@@ -1,3 +1,10 @@
+---
+title: React Native Analytics
+description: Analytics for React Native using Mobile Center
+keywords: analytics
+author: elamalani
+---
+
 # React Native Analytics
 
 Analytics module lets you automatically track session, device properties and pages when you start the SDK and you can use API to track your custom events. Follow the [Getting Started](/sdk/React-Native/getting-started#2-add-Mobile-Center-sdk-modules) section if you haven't setup and started the SDK in your application yet.

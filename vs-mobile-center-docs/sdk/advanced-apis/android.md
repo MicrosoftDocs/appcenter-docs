@@ -1,3 +1,10 @@
+---
+title: Android Advanced APIs
+description: Advanced APIs in the Android Mobile Center SDK
+keywords: sdk
+author: elamalani
+---
+
 # Android Advanced APIs
 
 

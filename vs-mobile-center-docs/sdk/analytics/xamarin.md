@@ -1,3 +1,10 @@
+---
+title: Xamarin Analytics
+description: Analytics for Xamarin using Mobile Center
+keywords: analytics
+author: elamalani
+---
+
 # Xamarin Analytics
 
 Analytics module lets you automatically track session, device properties and pages when you start the SDK and you can use API to track your custom events. Follow the [Getting Started](/sdk/Xamarin/getting-started) section if you haven't setup and started the SDK in your application yet.

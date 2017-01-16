@@ -1,12 +1,12 @@
 # Welcome to Mobile Center - "Mission Control for Your Mobile Apps"
 
-Mobile Center brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps and easily add backend cloud services to scale your app to millions of users on demand.
+[Mobile Center](https://mobile.azure.com) brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps and easily add backend cloud services to scale your app to millions of users on demand.
 
 You can choose from the following set of services as is appropriate for your mobile app:
 
 ## Lifecycle services
 
-For shipping your mobile apps faster, Mobile Center offers three key lifecycle services:
+For shipping your mobile apps faster, [Mobile Center](https://mobile.azure.com) offers three key lifecycle services:
 
 ###Build
 With Build, you can manage your source code in a Git repository and create an installable app package automatically with every commit or push. Best of all, you don't need to provision any agents or external machines that run macOS to build your iOS apps. Mobile Center takes care of this and will compile your iOS and Android app right from the source code with no manual setup on your side. Right now, Mobile Center only supports GitHub repositories. Bitbucket and VSTS integration is on the roadmap.
@@ -52,8 +52,8 @@ If you are using Xamarin Insights and Azure Mobile Engagement, you will need to 
 
 ## Pricing
 
-Mobile Center is free during the preview. Read about our pricing plans and give us your feedback.
+Mobile Center is free during the preview. Read about our [pricing plans](general/pricing) and give us your feedback.
 
 ## Mobile Center Roadmap
 
-Mobile Center is updated with new features on a weekly basis. Read through our product roadmap for the next 3-6 months and give us your feedback.
+Mobile Center is updated with new features on a weekly basis. Read through our [product roadmap](general/roadmap) for the next 3-6 months and give us your feedback.

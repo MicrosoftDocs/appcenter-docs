@@ -1,3 +1,10 @@
+---
+title: Azure
+description: Setting up Azure for iOS
+keywords: sdk,azure
+author: ysxu
+---
+
 # iOS Azure
 
 The iOS SDK supports Objective-C projects, Swift 2.2 projects, and Swift 2.3 projects for iOS versions 8.0 or later.

@@ -1,3 +1,10 @@
+---
+title: Xamarin Advanced APIs
+description: Advanced APIs in the Xamarin Mobile Center SDK
+keywords: sdk
+author: elamalani
+---
+
 # Xamarin Advanced APIs
 
 * **Debugging**: You can control the amount of log messages that show up from the SDK. Use the API below to enable additional logging while debugging. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications.

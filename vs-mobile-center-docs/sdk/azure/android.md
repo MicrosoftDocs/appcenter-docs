@@ -1,9 +1,16 @@
+---
+title: Android Azure
+description: Setting up Azure for Android
+keywords: sdk,azure
+author: ysxu
+---
+
 # Android Azure
 
 The Android SDK supports API levels 19 through 24 (KitKat through Nougat).
 
 You will need:
-* your Mobile Center app secret, which you can find at by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
+* your Mobile Center app secret, which you can find at by going to **Mobile Center > _your app_ > Getting Started > Manage app > App secret**.
 
 ## Add Azure Android SDK to your app
 1. Add this code to the Project level build.gradle file inside the buildscript tag:
@@ -37,5 +44,5 @@ MobileServiceClient azureMobileClient = new MobileServiceClient(
 ## Documentation References
 * [Javadocs API reference]
 
-[Identity]: /sdk/Android/azure/identity/
+[Identity]: ~/sdk/azure/identity/android.md
 [Javadocs API reference]: http://azure.github.io/azure-mobile-apps-android-client/

@@ -1,3 +1,10 @@
+---
+title: iOS Analytics
+description: iOS for Android using Mobile Center
+keywords: analytics
+author: elamalani
+---
+
 # iOS Analytics
 
 * **Track Session, Device Properties:**  Once the Analytics module is included in your app and the SDK is started, it will automatically track sessions, device properties like OS version, model, manufacturer etc. and you don’t need to add any additional code.

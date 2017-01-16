@@ -1,3 +1,10 @@
+---
+title: Android Azure Identity
+description: Setting up Azure Identity for Android
+keywords: sdk,azure
+author: ysxu
+---
+
 # iOS Azure Identity
 
 Add Identity to your mobile app with either client flow (recommended) or server flow authentication after [adding Azure iOS SDK to your mobile app].
