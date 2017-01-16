@@ -1,0 +1,31 @@
+# iOS Analytics
+
+This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](/sdk/iOS/getting-started/).
+The SDK section also contains instruction for using CocoaPods
+
+# 1 - Add the SDK to the project
+
+1. Download and unzip the [SDK](https://aka.ms/ehvc9e)
+2. Copy the frameworks into your project in the appropriate directory
+3. Add `MobileCenter.framework` and `MobileCenterAnalytics.framework` to your project
+
+# 2 - Start the SDK
+
+Add the following to your `didFinishLaunchingWithOptions` delegate:
+
+## for Objective-C:
+```obj-c
+[MSMobileCenter start:@"{Your App Secret}" withFeatures:@[[MSAnalytics class]]];
+```
+## for Swift:
+```swift
+MSMobileCenter.start("{Your App Secret}", withFeatures: [MSAnalytics.self])
+```
+Make sure that the `imports` are added.
+
+You will find your app secret on the *Manage App* section on the Mobile Center portal.
+
+# 3 - Analyse
+
+Now build and launch your app, then go to the Analytics section.  You should see 1 Active user and at least 1 session!
+The charts will get more relevant as you get more users.

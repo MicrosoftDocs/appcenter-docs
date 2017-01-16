@@ -4,7 +4,7 @@ Welcome to the Mobile Center documentation. This is the right place for you to b
 
 Our SDK is currently in public preview and is supported for the following platforms:
 
-* [iOS](/sdk/iOS)
-* [Android](/sdk/android)
-* [Xamarin](/sdk/xamarin)
-* [React Native](/sdk/react-native)
+* [iOS](/sdk/getting-started/ios)
+* [Android](/sdk/getting-started/android)
+* [Xamarin](/sdk/getting-started/xamarin)
+* [React Native](/sdk/getting-started/react-native)
