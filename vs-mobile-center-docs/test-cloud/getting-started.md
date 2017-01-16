@@ -1,4 +1,11 @@
-# Getting Started
+---
+title: Getting Started with Test Cloud
+description: How to start using Test Cloud in Mobile Center
+keywords: test cloud
+author: jraczak
+---
+
+# Getting Started with Test Cloud
 
 The requisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
 

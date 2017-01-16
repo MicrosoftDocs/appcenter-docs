@@ -1,3 +1,10 @@
+---
+title: Events Metrics
+description: Help using the Events Metrics on Mobile Center
+keywords: mobile center, analytics
+
+---
+
 # Events Metrics
 
 Events are actions that users take in your app. They measure the user's interaction with the content in the app and allow you to better understand your user's behavior.
@@ -5,7 +12,7 @@ Event properties provide contextual information about the events.
 
 Examples of events are: *"FileUpload", "Launch","LogOut"*.
 
-Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. More information about how to define the events can be found at the [SDK Documentation](/sdk) for [Android](/sdk/Android/analytics), [iOS](/sdk/iOS/analytics), [React-Native](/sdk/React-Native/analytics) and [Xamarin](/sdk/Xamarin/analytics).
+Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. More information about how to define the events can be found at the [SDK Documentation](~/sdk) for [Android](~/sdk/analytics/android), [iOS](~/sdk/analytics/ios), [React-Native](~/sdk/analytics/react-native) and [Xamarin](~/sdk/analytics/xamarin).
 
 By tracking events with properties to your app, you will be able to answers questions like:
 - What is the top N content viewed?

@@ -1,3 +1,10 @@
+---
+title: Starting a Test Run
+description: How to start a test run in Test Cloud
+keywords: test cloud
+author: jraczak
+---
+
 # Starting a Test Run
 
 This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload](/test-cloud/preparing-tests-for-upload).

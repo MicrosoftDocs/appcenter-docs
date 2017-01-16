@@ -1,5 +1,11 @@
-# Xcode
+---
+title: Building Xcode iOS apps
+description: How to set up a build for iOS apps created with Xcode
+keywords: build, ios
+author: siminapasat
+---
 
+# Building Xcode iOS apps
 
 To start building a native iOS app, you will firstly need to connect to your GitHub account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Xcode project or workspace and the scheme that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
 

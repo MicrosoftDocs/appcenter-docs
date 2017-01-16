@@ -1,3 +1,10 @@
+---
+title: Azure Active Directory
+description: Using Active Directory with Azure and Mobile Center
+keywords: azure, identity
+author: adrianhall
+---
+
 # Configure Azure Active Directory
 
 You will need:

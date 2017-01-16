@@ -1,3 +1,10 @@
+---
+title: Audience Page
+description: Help using the Audience Page on Mobile Center
+keywords: mobile center, analytics
+
+---
+
 # Audience Page
 
 The Audience page objective is to provide the key metrics about your app users population: their devices, their locations, activity and engagement.

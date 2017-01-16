@@ -1,3 +1,10 @@
+---
+title: Azure
+description: Using Azure with Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Azure
 
 Azure Services implements a backend for providing cloud-based services to your mobile application.

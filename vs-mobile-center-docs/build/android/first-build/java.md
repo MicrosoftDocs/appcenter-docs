@@ -1,4 +1,11 @@
-# Java
+---
+title: Configure an Android build
+description: How to set up a build system for Android apps
+keywords: android
+author: nrajpurk
+---
+
+# Building Java apps for Android
 
 To start building an app, you will firstly need to connect to your GitHub account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
 

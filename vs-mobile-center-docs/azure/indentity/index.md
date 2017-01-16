@@ -1,3 +1,10 @@
+---
+title: Azure Authentication
+description: Authentication methods for Azure and Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Identity
 
 Azure Identity enables user authentication for your app without changes to the app backend. It helps protect your application and work with per-user data seamlessly. It is powered by [Azure App Service Authentication / Authorization].

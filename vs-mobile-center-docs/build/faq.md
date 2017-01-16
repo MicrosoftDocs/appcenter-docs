@@ -1,3 +1,10 @@
+---
+title: Build Frequently Asked Questions
+description: Code signing apps built with Mobile Center
+keywords: build, faq
+author: siminapasat
+---
+
 # FAQ
 
 ## The repository I want to connect to is not listed in the Link Repository step

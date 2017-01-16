@@ -1,3 +1,10 @@
+---
+title: Android Analytics
+description: Analytics for Android apps
+keywords: android
+author:
+---
+
 # Android Analytics
 
 This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](/sdk/Android/getting-started/).

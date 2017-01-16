@@ -1,3 +1,10 @@
+---
+title: Android Build
+description: How to use Mobile Center Build for Android
+keywords: android
+author: nrajpurk
+---
+
 # Android
 
 You can build Android apps written in the following languages/frameworks:

@@ -1,4 +1,11 @@
-# Core Concepts
+---
+title: Test Cloud Core Concepts
+description: Glossary of terms used in Test Cloud
+keywords: test cloud
+author: jraczak
+---
+
+# Test Cloud Core Concepts
 
 It is helpful to familiarize yourself with the core concepts that comprise the Test Cloud experience.
 

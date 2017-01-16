@@ -1,5 +1,11 @@
-# Code Signing
+---
+title: Code Signing
+description: Code signing apps built with Mobile Center
+keywords: code signing,  ios
+author: siminapasat
+---
 
+# Code Signing
 
 To run an app on real devices during the development process or to distribute it via a beta program or in the AppStore it is required that the app is signed. Without code signing, the app can be only ran on a simulator or on a jailbroken device.
 

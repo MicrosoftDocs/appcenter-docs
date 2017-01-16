@@ -1,3 +1,10 @@
+---
+title: Analytics Frequently Asked Questions
+description: Help using the Analytics features of Mobile Center
+keywords: mobile center, analytics, faq
+author: blparr
+---
+
 # Analytics FAQ
 
 **Is the data Sampled?**

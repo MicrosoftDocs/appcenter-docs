@@ -1,3 +1,10 @@
+---
+title: Azure Twitter Authentication
+description: Using Twitter authentication with Azure and Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Configure Twitter
 
 You will need:

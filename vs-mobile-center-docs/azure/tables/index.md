@@ -1,3 +1,10 @@
+---
+title: Azure
+description:
+keywords: azure
+author: adrianhall
+---
+
 # Table Data Storage
 
 The Tables feature of Mobile Center provides a cloud-based data store for tabular data.  You can define multiple tables

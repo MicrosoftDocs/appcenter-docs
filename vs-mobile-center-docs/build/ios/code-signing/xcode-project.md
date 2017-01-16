@@ -1,3 +1,10 @@
+---
+title: Setting up an Xcode project for code signing
+description: Code signing apps built with Mobile Center
+keywords: code signing, ios
+author: siminapasat
+---
+
 # Setting up an Xcode project for code signing
 
 When developing an iOS app, there are two ways to configure the Code Signing settings.

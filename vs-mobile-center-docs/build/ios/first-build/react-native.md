@@ -1,4 +1,11 @@
-# React Native
+---
+title: React Native Build
+description: How to set up a build for React Native iOS apps
+keywords: build, ios
+author: siminapasat
+---
+
+# React Native Build
 
 Mobile Center can build React Native apps written in React Native version 0.34 or newer.
 

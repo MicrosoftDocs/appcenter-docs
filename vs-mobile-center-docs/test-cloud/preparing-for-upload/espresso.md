@@ -1,3 +1,10 @@
+---
+title: Preparing Espresso Tests for Upload
+description: How to upload Espresso tests to Mobile Center Test Cloud
+keywords: test cloud
+author: jraczak
+---
+
 # Preparing Espresso Tests for Upload
 
 The steps necessary to prepare an app and its corresponding test suite for upload
@@ -29,8 +36,8 @@ import com.xamarin.testcloud.espresso.ReportHelper;
 Insert this declaration in each of your test classes:
 
 ```java
-    @Rule
-    public ReportHelper reportHelper = Factory.getReportHelper();
+@Rule
+public ReportHelper reportHelper = Factory.getReportHelper();
 ```
 
 ### Step 3 - Update your test cases
@@ -40,10 +47,10 @@ Using the helper will still allow you to run your tests locally without addition
 A recommended practice is to have a call to label in the `@After` method, this will include a screenshot of the app final state in the test report. The screenshot will be taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
 
 ```java
-    @After
-    public void TearDown(){
-        reportHelper.label("Stopping App");
-    }
+@After
+public void TearDown(){
+    reportHelper.label("Stopping App");
+}
 ```
 To build the project and test apk files, run each of the following commands.
 
@@ -51,6 +58,8 @@ To build the project and test apk files, run each of the following commands.
 ./gradlew assembleDebug
 ./gradlew assembleDebugAndroidTest
 ```
-_Note: You will need to ensure your path variable has access to your machine's Java installation._
+
+> [!NOTE]
+> You will need to ensure your path variable has access to your machine's Java installation.
 
 Once a test suite has been instrumented with the Test Cloud extensions, it can be [uploaded to Test Cloud](/test-cloud/starting-a-test-run/).

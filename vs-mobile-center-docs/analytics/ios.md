@@ -1,6 +1,13 @@
+---
+title: iOS  Analytics
+description: Analytics for iOS apps
+keywords: ios
+
+---
+
 # iOS Analytics
 
-This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](/sdk/iOS/getting-started/).
+This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](!/sdk/getting-started/ios/).
 The SDK section also contains instruction for using CocoaPods
 
 # 1 - Add the SDK to the project
@@ -13,17 +20,17 @@ The SDK section also contains instruction for using CocoaPods
 
 Add the following to your `didFinishLaunchingWithOptions` delegate:
 
-## for Objective-C:
+> [!div class="tabbedCodeSnippets"]
 ```obj-c
 [MSMobileCenter start:@"{Your App Secret}" withFeatures:@[[MSAnalytics class]]];
 ```
-## for Swift:
 ```swift
 MSMobileCenter.start("{Your App Secret}", withFeatures: [MSAnalytics.self])
 ```
+
 Make sure that the `imports` are added.
 
-You will find your app secret on the *Manage App* section on the Mobile Center portal.
+You will find your app secret on the **Manage App** section on the Mobile Center portal.
 
 # 3 - Analyse
 

@@ -1,3 +1,10 @@
+---
+title: Azure Google Authentication
+description: Using Google authentication with Azure and Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Configure Google
 
 You will need:

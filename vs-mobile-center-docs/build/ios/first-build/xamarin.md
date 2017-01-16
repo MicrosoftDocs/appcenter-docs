@@ -1,4 +1,11 @@
-# Xamarin
+---
+title: Xamarin.iOS Build
+description: How to set up a build for Xamarin.iOS apps
+keywords: build, ios
+author: siminapasat
+---
+
+# Xamarin.iOS Build
 
 To start building a Xamarin iOS app, you will firstly need to connect to your GitHub account, select a repository and a branch where your app lives and then you can set up your first build. Choose the solution file and the configuration that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
 

@@ -1,3 +1,10 @@
+---
+title: Azure Facebook Authentication
+description: Using Facebook authentication with Azure and Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Configure Facebook
 
 You will need:

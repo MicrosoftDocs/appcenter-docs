@@ -1,3 +1,10 @@
+---
+title: Azure Microsoft Authentication
+description: Using Microsoft account authentication with Azure and Mobile Center
+keywords: azure
+author: adrianhall
+---
+
 # Configure Microsoft Account
 
 You will need:

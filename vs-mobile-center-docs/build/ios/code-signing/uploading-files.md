@@ -1,5 +1,11 @@
-# Uploading the code signing files
+---
+title: Uploading the code signing files
+description: Code signing apps built with Mobile Center
+keywords: code signing, ios
+author: siminapasat
+---
 
+# Uploading the code signing files
 
 To sign your iOS builds, upload a provisioning profile (.mobileprovision) and your certificate (.p12 file) when [configuring the build](../../first-build), along with the password you have set for the certificate. These files can be found in the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles.
 ![Apple Developer: Certificates, IDs & Profiles][apple-certificates]

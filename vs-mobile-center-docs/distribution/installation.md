@@ -1,4 +1,7 @@
 ---
+title: Install a Build
+description: Intructions on how to install a build
+keywords: distribution
 author: JoshuaWeber
 ---
 

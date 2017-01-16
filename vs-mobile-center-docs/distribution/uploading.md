@@ -1,3 +1,10 @@
+---
+title: Release a Build
+description: Distribute a completed build to users
+keywords: distribution
+author: JoshuaWeber
+---
+
 # Release a Build
 
 In order to distribute a release via Mobile Center, you must first upload your application binary package to Mobile Center. Mobile Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
@@ -9,7 +16,7 @@ In order to distribute a release via Mobile Center, you must first upload your a
 You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation][apple-ipa].
 
 1. [Register UDIDs][apple-devices] for all hardware devices in your provisioning profile.
-2. Archive your application. In Xcode go to Product -> Archive
+2. Archive your application. In Xcode go to **Product > Archive**
 3. Export the archive using the proper provisioning profile. Make sure to remember where the IPA file was placed on disk.
 
 ### Android
@@ -17,8 +24,10 @@ You will need to use the following steps to generate an IPA package for your app
 For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation][google-apk].
 
 1. Ensure you have [updated the manifest][android-manifest] and have a properly [configured Gradle build][gradle-config].
-2. Build the APK. From Android Studio select the build variant and then execute command Build -> Build APK.
-    - Note: Android studio places built APKs in *project-name*/*module-name*/build/outputs/apk/
+2. Build the APK. From Android Studio select the build variant and then execute command **Build > Build APK**.
+
+> [!NOTE]
+> Android studio places built APKs in *project-name*/*module-name*/build/outputs/apk/
 
 ## Uploading the package
 

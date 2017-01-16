@@ -1,4 +1,7 @@
 ---
+title: Distribute
+description: Distribute mobile apps with Mobile Center
+keywords: distribution
 author: JoshuaWeber
 ---
 
@@ -17,5 +20,6 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
 4. [Install][install] the release onto your device by clicking on the link in the email.
 
 [add_users]: ~/dashboard/
-[upload]: ~/distribution/uploading
-[install]: ~/distribution/installation
+[dist_groups]: groups
+[upload]: uploading
+[install]: installation

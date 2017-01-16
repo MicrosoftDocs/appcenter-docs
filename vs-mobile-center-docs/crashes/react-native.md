@@ -1,14 +1,21 @@
+---
+title: React Native Crashes
+description: Reporting crashes from React Native apps in Mobile Center
+keywords: crash reporting
+author: BretJohnson
+---
+
 # React Native Crashes
 
-# Getting Started
+## Getting Started
 
-1. Integrate the SDK as described in the [Getting Started with React Native](/sdk/React-Native/getting-started/) documentation.
+1. Integrate the SDK as described in the [Getting Started with React Native](~/sdk/getting-started/react-native) documentation.
 2. Upload the symbols that are created with each build using the *Incoming* page under the app.
 3. Add a test crash to the app's code by calling the `generateTestCrash` method of the crash reporting module as an action to a button.
 4. Run the app without the debugger connected, crash it and restart it.
 5. After a few minutes the crash report should be visible in the UI.
 
-# Uploading symbols
+## Uploading symbols
 
 1. Create a ZIP file with the dSYM package on your Mac and the JavaScript source map of your app. The source map should named "index.ios.map".
 
@@ -22,11 +29,11 @@
 3. Upload the zip file.
 4. After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
 
-# Troubleshooting
+## Troubleshooting
 
 1. *How does Mobile Center parse your .zip file?*
 
-    Mobile Center first looks for dsym directories at any level. Then it looks for a source map by the title of “index.ios.map”. If “index.ios.map” does not exist, it uses the first “.map” file that is found.
+    Mobile Center first looks for dsym directories at any level. Then it looks for a source map by the title of **index.ios.map**. If **index.ios.map** does not exist, it uses the first **.map** file that is found.
 
 2. *Why are crash reports not visible after a few minutes?*
 
