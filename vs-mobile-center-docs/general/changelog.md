@@ -1,3 +1,10 @@
+---
+title: Mobile Center Changelog
+description: History of updates to the product
+keywords: update,history
+author: piyushjo
+---
+
 # Changelog
 
 

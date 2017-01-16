@@ -1,5 +1,8 @@
 ---
-ms.author: piyushjo
+title: Mobile Center General Info
+description: General information about Mobile Center
+keywords: roadmap, pricing
+author: piyushjo
 ---
 
 # General

@@ -19,6 +19,6 @@ To sign your iOS builds, upload a provisioning profile (.mobileprovision) and yo
 5. Right click on the certificate and click Export. Save it with the .p12 extension and remember the password.
 6. After exporting the provisioning profile locally, you can upload it to Mobile Center when [configuring a branch](../../first-build).
 
-[apple-certificates]: images/Apple-developer-certificates-blurred.png
+[apple-certificates]: images/apple-developer-certificates-blurred.png
 [download-provisioning-profile]: images/provisioning-profile-blurred.png
 [download-certificate]: images/certificate-blurred.png

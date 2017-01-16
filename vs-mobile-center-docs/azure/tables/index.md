@@ -159,7 +159,7 @@ You may create a maximum of 250 tables.  Each table may have a maximum of 500 fi
 must follow the rules for [SQL Azure Identifiers] and are case-insensitive.
 
 
-[img1]: images/img1.PNG
+[img1]: images/create-table.png
 [Azure portal]: https://portal.azure.com
 [SQL Azure Identifiers]: https://msdn.microsoft.com/en-us/library/ms175874.aspx
 [string-type]: https://msdn.microsoft.com/en-us/library/ms186939.aspx

@@ -1,3 +1,7 @@
+---
+author: JoshuaWeber
+---
+
 # Manage Distribution Groups
 
 Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers or can represent stages or rings of releases, such as Staging.
@@ -10,11 +14,12 @@ To create a new Distribution Group select the "New Group" group button from the 
 
 Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Or select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
 
-**NOTE: You may only add existing [app users][app_users] to a Distribution Group. This is a temporary restriction that will be removed in the future.**
+> [!NOTE]
+> You may only add existing [app users][app_users] to a Distribution Group. This is a temporary restriction that will be removed in the future.**
 
 ## Releasing a Build to a Distribution Group
 
 To [release a new build][upload] to a Distribuiton Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
 
-[app_users]: /dashboard/
-[upload]: /distribution/uploading/
+[app_users]: ~/dashboard/
+[upload]: ~/distribution/uploading/

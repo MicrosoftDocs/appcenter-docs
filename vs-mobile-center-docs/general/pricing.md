@@ -1,3 +1,10 @@
+---
+title: Mobile Center Pricing Info
+description: Information about Mobile Center pricing plans
+keywords: pricing
+author: ianjanicki
+---
+
 # Pricing
 
 Mobile Center is free to use during the preview. The following limitations apply in the preview period:
