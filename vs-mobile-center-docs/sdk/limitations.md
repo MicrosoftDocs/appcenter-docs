@@ -5,7 +5,7 @@ keywords: sdk
 author: elamalani
 ---
 
-# Limitations & Known Issues
+# SDK Limitations & Known Issues
 
 Following are the known SDK limitations for different platforms:
 

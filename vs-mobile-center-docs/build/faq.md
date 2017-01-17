@@ -5,7 +5,7 @@ keywords: build, faq
 author: siminapasat
 ---
 
-# FAQ
+# Build FAQ
 
 ## The repository I want to connect to is not listed in the Link Repository step
 * If connecting to a repository that belongs to an organization, first request admin access to the repository.
