@@ -12,7 +12,7 @@ Event properties provide contextual information about the events.
 
 Examples of events are: *"FileUpload", "Launch","LogOut"*.
 
-Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. More information about how to define the events can be found at the [SDK Documentation](~/sdk) for [Android](~/sdk/analytics/android), [iOS](~/sdk/analytics/ios), [React-Native](~/sdk/analytics/react-native) and [Xamarin](~/sdk/analytics/xamarin).
+Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. More information about how to define the events can be found at the [SDK Documentation](~/sdk) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
 
 By tracking events with properties to your app, you will be able to answers questions like:
 - What is the top N content viewed?

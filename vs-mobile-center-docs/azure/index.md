@@ -34,10 +34,10 @@ Once the subscription is linked, Mobile Center will automatically create an Azur
 created in the South Central US region and on the F1 Free plan.  In addition, a free SQL Azure instance (limited to 20Mb) is created to hold your
 data.
 
-[Identity]: identity/
-[Facebook]: identity/facebook/
-[Google]: identity/google/
-[Microsoft]: identity/microsoft/
-[Twitter]: identity/twitter/
-[Azure AD]: identity/azuread/
-[Table Data Storage]: tables/
+[Identity]: identity/index.md
+[Facebook]: identity/facebook.md
+[Google]: identity/google.md
+[Microsoft]: identity/microsoft.md
+[Twitter]: identity/twitter.md
+[Azure AD]: identity/azuread.md
+[Table Data Storage]: tables/index.md

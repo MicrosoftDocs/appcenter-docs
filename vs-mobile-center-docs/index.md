@@ -52,8 +52,8 @@ If you are using Xamarin Insights and Azure Mobile Engagement, you will need to 
 
 ## Pricing
 
-Mobile Center is free during the preview. Read about our [pricing plans](general/pricing) and give us your feedback.
+Mobile Center is free during the preview. Read about our [pricing plans](general/pricing.md) and give us your feedback.
 
 ## Mobile Center Roadmap
 
-Mobile Center is updated with new features on a weekly basis. Read through our [product roadmap](general/roadmap) for the next 3-6 months and give us your feedback.
+Mobile Center is updated with new features on a weekly basis. Read through our [product roadmap](general/roadmap.md) for the next 3-6 months and give us your feedback.

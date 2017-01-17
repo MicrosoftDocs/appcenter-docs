@@ -30,14 +30,14 @@ You can use multiple providers in a single app, and can choose to utilize client
     * [Microsoft Account]
     * [Twitter]
 2.  Configure your app client to see Identity at work!
-    * [iOS] (Swift or Obj-C)
+    * [iOS][iOS] (Swift or Obj-C)
     * [Android]
 
 [Azure App Service Authentication / Authorization]: https://azure.microsoft.com/en-us/documentation/articles/app-service-authentication-overview/
-[Azure Active Directory]: azuread/
-[Facebook]: facebook/
-[Google]: google/
-[Microsoft Account]: microsoft/
-[Twitter]: twitter/
-[iOS]: /sdk/iOS/azure/identity/
-[Android]: /sdk/Android/azure/identity/
+[Azure Active Directory]: azuread.md
+[Facebook]: facebook.md
+[Google]: google.md
+[Microsoft Account]: microsoft.md
+[Twitter]: twitter.md
+[iOS]: ~/sdk/azure/identity/ios.md
+[Android]: ~/sdk/azure/identity/android.md
