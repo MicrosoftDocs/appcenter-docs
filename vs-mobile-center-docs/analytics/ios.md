@@ -20,7 +20,7 @@ The SDK section also contains instruction for using CocoaPods
 
 Add the following to your `didFinishLaunchingWithOptions` delegate:
 
-> [!div class="tabbedCodeSnippets"]
+> [!div class="tabbedCodeSnippets" obj-c="Objective-C" swift="Swift"]
 ```obj-c
 [MSMobileCenter start:@"{Your App Secret}" withFeatures:@[[MSAnalytics class]]];
 ```
