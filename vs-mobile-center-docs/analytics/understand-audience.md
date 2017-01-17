@@ -15,12 +15,12 @@ This will enable answers to questions such as:
 - Can I remove support for that old OS version?
 and many more
 
-# General information
+## General information
 All the data in the Audience page represent the device population in the selected **time range** and filters.
 For example the Languages will show the number of devices configured for a given language that was active in the selected time-range.
 It is possible to further filter the charts by selecting a number of app versions.
 
-# Active users
+## Active users
 Represents the number of unique app installations that launched the app in the last:
 - 1 calendar day for the "daily"
 - 7 calendar days for the "weekly"
@@ -28,7 +28,7 @@ Represents the number of unique app installations that launched the app in the l
 
 All days start at 12am UTC
 
-# Engagement
+## Engagement
 Engagement measures the app sessions count and duration.
 
 A **session** is defined as the time between the app coming to the foreground and the last event before going to the background.
@@ -40,17 +40,17 @@ However if the app goes to the background for less than 20 seconds, the session 
 - Session lengths: a distribution of the number of sessions over some duration intervals
 - Average session length: an average of all the session durations in the time range
 
-# Devices
+## Devices
 The Devices panel gives information about the users' devices:
 - Device model distribution: shows the count and percentage of the top-4 most used device models
 - OS distribution: shows the relative percentage of the top-4 most used OS versions
 
-# Country/Region and Languages
+## Country/Region and Languages
  The country/region and languages panel display information about devices geographical location and language setting.
  The country/region is determined by the carrier country and requires the device to have a SIM, and the language is the one defined at the OS level by the user.
 - The map shows shaded regions depending on the number of active devices. The more devices, the darker the shade
 - Country/Region distribution: shows the top 7 country/region by number of active devices
 - Language distribution: shows the top 7 major language device setting
 
-# Version
-Version shows the top 20 app version distribution for active devices in the time range
+## Version
+Version shows the top 20 app version distribution for active devices in the time range.

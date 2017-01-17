@@ -32,7 +32,7 @@
 ## [React Native](crashes/react-native.md)
 
 # [Analytics](analytics/index.md)
-## [iOS](analytics/ios/index.md)
+## [iOS](analytics/ios.md)
 ## [Android](analytics/android.md)
 ## [React Native](analytics/react-native.md)
 ## [Audience Page](analytics/understand-audience.md)

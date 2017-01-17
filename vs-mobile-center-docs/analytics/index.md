@@ -9,7 +9,7 @@ keywords: mobile center, analytics
 
 Mobile Center Analytics is a mobile apps measurement tool that lets developers understand their end-user population and usage patterns.
 
-# Key Features
+## Key Features
 
 | Scenario | Description |
 |--|--|
@@ -18,7 +18,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 | [Custom Events](~/analytics/understand-events)| Count, user count and custom properties analytics of custom events|
 | Log Flow| Check that your SDK is connected and see logs incoming in realtime|
 
-# Getting Started
+## Getting Started
 
 Getting Analytics only requires to add the SDK into the app and initialize it with 1 line of code.
 Doing this will get the data flowing to Mobile Center and your Analytics immediately: The Audience page will represent your data, albeit minimal, within seconds of your app run
@@ -31,10 +31,10 @@ Doing this will get the data flowing to Mobile Center and your Analytics immedia
 
 [Get Started on React Native](~/analytics/react-native.md)
 
-# Understand your audience
+## Understand your audience
 
 Find more details about the [audience page](~/analytics/understand-audience.md) and [answers to commonly asked questions](~/analytics/faq.md)
 
-# Events Metrics
+## Events Metrics
 
 The documentation for Custom Events can be found at [Events Metrics](~/analytics/understand-events.md).
