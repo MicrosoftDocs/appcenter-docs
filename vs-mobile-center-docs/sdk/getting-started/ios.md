@@ -1,10 +1,10 @@
 # iOS Getting Started
 
 > [!div class="op_single_selector"]
-- [iOS](ios)
-- [Android](android)
-- [Xamarin](xamarin)
-- [React Native](react-native)
+- [iOS](ios.md)
+- [Android](android.md)
+- [Xamarin](xamarin.md)
+- [React Native](react-native.md)
 
 Let's get started with setting up Mobile Center iOS SDK in your app to use Analytics and Crashes services:
 

@@ -19,7 +19,7 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
     - At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
 4. [Install][install] the release onto your device by clicking on the link in the email.
 
-[add_users]: ~/dashboard/
-[dist_groups]: groups
-[upload]: uploading
-[install]: installation
+[add_users]: ~/dashboard/index.md
+[dist_groups]: groups.md
+[upload]: uploading.md
+[install]: installation.md

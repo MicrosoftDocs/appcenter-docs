@@ -46,6 +46,6 @@ android {
 
 ```
 
-In the code above, the variable names allow security in keeping your signing credentials safe – the values will be encrypted and only available to the build agents at build time. You may choose to hardcode these if you prefer. You will be prompted for these values when [configuring a branch](~/build/android/first-build).
+In the code above, the variable names allow security in keeping your signing credentials safe – the values will be encrypted and only available to the build agents at build time. You may choose to hardcode these if you prefer. You will be prompted for these values when [configuring a branch](~/build/android/first-build/index.md).
 
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.

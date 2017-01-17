@@ -7,7 +7,7 @@ author: elamalani
 
 # Advanced APIs
 
-* [iOS](ios)
-* [Android](android)
-* [Xamarin](xamarin)
-* [React Native](react-native)
+* [iOS](ios.md)
+* [Android](android.md)
+* [Xamarin](xamarin.md)
+* [React Native](react-native.md)

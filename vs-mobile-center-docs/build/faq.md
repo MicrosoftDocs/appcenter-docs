@@ -29,4 +29,4 @@ The files uploaded for code signing and the password for the certificate are als
 ## A code signed build cannot be installed on an iOS device
 There are many reasons why a build cannot be installed on a user's device. A common case is that the provisioning profile does not contain the UDID of the user's device, in case of a development or ad-hoc distribution build. In the case of development provisioning profiles and ad-hoc distribution, you have to manually include the UDID of your users' devices in the provisioning profile in the Apple Developer Center, re-download the provisioning profile and upload it to Mobile Center build configuration. If you use enterprise distribution, you do not need to worry about collecting UDIDs.
 
-[xcode-share-scheme]: ../ios/first-build/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
+[xcode-share-scheme]: ~/build/ios/first-build/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"

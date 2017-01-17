@@ -28,7 +28,7 @@ To kick off the first build, configure how the iOS project should get built.
 
 3.5. **Simulator build** - Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
-3.6. **Code signing** - A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../../code-signing/uploading-files/), along with the password for the certificate. You can read more about code signing and device provisoning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
+3.6. **Code signing** - A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisoning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
 3.7. **Distribution to a distribution group** - You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
@@ -55,7 +55,7 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.ipa or .app)
-The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../../code-signing).
+The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing/index.md).
 
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 

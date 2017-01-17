@@ -24,5 +24,5 @@ Clicking on a Distribution Group will allow for management of the group. You can
 
 To [release a new build][upload] to a Distribuiton Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
 
-[app_users]: ~/dashboard/
-[upload]: ~/distribution/uploading/
+[app_users]: ~/dashboard/index.md
+[upload]: ~/distribution/uploading.md

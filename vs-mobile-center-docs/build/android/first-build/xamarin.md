@@ -23,7 +23,7 @@ To kick off the first build, configure how the Android project should get built.
 
 ### 3.2. **Project and Configuration** - The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
 
-### 3.3. **Code signing** - A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup).
+### 3.3. **Code signing** - A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
 Once you save the configuration, a new build will be automatically kicked off.
 

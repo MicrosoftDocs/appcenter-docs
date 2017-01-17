@@ -11,10 +11,10 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 to Test Cloud vary depending on the test framework. The sections below provide
 instructions for each of the supported test frameworks.
 
-[Preparing Appium tests for upload](appium)
+[Preparing Appium tests for upload](appium.md)
 
-[Preparing Espresso tests for upload](espresso)
+[Preparing Espresso tests for upload](espresso.md)
 
-[Preparing Calabash tests for upload](calabash)
+[Preparing Calabash tests for upload](calabash.md)
 
-[Preparing Xamarin.UITest tests for upload](uitest)
+[Preparing Xamarin.UITest tests for upload](uitest.md)

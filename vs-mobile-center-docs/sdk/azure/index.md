@@ -7,8 +7,8 @@ author: ysxu
 
 # Azure
 
-* [iOS](ios)
-* [Android](android)
+* [iOS](ios.md)
+* [Android](android.md)
 
-<!--* [Xamarin](xamarin)
-* [React Native](react-native)-->
+<!--* [Xamarin](xamarin.md)
+* [React Native](react-native.md)-->

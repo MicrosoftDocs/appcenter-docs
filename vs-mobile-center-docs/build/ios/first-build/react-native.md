@@ -26,7 +26,7 @@ To kick off the first build, configure how the iOS project should get built.
 
 3.3. **Build triggers** - By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-3.4. **Code signing** - A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files/), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
+3.4. **Code signing** - A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
 
 3.5. **CocoaPods** - Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
 
@@ -56,7 +56,7 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 ### 4.2. The app (.ipa)
 The .ipa is an iPhone application archive file which stores the iOS app.
-* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing).
+* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing/index.md).
 * if the build has not been signed, the .ipa can be signed by the developer (e.g. locally using xcodesign) or used for other purposes (e.g. upload to TestCloud for UI testing on real devices or run in the simulator)
 
 ### 4.3. The symbol files
