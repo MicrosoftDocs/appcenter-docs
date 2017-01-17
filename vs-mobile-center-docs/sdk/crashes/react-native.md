@@ -1,3 +1,10 @@
+---
+title: React Native Crashes
+description: Using React Native crash reporting in Mobile Center
+keywords: sdk, crash
+author: ljzhong
+---
+
 # React Native Crashes
 
 Once you set up and start the Mobile Center SDK to use the Crashes module in your application, the SDK will automatically start logging any crashes in the devices local storage. When the user opens the application again after a crash, all pending crash logs will automatically be forwarded to Mobile Center and you can analyze the crash along with the stack trace on the Mobile Center portal. Refer to the section to [Get Started](/sdk/React-Native/getting-started) if you haven't done so already.

@@ -1,5 +1,11 @@
-# Limitations & Known Issues
+---
+title: SDK Limitations & Known Issues
+description: Limitations and known issues with the Mobile Center SDK
+keywords: sdk
+author: elamalani
+---
 
+# Limitations & Known Issues
 
 Following are the known SDK limitations for different platforms:
 

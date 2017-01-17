@@ -56,12 +56,12 @@ To specify permissions:
 There are five endpoints:
 
 | Permission | Endpoint |
-+ ---------- + -------- |
-| Read | GET /tables/{tableName}/{id?} |
-| Insert | POST /tables/{tableName} |
-| Update | PATCH /tables/{tableName}/{id} |
-| Delete | DELETE /tables/{tableName}/{id} |
-| Undelete | POST /tables/{tableName}/{id} |
+| ---------- | -------- |
+| Read | `GET /tables/{tableName}/{id?}` |
+| Insert | `POST /tables/{tableName}` |
+| Update | `PATCH /tables/{tableName}/{id}` |
+| Delete | `DELETE /tables/{tableName}/{id`} |
+| Undelete | `POST /tables/{tableName}/{id}` |
 
 Adjust the permissions to match your needs by selecting the appropriate permission for each endpoint.  Once complete, click **Save**.
 
@@ -102,7 +102,7 @@ There are five fields that will be available on every table. If per-user data is
 To add a column, click on the **Add Column** button.  Enter a name and select a type for the field:
 
 | Type | SQL Azure Type |
-+ ---- + -------------- |
+| ---- | -------------- |
 | String | [NVARCHAR(MAX)][string-type] |
 | Number | [FLOAT(53)][number-type] |
 | Date | [DATETIMEOFFSET(7)][date-type] |

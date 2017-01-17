@@ -1,5 +1,5 @@
 ---
-title: Azure
+title: iOS Azure
 description: Setting up Azure for iOS
 keywords: sdk,azure
 author: ysxu

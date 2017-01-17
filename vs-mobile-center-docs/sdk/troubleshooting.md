@@ -1,3 +1,10 @@
+---
+title: Troubleshooting
+description: Troubleshooting the Mobile Center SDK
+keywords: sdk
+author: elamalani
+---
+
 # Troubleshooting
 
 Below are the steps you can follow to make sure the SDK is set up correctly and forwards Analytics and Crashes data to Mobile Center.
