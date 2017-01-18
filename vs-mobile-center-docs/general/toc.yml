@@ -1,0 +1,48 @@
+- name: Mobile Center
+  tocHref: /
+  topicHref: /index
+  items:
+  - name: General
+    tocHref: /general/
+    topicHref: /general/index
+  - name: Build
+    tocHref: /build/
+    topicHref: /build/index
+    items:
+    - name: iOS
+      tocHref: /build/ios/
+      topicHref: /build/ios/index
+    - name: Android
+      tocHref: /build/android/
+      topicHref: /build/android/index
+  - name: Test
+    tocHref: /test/
+    topicHref: /test/index
+  - name: Distribute
+    tocHref: /distribution/
+    topicHref: /test/index
+  - name: Tables
+    tocHref: /azure/tables/
+    topicHref: /azure/tables/index
+  - name: Identity
+    tocHref: /azure/identity/
+    topicHref: /azure/identity/index
+  - name: Crashes
+    tocHref: /crashes/
+    topicHref: /crashes/index
+  - name: Analytics
+    tocHref: /analytics/
+    topicHref: /analytics/index
+  - name: SDK
+    tocHref: /sdk/
+    topicHref: /sdk/index
+  - name: Reference
+    tocHref: /api-docs/
+    topicHref: /api-docs/index
+    items:
+    - name: API docs
+      tocHref: /api-docs/
+      topicHref: /api-docs/index
+    - name: Command Line Interface
+      tocHref: /cli/
+      topicHref: /cli/index
