@@ -3,8 +3,7 @@
     "content": [
       {
         "files": [
-          "**/*.md",
-          "**/*.yml"
+          "**/*.md"
         ],
         "exclude": [
           "**/obj/**",
@@ -28,9 +27,7 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {
-      "breadcrumb_path": "~/general/toc.json"
-    },
+    "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
     "dest": "vs-mobile-center-docs"
