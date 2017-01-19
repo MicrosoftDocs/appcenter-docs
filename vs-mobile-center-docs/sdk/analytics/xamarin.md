@@ -7,6 +7,12 @@ author: elamalani
 
 # Xamarin Analytics
 
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+- [Xamarin](xamarin.md)
+- [React Native](react-native.md)
+
 Analytics module lets you automatically track session, device properties and pages when you start the SDK and you can use API to track your custom events. Follow the [Getting Started](/sdk/Xamarin/getting-started) section if you haven't setup and started the SDK in your application yet.
 
 * **Track Session, Device Properties:**  Once the Analytics module is included in your app and the SDK is started, it will automatically track sessions, device properties like OS Version, model, manufacturer etc. and you don’t need to add any additional code.

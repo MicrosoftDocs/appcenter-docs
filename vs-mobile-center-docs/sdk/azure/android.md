@@ -7,6 +7,11 @@ author: ysxu
 
 # Android Azure
 
+
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+
 The Android SDK supports API levels 19 through 24 (KitKat through Nougat).
 
 You will need:

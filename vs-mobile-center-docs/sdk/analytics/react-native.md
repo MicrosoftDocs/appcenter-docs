@@ -7,6 +7,12 @@ author: elamalani
 
 # React Native Analytics
 
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+- [Xamarin](xamarin.md)
+- [React Native](react-native.md)
+
 Analytics module lets you automatically track session, device properties and pages when you start the SDK and you can use API to track your custom events. Follow the [Getting Started](/sdk/React-Native/getting-started#2-add-Mobile-Center-sdk-modules) section if you haven't setup and started the SDK in your application yet.
 
 * **Using the Analytics API:**

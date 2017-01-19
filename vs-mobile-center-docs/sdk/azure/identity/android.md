@@ -7,6 +7,11 @@ author: ysxu
 
 # Android Azure Identity
 
+
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+
 Add Identity to your mobile app with either client flow (recommended) or server flow authentication after [adding Azure Android SDK to your mobile app].
 
 ## Client flow

@@ -1,3 +1,9 @@
+---
+title: Getting Started
+description: Getting Started
+keywords: sdk
+---
+
 # Xamarin Getting Started
 
 > [!div class="op_single_selector"]

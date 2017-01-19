@@ -7,6 +7,11 @@ author: ysxu
 
 # iOS Azure
 
+
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+
 The iOS SDK supports Objective-C projects, Swift 2.2 projects, and Swift 2.3 projects for iOS versions 8.0 or later.
 
 ## Add Azure iOS SDK to your app

@@ -1,3 +1,9 @@
+---
+title: Getting Started
+description: Getting Started
+keywords: sdk
+---
+
 # React Native Getting Started
 
 > [!div class="op_single_selector"]
