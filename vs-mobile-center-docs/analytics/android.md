@@ -7,6 +7,11 @@ author:
 
 # Android Analytics
 
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+- [React Native](react-native.md)
+
 This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](/sdk/Android/getting-started/).
 
 ## 1. Add the SDK to the project

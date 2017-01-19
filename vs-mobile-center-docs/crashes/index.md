@@ -18,6 +18,8 @@ Crashes are grouped together by similarities like the reason for the crash and w
 # Getting Started
 To leverage this feature it is required to integrate the Mobile Center SDK and its crash reporting module into the app. As the SDK runs in the same process as the app, the crash report will be sent the next time the app starts.
 
+[Get Started on Android](~/crashes/android.md)
+
 [Get Started on iOS](~/crashes/ios.md)
 
-[Get Started on Android](~/crashes/android.md)
+[Get Started with React Native](~/crashes/react-native.md)

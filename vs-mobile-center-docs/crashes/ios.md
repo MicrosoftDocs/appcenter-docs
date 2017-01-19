@@ -7,7 +7,12 @@ author: BretJohnson
 
 # iOS Crashes
 
-# Getting Started
+> [!div class="op_single_selector"]
+- [iOS](ios.md)
+- [Android](android.md)
+- [React Native](react-native.md)
+
+## Getting Started
 
 1. Integrate the SDK as described in the [Getting Started with iOS](/sdk/iOS/getting-started/) documentation.
 2. Upload the symbols that are created with each build using the *Incoming* page under the app.
@@ -15,14 +20,14 @@ author: BretJohnson
 4. Run the app without the debugger connected, crash it and restart it.
 5. After a few minutes the crash report should be visible in the UI.
 
-# Uploading symbols
+## Uploading symbols
 
 1. Create a ZIP file for the dSYM package on your Mac.
 2. Open the *Incoming* page under *Crash Reporting* on Mobile Center of the app.
 3. Upload the zip file.
 4. After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
 
-# Troubleshooting
+## Troubleshooting
 
 1. *Why are crash reports not visible after a few minutes?*
 
