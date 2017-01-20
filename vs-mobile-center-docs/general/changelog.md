@@ -33,7 +33,7 @@ You can now set up builds for building native Android apps by going to the [Buil
 
 ### **Dec 1, 2016**
 * **React Native has arrived.**
-You can build, capture crash reports and see analytics data for your iOS app. Read the [docs](~/sdk/react-native/index.md) or start by connecting any React Native repository.
+You can build, capture crash reports and see analytics data for your iOS app. Read the [docs](~/sdk/getting-started/react-native.md) or start by connecting any React Native repository.
 * **Xamarin developers can build for iOS.**
 * **Auto-distribute from CI builds.**
 You can select a distribution group to automatically create a release from every CI build on a branch.
