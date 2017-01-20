@@ -3,6 +3,11 @@ title: iOS Crashes
 description: Using iOS crash reporting in Mobile Center
 keywords: sdk, crash
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
+ms.service: mobile-center
 ---
 
 # iOS Crashes

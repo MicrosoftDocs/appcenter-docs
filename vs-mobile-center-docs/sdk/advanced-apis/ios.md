@@ -3,6 +3,11 @@ title: iOS Advanced APIs
 description: iOS APIs in the Android Mobile Center SDK
 keywords: sdk
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
+ms.service: mobile-center
 ---
 
 # iOS Advanced APIs

@@ -3,6 +3,11 @@ title: Xamarin Crashes
 description: Using Xamarin crash reporting in Mobile Center
 keywords: sdk, crash
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
+ms.service: mobile-center
 ---
 
 # Xamarin Crashes

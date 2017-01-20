@@ -3,6 +3,11 @@ title: Build
 description: Building apps with Mobile Center
 keywords: build
 author: siminapasat
+ms.author: siminapasat
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 72f1d1cc-d17f-4e37-91b7-1b835bd0885e
+ms.service: mobile-center
 ---
 
 # Build

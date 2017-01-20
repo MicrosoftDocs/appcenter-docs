@@ -3,6 +3,11 @@ title: Getting Started with Test Cloud
 description: How to start using Test Cloud in Mobile Center
 keywords: test cloud
 author: jraczak
+ms.author: jraczak
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: b5759b2a-5a49-4874-85f3-7e13dfc0fe6b
+ms.service: mobile-center
 ---
 
 # Getting Started with Test Cloud

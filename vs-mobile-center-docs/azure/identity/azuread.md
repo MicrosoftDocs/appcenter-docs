@@ -3,6 +3,11 @@ title: Azure Active Directory
 description: Using Active Directory with Azure and Mobile Center
 keywords: azure, identity
 author: adrianhall
+ms.author: adrianhall
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: ef7b487b-6365-4882-b3a7-6fe84ffa9c14
+ms.service: mobile-center
 ---
 
 # Configure Azure Active Directory

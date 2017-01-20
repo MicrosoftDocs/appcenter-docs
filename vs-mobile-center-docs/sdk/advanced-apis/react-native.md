@@ -3,6 +3,11 @@ title: React Native Advanced APIs
 description: Advanced APIs in the React Native Mobile Center SDK
 keywords: sdk
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 28dc1568-c353-4a13-b2e9-16f9061e34c1
+ms.service: mobile-center
 ---
 
 # React Native Advanced APIs

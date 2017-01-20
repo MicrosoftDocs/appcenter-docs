@@ -3,6 +3,11 @@ title: Configure an Android build
 description: How to set up a build system for Android apps
 keywords: android
 author: nrajpurk
+ms.author: nrajpurk
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
+ms.service: mobile-center
 ---
 
 # Building Java apps for Android

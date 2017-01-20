@@ -3,6 +3,11 @@ title: Manage Distribution Groups
 description: Distribute mobile apps to groups of users
 keywords: distribution
 author: JoshuaWeber
+ms.author: JoshuaWeber
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
+ms.service: mobile-center
 ---
 
 # Manage Distribution Groups

@@ -3,6 +3,11 @@ title: iOS Azure
 description: Setting up Azure for iOS
 keywords: sdk,azure
 author: ysxu
+ms.author: ysxu
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 896ece30-60c1-43fa-ac66-a37627af5b9d
+ms.service: mobile-center
 ---
 
 # iOS Azure

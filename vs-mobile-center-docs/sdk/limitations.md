@@ -3,6 +3,11 @@ title: SDK Limitations & Known Issues
 description: Limitations and known issues with the Mobile Center SDK
 keywords: sdk
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
+ms.service: mobile-center
 ---
 
 # SDK Limitations & Known Issues

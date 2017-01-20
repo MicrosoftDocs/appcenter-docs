@@ -2,6 +2,12 @@
 title: Getting Started
 description: Getting Started
 keywords: sdk
+author:
+ms.author:
+ms.date: 01/20/17
+ms.topic: get-started-article
+ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
+ms.service: mobile-center
 ---
 
 # Xamarin Getting Started

@@ -3,6 +3,11 @@ title: Distribute
 description: Distribute mobile apps with Mobile Center
 keywords: distribution
 author: JoshuaWeber
+ms.author: JoshuaWeber
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: dda0e037-9f42-4e63-8ef8-e645d3e8fbda
+ms.service: mobile-center
 ---
 
 # Distribute

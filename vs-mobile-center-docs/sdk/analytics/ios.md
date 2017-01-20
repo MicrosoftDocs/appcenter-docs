@@ -3,6 +3,11 @@ title: iOS Analytics
 description: iOS for Android using Mobile Center
 keywords: analytics
 author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
+ms.service: mobile-center
 ---
 
 # iOS Analytics

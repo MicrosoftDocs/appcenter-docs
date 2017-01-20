@@ -3,6 +3,11 @@ title: Cloud build machines
 description: Software used on build machines
 keywords: build
 author: siminapasat
+ms.author: siminapasat
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
+ms.service: mobile-center
 ---
 
 # Cloud build machines

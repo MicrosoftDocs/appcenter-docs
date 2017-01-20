@@ -3,6 +3,11 @@ title: Mobile Center Changelog
 description: History of updates to the product
 keywords: update,history
 author: piyushjo
+ms.author: piyushjo
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
+ms.service: mobile-center
 ---
 
 # Changelog

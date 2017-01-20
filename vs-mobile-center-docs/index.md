@@ -2,6 +2,12 @@
 title: Welcome to Mobile Center - 'Mission Control for Your Mobile Apps'
 description: Introduction to Visual Studio Mobile Center, its key features and where to get started in the documentation.
 keywords: mobile center
+author: elamalani
+ms.author: elamalani
+ms.date: 01/20/17
+ms.topic: landing-page
+ms.assetid: de216172-7d5b-4cb8-9818-6c8b0b9d6c9a
+ms.service: mobile-center
 ---
 
 # Welcome to Mobile Center - "Mission Control for Your Mobile Apps"

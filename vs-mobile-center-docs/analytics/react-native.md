@@ -3,6 +3,11 @@ title: React Native Analytics
 description: Analytics for React Native apps
 keywords: react native
 author: ljzhong
+ms.author: ljzhong
+ms.date: 01/20/17
+ms.topic: article
+ms.assetid: 7779922e-f865-4bd4-ae65-3192af43fb5d
+ms.service: mobile-center
 ---
 
 # React Native Analytics
