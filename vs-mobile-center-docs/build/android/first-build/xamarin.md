@@ -30,6 +30,8 @@ To kick off the first build, configure how the Android project should get built.
 
 ### 3.3. **Code signing** - A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
+### 3.4. **Distribution to a distribution group** - You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+
 Once you save the configuration, a new build will be automatically kicked off.
 
 ## 4. Build results
