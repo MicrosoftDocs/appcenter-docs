@@ -15,7 +15,7 @@ ms.service: mobile-center
 You will need:
 * Your Mobile Center app secret, which you can find by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
 
-### **Register your application with Microsoft Account**
+### Register your application with Microsoft Account
 
 1. Navigate to the [My Applications] page in the Microsoft Account Developer Center, and log on with your Microsoft account, if required.
 
@@ -29,7 +29,7 @@ You will need:
 
 6. Under _Application Secrets_, click _Generate New Password_. Make note of the value that appears. Once you leave the page, it will not be displayed again.
 
-### **Configure Identity for Microsoft Account authentication**
+### Configure Identity for Microsoft Account authentication
 
 1. In [Mobile Center], go to _Identity_, and click on _Microsoft Account_.
 

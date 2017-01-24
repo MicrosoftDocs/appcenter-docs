@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
+ms.tgt_pltfrm: react-native
 ---
 
 # React Native Getting Started

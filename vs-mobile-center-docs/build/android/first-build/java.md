@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
 ms.service: mobile-center
+ms.tgt_pltfrm: android
 ---
 
 # Building Java apps for Android

@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 82649fa3-f763-4191-97c6-fb0eee4cac4b
 ms.service: mobile-center
+ms.tgt_pltfrm: ios
 ---
 
 # Configure an iOS build

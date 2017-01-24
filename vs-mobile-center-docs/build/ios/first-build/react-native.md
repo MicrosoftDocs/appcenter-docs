@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a
 ms.service: mobile-center
+ms.tgt_pltfrm: react-native
 ---
 
 # React Native Build

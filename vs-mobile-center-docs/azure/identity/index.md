@@ -26,7 +26,7 @@ You can use multiple providers in a single app, and can choose to utilize client
 * Server flow: Use a single line of code from the Azure Identity client SDK to sign in users.
 
 
-## **Getting Started**
+## Getting Started
 
 1.  Configure your app with a desired identity provider and establish trust with Mobile Center:
     * [Azure Active Directory]

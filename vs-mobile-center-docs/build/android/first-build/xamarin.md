@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: mobile-center
+ms.tgt_pltfrm: xamarin-android
 ---
 
 # Xamarin.Android Build

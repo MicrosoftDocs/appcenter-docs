@@ -16,7 +16,7 @@ You will need:
 * A Facebook account with a verified email and a phone number.
 * your Mobile Center app secret, which you can find at by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
 
-### **Register your application with Facebook**
+### Register your application with Facebook
 
 1. Go to the [Facebook Developers] site and sign-in with your Facebook  credentials. If you have not already registered, click _Apps > Register as a Developer_, then accept the policy and follow the registration steps.
 
@@ -28,7 +28,7 @@ You will need:
 
 [Facebook Developers]:https://developers.facebook.com/
 
-### **Configure Identity for Facebook authentication**
+### Configure Identity for Facebook authentication
 
 1. In [Mobile Center], go to _Identity_, and click on _Facebook_.
 

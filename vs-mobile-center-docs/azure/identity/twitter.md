@@ -16,7 +16,7 @@ You will need:
 * A [Twitter] account with a verified email and a phone number.
 * Your Mobile Center app secret, which you can find by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
 
-### **Register your application with Twitter**
+### Register your application with Twitter
 
 1. Go to the [Twitter Developers] site and sign-in with your Twitter  credentials.
 
@@ -33,7 +33,7 @@ You will need:
 
 5. Select the _Keys and Access Tokens_ tab. Make a note of the values of Consumer Key (API Key) and Consumer secret (API Secret).
 
-### **Configure Identity for Twitter authentication**
+### Configure Identity for Twitter authentication
 
 1. In [Mobile Center], go to _Identity_, and click on _Twitter_.
 

@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 28dc1568-c353-4a13-b2e9-16f9061e34c1
 ms.service: mobile-center
+ms.tgt_pltfrm: react-native
 ---
 
 # React Native Advanced APIs

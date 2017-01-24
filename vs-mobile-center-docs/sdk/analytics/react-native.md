@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: mobile-center
+ms.tgt_pltfrm: react-native
 ---
 
 # React Native Analytics

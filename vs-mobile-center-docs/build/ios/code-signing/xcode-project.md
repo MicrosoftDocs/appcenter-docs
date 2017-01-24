@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 47bb8997-4d24-48f4-a0e8-f503d2c65185
 ms.service: mobile-center
+ms.tgt_pltfrm: ios
 ---
 
 # Setting up an Xcode project for code signing

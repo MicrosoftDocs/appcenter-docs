@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 38624f1c-15fe-4c9f-8b64-e22348e2dcbc
 ms.service: mobile-center
+ms.tgt_pltfrm: android
 ---
 
 # Android Crashes

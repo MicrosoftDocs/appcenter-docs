@@ -16,7 +16,7 @@ You will need:
 * A Google account with a verified email.
 * Your Mobile Center app secret, which you can find by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
 
-### **Register your application with Google**
+### Register your application with Google
 
 1. Navigate to the [Google apis] website, sign in with your Google account credentials, click the _Project_ dropdown and _Create Project_, provide a _Project name_, then click _Create_.
 
@@ -34,7 +34,7 @@ You will need:
 The URI that is needed for the _Authorized JavaScript Origins_ and _Authorized redirect URIs_ is displayed in the Identity page.
 On the next screen, make a note of the values of the client ID and client secret.
 
-### **Configure Identity for Google authentication**
+### Configure Identity for Google authentication
 
 1. In [Mobile Center], go to _Identity_, and click on _Google_.
 

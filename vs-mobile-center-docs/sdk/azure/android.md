@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 0913454a-9804-4ac7-b5e6-936e88cd64d7
 ms.service: mobile-center
+ms.tgt_pltfrm: android
 ---
 
 # Android Azure

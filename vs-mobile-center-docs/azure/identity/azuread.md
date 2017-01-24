@@ -15,7 +15,7 @@ ms.service: mobile-center
 You will need:
 * Your Mobile Center app secret, which you can find at by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
 
-### **Register your application with Azure Active Directory**
+### Register your application with Azure Active Directory
 
 1. Sign in to the [Azure classic portal], and go to _Active Directory_ > _your directory_ > _Applications_ tab.
 
@@ -37,7 +37,7 @@ You will need:
 
 7. Within the root _EntityDescriptor_ element, there will be an _entityID_ attribute of the form _https://sts.windows.net/_ followed by a GUID specific to your tenant (called a "tenant ID"). Copy this value - it will serve as your _Issuer URL_.
 
-### **Configure Identity for Azure Active Directory authentication**
+### Configure Identity for Azure Active Directory authentication
 
 1. In [Mobile Center], go to _Identity_, and click on _Azure Active Directory_.
 

@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: mobile-center
+ms.tgt_pltfrm: xamarin-ios
 ---
 
 # Xamarin.iOS Build

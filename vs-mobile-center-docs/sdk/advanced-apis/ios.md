@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: mobile-center
+ms.tgt_pltfrm: ios
 ---
 
 # iOS Advanced APIs

@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
+ms.tgt_pltfrm: android
 ---
 
 # Android Getting Started

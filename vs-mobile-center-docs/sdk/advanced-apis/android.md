@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: mobile-center
+ms.tgt_pltfrm: android
 ---
 
 # Android Advanced APIs

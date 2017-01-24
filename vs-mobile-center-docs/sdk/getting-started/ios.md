@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: mobile-center
+ms.tgt_pltfrm: ios
 ---
 
 # iOS Getting Started

@@ -8,6 +8,7 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 2155290f-43e5-4f41-b45c-1658293313b8
 ms.service: mobile-center
+ms.tgt_pltfrm: react-native
 ---
 
 # React Native Crashes
