@@ -25,15 +25,25 @@ Next step once you have selected a GitHub repository is to select the branch you
 ## 3. Setting up your first build
 To kick off the first build, configure how the Android project should get built.
 
-### 3.1. **Project** - Select your project’s `package.json`. Mobile Center will automatically extract information from its associated `build.gradle` file, including including dependancies, build tools version, build types, and product flavors.
+### 3.1. Project
 
-### 3.2. **Build variant** - The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
+Select your project’s `package.json`. Mobile Center will automatically extract information from its associated `build.gradle` file, including including dependancies, build tools version, build types, and product flavors.
 
-### 3.3. **Build triggers** - By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+### 3.2. Build variant
 
-### 3.4. **Code signing** - A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
+The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
-### 3.5. **Distribution to a distribution group** - You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+### 3.3. Build triggers
+
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+
+### 3.4. Code signing
+
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
+
+### 3.5. Distribution to a distribution group
+
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be automatically kicked off.
 
