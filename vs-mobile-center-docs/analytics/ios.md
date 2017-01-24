@@ -8,6 +8,8 @@ ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 75fe684d-c3a6-4db6-9e69-ba2b499a06ab
 ms.service: mobile-center
+ms.tgt_pltfrm: ios
+---
 
 # iOS Analytics
 
