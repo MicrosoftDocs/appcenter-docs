@@ -3,7 +3,7 @@ title: React Native Analytics
 description: Analytics for React Native using Mobile Center
 keywords: analytics
 author: elamalani
-ms.author: elamalani
+ms.author: emalani
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb

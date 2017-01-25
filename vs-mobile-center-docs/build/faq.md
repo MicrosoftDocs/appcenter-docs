@@ -3,7 +3,7 @@ title: Build Frequently Asked Questions
 description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat
-ms.author: siminapasat
+ms.author: siminap
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af

@@ -3,7 +3,7 @@ title: Preparing Tests for Upload
 description: How to upload tests to Mobile Center Test Cloud
 keywords: test cloud
 author: jraczak
-ms.author: jraczak
+ms.author: jurac
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 34081aed-dc96-4781-b24e-04042ae77ddd

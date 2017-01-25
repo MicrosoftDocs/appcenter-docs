@@ -3,7 +3,7 @@ title: SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK
 keywords: sdk
 author: elamalani
-ms.author: elamalani
+ms.author: emalani
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1

@@ -3,7 +3,7 @@ title: Uploading the code signing files
 description: Code signing apps built with Mobile Center
 keywords: code signing, ios
 author: siminapasat
-ms.author: siminapasat
+ms.author: siminap
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 6a9c7fcc-7a9b-4d9b-bea2-c6ee8e4208a1

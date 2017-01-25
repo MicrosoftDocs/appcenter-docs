@@ -3,7 +3,7 @@ title: Setting up an Xcode project for code signing
 description: Code signing apps built with Mobile Center
 keywords: build, ios
 author: siminapasat
-ms.author: siminapasat
+ms.author: siminap
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 81ab90f9-a4a3-49ca-a7b7-ed6b3d29450b

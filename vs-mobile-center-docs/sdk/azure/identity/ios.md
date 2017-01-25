@@ -3,7 +3,7 @@ title: Android Azure Identity
 description: Setting up Azure Identity for Android
 keywords: sdk,azure
 author: ysxu
-ms.author: ysxu
+ms.author: yuaxu
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: dba12fcc-2c06-4a21-bfc1-58dfee74c7d1

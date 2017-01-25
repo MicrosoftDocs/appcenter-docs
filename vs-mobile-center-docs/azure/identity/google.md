@@ -3,7 +3,7 @@ title: Azure Google Authentication
 description: Using Google authentication with Azure and Mobile Center
 keywords: azure
 author: adrianhall
-ms.author: adrianhall
+ms.author: adrianha
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: dcd65a96-21eb-4174-9a39-a083aa581af2

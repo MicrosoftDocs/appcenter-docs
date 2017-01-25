@@ -3,7 +3,7 @@ title: Test Cloud Security
 description: Security information relating to devices used in Test Cloud
 keywords: test cloud
 author: jraczak
-ms.author: jraczak
+ms.author: jurac
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 10df164b-3834-4444-80ea-765df2cff9bb
