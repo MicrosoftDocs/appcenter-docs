@@ -1,33 +1,12 @@
-# mobile-center-docs
+# Mobile Center Preview documentation
 
-Content repo for [Visual Studio Mobile Center](https://mobile.azure.com) on docs.microsoft.com
+Welcome! This repo contains source files for the work-in-progress Mobile Center technical documentation. The topics are published on the [Mobile Center documentation site](https://docs.microsoft.com/mobile-center).
 
-This content will replace the temporary docs at [docs.mobile.azure.com](https://docs.mobile.azure.com)
+## Contributing to the documentation
 
-## Docs Staging
+To contribute to this documentation, please see the [Contributing guide](CONTRIBUTING.md).
+We welcome your contributions to help us improve the Mobile Center docs. All the articles in this repository use GitHub flavored markdown.
 
-[review.docs.microsoft.com/en-us/vs-mobile-center-docs/](https://review.docs.microsoft.com/en-us/vs-mobile-center-docs/)
+Several feature areas of Mobile Center have their own folders in this repo, such as **build** for topics on Build, **crashes** for topics on the Crash Reporting service, and so forth. The **/images** subfolder in each folder contains art files for the topics. The [Contributing guide](CONTRIBUTING.md) has more information.
 
-## Metadata
-
-[Metrics & metadata](https://github.com/Microsoft/CE-CSI-docs/blob/master/csice/docs-style/style-guide-metrics-metadata.md)
-
-Example:
-
-```
----
-title: SDK Documentation
-description: Using the Mobile Center SDK
-keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 01/20/17
-ms.topic: article
-ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
-ms.service: mobile-center
----
-```
-
-## Contact
-
-[Craig Dunn](mailto:craig.dunn@microsoft.com)
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
