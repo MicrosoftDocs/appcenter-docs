@@ -148,23 +148,6 @@ Once you set up and start the Mobile Center SDK to use the Crashes module in you
             MSCrashes.notify(with: MSUserConfirmation.send)
             MSCrashes.notify(with: MSUserConfirmation.always)
 
-    * **Binary attachment:**  If you'd like to attach text/binary data to a crash report, implement this callback. Before sending the crash, our SDK will add the attachment to the crash report and you can view it on the Mobile Center portal.
-
-        **Objective-C**
-
-            - (MSErrorAttachment *)attachmentWithCrashes:(MSCrashes *)crashes forErrorReport:(MSErrorReport *)errorReport {
-            return [MSErrorAttachment attachmentWithText:@"Text Attachment"
-                                            andBinaryData:[@"Hello World" dataUsingEncoding:NSUTF8StringEncoding]
-                                                filename:@"binary.txt" mimeType:@"text/plain"];
-            }
-
-        **Swift**
-
-            func attachment(with crashes: MSCrashes!, for errorReport: MSErrorReport!) -> MSErrorAttachment! {
-                let attachment = MSErrorAttachment.init(text: "TextAttachment", andBinaryData: (String("Hello World")?.data(using: String.Encoding.utf8))!, filename: "binary.txt", mimeType: "text/plain")
-                return attachment
-            }
-
     * **Before sending a crash report:** This callback will be invoked just before the crash is sent to Mobile Center:
 
         **Objective-C**

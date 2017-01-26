@@ -12,6 +12,23 @@ ms.service: mobile-center
 
 # Changelog
 
+### **Jan 24, 2017**
+
+**Build Android apps created using React Native**
+
+-   You can now use the Build service for Android apps created using React Native framework!
+
+**Add testers for Distribution much easily now**
+
+-   You can now invite any tester to a distribution group through their email, without having them first join Mobile Center.
+-   You can also delete distributed releases now
+
+**Crash metrics now available**
+
+-   Get better insights of your apps with graphs about crashes per day, crash-free users and device distribution
+
+We also updated our build machines to support the latest Xcode, Android, ProGuard and Node.js tooling
+
 
 ### **Dec 15, 2016**
 * **Build support for Xamarin Android apps.**

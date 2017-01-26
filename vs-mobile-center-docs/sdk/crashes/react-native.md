@@ -77,20 +77,3 @@ Once you set up and start the Mobile Center SDK to use the Crashes module in you
 
         // send all queued crashes without additional processing
         Crashes.process((report, sendCallback) => {sendCallback(true);}).catch((err) => {});
-
-   Optionally, you can attach additional messages to crash reports
-
-        Crashes.process((reports, sendCallback) => {
-           for(const report in reports) {
-
-              // Decide whether you want to attach something to the report
-              if (report.exceptionReason.contains("Cannot read property")) {
-
-                // Here, you may attach some text to the crash report
-                report.addAttachment("Could not read property today");
-              }
-           }
-           // I have finished processing the crashes, and I wish to send them to the backend
-           sendCallback(true);
-        }).catch((err) => { // Handle any errors that may result due to mis-processing app reports
-        });

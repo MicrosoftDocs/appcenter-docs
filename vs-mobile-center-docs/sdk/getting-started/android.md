@@ -26,7 +26,6 @@ Contents:
 1. [Prerequisites](#1-prerequisites)
 2. [Add Mobile Center SDK modules](#2-add-mobile-center-sdk-modules)
 3. [Start the SDK](#3-start-the-sdk)
-4. [List of available libraries](#4-list-of-available-libraries)
 
 ## 1. Prerequisites
 
@@ -44,7 +43,7 @@ Below are the steps on how to integrate our compiled libraries in your applicati
  1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use both Analytics and Crashes, add the following lines:
 
         dependencies {
-            def mobileCenterSdkVersion = '0.4.0'
+            def mobileCenterSdkVersion = '0.5.0'
             compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
             compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
         }
@@ -72,10 +71,3 @@ To start the Mobile Center SDK in your app, follow these steps:
         import com.microsoft.azure.mobile.crashes.Crashes;
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](/sdk/Android/analytics) and [Crashes](/sdk/Android/crashes) section for APIs to use in your app.
-
-## 4. List of available libraries
-
- Gradle Dependency                                          | Service
- -----------------------------------------------------------| -----------
- com.microsoft.azure.mobile:mobile-center-analytics:0.4.0   | Analytics
- com.microsoft.azure.mobile:mobile-center-crashes:0.4.0   | Crashes

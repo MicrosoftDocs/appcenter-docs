@@ -4,19 +4,17 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/17
+ms.date: 01/26/17
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
 ---
 
-# Cloud build machines
-
 Each build is ran on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulted from the build (log files, application files, symbol files) are stored on Mobile Center servers.
 
-## OS X Build Machine Image
+# OS X Build Machine Image
 
-- Updated: 2016-12-14
+- Updated: 2017-01-17
 
 ## Operating System
 - OS X 10.11.6 (15G1004)
@@ -24,14 +22,14 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 ## Installed Software
 
 ### Language and Runtime
-- Ruby ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin15]
+- Ruby ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin15]
 - Python Python 2.7.10
-- Node.js 6.9.1
+- Node.js 6.9.4
 
 ### Package Management
 - NPM 3.10.10
-- Homebrew 1.1.2
-- Homebrew/homebrew-core (git revision 6e21; last commit 2016-12-06)
+- Homebrew 1.1.7
+- Homebrew/homebrew-core (git revision 7af1a; last commit 2017-01-17)
 - bundler Bundler version 1.13.6
 - CoCoaPods 1.1.1
 
@@ -47,11 +45,12 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 - Xcode 8.0
 - Xcode 8.1
 - Xcode 8.2
+- Xcode 8.2.1
 
 ### Xcode Support
 
-- Nomad CLI 2.5.2
-- Nomad CLI IPA ipa 0.14.2
+- Nomad CLI 2.6.8
+- Nomad CLI IPA ipa 0.14.3
 - xctool 0.3.1
 - xcpretty 0.2.4
 
@@ -297,20 +296,20 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| tools                 | Android SDK Tools, revision 24.4.1          |
+| tools                 | Android SDK Tools, revision 25.2.5          |
 
 - Android SDK Platform-tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 25.0.1 |
+| platform-tools        | Android SDK Platform-tools, revision 25.0.3 |
 
 - Android Platforms
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | android-15            | Android SDK Platform 15, Revision 5       |
-| android-16            | Android SDK Platform 16, Revision 5       |
+| android-17            | Android SDK Platform 17, Revision 3       |
 | android-19            | Android SDK Platform 19, Revision 4       |
 | android-20            | Android SDK Platform 20, Revision 2       |
 | android-21            | Android SDK Platform 21, Revision 2       |
@@ -336,6 +335,7 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 | build-tools-24.0.3    | Android SDK Build-tools, Revision 24.0.3  |
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
+| build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
 
 - Google APIs
 
@@ -344,6 +344,7 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 | google_apis-google-21 | Google APIs, Android API 21, revision 1   |
 | google_apis-google-22 | Google APIs, Android API 22, revision 1   |
 | google_apis-google-23 | Google APIs, Android API 23, revision 1   |
+| google_apis-google-24 | Google APIs, Android API 24, revision 1   |
 
 - Extra packages
 
@@ -355,43 +356,39 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 #### Xamarin
 
-- Xamarin Studio: 6.1.2.44
-- Mono Framework MDK: Mono JIT compiler version 4.6.2.7 (mono-4.6.0-branch/08fd525 Thu Nov 10 20:28:28 EST 2016)
-- Xamarin.iOS: 10.2.1.5
-- Xamarin.Android: 7.0.2-37
-- Xamarin.mac: 2.10.0.113
+- Xamarin Studio: 6.1.4.1
+- Mono Framework MDK: Mono JIT compiler version 4.6.2.16 (mono-4.6.0-branch/ac9e222 Wed Dec 14 17:02:09 EST 2016)
+- Xamarin.iOS: 10.3.1.8
+- Xamarin.Android: 7.0.2-42
+- Xamarin.mac: 2.10.0.120
 
 #### Device Pairs
 ```
-1AC78E51-DB67-47B4-A146-90EA6F16D1E1
-    Watch: Apple Watch - 38mm (7778FBFD-002D-4187-9B73-51E2702B135A)
-    Phone: iPhone 6s (872693D6-32C8-4BAD-859B-BDE4F1C64CD7)
+3A664349-59EF-4DD7-AE9F-509ECDD1FCFA (active, disconnected)
+    Watch: Apple Watch - 38mm (2F53DD30-22E2-4E9E-819C-71047954FE71) (Shutdown)
+    Phone: iPhone 6s (0EC3F94D-6E9F-4D52-8383-8490B45CEFD3) (Shutdown)
 
-BC328ADE-50D7-444C-B081-D2D2B9BFFE61
-    Watch: Apple Watch - 42mm (8B191BA0-B0E3-47C9-8AAD-93685202A167)
-    Phone: iPhone 6s Plus (559DF4C3-C49E-461A-9F46-3F569990B668)
+80364A08-B640-42EE-B27F-A40CB4738F23 (active, disconnected)
+    Watch: Apple Watch - 42mm (17DF3788-13B0-4169-94F2-CD7EB7E32937) (Shutdown)
+    Phone: iPhone 6s Plus (DDA34211-5FD2-4883-908F-A7A56687D572) (Shutdown)
 
-A226ABA8-8984-427C-BEA5-55899F792B93
-    Watch: Apple Watch Series 2 - 38mm (15A01873-035E-42E3-9EB1-209B35A3D9AB)
-    Phone: iPhone 7 (9786A682-4FE2-4956-9C71-7A5A0DB564A1)
+6ABF427D-CD49-4ED7-91DF-12EFB5339FEB (active, disconnected)
+    Watch: Apple Watch Series 2 - 38mm (A225C70C-F6E0-4E8D-850F-23CD1AF0AAD0) (Shutdown)
+    Phone: iPhone 7 (F67BAB83-9936-418B-A449-D9FA3CAE9027) (Shutdown)
 
-E0ED2E98-DCFA-4909-8885-569D53DFDB6E
-    Watch: Apple Watch Series 2 - 38mm (CE6E119E-F981-415A-A7A4-7A0641F848F7)
-    Phone: iPhone 7 (B1115F18-2513-47CE-8A1C-C8FF4C7619F2)
+718F9538-2C37-4DD3-9B21-69768814E715 (active, disconnected)
+    Watch: Apple Watch Series 2 - 42mm (EF79176A-248D-4588-9514-D8A2771542AD) (Shutdown)
+    Phone: iPhone 7 Plus (C7B21B1C-F7A4-4D0C-804B-4E62C0F89AAB) (Shutdown)
 
-F785EDD3-B45D-41CE-AD1E-D2DC14D36568
-    Watch: Apple Watch Series 2 - 42mm (5C706C76-F14C-49A9-8D71-551365095C63)
-    Phone: iPhone 7 Plus (1A76F3D1-1AC7-4C08-8384-BDFA0F577AC6)
-    Watch: Apple Watch Series 2 - 38mm (CE6E119E-F981-415A-A7A4-7A0641F848F7)
-    Phone: iPhone 7 (B1115F18-2513-47CE-8A1C-C8FF4C7619F2)
-    Watch: Apple Watch Series 2 - 42mm (8C50D74E-5DE0-4DCC-BB12-ADD800A1D76F)
-    Phone: iPhone 7 Plus (EFB290D3-A108-4A8B-AB52-AF4F22E33D63)
+122001D4-7244-429F-A8D1-C9AAFDF906F1 (active, disconnected)
+    Watch: Apple Watch Series 2 - 38mm (D246DD85-EDBA-4883-9E4B-24796AD7157D) (Shutdown)
+    Phone: iPhone 7 (2EB8AB56-CB9B-46CA-AECE-57AA0C1EBB88) (Shutdown)
 
-4D351E05-2C49-458D-9508-6C5CEF936A17
-    Watch: Apple Watch Series 2 - 42mm (8C50D74E-5DE0-4DCC-BB12-ADD800A1D76F)
-    Phone: iPhone 7 Plus (EFB290D3-A108-4A8B-AB52-AF4F22E33D63)
-    Watch: Apple Watch Series 2 - 38mm (15A01873-035E-42E3-9EB1-209B35A3D9AB)
-    Phone: iPhone 7 (9786A682-4FE2-4956-9C71-7A5A0DB564A1)
-    Watch: Apple Watch Series 2 - 42mm (5C706C76-F14C-49A9-8D71-551365095C63)
-    Phone: iPhone 7 Plus (1A76F3D1-1AC7-4C08-8384-BDFA0F577AC6)
+82A61469-0A5D-4B37-AA30-9253245ED360 (active, disconnected)
+    Watch: Apple Watch Series 2 - 42mm (4D19FFA4-C3EC-4E74-B955-45E01D00102B) (Shutdown)
+    Phone: iPhone 7 Plus (F05254EB-1526-497D-99FB-FDB73CE04822) (Shutdown)
+    Watch: Apple Watch Series 2 - 38mm (A225C70C-F6E0-4E8D-850F-23CD1AF0AAD0) (Shutdown)
+    Phone: iPhone 7 (F67BAB83-9936-418B-A449-D9FA3CAE9027) (Shutdown)
+    Watch: Apple Watch Series 2 - 42mm (EF79176A-248D-4588-9514-D8A2771542AD) (Shutdown)
+    Phone: iPhone 7 Plus (C7B21B1C-F7A4-4D0C-804B-4E62C0F89AAB) (Shutdown)
 ```
