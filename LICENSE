@@ -1,21 +1,7 @@
-MIT License
+Copyright (c) Microsoft Corporation.  Distributed under the following terms:
 
-Copyright (c) 2016 Microsoft Docs
+1. Microsoft and any contributors to this project each grants you a license, under its respective copyrights, to the Microsoft Documentation under the [Creative Commons Attribution 4.0 International Public License](http://creativecommons.org/licenses/by/4.0/legalcode).  In addition, with respect to any sample code contained in the documentation, Microsoft and any such contributors grants you an additional license, under its respective intellectual property rights, to use the code to develop or design your software for this product.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+2.  Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries. This license does not grant you rights to use any names, logos, or trademarks. For Microsoft’s general trademark guidelines, go to [http://go.microsoft.com/fwlink/?LinkID=254653](http://go.microsoft.com/fwlink/?LinkID=254653).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3.  Microsoft and any contributors reserves all others rights, whether under copyrights, patents, or trademarks, or by implication, estoppel or otherwise.
