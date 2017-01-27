@@ -1,5 +1,7 @@
 # [Mobile Center Overview](index.md)
 
+# [Dashboard](dashboard/index.md)
+
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)
 ### [Configure a build](build/ios/first-build/index.md)
@@ -89,8 +91,6 @@
 ### [Xamarin](sdk/advanced-apis/xamarin.md)
 ## [Troubleshooting](sdk/troubleshooting.md)
 ## [Limitations](sdk/limitations.md)
-
-# [Dashboard](dashboard/index.md)
 
 # [General](general/index.md)
 ## [Changelog](general/changelog.md)
