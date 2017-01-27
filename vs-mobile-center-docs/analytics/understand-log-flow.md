@@ -2,8 +2,8 @@
 title: Log Flow Page
 description: Help using the Log Flow Page on Mobile Center
 keywords: mobile center, analytics
-author:
-ms.author:
+author: kpiteira
+ms.author: kapiteir
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: be4ee0a0-cd06-486a-bef1-22b6ab5dc896
