@@ -1,20 +1,20 @@
 ---
-title: Dashboard
+title: App Management
 description: Using the dashboard to create and access app info in Mobile Center.
 keywords: dashboard
 author: joemellin
 ms.author: joemellin
-ms.date: 01/20/17
+ms.date: 01/27/17
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: mobile-center
 ---
 
-# Dashboard
+# App Management
 
 ## Creating an App
 
-To create an app, log in and click **Create new app**.
+To create an app, log in and click **Add new app**.
 
 
 ## Access an App
