@@ -1,5 +1,5 @@
 ---
-title: Welcome to Mobile Center - 'Mission Control for Your Mobile Apps'
+title: Welcome to Mobile Center
 description: Introduction to Visual Studio Mobile Center, its key features and where to get started in the documentation.
 keywords: mobile center
 author: elamalani
@@ -10,7 +10,7 @@ ms.assetid: de216172-7d5b-4cb8-9818-6c8b0b9d6c9a
 ms.service: mobile-center
 ---
 
-# Welcome to Mobile Center - "Mission Control for Your Mobile Apps"
+# Welcome to Mobile Center
 
 [Mobile Center](https://mobile.azure.com) brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps and easily add backend cloud services to scale your app to millions of users on demand.
 

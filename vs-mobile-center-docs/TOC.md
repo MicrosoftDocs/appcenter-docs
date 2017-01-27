@@ -1,10 +1,4 @@
 # [Mobile Center Overview](index.md)
-# [General](general/index.md)
-## [Changelog](general/changelog.md)
-## [Product Roadmap](general/roadmap.md)
-## [Pricing](general/pricing.md)
-
-# [Dashboard](dashboard/index.md)
 
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)
@@ -95,6 +89,13 @@
 ### [Xamarin](sdk/advanced-apis/xamarin.md)
 ## [Troubleshooting](sdk/troubleshooting.md)
 ## [Limitations](sdk/limitations.md)
+
+# [Dashboard](dashboard/index.md)
+
+# [General](general/index.md)
+## [Changelog](general/changelog.md)
+## [Product Roadmap](general/roadmap.md)
+## [Pricing](general/pricing.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
