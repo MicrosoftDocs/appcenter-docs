@@ -67,4 +67,4 @@ To build the project and test apk files, run each of the following commands.
 > [!NOTE]
 > You will need to ensure your path variable has access to your machine's Java installation.
 
-Once a test suite has been instrumented with the Test Cloud extensions, it can be [uploaded to Test Cloud](~/test-cloud/starting-a-test-run/).
+Once a test suite has been instrumented with the Test Cloud extensions, it can be [uploaded to Test Cloud](~/test-cloud/starting-a-test-run.md).

@@ -2,8 +2,8 @@
 title: Events Metrics
 description: Help using the Events Metrics on Mobile Center
 keywords: mobile center, analytics
-author:
-ms.author:
+author: kpiteira
+ms.author: kapiteir
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688

@@ -2,8 +2,8 @@
 title: Analytics
 description: Help using the Analytics feature on Mobile Center
 keywords: mobile center, analytics
-author:
-ms.author:
+author: kpiteira
+ms.author: kapiteir
 ms.date: 01/20/17
 ms.topic: article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
