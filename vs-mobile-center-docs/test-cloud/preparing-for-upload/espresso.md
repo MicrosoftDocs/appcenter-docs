@@ -22,7 +22,7 @@ Add the following dependency in your app module's `build.gradle` file:
 androidTestCompile('com.xamarin.testcloud:espresso-support:1.1')
 ```
 
-This will ensure the reportHelper is available at compile time. The reportHelper enables the `label` feature. See Step 4 for more detail on the `label` feature.
+This will ensure the reportHelper is available at compile time. The reportHelper enables the `label` feature. See Step 3 for more detail on the `label` feature.
 
 ## 2. Changes to the tests
 
