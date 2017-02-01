@@ -1,5 +1,5 @@
 ---
-title: App Management
+title: Dashboard
 description: Using the dashboard to create and access app info in Mobile Center.
 keywords: dashboard
 author: joemellin
@@ -10,7 +10,7 @@ ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: mobile-center
 ---
 
-# App Management
+# Dashboard
 
 ## Creating an App
 

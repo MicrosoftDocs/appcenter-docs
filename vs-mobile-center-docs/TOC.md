@@ -1,6 +1,6 @@
 # [Mobile Center Overview](index.md)
 
-# [App Management](dashboard/index.md)
+# [Dashboard](dashboard/index.md)
 
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)

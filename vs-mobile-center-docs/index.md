@@ -1,6 +1,6 @@
 ---
-title: Welcome to Mobile Center
-description: Introduction to Visual Studio Mobile Center, its key features and where to get started in the documentation.
+title: "Visual Studio Mobile Center  | Getting Started & Documentation"
+description: "Setup your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices."
 keywords: mobile center
 author: elamalani
 ms.author: emalani
