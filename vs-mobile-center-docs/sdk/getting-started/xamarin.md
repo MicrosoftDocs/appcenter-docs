@@ -2,8 +2,8 @@
 title: Getting Started
 description: Getting Started
 keywords: sdk
-author:
-ms.author:
+author: guperrot
+ms.author: guperrot
 ms.date: 01/20/17
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
@@ -114,7 +114,7 @@ To start the Mobile Center SDK in your app, follow these steps:
 
     **Xamarin.Forms**
 
-     For creating a cross platform Forms app targeting both iOS and Android platform, you need to create two applications in Mobile Center portal - one for each platform. Creating two apps will give you two AppSecrets - one for iOS and another for Android. Therefore, Start SDK call is split into two methods for Xamarin.Forms. Open App.xaml.cs file in your shared project and add the API below in the `App()` constructor.
+     For creating a cross platform Forms app targeting both iOS and Android platform, you need to create two applications in Mobile Center portal - one for each platform. Creating two apps will give you two AppSecrets - one for iOS and another for Android. Therefore, Start SDK call is split into two methods for Xamarin.Forms. Open **App.xaml.cs** (or your class that inherits `Xamarin.Forms.Application`) in your shared or portable project and add the API below in the `OnStart()` override method.
 
         MobileCenter.Start(typeof(Analytics), typeof(Crashes));
 
