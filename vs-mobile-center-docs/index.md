@@ -4,7 +4,7 @@ description: "Setup your app to distribute to your beta testers on every commit,
 keywords: mobile center
 author: elamalani
 ms.author: emalani
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: landing-page
 ms.assetid: de216172-7d5b-4cb8-9818-6c8b0b9d6c9a
 ms.service: mobile-center
