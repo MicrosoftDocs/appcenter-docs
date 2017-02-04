@@ -4,7 +4,7 @@ description: How to start a test run in Test Cloud
 keywords: test cloud
 author: jraczak
 ms.author: jurac
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: fccaea20-b7ca-45d2-b111-46c23ff1832d
 ms.service: mobile-center

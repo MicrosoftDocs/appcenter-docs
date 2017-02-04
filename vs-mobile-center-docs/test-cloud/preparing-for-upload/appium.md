@@ -4,7 +4,7 @@ description: How to upload Appium tests to Mobile Center Test Cloud
 keywords: test cloud
 author: jraczak
 ms.author: jurac
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: mobile-center

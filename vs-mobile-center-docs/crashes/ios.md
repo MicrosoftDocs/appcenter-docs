@@ -4,7 +4,7 @@ description: Reporting crashes from iOS apps in Mobile Center
 keywords: crash reporting
 author: BretJohnson
 ms.author: BretJohnson
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 76a80967-b68e-4ca7-ad89-65a557682108
 ms.service: mobile-center

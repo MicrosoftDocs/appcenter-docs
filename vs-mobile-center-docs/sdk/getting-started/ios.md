@@ -4,7 +4,7 @@ description: Getting Started
 keywords: sdk
 author:
 ms.author:
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description:
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 34b27f0c-7380-421f-8cbd-fc36563af33c
 ms.service: mobile-center

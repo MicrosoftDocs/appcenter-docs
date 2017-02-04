@@ -4,7 +4,7 @@ description: Analytics for iOS apps
 keywords: ios
 author: kpiteira
 ms.author: kapiteir
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 75fe684d-c3a6-4db6-9e69-ba2b499a06ab
 ms.service: mobile-center

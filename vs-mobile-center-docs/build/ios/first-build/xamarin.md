@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: mobile-center

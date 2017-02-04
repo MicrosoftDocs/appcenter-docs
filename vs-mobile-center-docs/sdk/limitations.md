@@ -4,7 +4,7 @@ description: Limitations and known issues with the Mobile Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: mobile-center
