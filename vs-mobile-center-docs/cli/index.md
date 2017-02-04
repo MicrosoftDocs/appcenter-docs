@@ -4,7 +4,7 @@ description: How to use the CLI to access Mobile Center features
 keywords: command line, mobile center
 author: elamalani
 ms.author: emalani
-ms.date: 01/26/17
+ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: f98b1b59-ee20-4ed0-beb9-ec8fd4596ad1
 ms.service: mobile-center

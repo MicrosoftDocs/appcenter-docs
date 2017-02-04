@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in Mobile Center.
 keywords: dashboard
 author: joemellin
 ms.author: joemellin
-ms.date: 01/27/17
+ms.date: 01/27/2017
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: mobile-center

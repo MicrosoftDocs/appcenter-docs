@@ -4,7 +4,7 @@ description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: mobile-center

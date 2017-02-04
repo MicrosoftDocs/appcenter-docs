@@ -4,7 +4,7 @@ description: Using Twitter authentication with Azure and Mobile Center
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 7542129f-e53c-48cf-8d67-d4ad3e8bc4a2
 ms.service: mobile-center

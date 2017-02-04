@@ -4,7 +4,7 @@ description: Using Facebook authentication with Azure and Mobile Center
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: c2ba2b0c-5589-4432-9daa-dfde07c8404e
 ms.service: mobile-center

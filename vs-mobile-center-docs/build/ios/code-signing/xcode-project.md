@@ -4,7 +4,7 @@ description: Code signing apps built with Mobile Center
 keywords: code signing, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 47bb8997-4d24-48f4-a0e8-f503d2c65185
 ms.service: mobile-center

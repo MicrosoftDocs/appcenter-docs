@@ -4,7 +4,7 @@ description: How to set up a build for React Native iOS apps
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description: Help using the Audience Page on Mobile Center
 keywords: mobile center, analytics
 author: kpiteira
 ms.author: kapiteir
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5
 ms.service: mobile-center

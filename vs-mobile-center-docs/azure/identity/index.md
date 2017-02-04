@@ -4,7 +4,7 @@ description: Authentication methods for Azure and Mobile Center
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 8d36a5ed-e875-41cc-bd99-f8151705ffcb
 ms.service: mobile-center

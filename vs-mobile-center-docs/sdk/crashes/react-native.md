@@ -4,7 +4,7 @@ description: Using React Native crash reporting in Mobile Center
 keywords: sdk, crash
 author: ljzhong
 ms.author: ljzhong
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description: Using Microsoft account authentication with Azure and Mobile Center
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 16bbac0d-31a9-40d3-ad73-4a3aaf34108c
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description: Reporting crashes from React Native apps in Mobile Center
 keywords: crash reporting
 author: BretJohnson
 ms.author: BretJohnson
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 2155290f-43e5-4f41-b45c-1658293313b8
 ms.service: mobile-center

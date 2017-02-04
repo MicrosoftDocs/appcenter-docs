@@ -4,7 +4,7 @@ description: Analytics for Android apps
 keywords: android
 author: kpiteira
 ms.author: kapiteir
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 16b8e449-181d-4d68-88fc-710ee8d76c03
 ms.service: mobile-center

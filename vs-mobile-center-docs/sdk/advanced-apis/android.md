@@ -4,7 +4,7 @@ description: Advanced APIs in the Android Mobile Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: mobile-center

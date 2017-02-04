@@ -4,7 +4,7 @@ description: Using Azure with Mobile Center
 keywords: azure
 author: adrianhall
 ms.author: adrianha
-ms.date: 01/20/17
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 8f77e3f5-4df7-41ec-a385-2cdfb696d760
 ms.service: mobile-center
