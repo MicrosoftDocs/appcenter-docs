@@ -1,9 +1,9 @@
 ---
-title: Configure an Android build
+title: Configure a Java Android build in Mobile Center
 description: How to set up a build system for Android apps
 keywords: android
 author: nrajpurk
-ms.author: 
+ms.author:
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c

@@ -1,5 +1,5 @@
 ---
-title: Configure an iOS build
+title: Configure an iOS build in Mobile Center
 description: How to set up a build for iOS
 keywords: build, ios
 author: siminapasat

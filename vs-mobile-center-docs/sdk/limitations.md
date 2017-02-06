@@ -1,5 +1,5 @@
 ---
-title: SDK Limitations & Known Issues
+title: Mobile Center SDK Limitations & Known Issues
 description: Limitations and known issues with the Mobile Center SDK
 keywords: sdk
 author: elamalani

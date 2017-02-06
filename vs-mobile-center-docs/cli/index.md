@@ -1,5 +1,5 @@
 ---
-title: "Command Line Interface (CLI) Documentation"
+title: "Mobile Center Command Line Interface (CLI) Documentation"
 description: How to use the CLI to access Mobile Center features
 keywords: command line, mobile center
 author: elamalani

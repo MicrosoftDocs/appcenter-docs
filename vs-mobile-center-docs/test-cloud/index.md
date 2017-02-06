@@ -1,5 +1,5 @@
 ---
-title: Test Cloud
+title: Mobile Center Test
 description: Key features of Mobile Center Test Cloud
 keywords: test cloud
 author: jraczak
@@ -10,9 +10,9 @@ ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
 ms.service: mobile-center
 ---
 
-# Test Cloud
+# Mobile Center Test
 
-Test Cloud is a test automation service for native and hybrid mobile apps. Tests written using supported frameworks can be run with little modification on hundreds of unique device model and operating system configurations hosted in a Microsoft data center. Test runs can be initiated using the [Mobile Center Command Line Interface (CLI) tool](~/cli/index.md) or the public [REST API](https://docs.mobile.azure.com/api/#/test). Test results, including all associated media assets, are stored in Mobile Center for viewing at any time.
+Mobile Center Test is a test automation service for native and hybrid mobile apps, also known as Test Cloud. Tests written using supported frameworks can be run with little modification on hundreds of unique device model and operating system configurations hosted in a Microsoft data center. Test runs can be initiated using the [Mobile Center Command Line Interface (CLI) tool](~/cli/index.md) or the public [REST API](https://docs.mobile.azure.com/api/#/test). Test results, including all associated media assets, are stored in Mobile Center for viewing at any time.
 
 Test runs are executed in a hosted fashion, meaning the necessary assets (typically an app binary and test files) are uploaded to Test Cloud and the test run is executed entirely within our data center environment. Generated assets such as screenshots, video, and device logs are retained for test report viewing.
 

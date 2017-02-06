@@ -1,5 +1,5 @@
 ---
-title: Build Frequently Asked Questions
+title: Mobile Center Build Frequently Asked Questions
 description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat

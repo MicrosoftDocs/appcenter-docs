@@ -1,5 +1,5 @@
 ---
-title: Install a Build
+title: Install a Build from Mobile Center
 description: Intructions on how to install a build
 keywords: distribution
 author: JoshuaWeber

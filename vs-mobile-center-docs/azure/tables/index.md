@@ -1,5 +1,5 @@
 ---
-title: Azure
+title: Mobile Center Table Data Storage
 description:
 keywords: azure
 author: adrianhall

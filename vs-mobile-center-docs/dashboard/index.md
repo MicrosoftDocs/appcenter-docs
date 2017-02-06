@@ -1,5 +1,5 @@
 ---
-title: Dashboard
+title: Mobile Center Dashboard
 description: Using the dashboard to create and access app info in Mobile Center.
 keywords: dashboard
 author: joemellin

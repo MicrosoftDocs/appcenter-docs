@@ -1,5 +1,5 @@
 ---
-title: React Native Build
+title: Mobile Center Build for React Native
 description: How to set up a build for React Native iOS apps
 keywords: build, ios
 author: siminapasat

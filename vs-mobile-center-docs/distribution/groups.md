@@ -1,5 +1,5 @@
 ---
-title: Manage Distribution Groups
+title: Manage Mobile Center Distribution Groups
 description: Distribute mobile apps to groups of users
 keywords: distribution
 author: JoshuaWeber

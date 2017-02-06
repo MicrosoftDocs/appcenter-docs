@@ -1,5 +1,5 @@
 ---
-title: Uploading the code signing files
+title: Uploading iOS Code Signing Files in Mobile Center
 description: Code signing apps built with Mobile Center
 keywords: code signing, ios
 author: siminapasat

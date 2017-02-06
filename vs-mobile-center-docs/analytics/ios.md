@@ -1,5 +1,5 @@
 ---
-title: iOS  Analytics
+title: Mobile Center Analytics for iOS
 description: Analytics for iOS apps
 keywords: ios
 author: kpiteira

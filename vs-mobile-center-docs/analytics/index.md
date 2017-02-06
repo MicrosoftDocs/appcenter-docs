@@ -1,5 +1,5 @@
 ---
-title: Analytics
+title: Mobile Center Analytics
 description: Help using the Analytics feature on Mobile Center
 keywords: mobile center, analytics
 author: kpiteira

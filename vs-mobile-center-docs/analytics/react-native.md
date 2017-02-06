@@ -1,5 +1,5 @@
 ---
-title: React Native Analytics
+title: Mobile Center Analytics for React Native
 description: Analytics for React Native apps
 keywords: react native
 author: ljzhong
