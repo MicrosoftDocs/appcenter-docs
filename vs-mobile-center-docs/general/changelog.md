@@ -12,6 +12,13 @@ ms.service: mobile-center
 
 # Changelog
 
+### **Jan 31, 2017**
+
+**Espresso testing for Android apps**
+
+-   You can now run Espresso tests for Android apps using the Test service. 
+
+
 ### **Jan 24, 2017**
 
 **Build Android apps created using React Native**
