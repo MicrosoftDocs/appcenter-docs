@@ -1,5 +1,5 @@
 ---
-title: Building Xcode iOS apps
+title: Building Xcode iOS apps in Mobile Center
 description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat

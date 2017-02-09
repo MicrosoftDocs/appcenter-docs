@@ -1,5 +1,5 @@
 ---
-title: Release a Build
+title: Upload a Build to Distribute via Mobile Center
 description: Distribute a completed build to users
 keywords: distribution
 author: JoshuaWeber

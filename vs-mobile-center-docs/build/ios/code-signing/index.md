@@ -1,5 +1,5 @@
 ---
-title: iOS Code Signing
+title: iOS Code Signing in Mobile Center
 description: Code signing apps built with Mobile Center
 keywords: code signing,  ios
 author: siminapasat

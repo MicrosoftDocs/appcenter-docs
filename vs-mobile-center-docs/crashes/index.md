@@ -1,5 +1,5 @@
 ---
-title: Crashes
+title: Mobile Center Crash Reporting
 description: Reporting crashes in Mobile Center
 keywords: crash reporting
 author: BretJohnson

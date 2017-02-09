@@ -1,5 +1,5 @@
 ---
-title: API Service Documentation
+title: Mobile Center API Documentation
 description: Explore the Mobile Center API with Swagger
 keywords: swagger
 author: conceptdev
@@ -10,7 +10,7 @@ ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: mobile-center
 ---
 
-# API Service Documentation
+# API Documentation
 
 Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.com/api/).
 

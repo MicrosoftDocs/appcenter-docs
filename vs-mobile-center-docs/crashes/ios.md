@@ -1,5 +1,5 @@
 ---
-title: iOS Crashes
+title: Mobile Center Crash Reporting for iOS
 description: Reporting crashes from iOS apps in Mobile Center
 keywords: crash reporting
 author: BretJohnson

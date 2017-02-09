@@ -1,6 +1,6 @@
 ---
-title: Distribute
-description: Distribute mobile apps with Mobile Center
+title: Distribute Mobile Apps with Mobile Center
+description: "How to add users and upload binaries to distribute apps in Mobile Center."
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber

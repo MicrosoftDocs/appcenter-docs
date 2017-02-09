@@ -1,5 +1,5 @@
 ---
-title: Setting up an Xcode project for code signing
+title: Setting up an Xcode Project for Code Signing with Mobile Center
 description: Code signing apps built with Mobile Center
 keywords: code signing, ios
 author: siminapasat

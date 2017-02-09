@@ -1,5 +1,5 @@
 ---
-title: Azure
+title: Mobile Center Azure Tables
 description: Using Azure with Mobile Center
 keywords: azure
 author: adrianhall
@@ -10,7 +10,7 @@ ms.assetid: 8f77e3f5-4df7-41ec-a385-2cdfb696d760
 ms.service: mobile-center
 ---
 
-# Azure
+# Azure Tables
 
 Azure Services implements a backend for providing cloud-based services to your mobile application.
 

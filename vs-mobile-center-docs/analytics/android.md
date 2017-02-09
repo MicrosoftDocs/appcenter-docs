@@ -1,5 +1,5 @@
 ---
-title: Android Analytics
+title: Mobile Center Analytics for Android
 description: Analytics for Android apps
 keywords: android
 author: kpiteira

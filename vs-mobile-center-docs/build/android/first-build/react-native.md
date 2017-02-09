@@ -1,9 +1,9 @@
 ---
-title: Configure an Android build
+title: Configure a React Native Android build in Mobile Center
 description: How to set up a build system for Android apps
 keywords: android
 author: nrajpurk
-ms.author: 
+ms.author:
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202

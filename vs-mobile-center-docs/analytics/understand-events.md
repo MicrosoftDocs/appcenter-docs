@@ -1,5 +1,5 @@
 ---
-title: Events Metrics
+title: Understanding Mobile Center Events Metrics
 description: Help using the Events Metrics on Mobile Center
 keywords: mobile center, analytics
 author: kpiteira

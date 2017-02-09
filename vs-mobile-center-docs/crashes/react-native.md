@@ -1,5 +1,5 @@
 ---
-title: React Native Crashes
+title: Mobile Center Crash Reporting for React Native
 description: Reporting crashes from React Native apps in Mobile Center
 keywords: crash reporting
 author: BretJohnson

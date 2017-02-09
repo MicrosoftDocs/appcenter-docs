@@ -1,5 +1,5 @@
 ---
-title: Log Flow Page
+title: Understanding the Mobile Center Log Flow Page
 description: Help using the Log Flow Page on Mobile Center
 keywords: mobile center, analytics
 author: kpiteira

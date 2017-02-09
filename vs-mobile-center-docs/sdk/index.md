@@ -1,5 +1,5 @@
 ---
-title: SDK Documentation
+title: Mobile Center SDK Documentation
 description: Using the Mobile Center SDK
 keywords: sdk
 author: elamalani

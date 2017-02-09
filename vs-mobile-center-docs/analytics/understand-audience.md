@@ -1,5 +1,5 @@
 ---
-title: Audience Page
+title: Understanding the Mobile Center Audience Page
 description: Help using the Audience Page on Mobile Center
 keywords: mobile center, analytics
 author: kpiteira

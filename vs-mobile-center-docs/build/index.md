@@ -1,5 +1,5 @@
 ---
-title: Build
+title: Mobile Center Build
 description: Building apps with Mobile Center
 keywords: build
 author: siminapasat
