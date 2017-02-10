@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: mobile-center
+ms.custom: build
 ms.tgt_pltfrm: ios
 ---
 

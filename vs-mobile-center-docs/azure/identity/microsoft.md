@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 16bbac0d-31a9-40d3-ad73-4a3aaf34108c
 ms.service: mobile-center
+ms.custom: identity
 ---
 
 # Configure Microsoft Account

@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 7542129f-e53c-48cf-8d67-d4ad3e8bc4a2
 ms.service: mobile-center
+ms.custom: identity
 ---
 
 # Configure Twitter

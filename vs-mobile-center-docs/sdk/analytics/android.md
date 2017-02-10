@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: mobile-center
+ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 

@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688
 ms.service: mobile-center
+ms.custom: analytics
 ---
 
 # Events Metrics

@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 9006c330-eafc-4a8e-a27e-c57437ef9e81
 ms.service: mobile-center
+ms.custom: crashes
 ---
 
 # Crashes

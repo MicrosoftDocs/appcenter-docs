@@ -8,6 +8,8 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
+ms.custom: sdk
+ms.tgt_pltfrm: xamarin
 ---
 
 # Xamarin Advanced APIs
