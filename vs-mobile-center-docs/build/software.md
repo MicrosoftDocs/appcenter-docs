@@ -8,6 +8,7 @@ ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
+ms.custom: build
 ---
 
 Each build is ran on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulted from the build (log files, application files, symbol files) are stored on Mobile Center servers.

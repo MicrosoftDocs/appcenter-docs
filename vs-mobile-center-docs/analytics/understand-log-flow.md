@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: be4ee0a0-cd06-486a-bef1-22b6ab5dc896
 ms.service: mobile-center
+ms.custom: analytics
 ---
 
 # Log Flow Page

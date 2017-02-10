@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 10df164b-3834-4444-80ea-765df2cff9bb
 ms.service: mobile-center
+ms.custom: test
 ---
 
 # Test Cloud Security

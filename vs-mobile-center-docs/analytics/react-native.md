@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 7779922e-f865-4bd4-ae65-3192af43fb5d
 ms.service: mobile-center
+ms.custom: analytics
 ms.tgt_pltfrm: react-native
 ---
 
