@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: ef7b487b-6365-4882-b3a7-6fe84ffa9c14
 ms.service: mobile-center
+ms.custom: identity
 ---
 
 # Configure Azure Active Directory

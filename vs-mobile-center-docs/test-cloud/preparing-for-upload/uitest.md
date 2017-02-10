@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
 ms.service: mobile-center
+ms.custom: test
 ---
 
 # Preparing Xamarin.UITest Tests for Upload

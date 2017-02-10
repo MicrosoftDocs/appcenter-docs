@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
 ms.service: mobile-center
+ms.custom: test
 ---
 
 # Preparing Espresso Tests for Upload

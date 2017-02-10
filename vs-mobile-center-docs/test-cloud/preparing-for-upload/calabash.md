@@ -8,6 +8,7 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: c3f85df0-50a2-4466-baa0-39bb7218c8e3
 ms.service: mobile-center
+ms.custom: test
 ---
 
 # Preparing Calabash Tests for Upload

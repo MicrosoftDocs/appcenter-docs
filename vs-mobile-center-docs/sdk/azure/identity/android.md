@@ -8,6 +8,8 @@ ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 011af9b4-0513-4d36-80ff-166101f2ea52
 ms.service: mobile-center
+ms.custom: sdk
+ms.tgt_pltfrm: android
 ---
 
 # Android Azure Identity
