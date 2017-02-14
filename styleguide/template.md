@@ -290,21 +290,31 @@ Use backticks (&#96;) for `inline code`. Use inline code for command-line comman
 
 ### Static Image or Animated gif
 
-![this is the alt text](../images/Logo_DotNet.png)
+```
+![this is the alt text](images/dotnet.png)
+```
+
+![Responsive design](https://opsdocs.azurewebsites.net/en-us/opsdocs/images/responsivedesign.gif?branch=master)
 
 ### Linked Image
 
-[![alt text for linked image](../images/Logo_DotNet.png)](https://dot.net)
+```
+[![alt text for linked image](images/dotnet.png)](https://dot.net)
+```
 
 ## Videos
 
 ### Channel 9
 
+```
 <iframe src="https://channel9.msdn.com/Shows/On-NET/Shipping-NET-Core-RC2--Tools-Preview-1/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+```
 
 ### YouTube
 
+```
 <iframe width="420" height="315" src="https://www.youtube.com/embed/g2a4W6Q7aRw" frameborder="0" allowfullscreen></iframe>
+```
 
 ## docs.microsoft extensions
 
@@ -316,46 +326,60 @@ It's important to use the following alert styles so they render with the proper 
 
 #### Note
 
+```
 > [!NOTE]
 > This is a NOTE
+```
 
 #### Warning
 
+```
 > [!WARNING]
 > This is a WARNING
+```
 
 #### Tip
 
+```
 > [!TIP]
 > This is a TIP
+```
 
 #### Important
 
+```
 > [!IMPORTANT]
 > This is IMPORTANT
+```
 
 And they'll render like this:
-![Alert styles](../images/alerts.png)
+![Alert styles](images/alerts.png)
 
 ### Buttons
 
+```
 > [!div class="button"]
 [button links](../docs/core/index.md)
+```
 
 You can see an example of buttons in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/get-started/choose-how-to-enroll-devices).
 
 ### Selectors
 
+```
 > [!div class="op_single_selector"]
 - [macOS](../docs/core/tutorials/using-on-macos.md)
 - [Windows](../docs/core/tutorials/using-on-windows.md)
+```
 
 You can see an example of selectors in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
 
 ### Step-By-Steps
 
->[!div class="step-by-step"]
+```
+> [!div class="step-by-step"]
 [Pre](../docs/csharp/expression-trees-interpreting.md)
 [Next](../docs/csharp/expression-trees-translating.md)
+```
 
 You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/install-ata-step2).
