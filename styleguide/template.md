@@ -294,7 +294,7 @@ Use backticks (&#96;) for `inline code`. Use inline code for command-line comman
 ![this is the alt text](images/dotnet.png)
 ```
 
-![Responsive design](https://opsdocs.azurewebsites.net/en-us/opsdocs/images/responsivedesign.gif?branch=master)
+![Responsive design](images/responsivedesign.gif)
 
 ### Linked Image
 
@@ -353,6 +353,7 @@ It's important to use the following alert styles so they render with the proper 
 ```
 
 And they'll render like this:
+
 ![Alert styles](images/alerts.png)
 
 ### Buttons
