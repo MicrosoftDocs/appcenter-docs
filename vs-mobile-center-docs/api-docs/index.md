@@ -21,7 +21,7 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 1. Navigate to https://docs.mobile.azure.com/api/ and click on **Authorize** button on the top.
 2. Add your Mobile Center username and password in the **Basic authentication** section and click **Authorize**.
 
-![Authorization Window](/images/authorization_noToken.PNG)
+![Authorization Window](~/images/authorization_noToken.PNG)
 
 3. Once authorized, you will need an API token to call the APIs exposed in Mobile Center.
 4. Click on **account** to expand all the account management API and look for an API  to get `api_token` with a POST request.
@@ -30,7 +30,7 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 
 5. Once the API details are expanded, click **Try it out** button in the end. It would make a POST request using your authentication information.
 
-![API Example Response](/images/api_token_response.PNG)
+![API Example Response](~/images/api_token_response.PNG)
 
 6. In the response body, copy the `api_token` value that's contained in the json.
 7. Now click on the **Authorize** button on the top. Under **Api key authorization** section, paste the API key token value that you just copied.
