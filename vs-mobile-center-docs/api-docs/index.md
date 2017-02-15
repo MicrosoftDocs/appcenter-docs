@@ -4,7 +4,7 @@ description: Explore the Mobile Center API with Swagger
 keywords: swagger
 author: conceptdev
 ms.author: crdun
-ms.date: 02/13/2017
+ms.date: 02/14/2017
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: mobile-center
@@ -29,10 +29,10 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
     `POST /v0.1/api_tokens`
 
 5. Once the API details are expanded, click **Try it out** button in the end. It would make a POST request using your authentication information.
+6. In the response body, copy the `api_token` value that's contained in the json.
 
 ![API Example Response](~/api-docs/images/api_token_response.PNG)
 
-6. In the response body, copy the `api_token` value that's contained in the json.
 7. Now click on the **Authorize** button on the top. Under **Api key authorization** section, paste the API key token value that you just copied.
 8. This API token will be used to make all subsequent calls to Mobile Center APIs. You can try out any API and see the response.
 
