@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 01/20/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
@@ -12,12 +12,20 @@ ms.service: mobile-center
 
 # Changelog
 
+### **Feb 14, 2017**
+
+**Stack traces for failed Test service tests**
+
+- Stack traces are now available for failed test steps in Test service, making it easy to identify the root cause of a failure. You'll find the stack trace in the **logs** section of the test report device view.
+
+**Run Jest based tests for React Native apps**
+- For React Native apps, you can now run Jest based unit tests during the build process. Enable unit tests during build setup and the snapshots of the app you checked in get compared to the test runs. 
+
 ### **Jan 31, 2017**
 
 **Espresso testing for Android apps**
 
 -   You can now run Espresso tests for Android apps using the Test service. 
-
 
 ### **Jan 24, 2017**
 
