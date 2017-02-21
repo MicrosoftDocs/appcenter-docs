@@ -1,18 +1,16 @@
 ---
 title: Mobile Center Roadmap
-description: Information about future plans for Mobile Center
+description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: piyushjo
 ms.author: piyushjo
-ms.date: 02/17/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: mobile-center
 ---
 
 # Roadmap
-
-**[Last Updated - Feb 2017]**
 
 The list below presents the tentative roadmap for Mobile Center for the next 3-6 months.
 
@@ -36,7 +34,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ### Build service:
 * Support for Visual Studio Team Services & Bitbucket as source code repositories
-* Support for React Native Android
+* Ability to distribute a single build to an existing distribution group
+* Ability to automate running UI tests in the Test service after each successful build
 * Support for customizing your build definitions: secret variables, auto-incrementing of version number and build scripts
 
 ### Test service:
@@ -50,12 +49,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Re-release builds. You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package. 
 
 ### Analytics service:
-* Support for Events visualization in the portal
-* Support for live Logs Flow visualization in the portal
-* Support for exporting analytics data to Application Insights using common schema
-* Automatic page tracking
+* Ability to remove events (useful for removing events sent during test from Analytics visualization)
 
 ### Crashes service:
-* Integration between Crashes and Analytics service for better understanding of crashes population 
-* JavaScript stack trace with sourcemaps available for React Native apps
 * Display of attachments sent from the Crashes SDK, in the portal
+* Missing Symbols experience to know which symbols need to be uploaded
