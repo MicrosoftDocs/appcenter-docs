@@ -38,7 +38,7 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 
 ## Known Limitations
 
-You cannot obtain your API key using your GitHub or Microsoft account. You need to set a password in Mobile Center and authenticate with your Mobile Center username and password. Please follow these steps to set a password and avoid seeing the "Unauthorized" error code when you try to create the API token.
+You cannot obtain your API key using your GitHub or Microsoft account. You need to set a password in Mobile Center and authenticate with your Mobile Center username and password. Please follow these steps to set a password and avoid seeing the "Unauthorized" error code when you attempt to create the API token.
   1. Logout from Mobile Center.
   2. Navigate to the link to reset your password - https://mobile.azure.com/reset. You will get a mail that takes you to create a new password in Mobile Center.
   3. Once it’s done, authenticate the API's using the set credentials.
