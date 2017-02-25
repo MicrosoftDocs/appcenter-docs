@@ -4,7 +4,7 @@ description: Getting Started
 keywords: sdk
 author: guperrot
 ms.author: guperrot
-ms.date: 01/20/2017
+ms.date: 02/24/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -83,6 +83,9 @@ Multiplatform Xamarin.Forms app has three projects in your solution - portable c
 
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of Mobile Center services.
+
+> [!NOTE]
+> Due to a bug in Xamarin.iOS 10.4, you also need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
 
 ## 4. Start the SDK
 
