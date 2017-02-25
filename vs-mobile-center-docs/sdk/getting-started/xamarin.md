@@ -4,7 +4,7 @@ description: Getting Started
 keywords: sdk
 author: guperrot
 ms.author: guperrot
-ms.date: 01/20/2017
+ms.date: 02/24/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -84,6 +84,9 @@ Multiplatform Xamarin.Forms app has three projects in your solution - portable c
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of Mobile Center services.
 
+> [!NOTE]
+> Due to a bug in Xamarin.iOS 10.4, you also need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
+
 ## 4. Start the SDK
 
 To start the Mobile Center SDK in your app, follow these steps:
@@ -108,9 +111,6 @@ To start the Mobile Center SDK in your app, follow these steps:
 
         MobileCenter.Start("{Your Xamarin iOS Secret}", typeof(Analytics), typeof(Crashes));
 
-    > [!NOTE]
-    > Due to a bug in Xamarin.iOS 10.4, you also need to **uncheck** `Enable incremental builds` in iOS Build Project Options.
-
     **Xamarin.Android**
 
     Open MainActivity.cs file and add the Start API in OnCreate() method
@@ -126,9 +126,6 @@ To start the Mobile Center SDK in your app, follow these steps:
      In the iOS project of the Forms app, open AppDelegate.cs and add the API in `FinishedLaunching()` method. Make sure you call the API before `LoadApplication()` method is called.
 
         MobileCenter.Configure("{Your Xamarin iOS App Secret}");
-
-     > [!NOTE]
-     > Due to a bug in Xamarin.iOS 10.4, you also need to **uncheck** `Enable incremental builds` in iOS Build Project Options.
 
      In the Droid project of the Forms app, open MainActivity.cs and add the API in `OnCreate()` method. Make sure you call the API before `LoadApplication()` method is called.
 
