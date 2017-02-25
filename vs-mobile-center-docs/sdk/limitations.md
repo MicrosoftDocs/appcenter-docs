@@ -26,5 +26,5 @@ Your app will fail to compile with a linking error if you are using HockeyApp SD
 
 1. If you are using the Xamarin IDE alpha release, there is an issue causing the forms previewer not to work when working on a Xamarin.Forms application that integrates Mobile Center. The exact error is: `Invalid XAML: Could not create an native instance of the type 'Microsoft.Azure.Mobile.iOS.Bindings.MSWrapperSdk': the native class hasn't been loaded`
 
-2. If you have this error when building for iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)`, you need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
+2. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)`, you need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
 This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [here](https://bugzilla.xamarin.com/show_bug.cgi?id=52727).
