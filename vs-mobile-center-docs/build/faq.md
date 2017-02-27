@@ -40,6 +40,6 @@ There are many reasons why a build cannot be installed on a user's device. A com
 ## Why is the build in Mobile Center taking longer then my local build?
 There are many reasons why build duration can be higher when using a build service:
 * When running your build locally, many things are cached (e.g. NuGet packages, pods, dependencies); In Mobile Center, we always perform a clean build and re-download everything required
-* For Xamarin builds, when running your build locally, you are most likely running a simulator build, whereas with Mobile Center you run a device build (signed); Device builds always take longer to run.
+* For Xamarin builds, when running your build locally, you are most likely running a simulator build; In Mobile Center you can run a device build (signed), which takes much longer to run. 
 * Most likely the CPU power of your develoment machine is higher than the CPU of our VMs.
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
