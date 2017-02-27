@@ -46,7 +46,7 @@ For the [platform] app, should user tracking be enabled automatically ? (Use arr
   Enable in JavaScript
 ```
 
-We recommend you enable automatic event tracking. To understand enabling in JavaScript, [read more here](/sdk/React-Native/analytics/#enable-javascript).
+We recommend you enable automatic event tracking. To understand enabling in JavaScript, [read more here](~/sdk/React-Native/analytics/#enable-javascript).
 
 ## 3. Analyse
 

@@ -112,4 +112,4 @@ To start the Mobile Center SDK in your app, follow these steps:
 
 The example above shows how to use the `start` method and include both the Analytics and Crashes module. If you wish not to use Analytics, remove the parameter from the method call above. Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. Also, the `start` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](/sdk/iOS/analytics) and [Crashes](/sdk/iOS/crashes) section for APIs to use in your app.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/ios/analytics) and [Crashes](~/sdk/ios/crashes) section for APIs to use in your app.

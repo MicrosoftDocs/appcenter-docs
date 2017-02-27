@@ -21,7 +21,7 @@ ms.tgt_pltfrm: ios
 
 ## Getting Started
 
-1. Integrate the SDK as described in the [Getting Started with iOS](/sdk/iOS/getting-started/) documentation.
+1. Integrate the SDK as described in the [Getting Started with iOS](~/sdk/ios/getting-started/) documentation.
 2. Upload the symbols that are created with each build using the *Incoming* page under the app.
 3. Add a test crash to the app's code by calling the `generateTestCrash` method of the crash reporting module as an action to a button.
 4. Run the app without the debugger connected, crash it and restart it.
