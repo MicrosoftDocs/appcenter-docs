@@ -71,4 +71,4 @@ To start the Mobile Center SDK in your app, follow these steps:
         import com.microsoft.azure.mobile.analytics.Analytics;
         import com.microsoft.azure.mobile.crashes.Crashes;
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](/sdk/Android/analytics) and [Crashes](/sdk/Android/crashes) section for APIs to use in your app.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/Android/analytics) and [Crashes](~/sdk/Android/crashes) section for APIs to use in your app.
