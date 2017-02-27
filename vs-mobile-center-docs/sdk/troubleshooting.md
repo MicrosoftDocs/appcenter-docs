@@ -56,21 +56,21 @@ This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [her
 4. You need to restart the app after a crash and our SDK will forward the crash log only after its restarted. Also, the SDK will not forward crash log if you are attached to be debugger. So make sure you are not attached to a debugger when you re-open the app
 5. If you want to see logs sent to the backend, change the log level to 'Verbose' in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
-#### Android
+  **Android**
 
-    `MobileCenter.setLogLevel(Log.VERBOSE);`
+  `MobileCenter.setLogLevel(Log.VERBOSE);`
 
-#### Objective-C
+  **Objective-C**
 
-    `[MSMobileCenter setLogLevel:MSLogLevelVerbose]`
+  `[MSMobileCenter setLogLevel:MSLogLevelVerbose]`
 
-#### Swift
+  **Swift**
 
-    `MSMobileCenter.setLogLevel(MSLogLevel.Verbose)`
+  `MSMobileCenter.setLogLevel(MSLogLevel.Verbose)`
 
-#### Xamarin
+  **Xamarin**
 
-    `MobileCenter.LogLevel = LogLevel.Verbose;`
+  `MobileCenter.LogLevel = LogLevel.Verbose;`
 
 6. Don't use any other SDK that provides Crash Reporting functionality. You can only have one SDK integrated in your app.
 7. Make sure your device is connected to a working internet.
