@@ -31,19 +31,19 @@ This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [her
 
   **Android**
 
-    MobileCenter.setLogLevel(Log.VERBOSE);
+  `MobileCenter.setLogLevel(Log.VERBOSE);`
 
   **Objective-C**
 
-    [MSMobileCenter setLogLevel:MSLogLevelVerbose]
+  `[MSMobileCenter setLogLevel:MSLogLevelVerbose]`
 
   **Swift**
 
-    MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+  `MSMobileCenter.setLogLevel(MSLogLevel.Verbose)`
 
   **Xamarin**
 
-    MobileCenter.LogLevel = LogLevel.Verbose;
+  `MobileCenter.LogLevel = LogLevel.Verbose;`
 
 5. Make sure your device is connected to a working internet.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
