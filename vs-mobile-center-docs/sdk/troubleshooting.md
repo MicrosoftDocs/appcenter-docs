@@ -15,15 +15,15 @@ ms.custom: sdk
 
 Below are the steps you can follow to make sure the SDK is set up correctly and forwards Analytics and Crashes data to Mobile Center.
 
-### Setup
+## Setup
 1. For Xamarin Forms app, make sure the packages are installed in all the projects that reference any library. Otherwise you will see errors.
-2. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)`, you need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
+2. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)` you need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
 This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [here](https://bugzilla.xamarin.com/show_bug.cgi?id=52727).
 3. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT5210: Native linking failed, undefined symbol: _OBJC_METACLASS_$_MS{SomeSdkClassName}. Please verify that all the necessary frameworks have been referenced and native libraries are properly linked in. (MT5210)` or a similar error (`MT5211` code with similar message mentioning Mobile Center), please make sure you call `MobileCenter.Start` before using the API of a specific service.
 4. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
-5.. If you are using CocaPods to install Mobile Center in your iOS app and run into an error with the message - "CocoaPods - Unable to find a specification for MobileCenter", follow this [link](http://stackoverflow.com/questions/40785259/cocoapods-unable-to-find-a-specification-for-mobilecenter) to fix the issue.
+5. If you are using CocaPods to install Mobile Center in your iOS app and run into an error with the message - "CocoaPods - Unable to find a specification for MobileCenter", follow this [link](http://stackoverflow.com/questions/40785259/cocoapods-unable-to-find-a-specification-for-mobilecenter) to fix the issue.
 
-### Analytics
+## Analytics
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the Analytics service when you start the SDK. You can copy the exact start API code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
@@ -49,7 +49,7 @@ This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [her
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 7. To check if Mobile Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
 
-### Crashes
+## Crashes
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the Analytics service when you start the SDK. You can copy the exact start API code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
