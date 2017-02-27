@@ -20,7 +20,7 @@ ms.tgt_pltfrm: react-native
 - [Xamarin](xamarin.md)
 - [React Native](react-native.md)
 
-Once you set up and start the Mobile Center SDK to use the Crashes module in your application, the SDK will automatically start logging any crashes in the devices local storage. When the user opens the application again after a crash, all pending crash logs will automatically be forwarded to Mobile Center and you can analyze the crash along with the stack trace on the Mobile Center portal. Refer to the section to [Get Started](~/sdk/react-native/getting-started) if you haven't done so already.
+Once you set up and start the Mobile Center SDK to use the Crashes module in your application, the SDK will automatically start logging any crashes in the devices local storage. When the user opens the application again after a crash, all pending crash logs will automatically be forwarded to Mobile Center and you can analyze the crash along with the stack trace on the Mobile Center portal. Refer to the section to [Get Started](~/sdk/getting-started/react-native) if you haven't done so already.
 
 * **Using the Crashes API:**
 
