@@ -16,6 +16,7 @@ ms.custom: build
 ## The repository I want to connect to is not listed in the Link Repository step
 * If connecting to a repository that belongs to an organization, first request admin access to the repository.
 In order to use a repository for building apps with Mobile Center, you need to have admin rights to that repository. Admin rights are required because Mobile Center will register a webhook on your repository coming from the [mobile.azure.com](https://mobile.azure.com) domain.
+Depending on your oganization's configurations, first time when a member requests Mobile Center access to that organization, an organization member with owner privileges might to approve that request. See the [GitHub-specific instructions here](https://help.github.com/articles/approving-third-party-applications-for-your-organization/).
 * If connecting to a repository owned by a user, you need to be the owner of the repository. If you are not the owner, you can still onboard the app to Mobile Center build by inviting the repository owner asa collaborator to the app in Mobile Center. Then, the owner can connect his own GitHub repo as a source to the build service.
 
 ## No Xcode scheme is found
@@ -36,3 +37,11 @@ The files uploaded for code signing and the password for the certificate are als
 There are many reasons why a build cannot be installed on a user's device. A common case is that the provisioning profile does not contain the UDID of the user's device, in case of a development or ad-hoc distribution build. In the case of development provisioning profiles and ad-hoc distribution, you have to manually include the UDID of your users' devices in the provisioning profile in the Apple Developer Center, re-download the provisioning profile and upload it to Mobile Center build configuration. If you use enterprise distribution, you do not need to worry about collecting UDIDs.
 
 [xcode-share-scheme]: ~/build/ios/first-build/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
+
+## Why is the build in Mobile Center taking longer then my local build?
+There are many reasons why build duration can be higher when using a build service:
+* When running your build locally, many things are cached (e.g. NuGet packages, pods, dependencies); In Mobile Center, we always perform a clean build and re-download everything required.
+* For Xamarin builds, when running your build locally, you are most likely running a simulator build; In Mobile Center you can run a device build (signed), which takes much longer to run. 
+* Most likely the CPU power of your develoment machine is higher than the CPU of our VMs.
+
+We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.

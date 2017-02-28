@@ -39,7 +39,8 @@ If no scheme can be found, make sure that the scheme you want to build with is s
 
 3.5. **Code signing** - A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
 
-3.6. **CocoaPods** - Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
+3.6. **CocoaPods** - Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
+If the repository already contains a `/Pods` folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform `pod install`.
 
 3.7. **Distribution to a distribution group** - You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
