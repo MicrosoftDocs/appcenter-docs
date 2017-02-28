@@ -19,7 +19,7 @@ ms.tgt_pltfrm: android
 - [Android](android.md)
 - [React Native](react-native.md)
 
-This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](~/sdk/getting-started/android/).
+This page gives a summary of how to integrate the SDK for Analytics. Should you need more details, the detailed integration instruction can be found at [in the SDK section](~/sdk/getting-started/android.md).
 
 ## 1. Add the SDK to the project
 

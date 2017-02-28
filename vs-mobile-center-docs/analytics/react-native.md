@@ -46,9 +46,9 @@ For the [platform] app, should user tracking be enabled automatically ? (Use arr
   Enable in JavaScript
 ```
 
-We recommend you enable automatic event tracking. To understand enabling in JavaScript, [read more here](~/sdk/React-Native/analytics/#enable-javascript).
+We recommend you enable automatic event tracking. To understand enabling in JavaScript, [read more here](~/sdk/analytics/react-native.md#enable-javascript).
 
-## 3. Analyse
+## 3. Analyze
 
 Now build and launch your app, then go to the Analytics section.  You should see 1 Active user and at least 1 session!
 

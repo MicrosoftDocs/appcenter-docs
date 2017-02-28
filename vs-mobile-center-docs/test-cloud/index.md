@@ -32,4 +32,4 @@ Test Cloud does not currently support the following features:
 - VPN (coming soon)
 - Load testing
 
-Before getting started, it is recommended to become familiar with Test Cloud's [Core Concepts](~/test-cloud/core-concepts).
+Before getting started, it is recommended to become familiar with Test Cloud's [Core Concepts](~/test-cloud/core-concepts.md).
