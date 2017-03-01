@@ -190,3 +190,32 @@ Once you set up and start the Mobile Center SDK to use the Crashes module in you
             func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, withError error: Error!) {
                     // Your code, e.g. to hide the custom UI.
             }
+            
+            
+
+### Enabling Mach exception handling
+
+By default, the SDK is using the safe and proven in-process BSD Signals for catching crashes. This means, that some causes for crashes, e.g. stack overflows, cannot be detected. Using a Mach exception server instead allows to detect some of those crash causes but comes with the risk of using unsafe means to detect them.
+
+The `enableMachExceptionMethod` provides an option to enable catching fatal signals via a Mach exception server instead.
+
+The SDK will not check if the app is running in an AppStore environment or if a debugger was attached at runtime because some developers chose to do one or both at their own risk.
+
+**We strongly advice NOT to enable Mach exception handler in release versions of your apps!**
+
+The Mach exception handler executes in-process and will interfere with debuggers when they attempt to suspend all active threads (which will include the Mach exception handler). Mach-based handling should _NOT_ be used when a debugger is attached. The SDK will not enable crash reporting if the app is **started** with the debugger running. If you attach the debugger **at runtime**, this may cause issues if the Mach exception handler is enabled!
+
+If you want or need to enable the Mach exception handler, you _MUST_ call this method _BEFORE_ starting the SDK.
+
+Your typical setup code would look like this:
+
+**Objective-C**
+
+      [MSCrashes enableMachExceptionHandler];
+      [MSMobileCenter start:@"YOUR_APP_ID" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+
+**Swift**
+
+      MSCrashes.enableMachExceptionHandler()
+      MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self])
+       
