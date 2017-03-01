@@ -83,7 +83,7 @@ azureMobileClient.login("twitter", providerToken, optionalCallback);
 azureMobileClient.login("{provider}", optionalCallback);
 ```
 
-[adding Azure Android SDK to your mobile app]:/sdk/Android/azure/
+[adding Azure Android SDK to your mobile app]:~/sdk/azure/android.md
 [Facebook SDK for Android - Getting Started]: https://developers.facebook.com/docs/android/getting-started
 [Fabric for Android - Getting Started]: https://docs.fabric.io/android/twitter/log-in-with-twitter.html
 [Google Sign-In for Android - Start integrating]: https://developers.google.com/identity/sign-in/android/start-integrating

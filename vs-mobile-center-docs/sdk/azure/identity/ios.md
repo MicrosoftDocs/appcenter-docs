@@ -116,7 +116,7 @@ azureMobileClient.loginWithProvider("{provider}", controller: {nonnull UIViewCon
 [azureMobileClient loginWithProvider:@"{provider}" controller:{nonnull UIViewController} animated:{BOOL} completion:completion];
 ```
 
-[adding Azure iOS SDK to your mobile app]:/sdk/iOS/azure/
+[adding Azure iOS SDK to your mobile app]:~/sdk/azure/ios.md
 [Facebook SDK for iOS - Getting Started]: https://developers.facebook.com/docs/ios/getting-started
 [Fabric for iOS - Getting Started]: https://docs.fabric.io/ios/fabric/getting-started.html
 [Google Sign-In for iOS - Start integrating]: https://developers.google.com/identity/sign-in/ios/start-integrating
