@@ -4,13 +4,20 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 02/16/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
 
 # Changelog
+
+### **Mar 02, 2017**
+
+- Upload symbol files and get symbolicated crash reports using the latest CLI, v0.6.0.  
+- Gain deeper insight into user engagement with up to 10 Analytics custom event properties
+- Run automated UI tests for iOS 10 and Android 7 with Appium 1.6.3
+- FIXED: Analytics events appear correctly even if you have an adblocker in the browser
 
 ### **Feb 14, 2017**
 
