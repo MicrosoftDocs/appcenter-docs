@@ -26,7 +26,7 @@ If you are a Xamarin Insights customer, we do not have any plans to move your da
 
 It is also on our roadmap to bring over key features from Xamarin Insights like “managed exceptions” and “user profiles” to Mobile Center.   
 
-## Further reading:
+### Further reading
 
 - [Blog post for HockeyApp customers](https://www.hockeyapp.net/blog/2016/11/16/mobile-center-next-generation-hockeyapp.html)
 
