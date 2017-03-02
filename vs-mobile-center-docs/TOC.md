@@ -16,6 +16,8 @@
 #### [Java](build/android/first-build/java.md)
 #### [Xamarin](build/android/first-build/xamarin.md)
 #### [React Native](build/android/first-build/react-native.md)
+### [Code Signing](build/android/code-signing/index.md)
+#### [Setting up an Android project for code signing](build/android/code-signing/setup.md)
 ## [Cloud build machines](build/software.md)
 ## [FAQ](build/faq.md)
 
