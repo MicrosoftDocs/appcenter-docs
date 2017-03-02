@@ -98,6 +98,7 @@
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
+## [Guidance for existing customers](general/guidance.md)
 
 # Reference
 ## [API docs](api-docs/index.md)

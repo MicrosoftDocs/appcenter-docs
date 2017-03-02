@@ -56,11 +56,7 @@ Push notification service will enable you to easily send targeted push notificat
 
 ## Are you a HockeyApp, Xamarin Test Cloud, Xamarin Insights, or Azure Mobile Engagement user?
 
-Mobile Center is the next generation of HockeyApp and Xamarin Test Cloud. Today, you can already sign in with your existing HockeyApp account, but you won't see your apps and data just yet. To try out Mobile Center, you need to create a new app and replace HockeySDK with the Mobile Center SDK. For test runs, you need to switch to the new Mobile Center CLI.
-
-All users of HockeyApp and Xamarin Test Cloud will be able to see their apps and data in Mobile Center in Spring 2017 and will be provided a seamless transition.
-
-If you are using Xamarin Insights and Azure Mobile Engagement, you will need to manually transition to Mobile Center by creating a new account with new apps. There will be more details provided in the next few months for this migration.
+Make sure to read this [guidance document](general/guidance.md).
 
 ## Pricing
 
