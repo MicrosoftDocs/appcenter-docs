@@ -72,9 +72,13 @@ For a completed build (succeeded or failed), download the logs to understand mor
 
 The build step specific logs (located in the build/ directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
-## 4.2. The app (.apk)
+## 4.2. The app package (APK)
 
-The .apk is an Android application packaged file which stores the Android app. If the build has been correctly signed, the .apk can be installed on a real device and deployed to the Play Store. If the build has not been signed, the .apk can be run on an emulator or used for other purposes.
+The APK is an Android application packaged file which contains the Android app and assets. If the build has been correctly signed, the .apk can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
+
+### 4.3. Building multiple APKs
+
+If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
 
 ## 5. Supported versions and requirements
 
