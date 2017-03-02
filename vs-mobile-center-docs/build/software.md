@@ -357,8 +357,8 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
-| extra-android-m2repository        | Android Support Repository, revision 41  |
-| extra-google-m2repository         | Google Repository, revision 41           |
+| extra-android-m2repository        | Android Support Repository, revision 43  |
+| extra-google-m2repository         | Google Repository, revision 43           |
 | extra-google-google_play_services | Google Play services, revision 38        |
 
 #### Xamarin
