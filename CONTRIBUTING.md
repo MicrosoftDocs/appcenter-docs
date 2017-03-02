@@ -42,7 +42,7 @@ Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide
           /media
               debugging-installed-app-package.png
 
-**Step 5:** Submit a Pull Request (PR) from your branch to `Microsoft/visualstudio-docs/master`.
+**Step 5:** Submit a Pull Request (PR) from your branch to `MicrosoftDocs/mobile-center-docs/master`.
 
 If your PR is addressing an existing issue, add the `Fixes #Issue_Number` keyword to the commit message or PR description, so the issue can be automatically closed when the PR is merged. For more information, see [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
 
@@ -52,7 +52,7 @@ The Visual Studio team will review your PR and let you know if the change looks 
 
 The maintainers will merge your PR into the master branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from master branch into the live branch and then you'll be able to see your contribution live at https://docs.microsoft.com/visualstudio/.
+On a certain cadence, we push all commits from master branch into the live branch and then you'll be able to see your contribution live at https://docs.microsoft.com/mobile-center/.
 
 ## DOs and DON'Ts
 
