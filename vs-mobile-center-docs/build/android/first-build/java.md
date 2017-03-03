@@ -57,7 +57,7 @@ After a build has been triggered, it can be in the following states:
 * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
 * **canceled** - the build has been canceled by a user action or it has timed out
 
-## 4.1. Build logs
+### 4.1. Build logs
 
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center povides an archive with the following files:
 
@@ -72,7 +72,7 @@ For a completed build (succeeded or failed), download the logs to understand mor
 
 The build step specific logs (located in the build/ directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
-## 4.2. The app package (APK)
+### 4.2. The app package (APK)
 
 The APK is an Android application packaged file which contains the Android app and assets. If the build has been correctly signed, the .apk can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
