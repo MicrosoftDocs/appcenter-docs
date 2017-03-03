@@ -25,24 +25,31 @@ Next step once you have selected a GitHub repository is to select the branch you
 ## 3. Setting up your first build
 To kick off the first build, configure how the iOS project should get built.
 
-3.1. **Project/workspace and scheme** - For a build configuration, a Xcode project or a Xcode workspace a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
+### 3.1. Project/workspace and scheme
 
+For a build configuration, a Xcode project or a Xcode workspace a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked in in the branch you are setting up the build for.
 
 ![Mark scheme as shared][xcode-share-scheme]
 
-3.2. **XCode version** - Select the XCode version to run the build on.
+### 3.2. XCode version
+Select the XCode version to run the build on.
 
-3.3. **Build triggers** - By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+### 3.3. Build triggers
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-3.4. **Tests** - If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest tests.
+### 3.4 Tests
+If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest unit tests.
 
-3.5. **Code signing** - A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
+### 3.5. Code signing
+A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
 
-3.6. **CocoaPods** - Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
+### 3.6. CocoaPods
+Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
 If the repository already contains a */Pods* folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform `pod install`.
 
-3.7. **Distribution to a distribution group** - You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+### 3.7. Distribution to a distribution group**
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be automatically kicked off.
 
@@ -86,5 +93,6 @@ The following versions of Xcode are currently supported on our VMs.
 * Xcode 8.0
 * Xcode 8.1
 * Xcode 8.2
+* Xcode 8.2.1
 
 The build machines are running OS X 10.11.6 (15G1004). We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
