@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -28,7 +29,10 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "contributors_to_exclude": ["conceptdev","meganbradley"]
+      "contributors_to_exclude": ["conceptdev","meganbradley"],
+      "breadcrumb_path": "~/_breadcrumb/toc.yml",
+      "manager": "crdun",
+      "audience": "developer"
     },
     "fileMetadata": {},
     "template": [],
