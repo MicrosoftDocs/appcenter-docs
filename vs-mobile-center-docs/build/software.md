@@ -15,20 +15,23 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 
 # OS X Build Machine Image
 
-- Updated: 2017-03-02
+- Updated: 2017-03-08
 
 ## Operating System
+
 - OS X 10.11.6 (15G1004)
 
 ## Installed Software
 
 ### Language and Runtime
+
 - Ruby ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin15]
 - Python Python 2.7.10
 - Node.js 6.9.4
 - Java 1.8.0_121-b13
 
 ### Package Management
+
 - NPM 3.10.10
 - Homebrew 1.1.7
 - Homebrew/homebrew-core (git revision 7af1a; last commit 2017-01-17)
@@ -43,6 +46,7 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 - GNU Wget 1.18 built on darwin15.5.0
 
 ### Project Manangement
+
 - Apache Maven 3.3.9
 
 ### Xcode
@@ -368,6 +372,7 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 - Xamarin.iOS: 10.3.1.8
 - Xamarin.Android: 7.0.2-42
 - Xamarin.mac: 2.10.0.120
+- NUnit: 3.6.0
 
 #### Device Pairs
 ```
