@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 01/26/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -15,19 +15,23 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 
 # OS X Build Machine Image
 
-- Updated: 2017-01-17
+- Updated: 2017-03-08
 
 ## Operating System
+
 - OS X 10.11.6 (15G1004)
 
 ## Installed Software
 
 ### Language and Runtime
+
 - Ruby ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin15]
 - Python Python 2.7.10
 - Node.js 6.9.4
+- Java 1.8.0_121-b13
 
 ### Package Management
+
 - NPM 3.10.10
 - Homebrew 1.1.7
 - Homebrew/homebrew-core (git revision 7af1a; last commit 2017-01-17)
@@ -40,6 +44,10 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 - Git LFS 1.5.3
 - Curl 7.43.0 (x86_64-apple-darwin15.0) libcurl/7.43.0 SecureTransport zlib/1.2.5
 - GNU Wget 1.18 built on darwin15.5.0
+
+### Project Manangement
+
+- Apache Maven 3.3.9
 
 ### Xcode
 - Xcode 7.3.1
@@ -310,7 +318,9 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | android-15            | Android SDK Platform 15, Revision 5       |
+| android-16            | Android SDK Platform 16, Revision 5       |
 | android-17            | Android SDK Platform 17, Revision 3       |
+| android-18            | Android SDK Platform 18, Revision 3       |
 | android-19            | Android SDK Platform 19, Revision 4       |
 | android-20            | Android SDK Platform 20, Revision 2       |
 | android-21            | Android SDK Platform 21, Revision 2       |
@@ -351,8 +361,8 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
-| extra-android-m2repository        | Android Support Repository, revision 41  |
-| extra-google-m2repository         | Google Repository, revision 41           |
+| extra-android-m2repository        | Android Support Repository, revision 43  |
+| extra-google-m2repository         | Google Repository, revision 43           |
 | extra-google-google_play_services | Google Play services, revision 38        |
 
 #### Xamarin
@@ -362,6 +372,7 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 - Xamarin.iOS: 10.3.1.8
 - Xamarin.Android: 7.0.2-42
 - Xamarin.mac: 2.10.0.120
+- NUnit: 3.6.0
 
 #### Device Pairs
 ```
