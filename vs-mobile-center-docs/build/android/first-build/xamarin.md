@@ -74,3 +74,7 @@ The build step specific logs (located in the build/ directory of the archive) ar
 ### 4.2. The app (.apk)
 
 The .apk is an Android application packaged file which stores the Android app. If the build has been correctly signed, the .apk can be installed on a real device and deployed to the Play Store. If the build has not been signed, the .apk can be run on an emulator or used for other purposes.
+
+## Supported versions and requirements
+Currently Mobile Center only supports PCL 4 and is not supporting .NET standard libraries.
+Mobile Center has no support for Xamarin Components and we advised using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us via support.
