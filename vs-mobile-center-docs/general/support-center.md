@@ -14,27 +14,29 @@ ms.service: mobile-center
 
 ### Documentation
 
-[Product documentation](./) 
+[Product documentation](/) 
 
 [API documentation](api-docs)
 
-[Product roadmap](/general/roadmap)
+[Product roadmap](general/roadmap)
 
 ### Troubleshooting
 
-[SDK troubleshooting](/sdk/troubleshooting)
+[SDK troubleshooting](sdk/troubleshooting)
 
-[Build service FAQs](/build/faq)
+[Build service FAQs](build/faq)
 
 ### What changed recently  
 
-[Product Changelog](/general/changelog)
+[Product Changelog](general/changelog)
 
 SDKs (open sourced on GitHub)
 
 - [iOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
 
 - [Android SDK](https://github.com/Microsoft/mobile-center-sdk-android)
+
+- [Xamarin SDK](https://github.com/Microsoft/mobile-center-sdk-dotnet)
 
 - [React Native SDK](https://github.com/Microsoft/mobile-center-sdk-react-native)
 
@@ -44,9 +46,3 @@ Check if there are any ongoing issues on our [status page](https://status.mobile
 
 ### Contact us
 Report a bug or a make a feature request using the blue button at the bottom right of every Mobile Center portal page and the product team will respond to you. 
-
-
-
-
-
-
