@@ -14,21 +14,21 @@ ms.service: mobile-center
 
 ### Documentation
 
-[Product documentation](/) 
+[Product documentation](/index.md) 
 
-[API documentation](api-docs)
+[API documentation](/api-docs.md)
 
-[Product roadmap](general/roadmap)
+[Product roadmap](roadmap.md)
 
 ### Troubleshooting
 
-[SDK troubleshooting](sdk/troubleshooting)
+[SDK troubleshooting](sdk/troubleshooting.md)
 
-[Build service FAQs](build/faq)
+[Build service FAQs](build/faq.md)
 
 ### What changed recently  
 
-[Product Changelog](general/changelog)
+[Product Changelog](general/changelog.md)
 
 SDKs (open sourced on GitHub)
 
