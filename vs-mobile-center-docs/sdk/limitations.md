@@ -4,7 +4,7 @@ description: Limitations and known issues with the Mobile Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 02/24/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: mobile-center
@@ -25,6 +25,3 @@ Your app will fail to compile with a linking error if you are using HockeyApp SD
 ## Known Issues
 
 1. If you are using the Xamarin IDE alpha release, there is an issue causing the forms previewer not to work when working on a Xamarin.Forms application that integrates Mobile Center. The exact error is: `Invalid XAML: Could not create an native instance of the type 'Microsoft.Azure.Mobile.iOS.Bindings.MSWrapperSdk': the native class hasn't been loaded`
-
-2. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)` you need to *uncheck* **Enable incremental builds** in iOS Build Project Options.
-This is a problem introduced by Xamarin.iOS version 10.4 and can be tracked [here](https://bugzilla.xamarin.com/show_bug.cgi?id=52727).
