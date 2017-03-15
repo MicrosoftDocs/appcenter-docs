@@ -83,5 +83,5 @@ The .dsym files contains the debug symbols for the app.
 * if you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable (symbolicated) crash reports
 
 ## Supported versions and requirements
-Currently Mobile Center only supports PCL 4 and is not supporting .NET standard libraries.
-Mobile Center has no support for Xamarin Components and we advised using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us via support.
+Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
+Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us:click on the blue bubble on the bottom right corner once you're logged in into Mobile Center and share your feedback with us.
