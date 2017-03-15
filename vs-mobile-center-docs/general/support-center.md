@@ -12,7 +12,7 @@ ms.service: mobile-center
 
 # Mobile Center Support 
 
-### Documentation
+## Documentation
 
 [Product documentation](~/index.md) 
 
@@ -20,13 +20,13 @@ ms.service: mobile-center
 
 [Product roadmap](~/general/roadmap.md)
 
-### Troubleshooting
+## Troubleshooting
 
 [SDK troubleshooting](~/sdk/troubleshooting.md)
 
 [Build service FAQs](~/build/faq.md)
 
-### What changed recently  
+## Recent updates  
 
 [Product Changelog](~/general/changelog.md)
 
@@ -40,9 +40,9 @@ SDKs (open sourced on GitHub)
 
 - [React Native SDK](https://github.com/Microsoft/mobile-center-sdk-react-native)
 
-### Mobile Center status page
+## Mobile Center status page
 
-Check if there are any ongoing issues on our [status page](https://status.mobile.azure.com).
+Check if there are any ongoing issues on the [status page](https://status.mobile.azure.com).
 
-### Contact us
+## Contact us 
 Report a bug or a make a feature request using the blue button at the bottom right of every Mobile Center portal page and the product team will respond to you. 
