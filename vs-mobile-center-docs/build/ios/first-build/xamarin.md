@@ -84,4 +84,4 @@ The .dsym files contains the debug symbols for the app.
 
 ## Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
-Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us:click on the blue bubble on the bottom right corner once you're logged in into Mobile Center and share your feedback with us.
+Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us:click on the blue bubble on the bottom right corner once you're logged in to Mobile Center and share your feedback with us.
