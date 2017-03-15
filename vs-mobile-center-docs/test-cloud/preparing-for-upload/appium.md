@@ -19,15 +19,12 @@ to Test Cloud vary depending on the test framework. The section below provides i
 Note the following limitations for Appium support:
 
 * No support for TestNG
-* No support for iOS 10
-* No support for Android 7.0 (Nougat)
 * No support for Android 4.2 or prior
 * Maven version must be atleast 3.3.9
-* Support for Appium version 1.5 only
+* Support for Appium version 1.6 only
 * JUnit 4.9 or newer
 * Automating browsers (web testing) is not supported.
 * Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
-* Performance data is not yet included in the test reports
 
 ## 1a. Changes to the build system for Maven users
 _See the section below for instructions if you use Gradle for your project,
