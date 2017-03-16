@@ -16,7 +16,7 @@ ms.service: mobile-center
 
 [Product documentation](~/index.md) 
 
-[API documentation](~/api-docs.md)
+[API documentation](~/api-docs/index.md)
 
 [Product roadmap](~/general/roadmap.md)
 
