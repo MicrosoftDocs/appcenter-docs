@@ -4,7 +4,7 @@ description: Getting Started
 keywords: sdk
 author: guperrot
 ms.author: guperrot
-ms.date: 02/24/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -109,7 +109,7 @@ To start the Mobile Center SDK in your app, follow these steps:
 
     Open AppDelegate.cs file and add the Start API in FinishedLaunching() method
 
-        MobileCenter.Start("{Your Xamarin iOS Secret}", typeof(Analytics), typeof(Crashes));
+        MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes));
 
     **Xamarin.Android**
 
@@ -119,18 +119,10 @@ To start the Mobile Center SDK in your app, follow these steps:
 
     **Xamarin.Forms**
 
-     For creating a cross platform Forms app targeting both iOS and Android platform, you need to create two applications in Mobile Center portal - one for each platform. Creating two apps will give you two AppSecrets - one for iOS and another for Android. Therefore, Start SDK call is split into two methods for Xamarin.Forms. Open **App.xaml.cs** (or your class that inherits `Xamarin.Forms.Application`) in your shared or portable project and add the API below in the `OnStart()` override method.
+     For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another for Android. Open **App.xaml.cs** (or your class that inherits `Xamarin.Forms.Application`) in your shared or portable project and add the API below in the `OnStart()` override method.
 
-        MobileCenter.Start(typeof(Analytics), typeof(Crashes));
+        MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Analytics), typeof(Crashes));
 
-     In the iOS project of the Forms app, open AppDelegate.cs and add the API in `FinishedLaunching()` method. Make sure you call the API before `LoadApplication()` method is called.
-
-        MobileCenter.Configure("{Your Xamarin iOS App Secret}");
-
-     In the Droid project of the Forms app, open MainActivity.cs and add the API in `OnCreate()` method. Make sure you call the API before `LoadApplication()` method is called.
-
-        MobileCenter.Configure("{Your Xamarin Android App Secret}");
-
-    You can also copy paste the code from the Getting Started page on Mobile Center portal once your app is selected. It already includes the App Secret so that all the data collected by the SDK corresponds to your application. Make sure to replace {Your App Secret} text with the actual value for your application.
+    You need to copy paste the App secret value for Xamarin iOS and Android app from Mobile Center portal. Make sure to replace the placeholder text above with the actual values for your application.
 
     The example above shows how to use the Start() method and include both the Analytics and Crashes module. If you wish not to use Analytics, remove the parameter from the method call above. Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. Also, the Start() API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
