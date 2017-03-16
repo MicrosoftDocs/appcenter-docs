@@ -4,13 +4,19 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 03/02/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
 
 # Changelog
+
+### **Mar 16, 2017**
+- Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
+- Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.   
+- When you receive an email to install a build, you can now also sign-in with a different set of credentials and we will update your access automatically.  We also display the account you are using to login to install the build so there is no more confusion about which account you are using.  
+
 
 ### **Mar 02, 2017**
 
@@ -26,6 +32,7 @@ ms.service: mobile-center
 - Stack traces are now available for failed test steps in Test service, making it easy to identify the root cause of a failure. You'll find the stack trace in the **logs** section of the test report device view.
 
 **Run Jest based tests for React Native apps**
+
 - For React Native apps, you can now run Jest based unit tests during the build process. Enable unit tests during build setup and the snapshots of the app you checked in get compared to the test runs. 
 
 ### **Jan 31, 2017**
