@@ -15,7 +15,7 @@ ms.service: mobile-center
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.   
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and we will update your access automatically.  We also display the account you are using to login to install the build so there is no more confusion about which account you are using.  
+- When you receive an email to install a build, you can now also sign-in with a different set of credentials and Mobile Center will update your access automatically.  Mobile Center now also displays the account you are using to login to install the build so there is no more confusion about it.  
 
 
 ### **Mar 02, 2017**
