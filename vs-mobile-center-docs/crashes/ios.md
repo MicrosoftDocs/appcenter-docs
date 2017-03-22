@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ios
 # iOS Crashes
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [React Native](react-native.md)
 
 ## Getting Started
 

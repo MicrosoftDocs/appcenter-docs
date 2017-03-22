@@ -15,8 +15,8 @@ ms.tgt_pltfrm: ios
 # iOS Azure Identity
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
 
 Add Identity to your mobile app with either client flow (recommended) or server flow authentication after [adding Azure iOS SDK to your mobile app].
 

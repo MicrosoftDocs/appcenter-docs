@@ -15,10 +15,10 @@ ms.tgt_pltfrm: ios
 # iOS Crashes
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [Xamarin](xamarin.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [Xamarin](xamarin.md)
+> * [React Native](react-native.md)
 
 Once you set up and start the Mobile Center SDK to use the Crashes module in your application, the SDK will automatically start logging any crashes in the devices local storage. When the user opens the application again after a crash, all pending crash logs will automatically be forwarded to Mobile Center and you can analyze the crash along with the stack trace on the Mobile Center portal. Refer to the section to [Get Started](~/sdk/getting-started/ios.md) if you haven't done so already.
 
@@ -190,8 +190,8 @@ Once you set up and start the Mobile Center SDK to use the Crashes module in you
             func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, withError error: Error!) {
                     // Your code, e.g. to hide the custom UI.
             }
-            
-            
+
+
 
 ### Enabling Mach exception handling
 
@@ -218,4 +218,3 @@ Your typical setup code would look like this:
 
       MSCrashes.enableMachExceptionHandler()
       MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self])
-       
