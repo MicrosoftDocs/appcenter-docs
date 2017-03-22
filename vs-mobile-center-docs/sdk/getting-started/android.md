@@ -44,7 +44,7 @@ Below are the steps on how to integrate our compiled libraries in your applicati
  1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use both Analytics and Crashes, add the following lines:
 
         dependencies {
-            def mobileCenterSdkVersion = '0.5.0'
+            def mobileCenterSdkVersion = '0.6.0'
             compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
             compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
         }
