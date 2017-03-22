@@ -15,10 +15,10 @@ ms.tgt_pltfrm: react-native
 # React Native Getting Started
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [Xamarin](xamarin.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [Xamarin](xamarin.md)
+> * [React Native](react-native.md)
 
 Let's get started with setting up the Mobile Center React Native SDK in your app to use Analytics and Crashes services.
 

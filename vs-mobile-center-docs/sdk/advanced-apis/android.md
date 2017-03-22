@@ -15,10 +15,10 @@ ms.tgt_pltfrm: android
 # Android Advanced APIs
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [Xamarin](xamarin.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [Xamarin](xamarin.md)
+> * [React Native](react-native.md)
 
 * **Debugging**: You can control the amount of log messages that show up from the Mobile Center SDK in LogCat. Use the `MobileCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications.
 

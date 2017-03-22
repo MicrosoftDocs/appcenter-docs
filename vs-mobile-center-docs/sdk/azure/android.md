@@ -16,8 +16,8 @@ ms.tgt_pltfrm: android
 
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
 
 The Android SDK supports API levels 19 through 24 (KitKat through Nougat).
 

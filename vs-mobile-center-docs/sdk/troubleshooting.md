@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/15/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: mobile-center
@@ -18,9 +18,10 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
 ## Setup
 1. For Xamarin Forms app, make sure the packages are installed in all the projects that reference any library. Otherwise you will see errors.
 2. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT3001: Could not AOT the assembly 'obj/**/Build/Microsoft.Azure.Mobile.**.iOS.Bindings.dll' (MT3001)` you need to upgrade Xamarin.iOS component to version **10.4.0.128** or more recent.
-3. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT5210: Native linking failed, undefined symbol: _OBJC_METACLASS_$_MS{SomeSdkClassName}. Please verify that all the necessary frameworks have been referenced and native libraries are properly linked in. (MT5210)` or a similar error (`MT5211` code with similar message mentioning Mobile Center), please make sure you call `MobileCenter.Start` before using the API of a specific service.
-4. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
-5. If you are using CocaPods to install Mobile Center in your iOS app and run into an error with the message - "CocoaPods - Unable to find a specification for MobileCenter", follow this [link](http://stackoverflow.com/questions/40785259/cocoapods-unable-to-find-a-specification-for-mobilecenter) to fix the issue.
+3. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT5210: Native linking failed, undefined symbol: _OBJC_METACLASS_$_MS{SomeSdkClassName}. Please verify that all the necessary frameworks have been referenced and native libraries are properly linked in. (MT5210)` or a similar error (`MT5211` code with similar message mentioning Mobile Center), please make sure you call `MobileCenter.Start` before using the API of a specific service. If you are calling `Start` but have this issue, you need to upgrade Xamarin.iOS component to version **10.4.0.128** or more recent.
+4. If you are using Visual Studio for Mac and can't see an update to Xamarin.iOS and your Xamarin.iOS version is older than **10.4.0.128**, please install Xamarin Studio and update Xamarin.iOS from Xamarin Studio then you will be able to use the same Xamarin.iOS version on Visual Studio for Mac.
+5. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
+6. If you are using CocaPods to install Mobile Center in your iOS app and run into an error with the message - "CocoaPods - Unable to find a specification for MobileCenter", follow this [link](http://stackoverflow.com/questions/40785259/cocoapods-unable-to-find-a-specification-for-mobilecenter) to fix the issue.
 
 ## Analytics
 1. Make sure you have integrated the SDK modules correctly.

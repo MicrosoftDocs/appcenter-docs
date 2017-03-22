@@ -4,7 +4,7 @@ description: Getting Started
 keywords: sdk
 author:
 ms.author:
-ms.date: 01/20/2017
+ms.date: 03/21/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -15,10 +15,10 @@ ms.tgt_pltfrm: android
 # Android Getting Started
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [Xamarin](xamarin.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [Xamarin](xamarin.md)
+> * [React Native](react-native.md)
 
 Let's get started with setting up Mobile Center Android SDK in your app to use Analytics and Crashes services.
 

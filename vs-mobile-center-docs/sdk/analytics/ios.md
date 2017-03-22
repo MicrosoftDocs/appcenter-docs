@@ -15,10 +15,10 @@ ms.tgt_pltfrm: ios
 # iOS Analytics
 
 > [!div class="op_single_selector"]
-- [iOS](ios.md)
-- [Android](android.md)
-- [Xamarin](xamarin.md)
-- [React Native](react-native.md)
+> * [iOS](ios.md)
+> * [Android](android.md)
+> * [Xamarin](xamarin.md)
+> * [React Native](react-native.md)
 
 * **Track Session, Device Properties:**  Once the Analytics module is included in your app and the SDK is started, it will automatically track sessions, device properties like OS version, model, manufacturer etc. and you don’t need to add any additional code.
     Look at this section on how to [Get Started](~/sdk/getting-started/ios.md) if you haven't started it yet.
