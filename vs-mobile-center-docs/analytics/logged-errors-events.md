@@ -13,7 +13,7 @@ ms.custom: analytics
 
 *Logged Errors are not available yet as part of the Crashes service in Mobile Center. Therefore, we would like to propose a workaround using Custom Events. This is not how "Logged Errors" are intended to be supported and it is not the main purpose of Events either. However, we would like to give you some advice on how to best leverage Events to get counts on your logged errors.*
 
- 
+
 # How to Use Events for Logged Errors  
 In this section, you will learn how to use events to get information about your logged errors. Such events for logged errors are helpful if you are interested in counting the number of times an error has happened. You will get six different measures per event: count, count change, users, user change, count per user and count per session. 
  
@@ -43,7 +43,7 @@ Depending on your specific use case, you might want to include these as part of 
 If you would like to filter by version, you don't need to include that as part of the property, as you can use the dropdown provided on top right of the event page. 
 
 
-![](version-filtering)
+![](~/analytics/images/version-filtering.PNG)
   
 
 If you'd like to include the exception message, you can include it as another property. 
