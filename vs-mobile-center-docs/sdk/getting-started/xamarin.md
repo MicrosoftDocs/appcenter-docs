@@ -2,8 +2,8 @@
 title: Getting Started
 description: Getting Started
 keywords: sdk
-author: guperrot
-ms.author: guperrot
+author: elamalani
+ms.author: emalani
 ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18

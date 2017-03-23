@@ -2,8 +2,8 @@
 title: Configure a Xamarin.Android build in Mobile Center
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
-author: nrajpurk
-ms.author:
+author: siminapasat
+ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c

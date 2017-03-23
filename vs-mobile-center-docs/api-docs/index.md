@@ -2,8 +2,8 @@
 title: Mobile Center API Documentation
 description: Explore the Mobile Center API with Swagger
 keywords: swagger
-author: conceptdev
-ms.author: crdun
+author: psycosyd
+ms.author: jawh
 ms.date: 02/14/2017
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64

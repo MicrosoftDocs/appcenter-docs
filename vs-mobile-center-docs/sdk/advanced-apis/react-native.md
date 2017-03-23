@@ -15,7 +15,7 @@ ms.tgt_pltfrm: react-native
 # React Native Advanced APIs
 
 > [!div class="op_single_selector"]
-> *[iOS](ios.md)
+> * [iOS](ios.md)
 > * [Android](android.md)
 > * [Xamarin](xamarin.md)
 > * [React Native](react-native.md)

@@ -2,8 +2,8 @@
 title: Mobile Center Analytics for Android
 description: Analytics for Android apps
 keywords: android
-author: kpiteira
-ms.author: kapiteir
+author: blparr
+ms.author: blparr
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 16b8e449-181d-4d68-88fc-710ee8d76c03
