@@ -2,8 +2,8 @@
 title: Mobile Center Crash Reporting for Android
 description: Reporting crashes from Android apps in Mobile Center
 keywords: crash reporting
-author: BretJohnson
-ms.author: BretJohnson
+author: anlinde
+ms.author: anlinde
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 38624f1c-15fe-4c9f-8b64-e22348e2dcbc

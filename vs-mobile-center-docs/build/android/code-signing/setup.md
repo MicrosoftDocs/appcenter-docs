@@ -2,8 +2,8 @@
 title: Android Code Signing Setup in Mobile Center
 description: How to set up code signing for Android apps
 keywords: android
-author: nrajpurk
-ms.author:
+author: siminapasat
+ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 656b4c96-d2b8-456a-9cd8-b7cbc827cdf0
