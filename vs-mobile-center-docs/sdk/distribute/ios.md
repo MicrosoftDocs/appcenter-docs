@@ -17,8 +17,6 @@ ms.tgt_pltfrm: ios
 > [!div class="op_single_selector"]
 > * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
-> * [React Native](react-native.md)
 
 You can easily let your users get the latest version of your app by integrating the Distribute service of the Mobile Center SDK.
 
