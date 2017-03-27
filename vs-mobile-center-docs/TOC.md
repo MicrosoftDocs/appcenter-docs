@@ -55,9 +55,6 @@
 ## [React Native](crashes/react-native.md)
 
 # [Analytics](analytics/index.md)
-## [Android](analytics/android.md)
-## [iOS](analytics/ios.md)
-## [React Native](analytics/react-native.md)
 ## [Audience Page](analytics/understand-audience.md)
 ## [Events Metrics](analytics/understand-events.md)
 ## [Logged Errors using Events](analytics/logged-errors-events.md)
