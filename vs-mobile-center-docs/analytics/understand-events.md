@@ -18,7 +18,7 @@ Event properties provide contextual information about the events.
 
 Examples of events are: *"FileUpload", "Launch","LogOut"*.
 
-Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. More information about how to define the events can be found at the [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
+Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. Note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value name. More information about how to define the events can be found at the [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
 
 By tracking events with properties to your app, you will be able to answers questions like:
 - What is the top N content viewed?
@@ -43,7 +43,7 @@ The Events Page provides a table with an overview of the events happening in you
 ## Detailed event view
 By clicking on an event in the events table, you will access to a more detailed page, in which further information about an event is provided. Also, this page will provide information about the event properties.
 This page will include a detailed overview of the previous introduced information in the Events Page (count, users, count per user, count per session) over the selected period of time.
-It will also include information about the event properties, if any.
+It will also include information about the event properties, if any. From this view, event names can be removed. Note that this action cannot be undone.
 
 ## Events Properties
 Events Properties provide contextual information about the events. They allow to have a deeper understanding about the actions that the users take in your app.
@@ -56,5 +56,4 @@ Below there is an example of an event with one property and several property val
 *Event Property Values: "png", "jpeg", "pdf"*
 
 
-The maximum number of properties currently supported in Mobile Center is five. The number of property values per event property is unlimited. However, for each property, we will show the five event property values with highest count and its distribution.
-Currently, we support properties and property values that are strings.
+The maximum number of properties currently supported in Mobile Center is five. For each property, we will show the counts for the ten event property values with highest count, along with their distribution. Our property values are currently optimized for values of type String.

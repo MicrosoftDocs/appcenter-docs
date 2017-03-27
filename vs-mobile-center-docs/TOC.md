@@ -60,6 +60,7 @@
 ## [React Native](analytics/react-native.md)
 ## [Audience Page](analytics/understand-audience.md)
 ## [Events Metrics](analytics/understand-events.md)
+## [Logged Errors using Events](analytics/logged-errors-events.md)
 ## [Log Flow Page](analytics/understand-log-flow.md)
 ## [FAQ](analytics/faq.md)
 
