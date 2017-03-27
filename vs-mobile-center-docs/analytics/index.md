@@ -19,7 +19,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Xamarin](~/sdk/getting-started/xamarin.md), [iOS](~/analytics/ios.md), [Android](~/analytics/android.md), [React Native](~/analytics/react-native.md) | Simple steps to integrate the SDK and start understanding your audience|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), , [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md)| Simple steps to integrate the SDK and start understanding your audience|
 | [App Audience](~/analytics/understand-audience.md) | Key metric about the app usage and users devices|
 | [Custom Events](~/analytics/understand-events.md)| Count, user count and custom properties analytics of custom events|
 | [Log Flow](~/analytics/understand-log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
@@ -30,11 +30,11 @@ Getting Analytics only requires to add the SDK into the app and initialize it wi
 Doing this will get the data flowing to Mobile Center and your Analytics immediately.
 The Audience page will represent your data, albeit minimal, within seconds of your app run.
 
-[Get Started on Android](~/analytics/android.md)
+[Get Started on Android](~/sdk/getting-started/android.md)
 
-[Get Started on iOS](~/analytics/ios.md)
+[Get Started on iOS](~/sdk/getting-started/ios.md)
 
-[Get Started on React Native](~/analytics/react-native.md)
+[Get Started on React Native](~/sdk/getting-started/react-native.md)
 
 [Get Started on Xamarin](~/sdk/getting-started/xamarin.md)
 
@@ -44,7 +44,7 @@ Find more details about the [audience page](~/analytics/understand-audience.md) 
 
 ## Events Metrics
 
-The documentation for Custom Events can be found at [Events Metrics](~/analytics/understand-events.md).
+The documentation for Custom Events can be found at [Events Metrics](~/analytics/understand-events.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
 
 ## Log Flow
 
