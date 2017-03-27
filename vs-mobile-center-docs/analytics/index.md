@@ -45,3 +45,7 @@ Find more details about the [audience page](~/analytics/understand-audience.md) 
 ## Events Metrics
 
 The documentation for Custom Events can be found at [Events Metrics](~/analytics/understand-events.md).
+
+## Log Flow
+
+See your incoming activity using Log Flow. More details can be found at [Log Flow](~/analytics/understand-log-flow.md).
