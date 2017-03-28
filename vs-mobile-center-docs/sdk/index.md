@@ -37,16 +37,16 @@ The tables below show the minimum supported versions of Mobile Center services.
 
 ### Android
 
- Services         | Android   | API Level
- -----------------| ----------| ----------
+ Services         | Android            | API Level
+ -----------------|--------------------|-----------
  Analytics        | 4.0.3 and higher   | >=15
- Crashes          | 4.0.3 and higher    |  >=15
- Distribute       | 4.0.3 and higher    |  >=15
+ Crashes          | 4.0.3 and higher   | >=15
+ Distribute       | 4.0.3 and higher   | >=15
 
 ### iOS
 
  Services         | iOS    | Xcode
- -----------------| -------| ------
+ -----------------|--------|-------
  Analytics        | 8.0    | 8.0
  Crashes          | 8.0    | 8.0
  Distribute       | 8.0    | 8.0
