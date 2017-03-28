@@ -19,7 +19,7 @@ This will enable answers to questions such as:
 - Are my users majoritarily on the lastest version?
 - What are the main devices used?
 - Can I remove support for that old OS version?
-and many more
+and many more.
 
 ## General information
 All the data in the Audience page represent the device population in the selected **time range** and filters.
@@ -32,7 +32,7 @@ Represents the number of unique app installations that launched the app in the l
 - 7 calendar days for the "weekly"
 - 30 calendar days for the "monthly"
 
-All days start at 12am UTC
+All days start at 12am UTC.
 
 ## Engagement
 Engagement measures the app sessions count and duration.
@@ -53,7 +53,7 @@ The Devices panel gives information about the users' devices:
 
 ## Country/Region and Languages
  The country/region and languages panel display information about devices geographical location and language setting.
- The country/region is determined by the carrier country and requires the device to have a SIM, and the language is the one defined at the OS level by the user.
+ The country/region is determined by the carrier country and requires the device to have a SIM. Note that if you are using a simulator, the country shown will probably not be accurate as it is selected by default. The language is the one defined at the OS level by the user.
 - The map shows shaded regions depending on the number of active devices. The more devices, the darker the shade
 - Country/Region distribution: shows the top 7 country/region by number of active devices
 - Language distribution: shows the top 7 major language device setting
