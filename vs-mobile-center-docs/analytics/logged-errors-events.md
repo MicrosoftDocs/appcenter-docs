@@ -19,7 +19,7 @@ ms.custom: analytics
 # How to Use Events for Logged Errors  
 In this section, you will learn how to use events to get information about your logged errors. Such events for logged errors are helpful if you are interested in counting the number of times an error has happened. You will get six different measures per event: count, count change, users, user change, count per user and count per session. 
  
-## Event name: 
+## Event name
 We recommend giving the event a name that provides some contextual information. Logged errors can be very generic, so it’s necessary to provide some extra information that will identify an error in a more distinct way. An example of contextual information is the file/method name where the error is logged. 
 
 *Example*:
@@ -27,7 +27,7 @@ We recommend giving the event a name that provides some contextual information. 
 Let’s imagine a situation where you want to understand how often your users fail connecting to the WiFi. 
 “UnknownHostException:ConnectWiFi”, where “UnknownHostException” is the generic name of the exception and “ConnectWiFi” is the method name. 
   
-## Event properties: 
+## Event properties
 If you’d like to understand more about the distribution of these logged errors for different characteristics (e.g. device type, OS version, build number, or manufacturer), you can use the properties and property values. 
 
 *Example*: 
