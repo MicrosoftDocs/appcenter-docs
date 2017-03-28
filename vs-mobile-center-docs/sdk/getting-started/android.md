@@ -20,7 +20,7 @@ ms.tgt_pltfrm: android
 > * [Xamarin](xamarin.md)
 > * [React Native](react-native.md)
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Analytics and Crashes services.
+Let's get started with setting up Mobile Center Android SDK in your app to use Analytics, Crashes and Distribute services.
 
 Contents:
 

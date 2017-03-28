@@ -20,7 +20,7 @@ ms.tgt_pltfrm: ios
 
 You can easily let your users get the latest version of your app by integrating the Distribute service of the Mobile Center SDK.
 
-Once that is done, the SDK checks for new updates once per the app's lifetime. If the app is currently in the foreground or suspended in the background, you might need to kill the app to get the latest update. If it finds a new update, users will see a dialog with three options - `Download`, `Postpone` and `Ignore`. If the user presses Download, the SDK will trigger the new version to be installed. Postpone will delay the download until the app is opened again. Ignore will not prompt the user again for that particular app version.
+Once that is done, the SDK checks for new updates once per the app's lifetime. If the app is currently in the foreground or suspended in the background, you might need to kill the app to get the latest update. If an update is available, users will see a dialog with three options - **Download**, **Postpone** and **Ignore**. If the user presses **Download**, the SDK will trigger the new version to be installed. **Postpone** will delay the download until the app is opened again. **Ignore** will not prompt the user again for that particular app version.
 
 * **Localization of the update UI:** You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog.  [here](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files.
 

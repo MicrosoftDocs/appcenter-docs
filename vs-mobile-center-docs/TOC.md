@@ -80,6 +80,9 @@
 ### [iOS](sdk/crashes/ios.md)
 ### [React Native](sdk/crashes/react-native.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
+## Distribute
+### [Android](sdk/distribute/android.md)
+### [iOS](sdk/distribute/ios.md)
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)

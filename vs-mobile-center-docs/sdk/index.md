@@ -22,7 +22,7 @@ The SDK is currently in public preview and supports the following services:
 
 2. **Crashes** – The Mobile Center SDK will automatically generate a crash log every time your app crashes. The log is first written to the device’s storage and when the user starts the app again, the crash report will be forwarded to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store, Google Play or other app stores. Crash logs contain viable information for you to help resolve the issue. The SDK gives you a lot of flexibility how to handle a crash log. As a developer you can collect and add additional information to the report if you like.
 
-3. **Distribute** – Our SDK will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or ignore the latest version. Once they click "Download", SDK will start the installation process of your application. Note that this feature will NOT work if your app is deployed to the app store, if you are developing locally or if the app is a debug build.
+3. **Distribute** – Our SDK will let your users install a new version of the app when you distribute it via Mobile Center. When a new version of the app is available, the SDK will present an update dialog to the users to either download or ignore the latest version. Once they click **Download**, SDK will start the installation process of your application. Note that this feature will **NOT** work if your app is deployed to the app store, if you are developing locally or if the app is a debug build.
 
 ## Get Started
 
