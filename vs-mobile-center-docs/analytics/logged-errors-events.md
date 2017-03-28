@@ -11,7 +11,9 @@ ms.service: mobile-center
 ms.custom: analytics
 ---
 
-*Logged Errors are not available yet as part of the Crashes service in Mobile Center. Therefore, we would like to propose a workaround using Custom Events. This is not how "Logged Errors" are intended to be supported and it is not the main purpose of Events either. However, we would like to give you some advice on how to best leverage Events to get counts on your logged errors.*
+
+> [!IMPORTANT]
+> Logged Errors are not available yet as part of the Crashes service in Mobile Center. Therefore, we would like to propose a workaround using Custom Events. This is not how "Logged Errors" are intended to be supported and it is not the main purpose of Events either. However, we would like to give you some advice on how to best leverage Events to get counts on your logged errors.
 
 
 # How to Use Events for Logged Errors  
