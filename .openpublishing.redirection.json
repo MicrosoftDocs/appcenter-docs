@@ -1,0 +1,16 @@
+{
+  "redirections": [
+    {
+        "source_path": "analytics/android.md",
+        "redirect_url": "~/sdk/analytics/android.md"
+    },
+    {
+        "source_path": "analytics/ios.md",
+        "redirect_url": "~/sdk/analytics/ios.md"
+    },
+    {
+        "source_path": "analytics/react-native.md",
+        "redirect_url": "~/sdk/analytics/react-native.md"
+    }
+  ]
+}

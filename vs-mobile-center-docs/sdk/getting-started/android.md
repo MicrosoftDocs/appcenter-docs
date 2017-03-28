@@ -2,9 +2,9 @@
 title: Getting Started
 description: Getting Started
 keywords: sdk
-author:
+author: 
 ms.author:
-ms.date: 03/24/2017
+ms.date: 03/27/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -44,7 +44,7 @@ Below are the steps on how to integrate our compiled libraries in your applicati
  1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use include all the services, add the following lines:
 
         dependencies {
-            def mobileCenterSdkVersion = '0.6.0'
+            def mobileCenterSdkVersion = '0.6.1'
             compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
             compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
             compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
