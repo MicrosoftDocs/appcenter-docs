@@ -11,12 +11,11 @@ ms.service: mobile-center
 ms.custom: analytics
 ---
 
+# How to Use Events for Logged Errors  
 
 > [!IMPORTANT]
 > Logged Errors are not available yet as part of the Crashes service in Mobile Center. Therefore, we would like to propose a workaround using Custom Events. This is not how "Logged Errors" are intended to be supported and it is not the main purpose of Events either. However, we would like to give you some advice on how to best leverage Events to get counts on your logged errors.
 
-
-# How to Use Events for Logged Errors  
 In this section, you will learn how to use events to get information about your logged errors. Such events for logged errors are helpful if you are interested in counting the number of times an error has happened. You will get six different measures per event: count, count change, users, user change, count per user and count per session. 
  
 ## Event name
