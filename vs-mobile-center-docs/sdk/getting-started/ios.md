@@ -121,7 +121,9 @@ The example above shows how to use the `start` method and include both the Analy
     3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
     4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
     5. Implement the openURL-callback in your AppDelegate to enable in-app-updates.
-
+    
+   **Objective-C**
+   
     ```obj-c
         - (BOOL)application:(UIApplication *)application
                     openURL:(NSURL *)url
@@ -133,6 +135,8 @@ The example above shows how to use the `start` method and include both the Analy
         return YES;
         }
     ```
+    
+    **Swift**
 
     ```swift
         func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
