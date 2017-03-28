@@ -20,7 +20,7 @@ ms.tgt_pltfrm: ios
 > * [Xamarin](xamarin.md)
 > * [React Native](react-native.md)
 
-Let's get started with setting up Mobile Center iOS SDK in your app to use Analytics, Crashes and Distribute services:
+Let's get started with setting up Mobile Center iOS SDK in your app to use Analytics, Crashes, and Distribute services:
 
 Contents:
 
@@ -98,7 +98,7 @@ To start the Mobile Center SDK in your app, follow these steps:
         import MobileCenterCrashes
         import MobileCenterDistribute
 
-3. **Start the SDK:** Mobile Center provides developers with three modules to get started: MobileCenter (required), Analytics and Crashes. In order to use Mobile Center services, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them, both Analytics and Crashes, when starting the SDK.
+3. **Start the SDK:** Mobile Center provides developers with three modules to get started: MobileCenter (required), Analytics and Crashes. In order to use Mobile Center services, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them, Analytics, Crashes, and Distribute when starting the SDK.
 
     **Objective-C**
     Insert the following line to start the SDK in your app's AppDelegate.m class in the didFinishLaunchingWithOptions method.
@@ -116,14 +116,13 @@ The example above shows how to use the `start` method and include both the Analy
 
 4. **Enable MSDistribute to provide in-app-updates:**
 
-1. Open your `Info.plist`.
-2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your Info.plist as source code).
-3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
-4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
-5. Implement the openURL-callback in your AppDelegate to enable in-app-updates.
+    1. Open your `Info.plist`.
+    2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your Info.plist as source code).
+    3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
+    4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+    5. Implement the openURL-callback in your AppDelegate to enable in-app-updates.
 
-    **Objective-C**
-
+    ```obj-c
         - (BOOL)application:(UIApplication *)application
                     openURL:(NSURL *)url
         sourceApplication:(NSString *)sourceApplication
@@ -133,14 +132,14 @@ The example above shows how to use the `start` method and include both the Analy
         [MSDistribute openUrl:url];
         return YES;
         }
+    ```
 
-
-    **Swift**
-
+    ```swift
         func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         // Pass the URL to MSDistribute.
         MSDistribute.open(url as URL!)
         return true
         }
+    ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/ios.md) and [Crashes](~/sdk/crashes/ios.md) section for APIs to use in your app.

@@ -20,7 +20,7 @@ ms.tgt_pltfrm: android
 > * [Xamarin](xamarin.md)
 > * [React Native](react-native.md)
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Analytics, Crashes and Distribute services.
+Let's get started with setting up Mobile Center Android SDK in your app to use Analytics, Crashes, and Distribute services.
 
 Contents:
 
@@ -58,7 +58,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 To start the Mobile Center SDK in your app, follow these steps:
 
-1. **Start the SDK:**  Mobile Center provides developers with two modules to get started – Analytics and Crashes. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate` callback.
+1. **Start the SDK:**  Mobile Center provides developers with three modules to get started – Analytics and Crashes. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate` callback.
 
         MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Distribute.class);
 

@@ -26,20 +26,20 @@ Once that is done, the SDK checks for new updates once per the app's lifetime. I
 
 * **Enable or disable Distribute:** You can change the enabled state by calling the setEnabled API. If you disable it, the SDK will not prompt your users when a new version is available for install. To re-enable it, pass YES or true as a parameter in the same method.
 
-    **Objective-C**
+    ```obj-c
+    [MSDistribute setEnabled:NO];
+    ```
 
-        [MSDistribute setEnabled:NO];
-
-    **Swift**
-
-        MSDistribute.setEnabled(false)
+    ```swift
+    MSDistribute.setEnabled(false)
+    ```
 
 You can also check if the service is enabled or not using the isEnabled method:
 
-    **Objective-C**
-
-        BOOL enabled = [MSDistribute isEnabled];
+    ```obj-c
+    BOOL enabled = [MSDistribute isEnabled];
+    ```
     
-    **Swift**
-
+    ```swift
     var enabled = MSDistribute.isEnabled()
+    ```
