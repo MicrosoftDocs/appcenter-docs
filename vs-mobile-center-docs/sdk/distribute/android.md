@@ -32,7 +32,7 @@ If you want to change some text for the default English language, download
 
 ### Localization
 
-If you want to localize texts for language `{xx}`, download
+If you want to localize text for language `{xx}`, download
 [this resource file](https://raw.githubusercontent.com/Microsoft/mobile-center-sdk-android/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml), rename it to `mobile_center_distribute.xml` and move it to your application's `res/values-{xx}` folder (create the folder `values-{xx}` if missing).
 
 [//]: # (The following is extracted from https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)

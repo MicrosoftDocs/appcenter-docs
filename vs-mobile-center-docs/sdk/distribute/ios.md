@@ -24,7 +24,7 @@ Once that is done, the SDK checks for new updates once per the app's lifetime. I
 
 * **Localization of the update UI:** You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the strings file [here](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files.
 
-* **Enable or disable Distribute:** You can change the enabled state by calling the setEnabled API. If you disable it, the SDK will not prompt your users when a new version is available for install. To re-enable it, pass `YES` or `true` as a parameter in the same method.
+* **Enable or disable Distribute:** You can change the enabled state by calling the `setEnabled` API. If you disable it, the SDK will not prompt your users when a new version is available for install. To re-enable it, pass `YES` or `true` as a parameter in the same method.
 
   ```obj-c
   [MSDistribute setEnabled:NO];
@@ -34,7 +34,7 @@ Once that is done, the SDK checks for new updates once per the app's lifetime. I
   MSDistribute.setEnabled(false)
   ```
 
-You can also check if the service is enabled or not using the isEnabled method:
+You can also check if the service is enabled or not using the `isEnabled` method:
 
 ```obj-c
 BOOL enabled = [MSDistribute isEnabled];
