@@ -11,7 +11,9 @@ ms.service: mobile-center
 ms.custom: build
 ---
 
-Each build is ran on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulted from the build (log files, application files, symbol files) are stored on Mobile Center servers.
+# Cloud Build Machines
+
+Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on Mobile Center servers.
 
 ## Operating System
 
@@ -350,7 +352,7 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | ndk-bundle            | 14.0.3770861                              |
-| lldb;2.3              | 2.3.3614996                               |                      
+| lldb;2.3              | 2.3.3614996                               |
 | cmake;3.6.3155560     | 3.6.3155560                               |
 
 - Google APIs
