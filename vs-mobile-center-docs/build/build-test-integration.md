@@ -3,7 +3,7 @@
 
 title: Testing your latest build on a real device | Mobile Center Build
 description: How to test if your app starts on a real device
-keywords: test, build, ios
+keywords: test, build, ios, android
 author: oddj0b
 ms.author: vigimm
 ms.date: 03/28/2017
