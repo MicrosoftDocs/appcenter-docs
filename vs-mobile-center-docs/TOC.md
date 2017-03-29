@@ -19,6 +19,7 @@
 ### [Code Signing](build/android/code-signing/index.md)
 #### [Setting up an Android project for code signing](build/android/code-signing/setup.md)
 ## [Cloud build machines](build/software.md)
+## [Test your app on real devices](build/build-test-integration.md)
 ## [FAQ](build/faq.md)
 
 # [Test](test-cloud/index.md)
