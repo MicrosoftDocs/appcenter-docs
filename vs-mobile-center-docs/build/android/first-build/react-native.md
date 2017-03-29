@@ -39,11 +39,15 @@ The available build variants will populate from the Build Types and Product Flav
 
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-### 3.4. Code signing
+### 3.4. Launch your successful build on a real device
+
+Use your newly produced APK file, to test if your app stats on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
+
+### 3.5. Code signing
 
 A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
-### 3.5. Distribution to a distribution group
+### 3.6. Distribution to a distribution group
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
