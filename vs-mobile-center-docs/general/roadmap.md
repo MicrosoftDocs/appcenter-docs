@@ -38,7 +38,6 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## Build service
 
 * Support for Visual Studio Team Services & Bitbucket as source code repositories
-* Ability to distribute a single build to an existing distribution group
 * Ability to automate running UI tests in the Test service after each successful build
 * Support for customizing your build definitions: secret variables, auto-incrementing of version number and build scripts
 
