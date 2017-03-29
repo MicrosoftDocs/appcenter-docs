@@ -2,8 +2,8 @@
 title: Getting Started
 description: Getting Started
 keywords: sdk
-author:
-ms.author:
+author: elamalani
+ms.author: emalani
 ms.date: 03/24/2017
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
@@ -98,52 +98,58 @@ To start the Mobile Center SDK in your app, follow these steps:
         import MobileCenterCrashes
         import MobileCenterDistribute
 
-3. **Start the SDK:** Mobile Center provides developers with three modules to get started: MobileCenter (required), Analytics and Crashes. In order to use Mobile Center services, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them, Analytics, Crashes, and Distribute when starting the SDK.
+2. **Start the SDK:** Mobile Center provides developers with three modules to get started: MobileCenter (required), Analytics and Crashes. In order to use Mobile Center services, you need to opt in for the module(s) that you'd like, meaning by default no modules are started and you will have to explicitly call each of them, Analytics, Crashes, and Distribute when starting the SDK.
 
-    **Objective-C**
-    Insert the following line to start the SDK in your app's AppDelegate.m class in the didFinishLaunchingWithOptions method.
+  **Objective-C**
 
-        [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
+  Insert the following line to start the SDK in your app's AppDelegate.m class in the didFinishLaunchingWithOptions method.
 
-    **Swift**
-    Insert the following line to start the SDK in your app's AppDelegate.swift class in the didFinishLaunchingWithOptions method.
+  ```obj-c
+  [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
+  ```
 
-        MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+  **Swift**
 
-    You can also copy paste the `start` method call from the Getting Started page on Mobile Center portal once your app is selected. It already includes the App Secret so that all the data collected by the SDK corresponds to your application. Make sure to replace {Your App Secret} text with the actual value for your application.
+  Insert the following line to start the SDK in your app's AppDelegate.swift class in the didFinishLaunchingWithOptions method.
 
-The example above shows how to use the `start` method and include both the Analytics and Crashes module. If you wish not to use Analytics, remove the parameter from the method call above. Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. Also, the `start` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+  ```swift
+  MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+  ```
 
-4. **Enable MSDistribute to provide in-app-updates:**
+  You can also copy paste the `start` method call from the Getting Started page on Mobile Center portal once your app is selected. It already includes the App Secret so that all the data collected by the SDK corresponds to your application. Make sure to replace `{Your App Secret}` text with the actual value for your application.
 
-    1. Open your `Info.plist`.
-    2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your Info.plist as source code).
-    3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
-    4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
-    5. Implement the openURL-callback in your AppDelegate to enable in-app-updates.
-    
+  The example above shows how to use the `start` method and include the Analytics, Crashes, and Distribute modules. If you wish not to use Analytics (for example), remove the parameter from the method call above. Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. Also, the `start` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+
+## 4. Enable MSDistribute to provide in-app-updates
+
+1. Open your `Info.plist`.
+2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your Info.plist as source code).
+3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
+4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+5. Implement the openURL-callback in your AppDelegate to enable in-app-updates.
+
    **Objective-C**
-   
-    ```obj-c
-        - (BOOL)application:(UIApplication *)application
-                    openURL:(NSURL *)url
-        sourceApplication:(NSString *)sourceApplication
-                annotation:(id)annotation {
-                
-        // Pass the url to MSDistribute.
-        [MSDistribute openUrl:url];
-        return YES;
-        }
-    ```
-    
-    **Swift**
 
-    ```swift
-        func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        // Pass the URL to MSDistribute.
-        MSDistribute.open(url as URL!)
-        return true
-        }
-    ```
+  ```obj-c
+  - (BOOL)application:(UIApplication *)application
+              openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+          annotation:(id)annotation {
+
+  // Pass the url to MSDistribute.
+  [MSDistribute openUrl:url];
+  return YES;
+  }
+  ```
+
+  **Swift**
+
+  ```swift
+  func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+  // Pass the URL to MSDistribute.
+  MSDistribute.open(url as URL!)
+  return true
+  }
+  ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/ios.md) and [Crashes](~/sdk/crashes/ios.md) section for APIs to use in your app.
