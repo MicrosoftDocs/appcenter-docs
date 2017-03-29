@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 03/08/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -12,10 +12,6 @@ ms.custom: build
 ---
 
 Each build is ran on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulted from the build (log files, application files, symbol files) are stored on Mobile Center servers.
-
-# OS X Build Machine Image
-
-- Updated: 2017-03-08
 
 ## Operating System
 
@@ -27,23 +23,24 @@ Each build is ran on a separate, clean virtual machine and no other user has acc
 
 - Ruby ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin15]
 - Python Python 2.7.10
-- Node.js 6.9.4
+- Node.js v6.10.0
 - Java 1.8.0_121-b13
 
 ### Package Management
 
 - NPM 3.10.10
-- Homebrew 1.1.7
-- Homebrew/homebrew-core (git revision 7af1a; last commit 2017-01-17)
-- bundler Bundler version 1.13.6
-- CoCoaPods 1.1.1
+- Homebrew 1.1.11
+- Homebrew/homebrew-core (git revision 858d; last commit 2017-03-22)
+- bundler Bundler version 1.14.6
+- CoCoaPods 1.2.0
+- Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.11.0
+- Git 2.12.1
 - Git LFS 1.5.3
 - Curl 7.43.0 (x86_64-apple-darwin15.0) libcurl/7.43.0 SecureTransport zlib/1.2.5
-- GNU Wget 1.18 built on darwin15.5.0
+- GNU Wget 1.19.1 built on darwin15.6.0
 
 ### Project Manangement
 
@@ -305,13 +302,13 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| tools                 | Android SDK Tools, revision 25.2.5          |
+| tools                 | Android SDK Tools, revision 25.3.1          |
 
 - Android SDK Platform-tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 25.0.3 |
+| platform-tools        | Android SDK Platform-tools, revision 25.0.4 |
 
 - Android Platforms
 
@@ -348,6 +345,14 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
 
+- Utils
+
+| Package name          | Description                               |
+|-----------------------|-------------------------------------------|
+| ndk-bundle            | 14.0.3770861                              |
+| lldb;2.3              | 2.3.3614996                               |                      
+| cmake;3.6.3155560     | 3.6.3155560                               |
+
 - Google APIs
 
 | Package name          | Description                               |
@@ -361,18 +366,19 @@ iPad Pro (12.9 inch) (3FCCFED7-454F-4090-BBE0-0116A1CCEA13) (Shutdown)
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
-| extra-android-m2repository        | Android Support Repository, revision 43  |
+| extra-android-m2repository        | Android Support Repository, revision 46  |
 | extra-google-m2repository         | Google Repository, revision 43           |
 | extra-google-google_play_services | Google Play services, revision 38        |
 
 #### Xamarin
 
-- Xamarin Studio: 6.1.4.1
-- Mono Framework MDK: Mono JIT compiler version 4.6.2.16 (mono-4.6.0-branch/ac9e222 Wed Dec 14 17:02:09 EST 2016)
-- Xamarin.iOS: 10.3.1.8
-- Xamarin.Android: 7.0.2-42
-- Xamarin.mac: 2.10.0.120
-- NUnit: 3.6.0
+- Xamarin Studio: 6.2.0.1829
+- Mono Framework MDK: Mono JIT compiler version 4.8.0.495
+- Xamarin.iOS: 10.4.0.128
+- Xamarin.Android: 7.1.0-43
+- Xamarin.mac: 3.0.0.398
+- NUnit: 3.6.1
+- Nuget: 4.0.0
 
 #### Device Pairs
 ```
