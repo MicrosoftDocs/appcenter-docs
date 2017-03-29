@@ -96,6 +96,7 @@ To start the Mobile Center SDK in your app, follow these steps:
     ```
 
     **Swift**
+
     Open your AppDelegate.swift file and add the following lines.
 
     ```swift
