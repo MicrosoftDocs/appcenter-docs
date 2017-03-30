@@ -40,7 +40,7 @@ A successful build will produce an APK file. In order to release the build to th
 
 ### 3.4. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
+Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
 ### 3.5. build.gradle File
 
