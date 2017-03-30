@@ -43,9 +43,8 @@ If the selected scheme has a test action with a test target selected, you can co
 
 ### 3.5. Code signing
 A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
-
 ### 3.6. Launch your successful build on a real device
-Use your newly produced IPA file, to test if your app stats on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
+Use your newly produced IPA file to test if your app starts on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
 ### 3.7. CocoaPods
 Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
