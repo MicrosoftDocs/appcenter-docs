@@ -19,7 +19,7 @@ ms.reviewer: vigimm
 In this document, you'll learn how a successful build can be launched on a real device using Mobile Center Test. Launching your app is very helpful when validating that your latest build is working.
 
 ## Configuring your branch
-First, off the branch needs to be setup before it's ready to run the launch test. You can read more about configuring your branch in the Configure a build respectively for [Android](android/first-build/index.md) and [iOS](ios/first-build/index.md).
+First, the branch needs to be setup before it's ready to run the launch test. You can read more about configuring your branch in the Configure a build respectively for [Android](android/first-build/index.md) and [iOS](ios/first-build/index.md).
 
 Secondly, you need a subscription to Mobile Center Test before you can enable launch test. If you're a first-time user of Mobile Center Test, there's a free trial so you can see how it works. To activate your free trial, you can use the link below the _Run a launch test on a device_ option.
 
