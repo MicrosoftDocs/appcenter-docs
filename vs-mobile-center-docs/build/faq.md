@@ -47,6 +47,6 @@ There are many reasons why build duration can be higher when using a build servi
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
 
 ## Why do I get an extended build time when Run launch test on a device is enabled
-We run the test as part of the build operation, which gives the added build time. What happens is that Mobile Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device, we don't want users to spend their device hours by locking a device until we know everything checks out. Third, it's running the app on a phone, this takes very little time. And lastly, we move test logs, screenshots into the cloud.
+We run the test as part of the build operation, which gives the added build time. What happens is that Mobile Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device. Third, it's running the app on a phone, this takes very little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additionally **10 minutes of build time**.
