@@ -40,7 +40,8 @@ The available build variants will populate from the Build Types and Product Flav
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
 ### 3.4. Launch your successful build on a real device
-Use your newly produced APK file to test if your app starts on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
+
+Use your newly produced APK file, to test if your app stats on a real device. This will roughly add additional 10 minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
 ### 3.5. Code signing
 
