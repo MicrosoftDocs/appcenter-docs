@@ -4,7 +4,7 @@ description: Using the Mobile Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/20/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: mobile-center
@@ -22,6 +22,8 @@ The SDK is currently in public preview and supports the following services:
 
 2. **Crashes** – The Mobile Center SDK will automatically generate a crash log every time your app crashes. The log is first written to the device’s storage and when the user starts the app again, the crash report will be forwarded to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store, Google Play or other app stores. Crash logs contain viable information for you to help resolve the issue. The SDK gives you a lot of flexibility how to handle a crash log. As a developer you can collect and add additional information to the report if you like.
 
+3. **Distribute** – Our SDK will let your users install a new version of the app when you distribute it via Mobile Center. When a new version of the app is available, the SDK will present an update dialog to the users to either download or ignore the latest version. Once they click **Download**, SDK will start the installation process of your application. Note that this feature will **NOT** work if your app is deployed to the app store, if you are developing locally or if the app is a debug build.
+
 ## Get Started
 
 * [Android](getting-started/android.md)
@@ -31,21 +33,23 @@ The SDK is currently in public preview and supports the following services:
 
 ## Minimum Supported Versions
 
-The tables below show the minimum supported versions of for Mobile Center services.
+The tables below show the minimum supported versions of Mobile Center services.
 
 ### Android
 
- Services         | Android   | API Level
- -----------------| ----------| ----------
+ Services         | Android            | API Level
+ -----------------|--------------------|-----------
  Analytics        | 4.0.3 and higher   | >=15
- Crashes          | 4.0.3 and higher    |  >=15
+ Crashes          | 4.0.3 and higher   | >=15
+ Distribute       | 4.0.3 and higher   | >=15
 
 ### iOS
 
  Services         | iOS    | Xcode
- -----------------| -------| ------
+ -----------------|--------|-------
  Analytics        | 8.0    | 8.0
  Crashes          | 8.0    | 8.0
+ Distribute       | 8.0    | 8.0
 
 ## Repo Location
 
