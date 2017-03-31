@@ -31,8 +31,8 @@ Finding your launch test result can be done in two ways:
 2. Go to _Test_ in the left-hand menu and follow along in the progress
 
 ## Unsupported configurations
-A configuration is put together of several parts, one part of the branch configurations like described above. Another is the build definitions which are included in the code. Android for example, can contain Gradle which is read and executed by Mobile Center Build. Below are some known configurations that currently don't work with launch test.
+When a build is running, the build configuration is composed of several parts: the build definitions you made in the code or in the IDE, and the settings you have chosen in Mobile Center. The way configurations work is platform and language specific. Below are some known configurations where launch test is not supported.
 
-* Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. This can be done in several ways, one way we've seen is with the option _Generate apk per ABI_ which should be disabled 
-* Simulator builds for Xamarin apps, doesn't output a binary and there can't be tested. This is a problem for both iOS and Android
-* Android apps needs internet permissions, it's used by Mobile Center Test to communicate with your app. You specify permissions in your manifest, or else Mobile Center Test can't communicate with the app
+* Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable Generate one package(.apk) per selected ABI in your Android Build options, only one APK is created.
+* Simulator builds for Xamarin apps don't output a binary and there can't be tested. This is the case for both iOS and Android
+* Android apps without internet permissions cannot be tested using Mobile Center Test. Internet permissions are needed for the test infrastructure to communicate with your app. In order to use launch test for your Android project, make sure to declare internet permissions in your app manifest
