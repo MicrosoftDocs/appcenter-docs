@@ -21,7 +21,7 @@ You can choose from the following set of services as is appropriate for your mob
 For shipping your mobile apps faster, [Mobile Center](https://mobile.azure.com) offers three key lifecycle services:
 
 ###Build
-With Build, you can manage your source code in a Git repository and create an installable app package automatically with every commit or push. Best of all, you don't need to provision any agents or external machines that run macOS to build your iOS apps. Mobile Center takes care of this and will compile your iOS and Android app right from the source code with no manual setup on your side. Right now, Mobile Center only supports GitHub repositories. Bitbucket and VSTS integration is on the roadmap.
+With Build, you can manage your source code in a Git repository and create an installable app package automatically with every commit or push. Best of all, you don't need to provision any agents or external machines that run macOS to build your iOS apps. Mobile Center takes care of this and will compile your iOS and Android app right from the source code with no manual setup on your side. Right now, Mobile Center supports GitHub and Bitbucket repositories. VSTS integration is on the roadmap.
 
 ###Test
 Once the build process is finished, you want to run your tests on real devices. Test Cloud offers more than 2000 real devices in 400 unique device configurations to validate your mobile app's behavior. Tests can be written for your iOS and Android apps in C# (UITest), Ruby (Calabash), or Java (Appium). This service is backed by Xamarin Test Cloud.
