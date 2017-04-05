@@ -83,4 +83,4 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/android.md) and [Crashes](~/sdk/crashes/android.md) section for APIs to use in your app.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/android.md), [Crashes](~/sdk/crashes/android.md) and [Distribute](~/sdk/distribute/ios.md) section for APIs to use in your app.

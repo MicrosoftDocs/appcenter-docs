@@ -102,20 +102,33 @@ To start the Mobile Center SDK in your app, follow these steps:
         using Microsoft.Azure.Mobile;
         using Microsoft.Azure.Mobile.Analytics;
         using Microsoft.Azure.Mobile.Crashes;
+        using Microsoft.Azure.Mobile.Distribute;
 
 2. **Start the SDK:** Mobile Center provides developers with two modules to get started – Analytics and Crashes. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no module is started and you will have to explicitly call each of them when starting the SDK.
 
     **Xamarin.iOS**
 
-    Open AppDelegate.cs file and add the Start API in FinishedLaunching() method
+    1. Open AppDelegate.cs file and add the Start API in FinishedLaunching() method
 
-        MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes));
+        MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+    2. Add a new URL scheme to your `info.plist`. Open your `Info.plist` and switch to the **Advanced** tab. Copy and paste your bundle identifier as the `URL Identifier`, e.g. `com.example.awesomeapp`.
+    3. Next, in the **Advanced** tab, enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+    4. Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates and add the `Distribute.OpenUrl(url)`-call.
+    
+	```csharp
+	public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+   {
+   		Distribute.OpenUrl(url);
+
+       return true;
+   }
+	```
 
     **Xamarin.Android**
 
     Open MainActivity.cs file and add the Start API in OnCreate() method
 
-        MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics), typeof(Crashes));
+        MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
     **Xamarin.Forms**
 
@@ -126,3 +139,7 @@ To start the Mobile Center SDK in your app, follow these steps:
     You need to copy paste the App secret value for Xamarin iOS and Android app from Mobile Center portal. Make sure to replace the placeholder text above with the actual values for your application.
 
     The example above shows how to use the Start() method and include both the Analytics and Crashes module. If you wish not to use Analytics, remove the parameter from the method call above. Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. Also, the Start() API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+    
+    **Note that your forms iOS app requires additional setup-steps for Distribute to work.**
+   
+    These steps are described above in the `Xamarin.iOS`-paragraph.
