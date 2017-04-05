@@ -18,28 +18,65 @@ ms.tgt_pltfrm: ios
 > * [iOS](ios.md)
 > * [Android](android.md)
 
-You can easily let your users get the latest version of your app by integrating the Distribute service of the Mobile Center SDK.
+## Introduction
+You can easily let your users get the latest version of your app by integrating `Distribute` service of Mobile Center SDK. All you need to do is pass the service name as a parameter in the `start()` API call. Once the activity is created, the SDK checks for new updates in the background. If it finds a new update, users will see a dialog with three options - `Download`,`Postpone` and `Ignore`. If the user presses `Download`, it will trigger the new version to be installed. `Postpone` will delay the download until the app is opened again. `Ignore` will not prompt the user again for that particular app version.
 
-Once that is done, the SDK checks for new updates once per the app's lifetime. If the app is currently in the foreground or suspended in the background, you might need to kill the app to get the latest update. If an update is available, users will see a dialog with three options - **Download**, **Postpone** and **Ignore**. If the user presses **Download**, the new version to be installed. **Postpone** will delay the download until the app is opened again. **Ignore** will not prompt the user again for that particular app version.
+## Additional code to enable Distribute
 
-* **Localization of the update UI:** You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the strings file [here](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files.
+First, pass the `Distribute` module as a parameter to the `start:withServices:` method as described in the setup-section. Once that is done, additional steps are required to enable in-app-updates:
 
-* **Enable or disable Distribute:** You can change the enabled state by calling the `setEnabled` API. If you disable it, the SDK will not prompt your users when a new version is available for install. To re-enable it, pass `YES` or `true` as a parameter in the same method.
+1. Open your `Info.plist`.
+2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your `Info.plist` as source code).
+3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
+4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+5. Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 
-  ```obj-c
-  [MSDistribute setEnabled:NO];
-  ```
+**Objective-C**
 
-  ```swift
-  MSDistribute.setEnabled(false)
-  ```
+	- (BOOL)application:(UIApplication *)application
+	            openURL:(NSURL *)url
+	  sourceApplication:(NSString *)sourceApplication
+	         annotation:(id)annotation {
+	         
+	  // Pass the url to MSDistribute.
+	  [MSDistribute openUrl:url];
+	  return YES;
+	}
 
-You can also check if the service is enabled or not using the `isEnabled` method:
+**Swift**
 
-```obj-c
-BOOL enabled = [MSDistribute isEnabled];
-```
 
-```swift
-var enabled = MSDistribute.isEnabled()
-```
+	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+	    
+	  // Pass the URL to MSDistribute.
+	  MSDistribute.open(url as URL!)
+	  return true
+	}
+
+## Text customization and localization
+
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [here](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files.   
+
+## Enable or disable Distribute
+
+You can change the enabled state by calling the `setEnabled` API. If you disable it, the SDK will not prompt your users when a new version is available for install. To re-enable it, pass `YES` or `true` as a parameter in the same method.
+
+Note that it will only disable SDK features for the Distribute service (in-app updates for your application) and the SDK API has nothing to do with disabling the **Distribute** service on the Mobile Center portal.
+
+**Objective-C**
+
+	[MSDistribute setEnabled:NO];
+
+**Swift**
+
+	MSDistribute.setEnabled(false)
+    
+You can also check if the service is enabled in the SDK or not at runtime using the `isEnabled` method. 
+  
+**Objective-C**
+
+	BOOL enabled = [MSDistribute isEnabled];
+
+**Swift**
+
+	var enabled = MSDistribute.isEnabled()
