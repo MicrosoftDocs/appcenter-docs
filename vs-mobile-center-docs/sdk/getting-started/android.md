@@ -41,7 +41,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 Below are the steps on how to integrate our compiled libraries in your application using Android Studio and Gradle.
 
-1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use include all the services, add the following lines:
+1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use all the services, add the following lines:
 
         dependencies {
             def mobileCenterSdkVersion = '0.6.1'
