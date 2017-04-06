@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 03/16/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
@@ -12,11 +12,19 @@ ms.service: mobile-center
 
 # Changelog
 
+### **Mar 30, 2017**
+- Organizations: Share apps among your team members by creating and grouping them within an Organization. Find them under Settings.
+- Bitbucket: Connect to source code repositories using GitHub... and now BitBucket, too! VSTS support coming soon.  
+- New Build commands in the CLI: Trigger a new build for pre-configured branches, view the build status of a branch, download logs for a build and get a list of branches for your app using CLI v0.7.0.
+- Build React Native apps with Yarn: Use the popular JavaScript package manager, Yarn, when building React Native apps. Dependency installs are now also faster and deterministic.
+- Release notes from your commits: When building, release notes now auto-populate with the corresponding commit message.  
+- Xamarin Cycle 9: Build apps using Xamarin Cycle 9 (Service Release 0) and use NuGet URL v3. See the full list of cloud build machines.
+- New iOS test devices: Choose iOS 10.3 devices to run tests using Mobile Center Test service.
+
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.   
 - When you receive an email to install a build, you can now also sign-in with a different set of credentials and Mobile Center will update your access automatically.  Mobile Center now also displays the account you are using to login to install the build so there is no more confusion about it.  
-
 
 ### **Mar 02, 2017**
 
