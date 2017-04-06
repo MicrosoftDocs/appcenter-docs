@@ -106,7 +106,7 @@ To start the Mobile Center SDK in your app, follow these steps:
 
 2. **Start the SDK:** Mobile Center provides developers with two modules to get started – Analytics and Crashes. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no module is started and you will have to explicitly call each of them when starting the SDK.
 
-    **Xamarin.iOS**
+    **Xamarin.iOS** <a name="Xamarin.iOS"/>
 
     1. Open AppDelegate.cs file and add the Start API in FinishedLaunching() method
 
@@ -142,4 +142,4 @@ To start the Mobile Center SDK in your app, follow these steps:
     
     **Note that your forms iOS app requires additional setup-steps for Distribute to work.**
    
-    These steps are described above in the `Xamarin.iOS`-paragraph.
+    These steps are described above in the [paragraph about Xamarin.iOS](#Xamarin.iOS).

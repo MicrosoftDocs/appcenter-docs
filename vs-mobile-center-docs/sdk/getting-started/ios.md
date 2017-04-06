@@ -159,4 +159,4 @@ return true
 }
 ```
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/ios.md), [Crashes](~/sdk/crashes/ios.md) and [Distribute](~/sdk/distribute/ios.md) sections for APIs to use in your app.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/analytics/ios.md), [Crashes](~/sdk/crashes/ios.md), and [Distribute](~/sdk/distribute/ios.md) sections for APIs to use in your app.
