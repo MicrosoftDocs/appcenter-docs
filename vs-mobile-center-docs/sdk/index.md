@@ -13,16 +13,16 @@ ms.custom: sdk
 
 # SDK Documentation
 
-The Mobile Center SDK lets you add Mobile Center services to your mobile application.
-Each service comes with its own module so that you can quickly add the services required for your app.
+The Microsoft Mobile Center SDKs allow you to add Mobile Center services to your mobile application.
 
-The SDK is currently in public preview and supports the following services:
+The SDK currently supports the following services:
 
-1. **Analytics** – Mobile Center Analytics helps you understand user behavior and customer engagement to improve your mobile app. The SDK automatically captures session count, device properties like model, OS Version etc. and pages. You can define your own custom events to measure things that matter to your business. All the information captured is available in the Mobile Center portal for you to analyze the data.
+1. **Analytics**: Mobile Center Analytics helps you understand user behavior and customer engagement to improve your mobile app. The SDK automatically captures session count and device properties like model, OS Version etc. You can define your own custom events to measure things that matter to your business. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-2. **Crashes** – The Mobile Center SDK will automatically generate a crash log every time your app crashes. The log is first written to the device’s storage and when the user starts the app again, the crash report will be forwarded to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store, Google Play or other app stores. Crash logs contain viable information for you to help resolve the issue. The SDK gives you a lot of flexibility how to handle a crash log. As a developer you can collect and add additional information to the report if you like.
+2. **Crashes**: Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and and on the next app start, the crash report is forwarded to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store, Google Play or other app stores. Crash logs contain valuable information for you to help resolve the issue. The SDK gives you a lot of flexibility how to handle a crash log. As a developer you can collect and add additional information to the report if you like.
 
-3. **Distribute** – Our SDK will let your users install a new version of the app when you distribute it via Mobile Center. When a new version of the app is available, the SDK will present an update dialog to the users to either download or ignore the latest version. Once they click **Download**, SDK will start the installation process of your application. Note that this feature will **NOT** work if your app is deployed to the app store, if you are developing locally or if the app is a debug build.
+3. **Distribute**: Mobile Center Distribute enables your users to install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download, postpone or ignore the latest version. Once they tap **Download**, the SDK will update the application. If necessary, you can force your users to update the app to continue to use it. Note that this feature will NOT work if your app is deployed to the app store, if you are developing locally, if you are distributing new versions through a channel other than mobile center or if it is a debug build of your app (for Android Apps only).
+
 
 ## Get Started
 
