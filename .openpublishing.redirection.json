@@ -11,6 +11,10 @@
     {
         "source_path": "analytics/react-native.md",
         "redirect_url": "~/sdk/analytics/react-native.md"
+    },
+    {
+        "source_path": "dashboard/index.md",
+        "redirect_url": "~/dashboard/creating-and-managing-apps.md"
     }
   ]
 }

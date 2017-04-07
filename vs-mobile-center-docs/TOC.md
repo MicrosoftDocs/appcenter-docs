@@ -1,7 +1,7 @@
 # [Mobile Center Overview](index.md)
 
-# [Dashboard](dashboard/index.md)
-## [Creating and managing apps](dashboard/index.md)
+# Dashboard
+## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [FAQ](dashboard/faq.md)
 
