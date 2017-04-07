@@ -43,12 +43,14 @@ Below are the steps on how to integrate our compiled libraries in your applicati
 
 1. Open your app level build.gradle file (app/build.gradle) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use include all the services, add the following lines:
 
-        dependencies {
-            def mobileCenterSdkVersion = '0.6.1'
-            compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
-            compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
-            compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
-        }
+```groovy
+dependencies {
+	def mobileCenterSdkVersion = '0.6.1'
+   compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
+   compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
+   compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
+}
+```
 
 2. Save your build.gradle file and make sure to trigger a Gradle sync in Android Studio.
 
