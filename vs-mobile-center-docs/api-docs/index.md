@@ -19,7 +19,7 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 
 ### How to acquire an api-token from Mobile Center and make calls to the Mobile Center API?
 1. Navigate to https://mobile.azure.com and login with your account information.
-2. Select your account info on the bottom left and select **Settings**
+2. Click your username on the bottom left and select **Settings**
 
 	![The account details menu to select Settings](~/api-docs/images/mc_menu_dialog.PNG)
 
