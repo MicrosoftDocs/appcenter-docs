@@ -19,22 +19,19 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 
 ### How to acquire an api-token from Mobile Center and make calls to the Mobile Center API?
 1. Navigate to https://mobile.azure.com and login with your account information.
-2. Select your account info on the bottom left and select "Settings"
+2. Select your account info on the bottom left and select **Settings**
 
 	![The account details menu to select Settings](~/api-docs/images/mc_menu_dialog.PNG)
 
-3. Once authorized, you will need an API token to call the APIs exposed in Mobile Center.
-4. Click on **account** to expand all the account management API and look for an API  to get `api_token` with a POST request.
+3. Select **API Tokens** from the menu list
+4. Click on **New API token**  at the top and enter an appropriate description into the field
+5. This will generate a pop up with your API token. Copy it and store it in a secure location for use later
+6. Now navigate to https://docs.mobile.azure.com/api/ and click on the **Authorize** button on the top.
+7. Under **Api key authorization** section, paste the API key token value that you just copied.
 
-    `POST /v0.1/api_tokens`
+![Setting api token value to authorize our API's](~/api-docs/images/authorization_withtoken.PNG)
 
-5. Once the API details are expanded, click **Try it out** button in the end. It would make a POST request using your authentication information.
-6. In the response body, copy the `api_token` value that is contained in the json.
-
-	![API Example Response](~/api-docs/images/api_token_response.PNG)
-
-7. Click on the **Authorize** button on the top. Under **Api key authorization** section, paste the API key token value that you just copied.
-8. This API token will be used to make all subsequent calls to Mobile Center APIs. You can try out any API and see the response.
+8. This API token will be used to make all calls to the Mobile Center APIs. You can try out any API and see the response.
 
 ## Known Limitations
 
