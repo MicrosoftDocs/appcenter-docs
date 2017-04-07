@@ -23,7 +23,7 @@ ms.tgt_pltfrm: xamarin
 
 You can easily let your users get the latest version of your app by integrating Mobile Center Distribute. All you need to do is pass the service name as a parameter in the `start()` API call. Once the app launches, the SDK checks for new updates in the background. If it finds a new update, users will see a dialog with three options - **Download**, **Postpone**, and **Ignore**. If the user taps **Download**, Mobile Center Distribute will trigger the new version to be installed. **Postpone** will delay the download until the app is opened again. **Ignore** will not prompt the user again for that particular app version. In case of a required update, the user will only have the option to tap **Download**.
 
-Please follow the paragraph in the [getting started](~/getting-started/xamarin.md) to setup Mobile Center Distribute.
+Please follow the paragraph in the [getting started](~/sdk/getting-started/xamarin.md) to setup Mobile Center Distribute.
 
 ### Localization of the update UI
 
