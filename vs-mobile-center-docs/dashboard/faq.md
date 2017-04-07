@@ -6,7 +6,7 @@ author: joemellin
 ms.author: joemellin
 ms.date: 04/07/2017
 ms.topic: article
-ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
+ms.assetid: 0E94BEBC-F61E-4CAB-8CDF-CC191860D59F
 ms.service: mobile-center
 ---
 
