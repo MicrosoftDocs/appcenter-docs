@@ -14,7 +14,7 @@ ms.service: mobile-center
 
 ## Creating an app
 
-To create an app, log in and click **Add new** dropdown and choose **Add new app**.
+To create an app, log in and click the **Add new** dropdown and choose **Add new app**.
 
 ## Accessing apps
 
@@ -30,12 +30,12 @@ On each app there are three roles:
 
 * **Viewers** can view and download all data but cannot make changes.
 
-To change the permission of a collaborator, select an app and then click **Manage app** and use the dropdown to re-assign the role. Only 'Managers' can change collaborator permissions.
+To change the permission of a collaborator, select an app, click **Manage app** and use the dropdown to re-assign the role. Only 'Managers' can change collaborator permissions.
 
-Note: Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.
+**Note:** Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.
 
 ## Adding collaborators to apps
 
 To share your app with others, select an app and then click **Manage app** to add collaborators by typing in the user's email address.
 
-Note: If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
+**Note:** If you are not a 'Manager' role on an app, you cannot add collaborators to that app.

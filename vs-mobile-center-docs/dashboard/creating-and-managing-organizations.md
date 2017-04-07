@@ -18,7 +18,7 @@ To create an app, log in and click the **Add new** dropdown and choose **Add new
 
 ## Accessing organizations
 
-All of your organizations are accessible in the left navigation. All collaborators have access to **Apps** and **People** pages. 'Admins' will additionally see a **Manage** option.
+All of your organizations are accessible in the left navigation.
 
 ## Organization roles
 
@@ -30,7 +30,7 @@ There are two roles within an organization:
 
 To change the permission of a organization collaborator, select a user and then use the dropdown to re-assign the role. Only 'Admins' can change collaborator permissions.
 
-Note: When you create an organization, you automatically become an 'Admin'.
+**Note:** When you create an organization, you automatically become an 'Admin'.
 
 ## Adding collaborators to an organization
 
@@ -51,10 +51,10 @@ Select the organization, and then click on the **People** tab in the left naviga
 
 To leave an organization, click on your avatar and navigate to **Settings**. From there, select **Organizations**. There you can click **Leave** on any organization you belong to.
 
-Note: If you the sole 'Admin' of an organization, you cannot **Leave** the organization. You can either promote another collaborator to 'Admin' or delete the organization.
+**Note:** If you the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the organization.
 
 ## Deleting an organization
 
 To delete an organization, select the organization, and then click on **Manage**. From there, click on **Delete Organization**.
 
-Note: Only organization 'Admins' can delete organizations.
+**Note:** Only organization 'Admins' can delete organizations.
