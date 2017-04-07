@@ -4,7 +4,7 @@ description: Explore the Mobile Center API with Swagger
 keywords: swagger
 author: psycosyd
 ms.author: jawh
-ms.date: 02/14/2017
+ms.date: 04/11/2017
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: mobile-center
@@ -17,11 +17,11 @@ Explore the Mobile Center API Service with [swagger](https://docs.mobile.azure.c
 
 ## Getting Started
 
-### How to get an api-token from swagger and make calls to Mobile Center API?
-1. Navigate to https://docs.mobile.azure.com/api/ and click on **Authorize** button on the top.
-2. Add your Mobile Center username and password in the **Basic authentication** section and click **Authorize**.
+### How to acquire an api-token from Mobile Center and make calls to the Mobile Center API?
+1. Navigate to https://mobile.azure.com and login with your account information.
+2. Select your account info on the bottom left and select "Settings"
 
-	![Setting Basic authentication fields to obtain an api-token](~/api-docs/images/authorization_noToken.PNG)
+	![The account details menu to select Settings](~/api-docs/images/mc_menu_dialog.PNG)
 
 3. Once authorized, you will need an API token to call the APIs exposed in Mobile Center.
 4. Click on **account** to expand all the account management API and look for an API  to get `api_token` with a POST request.
