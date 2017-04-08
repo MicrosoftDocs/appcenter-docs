@@ -1,6 +1,9 @@
 # [Mobile Center Overview](index.md)
 
-# [Dashboard](dashboard/index.md)
+# Dashboard
+## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
+## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
+## [FAQ](dashboard/faq.md)
 
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)
@@ -82,6 +85,7 @@
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
+### [Xamarin](sdk/distribute/xamarin.md)
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)
