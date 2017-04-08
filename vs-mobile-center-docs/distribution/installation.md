@@ -18,5 +18,5 @@ Installation of an application being distributed by Mobile Center begins with an
 > [!IMPORTANT]
 > On iOS you must open the email install link in Safari, only Safari supports the installation APIs.
 
-[login]: ~/dashboard/index.md
-[signup]: ~/dashboard/index.md
+[login]: ~/dashboard/creating-and-managing-apps.md
+[signup]: ~/dashboard/creating-and-managing-apps.md
