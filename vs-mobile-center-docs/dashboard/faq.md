@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Dashboard
-description: Using the dashboard to create and access app info in Mobile Center.
+title: Frequently Asked Questions
+description: Frequently asked questions about the Mobile Center dashboard.
 keywords: dashboard faq
 author: joemellin
 ms.author: joemellin

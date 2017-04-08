@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Dashboard
-description: Using the dashboard to create and access app info in Mobile Center.
+title: Creating and managing organizations
+description: Using the dashboard to create and access app organizations in Mobile Center.
 keywords: dashboard organizations
 author: joemellin
 ms.author: joemellin
