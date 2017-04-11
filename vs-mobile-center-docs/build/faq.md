@@ -51,3 +51,8 @@ We are always working on improving build times. If you consider the build durati
 We run the test as part of the build operation, which gives the added build time. What happens is that while Mobile Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device. Third, it's running the app on a phone, which takes very little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additional **10 minutes of build time**.
+
+## Are Git submodules supported?
+For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
+For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now. 
+
