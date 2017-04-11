@@ -55,7 +55,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Analytics service
 
-* Ability to remove events (useful for removing events sent during test from Analytics visualization)
+* Export of raw data
+* Funnels
 
 ## Crashes service
 
