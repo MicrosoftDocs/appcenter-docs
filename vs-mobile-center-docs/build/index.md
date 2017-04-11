@@ -17,6 +17,6 @@ Mobile Center helps you build the mobile apps you and your team is working on, u
 
 To get started, a member of the app in Mobile Center needs to connect to their source control and select the repository where the app is located and then start building your app with only a few clicks.
 
-Currently, you can build apps hosted on GitHub and Bitbucket repositories.
+Currently, you can build apps hosted on Git repositories in GitHub, Bitbucket and Visual Studio Team Services (VSTS).
 
 While in public preview, we are constantly adding features and further platform support. If you are developing a mobile app in a platform that is not supported, chances are our team is working on it. Don't hesitate to contact us and let us know more about your needs.
