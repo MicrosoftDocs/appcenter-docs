@@ -8,4 +8,4 @@ ms.assetid: E9FEEBDC-73DA-458A-B2AA-FE5A1FA20D7A
 ms.service: mobile-center
 ---
 
-# Migrating HockeyApp Analytics
+# HockeyApp Analytics in Mobile Center
