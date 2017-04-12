@@ -56,7 +56,7 @@ Push notification service will enable you to easily send targeted push notificat
 
 ## Are you a HockeyApp, Xamarin Test Cloud, Xamarin Insights, or Azure Mobile Engagement user?
 
-Make sure to read this [guidance document](general/guidance.md).
+Make sure to read our [Migration section](migration/index.md).
 
 ## Pricing
 
