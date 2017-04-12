@@ -10,7 +10,7 @@ ms.service: mobile-center
 
 # HockeyApp Migration
 
-Migrating your HockeyApp account to Mobile Center.
+Migrating your HockeyApp account to Mobile Center. [Click here for a high-level overview](https://www.hockeyapp.net/mobile-center/about/).
 
 ## Spring 2017
 
@@ -55,3 +55,5 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 * Use the **People** tab to view the Collaborators on all apps within the organization.
 
 [image]
+
+## Coming soon
