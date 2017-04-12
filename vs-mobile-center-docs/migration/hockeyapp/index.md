@@ -49,10 +49,9 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 **Accessing your HockeyApp organizations**
 
 * Access all of the organizations you belong to HockeyApp. Using the left navigation, click on existing HockeyApp organizations alongside ones you have created in Mobile Center.
+* Use the **People** tab to view the Collaborators on all apps within the organization.
 
 ![HockeyApp organization apps in Mobile Center](images/orgs-apps-list.png)
-
-* Use the **People** tab to view the Collaborators on all apps within the organization.
 
 > [!NOTE]
 > Unlike HockeyApp, all collaborators within an organization are able to create apps.**
