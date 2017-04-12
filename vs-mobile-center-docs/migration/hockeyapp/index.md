@@ -22,7 +22,7 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 
 * Once logged in, you'll see a list of all of your existing HockeyApp apps (alongside any exiting Mobile Center apps you have already created).
 
-![HockeyApp apps in Mobile Center][my-apps-list]
+![HockeyApp apps in Mobile Center](images/my-apps-list.png)
 
 * HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xamarin**, or **React Native** technologies will be ready-to-use within Mobile Center. We're busy working on expanding to other platforms. Keep an eye on our [Product Roadmap](~/general/roadmap.md) for updates on OS and platform expansion and improvements.
 
@@ -32,11 +32,12 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 
 * Mobile Center's **Distribute** service will work alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md).
 
-[image]
+![HockeyApp release in Mobile Center](images/distribute-releases.png)
 
 * Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center. Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center.
 
-[image] [image]
+[image]
+[image]
 
 **What you can't do within Mobile Center**
 
