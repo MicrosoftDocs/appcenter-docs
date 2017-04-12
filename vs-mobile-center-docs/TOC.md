@@ -107,6 +107,18 @@
 ## [Guidance for existing customers](general/guidance.md)
 ## [Support Center](general/support-center.md)
 
+# [Migration](migration/index.md)
+## [HockeyApp](migration/hockeyapp/index.md)
+### [Distribution](migration/hockeyapp/distribution.md)
+### [Analytics](migration/hockeyapp/analytics.md)
+### [Crashes](migration/hockeyapp/crashes.md)
+## [Test Cloud](migration/test-cloud/index.md)
+### [Account Info](migration/test-cloud/accounts.md)
+### [Tests](migration/test-cloud/tests.md)
+## [CodePush](migration/codepush/index.md)
+### [App Updates](migration/codepush/app-updates.md)
+
+
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
