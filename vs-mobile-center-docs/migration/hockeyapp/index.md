@@ -36,9 +36,6 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 
 * Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center. Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center.
 
-[image]
-[image]
-
 **What you can't do within Mobile Center**
 
 * During this Preview period, all app management (Collaborators, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of 'Getting Started'.
@@ -47,14 +44,17 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 
 * Access all the apps owned by you in the by clicking your username in the left navigation. Apps you have created in Mobile Center that are owned by you will also appear here.
 
-[image]
+![Personal HockeyApp apps in Mobile Center](images/user-apps-list.png)
 
 **Accessing your HockeyApp organizations**
 
 * Access all of the organizations you belong to HockeyApp. Using the left navigation, click on existing HockeyApp organizations alongside ones you have created in Mobile Center.
 
+![HockeyApp organization apps in Mobile Center](images/orgs-apps-list.png)
+
 * Use the **People** tab to view the Collaborators on all apps within the organization.
 
-[image]
+> [!NOTE]
+> Unlike HockeyApp, all collaborators within an organization are able to create apps.**
 
-## Coming soon
+<!-- ## Coming soon -->
