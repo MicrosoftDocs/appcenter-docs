@@ -22,7 +22,7 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 
 * Once logged in, you'll see a list of all of your existing HockeyApp apps (alongside any exiting Mobile Center apps you have already created).
 
-[image]
+![HockeyApp apps in Mobile Center][my-apps-list]
 
 * HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xamarin**, or **React Native** technologies will be ready-to-use within Mobile Center. We're busy working on expanding to other platforms. Keep an eye on our [Product Roadmap](~/general/roadmap.md) for updates on OS and platform expansion and improvements.
 
