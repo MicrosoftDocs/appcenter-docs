@@ -54,6 +54,6 @@ This spring, all of your HockeyApp apps will be viewable within Mobile Center wi
 ![HockeyApp organization apps in Mobile Center](images/orgs-apps-list.png)
 
 > [!NOTE]
-> Unlike HockeyApp, all collaborators within an organization are able to create apps.**
+> Unlike HockeyApp, all collaborators within an organization are able to create apps.
 
 <!-- ## Coming soon -->

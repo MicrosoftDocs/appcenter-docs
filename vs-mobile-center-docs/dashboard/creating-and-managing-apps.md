@@ -33,11 +33,11 @@ On each app there are three roles:
 To change the permission of a collaborator, select an app, click **Manage app** and use the dropdown to re-assign the role. Only 'Managers' can change collaborator permissions.
 
 > [!NOTE]
-> Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.**
+> Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.
 
 ## Adding collaborators to apps
 
 To share your app with others, select an app and then click **Manage app** to add collaborators by typing in the user's email address.
 
 > [!NOTE]
-> If you are not a 'Manager' role on an app, you cannot add collaborators to that app.**
+> If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
