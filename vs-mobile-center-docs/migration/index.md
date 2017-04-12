@@ -8,6 +8,8 @@ ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
 ms.service: mobile-center
 ---
 
+# Migrating Existing Services
+
 Migrating your existing services to Mobile Center:
 
 * [HockeyApp](~/migration/hockeyapp/index.md)

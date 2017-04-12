@@ -8,4 +8,6 @@ ms.assetid: CFACCE9C-C430-4A85-A187-1A94F37B9A62
 ms.service: mobile-center
 ---
 
-CodePush app updates.
+# CodePush App Updates
+
+Migrate your CodePush app updates to Mobile Center.
