@@ -56,3 +56,25 @@ Expect an additional **10 minutes of build time**.
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now. 
 
+## How to restore a private NuGet feed?
+To restore private NuGet feeds, you include the credentials in the **NuGet.config** file:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>
+```
