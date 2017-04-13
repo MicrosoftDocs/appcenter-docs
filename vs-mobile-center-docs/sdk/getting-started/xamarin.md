@@ -20,7 +20,7 @@ ms.tgt_pltfrm: xamarin
 > * [Xamarin](xamarin.md)
 > * [React Native](react-native.md)
 
-Let's get started with setting up Mobile Center Xamarin SDK in your app to use Analytics and Crashes services.
+Let's get started with setting up Mobile Center Xamarin SDK in your app to use Analytics, Crashes and Distribute services.
 
 Contents:
 
@@ -113,23 +113,22 @@ To start the Mobile Center SDK in your app, follow these steps:
 
     **Xamarin.iOS** <a name="Xamarin.iOS"/>
 
-    1. Open AppDelegate.cs file and add the Start API in `FinishedLaunching()` method
-		
+	    1. Open AppDelegate.cs file and add the Start API in `FinishedLaunching()` method
+
 	```csharp
 	Distribute.DontCheckForUpdatesInDebug();
-        MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
-        ```
-	
-    2. Add a new URL scheme to your `info.plist`. Open your `Info.plist` and switch to the **Advanced** tab. Copy and paste your bundle identifier as the `URL Identifier`, e.g. `com.example.awesomeapp`.
-    3. Next, in the **Advanced** tab, enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
-    4. Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates and add the `Distribute.OpenUrl(url)`-call.
-    
+	MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+	```
+
+	    2. Add a new URL scheme to your `info.plist`. Open your `Info.plist` and switch to the **Advanced** tab. Copy and paste your bundle identifier as the `URL Identifier`, e.g. `com.example.awesomeapp`.
+	    3. Next, in the **Advanced** tab, enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+	    4. Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates and add the `Distribute.OpenUrl(url)`-call.
 	```csharp
 	public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
-   {
-        Distribute.OpenUrl(url);
-        return true;
-   }
+	{
+	Distribute.OpenUrl(url);
+	return true;
+	}
 	```
 
     **Xamarin.Android**
