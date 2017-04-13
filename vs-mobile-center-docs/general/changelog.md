@@ -4,13 +4,29 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 04/06/2017
+ms.date: 04/13/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
 
 # Changelog
+
+### **Apr 13, 2017**
+- **Build your apps hosted from a VSTS repository**: 
+In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps. 
+
+- **XCUITest now available for testing iOS apps**:
+Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, simply select this option in the "new test run" dialog.
+
+- **Get the latest build from distribution with in-app updates**:
+Notify testers of the latest releases from inside your distributed application. Simply integrate the latest Mobile Center SDK to automatically enable in-app update notifications each time you push a new release. 
+
+- **Auto-detect missing symbols in your Crash reports**: 
+If you forget to upload symbols for your iOS app, Mobile Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.
+
+- **Distribute your app via the CLI**:
+Create & manage your distribution groups, upload your release and distribute it using the new CLI version 0.8.0. 
 
 ### **Mar 30, 2017**
 - Organizations: Share apps among your team members by creating and grouping them within an Organization. Find them under Settings.
