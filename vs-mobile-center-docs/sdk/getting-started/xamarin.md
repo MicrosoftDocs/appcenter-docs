@@ -53,7 +53,7 @@ We support the following platforms:
 
 ## 3. Setup
 
-Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. If you'd like to get started with just Analytics or Crashes, include their packages in your app. For each iOS, Android, and Forms project, add the `Mobile Center Analytics` and `Mobile Center Crashes` packages.
+Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. If you'd like to get started with just Analytics or Crashes, include their packages in your app. For each iOS, Android, and Forms project, add the `Mobile Center Analytics` and `Mobile Center Crashes` packages. Also, add `Mobile Center Distribute` package if you'd like your testers to get in-app updates for your app when a new version is available.
 
 ### For Xamarin Studio
 
@@ -61,6 +61,7 @@ Mobile Center SDK is designed with a modular approach – a developer only needs
 
 * Navigate to the Project -> 'Add NuGet Packages...'
 * Search for 'Mobile Center', and select "Mobile Center Analytics" and "Mobile Center Crashes". Then Click 'Add Packages'
+* If you'd like your users to get in-app updates when a new app version is available, search for "Mobile Center Distribute" and click 'Add Packages'
 
 #### For Xamarin.Forms
 
@@ -68,11 +69,13 @@ Multiplatform Xamarin.Forms app has three projects in your solution - portable c
 
 * Navigate to the Project -> 'Add NuGet Packages...'
 * Search for 'Mobile Center', and select "Mobile Center Analytics" and "Mobile Center Crashes". Then Click 'Add Packages'
+* If you'd like your users to get in-app updates when a new app version is available, search for "Mobile Center Distribute" and click 'Add Packages'
 
 ### For Xamarin for Visual Studio
 
 * Navigate Project -> Manage NuGet Packages...
 * Search for 'Mobile Center', and select "Mobile Center Analytics" and "Mobile Center Crashes". Then Click 'Add Packages'
+* If you'd like your users to get in-app updates when a new app version is available, search for "Mobile Center Distribute" and click 'Add Packages'
 
 ## Using Package Manager Console ##
 
@@ -106,15 +109,17 @@ To start the Mobile Center SDK in your app, follow these steps:
    using Microsoft.Azure.Mobile.Distribute;
 	```
 
-2. **Start the SDK:** Mobile Center provides developers with two modules to get started – Analytics and Crashes. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no module is started and you will have to explicitly call each of them when starting the SDK.
+2. **Start the SDK:** Mobile Center provides developers with three modules to get started – Analytics, Crashes and Distribute. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no module is started and you will have to explicitly call each of them when starting the SDK.
 
     **Xamarin.iOS** <a name="Xamarin.iOS"/>
 
     1. Open AppDelegate.cs file and add the Start API in `FinishedLaunching()` method
 		
-		```csharp
-       MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+	```csharp
+	Distribute.DontCheckForUpdatesInDebug();
+        MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
         ```
+	
     2. Add a new URL scheme to your `info.plist`. Open your `Info.plist` and switch to the **Advanced** tab. Copy and paste your bundle identifier as the `URL Identifier`, e.g. `com.example.awesomeapp`.
     3. Next, in the **Advanced** tab, enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
     4. Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates and add the `Distribute.OpenUrl(url)`-call.
@@ -122,9 +127,8 @@ To start the Mobile Center SDK in your app, follow these steps:
 	```csharp
 	public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
    {
-   		Distribute.OpenUrl(url);
-
-       return true;
+        Distribute.OpenUrl(url);
+        return true;
    }
 	```
 
