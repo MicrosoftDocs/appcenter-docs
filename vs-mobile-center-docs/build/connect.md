@@ -19,7 +19,7 @@ With so many identities, apps (work or personal apps) and authentication methods
 
 
 ### I have connected to the wrong account to start building my apps with. How can I re-connect to the correct account?
-If you have connected to a source repository service with the wrong account, you will have to go to your User settings in the source hosting service (VSTS, GitHub or Bitbucket) and revoke the Oauth token manually. The instructions below are specific to the provider:
+If you have connected to a source repository service with the wrong account, you will have to go to your User settings in the source hosting service (VSTS, GitHub or Bitbucket) and revoke the Oauth token manually. Then you will be able to re-connect to another account in Mobile Center.
 
 >[!IMPORTANT]
 >Keep in mind that if you connect to a new account, you will lose all the build configuration and previous builds for ALL the apps configured with the previous account.
