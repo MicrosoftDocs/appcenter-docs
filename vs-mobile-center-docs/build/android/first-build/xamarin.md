@@ -13,10 +13,10 @@ ms.tgt_pltfrm: xamarin-android
 ---
 
 # Xamarin.Android Build
-To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid KeyStore.
+To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid KeyStore.
 
 ## 1. Linking your repository
-If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
 
 ## 2. Selecting a branch
 Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
@@ -41,7 +41,28 @@ A successful build will produce an apk file. In order to release the build to th
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
 ### 3.5. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. Currently Mobile Center only supports NuGet feed v2.
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
+To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>
+```
 
 ### 3.6. Distribution to a distribution group
 
