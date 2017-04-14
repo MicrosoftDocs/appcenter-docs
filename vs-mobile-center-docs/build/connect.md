@@ -21,19 +21,19 @@ If you have connected to a source repository service with the wrong account, you
 **Keep in mind that if you connect to a new account, you will lose all the build configuration and previous builds for ALL the apps configured with the previous account.**
 
 #### Visual Studio Team Services (VSTS)
-In order to connect to another VSTS account to build your apps, you'll first have to revoke the Oauth token. Go to https://app.vsaex.visualstudio.com/me > Manage Authorizations (See screenshot below) > Revoke Mobile Center token. Once revoked, it takes up to 60 minutes for that token to loose access, so you'll have to wait a bit until you can connect Mobile Center with another VSTS account. Then, if you go back to Mobile Center in the build tab, and try to connect to a repository, you will be able to reconnect to VSTS again and go through the Oauth flow. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in the browser from the identity that you used to connect to the previous VSTS account.
+In order to connect to another VSTS account to build your apps, first step is to revoke the Oauth token. Go to https://app.vsaex.visualstudio.com/me > Manage Authorizations (See screenshot below) > Revoke Mobile Center token. Once revoked, it takes up to 60 minutes for that token to lose access, so you will have to wait until you can connect Mobile Center with another VSTS account. Then, go back to Mobile Center in the build tab, reconnect to VSTS and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in the browser from the identity that you used to connect to the previous VSTS account.
 
 ![Remove VSTS Oauth Token][remove-vsts-oauth-token]
 
 #### GitHub
 If you logged in into Mobile Center with a GitHub acoount, you can only build apps from repositories under that GitHub account.
 
-If you logged in into Mobile Center with another method, but you have connected to the wrong GitHub account, you'll firstly have to revoke the Oauth token: go to https://github.com/settings/profile > Authorized Applications > Revoke Mobile Center token. Once revoked, if you go back to Mobile Center in the build tab, and try to connect to a repository, you will be able to reconnect to GitHub again and go through the Oauth flow. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in that browser from GitHub first.
+If you logged in into Mobile Center with another method, but you have connected to the wrong GitHub account, first step is to revoke the Oauth token: go to https://github.com/settings/profile > Authorized Applications > Revoke Mobile Center token. Then, go back to Mobile Center in the build tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in that browser from GitHub first.
 
 ![Remove GitHub Oauth Token][remove-github-oauth-token]
 
 #### GitHub
-In order to connect to another Bitbucket account to build your apps, you'll firstly have to revoke the Oauth token: go to https://bitbucket.org/account/ > Access Management (Oauth) > Revoke Mobile Center token. Once revoked, if you go back to Mobile Center in the build tab, and try to connect to a repository, you will be able to reconnect to Bitbucket again and go through the Oauth flow. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in that browser from Bitbucket first. 
+In order to connect to another Bitbucket account to build your apps, first step is to revoke the Oauth token: go to https://bitbucket.org/account/ > Access Management (Oauth) > Revoke Mobile Center token. Then, go back to Mobile Center in the build tab, reconnect to VSTS and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in that browser from Bitbucket first. 
 
 ![Remove Bitbucket Oauth Token][remove-bitbucket-oauth-token]
 
