@@ -64,7 +64,7 @@ Below are the steps on how to integrate the each seperate SDK library with your 
     What is the Android app secret? (00000000-0000-0000-0000-000000000000)
     ```
 
-    The SDK will then ask whether or not to send crash reports automatically. [Learn more about user processing on crash reports.](~/sdk/crashes/react-native.md/#process-javascript)
+    The SDK will then ask whether or not to send crash reports automatically. [Learn more about user processing on crash reports.](~/sdk/crashes/react-native.md#process-javascript)
 
         For the Android app, should crashes be sent automatically, or processed in javascr
         ipt before being sent? (Use arrow keys)
@@ -102,7 +102,7 @@ Below are the steps on how to integrate the each seperate SDK library with your 
     What is the Android app secret? (00000000-0000-0000-0000-000000000000)
     ```
 
-    The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/analytics/react-native.md/#enable-javascript)
+    The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/analytics/react-native.md#enable-javascript)
 
         For the Android app, should user tracking be enabled automatically ? (Use arrow keys)
         ❯ Enable Automatically
