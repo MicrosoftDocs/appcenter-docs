@@ -64,7 +64,7 @@ Below are the steps on how to integrate the each seperate SDK library with your 
     What is the Android app secret? (00000000-0000-0000-0000-000000000000)
     ```
 
-    The SDK will then ask whether or not to send crash reports automatically. [Learn more about user processing on crash reports.](/sdk/React-Native/crashes/#process-javascript)
+    The SDK will then ask whether or not to send crash reports automatically. [Learn more about user processing on crash reports.](~/sdk/React-Native/crashes/#process-javascript)
 
         For the Android app, should crashes be sent automatically, or processed in javascr
         ipt before being sent? (Use arrow keys)
@@ -102,7 +102,7 @@ Below are the steps on how to integrate the each seperate SDK library with your 
     What is the Android app secret? (00000000-0000-0000-0000-000000000000)
     ```
 
-    The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](/sdk/React-Native/analytics/#enable-javascript)
+    The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/React-Native/analytics/#enable-javascript)
 
         For the Android app, should user tracking be enabled automatically ? (Use arrow keys)
         ❯ Enable Automatically
@@ -120,7 +120,7 @@ Below are the steps on how to integrate the each seperate SDK library with your 
 
 ## <a name="3-start-the-sdk"></a>3. Use the SDK
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](/sdk/React-Native/analytics) and [Crashes](/sdk/React-Native/crashes) section for APIs guides and walkthroughs to learn what Mobile Center can do.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. Look at [Analytics](~/sdk/React-Native/analytics) and [Crashes](~/sdk/React-Native/crashes) section for APIs guides and walkthroughs to learn what Mobile Center can do.
 
 ## <a name="4-troubleshooting"></a>4. Manually link the iOS SDK
 
