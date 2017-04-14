@@ -10,6 +10,8 @@ ms.service: mobile-center
 ms.custom: build
 ---
 
+# Connecting to a source repository 
+
 To start building an app, you need to firstly connect to your code repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. To connect to the repository service, you will have to go through an Oauth flow and give Mobile Center permissions.
 
 With so many identities, apps (work or personal apps) and authentication methods, you might end up with your Mobile Center account connected to a different code repository service than where your app(s) are living.
@@ -18,7 +20,8 @@ With so many identities, apps (work or personal apps) and authentication methods
 ### I have connected to the wrong account to start building my apps with. How can I re-connect to the correct account?
 If you have connected to a source repository service with the wrong account, you will have to go to your User settings in the source hosting service (VSTS, GitHub or Bitbucket) and revoke the Oauth token manually. The instructions below are specific to the provider:
 
-**Keep in mind that if you connect to a new account, you will lose all the build configuration and previous builds for ALL the apps configured with the previous account.**
+[!IMPORTANT]
+Keep in mind that if you connect to a new account, you will lose all the build configuration and previous builds for ALL the apps configured with the previous account.
 
 #### Visual Studio Team Services (VSTS)
 In order to connect to another VSTS account to build your apps, first step is to revoke the Oauth token. Go to https://app.vsaex.visualstudio.com/me > Manage Authorizations (See screenshot below) > Revoke Mobile Center token. Once revoked, it takes up to 60 minutes for that token to lose access, so you will have to wait until you can connect Mobile Center with another VSTS account. Then, go back to Mobile Center in the build tab, reconnect to VSTS and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in the browser from the identity that you used to connect to the previous VSTS account.
