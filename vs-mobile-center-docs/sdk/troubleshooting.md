@@ -45,6 +45,19 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
 
   `MobileCenter.LogLevel = LogLevel.Verbose;`
 
+  **React Native iOS - add to AppDelegate.m**
+  ```obj-c
+  @import MobileCenter;
+  ...
+  [MSMobileCenter setLogLevel:MSLogLevelVerbose];    // add before RNAnalytics/RNCrashes register
+  ```
+  **React Native Android - add to MainApplication.java**
+  ```java
+  import com.microsoft.azure.mobile.MobileCenter;;
+  ...
+  MobileCenter.setLogLevel(Log.VERBOSE);             // add before SoLoader.init
+  ```
+
 5. Make sure your device is connected to a working internet.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 7. To check if Mobile Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
@@ -71,6 +84,19 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   **Xamarin**
 
   `MobileCenter.LogLevel = LogLevel.Verbose;`
+
+  **React Native iOS - add to AppDelegate.m**
+  ```obj-c
+  @import MobileCenter;
+  ...
+  [MSMobileCenter setLogLevel:MSLogLevelVerbose];    // add before RNAnalytics/RNCrashes register
+  ```
+  **React Native Android - add to MainApplication.java**
+  ```java
+  import com.microsoft.azure.mobile.MobileCenter;;
+  ...
+  MobileCenter.setLogLevel(Log.VERBOSE);             // add before SoLoader.init
+  ```
 
 6. Don't use any other SDK that provides Crash Reporting functionality. You can only have one SDK integrated in your app.
 7. Make sure your device is connected to a working internet.
