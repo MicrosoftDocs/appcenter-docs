@@ -32,8 +32,13 @@ If you logged in into Mobile Center with another method, but you have connected 
 
 ![Remove GitHub Oauth Token][remove-github-oauth-token]
 
-#### GitHub
+#### Bitbucket
 In order to connect to another Bitbucket account to build your apps, first step is to revoke the Oauth token: go to https://bitbucket.org/account/ > Access Management (Oauth) > Revoke Mobile Center token. Then, go back to Mobile Center in the build tab, reconnect to VSTS and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in Mobile Center, you log out in that browser from Bitbucket first. 
 
 ![Remove Bitbucket Oauth Token][remove-bitbucket-oauth-token]
+
+[remove-vsts-oauth-token]: ~/build/images/remove-vsts-oauth-token.png "Remove VSTS token"
+[remove-vsts-github-token]: ~/build/images/remove-github-oauth-token.png "Remove GitHub token"
+[remove-vsts-bitbucket-token]: ~/build/images/remove-bitbucket-oauth-token.png "Remove Bitbucket token"
+
 
