@@ -52,9 +52,9 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   [MSMobileCenter setLogLevel:MSLogLevelVerbose];    // add before RNAnalytics/RNCrashes register
   ```
   **React Native Android - add to MainApplication.java**
-  ```
+  ```java
   import com.microsoft.azure.mobile.MobileCenter;;
-  ...java
+  ...
   MobileCenter.setLogLevel(Log.VERBOSE);             // add before SoLoader.init
   ```
 
@@ -92,9 +92,9 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   [MSMobileCenter setLogLevel:MSLogLevelVerbose];    // add before RNAnalytics/RNCrashes register
   ```
   **React Native Android - add to MainApplication.java**
-  ```
+  ```java
   import com.microsoft.azure.mobile.MobileCenter;;
-  ...java
+  ...
   MobileCenter.setLogLevel(Log.VERBOSE);             // add before SoLoader.init
   ```
 
