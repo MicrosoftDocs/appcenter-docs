@@ -46,7 +46,7 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   `MobileCenter.LogLevel = LogLevel.Verbose;`
 
   **React Native iOS - add to AppDelegate.m**
-  ```
+  ```objective-c
   @import MobileCenter;
   ...
   [MSMobileCenter setLogLevel:MSLogLevelVerbose];   [add before RNAnalytics/RNCrashes register]
@@ -54,7 +54,7 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   **React Native Android - add to MainApplication.java**
   ```
   import com.microsoft.azure.mobile.MobileCenter;;
-  ...
+  ...java
   MobileCenter.setLogLevel(Log.VERBOSE);            [add before SoLoader.init]
   ```
 
@@ -86,7 +86,7 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   `MobileCenter.LogLevel = LogLevel.Verbose;`
 
   **React Native iOS - add to AppDelegate.m**
-  ```
+  ```objective-c
   @import MobileCenter;
   ...
   [MSMobileCenter setLogLevel:MSLogLevelVerbose];   [add before RNAnalytics/RNCrashes register]
@@ -94,7 +94,7 @@ Below are the steps you can follow to make sure the SDK is set up correctly and 
   **React Native Android - add to MainApplication.java**
   ```
   import com.microsoft.azure.mobile.MobileCenter;;
-  ...
+  ...java
   MobileCenter.setLogLevel(Log.VERBOSE);            [add before SoLoader.init]
   ```
 
