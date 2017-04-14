@@ -47,7 +47,7 @@ There are many reasons why build duration can be higher when using a build servi
 
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
 
-## Why do I get an extended build time when Run launch test on a device is enabled
+## Why do I get an extended build time when "Run launch test on a device" is enabled
 We run the test as part of the build operation, which gives the added build time. What happens is that while Mobile Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device. Third, it's running the app on a phone, which takes very little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additional **10 minutes of build time**.
@@ -55,4 +55,31 @@ Expect an additional **10 minutes of build time**.
 ## Are Git submodules supported?
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now. 
+
+## How to restore a private NuGet feed?
+To restore private NuGet feeds, you include the credentials in the **NuGet.config** file:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>
+```
+
+
+
+
 
