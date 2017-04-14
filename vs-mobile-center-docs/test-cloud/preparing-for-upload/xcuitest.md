@@ -16,8 +16,7 @@ ms.custom: test
 The steps necessary to prepare an app and its corresponding test suite for upload
 to Test Cloud vary depending on the test framework. The section below provides instructions for installing the XCUITest extensions for Test Cloud and preparing your tests for upload.
 
-An extension library for triggering screenshots/marking test steps when running XCUITests in Visual Studio Mobile Center / Xamarin 
-Test Cloud. By default, test steps are automatically marked at the conclusion of each test method (which also triggers a screenshot); 
+An extension library for triggering screenshots/marking test steps when running XCUITests in Visual Studio Mobile Center. By default, test steps are automatically marked at the conclusion of each test method (which also triggers a screenshot); 
 this library allows you to explicitly declare where you want to mark your test steps / trigger screenshots. 
 
 - [Requirements](#requirements)
