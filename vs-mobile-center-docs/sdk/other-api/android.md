@@ -24,7 +24,7 @@ ms.tgt_pltfrm: android
 
 You can control the amount of log messages by Mobile Center that show up in LogCat. Use the `MobileCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
 
-To have as many log messages as possible, add this line.
+To have as many log messages as possible use `Log.Verbose`.
 
 ```java
 MobileCenter.setLogLevel(Log.VERBOSE);

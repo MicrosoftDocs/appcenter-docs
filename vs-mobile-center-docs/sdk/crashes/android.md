@@ -46,7 +46,7 @@ Mobile Center Crashes has two API that give you more information in case your ap
 
 ### 2.1 Did the app crash in last session?
 
-At any time after starting the SDK, you can check if the app crashed in the previous session:
+At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
 ```java
 Crashes.hasCrashedInLastSession();
@@ -67,7 +67,8 @@ Crashes.getLastSessionCrashReport(new ResultCallback<ErrorReport>() {
   }
 });
 ```
-There are numerous use cases for this API, common use cases are that people call this API and implement their [crashes listener]() 
+
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#5-customize-your-usage-of-mobile-center-crashes). 
 
 
 ## 3. Enable or disable Mobile Center Crashes at runtime
@@ -94,7 +95,7 @@ Crashes.isEnabled();
 
 ## 5. Customize your usage of Mobile Center Crashes
 
-Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash reports to Mobile Center. This gives you more flexibility on the crash logs that will be sent.
+Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
 
 To handle the callbacks, you must either implement all methods in the `CrashesListener` interface, or override the `AbstractCrashesListener` class and pick only the ones you're interested in.
 

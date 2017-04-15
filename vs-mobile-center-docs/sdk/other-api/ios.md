@@ -1,10 +1,10 @@
 ---
-title: iOS Advanced APIs
-description: iOS APIs in the Android Mobile Center SDK
+title: Other API
+description: Other API in the Mobile Center SDK for iOS
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 01/20/2017
+author: troublemakerben
+ms.author: bereimol
+ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: mobile-center
@@ -12,45 +12,74 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# iOS Advanced APIs
+# Other API
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Xamarin](xamarin.md)
 
-* **Debugging**: You can control the amount of log messages that show up from the Mobile Center SDK. Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `MSLogLevelAssert` for App Store environment, `MSLogLevelWarning` otherwise.
+## Adjust the log level
 
-    **Objective-C**
+You can control the amount of log messages that show up from Mobile Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `MSLogLevelAssert` for the App Store environment and `MSLogLevelWarning` otherwise.
 
-        [MSMobileCenter setLogLevel:MSLogLevelVerbose];
+To have as many log messages as possible use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
 
+**Objective-C**
 
-    **Swift**
+```obj-c
+[MSMobileCenter setLogLevel:MSLogLevelVerbose];
+```
 
-        MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+**Swift**
 
+```swift
+MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+```
 
-* **Get Install Identifier**: The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
+# Identify installations
 
-    **Objective-C**
+The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
-        NSUUID *installId = [MSMobileCenter  installId];
+**Objective-C**
 
+```obj-c
+NSUUID *installId = [MSMobileCenter  installId];
+```
 
-    **Swift**
+**Swift**
 
-        var installId = MSMobileCenter.installId()
+```swift
+var installId = MSMobileCenter.installId()
+```
 
+## Disable the all services at runtime
 
-* **Enable/Disable the Mobile Center SDK:** If you want the Mobile Center SDK to be disabled completely, use the `setEnabled` API. When disabled, the SDK will not forward any information to Mobile Center.
+If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
 
-    **Objective-C**
+**Objective-C**
 
-        [MSMobileCenter setEnabled:NO];
+```obj-c
+[MSMobileCenter setEnabled:NO];
+```
 
+**Swift**
 
-    **Swift**
+```swift
+MSMobileCenter.setEnabled(false)
+```
 
-        MSMobileCenter.setEnabled(false)
+To enable enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
+
+**Objective-C**
+
+```obj-c
+[MSMobileCenter setEnabled:YES];
+```
+
+**Swift**
+
+```swift
+MSMobileCenter.setEnabled(true)
+```

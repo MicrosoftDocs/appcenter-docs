@@ -77,7 +77,7 @@ You can easily provide your own resource strings if you'd like to change or loca
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
-You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not provide any in-app update functionality.
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
 > [!NOTE]
 > Note that it will only disable SDK features for the Distribute service (in-app updates for your application) and the SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.

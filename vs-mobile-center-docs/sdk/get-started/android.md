@@ -15,8 +15,8 @@ ms.tgt_pltfrm: android
 
 1. [Prerequisites](#1-prerequisites)
 2. [Create your app in the Mobile Center Portal](#2-create-your-app-in-the-mobile-center-portal-to-optain-the-app-secret)
-2. [Add Mobile Center SDK modules](#3-add-mobile-center-sdk-modules)
-3. [Start the SDK](#3-start-the-sdk)
+3. [Add Mobile Center SDK modules](#3-add-mobile-center-sdk-modules)
+4. [Start the SDK](#4-start-the-sdk)
 
 # Get started
 
@@ -51,7 +51,7 @@ Once you have created an app, you can optain it's **App Secret** on the **Gettin
 
 ## 3. Add the Mobile Center SDK modules
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use all the services, add the following lines:
+1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use Mobile Center Analytics and Crashes, add the following lines:
 
 ```groovy
 dependencies {
@@ -65,9 +65,9 @@ dependencies {
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of Mobile Center.
 
-## 3. Start the SDK
+## 4. Start the SDK
 
-### 3.1 Add the start()-method
+### 4.1 Add the start()-method
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate`-callback to use **Mobile Center Analytics** and **Mobile Center Crashes**:
 
@@ -75,19 +75,19 @@ In order to use Mobile Center, you need to opt in to the module(s) that you want
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
 ```
 
-### 3.2 Replace the placeholder with your App Secret
+### 4.2 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the `start()` method and include both the Mobile Center Analytics and Mobile Center Crashes.
+The example above shows how to use the `start()` method and include both Mobile Center Analytics and Mobile Center Crashes.
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
 
 Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to Analytics service, you should modify the `start()` API call as follows:
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()` API call as follows:
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
@@ -106,4 +106,4 @@ Great, you are all set to visualize Analytics and Crashes data on the portal tha
 
 Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/android.md) and [Mobile Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
-To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/ios.md).
+To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
