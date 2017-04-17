@@ -16,7 +16,7 @@ ms.custom: test
 The steps necessary to prepare an app and its corresponding test suite for upload
 to Test Cloud vary depending on the test framework. The section below provides instructions for installing the XCUITest extensions for Test Cloud and preparing your tests for upload.
 
-An extension library for triggering screenshots/marking test steps when running XCUITests in Visual Studio Mobile Center. By default, test steps are automatically marked at the conclusion of each test method (which also triggers a screenshot); 
+The extension library enables triggering screenshots and labeling test steps when running XCUITests in Visual Studio Mobile Center. By default, test steps are automatically marked at the conclusion of each test method (which also triggers a screenshot); 
 this library allows you to explicitly declare where you want to mark your test steps / trigger screenshots. 
 
 - [Requirements](#requirements)
@@ -111,7 +111,7 @@ _Optional_: It is recommended that you install the `xcpretty` gem for nicer outp
 $ gem install xcpretty
 ```
 
-1) Run:
+1) From the root of the VSMobileCenterExtensions project folder, run:
 ```shell
 $ make
 ```
@@ -222,7 +222,7 @@ Presently, the issue not fully understood and believed to originate in `XCTest.f
 that one possible cause is related to XCUITest not being able to 'see' the element in the hierarchy when the gesture
 is invoked. 
 
-While not foolproof, as a potential workaround and general improvement to test stability, 
+While not foolproof, as a potential workaround and general improvement to test stability 
 we recommend adapting the following scaffolding code to your gestures invocation (example is for a `tap` gesture):
 
 Objective-C
@@ -249,7 +249,7 @@ func waitAndTap(element: XCUIElement) {
 
 You would then invoke `waitAndTap` instead of `tap` to ensure that the element in question is in a hittable state. 
 
-Note that in XTC/Mobile Center Test, this issue appears to only be prevelant on iPhone 7 devices.
+Note that in Mobile Center Test, this issue appears to only be prevelant on iPhone 7 devices.
 
 ### Xcode 8.3 and Swift
 
