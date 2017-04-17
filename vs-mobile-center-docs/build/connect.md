@@ -8,7 +8,7 @@ ms.date: 04/13/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom: build
-ms.assetid: GUID
+ms.assetid: 1EFB8DFD-76D5-4F8C-B73A-2CFBE3E3BD97
 ---
 
 # Connecting to a source repository 
