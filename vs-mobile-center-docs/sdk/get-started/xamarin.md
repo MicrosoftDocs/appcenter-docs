@@ -14,14 +14,14 @@ ms.tgt_pltfrm: xamarin
 
 1. [Prerequisites](#1-prerequisites)
 2. [Create your app in the Mobile Center Portal](#2-create-your-app-in-the-mobile-center-portal-to-optain-the-app-secret)
-2. [Add Mobile Center SDK modules](#3-add-mobile-center-sdk-modules)
-3. [Start the SDK](#3-start-the-sdk)
+3. [Add Mobile Center SDK modules](#3-add-mobile-center-sdk-modules)
+4. [Start the SDK](#3-start-the-sdk)
 
 # Get started
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 
@@ -66,7 +66,6 @@ If you have already created your app in the Mobile Center portal, you can skip t
 4. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can optain it's **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
-
 
 ## 3. Add the Mobile Center SDK modules
 

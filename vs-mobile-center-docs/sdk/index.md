@@ -72,6 +72,13 @@ Android Studio 2.2 or later.
  Crashes          | not available      | not available
  Distribute       | not available      | not available
 
+## 3.4 React Native
+
+Service   |  RN version   | iOS Version              | Android Version
+ ---------|---------------|--------------------------|-------
+Analytics| 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Crashes  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+
 
 # 4. Source code
 
