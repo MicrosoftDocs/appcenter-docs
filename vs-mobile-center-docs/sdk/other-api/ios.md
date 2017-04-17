@@ -24,7 +24,7 @@ ms.tgt_pltfrm: ios
 
 You can control the amount of log messages that show up from Mobile Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `MSLogLevelAssert` for the App Store environment and `MSLogLevelWarning` otherwise.
 
-To have as many log messages as possible use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
+To have as many log messages as possible, use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
 
 **Objective-C**
 
@@ -38,7 +38,7 @@ To have as many log messages as possible use `MSLogLevelVerbose`/`MSLogLevel.Ver
 MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 ```
 
-# Identify installations
+## Identify installations
 
 The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
@@ -56,7 +56,7 @@ var installId = MSMobileCenter.installId()
 
 ## Disable the all services at runtime
 
-If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
+If you want to disable all Mobile Center services at once, use the `setEnabled`-API. When disabled, the SDK will not forward any information to Mobile Center.
 
 **Objective-C**
 

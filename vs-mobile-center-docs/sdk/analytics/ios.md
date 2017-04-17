@@ -31,7 +31,7 @@ Please follow the [Get started](~/sdk/get-started/ios.md) section if you haven't
 
 ## 1. Session and device information
 
-Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, manufacturer etc. You don’t need to add any additional code.
+Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to add any additional code.
 
 ## 2. Custom events
 

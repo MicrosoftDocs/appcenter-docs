@@ -154,26 +154,26 @@ Feel free to have a look [at our reference implementation](https://github.com/Mi
 
 In our experience, developers might be interested about the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
 
-* Before a crash log is sent, the following callback will be invoked: 
+#### 5.4.1 Before a crash log is sent, the following callback will be invoked 
 
-	```java
-	void CrashesListener.onBeforeSending(ErrorReport report) {
-		// Your code goes here.
-	}
-	```
+```java
+void CrashesListener.onBeforeSending(ErrorReport report) {
+	// Your code, e.g. to present a custom UI.
+}
+```
 	
-* After sending a crash log was successful, the callback will be invoked :
+#### 5.4.2 After sending a crash log was successful, the callback will be invoked
 
-	```java
-	void CrashesListener.onSendingSucceeded(ErrorReport report) {
-		// Your code goes here.
-	}
-	```
+```java
+void CrashesListener.onSendingSucceeded(ErrorReport report) {
+	// Your code, e.g. to hide the custom UI.
+}
+```
    
-* After sending a crash log failed, the following callback will be invoked:
+#### 5.4.3 After sending a crash log failed, the following callback will be invoked
 
-	```java
-	void CrashesListener.onSendingFailed(ErrorReport report, Exception e) {
-		// Your code goes here.
-	}
-	```
+```java
+void CrashesListener.onSendingFailed(ErrorReport report, Exception e) {
+	// Your code goes here.
+}
+```

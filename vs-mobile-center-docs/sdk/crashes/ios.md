@@ -29,9 +29,9 @@ ms.tgt_pltfrm: ios
 
 Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't setup and started the SDK in your application yet.
+Please follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven't setup and started the SDK in your application yet.
 
-Also not that Crash logs on iOS require Symbolication, please check out the [Mobile Center Crashes documentation](~/crashes/ios.md) that explains how to provide symbols for your app.
+Also note that Crash logs on iOS require Symbolication, please check out the [Mobile Center Crashes documentation](~/crashes/ios.md) that explains how to provide symbols for your app.
 
 ## 1. Generate a test crash
 
@@ -237,7 +237,7 @@ MSCrashes.notify(with: MSUserConfirmation.always)
 
 In our experience, developers might be interested about the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `MSCrashesDelegate`-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
 
-* Before a crash log is sent, the following callback will be invoked: 
+#### 5.4.1 Before a crash log is sent, the following callback will be invoked 
 
 	**Objective-C**
 
@@ -255,43 +255,41 @@ In our experience, developers might be interested about the status of Mobile Cen
    }
 	```
 	
-* After sending a crash log was successful, the callback will be invoked :
+#### 5.4.2 After sending a crash log was successful, the callback will be invoked
 
-	**Objective-C**
+**Objective-C**
 
-	```obj-c
-	- (void)crashes:(MSCrashes *)crashes didSucceedSendingErrorReport:(MSErrorReport *)errorReport {
-		// Your code, e.g. to hide the custom UI.
-   }
-	```
+```obj-c
+- (void)crashes:(MSCrashes *)crashes didSucceedSendingErrorReport:(MSErrorReport *)errorReport {
+	// Your code, e.g. to hide the custom UI.
+}
+```
 	
-	**Swift**
+**Swift**
 
-	```swift
-	func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
-		// Your code goes here.
-   }
-	```
+```swift
+func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
+	// Your code goes here.
+}
+```
    
-* After sending a crash log failed, the following callback will be invoked:
+#### 5.4.3 After sending a crash log failed, the following callback will be invoked
 
-	**Objective-C**
+**Objective-C**
 
-	```obj-c
-	- (void)crashes:(MSCrashes *)crashes didFailSendingErrorReport:(MSErrorReport *)errorReport withError:(NSError *)error {
-		// Your code goes here.
-  }
-
-	```
+```obj-c
+- (void)crashes:(MSCrashes *)crashes didFailSendingErrorReport:(MSErrorReport *)errorReport withError:(NSError *)error {
+	// Your code goes here.
+}
+```
 	
-	**Swift**
+**Swift**
 
-	```swift
-	func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
-		// Your code goes here.
-   }
-	```
-    
+```swift
+func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
+	// Your code goes here.
+}
+```    
 
 ## 6. Enabling Mach exception handling
 
