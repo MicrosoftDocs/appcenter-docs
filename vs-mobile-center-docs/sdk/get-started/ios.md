@@ -27,7 +27,7 @@ ms.tgt_pltfrm: ios
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/ios).
+Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/ios.md).
 
 ## 1. Prerequisites
 

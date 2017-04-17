@@ -32,7 +32,7 @@ While it is possible to use Mobile Center Distribute to distribute a new version
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/get-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
 
 ### 1.1 Add the Mobile Center Distribute module
 
@@ -109,7 +109,7 @@ Insert the following line to start the SDK in your app's `AppDelegate.swift` cla
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your app's App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your app's App Secret. Please also check out the [Get started](~/sdk/get-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
 
 #### 1.3 Modify your `info.plist`
 

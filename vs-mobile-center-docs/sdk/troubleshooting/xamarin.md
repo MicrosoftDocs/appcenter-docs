@@ -12,13 +12,12 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarn
 ---
 
-
-
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+
+# Xamarin SDK Troubleshooting
 
 ## 1. Issues during setup
 1. For a Xamarin Forms app, make sure the packages are installed in all the projects that reference any library. Otherwise you will see errors.

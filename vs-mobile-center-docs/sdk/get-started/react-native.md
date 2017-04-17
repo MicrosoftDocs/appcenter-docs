@@ -2,8 +2,8 @@
 title: Get Started
 description: Get Started
 keywords: sdk
-author: elamalani, troublemakerben
-ms.author: emalani, bereimol
+author: troublemakerben
+ms.author: bereimol
 ms.date: 04/17/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
@@ -75,7 +75,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
 	```
 	
-	The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/analytics/react-native.md#enable-javascript)
+	The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/analytics/react-native.md)
 
 	```
 	For the Android app, should user tracking be enabled automatically ? (Use arrow keys)
@@ -105,7 +105,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
 	```
 
-	The SDK will then ask whether or not to send crash reports automatically. [Learn more about user processing on crash reports.](~/sdk/crashes/react-native.md#process-javascript)
+	The SDK will then ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
 
 	```
 	For the Android app, should crashes be sent automatically, or processed in javascript before being sent? (Use arrow keys)

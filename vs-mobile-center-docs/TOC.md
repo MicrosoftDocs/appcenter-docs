@@ -69,10 +69,10 @@
 
 # [SDK](sdk/index.md)
 ## Getting Started
-### [Android](sdk/getting-started/android.md)
-### [iOS](sdk/getting-started/ios.md)
-### [React Native](sdk/getting-started/react-native.md)
-### [Xamarin](sdk/getting-started/xamarin.md)
+### [Android](sdk/get-started/android.md)
+### [iOS](sdk/get-started/ios.md)
+### [React Native](sdk/get-started/react-native.md)
+### [Xamarin](sdk/get-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [iOS](sdk/analytics/ios.md)
@@ -93,12 +93,15 @@
 ## Identity
 ### [Android](sdk/azure/identity/android.md)
 ### [iOS](sdk/azure/identity/ios.md)
-## Advanced APIs
-### [Android](sdk/advanced-apis/android.md)
-### [iOS](sdk/advanced-apis/ios.md)
-### [React Native](sdk/advanced-apis/react-native.md)
-### [Xamarin](sdk/advanced-apis/xamarin.md)
-## [Troubleshooting](sdk/troubleshooting.md)
+## Other API
+### [Android](sdk/other-api/android.md)
+### [iOS](sdk/other-api/ios.md)
+### [React Native](sdk/other-api/react-native.md)
+### [Xamarin](sdk/other-api/xamarin.md)
+## [Troubleshooting]
+### [Android](sdk/troubleshooting/android.md)
+### [iOS](sdk/troubleshooting/ios.md)
+### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)

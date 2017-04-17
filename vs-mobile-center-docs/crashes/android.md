@@ -21,7 +21,7 @@ ms.tgt_pltfrm: android
 
 ## Getting Started
 
-1. Integrate the SDK as described in the [Getting Started with Android](~/sdk/getting-started/android.md) documentation.
+1. Integrate the SDK as described in the [Getting Started with Android](~/sdk/get-started/android.md) documentation.
 2. Add a test crash to the apps code by calling the `Crashes.generateTestCrash()` method of the crash reporting module as an action to a buttone
 3. Run the app without the debugger connected, crash it and restart it
 4. After a few minutes the crash report should be visible in the UI

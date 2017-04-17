@@ -2,8 +2,8 @@
 title: SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK for Android
 keywords: sdk
-author: elamalani, troublemakerben
-ms.author: emalani, bereimol
+author: elamalani
+ms.author: emalani
 ms.date: 04/17/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
@@ -11,9 +11,14 @@ ms.service: mobile-center
 ms.custom: sdk
 ---
 
-# SDK Troubleshooting
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [Xamarin](xamarin.md)
 
-## 1. What Andorid permissions are required?
+# Android SDK Troubleshooting
+
+## 1. What Android permissions are required?
 
 Depending on the services you use, the following permissions are required:
 

@@ -2,8 +2,8 @@
 title: Other API
 description: Other API in the Mobile Center SDK for Xamarin
 keywords: sdk
-author: elamalani, troublemakerben
-ms.author: emalani, bereimol
+author: elamalani
+ms.author: emalani
 ms.date: 04/17/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
