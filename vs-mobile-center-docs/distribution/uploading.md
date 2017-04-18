@@ -43,9 +43,6 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
 
 ### Uploading using the APIs
 
-75420b14ad51c37c0895c14f838a48abac0209d1
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 1. Pre-req: [Obtain an API token][api-token-docs]. API Token is used for authentication for all Mobile Center API calls.
 2. Upload a new release. This is 3 or more API calls. 
     
