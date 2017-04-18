@@ -90,7 +90,7 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
 
-Mobile Center will have a [dedicated feature](/general/roadmap.md) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+Mobile Center will have a [dedicated feature](~/general/roadmap.md) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
 
 ```
   "scripts": {
