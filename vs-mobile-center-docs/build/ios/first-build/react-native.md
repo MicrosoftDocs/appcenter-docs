@@ -95,7 +95,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
 
-Mobile Center will have a [dedicated feature](~/general/roadmap.md) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
 
 ```
   "scripts": {
