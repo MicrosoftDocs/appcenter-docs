@@ -81,6 +81,7 @@ The APK is an Android application packaged file which stores the Android app. If
 The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
 
 ## 6. Build tips
+
 ### 6.1. Yarn
 
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
@@ -94,9 +95,8 @@ Eventually Mobile Center will have a dedicated feature for running custom script
 ```
   "scripts": {
     ...
-    "postinstall" : "./postinstall.sh"
+    "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]
   },
 ```
 
-Then create a `postinstall.sh` shell script with the commands you want to run. Or if you just have a single command, you can put it directly in the `package.json` file.
-Postinstall scripts run right after all the `package.json` packages are installed, so you use them in your script.
+Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.
