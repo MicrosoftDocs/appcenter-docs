@@ -79,8 +79,8 @@ The APK is an Android application packaged file which stores the Android app. If
 
 ## 5. Supported versions and requirements
 The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
-### 6. Build tips
 
+## 6. Build tips
 ### 6.1. Yarn
 
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.

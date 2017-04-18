@@ -85,8 +85,7 @@ Keep in mind that the .dsym file does not change upon code signing the .ipa. If 
 
 If this app has the crashes SDK integrated, iOS symbols and source maps will automatically be sent to Mobile Center Crashes service to enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
 
-### 5. Build tips
-
+## 5. Build tips
 ### 5.1. Yarn
 
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
