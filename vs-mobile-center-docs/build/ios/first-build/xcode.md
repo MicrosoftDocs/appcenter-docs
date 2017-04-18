@@ -32,7 +32,7 @@ If no scheme can be found, make sure that the scheme you want to build with is s
 
 ![Mark scheme as shared][xcode-share-scheme]
 
-### 3.2. XCode version
+### 3.2. Xcode version
 Select the Xcode version to run the build on.
 
 ### 3.3. Build triggers
