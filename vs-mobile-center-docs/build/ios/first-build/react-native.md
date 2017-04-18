@@ -30,8 +30,8 @@ To kick off the first build, configure how the iOS project should get built.
 ### 3.1. Project
 Select your project’s `package.json`. Mobile Center will automatically detect the associated Xcode project/workspace.
 
-### 3.2. XCode version
-Select the XCode version to run the build on.
+### 3.2. Xcode version
+Select the Xcode version to run the build on.
 
 ### 3.3. Build triggers
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
@@ -95,7 +95,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
 
-Eventually Mobile Center will have a dedicated feature for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
 
 ```
   "scripts": {
