@@ -73,7 +73,7 @@ import com.microsoft.azure.mobile.distribute.Distribute;
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/distribute/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files. 
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files. 
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
