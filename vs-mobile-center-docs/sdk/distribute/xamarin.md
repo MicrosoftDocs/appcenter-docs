@@ -115,9 +115,9 @@ For your iOS application, open the `AppDelegate.cs` and add the following line b
 Distribute.DontCheckForUpdatesInDebug();
 ```
 
-#### 1.2.2 [For iOS only] Add the `openUrl`-method
+#### 1.2.2 [For iOS only] Add the `openUrl` method
 
-Implement the `openURL`-callback in your `AppDelegate.cs` to enable in-app-updates.
+Implement the `openURL` callback in your `AppDelegate.cs` to enable in-app-updates.
 
 ```csharp
 public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)

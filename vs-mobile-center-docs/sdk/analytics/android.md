@@ -40,7 +40,7 @@ You can track your own custom events with **up to five properties** to know what
 Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
 
 ```java
-Map<String,String> properties =new HashMap<>();
+Map<String, String> properties = new HashMap<>();
 properties.put("Category", "Music");
 properties.put("FileName", "favorite.avi");
 
