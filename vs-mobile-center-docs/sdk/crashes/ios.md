@@ -82,8 +82,7 @@ MSErrorReport *crashReport = [MSCrashes lastSessionCrashReport];
 var crashReport = MSCrashes.lastSessionCrashReport()
 ```
 
-There are numerous use cases for this API, the most common one is people who call this API and implement 
-their custom [MSCrashesDelegate](#5-customize-your-usage-of-mobile-center-crashes). 
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#5-customize-your-usage-of-mobile-center-crashes). 
 
 ## 3. Enable or disable Mobile Center Crashes at runtime
 
