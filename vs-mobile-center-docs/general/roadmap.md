@@ -47,7 +47,6 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Distribution service
 
-* In-app updates. New releases to a distribution group will trigger an in-app update for all installed versions.
 * UDID (iOS device id) collection. Help with iOS app provisioning by automatically collecting UDID from all tester devices.
 * Re-release builds. You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package. 
 
