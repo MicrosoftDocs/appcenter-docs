@@ -28,10 +28,10 @@ Next step once you have selected a repository is to select the branch you want t
 To kick off the first build, configure how the iOS project should get built.
 
 ### 3.1. Project
-Select your project’s `package.json`. Mobile Center will automatically detect the shared scheme.
+Select your project’s `package.json`. Mobile Center will automatically detect the associated Xcode project/workspace.
 
-### 3.2. XCode version
-Select the XCode version to run the build on.
+### 3.2. Xcode version
+Select the Xcode version to run the build on.
 
 ### 3.3. Build triggers
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
@@ -84,3 +84,24 @@ Upon building a React Native iOS app, a JavaScript source map and one or multipl
 Keep in mind that the .dsym file does not change upon code signing the .ipa. If you decide to code sign the build later, the .dsym generated before code signing is still valid.
 
 If this app has the crashes SDK integrated, iOS symbols and source maps will automatically be sent to Mobile Center Crashes service to enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
+
+## 5. Build tips
+
+### 5.1. Yarn
+
+[Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
+
+### 5.2. Custom build scripts
+
+In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
+
+Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+
+```
+  "scripts": {
+    ...
+    "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]
+  },
+```
+
+Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.
