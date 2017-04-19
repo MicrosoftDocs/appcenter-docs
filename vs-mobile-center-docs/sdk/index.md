@@ -50,7 +50,7 @@ The tables below show the required minimum supported versions of the different M
 
 Android Studio 2.2 or later.
 
- Service         | Android OS Version | API Level
+ Service          | Android OS Version | API Level
  -----------------|-------------------|-----------
  Analytics        | 4.0.3 and later   | 15 and later
  Crashes          | 4.0.3 and later   | 15 and later

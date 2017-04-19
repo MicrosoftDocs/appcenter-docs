@@ -158,9 +158,19 @@ Note that, unless you explicitly specify each module as parameters in the start 
 
 For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()`-call call as follows:
 
+#### 4.3.1 Xamarin.Android and Xamarin.iOS
+
 ```csharp
-MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics));
+MobileCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
+
+#### 4.3.2 Xarmarin.Forms
+
+```csharp
+MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics));
+```
+
+---
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 

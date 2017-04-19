@@ -62,7 +62,7 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 If your app crashed previously, you can get details about the last crash.
 
 ```csharp
-ErrorReport crashReport = Crashes.LastSessionCrashReport;
+ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
 
 There are numerous use cases for this API, the most common one is people who call this API and implement 
@@ -99,14 +99,16 @@ Mobile Center Crashes provides callbacks for developers to perform additional ac
 Set this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
 
 ```csharp
-Crashes.GetLastSessionCrashReportAsync().ContinueWith(task =>
+bool ShouldProcess(ErrorReport report)
 {
-    var errorReport = task.Result;
-    // inspect errorReport, can be null
-});
+
+ 	// Check the report in here and return true or false depending on the ErrorReport.
+ 
+	return true;
+}
 ```
 
-### 5.3 Ask for the users' consent to send a crash log
+### 5.2 Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.

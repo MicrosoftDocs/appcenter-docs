@@ -111,7 +111,7 @@ CrashesListener customListener = new CrashesListener() {
 Crashes.setListener(customListener);
 ```
 
-In case you are only interested in customizing one of the callbacks, use the `AbstractCrashesListener` instead: 
+In case you are only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead: 
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {

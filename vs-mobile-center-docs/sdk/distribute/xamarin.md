@@ -99,7 +99,6 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Cr
 Open `MainActivity.cs` and add the `start()`-call inside the `OnCreate()` method
 
 ```csharp
-Distribute.DontCheckForUpdatesInDebug();
 MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));```
 
 ##### Xamarin.Forms
