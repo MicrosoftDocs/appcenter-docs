@@ -10,7 +10,7 @@ ms.service: mobile-center
 
 # Migrating Existing Services
 
-Mobile Center is the next generation of HockeyApp and Xamarin Test Cloud.
+Mobile Center is the next generation of HockeyApp, Xamarin Test Cloud, and CodePush.
 
 It provides a unified suite of capabilities that will greatly benefit a mobile app developer during their continuous delivery process of build, test and distribute to testers, while monitoring the app for crashes and user analytics. It also integrates mobile backend services of Identity and Tables (for storage).  Some of these capabilities are built from ground-up while most others are using existing services like HockeyApp (Distribute & Crashes services) and Xamarin Test Cloud (Test service) under the hood.
 
