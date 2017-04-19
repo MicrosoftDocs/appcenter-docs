@@ -85,9 +85,9 @@ The example above shows how to use the `start()` method and include both Mobile 
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start()`-API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()`-API call as follows:
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()` API call as follows:
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);

@@ -32,7 +32,7 @@ None of these permissions require user approval at runtime, those are all instal
 ## 2. Analytics data doesn't show up in the portal
 
 1. Make sure you have integrated the SDK modules correctly.
-2. Make sure correct App Secret is included along with the `start()`-method call. You can copy the exact `start()`-code by opening the app in the portal and navigating to Getting Started page.
+2. Make sure correct App Secret is included along with the `start()` method call. You can copy the exact `start()` code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
@@ -47,7 +47,7 @@ None of these permissions require user approval at runtime, those are all instal
 ## 3. Crashes don't show up in the portal
 
 1. Make sure you have integrated the SDK modules correctly.
-2. Make sure correct App Secret is included along with the `start()`-method call. You can copy the exact `start()`-code by opening the app in the portal and navigating to Getting Started page.
+2. Make sure correct App Secret is included along with the `start()` method call. You can copy the exact `start()` code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
 4. You need to restart the app after a crash and our SDK will forward the crash log only after it is restarted.
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.

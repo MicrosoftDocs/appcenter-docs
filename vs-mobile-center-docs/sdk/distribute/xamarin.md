@@ -81,13 +81,13 @@ using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
 ```
 
-#### 1.2.2 Add the `start()`-method
+#### 1.2.2 Add the `start()` method
 
-Add `Distribute` to your `start()`-method to start Mobile Center Distribute together with the other services that you want to use in your app.
+Add `Distribute` to your `start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
 
 ##### Xamarin.iOS
 
-Open your `AppDelegate.cs` and add the `start()`-call inside the `FinishedLaunching()` method
+Open your `AppDelegate.cs` and add the `start()` call inside the `FinishedLaunching()` method
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
@@ -96,7 +96,7 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Cr
 
 ##### Xamarin.Android
 
-Open `MainActivity.cs` and add the `start()`-call inside the `OnCreate()` method
+Open `MainActivity.cs` and add the `start()` call inside the `OnCreate()` method
 
 ```csharp
 MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));```
