@@ -11,12 +11,12 @@ ms.service: mobile-center
 ms.custom: sdk
 ---
 
+# 1. Mobile Center
+
 1. [Mobile Center](#1-mobile-center)
 2. [Get started](#2-get-started)
 3. [Requirements](#3-requirements)
 4. [Source code](#4-source-code)
-
-# 1. Mobile Center
 
 Mobile Center is mission control for mobile apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.

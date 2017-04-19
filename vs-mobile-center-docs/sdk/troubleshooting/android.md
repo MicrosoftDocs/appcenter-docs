@@ -11,12 +11,12 @@ ms.service: mobile-center
 ms.custom: sdk
 ---
 
+# Troubleshooting
+
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
-
-# Android SDK Troubleshooting
 
 ## 1. What Android permissions are required?
 

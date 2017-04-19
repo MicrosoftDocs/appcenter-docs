@@ -12,12 +12,12 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarn
 ---
 
+# Troubleshooting
+
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
-
-# Xamarin SDK Troubleshooting
 
 ## 1. Issues during setup
 

@@ -12,12 +12,6 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-1. [Generate a test crash](#1-generate-a-test-crash)
-2. [Get more information about a previous crash](#2-get-more-information-about-a-previous-crash)
-3. [Enable or disable Mobile Center Crashes at runtime](#3-enable-or-disable-mobile-center-crashes-at-runtime)
-4. [Check if Mobile Center Crashes is enabled](#4-check-if-mobile-center-crashes-is-enabled)
-5. [Process crashes in Javascript](#5-process-crashes-in-javascript)
-
 # Mobile Center Crashes
 
 > [!div class="op_single_selector"]

@@ -12,17 +12,11 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-
-1. [Prerequisites](#1-prerequisites)
-2. [Create your app in the Mobile Center Portal](#2-create-your-app-in-the-mobile-center-portal-to-optain-the-app-secret)
-3. [Add Mobile Center SDK modules](#3-add-mobile-center-sdk-modules)
-4. [Start the SDK](#4-start-the-sdk)
-
 # Get started
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 

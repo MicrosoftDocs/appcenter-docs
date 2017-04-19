@@ -12,11 +12,6 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-1. [Session and device information](#1-session-and-device-information)
-2. [Custom events](#2-custom-events)
-3. [Enable or disable Mobile Center Analytics at runtime](#3-enable-or-disable-mobile-center-analytics-at-runtime)
-4. [Check if Mobile Center Analytics is enabled](#4-check-if-mobile-center-analytics-is-enabled)
-
 # Mobile Center Analytics
 
 > [!div class="op_single_selector"]

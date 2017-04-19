@@ -12,12 +12,6 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-1. [Generate a test crash](#1-generate-a-test-crash)
-2. [Get more information about a previous crash](#2-get-more-information-about-a-previous-crash)
-3. [Enable or disable Mobile Center Crashes at runtime](#3-enable-or-disable-mobile-center-crashes-at-runtime)
-4. [Check if Mobile Center Crashes is enabled](#4-check-if-mobile-center-crashes-is-enabled)
-5. [Customize your usage of Mobile Center Crashes](#5-customize-your-usage-of-mobile-center-crashes)
-
 # Mobile Center Crashes
 
 > [!div class="op_single_selector"]

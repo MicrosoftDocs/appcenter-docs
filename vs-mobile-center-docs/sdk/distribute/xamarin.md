@@ -12,12 +12,6 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-1. [Add in-app updates to your app](#1-add-in-app=updates-to-your-app)
-2. [Customize or localize the in-app update dialog](#2-customize-or-localize-the-in-app-update-dialog)
-3. [Enable or disable Mobile Center Distribute at runtime](#3-enable-or-disavle-mobile-center-distribute-at-runtime)
-4. [Check if Mobile Center Distribute is enabled](#4-check-if-mobile-center-distribute-is-enabled)
-5. [Don't initialise Mobile Center Distribute during development](#5-dont-initialise-mobile-center-distribute-during-development)
-
 # Mobile Center Distribute
 
 > [!div class="op_single_selector"]
