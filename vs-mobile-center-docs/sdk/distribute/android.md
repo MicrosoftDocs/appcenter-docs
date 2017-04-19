@@ -24,9 +24,9 @@ ms.tgt_pltfrm: android
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or ignore the new version. Once they chose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store and while you are developing your app.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store and while you are developing your app.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't done it, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
@@ -60,7 +60,7 @@ Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Cen
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Distribute.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your app's App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
 
 Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
@@ -79,9 +79,6 @@ You can easily provide your own resource strings if you'd like to change or loca
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
-> [!NOTE]
-> Note that it will only disable SDK features for the Distribute service (in-app updates for your application) and the SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
-
 ```java
 Distribute.setEnabled(false);
 ```
@@ -90,6 +87,9 @@ To enable Mobile Center Distribute again, use the same API but pass `true` as a 
 ```java
 Distribute.setEnabled(true);
 ```
+
+> [!NOTE]
+> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
 ## 4. Check if Mobile Center Distribute is enabled
 

@@ -27,7 +27,7 @@ ms.tgt_pltfrm: android
 
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-Please follow the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application yet.
+Please follow the [Get started](~/sdk/get-started/android.md) section if you haven't set up and started the SDK in your application yet.
 
 ## 1. Session and device information
 
@@ -40,7 +40,7 @@ You can track your own custom events with **up to five properties** to know what
 Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
 
 ```java
-Map<String,String>properties=new HashMap<String,String>();
+Map<String,String> properties =new HashMap<>();
 properties.put("Category", "Music");
 properties.put("FileName", "favorite.avi");
 

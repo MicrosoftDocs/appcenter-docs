@@ -1,6 +1,6 @@
 ---
-title: Other API
-description: Other API in the Mobile Center SDK for Xamarin
+title: Other APIs
+description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# Other API
+# Other APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -44,4 +44,10 @@ If you want to disable all Mobile Center services at once, use the `Enabled`-pro
 
 ```csharp
 MobileCenter.Enabled = false;
+```
+
+To enable enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
+
+```csharp
+MobileCenter.Enabled = true;
 ```

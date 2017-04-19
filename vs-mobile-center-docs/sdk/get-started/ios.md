@@ -27,14 +27,14 @@ ms.tgt_pltfrm: ios
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/ios.md).
+Let's get started with setting up Mobile Center iOS SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/ios.md).
 
 ## 1. Prerequisites
 
 Before you begin, please make sure that the following prerequisites are met:
 
 * Your iOS project is set up in Xcode 8 or later on macOS version 10.12.
-* You are tarketing devices running iOS 8.0 or later.
+* You are targeting devices running on iOS 8.0 or later.
 * You are not using any other SDK that provides Crash Reporting functionality.
 
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
@@ -43,12 +43,11 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for you app.
+2. Enter a name and an optional desciption for your app.
 3. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
 4. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can optain it's **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
-
+Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
@@ -62,17 +61,17 @@ The Mobile Center SDK for iOS can be integrated into your app using [Cocoapods](
 # Use the following line to use Mobile Center Analytics and Crashes.
 pod 'MobileCenter'
 
-# Use the following line if you want to specify which service you want to use.
+# Use the following lines if you want to specify which service you want to use.
 pod 'MobileCenter/MobileCenterAnalytics'
 pod 'MobileCenter/MobileCenterCrashes'
 ```
 
-2. Run `pod install` to install your newly defined pod, open your `.xcworkspace` and it's time to start the SDK and make use of the Mobile Center services.
+2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
 
 ### 2.2 Integration by copying the binaries into your project
-Below are the steps on how to integrate the compiled binaries in your Xcode project to setup Mobile Center Analytics and Mobile Center Crashes for your iOS app.
+Below are the steps on how to integrate the compiled binaries in your Xcode project to set up Mobile Center Analytics and Mobile Center Crashes for your iOS app.
 
 1. Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
 
@@ -95,7 +94,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-### 4.1 Add the @import statements
+### 4.1 Add the import statements
 
 **Objective-C**
 
@@ -117,7 +116,7 @@ import MobileCenterAnalytics
 import MobileCenterCrashes
 ```
 
-### 4.2 Add the `start:withServices:`-method
+### 4.2 Add the `start:withServices:` method
 
 **Objective-C**
 

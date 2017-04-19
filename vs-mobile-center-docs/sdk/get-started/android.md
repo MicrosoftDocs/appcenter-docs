@@ -35,7 +35,7 @@ Let's get started with setting up Mobile Center Android SDK in your app to use M
 Before you begin, please make sure that the following prerequisites are met:
 
 * Your Android project is set up in Android Studio.
-* You are tarketing devices running Android Version 4.0.3 (API level 15) or later.
+* You are targeting devices running Android Version 4.0.3 (API level 15) or later.
 
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
 
@@ -43,11 +43,11 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for you app.
+2. Enter a name and an optional desciption for your app.
 3. Select **Android** as the OS and **Java** as a platform.
 4. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can optain it's **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
@@ -56,18 +56,18 @@ Once you have created an app, you can optain it's **App Secret** on the **Gettin
 	```groovy
 	dependencies {
 		def mobileCenterSdkVersion = '0.6.1'
-   	compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
+   		compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
    		compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 	}
 	```
 
-2. Save your build.gradle file and make sure to trigger a Gradle sync in Android Studio.
+2. Make sure to trigger a Gradle sync in Android Studio.
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of Mobile Center.
 
 ## 4. Start the SDK
 
-### 4.1 Add the start()-method
+### 4.1 Add the start() method
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate`-callback to use **Mobile Center Analytics** and **Mobile Center Crashes**:
 
@@ -85,9 +85,9 @@ The example above shows how to use the `start()` method and include both Mobile 
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start()`-API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()` API call as follows:
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start()`-API call as follows:
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);

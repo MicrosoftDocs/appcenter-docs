@@ -27,29 +27,29 @@ ms.tgt_pltfrm: xamarin
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/xamarin.md).
+Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/xamarin.md).
 
 ## 1. Prerequisites
 
 Before you begin, please make sure that the following prerequisites are met:
 
 * Your project is set up in Xamarin Studio or Xamarin for Visual Studio.
-* You are tarketing devices running iOS 8.0 or later or Android 4.0.3 (API level 15) or later
+* You are targeting devices running iOS 8.0 or later or Android 4.0.3 (API level 15) or later
 * You are not using any other SDK that provides Crash Reporting functionality.
 
 The Mobile Center SDK for Xamarin supports the following platforms:
 
-* Xamarin.iOS
 * Xamarin.Android
+* Xamarin.iOS
 * Xamarin.Forms (iOS and Android)
 
-### 1.1 About Xamarin.iOS
-
-Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
-
-### 1.2 About Xamarin.Android
+### 1.1 About Xamarin.Android
   
 Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the OS and **Xamarin** as the platform.
+
+### 1.2 About Xamarin.iOS
+
+Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
 ### 1.3 About Xamarin.Forms (iOS and Android)
  
@@ -61,29 +61,26 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for you app.
+2. Enter a name and an optional desciption for your app.
 3. Select the appropriate OS and platform depending on your project as described above.
 4. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can optain it's **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
-The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual Studio, or using the Package Manager Console. 
-
-> [!NOTE]
-> Due to a bug in Xamarin.iOS 10.4, you also need to *uncheck* **Enable incremental builds** in your iOS project's **Build Options**.
+The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual Studio, or the Package Manager Console. 
 
 ### 3.1 Xamarin Studio
 
-#### 3.1.1 Xamarin.iOS and Xamarin.Android
+#### 3.1.1 Xamarin.Android and Xamarin.iOS
 
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
 
 #### 3.1.2 Xamarin.Forms
 
-Multiplatform Xamarin.Forms apps have three projects in your solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS` . You need to add the NuGet packages to each of these projects.
+Multiplatform Xamarin.Forms apps have three projects in your solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS`. You need to add the NuGet packages to each of these projects.
 
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
@@ -101,9 +98,7 @@ Multiplatform Xamarin.Forms apps have three projects in your solution - the port
    `PM> Install-Package Microsoft.Azure.Mobile.Analytics`
    `PM> Install-Package Microsoft.Azure.Mobile.Crashes`
 
-
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services.
-
 
 ## 4. Start the SDK
 
@@ -111,11 +106,11 @@ In order to use Mobile Center, you need to opt in to the module(s) that you want
 
 ### 4.1 Add the using statements
 
-Add the appropriate namespaces befor eyou get started with using our APIs.
+Add the appropriate namespaces before you get started with using our APIs.
 
-* **Xamarin.iOS** - Open you `AppDelegate.cs` and add the lines below the existing using statements
-* **Xamarin.Android** - Open your `MainActivity.cs` and add the lines below the existing using statements
-* **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following using statements
+* **Xamarin.Android** - Open your `MainActivity.cs` and add the following lines below the existing `using` statements.
+* * **Xamarin.iOS** - Open you `AppDelegate.cs` and add the following lines below the existing `using` statements.
+* **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following lines below the existing `using` statements:
 	
 ```csharp
 using Microsoft.Azure.Mobile;
@@ -123,24 +118,22 @@ using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
 ```
 
-### 4.2 Add the `start()`-method
+### 4.2 Add the `start()` method
 
-**Start the SDK:** Mobile Center provides developers with three modules to get started – Analytics, Crashes and Distribute. In order to use these modules, you need to opt in for the module(s) that you'd like, meaning by default no module is started and you will have to explicitly call each of them when starting the SDK.
+#### 4.2.1 Xamarin.Android
 
-#### 4.2.1 Xamarin.iOS
-
-Open your `AppDelegate.cs` and add the `start()`-call inside the `FinishedLaunching()` method
+Open `MainActivity.cs` and add the `start()` call inside the `OnCreate()` method
 
 ```csharp
-MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes));
-	```
+MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+```
 
-#### 4.2.2 Xamarin.Android
+#### 4.2.2 Xamarin.iOS
 
-Open `MainActivity.cs` and add the `start()`-call inside the `OnCreate()` method
+Open your `AppDelegate.cs` and add the `start()` call inside the `FinishedLaunching()` method
 
 ```csharp
-MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics), typeof(Crashes));
+MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 ##### 4.2.3 Xamarin.Forms
@@ -148,7 +141,7 @@ MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics), typeo
 For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Analytics), typeof(Crashes));
+MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics), typeof(Crashes));
 ```
 	
 ### 4.3 Replace the placeholder with your App Secret

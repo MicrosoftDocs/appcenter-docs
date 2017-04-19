@@ -27,7 +27,7 @@ ms.tgt_pltfrm: react-native
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. 
+Let's get started with setting up Mobile Center React Native SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. 
 
 ### 1. Prerequisites
 
@@ -43,11 +43,11 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for you app.
+2. Enter a name and an optional desciption for your app.
 3. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
 4. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can optain it's **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
@@ -57,7 +57,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 #### 3.1 Add Mobile Center Analytics
 
-1. Open a terminal and navigate to the root of your React Native project, enter the following lines to add Mobile Center Analytics and Mobile Center Crashes to the app:
+1. Open a Terminal and navigate to the root of your React Native project, enter the following lines to add Mobile Center Analytics and Mobile Center Crashes to the app:
 
 	```
 	npm install mobile-center-analytics --save
@@ -69,13 +69,13 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link mobile-center-analytics
 	```
 
-3. A set of dialog will apear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
+3. A set of dialogs will appear and ask for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
 
 	```
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
 	```
 	
-	The SDK will then ask whether or not to send user events automatically. [Learn more about manually sending user events.](~/sdk/analytics/react-native.md)
+	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md)
 
 	```
 	For the Android app, should user tracking be enabled automatically ? (Use arrow keys)
@@ -99,7 +99,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link mobile-center-crashes
 	```
 
-	A set of dialog will apear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
+	A set of dialogs will apear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
 
 	```
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
@@ -125,7 +125,7 @@ Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-S
 
 #### 3.2.2 Add the binaries to your Xcode project
 
-1. Make sure the Project Navigator is visible `(⌘+1)`. Click and drag the frameworks to your project to add them to the top level within your project.
+1. Make sure the Project Navigator is visible `(⌘+1)`. Drag and drop the frameworks into your project to add them to the top level within your project.
 2. A dialog will appear. Select “Create groups” and set the checkmark for “Add to targets” for your target. Then click Finish.
 
 > **Note:** `MobileCenter.framework` is required to start the SDK. Make sure it is added to your project, otherwise the other modules won’t work and your app won’t compile.

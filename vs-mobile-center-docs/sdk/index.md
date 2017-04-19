@@ -21,7 +21,7 @@ ms.custom: sdk
 Mobile Center is mission control for mobile apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
 
-The Mobile Center SDK use a modular architecture so you can use any or all of the services below. To learn more about how each service works for your platform, check out the in-depth documentation. 
+The Mobile Center SDKs use a modular architecture so you can use any or all of the services below. To learn more about how each service works for your platform, check out the in-depth documentation. 
 
 ## 1.1 Mobile Center Analytics
 
@@ -76,15 +76,15 @@ Android Studio 2.2 or later.
 
 Service   |  RN version   | iOS Version              | Android Version
  ---------|---------------|--------------------------|-------
-Analytics| 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Crashes  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Analytics | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Crashes   | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
 # 4. Source code
 
-Our SDK are open source and their code is available publicly on GitHub:
+The Mobile Center SDKs is open-source and available publicly on GitHub:
 
 * [Mobile Center SDK for Android](https://github.com/Microsoft/mobile-center-sdk-android/tree/master)
 * [Mobile Center SDK for iOS](https://github.com/Microsoft/mobile-center-sdk-ios/tree/master)
-* [React Native](https://github.com/Microsoft/MobileCenter-SDK-react-native)
+* [Mobile Center SDK for React Native](https://github.com/Microsoft/MobileCenter-SDK-react-native)
 * [Mobile Center SDK for UWP and Xamarin](https://github.com/Microsoft/mobile-center-sdk-xamarin/tree/master)

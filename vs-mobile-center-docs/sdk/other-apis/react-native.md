@@ -1,6 +1,6 @@
 ---
-title: Other API
-description: Other API in the Mobile Center SDK for React Native
+title: Other APIs
+description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# Other API
+# Other APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

@@ -38,13 +38,13 @@ Mobile Center Crashes provides you with an API to generate a test crash for easy
 Crashes.generateTestCrash();
 ```
 
-This API can only be used in test/beta apps and won't do anything in production apps.
+This API can only be used in debug builds and won't do anything in release builds.
 
 ## 2. Get more information about a previous crash
 
-Mobile Center Crashes has two API that give you more information in case your app has crashed.
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### 2.1 Did the app crash in last session?
+### 2.1 Did the app crash in the previous session?
 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
@@ -59,12 +59,13 @@ If your app crashed previously, you can get details about the last crash.
 
 ```java
 Crashes.getLastSessionCrashReport(new ResultCallback<ErrorReport>() {
- @Override
- public void onResult(ErrorReport data) {
-     if (data != null) {
-         Log.i("MyApp", "Last session crash details=", data.getThrowable());
-     }
-  }
+
+	@Override
+	public void onResult(ErrorReport data) {
+   		if (data != null) {
+			Log.i("MyApp", "Last session crash details=", data.getThrowable());
+		}
+	}
 });
 ```
 
@@ -121,21 +122,23 @@ Crashes.setListener(customListener);
 
 ### 5.2 Should the crash be processed?
 
-Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and don't want to send to Mobile Center.
+Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
 
 ```java
-boolean CrashesListener.shouldProcess(ErrorReport report) {
+@Override
+public boolean shouldProcess(ErrorReport report) {
      return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
 
-### 5.3 Ask for the user's consent to send a crash log
+### 5.3 Ask for the users' consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your user's confirmation before sending any crash reports.
-If you chose to do so, you are responsible for obtaining the user confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the user input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
 
 ```java
-boolean CrashesListener.shouldAwaitUserConfirmation() {
+@Override
+public boolean shouldAwaitUserConfirmation() {
 	return true; // Return true if the SDK should await user confirmation, otherwise false.
 }
 ```
@@ -148,32 +151,35 @@ Crashes.notifyUserConfirmation(int userConfirmation);
 
 Pass one option of `SEND`, `DONT_SEND` or `ALWAYS_SEND` in the above method call.
 
-Feel free to have a look [at our reference implementation](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L104).
+Feel free to have a look [at our reference implementation](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java).
 
 ### 5.4 Get information about the sending status for a crash log
 
-In our experience, developers might be interested about the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
+In our experience, developers might be interested in the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
 
-#### 5.4.1 Before a crash log is sent, the following callback will be invoked 
+#### 5.4.1 The following callback will be invoked before the SDK sends a crash log 
 
 ```java
-void CrashesListener.onBeforeSending(ErrorReport report) {
+@Override
+public void onBeforeSending(ErrorReport errorReport) {
 	// Your code, e.g. to present a custom UI.
 }
 ```
 	
-#### 5.4.2 After sending a crash log was successful, the callback will be invoked
+#### 5.4.2 The following callback will be invoked after the SDK sent a crash log successfully.
 
 ```java
-void CrashesListener.onSendingSucceeded(ErrorReport report) {
+@Override
+public void onSendingSucceeded(ErrorReport report) {
 	// Your code, e.g. to hide the custom UI.
 }
 ```
    
-#### 5.4.3 After sending a crash log failed, the following callback will be invoked
+#### 5.4.3 The following callback will be invoked if the SDK failed to send a crash log
 
 ```java
-void CrashesListener.onSendingFailed(ErrorReport report, Exception e) {
+@Override
+public void onSendingFailed(ErrorReport report, Exception e) {
 	// Your code goes here.
 }
 ```

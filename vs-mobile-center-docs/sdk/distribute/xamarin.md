@@ -25,9 +25,9 @@ ms.tgt_pltfrm: xamarin
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or ignore the new version. Once they chose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't done it, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
@@ -47,7 +47,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 ##### Xamarin.Forms
 
-Multiplatform Xamarin.Forms apps have three projects in your solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS` . You need to add the NuGet packages to each of these projects.
+Multiplatform Xamarin.Forms apps have three projects in one solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS`. You need to add the NuGet packages to each of these projects.
 
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
@@ -70,7 +70,7 @@ In order to use Mobile Center, you need to opt in to the module(s) that you want
 
 ##### 1.2.1 Add the using statement for Mobile Center Distribute
 
-dd the appropriate namespaces befor eyou get started with using our APIs.
+Add the appropriate namespaces before you get started with using our APIs.
 
 * **Xamarin.iOS** - Open your `AppDelegate.cs` and add the lines below the existing using statements
 * **Xamarin.Android** - Open your `MainActivity.cs` and add the lines below the existing using statements
@@ -92,7 +92,7 @@ Open your `AppDelegate.cs` and add the `start()`-call inside the `FinishedLaunch
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
 MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
-	```
+```
 
 ##### Xamarin.Android
 
@@ -107,8 +107,13 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Cr
 For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-Distribute.DontCheckForUpdatesInDebug();
 MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute);
+```
+
+For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplicaton`:
+
+```csharp
+Distribute.DontCheckForUpdatesInDebug();
 ```
 
 #### 1.2.2 [For iOS only] Add the `openUrl`-method
@@ -126,14 +131,11 @@ public override bool OpenUrl(UIApplication application, NSUrl url, string source
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files.  
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.  
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
-
-> [!NOTE]
-> Note that it will only disable SDK features for the Distribute service (in-app updates for your application) and the SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
 ```csharp
 Distribute.Enabled = false;
@@ -144,6 +146,9 @@ To enable Mobile Center Distribute again, use the same API but pass `YES`/`true`
 ```csharp
 Distribute.Enabled = true;
 ```
+
+> [!NOTE]
+> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
 ## 4. Check if Mobile Center Distribute is enabled
 

@@ -1,6 +1,6 @@
 ---
-title: Other API
-description: Other API in the Mobile Center SDK for iOS
+title: Other APIs
+description: Other APIs in the Mobile Center SDK for iOS
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# Other API
+# Other APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -70,7 +70,7 @@ If you want to disable all Mobile Center services at once, use the `setEnabled`-
 MSMobileCenter.setEnabled(false)
 ```
 
-To enable enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
+To enable enable all at once Mobile Center again, use the same API but pass `YES`/`true` as a parameter.
 
 **Objective-C**
 

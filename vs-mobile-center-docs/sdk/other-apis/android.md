@@ -1,6 +1,6 @@
 ---
-title: Other API
-description: Other API in the Mobile Center SDK for Android
+title: Other APIs
+description: Other APIs in the Mobile Center SDK for Android
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-# Other API
+# Other APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -32,7 +32,7 @@ MobileCenter.setLogLevel(Log.VERBOSE);
 
 ## Identify installations
 
-The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
+The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
 
 ```java
 UUID installId = MobileCenter.getInstallId();

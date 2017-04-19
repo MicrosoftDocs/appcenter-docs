@@ -25,9 +25,9 @@ ms.tgt_pltfrm: ios
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or ignore the new version. Once they chose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't done it, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
@@ -39,9 +39,9 @@ Please follow the [Get started](~/sdk/get-started/ios.md) section if you haven't
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 
-#### 1.1.1 Integration using Cocoapods
+#### 1.1.1 Integration via Cocoapods
 
-If you are integrating Mobile Center into your app using Cocoapods, add the following dependency to your podfile and run `pod install`.
+If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
 pod 'MobileCenter/MobileCenterDistribute`
@@ -57,11 +57,11 @@ pod 'MobileCenter/MobileCenterDistribute`
  	* As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called `Vendor`), so if you don't have your project organized with a subdirectory for libraries, now would be a great start for it.
  	* Create a group called `Vendor` inside your Xcode project to mimic your file structure on disk.
 
-4. Open Finder and copy the previously unzipped `MobileCenter-SDK-iOS` folder into your project's folder at the location where you want it to reside.
+4. Open Finder and copy the unzipped `MobileCenter-SDK-iOS` folder into your project's folder at the location where you want it to reside.
 
 5. Add the SDK framework to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop `MobileCenter.framework`, `MobileCenterDistribute.framework` and `MobileCenterDistributeResources.bundle` from the Finder (the ones inside the Vendor folder) into your Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it iss added to your project, otherwise the other modules won't work and your app won't compile.
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterDistribute.framework` and `MobileCenterDistributeResources.bundle` from the Finder (the ones inside the Vendor folder) into your Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 
@@ -109,7 +109,7 @@ Insert the following line to start the SDK in your app's `AppDelegate.swift` cla
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your app's App Secret. Please also check out the [Get started](~/sdk/get-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/ios.md) section if you haven't setup and started the SDK in your application, yet.
 
 #### 1.3 Modify your `info.plist`
 
@@ -155,9 +155,6 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
-> [!NOTE]
-> Note that it will only disable SDK features for the Distribute service (in-app updates for your application) and the SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
-
 **Objective-C**
 
 ```objectivec
@@ -182,6 +179,9 @@ To enable Mobile Center Distribute again, use the same API but pass `YES`/`true`
 MSDistribute.setEnabled(true)
 ```
 
+> [!NOTE]
+> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
+
 ## 4. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
@@ -200,7 +200,7 @@ var enabled = MSDistribute.isEnabled()
 
 ##  5. Don't initialise Mobile Center Distribute during development
  
-Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users it could be disruptive for you during the development stage of your application. We recommend to not initialize `MSDistribute` for your `DEBUG` configuration.
+Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users it could be disruptive for you during the development stage of your application. We do not recommend initialize `MSDistribute` for your `DEBUG` configuration.
 
  **Objective-C**
  

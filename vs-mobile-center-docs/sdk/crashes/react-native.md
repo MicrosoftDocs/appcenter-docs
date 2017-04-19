@@ -55,9 +55,9 @@ throw new Error("This is a test javascript crash!");
 
 ## 2. Get more information about a previous crash
 
-Mobile Center Crashes has two API that give you more information in case your app has crashed.
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### 2.1 Did the app crash in last session?
+### 2.1 Did the app crash in the previous session?
 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
@@ -101,7 +101,7 @@ Crashes.isEnabled();
 
 During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
 
-Processing a crash in JavaScript requires you to use the `process` method from the Crashes SDK.
+Processing a crash in JavaScript requires you to use the `process` method from Mobile Center Crashes.
 
 ```javascipt
 // import the Crashes library at the top of the file
