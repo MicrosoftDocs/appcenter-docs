@@ -169,7 +169,6 @@ func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErro
 	return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
-
     
 ### 5.3 Ask for the users' consent to send a crash log
 
@@ -223,7 +222,6 @@ MSCrashes.notify(with: MSUserConfirmation.dontSend)
 MSCrashes.notify(with: MSUserConfirmation.send)
 MSCrashes.notify(with: MSUserConfirmation.always)
 ```
-
 
 ### 5.4 Get information about the sending status for a crash log
 

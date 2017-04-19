@@ -125,8 +125,6 @@ Crashes.NotifyUserConfirmation(UserConfirmation.Send);
 
 In our experience, developers might be interested in the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `Crashes` provides three different callbacks that you can use in your app to be notified of what is going on:
 
-
-
 #### 5.4.1 The following callback will be invoked before the SDK sends a crash log
 
 ```csharp

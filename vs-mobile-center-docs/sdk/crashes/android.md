@@ -65,7 +65,6 @@ Crashes.getLastSessionCrashReport(new ResultCallback<ErrorReport>() {
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#5-customize-your-usage-of-mobile-center-crashes). 
 
-
 ## 3. Enable or disable Mobile Center Crashes at runtime
 
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
