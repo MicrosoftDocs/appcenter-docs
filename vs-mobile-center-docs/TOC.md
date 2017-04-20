@@ -34,6 +34,7 @@
 ### [Espresso](test-cloud/preparing-for-upload/espresso.md)
 ### [Calabash](test-cloud/preparing-for-upload/calabash.md)
 ### [Xamarin.UITest](test-cloud/preparing-for-upload/uitest.md)
+### [XCUITest](test-cloud/preparing-for-upload/xcuitest.md)
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
