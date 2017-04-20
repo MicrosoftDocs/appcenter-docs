@@ -25,10 +25,6 @@
         "redirect_url": "~/sdk/other-apis/ios.md"
     },
     {
-        "source_path": "sdk/advanced-apis/android.md",
-        "redirect_url": "~/sdk/other-apis/android.md"
-    },
-    {
         "source_path": "sdk/advanced-apis/react-native.md",
         "redirect_url": "~/sdk/other-apis/react-native.md"
     },
