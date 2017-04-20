@@ -24,7 +24,7 @@ The Mobile Center SDK uses a modular architecture so you can use any or all of t
 
 Let's get started with setting up Mobile Center React Native SDK in your app to use Mobile Center Analytics and Mobile Center Crashes.
 
-### 1. Prerequisites
+## 1. Prerequisites
 
 Before you begin, please make sure that the following prerequisites are met:
 

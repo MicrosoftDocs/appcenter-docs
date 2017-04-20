@@ -34,12 +34,12 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use all the services, add the following lines:
 
-  ```groovy
-  dependencies {
-     def mobileCenterSdkVersion = '0.6.1'
-     compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
-  }
-  ```
+	```groovy
+	dependencies {
+	   def mobileCenterSdkVersion = '0.6.1'
+	   compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
+	}
+	```
 
 2. Save your `build.gradle` file and make sure to trigger a Gradle sync in Android Studio.
 

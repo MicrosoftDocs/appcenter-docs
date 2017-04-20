@@ -52,14 +52,14 @@ The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](ht
 
 1. Add the following dependencies to your `podfile` to include Mobile Center Analytics and Mobile Center Crashes into your app. This will pull in the following frameworks: **MobileCenter**, **MobileCenterAnalytics** and **MobileCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on MobileCenter. It will get pulled in automatically.
 
-```ruby
-# Use the following line to use Mobile Center Analytics and Crashes.
-pod 'MobileCenter'
+	```ruby
+	# Use the following line to use Mobile Center Analytics and Crashes.
+	pod 'MobileCenter'
 
-# Use the following lines if you want to specify which service you want to use.
-pod 'MobileCenter/MobileCenterAnalytics'
-pod 'MobileCenter/MobileCenterCrashes'
-```
+	# Use the following lines if you want to specify which service you want to use.
+	pod 'MobileCenter/MobileCenterAnalytics'
+	pod 'MobileCenter/MobileCenterCrashes'
+	```
 
 2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
 
