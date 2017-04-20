@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Get Started with iOS
 description: Get started
 keywords: sdk
 author: troublemakerben
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# Get started
+# Get Started with iOS
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -46,7 +46,7 @@ Once you have created an app, you can optain its **App Secret** on the **Getting
 
 ## 3. Add the Mobile Center SDK modules
 
-The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project. 
+The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
 ### 3.1  Integration via Cocoapods
 

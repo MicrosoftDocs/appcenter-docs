@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Analytics
+title: Mobile Center Analytics for Xamarin
 description: Mobile Center Analytics for Xamarin
 keywords: analytics
 author: troublemakerben
@@ -56,7 +56,7 @@ Analytics.Enabled = false;
 ```
 
 To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
-       
+
 ```csharp
 Analytics.Enabled = true;
 ```

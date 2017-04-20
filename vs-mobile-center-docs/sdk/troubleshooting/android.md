@@ -1,5 +1,5 @@
 ---
-title: SDK Troubleshooting
+title: Android SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK for Android
 keywords: sdk
 author: elamalani
@@ -11,14 +11,14 @@ ms.service: mobile-center
 ms.custom: sdk
 ---
 
-# Troubleshooting
+# Android SDK Troubleshooting
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-## 1. What Android permissions are required?
+## What Android permissions are required?
 
 Depending on the services you use, the following permissions are required:
 
@@ -26,10 +26,10 @@ Depending on the services you use, the following permissions are required:
 - Distribute: `REQUEST_INSTALL_PACKAGES`, `DOWNLOAD_WITHOUT_NOTIFICATION`
 
 Required permissions are automatically merged into your app's manifest by the SDK.
-    
+
 None of these permissions require user approval at runtime, those are all install time permissions.
 
-## 2. Analytics data doesn't show up in the portal
+## Analytics data doesn't show up in the portal
 
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the `start()` method call. You can copy the exact `start()` code by opening the app in the portal and navigating to Getting Started page.
@@ -39,12 +39,12 @@ None of these permissions require user approval at runtime, those are all instal
   ```java
   MobileCenter.setLogLevel(Log.VERBOSE);
   ```
-  
+
 5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 7. To check if Mobile Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
 
-## 3. Crashes don't show up in the portal
+## Crashes don't show up in the portal
 
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the `start()` method call. You can copy the exact `start()` code by opening the app in the portal and navigating to Getting Started page.
@@ -55,7 +55,7 @@ None of these permissions require user approval at runtime, those are all instal
   ```java
   MobileCenter.setLogLevel(Log.VERBOSE);
   ```
-  
+
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
 7. Make sure your device is online.
 8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.

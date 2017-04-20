@@ -1,5 +1,5 @@
 ---
-title: Other APIs
+title: Other Android APIs
 description: Other APIs in the Mobile Center SDK for Android
 keywords: sdk
 author: troublemakerben
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-# Other APIs
+# Other Android APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

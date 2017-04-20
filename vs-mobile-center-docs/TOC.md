@@ -98,7 +98,7 @@
 ### [iOS](sdk/other-apis/ios.md)
 ### [React Native](sdk/other-apis/react-native.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
-## [Troubleshooting]
+## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)

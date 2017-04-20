@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Get Started with Xamarin
 description: Get started
 keywords: sdk
 author: troublemakerben
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# Get started
+# Get Started with Xamarin
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -39,7 +39,7 @@ The Mobile Center SDK for Xamarin supports the following platforms:
 * Xamarin.Forms (iOS and Android)
 
 ### 1.1 About Xamarin.Android
-  
+
 Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the OS and **Xamarin** as the platform.
 
 ### 1.2 About Xamarin.iOS
@@ -47,7 +47,7 @@ Choose this option if you target no other platform but Android. You need to crea
 Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
 ### 1.3 About Xamarin.Forms (iOS and Android)
- 
+
 Choose this option if you want to create a cross platform app for iOS and Android devices. You need to create two apps in Mobile Center – one for each OS – and select **Xamarin** as the platform for each of them.
 
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
@@ -64,7 +64,7 @@ Once you have created an app, you can optain its **App Secret** on the **Getting
 
 ## 3. Add the Mobile Center SDK modules
 
-The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual Studio, or the Package Manager Console. 
+The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual Studio, or the Package Manager Console.
 
 ### 3.1 Xamarin Studio
 
@@ -106,7 +106,7 @@ Add the appropriate namespaces before you get started with using our APIs.
 * **Xamarin.Android** - Open your `MainActivity.cs` and add the following lines below the existing `using` statements.
 * * **Xamarin.iOS** - Open you `AppDelegate.cs` and add the following lines below the existing `using` statements.
 * **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following lines below the existing `using` statements:
-	
+
 ```csharp
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
@@ -138,7 +138,7 @@ For creating a Xamarin.Forms application targeting both iOS and Android platform
 ```csharp
 MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics), typeof(Crashes));
 ```
-	
+
 ### 4.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.

@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Distribute
+title: Mobile Center Distribute for Android
 description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
@@ -34,12 +34,12 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use all the services, add the following lines:
 
-```groovy
-dependencies {
-	def mobileCenterSdkVersion = '0.6.1'
-    compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
-}
-```
+  ```groovy
+  dependencies {
+     def mobileCenterSdkVersion = '0.6.1'
+     compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
+  }
+  ```
 
 2. Save your `build.gradle` file and make sure to trigger a Gradle sync in Android Studio.
 
@@ -47,7 +47,7 @@ Now that you've integrated Mobile Center Distribute in your application, it's ti
 
 ### 1.2 Start Mobile Center Distribute
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. 
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
 
@@ -68,7 +68,7 @@ import com.microsoft.azure.mobile.distribute.Distribute;
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files. 
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 

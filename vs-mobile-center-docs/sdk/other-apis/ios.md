@@ -1,5 +1,5 @@
 ---
-title: Other APIs
+title: Other iOS APIs
 description: Other APIs in the Mobile Center SDK for iOS
 keywords: sdk
 author: troublemakerben
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# Other APIs
+# Other iOS APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

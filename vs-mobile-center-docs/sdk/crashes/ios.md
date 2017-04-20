@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Crashes
+title: Mobile Center Crashes for iOS
 description: Mobile Center Crashes for iOS
 keywords: sdk, crash
 author: troublemakerben
@@ -64,7 +64,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 MSCrashes.hasCrashedInLastSession()
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured. 
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
 ### 2.2 Details about the last crash
 
@@ -82,7 +82,7 @@ MSErrorReport *crashReport = [MSCrashes lastSessionCrashReport];
 var crashReport = MSCrashes.lastSessionCrashReport()
 ```
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#5-customize-your-usage-of-mobile-center-crashes). 
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#5-customize-your-usage-of-mobile-center-crashes).
 
 ## 3. Enable or disable Mobile Center Crashes at runtime
 
@@ -169,7 +169,7 @@ func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErro
 	return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
-    
+
 ### 5.3 Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
@@ -179,7 +179,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 
 ```obj-c
 MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
-	
+
 	// Your code to present your UI to the user, e.g. an UIAlertView.
    [[[UIAlertView alloc] initWithTitle:@"Sorry we crashed."
    							   message:@"Do you want to send a report about the crash to the developer?"
@@ -227,24 +227,24 @@ MSCrashes.notify(with: MSUserConfirmation.always)
 
 In our experience, developers might be interested in the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `MSCrashesDelegate`-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
 
-#### 5.4.1 The following callback will be invoked before the SDK sends a crash log 
+#### 5.4.1 The following callback will be invoked before the SDK sends a crash log
 
-	**Objective-C**
+**Objective-C**
 
-	```obj-c
-	- (void)crashes:(MSCrashes *)crashes willSendErrorReport:(MSErrorReport *)errorReport {
-   		// Your code, e.g. to present a custom UI.
-	}
-	```
-	
-	**Swift**
+```obj-c
+- (void)crashes:(MSCrashes *)crashes willSendErrorReport:(MSErrorReport *)errorReport {
+   // Your code, e.g. to present a custom UI.
+}
+```
 
-	```swift
-	func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
-		// Your code, e.g. to present a custom UI.
-   }
-	```
-	
+**Swift**
+
+```swift
+func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
+   // Your code, e.g. to present a custom UI.
+}
+```
+
 #### 5.4.2 The following callback will be invoked after the SDK sent a crash log successfully
 
 **Objective-C**
@@ -254,7 +254,7 @@ In our experience, developers might be interested in the status of Mobile Center
 	// Your code, e.g. to hide the custom UI.
 }
 ```
-	
+
 **Swift**
 
 ```swift
@@ -262,7 +262,7 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 	// Your code goes here.
 }
 ```
-   
+
 #### 5.4.3 The following callback will be invoked if the SDK failed to send a crash log
 
 **Objective-C**
@@ -272,14 +272,14 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 	// Your code goes here.
 }
 ```
-	
+
 **Swift**
 
 ```swift
 func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
 	// Your code goes here.
 }
-```    
+```
 
 ## 6. Enabling Mach exception handling
 
@@ -289,7 +289,8 @@ The `enableMachExceptionMethod` provides an option to enable catching fatal sign
 
 The SDK will not check if the app is running in an AppStore environment or if a debugger was attached at runtime because some developers chose to do one or both at their own risk.
 
-**We strongly advice AGAINST enabling the Mach exception handler in release versions of your apps!**
+> [!WARNING]
+> **We strongly advice AGAINST enabling the Mach exception handler in release versions of your apps!**
 
 The Mach exception handler executes in-process and will interfere with debuggers when they attempt to suspend all active threads (which will include the Mach exception handler). Mach-based handling should _NOT_ be used when a debugger is attached. Mobile Center Crashes will not enable crash reporting if the app is **started** with the debugger running. If you attach the debugger **at runtime**, this may cause issues if the Mach exception handler is enabled!
 

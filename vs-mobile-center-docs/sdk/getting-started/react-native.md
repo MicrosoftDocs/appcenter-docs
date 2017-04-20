@@ -1,5 +1,5 @@
 ---
-title: Get Started
+title: Get Started with React Native
 description: Get Started
 keywords: sdk
 author: troublemakerben
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# Get started
+# Get Started with React Native
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -22,7 +22,7 @@ ms.tgt_pltfrm: react-native
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center React Native SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. 
+Let's get started with setting up Mobile Center React Native SDK in your app to use Mobile Center Analytics and Mobile Center Crashes.
 
 ### 1. Prerequisites
 
@@ -69,7 +69,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	```
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
 	```
-	
+
 	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md)
 
 	```
@@ -77,7 +77,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
         ❯ Enable Automatically
           Enable in JavaScript
 	```
-	
+
   There will be the same set of questions for iOS.
 
 #### 3.1 Add Mobile Center Crashes
@@ -107,7 +107,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
         ❯ Automatically
           Processed in JavaScript by user
 	```
- 	
+
  	There will be the same set of questions for your iOS app.
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually

@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Distribute
+title: Mobile Center Distribute for Xamarin
 description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
@@ -36,19 +36,19 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 ##### Xamarin.iOS and Xamarin.Android
 
-* Navigate to the **Project -> Add NuGet Packages...**
+* Navigate to the **Project > Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
 
 ##### Xamarin.Forms
 
 Multiplatform Xamarin.Forms apps have three projects in one solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS`. You need to add the NuGet packages to each of these projects.
 
-* Navigate to the **Project -> Add NuGet Packages...**
+* Navigate to the **Project > Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
 
 #### 1.1.2 Xamarin for Visual Studio
 
-* Navigate to the **Project -> Manage NuGet Packages...**
+* Navigate to the **Project > Manage NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
 
 ##### 1.1.3 Package Manager Console ##
@@ -56,7 +56,7 @@ Multiplatform Xamarin.Forms apps have three projects in one solution - the porta
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 * Type the following command:
 
-   `PM> Install-Package Microsoft.Azure.Mobile.Distribute`
+  `PM> Install-Package Microsoft.Azure.Mobile.Distribute`
 
 ### 1.2 Start Mobile Center Distribute
 
@@ -69,7 +69,7 @@ Add the appropriate namespaces before you get started with using our APIs.
 * **Xamarin.iOS** - Open your `AppDelegate.cs` and add the lines below the existing using statements
 * **Xamarin.Android** - Open your `MainActivity.cs` and add the lines below the existing using statements
 * **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following using statements
-	
+
 ```csharp
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
@@ -124,7 +124,7 @@ public override bool OpenUrl(UIApplication application, NSUrl url, string source
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.  
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
@@ -146,7 +146,7 @@ Distribute.Enabled = true;
 ## 4. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
-  
+
 ```csharp
 bool enabled = Distribute.Enabled;
 ```

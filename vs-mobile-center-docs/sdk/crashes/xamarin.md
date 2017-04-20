@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Crashes
+title: Mobile Center Crashes for Xamarin
 description: Mobile Center Crashes for Xamarn
 keywords: sdk, crash
 author: troublemakerben
@@ -48,7 +48,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 bool didAppCrash = Crashes.HasCrashedInLastSession;
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured. 
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
 ### 2.2 Details about the last crash
 
@@ -58,7 +58,7 @@ If your app crashed previously, you can get details about the last crash.
 ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#5-customize-your-usage-of-mobile-center-crashes). 
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#5-customize-your-usage-of-mobile-center-crashes).
 
 ## 3. Enable or disable Mobile Center Crashes at runtime
 
@@ -95,7 +95,7 @@ bool ShouldProcess(ErrorReport report)
 {
 
  	// Check the report in here and return true or false depending on the ErrorReport.
- 
+
 	return true;
 }
 ```

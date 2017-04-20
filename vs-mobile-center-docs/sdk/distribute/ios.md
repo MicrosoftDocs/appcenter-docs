@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Distribute
+title: Mobile Center Distribute for iOS
 description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
@@ -61,7 +61,7 @@ pod 'MobileCenter/MobileCenterDistribute`
 
 ### 1.2 Start Mobile Center Distribute
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. 
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 #### 1.2.1 Add the import for Mobile Center Distribute
 
@@ -123,7 +123,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 	            openURL:(NSURL *)url
 	  sourceApplication:(NSString *)sourceApplication
 	         annotation:(id)annotation {
-	         
+
 	// Pass the url to MSDistribute.
 	[MSDistribute openUrl:url];
 	return YES;
@@ -134,7 +134,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 
 ```swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-	    
+
   // Pass the URL to MSDistribute.
   MSDistribute.open(url as URL!)
   return true
@@ -143,7 +143,7 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.   
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
@@ -162,6 +162,8 @@ MSDistribute.setEnabled(false)
 ```
 
 To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
+
+**Objective-C**
 
 ```objectivec
 [MSDistribute setEnabled:YES];
@@ -193,11 +195,11 @@ var enabled = MSDistribute.isEnabled()
 ```
 
 ##  5. Don't initialise Mobile Center Distribute during development
- 
+
 Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
 
  **Objective-C**
- 
+
  ```objectivec
  #if DEBUG
  	[MSMobileCenter start:@"YOUR_APP_ID" withServices:@[[MSAnalytics class], [MSCrashes class]]];
@@ -205,13 +207,13 @@ Mobile Center Distribute will pop up it's UI/browser at application start. While
  	[MSMobileCenter start:@"YOUR_APP_ID" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
  #endif
  ```
- 
+
  **Swift**
- 
+
  ```swift
  #if DEBUG
  	MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self])
  #else
  	MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
  #endif
- ``` 
+ ```

@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Analytics
+title: Mobile Center Analytics for iOS
 description: Mobile Center Analytics for iOS
 keywords: analytics
 author: troublemakerben
@@ -60,7 +60,7 @@ Properties for events are entirely optional – if you just want to track an eve
 MSAnalytics.trackEvent("Video clicked")
 ```
 
-For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md). 
+For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md).
 
 ## 3. Enable or disable Mobile Center Analytics at runtime
 
@@ -106,5 +106,3 @@ You can also check if Mobile Center Analytics is enabled or not.
 ```swift
 MSAnalytics.isEnabled()
 ```
-
-    

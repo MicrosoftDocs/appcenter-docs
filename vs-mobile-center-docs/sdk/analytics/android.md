@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Analytics
+title: Mobile Center Analytics for Android
 description: Mobile Center Analytics for Android
 keywords: analytics
 author: troublemakerben
@@ -48,7 +48,7 @@ Properties for events are entirely optional – if you just want to track an eve
 Analytics.trackEvent("Video clicked");
 ```
 
-For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md). 
+For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md).
 
 ## 3. Enable or disable Mobile Center Analytics at runtime
 

@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Crashes
-description: Mobile Center Crashes for Android
+title: Mobile Center Crashes for React Native
+description: Mobile Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
@@ -45,7 +45,9 @@ It's also easy to generate a JavaScript crash. Add the following line to your co
 ```javascript
 throw new Error("This is a test javascript crash!");
 ```
-    > **IMPORTANT**: Your React Native app needs to be compiled in release mode for this crash to be sent to Mobile Center.
+
+> [!TIP]
+> Your React Native app needs to be compiled in **release mode** for this crash to be sent to Mobile Center.
 
 ## 2. Get more information about a previous crash
 
@@ -59,7 +61,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 Crashes.hasCrashedInLastSession();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured. 
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
 ### 2.2 Details about the last crash
 
@@ -68,7 +70,7 @@ If your app crashed previously, you can get details about the last crash.
 ```javascript
 ErrorReport crashReport = Crashes.lastSessionCrashReport();
 ```
-        
+
 ## 3. Enable or disable Mobile Center Crashes at runtime
 
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.

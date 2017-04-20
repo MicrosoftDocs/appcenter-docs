@@ -1,5 +1,5 @@
 ---
-title: Other APIs
+title: Other Xamarin APIs
 description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# Other APIs
+# Other Xamarin APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
