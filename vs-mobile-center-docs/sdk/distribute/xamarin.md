@@ -21,12 +21,12 @@ ms.tgt_pltfrm: xamarin
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you have not integrated it, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/get-started/xamarin.md) section if you do not have set up and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/get-started/xamarin.md) section if you haven't setup and started the SDK in your application, yet.
 
 ### 1.1 Add the Mobile Center Distribute module
 

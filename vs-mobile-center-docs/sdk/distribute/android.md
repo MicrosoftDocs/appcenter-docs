@@ -21,12 +21,12 @@ ms.tgt_pltfrm: android
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store and while you are developing your app.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you do not have set up and started the SDK in your application, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/get-started/android.md) section if if you do not have set up and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
 
 ### 1.1 Add the Mobile Center Distribute module
 
@@ -55,7 +55,7 @@ Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Cen
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Distribute.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you do not have set up and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
 
 Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
