@@ -22,7 +22,7 @@ this library allows you to explicitly declare where you want to mark your test s
 
 ## Requirements
 
-### Project
+### Application Project
 
 `VSMobileCenterExtensions.framework` is built for iOS 9.0 or later.
 
@@ -60,7 +60,7 @@ The extension can be added to your Xcode XCUITest target by using a dependency m
 	end
 	```
 
-	'MyUITestTarget' should be the name of the target for your XCUITests. If you're unsure of what your test target is called, you can run
+	"MyUITestTarget" should be the name of the target for your XCUITests. If you're unsure of what your test target is called, you can run
 
 	```shell
 	$ xcodebuild -list
@@ -73,7 +73,7 @@ The extension can be added to your Xcode XCUITest target by using a dependency m
 	$ pod install
 	```
 
-4. You will probably see a notice from `cocoapods` about closing the Xcode project (if currently open) and using `[YOUR_PROJECT_NAME].xcworkspace` from now own. Please follow this instruction.
+4. You will probably see a notice from `cocoapods` about closing the Xcode project (if currently open) and using `[YOUR_PROJECT_NAME].xcworkspace` from now own. Please follow these instructions.
 
 ### Carthage
 
@@ -108,10 +108,10 @@ folder.
 
 2. Copy `VSMobileCenterExtensions.framework` into your application's project folder.
 
-![Application project folder](images/project-folder.png)
+	![Application project folder](images/project-folder.png)
 
 3. In Xcode, in the **Build Phases** tab of your _UI Test target_ (not your main application target),
-add the `VSMobileCenterExtensions.framework` in the 'Link Binary With Libraries' phase.
+add the `VSMobileCenterExtensions.framework` in the **Link Binary With Libraries** phase.
 
 4. In the same tab, add the `VSMobileCenterExtensions.framework` to your **Copy Files** phase.
 
@@ -229,7 +229,8 @@ we recommend adapting the following scaffolding code to your gestures invocation
 }
 ```
 
-Swift
+**Swift**
+
 ```swift
 func waitAndTap(element: XCUIElement) {
     let predicate = NSPredicate(format: "exists == 1 && hittable == 1")
@@ -245,7 +246,7 @@ Note that in Mobile Center Test, this issue appears to only be prevelant on iPho
 
 ### Xcode 8.3 and Swift
 
-If you are building Swift XCUITests using Xcode >= 8.3, you may encounter a build error related to bitcode.  As a workaround, you can disable bitcode in your XCUITest target. To do this,
+If you are building Swift XCUITests using Xcode 8.3 and newer, you may encounter a build error related to bitcode.  As a workaround, you can disable bitcode in your XCUITest target. To do this,
 go to Build Settings, search for `ENABLE_BITCODE` and set the value to `NO` for the test target.  You should not need to change the setting for the App target.
 
 ![Enable Bitcode in Xcode](images/enable-bitcode.png)
