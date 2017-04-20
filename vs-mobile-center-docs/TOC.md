@@ -93,12 +93,15 @@
 ## Identity
 ### [Android](sdk/azure/identity/android.md)
 ### [iOS](sdk/azure/identity/ios.md)
-## Advanced APIs
-### [Android](sdk/advanced-apis/android.md)
-### [iOS](sdk/advanced-apis/ios.md)
-### [React Native](sdk/advanced-apis/react-native.md)
-### [Xamarin](sdk/advanced-apis/xamarin.md)
-## [Troubleshooting](sdk/troubleshooting.md)
+## Other APIs
+### [Android](sdk/other-apis/android.md)
+### [iOS](sdk/other-apis/ios.md)
+### [React Native](sdk/other-apis/react-native.md)
+### [Xamarin](sdk/other-apis/xamarin.md)
+## Troubleshooting
+### [Android](sdk/troubleshooting/android.md)
+### [iOS](sdk/troubleshooting/ios.md)
+### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)

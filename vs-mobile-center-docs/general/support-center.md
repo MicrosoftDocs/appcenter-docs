@@ -22,7 +22,11 @@ ms.service: mobile-center
 
 ## Troubleshooting
 
-[SDK troubleshooting](~/sdk/troubleshooting.md)
+[Android SDK troubleshooting](~/sdk/troubleshooting/android.md)
+
+[iOS SDK troubleshooting](~/sdk/troubleshooting/ios.md)
+
+[Xamarin SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
 
 [Build service FAQs](~/build/faq.md)
 
