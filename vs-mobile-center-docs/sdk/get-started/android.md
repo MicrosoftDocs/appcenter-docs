@@ -37,9 +37,9 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for your app.
-3. Select **Android** as the OS and **Java** as a platform.
-4. Hit the button at the bottom right that says **Add new app**.
+3. Enter a name and an optional desciption for your app.
+4. Select **Android** as the OS and **Java** as a platform.
+5. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 

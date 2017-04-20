@@ -30,7 +30,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * Your iOS project is set up in Xcode 8 or later on macOS version 10.12.
 * You are targeting devices running on iOS 8.0 or later.
-* You are not using any other SDK that provides Crash Reporting functionality.
+* You are not using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
 
@@ -38,17 +38,17 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for your app.
-3. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
-4. Hit the button at the bottom right that says **Add new app**.
+3. Enter a name and an optional desciption for your app.
+4. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
+5. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
-The Mobile Center SDK for iOS can be integrated into your app using [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project. 
+The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project. 
 
-### 3.1  Integration using Cocoapods
+### 3.1  Integration via Cocoapods
 
 1. Add the following dependencies to your `podfile` to include Mobile Center Analytics and Mobile Center Crashes into your app. This will pull in the following frameworks: **MobileCenter**, **MobileCenterAnalytics** and **MobileCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on MobileCenter. It will get pulled in automatically.
 

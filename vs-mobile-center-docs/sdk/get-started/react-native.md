@@ -38,15 +38,15 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-2. Enter a name and an optional desciption for your app.
-3. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
-4. Hit the button at the bottom right that says **Add new app**.
+3. Enter a name and an optional desciption for your app.
+4. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
+5. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
-The default integration of the SDK uses Cocoapods for iOS. If you are not using Cocoapods in your app please use integrate the iOS SDK manually.
+The default integration of the SDK uses Cocoapods for iOS. If you are not using Cocoapods in your app, you need to integrate the React Native SDK manually for your iOS app.
 
 ### 3.1 Integrate the SDK automatically
 
@@ -58,7 +58,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	npm install mobile-center-analytics --save
 	```
 
-2. Link the plugin to the React Native app using the react-native link command.
+2. Link the plugin to the React Native app by using the react-native link command.
 
 	```
 	react-native link mobile-center-analytics
@@ -94,7 +94,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link mobile-center-crashes
 	```
 
-	A set of dialogs will apear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
+	A set of dialogs will appear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
 
 	```
 	What is the Android app secret?(0000-0000-0000-0000-000000000000)
@@ -112,7 +112,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
-We **strongly** recommend integrating the SDK using Cocoapods as described above. Nonetheless, it's also possible to integrate the SDK manually.
+We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the SDK manually.
 
 #### 3.2.1 Download the binaries
 

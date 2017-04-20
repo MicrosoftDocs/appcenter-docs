@@ -26,7 +26,7 @@ While it is possible to use Mobile Center Distribute to distribute a new version
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/get-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
 ### 1.1 Add the Mobile Center Distribute module
 
@@ -55,7 +55,7 @@ Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Cen
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Distribute.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you haven't setup and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/get-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
 Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
@@ -68,7 +68,7 @@ import com.microsoft.azure.mobile.distribute.Distribute;
 
 ## 2. Customize or localize the in-app update dialog
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name and specify the localized value to be reflected in the dialog in your own app resource files. 
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files. 
 
 ## 3. Enable or disable Mobile Center Distribute at runtime
 
