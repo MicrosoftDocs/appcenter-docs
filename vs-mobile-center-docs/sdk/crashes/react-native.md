@@ -22,7 +22,7 @@ ms.tgt_pltfrm: react-native
 
 Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/get-started/react-native.md) section if you haven't set up and started the SDK in your application yet.
+Please follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application yet.
 
 Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
 ```javascript

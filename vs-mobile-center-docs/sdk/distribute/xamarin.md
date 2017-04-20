@@ -26,7 +26,7 @@ While it is possible to use Mobile Center Distribute to distribute a new version
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/get-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
 
 ### 1.1 Add the Mobile Center Distribute module
 

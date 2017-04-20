@@ -69,10 +69,10 @@
 
 # [SDK](sdk/index.md)
 ## Getting Started
-### [Android](sdk/get-started/android.md)
-### [iOS](sdk/get-started/ios.md)
-### [React Native](sdk/get-started/react-native.md)
-### [Xamarin](sdk/get-started/xamarin.md)
+### [Android](sdk/getting-started/android.md)
+### [iOS](sdk/getting-started/ios.md)
+### [React Native](sdk/getting-started/react-native.md)
+### [Xamarin](sdk/getting-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [iOS](sdk/analytics/ios.md)

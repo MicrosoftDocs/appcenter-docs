@@ -22,7 +22,7 @@ ms.tgt_pltfrm: ios
 
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-Please follow the [Get started](~/sdk/get-started/ios.md) section if you haven't set up and started the SDK in your application yet.
+Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up and started the SDK in your application yet.
 
 ## 1. Session and device information
 
