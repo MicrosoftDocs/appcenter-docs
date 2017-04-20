@@ -1,10 +1,10 @@
 ---
-title: React Native Analytics
-description: Analytics for React Native using Mobile Center
+title: Mobile Center Analytics for React Native
+description: Mobile Center Analytics for React Native
 keywords: analytics
-author: elamalani
-ms.author: emalani
-ms.date: 01/20/2017
+author: troublemakerben
+ms.author: bereimol
+ms.date: 04/17/2017
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: mobile-center
@@ -12,53 +12,83 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# React Native Analytics
+# Mobile Center Analytics
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Xamarin](xamarin.md)
 
-Analytics module lets you automatically track session, device properties and pages when you start the SDK and you can use API to track your custom events. Follow the [Getting Started](~/sdk/getting-started/react-native.md#2-add-Mobile-Center-sdk-modules) section if you haven't setup and started the SDK in your application yet.
+Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-* **Using the Analytics API:**
+Please follow the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application yet.
 
-   In files where you are using the Analytics SDK, import the library.
+## 1. Session and device information
 
-        // import the Analytics library at the top of the file
-        import Analytics from "mobile-center-analytics";
+Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to add any additional code.
 
-* **Track Session, Device Properties:**  Once the Analytics module is included in your app and the SDK is started, it will automatically track sessions, device properties like OS Version, model, manufacturer etc. and you don’t need to add any additional code.
+## 2. Custom events
 
-* **Custom Events:** You can track your own custom events with up to five properties to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal. For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md). Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send up to 200 distinct events. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
+You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
 
-        Analytics.trackEvent(String name, Map<String,String> properties);
+Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
 
-    This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
+```
+// import Mobile Center Analytics at the top of the file.
+import Analytics from "mobile-center-analytics";
 
-    Properties for events are entirely optional. If you just want to track an event, use this sample instead:
+Analytics.trackEvent(String name, Map<String,String> properties);
+```
 
-        Analytics.trackEvent("My first event");
+This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
 
-* **Enable or disable Analytics:**  You can change the enabled state of the Analytics module at runtime by calling the `setEnabled` method. If you disable it, the SDK will not collect any more analytics information for the app. To re-enable it, pass `true` as a parameter in the same method.
+Properties for events are entirely optional. If you just want to track an event, use this sample instead:
 
-        Analytics.setEnabled(false);
+```
+Analytics.trackEvent("My first event");
+```
 
-    This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
+For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md).
 
-    You can also check if the module is enabled or not using the `isEnabled` method:
+## 3. Enable or disable Mobile Center Analytics at runtime
 
-        boolean isEnabled = Analytics.isEnabled();
+You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
-    This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
+```
+Analytics.setEnabled(false);
+```
 
-* <a name="enable-javascript"></a>**Wait for JS to enable analytics:** In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `I will manually enable events sending` during `react-native link`.
+This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
 
-        For the [platform] app, should user tracking be enabled automatically ? (Use arrow keys)
+To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
+
+```
+Analytics.setEnabled(true);
+```
+
+## 4. Check if Mobile Center Analytics is enabled
+
+You can also check if Mobile Center Analytics is enabled or not.
+
+```
+boolean isEnabled = Analytics.isEnabled();
+```
+
+This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
+
+## 5. Wait for JS to enable Mobile Center Analytics
+
+In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `I will manually enable events sending` during `react-native link`.
+
+```
+For the [platform] app, should user tracking be enabled automatically ? (Use arrow keys)
         ❯ Enable Automatically
           Enable in JavaScript
+```
 
-    This means that for any information to be sent to Mobile Center (even basic session information), the developer must first enable Analytics inside the app by adding the following line to his code.
+This means that for any information to be sent to Mobile Center (even basic session information), the developer must first enable Mobile Center Analytics inside the app by adding the following line to their code.
 
-        Analytics.setEnabled(true);
+```
+Analytics.setEnabled(true);
+```

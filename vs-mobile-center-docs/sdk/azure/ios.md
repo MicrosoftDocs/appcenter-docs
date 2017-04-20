@@ -1,5 +1,5 @@
 ---
-title: iOS Azure
+title: iOS Azure Tables
 description: Setting up Azure for iOS
 keywords: sdk,azure
 author: elamalani
@@ -12,8 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# iOS Azure
-
+# iOS Azure Tables
 
 > [!div class="op_single_selector"]
 > * [iOS](ios.md)
