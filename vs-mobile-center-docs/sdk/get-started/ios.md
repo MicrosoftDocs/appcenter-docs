@@ -65,7 +65,7 @@ pod 'MobileCenter/MobileCenterCrashes'
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
 
-### 2.2 Integration by copying the binaries into your project
+### 3.2 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up Mobile Center Analytics and Mobile Center Crashes for your iOS app.
 
 1. Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
