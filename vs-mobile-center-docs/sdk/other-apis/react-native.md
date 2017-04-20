@@ -1,6 +1,6 @@
 ---
-title: React Native Advanced APIs
-description: Advanced APIs in the React Native Mobile Center SDK
+title: Other React Native APIs
+description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
@@ -12,12 +12,12 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# React Native Advanced APIs
+# Other React Native APIs
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Xamarin](xamarin.md)
 
 At this time, the React Native Mobile Center SDK does not support APIs to adjust log verbosity level, getting a device's UUID, or disable all services in the Mobile Center SDK.
