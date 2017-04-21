@@ -119,7 +119,8 @@ public class MyDistributeListener implements DistributeListener {
         String versionName = releaseDetails.getShortVersion();
         int versionCode = releaseDetails.getVersion();
         String releaseNotes = releaseDetails.getReleaseNotes();
-        
+        Uri releaseNotesUrl = releaseDetails.getReleaseNotesUrl();
+
         // Build our own dialog title and message
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
         dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
@@ -156,3 +157,7 @@ public class MyDistributeListener implements DistributeListener {
     }
 }
 ```
+
+As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`, if you don't do that the callback will repeat on any activity change.
+
+If your application is going to background (like pressing `HOME`) then resuming in another activity or if your activity is covered by another one before user action has been notified to the SDK, the listener will be called again so that you have a chance to restore the custom dialog.
