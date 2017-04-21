@@ -30,7 +30,7 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 
 ### Mobile Center Distribute
 
-The Mobile Center SDK will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store, if you are developing locally or if the app is running with the DEBUG configuration.
+The Mobile Center SDK will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
 
 ## Get started
 
