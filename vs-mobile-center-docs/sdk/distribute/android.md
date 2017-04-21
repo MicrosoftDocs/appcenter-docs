@@ -36,7 +36,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 	```groovy
 	dependencies {
-	   def mobileCenterSdkVersion = '0.6.1'
+	   def mobileCenterSdkVersion = '0.7.0'
 	   compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
 	}
 	```
@@ -66,11 +66,7 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
-## 2. Customize or localize the in-app update dialog
-
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
-
-## 3. Enable or disable Mobile Center Distribute at runtime
+## 2. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
@@ -86,10 +82,84 @@ Distribute.setEnabled(true);
 > [!NOTE]
 > Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
-## 4. Check if Mobile Center Distribute is enabled
+## 3. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
 ```java
 Distribute.isEnabled();
+```
+
+## 4. Customize or localize the in-app update dialog
+
+### 4.1. Customize or localize texts
+
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+
+### 4.2 Customize the dialog U.I.
+
+You can replace the default update dialog implementation by your own thanks to a callback.
+
+You need to register the listener before calling `MobileCenter.start` by calling the following method:
+
+```java
+	Distribute.setListener(new MyDistributeListener());
+	MobileCenter.start(...);
+```
+
+Here is an example of the listener implementation that replaces the SDK dialog by a custom one:
+
+```java
+public class MyDistributeListener implements DistributeListener {
+
+    @Override
+    public boolean onReleaseAvailable(Activity activity, ReleaseDetails releaseDetails) {
+
+		// Look at releaseDetails public methods to get version information, release notes text or release notes URL
+		String versionName = releaseDetails.getShortVersion();
+		int versionCode = releaseDetails.getVersion();
+		String releaseNotes = releaseDetails.getReleaseNotes();
+		
+		// Build our own dialog title and message
+		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
+        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setMessage(releaseNotes);
+
+		// Mimick default SDK buttons
+        dialogBuilder.setPositiveButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_download, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+				// This method is used to tell the SDK what button was clicked
+				Distribute.notifyUpdateAction(UpdateAction.UPDATE);
+            }
+        });
+
+		// We can postpone the release only if the update is not mandatory
+        if (!releaseDetails.isMandatoryUpdate()) {
+            dialogBuilder.setNegativeButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+					// This method is used to tell the SDK what button was clicked
+                    Distribute.notifyUpdateAction(UpdateAction.POSTPONE);
+                }
+            });
+        }
+		dialogBuilder.setCancelable(false); // if it's cancelable you should map cancel to postpone, but only for optional updates
+        dialogBuilder.create().show();		
+
+		// Return true if you are using your own dialog, false otherwise
+        return true;
+    }
+}
+```
+
+Then you need to register the listener before calling `MobileCenter.start` by calling the following method:
+
+```java
+	Distribute.setListener(new MyDistributeListener());
+	MobileCenter.start(...);
 ```
