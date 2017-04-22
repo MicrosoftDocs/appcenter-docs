@@ -158,7 +158,9 @@ public class MyDistributeListener implements DistributeListener {
 }
 ```
 
-As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`. If you don't, the callback will repeat on every activity change.
+As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
+
+If you don't call `notifyUpdateAction`, the callback will repeat on every activity change.
 
 The listener can thus be called again with the same release if the activiy changes before the user action is notified to the SDK.
 
