@@ -158,6 +158,14 @@ public class MyDistributeListener implements DistributeListener {
 }
 ```
 
-As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`, if you don't do that the callback will repeat on any activity change.
+As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`. If you don't, the callback will repeat on every activity change.
 
-If your application is going to background (like pressing `HOME`) then resuming in another activity or if your activity is covered by another one before user action has been notified to the SDK, the listener will be called again so that you have a chance to restore the custom dialog.
+The listener can thus be called again with the same release if the activiy changes before the user action is notified to the SDK.
+
+This behavior is needed to cover the following scenarios:
+
+* Your application is going to the background (like pressing `HOME`) then resuming in a different activity.
+* Your activity is covered by another one without leaving the application (like clicking on some notifications).
+* Other similar scenarios.
+
+In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK either restores the default update dialog or calls the listener again to do so.
