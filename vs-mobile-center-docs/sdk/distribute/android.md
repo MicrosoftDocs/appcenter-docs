@@ -168,4 +168,4 @@ This behavior is needed to cover the following scenarios:
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
-In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK either restores the default update dialog or calls the listener again to do so.
+In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK calls the listener again so that you can restore the custom dialog.
