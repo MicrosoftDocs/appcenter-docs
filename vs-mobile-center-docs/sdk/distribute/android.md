@@ -162,7 +162,7 @@ As shown in the example, you have to either call `Distribute.notifyUpdateAction(
 
 If you don't call `notifyUpdateAction`, the callback will repeat on every activity change.
 
-The listener can thus be called again with the same release if the activiy changes before the user action is notified to the SDK.
+The listener can thus be called again with the same release if the activity changes before the user action is notified to the SDK.
 
 This behavior is needed to cover the following scenarios:
 
