@@ -4,7 +4,7 @@ description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: piyushjo
 ms.author: piyushjo
-ms.date: 02/21/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: mobile-center
@@ -31,9 +31,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## SDK & CLI
 
-* Universal Windows Platform (UWP) support
-* Full CLI support for Mobile Center operations to enable automation
-* In-app update feature for Distribution service
+* Universal Windows Platform (UWP) SDK support for Analytics and Crashes services
+* Full CLI support for all Mobile Center services to enable automation
 
 ## Build service
 
