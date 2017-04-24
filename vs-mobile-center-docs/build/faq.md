@@ -87,7 +87,7 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build you
 ##Since I have reconfigured my branch to use Xcoduild my build started to fail, why is that?
 There are many reasons why your build might fail after the change the main reason is that Xcodebuild is stricter then Xcrun.
 * If you are using CocoaPods you may encounter with the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
-  This means that you are using lib or pod that was build by a higher version of your current Xcode project. You can wether update your code or return to the previous version of your pods.
+  This means that you are using lib or pod that was build by a higher version of your current Xcode project. You can either update your code or return to the previous version of your pods.
 
 
 
