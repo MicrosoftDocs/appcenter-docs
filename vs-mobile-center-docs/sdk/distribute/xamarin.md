@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/17/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -125,11 +125,7 @@ public override bool OpenUrl(UIApplication application, NSUrl url, string source
 }
 ```
 
-## 2. Customize or localize the in-app update dialog
-
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
-
-## 3. Enable or disable Mobile Center Distribute at runtime
+## 2. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
@@ -146,10 +142,89 @@ Distribute.Enabled = true;
 > [!NOTE]
 > Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
-## 4. Check if Mobile Center Distribute is enabled
+## 3. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
 ```csharp
 bool enabled = Distribute.Enabled;
 ```
+
+## 4. Customize or localize the in-app update dialog
+
+### 4.1. Customize or localize texts
+
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+
+### 4.2 Customize the dialog U.I.
+
+You can replace the default update dialog implementation by your own thanks to a callback.
+
+You need to register the callback before calling `MobileCenter.Start` by calling the following method:
+
+```csharp
+// In this example OnReleaseAvailable is a method name in same class
+Distribute.ReleaseAvailable = OnReleaseAvailable;
+MobileCenter.Start(...);
+```
+
+Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog by a custom one:
+
+```csharp
+bool OnReleaseAvailable(ReleaseDetails releaseDetails)
+{
+	// Look at releaseDetails public properties to get version information, release notes text or release notes URL
+	string versionName = releaseDetails.ShortVersion;
+	string versionCodeOrBuildNumber = releaseDetails.Version;
+	string releaseNotes = releaseDetails.ReleaseNotes;
+	Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
+
+    // custom dialog
+	var title = "Version " + versionName + " available!";
+	Task answer;
+
+	// On mandatory update, user cannot postpone
+	if (releaseDetails.MandatoryUpdate)
+	{
+		answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install");
+	}
+	else
+	{
+		answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install", "Maybe tomorrow...");
+	}
+	answer.ContinueWith((task) =>
+	{
+		// If mandatory or if answer was positive
+		if (releaseDetails.MandatoryUpdate || (task as Task<bool>).Result)
+		{
+			// Notify SDK that user selected update
+			Distribute.NotifyUpdateAction(UpdateAction.Update);
+		}
+		else
+		{
+			// Notify SDK that user selected postpone (for 1 day)
+			// Note that this method call is ignored by the SDK if the update is mandatory
+			Distribute.NotifyUpdateAction(UpdateAction.Postpone);
+		}
+	});
+
+	// Return true if you are using your own dialog, false otherwise
+	return true;
+}
+```
+
+Implementations notes for **Xamarin.Android**:
+
+As shown in the example, you have to either call `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
+
+If you don't call `NotifyUpdateAction`, the callback will repeat on every activity change.
+
+The callback can thus be called again with the same release if the activity changes before the user action is notified to the SDK.
+
+This behavior is needed to cover the following scenarios:
+
+* Your application is going to the background (like pressing `HOME`) then resuming in a different activity.
+* Your activity is covered by another one without leaving the application (like clicking on some notifications).
+* Other similar scenarios.
+
+In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK calls the callback again so that you can restore the custom dialog.
