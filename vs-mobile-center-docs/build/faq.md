@@ -79,18 +79,18 @@ To restore private NuGet feeds, you include the credentials in the **NuGet.confi
   </packageSourceCredentials>
 </configuration>
 ```
+[xcode–xarchive-organizer]: images/xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
+
 ##Where is my .ipa file?
 If you have reconfigured your branch your build is no longer using Xcrun to generate an .ipa file it uses Xcdoebuild instead. Xcodebuild not like Xcrun doesn't allow generating an .ipa file if the build is not signed, therefore unsigned builds produces an .xarchive file instead.
 If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xarchive file to do so.
 ![Export xarchive file using xcode][xcode–xarchive-organizer]
 
-[xcode–xarchive-organizer]: images/xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
-
-
-##Since I have reconfigured my branch to use Xcoduild my build started to fail, why is that?
+##Since I have reconfigured my branch to use Xcodebuild my build started to fail, why is that?
 There are many reasons why your build might fail after the change the main reason is that Xcodebuild is stricter then Xcrun.
 * If you are using CocoaPods you may encounter with the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
-  This means that you are using lib or pod that was build by a higher version of your current Xcode project. You can either update your code or return to the previous version of your pods.
+  This error means that you are using lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
+  You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older, version of the problem library, compiled with an older version of Xcode.
 
 
 
