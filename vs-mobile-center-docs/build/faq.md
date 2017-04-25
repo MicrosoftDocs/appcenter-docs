@@ -84,6 +84,9 @@ If you have reconfigured your branch your build is no longer using Xcrun to gene
 If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xarchive file to do so.
 ![Export xarchive file using xcode][xcode–xarchive-organizer]
 
+[xcode–xarchive-organizer]: ~/build/ios/first-build/images/xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
+
+
 ##Since I have reconfigured my branch to use Xcoduild my build started to fail, why is that?
 There are many reasons why your build might fail after the change the main reason is that Xcodebuild is stricter then Xcrun.
 * If you are using CocoaPods you may encounter with the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
