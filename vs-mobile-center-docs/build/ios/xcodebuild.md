@@ -30,4 +30,4 @@ We use xcodebuild to preform archive and export.
 
 ![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
 
-[export-xcode–xcarchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an xcrchive file using Xcode Archives organizer"
+[export-xcode–xcarchive-organizer]: ~/build/images/export-xcode–xcarchive-organizer.png "Exporting an xcrchive file using Xcode Archives organizer"
