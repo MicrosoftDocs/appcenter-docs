@@ -179,7 +179,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 	string releaseNotes = releaseDetails.ReleaseNotes;
 	Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
 
-    // custom dialog
+	// custom dialog
 	var title = "Version " + versionName + " available!";
 	Task answer;
 
