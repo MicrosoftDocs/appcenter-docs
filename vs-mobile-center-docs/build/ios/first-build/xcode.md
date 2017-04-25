@@ -81,7 +81,7 @@ The build step specific logs (located in the `build/` directory of the archive) 
 The .ipa is an iPhone application archive file which contains the iOS app.
 * if the build has been signed correctly, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing/index.md).
 * if the build has not been signed, the .ipa can be signed by the developer (e.g. locally using xcodesign) or used for other purposes (e.g. upload to TestCloud for UI testing on real devices or run in the simulator) 
-* if the build was reconfigured to use xcodebuild instead of xcrun, unsinged builds will not reproduce an .ipa file. The artifact of an unsigned build is an .xarchive file which can be used to generate an .ipa file with Xcode Archives organizer.
+* if the build was reconfigured to use xcodebuild instead of xcrun, unsinged builds will not reproduce an .ipa file. The artifact of an unsigned build is the .xarchive file which can be used to generate an .ipa file with Xcode Archives organizer.
 
 ### 4.3. The symbols file (.dsym)
 The .dsym files contain the debug symbols for the app.
