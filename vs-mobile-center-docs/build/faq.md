@@ -84,7 +84,7 @@ If you have reconfigured your branch your build is no longer using Xcrun to gene
 If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xarchive file to do so.
 ![Export xarchive file using xcode][xcode–xarchive-organizer]
 
-[xcode–xarchive-organizer]: ~/build/ios/first-build/images/xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
+[xcode–xarchive-organizer]: ~/build/images/xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
 
 
 ##Since I have reconfigured my branch to use Xcoduild my build started to fail, why is that?
