@@ -93,6 +93,7 @@ There are many reasons why your build might fail after the change the main reaso
 * If you are using CocoaPods you may encounter with the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
   This error means that you are using lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older, version of the problem library, compiled with an older version of Xcode.
+* Build configuration has changed - XcodeBuild uses the `Archive` action which by default is set to release confgiuration, this may be a different configuration from the `Build` action that was used with Xcrun.
 
 
 
