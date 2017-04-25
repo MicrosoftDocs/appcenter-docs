@@ -79,21 +79,21 @@ To restore private NuGet feeds, you include the credentials in the **NuGet.confi
   </packageSourceCredentials>
 </configuration>
 ```
-##Where is my .ipa file?
-If you have reconfigured your branch your build is no longer using Xcrun to generate an .ipa file it uses Xcdoebuild instead. Xcodebuild not like Xcrun doesn't allow generating an .ipa file if the build is not signed, therefore unsigned builds produces an .xarchive file instead.
-If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xarchive file to do so.
+## Where is my .ipa file?
+If you have reconfigured your branch your build is no longer using xcrun to generate an .ipa file it uses xcodebuild instead. Xcodebuild not like Xcrun doesn't allow generating an .ipa file if the build is not signed, therefore unsigned builds produce an .xcarchive file instead.
+If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xcarchive file to do so.
 
 ![Export xarchive file using xcode][export-xcode–xarchive-organizer]
 
 [export-xcode–xarchive-organizer]: images/export-xcode–xarchive-organizer.png "Exporting an Xarchive file using Xcode Archives organizer"
 
 
-##Since I have reconfigured my branch to use Xcodebuild my build started to fail, why is that?
-There are many reasons why your build might fail after the change the main reason is that Xcodebuild is stricter then Xcrun.
-* If you are using CocoaPods you may encounter with the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
-  This error means that you are using lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
-  You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older, version of the problem library, compiled with an older version of Xcode.
-* Build configuration has changed - XcodeBuild uses the `Archive` action which by default is set to release confgiuration, this may be a different configuration from the `Build` action that was used with Xcrun.
+## Since I have reconfigured my branch to use xcodebuild my build started to fail, why is that?
+There are many reasons why your build might fail after the change the main reason is that xcodebuild is stricter than xcrun.
+* If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
+  This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
+  You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
+* Build configuration has changed - xcodeBuild uses the `Archive` action which by default is set to the release confgiuration, this may be a different configuration from the `Build` action that was used with xcrun.
 
 
 
