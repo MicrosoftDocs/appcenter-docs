@@ -20,7 +20,7 @@ xcodebuild is a command-line tool that allows you to perform build: query, analy
 xcodebuild supports various build actions such as build, analyze, and archive that can be performed on your target or scheme.
 We use xcodebuild to preform archive and export.
 * If your build is unsigned the `clean archive` command is performed and generates an .xcarchive file.
-* If your build is signed, after archiving the build the command `-exportArchive` is performed and generates an .ipa file.
+* If your build is signed, after archiving the build the command `exportArchive` is performed and generates an .ipa file.
 
 
 # What has changed?
