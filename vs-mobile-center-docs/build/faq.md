@@ -85,7 +85,7 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build you
 
 ![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
 
-[export-xcode–xacrchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
+[export-xcode–xcarchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 
 ## Since I have resaved my branch settings my build started to fail, why is that?
