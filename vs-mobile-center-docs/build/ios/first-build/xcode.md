@@ -4,7 +4,7 @@ description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: mobile-center
@@ -93,10 +93,12 @@ Keep in mind that the .dsym files do not change upon code signing the .ipa. If y
 
 ## Supported versions and requirements
 The following versions of Xcode are currently supported on our VMs.
-* Xcode 7.3.1
-* Xcode 8.0
-* Xcode 8.1
-* Xcode 8.2
+
+* Xcode 8.3.2
+* Xcode 8.3.1
 * Xcode 8.2.1
+* Xcode 8.2
+* Xcode 8.1
+* Xcode 8.0
 
 The build machines are running OS X 10.11.6 (15G1004). We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
