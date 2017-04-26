@@ -158,7 +158,7 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 4.2 Customize the update dialog
 
-You can replace the default update dialog implementation by your own thanks to a callback.
+You can replace the default update dialog implementation by your own, thanks to a callback.
 
 You need to register the callback before calling `MobileCenter.Start` by calling the following method:
 
