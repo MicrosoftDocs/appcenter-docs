@@ -36,4 +36,4 @@ When a build is running, the build configuration is composed of several parts: t
 * Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable Generate one package(.apk) per selected ABI in your Android Build options, only one APK is created.
 * Simulator builds for Xamarin apps don't output a binary and there can't be tested. This is the case for both iOS and Android
 * Android apps without internet permissions cannot be tested using Mobile Center Test. Internet permissions are needed for the test infrastructure to communicate with your app. In order to use launch test for your Android project, make sure to declare internet permissions in your app manifest
-* iOS unsigned builds don't generate an .ipa file and they can't be tested. This is only relevant if you have reconfigured your build to use xcodebuild instead of xcrun.
+* iOS unsigned builds don't generate an .ipa file and they can't be tested. This is only relevant if have resaved your build setting.

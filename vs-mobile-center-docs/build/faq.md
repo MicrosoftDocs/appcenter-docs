@@ -88,8 +88,8 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build you
 [export-xcode–xacrchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 
-## Since I have reconfigured my branch to use xcodebuild my build started to fail, why is that?
-There are many reasons why your build might fail after the change. The main reason is that xcodebuild is stricter than xcrun.
+## Since I have resaved my branch settings my build started to fail, why is that?
+There are many reasons why your build might fail. The main reason is that we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) and it is stricter than xcrun.
 * If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
   This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
