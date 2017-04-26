@@ -213,7 +213,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 }
 ```
 
-Implementations notes for **Xamarin.Android**:
+Implementation notes for **Xamarin.Android**:
 
 As shown in the example, you have to either call `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
 
