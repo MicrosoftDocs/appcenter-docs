@@ -194,11 +194,11 @@ var enabled = MSDistribute.isEnabled()
 
 ### 4.1. Customize or localize texts
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 4.2. Customize the update dialog
 
-You can replace the default update dialog implementation by your own, thanks to a delegate.
+You can replace the default update dialog by implementing a delegate protocol.
 
 You need to register the delegate before starting the SDK by calling the following method:
 
