@@ -48,7 +48,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Apache Maven 3.5.0
 
-### Xcode
+## Xcode
 
 - Xcode 8.3.2
 - Xcode 8.3.1
@@ -57,7 +57,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - Xcode 8.1
 - Xcode 8.0
 
-### Xcode Support
+### Xcode Support Tools
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
@@ -130,6 +130,7 @@ tvOS 10.2 (10.2 - 14W260) (com.apple.CoreSimulator.SimRuntime.tvOS-10-2)
 watchOS 2.2 (2.2 - 13V144) (com.apple.CoreSimulator.SimRuntime.watchOS-2-2)
 watchOS 3.2 (3.2 - 14V243) (com.apple.CoreSimulator.SimRuntime.watchOS-3-2)
 ```
+
 #### Devices
 
 ##### iOS 8.4
@@ -326,21 +327,21 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 ```
 
 
-### Android
+## Android
 
-#### Android SDK tools
+### Android SDK tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | tools                 | Android SDK Tools, revision 26.0.1          |
 
-#### Android SDK Platform-tools
+### Android SDK Platform-tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | platform-tools        | Android SDK Platform-tools, revision 25.0.4 |
 
-#### Android Platforms
+### Android Platforms
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -356,7 +357,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | android-24            | Android SDK Platform 24, Revision 2       |
 | android-25            | Android SDK Platform 25, Revision 3       |
 
-#### SDK Build tools
+### SDK Build tools
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -375,7 +376,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
 
-#### Utils
+### Utils
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -383,7 +384,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | lldb;2.3              | 2.3.3614996                               |
 | cmake;3.6.3155560     | 3.6.3155560                               |
 
-#### Google APIs
+### Google APIs
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -392,7 +393,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | google_apis-google-23 | Google APIs, Android API 23, revision 1   |
 | google_apis-google-24 | Google APIs, Android API 24, revision 1   |
 
-#### Extra packages
+### Extra packages
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
@@ -400,7 +401,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | extra-google-m2repository         | Google Repository, revision 46           |
 | extra-google-google_play_services | Google Play services, revision 39        |
 
-### Xamarin
+## Xamarin
 
 - Xamarin Studio: 6.3.0.863
 - Mono Framework MDK: Mono JIT compiler version 4.8.1.0
