@@ -25,11 +25,11 @@ In addition, please have a look at the information on how to [utilize Mobile Cen
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## How in-app updates work?
-Below is a high level overview of how in-app updates feature work:
+Below is a high level overview of how in-app updates feature works:
 1. This feature will ONLY work with `RELEASE` builds that are distributed using `Mobile Center Distribute` service.
 2. Once you integrate the SDK, build release verion of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
-3. When the open the link in their email, an install of that application will be triggered. Its important for your users to open the mail in order to trigger the install. We DO NOT support side loading scenario right now.
-4. Once the app is installed and opened for the first time after the Distribute SDK is added in the app, users will navigate to browser where we will try to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+3. When they open the link in their email, an install of that application will be triggered. It's important for your users to open the email in order to trigger the install. We DO NOT support side loading scenario right now.
+4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK is added in the app, users will navigate to browser where we will try to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. Any new releases of the app then shows the in-app update dialog asking users to update your application.     
 
