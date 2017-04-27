@@ -89,7 +89,7 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build, yo
 
 
 ## Since I have resaved my branch settings my build started to fail, why is that?
-From April 27th, we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after setting a new branch or resaving existing build settings will use [xcodebuild](~/build/ios/xcodebuild.md).
+From April 27th, we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after setting a new branch or resaving an existing branch setting will use [xcodebuild](~/build/ios/xcodebuild.md).
 * If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
   This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
