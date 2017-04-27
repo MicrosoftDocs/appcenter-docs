@@ -112,7 +112,15 @@ Distribute.DontCheckForUpdatesInDebug();
 
 This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
-#### 1.2.2 [For iOS only] Add the `openUrl` method
+#### 1.2.2 [For iOS only] Modify your `Info.plist`
+
+1. Open your `Info.plist`.
+2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your `Info.plist` as source code).
+3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
+4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+
+
+#### 1.2.3 [For iOS only] Add the `openUrl` method
 
 Implement the `openURL` callback in your `AppDelegate.cs` to enable in-app-updates.
 
