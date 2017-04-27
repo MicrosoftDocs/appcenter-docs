@@ -80,8 +80,8 @@ To restore private NuGet feeds, you include the credentials in the **NuGet.confi
 </configuration>
 ```
 ## Where is my .ipa file?
-If you have reconfigured your branch your build is no longer using xcrun to generate an .ipa file it uses xcodebuild instead. Xcodebuild not like Xcrun doesn't allow generating an .ipa file if the build is not signed, therefore unsigned builds produce an .xcarchive file instead.
-If you wish to generate an .ipa file with the artifacts of an unsigned build you can use the .xcarchive file to do so.
+If you have resaved your build settings, your build is no longer using xcrun to generate an .ipa file; it uses xcodebuild instead. Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed-unsigned builds produce an .xcarchive instead.
+If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
 
 ![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
 
@@ -89,11 +89,11 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build you
 
 
 ## Since I have resaved my branch settings my build started to fail, why is that?
-There are many reasons why your build might fail. The main reason is that we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) and it is stricter than xcrun.
+From April 27th, we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after setting a new branch or resaving existing build settings will use [xcodebuild](~/build/ios/xcodebuild.md).
 * If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
   This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
-* Build configuration has changed - with the move to xcodebuild we changed the build command to `clean archive` action which by default is set to the release configuration, this may be a different configuration from the `build` action that was used with xcrun.
+* Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
 
 
