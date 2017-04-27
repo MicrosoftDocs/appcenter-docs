@@ -150,11 +150,7 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 }
 ```
 
-## 2. Customize or localize the in-app update dialog
-
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
-
-## 3. Enable or disable Mobile Center Distribute at runtime
+## 2. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
@@ -187,7 +183,7 @@ MSDistribute.setEnabled(true)
 > [!NOTE]
 > Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
 
-## 4. Check if Mobile Center Distribute is enabled
+## 3. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
@@ -202,6 +198,78 @@ BOOL enabled = [MSDistribute isEnabled];
 ```swift
 var enabled = MSDistribute.isEnabled()
 ```
+
+## 4. Customize or localize the in-app update dialog
+
+### 4.1. Customize or localize texts
+
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+
+### 4.2. Customize the update dialog
+
+You can replace the default update dialog by implementing a delegate protocol.
+
+You need to register the delegate before starting the SDK by calling the following method:
+
+**Objective-C**
+
+```objectivec
+[MSDistribute setDelegate:self];
+```
+
+**Swift**
+
+```swift
+MSDistribute.setDelegate(self);
+```
+
+Here is an example of the delegate implementation that replaces the SDK dialog by a custom one:
+
+**Objective-C**
+
+```objectivec
+- (BOOL)distribute:(MSDistribute *)distribute releaseAvailableWithDetails:(MSReleaseDetails *)details {
+
+  // Your code to present your UI to the user, e.g. an UIAlertView.
+  [[[UIAlertView alloc] initWithTitle:@"Update availble."
+                              message:@"Do you want to update?"
+                             delegate:self
+                    cancelButtonTitle:@"Postpone"
+                    otherButtonTitles:@"Update", nil] show];
+  return YES;
+}
+```
+
+**Swift**
+
+```swift
+func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
+
+  // Your code to present your UI to the user, e.g. an UIAlertView.
+  UIAlertView.init(title: "Update available", message: "Do you want to update?", delegate: self, cancelButtonTitle: "Postpone", otherButtonTitles: "Update").show()
+  return true;
+}
+```
+
+In case you return `YES`/`true` in the above method, your app should obtain user's choice and message the SDK with the result using the following API.
+
+**Objective-C**
+
+```objectivec
+// Depending on the user's choice, call notifyUpdateAction: with the right value.
+[MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
+[MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
+```
+
+**Swift**
+
+```swift
+// Depending on the user's choice, call notify() with the right value.
+MSDistribute.notify(MSUpdateAction.update);
+MSDistribute.notify(MSUpdateAction.postpone);
+```
+
+If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
 
 ##  5. Don't initialise Mobile Center Distribute during development
 
