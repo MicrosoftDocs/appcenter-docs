@@ -93,7 +93,8 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Cr
 Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
-MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));```
+MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+```
 
 ##### Xamarin.Forms
 
@@ -108,6 +109,8 @@ For your iOS application, open the `AppDelegate.cs` and add the following line b
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
 ```
+
+This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
 #### 1.2.2 [For iOS only] Add the `openUrl` method
 
