@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/27/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -152,7 +152,7 @@ bool enabled = Distribute.Enabled;
 
 ## 4. Customize or localize the in-app update dialog
 
-### 4.1. Customize or localize texts
+### 4.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
@@ -161,9 +161,9 @@ You can easily provide your own resource strings if you'd like to localize the t
 > [!NOTE]
 > This is currently supported only on Android.
 
-You can replace the default update dialog implementation by your own, thanks to a callback.
+You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback.
 
-You need to register the callback before calling `MobileCenter.Start` by calling the following method:
+You need to register the callback before calling `MobileCenter.Start` as shown in the following example:
 
 ```csharp
 // In this example OnReleaseAvailable is a method name in same class
@@ -171,7 +171,7 @@ Distribute.ReleaseAvailable = OnReleaseAvailable;
 MobileCenter.Start(...);
 ```
 
-Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog by a custom one:
+Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
 
 ```csharp
 bool OnReleaseAvailable(ReleaseDetails releaseDetails)
@@ -226,7 +226,7 @@ The callback can thus be called again with the same release if the activity chan
 
 This behavior is needed to cover the following scenarios:
 
-* Your application is going to the background (like pressing `HOME`) then resuming in a different activity.
+* Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
