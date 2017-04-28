@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/26/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: mobile-center
