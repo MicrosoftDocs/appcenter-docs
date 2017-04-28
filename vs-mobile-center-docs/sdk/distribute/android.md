@@ -92,22 +92,22 @@ Distribute.isEnabled();
 
 ## 4. Customize or localize the in-app update dialog
 
-### 4.1. Customize or localize texts
+### 4.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ### 4.2. Customize the update dialog
 
-You can replace the default update dialog implementation by your own, thanks to a callback.
+You can customize the default update dialog's appearance by implementing the `DistributeListener` interface.
 
-You need to register the listener before calling `MobileCenter.start` by calling the following method:
+You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
 ```java
 Distribute.setListener(new MyDistributeListener());
 MobileCenter.start(...);
 ```
 
-Here is an example of the listener implementation that replaces the SDK dialog by a custom one:
+Here is an example of the listener implementation that replaces the SDK dialog with a custom one:
 
 ```java
 public class MyDistributeListener implements DistributeListener {
@@ -166,7 +166,7 @@ The listener can thus be called again with the same release if the activity chan
 
 This behavior is needed to cover the following scenarios:
 
-* Your application is going to the background (like pressing `HOME`) then resuming in a different activity.
+* Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 

@@ -192,15 +192,15 @@ var enabled = MSDistribute.isEnabled()
 
 ## 4. Customize or localize the in-app update dialog
 
-### 4.1. Customize or localize texts
+### 4.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 4.2. Customize the update dialog
 
-You can replace the default update dialog by implementing a delegate protocol.
+You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol.
 
-You need to register the delegate before starting the SDK by calling the following method:
+You need to register the delegate before starting the SDK as shown in the following example:
 
 **Objective-C**
 
@@ -214,7 +214,7 @@ You need to register the delegate before starting the SDK by calling the followi
 MSDistribute.setDelegate(self);
 ```
 
-Here is an example of the delegate implementation that replaces the SDK dialog by a custom one:
+Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
 
 **Objective-C**
 
