@@ -13,6 +13,7 @@
 ### [Code Signing](build/ios/code-signing/index.md)
 #### [Uploading the code signing files](build/ios/code-signing/uploading-files.md)
 #### [Setting up an Xcode project for code signing](build/ios/code-signing/xcode-project.md)
+### [The internals of an Xcode build](build/ios/xcodebuild.md)
 ## [Android](build/android/index.md)
 ### [Configure a build](build/android/first-build/index.md)
 #### [Java](build/android/first-build/java.md)
