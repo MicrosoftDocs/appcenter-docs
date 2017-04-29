@@ -44,7 +44,7 @@
 ## [Release a build](distribution/uploading.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
-## [In-App Updates](distribution/inappupdates)
+## [In-App Updates](distribution/inappupdates.md)
 
 
 # [Tables](azure/tables/index.md)
