@@ -158,9 +158,6 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 4.2. Customize the update dialog
 
-> [!NOTE]
-> This is currently supported only on Android.
-
 You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback.
 
 You need to register the callback before calling `MobileCenter.Start` as shown in the following example:
