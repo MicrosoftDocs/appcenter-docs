@@ -18,7 +18,7 @@ Installation of an application being distributed by Mobile Center begins with an
 > [!IMPORTANT]
 > On iOS you must open the email install link in Safari, only Safari supports the installation APIs.
 >
-> On Android you must open the email install link in Chrome. On some devices, versions 57 and 58 of chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](https://productforums.google.com/forum/#!topic/chrome/gas7OCTHZHo) 
+> On Android you must open the email install link in Chrome. On some devices, versions 57 and 58 of Chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](https://productforums.google.com/forum/#!topic/chrome/gas7OCTHZHo) 
 
 [login]: ~/dashboard/creating-and-managing-apps.md
 [signup]: ~/dashboard/creating-and-managing-apps.md
