@@ -76,13 +76,13 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
-Now that you've integrated Mobile Center Distribute in your application, it's time to start the SDK and make use of Mobile Center.
+Now that you've integrated Mobile Center Push in your application, it's time to start the SDK and make use of Mobile Center.
 
 ### 2.2. Start Mobile Center Push
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `MobileCenter.start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
+Add `Push.class` to your `MobileCenter.start()` method to start Mobile Center Push together with the other services that you want to use in your app.
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Push.class);
