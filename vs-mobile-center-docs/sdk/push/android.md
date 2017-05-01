@@ -70,7 +70,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
     ```groovy
     dependencies {
        def mobileCenterSdkVersion = '0.7.0'
-       compile "com.microsoft.azure.mobile:mobile-center-Push:${mobileCenterSdkVersion}"
+       compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
 
@@ -96,7 +96,7 @@ Android Studio will automatically suggest the required import statement once you
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
-import com.microsoft.azure.mobile.Push.Push;
+import com.microsoft.azure.mobile.push.Push;
 ```
 
 ## 3. Existing Firebase Analytics users
@@ -118,9 +118,9 @@ MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crash
 
 You can enable and disable Mobile Center Push at runtime.
 
-If you disable it, the SDK will stop updating the Google registration identifier used to Push but the existing one will continue working.
+If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working.
 
-As a result, disabling will not stop Push notifications from being received.
+As a result, disabling will not stop push notifications from being received.
 
 ```java
 Push.setEnabled(false);
