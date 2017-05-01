@@ -4,13 +4,26 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 04/13/2017
+ms.date: 04/27/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
 
 # Changelog
+
+### **Apr 27, 2017**
+- **Avoid failures when your testers install your distributed app** 
+Mobile Center now supports the capture and reporting of tester UDIDs for your distributed iOS app so you can easily create a valid ad-hoc provisioning profile including all your testers. This makes sure that there are no failures when your testers try to use your distributed app. 
+
+- **Automatically verify that your app launches successfully**
+After each successful build, verify that your app is launching on a real device hosted in our device center. You can configure this in your build settings. 
+
+- **Manage API tokens in Mobile Center portal**
+You can now easily create an API token for use with Mobile Center REST APIs right from Mobile Center portal by going to Settings -> API Tokens. 
+
+- **Build apps using latest Xcode versions and tooling**
+You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on Mobile Center. Additionally, new builds will now be run using xcodebuild. 
 
 ### **Apr 13, 2017**
 - **Build your apps hosted from a VSTS repository**: 
