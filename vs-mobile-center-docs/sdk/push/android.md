@@ -31,7 +31,7 @@ Pushes received in foreground are not yet managed by our SDK but you can impleme
 
 Before being able to use the push module, you need to add Firebase to your application.
 
-There is a couple of ways you can do that, either manual or using the Android Studio Firebase assistant.
+There is a couple of ways you can do that, either manually or by using the Android Studio Firebase assistant.
 
 ### 1.1. Manual integration
 
@@ -39,7 +39,7 @@ For that you need to follow some of the documentation of Firebase:
 
 1. Follow instructions in [Add Firebase to your app](https://firebase.google.com/docs/notifications/android/console-audience#add_firebase_to_your_app) section.
 
-2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk)
+2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk) section.
 
 Only those 2 steps are needed to use Mobile Center Push, the SDK is taking care of the rest.
 
@@ -118,9 +118,9 @@ MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crash
 
 You can enable and disable Mobile Center Push at runtime.
 
-If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one can still be used to push.
+If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working.
 
-Disabling will not stop push notifications from being received.
+As a result disabling will not stop push notifications from being received.
 
 ```java
 Push.setEnabled(false);
