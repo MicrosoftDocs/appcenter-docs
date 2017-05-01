@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/14/2017
+ms.date: 04/27/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -93,7 +93,6 @@ Android Studio will automatically suggest the required import statements once yo
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
-import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
