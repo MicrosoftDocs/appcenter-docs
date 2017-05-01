@@ -29,7 +29,7 @@ The in-app updates feature works as follows:
 1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
-4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. Any new releases of the app havign a more recent version name then shows the in-app update dialog asking users to update your application.     
 
