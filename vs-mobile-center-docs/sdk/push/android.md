@@ -19,7 +19,7 @@ ms.tgt_pltfrm: android
 
 Mobile Center Push will let you push notifications to your application's users using [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-Please note that only devices having [Google Play](https://play.google.com) can receive the notifications.
+Please note that only devices having [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
 
 Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
