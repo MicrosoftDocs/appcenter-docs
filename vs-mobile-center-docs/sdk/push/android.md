@@ -17,13 +17,11 @@ ms.tgt_pltfrm: android
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 
-Mobile Center Push will let you push notifications to your application users.
-
-Mobile Center Push relies on [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to push notifications to the devices.
+Mobile Center Push will let you push notifications to your application's users using [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 Please note that only devices having [Google Play](https://play.google.com) can receive the notifications.
 
-Please also note that a notification is displayed in the system notification center only if the application is in background at the moment the Push is received.
+Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
 Pushes received in foreground are not yet managed by our SDK but you can implement your own foreground Push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
 
