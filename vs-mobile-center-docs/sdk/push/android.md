@@ -20,11 +20,11 @@ Please note that only devices having [Google Play](https://play.google.com) stor
 
 Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
-Pushes received in foreground are not yet managed by our SDK but you can implement your own foreground Push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
+Push notifications received in foreground are not yet managed by our SDK but you can implement your own foreground Push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
 
 ## 1. Add Firebase to your app
 
-Before being able to use the Push module, you need to add Firebase to your application.
+Before being able to use the Push service, you need to add Firebase to your application.
 
 There are a couple of ways you can do that, either manually or by using the Android Studio Firebase assistant.
 
@@ -36,7 +36,7 @@ For that you need to follow some of the documentation of Firebase:
 
 2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk) section.
 
-Only those 2 steps are needed to use Mobile Center Push, the SDK is taking care of the rest.
+Only those 2 steps are required to use Mobile Center Push, the SDK will take care of the rest.
 
 ### 1.2. Using Firebase assistant
 
@@ -98,7 +98,7 @@ import com.microsoft.azure.mobile.push.Push;
 
 Mobile Center Push has a dependency on Firebase.
 
-Firebase Analytics is part of the core module and is thus a dependency of Firebase messaging.
+Firebase Analytics is included in the core Firebase module and is thus a dependency of Firebase messaging.
 
 As a result, our SDK automatically disables Firebase Analytics to prevent unwanted data collection to Firebase.
 
