@@ -102,4 +102,4 @@ Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/android.m
 
 To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
 
-To learn how to get started with push, head over to the documentation of [Mobile Center Push](~/sdk/push/android.md).
+To learn how to get started with Push, head over to the documentation of [Mobile Center Push](~/sdk/push/android.md).

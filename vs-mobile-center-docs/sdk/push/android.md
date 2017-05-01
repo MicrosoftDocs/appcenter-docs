@@ -1,6 +1,6 @@
 ---
 title: Mobile Center Push for Android
-description: Using push in Mobile Center
+description: Using Push in Mobile Center
 keywords: sdk, push
 author: guperrot
 ms.author: guperrot
@@ -17,21 +17,21 @@ ms.tgt_pltfrm: android
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 
-Mobile Center Push will let you push notifications to your application users.
+Mobile Center Push will let you Push notifications to your application users.
 
-Mobile Center Push relies on [Firebase messaging](https://firebase.google.com/docs/cloud-messaging/) to push notifications to the devices.
+Mobile Center Push relies on [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to Push notifications to the devices.
 
 Please note that only devices having [Google Play](https://play.google.com) can receive the notifications.
 
-Please also note that a notification is displayed in the system notification center only if the application is in background at the moment the push is received.
+Please also note that a notification is displayed in the system notification center only if the application is in background at the moment the Push is received.
 
-Pushes received in foreground are not yet managed by our SDK but you can implement your own foreground push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
+Pushes received in foreground are not yet managed by our SDK but you can implement your own foreground Push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
 
 ## 1. Add Firebase to your app
 
-Before being able to use the push module, you need to add Firebase to your application.
+Before being able to use the Push module, you need to add Firebase to your application.
 
-There is a couple of ways you can do that, either manually or by using the Android Studio Firebase assistant.
+There are a couple of ways you can do that, either manually or by using the Android Studio Firebase assistant.
 
 ### 1.1. Manual integration
 
@@ -57,7 +57,7 @@ If you wish to use the Firebase assistant:
 
 Step 3 is managed by our SDK automatically so you can stop after step 2.
 
-## 2. Add push to your app
+## 2. Add Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
@@ -70,7 +70,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
     ```groovy
     dependencies {
        def mobileCenterSdkVersion = '0.7.0'
-       compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+       compile "com.microsoft.azure.mobile:mobile-center-Push:${mobileCenterSdkVersion}"
     }
     ```
 
@@ -96,7 +96,7 @@ Android Studio will automatically suggest the required import statement once you
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
-import com.microsoft.azure.mobile.push.Push;
+import com.microsoft.azure.mobile.Push.Push;
 ```
 
 ## 3. Existing Firebase Analytics users
@@ -105,9 +105,9 @@ Mobile Center Push has a dependency on Firebase.
 
 Firebase Analytics is part of the core module and is thus a dependency of Firebase messaging.
 
-As a result our SDK automatically disables Firebase Analytics to prevent unwanted data collection to Firebase.
+As a result, our SDK automatically disables Firebase Analytics to prevent unwanted data collection to Firebase.
 
-If however you are a customer of Firebase Anlytics and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
+If you are a customer of Firebase Analytics and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());
@@ -118,9 +118,9 @@ MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crash
 
 You can enable and disable Mobile Center Push at runtime.
 
-If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working.
+If you disable it, the SDK will stop updating the Google registration identifier used to Push but the existing one will continue working.
 
-As a result disabling will not stop push notifications from being received.
+As a result, disabling will not stop Push notifications from being received.
 
 ```java
 Push.setEnabled(false);
