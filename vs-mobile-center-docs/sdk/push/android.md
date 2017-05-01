@@ -120,7 +120,7 @@ You can enable and disable Mobile Center Push at runtime.
 
 If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working.
 
-As a result, disabling will not stop push notifications from being received.
+As a result, disabling will not stop pushing notifications from being received.
 
 ```java
 Push.setEnabled(false);
