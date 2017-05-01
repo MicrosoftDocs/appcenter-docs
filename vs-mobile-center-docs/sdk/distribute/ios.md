@@ -24,6 +24,15 @@ Mobile Center Distribute will let your users install a new version of the app wh
 In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
+## How do in-app updates work?
+The in-app updates feature works as follows:
+1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
+2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
+5. Once the above step is successful, they should navigate back to the app.
+6. Any new releases of the app having a more recent version name then shows the in-app update dialog asking users to update your application. Note that our backend sorts by version name instead of version code.   
+
 ## 1. Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up and started the SDK in your application, yet.
@@ -105,9 +114,9 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up and started the SDK in your application, yet.
 
-#### 1.3 Modify your `info.plist`
+#### 1.3 Modify your **info.plist**
 
-1. Open your `Info.plist`.
+1. Open your **Info.plist**.
 2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your `Info.plist` as source code).
 3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
 4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
