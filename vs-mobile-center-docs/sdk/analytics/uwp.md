@@ -6,7 +6,7 @@ author: dhei
 ms.author: dihei
 ms.date: 05/01/2017
 ms.topic: article
-ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
+ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: uwp

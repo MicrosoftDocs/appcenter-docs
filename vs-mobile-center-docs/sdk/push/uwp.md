@@ -6,7 +6,7 @@ author: dhei
 ms.author: dihei
 ms.date: 05/01/2017
 ms.topic: article
-ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
+ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: UWP
