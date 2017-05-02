@@ -18,6 +18,7 @@ ms.tgt_pltfrm: xamarin
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
@@ -169,6 +170,6 @@ MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Ana
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/xamarin.md) and [Mobile Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
+Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/xamarin.md) and [Mobile Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/xamarin.md).

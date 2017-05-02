@@ -70,13 +70,14 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add references to Mobile Center package, Mobile Center Analytics package and Mobile Center Push package:
+Add references to Mobile Center package and Mobile Center Push package:
 
 ```csharp
 using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Push;
 ```
+
+2.2.1 UWP application
 
 Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push together with the other services that you want to use in your app.
 
@@ -84,7 +85,15 @@ Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center 
 MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/uwp.md) section if you haven't configured the SDK in your application.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/uwp.md) section if you haven't configured the SDK in your application.
+
+2.2.2 Xamarin.Forms UWP application
+
+Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push at the end of `OnLaunched()` method of your app. Note that you need to initialized MobileCenter `MobileCenter.Start("{Your App Secret}", typeof(Analytics))` **before** you can add Push service to your app.
+
+```csharp
+MobileCenter.Start(typeof(Push));
+``` 
 
 ## 3. Enable or disable Mobile Center Push at runtime
 
