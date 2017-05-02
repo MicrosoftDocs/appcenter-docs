@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ios
 
 # Mobile Center Push
 
-Mobile Center Push enables you to send push notifications to users of your app. The SDK automatically configures push notifications and delivers whatever notifications you send on the portal.
+Mobile Center Push enables you to send push notifications to users of your app from the portal.
 
 ## 1. Enable Apple Push Notifications service (APNs) for your app
 
