@@ -39,6 +39,7 @@
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in VSTS](test-cloud/vsts-plugin.md)
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
