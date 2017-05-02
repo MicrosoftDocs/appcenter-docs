@@ -39,7 +39,7 @@ If everything is done correctly in the above steps we're ready to run the test o
 
 By now you have your app slug, device selection, system language and test series. The app slug is normally something similiar to `<username>/<appname>` insert that into the `App Slug` field. Your device selection which is a mixture of letters and numbers, is inserted in the `Devices` field. Your test series is a free text which can be anything, normally it starts with Master and you can leave it like that. Lastly we have the system language which is a drop down menu, this is which language the devices running your test is using.
 
-You'll also need to create a Mobile Center connection, you'll need an API token which you can read more about on the [API documentation](../api-docs.md) page.
+You'll also need to create a Mobile Center connection, you'll need an API token which you can read more about on the [API documentation](../api-docs/index.mdv) page.
  
 You're all set and ready to queue up the build.
 
@@ -53,6 +53,10 @@ If everything is done correctly in the above steps we're ready to run the test o
 
 By now you have your app slug, device selection, system language and test series. The app slug is normally something similiar to `username/appname` fill the `App Slug` with that and your device selection which is a mixture of letters and numbers, this is inserted in the `Devices` field. Your test series is a free text which can be anything, normally it starts with Master and you can leave it like that. Lastly we have the system language which is a drop down menu, this is which language the devices running your test is using.
 
+You'll also need to create a Mobile Center connection, you'll need an API token which you can read more about on the [API documentation](../api-docs/index.mdv) page.
+ 
+You're all set and ready to queue up the build.
+
 ## Xamarin.UITest
 Before you can start testing using Xamarin.UITest, there's prerequisite steps. You'll need the application binary (apk or ipa file), you need to activate your trial for Mobile Center Test, this is done on [Mobile Center](https://mobile.azure.com/) and select Test in the left-hand menu. And you need to prepare your repository, read more [here](preparing-for-upload/uitest.md).
 
@@ -65,6 +69,6 @@ If everything is done correctly in the above steps we're ready to run the test o
 
 By now you have your app slug, device selection, system language and test series. The app slug is normally something similiar to `username/appname` fill the `App Slug` with that and your device selection which is a mixture of letters and numbers, this is inserted in the `Devices` field. Your test series is a free text which can be anything, normally it starts with Master and you can leave it like that. Lastly we have the system language which is a drop down menu, this is which language the devices running your test is using.
 
-You'll also need to create a Mobile Center connection, you'll need an API token which you can read more about on the [API documentation](../api-docs.md) page.
+You'll also need to create a Mobile Center connection, you'll need an API token which you can read more about on the [API documentation](../api-docs/index.mdv) page.
 
 Happy testing go and queue up that build.
