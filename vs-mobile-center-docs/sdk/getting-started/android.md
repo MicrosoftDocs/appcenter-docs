@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/14/2017
+ms.date: 04/27/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -93,11 +93,12 @@ Android Studio will automatically suggest the required import statements once yo
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
-import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/android.md) and [Mobile Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
-To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
+To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
+
+To learn how to get started with Push, read the documentation of [Mobile Center Push](~/sdk/push/android.md).
