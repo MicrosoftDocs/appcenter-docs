@@ -36,8 +36,11 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Build service
 
-* Ability to automate running UI tests in the Test service after each successful build
 * Support for customizing your build definitions: secret variables, auto-incrementing of version number and build scripts
+* Carthage dependency manager support for iOS Objective C / Swift apps
+* Support for C#7 and new Visual Studio 2017 project types by moving from xbuild to msbuild for Xamarin apps
+* Ability to automate running UI tests in the Test service after each successful build
+
 
 ## Test service
 
