@@ -142,8 +142,6 @@ For creating a Xamarin.Forms application targeting iOS, Android and UWP platform
 MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
-Note that, this documentation is only for Xamarin.Forms UWP. If you want to use UWP only, please follow UWP [Get started](~/sdk/getting-started/uwp.md) documentation.
-
 ### 4.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.

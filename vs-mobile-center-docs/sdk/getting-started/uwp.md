@@ -32,6 +32,9 @@ Before you begin, please make sure that the following prerequisites are met:
 * Your project is set up in Visual Studio 2015 Update 3 or Visual Studio 2017.
 * Your project references Universal Windows Platform [5.2.2](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/5.2.2) or later
 
+> [!NOTE]
+> If you want to use Xamarin.Forms for UWP, please follow Xamarin [Get started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
+
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
 
 If you have already created your app in the Mobile Center portal, you can skip this step.
@@ -67,9 +70,6 @@ The Mobile Center SDK can be integrated using Visual Studio, or the Package Mana
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services.
 
 ## 4. Start the SDK
-
-> [!NOTE]
-> If you want to use Xamarin.Forms for UWP, please follow Xamarin [Get started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
 
 In order to use Mobile Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
