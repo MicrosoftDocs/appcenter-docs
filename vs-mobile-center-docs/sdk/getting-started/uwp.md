@@ -68,6 +68,8 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ## 4. Start the SDK
 
+Note that, this documentation is only for Non-Xamarin UWP. If you want to use Xamarin.Forms for UWP, please follow Xamarin [Get started](~/sdk/getting-started/xamarin.md) documentation.
+
 In order to use Mobile Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the using statements

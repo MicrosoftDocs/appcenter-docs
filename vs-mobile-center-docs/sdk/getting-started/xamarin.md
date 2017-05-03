@@ -134,11 +134,13 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 ##### 4.2.3 Xamarin.Forms
 
-For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+For creating a Xamarin.Forms application targeting iOS, Android and UWP platform, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics), typeof(Crashes));
+MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+Note that, this documentation is only for Xamarin.Forms UWP. If you want to use UWP, please follow UWP [Get started](~/sdk/getting-started/uwp.md) documentation.
 
 ### 4.3 Replace the placeholder with your App Secret
 
