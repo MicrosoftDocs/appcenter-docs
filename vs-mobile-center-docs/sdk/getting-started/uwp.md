@@ -75,7 +75,7 @@ In order to use Mobile Center, you need to opt in to the services that you want 
 
 ### 4.1 Add the using statements
 
-Add the appropriate namespaces before you get started with using our APIs.
+Add the appropriate namespaces before you use our APIs.
 
 ```csharp
 using Microsoft.Azure.Mobile;
@@ -84,7 +84,7 @@ using Microsoft.Azure.Mobile.Analytics;
 
 ### 4.2 Add the `Start()` method
 
-Open your application's constructor and add the `Start()` call:
+Add the following call to your application's constructor:
 
 ```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics));

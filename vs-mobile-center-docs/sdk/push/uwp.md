@@ -108,7 +108,7 @@ at the end of `OnLaunched()` method of your UWP specific `App` object to make su
 
 You can enable and disable Mobile Center Push at runtime.
 
-If you disable it, the SDK will stop updating the WNS registration identifier used to push but the existing one will continue working. As a result disabling will **NOT** stop push notifications from being received.
+If you disable it, the SDK will stop updating the WNS registration identifier used to push but the existing one will continue working. In other words, disabling the Push service will **NOT** stop your application from receiving push notifications.
 
 ```csharp
 Push.Enabled = false;

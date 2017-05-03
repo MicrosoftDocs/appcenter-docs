@@ -55,7 +55,7 @@ NSUUID *installId = [MSMobileCenter  installId];
 var installId = MSMobileCenter.installId()
 ```
 
-## Disable the all services at runtime
+## Disable all services at runtime
 
 If you want to disable all Mobile Center services at once, use the `setEnabled`-API. When disabled, the SDK will not forward any information to Mobile Center.
 
@@ -71,7 +71,7 @@ If you want to disable all Mobile Center services at once, use the `setEnabled`-
 MSMobileCenter.setEnabled(false)
 ```
 
-To enable enable all at once Mobile Center again, use the same API but pass `YES`/`true` as a parameter.
+To enable all at once Mobile Center again, use the same API but pass `YES`/`true` as a parameter.
 
 **Objective-C**
 

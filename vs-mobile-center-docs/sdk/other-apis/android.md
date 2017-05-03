@@ -39,7 +39,7 @@ The Mobile Center SDK creates a UUID for each device once the app is installed. 
 UUID installId = MobileCenter.getInstallId();
 ```
 
-## Disable the all services at runtime
+## Disable all services at runtime
 
 If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
 
@@ -47,7 +47,7 @@ If you want to disable all Mobile Center services at once, use the `setEnabled()
 MobileCenter.setEnabled(false);
 ```
 
-To enable enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
+To enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
 
 ```java
 MobileCenter.setEnabled(true);
