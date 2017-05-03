@@ -14,7 +14,12 @@ ms.tgt_pltfrm: ios
 
 # Mobile Center Push
 
-Mobile Center Push enables you to send push notifications to users of your app from the portal.
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+
+Mobile Center Push enables you to send push notifications to users of your app from our portal.
 
 ## 1. Enable Apple Push Notifications service (APNs) for your app
 

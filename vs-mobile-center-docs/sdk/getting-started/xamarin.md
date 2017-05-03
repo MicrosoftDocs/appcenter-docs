@@ -18,6 +18,7 @@ ms.tgt_pltfrm: xamarin
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
@@ -36,7 +37,7 @@ The Mobile Center SDK for Xamarin supports the following platforms:
 
 * Xamarin.Android
 * Xamarin.iOS
-* Xamarin.Forms (iOS and Android)
+* Xamarin.Forms (iOS, Android and UWP)
 
 ### 1.1 About Xamarin.Android
 
@@ -46,9 +47,11 @@ Choose this option if you target no other platform but Android. You need to crea
 
 Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-### 1.3 About Xamarin.Forms (iOS and Android)
+### 1.3 About Xamarin.Forms (iOS, Android and UWP)
 
-Choose this option if you want to create a cross platform app for iOS and Android devices. You need to create two apps in Mobile Center – one for each OS – and select **Xamarin** as the platform for each of them.
+Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
+
+You need to select **Xamarin** as the platform for Android and iOS applications (UWP does not have a Xamarin option).
 
 ## 2. Create your app in the Mobile Center Portal to optain the App Secret
 
@@ -75,7 +78,7 @@ The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual
 
 #### 3.1.2 Xamarin.Forms
 
-Multiplatform Xamarin.Forms apps have three projects in your solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS`. You need to add the NuGet packages to each of these projects.
+Multiplatform Xamarin.Forms apps have four projects in your solution - the portable class library or shared library, the Android project `project.Droid`, the iOS project `project.iOS` and the UWP one. You need to add the NuGet packages to each of these projects.
 
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
@@ -133,10 +136,10 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 ##### 4.2.3 Xamarin.Forms
 
-For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics), typeof(Crashes));
+MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -162,13 +165,16 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics));
 #### 4.3.2 Xarmarin.Forms
 
 ```csharp
-MobileCenter.Start("ios={Your App Secret};android={Your App secret}", typeof(Analytics));
+MobileCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
 ```
 
 ---
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/xamarin.md) and [Mobile Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
+Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/xamarin.md) and [Mobile Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/xamarin.md).
+
+> [!NOTE]
+> Using the portable APIs from Xamarin Forms, you will see **Crashes** and **Distribute** APIs, however those APIs are not yet supported on the **UWP** platform and are doing nothing when running on your **UWP** application.

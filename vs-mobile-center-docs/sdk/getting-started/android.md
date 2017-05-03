@@ -18,6 +18,7 @@ ms.tgt_pltfrm: android
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
@@ -49,7 +50,7 @@ Once you have created an app, you can optain its **App Secret** on the **Getting
 
 	```groovy
 	dependencies {
-		def mobileCenterSdkVersion = '0.6.1'
+		def mobileCenterSdkVersion = '0.8.0'
    		compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
    		compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 	}
@@ -97,7 +98,7 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentaton for [Mobile Center Analytics](~/sdk/analytics/android.md) and [Mobile Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
+Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/android.md) and [Mobile Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
 
