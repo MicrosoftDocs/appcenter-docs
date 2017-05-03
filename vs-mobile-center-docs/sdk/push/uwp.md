@@ -25,7 +25,7 @@ Mobile Center Push relies on [Windows Notification Services](https://docs.micros
 
 ## 1. Register your app for Windows Notification Services (WNS)
 
-Before you can send notification using WNS, your app must be registered with Windows Store. This will provide you with credentials for your app that Mobile Center will use in authenticating with WNS. These credentials consist a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with Windows Store in Visual Studio.
+Before you can send notification using WNS, your app must be registered with Windows Store. This will provide you with credentials for your app that Mobile Center will use in authenticating with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with Windows Store in Visual Studio.
 
 ### 1.1. Windows Store Association in Visual Studio
 
@@ -73,7 +73,7 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 
 ### 2.2. Start Mobile Center Push service
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
 Add references to Mobile Center package and Mobile Center Push package:
 
@@ -82,7 +82,7 @@ using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Push;
 ```
 
-2.2.1 UWP application
+#### 2.2.1. UWP application
 
 Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push together with the other services that you want to use in your app.
 
@@ -92,13 +92,17 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/uwp.md) section if you haven't configured the SDK in your application.
 
-2.2.2 Xamarin.Forms UWP application
+#### 2.2.2. Xamarin.Forms UWP application
 
-Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push at the end of `OnLaunched()` method of your app. Note that you need to initialized MobileCenter `MobileCenter.Start("{Your App Secret}", typeof(Analytics))` **before** you can add Push service to your app.
+Push is currently available in UWP but not in the portable or xamarin projects.
+
+If you initialized MobileCenter with `MobileCenter.Start("{Your App Secrets}", typeof(Analytics), typeof(Crashes))` in the portable Xamarin Forms `App.OnStarted()`, you need to call
 
 ```csharp
 MobileCenter.Start(typeof(Push));
-``` 
+```
+
+at the end of `OnLaunched()` method of your UWP specific `App` object to make sure the portable call is made before the specific push one.
 
 ## 3. Enable or disable Mobile Center Push at runtime
 
