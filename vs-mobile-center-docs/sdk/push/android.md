@@ -6,7 +6,7 @@ author: guperrot
 ms.author: guperrot
 ms.date: 05/01/2017
 ms.topic: article
-ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
+ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: android
@@ -14,7 +14,12 @@ ms.tgt_pltfrm: android
 
 # Mobile Center Push
 
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+
+Mobile Center Push enables you to send push notifications to users of your app from our portal.
 
 To do that the Mobile Center SDK and portal integrate with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 

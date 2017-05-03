@@ -14,7 +14,12 @@ ms.tgt_pltfrm: UWP
 
 # Mobile Center Push
 
-Mobile Center Push will let you send push notifications to the users of your app. The SDK automatically configures push notifications and delivers notifications you send on the portal.
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+
+Mobile Center Push enables you to send push notifications to users of your app from our portal.
 
 Mobile Center Push relies on [Windows Notification Services](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
 
