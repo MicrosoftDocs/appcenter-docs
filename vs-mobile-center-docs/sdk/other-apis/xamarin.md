@@ -47,7 +47,7 @@ If you want to disable all Mobile Center services at once, use the `Enabled`-pro
 MobileCenter.Enabled = false;
 ```
 
-To enable all at once Mobile Center again, use the same API but pass `true` as a parameter.
+To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```csharp
 MobileCenter.Enabled = true;

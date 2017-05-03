@@ -71,7 +71,7 @@ If you want to disable all Mobile Center services at once, use the `setEnabled`-
 MSMobileCenter.setEnabled(false)
 ```
 
-To enable all at once Mobile Center again, use the same API but pass `YES`/`true` as a parameter.
+To enable all services at once again, use the same API but pass `YES`/`true` as a parameter.
 
 **Objective-C**
 
