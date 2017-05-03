@@ -177,4 +177,4 @@ Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/xamarin.
 To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you will see **Crashes** and **Distribute** APIs, however those APIs are not yet supported on the **UWP** platform and are inoperant when running on your **UWP** application.
+> Using the portable APIs from Xamarin Forms, you will see **Crashes** and **Distribute** APIs, however those APIs are not yet supported on the **UWP** platform and are doing nothing when running on your **UWP** application.
