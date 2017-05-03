@@ -118,7 +118,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 1. Open your **Info.plist**.
 2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your `Info.plist` as source code).
-3. Change the key of the first child item to URL Schemes or `CFBundleURLSchemes`.
+3. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
 4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 #### 1.4 Implement the `openURL:`-callback
