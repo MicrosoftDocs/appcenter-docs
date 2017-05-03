@@ -106,6 +106,7 @@
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)
 ### [React Native](sdk/other-apis/react-native.md)
+### [UWP](sdk/other-apis/uwp.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)

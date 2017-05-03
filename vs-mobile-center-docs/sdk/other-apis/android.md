@@ -18,6 +18,7 @@ ms.tgt_pltfrm: android
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 ## Adjust the log level
