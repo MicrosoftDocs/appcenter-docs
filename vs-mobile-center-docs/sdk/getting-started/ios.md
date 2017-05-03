@@ -74,27 +74,27 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 2. Unzip the file and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party-libraries.
- 	* As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called `Vendor`), so if you don't have your project organized with a subdirectory for libraries, now would be a great start for it.
- 	* Create a group called `Vendor` inside your Xcode project to mimic your file structure on disk.
+    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
+    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
 4. Open Finder and copy the previously unzipped `MobileCenter-SDK-iOS` folder into your project's folder at the location where you want it to reside.
 
 5. Add the SDK frameworks to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework` and `MobileCenterCrashes.framework` from the Finder (the ones inside the Vendor folder) into your Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it iss added to your project, otherwise the other modules won't work and your app won't compile.
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework` and `MobileCenterCrashes.framework` from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it iss added to your project, otherwise the other modules won't work and your app won't compile.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
 
 ## 4. Start the SDK
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 
 **Objective-C**
 
-Open your `AppDelegate.m` file and add the following import statements.
+Open your **AppDelegate.m** file and add the following import statements:
 
 ```obj-c
 @import MobileCenter;
@@ -104,7 +104,7 @@ Open your `AppDelegate.m` file and add the following import statements.
 
 **Swift**
 
-Open your `AppDelegate.swift` file and add the following import statements.
+Open your **AppDelegate.swift** file and add the following import statements:
 
 ```swift
 import MobileCenter
@@ -116,7 +116,7 @@ import MobileCenterCrashes
 
 **Objective-C**
 
-Insert the following line to start the SDK in your app's `AppDelegate.m` class in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
 
 ```obj-c
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
@@ -124,7 +124,7 @@ Insert the following line to start the SDK in your app's `AppDelegate.m` class i
 
 **Swift**
 
-Insert the following line to start the SDK in your app's `AppDelegate.swift` class in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
 
 ```swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
@@ -160,4 +160,6 @@ Great, you are all set to visualize Analytics and Crashes data on the portal tha
 
 Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/ios.md) and [Mobile Center Crashes](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
 
-To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/ios.md).
+To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/ios.md).
+
+To learn how to get started with Push, read the documentation of [Mobile Center Push](~/sdk/push/ios.md).

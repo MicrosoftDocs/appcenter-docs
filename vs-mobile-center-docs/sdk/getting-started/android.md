@@ -100,4 +100,6 @@ Great, you are all set to visualize Analytics and Crashes data on the portal tha
 
 Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/android.md) and [Mobile Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
-To learn how to get started with in-app updates, head over to the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
+To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/android.md).
+
+To learn how to get started with Push, read the documentation of [Mobile Center Push](~/sdk/push/android.md).
