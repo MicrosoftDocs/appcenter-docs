@@ -92,6 +92,7 @@
 ### [Xamarin](sdk/distribute/xamarin.md)
 ## Push
 ### [Android](sdk/push/android.md)
+### [iOS](sdk/push/ios.md)
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)
