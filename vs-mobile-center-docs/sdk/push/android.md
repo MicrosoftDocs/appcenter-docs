@@ -22,8 +22,6 @@ Please note that only devices having [Google Play](https://play.google.com) stor
 
 Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
-Push notifications received in foreground are not yet managed by our SDK but you can implement your own foreground Push message receiver by reading [this](https://firebase.google.com/docs/notifications/android/console-audience#receive_and_handle_notifications).
-
 ## 1. Add Firebase to your app
 
 Before being able to use the Push service, you need to add Firebase to your application.
@@ -134,4 +132,56 @@ You can also check if Mobile Center Push is enabled or not:
 
 ```java
 Push.isEnabled();
+```
+
+## 6. Push callback
+
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+
+As mentioned earlier, Firebase does not generate notifications when the push is received in foreground, you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+You need to register the listener before calling `MobileCenter.start` as shown in the following example:
+
+```java
+Push.setListener(new MyPushListener());
+MobileCenter.start(...);
+```
+
+Here is an example of the listener implementation that displays an alert dialog if the message is received in foreground or a toast if a background push has been clicked:
+
+```java
+public class MyPushListener implements PushListener {
+
+    @Override
+    public void onPushNotificationReceived(Activity activity, PushNotification pushNotification) {
+
+        /* The following notification properties are available. */
+        String title = pushNotification.getTitle();
+        String message = pushNotification.getMessage();
+        Map<String, String> customData = pushNotification.getCustomData();
+
+        /*
+         * Message and title cannot be read from a background notification object.
+         * Message being a mandatory field, you can use that to check foreground vs background.
+         */
+        if (message != null) {
+
+            /* Display an alert for foreground push. */
+            AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+            if (title != null) {
+                dialog.setTitle(title);
+            }
+            dialog.setMessage(message);
+            if (!customData.isEmpty()) {
+                dialog.setMessage(message + "\n" + customData);
+            }
+            dialog.setPositiveButton(android.R.string.ok, null);
+            dialog.show();
+        } else {
+
+            /* Display a toast when a background push is clicked. */
+            Toast.makeText(activity, String.format(activity.getString(R.string.push_toast), customData), Toast.LENGTH_LONG).show(); // For example R.string.push_toast would be "Push clicked with data=%1s"
+        }
+    }
+});
 ```
