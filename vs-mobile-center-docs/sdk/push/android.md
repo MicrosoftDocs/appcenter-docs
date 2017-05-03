@@ -134,11 +134,11 @@ You can also check if Mobile Center Push is enabled or not:
 Push.isEnabled();
 ```
 
-## 6. Push callbacks
+## 6. Push callback
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
-As discussed in introduction, Firebase does not generate notifications when the push is received in foreground, you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+As mentioned earlier, Firebase does not generate notifications when the push is received in foreground, you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
@@ -161,9 +161,9 @@ public class MyPushListener implements PushListener {
         Map<String, String> customData = pushNotification.getCustomData();
 
         /*
-            * Message and title cannot be read from a background notification object.
-            * Message being a mandatory field, you can use that to check foreground vs background.
-            */
+         * Message and title cannot be read from a background notification object.
+         * Message being a mandatory field, you can use that to check foreground vs background.
+         */
         if (message != null) {
 
             /* Display an alert for foreground push. */
@@ -180,7 +180,7 @@ public class MyPushListener implements PushListener {
         } else {
 
             /* Display a toast when a background push is clicked. */
-            Toast.makeText(activity, String.format(activity.getString(R.string.push_toast), customData), Toast.LENGTH_LONG).show(); // R.string.push_toast = "Push clicked with data=%1s"
+            Toast.makeText(activity, String.format(activity.getString(R.string.push_toast), customData), Toast.LENGTH_LONG).show(); // For example R.string.push_toast would be "Push clicked with data=%1s"
         }
     }
 });
