@@ -1,6 +1,6 @@
 ---
-title: Other Xamarin APIs
-description: Other APIs in the Mobile Center SDK for Xamarin
+title: Other UWP APIs
+description: Other APIs in the Mobile Center SDK for UWP
 keywords: sdk
 author: guperrot
 ms.author: guperrot
