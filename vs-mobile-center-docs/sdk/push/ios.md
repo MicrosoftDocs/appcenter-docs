@@ -19,13 +19,13 @@ ms.tgt_pltfrm: ios
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
 
-Mobile Center Push enables you to send push notifications to users of your app from our portal.
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
 ## 1. Enable Apple Push Notifications service (APNs) for your app
 
-Please configure Apple Push Notifications service (APNs) for your app from your Apple developer account before adding Mobile Center Push to your app. Mobile Center Push won't get any notifications if you don't enable push notifications. Follow instructions in [Configure push notifications](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+Please configure Apple Push Notifications service (APNs) for your app from your Apple developer account before adding Mobile Center Push to your app. Mobile Center Push won't get any notifications if you don't enable push notifications. Follow the instructions in Apple's documentation on [how to configure push notifications](http://help.apple.com/xcode/mac/current/#/dev11b059073).
 
-## 2. Add Push to your app
+## 2. Add Mobile Center Push to your app
 
 Please follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
@@ -104,9 +104,9 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
-#### 2.3 Implement callbacks for registration
+#### 2.3 Implement callbacks to register for Push notifications
 
-Implement `application:didRegisterForRemoteNotificationsWithDeviceToken:`-callback and `application:didFailToRegisterForRemoteNotificationsWithError:`-callback in your `AppDelegate` to enable Push.
+Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
 **Objective-C**
 
@@ -142,7 +142,9 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 }
 ```
 
-#### 2.4 Implement `application:didReceiveRemoteNotification:fetchCompletionHandler`-callback to receive push notifications
+#### 2.4 Implement the callback to receive push notifications
+
+Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notificaton.
 
 **Objective-C**
 
@@ -176,7 +178,7 @@ You can enable and disable Mobile Center Push at runtime.
 
 If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working.
 
-As a result, disabling will not stop pushing notifications from being received.
+In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 **Objective-C**
 

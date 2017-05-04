@@ -32,6 +32,10 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 
 The Mobile Center SDK will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
 
+### Mobile Center Push
+
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+
 ## Get started
 
 * [Mobile Center SDK for Android](getting-started/android.md)

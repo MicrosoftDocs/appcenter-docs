@@ -19,11 +19,11 @@ ms.tgt_pltfrm: android
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
 
-Mobile Center Push enables you to send push notifications to users of your app from our portal.
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
-To do that the Mobile Center SDK and portal integrate with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+To do that, the Mobile Center SDK and portal integrate with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-Please note that only devices having [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
+Please note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
 
 Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
@@ -41,7 +41,7 @@ For that you need to follow some of the documentation of Firebase:
 
 2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk) section.
 
-Only those 2 steps are required to use Mobile Center Push, the SDK will take care of the rest.
+Only those 2 steps are required to use Mobile Center Push, the SDK will take care of all other work.
 
 ### 1.2. Using Firebase assistant
 
@@ -57,7 +57,7 @@ If you wish to use the Firebase assistant:
 
 Step 3 is managed by our SDK automatically so you can stop after step 2.
 
-## 2. Add Push to your app
+## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
@@ -94,8 +94,6 @@ Android Studio will automatically suggest the required import statement once you
 
 ```java
 import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.analytics.Analytics;
-import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.push.Push;
 ```
 
@@ -105,7 +103,7 @@ Mobile Center Push has a dependency on Firebase.
 
 Firebase Analytics is included in the core Firebase module and is thus a dependency of Firebase messaging.
 
-As a result, our SDK automatically disables Firebase Analytics to prevent unwanted data collection to Firebase.
+As a result, our SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
 If you are a customer of Firebase Analytics and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
 
@@ -120,7 +118,7 @@ You can enable and disable Mobile Center Push at runtime.
 
 If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working.
 
-As a result, disabling will not stop pushing notifications from being received.
+In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 ```java
 Push.setEnabled(false);
@@ -139,7 +137,7 @@ You can also check if Mobile Center Push is enabled or not:
 Push.isEnabled();
 ```
 
-## 6. Push callback
+## 6. Customize your usage of Mobile Center Push 
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 

@@ -19,13 +19,13 @@ ms.tgt_pltfrm: UWP
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
 
-Mobile Center Push enables you to send push notifications to users of your app from our portal.
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
 Mobile Center Push relies on [Windows Notification Services](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
 
 ## 1. Register your app for Windows Notification Services (WNS)
 
-Before you can send notification using WNS, your app must be registered with Windows Store. This will provide you with credentials for your app that Mobile Center will use in authenticating with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with Windows Store in Visual Studio.
+Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that Mobile Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with the Windows Store in Visual Studio.
 
 ### 1.1. Windows Store Association in Visual Studio
 
@@ -49,7 +49,7 @@ Before you can send notification using WNS, your app must be registered with Win
 
 Navigate to your Mobile Center app -> Push, enter **Package SID** and **Security key** that you obtained from the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList) in the previous step, click **Apply changes**.
 
-## 2. Add Push to your Mobile Center app
+## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you haven't set up and started the SDK in your application.
 
@@ -57,13 +57,13 @@ Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you hav
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. It can be integrated using Visual Studio or Package Manager Console.
 
-2.1.1 Visual Studio
+#### 2.1.1 Visual Studio
 
 1. Navigate to the **Project -> Add NuGet Packages...**
 
 2. Search for **Mobile Center**, and select **Mobile Center Push**, then click **Add Packages**. 
 
-2.1.2 Package Manager Console
+#### 2.1.2 Package Manager Console
 
 1. Type the following command in Package Manager Console:
 
@@ -87,7 +87,7 @@ using Microsoft.Azure.Mobile.Push;
 Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push together with the other services that you want to use in your app.
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
+MobileCenter.Start("{Your App Secret}", typeof(Push));
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/uwp.md) section if you haven't configured the SDK in your application.
@@ -108,7 +108,9 @@ at the end of `OnLaunched()` method of your UWP specific `App` object to make su
 
 You can enable and disable Mobile Center Push at runtime.
 
-If you disable it, the SDK will stop updating the WNS registration identifier used to push but the existing one will continue working. In other words, disabling the Push service will **NOT** stop your application from receiving push notifications.
+If you disable it, the SDK will stop updating the WNS registration identifier that is used to push notificatons, but the existing one will continue  to work.
+
+In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 ```csharp
 Push.Enabled = false;
