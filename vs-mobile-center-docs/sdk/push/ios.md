@@ -144,7 +144,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 
 #### 2.4 Implement the callback to receive push notifications
 
-Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notificaton.
+Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notification.
 
 **Objective-C**
 
