@@ -141,8 +141,6 @@ Push.isEnabled();
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
-### 6.1 Display the notification when the app is in the foreground
-
 As mentioned earlier, Firebase does not generate notifications when the push is received in foreground, you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 You need to register the listener before calling `MobileCenter.start` as shown in the following example:
