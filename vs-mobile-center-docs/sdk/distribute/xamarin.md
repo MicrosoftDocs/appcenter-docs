@@ -32,13 +32,13 @@ The in-app updates feature works as follows:
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
-  * iOS: 
-      * a higher version name (`CFBundleShortVersionString`)
-      * an equal version name but a higher version (`CFBundleVersion`)
-      * an equal version name and version but a newer upload date
-  * Android:
-      * a higher version (`versionCode`)
-      * an equal version but a newer upload date 
+    * iOS: 
+        * a higher version name (`CFBundleShortVersionString`)
+        * an equal version name but a higher version (`CFBundleVersion`)
+        * an equal version name and version but a newer upload date
+    * Android:
+        * a higher version (`versionCode`)
+        * an equal version but a newer upload date 
 
 ## 1. Add in-app updates to your app
 
