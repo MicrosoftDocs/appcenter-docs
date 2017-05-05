@@ -31,7 +31,12 @@ The in-app updates feature works as follows:
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
-6. Any new releases of the app having a more recent version name then shows the in-app update dialog asking users to update your application. Note that our backend sorts by version name instead of version code.        
+6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+    * iOS: 
+        * a higher version name (`CFBundleShortVersionString`)
+        * an equal version name but a higher version (`CFBundleVersion`)
+    * Android:
+        * a higher version (`versionCode`)
 
 ## 1. Add in-app updates to your app
 
