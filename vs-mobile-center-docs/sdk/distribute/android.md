@@ -31,7 +31,10 @@ The in-app updates feature works as follows:
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
-6. Any new releases of the app with higher app version then shows the in-app update dialog asking users to update your application.     
+6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
+
+> [!TIP]
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `versionCode`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
 
 ## 1. Add in-app updates to your app
 
