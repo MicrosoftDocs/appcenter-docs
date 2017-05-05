@@ -21,7 +21,7 @@ ms.tgt_pltfrm: ios
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
+In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## How do in-app updates work?
@@ -35,11 +35,11 @@ The in-app updates feature works as follows:
 
 ## 1. Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up and started the SDK in your application, yet.
+Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 ### 1.1 Add the Mobile Center Distribute module
 
-The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+The Mobile Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
 
 
 #### 1.1.1 Integration via Cocoapods
@@ -57,26 +57,25 @@ pod 'MobileCenter/MobileCenterDistribute`
 2. Unzip the file and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party-libraries.
- 	* As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called `Vendor`), so if you don't have your project organized with a subdirectory for libraries, now would be a great start for it.
- 	* Create a group called `Vendor` inside your Xcode project to mimic your file structure on disk.
+    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
+    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
 4. Open Finder and copy the unzipped `MobileCenter-SDK-iOS` folder into your project's folder at the location where you want it to reside.
 
 5. Add the SDK framework to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop `MobileCenter.framework`, `MobileCenterDistribute.framework` and `MobileCenterDistributeResources.bundle` from the Finder (the ones inside the Vendor folder) into your Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterDistribute.framework` and `MobileCenterDistributeResources.bundle` from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
-
 
 ### 1.2 Start Mobile Center Distribute
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
 #### 1.2.1 Add the import for Mobile Center Distribute
 
 **Objective-C**
 
-Open your `AppDelegate.m` file and add the following import statements.
+Open your **AppDelegate.m** file and add the following import statements:
 
 ```obj-c
 @import MobileCenter;
@@ -85,7 +84,7 @@ Open your `AppDelegate.m` file and add the following import statements.
 
 **Swift**
 
-Open your `AppDelegate.swift` file and add the following import statements.
+Open your **AppDelegate.swift** file and add the following import statements:
 
 ```swift
 import MobileCenter
@@ -98,7 +97,7 @@ Add `MSDistribute` to your `start:withServices:` method to start Mobile Center D
 
 **Objective-C**
 
-Insert the following line to start the SDK in your app's `AppDelegate.m` class in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
 
 ```obj-c
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
@@ -106,13 +105,13 @@ Insert the following line to start the SDK in your app's `AppDelegate.m` class i
 
 **Swift**
 
-Insert the following line to start the SDK in your app's `AppDelegate.swift` class in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
 
 ```swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 #### 1.3 Modify your **info.plist**
 

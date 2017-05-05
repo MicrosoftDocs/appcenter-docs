@@ -1,18 +1,18 @@
 ---
-title: Other Xamarin APIs
-description: Other APIs in the Mobile Center SDK for Xamarin
+title: Other UWP APIs
+description: Other APIs in the Mobile Center SDK for UWP
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 04/17/2017
+author: guperrot
+ms.author: guperrot
+ms.date: 05/03/2017
 ms.topic: article
-ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
+ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.service: mobile-center
 ms.custom: sdk
-ms.tgt_pltfrm: xamarin
+ms.tgt_pltfrm: uwp
 ---
 
-# Other Xamarin APIs
+# Other UWP APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

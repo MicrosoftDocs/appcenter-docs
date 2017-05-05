@@ -1,15 +1,15 @@
 ---
-title: Mobile Center Analytics for Xamarin
-description: Mobile Center Analytics for Xamarin
+title: Mobile Center Analytics for UWP
+description: Mobile Center Analytics for UWP
 keywords: analytics
-author: troublemakerben
-ms.author: bereimol
-ms.date: 03/17/2017
+author: dhei
+ms.author: dihei
+ms.date: 05/01/2017
 ms.topic: article
-ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
+ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: mobile-center
 ms.custom: sdk
-ms.tgt_pltfrm: xamarin
+ms.tgt_pltfrm: uwp
 ---
 
 # Mobile Center Analytics
@@ -23,11 +23,21 @@ ms.tgt_pltfrm: xamarin
 
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your application yet.
+Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
 ## 1. Session and device information
 
-Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, manufacturer etc. You don’t need to write any additional code.
+Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, manufacturer etc.
+
+Country code is not automatically reported by the UWP SDK.
+
+If you want to report it manually, you can use the following code:
+
+```csharp
+MobileCenter.SetCountryCode("us");
+```
+
+You need to call this method before `MobileCenter.Start(... typeof(Analytics) ...);` so that it is reflected in the Audience page.
 
 ## 2. Custom events
 
