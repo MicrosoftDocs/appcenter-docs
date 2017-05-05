@@ -35,10 +35,8 @@ The in-app updates feature works as follows:
     * iOS: 
         * a higher version name (`CFBundleShortVersionString`)
         * an equal version name but a higher version (`CFBundleVersion`)
-        * an equal version name and version but a newer upload date
     * Android:
         * a higher version (`versionCode`)
-        * an equal version but a newer upload date 
 
 ## 1. Add in-app updates to your app
 

@@ -34,7 +34,6 @@ The in-app updates feature works as follows:
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
     * a higher version name (`CFBundleShortVersionString`)
     * an equal version name but a higher version (`CFBundleVersion`)
-    * an equal version name and version but a newer upload date 
 
 ## 1. Add in-app updates to your app
 
