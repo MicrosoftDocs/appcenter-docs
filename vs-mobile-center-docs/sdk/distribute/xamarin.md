@@ -33,10 +33,13 @@ The in-app updates feature works as follows:
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
     * iOS: 
-        * a higher version name (`CFBundleShortVersionString`)
+        * a higher version name (`CFBundleShortVersionString`) or
         * an equal version name but a higher version (`CFBundleVersion`)
     * Android:
         * a higher version (`versionCode`)
+
+> [!TIP]
+> If you upload the same apk/ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
 
 ## 1. Add in-app updates to your app
 

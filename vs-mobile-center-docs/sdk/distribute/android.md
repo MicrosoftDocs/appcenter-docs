@@ -33,6 +33,9 @@ The in-app updates feature works as follows:
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
 
+> [!TIP]
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same ``versionCode`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+
 ## 1. Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.

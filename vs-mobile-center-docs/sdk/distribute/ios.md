@@ -35,6 +35,9 @@ The in-app updates feature works as follows:
     * a higher version name (`CFBundleShortVersionString`)
     * an equal version name but a higher version (`CFBundleVersion`)
 
+> [!TIP]
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+
 ## 1. Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -42,7 +45,6 @@ Please follow the [Get started](~/sdk/getting-started/ios.md) section if you hav
 ### 1.1 Add the Mobile Center Distribute module
 
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
-
 
 #### 1.1.1 Integration via Cocoapods
 
