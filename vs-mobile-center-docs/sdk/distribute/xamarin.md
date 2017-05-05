@@ -136,6 +136,20 @@ This step is not necessary on Android where the debug configuration is detected 
 3. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
 4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
+> [!TIP]
+> If you want to verify that you modified the **Info.plist** correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
+> ```
+> <key>CFBundleURLTypes</key>
+>	<array>
+>		<dict>
+>			<key>CFBundleURLSchemes</key>
+>			<array>
+>				<string>mobilecenter-${APP_SECRET}</string>
+>			</array>
+>		</dict>
+>	</array>
+>	```
+
 #### 1.2.3 [For iOS only] Add the `openUrl` method
 
 Implement the `openURL` callback in your `AppDelegate.cs` to enable in-app-updates.

@@ -125,7 +125,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
-> If you want to verify that you modified the **Info.plist** correctly, open the it as source. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
+> If you want to verify that you modified the **Info.plist** correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
 > ```
 > <key>CFBundleURLTypes</key>
 >	<array>
