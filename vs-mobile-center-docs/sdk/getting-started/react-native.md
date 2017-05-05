@@ -18,6 +18,7 @@ ms.tgt_pltfrm: react-native
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.

@@ -76,11 +76,13 @@
 ### [iOS](sdk/getting-started/ios.md)
 ### [React Native](sdk/getting-started/react-native.md)
 ### [Xamarin](sdk/getting-started/xamarin.md)
+### [UWP](sdk/getting-started/uwp.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [iOS](sdk/analytics/ios.md)
 ### [React Native](sdk/analytics/react-native.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
+### [UWP](sdk/analytics/uwp.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [iOS](sdk/crashes/ios.md)
@@ -90,6 +92,10 @@
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
 ### [Xamarin](sdk/distribute/xamarin.md)
+## Push
+### [Android](sdk/push/android.md)
+### [iOS](sdk/push/ios.md)
+### [UWP](sdk/push/uwp.md)
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)
@@ -100,6 +106,7 @@
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)
 ### [React Native](sdk/other-apis/react-native.md)
+### [UWP](sdk/other-apis/uwp.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
