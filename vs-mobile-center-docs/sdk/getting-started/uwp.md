@@ -35,7 +35,7 @@ Before you begin, please make sure that the following prerequisites are met:
 > [!NOTE]
 > If you want to use Xamarin.Forms for UWP, please follow Xamarin [Get started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
 
-## 2. Create your app in the Mobile Center Portal to optain the App Secret
+## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 
 If you have already created your app in the Mobile Center portal, you can skip this step.
 
