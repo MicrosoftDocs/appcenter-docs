@@ -32,7 +32,7 @@ Before you begin, please make sure that the following prerequisites are met:
 * Your Android project is set up in Android Studio.
 * You are targeting devices running Android Version 4.0.3 (API level 15) or later.
 
-## 2. Create your app in the Mobile Center Portal to optain the App Secret
+## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 
 If you have already created your app in the Mobile Center portal, you can skip this step.
 
@@ -42,7 +42,7 @@ If you have already created your app in the Mobile Center portal, you can skip t
 4. Select **Android** as the OS and **Java** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can optain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
 
