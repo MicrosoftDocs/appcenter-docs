@@ -15,6 +15,11 @@ ms.custom: sdk
 
 ## Limitations
 
+### React Native
+
+1. The React Native SDK currently does not support In-App-Updates. The reason for this is that React Native already has this functionality somewhat out-of-the-box.
+2. The React Native SDK currently does not support Mobile Center Push. This will change in the future. 
+
 ### Xamarin
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the Xamarin runtime.
