@@ -69,7 +69,7 @@ Leave the submit page (last page on test run setup) open, as there's information
 * Test series is a free text and as explained it can be anything. It's the `--test-series` parameter
 * System Language is a drop-down menu, and if `Other` is selected a `Other Locale` field appears where you can input laguage and country code like this: en_US
 
-You can read more about starting a test run on the [Starting a test run](start-a-test-run.md) page.
+You can read more about starting a test run on the [Starting a test run](starting-a-test-run.md) page.
 
 You're all set to queue up the build.
 
