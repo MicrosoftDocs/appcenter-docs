@@ -20,9 +20,9 @@ To get started, [sign-in](https://mobile.azure.com/login?utm_medium=referral_lin
 
 We're starting with HockeyApp Preseason program participants, and will slowly roll-out to more and more of the HockeyApp user base. If you would like to try our preview, please contact [support@hockeyapp.net](mailto:support@hockeyapp.net).
 
-### Accepting terms and joining preview
+### How to join the preview
 
-Go to the Mobile Center dashboard and click on the 'Join' button in the header to accept the Preview terms and start migrating your apps to Mobile Center.
+Go to your HockeyApp dashboard and click on the 'Join' button in the header. This will start the sync and migration process.
 
 > [!NOTE]
 > Only app owners will see this banner. If you are a Preseason customer and are missing apps, make sure to tell the owner of your apps to join the program.
@@ -43,10 +43,10 @@ HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xa
 
 ### Limitations
 
-* During this Preview period, all app management (Collaborators, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of 'Getting Started'.
+* During this Preview period, all app management (Collaborators, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of the 'Getting Started' page in your app.
 
 ## Transition to Mobile Center - Late 2017
 
-When Mobile Center enters General Availability later this year, you can start officially migrating all of your apps, data, organizations, and users with the click of a button. Move one app at a time, or all your apps at once!
+When Mobile Center enters General Availability later this year, you can start officially migrating all of your apps, data, organizations, and users with the click of a button. This will make Mobile Center the official owner of your apps.
 
-This will also be when you can migrate your apps to the new Mobile Center SDK. The Mobile Center SDK is built to be faster and more modular than the HockeySDK. Ship the Mobile Center SDK in a future release, and still receive data from the HockeyApp SDK in Mobile Center from past releases. You’ll have a full year to transition SDKs at your own pace.
+This will also be the moment when you can migrate your apps to the new Mobile Center SDK. The Mobile Center SDK is built to be faster and more modular than the HockeySDK. Ship the Mobile Center SDK in a future release, and still receive data from the HockeyApp SDK in Mobile Center from past releases. You’ll have a full year to transition SDKs at your own pace.
