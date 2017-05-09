@@ -12,48 +12,41 @@ ms.service: mobile-center
 
 We're committed to migrating your HockeyApp account with zero hassle. That's why we have created a [transition plan](https://www.hockeyapp.net/mobile-center/transition/) that is transparent, easy-to-understand, and effortless for our users. This process is being rolled-out in two different phases:
 
-## Preview your apps & data in Mobile Center
-Spring 2017 - Available now
+## Preview your apps & data in Mobile Center - Available Today
 
-Transitioning should be low-risk for all HockeyApp users, that's why we created a side-by-side sync of your apps between our current and future platforms.
+Transitioning should be low-risk for all HockeyApp users, that's why we've synchronized your existing apps into Mobile Center. Your apps are now two places at once with back-and-forward synchronicity, so you and your team are always up-to-date.
 
-HockeyApp Preseason customers can view their HockeyApp apps within Mobile Center without needing to migrate them. To get started, [sign-in](https://mobile.azure.com/login?utm_medium=referral_link&utm_source=Hockey%20App) to Mobile Center using your existing HockeyApp credentials.
+To get started, [sign-in](https://mobile.azure.com/login?utm_medium=referral_link&utm_source=Hockey%20App) to Mobile Center using your existing HockeyApp credentials.
+
+We're starting with HockeyApp Preseason program participants, and will slowly roll-out to more and more of the HockeyApp user base. If you would like to try our preview, please contact [support@hockeyapp.net](mailto:support@hockeyapp.net).
+
+### Accepting terms and joining preview
+
+Go to the Mobile Center dashboard and click on the 'Join' button in the header to accept the Preview terms and start migrating your apps to Mobile Center.
+
+> [!NOTE]
+> Only app owners will see this banner. If you are a Preseason customer and are missing apps, make sure to tell the owner of your apps to join the program.
 
 ### Accessing your HockeyApp apps
 
 Once logged in, you'll see a list of all of your existing HockeyApp apps (alongside any exiting Mobile Center apps you have already created).
 
 HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xamarin**, or **React Native** technologies will be ready-to-use within Mobile Center. We're busy working on expanding to other platforms. Keep an eye on our [Product Roadmap](~/general/roadmap.md) for updates on OS and platform expansion and improvements.
-<br>
 
-### What can you do within Mobile Center?
+### How to use your apps inside Mobile Center
 
-Use existing HockeyApp apps with [Build](~/build/index.md) and [Test](~/test-cloud/index.md) services without affecting your existing HockeyApp apps.
+* Extend your test suite using our brand new cloud based [continuous integration](~/build/index.md) and [automated UI testing](~/test-cloud/index.md) services without affecting your HockeyApp workflow.
 
-* Mobile Center's **Distribute** service will work alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md).
-
-<!-- ![HockeyApp release in Mobile Center](images/distribute-releases.png) -->
+* Mobile Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md).
 
 * Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center. Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center.
 
-### What you can't do within Mobile Center
+### Limitations
 
 * During this Preview period, all app management (Collaborators, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of 'Getting Started'.
 
-### Accessing your HockeyApp personal apps
+## Transition to Mobile Center - Late 2017
 
-* Access all the apps owned by you in the by clicking your username in the left navigation. Apps you have created in Mobile Center that are owned by you will also appear here.
+When Mobile Center enters General Availability later this year, you can start officially migrating all of your apps, data, organizations, and users with the click of a button. Move one app at a time, or all your apps at once!
 
-<!-- ![Personal HockeyApp apps in Mobile Center](images/user-apps-list.png) -->
-
-### Accessing your HockeyApp organizations
-
-* Access all of the organizations you belong to HockeyApp. Using the left navigation, click on existing HockeyApp organizations alongside ones you have created in Mobile Center.
-* Use the **People** tab to view the Collaborators on all apps within the organization.
-
-<!-- ![HockeyApp organization apps in Mobile Center](images/orgs-apps-list.png) -->
-
-> [!NOTE]
-> Unlike HockeyApp, all collaborators within an organization are able to create apps.
-
-<!-- ## Coming soon -->
+This will also be when you can migrate your apps to the new Mobile Center SDK. The Mobile Center SDK is built to be faster and more modular than the HockeySDK. Ship the Mobile Center SDK in a future release, and still receive data from the HockeyApp SDK in Mobile Center from past releases. You’ll have a full year to transition SDKs at your own pace.
