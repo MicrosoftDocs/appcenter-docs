@@ -1,0 +1,123 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Visual Studio Mobile Center
+metadata:
+  description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
+  author: conceptdev
+  ms.author: apexprodleads
+  ms.date: 05-09-2017
+  ms.topic: landing-page
+abstract:
+  description: <a href="https://mobile.azure.com/">Mobile Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps and easily add backend cloud services to scale your app to millions of users on demand.
+  menu:
+    items:
+    - href: &nbsp;
+    - text: &nbsp;
+    - href: ~/general/support-center/
+      text: Support Center
+    - href: ~/general/guidance/
+      text: Guidance for existing customers
+    - href: ~/general/roadmap/
+      text: Roadmap
+    - href: ~/general/pricing/
+      text: Pricing
+    - href: ~/general/changelog/
+      text: Changelog
+sections:
+- title: Get Started
+  items:
+  - type: paragraph
+    text: Learn how to add the SDK to your app and get started with Mobile Center.
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: /media/logos/logo_android.svg
+      text: Android
+      href: ~/sdk/getting-started/android/
+    - image:
+        src: /media/logos/logo_ios.svg
+      text: iOS
+      href: ~/sdk/getting-started/ios/
+    - image:
+        src: /media/logos/logo_react.svg
+      text: React Native
+      href: ~/sdk/getting-started/react-native/
+    - image:
+        src: /media/logos/logo_xamarin.svg
+      text: Xamarin
+      href: ~/sdk/getting-started/xamarin/
+- title: Services
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/build/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/build.svg
+          href: https://docs.microsoft.com/
+        title: Build
+      - href: ~/test-cloud/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/test.svg
+          href: https://docs.microsoft.com/
+        title: Test
+      - href: ~/distribute/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/distribute.svg
+          href: https://docs.microsoft.com/
+        title: Distribute
+      - href: ~/azure/tables/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/tables.svg
+          href: https://docs.microsoft.com/
+        title: Tables
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/crashes/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/crashes.svg
+          href: https://docs.microsoft.com/
+        title: Crashes
+      - href: ~/analytics/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/analytics.svg
+          href: https://docs.microsoft.com/
+        title: Analytics
+      - href: "#"
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/push-notification.svg
+          href: https://docs.microsoft.com/
+        title: Push Notifications (Coming Soon)
+      - href: ~/azure/identity/
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        image:
+          src: /media/landing/mobile-center/identity.svg
+          href: ~/azure/identity/
+        title: Identity
+- title: Reference
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: SDKs
+      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/azure/android/">Tables</a></p><p><a href="~/sdk/azure/identity/android/">Identity</a></p>
+    - title: Command line
+      html: <p><a href="~/cli/">Node</a></p>
+    - title: APIs
+      html: <p><a href="~/api-docs/">REST Interface</a></p>
