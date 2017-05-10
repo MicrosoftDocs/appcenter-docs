@@ -13,15 +13,19 @@ ms.custom: sdk
 
 # SDK Limitations & Known Issues
 
-Following are the known SDK limitations for different platforms:
+## Limitations
 
-### iOS and Xamarin iOS
-1. Linking fails when using both HockeyApp and Mobile Center SDK in the same app.
-Your app will fail to compile with a linking error if you are using HockeyApp SDK for Crash reporting along with the Mobile Center SDK for Crashes. You can only include 1 Crash SDK in your app. In order for your app to compile, please remove the other one. Also note that Mobile Center SDK is in public preview right now, so our recommendation is to use the new SDK for test apps and continue using HockeySDK for your production apps.
+### React Native
+
+1. The React Native SDK currently does not support In-App-Updates. The reason for this is that one of React Native’s main features is that it allows to deploy apps using [CodePush](https://microsoft.github.io/code-push/) without the need to distribute a new build.
+2. The React Native SDK currently does not support Mobile Center Push. This will change in the future. 
 
 ### Xamarin
+
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the Xamarin runtime.
 
 ## Known Issues
+
+### Xamarin
 
 1. If you are using the Xamarin IDE alpha release, there is an issue causing the forms previewer not to work when working on a Xamarin.Forms application that integrates Mobile Center. The exact error is: `Invalid XAML: Could not create an native instance of the type 'Microsoft.Azure.Mobile.iOS.Bindings.MSWrapperSdk': the native class hasn't been loaded`

@@ -14,11 +14,12 @@ ms.custom: build
 # Build FAQ
 
 ## The repository I want to connect to is not listed in the Connect to Repository step
+* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFSVC, etc), it will not show up in the repository list.
 * If connecting to a repository that belongs to an organization on GitHub or team on Bitbucket, first request admin access to the repository.
 In order to use a repository for building apps with Mobile Center, you need to have admin rights to that repository. Admin rights are required because Mobile Center will register a webhook on your repository coming from the [mobile.azure.com](https://mobile.azure.com) domain.
 For GitHub repositories, depending on your organization's configuration, the first time when a member requests Mobile Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions here](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in Mobile Center.
 * If connecting to a repository owned by a user, you need to be the owner of the repository. If you are not the owner, you can still onboard the app to Mobile Center build by inviting the repository owner as a collaborator to the app in Mobile Center. Then, the owner can connect the repository as a source to the Mobile Center build service.
-* We only support Git repositories at this point. So if you're trying to link e.g. a Mercurial repository from Bitbucket, it will not show up and you won't be able to connect the repository through the API or CLI.
+
 
 ## No Xcode scheme is found
 In order to build a xcworkspace or a xcproject, a shared Xcode scheme is required. Xcode schemes are saved locally so that Xcode has access to them, but by default they are not shared with others and they are not included in source control.
@@ -47,7 +48,7 @@ There are many reasons why build duration can be higher when using a build servi
 
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
 
-## Why do I get an extended build time when Run launch test on a device is enabled
+## Why do I get an extended build time when "Run launch test on a device" is enabled
 We run the test as part of the build operation, which gives the added build time. What happens is that while Mobile Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device. Third, it's running the app on a phone, which takes very little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additional **10 minutes of build time**.
@@ -55,4 +56,44 @@ Expect an additional **10 minutes of build time**.
 ## Are Git submodules supported?
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now. 
+
+## How to restore a private NuGet feed?
+To restore private NuGet feeds, you include the credentials in the **NuGet.config** file:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>
+```
+## Where is my .ipa file?
+If you have [resaved your branch settings](~/build/ios/xcodebuild.md), your build is no longer using xcrun to generate an .ipa file; it uses xcodebuild instead. Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed-unsigned builds produce an .xcarchive instead.
+If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
+
+![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
+
+[export-xcode–xcarchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
+
+
+## Since I have resaved my branch settings my build started to fail, why is that?
+From April 27th, we changed our build tools to use [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after setting a new branch or resaving an existing branch setting will use [xcodebuild](~/build/ios/xcodebuild.md).
+* If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
+  This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
+  You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
+* Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
+
+
 

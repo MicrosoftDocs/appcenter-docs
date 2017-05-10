@@ -16,10 +16,10 @@ ms.tgt_pltfrm: react-native
 
 Mobile Center can build React Native apps written in React Native version 0.34 or newer.
 
-To start building a React Native iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the project's `package.json` that you want to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
+To start building a React Native iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the project's `package.json` that you want to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 ## 1. Linking your repository
-If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
 
 ## 2. Selecting a branch
 Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
@@ -79,3 +79,24 @@ The APK is an Android application packaged file which stores the Android app. If
 
 ## 5. Supported versions and requirements
 The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
+
+## 6. Build tips
+
+### 6.1. Yarn
+
+[Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
+
+### 6.2. Custom build scripts
+
+In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
+
+Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+
+```
+  "scripts": {
+    ...
+    "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]
+  },
+```
+
+Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.

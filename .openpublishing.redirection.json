@@ -15,6 +15,29 @@
     {
         "source_path": "dashboard/index.md",
         "redirect_url": "~/dashboard/creating-and-managing-apps.md"
+    },
+    {
+        "source_path": "sdk/advanced-apis/android.md",
+        "redirect_url": "~/sdk/other-apis/android.md"
+    },
+    {
+        "source_path": "sdk/advanced-apis/ios.md",
+        "redirect_url": "~/sdk/other-apis/ios.md"
+    },
+    {
+        "source_path": "sdk/advanced-apis/react-native.md",
+        "redirect_url": "~/sdk/other-apis/react-native.md"
+    },
+    {
+        "source_path": "sdk/advanced-apis/xamarin.md",
+        "redirect_url": "~/sdk/other-apis/xamarin.md"
+    },
+    {
+        "source_path": "sdk/troubleshooting.md",
+        "redirect_url": "~/sdk/troubleshooting/xamarin.md"
     }
+
+
+
   ]
 }

@@ -14,7 +14,7 @@ ms.service: mobile-center
 
 ## Creating an organization
 
-To create an app, log in and click the **Add new** dropdown and choose **Add new organization**.
+To create an organization, log in and click the **Add new** dropdown and choose **Add new organization**.
 
 ## Accessing organizations
 

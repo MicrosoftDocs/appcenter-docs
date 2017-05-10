@@ -19,14 +19,14 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), , [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md)| Simple steps to integrate the SDK and start understanding your audience|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md) | Simple steps to integrate the SDK and start understanding your audience|
 | [App Audience](~/analytics/understand-audience.md) | Key metric about the app usage and users devices|
 | [Custom Events](~/analytics/understand-events.md)| Count, user count and custom properties analytics of custom events|
 | [Log Flow](~/analytics/understand-log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
 
-## Getting Started
+## Get Started
 
-Getting Analytics only requires to add the SDK into the app and initialize it with one line of code.
+Getting Analytics only requires you to add the SDK into the app and initialize it with one line of code.
 Doing this will get the data flowing to Mobile Center and your Analytics immediately.
 The Audience page will represent your data, albeit minimal, within seconds of your app run.
 

@@ -1,10 +1,10 @@
 ---
-title: iOS Analytics
-description: iOS for Android using Mobile Center
+title: Mobile Center Analytics for iOS
+description: Mobile Center Analytics for iOS
 keywords: analytics
-author: elamalani
-ms.author: emalani
-ms.date: 01/20/2017
+author: troublemakerben
+ms.author: bereimol
+ms.date: 04/17/2017
 ms.topic: article
 ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
 ms.service: mobile-center
@@ -12,60 +12,98 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# iOS Analytics
+# Mobile Center Analytics
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [UWP](uwp.md)
+> * [Xamarin](xamarin.md)
 
-* **Track Session, Device Properties:**  Once the Analytics module is included in your app and the SDK is started, it will automatically track sessions, device properties like OS version, model, manufacturer etc. and you don’t need to add any additional code.
-    Look at this section on how to [Get Started](~/sdk/getting-started/ios.md) if you haven't started it yet.
+Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-* **Custom Events:** You can track your own custom events with up to five properties to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal. For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md). Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send up to 200 distinct events. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
+Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
-    **Objective-C**
+## 1. Session and device information
 
-        NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
-        [MSAnalytics trackEvent:@"Video clicked" withProperties: properties];
+Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to write any additional code.
 
-    **Swift**
+## 2. Custom events
 
-        MSAnalytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
+You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
+
+Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
+
+**Objective-C**
+
+```obj-c
+NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
+[MSAnalytics trackEvent:@"Video clicked" withProperties: properties];
+```
+**Swift**
+
+```swift
+MSAnalytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
+```
+
+Properties for events are entirely optional – if you just want to track an event, use this sample instead:
+
+**Objective-C**
+
+```obj-c
+[MSAnalytics trackEvent:@"Video clicked"];
+```
+
+**Swift**
+
+```swift
+MSAnalytics.trackEvent("Video clicked")
+```
+
+For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md).
+
+## 3. Enable or disable Mobile Center Analytics at runtime
+
+You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+
+**Objective-C**
+
+```obj-c
+[MSAnalytics setEnabled:NO];
+```
+
+**Swift**
+
+```swift
+MSAnalytics.setEnabled(false)
+```
+
+To enable Mobile Center Analytics again, use the same API but pass `YES`/`true` as a parameter.
+
+```obj-c
+[MSAnalytics setEnabled:YES];
+```
+
+**Swift**
+
+```swift
+MSAnalytics.setEnabled(true)
+```
 
 
-   Properties for events are entirely optional. If you just want to track an event, use this sample instead:
+## 4. Check if Mobile Center Analytics is enabled
 
-    **Objective-C**
+You can also check if Mobile Center Analytics is enabled or not.
 
-        [MSAnalytics trackEvent:@"Video clicked"];
+**Objective-C**
 
+```obj-c
+[MSAnalytics isEnabled];
+```
 
-    **Swift**
+**Swift**
 
-        MSAnalytics.trackEvent("Video clicked")
-
-
-* **Enable or disable Analytics:**  You can change the enabled state of the Analytics module at runtime by calling the `setEnabled` method. If you disable it, the SDK will not collect any more analytics information for the app. To re-enable it, pass `true` as a parameter in the same method.
-
-    **Objective-C**
-
-        [MSAnalytics setEnabled:NO];
-
-
-    **Swift**
-
-        MSAnalytics.setEnabled(false)
-
-
-    You can also check if the module is enabled or not using the `isEnabled` method:
-
-    **Objective-C**
-
-        BOOL enabled = [MSAnalytics isEnabled];
-
-
-    **Swift**
-
-        var enabled = MSAnalytics.isEnabled()
+```swift
+MSAnalytics.isEnabled()
+```
