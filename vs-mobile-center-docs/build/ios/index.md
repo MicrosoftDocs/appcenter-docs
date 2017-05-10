@@ -1,6 +1,6 @@
 ---
-title: Setting up an Xcode project for code signing in Mobile Center
-description: Code signing apps built with Mobile Center
+title: Mobile Center Build for iOS
+description: How to use Mobile Center Build for Android
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
