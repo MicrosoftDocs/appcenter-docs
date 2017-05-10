@@ -33,7 +33,7 @@ Before you begin, please make sure that the following prerequisites are met:
 * Your project references Universal Windows Platform [5.2.2](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/5.2.2) or later
 
 > [!NOTE]
-> If you want to use Xamarin.Forms for UWP, please follow Xamarin [Get started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
+> If you want to use Xamarin.Forms for UWP, please follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 
@@ -43,7 +43,7 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
 
-3. Enter a name and an optional desciption for your app.
+3. Enter a name and an optional description for your app.
 
 4. Select the appropriate OS and platform depending on your project as described above.
 
