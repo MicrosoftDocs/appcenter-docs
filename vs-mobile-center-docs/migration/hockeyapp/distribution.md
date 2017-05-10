@@ -14,11 +14,11 @@ HockeyApp distribution is now supported in Mobile Center. Both web portals are l
 
 ## What's new about distribution in Mobile Center
 
-New in Mobile Center is the concept of Distribution Groups. Distribution Groups provide a direct way of managing groups of testers. It is now possible to have a single app instance but still manage and control releases to multiple independent groups of testers. In addition, in Mobile Center you can take advantage of the Build service which has native integration to quickly setup a full CI/CD pipeline from commit to build to distribution.
+New in Mobile Center is the concept of Distribution Groups. Distribution Groups provide a direct way of managing groups of testers. It is now possible to have a single app instance but still manage and control releases to multiple independent groups of testers. In addition, in Mobile Center you can take advantage of the Build service which has native integration to quickly setup a full CI/CD pipeline from commit to build to distribution. 
 
 ### Manging your testers
 
-In HockeyApp, testers and your fellow developers are combined into a single user list. To make the management of testers easier we have introduced the concept of [distribution groups][dist-groups]. You can have unlimitted groups per app to control different audiences. Creation of groups is just adding a name and typing in email addresses of testers.
+In HockeyApp, testers and your fellow developers are combined into a single user list. To make the management of testers easier we have introduced the concept of [distribution groups][dist-groups]. You can have unlimitted groups per app to control different audiences. Creation of groups is just adding a name and typing in email addresses of testers. 
 
 ## Spring 2017: Preview your apps & data in Mobile Center
 
