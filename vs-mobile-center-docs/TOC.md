@@ -113,11 +113,11 @@
 <!-- ### [Analytics](migration/hockeyapp/analytics.md)
 ### [Crashes](migration/hockeyapp/crashes.md) -->
 <!-- ### [FAQ](migration/hockeyapp/faq.md) -->
-## [Test Cloud](migration/test-cloud/index.md)
+<!-- ## [Test Cloud](migration/test-cloud/index.md)
 ### [Account Info](migration/test-cloud/accounts.md)
 ### [Tests](migration/test-cloud/tests.md)
 ## [CodePush](migration/codepush/index.md)
-### [App Updates](migration/codepush/app-updates.md)
+### [App Updates](migration/codepush/app-updates.md) -->
 
 
 # Reference
