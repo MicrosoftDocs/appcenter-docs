@@ -19,6 +19,7 @@ Mobile Center Analytics provides an improved experience with respect to HockeyAp
 - Devices
 - Languages
 - Longer retention period (up to 90 days)
+- Incoming logs in real time (log flow)
 
 Once you are ready to make a full move to Mobile Center, you will also get information about the countries your users are in.
 
