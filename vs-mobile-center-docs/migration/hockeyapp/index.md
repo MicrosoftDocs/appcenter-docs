@@ -18,7 +18,7 @@ Transitioning should be low-risk for all HockeyApp users, that's why we've synch
 
 To get started, [sign-in](https://mobile.azure.com/login?utm_medium=referral_link&utm_source=Hockey%20App) to Mobile Center using your existing HockeyApp credentials.
 
-We're starting with HockeyApp Preseason program participants, and will slowly roll-out to more and more of the HockeyApp user base. If you would like to try our preview, please contact [support@hockeyapp.net](mailto:support@hockeyapp.net).
+We're starting with HockeyApp Preseason program participants, and will slowly roll-out to more and more of the HockeyApp user base. If you would like to try our preview, please contact support@hockeyapp.net.
 
 ### How to join the preview
 
@@ -37,7 +37,7 @@ HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xa
 
 * Extend your test suite using our brand new cloud based [continuous integration](~/build/index.md) and [automated UI testing](~/test-cloud/index.md) services without affecting your HockeyApp workflow.
 
-* Mobile Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account.[More details here](~/migration/hockeyapp/distribution.md).
+* Mobile Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md)
 
 * Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center.
 <!-- Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center. -->
