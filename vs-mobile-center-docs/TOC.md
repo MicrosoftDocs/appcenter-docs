@@ -109,9 +109,9 @@
 
 # [Migration](migration/index.md)
 ## [HockeyApp](migration/hockeyapp/index.md)
-### [Distribution](migration/hockeyapp/distribution.md)
+<!-- ### [Distribution](migration/hockeyapp/distribution.md)
 ### [Analytics](migration/hockeyapp/analytics.md)
-### [Crashes](migration/hockeyapp/crashes.md)
+### [Crashes](migration/hockeyapp/crashes.md) -->
 <!-- ### [FAQ](migration/hockeyapp/faq.md) -->
 ## [Test Cloud](migration/test-cloud/index.md)
 ### [Account Info](migration/test-cloud/accounts.md)

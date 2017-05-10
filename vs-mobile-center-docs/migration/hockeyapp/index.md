@@ -37,9 +37,11 @@ HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xa
 
 * Extend your test suite using our brand new cloud based [continuous integration](~/build/index.md) and [automated UI testing](~/test-cloud/index.md) services without affecting your HockeyApp workflow.
 
-* Mobile Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md).
+* Mobile Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using Mobile Center, all while automatically syncing with your HockeyApp account.
+<!-- [More details here](~/migration/hockeyapp/distribution.md). -->
 
-* Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center. Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center.
+* Mobile Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into Mobile Center.
+<!-- Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside Mobile Center. -->
 
 ### Limitations
 
