@@ -20,7 +20,6 @@ ms.tgt_pltfrm: android
 > * [UWP](uwp.md)
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
-> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 

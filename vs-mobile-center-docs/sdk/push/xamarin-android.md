@@ -21,7 +21,6 @@ ms.tgt_pltfrm: xamarin.android
 > * [UWP](uwp.md)
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
-> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -50,7 +49,7 @@ To ensure that the Proguard optimizer doesn't remove certain classes, you must c
 #### 1.2.1. Create a Proguard confiugration file
 
 >[!NOTE]
->If you already have a Proguard configuration file in your project, you may skip to [step 1.2.2](#step-1.2.2.).
+>If you already have a Proguard configuration file in your project, you may skip to step 1.2.2.
 
 Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
 
@@ -77,10 +76,10 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 2.1. Add the Mobile Center Push module
 
-[!include[](subsections/add-nuget.md)]
+[!include[](add-nuget.md)]
 
 ### 2.2. Add the google-services.json File
-Locate the *google-services.json* file from step 1 and add it to your project. Mark the build action to "GoogleServicesJson."
+Locate the *google-services.json* file from step 1 and add it to your project. Set the build action to "GoogleServicesJson."
 
 ![google-services-json-build-action](images/google-services-json-build-action.png)
 
@@ -89,7 +88,7 @@ Locate the *google-services.json* file from step 1 and add it to your project. M
 
 ### 2.3. Start Mobile Center Push
 
-[!include[](subsections/start-push.md)]
+[!include[](start-push.md)]
 
 ## 3. Existing Firebase Analytics users
 
@@ -108,8 +107,8 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), type
 
 ## 4. Enable or disable Push at runtime
 
-[!include[](subsections/enable-or-disable.md)]
+[!include[](enable-or-disable.md)]
 
 ## 5. Intercept push notification in the foreground
 
-[!include[](subsections/push-callbacks.md)]
+[!include[](push-callbacks.md)]
