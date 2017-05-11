@@ -39,7 +39,7 @@ By default a new build is triggered on every push a developer does to the config
 ### 3.5. Code signing
 Uploading your own certificate is optional. In case you don't provide one, Mobile Center will automatically generate a temporary certificate and sign the build for you. Please note that the certificate is unique for each build.
 
-### 3.6. Distribution to a distribution group**
+### 3.6. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
