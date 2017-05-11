@@ -1,4 +1,4 @@
-You can subscribe to the event `Push.PushNotificationReceived` to be notified whenever a push notification is received in the foreground or a background push notification has been clicked by the user.
+You can subscribe to the event `Push.PushNotificationReceived` to be notified whenever a push notification is received in the foreground or a background push notification has been clicked by the user. The following example demonstrates how to use the event and get the push data.
 
 ```csharp
 // This should come before MobileCenter.Start() is called
