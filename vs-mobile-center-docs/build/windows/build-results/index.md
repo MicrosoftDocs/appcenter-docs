@@ -13,7 +13,7 @@ ms.tgt_pltfrm: windows
 ---
 
 # Results for Windows builds
-The results for Windows builds are very similar.
+The build results give you rich information about the status of your build. You can download your succeeded build or only the symbols to use for crash reporting. In case of failure you can investigate the logs to solve build issues.
 
 A detailed description of the build results can be found on the platform-specific pages:
 * [UWP C#](uwp.md)
