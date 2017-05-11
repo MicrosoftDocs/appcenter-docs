@@ -24,14 +24,14 @@ The next step once you have selected a repository is to select the branch you wa
 ## 3. Setting up your first build
 To kick off the first build, configure how the UWP C# solution should get built.
 
-### 3.1. Select project
+### 3.1. Select solution
 First, make sure the right solution is selected.
 
 ### 3.2. Configuration
 The available build configurations will populate from your solution. By default it is [Debug and Release](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#rwdxOEJDZ2piSGPk.97). Select which configuration should be built.
 
 ### 3.3. Platforms
-Select the platforms your UWP app should be build for.
+Select the platforms your UWP app should be built for.
 
 ### 3.4. Build triggers
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.

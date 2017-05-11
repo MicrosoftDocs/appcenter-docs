@@ -21,12 +21,12 @@ After a build has been triggered, it can be in the following states:
 * **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 1.1. The AppPackages
-Building your app for Release will result in a folder called "AppPackages" that contains a `.appxupload` file which is meant to be for the store and the Test folder that contains the `.appxbundle` files for sideloading, one for each platform.
+Building your app for Release will result in a folder called "AppPackages" that contains a `.appxupload` file for the store and the Test folder that contains the `.appxbundle` files for sideloading, one for each platform.
 
-Mobile Center always generates an app bundle. However, Debug builds are not meant to be used for sideloading. You won't get the `.appxupload` file and the provided `.appxbundles` in the Test folder do not contain required dependencies.
+Mobile Center always generates an app bundle. However, Debug builds are not meant to be used for sideloading. You won't get the `.appxupload` file and the provided `.appxbundle` files in the Test folder do not contain required dependencies.
 
 ### 1.2. The symbols files
-The `.appxsym` files contain the debug symbols for the app. One file for each platform.
+The `.appxsym` files contain the debug symbols for the app. There is one symbols file for each platform your app supports.
 
 ### 1.3. Build logs
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
