@@ -120,7 +120,6 @@
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
-## [Guidance for existing customers](general/guidance.md)
 ## [Support Center](general/support-center.md)
 
 # Reference
