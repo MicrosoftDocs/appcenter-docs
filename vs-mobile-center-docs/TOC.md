@@ -4,6 +4,7 @@
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [FAQ](dashboard/faq.md)
+
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)
 ### [Configure a build](build/ios/first-build/index.md)
@@ -21,11 +22,15 @@
 #### [React Native](build/android/first-build/react-native.md)
 ### [Code Signing](build/android/code-signing/index.md)
 #### [Setting up an Android project for code signing](build/android/code-signing/setup.md)
+## [Windows](build/windows/index.md)
+### [Configure a build](build/windows/configure-build/index.md)
+#### [UWP](build/windows/configure-build/uwp.md)
+### [Build results](build/windows/build-results/index.md)
+#### [UWP](build/windows/build-results/uwp.md)
 ## [Connect to a source repository](build/connect.md)
 ## [Cloud build machines](build/software.md)
 ## [Test your app on real devices](build/build-test-integration.md)
 ## [FAQ](build/faq.md)
-
 
 # [Test](test-cloud/index.md)
 ## [Getting Started](test-cloud/getting-started.md)
@@ -46,7 +51,6 @@
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 
-
 # [Tables](azure/tables/index.md)
 ## [Azure](azure/index.md)
 # [Identity](azure/identity/index.md)
@@ -55,7 +59,6 @@
 ## [Google](azure/identity/google.md)
 ## [Microsoft Account](azure/identity/microsoft.md)
 ## [Twitter](azure/identity/twitter.md)
-
 
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
@@ -68,7 +71,6 @@
 ## [Logged Errors using Events](analytics/logged-errors-events.md)
 ## [Log Flow Page](analytics/understand-log-flow.md)
 ## [FAQ](analytics/faq.md)
-
 
 # [SDK](sdk/index.md)
 ## Getting Started
