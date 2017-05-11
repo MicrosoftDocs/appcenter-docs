@@ -1,4 +1,4 @@
-It is possible to subscribe to push notifications received in the foreground with the event `Push.PushNotificationReceived`. The event argument type, `PushNotificationReceivedEventArgs`, contains the relevant data associated with the notification. The following code sample intercepts and print push notifications received in the foreground.
+You can subscribe to the event `Push.PushNotificationReceived` to be notified whenever a push notification is received in the foreground or a background push notification has been clicked by the user.
 
 ```csharp
 // This should come before MobileCenter.Start() is called
@@ -23,11 +23,7 @@ Push.PushNotificationReceived += (sender, e) {
     // Send the notification summary to debug output
     System.Diagnostics.Debug.WriteLine(summary);
 };
-
 ```
 
 >[!NOTE]
->Because it uses `System.Diagnostics.Debug.WriteLine()`, this example assumes that the app is running in debug mode with a debugger attached, but that is generally not a requirement to use the event.
-
->[!WARNING]
->Though there is no setup required to enable this event in most cases, Xamarin.iOS users should make sure that they have completed all of the Xamarin.iOS setup steps first.
+>Because it uses `System.Diagnostics.Debug.WriteLine()`, this example assumes that the app is running in debug mode with a debugger attached, but that is not a requirement to simply use the `Push.PushNotificationReceived` event.

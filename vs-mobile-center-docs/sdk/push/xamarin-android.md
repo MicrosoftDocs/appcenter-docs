@@ -3,7 +3,7 @@
 
 title: Mobile Center Push for Xamarin.Android Apps
 description: Integrating Mobile Center Push into Xamarin.Android applications
-keywords: sdk, push, xamarin, android, xamarin.android
+keywords: sdk, push
 author: achocron
 ms.date: 05/10/2017
 ms.topic: article
@@ -21,20 +21,23 @@ ms.tgt_pltfrm: xamarin.android
 > * [UWP](uwp.md)
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
-To do that, the Mobile Center SDK and portal integrate with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
-
-Please note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
-
-Please also note that Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
-
 ## 1. Add Firebase to your app
+
+To send push notifications to your applications, Mobile Center integrates with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+
+>[!NOTE]
+>Only devices having the [Google Play](https://play.google.com) store application or emulators with *Google APIs* images can receive the notifications.
+
+>[!NOTE]
+>Firebase displays a notification in the system notification center only if the application is in the background at the moment the push is received.
 
 ### 1.1. Create a Firebase project
 
-The first step is to create a Firebase project in the Google's [Firebase console](https://console.firebase.google.com). Sign in with your Google account and proceed to the console. To create a Firebase project, select the **add project** button. Next, enter a project name and select **Create Project**.
+The first step in integrating your application with Mobile Center Push is to integrate it with Firebase Cloud Messaging. Start by creating a Firebase project in Google's [Firebase console](https://console.firebase.google.com). Sign in with your Google account and proceed to the console. To create a Firebase project, select the **add project** button. Next, enter a project name and select **Create Project**.
 
 Now that you've created a Firebase project, you must configure your application to receive Firebase notifications. On the side menu, select **Notifications** to navigate to the notifications page. To configure your application to receive notifications, select the Android logo (the button to the right of the one that says "iOS").
 
@@ -89,6 +92,9 @@ Locate the *google-services.json* file from step 1 and add it to your project. S
 ### 2.3. Start Mobile Center Push
 
 [!include[](start-push.md)]
+
+>[!NOTE]
+>If your Xamarin.Android project is part of a Xamarin.Forms application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## 3. Existing Firebase Analytics users
 

@@ -20,6 +20,7 @@ ms.tgt_pltfrm: UWP
 > * [UWP](uwp.md)
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -66,6 +67,9 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 ### 2.2. Start Mobile Center Push service
 
 [!include[](start-push.md)]
+
+>[!NOTE]
+>If your UWP project is part of a Xamarin.Forms application, it is not necessary to add the call to `MobileCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## 3. Enable or disable Mobile Center Push at runtime
 
