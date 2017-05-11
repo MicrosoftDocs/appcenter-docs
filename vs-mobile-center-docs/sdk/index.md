@@ -56,6 +56,8 @@ Android Studio 2.2 or later.
  Analytics        | 4.0.3 and later   | 15 and later
  Crashes          | 4.0.3 and later   | 15 and later
  Distribute       | 4.0.3 and later   | 15 and later
+ Push             | 4.0.3 and later   | 15 and later
+
 
 ### iOS
 
@@ -64,21 +66,28 @@ Android Studio 2.2 or later.
  Analytics        | 8.0 or later    | 8.2 and later
  Crashes          | 8.0 or later    | 8.2 and later
  Distribute       | 8.0 or later    | 8.2 and later
+ Push             | 8.0 or later    | 8.2 and later
+
 
 ### Windows UWP
 
- Service          | Windows Version    | Xcode
+ Service          | Windows Version    | Visual Studio
  -----------------|--------------------|-------
  Analytics        | 10 build 10240     | Visual Studio 2015 or later
  Crashes          | not available      | not available
  Distribute       | not available      | not available
+ Push             | 10 build 10240     | Visual Studio 2015 or later
+
 
 ### React Native
 
-Service   |  RN version   | iOS Version              | Android Version
- ---------|---------------|--------------------------|-------
-Analytics | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Crashes   | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Service    |  RN version   | iOS Version              | Android Version
+ ----------|---------------|--------------------------|-------
+Analytics  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Crashes    | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Distribute | not available | not available            | not available
+Push       | not available | not available            | not available
+
 
 
 ## Source code

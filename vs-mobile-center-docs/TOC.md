@@ -122,6 +122,12 @@
 ## [Pricing](general/pricing.md)
 ## [Support Center](general/support-center.md)
 
+# [Migration](migration/index.md)
+## [HockeyApp](migration/hockeyapp/index.md)
+### [Distribution](migration/hockeyapp/distribution.md)
+### [FAQ](migration/hockeyapp/faq.md)
+
+
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
