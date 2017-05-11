@@ -96,8 +96,8 @@
 ### [Android](sdk/push/android.md)
 ### [iOS](sdk/push/ios.md)
 ### [UWP](sdk/push/uwp.md)
-### [Xamarin.iOS](sdk/push/uwp.md)
-### [Xamarin.Android](sdk/push/uwp.md)
+### [Xamarin.iOS](sdk/push/xamarin-ios.md)
+### [Xamarin.Android](sdk/push/xamarin-android.md)
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
 
 ## Tables
