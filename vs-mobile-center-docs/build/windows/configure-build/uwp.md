@@ -1,3 +1,4 @@
+---
 title: Building UWP apps
 description: How to set up a build for UWP C#
 keywords: build, windows
