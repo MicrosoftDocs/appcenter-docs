@@ -69,7 +69,7 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 [!include[](start-push.md)]
 
 >[!NOTE]
->If your UWP project is part of a Xamarin.Forms application, it is not necessary to add the call to `MobileCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+>If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## 3. Enable or disable Mobile Center Push at runtime
 

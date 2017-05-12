@@ -94,7 +94,7 @@ Locate the *google-services.json* file from step 1 and add it to your project. S
 [!include[](start-push.md)]
 
 >[!NOTE]
->If your Xamarin.Android project is part of a Xamarin.Forms application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+>If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## 3. Existing Firebase Analytics users
 
