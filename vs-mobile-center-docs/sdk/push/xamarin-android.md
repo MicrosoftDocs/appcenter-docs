@@ -69,10 +69,6 @@ In your Xamarin.Android project, please add the following lines to your `proguar
 -keep class com.microsoft.azure.mobile.push.PushMessagingService
 ```
 
-### 1.3. Add to AndroidManifest.xml
-
-Add the following lines between your 
-
 ## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
@@ -89,7 +85,27 @@ Locate the *google-services.json* file from step 1 and add it to your project. S
 > [!IMPORTANT]
 > If you do not see this option under build actions, make sure you've added the Mobile Center Push NuGet package already. If you have and it still doesn't appear, try restarting your IDE.
 
-### 2.3. Start Mobile Center Push
+### 2.3. Modify AndroidManifest.xml
+
+Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into the `<application>` section:
+
+```xml
+  <receiver 
+      android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" 
+      android:exported="false" />
+  <receiver 
+      android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" 
+      android:exported="true" 
+      android:permission="com.google.android.c2dm.permission.SEND">
+      <intent-filter>
+          <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+          <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+          <category android:name="${applicationId}" />
+      </intent-filter>
+  </receiver>
+```
+
+### 2.4. Start Mobile Center Push
 
 [!include[](start-push.md)]
 
