@@ -34,7 +34,7 @@ The in-app updates feature works as follows:
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
 
 > [!TIP]
-> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `versionCode`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be different.
 
 ## 1. Add in-app updates to your app
 
