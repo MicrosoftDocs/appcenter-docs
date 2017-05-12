@@ -35,7 +35,7 @@ The in-app updates feature works as follows:
     * an equal version name but a higher version (`CFBundleVersion`)
 
 > [!TIP]
-> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary.
 
 ### How do I test in-app updates?
 
