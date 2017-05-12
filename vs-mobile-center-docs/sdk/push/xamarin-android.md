@@ -69,10 +69,6 @@ In your Xamarin.Android project, please add the following lines to your `proguar
 -keep class com.microsoft.azure.mobile.push.PushMessagingService
 ```
 
-### 1.3. Add to AndroidManifest.xml
-
-Add the following lines between your 
-
 ## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
