@@ -39,7 +39,7 @@ The in-app updates feature works as follows:
         * a higher version (`versionCode`)
 
 > [!TIP]
-> If you upload the same apk/ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+> If you upload the same apk/ipa a second time, the dialog will **NOT** appear as the binaries are identical. On iOS if you upload a **new** build with the same version, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp. On Android the `versionCode` has to be higher (if it does not change, the `versionName` has to change).
 
 ## 1. Add in-app updates to your app
 
