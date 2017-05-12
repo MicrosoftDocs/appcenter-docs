@@ -74,7 +74,3 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 ## 3. Enable or disable Mobile Center Push at runtime
 
 [!include[](enable-or-disable.md)]
-
-## 4. Intercept push notification in the foreground
-
-[!include[](push-callbacks.md)]

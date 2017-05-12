@@ -55,4 +55,7 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ## 4. Intercept push notifications
 
+>[!NOTE]
+>This feature is not yet available in UWP apps, though support is coming soon. You can still use the event in the shared or PCL part of your Xamarin.Forms application, just note that the event will not be invoked on the UWP platform.
+
 [!include[](push-callbacks.md)]
