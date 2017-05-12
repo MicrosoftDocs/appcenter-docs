@@ -70,9 +70,17 @@ public override void FailedToRegisterForRemoteNotifications(UIApplication applic
 >[!NOTE]
 >You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the Mobile Center lines of code above alongside existing code in your implementation of these methods.
 
-## 4. Implement callbacks to enable push notification received event
+## 4. Enable or disable Push at runtime
 
-Mobile Center Push provides APIs to handle push notifications received in the foreground. Implement the method `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+[!include[](enable-or-disable.md)]
+
+## 5. Intercept push notifications
+
+Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in Xamarin.iOS.
+
+### 5.1. Implement callbacks to enable push event
+
+To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
 
 ```csharp
 public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
@@ -91,10 +99,5 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
 
-## 5. Enable or disable Push at runtime
-
-[!include[](enable-or-disable.md)]
-
-## 6. Intercept push notifications in the foreground
-
+### 5.2. Subscribe to the push event
 [!include[](push-callbacks.md)]
