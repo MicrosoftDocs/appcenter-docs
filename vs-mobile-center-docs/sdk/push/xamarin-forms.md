@@ -13,6 +13,8 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin.forms
 ---
 
+# Mobile Center Push
+
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
@@ -20,8 +22,6 @@ ms.tgt_pltfrm: xamarin.forms
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
 > * [Xamarin.Forms](xamarin-forms.md)
-
-# Mobile Center Push
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
