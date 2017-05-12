@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: dhei
 ms.author: dihei
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center
@@ -18,6 +18,9 @@ ms.tgt_pltfrm: UWP
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
+> * [Xamarin.Android](xamarin-android.md)
+> * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -57,72 +60,17 @@ Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you hav
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. It can be integrated using Visual Studio or Package Manager Console.
 
-#### 2.1.1 Visual Studio
-
-1. Navigate to the **Project -> Add NuGet Packages...**
-
-2. Search for **Mobile Center**, and select **Mobile Center Push**, then click **Add Packages**. 
-
-#### 2.1.2 Package Manager Console
-
-1. Type the following command in Package Manager Console:
-
-    `PM> Install-Package Microsoft.Azure.Mobile.Push`
+[!include[](add-nuget.md)]
 
 Now that you've integrated Mobile Center Push in your application, it's time to start the SDK and make use of Mobile Center.
 
 ### 2.2. Start Mobile Center Push service
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+[!include[](start-push.md)]
 
-Add references to Mobile Center package and Mobile Center Push package:
-
-```csharp
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Push;
-```
-
-#### 2.2.1. UWP application
-
-Add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push together with the other services that you want to use in your app.
-
-```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Push));
-```
-
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/uwp.md) section if you haven't configured the SDK in your application.
-
-#### 2.2.2. Xamarin.Forms UWP application
-
-Push is currently available in UWP but not in the portable or xamarin projects.
-
-If you initialized MobileCenter with `MobileCenter.Start("{Your App Secrets}", typeof(Analytics), typeof(Crashes))` in the portable Xamarin Forms `App.OnStarted()`, you need to call
-
-```csharp
-MobileCenter.Start(typeof(Push));
-```
-
-at the end of `OnLaunched()` method of your UWP specific `App` object to make sure the portable call is made before the specific push one.
+>[!NOTE]
+>If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## 3. Enable or disable Mobile Center Push at runtime
 
-You can enable and disable Mobile Center Push at runtime.
-
-If you disable it, the SDK will stop updating the WNS registration identifier that is used to push notifications, but the existing one will continue  to work.
-
-In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
-
-```csharp
-Push.Enabled = false;
-```
-To enable Mobile Center Push again, use the same API but pass `true` as a parameter.
-
-```csharp
-Push.Enabled = true;
-```
-
-You can also check if Mobile Center Push is enabled or not:
-
-```csharp
-bool isEnabled = Push.Enabled;
-```
+[!include[](enable-or-disable.md)]
