@@ -281,6 +281,29 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 }
 ```
 
+#### 5.4.4 The following callback will be invoked so you can add attachments to a crash
+
+**Objective-C**
+
+```obj-c
+- (NSArray<MSErrorAttachmentLog *> *)attachmentsWithCrashes:(MSCrashes *)crashes
+                                            forErrorReport:(MSErrorReport *)errorReport {
+  MSErrorAttachmentLog *attachment1 = [MSErrorAttachmentLog attachmentWithText:@"Hello world!" filename:@"hello.txt"];
+  MSErrorAttachmentLog *attachment2 = [MSErrorAttachmentLog attachmentWithBinary:[@"Fake image" dataUsingEncoding:NSUTF8StringEncoding] filename:@"fake_image.jpeg" contentType:@"image/jpeg"];
+  return @[ attachment1, attachment2 ];
+}
+```
+
+**Swift**
+
+```swift
+func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MSErrorAttachmentLog] {
+	let attachment1 = MSErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")
+	let attachment2 = MSErrorAttachmentLog.attachment(withBinary: "Fake image".data(using: String.Encoding.utf8), filename: nil, contentType: "image/jpeg")
+	return [attachment1!, attachment2!]
+}
+```
+
 ## 6. Enabling Mach exception handling
 
 By default, Mobile Center Crashes uses the safe and proven in-process BSD Signals for catching crashes. This means that some causes for crashes, e.g. stack overflows, cannot be detected. Using a Mach exception server instead allows to detect some of those crash causes but comes with the risk of using unsafe means to detect them.
