@@ -13,25 +13,31 @@ ms.custom: push
 
 # Push Notifications
 
-Mobile Center Analytics is a mobile apps measurement tool that lets developers understand their end-user population and usage patterns.
+With Mobile Center Push you can engage your users by sending them push notifications. These messages can be sent to all your users, specific devices, or to a segment of your user base that will be defined by a set of device and custom properties.
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to set up the Mobile Center SDK as well as the platform specific push services for Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). You can follow the instructions for platform specific SDK docs for [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md) [UWP](~/sdk/push/uwp.md).
+In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). The SDK insructions and platform specific push service can be found at: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/xamarin-android.md), [Xamarin iOS](~/sdk/xamarin-ios.md) and [Xamarin Forms](~/sdk/xamarin-forms).
 
 ## Sending Push Notifications
 
 Once Mobile Center Push is configured, you are ready to start sending notifications to your users. By clicking the "Send Notification" button on top right of the page, a panel will show up where you will have to include:
-- Campaign Name:
-- Title:
-- Message:
-You can also include custom data. more info below.
+- Campaign Name: this name will be used to track the campaign but your users will not see it.
+- Title: title of the notification that your user will receive.
+- Message: content of the push notification.
 
-The next step is to select your target user. You can send the notification to:
-- All registered devices: This will do a broadcast and send the notification to all your registered devices.
-- Custom devices list: In order to get the install IDs you can use our [API](~/sdk/other-apis/android.md) 
-- Audiences: more info below.
+You can also attach some custom data to notification. More information on this can be foun below.
+
+The next step is to select your target. You can send the notification to:
+- All registered devices: all your users with push notifications opt-in will received the message.
+- Custom devices list: the notification will be sent to the list of install IDs that you include. You can get the install IDs by using our [API](~/sdk/other-apis/android.md). 
+- Audiences: this will send a notification to a segment of your users based on a set of properties.
 
 ## Custom Data in your notifications
 
+
 ## Audiences
+
+Audiences let you segment your users based on a set of properties and send targeted notifications to these audiences. These properties are of two types:
+- Device Properties: App Version, Country, Mobile Carrier, Language, Language Variant, Device Model, OEM, API Level, Device OS, Device OS Version, Screen Size, Time Zone Offset
+- Custom Properties: These properties are key-value pairs defined by the users. This will allow you to segement your user base on properties of your app specific.
