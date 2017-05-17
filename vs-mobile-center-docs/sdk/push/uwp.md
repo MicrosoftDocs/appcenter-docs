@@ -81,13 +81,13 @@ Mobile Center Push makes it possible to intercept push notifications but there i
 
 ## 4.1. Additional setup
 
-Call `Push.CheckPushActivation(e);` after `MobileCenter.Start` in `OnLaunched` method.
+Call `Push.CheckLaunchedFromNotification(e);` after `MobileCenter.Start` in `OnLaunched` method.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
     MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
-    Push.CheckPushActivation(e);
+    Push.CheckLaunchedFromNotification(e);
 }
 ```
 

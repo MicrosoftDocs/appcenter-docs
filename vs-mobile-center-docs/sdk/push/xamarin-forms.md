@@ -79,7 +79,7 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 
 # 4.2 UWP additional steps
 
-To enable the push event feature, modify your UWP application's `OnLaunched` method as follows to include `Push.CheckPushActivation(e);` at the end:
+To enable the push event feature, modify your UWP application's `OnLaunched` method as follows to include `Push.CheckLaunchedFromNotification(e);` at the end:
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -96,7 +96,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
     }
 
     // Best place to call this method
-    Push.CheckPushActivation(e);
+    Push.CheckLaunchedFromNotification(e);
 
     // End of method
 }
