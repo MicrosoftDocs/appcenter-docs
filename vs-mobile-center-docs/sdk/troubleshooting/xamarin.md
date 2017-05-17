@@ -1,5 +1,5 @@
 ---
-title: Xamarin SDK Troubleshootng
+title: Xamarin SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
@@ -17,6 +17,7 @@ ms.tgt_pltfrm: xamarin
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 ## Issues during setup
