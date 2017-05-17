@@ -119,6 +119,7 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
+### [UWP](sdk/troubleshooting/uwp.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
