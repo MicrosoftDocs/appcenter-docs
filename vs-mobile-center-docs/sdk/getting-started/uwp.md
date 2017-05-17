@@ -84,7 +84,7 @@ using Microsoft.Azure.Mobile.Analytics;
 
 ### 4.2 Add the `Start()` method
 
-Add the following call to your application's constructor:
+Add the following call to your application's `OnLaunched` method:
 
 ```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics));
