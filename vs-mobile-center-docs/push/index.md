@@ -17,7 +17,7 @@ With Mobile Center Push you can engage your users by sending them push notificat
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). The SDK instructions and platform specific push service can be found at: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/xamarin-android.md), [Xamarin iOS](~/sdk/xamarin-ios.md) and [Xamarin Forms](~/sdk/xamarin-forms).
+In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). The SDK instructions and platform specific push service can be found at: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/push/xamarin-android.md), [Xamarin iOS](~/sdk/push/xamarin-ios.md) and [Xamarin Forms](~/sdk/push/xamarin-forms.md).
 
 ## Sending Push Notifications
 
@@ -35,7 +35,7 @@ The next step is to select your target. You can send the notification to:
 
 ## Custom Data in your notifications
 
-You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback.
+You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback. Documentation for this can be found in the our [Push SDK docs](~/sdk/push/android.md)
 
 There are few reserved keywords in each platform that can be set via custom data:
 ### iOS:
