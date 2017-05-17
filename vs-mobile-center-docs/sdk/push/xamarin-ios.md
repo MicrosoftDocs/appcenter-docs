@@ -97,7 +97,6 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 }
 ```
 
-Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
-
 ### 5.2. Subscribe to the push event
+
 [!include[](push-callbacks.md)]

@@ -55,7 +55,53 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ## 4. Intercept push notifications
 
->[!NOTE]
->This feature is not yet available in UWP apps, though support is coming soon. You can still use the event in the shared or PCL part of your Xamarin.Forms application, just note that the event will not be invoked on the UWP platform.
+Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in iOS and UWP projects.
+It can be used directly in Android without any additional setup.
+
+# 4.1. iOS additional steps
+
+To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+
+```csharp
+public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
+{
+	var result = Push.DidReceiveRemoteNotification(userInfo);
+	if (result)
+	{
+		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+	}
+	else
+	{
+		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+	}
+}
+```
+
+# 4.2 UWP additional steps
+
+To enable the push event feature, modify your UWP application's `OnLaunched` method as follows to include `Push.CheckPushActivation(e);` at the end:
+
+```csharp
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ... not showing entire long method ...
+    if (e.PrelaunchActivated == false)
+    {
+        if (rootFrame.Content == null)
+        {
+            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call MobileCenter.Start
+            rootFrame.Navigate(typeof(MainPage), e.Arguments);
+        }
+        Window.Current.Activate();
+    }
+
+    // Best place to call this method
+    Push.CheckPushActivation(e);
+
+    // End of method
+}
+```
+
+# 4.3. Subscribe to the push event
 
 [!include[](push-callbacks.md)]

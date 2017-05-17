@@ -74,3 +74,23 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 ## 3. Enable or disable Mobile Center Push at runtime
 
 [!include[](enable-or-disable.md)]
+
+## 4. Intercept push notification in the foreground
+
+Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in UWP.
+
+## 4.1. Additional setup
+
+Call `Push.CheckPushActivation(e);` after `MobileCenter.Start` in `OnLaunched` method.
+
+```csharp
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
+    Push.CheckPushActivation(e);
+}
+```
+
+## 4.2. Subscribe to the push event
+
+[!include[](push-callbacks.md)]
