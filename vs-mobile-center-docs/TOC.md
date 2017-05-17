@@ -44,6 +44,7 @@
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in VSTS](test-cloud/vsts-plugin.md)
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
@@ -98,6 +99,10 @@
 ### [Android](sdk/push/android.md)
 ### [iOS](sdk/push/ios.md)
 ### [UWP](sdk/push/uwp.md)
+### [Xamarin.iOS](sdk/push/xamarin-ios.md)
+### [Xamarin.Android](sdk/push/xamarin-android.md)
+### [Xamarin.Forms](sdk/push/xamarin-forms.md)
+
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)
@@ -114,6 +119,7 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
+### [UWP](sdk/troubleshooting/uwp.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
