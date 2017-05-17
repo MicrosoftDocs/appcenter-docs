@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: uwp
 ---
 
-# Xamarin SDK Troubleshooting
+# UWP SDK Troubleshooting
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
