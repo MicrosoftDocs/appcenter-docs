@@ -177,7 +177,7 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 }
 ```
 
-#### 5.4.4 The following callback will be invoked so you can add attachments to a crash
+#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
 
 Here is an example to attach a text and an image to a crash.
 

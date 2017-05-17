@@ -281,7 +281,7 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 }
 ```
 
-#### 5.4.4 The following callback will be invoked so you can add attachments to a crash
+#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
 
 **Objective-C**
 
