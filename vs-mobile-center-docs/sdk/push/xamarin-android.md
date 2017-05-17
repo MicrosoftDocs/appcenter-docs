@@ -45,11 +45,14 @@ Now that you've created a Firebase project, you must configure your application 
 
 Follow steps **one** and **two** in the setup window. Since you are creating a Xamarin application, you may ignore step **three**. Finally, make sure to note where you save the *google-services.json* file, as you will need it later.
 
-### 1.2. Customize Proguard configuration
+### 1.2. Obtain your Android API Key
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the Mobile Center Push portal.
+
+### 1.3. Customize Proguard configuration
 
 To ensure that the Proguard optimizer doesn't remove certain classes, you must customize its configuration.
 
-#### 1.2.1. Create a Proguard confiugration file
+#### 1.3.1. Create a Proguard confiugration file
 
 >[!NOTE]
 >If you already have a Proguard configuration file in your project, you may skip to step 1.2.2.
@@ -58,7 +61,7 @@ Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the 
 
 ![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
 
-#### 1.2.2. Add customization to Proguard configuration file
+#### 1.3.2. Add customization to Proguard configuration file
 In your Xamarin.Android project, please add the following lines to your `proguard.cfg` file:
 
 ```
