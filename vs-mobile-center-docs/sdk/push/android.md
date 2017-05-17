@@ -37,11 +37,9 @@ There are a couple of ways you can do that, either manually or by using the Andr
 
 For that you need to follow some of the documentation of Firebase:
 
-1. Follow instructions in [Add Firebase to your app](https://firebase.google.com/docs/notifications/android/console-audience#add_firebase_to_your_app) section.
+1. Follow instructions in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
 
-2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk) section.
-
-Only those 2 steps are required to use Mobile Center Push, the SDK will take care of all other work.
+2. Make sure to continue following instructions in **Add the SDK** sub section right after.
 
 ### 1.2. Using Firebase assistant
 
