@@ -37,6 +37,20 @@ The next step is to select your target. You can send the notification to:
 
 You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback.
 
+There are few reserved keywords in each platform that can be set via custom data:
+### iOS:
+- **badge**: Add this key when you want to modify the badge of your app icon. If this key is not included, the badge is not changed. To remove the badge, set the value of this key to 0.
+- **sound**: Add this key when you want the to play a sound. The value of this key is the name of a sound file in your app's main bundle or in the `Library/Sounds` folder of your app’s data container. If the sound file cannot be found, or if you specify `default` for the value, the system plays the default alert sound.
+
+### Android:
+- **color**: The notification's icon color, expressed in #rrggbb format.
+- **icon**: The notification's icon.
+- **sound**: Add this key when you want the to play a sound when the device receives the notification. Supports `default` or the filename of a sound resource bundled in the app. Sound files must reside in `/res/raw/`.
+
+### Windows:
+- **audio**: Add this key when you want the to play a sound. this will modify the audio attribute for toast notifications.
+- **image**: Add this key when you want to modify the image attribute for tile and toast notifications.
+
 ## Audiences
 
 Audiences let you segment your users based on a set of properties and send targeted notifications to these audiences. These properties are of two types:
