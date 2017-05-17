@@ -75,7 +75,7 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 
 [!include[](enable-or-disable.md)]
 
-## 4. Intercept push notification in the foreground
+## 4. Intercept push notifications
 
 Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in UWP.
 
