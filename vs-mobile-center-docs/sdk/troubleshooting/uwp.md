@@ -1,5 +1,5 @@
 ---
-title: UWP SDK Troubleshootng
+title: UWP SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK for UWP
 keywords: sdk
 author: elamalani

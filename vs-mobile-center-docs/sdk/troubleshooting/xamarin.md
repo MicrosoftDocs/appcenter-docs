@@ -1,5 +1,5 @@
 ---
-title: Xamarin SDK Troubleshootng
+title: Xamarin SDK Troubleshooting
 description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
