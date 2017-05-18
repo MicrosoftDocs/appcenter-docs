@@ -17,7 +17,13 @@ With Mobile Center Push you can engage your users by sending them push notificat
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). The SDK instructions and platform specific push service can be found at: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/push/xamarin-android.md), [Xamarin iOS](~/sdk/push/xamarin-ios.md) and [Xamarin Forms](~/sdk/push/xamarin-forms.md).
+In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). The SDK instructions and platform specific push services can be found at:
+- [Android](~/sdk/push/android.md)
+- [iOS](~/sdk/push/ios.md)
+- [UWP](~/sdk/push/uwp.md)
+- [Xamarin Android](~/sdk/push/xamarin-android.md)
+- [Xamarin iOS](~/sdk/push/xamarin-ios.md)
+- [Xamarin Forms](~/sdk/push/xamarin-forms.md)
 
 ## Sending Push Notifications
 

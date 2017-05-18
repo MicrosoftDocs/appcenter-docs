@@ -52,10 +52,10 @@ Go to Project Settings and under Cloud Messaging, copy your Server Key. This wil
 
 To ensure that the Proguard optimizer doesn't remove certain classes, you must customize its configuration.
 
-#### 1.3.1. Create a Proguard confiugration file
+#### 1.3.1. Create a Proguard configuration file
 
 >[!NOTE]
->If you already have a Proguard configuration file in your project, you may skip to step 1.2.2.
+>If you already have a Proguard configuration file in your project, you may skip to step 1.3.2.
 
 Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
 
