@@ -79,7 +79,7 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 
 Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in UWP.
 
-## 4.1. Additional setup
+### 4.1. Additional setup
 
 Call `Push.CheckLaunchedFromNotification(e);` after `MobileCenter.Start` in `OnLaunched` method.
 
@@ -91,6 +91,6 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-## 4.2. Subscribe to the push event
+### 4.2. Subscribe to the push event
 
 [!include[](push-callbacks.md)]
