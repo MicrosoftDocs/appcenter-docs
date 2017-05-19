@@ -118,7 +118,7 @@ Mobile Center automatically forwards your application delegate's methods to Mobi
 
 ##### Manual
 
-###### Implement callbacks to register for Push notifications
+###### Implement the callbacks to register push notifications
 
 Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
