@@ -150,3 +150,17 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
 	// Your code goes here.
 };
 ```
+
+#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
+
+```csharp
+Crashes.GetErrorAttachments = (ErrorReport report) =>
+{
+	// Your code goes here.
+	return new ErrorAttachmentLog[]
+	{
+		ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+		ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+	};
+};
+```
