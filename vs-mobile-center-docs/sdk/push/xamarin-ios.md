@@ -49,7 +49,16 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 >[!NOTE]
 >If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
-## 3. Implement callbacks to register for Push notifications
+## 3 Application delegate methods forwarding
+
+### Automatic (swizzling)
+
+Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
+ 
+> [!NOTE]
+> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate. except the `application:didReceiveRemoteNotification:fetchCompletionHandler` method. If you or one of your third party libraries already implements this method then it will not be swizzled by the forwarder and you will have to do the forwarding to the Push service yourself by following [these steps](#implement-the-callback-to-receive-push-notifications).
+ 
+### Manual
 
 Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your `AppDelegate` class as follows:
 
@@ -76,9 +85,10 @@ public override void FailedToRegisterForRemoteNotifications(UIApplication applic
 
 ## 5. Intercept push notifications
 
-Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in Xamarin.iOS.
+### 5.1. Implement callbacks to enable push event if you disabled swizzling
 
-### 5.1. Implement callbacks to enable push event
+>[!NOTE]
+>You only need this step if you disabled method swizzling in step 3.
 
 To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
 
@@ -100,4 +110,5 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
 
 ### 5.2. Subscribe to the push event
+
 [!include[](push-callbacks.md)]
