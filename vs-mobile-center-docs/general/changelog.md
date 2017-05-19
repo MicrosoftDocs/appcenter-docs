@@ -4,13 +4,32 @@ description: History of updates to the product
 keywords: update,history
 author: piyushjo
 ms.author: piyushjo
-ms.date: 04/27/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
-
 # Changelog
+
+### **May 18, 2017**
+
+- **UWP support:**
+We now support Build, distribute and Analytics for Universal Windows Platform (UWP) apps. 
+
+- **Streamlined UX for configuring Builds:** 
+It’s easier to configure your build for continuous integration with a new and improved user experience. As always, you have options to tweak your build configuration; sign your app; and automatically queue successful builds for Distribution.
+
+- **Fastlane plugin for uploading your releases:** 
+Automate uploading your releases and symbol files to Mobile Center through the Mobile Center fastlane plugin.
+
+- **Latest tools for your iOS builds:** 
+All iOS apps written in Swift, Objective-C and React Native now use the latest tooling as recommended by Apple. 
+
+- **Sign in with Google & Facebook:** 
+Register and sign into Mobile Center using your Google or Facebook credentials.
+
+- **Manage email notifications for Crashes and Distribution:** 
+You can now instantly get notified via email when a new crash group gets created and manage these notifications in Mobile Center. 
 
 ### **Apr 27, 2017**
 - **Avoid failures when your testers install your distributed app** 
