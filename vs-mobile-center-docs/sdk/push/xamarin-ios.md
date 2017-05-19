@@ -49,55 +49,10 @@ Now that you've integrated Mobile Center Push in your application, it's time to 
 >[!NOTE]
 >If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
-## 3. Implement callbacks to register for Push notifications
-
-Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your `AppDelegate` class as follows:
-
-```csharp
-public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
-{
-	Push.RegisteredForRemoteNotifications(deviceToken);
-}
-```
-
-```csharp
-public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
-{
-	Push.FailedToRegisterForRemoteNotifications(error);
-}
-```
-
->[!NOTE]
->You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the Mobile Center lines of code above alongside existing code in your implementation of these methods.
-
 ## 4. Enable or disable Push at runtime
 
 [!include[](enable-or-disable.md)]
 
 ## 5. Intercept push notifications
 
-Mobile Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in Xamarin.iOS.
-
-### 5.1. Implement callbacks to enable push event
-
-To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
-
-```csharp
-public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
-{
-	var result = Push.DidReceiveRemoteNotification(userInfo);
-	if (result)
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
-	}
-	else
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
-	}
-}
-```
-
-Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
-
-### 5.2. Subscribe to the push event
 [!include[](push-callbacks.md)]

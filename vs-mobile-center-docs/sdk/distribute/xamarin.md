@@ -172,19 +172,6 @@ This step is not necessary on Android where the debug configuration is detected 
 >	</array>
 >	```
 
-#### 1.2.3 [For iOS only] Add the `openUrl` method
-
-Implement the `openURL` callback in your `AppDelegate.cs` to enable in-app-updates.
-
-```csharp
-public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
-{
-	Distribute.OpenUrl(url);
-
-	return true;
-}
-```
-
 ## 2. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
