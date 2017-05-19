@@ -107,7 +107,18 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
-#### 2.3 Implement callbacks to register for Push notifications
+#### 2.3 Application delegate methods forwarding
+
+##### Automatic (swizzling)
+
+Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
+
+> [!NOTE]
+> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate. except the `application:didReceiveRemoteNotification:fetchCompletionHandler` method. If you or one of your third party libraries already implements this method then it will not be swizzled by the forwarder and you will have to do the forwarding to the Push service yourself by following [these steps](#implement-the-callback-to-receive-push-notifications).
+
+##### Manual
+
+###### Implement callbacks to register for Push notifications
 
 Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
@@ -145,7 +156,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 }
 ```
 
-#### 2.4 Implement the callback to receive push notifications
+###### Implement the callback to receive push notifications
 
 Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notification.
 
@@ -224,4 +235,3 @@ BOOL enabled = [MSPush isEnabled];
 ```swift
 var enabled = MSPush.isEnabled()
 ```
-
