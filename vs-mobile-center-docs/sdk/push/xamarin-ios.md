@@ -90,22 +90,7 @@ public override void FailedToRegisterForRemoteNotifications(UIApplication applic
 >[!NOTE]
 >You only need this step if you disabled method swizzling in step 3.
 
-To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
-
-```csharp
-public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
-{
-	var result = Push.DidReceiveRemoteNotification(userInfo);
-	if (result)
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
-	}
-	else
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
-	}
-}
-```
+[!include[](xamarin-ios-didreceivenotification.md)]
 
 ### 5.2. Subscribe to the push event
 

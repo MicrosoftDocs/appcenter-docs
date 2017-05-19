@@ -60,22 +60,10 @@ It can be used directly in Android without any additional setup.
 
 # 4.1. iOS additional steps
 
-To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+>[!NOTE]
+>You only need this step if you disabled method swizzling while setting up [Xamarin.iOS](xamarin-ios.md).
 
-```csharp
-public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
-{
-	var result = Push.DidReceiveRemoteNotification(userInfo);
-	if (result)
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
-	}
-	else
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
-	}
-}
-```
+[!include[](xamarin-ios-didreceivenotification.md)]
 
 # 4.2 UWP additional steps
 
