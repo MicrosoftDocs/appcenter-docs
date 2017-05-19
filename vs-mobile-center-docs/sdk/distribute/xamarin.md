@@ -172,6 +172,27 @@ This step is not necessary on Android where the debug configuration is detected 
 >	</array>
 >	```
 
+#### 1.2.3 [For iOS only] Add the `openUrl` method
+
+##### Automatic (swizzling)
+ 
+ Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
+
+ > [!NOTE]
+ > Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate.
+ 
+ ##### Manual
+ 
+If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openUrl` callback in your `AppDelegate.cs` file as follows:
+
+```csharp
+public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+{
+	Distribute.OpenUrl(url);
+	return true;
+}
+```
+
 ## 2. Enable or disable Mobile Center Distribute at runtime
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
