@@ -16,6 +16,7 @@ ms.custom: sdk
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
 ## What Android permissions are required?

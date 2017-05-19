@@ -58,6 +58,9 @@ If you wish to use the Firebase assistant:
 
 Step 3 is managed by our SDK automatically so you can stop after step 2.
 
+### 1.3. Obtain your Android API Key
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the Mobile Center Push portal.
+
 ## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -70,7 +73,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.8.1'
+       def mobileCenterSdkVersion = '0.9.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```

@@ -176,3 +176,26 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 	// Your code goes here.
 }
 ```
+
+#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
+
+Here is an example to attach a text and an image to a crash.
+
+```java
+@Override
+public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
+
+	/* Attach some text. */
+	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+
+	/* Attach app icon. */
+	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+	ByteArrayOutputStream stream = new ByteArrayOutputStream();
+	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+	byte[] bitMapData = stream.toByteArray();
+	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitMapData, "ic_launcher.jpeg", "image/jpeg");
+
+	/* Return attachments as list. */
+	return Arrays.asList(textLog, binaryLog);
+}
+```

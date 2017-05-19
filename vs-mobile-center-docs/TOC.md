@@ -44,6 +44,7 @@
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in VSTS](test-cloud/vsts-plugin.md)
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
@@ -71,6 +72,8 @@
 ## [Logged Errors using Events](analytics/logged-errors-events.md)
 ## [Log Flow Page](analytics/understand-log-flow.md)
 ## [FAQ](analytics/faq.md)
+
+# [Push](push/index.md)
 
 # [SDK](sdk/index.md)
 ## Getting Started
@@ -118,6 +121,7 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
+### [UWP](sdk/troubleshooting/uwp.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)

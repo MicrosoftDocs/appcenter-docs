@@ -25,8 +25,8 @@ Mobile Center Distribute will let your users install a new version of the app wh
 
 The in-app updates feature works as follows:
 
-1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
-2. Once you integrate the SDK, build a release version of your app and upload it to Mobile Center, users in that distribution group will be notified for the new release via an email. 
+1. This feature will ONLY work with builds that are distributed using **Mobile Center Distribute** service. It won't work when the debugger is attached.
+2. Once you integrate the SDK, build a release version of your app and upload it to Mobile Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - Mobile Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment).
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should be navigated back to the app.
@@ -159,9 +159,18 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 >	</array>
 >	```
 
-#### 1.4 Implement the `openURL:`-callback
+#### 1.4 Application delegate methods forwarding
 
-Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
+##### Automatic (swizzling)
+
+Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
+
+> [!NOTE]
+> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate.
+
+##### Manual
+
+If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openURL` callback in your `AppDelegate`.
 
 **Objective-C**
 
@@ -172,8 +181,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 	         annotation:(id)annotation {
 
 	// Pass the url to MSDistribute.
-	[MSDistribute openUrl:url];
-	return YES;
+	return [MSDistribute openURL:url];
 }
 ```
 
@@ -183,8 +191,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
   // Pass the URL to MSDistribute.
-  MSDistribute.open(url as URL!)
-  return true
+  return MSDistribute.open(url as URL!)
 }
 ```
 
