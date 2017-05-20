@@ -172,7 +172,7 @@ This step is not necessary on Android where the debug configuration is detected 
 >	</array>
 >	```
 
-#### 1.2.3 [For iOS only] Add the `openUrl` method
+#### 1.2.3 [For iOS only] Add the `OpenUrl` method
 
 ##### Automatic (swizzling)
  
@@ -183,7 +183,7 @@ This step is not necessary on Android where the debug configuration is detected 
  
  ##### Manual
  
-If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openUrl` callback in your `AppDelegate.cs` file as follows:
+If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `OpenUrl` callback in your `AppDelegate.cs` file as follows:
 
 ```csharp
 public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
