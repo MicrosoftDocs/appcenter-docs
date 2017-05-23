@@ -4,8 +4,8 @@
 title: Testing your latest build on a real device | Mobile Center Build
 description: How to test if your app starts on a real device
 keywords: test, build, ios, android
-author: oddj0b
-ms.author: vigimm
+author: siminapasat
+ms.author: siminap
 ms.date: 03/28/2017
 ms.topic: article
 ms.service: mobile-center
@@ -25,9 +25,9 @@ Secondly, you need a subscription to Mobile Center Test before you can enable la
 
 When you have an active subscription it's time to enable testing, all you’ll need to do is to toggle _Run a launch test on a device_ option to on and click _Finish setup_ button. During the new build, there will be two parts, a build and a test part, so it's normal to have prolonged build time. The benefit is that you know whether your app starts on a physical device. What happens during the extended build is described more detailed in the [FAQ](faq.md#why-do-i-get-an-extended-build-time-when-run-launch-test-on-a-device-is-enabled)
 
-Finding your launch test result can be done in two ways: 
+Finding your launch test result can be done in two ways:
 
-1. When the test is completed the app collaborators will receive an e-mail with test results 
+1. When the test is completed the app collaborators will receive an e-mail with test results
 2. Go to _Test_ in the left-hand menu and follow along in the progress
 
 ## Unsupported configurations
