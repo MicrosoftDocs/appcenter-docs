@@ -189,7 +189,7 @@ $ rm -rf ddp #remove the derivedDataPath if it exists
 $ xcrun xcodebuild build-for-testing -configuration Debug -workspace YOUR_WORKSPACE -sdk iphoneos -scheme YOUR_APPLICATION_SCHEME -derivedDataPath ddp
 ```
 This will build your Application and your XCUITest-Runner into a local directory called `Build` (specifically, the bundles are in
-`Build/Products/Debug-iphoneos/`).
+`ddp/Build/Products/Debug-iphoneos/`).
 
 `YOUR_WORKSPACE` should point to a `.xcworkspace` file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APPLICAITON_SCHEME` should be
 the scheme you use to build your application. By default it is usually the name of your application. If you are unsure, you can run
