@@ -34,7 +34,9 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Organizations/Teams setup
 	* Ability to create organizations
 	* Ability to create teams with similar permissions
-
+* Email, Webhooks & Slack notifications 
+* Issue tracker integration
+	
 ## SDK & CLI
 
 * Universal Windows Platform (UWP) SDK support for Analytics and Crashes services
