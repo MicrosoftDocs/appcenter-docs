@@ -2,8 +2,8 @@
 title: Configure a Windows build
 description: How to set up a build for Windows
 keywords: build, windows
-author: danieladams
-ms.author: v-daada
+author: siminapasat
+ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: 01f5214a-2a9f-4b06-add4-2582a1a2ea53

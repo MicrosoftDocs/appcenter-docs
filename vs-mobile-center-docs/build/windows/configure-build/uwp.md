@@ -2,8 +2,8 @@
 title: Building UWP apps
 description: How to set up a build for UWP C#
 keywords: build, windows
-author: danieladams
-ms.author: v-daada
+author: siminapasat
+ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f
