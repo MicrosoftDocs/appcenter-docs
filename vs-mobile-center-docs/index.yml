@@ -60,29 +60,23 @@ sections:
       className: cardsB
       items:
       - href: ~/build/
-        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        html: Create an installable app package automatically with every commit or push. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
           href: ~/build/
         title: Build
       - href: ~/test-cloud/
-        html: Tests can be written for your iOS and Android apps in C# (UITest), Ruby (Calabash), or Java (Appium), then run on more than 2000 real devices in 400 unique device. Backed by Xamarin Test Cloud.
+        html: Tests can be written for your iOS and Android apps with UITest, Appium, Espresso, and XCUITest, then run on more than 2000 real devices in 400 unique device. Backed by Xamarin Test Cloud.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
           href: ~/test-cloud/
         title: Test
-      - href: ~/distribute/
+      - href: ~/distribution/
         html: Users can install the app via email distribution lists for testing, much as they'd download an app from the app store.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
           href: https://docs.microsoft.com/
         title: Distribute
-      - href: ~/azure/tables/
-        html: Build a cloud store for viewing, adding or modifying app data even when there's no network connection.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/tables.svg
-          href: ~/azure/tables/
-        title: Tables
     - type: list
       style: cards
       className: cardsB
@@ -94,7 +88,7 @@ sections:
           href: ~/crashes/
         title: Crashes
       - href: ~/analytics/
-        html: Create an installable app package automatically with every commit or push. Supports GitHub, Bitbucket, and Visual Studio Team Services (VSTS).
+        html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/analytics.svg
           href: ~/analytics/
@@ -105,12 +99,6 @@ sections:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
           href: https://docs.microsoft.com/
         title: Push Notifications (Coming Soon)
-      - href: ~/azure/identity/
-        html: Identity offers an easy and quick way to authenticate your mobile app's users with their Google, Facebook, Twitter or Microsoft account.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/identity.svg
-          href: ~/azure/identity/
-        title: Identity
 - title: Reference
   items:
   - type: list
