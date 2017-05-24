@@ -8,7 +8,7 @@ metadata:
   ms.date: 05-09-2017
   ms.topic: landing-page
 abstract:
-  description: <a href="https://mobile.azure.com/">Mobile Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps and easily add backend cloud services to scale your app to millions of users on demand.
+  description: <a href="https://mobile.azure.com/">Mobile Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
   menu:
     items:
     - href: ~/general/support-center/
