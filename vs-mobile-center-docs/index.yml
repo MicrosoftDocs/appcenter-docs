@@ -94,7 +94,7 @@ sections:
           href: ~/analytics/
         title: Analytics
       - href: ~/push/
-        html: Report on the number of daily, weekly, and monthly users, session duration, the top devices and OS versions, your app's world map, and a list of most used languages. Also use event tracking for rich behavioral analytics data.
+        html: Engage your users by sending them targeted messages to specific sets of users at exactly the right time. Create segments of users based on device and custom properties.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
           href: ~/push/
