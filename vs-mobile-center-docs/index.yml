@@ -60,13 +60,13 @@ sections:
       className: cardsB
       items:
       - href: ~/build/
-        html: Create an installable app package automatically with every commit or push. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).
+        html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
           href: ~/build/
         title: Build
       - href: ~/test-cloud/
-        html: Tests can be written for your iOS and Android apps with UITest, Appium, Espresso, and XCUITest, then run on more than 2000 real devices in 400 unique device. Backed by Xamarin Test Cloud.
+        html: Run your tests on more than 2000 real devices. Tests can be written for iOS and Android apps with UITest, Appium, Espresso, and XCUITest. Backed by Xamarin Test Cloud.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
           href: ~/test-cloud/
