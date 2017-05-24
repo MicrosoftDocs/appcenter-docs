@@ -24,7 +24,7 @@ Installation of an application being distributed by Mobile Center begins with an
 
 To install a windows package requires a trusted root certificate installed in the root certificate chain for the device you are installing too. The most common solution is for the developer to sign a application package with a purchased 3rd party provider trusted root certificate. This certificate will chain to through the third party to the Microsoft root store and so will be a trusted cert for all user devices. A developer can opt to use a self create test certificate and sign the application package, however it will result in additional steps for testers at installation time.
 
-##### Installing a build signed with a developer test certificate
+#### Installing a build signed with a developer test certificate
 
 You can install a test signed app by first installing the test certificate (which is automatically included in the app package) by following these steps.
 
