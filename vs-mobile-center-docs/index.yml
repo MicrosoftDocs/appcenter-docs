@@ -13,8 +13,8 @@ abstract:
     items:
     - href: ~/general/support-center/
       text: Support Center
-    - href: ~/general/guidance/
-      text: Guidance for existing customers
+    - href: ~/migration/
+      text: Migration guidance for existing customers
     - href: ~/general/roadmap/
       text: Roadmap
     - href: ~/general/pricing/
