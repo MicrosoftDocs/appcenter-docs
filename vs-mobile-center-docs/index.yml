@@ -93,11 +93,11 @@ sections:
           src: https://docs.microsoft.com/media/landing/mobile-center/analytics.svg
           href: ~/analytics/
         title: Analytics
-      - href: "#"
+      - href: ~/push/
         html: Report on the number of daily, weekly, and monthly users, session duration, the top devices and OS versions, your app's world map, and a list of most used languages. Also use event tracking for rich behavioral analytics data.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
-          href: https://docs.microsoft.com/
+          href: ~/push/
         title: Push Notifications (Coming Soon)
 - title: Reference
   items:
