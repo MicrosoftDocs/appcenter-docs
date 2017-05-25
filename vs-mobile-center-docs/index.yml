@@ -66,7 +66,7 @@ sections:
           href: ~/build/
         title: Build
       - href: ~/test-cloud/
-        html: Run your tests on more than 2000 real devices. Tests can be written for iOS and Android apps with UITest, Appium, Espresso, and XCUITest. Backed by Xamarin Test Cloud.
+        html: Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS). Backed by Xamarin Test Cloud.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
           href: ~/test-cloud/
