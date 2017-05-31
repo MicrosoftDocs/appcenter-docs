@@ -140,12 +140,12 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), type
 
 If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `onNewIntent` method:
 
-```java
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        Push.checkLaunchedFromNotification(this, intent);
-    }
+```csharp
+        protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
 ```
 
 ### 5.2. Subscribe to the push event
