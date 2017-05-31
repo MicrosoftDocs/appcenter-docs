@@ -59,6 +59,7 @@ If you wish to use the Firebase assistant:
 Step 3 is managed by our SDK automatically so you can stop after step 2.
 
 ### 1.3. Obtain your Android API Key
+
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the Mobile Center Push portal.
 
 ## 2. Add Mobile Center Push to your app
@@ -152,6 +153,16 @@ You need to register the listener before calling `MobileCenter.start` as shown i
 ```java
 Push.setListener(new MyPushListener());
 MobileCenter.start(...);
+```
+
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `onNewIntent` method:
+
+```java
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Push.checkLaunchedFromNotification(this, intent);
+    }
 ```
 
 Here is an example of the listener implementation that displays an alert dialog if the message is received in foreground or a toast if a background push has been clicked:
