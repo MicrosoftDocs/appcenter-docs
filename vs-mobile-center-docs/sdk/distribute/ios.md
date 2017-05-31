@@ -37,28 +37,6 @@ The in-app updates feature works as follows:
 > [!TIP]
 > If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary.
 
-### How do I test in-app updates?
-
-This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
-
-> [!TIP]
-> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
-
-1. Create your app in the Mobile Center Portal if you haven't done that already.
-2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
-5. Click on the **Distribute new release** button in the portal and upload your build of the app.
-6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
-7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
-9. Bump the version name (`CFBundleShortVersionString`) of your app.
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
-
-> [!TIP]
-> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
-
 ## 1. Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -102,7 +80,7 @@ In order to use Mobile Center, you need to opt in to the service(s) that you wan
 
 Open your **AppDelegate.m** file and add the following import statements:
 
-```obj-c
+```Objective-C
 @import MobileCenter;
 @import MobileCenterDistribute;
 ```
@@ -111,7 +89,7 @@ Open your **AppDelegate.m** file and add the following import statements:
 
 Open your **AppDelegate.swift** file and add the following import statements:
 
-```swift
+```Swift
 import MobileCenter
 import MobileCenterDistribute
 ```
@@ -124,7 +102,7 @@ Add `MSDistribute` to your `start:withServices:` method to start Mobile Center D
 
 Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
 
-```obj-c
+```Objective-C
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
 ```
 
@@ -132,7 +110,7 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 
 Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
 
-```swift
+```Swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
 ```
 
@@ -172,9 +150,7 @@ Mobile Center automatically forwards your application delegate's methods to Mobi
 
 If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openURL` callback in your `AppDelegate`.
 
-**Objective-C**
-
-```obj-c
+```Objective-C
 - (BOOL)application:(UIApplication *)application
 	            openURL:(NSURL *)url
 	  sourceApplication:(NSString *)sourceApplication
@@ -185,9 +161,7 @@ If you opted for the manual integration then you have to do the forwarding to Di
 }
 ```
 
-**Swift**
-
-```swift
+```Swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
   // Pass the URL to MSDistribute.
@@ -199,48 +173,36 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
-**Objective-C**
-
-```objectivec
+```Objective-C
 [MSDistribute setEnabled:NO];
 ```
 
-**Swift**
-
-```swift
+```Swift
 MSDistribute.setEnabled(false)
 ```
 
 To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
 
-**Objective-C**
-
-```objectivec
+```Objective-C
 [MSDistribute setEnabled:YES];
 ```
 
-**Swift**
-
-```swift
+```Swift
 MSDistribute.setEnabled(true)
 ```
 
 > [!NOTE]
-> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
+> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
 
 ## 3. Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
-**Objective-C**
-
-```objectivec
+```Objective-C
 BOOL enabled = [MSDistribute isEnabled];
 ```
 
-**Swift**
-
-```swift
+```Swift
 var enabled = MSDistribute.isEnabled()
 ```
 
@@ -248,31 +210,23 @@ var enabled = MSDistribute.isEnabled()
 
 ### 4.1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 4.2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol.
+You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
 
-You need to register the delegate before starting the SDK as shown in the following example:
-
-**Objective-C**
-
-```objectivec
+```Objective-C
 [MSDistribute setDelegate:self];
 ```
 
-**Swift**
-
-```swift
+```Swift
 MSDistribute.setDelegate(self);
 ```
 
 Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
 
-**Objective-C**
-
-```objectivec
+```Objective-C
 - (BOOL)distribute:(MSDistribute *)distribute releaseAvailableWithDetails:(MSReleaseDetails *)details {
 
   // Your code to present your UI to the user, e.g. an UIAlertView.
@@ -285,9 +239,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 }
 ```
 
-**Swift**
-
-```swift
+```Swift
 func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertView.
@@ -298,17 +250,13 @@ func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSRel
 
 In case you return `YES`/`true` in the above method, your app should obtain user's choice and message the SDK with the result using the following API.
 
-**Objective-C**
-
-```objectivec
+```Objective-C
 // Depending on the user's choice, call notifyUpdateAction: with the right value.
 [MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
 [MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
 ```
 
-**Swift**
-
-```swift
+```Swift
 // Depending on the user's choice, call notify() with the right value.
 MSDistribute.notify(MSUpdateAction.update);
 MSDistribute.notify(MSUpdateAction.postpone);
@@ -320,22 +268,40 @@ If you don't call the above method, the `releaseAvailableWithDetails:`-method wi
 
 Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
 
- **Objective-C**
-
- ```objectivec
+ ```Objective-C
  #if DEBUG
- 	[MSMobileCenter start:@"YOUR_APP_ID" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+ 	[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
  #else
- 	[MSMobileCenter start:@"YOUR_APP_ID" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
+ 	[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
  #endif
  ```
 
- **Swift**
-
- ```swift
+ ```Swift
  #if DEBUG
- 	MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self])
+ 	MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
  #else
- 	MSMobileCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+ 	MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
  #endif
  ```
+
+## 6. How do I test in-app updates?
+
+This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
+
+> [!TIP]
+> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
+
+1. Create your app in the Mobile Center Portal if you haven't done that already.
+2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
+4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
+5. Click on the **Distribute new release** button in the portal and upload your build of the app.
+6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+7. Review the Distribution and distribute the build to your in-app testing group.
+8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+9. Bump the version name (`CFBundleShortVersionString`) of your app.
+10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+
+> [!TIP]
+> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
