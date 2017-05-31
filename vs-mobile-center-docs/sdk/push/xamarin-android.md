@@ -136,4 +136,18 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), type
 
 ## 5. Intercept push notification in the foreground
 
+### 5.1. Additional setup
+
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `onNewIntent` method:
+
+```java
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Push.checkLaunchedFromNotification(this, intent);
+    }
+```
+
+### 5.2. Subscribe to the push event
+
 [!include[](push-callbacks.md)]
