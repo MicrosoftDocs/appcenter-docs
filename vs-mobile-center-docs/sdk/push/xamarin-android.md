@@ -138,7 +138,7 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), type
 
 ### 5.1. Additional setup
 
-If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `onNewIntent` method:
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)
