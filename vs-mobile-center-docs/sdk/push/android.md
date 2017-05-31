@@ -155,7 +155,7 @@ Push.setListener(new MyPushListener());
 MobileCenter.start(...);
 ```
 
-If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `onNewIntent` method:
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
 
 ```java
     @Override
