@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/28/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -21,9 +21,6 @@ ms.tgt_pltfrm: android
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it, yet.
-While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
-
 ### How do in-app updates work?
 The in-app updates feature works as follows:
 1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
@@ -36,28 +33,6 @@ The in-app updates feature works as follows:
 > [!TIP]
 > If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be different.
 
-### How do I test in-app updates?
-
-This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
-
-> [!TIP] 
-> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
-
-1. Create your app in the Mobile Center Portal if you haven't done that already.
-2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
-5. Click on the **Distribute new release** button in the portal and upload your build of the app.
-6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
-7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
-9. Bump the `versionCode` of your app.
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
-
-> [!TIP]
-> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
-
 ## 1. Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -66,7 +41,7 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use all the services, add the following lines:
+1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in the section below.
 
     ```groovy
     dependencies {
@@ -102,7 +77,7 @@ import com.microsoft.azure.mobile.distribute.Distribute;
 
 ## 2. Enable or disable Mobile Center Distribute at runtime
 
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app updates functionality.
 
 ```java
 Distribute.setEnabled(false);
@@ -114,7 +89,7 @@ Distribute.setEnabled(true);
 ```
 
 > [!NOTE]
-> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
+> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
 
 ## 3. Check if Mobile Center Distribute is enabled
 
@@ -132,9 +107,7 @@ You can easily provide your own resource strings if you'd like to change or loca
 
 ### 4.2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `DistributeListener` interface.
-
-You need to register the listener before calling `MobileCenter.start` as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `DistributeListener` interface. You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
 ```java
 Distribute.setListener(new MyDistributeListener());
@@ -199,9 +172,30 @@ If you don't call `notifyUpdateAction`, the callback will repeat on every activi
 The listener can thus be called again with the same release if the activity changes before the user action is notified to the SDK.
 
 This behavior is needed to cover the following scenarios:
-
 * Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
-In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK calls the listener again so that you can restore the custom dialog.
+In that case the activity hosting the dialog might be replaced without user interaction and so the SDK calls the listener again so that you can restore the custom dialog.
+
+## 5. How do I test in-app updates?
+
+This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
+
+> [!TIP] 
+> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
+
+1. Create your app in the Mobile Center Portal if you haven't done that already.
+2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
+4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
+5. Click on the **Distribute new release** button in the portal and upload your build of the app.
+6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+7. Review the Distribution and distribute the build to your in-app testing group.
+8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+9. Bump the `versionCode` of your app.
+10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+
+> [!TIP]
+> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
