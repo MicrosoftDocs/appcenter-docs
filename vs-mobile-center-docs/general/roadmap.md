@@ -17,6 +17,12 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## New Mobile Center services
 
 * Push Notifications
+    * Send notifications to:
+        * Broadcast
+        * Custom device list
+        * Audiences
+    * Create segments of users based on a set of custom and device properties.
+
 * [CodePush](https://microsoft.github.io/code-push/) 
 	* Fast track distribution for React Native apps
 	* Users, Apps, Deployments and Releases from existing CodePush apps available in Mobile Center dashboard
@@ -28,7 +34,9 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Organizations/Teams setup
 	* Ability to create organizations
 	* Ability to create teams with similar permissions
-
+* Email, Webhooks & Slack notifications 
+* Issue tracker integration
+	
 ## SDK & CLI
 
 * Universal Windows Platform (UWP) SDK support for Analytics and Crashes services
@@ -55,10 +63,12 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Analytics service
 
-* Export of raw data
-* Funnels
+* Continuous Export to Blob Storage
+* Export to Applications Insights
+* Export to SQL Database
 
 ## Crashes service
 
 * Display of attachments sent from the Crashes SDK, in the portal
+* Show the events that happened before a crash
 * Missing Symbols experience to know which symbols need to be uploaded

@@ -12,31 +12,52 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# Mobile Center Distribute
+# Mobile Center Distribute – In-app updates
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via the Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-In addition, please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) if you haven't integrated it.
-While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+### How do in-app updates work?
 
-## How do in-app updates work?
 The in-app updates feature works as follows:
-1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
-2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+
+1. This feature will ONLY work with builds that are distributed using **Mobile Center Distribute** service. It won't work when the debugger is attached.
+2. Once you integrate the SDK, build a release version of your app and upload it to Mobile Center, users in that distribution group will be notified for the new release via an email.
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - Mobile Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment).
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
-5. Once the above step is successful, they should navigate back to the app.
+5. Once the above step is successful, they should be navigated back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
-    * a higher version name (`CFBundleShortVersionString`)
+    * a higher version name (`CFBundleShortVersionString`) or
     * an equal version name but a higher version (`CFBundleVersion`)
 
 > [!TIP]
-> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary **and** it has a more recent upload timestamp.
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same `CFBundleShortVersionString`/`CFBundleVersion`, it will show the update dialog. The reason for this is that it is a **different** binary.
+
+### How do I test in-app updates?
+
+This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
+
+> [!TIP]
+> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
+
+1. Create your app in the Mobile Center Portal if you haven't done that already.
+2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
+4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
+5. Click on the **Distribute new release** button in the portal and upload your build of the app.
+6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+7. Review the Distribution and distribute the build to your in-app testing group.
+8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+9. Bump the version name (`CFBundleShortVersionString`) of your app.
+10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+
+> [!TIP]
+> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## 1. Add in-app updates to your app
 
@@ -51,7 +72,7 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
-pod 'MobileCenter/MobileCenterDistribute`
+pod 'MobileCenter/MobileCenterDistribute'
 ```
 
 #### 1.1.2 Integration by copying the binaries into your project
@@ -138,9 +159,18 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 >	</array>
 >	```
 
-#### 1.4 Implement the `openURL:`-callback
+#### 1.4 Application delegate methods forwarding
 
-Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
+##### Automatic (swizzling)
+
+Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
+
+> [!NOTE]
+> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate.
+
+##### Manual
+
+If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openURL` callback in your `AppDelegate`.
 
 **Objective-C**
 
@@ -151,8 +181,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 	         annotation:(id)annotation {
 
 	// Pass the url to MSDistribute.
-	[MSDistribute openUrl:url];
-	return YES;
+	return [MSDistribute openURL:url];
 }
 ```
 
@@ -162,8 +191,7 @@ Implement the `openURL`-callback in your `AppDelegate` to enable in-app-updates.
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
   // Pass the URL to MSDistribute.
-  MSDistribute.open(url as URL!)
-  return true
+  return MSDistribute.open(url as URL!)
 }
 ```
 
@@ -288,9 +316,9 @@ MSDistribute.notify(MSUpdateAction.postpone);
 
 If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
 
-##  5. Don't initialise Mobile Center Distribute during development
+##  5. Don't initialize Mobile Center Distribute during development
 
-Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
+Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
 
  **Objective-C**
 

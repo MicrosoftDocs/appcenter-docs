@@ -91,13 +91,11 @@ Mobile Center Crashes provides callbacks for developers to perform additional ac
 Set this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
 
 ```csharp
-bool ShouldProcess(ErrorReport report)
+Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 {
-
  	// Check the report in here and return true or false depending on the ErrorReport.
-
 	return true;
-}
+};
 ```
 
 ### 5.2 Ask for the users' consent to send a crash log
@@ -108,7 +106,8 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-	return true; // Return true if the SDK should await user confirmation, otherwise false.
+	// Return true if the SDK should await user confirmation, otherwise false.
+	return true;
 };
 ```
 
@@ -149,5 +148,19 @@ Crashes.SentErrorReport += (sender, e) =>
 Crashes.FailedToSendErrorReport += (sender, e) =>
 {
 	// Your code goes here.
+};
+```
+
+#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
+
+```csharp
+Crashes.GetErrorAttachments = (ErrorReport report) =>
+{
+	// Your code goes here.
+	return new ErrorAttachmentLog[]
+	{
+		ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+		ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+	};
 };
 ```
