@@ -1,4 +1,4 @@
-# [Mobile Center Overview](index.md)
+# [Mobile Center Overview](index.yml)
 
 # Dashboard
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
