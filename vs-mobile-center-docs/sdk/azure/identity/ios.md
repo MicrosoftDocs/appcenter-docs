@@ -10,7 +10,7 @@ ms.assetid: dba12fcc-2c06-4a21-bfc1-58dfee74c7d1
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: ios
-langs:
+dev_langs:
   - swift
   - objc
 ---
