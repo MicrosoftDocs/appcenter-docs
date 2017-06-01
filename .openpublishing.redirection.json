@@ -35,9 +35,11 @@
     {
         "source_path": "sdk/troubleshooting.md",
         "redirect_url": "~/sdk/troubleshooting/xamarin.md"
+    },
+    {
+        "source_path": "general/guidance.md",
+        "redirect_url": "~/migration/index.md"
     }
-
-
 
   ]
 }

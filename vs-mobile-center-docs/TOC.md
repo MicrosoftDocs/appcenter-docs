@@ -4,6 +4,7 @@
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [FAQ](dashboard/faq.md)
+
 # [Build](build/index.md)
 ## [iOS](build/ios/index.md)
 ### [Configure a build](build/ios/first-build/index.md)
@@ -21,11 +22,15 @@
 #### [React Native](build/android/first-build/react-native.md)
 ### [Code Signing](build/android/code-signing/index.md)
 #### [Setting up an Android project for code signing](build/android/code-signing/setup.md)
+## [Windows](build/windows/index.md)
+### [Configure a build](build/windows/configure-build/index.md)
+#### [UWP](build/windows/configure-build/uwp.md)
+### [Build results](build/windows/build-results/index.md)
+#### [UWP](build/windows/build-results/uwp.md)
 ## [Connect to a source repository](build/connect.md)
 ## [Cloud build machines](build/software.md)
 ## [Test your app on real devices](build/build-test-integration.md)
 ## [FAQ](build/faq.md)
-
 
 # [Test](test-cloud/index.md)
 ## [Getting Started](test-cloud/getting-started.md)
@@ -39,13 +44,13 @@
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in VSTS](test-cloud/vsts-plugin.md)
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
-
 
 # [Tables](azure/tables/index.md)
 ## [Azure](azure/index.md)
@@ -55,7 +60,6 @@
 ## [Google](azure/identity/google.md)
 ## [Microsoft Account](azure/identity/microsoft.md)
 ## [Twitter](azure/identity/twitter.md)
-
 
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
@@ -69,6 +73,7 @@
 ## [Log Flow Page](analytics/understand-log-flow.md)
 ## [FAQ](analytics/faq.md)
 
+# [Push](push/index.md)
 
 # [SDK](sdk/index.md)
 ## Getting Started
@@ -96,6 +101,10 @@
 ### [Android](sdk/push/android.md)
 ### [iOS](sdk/push/ios.md)
 ### [UWP](sdk/push/uwp.md)
+### [Xamarin.iOS](sdk/push/xamarin-ios.md)
+### [Xamarin.Android](sdk/push/xamarin-android.md)
+### [Xamarin.Forms](sdk/push/xamarin-forms.md)
+
 ## Tables
 ### [Android](sdk/azure/android.md)
 ### [iOS](sdk/azure/ios.md)
@@ -112,14 +121,20 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
+### [UWP](sdk/troubleshooting/uwp.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
-## [Guidance for existing customers](general/guidance.md)
 ## [Support Center](general/support-center.md)
+
+# [Migration](migration/index.md)
+## [HockeyApp](migration/hockeyapp/index.md)
+### [Distribution](migration/hockeyapp/distribution.md)
+### [FAQ](migration/hockeyapp/faq.md)
+
 
 # Reference
 ## [API docs](api-docs/index.md)

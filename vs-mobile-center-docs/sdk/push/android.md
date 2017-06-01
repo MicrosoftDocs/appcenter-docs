@@ -18,6 +18,9 @@ ms.tgt_pltfrm: android
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
+> * [Xamarin.Android](xamarin-android.md)
+> * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -37,11 +40,9 @@ There are a couple of ways you can do that, either manually or by using the Andr
 
 For that you need to follow some of the documentation of Firebase:
 
-1. Follow instructions in [Add Firebase to your app](https://firebase.google.com/docs/notifications/android/console-audience#add_firebase_to_your_app) section.
+1. Follow instructions in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
 
-2. Follow instructions in [Add the SDK](https://firebase.google.com/docs/notifications/android/console-audience#add_the_sdk) section.
-
-Only those 2 steps are required to use Mobile Center Push, the SDK will take care of all other work.
+2. Make sure to continue following instructions in **Add the SDK** sub section right after.
 
 ### 1.2. Using Firebase assistant
 
@@ -57,6 +58,9 @@ If you wish to use the Firebase assistant:
 
 Step 3 is managed by our SDK automatically so you can stop after step 2.
 
+### 1.3. Obtain your Android API Key
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the Mobile Center Push portal.
+
 ## 2. Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -69,7 +73,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.8.0'
+       def mobileCenterSdkVersion = '0.9.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
