@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/28/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: mobile-center
@@ -137,82 +137,13 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 >	</array>
 >	```
 
-#### 1.4 Application delegate methods forwarding
+## 2. Customize or localize the in-app update dialog
 
-##### Automatic (swizzling)
-
-Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
-
-> [!NOTE]
-> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate.
-
-##### Manual
-
-If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `openURL` callback in your `AppDelegate`.
-
-```Objective-C
-- (BOOL)application:(UIApplication *)application
-	            openURL:(NSURL *)url
-	  sourceApplication:(NSString *)sourceApplication
-	         annotation:(id)annotation {
-
-	// Pass the url to MSDistribute.
-	return [MSDistribute openURL:url];
-}
-```
-
-```Swift
-func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-
-  // Pass the URL to MSDistribute.
-  return MSDistribute.open(url as URL!)
-}
-```
-
-## 2. Enable or disable Mobile Center Distribute at runtime
-
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
-
-```Objective-C
-[MSDistribute setEnabled:NO];
-```
-
-```Swift
-MSDistribute.setEnabled(false)
-```
-
-To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
-
-```Objective-C
-[MSDistribute setEnabled:YES];
-```
-
-```Swift
-MSDistribute.setEnabled(true)
-```
-
-> [!NOTE]
-> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
-
-## 3. Check if Mobile Center Distribute is enabled
-
-You can also check if Mobile Center Distribute is enabled or not:
-
-```Objective-C
-BOOL enabled = [MSDistribute isEnabled];
-```
-
-```Swift
-var enabled = MSDistribute.isEnabled()
-```
-
-## 4. Customize or localize the in-app update dialog
-
-### 4.1. Customize or localize text
+### 2.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
-### 4.2. Customize the update dialog
+### 2.2. Customize the update dialog
 
 You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
 
@@ -264,7 +195,44 @@ MSDistribute.notify(MSUpdateAction.postpone);
 
 If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
 
-##  5. Don't initialize Mobile Center Distribute during development
+## 3. Enable or disable Mobile Center Distribute at runtime
+
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
+
+```Objective-C
+[MSDistribute setEnabled:NO];
+```
+
+```Swift
+MSDistribute.setEnabled(false)
+```
+
+To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
+
+```Objective-C
+[MSDistribute setEnabled:YES];
+```
+
+```Swift
+MSDistribute.setEnabled(true)
+```
+
+> [!NOTE]
+> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
+
+## 4. Check if Mobile Center Distribute is enabled
+
+You can also check if Mobile Center Distribute is enabled or not:
+
+```Objective-C
+BOOL enabled = [MSDistribute isEnabled];
+```
+
+```Swift
+var enabled = MSDistribute.isEnabled()
+```
+
+## 5. Don't initialize Mobile Center Distribute during development
 
 Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
 
@@ -305,3 +273,30 @@ This is what we recommend to do. There is no way to set this up locally on your 
 > [!TIP]
 > Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+
+## 7. Method Swizzling
+
+Mobile Center uses method swizzling by automatically forwarding your application delegate's methods to Mobile Center services. If you want to disable swizzling in your application code, please follow the steps below:
+
+1. Open your **Info.plist file**.
+2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
+3. Add `openURL` callback in your `AppDelegate` file.
+
+```Objective-C
+- (BOOL)application:(UIApplication *)application
+	            openURL:(NSURL *)url
+	  sourceApplication:(NSString *)sourceApplication
+	         annotation:(id)annotation {
+
+	// Pass the url to MSDistribute.
+	return [MSDistribute openURL:url];
+}
+```
+
+```Swift
+func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+
+  // Pass the URL to MSDistribute.
+  return MSDistribute.open(url as URL!)
+}
+```

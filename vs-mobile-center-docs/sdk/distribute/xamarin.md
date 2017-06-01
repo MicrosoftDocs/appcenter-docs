@@ -147,59 +147,13 @@ This step is not necessary on Android where the debug configuration is detected 
 >	</array>
 >	```
 
-#### 1.2.3 [For iOS only] Add the `OpenUrl` method
+## 2. Customize or localize the in-app update dialog
 
-##### Automatic (swizzling)
- 
- Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
-
- > [!NOTE]
- > Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate.
- 
- ##### Manual
- 
-If you opted for the manual integration then you have to do the forwarding to Distribute yourself by implementing the `OpenUrl` callback in your `AppDelegate.cs` file as follows:
-
-```csharp
-public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
-{
-	Distribute.OpenUrl(url);
-	return true;
-}
-```
-
-## 2. Enable or disable Mobile Center Distribute at runtime
-
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
-
-```csharp
-Distribute.Enabled = false;
-```
-
-To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
-
-```csharp
-Distribute.Enabled = true;
-```
-
-> [!NOTE]
-> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
-
-## 3. Check if Mobile Center Distribute is enabled
-
-You can also check if Mobile Center Distribute is enabled or not:
-
-```csharp
-bool enabled = Distribute.Enabled;
-```
-
-## 4. Customize or localize the in-app update dialog
-
-### 4.1. Customize or localize text
+### 2.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS [in this resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android [in this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/master/sdk/mobile-center-distribute/src/main/res/values/strings.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
-### 4.2. Customize the update dialog
+### 2.2. Customize the update dialog
 
 You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback. You need to register the callback before calling `MobileCenter.Start` as shown in the following example:
 
@@ -260,7 +214,7 @@ As shown in the example, you have to either call `Distribute.NotifyUpdateAction(
 
 If you don't call `NotifyUpdateAction`, the callback will repeat on every activity change.
 
-The callback can thus be called again with the same release if the activity changes before the user action is notified to the SDK.
+The callback can be called again with the same release if the activity changes before the user action is notified to the SDK.
 
 This behavior is needed to cover the following scenarios:
 
@@ -268,7 +222,32 @@ This behavior is needed to cover the following scenarios:
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
-In that case the activity hosting the dialog might be replaced without user interaction and thus the SDK calls the callback again so that you can restore the custom dialog.
+In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
+
+## 3. Enable or disable Mobile Center Distribute at runtime
+
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
+
+```csharp
+Distribute.Enabled = false;
+```
+
+To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
+
+```csharp
+Distribute.Enabled = true;
+```
+
+> [!NOTE]
+> Note that this will only enable/disable Mobile Center Distribute within the SDK and not the features for the Distribute service (in-app updates for your application). The SDK API has nothing to do with disabling the Distribute service on the Mobile Center portal.
+
+## 4. Check if Mobile Center Distribute is enabled
+
+You can also check if Mobile Center Distribute is enabled or not:
+
+```csharp
+bool enabled = Distribute.Enabled;
+```
 
 ## 5. How do I test in-app updates?
 
@@ -291,3 +270,20 @@ This is what we recommend to do. There is no way to set this up locally on your 
 > [!TIP]
 > Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+
+
+## 6. Method Swizzling [For iOS only] Add the `OpenUrl` method
+
+Mobile Center uses method swizzling by automatically forwarding your application delegate's methods to Mobile Center services. If you want to disable swizzling in your application code, please follow the steps below:
+
+1. Open your **Info.plist file**.
+2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
+3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
+
+```csharp
+public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+{
+	Distribute.OpenUrl(url);
+	return true;
+}
+```

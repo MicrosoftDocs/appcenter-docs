@@ -75,37 +75,13 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
-## 2. Enable or disable Mobile Center Distribute at runtime
+## 2. Customize or localize the in-app update dialog
 
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app updates functionality.
-
-```java
-Distribute.setEnabled(false);
-```
-To enable Mobile Center Distribute again, use the same API but pass `true` as a parameter.
-
-```java
-Distribute.setEnabled(true);
-```
-
-> [!NOTE]
-> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
-
-## 3. Check if Mobile Center Distribute is enabled
-
-You can also check if Mobile Center Distribute is enabled or not:
-
-```java
-Distribute.isEnabled();
-```
-
-## 4. Customize or localize the in-app update dialog
-
-### 4.1. Customize or localize text
+### 2.1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
-### 4.2. Customize the update dialog
+### 2.2. Customize the update dialog
 
 You can customize the default update dialog's appearance by implementing the `DistributeListener` interface. You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
@@ -169,15 +145,38 @@ As shown in the example, you have to either call `Distribute.notifyUpdateAction(
 
 If you don't call `notifyUpdateAction`, the callback will repeat on every activity change.
 
-The listener can thus be called again with the same release if the activity changes before the user action is notified to the SDK.
+The listener can be called again with the same release if the activity changes before the user action is notified to the SDK.
 
 This behavior is needed to cover the following scenarios:
 * Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
-In that case the activity hosting the dialog might be replaced without user interaction and so the SDK calls the listener again so that you can restore the custom dialog.
+In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
+## 3. Enable or disable Mobile Center Distribute at runtime
+
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app updates functionality.
+
+```java
+Distribute.setEnabled(false);
+```
+To enable Mobile Center Distribute again, use the same API but pass `true` as a parameter.
+
+```java
+Distribute.setEnabled(true);
+```
+
+> [!NOTE]
+> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
+
+## 4. Check if Mobile Center Distribute is enabled
+
+You can also check if Mobile Center Distribute is enabled or not:
+
+```java
+Distribute.isEnabled();
+```
 ## 5. How do I test in-app updates?
 
 This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
