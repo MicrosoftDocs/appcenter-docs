@@ -39,7 +39,7 @@ Azure Active Directory
 let payload: [String: String] = ["access_token": result.tokenCacheStoreItem.accessToken]
 azureMobileClient.loginWithProvider("aad", token: payload, completion: completion)
 ```
-```obj-c
+```objc
 NSDictionary *payload = @{
     @"access_token" : result.tokenCacheStoreItem.accessToken
 };
@@ -51,7 +51,7 @@ Facebook
 let payload: [String: String] = ["access_token": result.token.tokenString]
 azureMobileClient.loginWithProvider("facebook", token: payload, completion: completion)
 ```
-```obj-c
+```objc
 NSDictionary *payload = @{@"access_token":result.token.tokenString};
 [azureMobileClient loginWithProvider:@"facebook" token:payload completion:completion];
 ```
@@ -61,7 +61,7 @@ Google
 let payload: [String: String] = ["id_token": user.authentication.idToken, "authorization_code": user.serverAuthCode]
 azureMobileClient.loginWithProvider("google", token: payload, completion: completion)
 ```
-```obj-c
+```objc
 NSDictionary *payload = @{
     @"id_token":user.authentication.idToken,
     @"authorization_code":user.serverAuthCode
@@ -74,7 +74,7 @@ Microsoft Acount
 let payload: [String: String] = ["authenticationToken": self.liveClient.session.authenticationToken]
 azureMobileClient.loginWithProvider("microsoftaccount", token: payload, completion: completion)
 ```
-```obj-c
+```objc
 [azureMobileClient loginWithProvider:@"microsoftaccount" token:@{@"authenticationToken" : self.liveClient.session.authenticationToken} completion:completion];
 ```
 
@@ -83,7 +83,7 @@ Twitter
 let payload: [String: String] = ["access_token": session!.authToken, "access_token_secret": session!.authTokenSecret]
 azureMobileClient.loginWithProvider("twitter", token: payload, completion: completion)
 ```
-```obj-c
+```objc
 NSDictionary *payload = @{
     @"access_token":session.authToken,
     @"access_token_secret":session.authTokenSecret
@@ -98,7 +98,7 @@ NSDictionary *payload = @{
 ```swift
 azureMobileClient.loginWithProvider("{provider}", controller: {nonnull UIViewController}, animated: {BOOL}, completion: completion)
 ```
-```obj-c
+```objc
 [azureMobileClient loginWithProvider:@"{provider}" controller:{nonnull UIViewController} animated:{BOOL} completion:completion];
 ```
 

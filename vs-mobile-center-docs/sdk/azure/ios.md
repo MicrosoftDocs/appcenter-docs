@@ -33,7 +33,7 @@ You will need:
 ```swift
 let azureMobileClient = MSClient(applicationURLString: "_https://mobile-{app secret}.azurewebsites.net_")
 ```
-```obj-c
+```objc
 MSClient *azureMobileClient = [MSClient clientWithApplicationURLString:@"_https://mobile-{app secret}.azurewebsites.net_"];
 ```
 
