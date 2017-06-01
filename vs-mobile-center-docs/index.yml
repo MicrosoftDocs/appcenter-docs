@@ -42,7 +42,7 @@ sections:
       text: React Native
       href: ~/sdk/getting-started/react-native/
     - image:
-        src: https://review.docs.microsoft.com/en-us/media/logos/logo_windows.svg?branch=master
+        src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
       text: UWP
       href: ~/sdk/getting-started/uwp/
     - image:
