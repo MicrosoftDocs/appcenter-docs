@@ -60,7 +60,7 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
 
 3. Distribute the uploaded release to a distribution group — [PATCH /updateRelease][PATCH_updateRelease]
     
-    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "distribution_group_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
+    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [apple-devices]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW10
