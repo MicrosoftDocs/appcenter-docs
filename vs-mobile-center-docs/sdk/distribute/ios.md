@@ -80,7 +80,7 @@ In order to use Mobile Center, you need to opt in to the service(s) that you wan
 
 Open your **AppDelegate.m** file and add the following import statements:
 
-```Objective-C
+```objc
 @import MobileCenter;
 @import MobileCenterDistribute;
 ```
@@ -89,7 +89,7 @@ Open your **AppDelegate.m** file and add the following import statements:
 
 Open your **AppDelegate.swift** file and add the following import statements:
 
-```Swift
+```swift
 import MobileCenter
 import MobileCenterDistribute
 ```
@@ -102,7 +102,7 @@ Add `MSDistribute` to your `start:withServices:` method to start Mobile Center D
 
 Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
 
-```Objective-C
+```objc
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
 ```
 
@@ -110,7 +110,7 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 
 Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
 
-```Swift
+```swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
 ```
 
@@ -147,17 +147,17 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
 
-```Objective-C
+```objc
 [MSDistribute setDelegate:self];
 ```
 
-```Swift
+```swift
 MSDistribute.setDelegate(self);
 ```
 
 Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
 
-```Objective-C
+```objc
 - (BOOL)distribute:(MSDistribute *)distribute releaseAvailableWithDetails:(MSReleaseDetails *)details {
 
   // Your code to present your UI to the user, e.g. an UIAlertView.
@@ -170,7 +170,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 }
 ```
 
-```Swift
+```swift
 func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertView.
@@ -181,13 +181,13 @@ func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSRel
 
 In case you return `YES`/`true` in the above method, your app should obtain user's choice and message the SDK with the result using the following API.
 
-```Objective-C
+```objc
 // Depending on the user's choice, call notifyUpdateAction: with the right value.
 [MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
 [MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
 ```
 
-```Swift
+```swift
 // Depending on the user's choice, call notify() with the right value.
 MSDistribute.notify(MSUpdateAction.update);
 MSDistribute.notify(MSUpdateAction.postpone);
@@ -199,21 +199,21 @@ If you don't call the above method, the `releaseAvailableWithDetails:`-method wi
 
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality.
 
-```Objective-C
+```objc
 [MSDistribute setEnabled:NO];
 ```
 
-```Swift
+```swift
 MSDistribute.setEnabled(false)
 ```
 
 To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
 
-```Objective-C
+```objc
 [MSDistribute setEnabled:YES];
 ```
 
-```Swift
+```swift
 MSDistribute.setEnabled(true)
 ```
 
@@ -224,11 +224,11 @@ MSDistribute.setEnabled(true)
 
 You can also check if Mobile Center Distribute is enabled or not:
 
-```Objective-C
+```objc
 BOOL enabled = [MSDistribute isEnabled];
 ```
 
-```Swift
+```swift
 var enabled = MSDistribute.isEnabled()
 ```
 
@@ -236,7 +236,7 @@ var enabled = MSDistribute.isEnabled()
 
 Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
 
- ```Objective-C
+ ```objc
  #if DEBUG
  	[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
  #else
@@ -244,7 +244,7 @@ Mobile Center Distribute will pop up it's UI/browser at application start. While
  #endif
  ```
 
- ```Swift
+ ```swift
  #if DEBUG
  	MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
  #else
@@ -259,7 +259,7 @@ This is what we recommend to do. There is no way to set this up locally on your 
 > [!TIP]
 > To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
 
-1. Create your app in the Mobile Center Portal if you haven't done that already.
+1. Create your app in the Mobile Center Portal if you have not done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
 4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
@@ -282,7 +282,7 @@ Mobile Center uses method swizzling by automatically forwarding your application
 2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
 3. Add `openURL` callback in your `AppDelegate` file.
 
-```Objective-C
+```objc
 - (BOOL)application:(UIApplication *)application
 	            openURL:(NSURL *)url
 	  sourceApplication:(NSString *)sourceApplication
@@ -293,7 +293,7 @@ Mobile Center uses method swizzling by automatically forwarding your application
 }
 ```
 
-```Swift
+```swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
   // Pass the URL to MSDistribute.
