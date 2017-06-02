@@ -28,11 +28,11 @@ Mobile Center Analytics helps you understand user behavior and customer engageme
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
-## 1. Session and device information
+## Session and device information
 
 Once you add Mobile Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.
 
-## 2. Custom events
+## Custom events
 
 You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
 
@@ -55,7 +55,7 @@ Properties for events are entirely optional – if you just want to track an eve
 MSAnalytics.trackEvent("Video clicked")
 ```
 
-## 3. Enable or disable Mobile Center Analytics at runtime
+## Enable or disable Mobile Center Analytics at runtime
 
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
@@ -75,7 +75,7 @@ To enable Mobile Center Analytics again, use the same API but pass `YES`/`true` 
 MSAnalytics.setEnabled(true)
 ```
 
-## 4. Check if Mobile Center Analytics is enabled
+## Check if Mobile Center Analytics is enabled
 
 You can also check if Mobile Center Analytics is enabled or not.
 
