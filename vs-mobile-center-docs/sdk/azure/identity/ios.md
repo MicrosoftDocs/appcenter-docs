@@ -32,7 +32,7 @@ Add Identity to your mobile app with either client flow (recommended) or server 
     * Microsoft Account: [Signing users in to OneDrive (iOS)]
     * Twitter: [Fabric for iOS - Getting Started]
 
-2. On log in completion with the client SDK, make sure Azure gets the authentication token by adding the following snippets:
+2. On log in completion with the client SDK, make sure Azure gets the authentication token by adding the following snippets (choose _Swift_ or _Objective-C_ from the **Language** selection list on the top/right):
 
 Azure Active Directory
 ```swift

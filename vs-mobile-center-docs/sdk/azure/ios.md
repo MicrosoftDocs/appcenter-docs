@@ -28,7 +28,7 @@ The iOS SDK supports Objective-C projects, Swift 2.2 projects, and Swift 2.3 pro
 2. Create an _MSClient_ in your app to work with Azure features.
 
 You will need:
-* your Mobile Center app secret, which you can find at by going to _Mobile Center_ > _your app_ > _Getting Started_ > _Manage app_ > _App secret_.
+* your Mobile Center app secret, which you can find at by going to **Mobile Center > your app > Getting Started > Manage app > App secret**.
 
 ```swift
 let azureMobileClient = MSClient(applicationURLString: "_https://mobile-{app secret}.azurewebsites.net_")
