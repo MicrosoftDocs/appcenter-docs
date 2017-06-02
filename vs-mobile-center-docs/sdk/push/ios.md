@@ -240,13 +240,13 @@ var enabled = MSPush.isEnabled()
 
 You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
-By default iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 You need to register the delegate before starting MobileCenter as shown in the following example:
 
 **Objective-C**
 
-```objectivec
+```objc
 [MSPush setDelegate:{Your Push delegate}];
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
 ```
@@ -262,7 +262,7 @@ Here is an example of the delegate implementation that displays an alert dialog 
 
 **Objective-C**
 
-```objectivec
+```objc
 - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
   NSString *message = pushNotification.message;
   for (NSString *key in pushNotification.customData) {
