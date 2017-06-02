@@ -19,7 +19,7 @@ CodePush is a Mobile Center cloud service that enables Cordova and React Native 
 
 You manage your CodePush account using our NodeJS-based CLI. To install it, open a command prompt or terminal, and type <code>npm install -g code-push-cli</code>
 
-**Note:** On OSX and Linux, you may need to prefix this command with ```sudo```
+**Note:** On macOS and Linux, you may need to prefix this command with ```sudo```
 
 ## 2. CodePush-ify your app
 
