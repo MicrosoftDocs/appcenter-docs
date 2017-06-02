@@ -67,3 +67,36 @@ To enable all services at once again, use the same API but pass `YES`/`true` as 
 ```swift
 MSMobileCenter.setEnabled(true)
 ```
+
+## Use custom properties
+
+The Mobile Center SDK allows you to define custom properties in your app. They are key value pairs. You may use custom properties for various purposes. For instance, you can use custom properties to segment your user, and then send push notifications to a specific [audience](https://docs.microsoft.com/en-us/mobile-center/push/#audiences).
+
+You can set custom properties by calling the `setCustomProperties` API. A valid key of custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following datatypes: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
+
+**Objective-C**
+
+```obj-c
+[MobileCenter setCustomProperties: [[[MSCustomProperties new] setString:@"blue" forKey:@"color"] setNumber:10 forKey:@"score"]]
+```
+
+**Swift**
+
+```swift
+MobileCenter.setCustomProperties(MSCustomProperties().setString("blue", forKey: "color").setNumber((10), forKey: "score"))
+```
+Note - If you set the same custom property more than once, previous values will be overwritten by the last one.
+
+You may remove any custom property by calling the `clearPropertyForKey` API.
+
+**Objective-C**
+
+```obj-c
+[MobileCenter setCustomProperties: [[[MSCustomProperties new] setString:@"blue" forKey:@"color"] setNumber:10 forKey:@"score" clearPropertyForKey:@"score"]]
+```
+
+**Swift**
+
+```swift
+MobileCenter.setCustomProperties(MSCustomProperties().setString("blue", forKey: "color").setNumber((10), forKey: "score").clearProperty(forKey: "score"))
+```
