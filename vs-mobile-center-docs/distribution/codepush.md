@@ -44,5 +44,5 @@ For example: <code>code-push release-cordova MyApp android</code>.
 
 ## 4. Run your app
 
-And that's it! All users running your app will receive the update using the experience you configured in step #4. For more details, refer to the <a href="cli.html">CLI</a> and client SDK documentation
+And that's it! All users running your app will receive the update using the experience you configured in step #2. For more details, refer to the <a href="cli.html">CLI</a> and client SDK documentation
 (<a href="cordova.html">Cordova</a>, <a href="react-native.html">React Native</a>).</p>
