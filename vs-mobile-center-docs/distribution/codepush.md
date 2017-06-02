@@ -2,7 +2,7 @@
 title: Use CodePush to update your app live
 description: Fix bugs and add content quickly
 keywords: distribution
-author: iageoghe
+author: iageoghe@microsoft.com
 ms.author: iageoghe
 ms.date: 06/02/2017
 ms.topic: article
@@ -11,6 +11,38 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-# Release a Build
+# Update Live
 
-CodePush is a Mobile Center cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using our provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores.
+CodePush is a Mobile Center cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using our provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores. All React Native apps created on Mobile Center are CodePush enabled by default, to start using CodePush you simply need to follow the following steps.
+
+## 1. Install the CodePush CLI
+
+You manage your CodePush account using our NodeJS-based CLI. To install it, open a command prompt or terminal, and type <code>npm install -g code-push-cli</code>
+
+**Note:** On OSX and Linux, you may need to prefix this command with ```sudo```
+
+## 2. CodePush-ify your app
+
+Add the appropriate CodePush client SDKs to your app, and configure them to query for updates against the app deployment created above. The following provide details on how to do this for each unique app type:
+
+  - [Cordova]({{ site.baseurl }}/docs/cordova.html#link-2)
+  - [React Native (iOS)]({{ site.baseurl }}/docs/react-native.html#link-3)
+
+## 3. Release an app update
+
+After making changes to your app’s code or assets, push the update to your staging environment by using the CLI command which corresponds to the app type you are building (React Native or Cordova), and specifies the name of your CodePush app and the platform that your update is targetting (iOS or Android).
+
+###React Native
+Run the <code>release-react</code> command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
+
+For example: <code>code-push release-react MyApp ios</code>.
+
+###Cordova
+Run the <code>release-cordova</code> command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
+
+For example: <code>code-push release-cordova MyApp android</code>.
+
+## 4. Run your app
+
+And that's it! All users running your app will receive the update using the experience you configured in step #4. For more details, refer to the <a href="cli.html">CLI</a> and client SDK documentation
+(<a href="cordova.html">Cordova</a>, <a href="react-native.html">React Native</a>).</p>

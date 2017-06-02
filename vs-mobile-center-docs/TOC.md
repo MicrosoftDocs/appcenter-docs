@@ -48,10 +48,10 @@
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
-## [CodePush](distribution/codepush.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
+## [CodePush](distribution/codepush.md)
 
 # [Tables](azure/tables/index.md)
 ## [Azure](azure/index.md)
