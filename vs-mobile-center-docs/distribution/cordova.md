@@ -1,7 +1,7 @@
 ---
 title: Cordova Client SDK
 layout: docs
-permalink: /docs/cordova.html
+permalink: cordova.html
 ---
 
 This plugin provides client-side integration for the [CodePush service](http://codepush.tools), allowing you to easily add a dynamic update experience to your Cordova app(s).

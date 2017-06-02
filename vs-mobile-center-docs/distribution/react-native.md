@@ -1,7 +1,7 @@
 ---
 title: React Native Client SDK
 layout: docs
-permalink: /docs/react-native.html
+permalink: react-native.html
 ---
 
 *Note: These docs are only relevant to the latest version of our plugin. If you are using an older version, please switch to the relevant tag on [our GitHub repo](https://github.com/Microsoft/react-native-code-push) to view the docs for that particular version.*

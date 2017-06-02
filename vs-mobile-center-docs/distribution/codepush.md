@@ -2,7 +2,7 @@
 title: Use CodePush to update your app live
 description: Fix bugs and add content quickly
 keywords: distribution
-author: iageoghe@microsoft.com
+author: iageoghe
 ms.author: iageoghe
 ms.date: 06/02/2017
 ms.topic: article
@@ -23,9 +23,9 @@ You manage your CodePush account using our NodeJS-based CLI. To install it, open
 
 ## 2. CodePush-ify your app
 
-Add the appropriate CodePush client SDKs to your app, and configure them to query for updates against the app deployment created above. The following provide details on how to do this for each unique app type:
+Add the appropriate CodePush client SDKs to your app, and configure them to query for updates against one of your app deployments. The following provide details on how to do this for each unique app type:
 
-  - [Cordova](cordova.html#link-2)
+  - [Cordova][codova]
   - [React Native (iOS)](react-native.html#link-3)
 
 ## 3. Release an app update
@@ -46,3 +46,5 @@ For example: <code>code-push release-cordova MyApp android</code>.
 
 And that's it! All users running your app will receive the update using the experience you configured in step #2. For more details, refer to the <a href="cli.html">CLI</a> and client SDK documentation
 (<a href="cordova.html">Cordova</a>, <a href="react-native.html">React Native</a>).</p>
+
+ [codova]:(cordova.html)
