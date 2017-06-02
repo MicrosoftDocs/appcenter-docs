@@ -25,8 +25,8 @@ You manage your CodePush account using our NodeJS-based CLI. To install it, open
 
 Add the appropriate CodePush client SDKs to your app, and configure them to query for updates against the app deployment created above. The following provide details on how to do this for each unique app type:
 
-  - [Cordova]({{ site.baseurl }}/docs/cordova.html#link-2)
-  - [React Native (iOS)]({{ site.baseurl }}/docs/react-native.html#link-3)
+  - [Cordova](cordova.html#link-2)
+  - [React Native (iOS)](react-native.html#link-3)
 
 ## 3. Release an app update
 
