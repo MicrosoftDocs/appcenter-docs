@@ -47,4 +47,4 @@ For example: <code>code-push release-cordova MyApp android</code>.
 And that's it! All users running your app will receive the update using the experience you configured in step #2. For more details, refer to the <a href="cli.html">CLI</a> and client SDK documentation
 (<a href="cordova.html">Cordova</a>, <a href="react-native.html">React Native</a>).</p>
 
- [codova]:(cordova.html)
+ [codova]:https://review.docs.microsoft.com/en-us/mobile-center/distribution/cordova?branch=CodePush_Entry
