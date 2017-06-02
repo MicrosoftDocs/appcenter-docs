@@ -48,7 +48,7 @@
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
-## [Release a build with CodePush](distribution/codepush.md)
+## [Update live with CodePush](distribution/codepush.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
