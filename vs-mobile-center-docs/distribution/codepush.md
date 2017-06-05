@@ -30,7 +30,7 @@ Add the appropriate CodePush client SDKs to your app and configure them to query
 
 ## 3. Release an app update
 
-After making changes to your app’s code or assets, push the update to your staging environment by using the CLI command which corresponds to the app type you are building (React Native or Cordova), and specifies the name of your CodePush app and the platform that your update is targetting (iOS or Android).
+After making changes to your app’s code or assets, push the update to your staging environment by using the CLI command which corresponds to the app type you are building (React Native or Cordova), and specify the name of your CodePush app and the platform that your update is targetting (iOS or Android).
 
 ###React Native
 Run the <code>release-react</code> command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
