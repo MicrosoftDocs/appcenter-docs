@@ -17,7 +17,7 @@ CodePush is a Mobile Center cloud service that enables Cordova and React Native 
 
 ## 1. Install the CodePush CLI
 
-You manage your CodePush account using our NodeJS-based CLI. To install it, open a command prompt or terminal, and type <code>npm install -g code-push-cli</code>
+You manage your CodePush account using the [cli][NodeJS-based CLI]. To install it, open a command prompt or terminal, and type `npm install -g code-push-cli`
 
 **Note:** On macOS and Linux, you may need to prefix this command with ```sudo```
 
@@ -33,14 +33,14 @@ Add the appropriate CodePush client SDKs to your app and configure them to query
 After making changes to your app’s code or assets, push the update to your staging environment by using the CLI command which corresponds to the app type you are building (React Native or Cordova), and specify the name of your CodePush app and the platform that your update is targetting (iOS or Android).
 
 ###React Native
-Run the <code>release-react</code> command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
+Run the `release-react` command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
 
-For example: <code>code-push release-react MyApp ios</code>.
+For example: `code-push release-react MyApp ios`.
 
 ###Cordova
-Run the <code>release-cordova</code> command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
+Run the `release-cordova` command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server. 
 
-For example: <code>code-push release-cordova MyApp android</code>.
+For example: `code-push release-cordova MyApp android`.
 
 ## 4. Run your app
 
