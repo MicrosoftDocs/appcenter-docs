@@ -34,7 +34,7 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 
 [!include[](apns-setup.md)]
 
-For more information refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment) and the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+For more information refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment).
 
 ## 2. Add Mobile Center Push to your app
 
