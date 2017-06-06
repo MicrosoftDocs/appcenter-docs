@@ -13,10 +13,10 @@ On the bottom of the page select **Sandbox** for initial development or **Produc
 4. Go to your Apple developer account and create a [new key](https://developer.apple.com/account/ios/authkey/create) in **Certificates, Identifiers & Profiles**/**Keys**. Make sure to check the APNs checkbox, fill in the key name and press **Continue** then **Confirm**.
 ![apple-dev-center-new-auth-key](images/ios-new-auth-key-apple-portal.png)
 On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings **Key ID** field.
-Download the Auth Key file.
+Download the key file.
 ![apple-dev-center-confirm-auth-key](images/ios-confirm-auth-key-apple-portal.png)
 
-5. Open your Auth Key file with a text editor and extract the authentication token it contains.
+5. Open your key file with a text editor and extract the authentication token it contains.
 ![auth-key-file](images/ios-auth-key-file.png)
 Paste this token to the Mobile Center push settings **Authentication Token** field. Click the **Done** button from the Mobile Center push settings page to complete this configuration.
 
