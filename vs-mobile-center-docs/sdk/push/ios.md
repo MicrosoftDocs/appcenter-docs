@@ -26,7 +26,7 @@ Mobile Center Push enables you to send push notifications to users of your app f
 
 ## 1. Enable Apple Push Notifications service (APNs) for your app
 
-Please configure Apple Push Notifications service (APNs) for your app from your Apple developer account before adding Mobile Center Push to your app. Mobile Center Push won't get any notifications if you don't enable push notifications. Follow the instructions in Apple's documentation on [how to configure push notifications](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+[!include[](ios-push-settings.md)]
 
 ## 2. Add Mobile Center Push to your app
 

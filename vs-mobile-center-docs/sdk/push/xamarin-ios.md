@@ -25,10 +25,9 @@ ms.tgt_pltfrm: xamarin.ios
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
-## 1. Enable Apple Push Notifications service (APNS) for your app
+## 1. Enable Apple Push Notifications service (APNs) for your app
 
-For Mobile Center Push to work for an iOS application, you must set up your application to register with Apple's push notification service (APNS). Instructions on how to do this can be found in [Xamarin's documentation](https://developer.xamarin.com/guides/ios/application_fundamentals/notifications/remote_notifications_in_ios/).
-
+[!include[](ios-push-settings.md)]
 
 ## 2. Add Mobile Center Push to your app
 
