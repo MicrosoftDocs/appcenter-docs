@@ -30,12 +30,12 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 
 ### Enable push notifications on your application
 
- Open Xcode to enable push notifications on your application. In the project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
+ In XCode's project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
 ![enable-push-capability](images/ios-enable-push-capability.png)
 
 [!include[](apns-setup.md)]
 
-For more information refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 ## 2. Add Mobile Center Push to your app
 

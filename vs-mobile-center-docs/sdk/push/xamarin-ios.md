@@ -36,7 +36,7 @@ Double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. 
 
 [!include[](apns-setup.md)]
 
-For more information refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment).
+For more information, refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment).
 
 ## 2. Add Mobile Center Push to your app
 
