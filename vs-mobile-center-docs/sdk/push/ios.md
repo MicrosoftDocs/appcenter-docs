@@ -247,14 +247,14 @@ You need to register the delegate before starting MobileCenter as shown in the f
 **Objective-C**
 
 ```objc
-[MSPush setDelegate:{Your Push delegate}];
+[MSPush setDelegate:self];
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
 ```
 
 **Swift**
 
 ```swift
-MSPush.setDelegate({Your Push delegate})
+MSPush.setDelegate(self)
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
 ```
 
