@@ -30,7 +30,7 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 
 ### Enable push notifications on your application
 
- In XCode's project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
+ In Xcode's project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
 ![enable-push-capability](images/ios-enable-push-capability.png)
 
 [!include[](apns-setup.md)]
