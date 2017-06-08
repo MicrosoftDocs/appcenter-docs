@@ -61,7 +61,7 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 
 If your app crashed previously, you can get details about the last crash.
 
-````objc
+```objc
 MSErrorReport *crashReport = [MSCrashes lastSessionCrashReport];
 ```
 ```swift
@@ -234,7 +234,7 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
 
-````objc
+```objc
 [MSCrashes setEnabled:NO];
 ```
 ```swift
@@ -243,7 +243,7 @@ MSCrashes.setEnabled(false)
 
 To enable Mobile Center Crashes again, use the same API but pass `YES`/`true` as a parameter.
 
-````objc
+```objc
 [MSCrashes setEnabled:YES];
 ```
 ```swift
