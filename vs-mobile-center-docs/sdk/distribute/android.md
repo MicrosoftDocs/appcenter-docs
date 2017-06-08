@@ -19,7 +19,9 @@ ms.tgt_pltfrm: android
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+
+This feature will NOT work if your app is deployed to the app store.
 
 ## Add in-app updates to your app
 
@@ -29,7 +31,7 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in the section below.
+1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`.
 
     ```groovy
     dependencies {
@@ -40,13 +42,11 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 2. Save your `build.gradle` file and make sure to trigger a Gradle sync in Android Studio.
 
-Now that you've integrated Mobile Center Distribute in your application, it's time to start the SDK and make use of Mobile Center.
-
 ### 2. Start Mobile Center Distribute
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
+Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Center Distribute service.
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
@@ -56,8 +56,6 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 ```java
 import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.analytics.Analytics;
-import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
@@ -95,7 +93,7 @@ public class MyDistributeListener implements DistributeListener {
         dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
         dialogBuilder.setMessage(releaseNotes);
 
-        // Mimmick default SDK buttons
+        // Mimic default SDK buttons
         dialogBuilder.setPositiveButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_download, new DialogInterface.OnClickListener() {
 
             @Override

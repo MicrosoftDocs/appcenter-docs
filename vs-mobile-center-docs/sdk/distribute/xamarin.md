@@ -19,7 +19,9 @@ ms.tgt_pltfrm: xamarin
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+
+This feature will NOT work if your app is deployed to the app store.
 
 ## Add in-app updates to your app
 
@@ -48,7 +50,7 @@ Multiplatform Xamarin.Forms apps have three projects in one solution - the porta
 * Navigate to the **Project > Manage NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
 
-##### 1.3 Package Manager Console
+#### 1.3 Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
 
@@ -73,7 +75,7 @@ using Microsoft.Azure.Mobile.Distribute;
 
 #### 2.2 Add the `Start()` method
 
-Add `Distribute` to your `Start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
+Add `Distribute` to your `Start()` method to start Mobile Center Distribute service.
 
 ##### Xamarin.iOS
 
@@ -108,15 +110,14 @@ Distribute.DontCheckForUpdatesInDebug();
 
 This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
-#### 2.3 [For iOS only] Modify your `info.plist`
+#### 2.3 [For iOS only] Modify your `Info.plist`
 
-1. Open your `Info.plist`.
-2. Add a new key for `URL types` or `CFBundleURLTypes` (in case Xcode displays your `info.plist` as source code).
-3. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
-4. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+1. Add a new key for `URL types` or `CFBundleURLTypes` in your `Info.plist` file (in case Xcode displays your `Info.plist` as source code).
+2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
+3. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
-> If you want to verify that you modified the **Info.plist** correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
+> If you want to verify that you modified the `Info.plist` correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
 > ```
 > <key>CFBundleURLTypes</key>
 >	<array>
@@ -272,7 +273,7 @@ While it is possible to use Mobile Center Distribute to distribute a new version
 
 Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 
-1. Open your **Info.plist file**.
+1. Open your `Info.plist file`.
 2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
 3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
 
