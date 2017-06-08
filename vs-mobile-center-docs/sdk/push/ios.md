@@ -123,7 +123,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 Mobile Center automatically forwards your application delegate's methods to Mobile Center services. This is made possible by using method swizzling. It greatly improves the SDK integration but there is a possibility of conflicts with other third party libraries or the application delegate itself. For instance, it should be disabled if you or one of your third party libraries is doing message forwarding on the application delegate. Message forwarding usually implies the implementation of `NSObject#forwardingTargetForSelector:` or `NSObject#forwardInvocation:` methods. In this case you may want to disable the Mobile Center application delegate forwarder by adding the `MobileCenterAppDelegateForwarderEnabled` key to your Info.plist file and set the value to `0`, doing so will disable application delegate forwarding for all Mobile Center services.
 
 > [!NOTE]
-> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate. except the `application:didReceiveRemoteNotification:fetchCompletionHandler` method. If you or one of your third party libraries already implements this method then it will not be swizzled by the forwarder and you will have to do the forwarding to the Push service yourself by following [these steps](#implement-the-callback-to-receive-push-notifications).
+> Note that all delegate methods captured by the Mobile Center application delegate forwarder are forwarded to both Mobile Center services and your application delegate except the `application:didReceiveRemoteNotification:fetchCompletionHandler` method. If you or one of your third party libraries already implements this method then it will not be swizzled by the forwarder and you will have to do the forwarding to the Push service yourself by following [these steps](#implement-the-callback-to-receive-push-notifications).
 
 ##### Manual
 
@@ -243,4 +243,58 @@ BOOL enabled = [MSPush isEnabled];
 
 ```swift
 var enabled = MSPush.isEnabled()
+```
+
+## 5. Customize your usage of Mobile Center Push
+
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+
+By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+You need to register the delegate before starting MobileCenter as shown in the following example:
+
+**Objective-C**
+
+```objc
+[MSPush setDelegate:self];
+[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
+```
+
+**Swift**
+
+```swift
+MSPush.setDelegate(self)
+MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
+```
+
+Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push has been clicked:
+
+**Objective-C**
+
+```objc
+- (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
+  NSString *message = pushNotification.message;
+  for (NSString *key in pushNotification.customData) {
+    message = [NSString stringWithFormat:@"%@\n%@: %@", message, key, [pushNotification.customData objectForKey:key]];
+  }
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:pushNotification.title
+                                                  message:message
+                                                 delegate:self
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles:nil];
+  [alert show];
+}
+```
+
+**Swift**
+
+```swift
+func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
+  var message: String = pushNotification.message
+  for item in pushNotification.customData {
+    message = String(format: "%@\n%@: %@", message, item.key, item.value)
+  }
+  let alert = UIAlertView(title: pushNotification.title, message: message, delegate: self, cancelButtonTitle: "OK")
+  alert.show()
+}
 ```
