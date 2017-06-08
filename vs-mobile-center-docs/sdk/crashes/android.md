@@ -4,7 +4,7 @@ description:  Mobile Center Crashes for Android
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/14/2017
+ms.date: 06/07/2017
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: mobile-center
@@ -24,21 +24,19 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 
 Please follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
 
-## 1. Generate a test crash
+## Generate a test crash
 
-Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK:
+Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in debug builds and won't do anything in release builds.
 
 ```java
 Crashes.generateTestCrash();
 ```
 
-This API can only be used in debug builds and won't do anything in release builds.
-
-## 2. Get more information about a previous crash
+## Get more information about a previous crash
 
 Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### 2.1 Did the app crash in the previous session?
+### Did the app crash in the previous session?
 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
@@ -47,7 +45,7 @@ Crashes.hasCrashedInLastSession();
 ```
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
-### 2.2 Details about the last crash
+### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
 
@@ -63,37 +61,15 @@ Crashes.getLastSessionCrashReport(new ResultCallback<ErrorReport>() {
 });
 ```
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#5-customize-your-usage-of-mobile-center-crashes).
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-mobile-center-crashes).
 
-## 3. Enable or disable Mobile Center Crashes at runtime
-
-You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
-
-```java
-Crashes.setEnabled(false);
-```
-
-To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
-
-```java
-Crashes.setEnabled(true);
-```
-
-## 4. Check if Mobile Center Crashes is enabled
-
-You can also check if Mobile Center Crashes is enabled or not:
-
-```java
-Crashes.isEnabled();
-```
-
-## 5. Customize your usage of Mobile Center Crashes
+## Customize your usage of Mobile Center Crashes
 
 Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
 
 To handle the callbacks, you must either implement all methods in the `CrashesListener` interface, or override the `AbstractCrashesListener` class and pick only the ones you're interested in.
 
-### 5.1 Use your own CrashesListener
+### Use your own CrashesListener
 
 Create your own CrashesListener and assign it like this:
 
@@ -113,7 +89,7 @@ AbstractCrashesListener customListener = new AbstractCrashesListener() {
 Crashes.setListener(customListener);
 ```
 
-### 5.2 Should the crash be processed?
+### Should the crash be processed?
 
 Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
 
@@ -124,7 +100,7 @@ public boolean shouldProcess(ErrorReport report) {
 }
 ```
 
-### 5.3 Ask for the users' consent to send a crash log
+### Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
@@ -146,11 +122,11 @@ Pass one option of `SEND`, `DONT_SEND` or `ALWAYS_SEND` in the above method call
 
 Feel free to have a look [at our reference implementation](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java).
 
-### 5.4 Get information about the sending status for a crash log
+### Get information about the sending status for a crash log
 
-In our experience, developers might be interested in the status of Mobile Center Crashes. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
 
-#### 5.4.1 The following callback will be invoked before the SDK sends a crash log
+#### The following callback will be invoked before the SDK sends a crash log
 
 ```java
 @Override
@@ -159,7 +135,7 @@ public void onBeforeSending(ErrorReport errorReport) {
 }
 ```
 
-#### 5.4.2 The following callback will be invoked after the SDK sent a crash log successfully.
+#### The following callback will be invoked after the SDK sent a crash log successfully.
 
 ```java
 @Override
@@ -168,7 +144,7 @@ public void onSendingSucceeded(ErrorReport report) {
 }
 ```
 
-#### 5.4.3 The following callback will be invoked if the SDK failed to send a crash log
+#### The following callback will be invoked if the SDK failed to send a crash log
 
 ```java
 @Override
@@ -177,7 +153,7 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 }
 ```
 
-#### 5.4.4 The following callback will be invoked if you want to add attachments to a crash report
+#### The following callback will be invoked if you want to add attachments to a crash report
 
 Here is an example to attach a text and an image to a crash.
 
@@ -198,4 +174,26 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 	/* Return attachments as list. */
 	return Arrays.asList(textLog, binaryLog);
 }
+```
+
+## Enable or disable Mobile Center Crashes at runtime
+
+You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+
+```java
+Crashes.setEnabled(false);
+```
+
+To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
+
+```java
+Crashes.setEnabled(true);
+```
+
+## Check if Mobile Center Crashes is enabled
+
+You can also check if Mobile Center Crashes is enabled or not:
+
+```java
+Crashes.isEnabled();
 ```
