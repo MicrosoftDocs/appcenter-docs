@@ -4,12 +4,15 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: jaelim
 ms.author: jaelim
-ms.date: 05/01/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: ios
+dev_langs:  
+ - swift
+ - objc 
 ---
 
 # Mobile Center Push
@@ -24,9 +27,9 @@ ms.tgt_pltfrm: ios
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
-## 1. Enable Apple Push Notifications service (APNs) for your app
+## Enable Apple Push Notifications service (APNs) for your app
 
-Please configure Apple Push Notifications service (APNs) for your app from your Apple developer account and the Mobile Center portal before adding Mobile Center Push to your app. Mobile Center Push won't get any notifications if you don't setup push notifications.
+Configure Apple Push Notifications service (APNs) for your app from your Apple developer account and Mobile Center portal before adding Mobile Center Push to your app.
 
 ### Enable push notifications on your application
 
@@ -37,15 +40,15 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 
 For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
 
-## 2. Add Mobile Center Push to your app
+## Add Mobile Center Push to your app
 
 Please follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
-### 2.1 Add the Mobile Center Push module
+### 1. Add the Mobile Center Push module
 
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
-#### 2.1.1 Integration via Cocoapods
+#### Integration via Cocoapods
 
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
@@ -53,65 +56,38 @@ If you are integrating Mobile Center into your app via Cocoapods, add the follow
 pod 'MobileCenter/MobileCenterPush'
 ```
 
-#### 2.1.2 Integration by copying the binaries into your project
+#### Integration by copying the binaries into your project
 
-1. Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
+If you wish to manually integrate the module, follow this [documentation link](ios-manual-integration.md).
 
-2. Unzip the file and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
-
-3. [Optional] Create a subdirectory for 3rd-party-libraries.
-    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
-    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
-
-4. Open Finder and copy the unzipped `MobileCenter-SDK-iOS` folder into your project's folder at the location where you want it to reside.
-
-5. Add the SDK framework to the project in Xcode:
-    * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop `MobileCenter.framework` and `MobileCenterPush.framework` from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
-    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
-
-### 2.2 Start Mobile Center Push
+### 2.Start Mobile Center Push
 
 In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
-#### 2.2.1 Add the import for Mobile Center Push
+#### 2.1 Add the import for Mobile Center Push
 
-**Objective-C**
+Open your **AppDelegate.m** file  in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
 
-Open your **AppDelegate.m** file and add the following import statements:
-
-```obj-c
+```objc
 @import MobileCenter;
 @import MobileCenterPush;
 ```
-
-**Swift**
-
-Open your **AppDelegate.swift** file and add the following import statements:
-
 ```swift
 import MobileCenter
 import MobileCenterPush
 ```
 
-#### 2.2.2 Add the `start:withServices:` method
+#### 2.2 Add the `start:withServices:` method
 
 Add `MSPush` to your `start:withServices:` method to start Mobile Center Distribute together with the other services that you want to use in your app.
 
-**Objective-C**
+Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
-
-```obj-c
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
+```objc
+[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
-
-**Swift**
-
-Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
-
 ```swift
-MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -131,9 +107,7 @@ Mobile Center automatically forwards your application delegate's methods to Mobi
 
 Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
-**Objective-C**
-
-```obj-c
+```objc
 - (void)application:(UIApplication *)application
     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
@@ -148,9 +122,6 @@ Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` ca
   [MSPush didFailToRegisterForRemoteNotificationsWithError:error];
 }
 ```
-
-**Swift**
-
 ```swift
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 
@@ -169,9 +140,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 
 Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notification.
 
-**Objective-C**
-
-```obj-c
+```objc
 - (void)application:(UIApplication *)application
    didReceiveRemoteNotification:(NSDictionary *)userInfo
          fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -184,9 +153,6 @@ Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` 
   [alert show];
 }
 ```
-
-**Swift**
-
 ```swift
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
   let dictionary = ((userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? [AnyHashable: Any])
@@ -195,57 +161,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 }
 ```
 
-## 3. Enable or disable Mobile Center Push at runtime
-
-You can enable and disable Mobile Center Push at runtime.
-
-If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working.
-
-In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
-
-**Objective-C**
-
-```objectivec
-[MSPush setEnabled:NO];
-```
-
-**Swift**
-
-```swift
-MSPush.setEnabled(false)
-```
-
-To enable Mobile Center Push again, use the same API but pass `YES`/`true` as a parameter.
-
-**Objective-C**
-
-```objectivec
-[MSPush setEnabled:YES];
-```
-
-**Swift**
-
-```swift
-MSPush.setEnabled(true)
-```
-
-## 4. Check if Mobile Center Push is enabled
-
-You can also check if Mobile Center Push is enabled or not:
-
-**Objective-C**
-
-```objectivec
-BOOL enabled = [MSPush isEnabled];
-```
-
-**Swift**
-
-```swift
-var enabled = MSPush.isEnabled()
-```
-
-## 5. Customize your usage of Mobile Center Push
+## Customize your usage of Mobile Center Push
 
 You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
@@ -253,23 +169,16 @@ By default, iOS does not generate notifications when the push is received in for
 
 You need to register the delegate before starting MobileCenter as shown in the following example:
 
-**Objective-C**
-
 ```objc
 [MSPush setDelegate:self];
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
 ```
-
-**Swift**
-
 ```swift
 MSPush.setDelegate(self)
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
 ```
 
 Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push has been clicked:
-
-**Objective-C**
 
 ```objc
 - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
@@ -285,9 +194,6 @@ Here is an example of the delegate implementation that displays an alert dialog 
   [alert show];
 }
 ```
-
-**Swift**
-
 ```swift
 func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   var message: String = pushNotification.message
@@ -297,4 +203,35 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   let alert = UIAlertView(title: pushNotification.title, message: message, delegate: self, cancelButtonTitle: "OK")
   alert.show()
 }
+```
+
+## Enable or disable Mobile Center Push at runtime
+
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+
+```objc
+[MSPush setEnabled:NO];
+```
+```swift
+MSPush.setEnabled(false)
+```
+
+To enable Mobile Center Push again, use the same API but pass `YES`/`true` as a parameter.
+
+```objc
+[MSPush setEnabled:YES];
+```
+```swift
+MSPush.setEnabled(true)
+```
+
+## Check if Mobile Center Push is enabled
+
+You can also check if Mobile Center Push is enabled or not:
+
+```objc
+BOOL enabled = [MSPush isEnabled];
+```
+```swift
+var enabled = MSPush.isEnabled()
 ```
