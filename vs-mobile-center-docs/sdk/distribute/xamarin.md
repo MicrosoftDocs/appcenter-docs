@@ -110,14 +110,14 @@ Distribute.DontCheckForUpdatesInDebug();
 
 This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
-#### 2.3 [For iOS only] Modify your `Info.plist`
+#### 2.3 [For iOS only] Modify your **Info.plist**
 
-1. Add a new key for `URL types` or `CFBundleURLTypes` in your `Info.plist` file (in case Xcode displays your `Info.plist` as source code).
+1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
 3. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
-> If you want to verify that you modified the `Info.plist` correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
+> If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
 > ```
 > <key>CFBundleURLTypes</key>
 >	<array>
@@ -273,7 +273,7 @@ While it is possible to use Mobile Center Distribute to distribute a new version
 
 Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 
-1. Open your `Info.plist file`.
+1. Open your **Info.plist** file.
 2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
 3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
 
