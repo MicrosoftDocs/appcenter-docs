@@ -36,10 +36,10 @@ dev_langs:
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   	```objc
-  	[MSMobileCenter setLogLevel:MSLogLevelVerbose]`
+  	[MSMobileCenter setLogLevel:MSLogLevelVerbose]
   	```
     ```swift
-	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)`
+	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 	```
 	
 5. Make sure your device is online.
@@ -55,10 +55,10 @@ dev_langs:
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
 	```objc
- 	[MSMobileCenter setLogLevel:MSLogLevelVerbose]`
+ 	[MSMobileCenter setLogLevel:MSLogLevelVerbose]
  	```
  	```swift
-	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)`
+	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 	```
 
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
