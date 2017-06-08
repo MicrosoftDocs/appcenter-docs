@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 05/31/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -21,23 +21,11 @@ ms.tgt_pltfrm: android
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. This feature will NOT work if your app is deployed to the app store.
 
-### How do in-app updates work?
-The in-app updates feature works as follows:
-1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
-2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
-4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
-5. Once the above step is successful, they should navigate back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
-
-> [!TIP]
-> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be different.
-
-## 1. Add in-app updates to your app
+## Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
-### 1.1 Add the Mobile Center Distribute module
+### 1. Add the Mobile Center Distribute module
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
@@ -54,19 +42,17 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 Now that you've integrated Mobile Center Distribute in your application, it's time to start the SDK and make use of Mobile Center.
 
-### 1.2 Start Mobile Center Distribute
+### 2. Start Mobile Center Distribute
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 Add `Distribute.class` to your `MobileCenter.start()` method to start Mobile Center Distribute together with the other services that you want to use in your app.
 
 ```java
-MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class, Distribute.class);
+MobileCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
-
-Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.azure.mobile.MobileCenter;
@@ -75,13 +61,13 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
-## 2. Customize or localize the in-app update dialog
+## Customize or localize the in-app update dialog
 
-### 2.1. Customize or localize text
+### 1. Customize or localize text
 
 You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
-### 2.2. Customize the update dialog
+### 2. Customize the update dialog
 
 You can customize the default update dialog's appearance by implementing the `DistributeListener` interface. You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
@@ -154,9 +140,9 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
-## 3. Enable or disable Mobile Center Distribute at runtime
+## Enable or disable Mobile Center Distribute at runtime
 
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app updates functionality.
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
 
 ```java
 Distribute.setEnabled(false);
@@ -167,17 +153,27 @@ To enable Mobile Center Distribute again, use the same API but pass `true` as a 
 Distribute.setEnabled(true);
 ```
 
-> [!NOTE]
-> Note that this will only enable or disable the in-app updates SDK feature for Mobile Center Distribute. Mobile Center Distribute service can still be used in the portal for uploading and distributing releases.
-
-## 4. Check if Mobile Center Distribute is enabled
+## Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
 ```java
 Distribute.isEnabled();
 ```
-## 5. How do I test in-app updates?
+
+## How do in-app updates work?
+The in-app updates feature works as follows:
+1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
+2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+5. Once the above step is successful, they should navigate back to the app.
+6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
+
+> [!TIP]
+> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be different.
+
+## How do I test in-app updates?
 
 This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
 
