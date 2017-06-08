@@ -10,6 +10,9 @@ ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: ios
+dev_langs:  
+ - swift
+ - objc 
 ---
 
 # Other iOS APIs
@@ -27,14 +30,9 @@ You can control the amount of log messages that show up from Mobile Center in th
 
 To have as many log messages as possible, use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSMobileCenter setLogLevel:MSLogLevelVerbose];
 ```
-
-**Swift**
-
 ```swift
 MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 ```
@@ -43,14 +41,9 @@ MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 
 The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
-**Objective-C**
-
-```obj-c
+```objc
 NSUUID *installId = [MSMobileCenter  installId];
 ```
-
-**Swift**
-
 ```swift
 var installId = MSMobileCenter.installId()
 ```
@@ -59,28 +52,18 @@ var installId = MSMobileCenter.installId()
 
 If you want to disable all Mobile Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to Mobile Center.
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSMobileCenter setEnabled:NO];
 ```
-
-**Swift**
-
 ```swift
 MSMobileCenter.setEnabled(false)
 ```
 
 To enable all services at once again, use the same API but pass `YES`/`true` as a parameter.
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSMobileCenter setEnabled:YES];
 ```
-
-**Swift**
-
 ```swift
 MSMobileCenter.setEnabled(true)
 ```
