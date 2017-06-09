@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: dhei
 ms.author: dihei
-ms.date: 05/10/2017
+ms.date: 06/09/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center
@@ -24,7 +24,7 @@ ms.tgt_pltfrm: UWP
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal and relies on [Windows Notification Services](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
 
-## Register your app for Windows Notification Services (WNS)
+## Prerequisite - Register your app for Windows Notification Services (WNS)
 
 Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that Mobile Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with the Windows Store in Visual Studio.
 

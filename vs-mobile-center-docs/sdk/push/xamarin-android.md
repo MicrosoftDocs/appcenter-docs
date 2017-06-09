@@ -27,7 +27,7 @@ Mobile Center Push enables you to send push notifications to users of your app f
 
 Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications. Also, Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
-## Add Firebase to your app
+## Prerequisite - Add Firebase to your app
 
 ### 1. Create a Firebase project
 
