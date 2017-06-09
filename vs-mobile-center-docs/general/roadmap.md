@@ -4,7 +4,7 @@ description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: piyushjo
 ms.author: piyushjo
-ms.date: 04/23/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: mobile-center
