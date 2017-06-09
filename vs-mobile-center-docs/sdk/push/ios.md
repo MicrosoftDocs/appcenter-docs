@@ -112,7 +112,7 @@ MSPush.setDelegate(self)
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
 ```
 
-Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push has been clicked:
+Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push notification has been clicked:
 
 ```objc
 - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {

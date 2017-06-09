@@ -28,7 +28,7 @@ Note that only devices having the [Google Play](https://play.google.com) store a
 
 ## Prerequisite - Add Firebase to your app
 
-Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase assistant.
+Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
 
 ### 1. Manual integration
 
@@ -36,7 +36,7 @@ Before using Mobile Center Push service, you need to add Firebase to your applic
 
 2. Make sure to continue following instructions in **Add the SDK** sub section right after.
 
-### 2. Using Firebase assistant
+### 2. Using Firebase Assistant
 
 1. Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see **Firebase** in the **Tools** menu.
 
@@ -46,7 +46,7 @@ Before using Mobile Center Push service, you need to add Firebase to your applic
 
     2. Add FCM to your app
 
-Step 3 is managed by our SDK automatically, so you can stop after step 2.
+Step 3 is managed by Mobile Center SDK automatically, so you can stop after step 2.
 
 ### 3. Obtain your Android API Key
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
@@ -59,7 +59,7 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating Push module, add the following lines:
+1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating the Push module, add the following lines:
 
     ```groovy
     dependencies {
