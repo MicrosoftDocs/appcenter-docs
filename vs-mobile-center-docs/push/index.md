@@ -61,7 +61,7 @@ There are few reserved keywords in each platform that can be set via custom data
 
 Audiences let you segment your users based on a set of properties and send targeted notifications to these audiences. These properties are of two types:
 - Device Properties: App Version, Country, Mobile Carrier, Language, Language Variant, Device Model, OEM, API Level, Device OS, Device OS Version, Screen Size, Time Zone Offset
-- Custom Properties: These properties are key-value pairs defined by the users. This will allow you to segment your user base on properties of your app specific. Documentation for custom properties is available in the _Other APIs_ section for these platforms: 
+- Custom Properties: These properties are key-value pairs defined by the users. They allow you to segment your user base on properties specific to your app. Documentation for custom properties is available in the _Other APIs_ section for these platforms: 
     - [Android](~/sdk/other-apis/android.md#use-custom-properties) 
     - [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
     - [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
