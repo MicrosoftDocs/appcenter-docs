@@ -14,7 +14,7 @@ ms.service: mobile-center
 
 ## Documentation
 
-[Product documentation](~/index.md) 
+[Product documentation](~/index.yml) 
 
 [API documentation](~/api-docs/index.md)
 

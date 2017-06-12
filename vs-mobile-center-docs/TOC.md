@@ -1,4 +1,4 @@
-# [Mobile Center Overview](index.md)
+# [Mobile Center Overview](index.yml)
 
 # Dashboard
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
@@ -51,6 +51,7 @@
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
+## [CodePush](distribution/codepush.md)
 
 # [Tables](azure/tables/index.md)
 ## [Azure](azure/index.md)
