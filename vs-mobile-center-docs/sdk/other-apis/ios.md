@@ -75,19 +75,34 @@ Mobile Center SDK allows you to define custom properties as key value pairs in y
 You can set custom properties by calling the `setCustomProperties` API. A valid key of custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following datatypes: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
 ```objc
-[MobileCenter setCustomProperties: [[[MSCustomProperties new] setString:@"blue" forKey:@"color"] setNumber:10 forKey:@"score"]]
+MSCustomProperties *customProperties = [MSCustomProperties new];
+[customProperties setString:@"blue" forKey:@"color"];
+[customProperties setNumber:@(10) forKey:@"score"];
+[MSMobileCenter setCustomProperties:customProperties];
 ```
 ```swift
-MobileCenter.setCustomProperties(MSCustomProperties().setString("blue", forKey: "color").setNumber((10), forKey: "score"))
+var customProperties = MSCustomProperties()
+customProperties.setSring("blue", forKey: "color")
+customProperties.setNumber(10, forKey: "score")
+MSMobileCenter.setCustomProperties(customProperties)
 ```
+
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
 You may remove any custom property by calling the `clearPropertyForKey` API.
 
 ```objc
-[MobileCenter setCustomProperties: [[[MSCustomProperties new] setString:@"blue" forKey:@"color"] setNumber:10 forKey:@"score" clearPropertyForKey:@"score"]]
+MSCustomProperties *customProperties = [MSCustomProperties new];
+[customProperties setString:@"blue" forKey:@"color"];
+[customProperties setNumber:@(10) forKey:@"score"];
+[customProperties clearPropertyForKey:@"score"];
+[MSMobileCenter setCustomProperties:customProperties];
 ```
 ```swift
-MobileCenter.setCustomProperties(MSCustomProperties().setString("blue", forKey: "color").setNumber((10), forKey: "score").clearProperty(forKey: "score"))
+var customProperties = MSCustomProperties()
+customProperties.setSring("blue", forKey: "color")
+customProperties.setNumber(10, forKey: "score")
+customProperties.clearProperty(forKey: "score")
+MSMobileCenter.setCustomProperties(customProperties)
 ```
