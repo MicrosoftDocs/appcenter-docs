@@ -162,7 +162,7 @@ For example - If you just want to onboard to Mobile Center Analytics, you should
 MobileCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
 
-#### 4.3.2 Xarmarin.Forms
+#### 4.3.2 Xamarin.Forms
 
 ```csharp
 MobileCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));

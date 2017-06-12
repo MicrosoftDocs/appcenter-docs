@@ -2,8 +2,8 @@
 title: Build results for UWP apps
 description: Build results explained in detail
 keywords: build, windows
-author: danieladams
-ms.author: v-daada
+author: siminapasat
+ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: c41b61bb-c405-4e69-9c03-b1ebc9a1c1fe

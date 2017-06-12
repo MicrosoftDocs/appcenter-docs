@@ -4,7 +4,7 @@ description: Mobile Center Analytics for Android
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/14/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: mobile-center
@@ -25,15 +25,15 @@ Mobile Center Analytics helps you understand user behavior and customer engageme
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
 
-## 1. Session and device information
+## Session and device information
 
-Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, manufacturer etc. You don’t need to write any additional code.
+Once you add Mobile Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
 
-## 2. Custom events
+## Custom events
 
 You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
 
-Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value.
+Once you have started the SDK, use the `trackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
 
 ```java
 Map<String, String> properties = new HashMap<>();
@@ -49,9 +49,7 @@ Properties for events are entirely optional – if you just want to track an eve
 Analytics.trackEvent("Video clicked");
 ```
 
-For more information about custom events in Mobile Center, go to [Events Metrics](~/analytics/understand-events.md).
-
-## 3. Enable or disable Mobile Center Analytics at runtime
+## Enable or disable Mobile Center Analytics at runtime
 
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
@@ -65,7 +63,7 @@ To enable Mobile Center Analytics again, use the same API but pass `true` as a p
 Analytics.setEnabled(true);
 ```
 
-## 4. Check if Mobile Center Analytics is enabled
+## Check if Mobile Center Analytics is enabled
 
 You can also check if Mobile Center Analytics is enabled or not.
 

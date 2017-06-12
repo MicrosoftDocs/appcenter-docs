@@ -56,7 +56,8 @@ ms.tgt_pltfrm: xamarin
   ```
 
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
-7. Make sure your device is online.
-8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
-9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-10. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+7. Don't use `XA_BROKEN_EXCEPTION_TRANSITIONS=true` environment variable, the SDK is currently incompatible with this flag.
+8. Make sure your device is online.
+9. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
+10. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
+11. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.

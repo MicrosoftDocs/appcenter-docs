@@ -6,10 +6,10 @@ Add the following using statement to the top of the file you are referencing `Pu
 using Microsoft.Azure.Mobile.Push
 ```
 
-Next, add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push together with the other services that you want to use in your app.
+Next, add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push service.
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Push));
+MobileCenter.Start("{Your App Secret}", typeof(Push));
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your app secret.
