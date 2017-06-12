@@ -55,7 +55,7 @@ MobileCenter.setEnabled(true);
 
 ## Use custom properties
 
-The Mobile Center SDK allows you to define custom properties in your app. They are key value pairs. You may use custom properties for various purposes. For instance, you can use custom properties to segment your user, and then send push notifications to a specific [audience](~/push/index.md#audiences).
+Mobile Center SDK allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your user, and then send push notifications to a specific [audience](~/push/index.md#audiences).
 
 You can set custom properties by calling the `setCustomProperties()` API. A valid key of custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java datatypes: `String`, `Number`, `boolean` and `Date`. 
 
