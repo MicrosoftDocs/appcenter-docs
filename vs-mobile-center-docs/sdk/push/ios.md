@@ -181,55 +181,55 @@ Mobile Center uses swizzling to automatically forward your application delegate'
     Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
     ```objc
-- (void)application:(UIApplication *)application
-    didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    - (void)application:(UIApplication *)application
+        didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
-  // Pass the device token to MSPush.
-  [MSPush didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
+      // Pass the device token to MSPush.
+      [MSPush didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    }
 
-- (void)application:(UIApplication *)application
-    didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error {
+    - (void)application:(UIApplication *)application
+        didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error {
 
-  // Pass the error to MSPush.
-  [MSPush didFailToRegisterForRemoteNotificationsWithError:error];
-}
-```
+      // Pass the error to MSPush.
+      [MSPush didFailToRegisterForRemoteNotificationsWithError:error];
+    }
+    ```
     ```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 
-  // Pass the device token to MSPush.
-  MSPush.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
-}
+      // Pass the device token to MSPush.
+      MSPush.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+    }
 
-func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 
-  // Pass the error to MSPush.
-  MSPush.didFailToRegisterForRemoteNotificationsWithError(error)
-}
-```
+      // Pass the error to MSPush.
+      MSPush.didFailToRegisterForRemoteNotificationsWithError(error)
+    }
+    ```
 
 4. Implement the callback to receive push notifications
 
     Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notification.
 
     ```objc
-- (void)application:(UIApplication *)application
-   didReceiveRemoteNotification:(NSDictionary *)userInfo
-         fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-  NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[dictionary valueForKey:@"title"]
-                                                  message:[dictionary valueForKey:@"body"]
-                                                 delegate:self
-                                        cancelButtonTitle:@"OK"
-                                        otherButtonTitles:nil];
-  [alert show];
-}
-```
+    - (void)application:(UIApplication *)application
+       didReceiveRemoteNotification:(NSDictionary *)userInfo
+             fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+      NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[dictionary valueForKey:@"title"]
+                                                      message:[dictionary valueForKey:@"body"]
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+      [alert show];
+    }
+    ```
     ```swift
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-  let dictionary = ((userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? [AnyHashable: Any])
-  let alert = UIAlertView(title: dictionary?["title"] as? String, message: dictionary?["body"] as? String, delegate: self, cancelButtonTitle: "OK")
-  alert.show()
-}
-```
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+      let dictionary = ((userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? [AnyHashable: Any])
+      let alert = UIAlertView(title: dictionary?["title"] as? String, message: dictionary?["body"] as? String, delegate: self, cancelButtonTitle: "OK")
+      alert.show()
+    }
+    ```
