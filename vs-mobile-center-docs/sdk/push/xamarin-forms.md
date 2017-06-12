@@ -54,14 +54,29 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in iOS and UWP projects.
 It can be used directly in Android without any additional setup.
 
-### 4.1. iOS additional steps
+### iOS additional steps
 
 >[!NOTE]
 >You only need this step if you disabled method swizzling while setting up [Xamarin.iOS](xamarin-ios.md).
 
-[!include[](xamarin-ios-didreceivenotification.md)]
+To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
 
-### 4.2 UWP additional steps
+```csharp
+public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
+{
+	var result = Push.DidReceiveRemoteNotification(userInfo);
+	if (result)
+	{
+		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+	}
+	else
+	{
+		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+	}
+}
+```
+
+### UWP additional steps
 
 To enable the push event feature, modify your UWP application's `OnLaunched` method as follows to include `Push.CheckLaunchedFromNotification(e);` at the end as follows:
 
@@ -86,7 +101,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-### 4.3. Subscribe to the push event
+### Subscribe to the push event
 
 [!include[](push-callbacks.md)]
 
