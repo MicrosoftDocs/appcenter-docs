@@ -32,7 +32,7 @@ Before you can send notification using WNS, your app must be registered with the
 
 1. In Visual Studio Solution Explorer, right-click the UWP project, click **Store -> Associate App with the Store...**
 
-![uwp store association](images/mobile-center-uwp-sdk-store-association.png)
+    ![uwp store association](images/mobile-center-uwp-sdk-store-association.png)
 
 2. In the wizard, click **Next**, sign in with your Microsoft account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
 
@@ -42,7 +42,7 @@ Before you can send notification using WNS, your app must be registered with the
 
 1. Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList), sign-in with your Microsoft account. Click the Windows Store app you associated in the previous step.
 
-![uwp app registration](images/mobile-center-uwp-sdk-push-registration.png)
+    ![uwp app registration](images/mobile-center-uwp-sdk-push-registration.png)
 
 2. In the registration page, make a note of the value under **Application Secrets** and the **Package SID**, which you will next use to configure your Mobile Center Push backend.
 
