@@ -2,7 +2,7 @@ You can subscribe to the event `Push.PushNotificationReceived` to be notified wh
 
 ```csharp
 // This should come before MobileCenter.Start() is called
-Push.PushNotificationReceived += (sender, e) {
+Push.PushNotificationReceived += (sender, e) => {
 
     // Add the notification message and title to the message
     var summary =  $"Push notification received:"
@@ -25,5 +25,4 @@ Push.PushNotificationReceived += (sender, e) {
 };
 ```
 
->[!NOTE]
->Because it uses `System.Diagnostics.Debug.WriteLine()`, this example assumes that the app is running in debug mode with a debugger attached, but that is not a requirement to simply use the `Push.PushNotificationReceived` event.
+Note - Because it uses `System.Diagnostics.Debug.WriteLine()`, this example assumes that the app is running in debug mode with a debugger attached, but that is not a requirement to simply use the `Push.PushNotificationReceived` event.
