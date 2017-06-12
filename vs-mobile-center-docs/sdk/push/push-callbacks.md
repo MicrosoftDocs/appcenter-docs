@@ -24,5 +24,3 @@ Push.PushNotificationReceived += (sender, e) => {
     System.Diagnostics.Debug.WriteLine(summary);
 };
 ```
-
-Note - Because it uses `System.Diagnostics.Debug.WriteLine()`, this example assumes that the app is running in debug mode with a debugger attached, but that is not a requirement to simply use the `Push.PushNotificationReceived` event.
