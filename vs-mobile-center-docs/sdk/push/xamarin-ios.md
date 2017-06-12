@@ -63,7 +63,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 [!include[](enable-or-disable.md)]
 
-## Automatically forward application delegate's methods to Mobile Center services
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
 
 Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 

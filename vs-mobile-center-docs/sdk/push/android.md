@@ -143,7 +143,8 @@ public class MyPushListener implements PushListener {
 
 ## Existing Firebase Analytics users
 
-Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+>[!NOTE]
+>Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
 

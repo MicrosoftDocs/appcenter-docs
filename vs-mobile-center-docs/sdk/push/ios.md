@@ -91,7 +91,7 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
-#### 2.3 [Optional] Implement the callback to receive push notifications
+#### 2.3 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
 If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [these steps](#implement-the-callback-to-receive-push-notifications) to add the code to receive push notifications.
 
@@ -105,11 +105,11 @@ You need to register the delegate before starting MobileCenter as shown in the f
 
 ```objc
 [MSPush setDelegate:self];
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class], [MSPush class]]];
+[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
 MSPush.setDelegate(self)
-MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self, MSPush.self])
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push notification has been clicked:
@@ -170,7 +170,7 @@ BOOL enabled = [MSPush isEnabled];
 var enabled = MSPush.isEnabled()
 ```
 
-## Automatically forward application delegate's methods to Mobile Center services
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
 
 Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 
