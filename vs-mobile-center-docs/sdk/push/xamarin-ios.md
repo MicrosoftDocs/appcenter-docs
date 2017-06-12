@@ -71,43 +71,42 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
 3. Implement two methods to register push notifications
 
-Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your `AppDelegate` class as follows:
+    Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your `AppDelegate` class as follows:
 
-```csharp
-public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
-{
-	Push.RegisteredForRemoteNotifications(deviceToken);
-}
-```
+    ```csharp
+    public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+    {
+        Push.RegisteredForRemoteNotifications(deviceToken);
+    }
+    ```
 
-```csharp
-public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
-{
-	Push.FailedToRegisterForRemoteNotifications(error);
-}
-```
+    ```csharp
+    public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
+    {
+        Push.FailedToRegisterForRemoteNotifications(error);
+    }
+    ```
 
->[!NOTE]
->You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the Mobile Center lines of code above alongside existing code in your implementation of these methods.
+    >[!NOTE]
+    >You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the Mobile Center lines of code above alongside existing code in your implementation of these methods.
 
 4. Implement the callback to enable push event
 
-Implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+    Implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
 
-```csharp
-public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
-{
-	var result = Push.DidReceiveRemoteNotification(userInfo);
-	if (result)
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
-	}
-	else
-	{
-		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
-	}
-}
-```
+    ```csharp
+    public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
+    {
+        var result = Push.DidReceiveRemoteNotification(userInfo);
+        if (result)
+        {
+            completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+        }
+        else
+        {
+            completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+        }
+    }
+    ```
 
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
-```
