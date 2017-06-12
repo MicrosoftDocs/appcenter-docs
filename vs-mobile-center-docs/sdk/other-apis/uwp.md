@@ -55,7 +55,7 @@ MobileCenter.Enabled = true;
 
 ## Use custom properties
 
-The Mobile Center SDK allows you to define custom properties in your app. They are key value pairs. You may use custom properties for various purposes. For instance, you can use custom properties to segment your user, and then send push notifications to a specific [audience](https://docs.microsoft.com/en-us/mobile-center/push/#audiences).
+The Mobile Center SDK allows you to define custom properties in your app. They are key value pairs. You may use custom properties for various purposes. For instance, you can use custom properties to segment your user, and then send push notifications to a specific [audience](~/push/index.md#audiences).
 
 You can set custom properties by calling the `SetCustomProperties()` API. A valid key of custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# datatypes: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 
@@ -64,7 +64,9 @@ CustomProperties properties = new CustomProperties();
 properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
 MobileCenter.SetCustomProperties(properties);
 ```
-Note - If you set the same custom property more than once, previous values will be overwritten by the last one.
+
+> [!NOTE]
+> If you set the same custom property more than once, previous values will be overwritten by the last one.
 
 You may remove any custom property by calling the `Clear()` API.
 
