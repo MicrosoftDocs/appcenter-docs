@@ -22,7 +22,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 | One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md) | Simple steps to integrate the SDK and start understanding your users|
 | [Overview](~/analytics/overview.md) | Key metric about the app usage and users devices|
 | [Custom Events](~/analytics/event-metrics.md)| Count, user count and custom properties analytics of custom events|
-| [Log Flow](~/analytics/understand-log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
+| [Log Flow](~/analytics/log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
 
 ## Get Started
 
@@ -48,4 +48,4 @@ The documentation for Custom Events can be found at [Events Metrics](~/analytics
 
 ## Log Flow
 
-See your incoming activity using Log Flow. More details can be found at [Log Flow](~/analytics/understand-log-flow.md).
+See your incoming activity using Log Flow. More details can be found at [Log Flow](~/analytics/log-flow.md).
