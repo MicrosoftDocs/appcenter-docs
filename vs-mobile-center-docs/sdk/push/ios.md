@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: jaelim
 ms.author: jaelim
-ms.date: 06/08/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: mobile-center
@@ -93,7 +93,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 #### 2.3 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [these steps](#implement-the-callback-to-receive-push-notifications) to add the code to receive push notifications.
+If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
 
 ## Customize your usage of Mobile Center Push
 
