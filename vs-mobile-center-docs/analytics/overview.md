@@ -24,7 +24,7 @@ and many more.
 ## General information
 All the data in the Overview page represent the device population in the selected **time range** and filters.
 For example the Languages will show the number of devices configured for a given language that was active in the selected time-range.
-It is possible to further filter the charts by selecting a number of app versions.
+It is possible to further filter the charts by selecting a number of app versions. Note that we only have support for Semver2.0.
 
 ## Active users
 Represents the number of unique app installations that launched the app in the last:
