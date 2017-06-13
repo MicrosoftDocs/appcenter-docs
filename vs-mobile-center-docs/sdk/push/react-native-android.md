@@ -63,22 +63,22 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
 
-```
-npm install mobile-center-push --save
-```
+    ```
+    npm install mobile-center-push --save
+    ```
 
 2. Link the plugin to the React Native app by using the react-native link command.
 
-```
-react-native link mobile-center-push
-```
+    ```
+    react-native link mobile-center-push
+    ```
 
 3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
 
-```
-What is the Android app secret? (0000-0000-0000-0000-000000000000)
-What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-```
+    ```
+    What is the Android app secret? (0000-0000-0000-0000-000000000000)
+    What is the iOS app secret? (0000-0000-0000-0000-000000000000)
+    ```
 
 Those steps modify your *MainApplication.java* file, adding `RNPushPackage` there.
 
@@ -89,36 +89,36 @@ Those steps modify your *MainApplication.java* file, adding `RNPushPackage` ther
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `RNPushPackage` is instantiated, like from `MainApplication.onCreate`:
 
-```java
-import com.microsoft.azure.mobile.push.Push;
+    ```java
+    import com.microsoft.azure.mobile.push.Push;
 
-...
+    ...
 
-Push.enableFirebaseAnalytics(getApplication());
-```
+    Push.enableFirebaseAnalytics(getApplication());
+    ```
 
 ## Enable or disable Mobile Center Push at runtime
 
 You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 
-```javascript
-import Push from 'mobile-center-push';
+    ```javascript
+    import Push from 'mobile-center-push';
 
-...
+    ...
 
-await Push.setEnabled(false);      // Disable push
-await Push.setEnabled(true);       // Reenable it
-```
+    await Push.setEnabled(false);      // Disable push
+    await Push.setEnabled(true);       // Reenable it
+    ```
 
 ## Check if Mobile Center Push is enabled
 
 You can also check if Mobile Center Push is enabled or not:
 
-```javascript
-import Push from 'mobile-center-push';
+    ```javascript
+    import Push from 'mobile-center-push';
 
-...
+    ...
 
-const pushEnabled = await Push.isEnabled();
-```
+    const pushEnabled = await Push.isEnabled();
+    ```
