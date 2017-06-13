@@ -39,6 +39,19 @@
     {
         "source_path": "vs-mobile-center-docs/general/guidance.md",
         "redirect_url": "/mobile-center/migration/index"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-audience.md",
+        "redirect_url": "/mobile-center/analytics/overview"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-events.md",
+        "redirect_url": "/mobile-center/analytics/event-metrics"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-log-flow.md",
+        "redirect_url": "/mobile-center/analytics/log-flow"
     }
 
   ]

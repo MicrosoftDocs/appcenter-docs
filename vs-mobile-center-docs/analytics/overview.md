@@ -1,6 +1,6 @@
 ---
-title: Understanding the Mobile Center Audience Page
-description: Help using the Audience Page on Mobile Center
+title: Understanding the Mobile Center Overview Page
+description: Help using the Overview Page on Mobile Center
 keywords: mobile center, analytics
 author: blparr
 ms.author: blparr
@@ -11,9 +11,9 @@ ms.service: mobile-center
 ms.custom: analytics
 ---
 
-# Audience Page
+# Overview Page
 
-The Audience page objective is to provide the key metrics about your app users population: their devices, their locations, activity and engagement.
+The Overview page objective is to provide the key metrics about your app users population: their devices, their locations, activity and engagement.
 This will enable answers to questions such as:
 - Should I translate my app into a new language?
 - Are my users majoritarily on the lastest version?
@@ -22,9 +22,9 @@ This will enable answers to questions such as:
 and many more.
 
 ## General information
-All the data in the Audience page represent the device population in the selected **time range** and filters.
+All the data in the Overview page represent the device population in the selected **time range** and filters.
 For example the Languages will show the number of devices configured for a given language that was active in the selected time-range.
-It is possible to further filter the charts by selecting a number of app versions.
+It is possible to further filter the charts by selecting a number of app versions. Note that we only have support for Semver2.0.
 
 ## Active users
 Represents the number of unique app installations that launched the app in the last:
@@ -52,8 +52,8 @@ The Devices panel gives information about the users' devices:
 - OS distribution: shows the relative percentage of the top-4 most used OS versions
 
 ## Country/Region and Languages
- The country/region and languages panel display information about devices geographical location and language setting.
- The country/region is determined by the carrier country and requires the device to have a SIM. Note that if you are using a simulator, the country shown will probably not be accurate as it is selected by default. The language is the one defined at the OS level by the user.
+The country/region and languages panel display information about devices geographical location and language setting.
+The country/region is determined by the carrier country and requires the device to have a SIM. Note that if you are using a simulator, the country shown will probably not be accurate as it is selected by default. The language is the one defined at the OS level by the user.
 - The map shows shaded regions depending on the number of active devices. The more devices, the darker the shade
 - Country/Region distribution: shows the top 7 country/region by number of active devices
 - Language distribution: shows the top 7 major language device setting
