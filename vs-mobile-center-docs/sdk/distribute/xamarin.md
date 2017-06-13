@@ -269,7 +269,7 @@ This is what we recommend to do. There is no way to set this up locally on your 
 While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 
-## Automatically forward application delegate's methods to Mobile Center services [For iOS only]
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
 
 Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 
