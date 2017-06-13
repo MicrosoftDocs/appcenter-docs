@@ -50,7 +50,8 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 
 #### Integrate the SDK automatically
 
-The default integration of the SDK uses Cocoapods for iOS. If you are not using Cocoapods in your app, you need to integrate the React Native SDK manually for your iOS app.
+The default integration of the SDK uses Cocoapods for iOS. We recommend this approach, but if you don't wish to
+use Cocoapods, you'll need to integrate the SDK manually.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
 
