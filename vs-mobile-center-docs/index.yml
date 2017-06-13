@@ -21,6 +21,8 @@ abstract:
       text: Pricing
     - href: ~/general/changelog/
       text: Changelog
+    - href: http://status.mobile.azure.com/
+      text: Service Status
 sections:
 - title: Get Started
   items:
