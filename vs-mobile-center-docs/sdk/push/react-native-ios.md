@@ -6,6 +6,7 @@ author: bretjohn
 ms.author: bretjohn
 ms.date: 06/12/2017
 ms.topic: article
+ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
@@ -46,12 +47,12 @@ For more information, refer to the [Apple documentation](http://help.apple.com/x
 
 ### 1. Add the Mobile Center Push module
 
+Please follow the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
 #### Integrate the SDK automatically
 
-The default integration of the SDK uses Cocoapods for iOS. We recommend this approach, but if you don't wish to
-use Cocoapods, you'll need to integrate the SDK manually.
+The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
 
@@ -59,7 +60,7 @@ use Cocoapods, you'll need to integrate the SDK manually.
 	npm install mobile-center-push --save
 	```
 
-2. Link the plugin to the React Native app by using the react-native link command.
+2. Link the plugin to the React Native app by using the `react-native link command`.
 
 	```
 	react-native link mobile-center-push
@@ -76,8 +77,6 @@ use Cocoapods, you'll need to integrate the SDK manually.
 
 If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md)
 
-You will then need to initialize Push, by adding the following code. It's normally added to your `AppDelegate.m` `didFinishLaunchingWithOptions` method, but it can added elsewhere.
-
 ```objc
 #import <RNPush/RNPush.h>
 
@@ -88,7 +87,7 @@ You will then need to initialize Push, by adding the following code. It's normal
 
 ### 2.Start Mobile Center Push
 
-Mobile Center Push is started by the call to
+Mobile Center Push is started by this call:
 
 ```objc
 #import <RNPush/RNPush.h>
@@ -98,13 +97,13 @@ Mobile Center Push is started by the call to
 [RNPush registerAndEnable];
 ```
 
-That call is added automatically to `AppDelegate.m` by the automic instructions above. Otherwise, you need to add it manually.
+That call is added automatically to `AppDelegate.m` by the automatic instructions above. Otherwise, you need to add it manually.
 
-Note that when the app makes this call for the first time after being installed, iOS will prompt the user for permission to receive Push Notifications. If you wish to delay when that prompt appears to the user, say until after an app first time use wizard finishes, you can delay making the call.
+Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive Push Notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, you can delay making the call.
 
 #### 2.2 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [these steps](#implement-the-callback-to-receive-push-notifications) to add the code to receive push notifications.
+If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
 
 ## Enable or disable Mobile Center Push at runtime
 
@@ -116,7 +115,7 @@ import Push from 'mobile-center-push';
 ...
 
 await Push.setEnabled(false);      // Disable push
-await Push.setEnabled(true);       // Enable
+await Push.setEnabled(true);       // Reenable it
 ```
 
 ## Check if Mobile Center Push is enabled

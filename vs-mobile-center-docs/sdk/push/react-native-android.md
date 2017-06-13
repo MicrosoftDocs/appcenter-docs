@@ -6,6 +6,7 @@ author: bretjohn
 ms.author: bretjohn
 ms.date: 06/12/2017
 ms.topic: article
+ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
@@ -58,6 +59,7 @@ Go to Project Settings and under Cloud Messaging, copy your Server Key. This wil
 ## Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
+The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
 
@@ -106,7 +108,7 @@ import Push from 'mobile-center-push';
 ...
 
 await Push.setEnabled(false);      // Disable push
-await Push.setEnabled(true);       // Enable
+await Push.setEnabled(true);       // Reenable it
 ```
 
 ## Check if Mobile Center Push is enabled
