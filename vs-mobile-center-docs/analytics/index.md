@@ -21,7 +21,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 |--|--|
 | One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md) | Simple steps to integrate the SDK and start understanding your users|
 | [Overview](~/analytics/overview.md) | Key metric about the app usage and users devices|
-| [Custom Events](~/analytics/understand-events.md)| Count, user count and custom properties analytics of custom events|
+| [Custom Events](~/analytics/event-metrics.md)| Count, user count and custom properties analytics of custom events|
 | [Log Flow](~/analytics/understand-log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
 
 ## Get Started
@@ -44,7 +44,7 @@ Find more details about the [overview page](~/analytics/overview.md) and [answer
 
 ## Events Metrics
 
-The documentation for Custom Events can be found at [Events Metrics](~/analytics/understand-events.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
+The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
 
 ## Log Flow
 
