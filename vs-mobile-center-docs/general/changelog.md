@@ -129,7 +129,7 @@ This new version includes commands to create and manage your apps and API tokens
 * **Events for Analytics.**
 Going beyond understanding how many and who your users are, you can now learn about your users' actions.
 Find "Events" under the Analytics section to get detailed data about your events and their properties.
-Read the [doc](~/analytics/understand-events.md) and check out how to start learning from these events.
+Read the [doc](~/analytics/event-metrics.md) and check out how to start learning from these events.
 * **Build Support for Native Android Apps.**
 You can now set up builds for building native Android apps by going to the [Build](~/build/android/index.md) section.
 
