@@ -46,7 +46,7 @@
         "redirect_url": "/mobile-center/analytics/overview"
     },
     {
-        "source_path": "vs-mobile-center-docs/understand-events.md",
+        "source_path": "vs-mobile-center-docs/analytics/understand-events.md",
         "redirect_url": "/mobile-center/analytics/event-metrics"
     },
     {
