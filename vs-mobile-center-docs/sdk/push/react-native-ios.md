@@ -56,36 +56,30 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
 
-	```
-	npm install mobile-center-push --save
-	```
+```
+npm install mobile-center-push --save
+```
 
 2. Link the plugin to the React Native app by using the `react-native link command`.
 
-	```
-	react-native link mobile-center-push
-	```
+```
+react-native link mobile-center-push
+```
 
 3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
 
-	```
-	What is the Android app secret? (0000-0000-0000-0000-000000000000)
-	What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-	```
+```
+What is the Android app secret? (0000-0000-0000-0000-000000000000)
+What is the iOS app secret? (0000-0000-0000-0000-000000000000)
+```
 
 #### Integrate the iOS SDK manually
 
 If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md)
 
-```objc
-#import <RNPush/RNPush.h>
-
-...
-
-[RNPush registerAndEnable];
-```
-
 ### 2.Start Mobile Center Push
+
+#### 2.1 Register for notifications
 
 Mobile Center Push is started by this call:
 
@@ -97,7 +91,7 @@ Mobile Center Push is started by this call:
 [RNPush registerAndEnable];
 ```
 
-That call is added automatically to `AppDelegate.m` by the automatic instructions above. Otherwise, you need to add it manually.
+That call is added automatically to *AppDelegate.m* by the automatic instructions above. Otherwise, you need to add it manually.
 
 Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive Push Notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, you can delay making the call.
 
