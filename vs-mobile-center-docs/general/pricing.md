@@ -4,7 +4,7 @@ description: Information about Mobile Center pricing plans
 keywords: pricing
 author: piyushjo
 ms.author: piyushjo
-ms.date: 01/20/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
 ms.service: mobile-center
@@ -12,7 +12,9 @@ ms.service: mobile-center
 
 # Pricing
 
-Mobile Center is free to use during the preview. The following limitations apply in the preview period:
+The Mobile Center is free to use while we are in the current “preview” period. We aren’t quite ready to announce pricing yet, but you can be sure that our pricing will be competitive.  We’ll also have an ongoing level of free Mobile Center services to support lower-scale apps.
+
+During the preview period we have to set a few usage limits as we get everything working just how you’d expect:
 
 #### Build
 * 1 concurrent build per account
@@ -32,7 +34,9 @@ Mobile Center is free to use during the preview. The following limitations apply
 #### Analytics
 * 30 day retention
 
-The preview does not have a service level agreement.
+Once the preview period is complete, we’ll offer a guaranteed service level so you can count on us for your mission-critical apps. If our free tier in Mobile Center isn’t enough to meet your needs, you will be able to purchase Mobile Center services.  All billing will be through your Azure account, enabling direct purchasing via credit card, purchasing via the Microsoft Enterprise Agreement, and purchasing via partners who are in the Cloud Solution Provider program.
+
 
 # We want your feedback!
+
 Have questions, concerns, or feedback? We want to hear from you! Please [email us](mailto:vsmcpricing@microsoft.com) to provide feedback and help us make a pricing model that works for everyone.
