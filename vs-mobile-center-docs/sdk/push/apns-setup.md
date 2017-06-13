@@ -4,9 +4,9 @@
 
     ![mobile-center-push-settings](images/ios-push-settings-mc-portal.png)
 
-    On the bottom of the page, select **Sandbox** for initial development or **Production** for production version of your application. You will collect the **Key ID**, **App Name**, **App ID** and **Push Token** in the next steps.
+    On the bottom of the page, select **Sandbox** for initial development or **Production** for production version of your application. You will collect the **Key ID**, **Prefix**, **ID** and **Push Token** in the next steps.
 
-2. Go to your Apple developer account and select your application from the [App ID list](https://developer.apple.com/account/ios/identifier/bundle) in **Identifiers**. Copy the **Prefix** value from this window and paste it to the Mobile Center push settings **App ID** field. Do the same with the **ID** value to be copied to the Mobile Center push settings **App Name** field.
+2. Go to your Apple developer account and select your application from the [App ID list](https://developer.apple.com/account/ios/identifier/bundle) in **Identifiers**. Copy the **Prefix** value from this window and paste it to the Mobile Center push settings. Do the same with the **ID** value.
 
     ![apple-dev-center-app-id](images/ios-app-id-apple-portal.png)
 
@@ -14,7 +14,7 @@
 
     ![apple-dev-center-new-auth-key](images/ios-new-auth-key-apple-portal.png)
 
-    On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings **Key ID** field. Download the key file.
+    On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings. Download the key file.
 
     ![apple-dev-center-confirm-auth-key](images/ios-confirm-auth-key-apple-portal.png)
 
@@ -22,4 +22,4 @@
 
     ![auth-key-file](images/ios-auth-key-file.png)
 
-    On the Mobile Center push settings, paste this token to the **Authentication Token** field then click **Done** to complete this configuration.
+    On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration.
