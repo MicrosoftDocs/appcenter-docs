@@ -89,36 +89,36 @@ Those steps modify your *MainApplication.java* file, adding `RNPushPackage` ther
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `RNPushPackage` is instantiated, like from `MainApplication.onCreate`:
 
-    ```java
-    import com.microsoft.azure.mobile.push.Push;
+```java
+import com.microsoft.azure.mobile.push.Push;
 
-    ...
+...
 
-    Push.enableFirebaseAnalytics(getApplication());
-    ```
+Push.enableFirebaseAnalytics(getApplication());
+```
 
 ## Enable or disable Mobile Center Push at runtime
 
 You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 
-    ```javascript
-    import Push from 'mobile-center-push';
+```javascript
+import Push from 'mobile-center-push';
 
-    ...
+...
 
-    await Push.setEnabled(false);      // Disable push
-    await Push.setEnabled(true);       // Reenable it
-    ```
+await Push.setEnabled(false);      // Disable push
+await Push.setEnabled(true);       // Reenable it
+```
 
 ## Check if Mobile Center Push is enabled
 
 You can also check if Mobile Center Push is enabled or not:
 
-    ```javascript
-    import Push from 'mobile-center-push';
+```javascript
+import Push from 'mobile-center-push';
 
-    ...
+...
 
-    const pushEnabled = await Push.isEnabled();
-    ```
+const pushEnabled = await Push.isEnabled();
+```
