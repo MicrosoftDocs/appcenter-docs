@@ -8,7 +8,7 @@ Log in to the Mobile Center portal, select your application, click on the **Push
 
 * Collect the following information:
 
-  1. **Key ID**
+  1. **Prefix** and **ID**
    * Go to your Apple developer account and select your application from the [App ID list](https://developer.apple.com/account/ios/identifier/bundle) in **Identifiers**.
 
     * Copy the **Prefix** value from this window and paste it to the Mobile Center push settings.
@@ -17,7 +17,7 @@ Log in to the Mobile Center portal, select your application, click on the **Push
 
     ![apple-dev-center-app-id](images/ios-app-id-apple-portal.png)
 
-  2. **Prefix** and **ID**
+  2. **Key ID**
     * In your Apple developer account create a [new key](https://developer.apple.com/account/ios/authkey/create) in **Certificates, Identifiers & Profiles**/**Keys**.
 
     * Make sure to check the APNs checkbox.
