@@ -52,7 +52,7 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
-pod 'MobileCenter/MobileCenterPush'
+pod 'MobileCenter/Push'
 ```
 
 #### Integration by copying the binaries into your project
