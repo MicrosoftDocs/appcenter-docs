@@ -31,10 +31,10 @@ These properties can be of two types:
 These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific. An example of "key/value" pair is "type/premium".
 You can set these custom properties by using our SDK methods for each platform:
 
-- [Android](~/sdk/other-apis/android.md)
-- [iOS](~/sdk/other-apis/ios.md)
-- [UWP](~/sdk/other-apis/uwp.md)
-- [Xamarin](~/sdk/other-apis/xamarin.md)
+    - [Android](~/sdk/other-apis/android.md)
+    - [iOS](~/sdk/other-apis/ios.md)
+    - [UWP](~/sdk/other-apis/uwp.md)
+    - [Xamarin](~/sdk/other-apis/xamarin.md)
 
 ## Create Audiences
 From the audiences tab, select the necessary conditions to create your segment (both custom and device properties), and save your segment. You can later on use this segment when sending a notification.
