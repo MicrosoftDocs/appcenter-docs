@@ -10,9 +10,6 @@ ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
-dev_langs:
- - java
- - javascript
 ---
 
 # Mobile Center Push
