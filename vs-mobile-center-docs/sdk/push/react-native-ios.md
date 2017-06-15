@@ -75,7 +75,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 #### Integrate the iOS SDK manually
 
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#3.2-ios-only-integrate-the-ios-sdk-manually)
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#32-ios-only-integrate-the-ios-sdk-manually)
 
 ### 2.Start Mobile Center Push
 
@@ -109,7 +109,7 @@ You can enable and disable Mobile Center Push at runtime. If you disable it, the
   ...
 
   await Push.setEnabled(false);      // Disable push
-  await Push.setEnabled(true);       // Reenable it
+  await Push.setEnabled(true);       // Re-enable it
   ```
 
 ## Check if Mobile Center Push is enabled

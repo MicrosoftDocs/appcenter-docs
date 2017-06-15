@@ -108,7 +108,7 @@ import Push from 'mobile-center-push';
 ...
 
 await Push.setEnabled(false);      // Disable push
-await Push.setEnabled(true);       // Reenable it
+await Push.setEnabled(true);       // Re-enable it
 ```
 
 ## Check if Mobile Center Push is enabled
