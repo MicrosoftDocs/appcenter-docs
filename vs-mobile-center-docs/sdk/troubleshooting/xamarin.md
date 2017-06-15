@@ -64,9 +64,4 @@ ms.tgt_pltfrm: xamarin
 
 ## Push setup issues
 
-1. After adding if you see **java exited with code 2**, it is caused by the Firebase dependency. Xamarin team is tracking this issue: https://bugzilla.xamarin.com/show_bug.cgi?id=55117.
-    * For debug builds, we recommend enabling **Multi-dex** in build options to work around that issue.
-    * For release builds, you can also use multi-dex but it's better to try using **Proguard** first (and if you can, **Link All**).
-2. If your target framework is lower than **7.0**, you need to update it.
-   * Target framework has no incidence on minimum supported version which remains unchanged (you can still support Android 4.0.3 / API level 15, this setting has nothing to do with it). You can change target version in build settings. More information on what this version means can be found [here]( https://developer.xamarin.com/guides/android/application_fundamentals/understanding_android_api_levels/).
-   * After the change, you need to update your **packages.config** and update all **targetFramework** attributes to match the version. For example if in build settings the version is **7.1**, then you need all the lines in **packages.config** to match this: `targetFramework="monoandroid71"`.
+[!include[](../xamarin-android-push-setup-issues.md)]
