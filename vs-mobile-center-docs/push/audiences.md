@@ -1,14 +1,14 @@
 ---
-title: Mobile Center Push
-description: Help using the Push on Mobile Center
-keywords: mobile center, push
+title: Mobile Center Push Audiences
+description: Help using the Push Audiences on Mobile Center
+keywords: mobile center, push, audiences
 author: blparr
 ms.author: blparr
-ms.date: 05/11/2017
+ms.date: 06/15/2017
 ms.topic: article
-ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
+ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
 ms.service: mobile-center
-ms.custom: push
+ms.custom: audiences
 ---
 
 
