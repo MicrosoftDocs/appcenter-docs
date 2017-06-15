@@ -66,7 +66,7 @@ The default integration of the SDK uses Cocoapods for iOS.
   react-native link mobile-center-push
   ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
+3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here.
 
   ```
   What is the Android app secret? (0000-0000-0000-0000-000000000000)
@@ -93,7 +93,7 @@ Mobile Center Push is started by this call:
 
 That call is added automatically to *AppDelegate.m* by the automatic instructions above. Otherwise, you need to add it manually.
 
-Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive Push Notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, you can delay making the call.
+Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `registerAndEnable` call.
 
 #### 2.2 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
