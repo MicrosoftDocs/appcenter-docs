@@ -28,7 +28,11 @@ These properties can be of two types:
     - Screen Size
 
 - **Custom Properties:**
-These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific. An example of "key/value" pair is "type/premium".
+These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
+An example of custom property is:
+      Key: Type
+      Value: Premium
+
 You can set these custom properties by using our SDK methods for each platform:
 
     - [Android](~/sdk/other-apis/android.md)
