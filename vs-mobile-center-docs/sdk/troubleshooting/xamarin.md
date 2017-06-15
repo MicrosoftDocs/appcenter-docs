@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/17/2017
+ms.date: 06/14/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -61,3 +61,12 @@ ms.tgt_pltfrm: xamarin
 9. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 10. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 11. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+
+## Push setup issues
+
+1. After adding if you see **java exited with code 2**, it is caused by the Firebase dependency. Xamarin team is tracking this issue: https://bugzilla.xamarin.com/show_bug.cgi?id=55117.
+    * For debug builds, we recommend enabling **Multi-dex** in build options to work around that issue.
+    * For release builds, you can also use multi-dex but it's better to try using **Proguard** first (and if you can, **Link All**).
+2. If your target framework is lower than **7.0**, you need to update it.
+   * Target framework has no incidence on minimum supported version which remains unchanged (you can still support Android 4.0.3 / API level 15, this setting has nothing to do with it). You can change target version in build settings. More information on what this version means can be found [here]( https://developer.xamarin.com/guides/android/application_fundamentals/understanding_android_api_levels/).
+   * After the change, you need to update your **packages.config** and update all **targetFramework** attributes to match the version. For example if in build settings the version is **7.1**, then you need all the lines in **packages.config** to match this: `targetFramework="monoandroid71"`.
