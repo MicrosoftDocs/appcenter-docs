@@ -10,9 +10,6 @@ ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
-dev_langs:
- - java
- - javascript
 ---
 
 # Mobile Center Push
@@ -80,7 +77,7 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
     What is the iOS app secret? (0000-0000-0000-0000-000000000000)
     ```
 
-Those steps modify your *MainApplication.java* file, adding `RNPushPackage` there.
+Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
 
 ## Existing Firebase Analytics users
 
@@ -108,7 +105,7 @@ import Push from 'mobile-center-push';
 ...
 
 await Push.setEnabled(false);      // Disable push
-await Push.setEnabled(true);       // Reenable it
+await Push.setEnabled(true);       // Re-enable it
 ```
 
 ## Check if Mobile Center Push is enabled
