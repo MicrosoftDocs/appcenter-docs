@@ -36,15 +36,15 @@ sections:
       text: Android
       href: ~/sdk/getting-started/android/
     - image:
-        src: https://docs.microsoft.com/media/logos/logo_ios.svg
+        src: ~/media/logo_ios.svg
       text: iOS
       href: ~/sdk/getting-started/ios/
     - image:
-        src: https://docs.microsoft.com/media/logos/logo_react.svg
+        src: ~/media/logo_react.svg
       text: React Native
       href: ~/sdk/getting-started/react-native/
     - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+        src: https://docs.microsoft.com/media/logos/logo_windows.svg
       text: UWP
       href: ~/sdk/getting-started/uwp/
     - image:
