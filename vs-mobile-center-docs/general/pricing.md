@@ -2,8 +2,8 @@
 title: Mobile Center Pricing Info
 description: Information about Mobile Center pricing plans
 keywords: pricing
-author: piyushjo
-ms.author: piyushjo
+author: joemellin
+ms.author: joemel
 ms.date: 06/13/2017
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
