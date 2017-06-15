@@ -91,7 +91,7 @@ Mobile Center Push is started by this call:
   [RNPush registerAndEnable];
   ```
 
-That call is added automatically to *AppDelegate.m* by the automatic instructions above. Otherwise, you need to add it manually.
+That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
 Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `registerAndEnable` call.
 

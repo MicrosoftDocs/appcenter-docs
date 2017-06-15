@@ -80,7 +80,7 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
     What is the iOS app secret? (0000-0000-0000-0000-000000000000)
     ```
 
-Those steps modify your *MainApplication.java* file, adding `RNPushPackage` there.
+Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
 
 ## Existing Firebase Analytics users
 
