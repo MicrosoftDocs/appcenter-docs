@@ -34,7 +34,7 @@ You will need:
 let azureMobileClient = MSClient(applicationURLString: "_https://mobile-{app secret}.azurewebsites.net_")
 ```
 ```objc
-MSClient *azureMobileClient = [MSClient clientWithApplicationURLString:@"_https://mobile-{app secret}.azurewebsites.net_"];
+MSClient *azureMobileClient = [MSClient clientWithApplicationURLString:@"https://mobile-{app secret}.azurewebsites.net"];
 ```
 
 
@@ -42,4 +42,4 @@ MSClient *azureMobileClient = [MSClient clientWithApplicationURLString:@"_https:
 * [Identity]
 
 [iOS Client SDK]: https://github.com/Azure/azure-mobile-apps-ios-client/blob/master/README.md#ios-client-sdk
-[Identity]: /sdk/iOS/azure/identity/
+[Identity]: ~/sdk/azure/identity/ios/
