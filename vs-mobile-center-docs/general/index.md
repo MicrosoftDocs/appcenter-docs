@@ -2,8 +2,8 @@
 title: Mobile Center General Info
 description: General information about Mobile Center
 keywords: roadmap, pricing
-author: piyushjo
-ms.author: piyushjo
+author: joemellin
+ms.author: joemel
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 49b3b1d7-4651-4adf-95a6-9c9cc2232269

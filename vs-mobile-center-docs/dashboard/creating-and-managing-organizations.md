@@ -3,7 +3,7 @@ title: Creating and managing organizations
 description: Using the dashboard to create and access app organizations in Mobile Center.
 keywords: dashboard organizations
 author: joemellin
-ms.author: joemellin
+ms.author: joemel
 ms.date: 04/07/2017
 ms.topic: article
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
