@@ -47,6 +47,10 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 [!include[](add-nuget.md)]
 
+You may have the following known issues while building on Android:
+
+[!include[](../xamarin-android-push-setup-issues.md)]
+
 ### 2. Start Mobile Center Push
 
 [!include[](start-push.md)]

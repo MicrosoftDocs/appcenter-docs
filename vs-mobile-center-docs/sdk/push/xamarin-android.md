@@ -76,6 +76,10 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 [!include[](add-nuget.md)]
 
+You may have the following known issues while building:
+
+[!include[](../xamarin-android-push-setup-issues.md)]
+
 ### 2. Add the google-services.json File
 Locate the *google-services.json* file from step 1 and add it to your project. Set the build action to "GoogleServicesJson."
 
