@@ -17,7 +17,7 @@ ms.custom: audiences
 Audiences let you segment your user base based on a set of properties and send them targeted notifications.
 These properties can be of two types:
 
-- **Device Properties:**
+**Device Properties:**
     - App Version
     - Country
     - Mobile Carrier
@@ -27,7 +27,7 @@ These properties can be of two types:
     - API Level
     - Screen Size
 
-- **Custom Properties:**
+**Custom Properties:**
 These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
 An example of custom property is:
       *Key*: *Type*
