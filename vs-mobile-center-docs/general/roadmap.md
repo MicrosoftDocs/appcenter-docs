@@ -16,13 +16,6 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## New Mobile Center services
 
-* Push Notifications
-    * Send notifications to:
-        * Broadcast
-        * Custom device list
-        * Audiences
-    * Create segments of users based on a set of custom and device properties.
-
 * [CodePush](https://microsoft.github.io/code-push/) 
 	* Fast track distribution for React Native apps
 	* Users, Apps, Deployments and Releases from existing CodePush apps available in Mobile Center dashboard
@@ -56,6 +49,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Full feature parity with Xamarin Test Cloud
 * Support for Espresso & XCUITest
 
+
 ## Distribution service
 
 * Re-release builds. You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
@@ -67,14 +61,23 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Native Apps. You will be able to view and install apps via a dedicated native app experience.
 * Markdown release notes. You will be able to write release notes that include markdown styling. 
 
-## Analytics service
-
-* Continuous Export to Blob Storage
-* Export to Applications Insights
-* Export to SQL Database
 
 ## Crashes service
 
 * Display of attachments sent from the Crashes SDK, in the portal
 * Show the events that happened before a crash
 * Missing Symbols experience to know which symbols need to be uploaded
+
+
+## Analytics service
+
+* Continuous Export to Blob Storage
+* Export to Applications Insights
+
+
+## Push Notifications
+
+* React Native:
+    * Custom Properties
+    * Push Callbacks
+
