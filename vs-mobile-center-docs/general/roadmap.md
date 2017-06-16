@@ -67,6 +67,11 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Native Apps. You will be able to view and install apps via a dedicated native app experience.
 * Markdown release notes. You will be able to write release notes that include markdown styling. 
 
+## CodePush service
+
+* Apache Cordova support
+* Bundle signing 
+
 ## Analytics service
 
 * Continuous Export to Blob Storage
