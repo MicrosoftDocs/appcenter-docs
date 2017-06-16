@@ -44,7 +44,7 @@ You can also attach custom data along with your notification. More information o
 The next step is to select your target. You can send the notification to:
 - All registered devices: all your users with push notifications opt-in will received the message.
 - Custom devices list: the notification will be sent to the list of install IDs that you include. You can get the install IDs by using our [API](~/sdk/other-apis/android.md).
-- Audiences: this will send a notification to a segment of your users based on a set of device and custom properties.
+- [Audiences](~/push/audiences.md): this will send a notification to a segment of your users based on a set of device and custom properties.
 
 ## Custom Data in your notifications
 
