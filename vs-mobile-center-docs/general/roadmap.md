@@ -65,7 +65,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## CodePush service
 
-* Apache Cordova support
+* Dashboard supprt for Apache Cordova 
 * Bundle signing 
 
 
