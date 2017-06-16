@@ -42,4 +42,4 @@ MSClient *azureMobileClient = [MSClient clientWithApplicationURLString:@"https:/
 * [Identity]
 
 [iOS Client SDK]: https://github.com/Azure/azure-mobile-apps-ios-client/blob/master/README.md#ios-client-sdk
-[Identity]: ~/sdk/azure/identity/ios/
+[Identity]: ~/sdk/azure/identity/ios.md
