@@ -38,7 +38,8 @@ Once Mobile Center Push is configured following the instructions above, you are 
 
 You can also attach custom data along with your notification. More information on this can be found later in this document.
 
-![](~/push/images/send-notification.png)
+![Send Notification](~/push/images/send-notification.png "Campaign Name and Message fields are required to send a notification")
+
 
 The next step is to select your target. You can send the notification to:
 - All registered devices: all your users with push notifications opt-in will received the message.
