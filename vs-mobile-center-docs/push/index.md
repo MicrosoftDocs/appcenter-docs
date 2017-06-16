@@ -47,7 +47,7 @@ The next step is to select your target. You can send the notification to:
 
 ## Custom Data in your notifications
 
-You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback. Documentation for this can be found in the our [Push SDK docs](~/sdk/push/android.md)
+You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback. Documentation for this can be found in the our [Push SDK docs](~/sdk/push/android.md).
 
 There are few reserved keywords in each platform that can be set via custom data:
 ### iOS:
