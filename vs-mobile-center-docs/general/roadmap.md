@@ -20,6 +20,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 	* Fast track distribution for React Native apps
 	* Users, Apps, Deployments and Releases from existing CodePush apps available in Mobile Center dashboard
 
+
 ## General
 
 * Apps & data from HockeyApp visible in Mobile Center
@@ -60,6 +61,12 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Support for release to Windows Store. You can create new stores that target release to the production Windows Store.
 * Native Apps. You will be able to view and install apps via a dedicated native app experience.
 * Markdown release notes. You will be able to write release notes that include markdown styling. 
+
+
+## CodePush service
+
+* Apache Cordova support
+* Bundle signing 
 
 
 ## Crashes service
