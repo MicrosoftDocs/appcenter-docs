@@ -40,7 +40,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 ### Utilities
 
 - Git 2.13.1
-- Git LFS 2.0.2
+- Git LFS 2.1.1
 - curl 7.51.0 (x86_64-apple-darwin16.0) libcurl/7.51.0 SecureTransport zlib/1.2.8
 - GNU Wget 1.19.1 built on darwin16.6.0
 
@@ -427,7 +427,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ## Xamarin
 
-- Xamarin Studio: 7.0.1.24
+- Visual Studio for Mac: 7.0.1.24
 - Mono Framework MDK: Mono JIT compiler version 5.0.1.1
 - Xamarin.iOS: 10.10.0.36
 - Xamarin.Android: 7.3.1-2
