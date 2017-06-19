@@ -398,8 +398,6 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
-| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
-| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
 
 ### Utils
 
@@ -408,6 +406,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | ndk-bundle            | 15.0.4075724                              |
 | lldb;2.3              | 2.3.3614996                               |
 | cmake;3.6.3155560     | 3.6.3155560                               |
+| ProGuard              | 5.3.3                                     |
 
 ### Google APIs
 
@@ -432,6 +431,6 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 - Mono Framework MDK: Mono JIT compiler version 5.0.1.1
 - Xamarin.iOS: 10.10.0.36
 - Xamarin.Android: 7.3.1-2
-- Xamarin.mac: 3.4.0.36
+- Xamarin.Mac: 3.4.0.36
 - NUnit: 3.6.1
 - Nuget: 4.1.0
