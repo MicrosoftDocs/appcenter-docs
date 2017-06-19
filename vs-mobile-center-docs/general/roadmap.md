@@ -33,7 +33,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 	
 ## SDK & CLI
 
-* Universal Windows Platform (UWP) SDK support for Analytics and Crashes services
+* Universal Windows Platform (UWP) SDK support for Crashes service
+* macOS and tvOS SDK support for Analytics and Crashes services
 * Full CLI support for all Mobile Center services to enable automation
 
 ## Build service
@@ -65,7 +66,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## CodePush service
 
-* Dashboard supprt for Apache Cordova 
+* Dashboard support for Apache Cordova 
 * Bundle signing 
 
 
