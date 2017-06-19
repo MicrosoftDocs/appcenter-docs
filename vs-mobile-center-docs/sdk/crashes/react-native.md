@@ -1,10 +1,10 @@
 ---
-title: React Native Crashes
-description: Using React Native crash reporting in Mobile Center
+title: Mobile Center Crashes for React Native
+description: Mobile Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 01/20/2017
+ms.date: 06/07/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: mobile-center
@@ -12,69 +12,99 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# React Native Crashes
+# Mobile Center Crashes
 
 > [!div class="op_single_selector"]
-> * [iOS](ios.md)
 > * [Android](android.md)
-> * [Xamarin](xamarin.md)
+> * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Xamarin](xamarin.md)
 
-Once you set up and start the Mobile Center SDK to use the Crashes module in your application, the SDK will automatically start logging any crashes in the devices local storage. When the user opens the application again after a crash, all pending crash logs will automatically be forwarded to Mobile Center and you can analyze the crash along with the stack trace on the Mobile Center portal. Refer to the section to [Get Started](~/sdk/getting-started/react-native.md) if you haven't done so already.
+Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 
-* **Using the Crashes API:**
+Please follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up the SDK in your application yet.
 
-   In files where you are using the Crashes SDK, import the library.
+Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
+```javascript
+// Import Mobile Center Crashes at the top of the file.
+import Crashes from "mobile-center-crashes";
+```
 
-        // import the Crashes library at the top of the file
-        import Crashes from "mobile-center-crashes";
+## Generate a test crash
 
-* **Generate a test crash:** The SDK provides you with a static API to generate a native test crash for easy testing of the SDK:
+Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
-        Crashes.generateTestCrash();
+```
+Crashes.generateTestCrash();
+```
 
-    Note that this API can only be used in test/beta apps and won't work in production apps.
+It's also easy to generate a JavaScript crash. Add the following line to your code, which throws a JavaScript error and causes a crash.
 
-    It's also easy to generate a JavaScript crash. Add the following line to your code, which throws a JavaScript error and causes a crash.
+```javascript
+throw new Error("This is a test javascript crash!");
+```
 
-        throw new Error("Cannot read property");
+> [!TIP]
+> Your React Native app needs to be compiled in **release mode** for this crash to be sent to Mobile Center.
 
-    > **IMPORTANT**: Your React Native app needs to be compiled in release mode for this crash to be sent to Mobile Center.
+## Get more information about a previous crash
 
-* **Did the app crash in last session:** At any time after starting the SDK, you can check if the app crashed in the previous session:
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
 
-        Crashes.hasCrashedInLastSession();
+### Did the app crash in the previous session?
 
-        This returns a boolean, true if the app had crashed in the previous session. False if it has not.
+At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
-* **Details about the last crash:** If your app crashed previously, you can get details about the last crash:
+```javascript
+Crashes.hasCrashedInLastSession();
+```
 
-        ErrorReport crashReport = Crashes.lastSessionCrashReport();
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
-        This either returns a crashReport, a JavaScript object that gives details on the last crash. Or, undefined.
+### Details about the last crash
 
-* **Enable or disable the Crashes module:**  You can disable and opt out of using the Crashes module by calling the `setEnabled()` API and the SDK will collect no crashes for your app. Use the same API to re-enable it by passing `true` as a parameter.
+If your app crashed previously, you can get details about the last crash.
 
-        Crashes.setEnabled(false);
+```javascript
+ErrorReport crashReport = Crashes.lastSessionCrashReport();
+```
 
-    This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
+## Processing crashes in JavaScript
 
-    You can also check if the module is enabled or not using the `isEnabled()` method:
+During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
 
-        boolean isEnabled = Crashes.isEnabled();
+Processing a crash in JavaScript requires you to use the `process` method from Mobile Center Crashes.
 
-    This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
+```javascipt
+// import the Crashes library at the top of the file
+import Crashes from "mobile-center-crashes";
+```
 
-    This function returns a promise,
+Then, you can send all crashes that have been queued up since the last call to `process`.
 
-* <a name="process-javascript"></a>**Processing crashes in JavaScript:** During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
+```javascript
+// send all queued crashes without additional processing
+Crashes.process((report, sendCallback) => {sendCallback(true);}).catch((err) => {});
+```
 
-   Processing a crash in JavaScript requires you to use the `process` method from the Crashes SDK.
+## Enable or disable Mobile Center Crashes at runtime
 
-        // import the Crashes library at the top of the file
-        import Crashes from "mobile-center-crashes";
+You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
 
-   Then, you can send all crashes that have been queued up since the last call to `process`.
+```javascript
+Crashes.setEnabled(false);
+```
 
-        // send all queued crashes without additional processing
-        Crashes.process((report, sendCallback) => {sendCallback(true);}).catch((err) => {});
+To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
+
+```javascript
+Crashes.setEnabled(true);
+```
+
+## Check if Mobile Center Crashes is enabled
+
+You can also check if Mobile Center Crashes is enabled or not:
+
+```java
+Crashes.isEnabled();
+```

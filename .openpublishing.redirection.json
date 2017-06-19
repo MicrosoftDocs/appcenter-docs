@@ -1,16 +1,58 @@
 {
   "redirections": [
     {
-        "source_path": "analytics/android.md",
-        "redirect_url": "~/sdk/analytics/android.md"
+        "source_path": "vs-mobile-center-docs/analytics/android.md",
+        "redirect_url": "/mobile-center/sdk/analytics/android"
     },
     {
-        "source_path": "analytics/ios.md",
-        "redirect_url": "~/sdk/analytics/ios.md"
+        "source_path": "vs-mobile-center-docs/analytics/ios.md",
+        "redirect_url": "/mobile-center/sdk/analytics/ios"
     },
     {
-        "source_path": "analytics/react-native.md",
-        "redirect_url": "~/sdk/analytics/react-native.md"
+        "source_path": "vs-mobile-center-docs/analytics/react-native.md",
+        "redirect_url": "/mobile-center/sdk/analytics/react-native"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/dashboard/index.md",
+        "redirect_url": "/mobile-center/dashboard/creating-and-managing-apps"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/android.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/android"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/ios.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/ios"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/react-native.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/react-native"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/xamarin.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/xamarin"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/troubleshooting.md",
+        "redirect_url": "/mobile-center/sdk/troubleshooting/xamarin"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/general/guidance.md",
+        "redirect_url": "/mobile-center/migration/index"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-audience.md",
+        "redirect_url": "/mobile-center/analytics/overview"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-events.md",
+        "redirect_url": "/mobile-center/analytics/event-metrics"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-log-flow.md",
+        "redirect_url": "/mobile-center/analytics/log-flow"
     }
+
   ]
 }

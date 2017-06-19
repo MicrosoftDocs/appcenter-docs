@@ -1,5 +1,5 @@
 ---
-title: Android Azure
+title: Android Azure Tables
 description: Setting up Azure for Android
 keywords: sdk,azure
 author: elamalani
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-# Android Azure
+# Android Azure Tables
 
 
 > [!div class="op_single_selector"]
