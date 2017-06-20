@@ -5,7 +5,7 @@ title: Mobile Center Push for Xamarin.Forms Apps
 description: Integrating Mobile Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: achocron
-ms.date: 05/11/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: mobile-center
@@ -58,7 +58,6 @@ You may have the following known issues while building on Android:
 ## Intercept push notifications
 
 Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in iOS and UWP projects.
-It can be used directly in Android without any additional setup.
 
 ### iOS additional steps
 
@@ -80,6 +79,18 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 		completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
 	}
 }
+```
+
+### Android additional steps
+
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `OnNewIntent` method:
+
+```csharp
+        protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
 ```
 
 ### UWP additional steps
