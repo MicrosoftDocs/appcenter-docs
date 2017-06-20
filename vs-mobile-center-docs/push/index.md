@@ -63,4 +63,3 @@ There are few reserved keywords in each platform that can be set via custom data
 ### Windows:
 - **audio**: Add this key when you want the to play a sound. this will modify the audio attribute for toast notifications.
 - **image**: Add this key when you want to modify the image attribute for tile and toast notifications.
-
