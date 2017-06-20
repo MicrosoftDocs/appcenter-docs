@@ -4,7 +4,7 @@ description: Help using the Push Audiences on Mobile Center
 keywords: mobile center, push, audiences
 author: blparr
 ms.author: blparr
-ms.date: 06/15/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
 ms.service: mobile-center
@@ -39,10 +39,10 @@ An example of custom property is:
 
 You can set these custom properties by using our SDK methods for each platform:
 
-   - [Android](~/sdk/other-apis/android.md)
-   - [iOS](~/sdk/other-apis/ios.md)
-   - [UWP](~/sdk/other-apis/uwp.md)
-   - [Xamarin](~/sdk/other-apis/xamarin.md)
+   - [Android](~/sdk/other-apis/android.md#use-custom-properties) 
+   - [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
+   - [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
+   - [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
 
 ## Create Audiences
 
