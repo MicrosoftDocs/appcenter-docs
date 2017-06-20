@@ -4,7 +4,7 @@ description: Help using the Push on Mobile Center
 keywords: mobile center, push
 author: blparr
 ms.author: blparr
-ms.date: 05/11/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: mobile-center
