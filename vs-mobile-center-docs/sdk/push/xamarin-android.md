@@ -5,7 +5,7 @@ title: Mobile Center Push for Xamarin.Android Apps
 description: Integrating Mobile Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: achocron
-ms.date: 05/10/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: mobile-center
@@ -116,6 +116,20 @@ Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into
 >If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notification in the foreground
+
+### Additional setup
+
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+
+```csharp
+        protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
+```
+
+### Subscribe to the push event
 
 [!include[](push-callbacks.md)]
 
