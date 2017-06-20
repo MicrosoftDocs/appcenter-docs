@@ -17,32 +17,32 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Operating System
 
-- OS X 10.12.4 (16E195)
+- OS X 10.12.5 (16F73)
 
 ## Installed Software
 
 ### Language and Runtime
 
-- ruby 2.4.1p111 (2017-03-22 revision 58053)
-- Python Python 2.7.10
-- Node.js v6.10.2
+- ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
+- Python 2.7.10
+- Node.js v6.10.3
 - Java 1.8.0_131-b11
 
 ### Package Management
 
 - NPM 3.10.10
-- Homebrew 1.1.13
-- Homebrew/homebrew-core (git revision 87e3; last commit 2017-04-19)
-- bundler Bundler version 1.14.6
+- Homebrew 1.2.2
+- Homebrew/homebrew-core (git revision 4ec2; last commit 2017-06-09)
+- bundler Bundler version 1.15.1
 - CoCoaPods 1.2.1
 - Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.12.2
-- Git LFS 2.0.2
+- Git 2.13.1
+- Git LFS 2.1.1
 - curl 7.51.0 (x86_64-apple-darwin16.0) libcurl/7.51.0 SecureTransport zlib/1.2.8
-- GNU Wget 1.19.1 built on darwin15.6.0
+- GNU Wget 1.19.1 built on darwin16.6.0
 
 ### Project Manangement
 
@@ -62,7 +62,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
 - xctool 0.3.1
-- xcpretty 0.2.6
+- xcpretty 0.2.8
 
 ### Installed SDKs
 
@@ -80,6 +80,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - tvOS 10.2                 `-sdk appletvos10.2`
 - tvOS Simulator 10.0       `-sdk appletvsimulator10.0`
 - tvOS Simulator 10.1       `-sdk appletvsimulator10.1`
+- tvOS Simulator 10.2       `-sdk appletvsimulator10.2`
 - watchOS 3.0               `-sdk watchos3.0`
 - watchOS 3.1               `-sdk watchos3.1`
 - watchOS 3.2               `-sdk watchos3.2`
@@ -259,6 +260,23 @@ iPad Pro (9.7 inch) (1182CCC2-E9BE-477F-8001-A033377F5949)
 iPad Pro (12.9 inch) (2718361D-A5F1-48CE-9A33-385A46CB5A64)
 ```
 
+##### iOS 10.3
+```
+iPhone 5 (0A5283EC-0C4F-4B0C-A322-A694348D36EF)
+iPhone 5s (E7C601C7-4208-450D-8D48-C12FD477F729)
+iPhone 6 (15060D44-A03F-4EAE-8722-2E38148FE8E8)
+iPhone 6 Plus (C68C2D04-839D-49E0-95F5-B462E3AC04EE) 
+iPhone 6s (FFE2B0C0-07BD-40A3-86E4-C5BBFC33FEE8)
+iPhone 6s Plus (13E54D95-F0E4-4A97-AACA-4AE41C1227F3)
+iPhone 7 (3E1C9723-E712-497C-967E-33807D1144F2)
+iPhone 7 Plus (83C29B6A-767C-4C19-90AE-FC15A62FD094)
+iPhone SE (5F77D17F-58B9-4998-A067-0A204EE1A881)
+iPad Air (F7BA3867-F7AA-469C-9721-8DBE6A676113)
+iPad Air 2 (71DA229D-ADB8-4E73-B566-B2AB16C54C1F)
+iPad Pro (9.7 inch) (813E7CF7-B078-4A42-B3FB-A31FDD8841FF)
+iPad Pro (12.9 inch) (B68FFAD7-0F20-47F9-AB95-3C6480CB8274)
+```
+
 ##### tvOS 10.0
 ```
 Apple TV 1080p (B5CB3CD3-46B1-4608-82B9-54D08A7DC72B
@@ -267,6 +285,11 @@ Apple TV 1080p (B5CB3CD3-46B1-4608-82B9-54D08A7DC72B
 ##### tvOS 10.1
 ```
 Apple TV 1080p (C5BDC8B8-AC08-4CCF-B777-2F8E9DC7F8CA)
+```
+
+##### tvOS 10.2
+```
+Apple TV 1080p (5B89C2EB-9AC9-4ACD-BFC1-8F1CB792799D)
 ```
 
 ##### watchOS 2.2
@@ -333,13 +356,13 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| tools                 | Android SDK Tools, revision 26.0.1          |
+| tools                 | Android SDK Tools, revision 26.0.2          |
 
 ### Android SDK Platform-tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 25.0.4 |
+| platform-tools        | Android SDK Platform-tools, revision 26.0.0 |
 
 ### Android Platforms
 
@@ -380,9 +403,10 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
-| ndk-bundle            | 14.1.3816874                              |
+| ndk-bundle            | 15.0.4075724                              |
 | lldb;2.3              | 2.3.3614996                               |
 | cmake;3.6.3155560     | 3.6.3155560                               |
+| ProGuard              | 5.3.3                                     |
 
 ### Google APIs
 
@@ -398,15 +422,15 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-m2repository         | Google Repository, revision 46           |
-| extra-google-google_play_services | Google Play services, revision 39        |
+| extra-google-m2repository         | Google Repository, revision 53           |
+| extra-google-google_play_services | Google Play services, revision 41        |
 
 ## Xamarin
 
-- Xamarin Studio: 6.3.0.863
-- Mono Framework MDK: Mono JIT compiler version 4.8.1.0
-- Xamarin.iOS: 10.8.0.175
-- Xamarin.Android: 7.2.0-7
-- Xamarin.mac: 3.2.0.175
+- Visual Studio for Mac: 7.0.1.24
+- Mono Framework MDK: Mono JIT compiler version 5.0.1.1
+- Xamarin.iOS: 10.10.0.36
+- Xamarin.Android: 7.3.1-2
+- Xamarin.Mac: 3.4.0.36
 - NUnit: 3.6.1
-- Nuget: 4.0.0
+- Nuget: 4.1.0
