@@ -22,6 +22,8 @@ ms.tgt_pltfrm: xamarin.android
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
 > * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
@@ -73,6 +75,10 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 ### 1. Add the Mobile Center Push module
 
 [!include[](add-nuget.md)]
+
+You may have the following known issues while building:
+
+[!include[](../xamarin-android-push-setup-issues.md)]
 
 ### 2. Add the google-services.json File
 Locate the *google-services.json* file from step 1 and add it to your project. Set the build action to "GoogleServicesJson."

@@ -24,6 +24,8 @@ In order to set up Push Notifications, you will have to set up the Push Mobile C
 - [Xamarin Android](~/sdk/push/xamarin-android.md)
 - [Xamarin iOS](~/sdk/push/xamarin-ios.md)
 - [Xamarin Forms](~/sdk/push/xamarin-forms.md)
+- [React Native Android](~/sdk/push/react-native-android.md)
+- [React Native iOS](~/sdk/push/react-native-ios.md)
 
 ## Sending Push Notifications
 

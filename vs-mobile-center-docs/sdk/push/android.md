@@ -21,6 +21,8 @@ ms.tgt_pltfrm: android
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
 > * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
@@ -64,7 +66,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.9.0'
+       def mobileCenterSdkVersion = '0.10.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```

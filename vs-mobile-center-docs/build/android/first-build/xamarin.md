@@ -22,25 +22,24 @@ If you haven't done it previously already, first of all, you have to connect you
 Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
 
 ## 3. Configuring Your Build
-
 To kick off the first build, configure how the Android project should get built.
 
 ### 3.1. Build triggers
-
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
 ### 3.2. Project and Configuration
-
 The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
 
-### 3.3. Code signing
+### 3.3. Mono version
+Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
+### 3.4. Code signing
 A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
-### 3.4. Launch your successful build on a real device
+### 3.5. Launch your successful build on a real device
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
-### 3.5. NuGet restore
+### 3.6. NuGet restore
 If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
 To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
 
@@ -64,8 +63,7 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
 </configuration>
 ```
 
-### 3.6. Distribution to a distribution group
-
+### 3.7. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.

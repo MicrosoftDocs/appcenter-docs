@@ -22,6 +22,8 @@ ms.tgt_pltfrm: xamarin.forms
 > * [Xamarin.Android](xamarin-android.md)
 > * [Xamarin.iOS](xamarin-ios.md)
 > * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -44,6 +46,10 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 ### 1. Add the Mobile Center Push module
 
 [!include[](add-nuget.md)]
+
+You may have the following known issues while building on Android:
+
+[!include[](../xamarin-android-push-setup-issues.md)]
 
 ### 2. Start Mobile Center Push
 

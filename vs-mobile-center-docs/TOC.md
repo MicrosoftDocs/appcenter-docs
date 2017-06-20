@@ -68,10 +68,10 @@
 ## [React Native](crashes/react-native.md)
 
 # [Analytics](analytics/index.md)
-## [Audience Page](analytics/understand-audience.md)
-## [Events Metrics](analytics/understand-events.md)
+## [Overview](analytics/overview.md)
+## [Events Metrics](analytics/event-metrics.md)
 ## [Logged Errors using Events](analytics/logged-errors-events.md)
-## [Log Flow Page](analytics/understand-log-flow.md)
+## [Log Flow Page](analytics/log-flow.md)
 ## [FAQ](analytics/faq.md)
 
 # [Push](push/index.md)
@@ -105,6 +105,8 @@
 ### [Xamarin.iOS](sdk/push/xamarin-ios.md)
 ### [Xamarin.Android](sdk/push/xamarin-android.md)
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
+### [React Native Android](sdk/push/react-native-android.md)
+### [React Native iOS](sdk/push/react-native-ios.md)
 
 ## Tables
 ### [Android](sdk/azure/android.md)

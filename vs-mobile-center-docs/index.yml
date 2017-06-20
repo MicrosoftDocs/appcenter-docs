@@ -21,6 +21,8 @@ abstract:
       text: Pricing
     - href: ~/general/changelog/
       text: Changelog
+    - href: http://status.mobile.azure.com/
+      text: Service Status
 sections:
 - title: Get Started
   items:
@@ -34,15 +36,15 @@ sections:
       text: Android
       href: ~/sdk/getting-started/android/
     - image:
-        src: https://docs.microsoft.com/media/logos/logo_ios.svg
+        src: ~/media/logo_ios.svg
       text: iOS
       href: ~/sdk/getting-started/ios/
     - image:
-        src: https://docs.microsoft.com/media/logos/logo_react.svg
+        src: ~/media/logo_react.svg
       text: React Native
       href: ~/sdk/getting-started/react-native/
     - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+        src: https://docs.microsoft.com/media/logos/logo_windows.svg
       text: UWP
       href: ~/sdk/getting-started/uwp/
     - image:
@@ -98,7 +100,7 @@ sections:
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
           href: ~/push/
-        title: Push Notifications (Coming Soon)
+        title: Push Notifications
 - title: Reference
   items:
   - type: list
@@ -106,8 +108,8 @@ sections:
     className: cardsD
     items:
     - title: SDKs
-      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/azure/android/">Tables</a></p><p><a href="~/sdk/azure/identity/android/">Identity</a></p>
+      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p><p><a href="~/sdk/azure/android/">Tables</a></p><p><a href="~/sdk/azure/identity/android/">Identity</a></p>
     - title: Command line
-      html: <p><a href="~/cli/">Node</a></p>
+      html: <p><a href="~/cli/">Overview</a></p>
     - title: APIs
       html: <p><a href="~/api-docs/">REST Interface</a></p>

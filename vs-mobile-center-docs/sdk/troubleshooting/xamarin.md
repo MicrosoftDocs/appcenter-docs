@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/17/2017
+ms.date: 06/14/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -61,3 +61,7 @@ ms.tgt_pltfrm: xamarin
 9. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 10. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 11. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+
+## Push setup issues
+
+[!include[](../xamarin-android-push-setup-issues.md)]
