@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: jaelim
 ms.author: jaelim
-ms.date: 06/13/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: mobile-center
@@ -213,25 +213,28 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 
 4. Implement the callback to receive push notifications
 
-    Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to add the logic for receiving a Push notification.
+    Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to forward push notifications to the Push service.
 
     ```objc
     - (void)application:(UIApplication *)application
-       didReceiveRemoteNotification:(NSDictionary *)userInfo
-             fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-      NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[dictionary valueForKey:@"title"]
-                                                      message:[dictionary valueForKey:@"body"]
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-      [alert show];
+        didReceiveRemoteNotification:(NSDictionary *)userInfo
+              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+      BOOL result = [MSPush didReceiveRemoteNotification:userInfo];
+      if (result) {
+        completionHandler(UIBackgroundFetchResultNewData);
+      } else {
+        completionHandler(UIBackgroundFetchResultNoData);
+      }
     }
     ```
     ```swift
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-      let dictionary = ((userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? [AnyHashable: Any])
-      let alert = UIAlertView(title: dictionary?["title"] as? String, message: dictionary?["body"] as? String, delegate: self, cancelButtonTitle: "OK")
-      alert.show()
+      let result: Bool = MSPush.didReceiveRemoteNotification(userInfo)
+      if result {
+        completionHandler(.newData)
+      }
+      else {
+        completionHandler(.noData)
+      }
     }
     ```
