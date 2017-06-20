@@ -75,6 +75,8 @@
 ## [FAQ](analytics/faq.md)
 
 # [Push](push/index.md)
+## [Audiences](push/audiences.md)
+
 
 # [SDK](sdk/index.md)
 ## Getting Started
