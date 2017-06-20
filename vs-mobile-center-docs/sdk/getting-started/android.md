@@ -50,7 +50,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 	```groovy
 	dependencies {
-		def mobileCenterSdkVersion = '0.9.0'
+		def mobileCenterSdkVersion = '0.10.0'
    		compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
    		compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 	}
