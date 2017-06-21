@@ -60,7 +60,7 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 You can also check if Mobile Center is enabled or not.
 
 ```csharp
-bool isEnabled = await MobileCenter.IsEnabledAsync();
+bool enabled = await MobileCenter.IsEnabledAsync();
 ```
 
 ## Use custom properties
