@@ -215,7 +215,7 @@ You can enable and disable Mobile Center Distribute at runtime. If you disable i
 Distribute.SetEnabledAsync(false);
 ```
 
-To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
+To enable Mobile Center Distribute again, use the same API but pass `true` as a parameter.
 
 ```csharp
 Distribute.SetEnabledAsync(true);
