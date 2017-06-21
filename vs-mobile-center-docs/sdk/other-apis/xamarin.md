@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/20/2017
+ms.date: 06/21/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
@@ -51,6 +51,14 @@ To enable all services at once again, use the same API but pass `true` as a para
 
 ```csharp
 MobileCenter.Enabled = true;
+```
+
+## Check if Mobile Center is enabled
+
+You can also check if Mobile Center is enabled or not.
+
+```csharp
+bool enabled = MobileCenter.Enabled;
 ```
 
 ## Use custom properties
