@@ -9,6 +9,8 @@ To enable Mobile Center Push again, use the same API but pass `true` as a parame
 Push.Enabled = true;
 ```
 
+# Check if Mobile Center Push is enabled
+
 You can also check if Mobile Center Push is enabled or not:
 
 ```csharp
