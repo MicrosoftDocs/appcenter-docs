@@ -63,14 +63,6 @@ You can also check if Mobile Center is enabled or not.
 bool isEnabled = await MobileCenter.IsEnabledAsync();
 ```
 
-## Check if Mobile Center is enabled
-
-You can also check if Mobile Center is enabled or not.
-
-```csharp
-bool enabled = MobileCenter.Enabled;
-```
-
 ## Use custom properties
 
 Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
