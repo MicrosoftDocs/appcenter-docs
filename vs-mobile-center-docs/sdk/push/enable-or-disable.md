@@ -11,6 +11,8 @@ Push.SetEnabledAsync(true);
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
+# Check if Mobile Center Push is enabled
+
 You can also check if Mobile Center Push is enabled or not:
 
 ```csharp
