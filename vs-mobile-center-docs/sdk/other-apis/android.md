@@ -41,7 +41,7 @@ MobileCenter.getInstallId();
 
 [!include[](../android-see-async.md)]
 
-## Enable or disable all services at runtime
+## Disable all services at runtime
 
 If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
 
@@ -59,7 +59,7 @@ MobileCenter.setEnabled(true);
 
 ## Check if Mobile Center is enabled
 
-You can also check if Mobile Center is enabled or not:
+You can also check if Mobile Center is enabled or not.
 
 ```java
 MobileCenter.isEnabled();
