@@ -53,7 +53,7 @@ To enable all services at once again, use the same API but pass `true` as a para
 MobileCenter.SetEnabledAsync(true);
 ```
 
-Further API calls are immediately consistent with the state change even if you don't wait for the operation to finish persisting the state change on disk (and you should not wait in U.I. thread to avoid slowing down your application).
+You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
 ## Check if Mobile Center is enabled
 
