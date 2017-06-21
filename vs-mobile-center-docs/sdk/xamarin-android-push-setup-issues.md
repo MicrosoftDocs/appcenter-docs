@@ -5,3 +5,8 @@
    * Target framework has no impact on minimum supported version which remains unchanged (you can still support Android 4.0.3 / API level 15, this setting has nothing to do with it). You can change target version in build settings. The difference between minimum and target API levels is explained in the 
 [Xamarin.Android API levels guide]( https://developer.xamarin.com/guides/android/application_fundamentals/understanding_android_api_levels/).
    * After the change, you need to update your **packages.config** and update all **targetFramework** attributes to match the version. For example if in build settings the version is **7.1**, then you need all the lines in **packages.config** to match this: `targetFramework="monoandroid71"`.
+3. If you see something like
+
+> java.lang.IllegalStateException: Default FirebaseApp is not initialized in this process {your_package_name}. Make sure to call FirebaseApp.initializeApp(Context) first.
+
+in the logs, and you made sure the **google-services.json** has the GoogleServices build action, then clean and build again, this is a known issue when reusing builds.
