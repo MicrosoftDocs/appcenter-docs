@@ -43,7 +43,7 @@ Mobile Center Crashes has two APIs that give you more information in case your a
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
 ```csharp
-bool didAppCrash = Crashes.HasCrashedInLastSession;
+bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 ```
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
@@ -146,19 +146,21 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
 
 ```csharp
-Crashes.Enabled = false;
+Crashes.SetEnabledAsync(false);
 ```
 
 To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
 
 ```csharp
-Crashes.Enabled = true;
+Crashes.SetEnabledAsync(true);
 ```
+
+Further API calls are immediately consistent with the state change even if you don't wait for the operation to finish persisting the state change on disk (and you should not wait in U.I. thread to avoid slowing down your application).
 
 ## Check if Mobile Center Crashes is enabled
 
 You can also check if Mobile Center Crashes is enabled or not:
 
 ```csharp
-bool isEnabled = Crashes.Enabled;
+bool isEnabled = await Crashes.IsEnabledAsync();
 ```

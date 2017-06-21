@@ -212,21 +212,23 @@ In that case, the activity hosting the dialog might be replaced without user int
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
 
 ```csharp
-Distribute.Enabled = false;
+Distribute.SetEnabledAsync(false);
 ```
 
-To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
+To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
 
 ```csharp
-Distribute.Enabled = true;
+Distribute.SetEnabledAsync(true);
 ```
+
+Further API calls are immediately consistent with the state change even if you don't wait for the operation to finish persisting the state change on disk (and you should not wait in U.I. thread to avoid slowing down your application).
 
 ## Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
 ```csharp
-bool enabled = Distribute.Enabled;
+bool enabled = await Distribute.IsEnabledAsync();
 ```
 
 ## How do in-app updates work?
