@@ -3,7 +3,7 @@ Asynchronous APIs return a `MobileCenterFuture` object instead of returning the 
 You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this:
 
 ```java
-MobileCenterFuture<{ReturnType}> future = {AnyAsyncApiOfOurSDK}();
+MobileCenterFuture<{ReturnType}> future = {AnyAsyncApi}();
 future.thenAccept(new MobileCenterConsumer<{ReturnType}>() {
 
     @Override
@@ -14,9 +14,9 @@ future.thenAccept(new MobileCenterConsumer<{ReturnType}>() {
 });
 ```
 
-On U.I. thread, please always use the callback not to slow down your application.
+To avoid blocking UI thread that causes slowing down your application, consider using ``thenAccept`` with the callback all the time.
 
-On a worker thread it's fine to use `{AnyAsyncApiOfOurSDK}().get()` directly.
+On a worker thread you can simply call `{AnyAsyncApi}().get()`.
 
 Callback example:
 
