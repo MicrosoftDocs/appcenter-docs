@@ -14,7 +14,7 @@ future.thenAccept(new MobileCenterConsumer<{ReturnType}>() {
 });
 ```
 
-To avoid blocking UI thread that causes slowing down your application, consider using ``thenAccept`` with the callback all the time.
+To avoid blocking UI thread that causes slowing down your application, consider using `thenAccept` with the callback all the time.
 
 On a worker thread you can simply call `{AnyAsyncApi}().get()`.
 
