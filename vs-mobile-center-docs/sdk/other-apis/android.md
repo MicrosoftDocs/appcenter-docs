@@ -36,10 +36,12 @@ MobileCenter.setLogLevel(Log.VERBOSE);
 The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
 
 ```java
-UUID installId = MobileCenter.getInstallId();
+MobileCenter.getInstallId();
 ```
 
-## Disable all services at runtime
+[!include[](../android-see-async.md)]
+
+## Enable or disable all services at runtime
 
 If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
 
@@ -52,6 +54,18 @@ To enable all services at once again, use the same API but pass `true` as a para
 ```java
 MobileCenter.setEnabled(true);
 ```
+
+[!include[](../android-see-async.md)]
+
+## Check if Mobile Center is enabled
+
+You can also check if Mobile Center is enabled or not:
+
+```java
+MobileCenter.isEnabled();
+```
+
+[!include[](../android-see-async.md)]
 
 ## Use custom properties
 

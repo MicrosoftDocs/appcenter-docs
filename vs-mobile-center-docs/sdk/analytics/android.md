@@ -63,6 +63,8 @@ To enable Mobile Center Analytics again, use the same API but pass `true` as a p
 Analytics.setEnabled(true);
 ```
 
+[!include[](../android-see-async.md)]
+
 ## Check if Mobile Center Analytics is enabled
 
 You can also check if Mobile Center Analytics is enabled or not.
@@ -70,3 +72,5 @@ You can also check if Mobile Center Analytics is enabled or not.
 ```java
 Analytics.isEnabled();
 ```
+
+[!include[](../android-see-async.md)]

@@ -35,7 +35,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.10.0'
+       def mobileCenterSdkVersion = '0.11.0'
        compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
     }
     ```
@@ -151,6 +151,8 @@ To enable Mobile Center Distribute again, use the same API but pass `true` as a 
 Distribute.setEnabled(true);
 ```
 
+[!include[](../android-see-async.md)]
+
 ## Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
@@ -158,6 +160,8 @@ You can also check if Mobile Center Distribute is enabled or not:
 ```java
 Distribute.isEnabled();
 ```
+
+[!include[](../android-see-async.md)]
 
 ## How do in-app updates work?
 The in-app updates feature works as follows:

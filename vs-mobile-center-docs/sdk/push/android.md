@@ -66,7 +66,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.10.0'
+       def mobileCenterSdkVersion = '0.11.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
@@ -179,6 +179,8 @@ To enable Mobile Center Push again, use the same API but pass `true` as a parame
 Push.setEnabled(true);
 ```
 
+[!include[](../android-see-async.md)]
+
 ## Check if Mobile Center Push is enabled
 
 You can also check if Mobile Center Push is enabled or not:
@@ -186,3 +188,5 @@ You can also check if Mobile Center Push is enabled or not:
 ```java
 Push.isEnabled();
 ```
+
+[!include[](../android-see-async.md)]
