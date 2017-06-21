@@ -36,7 +36,7 @@ MobileCenter.LogLevel = LogLevel.Verbose;
 The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```csharp
-System.Guid installId = MobileCenter.InstallId;
+System.Guid installId = await MobileCenter.GetInstallIdAsync();
 ```
 
 ## Disable all services at runtime
@@ -44,13 +44,23 @@ System.Guid installId = MobileCenter.InstallId;
 If you want to disable all Mobile Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to Mobile Center.
 
 ```csharp
-MobileCenter.Enabled = false;
+MobileCenter.SetEnabledAsync(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```csharp
-MobileCenter.Enabled = true;
+MobileCenter.SetEnabledAsync(true);
+```
+
+Further API calls are immediately consistent with the state change even if you don't wait for the operation to finish persisting the state change on disk (and you should not wait in U.I. thread to avoid slowing down your application).
+
+## Check if Mobile Center is enabled
+
+You can also check if Mobile Center is enabled or not.
+
+```csharp
+bool isEnabled = await MobileCenter.IsEnabledAsync();
 ```
 
 ## Use custom properties
