@@ -75,7 +75,6 @@ You can also check if Mobile Center is enabled or not.
 ```objc
 [MSMobileCenter isEnabled];
 ```
-
 ```swift
 MSMobileCenter.isEnabled()
 ```
