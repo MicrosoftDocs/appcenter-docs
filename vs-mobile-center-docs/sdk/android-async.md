@@ -1,5 +1,5 @@
-This API is asynchronous and returns a `MobileCenterFuture` object instead of returning the result directly.
-You can either call `get()` on the future object to synchronously wait for the result (not recommended on U.I. thread) or provide a callback like this:
+Asynchronous APIs return a `MobileCenterFuture` object instead of returning the result directly.
+You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this:
 
 ```java
 MobileCenterFuture<ReturnType> future = {AnyAsyncApiOfOurSDK}();
