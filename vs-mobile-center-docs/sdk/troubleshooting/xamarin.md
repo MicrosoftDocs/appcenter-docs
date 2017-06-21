@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/14/2017
+ms.date: 06/21/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -65,3 +65,9 @@ ms.tgt_pltfrm: xamarin
 ## Push setup issues
 
 [!include[](../xamarin-android-push-setup-issues.md)]
+
+3. If you see something like
+
+> java.lang.IllegalStateException: Default FirebaseApp is not initialized in this process {your_package_name}. Make sure to call FirebaseApp.initializeApp(Context) first.
+
+in the logs, and you made sure the **google-services.json** has the **GoogleServicesJson** build action, then **clean** and build again, this is a known issue when reusing builds (this issue is not caused by Mobile Center SDK, you can read more about this issue in the [Xamarin forums](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process)).
