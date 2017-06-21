@@ -108,7 +108,7 @@ sections:
     className: cardsD
     items:
     - title: SDKs
-      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p><p><a href="~/sdk/azure/android/">Tables</a></p><p><a href="~/sdk/azure/identity/android/">Identity</a></p>
+      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p>
     - title: Command line
       html: <p><a href="~/cli/">Overview</a></p>
     - title: APIs
