@@ -208,14 +208,14 @@ func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MS
 
 By default, Mobile Center Crashes uses the Mach exception handler to catch fatal signals, e.g. stack overflows, via a Mach exception server.
 
-The `disableMachExceptionMethod` provides an option to disable catching fatal signals via a Mach exception server. If you want or need to disable the Mach exception handler by any reasons, you _MUST_ call this method _BEFORE_ starting the SDK. Your typical setup code would look like this:
+The `disableMachExceptionMethod` provides an option to disable catching fatal signals via a Mach exception server. If you want to disable the Mach exception handler, you should call this method _BEFORE_ starting the SDK. Your typical setup code would look like this:
 
 ```objc
-[MSCrashes enableMachExceptionHandler];
+[MSCrashes disableMachExceptionHandler];
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
 ```swift
-MSCrashes.enableMachExceptionHandler()
+MSCrashes.disableMachExceptionHandler()
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
