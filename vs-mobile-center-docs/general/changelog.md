@@ -11,6 +11,32 @@ ms.service: mobile-center
 ---
 # Changelog
 
+### **June, 22 2017**
+
+- **Engage with your users using Push Notifications:**
+Mobile Center Push allows you to engage your users by sending them push notifications. You can target these notifications to a specific set of users defined by a combination of device and custom properties.
+
+- **Now Build apps with C# 7:**
+Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in Mobile Center here.
+
+- **Auto-increment build number for builds:**
+
+Automatically increment the build number of your builds with a specific format. Choose the continuous Mobile Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
+
+### **June 8, 2017**
+
+- **Get deeper insights by attaching your own logs to crashes:** 
+The Mobile Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash. 
+
+- **Annotate your findings to crash groups:** 
+It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in Mobile Centers using the new Crash Group annotation feature. 
+
+- **Use CodePush in Mobile Center:** 
+Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the Mobile Center across multiple deployments. Keep an eye out for more features and improvements here! 
+
+- **Updates in CLI:** 
+With the new CLI version  – 0.9.1, you can now upload missing symbol files for crashes and run analytics commands to get information about your app audience, session and events. We also support browser login, so you can easily login to CLI with your GitHub or Microsoft account. 
+
 ### **May 18, 2017**
 
 - **UWP support:**
