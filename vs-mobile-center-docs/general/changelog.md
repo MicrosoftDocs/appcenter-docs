@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: joemellin
 ms.author: joemel
-ms.date: 05/18/2017
+ms.date: 06/22/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
@@ -20,7 +20,6 @@ Mobile Center Push allows you to engage your users by sending them push notifica
 Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in Mobile Center here.
 
 - **Auto-increment build number for builds:**
-
 Automatically increment the build number of your builds with a specific format. Choose the continuous Mobile Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
 
 ### **June 8, 2017**
