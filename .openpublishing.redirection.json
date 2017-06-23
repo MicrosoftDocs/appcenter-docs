@@ -52,6 +52,35 @@
     {
         "source_path": "vs-mobile-center-docs/analytics/understand-log-flow.md",
         "redirect_url": "/mobile-center/analytics/log-flow"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/azure/tables/index.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/azuread.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/facebook.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/google.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/index.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/microsoft.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/twitter.md",
+        "redirect_url": "/mobile-center/azure/index.md"
     }
 
   ]
