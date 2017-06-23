@@ -95,5 +95,7 @@ Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
+## My Xamarin.Android build failed with `Error: No APK files found`, what can be done?
+One common reason for a build failing during `Xamarin Android Postprocess` task can be a wrong setting of `<OutputPath>` property in Xamarin.Android project file. To check it - go to `YourXamarin.Android -> Project Options -> Build -> Output` and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
 
 
