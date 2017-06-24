@@ -81,6 +81,23 @@
     {
         "source_path": "vs-mobile-center-docs/azure/identity/twitter.md",
         "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/identity/android.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    }
+    ,
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/identity/ios.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/android.md",
+        "redirect_url": "/mobile-center/azure/index.md"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/ios.md",
+        "redirect_url": "/mobile-center/azure/index.md"
     }
 
   ]
