@@ -31,14 +31,14 @@ ms.tgt_pltfrm: xamarin
 
     ```javacript
     {
-    "dependencies": {
-        "NETStandard.Library": "1.6.1"
-    },
-    "frameworks": {
-        "netstandard1.{version}": {
-            "imports": "portable-net45+win8+wpa81"
+        "dependencies": {
+            "NETStandard.Library": "1.6.1"
+        },
+        "frameworks": {
+            "netstandard1.{version}": {
+                "imports": "portable-net45+win8+wpa81"
+            }
         }
-    }
     }
     ```
 
