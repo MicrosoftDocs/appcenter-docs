@@ -29,18 +29,18 @@ ms.tgt_pltfrm: xamarin
 5. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
 6. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this ``frameworks`` section to your **project.json** file:
 
-```javacript
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.1"
-  },
-  "frameworks": {
-    "netstandard1.{version}": {
-        "imports": "portable-net45+win8+wpa81"
+    ```javacript
+    {
+    "dependencies": {
+        "NETStandard.Library": "1.6.1"
+    },
+    "frameworks": {
+        "netstandard1.{version}": {
+            "imports": "portable-net45+win8+wpa81"
+        }
     }
-  }
-}
-```
+    }
+    ```
 
 Replace `{version}` by the .NET standard version of your project.
 
