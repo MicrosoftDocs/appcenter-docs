@@ -4,7 +4,7 @@ description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: mobile-center
@@ -43,7 +43,7 @@ There are many reasons why a build cannot be installed on a user's device. A com
 ## Why is the build in Mobile Center taking longer then my local build?
 There are many reasons why build duration can be higher when using a build service:
 * When running your build locally, many things are cached (e.g. NuGet packages, pods, dependencies); In Mobile Center, we always perform a clean build and re-download everything required.
-* For Xamarin builds, when running your build locally, you are most likely running a simulator build; In Mobile Center you can run a device build (signed), which takes much longer to run. 
+* For Xamarin builds, when running your build locally, you are most likely running a simulator build; In Mobile Center you can run a device build (signed), which takes much longer to run.
 * Most likely the CPU power of your development machine is higher than the CPU of our VMs.
 
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
@@ -55,7 +55,7 @@ Expect an additional **10 minutes of build time**.
 
 ## Are Git submodules supported?
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
-For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now. 
+For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now.
 
 ## How to restore a private NuGet feed?
 To restore private NuGet feeds, you include the credentials in the **NuGet.config** file:
@@ -89,13 +89,12 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build, yo
 
 
 ## I didn't change anything but my build started to fail, why is that?
+
 Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React Native run with the build tool [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after this date will use [xcodebuild](~/build/ios/xcodebuild.md).
-* If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`  
+* If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`
   This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
 ## My Xamarin.Android build failed with **Error: No APK files found**, what can be done?
-One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it - go to **YourXamarin.Android -> Project Options -> Build -> Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
-
-
+One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
