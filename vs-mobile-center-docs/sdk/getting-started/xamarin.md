@@ -83,6 +83,8 @@ Multiplatform Xamarin.Forms apps have four projects in your solution - the porta
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
 
+[!include[](../note-dotnet-standard.md)]
+
 ### 3.2 Xamarin for Visual Studio
 
 * Navigate to the **Project -> Manage NuGet Packages...**

@@ -69,6 +69,10 @@ The Mobile Center SDK can be integrated using Visual Studio, or the Package Mana
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services.
 
+### 3.3 Portable project using .NET standard
+
+[!include[](../note-dotnet-standard.md)]
+
 ## 4. Start the SDK
 
 In order to use Mobile Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
