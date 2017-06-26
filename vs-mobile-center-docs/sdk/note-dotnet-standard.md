@@ -1,7 +1,7 @@
 > [!NOTE]
-> If you add the nugets to a portable project using **.NET standard**, you need to add this ``frameworks`` section to your **project.json** file:
+> If you add the NuGet packages to a portable project using **.NET standard**, you need to add this `frameworks` section to your **project.json** file:
 >
-> ```javacript
+> ```javascript
 > {
 >   "dependencies": {
 >     "NETStandard.Library": "1.6.1"
@@ -14,4 +14,4 @@
 > }
 > ```
 >
-> Replace `{version}` by the .NET standard version of your project.
+> Replace `{version}` with the .NET standard version of your project.

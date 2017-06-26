@@ -27,9 +27,9 @@ ms.tgt_pltfrm: xamarin
 3. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT5210: Native linking failed, undefined symbol: _OBJC_METACLASS_$_MS{SomeSdkClassName}. Please verify that all the necessary frameworks have been referenced and native libraries are properly linked in. (MT5210)` or a similar error (`MT5211` code with similar message mentioning Mobile Center), please make sure you call `MobileCenter.Start` before using the APIs of a specific service. If you are calling `Start` but have this issue, you need to update Xamarin.iOS component to version **10.4.0.128** or more recent.
 4. If you are using Visual Studio for Mac and can't see an update to Xamarin.iOS and your Xamarin.iOS version is older than **10.4.0.128**, please install Xamarin Studio and update Xamarin.iOS from Xamarin Studio then you will be able to use the same Xamarin.iOS version on Visual Studio for Mac.
 5. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
-6. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this ``frameworks`` section to your **project.json** file:
+6. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this `frameworks` section to your **project.json** file:
 
-    ```javacript
+    ```javascript
     {
         "dependencies": {
             "NETStandard.Library": "1.6.1"
@@ -42,7 +42,7 @@ ms.tgt_pltfrm: xamarin
     }
     ```
 
-Replace `{version}` by the .NET standard version of your project.
+Replace `{version}` with the .NET standard version of your project.
 
 ## Analytics data doesn't show up in the portal
 

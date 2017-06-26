@@ -22,9 +22,9 @@ ms.tgt_pltfrm: uwp
 
 ## Issues during setup
 
-1. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this ``frameworks`` section to your **project.json** file:
+1. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this `frameworks` section to your **project.json** file:
 
-    ```javacript
+    ```javascript
     {
         "dependencies": {
             "NETStandard.Library": "1.6.1"
@@ -37,7 +37,7 @@ ms.tgt_pltfrm: uwp
     }
     ```
 
-Replace `{version}` by the .NET standard version of your project.
+Replace `{version}` with the .NET standard version of your project.
 
 ## Analytics data doesn't show up in the portal
 
