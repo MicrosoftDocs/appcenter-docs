@@ -37,8 +37,8 @@ This app in particular is intended for iOS developers programming in Swift.
 We recommend using GitHub to login to the [Mobile Center portal](https://mobile.azure.com).
 
 
-#### 2.
-
+<!--
+#### 2. Create
 
 
 
@@ -46,7 +46,7 @@ Throughout this process, remember that intercom exists in Mobile Center. If you 
 
 
 
-# commenting out the references below
+
 <!--
 
 This dotnet/docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view does not).
