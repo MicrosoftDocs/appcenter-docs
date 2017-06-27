@@ -33,9 +33,12 @@ This app in particular is intended for iOS developers programming in Swift.
 - [GitHub account](https://github.com/join).
 - CocoaPods installed. Skip the following section if this prerequisite is met.
 
+---
+
+
 #### 1. Fork the Repository
-
-
+- Click [here](https://github.com/MobileCenter/demoapp-ios-swift) to access the GitHub repository containing the demo app.
+- Click the Fork button at the top right hand corner of the page.
 
 #### 2. Install CocoaPods
 The following steps are reiterated on the Getting Started page in Mobile Center.
@@ -70,6 +73,8 @@ We recommend using GitHub to login to the [Mobile Center portal](https://mobile.
 Click the Add new button on the upper right hand corner of the page.
 Name the app whatever you'd like. Optional: add a brief description for your own reference. Make sure that iOS is selected as the OS and Objective-C/Swift is selected as the Platform.
 
+# Insert page navigations here.
+----
 
 ##### Sidenote
-Throughout this process, remember intercom, the chat button at the lower right hand corner of the Mobile Center landing page. If you have any problems at any stage of the process, don't hesitate to reach out for help.
+Throughout this process, remember intercom, the chat button at the lower right hand corner of the Mobile Center landing page. If you have any problems or questions at any stage of the process, please don't hesitate to reach out for help.
