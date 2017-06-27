@@ -23,8 +23,7 @@ When building your project on a build service, such as Mobile Center, we recomme
 
 When building a project locally on the device, Xcode will use the automatically detected provisioning profile and certificate. In order to build your project with Mobile Center, make sure that the files you are uploading are compatible with the code signing settings in the project and in the project targets. For instance, if the Xcode project is configured to use a development code signing identity, make sure to upload a compatible development certificate to Mobile Center.
 
-### Xcode 8
-#### Automatic Signing
+### How does automatic signing work?
 The Automatic signing in Xcode 8 is truly automatic. 
 In automatic signing the provisioning profile is chosen by a combination of the correct project's Team, app bundle id , target and capabilities if this provisioning profile doesn't exists Xcode will create one automatically. 
 
@@ -36,20 +35,20 @@ We are currently working on supporting other exports options.
 
 In order to use automatic signing you must use the development provisioning profile that was created by Xcode. 
 
-#### How to find the provisioning profile created by Xcode?
+#### How to find the provisioning profile that was chosen by Xcode?
 
 When enabling the automatic signing option Xcode provides the provisioning profile name
 
 ![Xcode 8 find provisioning profile name][xcode-8-provisioning-profile-name]
 
-#### Xcode 8.1 & 8.2
+##### Xcode 8.1 & 8.2
 You can find the provisioning profile by searching in your account details
 
 ![Xcode 8 search for your account][xcode-8-account]
 
 ![Xcode 8 search for your profile account][xcode-8-account-profile]
 
-#### Xcode 8.3 
+##### Xcode 8.3 
 From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in the folder `~/Library/MobileDevice/Provisioning\ Profiles`
 
 
