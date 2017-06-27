@@ -25,7 +25,7 @@ When building a project locally on the device, Xcode will use the automatically 
 
 ### How does automatic signing work?
 The Automatic signing in Xcode 8 is truly automatic. 
-In automatic signing the provisioning profile is chosen by a combination of the correct project's Team, app bundle id , target and capabilities if this provisioning profile doesn't exists Xcode will create one automatically. 
+In automatic signing the provisioning profile is chosen by a combination of the correct project's Team, app bundle id , target and capabilities, Xcode automatically creates such provisioning profile and manages them for you. 
 
 When using automatic-signing the `Archive` action firsts creates an archive file signed with **development code signing**. 
 Then, the export part resigns the archive with a **certificate matching the export method** (app-store,ad-hoc,enterprise,development).If the used export method is not `development` then the the signing process requires two different provisioning profiles and certificates. One for the `Archive` action and one for the `Export` action.
@@ -35,29 +35,37 @@ We are currently working on supporting other exports options.
 
 In order to use automatic signing you must use the development provisioning profile that was created by Xcode. 
 
-#### How to find the provisioning profile that was chosen by Xcode?
+If you like to know more about automatic signing check out the [WWDC videos](https://developer.apple.com/videos/play/wwdc2016/401/)
+
+#### How to find the provisioning profile that was created by Xcode?
 
 When enabling the automatic signing option Xcode provides the provisioning profile name
 
-![Xcode 8 find provisioning profile name][xcode-8-provisioning-profile-name]
+![Xcode find provisioning profile name][xcode-provisioning-profile-name]
 
 #### Xcode 8.1 & 8.2
 You can find the provisioning profile by searching in your account details
 
-![Xcode 8 search for your account][xcode-8-account]
+![Xcode search for your account][xcode-account]
 
-![Xcode 8 search for your profile account][xcode-8-account-profile]
+![Xcode search for your profile account][xcode-account-profile]
 
 #### Xcode 8.3 
-From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in the folder `~/Library/MobileDevice/Provisioning\ Profiles`
+From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in this folder `~/Library/MobileDevice/Provisioning\ Profiles`
 
+Open the provisioning profile using a text editor of your preferences and locate it's name
+
+![Xcode search for your provisioning profile name][xcode-provisioning-profile-content]
 
 ## Manual provisioning
 You can configure Xcode to use a specific certificate and provisioning profile to sign a build. Make sure that you upload the exact same files to Mobile Center.
 
-[xcode-8-provisioning-profile-name]: images/xcode-8-provisioning-profile-name.png
+[xcode-provisioning-profile-name]: images/xcode-8-provisioning-profile-name.png
 
-[xcode-8-account]: images/account.png
+[xcode-account]: images/account.png
 
-[xcode-8-account-profile]: images/account-profile.png
+[xcode-account-profile]: images/account-profile.png
+
+[xcode-provisioning-profile-content]: images/provisioning-profile-content.png
+
 
