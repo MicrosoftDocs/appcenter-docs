@@ -4,8 +4,8 @@
 title: [Getting Started | Demo App Tutorials]
 description: a tutorial to help a new user to get started using the demo app.
 keywords:
-author: sabrinaj206
-ms.author: t-sajia
+authors: sabrinaj206 sshibu
+ms.author: t-sajia t-shshib
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
@@ -22,7 +22,32 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 ---
 
-# Metadata and Markdown Template
+# Getting started
+#### About This Tutorial
+
+This tutorial aims to help you easily onboard to Mobile Center by mirroring the process with a demo app. By the end of this tutorial, you will better understand how to use the services Mobile Center provides.  
+
+This app in particular is intended for iOS developers programming in Swift.
+
+#### Prerequisites
+- GitHub account.
+
+
+#### 1. Login to Mobile Center
+We recommend using GitHub to login to the [Mobile Center portal](https://mobile.azure.com).
+
+
+#### 2.
+
+
+
+
+Throughout this process, remember that intercom exists in Mobile Center. If you have any problems at any stage of the process, don't hesitate to reach out for help.
+
+
+
+# commenting out the references below
+<!--
 
 This dotnet/docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view does not).
 
@@ -415,3 +440,5 @@ You can see an example of selectors in action at the [Intune docs](https://docs.
 [Next](../docs/csharp/expression-trees-translating.md)
 
 You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/install-ata-step2).
+
+--->
