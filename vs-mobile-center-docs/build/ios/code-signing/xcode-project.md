@@ -41,14 +41,14 @@ When enabling the automatic signing option Xcode provides the provisioning profi
 
 ![Xcode 8 find provisioning profile name][xcode-8-provisioning-profile-name]
 
-##### Xcode 8.1 & 8.2
+#### Xcode 8.1 & 8.2
 You can find the provisioning profile by searching in your account details
 
 ![Xcode 8 search for your account][xcode-8-account]
 
 ![Xcode 8 search for your profile account][xcode-8-account-profile]
 
-##### Xcode 8.3 
+#### Xcode 8.3 
 From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in the folder `~/Library/MobileDevice/Provisioning\ Profiles`
 
 
