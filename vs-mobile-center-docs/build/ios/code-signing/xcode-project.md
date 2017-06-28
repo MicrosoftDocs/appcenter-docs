@@ -51,10 +51,4 @@ You can configure Xcode to use a specific certificate and provisioning profile t
 
 [xcode-provisioning-profile-name]: images/xcode-8-provisioning-profile-name.png
 
-[xcode-account]: images/account.png
-
-[xcode-account-profile]: images/account-profile.png
-
-[xcode-provisioning-profile-content]: images/provisioning-profile-content.png
-
 
