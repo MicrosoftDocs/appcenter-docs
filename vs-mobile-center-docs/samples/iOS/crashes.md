@@ -1,17 +1,17 @@
 ---
 # required metadata
 
-title: Distribute | Sample App Tutorials
-description: Tutorial to distribute a sample iOS app to a group in Mobile Center.
+title: Crashes | Sample App Tutorials
+description: Tutorial on viewing crashes from a sample iOS app in Mobile Center
 keywords: mobile-center
 authors: sabrinaj206
 ms.author: t-sajia
-ms.date: 06/27/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom:
 ms.prod: .net-core
-ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
+ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 
 # optional metadata
 
@@ -22,28 +22,29 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 
 ---
 
-# Distribute
-In this tutorial, you will learn to distribute a sample iOS app to yourself, then install and use the app on your device.
+# Crashes
+In this tutorial, you will learn to view crashes from a sample iOS app in Mobile Center.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
+## Replace the App Secret
+In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
+1. Open the **.xcworkspace**.
+2. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and replace App Secret.
 
-### Prerequisites
-- Code signed (optional)
+## Crashing the sample app
+1. ??
+2. Tap the **crash** button to crash the app.
+3. **Reopen the app.** This sends the crash report to the Mobile Center backend.
 
-## Create a distribution group
-1. Navigate to the **Distribute** service on the Mobile Center portal.
-2. Click **New Group** at the top of the page.
-3. Name the group **Beta Testers** and add your email in the invitation box below.
-4. Press **Create Group**.
 
-## Distribute the sample app
+## View the crashes in Mobile Center
 There are **two ways you can distribute** the app.
 
 If you already completed the [Build tutorial](/build.md) and built the sample app:
 1. Navigate to the **Build** tab in the portal.
 2. Select the **master** branch.
-3. Click on the latest successful build. **The build must be signed.** You can learn more about codesigning [here](https://developer.apple.com/support/certificates/).
+3. Click on the latest successful build. **The build must be signed.** You can learn more [here](https://developer.apple.com/support/certificates/).
 4. Click **Distribute** at the top of the page.
 5. Select the **Beta Testers** group you just made.
 6. Click **Next** and then **Distribute build**.

@@ -30,7 +30,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 
 ### Prerequisites
 - [GitHub account](https://github.com/join).
-- Provisioning profile and certificate (optional)
+- Provisioning Profile and Certificate (optional)
 
 <!--
 ## Add a shared scheme
@@ -48,7 +48,7 @@ To build the sample app, you'll first have to add a shared scheme to the project
 ## Configure the build
 1. From the list of branches, select the **master** branch.
 2. Click **Configure build**. The Build configuration panel will show up.
-3. If would like to sign the builds, flip the switch next to **Sign build**, and upload your Provisioning profile and certificate. This will let you distribute the build later.
+3. If would like to sign the builds, flip the switch next to **Sign build**, and upload your Provisioning Profile and Certificate. This will let you distribute the build later, and you find out more [here](https://developer.apple.com/support/certificates/).
 4. Click **Save** at the bottom of the page, and the build will begin.
 
 The build can take a couple minutes, but you can click on it to to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
