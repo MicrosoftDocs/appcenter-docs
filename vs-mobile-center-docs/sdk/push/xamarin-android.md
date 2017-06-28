@@ -115,7 +115,7 @@ Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into
 >[!NOTE]
 >If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
-## Intercept push notification in the foreground
+## Intercept push notifications
 
 ### Additional setup
 
