@@ -26,7 +26,7 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 # Getting started
 ## About This Tutorial
 
-This tutorial aims to help you easily onboard to Mobile Center by mirroring the process with a demo app. By the end of this tutorial, you will better understand how to use the services Mobile Center provides.  
+This tutorial aims to help you easily onboard to Mobile Center by mirroring the process with a sample app. By the end of this tutorial, you will better understand how to use the services Mobile Center provides.  
 
 This app in particular is intended for iOS developers programming in Swift.
 
@@ -38,11 +38,14 @@ This app in particular is intended for iOS developers programming in Swift.
 ## Preliminary Steps
 
 #### 1. Fork the Repository
-- Click [here](https://github.com/MobileCenter/demoapp-ios-swift) to access the GitHub repository containing the demo app.
-- Click the Fork button at the top right hand corner of the page.
+
+- Click [here](https://github.com/MobileCenter/demoapp-ios-swift) to access the GitHub repository containing the sample app.
+
+- Click on **Fork** at the top right hand corner of the page.
+
 
 #### 2. Install CocoaPods
-The following steps are reiterated on the Getting Started page in Mobile Center.
+
 1. Run the following command in terminal to install CocoaPods:
 ```
 sudo gem install cocoapods
@@ -59,6 +62,12 @@ pod install
 #### 3. Sign in to Mobile Center
 We recommend using GitHub to login to the [Mobile Center portal](https://mobile.azure.com).
 
-#### 4. Create a New App in Mobile Center
-Click the Add new button on the upper right hand corner of the page.
-Name the app whatever you'd like. Make sure that iOS is selected as the OS and Objective-C/Swift is selected as the platform.
+#### 4. Create a new app in Mobile Center
+
+Click on **Add new** on the upper right hand corner of the page.
+
+From the dropdown options, select **Add new app**.
+
+Name the app **Sample iOS App**. Make sure that iOS is selected as the OS and Objective-C/Swift is selected as the platform.
+
+Finish the process by pressing **Add new app** on the bottom right hand corner of the page.
