@@ -2,7 +2,7 @@
 # required metadata
 
 title: Build| Sample App Tutorials
-description: Tutorial to build sample app in the Mobile center portal.
+description: Tutorial to build sample iOS app in Mobile Center.
 keywords: mobile-center
 authors: sabrinaj206
 ms.author: t-sajia
@@ -23,7 +23,7 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 ---
 
 # Build
-In this tutorial, you will build the sample app in the Mobile Center portal.
+In this tutorial, you will learn to build a sample iOS app in the Mobile Center portal.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
@@ -41,16 +41,16 @@ To build the sample app, you'll first have to add a shared scheme to the project
 4. Push the changes to GitHub.
 -->
 ## Set up the repository
-1. Navigate to the **Build tab** on the Mobile Center portal.
+1. Navigate to the **Build** service on the Mobile Center portal.
 2. Select **GitHub** as the service to Build with.
 3. Select the sample app's repo, **demoapp-ios-swift**.
 
 ## Configure the build
 1. From the list of branches, select the **master** branch.
-2. Click **Configure build**.
-3. If you have a provisioning profile and certificate, enable code signing by flipping the switch next to **Sign build**, and upload the files.
+2. Click **Configure build**. The Build configuration panel will show up.
+3. If would like to sign the builds, flip the switch next to **Sign build**, and upload your Provisioning profile and certificate. This will let you distribute the build later.
 4. Click **Save** at the bottom of the page, and the build will begin.
 
-Your build should be queued, and should take a couple minutes to finish building. Click on the build to view the **build output**.
+The build can take a couple minutes, but you can click on it to to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
 
 Every time you push code to a configured branch, a build will automatically begin. This helps you continuously deliver apps by ensuring the latest changes to your app can build.

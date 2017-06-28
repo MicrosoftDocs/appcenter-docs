@@ -2,7 +2,7 @@
 # required metadata
 
 title: Distribute | Sample App Tutorials
-description: Tutorial for distribute beacon. Reader will create a distribution group and distribute the app to that group.
+description: Tutorial to distribute a sample iOS app to a group in Mobile Center.
 keywords: mobile-center
 authors: sabrinaj206
 ms.author: t-sajia
@@ -23,16 +23,16 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 ---
 
 # Distribute
-In this tutorial, you will distribute the sample app to a group of users.
+In this tutorial, you will learn to distribute a sample iOS app to yourself, then install and use the app on your device.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
 
 ### Prerequisites
-- Provisioning profile and certificate (optional)
+- Code signed (optional)
 
 ## Create a distribution group
-1. Navigate to the **Distribute tab** on the Mobile Center portal.
+1. Navigate to the **Distribute** service on the Mobile Center portal.
 2. Click **New Group** at the top of the page.
 3. Name the group **Beta Testers** and add your email in the invitation box below.
 4. Press **Create Group**.
@@ -43,7 +43,7 @@ There are **two ways you can distribute** the app.
 If you already completed the [Build tutorial](/build.md) and built the sample app:
 1. Navigate to the **Build** tab in the portal.
 2. Select the **master** branch.
-3. Click on the build. **The build must be signed.**
+3. Click on the latest successful build. **The build must be signed.**
 4. Click **Distribute** at the top of the page.
 5. Select the **Beta Testers** group you just made.
 6. Click **Next** and then **Distribute build**.

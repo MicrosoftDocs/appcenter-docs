@@ -1,6 +1,6 @@
 # [Mobile Center Overview](index.yml)
 
-# Quickstart Tutorial and Sample App
+# Samples
 ## [iOS](samples/iOS/getting-started.md)
 ### [Getting started](samples/iOS/getting-started.md)
 ### [Build](samples/iOS/build.md)
