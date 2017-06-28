@@ -11,7 +11,7 @@ ms.topic: article
 ms.service: mobile-center
 ms.custom:
 ms.prod: .net-core
-ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
+ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517ms.
 
 # optional metadata
 
