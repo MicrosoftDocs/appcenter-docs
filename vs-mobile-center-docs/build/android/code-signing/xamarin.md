@@ -16,10 +16,10 @@ ms.tgt_pltfrm: xamarin-android
 When Mobile Center builds a Xamarin.Android application with a debug build type, a keystore associated with a developer is not required. These builds will be automatically code signed with a debug key. For a release build that will be deployed, Mobile Center will require a keystore to be uploaded.
 
 ## Generating a keystore
-If you do not currently have a keystore, you can generate one using instructions specific for OS and IDE of your choice.
+If you do not currently have a keystore, you can generate one using instructions specific for the OS and IDE of your choice.
 
 ### 1. In Windows
-You can use the [instructions for different versions of Visual Studio](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/publishing_an_application/part_2_-_signing_the_android_application_package/#) to generate a keystore. Or if you a command line geek check **2. Android: Generate a Private Certificate** in [Cross Platform Development Documentation](https://docs.microsoft.com/en-us/visualstudio/cross-platform/tools-for-cordova/publishing/publish-to-a-store)
+You can use the [instructions for different versions of Visual Studio](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/publishing_an_application/part_2_-_signing_the_android_application_package/#) to generate a keystore. Or, if you want to use the command line, check: **2. Android: Generate a Private Certificate** in [Cross Platform Development Documentation](https://docs.microsoft.com/en-us/visualstudio/cross-platform/tools-for-cordova/publishing/publish-to-a-store)
 
 ### 2. In macOS
 Instructions on generating a keystore to sign APKs can be found in [Visual Studio for Mac's official User Guide](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/publishing_an_application/part_2_-_signing_the_android_application_package/?ide=xs#sign-the-apk-xs) or in [Android Studio's official User Guide](https://developer.android.com/studio/publish/app-signing.html).
