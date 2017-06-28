@@ -4,12 +4,12 @@
 title: Getting Started | Demo App Tutorials
 description: Tutorial to onboard an iOS application in Mobile Center
 keywords: mobile-center
-authors: sshibu sabrinaj206
-ms.author: t-shshib t-sajia
+authors: sshibu
+ms.author: t-shshib
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
-ms.custom:
+ms.custom: samples
 ms.prod: .net-core
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
@@ -24,13 +24,13 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 
 # Getting started
-### About This Tutorial
+## About This Tutorial
 
 This tutorial aims to help you easily onboard to Mobile Center by mirroring the process with a demo app. By the end of this tutorial, you will better understand how to use the services Mobile Center provides.  
 
 This app in particular is intended for iOS developers programming in Swift.
 
-### Prerequisite
+## Prerequisite
 - [GitHub account](https://github.com/join).
 
 ---
