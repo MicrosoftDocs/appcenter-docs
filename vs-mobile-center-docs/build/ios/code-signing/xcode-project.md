@@ -39,23 +39,12 @@ If you like to know more about automatic signing check out the [WWDC session on 
 
 #### How to find the provisioning profile that was created by Xcode?
 
-When enabling the automatic signing option Xcode provides the provisioning profile name
+When enabling the automatic signing option Xcode provides the provisioning profile details.
+
+Drag the `PROV` icon from the details view and drop it right into Mobile Center
 
 ![Xcode find provisioning profile name][xcode-provisioning-profile-name]
 
-#### Xcode 8.1 & 8.2
-You can find the provisioning profile by searching in your account details
-
-![Xcode search for your account][xcode-account]
-
-![Xcode search for your profile account][xcode-account-profile]
-
-#### Xcode 8.3 
-From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in this folder `~/Library/MobileDevice/Provisioning\ Profiles`
-
-Open the provisioning profile using a text editor of your preference and locate its name
-
-![Xcode search for your provisioning profile name][xcode-provisioning-profile-content]
 
 ## Manual provisioning
 You can configure Xcode to use a specific certificate and provisioning profile to sign a build. Make sure that you upload the exact same files to Mobile Center.
