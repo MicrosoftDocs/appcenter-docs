@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Build| Demo App Tutorials
+title: Build| Sample App Tutorials
 description: Tutorial to build sample app in the Mobile center portal.
 keywords: mobile-center
 authors: sabrinaj206

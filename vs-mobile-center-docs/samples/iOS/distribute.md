@@ -43,15 +43,15 @@ There are **two ways you can distribute** the app.
 If you already completed the [Build tutorial](/build.md) and built the sample app:
 1. Navigate to the **Build** tab in the portal.
 2. Select the **master** branch.
-3. Click on the build.
-4. Click **Distribute** at the top
+3. Click on the build. **The build must be signed.**
+4. Click **Distribute** at the top of the page.
 5. Select the **Beta Testers** group you just made.
 6. Click **Next** and then **Distribute build**.
 
 Alternatively, you can upload a .ipa file from your computer:
 1. Navigate to the **Distribute** tab in the portal.
 2. Select the **Beta Testers** distribution group you just made.
-3. Click **Distribute new release** at the top.
+3. Click **Distribute new release** at the top of the page.
 4. Upload your **.ipa** file.
 5. Click **Next** and then **Distribute build**.
 
