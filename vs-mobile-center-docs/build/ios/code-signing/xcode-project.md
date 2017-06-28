@@ -24,18 +24,18 @@ When building your project on a build service, such as Mobile Center, we recomme
 When building a project locally on the device, Xcode will use the automatically detected provisioning profile and certificate. In order to build your project with Mobile Center, make sure that the files you are uploading are compatible with the code signing settings in the project and in the project targets. For instance, if the Xcode project is configured to use a development code signing identity, make sure to upload a compatible development certificate to Mobile Center.
 
 ### How does automatic signing work?
-The Automatic signing in Xcode 8 is truly automatic. 
-In automatic signing the provisioning profile is chosen by a combination of the correct project's Team, app bundle id , target and capabilities, Xcode automatically creates such provisioning profile and manages them for you. 
+The automatic signing in Xcode 8 is truly automatic. 
+In automatic signing the provisioning profile is chosen by a combination of the correct team, bundle ID , target and capabilities, Xcode automatically creates such a provisioning profile and manages it for you. 
 
-When using automatic-signing the `Archive` action firsts creates an archive file signed with **development code signing**. 
-Then, the export part resigns the archive with a **certificate matching the export method** (app-store,ad-hoc,enterprise,development).If the used export method is not `development` then the the signing process requires two different provisioning profiles and certificates. One for the `Archive` action and one for the `Export` action.
+When using automatic signing the `Archive` action firsts creates an archive file signed with **development code signing**. 
+Then, the export part re-sign the archive with a **certificate matching the export method** (app-store, ad-hoc, enterprise, development). If the used export method is not `development` then the the signing process requires two different provisioning profiles and certificates. One for the `Archive` action and one for the `Export` action.
 
 Currently we support automatic signing using **development export method** only.
-We are currently working on supporting other exports options.
+We are currently working on supporting other export options.
 
 In order to use automatic signing you must use the development provisioning profile that was created by Xcode. 
 
-If you like to know more about automatic signing check out the [WWDC videos](https://developer.apple.com/videos/play/wwdc2016/401/)
+If you like to know more about automatic signing check out the [WWDC session on automatic signing](https://developer.apple.com/videos/play/wwdc2016/401/)
 
 #### How to find the provisioning profile that was created by Xcode?
 
@@ -53,7 +53,7 @@ You can find the provisioning profile by searching in your account details
 #### Xcode 8.3 
 From Xcode 8.3 it's not possible to search for your account details, instead you will need to search for the provisioning profile directly in this folder `~/Library/MobileDevice/Provisioning\ Profiles`
 
-Open the provisioning profile using a text editor of your preferences and locate it's name
+Open the provisioning profile using a text editor of your preference and locate its name
 
 ![Xcode search for your provisioning profile name][xcode-provisioning-profile-content]
 
