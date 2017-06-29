@@ -41,7 +41,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 There are **two ways you can distribute** the app.
 
 If you already completed the [Build tutorial](/build.md) and built the sample app:
-1. Navigate to the **Build** tab in the portal.
+1. Navigate to the **Build** service in the portal.
 2. Select the **master** branch.
 3. Click on the latest successful build. **The build must be signed.** You can learn more about codesigning [here](https://developer.apple.com/support/certificates/).
 4. Click **Distribute** at the top of the page.
