@@ -31,7 +31,7 @@ In this tutorial, you will allow data from your app to show up on the Mobile Cen
 ## Start the SDK
 1. Obtain the **App Secret** unique to your app by navigating to the **Settings** page in Mobile Center. Once in **Settings**, find the app secret by following the arrow in the picture below:
 
-  ![Find App Secret](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.12.32 PM.jpg)
+  ![Find App Secret](https://github.com/MicrosoftDocs/mobile-center-docs/blob/demoapp-tutorials-swift/vs-mobile-center-docs/samples/iOS/Images/Screen%20Shot%202017-06-28%20at%206.12.32%20PM.jpg)
 
 2. Navigate to the **AppDelegate.swift** file. Go to the `didFinishLaunchingWithOptions` method and locate the following:
 ```
@@ -47,4 +47,4 @@ MSMobileCenter.start("{Your App Secret}", withServices: [
 ## Adding Custom Events
 1. Go to the analytics service in Mobile Center.
 
-## Logflow
+## Log Flow
