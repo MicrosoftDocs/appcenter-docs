@@ -36,7 +36,7 @@ Before you can send notification using WNS, your app must be registered with the
 
     ![uwp store association](images/mobile-center-uwp-sdk-store-association.png)
 
-2. In the wizard, click **Next**, sign in with your Microsoft account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
+2. In the wizard, click **Next**, sign in with your Windows developer account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
 
 3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
 
