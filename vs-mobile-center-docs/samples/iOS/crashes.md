@@ -50,7 +50,7 @@ In order for the sample app to send information to Mobile Center, the app secret
 4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
 
 ## Crashing the sample app
-1. ??
+1. Open the sample app.
 2. Tap the **crash** button to crash the app.
 3. **Reopen the app.** This sends the crash report to the Mobile Center backend.
 
