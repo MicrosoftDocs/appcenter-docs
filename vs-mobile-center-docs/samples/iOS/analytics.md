@@ -33,7 +33,7 @@ In this tutorial, you will allow data from your app to show up on the Mobile Cen
 
   ![Find App Secret](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.12.32 PM.jpg)
 
-2. Navigate to the **AppDelegate.swift** class. Go to the `didFinishLaunchingWithOptions` method and insert the following:
+2. Navigate to the **AppDelegate.swift** file. Go to the `didFinishLaunchingWithOptions` method and insert the following:
 ```
 MSMobileCenter.start("{Your App Secret}", withServices: [
       MSAnalytics.self,

@@ -24,9 +24,6 @@ ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 
 # Overview
-## About This Tutorial
-
-This tutorial aims to help you easily onboard to Mobile Center by mirroring the process with sample apps. By the end of this tutorial, you will better understand how to use the services Mobile Center provides.  
 
 
 
