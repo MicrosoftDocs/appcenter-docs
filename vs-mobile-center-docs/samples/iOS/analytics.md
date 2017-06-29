@@ -26,7 +26,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 # Analytics
 
-In this tutorial, you will enable data from your app to show up on the Mobile Center Analytics page.
+In this tutorial, you will allow data from your app to show up on the Mobile Center Analytics page.
 
 ## Start the SDK
 1. Obtain the **App Secret** unique to your app by navigating to the **Settings** page in Mobile Center. Once in **Settings**, find the app secret by following the arrow in the picture below:
