@@ -4,11 +4,11 @@
 ## [iOS](samples/iOS/overview.md)
 ### [Getting started](samples/iOS/getting-started.md)
 ### [Build](samples/iOS/build.md)
-### [Test](samples/iOS/test,md)
-### [Distribute](samples/iOS/distribute,md)
-### [Crashes](samples/iOS/crashes,md)
-### [Analytics](samples/iOS/analytics,md)
-### [Push](samples/iOS/push,md)
+### [Test](samples/iOS/test.md)
+### [Distribute](samples/iOS/distribute.md)
+### [Crashes](samples/iOS/crashes.md)
+### [Analytics](samples/iOS/analytics.md)
+### [Push](samples/iOS/push.md)
 
 
 # Dashboard
