@@ -2,7 +2,7 @@
 # required metadata
 
 title: Analytics | Demo App Tutorials
-description: Tutorial to help user get data from analytics by enabling the SDK.
+description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
@@ -40,16 +40,10 @@ MSMobileCenter.start("{Your App Secret}", withServices: [
       MSCrashes.self
   ])
 ```
-3. Replace ``{Your App Secret}`` with your actual app secret. If you do not wish to use Mobile Center Crashes, you can remove it from the `start:withServices` method above.
-4. Save and close the file.
-5. Build and launch your app.
+3. Make sure ``{Your App Secret}`` is consistent with what is shown on the Mobile Center portal.
+4. Build and launch your app.
 
-## Go to Analytics in Mobile Center
-  1. Look for one active user and at least one session.
-  2. As you obtain more users, the charts will become more useful.
+## Adding Custom Events
+1. Go to the analytics service in Mobile Center.
 
-An example of what the analytics page might look like at a more advanced stage:
-
-![Analytics Page 1 of 2](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.53.36 PM.jpg)
-
-![Analytics Page 2 of 2](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.54.22 PM.jpg)
+## Logflow
