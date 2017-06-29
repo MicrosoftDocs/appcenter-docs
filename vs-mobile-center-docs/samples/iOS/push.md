@@ -46,7 +46,7 @@ MSMobileCenter.start("{Your App Secret}", withServices: [
   ])
 ```
 3. Replace `{Your App Secret}` with your actual app secret.
-  - Obtain the **App Secret** unique to your app by navigating to the **Settings** page in Mobile Center. Once in **Settings**, find the app secret by following the arrow in the picture below:
+  - Obtain the **App secret** unique to your app by navigating to the **Settings** page in Mobile Center. Once in **Settings**, find the app secret by following the arrow in the picture below:
 
   ![Find App Secret](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.12.32 PM.jpg)
 4. Save and close the file.
@@ -63,7 +63,8 @@ MSMobileCenter.start("{Your App Secret}", withServices: [
   - **badge**: This key can be added to change the badge of your app icon. The badge does not change if the key is not included. If the key value is set to 0, the badge is removed.
   - **sound**: If you want to play a sound, set the value of this key to the name of a sound file in your app's main bundle or in the Library/Sounds folder of your app’s data container. The system plays the default alert sound without a custom sound.  
 At this point, the page sidebar should look like this:
-![](/Users/sherin/Desktop/Screen Shot 2017-06-28 at 8.58.44 PM.jpg
+
+![setting up push](/Users/sherin/Desktop/Screen Shot 2017-06-28 at 8.58.44 PM.jpg
 )
 
  Verify that it does and press **Next**

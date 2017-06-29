@@ -31,10 +31,10 @@ You can run tests on multiple devices, view screenshots captured within a test r
 
 
 
-## Prerequisite steps to work with test
+## Install CLI and codesign the project
 
 1. Install Node.js version 6.3 or later [here](https://nodejs.org/en/).
-2. Install Mobile Center Command Line Interface
+2. Install Mobile Center Command Line Interface.
 Run the following command in terminal:
 ```
 npm install -g mobile-center-cli
