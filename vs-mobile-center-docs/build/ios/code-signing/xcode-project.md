@@ -28,7 +28,7 @@ The automatic signing in Xcode 8 is truly automatic.
 In automatic signing the provisioning profile is chosen by a combination of the correct team, bundle ID , target and capabilities. Xcode automatically creates such a provisioning profile and manages it for you. 
 
 When using automatic signing the `Archive` action firsts creates an archive file signed with **development code signing**. 
-Then, the `Export` action re-sign the archive with a **certificate matching the export method** (app-store, ad-hoc, enterprise, development). If the used export method is not `development` then the the signing process requires two different provisioning profiles and certificates: one for the `Archive` action and one for the `Export` action.
+Then, the `Export` action re-signs the archive with a **certificate matching the export method** (app-store, ad-hoc, enterprise, development). If the used export method is not `development` then the the signing process requires two different provisioning profiles and certificates: one for the `Archive` action and one for the `Export` action.
 
 Currently we support automatic signing using **development export method** only.
 We are currently working on supporting other export methods.
