@@ -2,7 +2,7 @@
 # required metadata
 
 title: Push | Demo App Tutorials
-description: Tutorial to help user create push notifications.
+description: Tutorial to help user create and send push notifications.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
@@ -32,14 +32,16 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 )
 
 ## Opt in to push service
-1. Navigate to the **AppDelegate.swift** file. Insert the following:
+1. Navigate to the **AppDelegate.swift** file. Locate the following:
 ```
 import MobileCenter
 import MobileCenterPush
 ```
-2. In the same file, go to the `didFinishLaunchingWithOptions` method and insert the following:
+2. In the same file, go to the `didFinishLaunchingWithOptions` method and locate the following:
 ```
 MSMobileCenter.start("{Your App Secret}", withServices: [
+      MSAnalytics.self,
+      MSCrashes.self,
       MSPush.self,
   ])
 ```
