@@ -40,6 +40,9 @@ Before you can send notification using WNS, your app must be registered with the
 
 3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
 
+>[!NOTE]
+>You will need a Windows Developer account to send push notifications to your UWP app. You can [register a developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
+
 ### 2. Get Package SID and Application secret from Application Registration Portal
 
 1. Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList), sign-in with your Microsoft account. Click the Windows Store app you associated in the previous step.
