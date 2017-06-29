@@ -33,11 +33,20 @@ Then, the `Export` action re-sign the archive with a **certificate matching the 
 Currently we support automatic signing using **development export method** only.
 We are currently working on supporting other export methods.
 
-In order to use automatic signing you must use the development provisioning profile that was created by Xcode. 
-
 If you like to know more about automatic signing check out the [WWDC session on automatic signing](https://developer.apple.com/videos/play/wwdc2016/401/)
 
+### How to use automatic signing with Mobile Center?
+
+1. Enable the automatic signing option in Xcode. [Setting up Xcode to automatically manage your provisioning profiles](https://developer.apple.com/library/content/qa/qa1814/_index.html)
+1. Push the project's changes into your repository. 
+1. Add the new provisioning profile Xcode has created into the Build configuration pane.
+1. Trigger a build.
+
+Mobile Center will automatically identify you are using automatic signing and it will build your app with the provided signing configuration.
+
 #### How to find the provisioning profile that was created by Xcode?
+
+In order to use automatic signing you must use the development provisioning profile that was created by Xcode. 
 
 When enabling the automatic signing option Xcode provides the provisioning profile details.
 
