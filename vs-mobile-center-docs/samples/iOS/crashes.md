@@ -32,6 +32,7 @@ In order for the sample app to send information to Mobile Center, the app secret
 1. Open the **.xcworkspace**.
 2. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and replace App Secret.
 
+
 ## Crashing the sample app
 1. ??
 2. Tap the **crash** button to crash the app.
@@ -39,23 +40,3 @@ In order for the sample app to send information to Mobile Center, the app secret
 
 
 ## View the crashes in Mobile Center
-There are **two ways you can distribute** the app.
-
-If you already completed the [Build tutorial](/build.md) and built the sample app:
-1. Navigate to the **Build** tab in the portal.
-2. Select the **master** branch.
-3. Click on the latest successful build. **The build must be signed.** You can learn more [here](https://developer.apple.com/support/certificates/).
-4. Click **Distribute** at the top of the page.
-5. Select the **Beta Testers** group you just made.
-6. Click **Next** and then **Distribute build**.
-
-Alternatively, you can upload a .ipa file from your computer:
-1. Navigate to the **Distribute** tab in the portal.
-2. Select the **Beta Testers** distribution group you just made.
-3. Click **Distribute new release** at the top of the page.
-4. Upload your **.ipa** file.
-5. Click **Next** and then **Distribute build**.
-
-## Install the sample app
-1. You should receive an email with a link to download the sample app.
-2. Open the link and follow the instructions to register your device with Mobile Center, and the app will begin installing.

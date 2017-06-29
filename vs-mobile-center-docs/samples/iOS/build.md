@@ -23,7 +23,7 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 ---
 
 # Build
-In this tutorial, you will learn to build a sample iOS app in the Mobile Center portal.
+In this tutorial, you will learn to build a sample iOS app in Mobile Center.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
@@ -43,7 +43,9 @@ To build the sample app, you'll first have to add a shared scheme to the project
 ## Set up the repository
 1. Navigate to the **Build** service on the Mobile Center portal.
 2. Select **GitHub** as the service to Build with.
-3. Select the sample app's repo, **demoapp-ios-swift**.
+3. ??
+4. Sign in to GitHub, and click **Authorize MobileCenter**.
+5. Select the sample app's repo, **demoapp-ios-swift**.
 
 ## Configure the build
 1. From the list of branches, select the **master** branch.

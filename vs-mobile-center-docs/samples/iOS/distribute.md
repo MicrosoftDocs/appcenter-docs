@@ -23,7 +23,7 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 ---
 
 # Distribute
-In this tutorial, you will learn to distribute a sample iOS app to yourself, then install and use the app on your device.
+In this tutorial, you will learn to distribute a sample iOS app to a group of users, who can install the app on their device.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
