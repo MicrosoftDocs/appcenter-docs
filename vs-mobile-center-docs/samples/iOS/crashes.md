@@ -27,16 +27,18 @@ In this tutorial, you will learn to view crashes from a sample iOS app in Mobile
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
-## Replace the App Secret
+## Obtain and Replace your App Secret
 In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
-1. Open the **.xcworkspace**.
-2. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and replace App Secret.
 
+1. Navigate to the **Settings** page in Mobile Center.
+2. Copy the **App Secret** at the top to the clipboard.
+3. Open the **.xcworkspace**.
+4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret.
 
 ## Crashing the sample app
 1. ??
 2. Tap the **crash** button to crash the app.
 3. **Reopen the app.** This sends the crash report to the Mobile Center backend.
 
-
 ## View the crashes in Mobile Center
+1.
