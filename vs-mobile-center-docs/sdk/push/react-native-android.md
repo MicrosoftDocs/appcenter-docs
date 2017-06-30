@@ -70,13 +70,6 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
     react-native link mobile-center-push
     ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
-
-    ```
-    What is the Android app secret? (0000-0000-0000-0000-000000000000)
-    What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-    ```
-
 Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
 
 ## Customize your usage of Mobile Center Push 

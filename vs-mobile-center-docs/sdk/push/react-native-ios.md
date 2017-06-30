@@ -63,13 +63,6 @@ The default integration of the SDK uses Cocoapods for iOS.
   react-native link mobile-center-push
   ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here.
-
-  ```
-  What is the Android app secret? (0000-0000-0000-0000-000000000000)
-  What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-  ```
-
 #### Integrate the iOS SDK manually
 
 If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#32-ios-only-integrate-the-ios-sdk-manually)
