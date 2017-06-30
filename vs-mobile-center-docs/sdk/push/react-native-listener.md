@@ -5,7 +5,6 @@ import Push from 'mobile-center-push';
 import { AppState, Alert } from 'react-native';
 
 class MyApp extends Component {
-    ...
 }
 
 Push.setEventListener({
