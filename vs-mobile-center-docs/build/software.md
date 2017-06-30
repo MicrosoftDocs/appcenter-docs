@@ -1,4 +1,4 @@
----
+0.3---
 title: Mobile Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
@@ -25,7 +25,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 - Python 2.7.10
-- Node.js v6.11
+- Node.js v6.10.3
 - Java 1.8.0_131-b11
 
 ### Package Management
