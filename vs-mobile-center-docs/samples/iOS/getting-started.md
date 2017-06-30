@@ -25,33 +25,43 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # Getting Started
 
+### Prerequisites
+- [GitHub account](https://github.com/join)
+- [XCode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12#)
+
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
-2. Click [here](https://github.com/MobileCenter/demoapp-ios-swift) to access the GitHub repository containing the sample app.
-3. Click on **Fork** at the top right hand corner of the page.
+2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/demoapp-ios-swift).
+3. Click **Fork** at the top right hand corner of the page.
 
-
-## Install CocoaPods
-
-1. Run the following command in terminal to install CocoaPods:
+## Integrate CocoaPods
+1. Open a terminal and go to the sample app's directory.
+2. Run this to install CocoaPods:
 ```
 sudo gem install cocoapods
 ```
-2. Run the following command in terminal to install the dependencies specified by the pod file in the repository:
+3. Run this to install dependencies:
 ```
 pod install
 ```
-
-3. Open the .xcworkspace file.
-
-
+4. Open the **.xcworkspace** and press **Run**. The app should build without error.
+<!-- gif here-->
 
 ## Sign in to Mobile Center
-We recommend using GitHub to login to the [Mobile Center portal](https://mobile.azure.com).
-
+1. Open the [Mobile Center portal](https://mobile.azure.com).
+2. Click **Connect with GitHub** and log in, or use another provider.
 
 ## Create a new app in Mobile Center
-1. Click on **Add new** at the upper right hand corner of the page.
-2. From the dropdown options, select **Add new app**.
-3. Name the app **Sample iOS App**. Make sure that iOS is selected as the OS and Objective-C/Swift is selected as the platform.
-4. Finish the process by pressing **Add new app** on the bottom right hand corner of the page.
+1. Click **Add new** > **Add new app** at the top.
+2. Name the app **Sample iOS App**.
+3. Choose **iOS** and **Objective-C / Swift**.
+4. Click **Add new app** at the bottom.
+
+## Replace the App Secret
+In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
+
+1. Navigate to the **Settings** page in Mobile Center.
+2. Copy the **App Secret** at the top.
+3. Open the **.xcworkspace** from the sample app folder.
+4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
+<!--gif here-->

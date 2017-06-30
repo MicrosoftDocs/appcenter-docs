@@ -1,16 +1,5 @@
 # [Mobile Center Overview](index.yml)
 
-# Samples
-## [iOS](samples/iOS/overview.md)
-### [Getting started](samples/iOS/getting-started.md)
-### [Build](samples/iOS/build.md)
-### [Test](samples/iOS/test.md)
-### [Distribute](samples/iOS/distribute.md)
-### [Crashes](samples/iOS/crashes.md)
-### [Analytics](samples/iOS/analytics.md)
-### [Push](samples/iOS/push.md)
-
-
 # Dashboard
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
@@ -141,3 +130,13 @@
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
+
+# Samples
+## [iOS](samples/iOS/overview.md)
+### [Getting started](samples/iOS/getting-started.md)
+### [Build](samples/iOS/build.md)
+### [Test](samples/iOS/test.md)
+### [Distribute](samples/iOS/distribute.md)
+### [Crashes](samples/iOS/crashes.md)
+### [Analytics](samples/iOS/analytics.md)
+### [Push](samples/iOS/push.md)

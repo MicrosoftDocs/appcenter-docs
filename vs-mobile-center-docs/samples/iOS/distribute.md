@@ -32,7 +32,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 - Code signed (optional)
 
 ## Create a distribution group
-1. Navigate to the **Distribute** service on the Mobile Center portal.
+1. Navigate to the **Distribute** service on the [Mobile Center portal](https://mobile.azure.com/apps).
 2. Click **New Group** at the top of the page.
 3. Name the group **Beta Testers** and add your email in the invitation box below.
 4. Press **Create Group**.
@@ -43,7 +43,7 @@ There are **two ways you can distribute** the app.
 If you already completed the [Build tutorial](/build.md) and built the sample app:
 1. Navigate to the **Build** service in the portal.
 2. Select the **master** branch.
-3. Click on the latest successful build. **The build must be signed.** You can learn more about codesigning [here](https://developer.apple.com/support/certificates/).
+3. Click on the latest successful build. **The build must be signed.** You can learn more about codesigning from [Apple's documentation](https://developer.apple.com/support/certificates/).
 4. Click **Distribute** at the top of the page.
 5. Select the **Beta Testers** group you just made.
 6. Click **Next** and then **Distribute build**.

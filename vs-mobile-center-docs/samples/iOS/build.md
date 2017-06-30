@@ -25,12 +25,11 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 # Build
 In this tutorial, you will learn to build a sample iOS app in Mobile Center.
 
-If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
-
+First, follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
 ### Prerequisites
-- [GitHub account](https://github.com/join).
-- Provisioning Profile and Certificate (optional)
+- [GitHub account](https://github.com/join)
+- Provisioning profile and Certificate (optional)
 
 <!--
 ## Add a shared scheme
@@ -41,18 +40,17 @@ To build the sample app, you'll first have to add a shared scheme to the project
 4. Push the changes to GitHub.
 -->
 ## Set up the repository
-1. Navigate to the **Build** service on the Mobile Center portal.
+1. Navigate to the **Build** service on the [Mobile Center portal](https://mobile.azure.com/apps).
 2. Select **GitHub** as the service to Build with.
-3. ??
-4. Sign in to GitHub, and click **Authorize MobileCenter**.
-5. Select the sample app's repo, **demoapp-ios-swift**.
+3. Sign in to GitHub, and click **Authorize MobileCenter**.
+4. Choose **demoapp-ios-swift**.
 
 ## Configure the build
-1. From the list of branches, select the **master** branch.
+1. Choose the **master** branch.
 2. Click **Configure build**. The Build configuration panel will show up.
-3. If would like to sign the builds, flip the switch next to **Sign build**, and upload your Provisioning Profile and Certificate. This will let you distribute the build later, and you find out more [here](https://developer.apple.com/support/certificates/).
+3. If you want to sign the builds, flip the switch next to **Sign build**. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
 4. Click **Save** at the bottom of the page, and the build will begin.
 
-The build can take a couple minutes, but you can click on it to to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
+The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
 
-Every time you push code to a configured branch, a build will automatically begin. This helps you continuously deliver apps by ensuring the latest changes to your app can build.
+Every time you push code to a configured branch, a build will automatically begin. This helps you continuously deliver apps by making sure the latest changes to your app can build.

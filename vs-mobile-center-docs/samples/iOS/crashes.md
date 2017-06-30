@@ -40,15 +40,6 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 1. Navigate to the **Crashes** service and go to the **Symbols** page.
 2. Click **Upload symbols** at the top of the page and upload the symbol file.
 
-
-## Replace your App Secret
-In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
-
-1. Navigate to the **Settings** page in Mobile Center.
-2. Copy the **App Secret** at the top to the clipboard.
-3. Open the **.xcworkspace**.
-4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
-
 ## Crashing the sample app
 1. Open the sample app.
 2. Tap the **crash** button to crash the app.
