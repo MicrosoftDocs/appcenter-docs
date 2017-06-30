@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Android
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/17/2017
+ms.date: 06/21/2017
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: mobile-center
@@ -51,4 +51,35 @@ To enable all services at once again, use the same API but pass `true` as a para
 
 ```java
 MobileCenter.setEnabled(true);
+```
+
+## Check if Mobile Center is enabled
+
+You can also check if Mobile Center is enabled or not.
+
+```java
+MobileCenter.isEnabled();
+```
+
+## Use custom properties
+
+Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+
+You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java datatypes: `String`, `Number`, `boolean` and `Date`. 
+
+```java
+CustomProperties properties = new CustomProperties();
+properties.set("color", "blue").set("score", 10);
+MobileCenter.setCustomProperties(properties);
+```
+
+> [!NOTE]
+> If you set the same custom property more than once, previous values will be overwritten by the last one.
+
+You may remove any custom property by calling the `clear()` API.
+
+```java
+CustomProperties properties = new CustomProperties();
+properties.set("color", "blue").set("score", 10).clear("score");
+MobileCenter.setCustomProperties(properties);
 ```

@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: guperrot
 ms.author: guperrot
-ms.date: 06/08/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: mobile-center
@@ -51,6 +51,7 @@ Before using Mobile Center Push service, you need to add Firebase to your applic
 Step 3 is managed by Mobile Center SDK automatically, so you can stop after step 2.
 
 ### 3. Obtain your Android API Key
+
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
 
 ## Add Mobile Center Push to your app
@@ -65,7 +66,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.9.0'
+       def mobileCenterSdkVersion = '0.10.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
@@ -102,6 +103,16 @@ You need to register the listener before calling `MobileCenter.start` as shown i
 ```java
 Push.setListener(new MyPushListener());
 MobileCenter.start(...);
+```
+
+If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+
+```java
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Push.checkLaunchedFromNotification(this, intent);
+    }
 ```
 
 Here is an example of the listener implementation that displays an alert dialog if the message is received in foreground or a toast if a background push has been clicked:

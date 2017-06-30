@@ -14,7 +14,7 @@ ms.custom: test
 # Preparing Appium Tests for Upload
 
 The steps necessary to prepare an app and its corresponding test suite for upload
-to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/slate/en/1.6/?java#)
+to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/slate/en/master/?java#)
 
 Note the following limitations for Appium support:
 

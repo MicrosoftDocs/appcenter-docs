@@ -53,14 +53,6 @@
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
 
-# [Tables](azure/tables/index.md)
-## [Azure](azure/index.md)
-# [Identity](azure/identity/index.md)
-## [Active Directory](azure/identity/azuread.md)
-## [Facebook](azure/identity/facebook.md)
-## [Google](azure/identity/google.md)
-## [Microsoft Account](azure/identity/microsoft.md)
-## [Twitter](azure/identity/twitter.md)
 
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
@@ -75,6 +67,8 @@
 ## [FAQ](analytics/faq.md)
 
 # [Push](push/index.md)
+## [Audiences](push/audiences.md)
+
 
 # [SDK](sdk/index.md)
 ## Getting Started
@@ -108,12 +102,6 @@
 ### [React Native Android](sdk/push/react-native-android.md)
 ### [React Native iOS](sdk/push/react-native-ios.md)
 
-## Tables
-### [Android](sdk/azure/android.md)
-### [iOS](sdk/azure/ios.md)
-## Identity
-### [Android](sdk/azure/identity/android.md)
-### [iOS](sdk/azure/identity/ios.md)
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)

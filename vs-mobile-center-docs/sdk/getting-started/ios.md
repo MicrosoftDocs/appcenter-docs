@@ -58,8 +58,8 @@ The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](ht
 	pod 'MobileCenter'
 
 	# Use the following lines if you want to specify which service you want to use.
-	pod 'MobileCenter/MobileCenterAnalytics'
-	pod 'MobileCenter/MobileCenterCrashes'
+	pod 'MobileCenter/Analytics'
+	pod 'MobileCenter/Crashes'
 	```
 
 2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
