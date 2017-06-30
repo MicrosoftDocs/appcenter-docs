@@ -85,37 +85,7 @@ You can set up a listener to be notified whenever a push notification is receive
 
 Firebase does not generate notifications when the push is received in foreground, so you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-You need to register the listener when your app starts. A convenient place to do that is in the constructor for your root component:
-
-```javascript
-class MyApp extends Component {
-    constructor() {
-        Push.setEventListener({
-            pushNotificationReceived: function (pushNotification) {
-                let msg = pushNotification.message;
-                if (! msg) {
-                    msg = "No message present. This happens for Android messages received in the background. For iOS the message is always present."
-                }
-                if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
-                    msg += '\nCustom properties:\n' + JSON.stringify(pushNotification.customProperties);
-                }
-
-                const state = AppState.currentState;
-                if (state === 'active') {
-                    Alert.alert(pushNotification.title, msg);
-                }
-                else {
-                    // This case should only happen on Android. For iOS, when a message is received in the background the
-                    // callback is only called after the user taps on it, launching your app, at which point your app
-                    // is in the foreground when the callback happens.
-                    ToastAndroid.show('Background notification:\n' + msg, ToastAndroid.LONG);
-                }
-            }
-        });
-    }
-}
-
-```
+[!include[](react-native-listener.md)]
 
 ## Existing Firebase Analytics users
 

@@ -2,11 +2,11 @@
 title: Other React Native APIs
 description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 01/20/2017
+author: bretjohn
+ms.author: bretjohn
+ms.date: 06/27/2017
 ms.topic: article
-ms.assetid: 28dc1568-c353-4a13-b2e9-16f9061e34c1
+ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
@@ -21,4 +21,71 @@ ms.tgt_pltfrm: react-native
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
-At this time, the React Native Mobile Center SDK does not support APIs to adjust log verbosity level, getting a device's UUID, or disable all services in the Mobile Center SDK.
+
+## Adjust the log level
+
+You can control the amount of log messages that show up from Mobile Center. Log messages show in the standard place for the OS, LogCat on Android and the console on iOS.
+Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the iOS App Store environment / Android release builds and `LogLevelWarning` otherwise.
+
+To have as many log messages as possible, use `LogLevelVerbose`.
+
+```javascript
+import MobileCenter from 'mobile-center';
+
+await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
+```
+
+The JavaScript setLogLevel API can't increase logging for app startup code, before JavaScript is loaded. If you wish to increase logging for app startup, use the native SDK setLogLevel APIs, for 
+[iOS](ios.md) and [Android](android.md).
+
+## Identify installations
+
+The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data on Android. The following API is useful for debugging purposes.
+
+```javascript
+import MobileCenter from 'mobile-center';
+
+const installId = MobileCenter.getInstallId();   // The installId is returned as a string
+```
+
+## Disable all services at runtime
+
+If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
+
+```javascript
+MobileCenter.setEnabled(false);
+```
+
+To enable all services at once again, use the same API but pass `true` as a parameter.
+
+```javascript
+MobileCenter.setEnabled(true);
+```
+
+## Check if Mobile Center is enabled
+
+You can also check if Mobile Center is enabled or not.
+
+```java
+MobileCenter.isEnabled();
+```
+
+## Use custom properties
+
+Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users and then send push notifications to a specific [audience](~/push/audiences.md).
+
+You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be a string, number (integer or floating point), boolean, or date/time (use the JavaScript `Date` class).
+
+```javascript
+let properties = {
+  'color': 'red',
+  'score': 10,
+  'isEnabled': true,
+  'date': new Date()
+};
+
+MobileCenter.setCustomProperties(properties);
+```
+
+> [!NOTE]
+> If you set the same custom property more than once, previous values will be overwritten by the last one.
