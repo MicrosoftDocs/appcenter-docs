@@ -2,9 +2,9 @@
 title: Get Started with React Native
 description: Get Started
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 04/17/2017
+author: elamalani
+ms.author: elamalani
+ms.date: 06/30/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
@@ -51,65 +51,57 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 ### 3.1 Integrate the SDK automatically
 
-#### 3.1 Add Mobile Center Analytics
+#### 3.1 Add Mobile Center SDK modules
 
-1. Open a Terminal and navigate to the root of your React Native project, enter the following lines to add Mobile Center Analytics and Mobile Center Crashes to the app:
-
-	```
-	npm install mobile-center-analytics --save
-	```
-
-2. Link the plugin to the React Native app by using the react-native link command.
+1. Open a Terminal and navigate to the root of your React Native project, then enter the following line to add Mobile Center Analytics and Crashes to the app:
 
 	```
-	react-native link mobile-center-analytics
+	npm install mobile-center mobile-center-analytics mobile-center-crashes --save
 	```
 
-3. A set of dialogs will appear and ask for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
+	The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. **mobile-center-analytics** and
+	**mobile-center-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **mobile-center** provides general
+	purpose Mobile Center [APIs](../other-apis/react-native.md), useful for multiple services.
+
+2. Link the plugins to the React Native app by using the react-native link command.
 
 	```
-	What is the Android app secret?(0000-0000-0000-0000-000000000000)
+	react-native link
 	```
+
+3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables Mobile Center to map this app to the right user account.
+
+	```
+	What is the Android App Secret? 0000-0000-0000-0000-000000000000
+
+	What is the iOS App Secret? 0000-0000-0000-0000-000000000000
+	```
+
+	If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 
 	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md)
 
 	```
-	For the Android app, should user tracking be enabled automatically ? (Use arrow keys)
+	For the Android app, should user tracking be enabled automatically? (Use arrow keys)
+        ❯ Enable Automatically
+          Enable in JavaScript
+
+	For the iOS app, should user tracking be enabled automatically? (Use arrow keys)
         ❯ Enable Automatically
           Enable in JavaScript
 	```
 
-  There will be the same set of questions for iOS.
-
-#### 3.1 Add Mobile Center Crashes
-
-1. Open a terminal and navigate to the root of your React Native project, enter the following lines to add Mobile Center Analytics and Mobile Center Crashes to the app:
+	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
 
 	```
-	npm install mobile-center-crashes --save
-	```
+	For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
+        ❯ Automatically
+          Processed in JavaScript by user
 
-2. Link the plugin to the React Native app using the react-native link command.
-
-	```
-	react-native link mobile-center-crashes
-	```
-
-	A set of dialogs will appear that asks for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue.
-
-	```
-	What is the Android app secret?(0000-0000-0000-0000-000000000000)
-	```
-
-	The SDK will then ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
-
-	```
-	For the Android app, should crashes be sent automatically, or processed in javascript before being sent? (Use arrow keys)
+	For the iOS app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
         ❯ Automatically
           Processed in JavaScript by user
 	```
-
- 	There will be the same set of questions for your iOS app.
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
