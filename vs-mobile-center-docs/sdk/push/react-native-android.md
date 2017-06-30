@@ -2,9 +2,9 @@
 title: Mobile Center Push for React Native Android
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: bretjohn
-ms.author: bretjohn
-ms.date: 06/12/2017
+author: elamalani
+ms.author: emalani
+ms.date: 06/30/2017
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
@@ -70,14 +70,15 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
     react-native link mobile-center-push
     ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
-
-    ```
-    What is the Android app secret? (0000-0000-0000-0000-000000000000)
-    What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-    ```
-
 Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
+
+## Customize your usage of Mobile Center Push 
+
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+
+Firebase does not generate notifications when the push is received in foreground, so you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+[!include[](react-native-listener.md)]
 
 ## Existing Firebase Analytics users
 
