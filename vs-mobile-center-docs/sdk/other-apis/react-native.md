@@ -44,7 +44,7 @@ The Mobile Center SDK creates a UUID for each device once the app is installed. 
 ```javascript
 import MobileCenter from 'mobile-center';
 
-const installId = MobileCenter.getInstallId();   // Returned as a string
+const installId = await MobileCenter.getInstallId();   // Returned as a string
 ```
 
 ## Disable all services at runtime
@@ -54,13 +54,13 @@ If you want to disable all Mobile Center services at once, use the `setEnabled()
 ```javascript
 import MobileCenter from 'mobile-center';
 
-MobileCenter.setEnabled(false);
+await MobileCenter.setEnabled(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```javascript
-MobileCenter.setEnabled(true);
+await MobileCenter.setEnabled(true);
 ```
 
 ## Check if Mobile Center is enabled
@@ -68,7 +68,7 @@ MobileCenter.setEnabled(true);
 You can also check if Mobile Center is enabled or not.
 
 ```javascript
-MobileCenter.isEnabled();
+const enabled = await MobileCenter.isEnabled();
 ```
 
 ## Use custom properties
@@ -87,7 +87,7 @@ let properties = {
   'date': new Date()
 };
 
-MobileCenter.setCustomProperties(properties);
+await MobileCenter.setCustomProperties(properties);
 ```
 
 > [!NOTE]
