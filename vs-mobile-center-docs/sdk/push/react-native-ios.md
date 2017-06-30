@@ -2,9 +2,9 @@
 title: Mobile Center Push for React Native iOS
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: bretjohn
-ms.author: bretjohn
-ms.date: 06/12/2017
+author: elamalani
+ms.author: emalani
+ms.date: 06/30/2017
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: mobile-center
@@ -63,13 +63,6 @@ The default integration of the SDK uses Cocoapods for iOS.
   react-native link mobile-center-push
   ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here.
-
-  ```
-  What is the Android app secret? (0000-0000-0000-0000-000000000000)
-  What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-  ```
-
 #### Integrate the iOS SDK manually
 
 If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#32-ios-only-integrate-the-ios-sdk-manually)
@@ -85,16 +78,24 @@ Mobile Center Push is started by this call:
 
   ...
 
-  [RNPush registerAndEnable];
+  [RNPush register];
   ```
 
 That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
-Note that when the app calls `registerAndEnable` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `registerAndEnable` call.
+Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `register` call.
 
 #### 2.2 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
 If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
+
+## Customize your usage of Mobile Center Push
+
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+
+By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+[!include[](react-native-listener.md)]
 
 ## Enable or disable Mobile Center Push at runtime
 
