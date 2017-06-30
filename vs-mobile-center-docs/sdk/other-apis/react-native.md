@@ -24,8 +24,7 @@ ms.tgt_pltfrm: react-native
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from Mobile Center. Log messages show in the standard place for the OS, LogCat on Android and the console on iOS.
-Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the iOS App Store environment / Android release builds and `LogLevelWarning` otherwise.
+You can control the amount of log messages that show up from Mobile Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the iOS App Store environment / Android release builds and `LogLevelWarning` otherwise.
 
 To have as many log messages as possible, use `LogLevelVerbose`.
 
@@ -35,8 +34,8 @@ import MobileCenter from 'mobile-center';
 await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
 ```
 
-The JavaScript setLogLevel API can't increase logging for app startup code, before JavaScript is loaded. If you wish to increase logging for app startup, use the native SDK setLogLevel APIs, for 
-[iOS](ios.md) and [Android](android.md).
+The JavaScript `setLogLevel` API can't increase logging for app startup code, before JavaScript is loaded. If you wish to increase logging for app startup, use the native Mobile Center setLogLevel APIs,
+setting for [iOS](ios.md) in **AppDelegate.m** and [Android](android.md) in **MainApplication.java**.
 
 ## Identify installations
 
@@ -45,7 +44,7 @@ The Mobile Center SDK creates a UUID for each device once the app is installed. 
 ```javascript
 import MobileCenter from 'mobile-center';
 
-const installId = MobileCenter.getInstallId();   // The installId is returned as a string
+const installId = MobileCenter.getInstallId();   // Returned as a string
 ```
 
 ## Disable all services at runtime
@@ -53,6 +52,8 @@ const installId = MobileCenter.getInstallId();   // The installId is returned as
 If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
 
 ```javascript
+import MobileCenter from 'mobile-center';
+
 MobileCenter.setEnabled(false);
 ```
 
@@ -66,7 +67,7 @@ MobileCenter.setEnabled(true);
 
 You can also check if Mobile Center is enabled or not.
 
-```java
+```javascript
 MobileCenter.isEnabled();
 ```
 
@@ -77,6 +78,8 @@ Mobile Center allows you to define custom properties as key value pairs in your 
 You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be a string, number (integer or floating point), boolean, or date/time (use the JavaScript `Date` class).
 
 ```javascript
+import MobileCenter from 'mobile-center';
+
 let properties = {
   'color': 'red',
   'score': 10,
