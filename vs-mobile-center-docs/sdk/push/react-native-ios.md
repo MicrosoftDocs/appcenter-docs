@@ -2,9 +2,9 @@
 title: Mobile Center Push for React Native iOS
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: bretjohn
-ms.author: bretjohn
-ms.date: 06/12/2017
+author: elamalani
+ms.author: emalani
+ms.date: 06/30/2017
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: mobile-center

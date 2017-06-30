@@ -2,9 +2,9 @@
 title: Mobile Center Push for React Native Android
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: bretjohn
-ms.author: bretjohn
-ms.date: 06/12/2017
+author: elamalani
+ms.author: emalani
+ms.date: 06/30/2017
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
