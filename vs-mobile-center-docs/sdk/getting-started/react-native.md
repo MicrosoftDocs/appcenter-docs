@@ -60,7 +60,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	```
 
 	The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. **mobile-center-analytics** and
-	**mobile-center-crashes** make sense to add to almost every app, as they provide value with no additional setup required. The **mobile-center** module provides general
+	**mobile-center-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **mobile-center** provides general
 	purpose Mobile Center [APIs](../other-apis/react-native.md), useful for multiple services.
 
 2. Link the plugins to the React Native app by using the react-native link command.
@@ -69,14 +69,15 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link
 	```
 
-3. A set of dialogs will appear and ask for additional information. The first one will ask for the App Secret, which will enable Mobile Center to map this app to the right user account.
-If you provided the app secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
+3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables Mobile Center to map this app to the right user account.
 
 	```
-	What is the Android App Secret?
+	What is the Android App Secret? 0000-0000-0000-0000-000000000000
 
-	What is the iOS App Secret?
+	What is the iOS App Secret? 0000-0000-0000-0000-000000000000
 	```
+
+	If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 
 	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md)
 
@@ -90,14 +91,14 @@ If you provided the app secret previously, you won't be prompted again instead s
           Enable in JavaScript
 	```
 
-	Next it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
+	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
 
 	```
-	For the Android app, should crashes be sent automatically or processed in javascript before being sent? (Use arrow keys)
+	For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
         ❯ Automatically
           Processed in JavaScript by user
 
-	For the iOS app, should crashes be sent automatically or processed in javascript before being sent? (Use arrow keys)
+	For the iOS app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
         ❯ Automatically
           Processed in JavaScript by user
 	```
