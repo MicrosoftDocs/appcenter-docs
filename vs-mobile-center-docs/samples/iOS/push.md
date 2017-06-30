@@ -28,11 +28,10 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 1. Go to the Xcode project editor by clicking on the .xcworkspace file.
 2. In the editor, click **Capabilities**. Turn **Push Notifications** ON.
 
-![push capability](/Users/sherin/Downloads/ios-enable-push-capability.png
-)
+![push capability](https://github.com/MicrosoftDocs/mobile-center-docs/blob/demoapp-tutorials-swift/vs-mobile-center-docs/samples/iOS/Images/ios-enable-push-capability.png)
 
 ## Opt in to push service
-1. Navigate to the **AppDelegate.swift** file. Locate the following:
+1. Navigate to the **AppDelegate.swift** file. Locate the following within the file:
 ```
 import MobileCenter
 import MobileCenterPush
@@ -42,13 +41,13 @@ import MobileCenterPush
 MSMobileCenter.start("{Your App Secret}", withServices: [
       MSAnalytics.self,
       MSCrashes.self,
-      MSPush.self,
+      MSPush.self
   ])
 ```
 3. Replace `{Your App Secret}` with your actual app secret.
   - Obtain the **App secret** unique to your app by navigating to the **Settings** page in Mobile Center. Once in **Settings**, find the app secret by following the arrow in the picture below:
 
-  ![Find App Secret](/Users/sherin/Desktop/Screenshots/Screen Shot 2017-06-28 at 6.12.32 PM.jpg)
+  ![Find App Secret](https://github.com/MicrosoftDocs/mobile-center-docs/blob/demoapp-tutorials-swift/vs-mobile-center-docs/samples/iOS/Images/Screen%20Shot%202017-06-28%20at%206.12.32%20PM.jpg)
 4. Save and close the file.
 5. Build and launch your app.
 
@@ -64,8 +63,7 @@ MSMobileCenter.start("{Your App Secret}", withServices: [
   - **sound**: If you want to play a sound, set the value of this key to the name of a sound file in your app's main bundle or in the Library/Sounds folder of your app’s data container. The system plays the default alert sound without a custom sound.  
 At this point, the page sidebar should look like this:
 
-![setting up push](/Users/sherin/Desktop/Screen Shot 2017-06-28 at 8.58.44 PM.jpg
-)
+![setting up push](https://github.com/MicrosoftDocs/mobile-center-docs/blob/demoapp-tutorials-swift/vs-mobile-center-docs/samples/iOS/Images/Screen%20Shot%202017-06-28%20at%208.58.44%20PM.jpg
 
  Verify that it does and press **Next**
 4. In the Target section, under **Who are you sending this notification to?**, select **All registered devices** and press **Next**.

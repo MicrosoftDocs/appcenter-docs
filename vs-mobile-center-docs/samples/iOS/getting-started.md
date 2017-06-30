@@ -37,7 +37,7 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 ```
 sudo gem install cocoapods
 ```
-2. Run the following command in terminal to install the dependencies specified by the pod file in the repository.
+2. Run the following command in terminal to install the dependencies specified by the pod file in the repository:
 ```
 pod install
 ```
@@ -51,7 +51,7 @@ We recommend using GitHub to login to the [Mobile Center portal](https://mobile.
 
 
 ## Create a new app in Mobile Center
-1. Click on **Add new** on the upper right hand corner of the page.
+1. Click on **Add new** at the upper right hand corner of the page.
 2. From the dropdown options, select **Add new app**.
 3. Name the app **Sample iOS App**. Make sure that iOS is selected as the OS and Objective-C/Swift is selected as the platform.
 4. Finish the process by pressing **Add new app** on the bottom right hand corner of the page.
