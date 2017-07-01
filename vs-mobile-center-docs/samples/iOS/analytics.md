@@ -4,8 +4,8 @@
 title: Analytics | Demo App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: mobile-center
-authors: sshibu
-ms.author: t-shshib
+authors: sabrinaj206 sshibu
+ms.author: t-sajia t-shshib
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center

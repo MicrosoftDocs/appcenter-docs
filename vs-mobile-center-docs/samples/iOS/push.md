@@ -4,8 +4,8 @@
 title: Push | Demo App Tutorials
 description: Tutorial to help user create and send push notifications.
 keywords: mobile-center
-authors: sshibu
-ms.author: t-shshib
+authors: sabirnaj206 sshibu
+ms.author: t-sajia t-shshib
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center

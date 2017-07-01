@@ -4,8 +4,8 @@
 title: Getting Started | Demo App Tutorials
 description: Tutorial to onboard an iOS application in Mobile Center
 keywords: mobile-center
-authors: sshibu
-ms.author: t-shshib
+authors: sabrinaj206 sshibu
+ms.author: t-sajia t-shshib
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center

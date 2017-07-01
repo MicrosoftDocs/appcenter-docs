@@ -29,7 +29,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
-- Provisioning profile and Certificate (optional)
+- Provisioning Profile and Certificate (optional)
 
 <!--
 ## Add a shared scheme
