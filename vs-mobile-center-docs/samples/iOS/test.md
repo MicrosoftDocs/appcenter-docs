@@ -54,10 +54,12 @@ mobile-center login
 ## Make the test folder
 1. Open a terminal and go to the project directory.
 2. Run this to remove the derivedDataPath if it exists:
+
 ```shell
 rm -rf ddp
 ```
 3. Run this to build the project for tests: <!-- NEEDS UPDATE-->
+
 ```shell
 xcrun xcodebuild build-for-testing -configuration Debug -workspace YOUR_WORKSPACE -sdk iphoneos -scheme YOUR_APPLICATION_SCHEME -derivedDataPath ddp
 ```
