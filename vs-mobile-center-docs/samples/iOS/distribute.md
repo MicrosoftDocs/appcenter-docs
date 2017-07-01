@@ -48,7 +48,7 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 5. Select the **Beta Testers** group you just made.
 6. Click **Next** and then **Distribute build**.
 
-Alternatively, you can upload a .ipa file from your computer:
+Alternatively, you can upload your own .ipa file from XCode:
 1. Navigate to the **Distribute** tab in the portal.
 2. Select the **Beta Testers** distribution group you just made.
 3. Click **Distribute new release** at the top of the page.

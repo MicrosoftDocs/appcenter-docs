@@ -27,7 +27,7 @@ In this tutorial, you will learn to view crashes from a sample iOS app in Mobile
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
-## Obtain symbols
+## Get the symbols
 In order to process your crashes, you must upload a **symbol file to Mobile Center**. You can download symbols from a build in Mobile Center, or skip this section and use your own.
 
 If you already completed the [Build tutorial](/build.md) and built the sample app:
