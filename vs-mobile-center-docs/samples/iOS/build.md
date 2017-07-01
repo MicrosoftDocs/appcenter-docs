@@ -32,7 +32,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 - Provisioning Profile and Certificate (optional)
 
 <!--
-## Add a shared scheme
+Add a shared scheme
 To build the sample app, you'll first have to add a shared scheme to the project.
 1. Open the sample app's **.xcworkspace** in XCode.
 2. Select **Product** > **Scheme** > **Manage Schemes**.
