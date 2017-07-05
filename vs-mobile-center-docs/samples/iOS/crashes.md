@@ -34,11 +34,13 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 1. Navigate to the **Build** service in the portal.
 2. Select the **master** branch.
 3. Click on the latest successful build.
-4. Click **Download** at the top of the page and select **Download symbols**.
+4. Click **Download** > **Download symbols** at the top.
+
+  ![Download symbols](images/Download_symbols_ios.png)
 
 ## Upload symbols
 1. Navigate to the **Crashes** service and go to the **Symbols** page.
-2. Click **Upload symbols** at the top of the page and upload the symbol file.
+2. Click **Upload symbols** at the top of the page and upload the symbol file you just downloaded.
 
 ## Crashing the sample app
 1. Open the sample app.

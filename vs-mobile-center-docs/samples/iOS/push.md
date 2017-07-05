@@ -36,7 +36,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 2. Click **Capabilities**.
 3. Turn **Push Notifications** on.
 
-![push capability](Images/ios-enable-push-capability.png)
+<!--![push capability](images/ios-enable-push-capability.png)-->
 
 
 ## Get your Apple Push Notification service Key
@@ -59,7 +59,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 3. Click **Send notification** at the top of the page.
 4. Set the **Campaign Name** as "Using Push Notifcations". Set the **Message** as "testing".
 
-![setting up push](Images/Screen%20Shot%202017-06-28%20at%208.58.44%20PM.jpg)
+<!--![setting up push](images/Screen%20Shot%202017-06-28%20at%208.58.44%20PM.jpg)-->
 
 ## Send a push notification
 1. Click **Next** at the bottom.

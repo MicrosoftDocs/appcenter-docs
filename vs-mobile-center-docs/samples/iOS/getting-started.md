@@ -49,17 +49,20 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
   ```
 
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
-<!-- gif here-->
+
+  ![Install Cocoapods](images/install_cocoapods_ios.gif)
 
 ## Sign in to Mobile Center
 1. Open the [Mobile Center portal](https://mobile.azure.com).
 2. Click **Connect with GitHub** and log in, or use another provider.
 
 ## Create a new app in Mobile Center
-1. Click **Add new** > **Add new app** at the top.
+1. Click **Add new app**.
 2. Name the app **Sample iOS App**.
 3. Choose **iOS** and **Objective-C / Swift**.
 4. Click **Add new app** at the bottom.
+
+  ![Make a new app](images/Make_new_app_ios.gif)
 
 ## Replace the App Secret
 In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
