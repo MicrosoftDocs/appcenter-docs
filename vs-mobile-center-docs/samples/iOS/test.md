@@ -52,7 +52,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 3. Select **Automatically manage signing** to point to XCode to a certificate installed on your machine.  
 <!--4. Change "Provisioning Profile" to match your own. 5. Go to the **Build Settings** tab and go to **Signing**, then **Code Signing Identity**. Change the selection for all four tabs under Code Signing Identity (Debug, Any iOS SDK, Release, Any iOS SDK) to your unique identity in keychain. 6. Change **Deployment Team** to your own and **Provisioning Profile** to your provisioning profile. 7. Going to **General** within the .xcodeproj file, going to the first subsection, **Identity** and changing the information for **Bundle Identifier**. Use the bundle associated with the app in your Apple Developer account. See additional information [here](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).-->
 
-  ![Codesigning](Images/Sign_code_ios.png)
+  ![Codesigning](images/Sign_code_ios.png)
 
 ## Make the test folder
 1. Open a terminal and go to the project directory.
@@ -73,11 +73,11 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 2. Click on **Start testing your app**.
 3. Select the first device, the **Apple iPhone 7 Plus**, and press **Select one device** at the bottom.
 
-  ![Select one device](Images/Select_device_ios.png)
+  ![Select one device](images/Select_device_ios.png)
 
 4. Choose **XCUITest** as the Test framework.  
 
-  ![Test framework](Images/Test_framework_ios.png)
+  ![Test framework](images/Test_framework_ios.png)
 
 5. Click **Next**.
 
@@ -85,7 +85,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 ## Run the tests
 1. Copy the custom command under **Running tests**.
 2. Paste it into the terminal while in the project directory.
-3. Replace ```pathToXCUItestBuildFolder``` with: <!--Gif here-->
+3. Replace ```pathToXCUItestBuildFolder``` with:
 
   ```shell
   ddp/Build/Products/Debug-iphoneos

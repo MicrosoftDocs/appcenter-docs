@@ -45,7 +45,7 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 2. Click **Distribute new release** at the top of the page.
 3. Choose **Select Build from branch**.
 4. Choose the **master** branch.  
-![Distribute build from branch](Images/build_from_branch_ios.png)
+![Distribute build from branch](images/build_from_branch_ios.png)
 5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](/build.md) has steps to do so.
 6. Click **Next** twice. Leave the **Release notes** blank.
 7. Click **Distribute build**.
@@ -55,7 +55,7 @@ Another way is to upload your own .ipa file from XCode:
 1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
 2. Click **Distribute new release** at the top of the page.
 3. Choose **Select Build from branch**.  
-![Distribute .ipa file](Images/upload_new_build_ios.png)
+![Distribute .ipa file](images/upload_new_build_ios.png)
 4. Upload your **.ipa** file.
 5. Click **Next** twice. Leave the **Release notes** blank.
 6. Click **Distribute build**.
