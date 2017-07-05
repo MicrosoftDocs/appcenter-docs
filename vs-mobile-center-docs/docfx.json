@@ -1,43 +1,39 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "vs-mobile-center-docs/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg",
-          "**/*.svg",
-          "**/*.gif",
-        ],
-        "exclude": [
-          "**/obj/**",
-          "vs-mobile-center-docs/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "contributors_to_exclude": ["conceptdev","meganbradley"],
-      "breadcrumb_path": "~/_breadcrumb/toc.yml",
-      "manager": "crdun",
-      "audience": "developer"
-    },
-    "fileMetadata": {},
-    "template": [],
-    "dest": "vs-mobile-center-docs"
-  }
+	"build": {
+		"content": [{
+			"files": [
+				"**/*.md",
+				"**/*.yml"
+			],
+			"exclude": [
+				"**/obj/**",
+				"vs-mobile-center-docs/**",
+				"**/includes/**"
+			]
+		}],
+		"resource": [{
+			"files": [
+				"**/*.png",
+				"**/*.jpg",
+				"**/*.svg",
+				"**/*.gif"
+			],
+			"exclude": [
+				"**/obj/**",
+				"vs-mobile-center-docs/**",
+				"**/includes/**"
+			]
+		}],
+		"overwrite": [],
+		"externalReference": [],
+		"globalMetadata": {
+			"contributors_to_exclude": ["conceptdev", "meganbradley"],
+			"breadcrumb_path": "~/_breadcrumb/toc.yml",
+			"manager": "crdun",
+			"audience": "developer"
+		},
+		"fileMetadata": {},
+		"template": [],
+		"dest": "vs-mobile-center-docs"
+	}
 }
