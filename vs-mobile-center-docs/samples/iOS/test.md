@@ -75,8 +75,8 @@ mobile-center login
 1. Copy the custom command under **Running tests**.
 2. Paste it into the terminal while in the project directory.
 3. Replace ```pathToXCUItestBuildFolder``` with: <!--Gif here-->
- ```shell
- ddp/Build/Products/Debug-iphoneos
- ```
+  ```shell
+  ddp/Build/Products/Debug-iphoneos
+  ```
 4. Run the command. You will see the tests begin to run.
 5. In Mobile Center, click **Done**.
