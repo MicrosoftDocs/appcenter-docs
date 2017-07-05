@@ -94,4 +94,4 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 4. Run the command. You will see the tests begin to run.
 5. In Mobile Center, click **Done**.
 
-  ![Run the tests](Images/Run_XCUITests.gif)
+  ![Run the tests](images/Run_XCUITests.gif)
