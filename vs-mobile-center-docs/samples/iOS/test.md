@@ -81,7 +81,6 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 5. Click **Next**.
 
-
 ## Run the tests
 1. Copy the custom command under **Running tests**.
 2. Paste it into the terminal while in the project directory.
