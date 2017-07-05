@@ -41,19 +41,24 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 There are **two ways you can distribute** the app.
 
 If you already completed the [Build tutorial](/build.md) and built the sample app:
-1. Navigate to the **Build** service in the portal.
-2. Select the **master** branch.
-3. Click on the latest successful build. **The build must be signed.** You can learn more about codesigning from [Apple's documentation](https://developer.apple.com/support/certificates/).
-4. Click **Distribute** at the top of the page.
-5. Select the **Beta Testers** group you just made.
-6. Click **Next** and then **Distribute build**.
+1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
+2. Click **Distribute new release** at the top of the page.
+3. Choose **Select Build from branch**.
+4. Choose the **master** branch.
+![Distribute build from branch](Images/build_from_branch_ios.png)
+5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](/build.md) has steps to do so.
+6. Click **Next** twice. Leave the **Release notes** blank.
+7. Click **Distribute build**.
+<!--Gif here-->
 
-Alternatively, you can upload your own .ipa file from XCode:
-1. Navigate to the **Distribute** tab in the portal.
-2. Select the **Beta Testers** distribution group you just made.
-3. Click **Distribute new release** at the top of the page.
+Another way is to upload your own .ipa file from XCode:
+1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
+2. Click **Distribute new release** at the top of the page.
+3. Choose **Select Build from branch**.
+![Distribute .ipa file](Images/upload_new_build_ios.png)
 4. Upload your **.ipa** file.
-5. Click **Next** and then **Distribute build**.
+5. Click **Next** twice. Leave the **Release notes** blank.
+6. Click **Distribute build**.
 
 ## Install the sample app
 1. You should receive an email with a link to download the sample app.
