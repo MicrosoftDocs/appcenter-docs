@@ -35,13 +35,16 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 1. Install [Node.js](https://nodejs.org/en/) version 6.3 or later.
 2. Open the terminal and run this to install the Mobile Center CLI:
-```shell
-npm install -g mobile-center-cli
-```
+
+  ```shell
+  npm install -g mobile-center-cli
+  ```
+
 3. Run this and follow the directions to log in to Mobile Center:
-```shell
-mobile-center login
-```
+
+  ```shell
+  mobile-center login
+  ```
 
 ## Codesign the project <!-- UPDATE THIS -->
 1. Open **.xcworkspace** from the sample app's folder.
