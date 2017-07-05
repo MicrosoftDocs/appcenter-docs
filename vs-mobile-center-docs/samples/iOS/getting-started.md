@@ -37,13 +37,13 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
 2. Run this to install CocoaPods:
-```
-sudo gem install cocoapods
-```
+ ```shell
+ sudo gem install cocoapods
+ ```
 3. Run this to install dependencies:
-```
-pod install
-```
+ ```shell
+ pod install
+ ```
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
 <!-- gif here-->
 
