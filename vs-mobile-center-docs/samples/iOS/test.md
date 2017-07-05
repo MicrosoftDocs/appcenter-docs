@@ -53,13 +53,16 @@ mobile-center login
 ## Make the test folder
 1. Open a terminal and go to the project directory.
 2. Run this to remove the derivedDataPath if it exists:
- ```shell
- rm -rf ddp
- ```
+
+  ```shell
+  rm -rf ddp
+  ```
+
 3. Run this to make the build folder for tests:
- ```shell
- xcrun xcodebuild build-for-testing -configuration Debug -workspace demoapp-ios-swift.xcworkspace -sdk iphoneos -scheme demoapp-ios-swift -derivedDataPath ddp
- ```
+
+  ```shell
+  xcrun xcodebuild build-for-testing -configuration Debug -workspace demoapp-ios-swift.xcworkspace -sdk iphoneos -scheme demoapp-ios-swift -derivedDataPath ddp
+  ```
 
 ## Prepare to run tests in Mobile Center
 1. Go to the **Test** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -75,8 +78,10 @@ mobile-center login
 1. Copy the custom command under **Running tests**.
 2. Paste it into the terminal while in the project directory.
 3. Replace ```pathToXCUItestBuildFolder``` with: <!--Gif here-->
+
   ```shell
   ddp/Build/Products/Debug-iphoneos
   ```
+
 4. Run the command. You will see the tests begin to run.
 5. In Mobile Center, click **Done**.
