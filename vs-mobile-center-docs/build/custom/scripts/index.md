@@ -12,7 +12,7 @@ ms.custom: build
 ---
 
 # Build scripts
-You can add up to three custom build steps in form of bash/shell scripts that run at build time. Place the scripts with the respective format next to your project (`.xcodeproj`, `build.gradle`, `.csproj` or `.sln`) and we will run them as custom build steps. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+You can add up to three custom build steps in the form of Bash scripts that run at pre-defined stages during build time. Place the scripts with the respective format next to your project-level (`.xcodeproj`, `build.gradle`, `.csproj` or `.sln`) file and we will run them as custom build steps. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
 ## Post-clone
 The post-clone script runs immediately after the repository was cloned but before we do anything else on our end.
@@ -26,7 +26,7 @@ To run scripts post-clone, add the following file next to the project file in yo
 ```
 
 ## Pre-build
-The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, Cocoapods or Carthage.
+The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-buid, add the following file next to the project file in your repository:
 `mobile-center-pre-build.sh`
@@ -37,7 +37,7 @@ To run scripts pre-buid, add the following file next to the project file in your
 ```
 
 ## Post-build
-The post-build script runs after the build has finished and we have copied all the necessary artefacts to the output directory.
+The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 `mobile-center-post-build.sh`
@@ -48,6 +48,7 @@ To run scripts post-build, add the following file next to the project file in yo
 ```
 
 ## Environment variables
+We set the following environment variables, so you can access them from your build scripts.
 
 | Variable | Description |
 | --- | --- |
