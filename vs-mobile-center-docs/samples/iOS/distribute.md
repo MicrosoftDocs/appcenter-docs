@@ -31,13 +31,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 ### Prerequisites
 - Code signed (optional)
 
-## Create a distribution group
-1. Navigate to the **Distribute** service on the [Mobile Center portal](https://mobile.azure.com/apps).
-2. Click **New Group** at the top of the page.
-3. Name the group **Beta Testers** and add your email in the invitation box below.
-4. Press **Create Group**.
-
-## Distribute the sample app
+## Choose a build to Distribute
 There are **two ways you can distribute** the app.
 
 If you already completed the [Build tutorial](/build.md) and built the sample app:
@@ -50,8 +44,6 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 
 5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](/build.md) has steps to do so.
 6. Click **Next** twice. Leave the **Release notes** blank.
-7. Click **Distribute build**.
-<!--Gif here-->
 
 Another way is to upload your own .ipa file from XCode:
 1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
@@ -62,7 +54,15 @@ Another way is to upload your own .ipa file from XCode:
 
 4. Upload your **.ipa** file.
 5. Click **Next** twice. Leave the **Release notes** blank.
-6. Click **Distribute build**.
+
+
+## Distribute the app
+2. Click **New distribution group**.
+3. Name the group **Beta Testers** and add your email in the invitation box below.
+4. Press **Create Group**.
+6. Click **Next** twice and then **Distribute build**.
+
+By creating groups of users, you can easily distribute to them all at once, and add new testers when needed.
 
 ## Install the sample app
 1. You should receive an email with a link to download the sample app.
