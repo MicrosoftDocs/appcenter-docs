@@ -5,7 +5,7 @@ You can subscribe to the event `Push.PushNotificationReceived` to be notified wh
 Push.PushNotificationReceived += (sender, e) => {
 
     // Add the notification message and title to the message
-    var summary =  $"Push notification received:"
+    var summary =  $"Push notification received:" +
                         $"\n\tNotification title: {e.Title}" +
                         $"\n\tMessage: {e.Message}";
                         
