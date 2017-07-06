@@ -49,6 +49,6 @@ Step 3 is managed by Mobile Center SDK automatically, so you can stop after step
 >    compile "com.google.firebase:firebase-messaging:${version}"
 > ```
 
-### 3. Obtain your Android API Key
+### 4. Obtain your Android API Key
 
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
