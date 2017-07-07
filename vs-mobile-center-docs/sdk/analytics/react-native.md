@@ -4,7 +4,7 @@ description: Mobile Center Analytics for React Native
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/02/2017
+ms.date: 07/06/2017
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: mobile-center
@@ -35,7 +35,7 @@ You can track your own custom events with **up to five properties** to know what
 
 Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
 
-```
+```javascript
 // import Mobile Center Analytics at the top of the file.
 import Analytics from "mobile-center-analytics";
 
@@ -46,7 +46,7 @@ This function returns a promise, in which the success case returns an empty stri
 
 Properties for events are entirely optional. If you just want to track an event, use this sample instead:
 
-```
+```javascript
 Analytics.trackEvent("My first event");
 ```
 
@@ -54,7 +54,7 @@ Analytics.trackEvent("My first event");
 
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
-```
+```javascript
 Analytics.setEnabled(false);
 ```
 
@@ -62,7 +62,7 @@ This function returns a promise, in which the success case returns an empty stri
 
 To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
 
-```
+```javascript
 Analytics.setEnabled(true);
 ```
 
@@ -70,13 +70,13 @@ Analytics.setEnabled(true);
 
 You can also check if Mobile Center Analytics is enabled or not.
 
-```
+```javascript
 boolean isEnabled = Analytics.isEnabled();
 ```
 
 This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
 
-## 5. Wait for JS to enable Mobile Center Analytics
+## Wait for JS to enable Mobile Center Analytics
 
 In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `I will manually enable events sending` during `react-native link`.
 
@@ -88,6 +88,6 @@ For the [platform] app, should user tracking be enabled automatically ? (Use arr
 
 This means that for any information to be sent to Mobile Center (even basic session information), the developer must first enable Mobile Center Analytics inside the app by adding the following line to their code.
 
-```
+```javascript
 Analytics.setEnabled(true);
 ```
