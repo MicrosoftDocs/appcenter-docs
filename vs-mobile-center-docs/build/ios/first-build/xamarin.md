@@ -25,7 +25,7 @@ Next step once you have selected a repository is to select the branch you want t
 To kick off the first build, configure how the iOS project should get built.
 
 ### 3.1. Project/solution
-Mobile Center automatically detects the solution files in your repository. Select the `.sln` you would like to build. In your code, make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target `iPhone` and `iPhoneSimulator`, uncheck all the projects which are targeting other platforms. This will ensure that when the `.sln` is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](~/build/xamarin/solution-configuration-mappings.md) you can read.
+Mobile Center automatically detects the solution files in your repository. Select the `.sln` you would like to build. In your code, make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target `iPhone` and `iPhoneSimulator`, uncheck all the projects which are targeting other platforms. This will ensure that when the `.sln` is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](xamarin-solution-configuration-mappings.md) you can read.
 
 ### 3.2. Configuration
 Select the configuration you would like to build with. The configurations are automatically detected depending on the solution picked in the previous step.
