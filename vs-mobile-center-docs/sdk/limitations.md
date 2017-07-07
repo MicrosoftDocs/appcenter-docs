@@ -18,7 +18,6 @@ ms.custom: sdk
 ### React Native
 
 1. The React Native SDK currently does not support In-App-Updates. The reason for this is that one of React Native’s main features is that it allows to deploy apps using [CodePush](https://microsoft.github.io/code-push/) without the need to distribute a new build.
-2. The React Native SDK currently does not support Mobile Center Push. This will change in the future. 
 
 ### Xamarin
 
