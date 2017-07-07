@@ -74,7 +74,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 3. Select the first device, the **Apple iPhone 7 Plus**, and press **Select one device** at the bottom.  
 4. Choose **XCUITest** as the Test framework.   
 5. Click **Next**.  
-  ![Prepare to run tests](images/Setup_test_ios.gif\)
+  ![Prepare to run tests](images/Setup_test_ios.gif)
 
 ## Run the tests
 1. Copy the custom command under **Running tests**.
