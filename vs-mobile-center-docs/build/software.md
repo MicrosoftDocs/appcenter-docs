@@ -50,6 +50,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Xcode
 
+- Xcode 8.3.3
 - Xcode 8.3.2
 - Xcode 8.3.1
 - Xcode 8.2.1
