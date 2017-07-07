@@ -27,7 +27,7 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
-- [XCode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12#)
+- [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12#)
 
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
@@ -36,13 +36,13 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
-2. Run this to install CocoaPods:
+2. Run this command to install CocoaPods:
 
   ```shell
   sudo gem install cocoapods
   ```
 
-3. Run this to install dependencies:
+3. Run this command to install dependencies:
 
   ```shell
   pod install
@@ -60,15 +60,13 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 1. Click **Add new app**.
 2. Name the app **Sample iOS App**.
 3. Choose **iOS** and **Objective-C / Swift**.
-4. Click **Add new app** at the bottom.
-
+4. Click **Add new app** at the bottom.    
   ![Make a new app](images/Make_new_app_ios.gif)
-
 ## Replace the App Secret
-In order for the sample app to send information to Mobile Center, the app secret must be changed in XCode.
+In order for the sample app to send information to Mobile Center, the app secret must be changed in Xcode.
 
 1. Navigate to the **Settings** page in Mobile Center.
 2. Copy the **App Secret** at the top.
 3. Open the **.xcworkspace** from the sample app folder.
-4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
-<!--gif here-->
+4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.  
+  ![Replace the App Secret](images/Change_app_secret_ios.gif)

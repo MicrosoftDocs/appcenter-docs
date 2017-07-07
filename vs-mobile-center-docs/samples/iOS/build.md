@@ -34,7 +34,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 <!--
 Add a shared scheme
 To build the sample app, you'll first have to add a shared scheme to the project.
-1. Open the sample app's **.xcworkspace** in XCode.
+1. Open the sample app's **.xcworkspace** in Xcode.
 2. Select **Product** > **Scheme** > **Manage Schemes**.
 3. Check the **shared** box for the project
 4. Push the changes to GitHub.
@@ -48,10 +48,8 @@ To build the sample app, you'll first have to add a shared scheme to the project
 ## Configure the build
 1. Choose the **master** branch.
 2. Click **Configure build**. The Build configuration panel will show up.
-3. If you want to sign the builds, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
-
+3. If you want to sign the builds, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.  
   ![Signing Builds](images/Signing_builds_ios.png)
-
 4. Click **Save** at the bottom of the page, and the build will begin.
 
 The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Analytics | Demo App Tutorials
+title: Analytics | Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: mobile-center
 authors: sabrinaj206 sshibu
@@ -26,7 +26,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 # Analytics
 
-We've included custom events in sample app. In this tutorial, you will learn to view those events and other user analytics in Mobile Center.
+We've included code to track custom events in sample app. In this tutorial, you will learn to view those events and other user analytics in Mobile Center.
 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
@@ -34,7 +34,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 1. Open **.xcworkspace** and run the app.
 2. Go to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps).
 
-Once the app is open, you should see at least one user and one session.
+Once the app runs on any device, you should start seeing users, session, and other information on the Overview page.
 
 ## View Custom Events
 1. In the sample app, press the buttons. We've included code from the Mobile Center SDK that will specifically track these events. <!--UPDATE-->

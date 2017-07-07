@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Push | Demo App Tutorials
-description: Tutorial to help user create and send push notifications.
+title: Push | Sample App Tutorials
+description: Tutorial to send a push notification to the sample ios app.
 keywords: mobile-center
 authors: sabrinaj206 sshibu
 ms.author: t-sajia t-shshib
