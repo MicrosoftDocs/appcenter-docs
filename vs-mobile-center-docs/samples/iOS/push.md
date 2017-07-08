@@ -34,34 +34,35 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 ## Enable Apple Push Notifications service
 1. Open the **.xcworkspace**.
 2. Click **Capabilities**.
-3. Turn **Push Notifications** on.
+3. Turn **Push Notifications** on.  
+  ![Enable Push](images/Enable_Push_xcode.gif)
 
-<!--![push capability](images/ios-enable-push-capability.png)-->
-
+## Set up Push in Mobile Center
+1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
+2. Click **next** to skip the first page. We've already included all the code shown here.
 
 ## Get your Apple Push Notification service Key
 1. Go to your **[Keys](https://developer.apple.com/account/ios/authkey/)** on the Apple Developer website.
 2. Create a new APNs Key if you don't have one. Fill in a Key name and check the **APNs** checkbox.
-3. Copy the **Key ID** and paste it in the box in Mobile Center.
+3. Copy the **Key ID** and download the **key file**. Paste it in the box in Mobile Center.
 
 ## Get the sample app's Prefix and ID
 1. Go to your **[App IDs](https://developer.apple.com/account/ios/identifier/bundle)** on the Apple Developer Website.
 2. Click on the sample app's ID.
 3. Copy the **Prefix** and paste it in the box in Mobile Center.
 4. Copy the **ID** and paste it in the box in Mobile Center.
-5. Enter your Authentication Key. <!-- UPDATE THIS -->
+5. Open the **key file** from your **Key ID**, and copy the authentication token. Paste it in the box.
 5. Choose **Sandbox**.
 6. Click **Done** at the bottom.
 
-## Set up a push notification
+## Set up a Push notification
 1. First, follow the [Distribute tutorial](distribute.md) to download the app to your device.
 2. Navigate to the **Push** service in Mobile Center.
-3. Click **Send notification** at the top of the page.
-4. Set the **Campaign Name** as "Using Push Notifcations". Set the **Message** as "testing".
-
-<!--![setting up push](images/Screen%20Shot%202017-06-28%20at%208.58.44%20PM.jpg)-->
+3. Click **Send notification**.
+4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
 
 ## Send a push notification
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
-3. Click **Next** and **Send notification** at the bottom.
+3. Click **Next** and **Send notification** at the bottom.  
+![Send a Push notification](images/Send_push_ios.gif)

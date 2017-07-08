@@ -36,8 +36,6 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 3. Click on the latest successful build.
 4. Click **Download** > **Download symbols** at the top.
 
-  ![Download symbols](images/Download_symbols_ios.png)
-
 ## Upload symbols
 1. Navigate to the **Crashes** service and go to the **Symbols** page.
 2. Click **Upload symbols** at the top of the page and upload the symbol file you just downloaded.
@@ -46,7 +44,7 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 ## Crashing the sample app
 1. Open the sample app.
 2. Tap the **crash** button to crash the app.
-3. **Reopen the app.** This sends the crash report to the Mobile Center backend.
+3. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
   ![Crash the sample app](images/Crash_ios_app.gif)
 
 ## View the crashes in Mobile Center
