@@ -21,4 +21,6 @@ ms.reviewer: vigimm
 ---
 
 # Device registration
-**TBD**
+**Preview**
+
+With device registration, you can register iOS device IDs in your Apple developer account and download the provisioning profile with the newly added IDs.
