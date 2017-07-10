@@ -34,20 +34,20 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 ## Install Mobile Center Command Line Interface
 
 1. Install [Node.js](https://nodejs.org/en/) version 6.3 or later.
-2. Open the terminal and run this command to install the Mobile Center CLI:
+2. Open the terminal and run the command below to install the Mobile Center CLI:
 
   ```shell
   npm install -g mobile-center-cli
   ```
 
-3. Run this command and follow the directions to log in to Mobile Center:
+3. Run the command below and follow the directions to log in to Mobile Center:
 
   ```shell
   mobile-center login
   ```  
   ![Install CLI and login](images/Install_CLI_login_ios.gif)
 
-## Codesign the project <!-- UPDATE THIS -->
+## Codesign the project
 1. Open **.xcworkspace** from the sample app's folder.
 2. Go to **General** within the .xcodeproj file and changing the information under the **Signing** tabs.
 3. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine.  
@@ -55,13 +55,13 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 ## Make the test folder
 1. Open a terminal and go to the project directory.
-2. Run this command to remove the derivedDataPath if it exists:
+2. Run the command below to remove the derivedDataPath if it exists:
 
   ```shell
   rm -rf ddp
   ```
 
-3. Run this command to make the build folder for tests:
+3. Run the command below to make the build folder for tests:
 
   ```shell
   xcrun xcodebuild build-for-testing -configuration Debug -workspace demoapp-ios-swift.xcworkspace -sdk iphoneos -scheme demoapp-ios-swift -derivedDataPath ddp
@@ -79,7 +79,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 ## Run the tests
 1. Copy the custom command under **Running tests**.
 2. Paste it into the terminal while in the project directory.
-3. Replace ```pathToXCUItestBuildFolder``` with:
+3. Replace ```pathToXCUItestBuildFolder``` with the text below:
 
   ```shell
   ddp/Build/Products/Debug-iphoneos

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Getting Started | Demo App Tutorials
+title: Getting Started | Sample App Tutorials
 description: Tutorial to onboard an iOS application in Mobile Center
 keywords: mobile-center
 authors: sabrinaj206 sshibu
@@ -25,6 +25,8 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # Getting Started
 
+In this tutorial, you will learn how to set up a sample iOS app with Mobile Center.
+
 ### Prerequisites
 - [GitHub account](https://github.com/join)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12#)
@@ -36,13 +38,13 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
-2. Run this command to install CocoaPods:
+2. Run the command below to install CocoaPods:
 
   ```shell
   sudo gem install cocoapods
   ```
 
-3. Run this command to install dependencies:
+3. We've included the Podfile listing the dependencies in the source code. To install them, run the command below to install dependencies:
 
   ```shell
   pod install

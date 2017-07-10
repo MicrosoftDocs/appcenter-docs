@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview | Demo App Tutorials
+title: Overview | Sample App Tutorials
 description: Landing page to navigate through tutorials.
 keywords: mobile-center
 authors: sshibu
@@ -25,14 +25,18 @@ ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 # Overview
 
+## About
+This collection of tutorials is designed to help you quickly and easily onboard to Mobile Center. To do so, we've provided you with a sample iOS app with the Mobile Center SDK already integrated - all you need to do is follow the tutorials to learn how to use each service.
 
+Begin with the **Getting Started** tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 
+## Contents
 | Title       | Description     |Links  |
 |:-------------:|:-------------:|:-----:|
-| Getting Started  | Creating a new app | [iOS]()|
-| Build    | Build sample app | [iOS]()|
-| Test    |   Run tests in Test Cloud   |   [iOS]()|
-| Distribute| Distribute sample app to distribution group  |   [iOS]() |
-| Crash   | Track app crashes  | [iOS]()|
-| Analytics  | Obtain analytics data| [iOS]()|
-| Push   | Send users selected push notifications| [iOS]()|
+| Getting Started  | Set up the app | [iOS](getting-started.md)|
+| Build    | Build the sample app | [iOS](build.md)|
+| Test    | Run automated UI tests |   [iOS](test.md)|
+| Distribute| Distribute to a user's device |   [iOS](distribute.md) |
+| Crash   | Monitor application crashes | [iOS](crashes.md)|
+| Analytics  | View user analytics | [iOS](analytics.md)|
+| Push   | Send users push notifications | [iOS](push.md)|
