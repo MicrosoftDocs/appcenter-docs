@@ -4,7 +4,7 @@ description:  Mobile Center Crashes for Android
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/07/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: mobile-center
@@ -43,6 +43,9 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 ```java
 Crashes.hasCrashedInLastSession();
 ```
+
+[!include[](../android-see-async.md)]
+
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
 
 ### Details about the last crash
@@ -50,16 +53,10 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 If your app crashed previously, you can get details about the last crash.
 
 ```java
-Crashes.getLastSessionCrashReport(new ResultCallback<ErrorReport>() {
-
-	@Override
-	public void onResult(ErrorReport data) {
-   		if (data != null) {
-			Log.i("MyApp", "Last session crash details=", data.getThrowable());
-		}
-	}
-});
+Crashes.getLastSessionCrashReport();
 ```
+
+[!include[](../android-see-async.md)]
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-mobile-center-crashes).
 
@@ -190,6 +187,8 @@ To enable Mobile Center Crashes again, use the same API but pass `true` as a par
 Crashes.setEnabled(true);
 ```
 
+[!include[](../android-see-async.md)]
+
 ## Check if Mobile Center Crashes is enabled
 
 You can also check if Mobile Center Crashes is enabled or not:
@@ -197,3 +196,5 @@ You can also check if Mobile Center Crashes is enabled or not:
 ```java
 Crashes.isEnabled();
 ```
+
+[!include[](../android-see-async.md)]
