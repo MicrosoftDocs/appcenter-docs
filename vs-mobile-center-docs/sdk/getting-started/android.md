@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/19/2017
+ms.date: 07/10/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center

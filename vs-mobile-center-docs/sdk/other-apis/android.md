@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Android
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/21/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: mobile-center
