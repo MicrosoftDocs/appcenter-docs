@@ -4,7 +4,7 @@ description: Mobile Center Crashes for Xamarn
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/07/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: mobile-center

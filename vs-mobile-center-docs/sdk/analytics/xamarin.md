@@ -4,7 +4,7 @@ description: Mobile Center Analytics for Xamarin
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/02/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.service: mobile-center
