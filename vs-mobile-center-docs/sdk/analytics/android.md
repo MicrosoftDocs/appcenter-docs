@@ -4,7 +4,7 @@ description: Mobile Center Analytics for Android
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/02/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: mobile-center
@@ -63,6 +63,8 @@ To enable Mobile Center Analytics again, use the same API but pass `true` as a p
 Analytics.setEnabled(true);
 ```
 
+[!include[](../android-see-async.md)]
+
 ## Check if Mobile Center Analytics is enabled
 
 You can also check if Mobile Center Analytics is enabled or not.
@@ -70,3 +72,5 @@ You can also check if Mobile Center Analytics is enabled or not.
 ```java
 Analytics.isEnabled();
 ```
+
+[!include[](../android-see-async.md)]
