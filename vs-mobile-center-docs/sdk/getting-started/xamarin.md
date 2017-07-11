@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/14/2017
+ms.date: 06/26/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -82,6 +82,8 @@ Multiplatform Xamarin.Forms apps have four projects in your solution - the porta
 
 * Navigate to the **Project -> Add NuGet Packages...**
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
+
+[!include[](../note-dotnet-standard.md)]
 
 ### 3.2 Xamarin for Visual Studio
 

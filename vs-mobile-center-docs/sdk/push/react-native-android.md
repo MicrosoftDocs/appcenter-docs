@@ -2,9 +2,9 @@
 title: Mobile Center Push for React Native Android
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: bretjohn
-ms.author: bretjohn
-ms.date: 06/12/2017
+author: elamalani
+ms.author: emalani
+ms.date: 07/05/2017
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
@@ -12,46 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# Mobile Center Push
-
-> [!div class="op_single_selector"]
-> * [Android](android.md)
-> * [iOS](ios.md)
-> * [UWP](uwp.md)
-> * [Xamarin.Android](xamarin-android.md)
-> * [Xamarin.iOS](xamarin-ios.md)
-> * [Xamarin.Forms](xamarin-forms.md)
-> * [React Native Android](react-native-android.md)
-> * [React Native iOS](react-native-ios.md)
-
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
-
-Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications. Also, Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
-
-## Prerequisite - Add Firebase to your app
-
-Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
-
-### 1. Manual integration
-
-1. Follow the instructions listed in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
-
-2. Make sure to continue following instructions in **Add the SDK** sub section right after.
-
-### 2. Using Firebase Assistant
-
-1. Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see **Firebase** in the **Tools** menu.
-
-2. Click on Tools > Firebase and follow **only** the first two following steps:
-
-    1. Connect your app to Firebase
-
-    2. Add FCM to your app
-
-Step 3 is managed by Mobile Center SDK automatically, so you can stop after step 2.
-
-### 3. Obtain your Android API Key
-Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
+[!include[](introduction-android.md)]
 
 ## Add Mobile Center Push to your app
 
@@ -70,14 +31,15 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
     react-native link mobile-center-push
     ```
 
-3. You will be prompted for the App Secret, which will enable Mobile Center to map this app to the right user account. The secret may already be pre-populated, showing up beside the question. If the pre-filled secret is correct, press enter to continue. Otherwise, provide your app secret here. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't yet configured the SDK in your application.
-
-    ```
-    What is the Android app secret? (0000-0000-0000-0000-000000000000)
-    What is the iOS app secret? (0000-0000-0000-0000-000000000000)
-    ```
-
 Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
+
+## Customize your usage of Mobile Center Push 
+
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+
+Firebase does not generate notifications when the push is received in foreground, so you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+[!include[](react-native-listener.md)]
 
 ## Existing Firebase Analytics users
 
