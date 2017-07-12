@@ -29,7 +29,7 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 
 
 ### Prerequisites
-- Code signed (optional)
+- - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Choose a build to Distribute
 There are **two ways you can distribute** the app.

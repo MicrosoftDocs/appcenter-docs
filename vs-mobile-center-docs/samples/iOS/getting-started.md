@@ -64,11 +64,14 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 3. Choose **iOS** and **Objective-C / Swift**.
 4. Click **Add new app** at the bottom.    
   ![Make a new app](images/Make_new_app_ios.gif)
+
 ## Replace the App Secret
+
 In order for the sample app to send information to Mobile Center, the app secret must be changed in Xcode.
 
 1. Navigate to the **Settings** page in Mobile Center.
 2. Copy the **App Secret** at the top.
 3. Open the **.xcworkspace** from the sample app folder.
 4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.  
+5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
   ![Replace the App Secret](images/Change_app_secret_ios.gif)

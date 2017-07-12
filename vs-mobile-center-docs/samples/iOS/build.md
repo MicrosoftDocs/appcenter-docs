@@ -29,16 +29,8 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
-- Provisioning Profile and Certificate (optional)
+- Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
-<!--
-Add a shared scheme
-To build the sample app, you'll first have to add a shared scheme to the project.
-1. Open the sample app's **.xcworkspace** in Xcode.
-2. Select **Product** > **Scheme** > **Manage Schemes**.
-3. Check the **shared** box for the project
-4. Push the changes to GitHub.
--->
 ## Set up the repository
 1. Go to the **Build** service in [Mobile Center](https://mobile.azure.com/apps).
 2. Choose **GitHub** as the service to Build with.

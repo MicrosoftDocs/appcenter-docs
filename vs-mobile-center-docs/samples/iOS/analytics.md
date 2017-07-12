@@ -31,13 +31,19 @@ We've included code to track custom events in sample app. In this tutorial, you 
 If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
 ## Open the app and view user Analytics
-1. Open **.xcworkspace** and run the app.
+1. Run the app using .xcworkspace, or from your device.
 2. Go to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps).
 
-Once the app runs on any device, you should start seeing users, session, and other information on the Overview page.
+Once the app runs on any device or simulator, you should start seeing users, session, and other information on the Overview page.
 
-## View Custom Events
-1. In the sample app, press the buttons. We've included code from the Mobile Center SDK that will specifically track these events. <!--UPDATE-->
-2. Navigate to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps) and go to the **Events** section.
+## Send and view custom events
 
-Mobile Center will show which buttons you pressed.
+1. In the sample app, press the **Send a sample event** button.
+2. In the sample app, press the **Send event with color property** button. Choose a color.
+3. Navigate to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps) and go to the **Events** section.
+4. You should see data for both the sample and color event buttons. Click on the color event to see that the color you chose has been pressed at least once.  
+  ![Send Events](images/Send_events_ios.gif)
+
+In Mobile Center, you can view detailed analytics about both buttons by clicking on the events, and even see how many people chose each color.
+
+To make this possible, we've included code from the Mobile Center SDK that will specifically track when these buttons are pressed. These custom events can have multiple properties - in this case, the color chosen is an event property.

@@ -29,13 +29,8 @@ In this tutorial you will learn how to send push notification to users through M
 First, follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
 ### Prerequisites
-- Code signed
-
-## Enable Apple Push Notifications service
-1. Open the **.xcworkspace**.
-2. Click **Capabilities**.
-3. Turn **Push Notifications** on.  
-  ![Enable Push](images/Enable_Push_xcode.gif)
+ - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+ - Distributed the sample app to your device (not running on a simulator).
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -64,5 +59,5 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 ## Send a push notification
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
-3. Click **Next** and **Send notification** at the bottom.  
-![Send a Push notification](images/Send_push_ios.gif)
+3. Click **Next** and **Send notification** at the bottom. **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
+  ![Send a Push notification](images/Send_push_ios.gif)

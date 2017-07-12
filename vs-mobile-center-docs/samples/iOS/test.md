@@ -29,7 +29,7 @@ We've included XCUITests with the sample app. In this tutorial, you will learn t
 First, follow the [getting started tutorial](/getting-started.md) to set up the sample app.
 
 ### Prerequisites
-- Provisioning Profile and Certificate
+ - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Install Mobile Center Command Line Interface
 
@@ -49,9 +49,11 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 ## Codesign the project
 1. Open **.xcworkspace** from the sample app's folder.
-2. Go to **General** within the .xcodeproj file and changing the information under the **Signing** tabs.
-3. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine.  
+2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
+3. Edit the **Bundle Identifier** to match the app ID.
+4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.  
   ![Codesigning](images/Sign_code_ios.png)
+
 
 ## Make the test folder
 1. Open a terminal and go to the project directory.
