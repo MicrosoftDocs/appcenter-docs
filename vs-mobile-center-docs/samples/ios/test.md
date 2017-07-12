@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Test| Demo App Tutorials
+title: Test| Sample App Tutorials
 description: Tutorial to test the sample ios app with Mobile Center.
 keywords: mobile-center
 authors: sabrinaj206 sshibu
@@ -47,14 +47,6 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
   ```  
   ![Install CLI and login](images/Install_CLI_login_ios.gif)
 
-## Codesign the project
-1. Open **.xcworkspace** from the sample app's folder.
-2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
-3. Edit the **Bundle Identifier** to match the app ID.
-4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.  
-  ![Codesigning](images/Sign_code_ios.png)
-
-
 ## Make the test folder
 1. Open a terminal and go to the project directory.
 2. Run the command below to remove the derivedDataPath if it exists:
@@ -67,8 +59,8 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
   ```shell
   xcrun xcodebuild build-for-testing -configuration Debug -workspace demoapp-ios-swift.xcworkspace -sdk iphoneos -scheme demoapp-ios-swift -derivedDataPath ddp
-  ```
-![Build the Test Folder](images/Build_test_folder_ios.gif)
+  ```  
+  ![Build the Test Folder](images/Build_test_folder_ios.gif)
 
 ## Prepare to run tests in Mobile Center
 1. Go to the **Test** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -76,7 +68,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 3. Select the first device, the **Apple iPhone 7 Plus**, and press **Select one device** at the bottom.  
 4. Choose **XCUITest** as the Test framework.   
 5. Click **Next**.  
-![Prepare to run tests](images/Setup_test_ios.gif)
+  ![Prepare to run tests](images/Setup_test_ios.gif)
 
 ## Run the tests
 1. Copy the custom command under **Running tests**.
@@ -88,6 +80,5 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
   ```
 
 4. Run the command. You will see the tests begin to run.
-5. In Mobile Center, click **Done** to close the panel.
-
+5. In Mobile Center, click **Done** to close the panel.  
   ![Run the tests](images/Run_XCUITests.gif)
