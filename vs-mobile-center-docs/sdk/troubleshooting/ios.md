@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for iOS
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/07/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: mobile-center
@@ -51,7 +51,7 @@ dev_langs:
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the `start:withServices:` method call. You can copy the exact `start:withServices:` code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
-4. You need to restart the app after a crash and Mobile Center Crashes will forward the crash log only after it is restarted. Also, the SDK will not forward any crash log if you attached to be debugger. Make sure the debugger is not attached when you re-open the app.
+4. You need to restart the app after a crash and Mobile Center Crashes will forward the crash log only after it is restarted. Also, the SDK will not forward any crash log if you attached to be debugger. Make sure the debugger is not attached when you crash the app.
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
 	```objc
