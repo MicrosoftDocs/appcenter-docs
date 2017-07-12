@@ -5,7 +5,7 @@ title: Mobile Center Push for Xamarin.iOS Apps
 description: Integrating Mobile Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: achocron
-ms.date: 06/09/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: mobile-center
