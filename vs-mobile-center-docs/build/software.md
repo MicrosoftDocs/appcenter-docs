@@ -25,21 +25,21 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 - Python 2.7.10
-- Node.js v6.10.3
+- Node.js v6.11.0
 - Java 1.8.0_131-b11
 
 ### Package Management
 
 - NPM 3.10.10
-- Homebrew 1.2.2
-- Homebrew/homebrew-core (git revision 4ec2; last commit 2017-06-09)
+- Homebrew 1.2.4
+- Homebrew/homebrew-core (git revision 695d9; last commit 2017-07-07)
 - bundler Bundler version 1.15.1
 - CoCoaPods 1.2.1
 - Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.13.1
+- Git 2.13.2
 - Git LFS 2.1.1
 - curl 7.51.0 (x86_64-apple-darwin16.0) libcurl/7.51.0 SecureTransport zlib/1.2.8
 - GNU Wget 1.19.1 built on darwin16.6.0
@@ -50,6 +50,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Xcode
 
+- Xcode 8.3.3
 - Xcode 8.3.2
 - Xcode 8.3.1
 - Xcode 8.2.1
@@ -398,6 +399,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
+| build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.3  |
+| build-tools-25.0.2    | Android SDK Build-tools, Revision 26.0.0  |
 
 ### Utils
 
