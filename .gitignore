@@ -6,3 +6,5 @@ _themes*/
 
 .openpublishing.buildcore.ps1
 
+# Folder configuration on Mac
+.DS_Store

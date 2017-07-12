@@ -2,8 +2,8 @@
 title: Mobile Center Support
 description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
-author: piyushjo
-ms.author: piyushjo
+author: joemellin
+ms.author: joemel
 ms.date: 03/14/2017
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
@@ -14,7 +14,7 @@ ms.service: mobile-center
 
 ## Documentation
 
-[Product documentation](~/index.md) 
+[Product documentation](~/index.yml) 
 
 [API documentation](~/api-docs/index.md)
 
@@ -22,7 +22,11 @@ ms.service: mobile-center
 
 ## Troubleshooting
 
-[SDK troubleshooting](~/sdk/troubleshooting.md)
+[Android SDK troubleshooting](~/sdk/troubleshooting/android.md)
+
+[iOS SDK troubleshooting](~/sdk/troubleshooting/ios.md)
+
+[Xamarin SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
 
 [Build service FAQs](~/build/faq.md)
 
