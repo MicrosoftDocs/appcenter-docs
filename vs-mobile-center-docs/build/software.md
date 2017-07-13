@@ -25,21 +25,21 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 - Python 2.7.10
-- Node.js v6.10.3
+- Node.js v6.11.0
 - Java 1.8.0_131-b11
 
 ### Package Management
 
 - NPM 3.10.10
-- Homebrew 1.2.2
-- Homebrew/homebrew-core (git revision 4ec2; last commit 2017-06-09)
+- Homebrew 1.2.4
+- Homebrew/homebrew-core (git revision 695d9; last commit 2017-07-07)
 - bundler Bundler version 1.15.1
 - CoCoaPods 1.2.1
 - Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.13.1
+- Git 2.13.2
 - Git LFS 2.1.1
 - curl 7.51.0 (x86_64-apple-darwin16.0) libcurl/7.51.0 SecureTransport zlib/1.2.8
 - GNU Wget 1.19.1 built on darwin16.6.0
@@ -50,6 +50,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Xcode
 
+- Xcode 8.3.3
 - Xcode 8.3.2
 - Xcode 8.3.1
 - Xcode 8.2.1
@@ -61,7 +62,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
-- xctool 0.3.1
+- xctool 0.3.2
 - xcpretty 0.2.8
 
 ### Installed SDKs
@@ -107,8 +108,11 @@ iPad 2 (com.apple.CoreSimulator.SimDeviceType.iPad-2)
 iPad Retina (com.apple.CoreSimulator.SimDeviceType.iPad-Retina)
 iPad Air (com.apple.CoreSimulator.SimDeviceType.iPad-Air)
 iPad Air 2 (com.apple.CoreSimulator.SimDeviceType.iPad-Air-2)
+iPad (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-)
 iPad Pro (9.7-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--9-7-inch-)
 iPad Pro (12.9-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro)
+iPad Pro (12.9-inch) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-)
+iPad Pro (10.5-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--10-5-inch-)
 Apple TV 1080p (com.apple.CoreSimulator.SimDeviceType.Apple-TV-1080p)
 Apple Watch - 38mm (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-38mm)
 Apple Watch - 42mm (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-42mm)
@@ -126,9 +130,10 @@ iOS 9.3 (9.3 - 13E233) (com.apple.CoreSimulator.SimRuntime.iOS-9-3)
 iOS 10.0 (10.0 - 14A345) (com.apple.CoreSimulator.SimRuntime.iOS-10-0)
 iOS 10.1 (10.1 - 14B72) (com.apple.CoreSimulator.SimRuntime.iOS-10-1)
 iOS 10.2 (10.2 - 14C89) (com.apple.CoreSimulator.SimRuntime.iOS-10-2)
-iOS 10.3 (10.3 - 14E269) (com.apple.CoreSimulator.SimRuntime.iOS-10-3)
+iOS 10.3 (10.3.1 - 14E8301) (com.apple.CoreSimulator.SimRuntime.iOS-10-3)
 tvOS 10.2 (10.2 - 14W260) (com.apple.CoreSimulator.SimRuntime.tvOS-10-2)
 watchOS 2.2 (2.2 - 13V144) (com.apple.CoreSimulator.SimRuntime.watchOS-2-2)
+watchOS 3.1 (3.1 - 14S471a) (com.apple.CoreSimulator.SimRuntime.watchOS-3-1)
 watchOS 3.2 (3.2 - 14V243) (com.apple.CoreSimulator.SimRuntime.watchOS-3-2)
 ```
 
@@ -273,8 +278,11 @@ iPhone 7 Plus (83C29B6A-767C-4C19-90AE-FC15A62FD094)
 iPhone SE (5F77D17F-58B9-4998-A067-0A204EE1A881)
 iPad Air (F7BA3867-F7AA-469C-9721-8DBE6A676113)
 iPad Air 2 (71DA229D-ADB8-4E73-B566-B2AB16C54C1F)
+iPad (5th generation) (ED9A0364-137E-4363-80E9-EE65FDE6F996)
 iPad Pro (9.7 inch) (813E7CF7-B078-4A42-B3FB-A31FDD8841FF)
 iPad Pro (12.9 inch) (B68FFAD7-0F20-47F9-AB95-3C6480CB8274)
+iPad Pro (12.9-inch) (2nd generation) (AD80DD07-219C-4C3F-BF8A-464728298537)
+iPad Pro (10.5-inch) (6BDC6A7B-916E-49FB-80DA-573A7E45EF72)
 ```
 
 ##### tvOS 10.0
@@ -308,10 +316,10 @@ Apple Watch Series 2 - 42mm (214C720B-B2F0-4169-B5E9-4A08C4025A33)
 
 ##### watchOS 3.1
 ```
-Apple Watch - 38mm (C1F0E07D-133C-4AAC-A2B9-C1F2E7EE4A95)
-Apple Watch - 42mm (EACBCE7B-9EBE-4AC1-A403-8C0E7B1890FC)
-Apple Watch Series 2 - 38mm (093021F7-6F06-43C1-9659-17C729B07FFC)
-Apple Watch Series 2 - 42mm (0363329D-A8B0-4A37-A750-CAD1D8D4F182)
+Apple Watch - 38mm (88ABCC9D-6689-4AA2-8EF7-9D7C0CD1400B)
+Apple Watch - 42mm (C15882F4-12EA-44FE-94C7-604F3CA039FA)
+Apple Watch Series 2 - 38mm (54411D29-1BD1-4503-91FB-C01713321B38)
+Apple Watch Series 2 - 42mm (7B923637-0F5B-4E03-92D1-2D7E77E1B143)
 ```
 
 ##### watchOS 3.2
@@ -324,6 +332,14 @@ Apple Watch Series 2 - 42mm (779A58DA-E410-4CE6-8C3A-135AD06B1B3C)
 
 ### Device Pairs
 ```
+BD4B234C-320F-43D9-A36B-37B4F4A57183 (active, disconnected)
+    Watch: Apple Watch Series 2 - 38mm (54411D29-1BD1-4503-91FB-C01713321B38)
+    Phone: iPhone 7 (1BA6913E-F267-4EFA-9D92-9FDB27DB79D3)
+    
+8F53D501-89D0-4B81-84BF-A8F081B9AB2A (active, disconnected)
+    Watch: Apple Watch Series 2 - 42mm (7B923637-0F5B-4E03-92D1-2D7E77E1B143)
+    Phone: iPhone 7 Plus (3611C41D-E65B-4D57-8889-84D035976699)
+
 9E347BC3-A639-49D2-844C-6B118F824B4E (active, disconnected)
     Watch: Apple Watch - 38mm (6F95596F-EADB-40C2-8F1D-EB858041E0E9)
     Phone: iPhone 6s (FFE2B0C0-07BD-40A3-86E4-C5BBFC33FEE8)
@@ -343,10 +359,14 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
     Phone: iPhone 7 (B4A229FB-A029-4287-ABAE-D1D931B1876A)
     Watch: Apple Watch Series 2 - 42mm (5619831F-1C3F-47BB-8554-C96CE5222261)
     Phone: iPhone 7 Plus (8F04D1B5-8379-47BE-9616-30CA401DA422)
-    Watch: Apple Watch Series 2 - 38mm (54411D29-1BD1-4503-91FB-C01713321B38)
-    Phone: iPhone 7 (1BA6913E-F267-4EFA-9D92-9FDB27DB79D3)
-    Watch: Apple Watch Series 2 - 42mm (7B923637-0F5B-4E03-92D1-2D7E77E1B143)
-    Phone: iPhone 7 Plus (3611C41D-E65B-4D57-8889-84D035976699)
+    Watch: Apple Watch - 38mm (7B0A1930-A26F-4203-A42E-88E9156A5EB3)
+    Phone: iPhone 6s (53FA179B-DEA6-4C53-BE80-634DD67D396D)
+    Watch: Apple Watch - 42mm (AF32DF30-15B0-454E-ADFF-88DF0CD05C19)
+    Phone: iPhone 6s Plus (7761AE8D-1319-4D4D-91D5-D273E709620A)
+    Watch: Apple Watch Series 2 - 38mm (33271777-F220-4432-BCE5-A6C1730B13CB)
+    Phone: iPhone 7 (92D9C8C2-4D38-4476-B89D-7E87001B747A)
+    Watch: Apple Watch Series 2 - 42mm (574B4DA6-AC25-4175-8783-D2C1B39F7541)
+    Phone: iPhone 7 Plus (D5C00319-F92A-481A-AFF3-59BD47B1151F)
 ```
 
 
@@ -398,6 +418,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
+| build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.3  |
+| build-tools-25.0.2    | Android SDK Build-tools, Revision 26.0.0  |
 
 ### Utils
 
