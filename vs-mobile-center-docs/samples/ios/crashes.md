@@ -49,7 +49,7 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
   ![Detach the debugger](images/Detach_debugger_ios.gif)
 
 ## Crashing the sample app
-1. Swipe over to the **Crashes** page. Tap the **crash** button to crash the app.
+1. Swipe over to the **Crashes** page. Tap the **Send a sample crash** button to crash the app.
 2. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
   ![Crash the sample app](images/Crash_ios_app.gif)
 
