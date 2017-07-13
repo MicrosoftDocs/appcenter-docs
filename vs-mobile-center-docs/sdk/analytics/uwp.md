@@ -4,7 +4,7 @@ description: Mobile Center Analytics for UWP
 keywords: analytics
 author: dhei
 ms.author: dihei
-ms.date: 06/02/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: mobile-center
@@ -59,19 +59,21 @@ Analytics.TrackEvent("Video clicked");
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
 ```csharp
-Analytics.Enabled = false;
+Analytics.SetEnabledAsync(false);
 ```
 
 To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
 
 ```csharp
-Analytics.Enabled = true;
+Analytics.SetEnabledAsync(true);
 ```
+
+You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
 ## Check if Mobile Center Analytics is enabled
 
 You can also check if Mobile Center Analytics is enabled or not.
 
 ```csharp
-bool isEnabled = Analytics.Enabled;
+bool isEnabled = await Analytics.IsEnabledAsync();
 ```

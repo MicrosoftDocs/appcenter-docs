@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 05/31/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -212,21 +212,23 @@ In that case, the activity hosting the dialog might be replaced without user int
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
 
 ```csharp
-Distribute.Enabled = false;
+Distribute.SetEnabledAsync(false);
 ```
 
-To enable Mobile Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
+To enable Mobile Center Distribute again, use the same API but pass `true` as a parameter.
 
 ```csharp
-Distribute.Enabled = true;
+Distribute.SetEnabledAsync(true);
 ```
+
+You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
 ## Check if Mobile Center Distribute is enabled
 
 You can also check if Mobile Center Distribute is enabled or not:
 
 ```csharp
-bool enabled = Distribute.Enabled;
+bool enabled = await Distribute.IsEnabledAsync();
 ```
 
 ## How do in-app updates work?
