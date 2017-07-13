@@ -72,3 +72,13 @@ dev_langs:
 This means that the `MobileCenterDistributeResources.bundle` wasn't added to the project. Make sure you have drag'n'dropped the file into your Xcode project, and it appears in your app target's `Copy Bundle Resources` build phase. The later should be the case if you have added the file through drag'n'drop – Xcode does it automatically for you. If the file is missing from the build phase, add it so it gets compiled into your app's bundle.
 
 If you are using Cocoapods, it takes care of the resources automatically. Try re-installing the pod.
+
+## You are seeing messages in the console that indicate that the data base could not be opened (using SDK version 0.11.0 and later)
+
+Starting with version 0.11.0 of the iOS SDK, Mobile Center uses iOS' SQLite database. If you are bundling your application with your own SQLite database instead of using the one provided by the system, you might see errors like this in the console:
+`[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` 
+
+The reason for this error is that additional measures have to be taken when building and linking your own version of SQLite into your app. Section 2.2.1 of the [official SQLite documentation](http://sqlite.org/howtocorrupt.html) points that out.
+
+While the Mobile Center SDK is not doing anything wrong per se as we are using SQLite as provided by iOS, we are looking into improving Mobile Center to work even for cases where a developer's SQLite build is not hiding it's own symbols. Unfortunately, there is no ETA for this.
+There's only one work around, though: You need to configure the linker to pull in your SQLite library as a single static blob early in the link process with full “private” linkage - e.g. nothing else would ever see your custom SQLite symbols.
