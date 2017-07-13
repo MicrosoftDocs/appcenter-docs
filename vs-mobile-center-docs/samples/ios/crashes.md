@@ -41,10 +41,16 @@ If you already completed the [Build tutorial](/build.md) and built the sample ap
 2. Click **Upload symbols** at the top of the page and upload the symbol file you just downloaded.
   ![Upload symbols](images/Upload_symbols_ios.gif)
 
+## Open the sample app
+1. Run the sample app. If you're running it in the **Xcode simulator**, follow these additional steps to detach the debugger:
+2. Press the **Stop** icon to stop running the app.
+3. In the simulator, close the app. Double click the home button (cmd+shift+h) and swipe up on the sample app.
+4. Reopen the app by clicking on its icon.  
+  ![Detach the debugger](images/Detach_debugger_ios.gif)
+
 ## Crashing the sample app
-1. Open the sample app.
-2. Tap the **crash** button to crash the app.
-3. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
+1. Swipe over to the **Crashes** page. Tap the **crash** button to crash the app.
+2. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
   ![Crash the sample app](images/Crash_ios_app.gif)
 
 ## View the crashes in Mobile Center
