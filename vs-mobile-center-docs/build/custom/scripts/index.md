@@ -12,16 +12,24 @@ ms.custom: build
 ---
 
 # Build scripts
-You can add up to three custom build steps in the form of Bash scripts (PowerShell scripts in case of UWP app) that run at pre-defined stages during build time. Place the scripts with the respective format next to your project-level (`.xcodeproj`, `build.gradle`, `.csproj`, `.sln` or `package.json`) file and we will run them as custom build steps. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to your project-level (`.xcodeproj`, `build.gradle`, `.csproj`, `.sln` or `package.json`) file and we will run them as custom build steps. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+
+## Scripting languages supported
+Depending on the platform that your app is targeting, the following scripting languages are supported:
+- **iOS and Android apps**: Bash scripts
+- **UWP apps**: PowerShell scripts
 
 ## Post-clone
 The post-clone script runs immediately after the repository was cloned but before we do anything else on our end.
 
 To run scripts post-clone, add the following file next to the project file in your repository:
-`mobile-center-post-clone.sh` (`mobile-center-post-clone.ps1` for UWP)
-
+- **iOS and Android apps**: `mobile-center-post-clone.sh`
 ```
 #!/usr/bin/env bash
+# Example here
+```
+- **UWP apps**: `mobile-center-post-clone.ps1`
+```
 # Example here
 ```
 
@@ -29,10 +37,13 @@ To run scripts post-clone, add the following file next to the project file in yo
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-buid, add the following file next to the project file in your repository:
-`mobile-center-pre-build.sh` (`mobile-center-pre-build.ps1` for UWP)
-
+- **iOS and Android apps**: `mobile-center-pre-build.sh`
 ```
 #!/usr/bin/env bash
+# Example here
+```
+- **UWP apps**: `mobile-center-pre-build.ps1`
+```
 # Example here
 ```
 
@@ -40,10 +51,13 @@ To run scripts pre-buid, add the following file next to the project file in your
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
-`mobile-center-post-build.sh` (`mobile-center-post-build.ps1` for UWP)
-
+- **iOS and Android apps**: `mobile-center-post-build.sh`
 ```
 #!/usr/bin/env bash
+# Example here
+```
+- **UWP apps**: `mobile-center-post-build.ps1`
+```
 # Example here
 ```
 
