@@ -47,13 +47,13 @@ Then navigate to *Build -> Configurations -> General*
 # Changing a Solution Configuration Mappings
 The way you can change your *Configuration Mapping* depends on IDE you use. Here you may change specific project building with current solution configuration using the checkboxes in the Build column. You may want to disable building Android projects for your iOS application here. To disable building UWP projects you will need to use VS for Windows or manual editing of your `.sln` file.
 
-## Windows
+## Configuration Mappings in **Windows**
 Please open the *Configuration manager* to edit the mappings.
 ![Solution Explorer](images/vswindows-configuration-manager.png)
 
 You can read additional configuration mappings information in [VS official documentation](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/configuration-options-overview).
 
-## macOS
+## Configuration Mappings in **macOS**
 Please navigate to *Build -> Configurations -> Configuration Mappings* in your solution options.
 
 ![Solution Configurations Mappings](images/vsmac-solution-configurations-mappings.png)

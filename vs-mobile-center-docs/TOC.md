@@ -9,7 +9,7 @@
 ## [iOS](build/ios/index.md)
 ### [Configure a build](build/ios/first-build/index.md)
 #### [Xcode](build/ios/first-build/xcode.md)
-#### [Xamarin](build/ios/first-build/xamarin.md)
+#### [Xamarin](build/ios/first-build/xamarin/index.md)
 #### [React Native](build/ios/first-build/react-native.md)
 ### [Code Signing](build/ios/code-signing/index.md)
 #### [Uploading the code signing files](build/ios/code-signing/uploading-files.md)
