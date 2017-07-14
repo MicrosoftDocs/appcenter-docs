@@ -425,9 +425,9 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
-| ndk-bundle            | 15.0.4075724                              |
+| ndk-bundle            | 15.1.4119039                              |
 | lldb;2.3              | 2.3.3614996                               |
-| cmake;3.6.3155560     | 3.6.3155560                               |
+| cmake; 3.6.4111459    | 3.6.4111459                               |
 | ProGuard              | 5.3.3                                     |
 
 ### Google APIs
@@ -444,8 +444,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-m2repository         | Google Repository, revision 53           |
-| extra-google-google_play_services | Google Play services, revision 41        |
+| extra-google-m2repository         | Google Repository, revision 55           |
+| extra-google-google_play_services | Google Play services, revision 42        |
 
 ## Xamarin
 
