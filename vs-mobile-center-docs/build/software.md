@@ -418,8 +418,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
-| build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.3  |
-| build-tools-25.0.2    | Android SDK Build-tools, Revision 26.0.0  |
+| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
+| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
 
 ### Utils
 
