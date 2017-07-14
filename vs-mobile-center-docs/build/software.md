@@ -386,7 +386,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ### Android Platforms
 
-| Package name          | Description                               ||-----------------------|-------------------------------------------|
+| Package name          | Description                               |
+|-----------------------|-------------------------------------------|
 | android-15            | Android SDK Platform 15, Revision 5       |
 | android-16            | Android SDK Platform 16, Revision 5       |
 | android-17            | Android SDK Platform 17, Revision 3       |
