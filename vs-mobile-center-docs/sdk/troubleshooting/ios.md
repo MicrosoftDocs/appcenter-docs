@@ -73,13 +73,13 @@ This means that the `MobileCenterDistributeResources.bundle` wasn't added to the
 
 If you are using Cocoapods, it takes care of the resources automatically. Try re-installing the pod.
 
-## You are seeing messages in the console that indicate that the data base could not be opened (using SDK version 0.11.0 and later)
+## You are seeing messages in the console that indicate that the database could not be opened (using SDK version 0.11.0 and later)
 
-Starting with version 0.11.0 of the iOS SDK, Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite database instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't be seeing no analytics or crash information in the backend. The reason for this is that bundling your own version of SQLite is something that should be done carefully and only when necessary. Bundling your own build of SQLite requires additional measures have to be taken when building and linking your own version of SQLite into your app. Eric Sink explains the issues pretty well in [this blogpost](http://ericsink.com/entries/sqlite_android_n.html) and [that one](http://ericsink.com/entries/multiple_sqlite_problem.html). Section 2.2.1 of the [official SQLite documentation](http://sqlite.org/howtocorrupt.html) points that out problem, too.
+Starting with version 0.11.0 of the iOS SDK, Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't be seeing any analytics or crash information in the backend. The reason for this is that bundling your own version of SQLite is something that should be done carefully and only when necessary. Bundling your own build of SQLite requires additional measures when building and linking your own version of SQLite into your app. Eric Sink explains the issues pretty well in [this blogpost](http://ericsink.com/entries/sqlite_android_n.html) and [that one](http://ericsink.com/entries/multiple_sqlite_problem.html). 
 
-While the Mobile Center SDK is not doing anything wrong per se, as we are using SQLite as provided by iOS, we are looking into improving Mobile Center to work even for cases where a developer's SQLite build is not hiding its own symbols and isolating your custom copy of SQLite.
+Section 2.2.1 of the [official SQLite documentation](http://sqlite.org/howtocorrupt.html#multiple_copies_of_sqlite_linked_into_the_same_application) points out that linking several SQLite databases can lead to errors. Mobile Center SDK relies on the SQLite build provided by iOS. We are investigating how we might support apps with a custom SQLite build – if this affects your applications, please contact us on Intercom by using the blue button on the bottom right of the Mobile Center portal. Learning how your application bundles and uses SQLite will help shape Mobile Center's future.
 
-Unfortunately, there is no ETA from our side for this as we are exploring various solutions and we are waiting for more user feedback. If you are running into this issue, please get in touch with us on Intercom by using the blue button on the bottom right of the Mobile Center portal. We'd love to learn more about why you are bundling your own build of SQLite with your app.
+### What if I really need to ship my own version of SQLite?
 
 If you really need to ship your custom version of SQLite with your app, you need to make sure, as pointed out above, that your custom SQLite build has hidden its symbols and isolated itself properly.
 
@@ -90,6 +90,8 @@ If you were to link SQLite dynamically on iOS, the following steps would be nece
 
 As static linking is the way to go on iOS, there is really only one way to isolate your custom build of SQLite properly: Rename all the SQLite symbols manually with your own symbols.
 
-That said, depending on your custom SQLite build configuration, even more changes might be necessary, even for dynamic linking, which we cannot cover.
+Because of the complexities of bundling your own SQLite build, even more changes might be necessary than those outlined above. This will depend on your configuration and be different for each developer.
 
-In addition, please note that building your own `sqlite3.c` should always be used in `release mode` as a build of SQLite in `debug mode` will balloon your apps' debug build by several MB instead of tens of KB.
+> [!NOTE]
+> Always build your own `sqlite3.c` in **release mode**.
+> Please note that building your own `sqlite3.c` should always be used in `release mode` as a build of SQLite in `debug mode` will balloon your apps' debug build by several MB instead of tens of KB.
