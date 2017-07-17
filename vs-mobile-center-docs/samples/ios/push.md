@@ -43,7 +43,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 
 ## Get the sample app's Prefix and ID
 1. Go to your **[App IDs](https://developer.apple.com/account/ios/identifier/bundle)** on the Apple Developer Website.
-2. Click on the sample app's ID. 
+2. Click on the sample app's ID.
 3. Copy the **Prefix** and paste it in the box in Mobile Center.
 4. Copy the **ID** and paste it in the box in Mobile Center.
 5. Open the **key file** from your **Key ID**, and copy the authentication token. Paste it in the box.

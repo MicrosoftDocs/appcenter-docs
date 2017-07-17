@@ -35,7 +35,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 1. Go to the **Build** service in [Mobile Center](https://mobile.azure.com/apps).
 2. Choose **GitHub** as the service to Build with.
 3. Sign in to GitHub, and click **Authorize MobileCenter**.
-4. Choose **demoapp-ios-swift**.
+4. Choose **sampleapp-ios-swift**.
 
 ## Configure the build
 1. Choose the **master** branch.

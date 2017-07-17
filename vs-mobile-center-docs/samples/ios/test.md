@@ -58,7 +58,7 @@ First, follow the [getting started tutorial](/getting-started.md) to set up the 
 3. Run the command below to make the build folder for tests:
 
   ```shell
-  xcrun xcodebuild build-for-testing -configuration Debug -workspace demoapp-ios-swift.xcworkspace -sdk iphoneos -scheme demoapp-ios-swift -derivedDataPath ddp
+  xcrun xcodebuild build-for-testing -configuration Debug -workspace sampleapp-ios-swift.xcworkspace -sdk iphoneos -scheme sampleapp-ios-swift -derivedDataPath ddp
   ```  
   ![Build the Test Folder](images/Build_test_folder_ios.gif)
 
