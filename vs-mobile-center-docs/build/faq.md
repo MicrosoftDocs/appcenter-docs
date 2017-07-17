@@ -96,5 +96,16 @@ Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
+## My iOS app fails to run a test with the following error ⚠️  ld: directory not found for option -F/Applications/Xcode_8.3.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.3.sdk/Developer/Library/Frameworks, how can I fix this?
+
+This error usually appears following with these lines.<br />
+  ❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64<br />
+  ❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  <br />
+It means that the linking type to `Apple Mach-O Linker` is different from `static library`.
+
+![Apple Mach-O Linker][mach-o-apple-linkage]
+
+[mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
+
 ## My Xamarin.Android build failed with **Error: No APK files found**, what can be done?
 One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
