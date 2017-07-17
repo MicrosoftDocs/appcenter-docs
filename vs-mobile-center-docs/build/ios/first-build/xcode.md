@@ -95,6 +95,7 @@ Keep in mind that the .dsym files do not change upon code signing the .ipa. If y
 ## Supported versions and requirements
 The following versions of Xcode are currently supported on our VMs.
 
+* Xcode 8.3.3
 * Xcode 8.3.2
 * Xcode 8.3.1
 * Xcode 8.2.1
