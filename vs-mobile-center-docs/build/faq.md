@@ -98,9 +98,12 @@ Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React
 
 ## Since I have upgraded my project to Xcode 8 My iOS app fails to run a test, how can I fix this?
 One common reason for test to fail is related to `Apple Mach-O Linker`, if this is the case of your failure, you will see the following error - <br />
- `ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks` <br />
-  `❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64` <br />
-  `❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  `<br />
+ ```
+ ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks <br />
+  ❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64 <br />
+  ❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  <br />
+  ```
+  
 It means that the linking type to `Apple Mach-O Linker` is different from `static library`.
 
 ![Apple Mach-O Linker][mach-o-apple-linkage]
