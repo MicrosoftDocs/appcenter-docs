@@ -97,7 +97,7 @@ Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
 ## Since I have upgraded my project to Xcode 8 My iOS app fails to run a test, how can I fix this?
-One common reason for test to fail is related to `Apple Mach-O Linker`, if this is the case of your failure, you will see the following error - <br />
+One common reason for tests to fail is related to `Apple Mach-O Linker`, if this is the case of your failure, you will see the following error - <br />
  ```
  ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks <br />
   ❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64 <br />
