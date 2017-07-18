@@ -39,7 +39,7 @@ To add, remove or edit existing solution configuration double click on your solu
 
 ![Visual Studio for Mac Solution Explorer](images/vsmac-solution-explorer.png)
 
-Then navigate to **Build -> Configurations -> General**
+Then navigate to **Build > Configurations > General**
 
 ![Visual Studio for Mac Solution Configurations General View](images/vsmac-solution-configurations-general.png)
 
@@ -55,7 +55,7 @@ Choose the desired active solution configuration and platform in the upper drop-
 You can read additional configuration mappings information in [Visual Studio official documentation](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/configuration-options-overview).
 
 ## Configuration Mappings in **macOS**
-Navigate to **Build -> Configurations -> Configuration Mappings** in your solution options.
+Navigate to **Build > Configurations > Configuration Mappings** in your solution options.
 
 ![Visual Studio for Mac Solution Configurations Mappings](images/vsmac-solution-configurations-mappings.png)
 
