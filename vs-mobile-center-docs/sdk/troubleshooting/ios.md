@@ -85,7 +85,7 @@ If you really need to ship your custom version of SQLite with your app, you need
 
 The common way to bundle SQLite on iOS is to use **static linking**. To use several copies of SQLite in this case, the only way to not cause any issues and be a good citizen is to isolate your custom build of SQLite by renaming **all** the SQLite symbols manually with your own symbols.
 
-For some uses-cases, it might be possible to use **dynamically linking** to bundle your own copy of SQLite. To attempt this in your app, at a minimum the following steps would be necessary: 
+For some uses-cases, it might be possible to use **dynamic linking** to bundle your own copy of SQLite. To attempt this in your app, at a minimum the following steps would be necessary: 
 
 1. Make sure you utilize `__attribute__((visibility("hidden")))`/`-fvisibility=hidden` and `-fvisibility-inlines-hidden`to hide any API to avoid symbol collisions.
 2. Leverage two-level namespaces in `dyld` which is a topic of its own and which is explained, e.g. in Apple's Guide on [Executing Mach-O Files](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/MachOTopics/1-Articles/executing_files.html).
