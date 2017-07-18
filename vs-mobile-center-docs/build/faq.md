@@ -105,8 +105,7 @@ One common reason for tests to fail is related to **Apple Mach-O Linker**, if th
   ```
 
 It means that the linking type to **Apple Mach-O Linker** is different from **static library**. 
-
-In order to successfully build and test your app, make sure that the linking type of **Apple Mach-O Linker** in your **test target** is set to `static library`.
+In order to successfully build and test your app, make sure that the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
 
 ![Apple Mach-O Linker][mach-o-apple-linkage]
 
