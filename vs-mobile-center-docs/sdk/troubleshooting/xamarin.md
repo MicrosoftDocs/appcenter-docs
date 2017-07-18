@@ -98,19 +98,17 @@ Section 2.2.1 of the [official SQLite documentation](http://sqlite.org/howtocorr
 
 ### What if I really need to ship my own version of SQLite?
 
-If you really need to ship your custom version of SQLite with your app, you need to make sure, as pointed out above, that your custom SQLite build has hidden its symbols and isolated itself properly.
+If you really need to ship your custom version of SQLite with your app, you need to make sure – as pointed out above – that your custom SQLite build has hidden its symbols and isolated itself properly.
 
-If you were to link SQLite dynamically on iOS, the following steps would be necessary: 
+The common way to bundle SQLite on iOS is to use **static linking**. To use several copies of SQLite in this case, the only way to not cause any issues and be a good citizen is to isolate your custom build of SQLite by renaming **all** the SQLite symbols manually with your own symbols.
+
+For some uses-cases, it might be possible to use **dynamically linking** to bundle your own copy of SQLite. To attempt this in your app, at a minimum the following steps would be necessary: 
 
 1. Make sure you utilize `__attribute__((visibility("hidden")))`/`-fvisibility=hidden` and `-fvisibility-inlines-hidden`to hide any API to avoid symbol collisions.
 2. Leverage two-level namespaces in `dyld` which is a topic of its own and which is explained, e.g. in Apple's Guide on [Executing Mach-O Files](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/MachOTopics/1-Articles/executing_files.html).
-
-As static linking is the way to go on iOS, there is really only one way to isolate your custom build of SQLite properly: Rename all the SQLite symbols manually with your own symbols.
 
 Because of the complexities of bundling your own SQLite build, even more changes might be necessary than those outlined above. This will depend on your configuration and be different for each developer.
 
 > [!NOTE]
 > Always build your own `sqlite3.c` in **release mode**.
 > Please note that building your own `sqlite3.c` should always be used in `release mode` as a build of SQLite in `debug mode` will balloon your apps' debug build by several MB instead of tens of KB.
-
-
