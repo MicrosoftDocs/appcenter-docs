@@ -77,24 +77,31 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 ### Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-	// Return true if the SDK should await user confirmation, otherwise false.
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+	// Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
 	return true;
 };
 ```
 
-In case you return `true` in the callback above, your app should obtain user permission and message the SDK with the result using the following API.
+In case you return `true` in the callback above, your app must obtain (using your own code) user permission and message the SDK with the result using the following API.
 
 ```csharp
 // Depending on the user's choice, call Crashes.NotifyUserConfirmation() with the right value.
 Crashes.NotifyUserConfirmation(UserConfirmation.DontSend);
-Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
 Crashes.NotifyUserConfirmation(UserConfirmation.Send);
+Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
 ```
+
+Feel free to have a look [at our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-dotnet/blob/27e426b56af2a882aa6ba06f5a9e56859df70cbb/Apps/Contoso.Forms.Demo/Contoso.Forms.Demo/App.xaml.cs#L149).
 
 ### Get information about the sending status for a crash log
 

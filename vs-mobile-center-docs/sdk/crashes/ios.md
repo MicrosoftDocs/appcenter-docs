@@ -103,7 +103,10 @@ func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErro
 ### Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+The following method show how to set up a user confirmation handler:
 
 ```objc
 MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
@@ -133,8 +136,8 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.
 [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
 [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
