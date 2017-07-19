@@ -28,7 +28,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 We've included code to track custom events in sample app. In this tutorial, you will learn to view those events and other user analytics in Mobile Center.
 
-If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
+If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Open the app and view user Analytics
 1. Run the app using .xcworkspace, or from your device.

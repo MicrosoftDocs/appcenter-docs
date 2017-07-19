@@ -26,7 +26,7 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 # Push
 In this tutorial you will learn how to send push notification to users through Mobile Center.
 
-First, follow the [getting started tutorial](/getting-started.md) to set up the sample app.
+First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ### Prerequisites
  - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.

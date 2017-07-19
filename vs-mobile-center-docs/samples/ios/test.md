@@ -26,7 +26,7 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 
 We've included XCUITests with the sample app. In this tutorial, you will learn to run the UI tests using Mobile Center.
 
-First, follow the [getting started tutorial](/getting-started.md) to set up the sample app.
+First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ### Prerequisites
  - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.

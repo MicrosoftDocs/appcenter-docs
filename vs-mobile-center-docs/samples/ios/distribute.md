@@ -25,7 +25,7 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 # Distribute
 In this tutorial, you will learn to distribute a sample iOS app to a group of users, who can install the app on their device.
 
-If you have not already, first follow the [getting started tutorial](/getting-started.md) to set up the sample app.
+If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 
 ### Prerequisites
@@ -34,13 +34,13 @@ If you have not already, first follow the [getting started tutorial](/getting-st
 ## Choose a build to Distribute
 There are **two ways you can distribute** the app.
 
-If you already completed the [Build tutorial](/build.md) and built the sample app:
+If you already completed the [Build tutorial](build.md) and built the sample app:
 1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
 2. Click **Distribute new release** at the top of the page.
 3. Choose **Select Build from branch**.
 4. Choose the **master** branch.  
   ![Distribute build from branch](images/build_from_branch_ios.png)
-5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](/build.md) has steps to do so.
+5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](build.md) has steps to do so.
 6. Click **Next** twice. Leave the **Release notes** blank.
 
 Another way is to upload your own .ipa file from XCode:
