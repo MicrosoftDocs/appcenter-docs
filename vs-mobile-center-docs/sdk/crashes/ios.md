@@ -106,7 +106,7 @@ If user privacy is important to you, you might want to get your users' confirmat
 
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
 
-The following method show how to set up a user confirmation handler:
+The following method shows how to set up a user confirmation handler:
 
 ```objc
 MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
