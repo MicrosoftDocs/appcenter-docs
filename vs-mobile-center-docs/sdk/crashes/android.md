@@ -103,6 +103,9 @@ If user privacy is important to you, you might want to get your users' confirmat
 
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
 
+> [!NOTE]
+> No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
+
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```java
