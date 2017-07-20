@@ -69,7 +69,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link
 	```
 
-	For iOS, it will try to download our SDK from **Cocoapods**, if you see an error like:
+	For iOS, it will try to download the iOS Mobile Center SDK from **Cocoapods**, if you see an error like:
 
 	```
 	Added code to initialize iOS Mobile Center SDK in ios/reactnativesample/AppDelegate.m
