@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/21/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
@@ -36,7 +36,7 @@ MobileCenter.LogLevel = LogLevel.Verbose;
 The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```csharp
-System.Guid installId = MobileCenter.InstallId;
+System.Guid installId = await MobileCenter.GetInstallIdAsync();
 ```
 
 ## Disable all services at runtime
@@ -44,21 +44,23 @@ System.Guid installId = MobileCenter.InstallId;
 If you want to disable all Mobile Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to Mobile Center.
 
 ```csharp
-MobileCenter.Enabled = false;
+MobileCenter.SetEnabledAsync(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```csharp
-MobileCenter.Enabled = true;
+MobileCenter.SetEnabledAsync(true);
 ```
+
+You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
 ## Check if Mobile Center is enabled
 
 You can also check if Mobile Center is enabled or not.
 
 ```csharp
-bool enabled = MobileCenter.Enabled;
+bool enabled = await MobileCenter.IsEnabledAsync();
 ```
 
 ## Use custom properties

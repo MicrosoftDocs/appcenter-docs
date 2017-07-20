@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: dhei
 ms.author: dihei
-ms.date: 06/09/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center
@@ -36,9 +36,12 @@ Before you can send notification using WNS, your app must be registered with the
 
     ![uwp store association](images/mobile-center-uwp-sdk-store-association.png)
 
-2. In the wizard, click **Next**, sign in with your Microsoft account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
+2. In the wizard, click **Next**, sign in with your Windows developer account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
 
 3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
+
+>[!NOTE]
+>You will need a Windows Developer account to send push notifications to your UWP app. You can [register a developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
 
 ### 2. Get Package SID and Application secret from Application Registration Portal
 
