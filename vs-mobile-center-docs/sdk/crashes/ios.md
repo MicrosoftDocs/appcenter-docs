@@ -4,7 +4,7 @@ description: Mobile Center Crashes for iOS
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/07/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: mobile-center
