@@ -101,7 +101,7 @@ public boolean shouldProcess(ErrorReport report) {
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
@@ -128,7 +128,7 @@ Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
 
-Feel free to have a look [at our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.11.1/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
+As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.11.1/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
 
 ### Get information about the sending status for a crash log
 
