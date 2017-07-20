@@ -85,7 +85,7 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+	// Build your own UI to ask for user consent here. SDK does not provide one by default.
 
 	// Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
 	return true;
