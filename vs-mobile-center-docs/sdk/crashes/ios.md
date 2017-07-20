@@ -4,7 +4,7 @@ description: Mobile Center Crashes for iOS
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/07/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: mobile-center
@@ -103,7 +103,13 @@ func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErro
 ### Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+> [!NOTE]
+> No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
+
+The following method shows how to set up a user confirmation handler:
 
 ```objc
 MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
@@ -133,8 +139,8 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.
 [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
 [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
