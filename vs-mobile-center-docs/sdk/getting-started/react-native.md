@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 06/30/2017
+ms.date: 07/19/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
@@ -68,6 +68,21 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	```
 	react-native link
 	```
+
+	For iOS, it will try to download the iOS Mobile Center SDK from **Cocoapods**, if you see an error like:
+
+	```
+	Added code to initialize iOS Mobile Center SDK in ios/reactnativesample/AppDelegate.m
+	Analyzing dependencies [!] Unable to find a specification for RNMobileCenterShared (~> {version})	
+	```
+
+	Please run the following command:
+
+	```
+	pod repo update
+	```
+
+	And then retry running `react-native link`.
 
 3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables Mobile Center to map this app to the right user account.
 
