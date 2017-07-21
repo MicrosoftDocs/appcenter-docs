@@ -16,7 +16,7 @@ ms.tgt_pltfrm: ios
 
 You can build iOS apps written in the following languages/frameworks:
 * [Objective C / Swift](first-build/xcode.md)
-* [Xamarin](first-build/xamarin.md)
+* [Xamarin](first-build/xamarin/index.md)
 * [React Native](first-build/react-native.md)
 
 While in limited preview, some of the features might not be available to all users. If you have interest in a specific feature, but you cannot find it in the UI, contact us to get access to the latest bits.
