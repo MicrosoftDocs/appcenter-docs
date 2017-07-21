@@ -4,7 +4,7 @@ description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 06/26/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: mobile-center
@@ -120,3 +120,10 @@ If your build log contains `RequireProvisioningProfile: True` even though you se
 ![Disable signing for Debug configuration in Xamarin.iOS application][xamarin-ios-empty-codesigning]
 
 [xamarin-ios-empty-codesigning]: images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application"
+
+## My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error, how to fix that?
+When you create Xamarin.iOS project in Visual Studio the default configuration for iPhoneSimulator has **i386 + x86_64** supported architectures. The **.app** file that builds from such configuration will fail to upload into simulator. Open **Project Options > Build > iOS Build** and for iPhoneSimulator configuration change **Supported architectures** to just **i386** or **x86\_64**.
+
+![Set i386 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
+
+[xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set i386 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
