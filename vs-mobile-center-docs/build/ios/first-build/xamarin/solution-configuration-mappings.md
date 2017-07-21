@@ -15,7 +15,7 @@ ms.tgt_pltfrm: xamarin
 # Configuration mappings
 In order to minimize possible errors when building from the **.sln** file and even reduce the build time you can apply the following guidelines to prepare proper configuration mapping in your solution.
 
-If you like to just fix your Xamarin.iOS configuration please apply the instructions in [the official VSTS guide for Xamarin.iOS task](https://www.visualstudio.com/ru-ru/docs/build/apps/mobile/xamarin#configure-the-solution-for-ios-release).
+If you just like to fix your Xamarin.iOS configuration you can apply the instructions in [the official VSTS guide for Xamarin.iOS task](https://www.visualstudio.com/ru-ru/docs/build/apps/mobile/xamarin#configure-the-solution-for-ios-release).
 
 # Changing a Solution Configuration Mappings
 The way you can change your **Configuration Mapping** depends on IDE you use. Here you may change specific project building with current solution configuration using the checkboxes in the Build column. You may want to disable building Android projects for your iOS application here. To disable building UWP projects you will need to use VS for Windows or edit your **.sln** file manually.
