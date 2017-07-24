@@ -115,7 +115,7 @@ In order to successfully build and test your app,  ensure the linking type of **
 One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
 
 ## I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information, why is that?
-If your build log contains `RequireProvisioningProfile: True` even though you selected **Sign builds: Off** in the Mobile Center branch configuration, it means that your project itself is configured for signing and will try to apply signing despite the Mobile Center configuration. Open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (e.g., **Debug|iPhoneSimulator**) does not contain any signing information other than **Automatic**.
+If you selected **Sign builds: Off** in the Mobile Center branch configuration and your build log contains `RequireProvisioningProfile: True`, it means that your project itself is configured for signing and will try to apply signing despite the Mobile Center configuration. To fix it open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (e.g., **Debug|iPhoneSimulator**) does not contain any signing information other than **Automatic**.
 
 ![Disable signing for Debug configuration in Xamarin.iOS application][xamarin-ios-empty-codesigning]
 
