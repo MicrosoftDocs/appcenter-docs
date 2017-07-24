@@ -111,11 +111,11 @@ In order to successfully build and test your app,  ensure the linking type of **
 
 [mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
 
-## My Xamarin.Android build failed with **Error: No APK files found**, what can be done?
+## My Xamarin.Android build failed with **Error: No APK files found**; what can be done?
 One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
 
 ## I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information, why is that?
-If your build log contains `RequireProvisioningProfile: True` even though you selected **Sign builds: Off** in the Mobile Center branch configuration, open **Project Options > Build > iOS Bundle Signing** in your IDE and check that your project configuration does not contain any signing information other than **Automatic**. Especially your **Debug|iPhoneSimulator** configuration should not contain any signing information if you don't want to sign it in the Mobile Center.
+If your build log contains `RequireProvisioningProfile: True` even though you selected **Sign builds: Off** in the Mobile Center branch configuration, open **Project Options > Build > iOS Bundle Signing** in your IDE and check that your project configuration does not contain any signing information other than **Automatic**. Your **Debug|iPhoneSimulator** configuration should not contain any signing information if you don't want to sign it in the Mobile Center.
 
 ![Disable signing for Debug configuration in Xamarin.iOS application][xamarin-ios-empty-codesigning]
 
@@ -124,6 +124,6 @@ If your build log contains `RequireProvisioningProfile: True` even though you se
 ## My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error, how to fix that?
 When you create Xamarin.iOS project in Visual Studio the default configuration for iPhoneSimulator has **i386 + x86_64** supported architectures. The **.app** file that builds from such configuration will fail to upload into simulator. Open **Project Options > Build > iOS Build** and for iPhoneSimulator configuration change **Supported architectures** to just **i386** or **x86\_64**.
 
-![Set i386 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
+![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
 
-[xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set i386 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
+[xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
