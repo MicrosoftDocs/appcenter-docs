@@ -14,58 +14,67 @@ ms.custom: build
 # Build scripts
 You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (`.xcodeproj`, `build.gradle`, `.csproj`, `.sln` or `package.json`) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
+**NOTE:** Once your build scripts have been detected make sure to re-save the branch configuration!
+[build-scripts-detected]: images/build-scripts-detected.png "Build configuration shows detected build scripts"
+
 ## Post-clone
 The post-clone script runs immediately after the repository was cloned but before we do anything else on our end.
 
 To run scripts post-clone, add the following file next to the project file in your repository:
 
-- **iOS and Android apps**: `mobile-center-post-clone.sh`
+`mobile-center-post-clone.sh` (iOS and Android)
 
 ```
 #!/usr/bin/env bash
-# Example here
+
+# Example: Clone some project
+git clone https://github.com/example/SomeProject
 
 ```
-- **UWP apps**: `mobile-center-post-clone.ps1`
 
-```
-# Example here
-```
+`mobile-center-post-clone.ps1` (UWP)
 
 ## Pre-build
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-buid, add the following file next to the project file in your repository:
 
-- **iOS and Android apps**: `mobile-center-pre-build.sh`
+`mobile-center-pre-build.sh` (iOS and Android)
 
 ```
 #!/usr/bin/env bash
-# Example here
-```
-- **UWP apps**: `mobile-center-pre-build.ps1`
+
+
 
 ```
-# Example here
-```
+
+`mobile-center-pre-build.ps1` (UWP)
 
 ## Post-build
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
-- **iOS and Android apps**: `mobile-center-post-build.sh`
+`mobile-center-post-build.sh` (iOS and Android)
 
 ```
 #!/usr/bin/env bash
-# Example here
+
+HOCKEYAPP_API_TOKEN={API_Token}
+HOCKEYAPP_APP_ID={APP_ID}
+
+# Example: Upload to HockeyApp using the API
+curl \
+-F "status=2" \
+-F "notify=0" \
+-F "notes_type=1" \
+-F "ipa=@$MOBILECENTER_OUTPUT_DIRECTORY/MyApps.ipa" \
+-H "X-HockeyAppToken: $HOCKEYAPP_API_TOKEN" \
+https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
+
 ```
 
-- **UWP apps**: `mobile-center-post-build.ps1`
-
-```
-# Example here
-```
+`mobile-center-post-build.ps1` (UWP)
 
 ## Environment variables
 We set the following environment variables, so you can access them from your build scripts.
