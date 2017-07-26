@@ -22,7 +22,8 @@ The post-clone script runs immediately after the repository was cloned but befor
 
 To run scripts post-clone, add the following file next to the project file in your repository:
 
-`mobile-center-post-clone.sh` (iOS and Android)
+### iOS and Android
+`mobile-center-post-clone.sh`
 
 ```
 #!/usr/bin/env bash
@@ -31,8 +32,8 @@ To run scripts post-clone, add the following file next to the project file in yo
 git clone https://github.com/example/SomeProject
 
 ```
-
-`mobile-center-post-clone.ps1` (UWP)
+### UWP
+`mobile-center-post-clone.ps1`
 
 ## Pre-build
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
