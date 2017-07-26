@@ -16,7 +16,7 @@ You can add up to three custom build steps that run at pre-defined stages during
 
 **NOTE:** Once your build scripts have been detected make sure to re-save the branch configuration!
 
-[build-scripts-detected]: build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+![Save detected scripts][build-scripts-detected]
 
 ## Post-clone
 The post-clone script runs immediately after the repository was cloned but before we do anything else on our end.
@@ -124,3 +124,6 @@ We set the following environment variables, so you can access them from your bui
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_REACTNATIVE_PACKAGE` | Selected package|
+
+
+[build-scripts-detected]: build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
