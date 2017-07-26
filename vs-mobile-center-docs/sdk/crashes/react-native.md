@@ -56,7 +56,7 @@ Mobile Center Crashes has two APIs that give you more information in case your a
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
 ```javascript
-Crashes.hasCrashedInLastSession();
+const didCrash = await Crashes.hasCrashedInLastSession();
 ```
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
@@ -66,7 +66,7 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 If your app crashed previously, you can get details about the last crash.
 
 ```javascript
-ErrorReport crashReport = Crashes.lastSessionCrashReport();
+const crashReport = await Crashes.lastSessionCrashReport();
 ```
 
 ## Processing crashes in JavaScript
@@ -92,13 +92,13 @@ Crashes.process((report, sendCallback) => {sendCallback(true);}).catch((err) => 
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
 
 ```javascript
-Crashes.setEnabled(false);
+await Crashes.setEnabled(false);
 ```
 
 To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
 
 ```javascript
-Crashes.setEnabled(true);
+await Crashes.setEnabled(true);
 ```
 
 ## Check if Mobile Center Crashes is enabled
@@ -106,5 +106,5 @@ Crashes.setEnabled(true);
 You can also check if Mobile Center Crashes is enabled or not:
 
 ```java
-Crashes.isEnabled();
+const enabled = await Crashes.isEnabled();
 ```
