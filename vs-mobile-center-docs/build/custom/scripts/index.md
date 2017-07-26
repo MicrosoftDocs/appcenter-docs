@@ -40,23 +40,23 @@ The pre-build script runs before the actual build starts, but after we have inst
 
 To run scripts pre-buid, add the following file next to the project file in your repository:
 
-`mobile-center-pre-build.sh` (iOS and Android)
+### iOS and Android
+`mobile-center-pre-build.sh`
 
 ```
 #!/usr/bin/env bash
-
-
-
 ```
 
-`mobile-center-pre-build.ps1` (UWP)
+### UWP
+`mobile-center-pre-build.ps1`
 
 ## Post-build
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
-`mobile-center-post-build.sh` (iOS and Android)
+### iOS and Android
+`mobile-center-post-build.sh`
 
 ```
 #!/usr/bin/env bash
@@ -75,7 +75,8 @@ https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
 
 ```
 
-`mobile-center-post-build.ps1` (UWP)
+### UWP
+`mobile-center-post-build.ps1`
 
 ## Environment variables
 We set the following environment variables, so you can access them from your build scripts.
