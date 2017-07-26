@@ -15,6 +15,7 @@ ms.custom: build
 You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (`.xcodeproj`, `build.gradle`, `.csproj`, `.sln` or `package.json`) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
 **NOTE:** Once your build scripts have been detected make sure to re-save the branch configuration!
+
 [build-scripts-detected]: build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
 
 ## Post-clone
@@ -32,6 +33,7 @@ To run scripts post-clone, add the following file next to the project file in yo
 git clone https://github.com/example/SomeProject
 
 ```
+
 ### UWP
 `mobile-center-post-clone.ps1`
 
