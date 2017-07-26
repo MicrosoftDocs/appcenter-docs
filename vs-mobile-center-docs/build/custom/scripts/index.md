@@ -126,4 +126,4 @@ We set the following environment variables, so you can access them from your bui
 | `MOBILECENTER_REACTNATIVE_PACKAGE` | Selected package|
 
 
-[build-scripts-detected]: build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
