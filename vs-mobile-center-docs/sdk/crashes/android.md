@@ -4,7 +4,7 @@ description:  Mobile Center Crashes for Android
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/19/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: mobile-center
@@ -161,9 +161,9 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 }
 ```
 
-#### The following callback will be invoked if you want to add attachments to a crash report
+### Add attachments to a crash report
 
-Here is an example to attach a text and an image to a crash.
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash.
 
 ```java
 @Override

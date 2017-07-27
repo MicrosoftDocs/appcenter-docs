@@ -4,7 +4,7 @@ description: Mobile Center Crashes for iOS
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/19/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: mobile-center
@@ -192,7 +192,9 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 }
 ```
 
-#### The following callback will be invoked if you want to add attachments to a crash report
+### Add attachments to a crash report
+
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report.
 
 ```objc
 - (NSArray<MSErrorAttachmentLog *> *)attachmentsWithCrashes:(MSCrashes *)crashes
