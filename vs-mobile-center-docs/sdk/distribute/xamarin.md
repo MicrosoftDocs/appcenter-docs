@@ -50,7 +50,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 > [!NOTE]
 > If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable, Android and iOS ones (and UWP if you have one).
+> in each of the projects: the portable, Android and iOS ones.
 
 ### 2. Start Mobile Center Distribute
 
