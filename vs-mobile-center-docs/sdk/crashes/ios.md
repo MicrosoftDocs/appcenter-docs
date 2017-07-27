@@ -70,7 +70,7 @@ var crashReport = MSCrashes.lastSessionCrashReport()
 
 There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#customize-your-usage-of-mobile-center-crashes).
 
-### Customize your usage of Mobile Center Crashes
+## Customize your usage of Mobile Center Crashes
 
 Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
 
