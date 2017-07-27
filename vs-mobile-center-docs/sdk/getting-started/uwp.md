@@ -55,13 +55,13 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 The Mobile Center SDK can be integrated using Visual Studio, or the Package Manager Console.
 
-### 3.1 Visual Studio
+### Visual Studio
 
 1. Navigate to the **Project -> Manage NuGet Packages...**
 
 2. Search for **Mobile Center**, and install **Microsoft.Azure.Mobile.Analytics**.
 
-### 3.2 Package Manager Console
+### Package Manager Console
 
 * Type the following commands:
 

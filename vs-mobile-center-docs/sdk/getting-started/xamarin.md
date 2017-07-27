@@ -69,18 +69,18 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 The Mobile Center SDK can be integrated using Xamarin Studio, Visual Studio, or the Package Manager Console.
 
-### 3.1 Visual Studio for Mac or Xamarin Studio
+### Visual Studio for Mac or Xamarin Studio
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
 * Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**.
 * Click **Add Packages**.
 
-### 3.2 Visual Studio for Windows
+### Visual Studio for Windows
 
 * Navigate to the **Project -> Manage NuGet Packages...**
 * Search for **Mobile Center**, then install **Microsoft.Azure.Mobile.Analytics** and **Microsoft.Azure.Mobile.Crashes** packages.
 
-### 3.3 Package Manager Console
+### Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 * Type the following commands:

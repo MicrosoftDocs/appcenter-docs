@@ -11,7 +11,7 @@
 
 #### Package Manager Console
 
-1. Type the following command in Package Manager Console:
+* Type the following command in Package Manager Console:
 
     `PM> Install-Package Microsoft.Azure.Mobile.Push`
 
