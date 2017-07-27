@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/26/2017
+ms.date: 07/27/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -65,32 +65,22 @@ If you have already created your app in the Mobile Center portal, you can skip t
 
 Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
-## 3. Add the Mobile Center SDK modules
+## 3. Add the Mobile Center SDK to your solution
 
-The Mobile Center SDK can be integrated using Xamarin Studio, Xamarin for Visual Studio, or the Package Manager Console.
+The Mobile Center SDK can be integrated using Xamarin Studio, Visual Studio, or the Package Manager Console.
 
-### 3.1 Xamarin Studio
+### 3.1 Visual Studio for Mac or Xamarin Studio
 
-#### 3.1.1 Xamarin.Android and Xamarin.iOS
+* Under your project, select **Packages**, open context menu and click **Add packages**.
+* Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**.
+* Click **Add Packages**.
 
-* Navigate to the **Project -> Add NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
-
-#### 3.1.2 Xamarin.Forms
-
-Multiplatform Xamarin.Forms apps have four projects in your solution - the portable class library or shared library, the Android project `project.Droid`, the iOS project `project.iOS` and the UWP one. You need to add the NuGet packages to each of these projects.
-
-* Navigate to the **Project -> Add NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
-
-[!include[](../note-dotnet-standard.md)]
-
-### 3.2 Xamarin for Visual Studio
+### 3.2 Visual Studio for Windows
 
 * Navigate to the **Project -> Manage NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Analytics** and **Mobile Center Crashes**. Then Click **Add Packages**.
+* Search for **Mobile Center** then install **Microsoft.Azure.Mobile.Analytics** and **Microsoft.Azure.Mobile.Crashes** packages.
 
-### 3.3 Package Manager Console ##
+### 3.3 Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 * Type the following commands:
@@ -99,6 +89,14 @@ Multiplatform Xamarin.Forms apps have four projects in your solution - the porta
    `PM> Install-Package Microsoft.Azure.Mobile.Crashes`
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services.
+
+> [!NOTE]
+> If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
+> in each of the projects: the portable, Android and iOS ones (and UWP if you have one).
+
+[!include[](../note-dotnet-standard.md)]
+
+###  Xamarin.Forms and portable projects
 
 ## 4. Start the SDK
 

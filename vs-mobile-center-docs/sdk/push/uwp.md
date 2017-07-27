@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: dhei
 ms.author: dihei
-ms.date: 07/11/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/11/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -31,30 +31,26 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-#### 1.1 Xamarin Studio
+#### Visual Studio for Mac or Xamarin Studio
 
-##### Xamarin.iOS and Xamarin.Android
+* Under your project, select **Packages**, open context menu and click **Add packages**.
+* Search for **Mobile Center**, and select **Mobile Center Push**.
+* Click **Add Packages**.
 
-* Navigate to the **Project > Add NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
+#### Visual Studio for Windows
 
-##### Xamarin.Forms
+* Navigate to the **Project -> Manage NuGet Packages...**
+* Search for **Mobile Center** then install **Microsoft.Azure.Mobile.Push**.
 
-Multiplatform Xamarin.Forms apps have three projects in one solution - the portable class library or shared library, the Android project `project.Droid` and the iOS project `project.iOS`. You need to add the NuGet packages to each of these projects.
-
-* Navigate to the **Project > Add NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
-
-#### 1.2 Xamarin for Visual Studio
-
-* Navigate to the **Project > Manage NuGet Packages...**
-* Search for **Mobile Center**, and select **Mobile Center Distribute**, then, click **Add Packages**.
-
-#### 1.3 Package Manager Console
+#### Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
 
   `PM> Install-Package Microsoft.Azure.Mobile.Distribute`
+
+> [!NOTE]
+> If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
+> in each of the projects: the portable, Android and iOS ones (and UWP if you have one).
 
 ### 2. Start Mobile Center Distribute
 

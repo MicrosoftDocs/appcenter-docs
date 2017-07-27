@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: dhei
 ms.author: dihei
-ms.date: 06/26/2017
+ms.date: 07/27/2017
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: mobile-center
@@ -59,7 +59,7 @@ The Mobile Center SDK can be integrated using Visual Studio, or the Package Mana
 
 1. Navigate to the **Project -> Manage NuGet Packages...**
 
-2. Search for **Mobile Center**, and select **Mobile Center Analytics**. Then Click **Add Packages**.
+2. Search for **Mobile Center**, and install **Microsoft.Azure.Mobile.Analytics**.
 
 ### 3.2 Package Manager Console
 
@@ -68,6 +68,10 @@ The Mobile Center SDK can be integrated using Visual Studio, or the Package Mana
    `PM> Install-Package Microsoft.Azure.Mobile.Analytics`
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services.
+
+> [!NOTE]
+> If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
+> in each of the projects: the portable and UWP ones.
 
 [!include[](../note-dotnet-standard.md)]
 

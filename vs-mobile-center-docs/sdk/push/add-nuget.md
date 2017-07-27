@@ -1,10 +1,20 @@
-#### Visual Studio / Xamarin Studio
-1. From the menu bar, navigate to **Project -> Add NuGet Packages...**
+#### Visual Studio for Mac or Xamarin Studio
 
-2. Search for *Mobile Center Push* and select the package titled *Mobile Center Push* (the package ID will be *Microsoft.Azure.Mobile.Push*), then click **Add Package**. 
+* Under your project, select **Packages**, open context menu and click **Add packages**.
+* Search for **Mobile Center**, and select **Mobile Center Push**.
+* Click **Add Packages**.
+
+#### Visual Studio for Windows
+
+* Navigate to the **Project -> Manage NuGet Packages...**
+* Search for **Mobile Center** then install **Microsoft.Azure.Mobile.Push**.
 
 #### Package Manager Console
 
 1. Type the following command in Package Manager Console:
 
     `PM> Install-Package Microsoft.Azure.Mobile.Push`
+
+> [!NOTE]
+> If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
+> in each of the projects: the portable, Android, iOS and UWP ones.
