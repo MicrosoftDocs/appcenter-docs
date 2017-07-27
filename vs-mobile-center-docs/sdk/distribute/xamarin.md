@@ -34,13 +34,13 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 #### Visual Studio for Mac or Xamarin Studio
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
-* Search for **Mobile Center**, and select **Mobile Center Push**.
+* Search for **Mobile Center**, and select **Mobile Center Distribute**.
 * Click **Add Packages**.
 
 #### Visual Studio for Windows
 
 * Navigate to the **Project -> Manage NuGet Packages...**
-* Search for **Mobile Center** then install **Microsoft.Azure.Mobile.Push**.
+* Search for **Mobile Center** then install **Microsoft.Azure.Mobile.Distribute**.
 
 #### Package Manager Console
 
