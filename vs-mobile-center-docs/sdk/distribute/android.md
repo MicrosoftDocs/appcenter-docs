@@ -172,14 +172,17 @@ The in-app updates feature works as follows:
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version `versionCode`, or the same `versionCode` and a higher `versionName`.
+6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+
+    * a higher value of `versionCode` or
+    * an equal value of `versionCode` but a higher value of `versionName`.
 
 > [!TIP]
-> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be a higher version name.
+> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical.
 
 ## How do I test in-app updates?
 
-You need to upload release builds that use the distribute Mobile Center SDK to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
+You need to upload release builds (that use the Distribute module of the Mobile Center SDK) to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the Mobile Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
