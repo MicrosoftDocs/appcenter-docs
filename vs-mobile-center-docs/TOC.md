@@ -131,7 +131,7 @@
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# Samples Apps and Quickstart Tutorials
+# Quickstart
 ## [iOS](samples/ios/overview.md)
 ### [Getting started](samples/ios/getting-started.md)
 ### [Build](samples/ios/build.md)
