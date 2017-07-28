@@ -74,11 +74,12 @@ In order for the sample app to send information to Mobile Center, the app secret
 3. Open the **.xcworkspace** from the sample app folder.
 4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.  
 5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
+
   ![Replace the App Secret](images/Change_app_secret_ios.gif)
 
 ## Codesign the project
 
-_This section is optional, but recommended._
+_Codesigning is optional, but recommended._
 
 In order to run tests, distribute the app to users, and send push notifications, the code must be signed. After creating an App ID for the sample app, follow the steps below to sign your code. Read more at the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)
 
@@ -87,4 +88,5 @@ In order to run tests, distribute the app to users, and send push notifications,
   3. Edit the **Bundle Identifier** to match the app ID.
   4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.
   5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
+
     ![Codesigning](images/Sign_code_ios.png)

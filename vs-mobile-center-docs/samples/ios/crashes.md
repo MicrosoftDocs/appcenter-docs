@@ -46,11 +46,13 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 2. Press the **Stop** icon to stop running the app.
 3. In the simulator, close the app. Press the home button twice (cmd+shift+h) and swipe up on the sample app.
 4. Reopen the app by clicking on its icon.  
+
   ![Detach the debugger](images/Detach_debugger_ios.gif)
 
 ## Crashing the sample app
 1. Swipe over to the **Crashes** page. Tap the **Send a sample crash** button to crash the app.
 2. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
+  
   ![Crash the sample app](images/Crash_ios_app.gif)
 
 ## View the crashes in Mobile Center

@@ -30,7 +30,15 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ### Prerequisites
  - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
- - Distributed the sample app to your device (not running on a simulator).
+ - Distributed the sample app **to your device** (not running on a simulator).
+
+## Enable Push Notifications in Xcode
+1. Open the **.xcworkspace** from the sample app folder.
+2. Under the **Capabilities** tab, turn **Push Notifications** on.  
+
+  ![Enable Push in Xcode](images/Enable_push_ios.png)
+
+  If you encounter an error, your codesigning may not not support Push Notifications.
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -60,4 +68,5 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
 3. Click **Next** and **Send notification** at the bottom. **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
+
   ![Send a Push notification](images/Send_push_ios.gif)

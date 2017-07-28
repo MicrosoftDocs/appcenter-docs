@@ -40,8 +40,10 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 ## Configure the build
 1. Choose the **master** branch.
 2. Click **Configure build**. The Build configuration panel will show up.
-3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.  
+3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
+
   ![Signing Builds](images/Signing_builds_ios.png)  
+
 4. Click **Save** at the bottom of the page, and the build will begin.
 
 The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
