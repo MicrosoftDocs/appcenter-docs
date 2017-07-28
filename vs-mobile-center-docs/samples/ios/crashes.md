@@ -39,7 +39,7 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 ## Upload symbols
 1. Navigate to the **Crashes** service and go to the **Symbols** page.
 2. Click **Upload symbols** at the top of the page and upload the symbol file you just downloaded.
-  ![Upload symbols](images/Upload_symbols_ios.gif)
+  <!--![Upload symbols](images/Upload_symbols_ios.gif)-->
 
 ## Open the sample app
 1. Run the sample app. If you're running it in the **Xcode simulator**, follow these additional steps to detach the debugger:
