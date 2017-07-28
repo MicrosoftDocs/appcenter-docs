@@ -2,7 +2,7 @@
 # required metadata
 
 title: Getting Started | Sample App Tutorials
-description: Tutorial to onboard an Android application in Mobile Center
+description: Getting started prerequisites to onboard an Android application in Mobile Center
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
@@ -76,12 +76,12 @@ protected void onCreate(Bundle savedInstanceState) {
 In order to run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
 
   1. Open Android Studio and click **Open an existing Android Studio project**.
-  2. Navigate to the forked sample app android repository location on your machine.
+  2. Navigate to the forked sample app repository location on your machine.
   3. Go to **Build > Generate Signed APK** from the menu bar.
   4. Leave **Module: app** and click Next.
   5. In **Key store path**, click **Create new...** and create the keystore as per the following image from the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto):
 ![Make a new app](images/newKeystore.png)
-  3. Edit the **Bundle Identifier** to match the app ID.
-  4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.
-  5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
-    ![Codesigning](images/Sign_code_ios.png)
+  6. Click **OK**. The **Key store password**, **Key alias** and **Key password** should automatically fill in with the information from your new keystore. Click Next.
+  7. Select a destination for the signed APK, make sure **Build Type** is set to **release**, and select both signature versions **V1** and **V2**. Click Finish.
+  8. Gradle should automatically begin to build. After everything syncs up, you should find your signed APK in the specified destination folder.
+  8. **Add, commit, and push changes to your forked repository.**
