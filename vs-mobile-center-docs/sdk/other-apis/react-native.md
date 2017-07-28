@@ -36,8 +36,11 @@ await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
 
 > [!NOTE]
 > The JavaScript `setLogLevel` API can't increase logging for app startup code, before JavaScript is loaded.
+>
 > If you wish to increase logging for app startup, use the native Mobile Center setLogLevel APIs.
+>
 > In iOS, call `[MSMobileCenter setLogLevel: MSLogLevelVerbose];` before `[RNMobileCenter register];` in **AppDelegate.m**.
+>
 > In Android, call `MobileCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
 ## Identify installations
