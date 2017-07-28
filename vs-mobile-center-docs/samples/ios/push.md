@@ -38,7 +38,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
   ![Enable Push in Xcode](images/Enable_push_ios.png)
 
-  If you encounter an error, your codesigning may not not support Push Notifications.
+  If you encounter an error, your codesigning may not not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/ios/identifier/bundle/) and edit the App ID to allow Push Notifications.
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
