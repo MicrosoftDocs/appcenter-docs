@@ -24,11 +24,11 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 ---
 
 
-# Analytics
+# Analytics - Sample Swift App and Tutorials
 
-We've included code to track custom events in sample app. In this tutorial, you will learn to view those events and other user analytics in Mobile Center.
+In this tutorial, you will learn to view custom events and other user analytics in Mobile Center. Code to track these events is included in the sample Swift app.
 
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
+If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ## Open the app and view user Analytics
 1. Run the app using .xcworkspace, or from your device.
@@ -46,4 +46,4 @@ Once the app runs on any device or simulator, you should start seeing users, ses
 
 In Mobile Center, you can view detailed analytics about both buttons by clicking on the events, and even see how many people chose each color.
 
-To make this possible, we've included code from the Mobile Center SDK that will specifically track when these buttons are pressed. These custom events can have multiple properties - in this case, the color chosen is an event property.
+To make this possible, code from the Mobile Center SDK is included. It will specifically track when these buttons are pressed. These custom events can have multiple properties - in this case, the color chosen is an event property.

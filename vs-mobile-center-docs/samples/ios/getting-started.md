@@ -23,9 +23,9 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 ---
 
 
-# Getting Started
+# Getting Started - Sample Swift App and Tutorials
 
-In this tutorial, you will learn how to set up a sample iOS app with Mobile Center.
+In this tutorial, you will learn how to set up a sample Swift app with Mobile Center for iOS. Note that both Objective-C and Swift are supported.
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
@@ -34,7 +34,7 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
 2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-ios-swift).
-3. Click **Fork** at the top right hand corner of the page.
+3. Click **Fork** at the top right hand corner of the page, and clone the
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
@@ -44,7 +44,7 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
   sudo gem install cocoapods
   ```
 
-3. We've included the Podfile listing the dependencies in the source code. To install them, run the command below to install dependencies:
+3. The included Podfile lists the dependencies in the source code. To install them, run the command below:
 
   ```shell
   pod install
@@ -78,7 +78,7 @@ In order for the sample app to send information to Mobile Center, the app secret
 
 ## Codesign the project
 
-This section is optional, but recommended.
+_This section is optional, but recommended._
 
 In order to run tests, distribute the app to users, and send push notifications, the code must be signed. After creating an App ID for the sample app, follow the steps below to sign your code. Read more at the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)
 

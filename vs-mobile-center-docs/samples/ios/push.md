@@ -23,10 +23,10 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 ---
 
 
-# Push
-In this tutorial you will learn how to send push notification to users through Mobile Center.
+# Push - Sample Swift App and Tutorials
+In this tutorial you will learn how to send push notifications to users through Mobile Center.
 
-First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
+First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ### Prerequisites
  - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
@@ -34,7 +34,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
-2. Click **next** to skip the first page. We've already included all the code shown here.
+2. Click **next** to skip the first page. The code shown here is already included.
 
 ## Get your Apple Push Notification service Key
 1. Go to your **[Keys](https://developer.apple.com/account/ios/authkey/)** on the Apple Developer website.
@@ -51,7 +51,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 6. Click **Done** at the bottom.
 
 ## Set up a Push notification
-1. First, follow the [Distribute tutorial](distribute.md) to download the app to your device.
+1. Follow the [Distribute tutorial](distribute.md) to download the app to your device.
 2. Navigate to the **Push** service in Mobile Center.
 3. Click **Send notification**.
 4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  

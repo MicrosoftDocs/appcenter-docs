@@ -22,20 +22,19 @@ ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 ---
 
+# Overview - Sample Swift App and Tutorials
 
-# Swift Sample App and Tutorials - Overview
-
-This collection of tutorials is designed to help you quickly and easily onboard to Mobile Center. To do so, we've provided you with a [sample app](https://github.com/MobileCenter/sampleapp-ios-swift) with the Mobile Center SDK already integrated - all you need to do is follow the tutorials to learn how to use each service.
+These quickstart tutorials will help you onboard to Mobile Center for iOS. The [sample swift app](https://github.com/MobileCenter/sampleapp-ios-swift) has the Mobile Center SDK already integrated, and links to its tutorials are below.
 
 Begin with the **Getting Started** tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 
 ## Contents
-| Title | Description | Links |
-|:-:|:-:|:-:|
-| Getting Started | Set up the app | [iOS](getting-started.md) |
-| Build | Build the app | [iOS](build.md) |
-| Test | Run automated UI tests | [iOS](test.md) |
-| Distribute| Distribute to a user's device |   [iOS](distribute.md) |
-| Crash | Monitor application crashes | [iOS](crashes.md) |
-| Analytics | View user analytics | [iOS](analytics.md) |
-| Push | Send users push notifications | [iOS](push.md) |
+| Title | Description |
+|:-|:-|
+| [Getting Started](getting-started.md) | Set up the app |
+| [Build](build.md) | Build the app |
+| [Test](test.md) | Run automated UI tests |
+| [Distribute](distribute.md) | Distribute to a user's device |
+| [Crash](crashes.md) | Monitor application crashes |
+| [Analytics](analytics.md) | View user analytics |
+| [Push](push.md) | Send users push notifications |

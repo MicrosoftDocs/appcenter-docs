@@ -131,12 +131,12 @@
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# Samples
-## [iOS](samples/iOS/overview.md)
-### [Getting started](samples/iOS/getting-started.md)
-### [Build](samples/iOS/build.md)
-### [Test](samples/iOS/test.md)
-### [Distribute](samples/iOS/distribute.md)
-### [Crashes](samples/iOS/crashes.md)
-### [Analytics](samples/iOS/analytics.md)
-### [Push](samples/iOS/push.md)
+# Samples Apps and Quickstart Tutorials
+## [iOS](samples/ios/overview.md)
+### [Getting started](samples/ios/getting-started.md)
+### [Build](samples/ios/build.md)
+### [Test](samples/ios/test.md)
+### [Distribute](samples/ios/distribute.md)
+### [Crashes](samples/ios/crashes.md)
+### [Analytics](samples/ios/analytics.md)
+### [Push](samples/ios/push.md)

@@ -22,8 +22,8 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 
 ---
 
-# Build
-In this tutorial, you will learn to build a sample iOS app in Mobile Center.
+# Build - Sample Swift App and Tutorials
+In this tutorial, you will learn to build a sample Swift app in Mobile Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 

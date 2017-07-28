@@ -22,9 +22,9 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 
 ---
 
-# Test
+# Test - Sample Swift App and Tutorials
 
-We've included XCUITests with the sample app. In this tutorial, you will learn to run the UI tests using Mobile Center.
+XCUITests are included with the sample app. In this tutorial, you will learn to run the UI tests using Mobile Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
@@ -60,7 +60,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
   ```shell
   xcrun xcodebuild build-for-testing -configuration Debug -workspace sampleapp-ios-swift.xcworkspace -sdk iphoneos -scheme sampleapp-ios-swift -derivedDataPath ddp
   ```  
-  ![Build the Test Folder](images/Build_test_folder_ios.gif)
+  <!--![Build the Test Folder](images/Build_test_folder_ios.gif)-->
 
 ## Prepare to run tests in Mobile Center
 1. Go to the **Test** service in [Mobile Center](https://mobile.azure.com/apps).
