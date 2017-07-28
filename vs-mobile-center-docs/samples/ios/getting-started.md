@@ -52,7 +52,7 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
 
-  ![Install Cocoapods](images/install_cocoapods_ios.gif)
+  <!--![Install Cocoapods](images/install_cocoapods_ios.gif)-->
 
 ## Sign in to Mobile Center
 1. Open the [Mobile Center portal](https://mobile.azure.com).
@@ -63,7 +63,7 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 2. Name the app **Sample iOS App**.
 3. Choose **iOS** and **Objective-C / Swift**.
 4. Click **Add new app** at the bottom.    
-  ![Make a new app](images/Make_new_app_ios.gif)
+  <!--![Make a new app](images/Make_new_app_ios.gif)-->
 
 ## Replace the App Secret
 
