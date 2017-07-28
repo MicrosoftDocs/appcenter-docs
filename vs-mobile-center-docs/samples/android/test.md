@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Test| Sample App Tutorials
-description: Tutorial to test the sample Android app with Mobile Center.
+title: Run Included Tests with Mobile Center | Sample App Tutorials
+description: Tutorial to run a test using Android sample app with Mobile Center.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
@@ -24,7 +24,7 @@ ms.assetid: 04ea1c0e-2cb1-4b55-accb-2b36066dd70c
 
 # Run Included Tests with Mobile Center
 
-### Prerequisites
+### Prerequisite
  - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Install Mobile Center Command Line Interface

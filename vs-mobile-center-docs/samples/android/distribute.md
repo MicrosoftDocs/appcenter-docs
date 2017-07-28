@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Distribute | Sample App Tutorials
-description: Tutorial to distribute a sample iOS app to a group in Mobile Center.
+title: Distribute Installable Sample App to Users | Sample App Tutorials
+description: Tutorial to distribute a sample Android app to a group of users in Mobile Center.
 keywords: mobile-center
-authors: sabrinaj206
-ms.author: t-sajia
-ms.date: 06/27/2017
+authors: sshibu
+ms.author: t-shshib
+ms.date: 07/27/2017
 ms.topic: article
 ms.service: mobile-center
-ms.custom:
+ms.custom: samples
 ms.prod: .net-core
 ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 
@@ -22,16 +22,13 @@ ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 
 ---
 
-# Distribute
-In this tutorial, you will learn to distribute a sample iOS app to a group of users, who can install the app on their device.
-
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
-
-
+# Distribute Installable Sample App to Users
 ### Prerequisites
-- Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+- Follow the [getting started tutorial](getting-started.md) to set up the sample app.
+- Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
-## Choose a build to Distribute
+
+## Choose a build to distribute
 There are **two ways you can distribute** the app.
 
 If you already completed the [Build tutorial](build.md) and built the sample app:

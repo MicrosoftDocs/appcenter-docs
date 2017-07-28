@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Build| Sample App Tutorials
+title: Build Sample Android App on Mobile Center | Sample App Tutorials
 description: Tutorial to build sample Android app in Mobile Center.
 keywords: mobile-center
 authors: sshibu
@@ -22,9 +22,9 @@ ms.assetid: ea3f9263-5325-4bda-be1b-c0ec85284957
 
 ---
 
-# Build Sample App on Mobile Center
+# Build Sample Android App on Mobile Center
 
-### Prerequisite
+### Prerequisites
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 - Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
