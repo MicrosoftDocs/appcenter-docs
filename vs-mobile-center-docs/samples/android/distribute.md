@@ -25,38 +25,30 @@ ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 # Distribute Installable Sample App to Users
 ### Prerequisites
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
-- Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
+- Signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
 
 ## Choose a build to distribute
 There are **two ways you can distribute** the app.
-
-If you already completed the [Build tutorial](build.md) and built the sample app:
-1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
-2. Click **Distribute new release** at the top of the page.
-3. Choose **Select Build from branch**.
-4. Choose the **master** branch.  
-  ![Distribute build from branch](images/build_from_branch_ios.png)
-5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](build.md) has steps to do so.
-6. Click **Next** twice. Leave the **Release notes** blank.
-
-Another way is to upload your own .ipa file from XCode:
-1. From the **Distribute** service, select the **Beta Testers** distribution group you just made.
-2. Click **Distribute new release** at the top of the page.
-3. Choose **Select Build from branch**.  
-  ![Distribute .ipa file](images/upload_new_build_ios.png)
-4. Upload your **.ipa** file.
-5. Click **Next** twice. Leave the **Release notes** blank.
+If you have already completed the [Build tutorial](build.md) and built the sample app:
+1. Navigate to the **Build** service in Mobile Center and click on settings from your latest successful build.
+2. Turn **Distribute builds** on and select a collaborator group. You can edit groups and add new groups in the **Distribute** service.
+3. Click **Save** and allow the branch to build again.
+  ![Distribute from Build](images/distributeFromBuild.gif)
 
 
-## Distribute the app
-2. Click **New distribution group**.
-3. Name the group **Beta Testers** and add your email in the invitation box below.
-4. Press **Create Group**.
-6. Click **Next** twice and then **Distribute build**.
+Another way is to upload your own .apk file:
 
-By creating groups of users, you can easily distribute to them all at once, and add new testers when needed.
+*Optional: From the **Distribute** service, click **New Group** at the top of the page to add people to test the app or collaborate with you. *
+1. Click **Distribute new release** at the top of the page.
+2. Under **Upload your release**, navigate to the app-release.apk file that was generated when you signed the APK. Click Next.  
+  ![Distribute from Distribute](images/distributeFromBeacon.gif)
+3. Leave Release notes blank. Click Next.
+4. Under **Who are you distributing this release to?** select the distribution group. Click Next.
+5. Click **Distribute**.
+
+
 
 ## Install the sample app
-1. You should receive an email with a link to download the sample app.
+1. You, and all other specified testers, should receive an email with a link to download the sample app.
 2. Open the link and follow the instructions to register your device with Mobile Center, and the app will begin installing.

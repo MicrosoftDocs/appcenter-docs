@@ -76,7 +76,9 @@ protected void onCreate(Bundle savedInstanceState) {
 In order to run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
 
   1. Open Android Studio and click **Open an existing Android Studio project**.
-  2. Navigate to the forked sample app repository location on your machine.
+  2. Navigate to the forked sample app repository location on your machine and upload it to Android Studio.
+  3. Go to **Build Variants** in the leftmost panel and click it.
+  4. Make sure that the build variant is set to release.
   3. Go to **Build > Generate Signed APK** from the menu bar.
   4. Leave **Module: app** and click Next.
   5. In **Key store path**, click **Create new...** and create the keystore as per the following image from the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto):

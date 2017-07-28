@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Analytics | Sample App Tutorials
+title: View Custom Events and Track User Analytics | Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: mobile-center
 authors: sshibu
@@ -24,14 +24,10 @@ ms.assetid: 2eab2986-32ce-4cc5-aa49-ab60a72bf456
 ---
 
 
-# Analytics Android Sample
+# View Custom Events and Track User Analytics
 
-In this tutorial, you will learn to view custom events and other user analytics in Mobile Center.
-
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
-
-## Open the app and view user Analytics
-1. Run the app using .xcworkspace, or from your device.
+## Open the app and view user analytics
+1. Run the app using the emulator on Android Studio, or from your device.
 2. Go to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps).
 
 Once the app runs on any device or simulator, you should start seeing users, session, and other information on the Overview page.
@@ -42,8 +38,6 @@ Once the app runs on any device or simulator, you should start seeing users, ses
 2. In the sample app, press the **Send event with color property** button. Choose a color.
 3. Navigate to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps) and go to the **Events** section.
 4. You should see data for both the sample and color event buttons. Click on the color event to see that the color you chose has been pressed at least once.  
-  ![Send Events](images/Send_events_ios.gif)
+
 
 In Mobile Center, you can view detailed analytics about both buttons by clicking on the events, and even see how many people chose each color.
-
-To make this possible, we've included code from the Mobile Center SDK that will specifically track when these buttons are pressed. These custom events can have multiple properties - in this case, the color chosen is an event property.
