@@ -81,7 +81,11 @@ In order for the sample app to send information to Mobile Center, the app secret
 
 _Codesigning is optional, but recommended._
 
-In order to run tests, distribute the app to users, and send push notifications, the code must be signed. After creating an App ID for the sample app, follow the steps below to sign your code. Read more at the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)
+In order to run tests, distribute the app to users, and send push notifications, the code must be signed. Read more at the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+
+When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
+
+  ![Push App Service](images/AppID_push_ios.png)
 
   1. Open **.xcworkspace** from the sample app's folder.
   2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
