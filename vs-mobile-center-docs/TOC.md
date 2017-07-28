@@ -28,6 +28,7 @@
 ### [Build results](build/windows/build-results/index.md)
 #### [UWP](build/windows/build-results/uwp.md)
 ## [Connect to a source repository](build/connect.md)
+## [Build scripts](build/custom/scripts/index.md)
 ## [Cloud build machines](build/software.md)
 ## [Test your app on real devices](build/build-test-integration.md)
 ## [FAQ](build/faq.md)
