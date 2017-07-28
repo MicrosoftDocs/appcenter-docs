@@ -4,8 +4,8 @@
 title: Getting Started | Sample App Tutorials
 description: Tutorial to onboard an iOS application in Mobile Center
 keywords: mobile-center
-authors: sabrinaj206 sshibu
-ms.author: t-sajia t-shshib
+authors: sabrinaj206
+ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
@@ -85,6 +85,6 @@ In order to run tests, distribute the app to users, and send push notifications,
   1. Open **.xcworkspace** from the sample app's folder.
   2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
   3. Edit the **Bundle Identifier** to match the app ID.
-  4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below. 
+  4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.
   5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
     ![Codesigning](images/Sign_code_ios.png)
