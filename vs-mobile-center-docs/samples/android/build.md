@@ -23,10 +23,9 @@ ms.assetid: ea3f9263-5325-4bda-be1b-c0ec85284957
 ---
 
 # Build Sample App on Mobile Center
-First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
-### Prerequisites
-- [GitHub account](https://github.com/join)
+### Prerequisite
+- Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 - Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
 ## Set up the repository
