@@ -6,7 +6,7 @@
 
 #### Visual Studio for Windows
 
-* Navigate to the **Project -> Manage NuGet Packages...**
+* Navigate to the **Project > Manage NuGet Packages...**
 * Search for **Mobile Center**, then install **Microsoft.Azure.Mobile.Push**.
 
 #### Package Manager Console

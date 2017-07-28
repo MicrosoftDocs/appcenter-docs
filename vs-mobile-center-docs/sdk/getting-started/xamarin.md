@@ -77,7 +77,7 @@ The Mobile Center SDK can be integrated using Xamarin Studio, Visual Studio, or 
 
 ### Visual Studio for Windows
 
-* Navigate to the **Project -> Manage NuGet Packages...**
+* Navigate to the **Project > Manage NuGet Packages...**
 * Search for **Mobile Center**, then install **Microsoft.Azure.Mobile.Analytics** and **Microsoft.Azure.Mobile.Crashes** packages.
 
 ### Package Manager Console

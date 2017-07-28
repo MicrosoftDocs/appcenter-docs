@@ -57,7 +57,7 @@ The Mobile Center SDK can be integrated using Visual Studio, or the Package Mana
 
 ### Visual Studio
 
-1. Navigate to the **Project -> Manage NuGet Packages...**
+1. Navigate to the **Project > Manage NuGet Packages...**
 
 2. Search for **Mobile Center**, and install **Microsoft.Azure.Mobile.Analytics**.
 

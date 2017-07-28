@@ -39,7 +39,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 #### Visual Studio for Windows
 
-* Navigate to the **Project -> Manage NuGet Packages...**
+* Navigate to the **Project > Manage NuGet Packages...**
 * Search for **Mobile Center**, then install **Microsoft.Azure.Mobile.Distribute**.
 
 #### Package Manager Console
