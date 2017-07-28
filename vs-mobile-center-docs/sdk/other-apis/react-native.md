@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/30/2017
+ms.date: 07/28/2017
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: mobile-center
