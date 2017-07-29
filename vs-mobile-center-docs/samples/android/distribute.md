@@ -38,8 +38,7 @@ If you have already completed the [Build tutorial](build.md) and built the sampl
 
 
 Another way is to upload your own .apk file:
-
-*Optional: From the **Distribute** service, click **New Group** at the top of the page to add people to test the app or collaborate with you. *
+*Optional: From the Distribute service, click **New Group** at the top of the page to add people to test the app or collaborate with you. *
 1. Click **Distribute new release** at the top of the page.
 2. Under **Upload your release**, navigate to the app-release.apk file that was generated when you signed the APK. Click Next.  
   ![Distribute from Distribute](images/distributeFromBeacon.gif)
