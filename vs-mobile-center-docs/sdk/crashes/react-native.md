@@ -84,8 +84,9 @@ Processing a crash in JavaScript requires you to use the `process` method from M
 import Crashes from "mobile-center-crashes";
 ```
 
-Then, you can send all crashes that have been queued up since the last call to `process` or discard them
-based on for example your own user confirmation dialog:
+Then, you can send all crashes that have been queued up since the last call to `process` or discard them.
+
+The following example shows how to handle a user confirmation dialog:
 
 ```javascript
     Crashes.process((reports, send) => {
@@ -107,7 +108,7 @@ based on for example your own user confirmation dialog:
 
 At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
 
-Do do that you have to define an event listener in your code as in the following example:
+To do that you have to define an event listener in your code as in the following example:
 
 ```javascript
       Crashes.setEventListener({
@@ -123,7 +124,7 @@ Do do that you have to define an event listener in your code as in the following
       });
 ```
 
-All callbacks being optional, you can implement for example only 1 method in the event listener.
+All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only `willSendCrash`.
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
