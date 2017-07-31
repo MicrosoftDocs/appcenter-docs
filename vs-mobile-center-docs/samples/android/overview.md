@@ -30,7 +30,7 @@ This tutorial series, in conjunction with this [sample Android app written in Ja
 Begin with the [**Getting Started**](getting-started.md) tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 
 | Title | Description |
-|:-:|:-:|
+|:-|:-|
 | [Getting Started](getting-started.md) | Set up the app |
 | [Build](build.md) | Build the app |
 | [Test](test.md) | Run automated UI tests |
