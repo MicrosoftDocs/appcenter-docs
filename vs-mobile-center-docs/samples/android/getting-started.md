@@ -56,14 +56,13 @@ In order for the sample app to send information to Mobile Center, the app secret
 2. Copy the **App Secret** at the top of the page.
   ![Make a new app](images/AppSecret.jpg)
 3. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**, located in /app/src/main/java/com/example/mobilecenter/sampleapp_android.
-4. In **MainActivity.java**, locate the following:
+4. In **MainActivity.java**, locate the following (*Note: You can locate the code snippet on the Getting Started page in the Mobile Center portal.*):
 ```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
         MobileCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
-```
-*Note: You can locate the code snippet above on the Getting Started page in the Mobile Center portal.* 
+``` 
 5. Replace  `<APP SECRET HERE>` with your unique app secret.
 6. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
