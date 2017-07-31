@@ -103,11 +103,45 @@ based on for example your own user confirmation dialog:
     });
 ```
 
+### Get information about the sending status for a crash log
+
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
+
+Do do that you have to define an event listener in your code as in the following example:
+
+```javascript
+      Crashes.setEventListener({
+        willSendCrash: function (report) {
+            // called after Crashes.process and before sending the crash.
+        },
+        didSendCrash: function (report) {
+            // called when crash report sent successfully.
+        },
+        failedSendingCrash: function (report) {
+            // called when crash report could not be sent.
+        }
+      });
+```
+
+All callbacks being optional, you can implement for example only 1 method in the event listener.
+
+> [!NOTE]
+> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+>
+> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
+
+Thus you should configure crashes to be processed in Javascript and set up the event listener before calling `Crashes.process`.
+
 ### Add attachments to a crash report
 
 You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal.
 
-To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](#process).
+> [!NOTE]
+> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+>
+> This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 ```javascript
     Crashes.process(function (reports, send) {
