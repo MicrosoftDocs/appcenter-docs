@@ -29,9 +29,11 @@ To run scripts post-clone, add the following file next to the project file in yo
 ```
 #!/usr/bin/env bash
 
-# Example: Clone some project
+# Example: Clone a required repository
 git clone https://github.com/example/SomeProject
 
+# Example: Install Mobile Center CLI
+npm install -g mobile-center-cli
 ```
 
 ### UWP
