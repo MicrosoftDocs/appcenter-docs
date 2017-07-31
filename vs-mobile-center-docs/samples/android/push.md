@@ -36,11 +36,8 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 1. Locate the following in **app/build.gradle** and add the compile statement:
 ```
 dependencies {  
-
       def mobileCenterSdkVersion = ' 0.11.0'
-
       compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
-
 }
 ```
 2. Locate the Mobile Center import statement in **MainActivity.java** and add the push import statement below it:
@@ -51,7 +48,6 @@ import com.microsoft.azure.mobile.push.Push;
 3. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
 ```
 MobileCenter.start(getApplication(), "<APP SECRET HERE>",
-
          Analytics.class, Crashes.class, Push.class);
 ```
 
@@ -63,8 +59,8 @@ MobileCenter.start(getApplication(), "<APP SECRET HERE>",
 5. Add Firebase Cloud Messaging to your app. Ignore all other steps in the Firebase Assistant.
 6. The Mobile Center SDK manages the following for you; if added automatically, please remove to avoid errors:
 ```
-compile "com.google.firebase:firebase-core:${version}"
-   compile "com.google.firebase:firebase-messaging:${version}"
+  compile "com.google.firebase:firebase-core:${version}"
+  compile "com.google.firebase:firebase-messaging:${version}"
 ```
 
 ## Set up Push in Mobile Center
