@@ -81,7 +81,7 @@ In order to run tests, distribute the app to users, and send push notifications,
   3. Go to **Build > Generate Signed APK** from the menu bar.
   4. Leave **Module: app** and click Next.
   5. In **Key store path**, click **Create new...** and create the keystore as per the following image from the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto):
-![Make a new app](images/newKeystore.png)
+      ![Make a new app](images/newKeystore.png)
   6. Click **OK**. The **Key store password**, **Key alias** and **Key password** should automatically fill in with the information from your new keystore. Click Next.
   7. Select a destination for the signed APK, make sure **Build Type** is set to **release**, and select both signature versions **V1** and **V2**. Click Finish.
   8. Gradle should automatically begin to build. After everything syncs up, you should find your signed APK in the specified destination folder.
