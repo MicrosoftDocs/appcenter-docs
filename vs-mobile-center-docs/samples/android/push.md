@@ -31,6 +31,26 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
  - Distributed sample app to your device (not running on emulator).
  - Google account.
 
+## Integrate Mobile Center SDK
+*The following directions are also located in the push service on Mobile Center.*
+1. Locate the following in **app/build.gradle** and add the compile statement:
+```
+dependencies {
+  def mobileCenterSdkVersion = ' 0.11.0'
+  compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+}
+```
+2. Locate the Mobile Center import statement in **MainActivity.java** and add the push import statement below it:
+```
+import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.push.Push;
+```
+4. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
+```
+MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+         Analytics.class, Crashes.class, Push.class);
+```
+
 ## Use Firebase Assistant to set up Firebase Cloud Messaging
 1. Navigate to the app in Android Studio.
 2. Go to the Firebase Assistant from the tool bar by clicking on **Tools > Firebase**.
