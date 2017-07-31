@@ -35,9 +35,12 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 *The following directions are also located in the push service on Mobile Center.*
 1. Locate the following in **app/build.gradle** and add the compile statement:
 ```
-dependencies {
-  def mobileCenterSdkVersion = ' 0.11.0'
-  compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+dependencies {  
+
+      def mobileCenterSdkVersion = ' 0.11.0'
+
+      compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+
 }
 ```
 2. Locate the Mobile Center import statement in **MainActivity.java** and add the push import statement below it:
@@ -45,9 +48,10 @@ dependencies {
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.push.Push;
 ```
-4. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
+3. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
 ```
 MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+
          Analytics.class, Crashes.class, Push.class);
 ```
 
