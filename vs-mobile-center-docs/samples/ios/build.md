@@ -44,6 +44,9 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
   ![Signing Builds](images/Signing_builds_ios.png)  
 
+  
+  **If your build fails because of a codesigning error:** double check that all your changes have been pushed to the remote repository.
+
 4. Click **Save** at the bottom of the page, and the build will begin.
 
 The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.

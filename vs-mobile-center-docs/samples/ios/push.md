@@ -24,7 +24,7 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 
 
 # Push - Sample Swift App and Tutorials
-In this tutorial you will learn how to send push notifications to users through Mobile Center.
+In this tutorial you will learn how to send push notifications to users through Mobile Center. Code allowing Mobile Center to send notifications is included in the sample Swift app.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
