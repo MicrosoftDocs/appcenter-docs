@@ -63,7 +63,7 @@ protected void onCreate(Bundle savedInstanceState) {
         MobileCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
 ```
-*Note: You can locate the code snippet above on the Getting Started page in the Mobile Center portal.*
+*Note: You can locate the code snippet above on the Getting Started page in the Mobile Center portal.* 
 5. Replace  `<APP SECRET HERE>` with your unique app secret.
 6. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
