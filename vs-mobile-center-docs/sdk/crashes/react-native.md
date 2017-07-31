@@ -4,7 +4,7 @@ description: Mobile Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: mobile-center
@@ -69,7 +69,11 @@ If your app crashed previously, you can get details about the last crash.
 const crashReport = await Crashes.lastSessionCrashReport();
 ```
 
-## Processing crashes in JavaScript
+## Customize your usage of Mobile Center Crashes
+
+Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
+
+### <a name="process"></a> Processing crashes in JavaScript
 
 During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
 
@@ -80,11 +84,39 @@ Processing a crash in JavaScript requires you to use the `process` method from M
 import Crashes from "mobile-center-crashes";
 ```
 
-Then, you can send all crashes that have been queued up since the last call to `process`.
+Then, you can send all crashes that have been queued up since the last call to `process` or discard them
+based on for example your own user confirmation dialog:
 
 ```javascript
-// send all queued crashes without additional processing
-Crashes.process((report, sendCallback) => {sendCallback(true);}).catch((err) => {});
+    Crashes.process((reports, send) => {
+      if (reports.length > 0) {
+        Alert.alert(
+          `Send ${reports.length} crash(es)?`,
+          '',
+          [
+            { text: 'Send', onPress: () => send(true) },
+            { text: 'Ignore', onPress: () => send(false), style: 'cancel' },
+          ],
+          { cancelable: false }
+        );
+      }
+    });
+```
+
+### Add attachments to a crash report
+
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal.
+
+To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+```javascript
+    Crashes.process(function (reports, send) {
+      for (const report of reports) {
+        report.addTextAttachment("Hello text attachment!", "hello.txt");
+        report.addBinaryAttachment(`${imageAsBase64string}`, "logo.png", "image/png");
+      }
+      send(true);
+    });
 ```
 
 ## Enable or disable Mobile Center Crashes at runtime
