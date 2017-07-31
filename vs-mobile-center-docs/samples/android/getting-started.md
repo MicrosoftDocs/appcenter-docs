@@ -46,7 +46,6 @@ In this tutorial, you will learn how to set up a sample Android app with Mobile 
 2. Name the app **Sample Android App**.
 3. Choose **Android** and **Java** respectively.
 4. Click **Add new app**.  
-
   ![Make a new app](images/MakeAndroidApp.gif)
 
 ## Replace the App Secret
