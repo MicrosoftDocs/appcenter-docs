@@ -87,5 +87,6 @@ In order to run tests, distribute the app to users, and send push notifications,
 
 
   ## Optional: Run app in Android Studio and read descriptions
+  The crashes and analytics services have to be linked to the app, see [crashes](crashes.md) and [analytics](analytics.md) tutorials, in order for the crashes and analytics buttons to send trackable data to Mobile Center.
   This is how the app looks running on the Android Studio Emulator:
         ![Make a new app](images/androidAppSampleDemo.gif)
