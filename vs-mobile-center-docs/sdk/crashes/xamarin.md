@@ -4,7 +4,7 @@ description: Mobile Center Crashes for Xamarn
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/19/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: mobile-center
@@ -137,7 +137,9 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
 };
 ```
 
-#### The following callback will be invoked if you want to add attachments to a crash report
+### Add attachments to a crash report
+
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>

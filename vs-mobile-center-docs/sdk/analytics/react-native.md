@@ -4,7 +4,7 @@ description: Mobile Center Analytics for React Native
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/06/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: mobile-center
@@ -55,7 +55,7 @@ Analytics.trackEvent("My first event");
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
 ```javascript
-Analytics.setEnabled(false);
+await Analytics.setEnabled(false);
 ```
 
 This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
@@ -63,7 +63,7 @@ This function returns a promise, in which the success case returns an empty stri
 To enable Mobile Center Analytics again, use the same API but pass `true` as a parameter.
 
 ```javascript
-Analytics.setEnabled(true);
+await Analytics.setEnabled(true);
 ```
 
 ## Check if Mobile Center Analytics is enabled
@@ -71,7 +71,7 @@ Analytics.setEnabled(true);
 You can also check if Mobile Center Analytics is enabled or not.
 
 ```javascript
-boolean isEnabled = Analytics.isEnabled();
+const enabled = await Analytics.isEnabled();
 ```
 
 This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
@@ -89,5 +89,5 @@ For the [platform] app, should user tracking be enabled automatically ? (Use arr
 This means that for any information to be sent to Mobile Center (even basic session information), the developer must first enable Mobile Center Analytics inside the app by adding the following line to their code.
 
 ```javascript
-Analytics.setEnabled(true);
+await Analytics.setEnabled(true);
 ```
