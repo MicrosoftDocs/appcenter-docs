@@ -102,47 +102,32 @@ For more information on this please check out this link:
 
 Now that you have all your account credentials, you can create a Distribution store.
 
-1. Click on **Stores** in Distribution beacon. Click on **Add
-    Connection**.
-
-2. Select the store type you want to connect to
-
-3. Select Google Play store and click **Next.**
-
-4. You will need to upload the **Private Key JSON** file which you downloaded to your machine while creating the service account. Please do not edit this JSON file.
+1. Click on **Stores** under Distribution. 
+2. Click on **Add Connection**.
+3. Select the store type you want to connect to
+4. Select Google Play store and click **Next.**
+5. You will need to upload the **private key JSON** file which you downloaded to your machine while creating the service account.
 
 **Note:** If the JSON fields are edited to incorrect values, your creation of store might fail. Please make sure you have your service account linked to your Google play Developer console as mentioned in the pre-requisite section above. If not linked, your store creation will fail.
 
 1. Once you upload, click **Connect**.
-
 2. You are now connected, and you should now be able to see a store by the name **GooglePlay-Production** store in the **stores** home page.
 
 ### Step 2: Publish to Google Play Store
 
-1. From the **stores** home page click on the Google-Play-Production Distribution Store which you created above.
-
+1. From the **stores** home page select GooglePlay-Production store created above.
 2. Click on **Publish to store**.
-
 3. Upload the application package and enter release notes.
-
-**Note:**
-
-- Application type should be correct and should be signed with a valid key store before uploading.
-
-- Google Play store supports a maximum of 100 MB of application package. If your application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
-<https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
-
-- The version of the .apk must be strictly greater than the current version in production.
-
-- If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
-
+ **Note:**
+    * Application type should be correct and should be signed with a valid key store before uploading.
+    * Google Play store supports a maximum of 100 MB of application package. If your application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
+    <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
+    * The version of the .apk must be strictly greater than the current version in production.
+    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
 
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next** to go to the next page.
-
-5. Click **Publish** to publish this app to the **Google Play store**. Once you click publish, you should be able to see this release on the store details page with status as **Submitted.**
-
+5. Click on **Publish** to publish this app to the **Google Play store**. Once you click publish, you should be able to see this release on the store details page with status as **Submitted.**
 6. Once your app is published, the status of the app will change to **Published.**
-
 7. In case of a failure while publishing the status will change to failed with an appropriate error message. You can reach out via Intercom for help in case of issues.
 
 
