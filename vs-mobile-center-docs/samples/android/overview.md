@@ -27,7 +27,7 @@ ms.assetid: d99d49f4-a1a7-4764-9b83-ef88ae5c2eef
 
 This tutorial series, in conjunction with this [sample Android app written in Java](https://github.com/MobileCenter/sampleapp-android), will help you get started with Mobile Center for Android.
 
-Begin with the [**Getting Started**](getting-started.md) tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
+Begin with the [Getting Started](getting-started.md) tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 
 | Title | Description |
 |:-|:-|
