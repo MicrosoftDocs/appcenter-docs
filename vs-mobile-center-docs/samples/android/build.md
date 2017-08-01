@@ -39,7 +39,7 @@ ms.assetid: ea3f9263-5325-4bda-be1b-c0ec85284957
 2. Click **Configure build**. The Build configuration panel will show up.
 3. The default setting for build frequency is **Build this branch on every push**. Every time you push code to a configured branch, a build will automatically begin. You can enable this continuous integration feature or opt to manually choose when builds run.
 ![Continuous Integration](images/ContinuousIntegration.jpg)
-4. If you want to run the build on a device, turn **Sign builds** on. Upload your keystore file and fill in the environment variables.
+4. If you want to run the build on a device, turn **Sign builds** on. If you followed the instructions on **Getting Started**, you can upload your keystore file and fill in the environment variables or check **My Gradle settings are entirely set to handle signing automatically**.
 5. Click **Save** at the bottom of the page, and the build will begin.
 
 The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
