@@ -87,6 +87,8 @@ fi
 ## Environment variables
 We set the following environment variables, so you can access them from your build scripts.
 
+### General variables
+
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_BUILD_ID` | The unique identifier for the current build |
@@ -95,35 +97,35 @@ We set the following environment variables, so you can access them from your bui
 | `MOBILECENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
 | `MOBILECENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
 
-## iOS variables
+### iOS variables
 
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_XCODE_PROJECT` | Selected Xcode project |
 | `MOBILECENTER_XCODE_SCHEME` | Selected Xcode scheme |
 
-## Android variables
+### Android variables
 
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_ANDROID_VARIANT` | Selected Android variant |
 | `MOBILECENTER_ANDROID_MODULE` | Selected Android module |
 
-## UWP variables
+### UWP variables
 
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_UWP_SOLUTION` | Selected solution |
 | `MOBILECENTER_UWP_CONFIGURATION` | Selected configuration |
 
-## Xamarin variables
+### Xamarin variables
 
 | Variable | Description |
 | --------------------------------- | --- |
 | `MOBILECENTER_XAMARIN_PROJECT` | Selected project|
 | `MOBILECENTER_XAMARIN_CONFIGURATION` | Selected configuration|
 
-## React Native variables
+### React Native variables
 
 | Variable | Description |
 | --------------------------------- | --- |
