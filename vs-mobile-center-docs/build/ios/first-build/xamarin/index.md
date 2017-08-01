@@ -39,7 +39,7 @@ Select the configuration you would like to build with. The configurations are au
 ### 3.3. Mono version
 Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
-### 3.4. **Xcode Version
+### 3.4. Xcode Version
 Current version of Xamarin requires Xcode 8.0 or higher.
 
 ### 3.5. Build triggers
