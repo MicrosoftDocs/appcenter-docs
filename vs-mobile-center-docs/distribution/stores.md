@@ -1,12 +1,11 @@
 ---
-title: Use CodePush to update your app live
-description: Fix bugs and add content quickly
-keywords: distribution
-author: iageoghe
-ms.author: iageoghe
-ms.date: 06/02/2017
+title: Publish to Google Play store
+description: Publish your apps to Google Play store
+keywords: distribution store
+author: girish
+ms.author: girish
+ms.date: 08/01/2017
 ms.topic: article
-ms.assetid: F19F4122-B9F0-42CC-85B8-E3C344AE5419
 ms.service: mobile-center
 ms.custom: distribute
 ---
@@ -34,7 +33,7 @@ Before you can access the API, you must link your Google Play Console to an API 
 
 * Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 * Accept the Terms of Service.
-* Click **Create new project**.
+* Click on "Create new project".
 * An API project is automatically generated and linked to your Google Play Console.
 
 **Using an existing API project**
@@ -43,7 +42,7 @@ Before you can access the API, you must link your Google Play Console to an API 
 * Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 * Accept the API Terms of Service.
 * Choose the project you’d like to link.
-* Click **Link**.
+* Click on "Link".
 
  Setting Up API Access Clients
 ------------------------------
@@ -69,7 +68,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 <img src="./images/image4.png" width="544" height="77" />
 
-        - Configure it as:
+* Configure it as:
 
 <img src="./images/image5.png" width="288" height="217" />
 
@@ -77,11 +76,11 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 <img src="./images/image6.png" width="404" height="242" />
 
-    - Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
+* Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
 
 <img src="./images/image7.png" width="291" height="273" />
 
-    - Click **Create**, and you are done.
+ * Click **Create**, and you are done.
 
 **Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
 
@@ -124,7 +123,7 @@ Now that you have all your account credentials, you can create a Distribution st
 
 2. Click on **Publish to store**.
 
-3. Upload the application package and enter release notes (if any).
+3. Upload the application package and enter release notes.
 
 **Note:**
 
@@ -136,6 +135,7 @@ Now that you have all your account credentials, you can create a Distribution st
 - The version of the .apk must be strictly greater than the current version in production.
 
 - If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
+
 
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next** to go to the next page.
 

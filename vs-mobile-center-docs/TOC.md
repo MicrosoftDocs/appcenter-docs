@@ -51,6 +51,7 @@
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
 ## [Manage Distribution Groups](distribution/groups.md)
+## [Stores](distribution/stores.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
