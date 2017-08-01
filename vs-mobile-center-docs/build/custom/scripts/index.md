@@ -23,8 +23,7 @@ The post-clone script runs immediately after the repository was cloned but befor
 
 To run scripts post-clone, add the following file next to the project file in your repository:
 
-### iOS and Android
-`mobile-center-post-clone.sh`
+**mobile-center-post-clone.sh** (Bash for iOS & Android)
 
 ```
 #!/usr/bin/env bash
@@ -36,16 +35,14 @@ git clone https://github.com/example/SomeProject
 npm install -g mobile-center-cli
 ```
 
-### UWP
-`mobile-center-post-clone.ps1`
+**mobile-center-post-clone.ps1** (PowerShell for UWP)
 
 ## Pre-build
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-buid, add the following file next to the project file in your repository:
 
-### iOS and Android
-`mobile-center-pre-build.sh`
+**mobile-center-pre-build.sh** (Bash for iOS & Android)
 
 ```
 #!/usr/bin/env bash
@@ -57,16 +54,14 @@ then
 fi
 ```
 
-### UWP
-`mobile-center-pre-build.ps1`
+**mobile-center-pre-build.ps1** (PowerShell for UWP)
 
 ## Post-build
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
-### iOS and Android
-`mobile-center-post-build.sh`
+**mobile-center-post-build.sh** (Bash for iOS & Android)
 
 ```
 #!/usr/bin/env bash
@@ -87,8 +82,7 @@ else
 fi
 ```
 
-### UWP
-`mobile-center-post-build.ps1`
+**mobile-center-post-build.ps1** (PowerShell for UWP)
 
 ## Environment variables
 We set the following environment variables, so you can access them from your build scripts.
