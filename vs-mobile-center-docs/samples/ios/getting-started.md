@@ -34,7 +34,7 @@ In this tutorial, you will learn how to set up a sample Swift app with Mobile Ce
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
 2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-ios-swift).
-3. Click **Fork** at the top right hand corner of the page, and clone the
+3. Click **Fork** at the top right hand corner of the page, and clone the repository.
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.

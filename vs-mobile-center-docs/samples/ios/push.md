@@ -30,15 +30,19 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ### Prerequisites
  - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
- - Distributed the sample app **to your device** (not running on a simulator).
 
-## Enable Push Notifications in Xcode
+
+## Enable Push notifications in Xcode
 1. Open the **.xcworkspace** from the sample app folder.
 2. Under the **Capabilities** tab, turn **Push Notifications** on.  
 
   ![Enable Push in Xcode](images/Enable_push_ios.png)
 
   If you encounter an error, your codesigning may not not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/ios/identifier/bundle/) and edit the App ID to allow Push Notifications.
+
+## Build and Distribute the app
+1. **Add, commit, and push the changes to Github.**
+2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification will not appear on a simulator.
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -64,7 +68,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 3. Click **Send notification**.
 4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
 
-## Send a push notification
+## Send a Push notification
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
 3. Click **Next** and **Send notification** at the bottom. **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
