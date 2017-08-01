@@ -40,7 +40,7 @@ npm install -g mobile-center-cli
 ## Pre-build
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
-To run scripts pre-buid, add the following file next to the project file in your repository:
+To run scripts pre-build, add the following file next to the project file in your repository:
 
 **mobile-center-pre-build.sh** (Bash for iOS & Android)
 
