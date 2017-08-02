@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/28/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: mobile-center
@@ -39,7 +39,7 @@ await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
 >
 > If you wish to increase logging for app startup, use the native Mobile Center setLogLevel APIs.
 >
-> In iOS, call `[MSMobileCenter setLogLevel: MSLogLevelVerbose];` before `[RNMobileCenter register];` in **AppDelegate.m**.
+> In iOS, call `[MSMobileCenter setLogLevel: MSLogLevelVerbose];` before any call to `[RNMobileCenter register];` (or `RNAnalytics` or `RNCrashes` or `RNPush`) in **AppDelegate.m**. You have to add `@import MobileCenter;` if missing in that file.
 >
 > In Android, call `MobileCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
