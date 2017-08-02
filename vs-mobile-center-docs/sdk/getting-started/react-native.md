@@ -77,6 +77,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	> react-native link mobile-center
 	> react-native link mobile-center-analytics
 	> react-native link mobile-center-crashes
+	> ```
 
 	For iOS, it will try to download the iOS Mobile Center SDK from **Cocoapods**, if you see an error like:
 
