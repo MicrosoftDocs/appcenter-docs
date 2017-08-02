@@ -87,48 +87,31 @@ To run scripts post-build, add the following file next to the project file in yo
 ## Environment variables
 We set the following environment variables, so you can access them from your build scripts.
 
-### General variables
-
-| Variable | Description |
+| **General variables** | **Description** |
 | --------------------------------- | --- |
 | `MOBILECENTER_BUILD_ID` | The unique identifier for the current build |
 | `MOBILECENTER_BRANCH` | Name of the branch that is being built from |
 | `MOBILECENTER_SOURCE_DIRECTORY` | Location of the source code on the build machine |
 | `MOBILECENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
 | `MOBILECENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
-
-### iOS variables
-
-| Variable | Description |
-| --------------------------------- | --- |
+|||
+| **iOS specific** | |
 | `MOBILECENTER_XCODE_PROJECT` | Selected Xcode project |
 | `MOBILECENTER_XCODE_SCHEME` | Selected Xcode scheme |
-
-### Android variables
-
-| Variable | Description |
-| --------------------------------- | --- |
+|||
+| **Android specific** | |
 | `MOBILECENTER_ANDROID_VARIANT` | Selected Android variant |
 | `MOBILECENTER_ANDROID_MODULE` | Selected Android module |
-
-### UWP variables
-
-| Variable | Description |
-| --------------------------------- | --- |
+|||
+| **UWP specific** | |
 | `MOBILECENTER_UWP_SOLUTION` | Selected solution |
 | `MOBILECENTER_UWP_CONFIGURATION` | Selected configuration |
-
-### Xamarin variables
-
-| Variable | Description |
-| --------------------------------- | --- |
+|||
+| **Xamarin specific** | |
 | `MOBILECENTER_XAMARIN_PROJECT` | Selected project|
 | `MOBILECENTER_XAMARIN_CONFIGURATION` | Selected configuration|
-
-### React Native variables
-
-| Variable | Description |
-| --------------------------------- | --- |
+|||
+| **React Native specific** | |
 | `MOBILECENTER_REACTNATIVE_PACKAGE` | Selected package|
 
 
