@@ -94,24 +94,19 @@ We set the following environment variables, so you can access them from your bui
 | `MOBILECENTER_SOURCE_DIRECTORY` | Location of the source code on the build machine |
 | `MOBILECENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
 | `MOBILECENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
-|||
-| **iOS specific** | |
+| <br> **iOS specific** | |
 | `MOBILECENTER_XCODE_PROJECT` | Selected Xcode project |
 | `MOBILECENTER_XCODE_SCHEME` | Selected Xcode scheme |
-|||
-| **Android specific** | |
+| <br> **Android specific** | |
 | `MOBILECENTER_ANDROID_VARIANT` | Selected Android variant |
 | `MOBILECENTER_ANDROID_MODULE` | Selected Android module |
-|||
-| **UWP specific** | |
+| <br> **UWP specific** | |
 | `MOBILECENTER_UWP_SOLUTION` | Selected solution |
 | `MOBILECENTER_UWP_CONFIGURATION` | Selected configuration |
-|||
-| **Xamarin specific** | |
+| <br> **Xamarin specific** | |
 | `MOBILECENTER_XAMARIN_PROJECT` | Selected project|
 | `MOBILECENTER_XAMARIN_CONFIGURATION` | Selected configuration|
-|||
-| **React Native specific** | |
+| <br> **React Native specific** | |
 | `MOBILECENTER_REACTNATIVE_PACKAGE` | Selected package|
 
 
