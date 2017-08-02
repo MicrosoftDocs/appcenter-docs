@@ -88,9 +88,9 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
   ![Push App Service](images/AppID_push_ios.png)
 
   1. Open **.xcworkspace** from the sample app's folder.
-  2. Go to **General** within the .xcworkspace file.
-  3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
-  4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
+  2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
+  3. Edit the **Bundle Identifier** to match the app ID.
+  4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below.
   5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
-    ![Codesigning](images/Manual_sign_ios.png)
+    ![Codesigning](images/Sign_code_ios.png)
