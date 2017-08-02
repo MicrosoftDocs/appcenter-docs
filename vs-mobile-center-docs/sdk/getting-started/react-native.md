@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
@@ -68,6 +68,16 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	```
 	react-native link
 	```
+
+	> [!NOTE]
+	> On React Native **0.47.0**, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using link without parameters.
+	> 
+	> If you are using that version, please link all modules separately:
+	> ```
+	> react-native link mobile-center
+	> react-native link mobile-center-analytics
+	> react-native link mobile-center-crashes
+	> ```
 
 	For iOS, it will try to download the iOS Mobile Center SDK from **Cocoapods**, if you see an error like:
 
