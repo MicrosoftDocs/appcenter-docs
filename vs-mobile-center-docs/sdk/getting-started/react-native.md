@@ -70,7 +70,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	```
 
 	> [!NOTE]
-	> On React Native 0.47.0, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using > > link without parameters.
+	> On React Native **0.47.0**, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using link without parameters.
 	> 
 	> If you are using that version, please link all modules separately:
 	> ```
