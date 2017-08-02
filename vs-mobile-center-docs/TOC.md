@@ -131,12 +131,12 @@
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# Quickstart
-## [iOS](samples/ios/overview.md)
-### [Getting started](samples/ios/getting-started.md)
-### [Build](samples/ios/build.md)
-### [Test](samples/ios/test.md)
-### [Distribute](samples/ios/distribute.md)
-### [Crashes](samples/ios/crashes.md)
-### [Analytics](samples/ios/analytics.md)
-### [Push](samples/ios/push.md)
+# Quickstarts
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
