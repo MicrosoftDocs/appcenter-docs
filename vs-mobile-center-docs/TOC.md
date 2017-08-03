@@ -51,6 +51,7 @@
 
 # [Distribute](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
+## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
