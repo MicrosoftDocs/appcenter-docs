@@ -130,18 +130,30 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
-We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the SDK manually.
+We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
-#### 3.2.1 Download the binaries
+> [!NOTE]
+> The latest version of React Native SDK does not necessarily depends on the latest version
+> of the iOS SDK dependency as the iOS SDK is updated and released first.
 
-Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) and the [ReactNative Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-React-Native/releases) frameworks provided as two zip files. Unzip the files and you will see different frameworks for each Mobile Center services and the ReactNative Mobile Center framework. 
+The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
-#### 3.2.2 Add the binaries to your Xcode project
+1. Download the [Mobile Center SDK for React Native](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/latest) frameworks provided as a zip file.
 
-1. Make sure the Project Navigator is visible `(⌘+1)`. Drag and drop the frameworks into your project to add them to the top level within your project.
-2. A dialog will appear. Select “Create groups” and set the checkmark for “Add to targets” for your target. Then click Finish.
+2. From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
 
-> **Note:** `MobileCenter.framework` is required to start the SDK. Make sure it is added to your project, otherwise the other modules won’t work and your app won’t compile.
+3. Unzip both archives and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The frameworks called `MobileCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named `RNMobileCenterShared` which contains a single framework for the React Native bridge for iOS which is also required.
+
+4. [Optional] Create a subdirectory for 3rd-party-libraries.
+    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
+    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
+
+5. Open Finder and copy the previously unzipped `MobileCenter-SDK-iOS` and `RNMobileCenterShared` folders into your project's folder at the location where you want it to reside.
+
+6. Add the SDK frameworks to the project in Xcode:
+    * Make sure the Project Navigator is visible (⌘+1).
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework`, `MobileCenterCrashes.framework` and `RNMobileCenterShared.framework` from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that `MobileCenter.framework` and `RNMobileCenterShared.framework` are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
 
