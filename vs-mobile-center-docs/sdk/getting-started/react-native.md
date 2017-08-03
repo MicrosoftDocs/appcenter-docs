@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/02/2017
+ms.date: 08/03/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
@@ -133,10 +133,9 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
 > [!NOTE]
-> The latest version of React Native SDK does not necessarily depends on the latest version
-> of the iOS SDK dependency as the iOS SDK is updated and released first.
-
-The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
+> The latest Mobile Center React Native SDK doesn't necessarily depends on the latest Mobile Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
+>
+> The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
 1. Download the [Mobile Center SDK for React Native](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/latest) frameworks provided as a zip file.
 
@@ -144,7 +143,7 @@ The consequence is that you have to know which version of the iOS SDK the React 
 
 3. Unzip both archives and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The frameworks called `MobileCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named `RNMobileCenterShared` which contains a single framework for the React Native bridge for iOS which is also required.
 
-4. [Optional] Create a subdirectory for 3rd-party-libraries.
+4. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
     * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
