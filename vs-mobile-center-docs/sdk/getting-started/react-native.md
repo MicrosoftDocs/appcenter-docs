@@ -133,7 +133,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
 > [!NOTE]
-> The latest Mobile Center React Native SDK doesn't necessarily depends on the latest Mobile Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
+> The latest Mobile Center React Native SDK doesn't necessarily depend on the latest Mobile Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
 >
 > The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
@@ -141,7 +141,7 @@ We **strongly** recommend integrating the SDK via Cocoapods as described above. 
 
 2. From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
 
-3. Unzip both archives and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The frameworks called `MobileCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named `RNMobileCenterShared` which contains a single framework for the React Native bridge for iOS which is also required.
+3. Unzip both archives and you will see a folder called **MobileCenter-SDK-iOS** that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **RNMobileCenterShared** which contains a single framework for the React Native bridge for iOS which is also required.
 
 4. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
