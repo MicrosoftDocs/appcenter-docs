@@ -127,8 +127,8 @@ Now that you have all your account credentials, you can create a Distribution st
 
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next** to go to the next page.
 5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
-6. Once mobile center has completed the ahnd-over of the app to Google, the status of the app will change to **Published.**
-7. In case of a failure while publishing by Google, app owner will recive an email at the Google registered email. 
+6. Once mobile center has completed the hand-over of the app to Google, the status of the app will change to **Published.**
+7. In case of a failure while publishing by Google, app owner will recive a notiifcation at google mail. 
 
 
 
