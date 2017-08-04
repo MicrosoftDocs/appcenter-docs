@@ -4,7 +4,7 @@ description: Mobile Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/31/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: mobile-center
@@ -134,6 +134,25 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
 
 Thus you should configure crashes to be processed in Javascript and set up the event listener before calling `Crashes.process`.
+
+### Add attachments to a crash report
+
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal.
+
+> [!NOTE]
+> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+>
+> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+```javascript
+    Crashes.process(function (reports, send) {
+      for (const report of reports) {
+        report.addTextAttachment("Hello text attachment!", "hello.txt");
+        report.addBinaryAttachment(`${imageAsBase64string}`, "logo.png", "image/png");
+      }
+      send(true);
+    });
+```
 
 ## Enable or disable Mobile Center Crashes at runtime
 
