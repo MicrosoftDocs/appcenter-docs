@@ -1,24 +1,12 @@
 ---
 # required metadata
 
-title: Getting Started | Sample App Tutorials
+title: Getting Started | Android Sample App Tutorials
 description: Getting started prerequisites to onboard an Android application in Mobile Center
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
-ms.topic: article
-ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
-ms.assetid: fe5544b6-b243-4e9b-90db-09911e0557c6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
 
 ---
 
@@ -57,18 +45,20 @@ In order for the sample app to send information to Mobile Center, the app secret
   ![Make a new app](images/AppSecret.jpg)
 3. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**, located in /app/src/main/java/com/example/mobilecenter/sampleapp_android.
 4. In **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the Mobile Center portal.*
-```
+
+```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
         MobileCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
 ```
+
 5. Replace  `<APP SECRET HERE>` with your unique app secret.
 6. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
 ## Sign the Android Package Kit (APK)
 
-*This section is optional, but recommended.*
+*Code signing is optional, but recommended.*
 
 In order to run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
 
@@ -80,8 +70,8 @@ In order to run tests, distribute the app to users, and send push notifications,
   6. Leave **Module: app** and click Next.
   7. In **Key store path**, click **Create new...** and create the keystore as per the following image from the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto):
       ![Make a new app](images/newKeystore.png)
-  8. Click **OK**. The **Key store password**, **Key alias** and **Key password** should automatically fill in with the information from your new keystore. Click Next.
-  9. Select a destination for the signed APK, make sure **Build Type** is set to **release**, and select both signature versions **V1** and **V2**. Click Finish.
+  8. Click **OK**. The **Key store password**, **Key alias** and **Key password** should automatically fill in with the information from your new keystore. Click **Next**.
+  9. Select a destination for the signed APK, make sure **Build Type** is set to **release**, and select both signature versions **V1** and **V2**. Click **Finish**.
   10. Gradle should automatically begin to build. After everything syncs up, you should find your signed APK in the specified destination folder.
   11. **Add, commit, and push changes to your forked repository.**
 
@@ -89,4 +79,5 @@ In order to run tests, distribute the app to users, and send push notifications,
   ## Optional: Run app in Android Studio and read descriptions
   The crashes and analytics services have to be linked to the app, see [crashes](crashes.md) and [analytics](analytics.md) tutorials, in order for the crashes and analytics buttons to send trackable data to Mobile Center.
   This is how the app looks running on the Android Studio Emulator:
-        ![Make a new app](images/androidAppSampleDemo.gif)
+
+  ![App running on Android Studio Emulator](images/androidAppSampleDemo.gif)

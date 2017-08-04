@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Distribute Installable Sample App to Users | Sample App Tutorials
+title: Distribute Installable Sample App to Users | Android Sample App Tutorials
 description: Tutorial to distribute a sample Android app to a group of users in Mobile Center.
 keywords: mobile-center
 authors: sshibu

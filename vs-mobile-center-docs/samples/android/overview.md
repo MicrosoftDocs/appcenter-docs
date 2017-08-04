@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview | Sample App Tutorials
+title: Overview | Android Sample App Tutorials
 description: Landing page to navigate through Android tutorials.
 keywords: mobile-center
 authors: sshibu

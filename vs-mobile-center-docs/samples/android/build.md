@@ -1,25 +1,12 @@
 ---
 # required metadata
 
-title: Build Sample Android App on Mobile Center | Sample App Tutorials
+title: Build Sample Android App on Mobile Center | Android Sample App Tutorials
 description: Tutorial to build sample Android app in Mobile Center.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/27/2017
-ms.topic: article
-ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
-ms.assetid: ea3f9263-5325-4bda-be1b-c0ec85284957
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
-
 ---
 
 # Build Sample Android App on Mobile Center
@@ -42,4 +29,4 @@ ms.assetid: ea3f9263-5325-4bda-be1b-c0ec85284957
 4. If you want to run the build on a device, turn **Sign builds** on. If you followed the instructions on **Getting Started**, you can upload your keystore file and fill in the environment variables or check **My Gradle settings are entirely set to handle signing automatically**.
 5. Click **Save** at the bottom of the page, and the build will begin.
 
-The build can take a couple minutes, but you can click on it to view real-time output logs. After, if the build is successful, you can download the build, symbols, or logs by clicking **Download**.
+The build should complete after a couple minutes. Once the build has completed, you can download the results by clicking **Download**. This will include logs and, if the build was successful, build output and symbols. 

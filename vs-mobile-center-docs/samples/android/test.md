@@ -1,25 +1,12 @@
 ---
 # required metadata
 
-title: Run Included Tests with Mobile Center | Sample App Tutorials
+title: Run Included Tests with Mobile Center | Android Sample App Tutorials
 description: Tutorial to run a test using Android sample app with Mobile Center.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
-ms.topic: article
-ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
-ms.assetid: 04ea1c0e-2cb1-4b55-accb-2b36066dd70c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
-
 ---
 
 # Run Included Tests with Mobile Center
@@ -64,7 +51,7 @@ ms.assetid: 04ea1c0e-2cb1-4b55-accb-2b36066dd70c
 1. In the **Submit** step, copy the custom command under **Running tests**.
 2. Paste it into terminal while in the project directory.
 3. Navigate into **sampleapp-android/app/build/outputs/apk**.
-4. Copy the pathname and replace the placeholder text ```pathToEspressoBuildFolder``` in the custom command with the pathname text.
-5. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text ```pathToFile.apk``` in the custom command with the pathname text.
+4. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
+5. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
 6. Run the command. You will see the tests begin to run.
 7. In Mobile Center, click **Done** to close the panel.  

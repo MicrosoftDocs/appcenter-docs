@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View Custom Events and Track User Analytics | Sample App Tutorials
+title: View Custom Events and Track User Analytics | Android Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: mobile-center
 authors: sshibu

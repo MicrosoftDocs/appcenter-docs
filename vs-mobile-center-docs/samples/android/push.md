@@ -1,25 +1,12 @@
 ---
 # required metadata
 
-title: Send Push Notifications to Users | Sample App Tutorials
+title: Send Push Notifications to Users | Android Sample App Tutorials
 description: Tutorial to send a push notification to the sample Android app.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
-ms.topic: article
-ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
-ms.assetid: 14c6e713-5efe-4e3c-8c80-2e4ce5702e56
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
-
 ---
 
 
@@ -34,19 +21,24 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 ## Integrate Mobile Center SDK
 *The following directions are also located in the push service on Mobile Center.*
 1. Locate the following in **app/build.gradle** and add the compile statement:
-```
+
+``` java
 dependencies {  
       def mobileCenterSdkVersion = ' 0.11.0'
       compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
 }
 ```
+
 2. Locate the Mobile Center import statement in **MainActivity.java** and add the push import statement below it:
-```
+
+```java
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.push.Push;
 ```
+
 3. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
-```
+
+```java
 MobileCenter.start(getApplication(), "<APP SECRET HERE>",
          Analytics.class, Crashes.class, Push.class);
 ```
@@ -58,10 +50,12 @@ MobileCenter.start(getApplication(), "<APP SECRET HERE>",
 4. Connect your app to Firebase.
 5. Add Firebase Cloud Messaging to your app. Ignore all other steps in the Firebase Assistant.
 6. The Mobile Center SDK manages the following for you; if added automatically, please remove to avoid errors:
-```
+
+```java
   compile "com.google.firebase:firebase-core:${version}"
   compile "com.google.firebase:firebase-messaging:${version}"
 ```
+
 
 ## Set up Push in Mobile Center
 1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
@@ -82,4 +76,8 @@ MobileCenter.start(getApplication(), "<APP SECRET HERE>",
 2. Choose **All registered devices**.
 3. Click **Next** and **Send notification** at the bottom.
 
-**A push notification will be sent to the device you distributed to. It will not show up in the simulator.**  
+![Working Push Notification](images/)
+
+> [!NOTE]
+> A push notification will be sent to the device you
+> distributed to. It will not show up in the simulator.

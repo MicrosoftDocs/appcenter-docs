@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View Crashes Sent From Android App in Mobile Center | Sample App Tutorials
+title: View Crashes Sent From Android App in Mobile Center | Android Sample App Tutorials
 description: Tutorial on viewing crashes from a sample Android app in Mobile Center
 keywords: mobile-center
 authors: sshibu
