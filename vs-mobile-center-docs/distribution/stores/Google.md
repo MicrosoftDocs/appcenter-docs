@@ -53,32 +53,32 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 
-<img src="./images/image1.png" width="497" height="153" />
+<img src="..//images/image1.png" width="497" height="153" />
 
 2. Under **Service Accounts**, click **Create Service Account**.
 
-<img src="./images/image2.png" width="365" height="195" />
+<img src=".././images/image2.png" width="365" height="195" />
 
 3. Follow the instructions on the page to create your service account.
 
-<img src="./images/image3.png" width="343" height="213" />
+<img src="../images/image3.png" width="343" height="213" />
 
 4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link.
     Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
 
-<img src="./images/image4.png" width="544" height="77" />
+<img src="../images/image4.png" width="544" height="77" />
 
 * Configure it as:
 
-<img src="./images/image5.png" width="288" height="217" />
+<img src="../images/image5.png" width="288" height="217" />
 
-    - Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
+* Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
 
-<img src="./images/image6.png" width="404" height="242" />
+<img src="../images/image6.png" width="404" height="242" />
 
 * Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
 
-<img src="./images/image7.png" width="291" height="273" />
+<img src="../images/image7.png" width="291" height="273" />
 
  * Click **Create**, and you are done.
 
@@ -87,7 +87,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page
 automatically refreshes, and your service account will be listed.
 
-<img src="./images/image8.png" width="503" height="221" />
+<img src="../images/image8.png" width="503" height="221" />
 
 6. Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
@@ -108,10 +108,10 @@ Now that you have all your account credentials, you can create a Distribution st
 4. Select Google Play store and click **Next.**
 5. You will need to upload the **private key JSON** file which you downloaded to your machine while creating the service account.
 
-**Note:** If the JSON fields are edited to incorrect values, your creation of store might fail. Please make sure you have your service account linked to your Google play Developer console as mentioned in the pre-requisite section above. If not linked, your store creation will fail.
+    **Note:** If the JSON fields are edited to incorrect values, your creation of store might fail. Please make sure you have your service account linked to your Google play Developer console as mentioned in the pre-requisite section above. If not linked, your store creation will fail.
 
-1. Once you upload, click **Connect**.
-2. You are now connected, and you should now be able to see a store by the name **GooglePlay-Production** store in the **stores** home page.
+6. Once you upload, click **Connect**.
+7. You are now connected, and you should now be able to see a store by the name **GooglePlay-Production** store in the **stores** home page.
 
 ### Step 2: Publish to Google Play Store
 
@@ -128,7 +128,7 @@ Now that you have all your account credentials, you can create a Distribution st
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next** to go to the next page.
 5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
 6. Once mobile center has completed the hand-over of the app to Google, the status of the app will change to **Published.**
-7. In case of a failure while publishing by Google, app owner will recive a notiifcation at google mail. 
+7. In case of a failure while publishing by Google, app owner will receive a notiifcation at google mail. 
 
 
 
