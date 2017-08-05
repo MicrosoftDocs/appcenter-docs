@@ -33,13 +33,13 @@ Once you add Mobile Center Analytics to your app and the SDK is started, it will
 
 You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
 
-Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
 
 ```javascript
 // import Mobile Center Analytics at the top of the file.
 import Analytics from "mobile-center-analytics";
 
-Analytics.trackEvent(String name, Map<String,String> properties);
+Analytics.trackEvent("Video clicked", { "Category": "Music", "FileName": "favorite.avi" });
 ```
 
 This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
@@ -47,7 +47,7 @@ This function returns a promise, in which the success case returns an empty stri
 Properties for events are entirely optional. If you just want to track an event, use this sample instead:
 
 ```javascript
-Analytics.trackEvent("My first event");
+Analytics.trackEvent("Video clicked");
 ```
 
 ## Enable or disable Mobile Center Analytics at runtime
