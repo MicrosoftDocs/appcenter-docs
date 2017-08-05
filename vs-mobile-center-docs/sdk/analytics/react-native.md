@@ -39,7 +39,7 @@ Once you have started the SDK, use the `trackEvent` method to track your events 
 // import Mobile Center Analytics at the top of the file.
 import Analytics from "mobile-center-analytics";
 
-Analytics.trackEvent("Video clicked", { "Category": "Music", "FileName": "favorite.avi" });
+Analytics.trackEvent("Video clicked", { Category: "Music", FileName: "favorite.avi" });
 ```
 
 This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
