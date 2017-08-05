@@ -104,7 +104,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 	If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 
-	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md/#wait-for-js-to-enable-mobile-center-analytics)
+	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md#wait-for-js-to-enable-mobile-center-analytics)
 
 	```
 	For the Android app, should user tracking be enabled automatically? (Use arrow keys)
@@ -116,7 +116,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
           Enable in JavaScript
 	```
 
-	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md/#customize-your-usage-of-mobile-center-crashes).
+	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md#customize-your-usage-of-mobile-center-crashes).
 
 	```
 	For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
