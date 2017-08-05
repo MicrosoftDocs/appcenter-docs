@@ -76,8 +76,6 @@ MobileCenter.start(getApplication(), "<APP SECRET HERE>",
 2. Choose **All registered devices**.
 3. Click **Next** and **Send notification** at the bottom.
 
-![Working Push Notification](images/)
-
 > [!NOTE]
 > A push notification will be sent to the device you
 > distributed to. It will not show up in the simulator.
