@@ -78,12 +78,12 @@ This function returns a promise, in which the success case returns a `boolean`, 
 
 ## Wait for JS to enable Mobile Center Analytics
 
-In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `I will manually enable events sending` during `react-native link`.
+In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `Enable in JavaScript` during `react-native link`.
 
 ```
 For the [platform] app, should user tracking be enabled automatically ? (Use arrow keys)
-        ❯ Enable Automatically
-          Enable in JavaScript
+          Enable Automatically
+        > Enable in JavaScript
 ```
 
 This means that for any information to be sent to Mobile Center (even basic session information), the developer must first enable Mobile Center Analytics inside the app by adding the following line to their code.
