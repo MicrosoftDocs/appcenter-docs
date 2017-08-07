@@ -51,6 +51,7 @@ Before you can access the API, you must link your Google Play Console to an API 
 
 You can also create a [service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
 
+<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
 1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console under "settings".
 
 <img src="./images/image1.png" width="150" height="300" />
@@ -67,17 +68,38 @@ You can also create a [service account](https://developers.google.com/accounts/
     Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
 
 <img src="./images/image4.png" width="1252  " height="100" />
+=======
+1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
+<img src="..//images/image1.png" width="197" height="353" />
+
+2. Under **Service Accounts**, click **Create Service Account**.
+<img src=".././images/image2.png" width="365" height="195" />
+3. Follow the instructions on the page to create your service account.
+<img src="../images/image3.png" width="343" height="213" />
+
+4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link.
+    Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
+<img src="../images/image4.png" width="544" height="77" />
+>>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
 
 * Configure it as:
+<img src="../images/image5.png" width="288" height="217" />
 
+<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
 <img src="./images/image5.png" width="451" height="291" />
 
 * Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
 
 <img src="./images/image6.png" width="914" height="450"/>
+=======
+* Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
+<img src="../images/image6.png" width="404" height="242" />
+>>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
 
 * Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
+<img src="../images/image7.png" width="291" height="273" />
 
+<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
 <img src="./images/image7.png" width="391" height="373" />
 
  * Click **Create**, and you are done.
@@ -88,6 +110,14 @@ You can also create a [service account](https://developers.google.com/accounts/
 automatically refreshes, and your service account will be listed.
 
 <img src="./images/image8.png" width="876" height="361" />
+=======
+* Click **Create**, and you are done.
+
+**Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
+
+5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
+<img src="../images/image8.png" width="503" height="221" />
+>>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
 
 6. Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
@@ -124,11 +154,11 @@ Now that you have all your account credentials, you can create a Distribution st
     <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
     * The version of the .apk must be strictly greater than the current version in production.
     * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
-
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next** to go to the next page.
-5. Click on **Publish** to publish this app to the **Google Play store**. Once you click publish, you should be able to see this release on the store details page with status as **Submitted.**
-6. Once your app is published, the status of the app will change to **Published.**
-7. In case of a failure while publishing the status will change to failed with an appropriate error message. You can reach out via Intercom for help in case of issues.
+5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
+6. Once mobile center has completed the hand-over of the app to Google, the status of the app will change to **Published.**
+7. In case of a failure while publishing by Google, app owner will receive a notiifcation at google mail. 
+
 
 
 
