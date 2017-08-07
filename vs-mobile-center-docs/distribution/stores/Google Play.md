@@ -14,16 +14,14 @@ ms.custom: distribute
 
 You can now publish an upgrade to an existing app in Google play store from Mobile Center.
 
-### Google Pre-requisites:
+## Google Pre-requisites:
 
 * At-least one version of your application exists in Google Play.
-* Google Play Developer account. If you don’t have one, then please register for a Google play developer account at
-<https://play.google.com/apps/publish/signup>
+* Google Play Developer account. If you don’t have one, then please register for a Google play developer account at <https://play.google.com/apps/publish/signup>
 * You can log in to access the Google Play Developer Console to publish your first version of your application.
 * Mobile center uses the Google API’s to enable users to publish an update. In order for Mobile center to access these API’s on user’s behalf, you need to create a API project and a Service account (if you don’t’ have one). This is an account that belongs to an application instead of the user and will be used in creating the store in Mobile Center
 
-For more information on how to use the Google Play Console please use the following link:
-<https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
+For more information on how to use the Google Play Console please use the following link: <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
 
 ## Linking your API Project
 
@@ -44,80 +42,48 @@ Before you can access the API, you must link your Google Play Console to an API 
 * Choose the project you’d like to link.
 * Click on "Link".
 
- Setting Up API Access Clients
-------------------------------
+**Setting Up API Access Clients**
 
 ### Using a service account
 
 You can also create a [service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
 
-<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
-1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console under "settings".
-
-<img src="./images/image1.png" width="150" height="300" />
-
-2. Under **Service Accounts**, click **Create Service Account**.
-
-<img src="./images/image2.png" width="664" height="250" />
-
-3. Follow the instructions on the page to create your service account.
-
-<img src="./images/image3.png" width="466" height="276" />
-
-4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link.
-    Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
-
-<img src="./images/image4.png" width="1252  " height="100" />
-=======
 1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
+
 <img src="..//images/image1.png" width="197" height="353" />
 
 2. Under **Service Accounts**, click **Create Service Account**.
+
 <img src=".././images/image2.png" width="365" height="195" />
+
 3. Follow the instructions on the page to create your service account.
+
 <img src="../images/image3.png" width="343" height="213" />
 
 4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link.
     Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
-<img src="../images/image4.png" width="544" height="77" />
->>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
+
+<img src="../images/image4.png" width="744" height="57" />
 
 * Configure it as:
+
 <img src="../images/image5.png" width="288" height="217" />
 
-<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
-<img src="./images/image5.png" width="451" height="291" />
-
 * Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
 
-<img src="./images/image6.png" width="914" height="450"/>
-=======
-* Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
 <img src="../images/image6.png" width="404" height="242" />
->>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
 
 * Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
+
 <img src="../images/image7.png" width="291" height="273" />
 
-<<<<<<< HEAD:vs-mobile-center-docs/distribution/stores.md
-<img src="./images/image7.png" width="391" height="373" />
-
- * Click **Create**, and you are done.
-
-**Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
-
-5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page
-automatically refreshes, and your service account will be listed.
-
-<img src="./images/image8.png" width="876" height="361" />
-=======
 * Click **Create**, and you are done.
 
 **Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
 
 5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
+
 <img src="../images/image8.png" width="503" height="221" />
->>>>>>> 9fd41f8866c106427ef6d19f08895c647034b604:vs-mobile-center-docs/distribution/stores/Google Play.md
 
 6. Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
