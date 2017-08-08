@@ -83,7 +83,7 @@ For more information please check out this link:
 
 **The Google pre-requisites are a one time process. We now move to publishing an update of an existing Google Play application from Mobile Center**
 
-### Step1: Create a Store in Mobile Center
+### Step1: Create a store in Mobile Center
 
 1. Click on **Stores** under Distribution. 
 2. Click on **Add Connection**.
@@ -93,14 +93,14 @@ For more information please check out this link:
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page.
-     **Note:**The store creation process is a one time process for an app in Mobile Center.
+     **Note:**The above GooglePlay-Production setup is only a one time process for an app in Mobile Center.
 
 ### Step 2: Publish to Google Play Store
 
 1. From the **Stores** home page select **GooglePlay-Production**.
 2. Click on **Publish to Store**.
-3. Upload the application package and enter release notes.
-    **Note**
+3. Upload the app package.
+    **A few points to note**
     * Application type should be correct and signed with a valid key store before uploading.
     * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
     <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
