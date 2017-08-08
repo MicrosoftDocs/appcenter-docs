@@ -66,12 +66,12 @@ You can also create a [service account](https://developers.google.com/accounts/
 
     2. Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**<img src="../images/image6.png">
 
-    3. Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
+    3. Choose a **JSON Key Type**, by clicking on "Furnish a new private key".
 <img src="../images/image7.png">
 
     4. Click **Create**, and you are done.
 
-**Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
+    **Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
 
 *   Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 <img src="../images/image8.png">
