@@ -99,8 +99,7 @@ For more information please check out this link:
 
 1. From the **Stores** home page select **GooglePlay-Production**.
 2. Click on **Publish to Store**.
-3. Upload the app package.
-3. A few points to note.
+3. Upload the app package. A few points to note.
     * Application type should be correct and signed with a valid key store before uploading.
     * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
     <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
