@@ -87,22 +87,19 @@ For more information please check out this link:
 
 1. Click on **Stores** under Distribution. 
 2. Click on **Add Connection**.
-3. Select the store type you want to connect to
-4. Select Google Play store and click **Next**.
+3. Select **Google Play** store.
+4. Click on **Next**.
 5. Upload the **private key JSON** file which was downloaded to your machine while creating the service account.
-
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
-
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page.
 
 ### Step 2: Publish to Google Play Store
 
-1. From the **stores** home page select **GooglePlay-Production**.
-2. Click on **Publish to store**.
+1. From the **Stores** home page select **GooglePlay-Production**.
+2. Click on **Publish to Store**.
 3. Upload the application package and enter release notes.
-
-    **Note:**
+    **Note**
     * Application type should be correct and signed with a valid key store before uploading.
     * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
     <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
