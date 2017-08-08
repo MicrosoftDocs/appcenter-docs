@@ -4,7 +4,7 @@ description: Publish your apps to Google Play store
 keywords: distribution store
 author: girish
 ms.author: girish
-ms.date: 08/01/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom: distribute
@@ -16,11 +16,10 @@ You can now publish an upgrade to an existing app in Google play store from Mobi
 
 ### Google Pre-requisites
 
-* At-least one version of your application exists in Google Play.
-* Google Play Developer account. If you don’t have one, then please register for a Google play developer account at
+* The first version of your Google Play application has been published through Google console.
+* A Google Play Developer account. If you don’t have one, register for a Google play developer account at
 <https://play.google.com/apps/publish/signup>
-* You can log in to access the Google Play Developer Console to publish your first version of your application.
-* Mobile center uses the Google API’s to enable users to publish an update. In order for Mobile center to access these API’s on user’s behalf, you need to create a API project and a Service account (if you don’t’ have one). This is an account that belongs to an application instead of the user and will be used in creating the store in Mobile Center
+* Mobile center uses the Google API’s to enable users to publish an update. In order for Mobile center to access these API’s on user’s behalf, you need to create a API project and a Service account. This is an account that belongs to an application, not user, and will be used in creating the store connection in Mobile Center.
 
 For more information on how to use the Google Play Console please use the following link:
 <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
