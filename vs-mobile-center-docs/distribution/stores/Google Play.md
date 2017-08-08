@@ -93,7 +93,7 @@ For more information please check out this link:
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page.
-     **Note:**The store creation process is a one time process per app.
+     **Note:**The store creation process is a one time process for an app in Mobile Center.
 
 ### Step 2: Publish to Google Play Store
 
