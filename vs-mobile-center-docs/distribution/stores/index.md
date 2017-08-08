@@ -10,7 +10,7 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-## Google Play
+## Distribute app directly to public stores from Mobile Center
 
 You can now publish an upgrade to an existing app in the Google play store from Mobile Center.
 
