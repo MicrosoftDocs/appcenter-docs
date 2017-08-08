@@ -14,7 +14,7 @@ ms.custom: distribute
 
 You can now publish an upgrade to an existing app in Google play store from Mobile Center.
 
-### Google Pre-requisites:
+### Google Pre-requisites
 
 * At-least one version of your application exists in Google Play.
 * Google Play Developer account. If you don’t have one, then please register for a Google play developer account at
@@ -25,7 +25,7 @@ You can now publish an upgrade to an existing app in Google play store from Mobi
 For more information on how to use the Google Play Console please use the following link:
 <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
 
-## Linking your API Project
+### Linking your API Project
 
 Before you can access the API, you must link your Google Play Console to an API project. In most cases, we recommend that you create a new API project, though current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
 
@@ -44,20 +44,18 @@ Before you can access the API, you must link your Google Play Console to an API 
 * Choose the project you’d like to link.
 * Click on "Link".
 
-**Setting Up API Access Clients**
 
-
-### Using a service account
+###Setting Up API Access Clients
+**Using a service account**
 
 You can also create a [service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
 
 1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
-
 <img src="..//images/image1.png">
 
 2. Under **Service Accounts**, click **Create Service Account**.
-
 <img src=".././images/image2.png">
+
 3. Follow the instructions on the page to create your service account.
 
 <img src="../images/image3.png">
