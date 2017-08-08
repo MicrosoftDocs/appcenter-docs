@@ -50,32 +50,32 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 
-<img src="..//images/image1.png" width="197" height="353" />
+<img src="..//images/image1.png">
 
 2. Under **Service Accounts**, click **Create Service Account**.
 
-<img src=".././images/image2.png" width="365" height="195" />
+<img src=".././images/image2.png">
 
 3. Follow the instructions on the page to create your service account.
 
-<img src="../images/image3.png" width="343" height="213" />
+<img src="../images/image3.png">
 
 4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link.
     Proceed by clicking **+ CREATE SERVICE ACCOUNT**.
 
-<img src="../images/image4.png" width="744" height="57" />
+<img src="../images/image4.png">
 
 * Configure it as:
 
-<img src="../images/image5.png" width="288" height="217" />
+<img src="../images/image5.png">
 
 * Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
 
-<img src="../images/image6.png" width="404" height="242" />
+<img src="../images/image6.png">
 
 * Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
 
-<img src="../images/image7.png" width="291" height="273" />
+<img src="../images/image7.png">
 
 * Click **Create**, and you are done.
 
@@ -83,7 +83,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 
-<img src="../images/image8.png" width="503" height="221" />
+<img src="../images/image8.png">
 
 6. Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
