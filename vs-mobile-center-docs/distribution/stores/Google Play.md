@@ -50,38 +50,34 @@ Before you can access the API, you must link your Google Play Console to an API 
 
 You can also create a [service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
 
-1. Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
+*   Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 <img src="..//images/image1.png">
 
-2. Under **Service Accounts**, click **Create Service Account**.
+*   Under **Service Accounts**, click **Create Service Account**.
 <img src=".././images/image2.png">
 
-3. Follow the instructions on the page to create your service account.
+*   Follow the instructions on the page to create your service account.
 <img src="../images/image3.png">
 
-4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link. Proceed by clicking **CREATE SERVICE ACCOUNT**.
+*   On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link. Proceed by clicking **CREATE SERVICE ACCOUNT**.
 <img src="../images/image4.png">
 
-*  Configure it as
-
+    1. Configure it as
 <img src="../images/image5.png">
 
-* Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**
+    2. Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**<img src="../images/image6.png">
 
-<img src="../images/image6.png">
-
-* Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
-
+    3. Choose a **JSON Key Type**, by clicking on Furnish a new private Key.
 <img src="../images/image7.png">
 
-* Click **Create**, and you are done.
+    4. Click **Create**, and you are done.
 
 **Note:** As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
 
-5. Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
+*   Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 <img src="../images/image8.png">
 
-6. Click **Grant Access** to provide the service account the necessary rights to perform actions.
+*   Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
     At this point, you should be able to access the API through the service account. For more information, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
