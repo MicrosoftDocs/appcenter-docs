@@ -69,7 +69,7 @@ You can also create a [service account](https://developers.google.com/accounts/
     3. Choose a **JSON Key Type**, by clicking on "Furnish a new private key".
     <img src="../images/image7.png">
 
-    4. Click **Create** to complete the service account creation. As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. ***You will need this file for publish your application***
+    4. Click **Create** to complete the service account creation. As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. This file is required to publish your application.
 
 *   Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 <img src="../images/image8.png">
@@ -78,10 +78,10 @@ You can also create a [service account](https://developers.google.com/accounts/
 
     At this point, you should be able to access the API through the service account. For more information, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
-For more information on this please check out this link:
+For more information please check out this link:
 <https://developers.google.com/android-publisher/getting_started>
 
-**You are now done with the Google pre-requisites and ready to publish an update to the Play store from Mobile Center**
+**The Google pre-requisites are done and we now move to the next step of publishing an update to an existing Google Play application from Mobile Center**
 
 ### Step1: Create a Store in Mobile Center
 
