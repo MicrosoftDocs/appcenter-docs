@@ -81,7 +81,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 For more information please check out this link:
 <https://developers.google.com/android-publisher/getting_started>
 
-**The above Google pre-requisites are done and is a one time process. We now move to publishing an update of an existing Google Play application from Mobile Center**
+**The Google pre-requisites are a one time process. We now move to publishing an update of an existing Google Play application from Mobile Center**
 
 ### Step1: Create a Store in Mobile Center
 
@@ -93,7 +93,7 @@ For more information please check out this link:
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page.
-8. The store creation process is a one time process per app.
+     **Note:**The store creation process is a one time process per app.
 
 ### Step 2: Publish to Google Play Store
 
