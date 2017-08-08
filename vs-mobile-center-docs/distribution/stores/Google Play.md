@@ -12,14 +12,14 @@ ms.custom: distribute
 
 ## Google Play Store Distribution 
 
-You can now publish an upgrade to an existing app in Google play store from Mobile Center.
+Publish an upgrade to Google Play from Mobile Center.
 
-### Google Pre-requisites
+### Pre-requisites
 
-* The first version of your Google Play application has been published through Google console.
+* Google requires the first version of your Google Play application to have been published through the Google console.
 * A Google Play Developer account. If you don’t have one, register for a Google play developer account at
 <https://play.google.com/apps/publish/signup>
-* Mobile center uses the Google API’s to enable users to publish an update. In order for Mobile center to access these API’s on user’s behalf, you need to create a API project and a Service account. This is an account that belongs to an application, not user, and will be used in creating the store connection in Mobile Center.
+* For Mobile center to create a Google Store conenction and to access Google API’s on user’s behalf, you need to create an API project and a Service account.
 
 For more information on how to use the Google Play Console please use the following link:
 <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
@@ -37,7 +37,7 @@ Before you can access the API, you must link your Google Play Console to an API 
 
 **Using an existing API project**
 
-* If you are already a user of the Google Play Developer API, you can link to your existing API project by following these steps. If the API project you want to link to is not listed, verify that your Google Play Console account is designated as an Owner, and the Google Play Developer API is enabled.
+* If you are already a user of the Google Play Developer API, you can link to your existing API project by following these steps. If the API project to link to is not listed, verify that your Google Play Console account is designated as an Owner, and the Google Play Developer API is enabled.
 * Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
 * Accept the API Terms of Service.
 * Choose the project you’d like to link.
@@ -81,7 +81,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 For more information please check out this link:
 <https://developers.google.com/android-publisher/getting_started>
 
-**The Google pre-requisites are done and we now move to the next step of publishing an update to an existing Google Play application from Mobile Center**
+**The above Google pre-requisites are done and is a one time process. We now move to publishing an update of an existing Google Play application from Mobile Center**
 
 ### Step1: Create a Store in Mobile Center
 
@@ -93,6 +93,7 @@ For more information please check out this link:
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page.
+8. The store creation process is a one time process per app.
 
 ### Step 2: Publish to Google Play Store
 
