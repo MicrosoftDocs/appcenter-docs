@@ -57,11 +57,9 @@ You can also create a [service account](https://developers.google.com/accounts/
 <img src=".././images/image2.png">
 
 3. Follow the instructions on the page to create your service account.
-
 <img src="../images/image3.png">
 
 4. On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link. Proceed by clicking **CREATE SERVICE ACCOUNT**.
-
 <img src="../images/image4.png">
 
 * Configure it as:
