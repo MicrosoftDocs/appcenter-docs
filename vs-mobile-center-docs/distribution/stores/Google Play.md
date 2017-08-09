@@ -78,7 +78,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 
     At this point, you should be able to access the API through the service account. For more information on OAuth 2.0, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
-**The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process**
+**The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process.**
 
 ### Step1: Create a store in Mobile Center
 
@@ -86,12 +86,11 @@ You can also create a [service account](https://developers.google.com/accounts/
 2. Click on **Add Connection**.
 3. Select **Google Play** store.
 4. Click on **Next**.
-5. Upload the **private key JSON** file which was downloaded to your machine while creating the service account.
-    **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
+5. Upload the **private key JSON** file which was downloaded to your machine while creating the service account.If the JSON fields are edited to incorrect values, the store creation might fail.Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
 7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page. Note that this is a one time process for a specific app in Mobile Center.
 
-### Step 2: Publish to Google Play Store
+### Step 2: Publish your APK to Google Play Store
 
 1. From the **Stores** home page select **GooglePlay-Production**.
 2. Click on **Publish to Store**.
@@ -103,7 +102,7 @@ You can also create a [service account](https://developers.google.com/accounts/
     * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
-6. Once Mobile Center has completed the hand-over of the app to Google, the status of the app will change to **Published.**
+6. Once Mobile Center has completed the hand-over of the app to Google, the status of the app will change to **Published.**Note that Google could take upto 24 hours to show up the app on the Play store.
 7. In case of a failure while publishing by Google, app owner will receive a notiifcation to the registered google mail. 
 
 
