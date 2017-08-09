@@ -17,9 +17,9 @@ Publish an upgrade to Google Play from Mobile Center.
 ### Pre-requisites
 
 * Google requires the first version of your Google Play application to have been published through the Google console.
-* A Google Play Developer account. If you don’t have one, register for a Google play developer account at
+* A Google Play Developer account. If you don’t have one, register for a developer account at
 <https://play.google.com/apps/publish/signup>
-* For Mobile center to create a Google Store conenction and to access Google API’s on user’s behalf, you need to create an API project and a Service account.
+* For Mobile center to create a Google Store conenction and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
 
 For more information on how to use the Google Play Console please use the following link:
 <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
@@ -76,12 +76,9 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 *   Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
-    At this point, you should be able to access the API through the service account. For more information, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
+    At this point, you should be able to access the API through the service account. For more information on OAuth 2.0, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
-For more information please check out this link:
-<https://developers.google.com/android-publisher/getting_started>
-
-**The Google pre-requisites are a one time process. We now move to publishing an update of an existing Google Play application from Mobile Center**
+**The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process**
 
 ### Step1: Create a store in Mobile Center
 
@@ -92,7 +89,7 @@ For more information please check out this link:
 5. Upload the **private key JSON** file which was downloaded to your machine while creating the service account.
     **Note:** If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
-7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page. Note that he above Google Play store setup is a one time process for a specific app in Mobile Center.
+7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page. Note that this is a one time process for a specific app in Mobile Center.
 
 ### Step 2: Publish to Google Play Store
 

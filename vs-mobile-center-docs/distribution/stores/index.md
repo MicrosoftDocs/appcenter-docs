@@ -14,4 +14,4 @@ ms.custom: distribute
 
 You can now publish an upgrade to an existing app in the Google play store from Mobile Center.
 
-This is an early version. If you have interest in any specific capabilities, please contact us.
+This is an early version of the store distribution. If you have interest in any specific capabilities , please contact us.
