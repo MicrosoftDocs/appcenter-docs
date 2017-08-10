@@ -10,14 +10,14 @@ ms.date: 06/27/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom:
-ms.prod: .net-core
+ms.prod:
 ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.devlang: dotnet
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 
 ---

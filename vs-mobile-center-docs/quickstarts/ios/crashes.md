@@ -10,14 +10,14 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom:
-ms.prod: .net-core
+ms.prod:
 ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.devlang: dotnet
+#ms.devlang: 
 #ms.reviewer: [ALIAS]
 
 ---
@@ -52,7 +52,7 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 ## Crashing the sample app
 1. Swipe over to the **Crashes** page. Tap the **Send a sample crash** button to crash the app.
 2. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
-  
+
   ![Crash the sample app](images/Crash_ios_app.gif)
 
 ## View the crashes in Mobile Center

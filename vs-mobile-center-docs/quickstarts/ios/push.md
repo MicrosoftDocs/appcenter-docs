@@ -9,15 +9,15 @@ ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
+ms.custom:
+ms.prod:
 ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.devlang: dotnet
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 
 ---
@@ -71,6 +71,8 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 ## Send a Push notification
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
-3. Click **Next** and **Send notification** at the bottom. **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
+3. Click **Next** and **Send notification** at the bottom.
+  >!WARNING]
+  > **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
 
   ![Send a Push notification](images/Send_push_ios.gif)

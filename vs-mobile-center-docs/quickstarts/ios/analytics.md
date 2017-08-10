@@ -9,8 +9,8 @@ ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
+ms.custom:
+ms.prod:
 ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 
@@ -18,7 +18,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 #ROBOTS:
 #audience:
-#ms.devlang: dotnet
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 
 ---
@@ -31,10 +31,10 @@ In this tutorial, you will learn to view custom events and other user analytics 
 If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ## Open the app and view user Analytics
+To see users, session, and other information on the Overview page:
 1. Run the app using .xcworkspace, or from your device.
-2. Go to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps).
-
-Once the app runs on any device or simulator, you should start seeing users, session, and other information on the Overview page.
+2. Interact with the sample app from the simulator or device.
+3. Go to the **Analytics** service in [Mobile Center](https://mobile.azure.com/apps). There may be a short delay before the page is updated.
 
 ## Send and view custom events
 
