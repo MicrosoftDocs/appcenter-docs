@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/27/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -35,7 +35,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.11.1'
+       def mobileCenterSdkVersion = '0.11.2'
        compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
     }
     ```
