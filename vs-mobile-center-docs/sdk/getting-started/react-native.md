@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: mobile-center
@@ -69,6 +69,16 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	react-native link
 	```
 
+	> [!NOTE]
+	> On React Native **0.47.0**, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using link without parameters.
+	> 
+	> If you are using that version, please link all modules separately:
+	> ```
+	> react-native link mobile-center
+	> react-native link mobile-center-analytics
+	> react-native link mobile-center-crashes
+	> ```
+
 	For iOS, it will try to download the iOS Mobile Center SDK from **Cocoapods**, if you see an error like:
 
 	```
@@ -94,7 +104,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 	If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 
-	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md)
+	The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md#wait-for-js-to-enable-mobile-center-analytics)
 
 	```
 	For the Android app, should user tracking be enabled automatically? (Use arrow keys)
@@ -106,7 +116,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
           Enable in JavaScript
 	```
 
-	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md).
+	Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md#customize-your-usage-of-mobile-center-crashes).
 
 	```
 	For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
@@ -120,18 +130,29 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
-We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the SDK manually.
+We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
-#### 3.2.1 Download the binaries
+> [!NOTE]
+> The latest Mobile Center React Native SDK doesn't necessarily depend on the latest Mobile Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
+>
+> The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
-Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) and the [ReactNative Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-React-Native/releases) frameworks provided as two zip files. Unzip the files and you will see different frameworks for each Mobile Center services and the ReactNative Mobile Center framework. 
+1. Download the [Mobile Center SDK for React Native](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/latest) frameworks provided as a zip file.
 
-#### 3.2.2 Add the binaries to your Xcode project
+2. From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
 
-1. Make sure the Project Navigator is visible `(⌘+1)`. Drag and drop the frameworks into your project to add them to the top level within your project.
-2. A dialog will appear. Select “Create groups” and set the checkmark for “Add to targets” for your target. Then click Finish.
+3. Unzip both archives and you will see a folder called **MobileCenter-SDK-iOS** that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **RNMobileCenterShared** which contains a single framework for the React Native bridge for iOS which is also required.
 
-> **Note:** `MobileCenter.framework` is required to start the SDK. Make sure it is added to your project, otherwise the other modules won’t work and your app won’t compile.
+4. [Optional] Create a subdirectory for 3rd-party libraries.
+    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
+    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
+
+5. Open Finder and copy the previously unzipped `MobileCenter-SDK-iOS` and `RNMobileCenterShared` folders into your project's folder at the location where you want it to reside.
+
+6. Add the SDK frameworks to the project in Xcode:
+    * Make sure the Project Navigator is visible (⌘+1).
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework`, `MobileCenterCrashes.framework` and `RNMobileCenterShared.framework` from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that `MobileCenter.framework` and `RNMobileCenterShared.framework` are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
 
