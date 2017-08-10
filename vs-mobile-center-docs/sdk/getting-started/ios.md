@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/17/2017
+ms.date: 08/03/2017
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: mobile-center
@@ -73,7 +73,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 
 2. Unzip the file and you will see a folder called `MobileCenter-SDK-iOS` that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
 
-3. [Optional] Create a subdirectory for 3rd-party-libraries.
+3. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
     * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
@@ -81,7 +81,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 
 5. Add the SDK frameworks to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework` and `MobileCenterCrashes.framework` from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it iss added to your project, otherwise the other modules won't work and your app won't compile.
+    * Now drag and drop `MobileCenter.framework`, `MobileCenterAnalytics.framework` and `MobileCenterCrashes.framework` from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that `MobileCenter.framework` is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.

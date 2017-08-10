@@ -1,10 +1,10 @@
 ---
 title: Mobile Center Build for Xamarin.iOS
 description: How to set up a build for Xamarin.iOS apps
-keywords: build, ios
+keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: mobile-center
@@ -25,15 +25,21 @@ Next step once you have selected a repository is to select the branch you want t
 To kick off the first build, configure how the iOS project should get built.
 
 ### 3.1. Project/solution
-Mobile Center automatically detects the solution files in your repository. Select the `.sln` you would like to build. In your code, make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target `iPhone` and `iPhoneSimulator`, uncheck all the projects which are targeting other platforms. This will ensure that when the `.sln` is building, it will not attempt to build the other projects.
+Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
+
+#### 3.1.1. Building from the solution file (.sln)
+In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](solution-configuration-mappings.md) you can read.
+
+#### 3.1.2. Building from the project file (.csproj/.fsproj)
+In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
 
 ### 3.2. Configuration
-Select the configuration you would like to build with. The configurations are automatically detected depending on the solution picked in the previous step.
+Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
 ### 3.3. Mono version
 Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
-### 3.4. **Xcode Version
+### 3.4. Xcode Version
 Current version of Xamarin requires Xcode 8.0 or higher.
 
 ### 3.5. Build triggers
@@ -43,10 +49,10 @@ By default a new build is triggered on every push a developer does to the config
 Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
 ### 3.7. Code signing
-A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
+A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
 ### 3.8. Launch your successful build on a real device
-Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
 
 ### 3.9. NuGet restore
 If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
@@ -99,7 +105,7 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.ipa or .app)
-The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing/index.md).
+The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center](../../code-signing/index.md).
 
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 

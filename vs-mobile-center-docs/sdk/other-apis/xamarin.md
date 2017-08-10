@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
@@ -78,7 +78,7 @@ MobileCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API.
+You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

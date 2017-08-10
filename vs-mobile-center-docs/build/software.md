@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 04/26/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -17,7 +17,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Operating System
 
-- OS X 10.12.5 (16F73)
+- OS X 10.12.6 (16G29)
 
 ## Installed Software
 
@@ -25,23 +25,23 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 - Python 2.7.10
-- Node.js v6.11.0
+- Node.js v6.11.1
 - Java 1.8.0_131-b11
 
 ### Package Management
 
 - NPM 3.10.10
 - Homebrew 1.2.4
-- Homebrew/homebrew-core (git revision 695d9; last commit 2017-07-07)
-- bundler Bundler version 1.15.1
+- Homebrew/homebrew-core (git revision c45d; last commit 2017-07-23)
+- bundler Bundler version 1.15.3
 - CoCoaPods 1.2.1
 - Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.13.2
+- Git 2.13.3
 - Git LFS 2.1.1
-- curl 7.51.0 (x86_64-apple-darwin16.0) libcurl/7.51.0 SecureTransport zlib/1.2.8
+- curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
 - GNU Wget 1.19.1 built on darwin16.6.0
 
 ### Project Manangement
@@ -270,7 +270,7 @@ iPad Pro (12.9 inch) (2718361D-A5F1-48CE-9A33-385A46CB5A64)
 iPhone 5 (0A5283EC-0C4F-4B0C-A322-A694348D36EF)
 iPhone 5s (E7C601C7-4208-450D-8D48-C12FD477F729)
 iPhone 6 (15060D44-A03F-4EAE-8722-2E38148FE8E8)
-iPhone 6 Plus (C68C2D04-839D-49E0-95F5-B462E3AC04EE) 
+iPhone 6 Plus (C68C2D04-839D-49E0-95F5-B462E3AC04EE)
 iPhone 6s (FFE2B0C0-07BD-40A3-86E4-C5BBFC33FEE8)
 iPhone 6s Plus (13E54D95-F0E4-4A97-AACA-4AE41C1227F3)
 iPhone 7 (3E1C9723-E712-497C-967E-33807D1144F2)
@@ -335,7 +335,7 @@ Apple Watch Series 2 - 42mm (779A58DA-E410-4CE6-8C3A-135AD06B1B3C)
 BD4B234C-320F-43D9-A36B-37B4F4A57183 (active, disconnected)
     Watch: Apple Watch Series 2 - 38mm (54411D29-1BD1-4503-91FB-C01713321B38)
     Phone: iPhone 7 (1BA6913E-F267-4EFA-9D92-9FDB27DB79D3)
-    
+
 8F53D501-89D0-4B81-84BF-A8F081B9AB2A (active, disconnected)
     Watch: Apple Watch Series 2 - 42mm (7B923637-0F5B-4E03-92D1-2D7E77E1B143)
     Phone: iPhone 7 Plus (3611C41D-E65B-4D57-8889-84D035976699)
@@ -399,6 +399,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | android-23            | Android SDK Platform 23, Revision 3       |
 | android-24            | Android SDK Platform 24, Revision 2       |
 | android-25            | Android SDK Platform 25, Revision 3       |
+| android-26            | Android SDK Platform 26, Revision 1       |
 
 ### SDK Build tools
 

@@ -4,7 +4,7 @@ description: Using in-app updates in Mobile Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/11/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: mobile-center
@@ -35,7 +35,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.11.1'
+       def mobileCenterSdkVersion = '0.11.2'
        compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
     }
     ```
@@ -164,23 +164,25 @@ Distribute.isEnabled();
 [!include[](../android-see-async.md)]
 
 ## How do in-app updates work?
+
 The in-app updates feature works as follows:
+
 1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has a higher version (`versionCode`).
+6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+
+    * a higher value of `versionCode` or
+    * an equal value of `versionCode` but a higher value of `versionName`.
 
 > [!TIP]
-> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical. `versionCode` must be greater or equals, if `versionCode` is the same, `versionName` has to be different.
+> If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical.
 
 ## How do I test in-app updates?
 
-This is what we recommend to do. There is no way to set this up locally on your machine in a non-trivial way, so you will need to use the Mobile Center Portal for this.
-
-> [!TIP] 
-> To test in-app updates, you need to add **Mobile Center Distribute** to your application and distribute that using Mobile Center Distribute.
+You need to upload release builds (that use the Distribute module of the Mobile Center SDK) to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the Mobile Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.

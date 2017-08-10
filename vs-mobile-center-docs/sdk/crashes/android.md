@@ -4,7 +4,7 @@ description:  Mobile Center Crashes for Android
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/11/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: mobile-center
@@ -100,24 +100,35 @@ public boolean shouldProcess(ErrorReport report) {
 ### Ask for the users' consent to send a crash log
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of these options - "Always Send", "Send", and "Don't send". Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly. The method takes a block as a parameter, use it to pass in your logic to present the UI to ask for the user's consent.
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+> [!NOTE]
+> No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
+
+The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```java
 @Override
 public boolean shouldAwaitUserConfirmation() {
-	return true; // Return true if the SDK should await user confirmation, otherwise false.
+
+	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+	// Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+	return true;
 }
 ```
 
-If you return `true`, your app must obtain the user's permission and message the SDK with the result using the following API:
+If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
 
 ```java
-Crashes.notifyUserConfirmation(int userConfirmation);
+// Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
+Crashes.notifyUserConfirmation(Crashes.DONT_SEND);
+Crashes.notifyUserConfirmation(Crashes.SEND);
+Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
 
-Pass one option of `SEND`, `DONT_SEND` or `ALWAYS_SEND` in the above method call.
-
-Feel free to have a look [at our reference implementation](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java).
+As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.11.2/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
 
 ### Get information about the sending status for a crash log
 
@@ -150,9 +161,9 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 }
 ```
 
-#### The following callback will be invoked if you want to add attachments to a crash report
+### Add attachments to a crash report
 
-Here is an example to attach a text and an image to a crash.
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
 
 ```java
 @Override

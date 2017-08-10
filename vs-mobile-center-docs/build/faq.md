@@ -4,7 +4,7 @@ description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 06/26/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: mobile-center
@@ -96,5 +96,34 @@ Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React
   You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 
-## My Xamarin.Android build failed with **Error: No APK files found**, what can be done?
+## Since I have upgraded my project to Xcode 8 My iOS app fails to run a test, how can I fix this?
+A common reason for tests to fail is where the linker commands fails with an error similar to the following:
+ ```
+ ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks 
+  ❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64 
+  ❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  
+  ```
+
+The likely cause of this error is the linking type of **Apple Mach-O Linker** is not set to **static library**. 
+In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
+
+![Apple Mach-O Linker][mach-o-apple-linkage]
+
+[mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
+
+## My Xamarin.Android build failed with **Error: No APK files found**; what can be done?
 One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
+
+## I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information, why is that?
+If you selected **Sign builds: Off** in the Mobile Center branch configuration and your build log contains `RequireProvisioningProfile: True`, it means that your project itself is configured for signing and will try to apply signing despite the Mobile Center configuration. To fix it open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (e.g., **Debug|iPhoneSimulator**) does not contain any signing information other than **Automatic**.
+
+![Disable signing for Debug configuration in Xamarin.iOS application][xamarin-ios-empty-codesigning]
+
+[xamarin-ios-empty-codesigning]: images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application"
+
+## My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error, how to fix that?
+When you create Xamarin.iOS project in Visual Studio the default configuration for iPhoneSimulator has **i386 + x86_64** supported architectures. The **.app** file that builds from such configuration will fail to upload into simulator. Open **Project Options > Build > iOS Build** and for iPhoneSimulator configuration change **Supported architectures** to just **i386** or **x86\_64**.
+
+![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
+
+[xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
