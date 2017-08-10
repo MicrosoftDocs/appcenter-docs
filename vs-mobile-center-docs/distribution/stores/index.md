@@ -10,8 +10,8 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-# Google Play
+### Distribute apps directly to stores 
 
-You can now publish an upgrade to an existing app in Google play store from Mobile Center.
+You can now publish an upgrade to an existing app in the Google play store from Mobile Center.
 
-This is an early version. If you have interest in a specific feature, but you cannot find it in the UI, please contact us.
+This is an early version of the store distribution. If you have interest in any specific capabilities , please contact us.
