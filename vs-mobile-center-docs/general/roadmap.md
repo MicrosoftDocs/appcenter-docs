@@ -4,7 +4,7 @@ description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: joemellin
 ms.author: joemel
-ms.date: 06/02/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: mobile-center
@@ -39,7 +39,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Build service
 
-* Support for customizing your build definitions: secret variables and build scripts
+* Support for customizing your build definitions: secret variables
 * Improved code signing options for iOS apps, including automatic signing
 * Ability to automate running UI tests in the Test service after each successful build
 
