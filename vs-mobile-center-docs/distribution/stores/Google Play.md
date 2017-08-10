@@ -21,8 +21,7 @@ Publish an upgrade to Google Play from Mobile Center.
 <https://play.google.com/apps/publish/signup>
 * For Mobile center to create a Google Store conenction and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
 
-For more information on how to use the Google Play Console please use the following link:
-<https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
+For more information on how to use the Google Play Console please use the following link: <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
 
 ### Linking your API Project
 
@@ -72,6 +71,7 @@ You can also create a [service account](https://developers.google.com/accounts/
     4. Click **Create** to complete the service account creation. As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. This file is required to publish your application.
 
 *   Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
+
 <img src="../images/image8.png">
 
 *   Click **Grant Access** to provide the service account the necessary rights to perform actions.
