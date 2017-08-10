@@ -16,7 +16,7 @@ Publish an upgrade to Google Play from Mobile Center.
 
 ### Pre-requisites
 
-* Google requires the first version of your Google Play application to have been published through the Google console.
+* Google requires the first version of your Google Play application to be published through the Google console.
 * A Google Play Developer account. If you don’t have one, register for a developer account at
 <https://play.google.com/apps/publish/signup>
 * For Mobile center to create a Google Store conenction and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
