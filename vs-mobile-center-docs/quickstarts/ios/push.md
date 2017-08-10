@@ -72,6 +72,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 1. Click **Next** at the bottom.
 2. Choose **All registered devices**.
 3. Click **Next** and **Send notification** at the bottom.
+  
   >[!WARNING]
   > **A push notification will be sent to the device you distributed to - it will not show up in the simulator.**  
 
