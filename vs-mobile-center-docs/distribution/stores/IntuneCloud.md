@@ -20,11 +20,11 @@ Publish a new and upgrade an existing iOS and Android applications to your Intun
 * An Intune cloud admin and tenant account activated.
 * Create a [DNS CNAME](https://docs.microsoft.com/en-us/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
 * Manually [add users](https://docs.microsoft.com/en-us/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
-* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add)to organize users or devices by geographic location, department, or hardware characteristics
+* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add)to organize users or devices by geographic location, department, or hardware characteristics.
 
-For more information on Intune, use this [link](https://docs.microsoft.com/en-us/intune/introduction-intune)
+For more information on Intune, use this [link](https://docs.microsoft.com/en-us/intune/introduction-intune).
 
-**Once a company's Intune cloud has been set up, Mobile Center makes it simple to publish applications to the Intune Company Portal.**
+**Once Intune cloud has been set up, Mobile Center makes it simple to publish applications to the Intune cloud Company Portal.**
 
 
 ### Step1: Create a store in Mobile Center
@@ -33,10 +33,10 @@ For more information on Intune, use this [link](https://docs.microsoft.com/en-us
 2. Select the store type as Intune Company Portal and click **Next**. 
 3. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
 4. On successful login, you will be asked to enter a **Store name**.
-5. Select a category of the app from the drop down **Select Category**. 
-6. For **Audience**, provide the distribution list (email-id) which you wish to share this application to.
-7. Click **Connect**
-8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Note that setting up a Intune connection is a one time process for a specific app in Mobile Center.
+5. **Select Category** of the app from the drop down. 
+6. For **Audience**, provide the distribution list (email-id) for sharing this application.
+7. Click **Connect**.
+8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Creating an Intune store connection is a one time process for a specific app in Mobile Center.
 
 ### Step 2: Publish your application to the Intune cloud Company Portal.
 
