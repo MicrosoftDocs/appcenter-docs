@@ -1,6 +1,6 @@
 ---
-title: Publish to Intune cloud Company Portal
-description: Publish your apps to Intune cloud Coopany Portal
+title: Publish applications to Intune cloud Company Portal
+description: Publish applications to Intune cloud Company Portal
 keywords: distribution store
 author: girish
 ms.author: girish
@@ -40,7 +40,7 @@ For more information on Intune, use this [link](https://docs.microsoft.com/en-us
 
 ### Step 2: Publish your application to the Intune cloud Company Portal.
 
-1. From the **Stores** home page select the Intune Store which you created above. 
+1. From the **Stores** home page select the Intune Store created above. 
 2. Click on **Publish to Store**.
 3. Upload the app package. 
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next**.
