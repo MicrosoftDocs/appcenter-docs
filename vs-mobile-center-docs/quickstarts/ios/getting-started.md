@@ -4,28 +4,27 @@
 title: Getting Started | Sample App Tutorials
 description: Tutorial to onboard an iOS application in Mobile Center
 keywords: mobile-center
-authors: sabrinaj206 sshibu
-ms.author: t-sajia t-shshib
+authors: sabrinaj206
+ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: mobile-center
-ms.custom: samples
-ms.prod: .net-core
+ms.custom:
+ms.prod:
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.devlang: dotnet
+#ms.devlang:
 #ms.reviewer: [ALIAS]
 
 ---
 
+# Getting Started - Sample Swift App and Tutorials
 
-# Getting Started
-
-In this tutorial, you will learn how to set up a sample iOS app with Mobile Center.
+In this tutorial, you will learn how to set up a sample Swift app with Mobile Center for iOS. Note that both Objective-C and Swift are supported.
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
@@ -34,25 +33,25 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
 2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-ios-swift).
-3. Click **Fork** at the top right hand corner of the page.
+3. Click **Fork** at the top right hand corner of the page, and clone the repository.
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
 2. Run the command below to install CocoaPods:
 
-  ```shell
+  ```bash
   sudo gem install cocoapods
   ```
 
-3. We've included the Podfile listing the dependencies in the source code. To install them, run the command below to install dependencies:
+3. The included Podfile lists the dependencies in the source code. To install them, run the command below:
 
-  ```shell
+  ```bash
   pod install
   ```
 
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
 
-  ![Install Cocoapods](images/install_cocoapods_ios.gif)
+  <!--![Install Cocoapods](images/install_cocoapods_ios.gif)-->
 
 ## Sign in to Mobile Center
 1. Open the [Mobile Center portal](https://mobile.azure.com).
@@ -62,8 +61,8 @@ In this tutorial, you will learn how to set up a sample iOS app with Mobile Cent
 1. Click **Add new app**.
 2. Name the app **Sample iOS App**.
 3. Choose **iOS** and **Objective-C / Swift**.
-4. Click **Add new app** at the bottom.    
-  ![Make a new app](images/Make_new_app_ios.gif)
+4. Click **Add new app** at the bottom.  
+  <!--![Make a new app](images/Make_new_app_ios.gif)-->
 
 ## Replace the App Secret
 
@@ -72,19 +71,27 @@ In order for the sample app to send information to Mobile Center, the app secret
 1. Navigate to the **Settings** page in Mobile Center.
 2. Copy the **App Secret** at the top.
 3. Open the **.xcworkspace** from the sample app folder.
-4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.  
+4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
 5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
+
   ![Replace the App Secret](images/Change_app_secret_ios.gif)
 
 ## Codesign the project
 
-This section is optional, but recommended.
+_Codesigning is optional, but recommended._
 
-In order to run tests, distribute the app to users, and send push notifications, the code must be signed. After creating an App ID for the sample app, follow the steps below to sign your code. Read more at the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)
+Codesigning assures users that the app is from a trustworthy developer, and has not been altered by someone else. In Mobile Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+
+When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
+
+  ![Push App Service](images/AppID_push_ios.png)
 
   1. Open **.xcworkspace** from the sample app's folder.
-  2. Go to **General** within the .xcodeproj file and change the information under the **Signing** tabs.
-  3. Edit the **Bundle Identifier** to match the app ID.
-  4. Select **Automatically manage signing** to point to Xcode to a certificate installed on your machine. Also, be sure to select your team below. 
+  2. Go to **General** within the .xcworkspace file.
+  3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
+  4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
   5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
-    ![Codesigning](images/Sign_code_ios.png)
+
+    ![Codesigning](images/Manual_sign_ios.png)
+
+You're all set up to try out a Mobile Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.

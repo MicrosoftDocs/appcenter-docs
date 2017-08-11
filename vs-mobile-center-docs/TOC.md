@@ -53,7 +53,6 @@
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
 
-
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
 ## [iOS](crashes/ios.md)
@@ -126,20 +125,19 @@
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 
-
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# Samples
-## [iOS](samples/iOS/overview.md)
-### [Getting started](samples/iOS/getting-started.md)
-### [Build](samples/iOS/build.md)
-### [Test](samples/iOS/test.md)
-### [Distribute](samples/iOS/distribute.md)
-### [Crashes](samples/iOS/crashes.md)
-### [Analytics](samples/iOS/analytics.md)
-### [Push](samples/iOS/push.md)
+# Quickstarts
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
 ## [Android](samples/android/overview.md)
 ### [Getting Started](samples/android/getting-started.md)
 ### [Build](samples/android/build.md)
