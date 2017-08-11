@@ -33,7 +33,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - NPM 3.10.10
 - Homebrew 1.3.0
 - Homebrew/homebrew-core (git revision 7c05; last commit 2017-08-04)
-- bundler Bundler version 1.15.3
+- Bundler version 1.15.3
 - CoCoaPods 1.3.0
 - Yarn 0.21.3
 
@@ -401,7 +401,7 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | android-23            | Android SDK Platform 23, Revision 3       |
 | android-24            | Android SDK Platform 24, Revision 2       |
 | android-25            | Android SDK Platform 25, Revision 3       |
-| android-26            | Android SDK Platform 26, Revision 1       |
+| android-26            | Android SDK Platform 26, Revision 2       |
 
 ### SDK Build tools
 
