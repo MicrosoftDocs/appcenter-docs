@@ -12,7 +12,7 @@ ms.custom: distribute
 
 ## Intune Cloud Company Portal Distribution 
 
-Publish a new and upgrade an existing iOS and Android applications to your organization's Intune cloud company portal from Mobile Center.
+Publish a new and upgrade an existing iOS and Android applications to your Intune cloud Company Portal from Mobile Center.
 
 ### Pre-requisites
 
@@ -24,7 +24,7 @@ Publish a new and upgrade an existing iOS and Android applications to your organ
 
 For more information on Intune, use this [link](https://docs.microsoft.com/en-us/intune/introduction-intune)
 
-**Once the Intune Cloud has been set up for an organization, Mobile Center makes it simple to publish applications to the Intune Company Portal.**
+**Once a company's Intune cloud has been set up, Mobile Center makes it simple to publish applications to the Intune Company Portal.**
 
 
 ### Step1: Create a store in Mobile Center
