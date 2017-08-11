@@ -1,6 +1,6 @@
 ---
-title: Publish to Intune Cloud COmpany Portal
-description: Publish your apps to Intune Cloud COmpany Portal
+title: Publish to Intune cloud Company Portal
+description: Publish your apps to Intune cloud Coopany Portal
 keywords: distribution store
 author: girish
 ms.author: girish
