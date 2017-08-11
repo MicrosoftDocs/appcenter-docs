@@ -16,13 +16,13 @@ Publish a new and upgrade an existing IOS and Android application to your organi
 
 ### Pre-requisites
 
-* Mobile Center assumes your organization has an Intune cloud subscription. If not, sign up for a trial account here <https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20>.
+* Mobile Center assumes your organization has an Intune cloud subscription. If not, sign up for a [trial account](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 * An Intune cloud admin and tenant account activated.
-* Create a DNS CNAME<https://docs.microsoft.com/en-us/intune/custom-domain-name-configure> to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
-* Manually add users<https://docs.microsoft.com/en-us/intune/users-add> to your Intune subscription via the Office 365 portal<https://www.office.com/signin> or the Azure Intune portal<https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview> and give users additional permissions including global administrator and service administrator permissions.
-* You need to create groups<https://docs.microsoft.com/en-us/intune/groups-add> to organize users or devices by geographic location, department, or hardware characteristics
+* Create a [DNS CNAME](https://docs.microsoft.com/en-us/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
+* Manually [add users](https://docs.microsoft.com/en-us/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
+* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add)to organize users or devices by geographic location, department, or hardware characteristics
 
-For more information on Intune, use this link <https://docs.microsoft.com/en-us/intune/introduction-intune>
+For more information on Intune, use this [link](https://docs.microsoft.com/en-us/intune/introduction-intune)
 
 **Once the Intune Cloud has been set up for an organization, Mobile Center makes it simple to publish applications to the Intune Company Portal.**
 
