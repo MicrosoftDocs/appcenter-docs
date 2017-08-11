@@ -36,7 +36,7 @@ For more information on Intune, use this [link](https://docs.microsoft.com/en-us
 5. **Select Category** of the app from the drop down. 
 6. For **Audience**, provide the distribution list (email-id) for sharing this application.
 7. Click **Connect**.
-8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Creating an Intune store connection is a one time process for a specific app in Mobile Center.
+8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Note that creating an Intune store connection is a one time process for a specific app in Mobile Center.
 
 ### Step 2: Publish your application to the Intune cloud Company Portal.
 
