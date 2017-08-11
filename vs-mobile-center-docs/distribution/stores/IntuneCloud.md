@@ -20,14 +20,14 @@ Publish a new and upgrade existing iOS and Android applications to your Intune c
 * An Intune cloud admin and tenant account activated.
 * Create a [DNS CNAME](https://docs.microsoft.com/en-us/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
 * Manually [add users](https://docs.microsoft.com/en-us/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
-* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add) to organize users or devices by geographic location, department, or hardware characteristics.
+* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add) to organize users or devices by geographic location, department or hardware characteristics.
 
 For more information on Intune, use this [link](https://docs.microsoft.com/en-us/intune/introduction-intune).
 
 **Once Intune cloud has been set up, Mobile Center makes it simple to publish applications to the Intune cloud Company Portal.**
 
 
-### Step1: Create a store in Mobile Center
+### Step1: Create an Intune cloud Company Portal connection in Mobile Center
 
 1. In the Distribution beacon select **Stores** and click on **Add Connection**.  
 2. Select the store type as Intune Company Portal and click **Next**. 
