@@ -10,9 +10,9 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-## Intune Cloud COmpany Portal Distribution 
+## Intune Cloud Company Portal Distribution 
 
-Publish a new and upgrade an existing IOS and Android application to your organizations Intune cloud company portal from Mobile Center.
+Publish a new and upgrade an existing iOS and Android applications to your organization's Intune cloud company portal from Mobile Center.
 
 ### Pre-requisites
 
@@ -34,9 +34,9 @@ For more information on Intune, use this [link](https://docs.microsoft.com/en-us
 3. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
 4. On successful login, you will be asked to enter a **Store name**.
 5. Select a category of the app from the drop down **Select Category**. 
-6. For **Audience**, provide the distribution list (email-id) which you wish to share this application in.
+6. For **Audience**, provide the distribution list (email-id) which you wish to share this application to.
 7. Click **Connect**
-8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided, on the **Stores** home page. Note that setting up a Intune connection is a one time process for a specific app in Mobile Center.
+8. An Intune cloud company portal connection has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Note that setting up a Intune connection is a one time process for a specific app in Mobile Center.
 
 ### Step 2: Publish your application to the Intune cloud Company Portal.
 
