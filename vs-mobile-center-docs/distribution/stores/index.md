@@ -10,10 +10,10 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-### Distribute apps directly to stores from Mobile Center
+## Distribute apps directly to stores from Mobile Center
 
 You can now publish 
 1. An upgrade to an existing app into the Google Play store.
 2. A new app and upgrade of an existing app into the Intune cloud Company Portal.
 
-This is an early version of the store distribution. If you have interest in any specific capabilities , please contact us.
+This is an early version of the store distribution. If you have interest in any specific capabilities, please contact us.
