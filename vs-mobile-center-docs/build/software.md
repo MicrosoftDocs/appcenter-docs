@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/07/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -25,21 +25,21 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 - Python 2.7.10
-- Node.js v6.11.1
+- Node.js v6.11.2
 - Java 1.8.0_131-b11
 
 ### Package Management
 
 - NPM 3.10.10
-- Homebrew 1.2.4
-- Homebrew/homebrew-core (git revision c45d; last commit 2017-07-23)
+- Homebrew 1.3.0
+- Homebrew/homebrew-core (git revision 7c05; last commit 2017-08-04)
 - bundler Bundler version 1.15.3
-- CoCoaPods 1.2.1
+- CoCoaPods 1.3.0
 - Yarn 0.21.3
 
 ### Utilities
 
-- Git 2.13.3
+- Git 2.13.4
 - Git LFS 2.1.1
 - curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
 - GNU Wget 1.19.1 built on darwin16.6.0
@@ -62,8 +62,10 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
+- Mobile Center CLI 0.11.0
 - xctool 0.3.2
 - xcpretty 0.2.8
+- fastlane 2.50.1
 
 ### Installed SDKs
 
@@ -380,9 +382,9 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ### Android SDK Platform-tools
 
-| Package name          | Description                                 |
-|-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 26.0.0 |
+| Package name          | Description                                             |
+|-----------------------|---------------------------------------------------------|
+| platform-tools        | Android SDK Platform-tools, revision 26.0.0 (version 2) |
 
 ### Android Platforms
 
@@ -445,8 +447,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-m2repository         | Google Repository, revision 55           |
-| extra-google-google_play_services | Google Play services, revision 42        |
+| extra-google-m2repository         | Google Repository, revision 57           |
+| extra-google-google_play_services | Google Play services, revision 43        |
 
 ## Xamarin
 
