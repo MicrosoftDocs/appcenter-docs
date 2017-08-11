@@ -1,6 +1,6 @@
 ---
 title: Publish to Google Play store
-description: Publish your apps to Google Play store
+description: Simplify distribution of mobile applications to the Google Play store 
 keywords: distribution store
 author: girish
 ms.author: girish
@@ -10,18 +10,17 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-## Google Play Store Distribution 
+# Google Play Store Distribution 
 
 Publish an upgrade to Google Play from Mobile Center.
 
 ### Pre-requisites
 
 * Google requires the first version of your Google Play application to be published through the Google console.
-* A Google Play Developer account. If you don’t have one, register for a developer account at
-<https://play.google.com/apps/publish/signup>
+* A Google Play Developer account. If you don’t have one, register for a [developer account](https://play.google.com/apps/publish/signup)
 * For Mobile center to create a Google Store connection and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
 
-For more information on how to use the Google Play Console please use the following link: <https://support.google.com/googleplay/android-developer/answer/6112435?hl=en>
+For more information, review [How to use the Google Play console] (https://support.google.com/googleplay/android-developer/answer/6112435?hl=en)
 
 ### Linking your API Project
 
@@ -76,9 +75,9 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 *   Click **Grant Access** to provide the service account the necessary rights to perform actions.
 
-    At this point, you should be able to access the API through the service account. For more information on OAuth 2.0, see [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
+    At this point, you should be able to access the API through the service account. For more information on OAuth 2.0, review [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
-**The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process.**
+[Note] The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process.
 
 ### Step1: Create a store in Mobile Center
 

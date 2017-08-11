@@ -1,8 +1,8 @@
 ---
 title: Publish to consumer and enterprise stores
-description: Publish your apps to consumer and enterprise stores
+description: Distribute your apps to consumer and enterprise stores
 keywords: distribution store
-author: gned
+author: girish
 ms.author: girish
 ms.date: 08/01/2017
 ms.topic: article
@@ -10,7 +10,7 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-## Distribute apps directly to stores from Mobile Center
+# Distribute apps directly to stores from Mobile Center
 
 You can now publish 
 1. An upgrade to an existing app into the Google Play store.

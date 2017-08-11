@@ -1,6 +1,6 @@
 ---
 title: Publish applications to Intune cloud Company Portal
-description: Publish applications to Intune cloud Company Portal
+description: Simplify distribution of mobile applications to the Intune cloud Company Portal
 keywords: distribution store
 author: girish
 ms.author: girish
@@ -10,7 +10,7 @@ ms.service: mobile-center
 ms.custom: distribute
 ---
 
-## Intune Cloud Company Portal Distribution 
+# Intune Cloud Company Portal Distribution 
 
 Publish a new and upgrade existing iOS and Android applications to your Intune cloud Company Portal from Mobile Center.
 
@@ -18,16 +18,16 @@ Publish a new and upgrade existing iOS and Android applications to your Intune c
 
 * Your company has an Intune cloud subscription. If not, you could sign up for a [trial account](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 * An Intune cloud admin and tenant account activated.
-* Create a [DNS CNAME](https://docs.microsoft.com/en-us/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
-* Manually [add users](https://docs.microsoft.com/en-us/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
-* You need to [create groups](https://docs.microsoft.com/en-us/intune/groups-add) to organize users or devices by geographic location, department or hardware characteristics.
+* Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
+* Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
+* You need to [create groups](https://docs.microsoft.com/intune/groups-add) to organize users or devices by geographic location, department or hardware characteristics.
 
-For more information on Intune, click [here](https://docs.microsoft.com/en-us/intune/introduction-intune).
+For more information review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
 
-**Once Intune has been set up, Mobile Center makes it simple to publish applications to the Intune cloud Company Portal.**
+[Note:] Once Intune has been set up, Mobile Center makes it simple to publish applications to the Intune cloud Company Portal.
 
 
-### Step1: Create an Intune cloud Company Portal connection in Mobile Center
+### Step 1: Create an Intune cloud Company Portal connection in Mobile Center
 
 1. In the Distribution beacon select **Stores** and click on **Add Connection**.  
 2. Select the store type as Intune Company Portal and click **Next**. 
