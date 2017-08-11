@@ -17,7 +17,7 @@ Publish an upgrade to Google Play from Mobile Center.
 ### Pre-requisites
 
 * Google requires the first version of your Google Play application to be published through the Google console.
-* A Google Play Developer account. If you don’t have one, register for a [developer account](https://play.google.com/apps/publish/signup)
+* A Google Play Developer account. If you don’t have one, register for a [developer account](https://play.google.com/apps/publish/signup).
 * For Mobile center to create a Google Store connection and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
 
 For more information, review [How to use the Google Play console] (https://support.google.com/googleplay/android-developer/answer/6112435?hl=en)
@@ -73,13 +73,11 @@ You can also create a [service account](https://developers.google.com/accounts/
 
 <img src="../images/image8.png">
 
-*   Click **Grant Access** to provide the service account the necessary rights to perform actions.
+*   Click **Grant Access** to provide the service account the necessary rights to perform actions. You should now be able to access the API through the service account. For more information on OAuth 2.0, review [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
-    At this point, you should be able to access the API through the service account. For more information on OAuth 2.0, review [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
+**Note:** The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process.
 
-[Note] The Google developer account pre-requisites are a one time process. We now move onto the Mobile Center publishing process.
-
-### Step1: Create a store in Mobile Center
+### Step1: Create a Google Play connection in Mobile Center
 
 1. Click on **Stores** under Distribution. 
 2. Click on **Add Connection**.
@@ -87,7 +85,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 4. Click on **Next**.
 5. Upload the **private key JSON** file which was downloaded to your machine while creating the service account. If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google play Developer console as per the pre-requisite section above. 
 6. Once you upload, click **Connect**.
-7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page. Note that setting up a Google Play production connection is a one time process for a specific app in Mobile Center.
+7. A store by the name **GooglePlay-Production** should be visible in the **stores** home page. Setting up this connection is a one time process for a specific app in Mobile Center.
 
 ### Step 2: Publish your APK to the Google Play Store
 
@@ -95,8 +93,7 @@ You can also create a [service account](https://developers.google.com/accounts/
 2. Click on **Publish to Store**.
 3. Upload the app package. A few points to note
     * Application type should be correct and signed with a valid key store before uploading.
-    * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. For more information on Expansion files, check out the link here:   
-    <https://support.google.com/googleplay/android-developer/answer/2481797?hl=en>
+    * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
     * The version of the .apk must be strictly greater than the current version in production.
     * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next**.
