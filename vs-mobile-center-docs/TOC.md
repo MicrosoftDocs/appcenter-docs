@@ -53,6 +53,8 @@
 ## [Release a build](distribution/uploading.md)
 ## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
+## [Stores](distribution/stores/index.md)
+### [Google Play](distribution/stores/google play.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
