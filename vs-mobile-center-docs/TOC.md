@@ -53,7 +53,6 @@
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
 
-
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
 ## [iOS](crashes/ios.md)
@@ -126,7 +125,6 @@
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 
-
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
@@ -140,3 +138,11 @@
 ### [Crashes](quickstarts/ios/crashes.md)
 ### [Analytics](quickstarts/ios/analytics.md)
 ### [Push](quickstarts/ios/push.md)
+## [Android](samples/android/overview.md)
+### [Getting Started](samples/android/getting-started.md)
+### [Build](samples/android/build.md)
+### [Test](samples/android/test.md)
+### [Distribute](samples/android/distribute.md)
+### [Crashes](samples/android/crashes.md)
+### [Analytics](samples/android/analytics.md)
+### [Push](samples/android/push.md)
