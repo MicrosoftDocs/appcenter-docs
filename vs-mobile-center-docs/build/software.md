@@ -30,7 +30,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ### Package Management
 
-- Bundler version 1.15.3
+- Bundler 1.15.3
 - Carthage 0.24.0
 - CocoaPods 1.3.0
 - Homebrew 1.3.0
