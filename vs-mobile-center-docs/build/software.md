@@ -45,14 +45,14 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ### Utilities
 
-- Curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
+- curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
 - Git 2.13.4
 - Git LFS 2.1.1
 - GNU Wget 1.19.1 built on darwin16.6.0
 
 ### Tools
 
-- Fastlane 2.50.1
+- fastlane 2.50.1
 - Mobile Center CLI 0.11.0
 
 ## Xcode
@@ -69,8 +69,8 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
-- Xcpretty 0.2.8
-- Xctool 0.3.2
+- xcpretty 0.2.8
+- xctool 0.3.2
 
 ### Installed SDKs
 
