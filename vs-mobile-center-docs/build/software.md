@@ -457,8 +457,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ## Xamarin
 
-- Visual Studio for Mac: 7.0.1.24
 - Mono Framework MDK: Mono JIT compiler version 5.0.1.1
+- Visual Studio for Mac: 7.0.1.24
 - Xamarin.iOS: 10.10.0.36
 - Xamarin.Android: 7.3.1-2
 - Xamarin.Mac: 3.4.0.36
