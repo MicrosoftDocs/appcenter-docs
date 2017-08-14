@@ -414,7 +414,6 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 |-----------------------|-------------------------------------------|
 | build-tools-17.0.0    | Android SDK Build-tools, Revision 17.0.0  |
 | build-tools-19.1.0    | Android SDK Build-tools, Revision 19.1.0  |
-
 | build-tools-20.0.0    | Android SDK Build-tools, Revision 20.0.0  |
 | build-tools-21.1.2    | Android SDK Build-tools, Revision 21.1.2  |
 | build-tools-22.0.1    | Android SDK Build-tools, Revision 22.0.1  |
@@ -453,8 +452,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-m2repository         | Google Repository, revision 57           |
 | extra-google-google_play_services | Google Play services, revision 43        |
+| extra-google-m2repository         | Google Repository, revision 57           |
 
 ## Xamarin
 
