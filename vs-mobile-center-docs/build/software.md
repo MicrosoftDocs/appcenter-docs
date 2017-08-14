@@ -434,9 +434,9 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | cmake;3.6.4111459     | 3.6.4111459                               |
+| lldb;2.3              | 2.3.3614996                               |
 | ndk-bundle            | 15.1.4119039                              |
 | ProGuard              | 5.3.3                                     |
-| lldb;2.3              | 2.3.3614996                               |
 
 ### Google APIs
 
