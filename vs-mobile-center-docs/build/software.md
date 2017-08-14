@@ -23,30 +23,37 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ### Language and Runtime
 
-- ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
-- Python 2.7.10
-- Node.js v6.11.2
 - Java 1.8.0_131-b11
+- Node.js v6.11.2
+- Python 2.7.10
+- Ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 
 ### Package Management
 
-- NPM 3.10.10
+- Bundler version 1.15.3
+- Carthage 0.24.0
+- CocoaPods 1.3.0
 - Homebrew 1.3.0
 - Homebrew/homebrew-core (git revision 7c05; last commit 2017-08-04)
-- Bundler version 1.15.3
-- CoCoaPods 1.3.0
+- NPM 3.10.10
 - Yarn 0.21.3
-
-### Utilities
-
-- Git 2.13.4
-- Git LFS 2.1.1
-- curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
-- GNU Wget 1.19.1 built on darwin16.6.0
 
 ### Project Manangement
 
 - Apache Maven 3.5.0
+- Gradle 4.0.2
+
+### Utilities
+
+- Curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
+- Git 2.13.4
+- Git LFS 2.1.1
+- GNU Wget 1.19.1 built on darwin16.6.0
+
+### Tools
+
+- Fastlane 2.50.1
+- Mobile Center CLI 0.11.0
 
 ## Xcode
 
@@ -62,10 +69,8 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
-- Mobile Center CLI 0.11.0
-- xctool 0.3.2
-- xcpretty 0.2.8
-- fastlane 2.50.1
+- Xcpretty 0.2.8
+- Xctool 0.3.2
 
 ### Installed SDKs
 
@@ -382,9 +387,9 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ### Android SDK Platform-tools
 
-| Package name          | Description                                             |
-|-----------------------|---------------------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 26.0.0 (version 2) |
+| Package name          | Description                                 |
+|-----------------------|---------------------------------------------|
+| platform-tools        | Android SDK Platform-tools, revision 26.0.0 |
 
 ### Android Platforms
 
@@ -428,9 +433,9 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
-| ndk-bundle            | 15.1.4119039                              |
-| lldb;2.3              | 2.3.3614996                               |
 | cmake;3.6.4111459     | 3.6.4111459                               |
+| lldb;2.3              | 2.3.3614996                               |
+| ndk-bundle            | 15.1.4119039                              |
 | ProGuard              | 5.3.3                                     |
 
 ### Google APIs
@@ -447,8 +452,8 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-m2repository         | Google Repository, revision 57           |
 | extra-google-google_play_services | Google Play services, revision 43        |
+| extra-google-m2repository         | Google Repository, revision 57           |
 
 ## Xamarin
 
@@ -457,5 +462,11 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 - Xamarin.iOS: 10.10.0.36
 - Xamarin.Android: 7.3.1-2
 - Xamarin.Mac: 3.4.0.36
+
+### Package Management 
+
+- NuGet: 4.1.0
+
+### Unit Test Framework
+
 - NUnit: 3.6.1
-- Nuget: 4.1.0
