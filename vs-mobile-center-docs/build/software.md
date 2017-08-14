@@ -33,16 +33,15 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - Bundler version 1.15.3
 - Carthage 0.24.0
 - CocoaPods 1.3.0
-- Gradle 4.0.2
 - Homebrew 1.3.0
 - Homebrew/homebrew-core (git revision 7c05; last commit 2017-08-04)
 - NPM 3.10.10
 - Yarn 0.21.3
 
-### Tools
+### Project Manangement
 
-- Fastlane 2.50.1
-- Mobile Center CLI 0.11.0
+- Apache Maven 3.5.0
+- Gradle 4.0.2
 
 ### Utilities
 
@@ -51,9 +50,10 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - Git LFS 2.1.1
 - GNU Wget 1.19.1 built on darwin16.6.0
 
-### Project Manangement
+### Tools
 
-- Apache Maven 3.5.0
+- Fastlane 2.50.1
+- Mobile Center CLI 0.11.0
 
 ## Xcode
 
@@ -69,8 +69,8 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 - Nomad CLI 2.6.11
 - Nomad CLI IPA ipa 0.14.3
-- xcpretty 0.2.8
-- xctool 0.3.2
+- Xcpretty 0.2.8
+- Xctool 0.3.2
 
 ### Installed SDKs
 
