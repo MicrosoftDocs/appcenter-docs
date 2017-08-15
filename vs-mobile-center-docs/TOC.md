@@ -55,7 +55,7 @@
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Stores](distribution/stores/index.md)
 ### [Google Play](distribution/stores/googleplay.md)
-### [Intune Cloud](distribution/stores/intunecloud.md)
+### [Intune](distribution/stores/intunecloud.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
