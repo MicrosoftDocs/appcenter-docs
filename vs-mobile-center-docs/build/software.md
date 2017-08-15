@@ -17,7 +17,11 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Operating System
 
+Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
+
 - OS X 10.12.6 (16G29)
+
+Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
 ## Installed Software
 
