@@ -38,7 +38,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 - NPM 3.10.10
 - Yarn 0.21.3
 
-### Project Manangement
+### Project Management
 
 - Apache Maven 3.5.0
 - Gradle 4.0.2
