@@ -12,13 +12,13 @@ ms.custom: distribute
 
 # Intune Company Portal Distribution 
 
-Publish new and upgrade existing line of business iOS and Android applications from Mobile Center to the Company Portal on your Intune Cloud instance.
+Publish new and upgrade existing line of business(LOB) iOS and Android applications from Mobile Center into Company Portal on your Intune Cloud instance.
 
 ### Pre-requisites
 
 * Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 * An Intune admin and tenant account activated. 
-* Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize their logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
+* Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
 * Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
 * You need to [create groups](https://docs.microsoft.com/intune/groups-add) to organize users or devices by geographic location, department or hardware characteristics.
 

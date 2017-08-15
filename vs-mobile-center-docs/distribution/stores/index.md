@@ -13,7 +13,7 @@ ms.custom: distribute
 # Distribute apps directly to stores from Mobile Center
 
 You can now publish 
-1. Upgrades to an existing app into the Google Play store.
-2. New and upgrade of existing line of business applications into Intune Company Portal.
+1. upgrades of an existing Play store app into the Google Play store.
+2. new and upgrades of existing line of business applications into the Intune Company Portal.
 
 This is an early version of the store distribution. If you have interest in any specific capabilities, please contact us.
