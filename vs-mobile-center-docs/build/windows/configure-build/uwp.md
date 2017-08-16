@@ -33,13 +33,16 @@ The available build configurations will populate from your solution. By default 
 ### 3.3. Platforms
 Select the platforms your UWP app should be built for.
 
-### 3.4. Build triggers
-By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
+### 3.4. Increment build number
+Enable to automatically increment the version number of your UWP app. The version format is `{Major}.{Minor}.{Build}.{Revision}` we only increase the Build number. The change happens pre build and won't be committed to your repository.
 
-### 3.5. Code signing
+### 3.5. Simulator build
+Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
+
+### 3.6. Code signing
 Uploading your own certificate is optional. In case you don't provide one, Mobile Center will automatically generate a temporary certificate and sign the build for you. Please note that the certificate is unique for each build.
 
-### 3.6. Distribution to a distribution group
+### 3.7. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.

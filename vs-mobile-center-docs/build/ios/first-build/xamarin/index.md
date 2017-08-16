@@ -48,13 +48,16 @@ By default a new build is triggered on every push a developer does to the config
 ### 3.6. Simulator build
 Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
-### 3.7. Code signing
+### 3.7. Increment build number
+Enable to automatically increment the `CFBundleVersion` in the Info.plist of your app. The change happens pre build and won't be committed to your repository.
+
+### 3.8. Code signing
 A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
-### 3.8. Launch your successful build on a real device
+### 3.9. Launch your successful build on a real device
 Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
 
-### 3.9. NuGet restore
+### 3.10. NuGet restore
 If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
 To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
 
@@ -78,7 +81,7 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
 </configuration>
 ```
 
-### 3.10. Distribution to a distribution group
+### 3.11. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be automatically kicked off.
