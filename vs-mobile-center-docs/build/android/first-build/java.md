@@ -30,7 +30,7 @@ By default a new build is triggered on every push a developer does to the config
 ### 3.2. Build variant
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
-### 3.4. Increment build number
+### 3.4. Increment version number
 Enable to automatically increment the version code in the AndroidManifest.xml of your app. The change happens during the actual build and won't be committed to your repository.
 
 ### 3.3. Code signing

@@ -33,7 +33,7 @@ The available projects in your repository will populate. Select the correct proj
 ### 3.3. Mono version
 Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
-### 3.4. Increment build number
+### 3.4. Increment version number
 Enable to automatically increment the version code in the AndroidManifest.xml of your app. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Code signing
