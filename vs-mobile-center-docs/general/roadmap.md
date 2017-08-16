@@ -46,8 +46,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Test service
 
-* Full feature parity with Xamarin Test Cloud
-* Support for Espresso & XCUITest
+* Support for Android O & iOS 11
+* Preview support for UWP testing
 
 
 ## Distribution service
