@@ -76,3 +76,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 * Continuous Export to Blob Storage
 * Export to Application Insights
+* macOS and tvOS SDK support
+
+## Push service
+
+* macOS SDK support
