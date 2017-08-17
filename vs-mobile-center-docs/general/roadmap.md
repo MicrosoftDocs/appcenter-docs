@@ -47,7 +47,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## Test service
 
 * Support for Android O & iOS 11
-* Preview support for UWP testing
+* Preview support for testing of UWP apps
 
 
 ## Distribution service
