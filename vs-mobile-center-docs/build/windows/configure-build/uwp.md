@@ -34,7 +34,7 @@ The available build configurations will populate from your solution. By default 
 Select the platforms your UWP app should be built for.
 
 ### 3.4. Increment version number
-Enable to automatically increment the version number of your UWP app. The version format is `{Major}.{Minor}.{Build}.{Revision}` we only increase the Build number. The change happens pre build and won't be committed to your repository.
+When enabled, the version number of your app automatically increments for each build. The version format is `{Major}.{Minor}.{Build}.{Revision}`, we only increase the Build number. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Simulator build
 Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.

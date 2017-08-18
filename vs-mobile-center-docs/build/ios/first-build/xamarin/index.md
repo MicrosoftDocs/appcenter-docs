@@ -49,7 +49,7 @@ By default a new build is triggered on every push a developer does to the config
 Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
 ### 3.7. Increment build number
-Enable to automatically increment the `CFBundleVersion` in the Info.plist of your app. The change happens pre build and won't be committed to your repository.
+When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 ### 3.8. Code signing
 A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).

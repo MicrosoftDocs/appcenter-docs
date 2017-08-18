@@ -38,7 +38,7 @@ Select the Xcode version to run the build on.
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.4. Increment build number
-Enable to automatically increment the `CFBundleVersion` in the Info.plist of your app. The change happens pre build and won't be committed to your repository.
+When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Tests
 If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest unit tests.

@@ -37,7 +37,7 @@ Select the Xcode version to run the build on.
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred as "Continuous Integration". If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
 ### 3.4. Increment build number
-Enable to automatically increment the `CFBundleVersion` in the Info.plist of your app. The change happens pre build and won't be committed to your repository.
+When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Code signing
 A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).

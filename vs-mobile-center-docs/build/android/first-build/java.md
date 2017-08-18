@@ -31,7 +31,7 @@ By default a new build is triggered on every push a developer does to the config
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
 ### 3.4. Increment version number
-Enable to automatically increment the version code in the AndroidManifest.xml of your app. The change happens during the actual build and won't be committed to your repository.
+When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
 ### 3.3. Code signing
 A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
