@@ -31,6 +31,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Node.js v6.11.2
 - Python 2.7.10
 - Ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
+- Powershell v6.0.0-beta.5
 
 ### Package Management
 
