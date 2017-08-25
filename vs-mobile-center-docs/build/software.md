@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -31,21 +31,22 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Node.js v6.11.2
 - Python 2.7.10
 - Ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
+- PowerShell v6.0.0-beta.5
 
 ### Package Management
 
 - Bundler 1.15.3
 - Carthage 0.24.0
-- CocoaPods 1.3.0
-- Homebrew 1.3.0
-- Homebrew/homebrew-core (git revision 7c05; last commit 2017-08-04)
-- NPM 3.10.10
-- Yarn 0.21.3
+- CocoaPods 1.3.1
+- Homebrew 1.3.1
+- Homebrew/homebrew-core (git revision 5676; last commit 2017-08-16)
+- NPM 5.3.0
+- Yarn 0.27.5
 
 ### Project Management
 
 - Apache Maven 3.5.0
-- Gradle 4.0.2
+- Gradle 4.1
 
 ### Utilities
 
@@ -56,7 +57,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.50.1
+- fastlane 2.53.1
 - Mobile Center CLI 0.11.0
 
 ## Xcode
