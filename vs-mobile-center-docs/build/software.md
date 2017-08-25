@@ -45,7 +45,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Manangement
 
 - Apache Maven 3.5.0
-- Gradle Gradle 4.1
+- Gradle 4.1
 
 ### Utilities
 
