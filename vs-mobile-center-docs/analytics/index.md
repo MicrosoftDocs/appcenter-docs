@@ -46,7 +46,7 @@ Find more details about the [overview page](~/analytics/overview.md) and [answer
 
 ## Events Metrics
 
-The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md) and [UWP](~/sdk/analytics/uwp.md).
+The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), and [UWP](~/sdk/analytics/uwp.md).
 
 ## Log Flow
 
