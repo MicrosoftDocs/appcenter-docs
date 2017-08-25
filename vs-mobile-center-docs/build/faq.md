@@ -40,7 +40,7 @@ There are many reasons why a build cannot be installed on a user's device. A com
 
 [xcode-share-scheme]: ~/build/ios/first-build/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
-## Why is the build in Mobile Center taking longer then my local build?
+## Why is the build in Mobile Center taking longer than my local build?
 There are many reasons why build duration can be higher when using a build service:
 * When running your build locally, many things are cached (e.g. NuGet packages, pods, dependencies); In Mobile Center, we always perform a clean build and re-download everything required.
 * For Xamarin builds, when running your build locally, you are most likely running a simulator build; In Mobile Center you can run a device build (signed), which takes much longer to run.

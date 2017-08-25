@@ -30,11 +30,13 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 	* Ability to create teams with similar permissions
 * Email, Webhooks & Slack notifications 
 * Issue tracker integration
+* macOS and tvOS support for some services
+
 	
 ## SDK & CLI
 
 * Universal Windows Platform (UWP) SDK support for Crashes service
-* macOS and tvOS SDK support for Analytics and Crashes services
+* macOS and tvOS SDK support
 * Full CLI support for all Mobile Center services to enable automation
 
 ## Build service
@@ -46,8 +48,8 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 
 ## Test service
 
-* Full feature parity with Xamarin Test Cloud
-* Support for Espresso & XCUITest
+* Support for Android O & iOS 11
+* Preview support for testing of UWP apps
 
 
 ## Distribution service

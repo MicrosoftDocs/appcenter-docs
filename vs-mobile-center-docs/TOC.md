@@ -54,11 +54,11 @@
 ## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
 ## [Stores](distribution/stores/index.md)
-### [Google Play](distribution/stores/google play.md)
+### [Google Play](distribution/stores/googleplay.md)
+### [Intune](distribution/stores/intune.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush.md)
-
 
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
@@ -132,7 +132,24 @@
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 
-
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
+
+# Quickstarts
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
+## [Android](quickstarts/android/overview.md)
+### [Getting Started](quickstarts/android/getting-started.md)
+### [Build](quickstarts/android/build.md)
+### [Test](quickstarts/android/test.md)
+### [Distribute](quickstarts/android/distribute.md)
+### [Crashes](quickstarts/android/crashes.md)
+### [Analytics](quickstarts/android/analytics.md)
+### [Push](quickstarts/android/push.md)
