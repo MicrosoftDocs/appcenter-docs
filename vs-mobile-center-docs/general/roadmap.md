@@ -77,12 +77,9 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## Analytics service
 
 * Continuous Export to Blob Storage
-* Export to Applications Insights
+* Export to Application Insights
+* macOS and tvOS SDK support
 
+## Push service
 
-## Push Notifications
-
-* React Native:
-    * Custom Properties
-    * Push Callbacks
-
+* macOS SDK support
