@@ -68,7 +68,7 @@
 # [Analytics](analytics/index.md)
 ## [Overview](analytics/overview.md)
 ## [Events Metrics](analytics/event-metrics.md)
-## [Logged Errors using Events](analytics/logged-errors-events.md)
+## [Handled Errors using Events](analytics/handled-errors-events.md)
 ## [Log Flow Page](analytics/log-flow.md)
 ## [FAQ](analytics/faq.md)
 
