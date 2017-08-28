@@ -75,4 +75,6 @@ If you are using Cocoapods, it takes care of the resources automatically. Try re
 
 ## You are seeing messages in the console that indicate that the database could not be opened
 
-Starting with version 0.11.0 of the iOS SDK, Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't be seeing any analytics or crash information in the backend. To fix the issue, the SDK should be updated to version 0.12.0 or later. Keep in mind that Mobile Center should be started prior to initialize any other SQLite libraries.
+Starting with version 0.11.0 of the iOS SDK, Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. To fix the issue,
+1. Update the SDK to version 0.12.0 or later.
+2. Mobile Center should be started prior to initializing any other SQLite libraries.
