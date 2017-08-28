@@ -57,3 +57,10 @@ Below there is an example of an event with one property and several property val
 
 
 The maximum number of properties currently supported in Mobile Center is five. For each property, we will show the counts for the ten event property values with highest count, along with their distribution. Our property values are currently optimized for values of type String.
+
+
+# Breadcrumbs (Events before a crash)
+
+Events can also be used to help you identify the root cause of your crashes. As part of the Mobile Center Crashes service, you can see all the events that happened before a crash for a specific session. 
+
+In order to see the events before a crash, the Analytics SDK needs to be integrated and events need to be defined.
