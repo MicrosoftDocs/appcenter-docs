@@ -63,7 +63,7 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
     ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
-[apple-devices]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW10
+[apple-devices]: ./auto-provisioning.md
 [google-apk]: https://developer.android.com/studio/publish/preparing.html
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
