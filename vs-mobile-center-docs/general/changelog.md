@@ -11,6 +11,33 @@ ms.service: mobile-center
 ---
 # Changelog
 
+### **August, 23 2017**
+
+- **Advanced build customization options**:
+You can now [configure](https://docs.microsoft.com/mobile-center/build/custom/scripts/) your build to run custom scripts at pre-defined stages of the build process. 
+
+- **Use popular command line tools straight from your build**:
+The build VMs come now with fastlane and the Mobile Center CLI pre-installed, so you can take the customization of your builds even a step further.
+
+- **Better UDID management**: 
+Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from Mobile Center.
+
+
+### **July, 2017**
+
+- **Carthage support for your iOS builds**:
+If you use Carthage to manage your dependencies for iOS apps written in Objective C/Swift, Mobile Center will automatically detect this and resolve the dependencies as part of the build process.
+
+- **Faster builds**:
+Xamarin and UWP builds which rely on restoring NuGet packages and iOS builds using Cocoapods are now faster.
+
+- **Public Distribution Groups**:
+You can now mark distribution groups as public. These groups will no longer require an account login to download and install apps. You can publish the URL through any mechanism and allow any number of users to install the app without the need for a Mobile Center account.
+
+- **Distribute your iOS and Android apps to Intune**:
+You can now setup a new distribution store targeting Intune cloud. If you use Intune for rich device and application management you can now streamline the release of new application packages to Intune via Mobile Center.
+
+
 ### **June, 22 2017**
 
 - **Engage with your users using Push Notifications:**
