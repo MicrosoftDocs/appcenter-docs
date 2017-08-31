@@ -71,7 +71,7 @@ MobileCenter.isEnabled();
 
 Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
-You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java datatypes: `String`, `Number`, `boolean` and `Date`. 
+You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
 
 ```java
 CustomProperties properties = new CustomProperties();
@@ -86,6 +86,6 @@ You may remove any custom property by calling the `clear()` API. This will only 
 
 ```java
 CustomProperties properties = new CustomProperties();
-properties.set("color", "blue").set("score", 10).clear("score");
+properties.clear("score");
 MobileCenter.setCustomProperties(properties);
 ```
