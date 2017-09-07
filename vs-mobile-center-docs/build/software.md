@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/25/2017
+ms.date: 09/06/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: mobile-center
@@ -29,17 +29,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Java 1.8.0_131-b11
 - Node.js v6.11.2
+- PowerShell v6.0.0-beta.6
 - Python 2.7.10
 - Ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
-- PowerShell v6.0.0-beta.5
 
 ### Package Management
 
-- Bundler 1.15.3
+- Bundler 1.15.4
 - Carthage 0.24.0
 - CocoaPods 1.3.1
 - Homebrew 1.3.1
-- Homebrew/homebrew-core (git revision 5676; last commit 2017-08-16)
+- Homebrew/homebrew-core (git revision 5fcc; last commit 2017-08-29)
 - NPM 5.3.0
 - Yarn 0.27.5
 
@@ -57,11 +57,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.53.1
+- fastlane 2.54.3
 - Mobile Center CLI 0.11.0
 
 ## Xcode
 
+- Xcode 9 beta 6
 - Xcode 8.3.3
 - Xcode 8.3.2
 - Xcode 8.3.1
@@ -463,13 +464,13 @@ A19C36CC-5965-4DB6-B9EC-A176C3DA1717 (active, disconnected)
 
 ## Xamarin
 
-- Visual Studio for Mac: 7.0.1.24
-- Xamarin.iOS: 10.10.0.36
-- Xamarin.Android: 7.3.1-2
-- Xamarin.Mac: 3.4.0.36
-- Mono Framework MDK: Mono JIT compiler version 5.0.1.1
+- Visual Studio for Mac: 7.1.0.1297
+- Xamarin.iOS: 10.12.0.20
+- Xamarin.Android: 7.4.0-21
+- Xamarin.Mac: 3.6.0.19
+- Mono Framework MDK: Mono JIT compiler version 5.2.0
 
-### Package Management 
+### Package Management
 
 - NuGet: 4.1.0
 
