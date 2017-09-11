@@ -125,6 +125,7 @@
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
+## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Support Center](general/support-center.md)
 
 # [Migration](migration/index.md)
