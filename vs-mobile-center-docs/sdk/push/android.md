@@ -26,7 +26,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.11.2'
+       def mobileCenterSdkVersion = '0.12.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
