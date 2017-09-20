@@ -40,6 +40,11 @@ Double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. 
 
 For more information, refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment).
 
+#### [Optional] Enable silent notifications
+
+Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://developer.xamarin.com/guides/ios/application_fundamentals/backgrounding/ios_backgrounding_techniques/updating_an_application_in_the_background/#Remote_Notifications_iOS_7_and_Greater)). To enable silent notifications double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. This will open the Entitlements.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
+
 ## Add Mobile Center Push to your app
 
 ### 1. Add the Mobile Center Push package
@@ -51,6 +56,11 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 ### 2. Start Mobile Center Push service
 
 [!include[](start-push.md)]
+
+ The `Push.PushNotificationReceived` event may also be called when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
+
+ >[!NOTE]
+ >If silent notifications are enabled and you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
 >[!NOTE]
 >If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
