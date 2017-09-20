@@ -97,4 +97,7 @@ Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service
   },
 ```
 
+### 6.3. Building multiple APKs
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). In general, make sure that `universalApk` is set to `true` for your React Native build configuration.
+
 Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.
