@@ -3,6 +3,8 @@
 # Dashboard
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
+## [Bug Tracker Integration](dashboard/bugtracker/index.md)
+## [Webhooks](dashboard/webhooks/index.md)
 ## [FAQ](dashboard/faq.md)
 
 # [Build](build/index.md)
