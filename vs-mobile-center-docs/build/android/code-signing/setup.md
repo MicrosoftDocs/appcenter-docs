@@ -20,7 +20,7 @@ When Mobile Center builds an Android application with a debug build type, a keys
 If you do not currently have a keystore, you can generate one in Android Studio. Instructions on generating a keystore to sign APKs can be found in [Android Studio's official User Guide](https://developer.android.com/studio/publish/app-signing.html).
 
 ## Setting up Code Signing
-Mobile Center supports three different configurations of setting up code signing for Android apps. To begin, enable the **Sign builds** toggle in the branch configuration.
+Mobile Center supports three different configurations of setting up code signing for Android apps. To begin, enable the **Sign builds** toggle in the branch configuration. Then, depending on your scenario, use the one most suitable of the three options below:
 
 ### 1. Storing everything in the Gradle configuration
 If you would like to specify signing details in the build.gradle file with all credentials and the keystore available in the repository, add all the items needed to your code and repository and leave the revealed checkbox enabled, to mark that your configuration takes care of signing automatically.
