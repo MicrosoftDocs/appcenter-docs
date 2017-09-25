@@ -28,26 +28,24 @@ Next step once you have selected a repository is to select the branch you want t
 To kick off the first build, configure how the Android project should get built.
 
 ### 3.1. Project
-
 Select your project’s `package.json`. Mobile Center will automatically extract information from its associated `build.gradle` file, including including dependencies, build tools version, build types, and product flavors.
 
 ### 3.2. Build variant
-
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
 ### 3.3. Build triggers
-
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-### 3.4. Launch your successful build on a real device
+### 3.4. Increment version number
+When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
+### 3.5. Launch your successful build on a real device
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
-### 3.5. Code signing
-
+### 3.6. Code signing
 A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
-### 3.6. Distribution to a distribution group
+### 3.7. Distribution to a distribution group
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
@@ -98,5 +96,8 @@ Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service
     "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]
   },
 ```
+
+### 6.3. Building multiple APKs
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). In general, make sure that `universalApk` is set to `true` for your React Native build configuration.
 
 Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.

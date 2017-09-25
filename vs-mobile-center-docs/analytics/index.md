@@ -19,7 +19,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md) | Simple steps to integrate the SDK and start understanding your users|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) | Simple steps to integrate the SDK and start understanding your users|
 | [Overview](~/analytics/overview.md) | Key metric about the app usage and users devices|
 | [Custom Events](~/analytics/event-metrics.md)| Count, user count and custom properties analytics of custom events|
 | [Log Flow](~/analytics/log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
@@ -38,13 +38,15 @@ The Overview page will represent your data, albeit minimal, within seconds of yo
 
 [Get Started on Xamarin](~/sdk/getting-started/xamarin.md)
 
+[Get Started on UWP](~/sdk/getting-started/uwp.md)
+
 ## Understand your users
 
 Find more details about the [overview page](~/analytics/overview.md) and [answers to commonly asked questions](~/analytics/faq.md)
 
 ## Events Metrics
 
-The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md) and [Xamarin](~/sdk/analytics/xamarin.md).
+The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), and [UWP](~/sdk/analytics/uwp.md).
 
 ## Log Flow
 

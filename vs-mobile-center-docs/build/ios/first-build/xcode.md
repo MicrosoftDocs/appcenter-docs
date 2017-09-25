@@ -26,7 +26,6 @@ The next step once you have selected a repository is to select the branch you wa
 To kick off the first build, configure how the iOS project should get built.
 
 ### 3.1. Project/workspace and scheme
-
 For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
 
@@ -38,20 +37,23 @@ Select the Xcode version to run the build on.
 ### 3.3. Build triggers
 By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
-### 3.4 Tests
+### 3.4. Increment build number
+When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+
+### 3.5. Tests
 If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest unit tests.
 
-### 3.5. Code signing
+### 3.6. Code signing
 A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
 
-### 3.6. Launch your successful build on a real device
+### 3.7. Launch your successful build on a real device
 Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
-### 3.7. CocoaPods
+### 3.8. CocoaPods
 Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
 If the repository already contains a */Pods* folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform `pod install`.
 
-### 3.8. Distribution to a distribution group**
+### 3.9. Distribution to a distribution group**
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
@@ -95,6 +97,7 @@ Keep in mind that the .dsym files do not change upon code signing the .ipa. If y
 ## Supported versions and requirements
 The following versions of Xcode are currently supported on our VMs.
 
+* Xcode 8.3.3
 * Xcode 8.3.2
 * Xcode 8.3.1
 * Xcode 8.2.1

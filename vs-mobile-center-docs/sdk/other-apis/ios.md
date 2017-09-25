@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for iOS
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/21/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: mobile-center
@@ -83,7 +83,7 @@ MSMobileCenter.isEnabled()
 
 Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
-You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following datatypes: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
+You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
 ```objc
 MSCustomProperties *customProperties = [MSCustomProperties new];
@@ -101,19 +101,15 @@ MSMobileCenter.setCustomProperties(customProperties)
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clearPropertyForKey` API.
+You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
 
 ```objc
 MSCustomProperties *customProperties = [MSCustomProperties new];
-[customProperties setString:@"blue" forKey:@"color"];
-[customProperties setNumber:@(10) forKey:@"score"];
 [customProperties clearPropertyForKey:@"score"];
 [MSMobileCenter setCustomProperties:customProperties];
 ```
 ```swift
 var customProperties = MSCustomProperties()
-customProperties.setSring("blue", forKey: "color")
-customProperties.setNumber(10, forKey: "score")
 customProperties.clearProperty(forKey: "score")
 MSMobileCenter.setCustomProperties(customProperties)
 ```

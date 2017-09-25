@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/30/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: mobile-center
@@ -34,8 +34,14 @@ import MobileCenter from 'mobile-center';
 await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
 ```
 
-The JavaScript `setLogLevel` API can't increase logging for app startup code, before JavaScript is loaded. If you wish to increase logging for app startup, use the native Mobile Center setLogLevel APIs,
-setting for [iOS](ios.md) in **AppDelegate.m** and [Android](android.md) in **MainApplication.java**.
+> [!NOTE]
+> The JavaScript `setLogLevel` API can't increase logging for app startup code, before JavaScript is loaded.
+>
+> If you wish to increase logging for app startup, use the native Mobile Center setLogLevel APIs.
+>
+> In iOS, call `[MSMobileCenter setLogLevel: MSLogLevelVerbose];` before any call to `[RNMobileCenter register];` (or `RNAnalytics` or `RNCrashes` or `RNPush`) in **AppDelegate.m**. You have to add `@import MobileCenter;` if missing in that file.
+>
+> In Android, call `MobileCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
 ## Identify installations
 
@@ -73,22 +79,27 @@ const enabled = await MobileCenter.isEnabled();
 
 ## Use custom properties
 
-Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users and then send push notifications to a specific [audience](~/push/audiences.md).
+Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
-You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be a string, number (integer or floating point), boolean, or date/time (use the JavaScript `Date` class).
+You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Javascript types: `string`, `number`, `boolean` and `Date`. 
 
 ```javascript
-import MobileCenter from 'mobile-center';
+import MobileCenter, {CustomProperties} from 'mobile-center';
 
-let properties = {
-  'color': 'red',
-  'score': 10,
-  'isEnabled': true,
-  'date': new Date()
-};
-
-await MobileCenter.setCustomProperties(properties);
+const properties = new CustomProperties();
+properties.set("color", "blue").set("score", 10);
+MobileCenter.setCustomProperties(properties);
 ```
 
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
+
+You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
+
+```javascript
+import MobileCenter, {CustomProperties} from 'mobile-center';
+
+const properties = new CustomProperties();
+properties.clear("score");
+MobileCenter.setCustomProperties(properties);
+```

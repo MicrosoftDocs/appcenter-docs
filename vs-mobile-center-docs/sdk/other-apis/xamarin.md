@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
@@ -67,7 +67,7 @@ bool enabled = await MobileCenter.IsEnabledAsync();
 
 Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
-You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# datatypes: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
+You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 
 ```csharp
 CustomProperties properties = new CustomProperties();
@@ -78,10 +78,10 @@ MobileCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API.
+You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();
-properties.Set("color", "blue").Set("score", 10).Clear("score");
+properties.Clear("score");
 MobileCenter.SetCustomProperties(properties);
 ```

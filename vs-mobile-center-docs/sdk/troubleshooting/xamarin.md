@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for Xamarin
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 06/26/2017
+ms.date: 07/12/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -64,15 +64,15 @@ Replace `{version}` with the .NET standard version of your project.
 1. Make sure you have integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the `Start()` method call. You can copy the exact `Start()` code by opening the app in the portal and navigating to Getting Started page.
 3. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
-4. You need to restart the app after a crash and Mobile Center Crashes will forward the crash log only after it is restarted. In addition, on both Xamarin.iOS and Xamarin.Android, the SDK will not forward any crash log if you attached a debugger. Make sure the debugger is not attached when you re-open the app.
+4. You need to restart the app after a crash and Mobile Center Crashes will forward the crash log only after it is restarted. In addition, on Xamarin.iOS, the SDK will not save any crash log if you attached a debugger. Make sure the debugger is not attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   ```csharp
   MobileCenter.LogLevel = LogLevel.Verbose;
   ```
 
-6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
-7. Don't use `XA_BROKEN_EXCEPTION_TRANSITIONS=true` environment variable, the SDK is currently incompatible with this flag.
+6. On iOS, don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your iOS app.
+7. If you use Hockey App in Android, make sure it's initialized after Mobile Center.
 8. Make sure your device is online.
 9. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 10. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
@@ -81,3 +81,10 @@ Replace `{version}` with the .NET standard version of your project.
 ## Push setup issues
 
 [!include[](../xamarin-android-push-setup-issues.md)]
+
+## You are seeing messages in the console that indicate that the database could not be opened on iOS
+
+Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. To fix the issue,
+1. Update the SDK to version 0.15.0 or later.
+2. Mobile Center should be started prior to initializing any other SQLite libraries.
+

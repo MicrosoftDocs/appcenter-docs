@@ -4,7 +4,7 @@ description: Troubleshooting the Mobile Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/17/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: mobile-center
@@ -57,8 +57,7 @@ None of these permissions require user approval at runtime, those are all instal
   MobileCenter.setLogLevel(Log.VERBOSE);
   ```
 
-6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
-7. Make sure your device is online.
-8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
-9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-10. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+6. Make sure your device is online.
+7. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
+8. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
+9. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.

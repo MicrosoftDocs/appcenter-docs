@@ -18,7 +18,7 @@ The general idea for setting up a build is similar across all platforms. Firstly
 
 The specific steps can be found on the platform-specific pages:
 * [Objective C / Swift](Xcode.md)
-* [Xamarin](xamarin.md)
+* [Xamarin](xamarin/index.md)
 * [React Native](react-native.md)
 
 While in limited preview, some of the features might not be available to all users. If you have interest in a specific feature, but you cannot find it in the UI, contact us to get access to the latest bits.

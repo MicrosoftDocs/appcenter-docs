@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: guperrot
 ms.author: guperrot
-ms.date: 07/11/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: mobile-center
@@ -26,7 +26,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.11.1'
+       def mobileCenterSdkVersion = '0.12.0'
        compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
     }
     ```
