@@ -23,6 +23,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 | [Overview](~/analytics/overview.md) | Key metric about the app usage and users devices|
 | [Custom Events](~/analytics/event-metrics.md)| Count, user count and custom properties analytics of custom events|
 | [Log Flow](~/analytics/log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
+| [Export to Azure](~/analytics/export.md)| Export your raw data into Azure for extended retention and query capabilites.|
 
 ## Get Started
 
@@ -51,3 +52,7 @@ The documentation for Custom Events can be found at [Events Metrics](~/analytics
 ## Log Flow
 
 See your incoming activity using Log Flow. More details can be found at [Log Flow](~/analytics/log-flow.md).
+
+## Export
+
+Export all your Analytics data into Azure Blob Storage or Application Insights. This will allow you to keep your data as long as you need, as well as further insights into your data with powerful filtering, data visualizations and query capabilities.
