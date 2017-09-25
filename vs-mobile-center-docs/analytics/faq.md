@@ -56,3 +56,7 @@ The maximum number of event properties is currently set to five. If more than fi
 **What is the maximum number of property values that I can send per event?**
 
 You will see the count and distribution for the ten property values with highest count.
+
+**Can I export the raw data?**
+
+Yes. Under app settings, you can export your Analytics raw data into Azure Blob Storage and Application Insights.
