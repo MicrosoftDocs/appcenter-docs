@@ -211,6 +211,11 @@ The in-app updates feature works as follows:
 2. Once you integrate the SDK, build a release version of your app and upload it to Mobile Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - Mobile Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment).
 4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
+
+	* On iOS 8 and 9, the user will be redirected to the Safari app where they will be authenticated, and then redirected to the app.
+	* On iOS 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
+	* On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
+
 5. Once the above step is successful, they should be navigated back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
 
