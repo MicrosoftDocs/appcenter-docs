@@ -88,13 +88,10 @@ If you wish to generate an .ipa file with the artifacts of an unsigned build, yo
 [export-xcode–xcarchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 
-## I didn't change anything but my build started to fail, why is that?
+## My iOS app with CocoaPods fails with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, why is that?
 
-Starting May 17th, all builds of iOS apps written in Objective-C, Swift or React Native run with the build tool [xcodebuild](~/build/ios/xcodebuild.md) intead of xcrun and it is stricter. All builds kicked off after this date will use [xcodebuild](~/build/ios/xcodebuild.md).
-* If you are using CocoaPods, you might encounter the error - `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`
-  This error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used to build your project.
-  You can update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
-* Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
+If you are using Xcode to build your project and having such a failure, this error means that you are using a lib or pod that was built by a newer version of Xcode than the Xcode version currently used in your project. You can either update your build configuration in Mobile Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
+
 
 ## Since I have upgraded my project to Xcode 8 My iOS app fails to run a test, how can I fix this?
 A common reason for tests to fail is where the linker commands fails with an error similar to the following:
