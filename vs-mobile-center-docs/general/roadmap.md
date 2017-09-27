@@ -70,14 +70,11 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## Crashes service
 
 * Display of attachments sent from the Crashes SDK, in the portal
-* Show the events that happened before a crash
 * Missing Symbols experience to know which symbols need to be uploaded
 
 
 ## Analytics service
 
-* Continuous Export to Blob Storage
-* Export to Application Insights
 * macOS and tvOS SDK support
 
 ## Push service
