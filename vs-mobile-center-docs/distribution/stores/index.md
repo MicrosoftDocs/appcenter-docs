@@ -2,8 +2,8 @@
 title: Publish to consumer and enterprise stores
 description: Distribute your apps to consumer and enterprise stores
 keywords: distribution store
-author: girish
-ms.author: girish
+author: pnghub
+ms.author: gned
 ms.date: 08/01/2017
 ms.topic: article
 ms.service: mobile-center
