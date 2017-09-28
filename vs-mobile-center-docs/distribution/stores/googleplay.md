@@ -2,9 +2,9 @@
 title: Publish to Google Play store
 description: Simplify distribution of mobile applications to the Google Play store 
 keywords: distribution store
-author: girish
-ms.author: girish
-ms.date: 08/10/2017
+author: pnghub
+ms.author: gned
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom: distribute
