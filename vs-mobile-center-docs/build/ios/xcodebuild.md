@@ -26,6 +26,6 @@ We use xcodebuild to perform archive and export:
 * Build configuration has changed - with the move to xcodebuild, we changed the build action to `clean archive`, which by default is set to the release          configuration. This may be a different configuration from the `build` action that was used with xcrun.
 * xcarchive file - an unsigned build will no longer produce the .ipa file; this is due to the fact that xcodebuild doesn't allow exporting builds that are not signed. If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
 
-![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
+![Export xcarchive file using xcode][export-xcode-xcarchive-organizer]
 
-[export-xcode–xcarchive-organizer]: ~/build/images/export-xcode–xcarchive-organizer.png "Exporting an xcrchive file using Xcode Archives organizer"
+[export-xcode-xcarchive-organizer]: ~/build/images/export-xcode-xcarchive-organizer.png "Exporting an xcrchive file using Xcode Archives organizer"
