@@ -83,9 +83,9 @@ To restore private NuGet feeds, you include the credentials in the **NuGet.confi
 If you have [resaved your branch settings](~/build/ios/xcodebuild.md), your build is no longer using xcrun to generate an .ipa file; it uses xcodebuild instead. Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed-unsigned builds produce an .xcarchive instead.
 If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
 
-![Export xcarchive file using xcode][export-xcode–xcarchive-organizer]
+![Export xcarchive file using xcode][export-xcode-xcarchive-organizer]
 
-[export-xcode–xcarchive-organizer]: images/export-xcode–xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
+[export-xcode-xcarchive-organizer]: images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 
 ## I didn't change anything but my build started to fail, why is that?
