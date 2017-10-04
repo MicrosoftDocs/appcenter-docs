@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for iOS
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/27/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: mobile-center
@@ -77,6 +77,17 @@ You can also check if Mobile Center is enabled or not.
 ```
 ```swift
 MSMobileCenter.isEnabled()
+```
+
+## Check Mobile Center SDK version at runtime
+
+You can get the version of Mobile Center SDK that you are currently using.
+
+```objc
+[MSMobileCenter sdkVersion];
+```
+```swift
+MSMobileCenter.sdkVersion()
 ```
 
 ## Use custom properties

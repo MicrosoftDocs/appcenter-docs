@@ -84,7 +84,5 @@ Replace `{version}` with the .NET standard version of your project.
 
 ## You are seeing messages in the console that indicate that the database could not be opened on iOS
 
-Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. To fix the issue,
-1. Update the SDK to version 0.15.0 or later.
-2. Mobile Center should be started prior to initializing any other SQLite libraries.
+Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.16.0 or later.
 
