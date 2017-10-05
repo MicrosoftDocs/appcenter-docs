@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 08/02/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: mobile-center
@@ -75,6 +75,14 @@ You can also check if Mobile Center is enabled or not.
 
 ```javascript
 const enabled = await MobileCenter.isEnabled();
+```
+
+## Check Mobile Center SDK version at runtime
+ 
+You can get the version of Mobile Center SDK that you are currently using.
+ 
+```javascript
+MobileCenter.getSdkVersion();
 ```
 
 ## Use custom properties
