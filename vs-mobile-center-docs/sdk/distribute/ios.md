@@ -34,6 +34,9 @@ Please follow the [Get started](~/sdk/getting-started/ios.md) section if you hav
 
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
 
+> [!NOTE]
+> In-app updates is currently not working on iOS 8 devices.
+
 #### Integration via Cocoapods
 
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
