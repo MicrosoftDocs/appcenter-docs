@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 06/30/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: mobile-center
@@ -93,7 +93,7 @@ Note that when the app calls `register` for the first time after being installed
 
 If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
 
-## Customize your usage of Mobile Center Push
+## Intercept push notifications
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
 

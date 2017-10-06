@@ -4,8 +4,9 @@
 title: Mobile Center Push for Xamarin.Android Apps
 description: Integrating Mobile Center Push into Xamarin.Android applications
 keywords: sdk, push
-author: achocron
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: mobile-center
@@ -25,9 +26,7 @@ ms.tgt_pltfrm: xamarin.android
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
-
-Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications. Also, Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
+[!include[](introduction-android.md)]
 
 ## Prerequisite - Add Firebase to your app
 
@@ -119,7 +118,7 @@ Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into
 
 ### Additional setup
 
-If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)
@@ -131,7 +130,20 @@ If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` o
 
 ### Subscribe to the push event
 
-[!include[](push-callbacks.md)]
+[!include[](dotnet-push-event-intro.md)]
+
+> [!NOTE]
+> Firebase does not generate notifications when the push is received in foreground.
+
+> [!NOTE]
+> If the push is received in background, the event is **NOT** triggered at receive time.
+> The event is triggered when you click on the notification.
+
+> [!NOTE]
+> The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
+> **Title** and **message** are only available in **foreground** pushes.
+
+[!include[](dotnet-push-event-example.md)]
 
 ## Existing Firebase Analytics users
 

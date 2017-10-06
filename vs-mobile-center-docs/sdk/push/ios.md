@@ -2,9 +2,9 @@
 title: Mobile Center Push for iOS
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: jaelim
-ms.author: jaelim
-ms.date: 06/20/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: mobile-center
@@ -101,7 +101,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
 
-## Customize your usage of Mobile Center Push
+## Intercept push notifications
 
 You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
 
