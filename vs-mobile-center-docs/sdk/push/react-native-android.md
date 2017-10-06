@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/05/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: mobile-center
@@ -33,11 +33,20 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 
 Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
 
-## Customize your usage of Mobile Center Push 
+## Intercept push notifications
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
-Firebase does not generate notifications when the push is received in foreground, so you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+> [!NOTE]
+> Firebase does not generate notifications when the push is received in foreground.
+
+> [!NOTE]
+> If the push is received in background, the event is **NOT** triggered at receive time.
+> The event is triggered when you click on the notification.
+
+> [!NOTE]
+> The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
+> **title** and message are only available in **foreground** pushes.
 
 [!include[](react-native-listener.md)]
 

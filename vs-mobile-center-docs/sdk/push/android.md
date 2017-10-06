@@ -2,9 +2,9 @@
 title: Mobile Center Push for Android
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: guperrot
-ms.author: guperrot
-ms.date: 08/09/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: mobile-center
@@ -52,11 +52,20 @@ import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.push.Push;
 ```
 
-## Customize your usage of Mobile Center Push 
+## Intercept push notifications
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
-Firebase does not generate notifications when the push is received in foreground, so you can use the callback to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+> [!NOTE]
+> Firebase does not generate notifications when the push is received in foreground.
+
+> [!NOTE]
+> If the push is received in background, the event is **NOT** triggered at receive time.
+> The event is triggered when you click on the notification.
+
+> [!NOTE]
+> The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
+> **Title** and **message** are only available in **foreground** pushes.
 
 You need to register the listener before calling `MobileCenter.start` as shown in the following example:
 
@@ -65,7 +74,7 @@ Push.setListener(new MyPushListener());
 MobileCenter.start(...);
 ```
 
-If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
 
 ```java
     @Override

@@ -2,9 +2,9 @@
 title: Mobile Center Push for Universal Windows Platform
 description: Using Push in Mobile Center
 keywords: sdk, push
-author: dhei
-ms.author: dihei
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: mobile-center
@@ -25,6 +25,9 @@ ms.tgt_pltfrm: UWP
 > * [React Native iOS](react-native-ios.md)
 
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal and relies on [Windows Notification Services](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
+
+> [!NOTE]
+> A toast is displayed only if the application is in background at the moment the Push is received.
 
 ## Prerequisite - Register your app for Windows Notification Services (WNS)
 
@@ -92,7 +95,20 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ### Subscribe to the push event
 
-[!include[](push-callbacks.md)]
+[!include[](dotnet-push-event-intro.md)]
+
+> [!NOTE]
+> No toast is shown when the push is received in foreground.
+
+> [!NOTE]
+> If the push is received in background, the event is **NOT** triggered at receive time.
+> The event is triggered when you click on the notification.
+
+> [!NOTE]
+> UWP toasts do **NOT** expose **title** and **message** to the background notification click callback.
+> **Title** and **message** are only available in **foreground** pushes.
+
+[!include[](dotnet-push-event-example.md)]
 
 ## Enable or disable Mobile Center Push at runtime
 

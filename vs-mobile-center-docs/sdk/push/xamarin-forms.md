@@ -4,8 +4,9 @@
 title: Mobile Center Push for Xamarin.Forms Apps
 description: Integrating Mobile Center Push into Xamarin.Forms applications
 keywords: sdk, push
-author: achocron
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: mobile-center
@@ -57,7 +58,7 @@ You may have the following known issues while building on Android:
 
 ## Intercept push notifications
 
-Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in iOS and UWP projects.
+Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in plaform specific projects.
 
 ### iOS additional steps
 
@@ -83,7 +84,7 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 
 ### Android additional steps
 
-If your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `OnNewIntent` method:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `OnNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)
@@ -120,9 +121,31 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ### Subscribe to the push event
 
-[!include[](push-callbacks.md)]
+[!include[](dotnet-push-event-intro.md)]
+
+The behavior of the event depends on:
+
+* The platform (iOS vs Android vs UWP).
+* Whether the push is received while application is in foreground or background.
+
+For all platforms, when the push is received in background, the event is not 
+fired right away, the user will first see an Android system notification, an
+iOS alert or a UWP toast.
+
+The event is **fired only by clicking the notification** in that case.
+
+When the push is received in **foreground**, the event is fired right away but
+**no notification** is shown to user.
+
+> [!NOTE]
+> When the push is clicked from background on **Android and UWP**, the event **does not** have **title**
+and **message** in the event arguments, only iOS expose those fields for all events.
+
+> [!NOTE]
+> On iOS only, if silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+
+[!include[](dotnet-push-event-example.md)]
 
 ## Enable or disable Push at runtime
 
 [!include[](enable-or-disable.md)]
-
