@@ -31,6 +31,9 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
+> [!NOTE]
+> In-app updates is currently not working on iOS 8 devices.
+
 #### Visual Studio for Mac or Xamarin Studio
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.

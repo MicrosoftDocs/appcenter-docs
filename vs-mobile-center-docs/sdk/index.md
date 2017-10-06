@@ -2,9 +2,9 @@
 title: Mobile Center SDK Documentation
 description: Using the Mobile Center SDK
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 04/13/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/06/2017
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: mobile-center
@@ -41,7 +41,8 @@ Mobile Center Push enables you to send push notifications to users of your app f
 * [Mobile Center SDK for Android](getting-started/android.md)
 * [Mobile Center SDK for iOS](getting-started/ios.md)
 * [Mobile Center SDK for React Native](getting-started/react-native.md)
-* [Mobile Center SDK for Xamarin and UWP](getting-started/xamarin.md)
+* [Mobile Center SDK for Xamarin](getting-started/xamarin.md)
+* [Mobile Center SDK for UWP](getting-started/uwp.md)
 
 ## Requirements
 
@@ -86,7 +87,7 @@ Service    |  RN version   | iOS Version              | Android Version
 Analytics  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 Crashes    | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 Distribute | not available | not available            | not available
-Push       | not available | not available            | not available
+Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
 
