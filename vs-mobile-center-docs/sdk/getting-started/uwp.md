@@ -2,9 +2,9 @@
 title: Get Started with UWP
 description: Get started
 keywords: sdk
-author: dhei
-ms.author: dihei
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/05/2017
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: mobile-center
@@ -90,7 +90,7 @@ using Microsoft.Azure.Mobile.Analytics;
 
 ### 4.2 Add the `Start()` method
 
-Add the following call to your application's `OnLaunched` method:
+Add the following call to your application's **constructor**:
 
 ```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics));
