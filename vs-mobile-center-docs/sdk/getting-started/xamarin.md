@@ -2,9 +2,9 @@
 title: Get Started with Xamarin
 description: Get started
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/05/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -134,7 +134,7 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 ##### 4.2.3 Xamarin.Forms
 
-To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the **constructor**.
 
 ```csharp
 MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
