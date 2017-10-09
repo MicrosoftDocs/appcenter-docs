@@ -1,7 +1,7 @@
 ---
 title: "Migrating HockeyApp Analytics"
-author: ianjanicki
-ms.author: iajanji
+author: joemellin
+ms.author: joemel
 ms.date: 04/10/2017
 ms.topic: article
 ms.assetid: E9FEEBDC-73DA-458A-B2AA-FE5A1FA20D7A
@@ -9,11 +9,11 @@ ms.service: mobile-center
 ---
 
 # HockeyApp Analytics in Mobile Center
-  
+
 Mobile Center provides an Analytics tool that will allow you to get insights about your users and actions they are taking in your app. By taking advantage of our side by side experience, you will be able to see all your Analytics data not only in HockeyApp, but also in Mobile Center.
-  
+
 ## What's new about Analytics in Mobile Center
-  
+
 Mobile Center Analytics provides an improved experience with respect to HockeyApp. Apart from the Analytics information that you are already getting in HockeyApp, you will also get information about:
 - Session Duration
 - Devices
