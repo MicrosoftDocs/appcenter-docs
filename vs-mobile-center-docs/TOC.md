@@ -5,6 +5,7 @@
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [Bug Tracker Integration](dashboard/bugtracker/index.md)
 ## [Webhooks](dashboard/webhooks/index.md)
+## [Slack App](dashboard/slack/index.md)
 ## [FAQ](dashboard/faq.md)
 
 # [Build](build/index.md)
