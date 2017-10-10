@@ -2,8 +2,8 @@
 title: Starting a Test Run
 description: How to start a test run in Test Cloud
 keywords: test cloud
-author: jraczak
-ms.author: jurac
+author: glennwester
+ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: fccaea20-b7ca-45d2-b111-46c23ff1832d

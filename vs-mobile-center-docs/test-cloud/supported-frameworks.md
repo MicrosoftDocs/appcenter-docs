@@ -2,8 +2,8 @@
 title: Supported Test Frameworks
 description: List of test frameworks supported by Mobile Center
 keywords: test cloud
-author: jraczak
-ms.author: jurac
+author: glennwester
+ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57

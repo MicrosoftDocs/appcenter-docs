@@ -2,8 +2,8 @@
 title: Test Cloud Core Concepts
 description: Glossary of terms used in Test Cloud
 keywords: test cloud
-author: jraczak
-ms.author: jurac
+author: glennwester
+ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 5ed07ad2-ed36-4812-adbb-fc1cbf7931df

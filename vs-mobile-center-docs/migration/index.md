@@ -1,7 +1,7 @@
 ---
 title: "Migration"
-author: ianjanicki
-ms.author: iajani
+author: joemellin
+ms.author: joemel
 ms.date: 04/10/2017
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C

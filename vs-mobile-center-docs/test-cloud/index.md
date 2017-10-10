@@ -2,8 +2,8 @@
 title: Mobile Center Test
 description: Key features of Mobile Center Test Cloud
 keywords: test cloud
-author: jraczak
-ms.author: jurac
+author: glennwester
+ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
