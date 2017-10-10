@@ -1,23 +1,5 @@
 # [Mobile Center Overview](index.yml)
 
-# Quickstart
-## [iOS](quickstarts/ios/overview.md)
-### [Getting started](quickstarts/ios/getting-started.md)
-### [Build](quickstarts/ios/build.md)
-### [Test](quickstarts/ios/test.md)
-### [Distribute](quickstarts/ios/distribute.md)
-### [Crashes](quickstarts/ios/crashes.md)
-### [Analytics](quickstarts/ios/analytics.md)
-### [Push](quickstarts/ios/push.md)
-## [Android](quickstarts/android/overview.md)
-### [Getting Started](quickstarts/android/getting-started.md)
-### [Build](quickstarts/android/build.md)
-### [Test](quickstarts/android/test.md)
-### [Distribute](quickstarts/android/distribute.md)
-### [Crashes](quickstarts/android/crashes.md)
-### [Analytics](quickstarts/android/analytics.md)
-### [Push](quickstarts/android/push.md)
-
 # Dashboard
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
@@ -157,3 +139,21 @@
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
+
+# Quickstarts
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
+## [Android](quickstarts/android/overview.md)
+### [Getting Started](quickstarts/android/getting-started.md)
+### [Build](quickstarts/android/build.md)
+### [Test](quickstarts/android/test.md)
+### [Distribute](quickstarts/android/distribute.md)
+### [Crashes](quickstarts/android/crashes.md)
+### [Analytics](quickstarts/android/analytics.md)
+### [Push](quickstarts/android/push.md)
