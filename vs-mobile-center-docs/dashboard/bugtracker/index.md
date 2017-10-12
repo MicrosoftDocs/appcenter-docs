@@ -28,7 +28,7 @@ Mobile Center has bug tracker integration for the crashes service. Users can be 
 		1. Login with your VSTS credentials and click **Accept** when prompted on app authorization.
 		1. Select which VSTS projects to integrate the bug tracker with and click **Next**.
 		1. Under **Add Bug Tracker**, fill in fields for **Area** and **Default Payload**, and click **add**:
-			- Default payload is an optional field to fill in for use in work items. For example, `[{"field" : "System.IterationPath", "value": "Iteration 1"}, {"field" : "System.AssignedTo", "value": "Fabrikam"}]`. Please see here for all fields with [work item types API](https://docs.microsoft.com/vsts/integrate/#Getaworkitemtype).
+			- Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please see here for all fields with [work item types API](https://docs.microsoft.com/vsts/integrate/#Getaworkitemtype).
 
 	  			![How to add a bug tracker for VSTS](media/addBugTrackerVSTS.gif)
 
