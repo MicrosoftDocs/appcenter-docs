@@ -28,19 +28,18 @@ The main goal of webhooks is to communicate important information from Mobile Ce
 
 1. In your app, select **Settings**, and click the **edit** button.
 
-1. <a name="step3"></a>Select the **New Webhook** button and enter:
+1. <a name="step3"></a>Select the **New Webhook** button and enter: 
 
-    1. Webhook name
-    1. Webhook url
-
-
-    	You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft 		Teams). In Mobile Center, click on the **radio buttons** to decide what events will trigger the webhook alerts. Once these 		events happen, alerts from Mobile Center will be posted into your integrated applications.
-
-  		![How to create a new webhook](media/createANewWebhook.gif)
+    - Webhook name
+    - Webhook url
+    
+    You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft Teams). In Mobile Center, click on the **radio buttons** to decide what events will trigger the webhook alerts. Once these events happen, alerts from Mobile Center will be posted into your integrated applications.
+    
+    ![How to create a new webhook](media/createANewWebhook.gif)
 
 1. Done! Your webhook is now created and enabled. You may create multiple webhooks by repeating [step 3](#step3).
 
-1. Toggle to the extreme right hand of the webhook to **test, disable or delete** the webhook.
+1. Toggle to the extreme right hand of the webhook to **test, disable or delete** the webhook.  
 
   - **test** will send a test alert to your connected application.
   - **disable** keeps the webhook inactive but present in your dashboard.
