@@ -26,7 +26,10 @@ ms.tgt_pltfrm: xamarin.android
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 
-[!include[](introduction-android.md)]
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+
+> [!NOTE]
+> Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
 
 ## Prerequisite - Add Firebase to your app
 
