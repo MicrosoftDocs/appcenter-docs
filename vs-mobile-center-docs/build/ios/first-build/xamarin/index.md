@@ -37,7 +37,7 @@ In order to build from a **.csproj/.fsproj** file all the referenced projects (e
 Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
 ### 3.3. Mono version
-Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
+Mobile Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono you will see the Xamarin.iOS SDK version which is bundled with it. For more information about Xamarin SDK version updates, you can read posts in [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Xcode Version
 Current version of Xamarin requires Xcode 8.0 or higher.
