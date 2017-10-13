@@ -31,7 +31,7 @@ By default, a new build is triggered on every push a developer does to the confi
 The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
 
 ### 3.3. Mono version
-Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
+Mobile Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Increment version number
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
