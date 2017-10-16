@@ -68,6 +68,20 @@ The prerequisite for using this guide is to have an Apple production certificate
 
 [export-certificate]: images/ios-keychain-certificates.png
 
+## Known errors
+
+### Profile not found
+When logging into Apple through Mobile Center, the provisioning profile(s) included in your application are checked against those in your developer account. If any profile used in the binary is not found in your Apple Developer account, Mobile Center will not be able to re-sign your application. To resolve this, ensure that your Apple Developer account contains all of the provisioning profiles used in your application; you can check application profiles in the **General** tab of Xcode project settings, or in the **[iOS bundle signing options](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/#iOS_Bundle_Signing_Tab)** in Visual Studio for Mac.
+
+### Team not found
+When logging into Apple through Mobile Center, the team included in your application are checked against those in your developer account. If any team used in the binary cannot be found in the used Apple developer account, Mobile Center will not be able to re-sign your application. To resolve this, ensure that your Apple developer account contains the team used in your application; you can check the applications team in "General" tab of Xcode project settings or the **[iOS bundle signing options](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/#iOS_Bundle_Signing_Tab)** in Visual Studio for Mac.
+
+### Updated license agreement
+Apple periodically updates its license agreement, and for continued Developer portal use, it is necessary to read and agree with the updated license. The fix is to visit https://developer.apple.com/, login, and follow the instructions on the screen. Mobile Center is unable to help with content in the license or the flow for the license agreement.
+
+### Multifactor authentication
+Apple supports multifactor authentication (MFA) for its developer portal and soon so will Mobile Center. For now, the only option is to disable MFA for your Apple ID. Visit appleid.apple.com for details.
+
 ## Feedback
 Contact us with questions or suggestions about device registration, by commenting on below or through Mobile Center by clicking on the round blue chat button in the lower right-hand side of the screen.
 
