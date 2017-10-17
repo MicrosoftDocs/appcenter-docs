@@ -94,6 +94,7 @@ The following steps explain how to set up the connection between Mobile Center a
 3. Upload the app package. A few points to note
     * Application type should be correct and signed with a valid key store before uploading.
     * Google Play store supports a maximum of 100 MB of application package. If the application exceeds 100 Mb, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don’t support Expansion files in Mobile Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
+    * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
     * The version of the .apk must be strictly greater than the current version in production.
     * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
     * Google API’s currently do not support promotion of an app from one track to another. Hence Mobile Center does not support promoting a version from alpha to beta or beta to production.
