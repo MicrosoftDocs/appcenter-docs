@@ -39,11 +39,14 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * macOS and tvOS SDK support
 * Full CLI support for all Mobile Center services to enable automation
 
+
 ## Build service
 
 * Support for customizing your build definitions: secret variables
 * Improved code signing options for iOS apps, including automatic signing
+* Improved Xamarin iOS Mono/SDK mapping and Xcode version handling
 * Ability to automate running UI tests in the Test service after each successful build
+* Support to build macOS apps
 
 
 ## Test service
@@ -76,6 +79,7 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 ## Analytics service
 
 * macOS and tvOS SDK support
+
 
 ## Push service
 
