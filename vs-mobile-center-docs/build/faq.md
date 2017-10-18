@@ -4,7 +4,7 @@ description: Code signing apps built with Mobile Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 07/21/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: mobile-center
@@ -124,3 +124,12 @@ When you create Xamarin.iOS project in Visual Studio the default configuration f
 ![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
 
 [xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
+
+## My Xamarin build fails with error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly, what can be done?
+
+Looks like your solution contains PCL or older .NET Standard projects together with newer .NET Standard projects. That means they may contain both `PackageTargetFallback` and `AssetTargetFallback` references in .csproj files. Your build logs will also contain messages like this:
+```
+error MSB4018: NuGet.Commands.RestoreCommandException: PackageTargetFallback and AssetTargetFallback cannot be used together. Remove PackageTargetFallback(deprecated) references from the project environment.
+```
+
+To resolve this issue, either remove PackageTargetFallback (tends to be in older PCL .csproj files) or rename it to AssetTargetFallback? The solution is also described in [this StackOverflow thread](https://stackoverflow.com/questions/45569378/upgrading-to-net-core-2-0-packagetargetfallback-and-assettargetfallback-cannot).
