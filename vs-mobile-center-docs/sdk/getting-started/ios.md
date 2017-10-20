@@ -64,6 +64,11 @@ The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](ht
 
 2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
 
+
+> [!NOTE]
+> If you see an error like ```[!] Unable to find a specification for `MobileCenter` ```
+>  while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
+
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
 
 ### 3.2 Integration by copying the binaries into your project
