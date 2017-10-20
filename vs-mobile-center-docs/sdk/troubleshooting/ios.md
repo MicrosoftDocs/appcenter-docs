@@ -25,7 +25,7 @@ dev_langs:
 ## Issues during setup
 
 1. In the console, look for an Assert log with the message - "Mobile Center SDK configured successfully". This verifies that the SDK is configured successfully.
-2. If you are using Cocoapods to integrate Mobile Center in your iOS app and run into an error with the message - `CocoaPods - Unable to find a specification for MobileCenter`, follow this [link](http://stackoverflow.com/questions/40785259/cocoapods-unable-to-find-a-specification-for-mobilecenter) to fix the issue.
+2. If you are using Cocoapods to integrate Mobile Center in your iOS app and run into an error with the message - `CocoaPods - Unable to find a specification for MobileCenter`, run `pod repo update` to update your local Cocoapods repository and then run `pod install` again.
 3. If you are manually integrating the SDK binaries, make sure you have modules enabled for your project.
 
 ## Analytics data doesn't show up in the portal.
