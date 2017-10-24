@@ -4,12 +4,41 @@ description: History of updates to the product
 keywords: update,history
 author: joemellin
 ms.author: joemel
-ms.date: 06/22/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: mobile-center
 ---
 # Changelog
+
+### **October 20, 2017**
+- **Improved Xamarin iOS Mono/SDK mapping and Xcode version handling**:
+We have improved the automatic mapping between your iOS SDK versions with Mono and XCode to ensure a smoother and more consistent build experience out of the box.
+
+- **Support for Android Oreo & iOS 11**:
+We have added support to allow you build and test apps targeting iOS 11 and Android Oreo.
+
+- **Named Device Sets in Test**:
+You are now able to save device/OS combinations into named device sets to allow for reuse in future test runs.
+
+- **Export your data to Blob Storage and Application Insights**:
+You are now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
+
+- **Crash Results now include Events leading up to a Crash (Breadcrumbs)**:
+Events leading up to a crash are now listed, helping you diagnose issues more easily.
+
+- **Added Webhooks and VSTS bug tracker integration**:
+Notify 3rd party applications and VSTS when events like crash groups are created or a new version of your app is released. Check out our docs for more details for configuring [Webhooks](~/dashboard/webhooks/index.md) and [VSTS integration](~/dashboard/bugtracker/index.md)
+
+- **Published Mobile Center Slack Bot**:
+Get Mobile Center notifications and updates directly in your existing Slack channels.
+
+- **Display of attachments sent from Crashes SDK**:
+Attachments from the a crash can now be viewed within the portal
+
+- **Missing Symbols experience improved**:
+Know of which symbols need to be uploaded to get symbolicated crash reports
+
 
 ### **August, 23 2017**
 
