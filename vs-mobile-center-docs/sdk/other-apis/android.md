@@ -2,9 +2,9 @@
 title: Other Android APIs
 description: Other APIs in the Mobile Center SDK for Android
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/23/2017
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: mobile-center
@@ -66,6 +66,14 @@ MobileCenter.isEnabled();
 ```
 
 [!include[](../android-see-async.md)]
+
+## Check Mobile Center SDK version at runtime
+
+You can get the version of Mobile Center SDK that you are currently using.
+
+```java
+MobileCenter.getSdkVersion();
+```
 
 ## Use custom properties
 
