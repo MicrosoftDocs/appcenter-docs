@@ -4,7 +4,7 @@ description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: joemellin
 ms.author: joemel
-ms.date: 08/10/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: mobile-center
@@ -14,45 +14,30 @@ ms.service: mobile-center
 
 The list below presents the tentative roadmap for Mobile Center for the next 3-6 months.
 
-## New Mobile Center services
-
-* [CodePush](https://microsoft.github.io/code-push/) 
-	* Fast track distribution for React Native apps
-	* Users, Apps, Deployments and Releases from existing CodePush apps available in Mobile Center dashboard
-
-
 ## General
 
 * Apps & data from HockeyApp visible in Mobile Center
 * Apps & data from Xamarin Test Cloud visible in Mobile Center
-* Organizations/Teams setup
-	* Ability to create organizations
-	* Ability to create teams with similar permissions
-* Email, Webhooks & Slack notifications 
-* Issue tracker integration
 * macOS and tvOS support for some services
 
 	
 ## SDK & CLI
 
-* Universal Windows Platform (UWP) SDK support for Crashes service
-* macOS and tvOS SDK support
-* Full CLI support for all Mobile Center services to enable automation
+* Universal Windows Platform (UWP) SDK support for Crashes service.
+* macOS and tvOS SDK support.
+* Full CLI support for all Mobile Center services to enable automation.
 
 
 ## Build service
 
-* Support for customizing your build definitions: secret variables
-* Improved code signing options for iOS apps, including automatic signing
-* Improved Xamarin iOS Mono/SDK mapping and Xcode version handling
-* Ability to automate running UI tests in the Test service after each successful build
-* Support to build macOS apps
+* Support for customizing your build definitions: secret variables.
+* Support to build macOS apps.
 
 
 ## Test service
 
-* Support for Android O & iOS 11
-* Preview support for testing of UWP apps
+* Preview support for testing of UWP apps.
+* iPhone X support.
 
 
 ## Distribution service
@@ -61,26 +46,24 @@ The list below presents the tentative roadmap for Mobile Center for the next 3-6
 * Support for release to Apple Store and Testflight. You can create new stores that target release to the production Apple Store or beta TestFlight service.
 * Support for release to Windows Store. You can create new stores that target release to the production Windows Store.
 * Native Apps. You will be able to view and install apps via a dedicated native app experience.
-* Markdown release notes. You will be able to write release notes that include markdown styling. 
+* Automatic iOS device provisioning.
 
 
 ## CodePush service
 
-* Dashboard support for Apache Cordova 
-* Bundle signing 
+* Dashboard support for Apache Cordova.
 
 
 ## Crashes service
 
-* Display of attachments sent from the Crashes SDK, in the portal
-* Missing Symbols experience to know which symbols need to be uploaded
+* Handled exceptions.
 
 
 ## Analytics service
 
-* macOS and tvOS SDK support
-
+* macOS and tvOS app support.
+* Closer integration with Distribution to surface download, crash and session counts within Distribution groups and releases.
 
 ## Push service
 
-* macOS SDK support
+* macOS app support.
