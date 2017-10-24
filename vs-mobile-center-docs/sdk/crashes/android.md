@@ -2,9 +2,9 @@
 title: Mobile Center Crashes for Android
 description:  Mobile Center Crashes for Android
 keywords: sdk, crash
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/09/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/23/2017
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: mobile-center
@@ -128,7 +128,7 @@ Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
 
-As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.12.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
+As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.13.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
 
 ### Get information about the sending status for a crash log
 

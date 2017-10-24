@@ -2,9 +2,9 @@
 title: Get Started with Android
 description: Get started
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/09/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/23/2017
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: mobile-center
@@ -50,7 +50,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 	```groovy
 	dependencies {
-		def mobileCenterSdkVersion = '0.12.0'
+		def mobileCenterSdkVersion = '0.13.0'
    		compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
    		compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 	}
