@@ -61,3 +61,7 @@ None of these permissions require user approval at runtime, those are all instal
 7. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 8. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 9. To check if Mobile Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+
+## Distribute and in-app updates are blocking my automated UI tests
+
+If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI tests. 

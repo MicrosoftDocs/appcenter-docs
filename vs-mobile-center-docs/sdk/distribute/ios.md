@@ -24,7 +24,12 @@ dev_langs:
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
 
-This feature will NOT work if your app is deployed to the app store.
+> [!NOTE]
+> There are a few things to consider when using in-app updates:
+> 
+> 1. In-app updates are currently not working on iOS 8 devices.
+> 2. If you have released your app in the App Store, in-app updates will be disabled.
+> 3. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI test target. 
 
 ## Add in-app updates to your app
 
@@ -34,8 +39,6 @@ Please follow the [Get started](~/sdk/getting-started/ios.md) section if you hav
 
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
 
-> [!NOTE]
-> In-app updates is currently not working on iOS 8 devices.
 
 #### Integration via Cocoapods
 
