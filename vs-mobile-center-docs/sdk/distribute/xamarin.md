@@ -23,6 +23,12 @@ Mobile Center Distribute will let your users install a new version of the app wh
 
 This feature will NOT work if your app is deployed to the app store.
 
+> [!NOTE]
+> There are a few things to consider when using in-app updates:
+> 1. In-app updates are currently not working on iOS 8 devices.
+> 2. If you have released your app in the App Store or Google Play, in-app updates will be disabled.
+> 3. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI tests. 
+
 ## Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.

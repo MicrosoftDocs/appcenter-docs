@@ -21,7 +21,11 @@ ms.tgt_pltfrm: android
 
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
 
-This feature will NOT work if your app is deployed to the app store.
+> [!NOTE]
+> There are a few things to consider when using in-app updates:
+> 
+> 1. If you have released your app in the Play Store, in-app updates will be disabled.
+> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 

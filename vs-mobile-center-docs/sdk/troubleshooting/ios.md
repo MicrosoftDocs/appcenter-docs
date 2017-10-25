@@ -77,6 +77,10 @@ If you are using Cocoapods, it takes care of the resources automatically. Try re
 
 Starting with version 0.11.0 of the iOS SDK, Mobile Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.13.0 or later.
 
+## Distribute and in-app updates are blocking my automated UI tests
+
+If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI test target. 
+
 ## Why is the SDK distributed as a "static library"?
 
 The primary design goals for the Mobile Center SDK are to have a minimal impact on the app that is using Mobile Center and to have a modular SDK. This would result in the SDK being distributed as several dynamic linked shared libraries.
