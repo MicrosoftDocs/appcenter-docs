@@ -80,6 +80,7 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
   </packageSourceCredentials>
 </configuration>
 ```
+If you have complex configurations and need more information, please refer to [Configuring Nuget behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.11. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
