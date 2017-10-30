@@ -4,7 +4,7 @@ description: Using Push in Mobile Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/04/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: mobile-center
@@ -137,9 +137,12 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
 3. Implement the callbacks to register push notifications
 
-    Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    You will have to add `@import MobileCenterPush` and `@import RNMobileCenterShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
     ```objc
+    @import MobileCenterPush;
+    @import RNMobileCenterShared;
+
     - (void)application:(UIApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
@@ -161,14 +164,18 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 
     ```objc
     - (void)application:(UIApplication *)application
-       didReceiveRemoteNotification:(NSDictionary *)userInfo
+        didReceiveRemoteNotification:(NSDictionary *)userInfo
              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
       NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[dictionary valueForKey:@"title"]
-                                                      message:[dictionary valueForKey:@"body"]
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-      [alert show];
+      UIAlertController *alert = [UIAlertController alertControllerWithTitle:[dictionary valueForKey:@"title"]
+                                                                    message:[dictionary valueForKey:@"body"] 
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+      }];
+      [alert addAction:ok];
+      [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
     ```
