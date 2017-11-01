@@ -2,9 +2,9 @@
 title: Other UWP APIs
 description: Other APIs in the Mobile Center SDK for UWP
 keywords: sdk
-author: guperrot
-ms.author: guperrot
-ms.date: 07/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.service: mobile-center
@@ -61,6 +61,14 @@ You can also check if Mobile Center is enabled or not.
 
 ```csharp
 bool enabled = await MobileCenter.IsEnabledAsync();
+```
+
+## Check Mobile Center SDK version at runtime
+
+You can get the version of Mobile Center SDK that you are currently using.
+
+```csharp
+MobileCenter.SdkVersion;
 ```
 
 ## Use custom properties
