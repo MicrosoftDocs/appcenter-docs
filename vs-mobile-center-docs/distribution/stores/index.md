@@ -4,7 +4,7 @@ description: Distribute your apps to consumer and enterprise stores
 keywords: distribution store
 author: pnghub
 ms.author: gned
-ms.date: 08/01/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.service: mobile-center
 ms.custom: distribute
@@ -12,8 +12,6 @@ ms.custom: distribute
 
 # Distribute apps directly to stores from Mobile Center
 
-You can now publish 
-1. upgrades of an existing Play store app into the Google Play store.
-2. new and upgrades of existing line of business applications into the Intune Company Portal.
+You can now publish upgrades of your existing store apps to the App Store and Google Play. Mobile Center also enables enterprise line of business application developers to publish new and upgraded versions of LOB apps to the Intune Company Portal.
 
-This is an early version of the store distribution. If you have interest in any specific capabilities, please contact us.
+This is an early version of store distribution. If you have interest in any specific capabilities, please contact us.

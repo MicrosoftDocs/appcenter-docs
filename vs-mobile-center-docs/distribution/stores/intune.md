@@ -32,7 +32,7 @@ For more information review the [introduction to Intune](https://docs.microsoft.
 3. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
 4. On successful login, you will be asked to enter a **Store name**.
 5. **Select Category** of the app from the drop down. 
-6. For **Audience**, provide the distribution list (email-id) for sharing this application.
+6. For **Audience**, provide the distribution list (email-id) for sharing this application. Note that the email-id used here should be an Azure AD group. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to.
 7. Click **Connect**.
 8. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in Mobile Center.
 
