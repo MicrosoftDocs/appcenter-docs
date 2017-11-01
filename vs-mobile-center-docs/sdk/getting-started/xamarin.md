@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/05/2017
+ms.date: 10/31/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: mobile-center
@@ -93,8 +93,6 @@ Now that you've integrated the SDK in your application, it's time to start the S
 > [!NOTE]
 > If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
 > in each of the projects: the portable, Android and iOS ones (and UWP if you have one).
-
-[!include[](../note-dotnet-standard.md)]
 
 ## 4. Start the SDK
 
