@@ -12,20 +12,27 @@ ms.custom: build
 ms.tgt_pltfrm: react-native
 ---
 
-# React Native Android Build
+# Building React Native Android apps
 
 Mobile Center can build React Native apps written in React Native version 0.34 or newer.
 
-To start building a React Native iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the project's `package.json` that you want to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
+To start building your first React Native Android app, you will need to the following:
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+2. Select a repository and a branch where your app lives.
+3. Choose the project's `package.json` that you want to build.
+4. Set up your first build.
+
+> [!NOTE]
+> For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 ## 1. Linking your repository
-If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your React Native project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
 
 ## 3. Setting up your first build
-To kick off the first build, configure how the Android project should get built.
+Before your first build, the React Native project needs to be configured.
 
 ### 3.1. Project
 Select your project’s `package.json`. Mobile Center will automatically extract information from its associated `build.gradle` file, including including dependencies, build tools version, build types, and product flavors.
@@ -34,7 +41,7 @@ Select your project’s `package.json`. Mobile Center will automatically extract
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
 ### 3.3. Build triggers
-By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.4. Increment version number
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
@@ -45,7 +52,7 @@ Use your newly produced APK file to test if your app starts on a real device. Th
 ### 3.6. Code signing
 A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
 
-### 3.7. Distribution to a distribution group
+### 3.7. Distribute to a distribution group
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 

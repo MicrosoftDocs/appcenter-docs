@@ -13,19 +13,27 @@ ms.tgt_pltfrm: android
 ---
 
 # Building Java apps for Android
-To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
+
+To start building your first Android app, you will need to the following:
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+2. Select a repository and a branch where your app lives.
+3. Choose the Android project you want to build.
+4. Set up your first build.
+
+> [!NOTE]
+> For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 ## 1. Linking your repository
-If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
 
-## 3. Configuring Your Build
-To kick off the first build, configure how the Android project should get built:
+## 3. Setting up your first build
+Before your first build, the Android project needs to be configured.
 
 ### 3.1. Build triggers
-By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.2. Build variant
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
@@ -42,7 +50,7 @@ Use your newly produced APK file to test if your app starts on a real device. Th
 ### 3.5. build.gradle File
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
-### 3.6. Distribution to a distribution group
+### 3.6. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
