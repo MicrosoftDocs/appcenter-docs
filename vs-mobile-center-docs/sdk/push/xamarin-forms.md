@@ -6,7 +6,7 @@ description: Integrating Mobile Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/04/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: mobile-center

@@ -4,7 +4,7 @@ description: Other APIs in the Mobile Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/27/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: mobile-center
@@ -61,6 +61,14 @@ You can also check if Mobile Center is enabled or not.
 
 ```csharp
 bool enabled = await MobileCenter.IsEnabledAsync();
+```
+
+## Check Mobile Center SDK version at runtime
+
+You can get the version of Mobile Center SDK that you are currently using.
+
+```csharp
+MobileCenter.SdkVersion;
 ```
 
 ## Use custom properties

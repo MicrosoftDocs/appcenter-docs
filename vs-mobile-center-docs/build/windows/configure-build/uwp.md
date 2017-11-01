@@ -13,16 +13,20 @@ ms.tgt_pltfrm: windows
 ---
 
 # Building UWP C# apps for Windows
-To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the UWP solution that you would like to build.
+
+To start building your first UWP app, you will need to the following:
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+2. Select a repository and a branch where your app lives.
+3. Set up your first build.
 
 ## 1. Linking your repository
-If you haven't previously connected to your repository service (GitHub, Bitbucket, VSTS) account, you will firstly need to do this. Once your account is connected, select the repository where your UWP C# solution is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your UWP project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-The next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
 
 ## 3. Setting up your first build
-To kick off the first build, configure how the UWP C# solution should get built.
+Before your first build, the UWP project needs to be configured.
 
 ### 3.1. Select solution
 First, make sure the right solution is selected.
@@ -67,7 +71,7 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
 ```
 If you have complex configurations and need more information, please refer to [Configuring Nuget behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-### 3.8. Distribution to a distribution group
+### 3.8. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
