@@ -7,8 +7,8 @@ import { AppState, Alert } from 'react-native';
 class MyApp extends Component {
 }
 
-Push.setEventListener({
-  pushNotificationReceived: function (pushNotification) {
+Push.setListener({
+  onPushNotificationReceived: function (pushNotification) {
     let message = pushNotification.message;
     let title = pushNotification.title;
 

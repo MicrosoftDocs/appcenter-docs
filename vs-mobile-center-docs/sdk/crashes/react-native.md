@@ -4,7 +4,7 @@ description: Mobile Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/03/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: mobile-center
@@ -75,34 +75,75 @@ Mobile Center Crashes provides callbacks for developers to perform additional ac
 
 ### <a name="process"></a> Processing crashes in JavaScript
 
-During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
+During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. You need to answer
+to process in Javascript for any of the `Crash.setListener` methods to work as expected.
 
-Processing a crash in JavaScript requires you to use the `process` method from Mobile Center Crashes.
+All the different callbacks of the event listener are discussed one by one
+in this document, but you need to set one event listener that define all callbacks at once.
 
-```javascipt
-// import the Crashes library at the top of the file
-import Crashes from "mobile-center-crashes";
-```
+### Should the crash be processed?
 
-Then, you can send all crashes that have been queued up since the last call to `process` or discard them.
-
-The following example shows how to handle a user confirmation dialog:
+Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
 
 ```javascript
-    Crashes.process((reports, send) => {
-      if (reports.length > 0) {
-        Alert.alert(
-          `Send ${reports.length} crash(es)?`,
-          '',
-          [
-            { text: 'Send', onPress: () => send(true) },
-            { text: 'Ignore', onPress: () => send(false), style: 'cancel' },
-          ],
-          { cancelable: false }
-        );
-      }
-    });
+Crashes.setListener({
+
+    shouldProcess: function (report) {
+        return true; // return true if the crash report should be processed, otherwise false.
+    },
+
+    // Other callbacks must also be defined at the same time if used.
+    // Default values are used if a method with return parameter is not defined.
+});
 ```
+
+> [!NOTE]
+> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+>
+> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+### Ask for the users' consent to send a crash log
+
+If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+> [!NOTE]
+> No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
+
+The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
+
+```javascript
+Crashes.setListener({
+
+    shouldAwaitUserConfirmation: function (report) {
+
+        // Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+        // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+        return true;
+    },
+
+    // Other callbacks must also be defined at the same time if used.
+    // Default values are used if a method with return parameter is not defined.
+});
+```
+
+If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
+
+```javascript
+import Crashes, { UserConfirmation } from "mobile-center-crashes";
+
+// Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
+Crashes.notifyUserConfirmation(UserConfirmation.DONT_SEND);
+Crashes.notifyUserConfirmation(UserConfirmation.SEND);
+Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND);
+```
+
+> [!NOTE]
+> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+>
+> This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 ### Get information about the sending status for a crash log
 
@@ -111,48 +152,53 @@ At times, you would like to know the status of your app crash. A common use case
 To do that you have to define an event listener in your code as in the following example:
 
 ```javascript
-      Crashes.setEventListener({
-        willSendCrash: function (report) {
-            // called after Crashes.process and before sending the crash.
-        },
-        didSendCrash: function (report) {
-            // called when crash report sent successfully.
-        },
-        failedSendingCrash: function (report) {
-            // called when crash report could not be sent.
-        }
-      });
+Crashes.setListener({
+    onBeforeSending: function (report) {
+        // called after Crashes.process and before sending the crash.
+    },
+    onSendingSucceeded: function (report) {
+        // called when crash report sent successfully.
+    },
+    onSendingFailed: function (report) {
+        // called when crash report could not be sent.
+    }
+
+    // Other callbacks must also be defined at the same time if used.
+    // Default values are used if a method with return parameter is not defined.
+});
 ```
 
-All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only `willSendCrash`.
+All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only `onBeforeSending`.
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
 >
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
-
-If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
-
-Thus you should configure crashes to be processed in Javascript and set up the event listener before calling `Crashes.process`.
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal.
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
+
+```javascript
+import Crashes, { ErrorAttachmentLog } from "mobile-center-crashes";
+
+Crashes.setListener({
+    getErrorAttachments(report) {
+        return [
+            ErrorAttachmentLog.attachmentWithText("Hello text attachment!", "hello.txt"),
+            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, "logo.png", "image/png");
+        ];
+    }
+
+    // Other callbacks must also be defined at the same time if used.
+    // Default values are used if a method with return parameter is not defined.
+});
+```
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
 >
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
-
-```javascript
-    Crashes.process(function (reports, send) {
-      for (const report of reports) {
-        report.addTextAttachment("Hello text attachment!", "hello.txt");
-        report.addBinaryAttachment(`${imageAsBase64string}`, "logo.png", "image/png");
-      }
-      send(true);
-    });
-```
 
 ## Enable or disable Mobile Center Crashes at runtime
 
