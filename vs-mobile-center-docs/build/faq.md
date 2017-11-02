@@ -133,3 +133,8 @@ error MSB4018: NuGet.Commands.RestoreCommandException: PackageTargetFallback and
 ```
 
 To resolve this issue, either remove PackageTargetFallback (tends to be in older PCL .csproj files) or rename it to AssetTargetFallback? The solution is also described in [this StackOverflow thread](https://stackoverflow.com/questions/45569378/upgrading-to-net-core-2-0-packagetargetfallback-and-assettargetfallback-cannot).
+
+## My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
+
+It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If yes, you need to go to your Pods project and ensure it is set to use the same signing method as your Main project. If you set both Pods project and Main project to have the same singing configuration, this should resolve the issue. 
+If your Pods are not checked-in into your repository, it might be different issues and there are few workarounds you can use with [pre-build scripts](https://docs.microsoft.com/mobile-center/build/custom/scripts/#pre-build) in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964).
