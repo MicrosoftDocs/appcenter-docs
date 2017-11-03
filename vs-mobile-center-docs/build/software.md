@@ -425,15 +425,35 @@ F620EDB7-249F-4590-836C-1A1C3D93AA88 (active, disconnected)
 
 ## Xamarin
 
-- Visual Studio for Mac: 7.1.5.2
+- Visual Studio for Mac: 7.2.0.636
+
+### Mono Framework 5.4.0.201
+
+- Xamarin.iOS: 11.2.0.11
+- Xamarin.Android: 8.0.0-33
+- Xamarin.Mac: 3.8.0.49
+
+### Mono Framework 5.2.0.224
+
 - Xamarin.iOS: 11.0.0.0
 - Xamarin.Android: 7.4.5-1
 - Xamarin.Mac: 3.6.3.3
-- Mono Framework MDK: Mono JIT compiler version 5.2.0
+
+### Mono Framework 5.0.1.1
+
+- Xamarin.iOS: 10.10.0.36
+- Xamarin.Android: 7.3.1-2
+- Xamarin.Mac: 3.4.0.36
+
+### Mono Framework 4.8.1.0
+
+- Xamarin.iOS: 10.6.0.10
+- Xamarin.Android: 7.1.0-43
+- Xamarin.Mac: 3.0.0.398
 
 ### Package Management
 
-- NuGet: 4.1.0
+- NuGet: 4.3.0
 
 ### Unit Test Framework
 
