@@ -6,7 +6,7 @@ description: Integrating Mobile Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/04/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: mobile-center
@@ -43,7 +43,7 @@ For more information, refer to the [Xamarin documentation](https://developer.xam
 
 #### [Optional] Enable silent notifications
 
-Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://developer.xamarin.com/guides/ios/application_fundamentals/backgrounding/ios_backgrounding_techniques/updating_an_application_in_the_background/#Remote_Notifications_iOS_7_and_Greater)). To enable silent notifications double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. This will open the Entitlements.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://developer.xamarin.com/guides/ios/application_fundamentals/backgrounding/ios_backgrounding_techniques/updating_an_application_in_the_background/#Remote_Notifications_iOS_7_and_Greater)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
 ![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
 
 ## Add Mobile Center Push to your app
