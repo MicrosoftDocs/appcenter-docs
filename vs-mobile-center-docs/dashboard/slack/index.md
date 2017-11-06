@@ -41,7 +41,7 @@ Our aim is to enable users to quickly access App Center services and respond to 
 1. Authorize App Center's Slack App by following the instructions below:
 
 	1. Go to https://mobile.azure.com/settings/apitokens and create a new Full Access API token.
-		- Here are details on how to [create a new Full Access API token](https://docs.microsoft.com/mobile-center/api-docs/), in particular please see steps 4-5.
+		- Here are details on how to [create a new Full Access API token](~/api-docs/index.md), in particular please see steps 4-5.
 	1. Go back to Slack and run `/mobile-center login <your token>` command.
 	1. Welcome! You've successfully authorized your app.
 	

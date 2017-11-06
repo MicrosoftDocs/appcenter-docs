@@ -67,7 +67,7 @@ To upload a package to App Center, use the navigation bar on the left to navigat
 [google-apk]: https://developer.android.com/studio/publish/preparing.html
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
-[api-token-docs]: https://docs.microsoft.com/en-us/mobile-center/api-docs/
+[api-token-docs]: ~/api-docs/index.md
 [POST_releaseUpload]: https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload
 [PATCH_updateReleaseUplolad]: https://docs.mobile.azure.com/api/#!/distribute/updateReleaseUpload
 [PATCH_updateRelease]: https://docs.mobile.azure.com/api/#!/distribute/updateRelease

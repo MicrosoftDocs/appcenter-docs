@@ -43,7 +43,7 @@ Know of which symbols need to be uploaded to get symbolicated crash reports
 ### **August, 23 2017**
 
 - **Advanced build customization options**:
-You can now [configure](https://docs.microsoft.com/mobile-center/build/custom/scripts/) your build to run custom scripts at pre-defined stages of the build process. 
+You can now [configure](~/build/custom/scripts/index.md) your build to run custom scripts at pre-defined stages of the build process. 
 
 - **Use popular command line tools straight from your build**:
 The build VMs come now with fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.

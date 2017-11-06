@@ -16,7 +16,7 @@ It provides a unified suite of capabilities that will greatly benefit a mobile a
 
 App Center is in preview right now and is free to use. We will announce the public pricing later. Our philosophy is to keep the product free for the majority of customers even after after the preview period is over.
 
-Today we recommend you to not use App Center for production use but continue using HockeyApp and Xamarin Test Cloud. If you are evaluating App Center in the same app which is also using HockeyApp SDK be aware of the issues described [here](https://docs.microsoft.com/en-us/mobile-center/sdk/limitations).
+Today we recommend you to not use App Center for production use but continue using HockeyApp and Xamarin Test Cloud. If you are evaluating App Center in the same app which is also using HockeyApp SDK be aware of the issues described [here](~/mobile-center/sdk/limitations.md).
 
 ## [HockeyApp](~/migration/hockeyapp/index.md)
 
