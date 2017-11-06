@@ -3,7 +3,7 @@
     {
       "docset_name": "vs-appcenter",
       "build_source_folder": "vs-mobile-center-docs",
-      "build_output_subfolder": "vs-appcenter",
+      "build_output_subfolder": "vs-mobile-center-docs",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
