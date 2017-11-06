@@ -3,7 +3,7 @@
 
 title: Distribute Installable Sample App to Users | Android Sample App Tutorials
 description: Tutorial to distribute a sample Android app to a group of users in App Center.
-keywords: mobile-center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/27/2017

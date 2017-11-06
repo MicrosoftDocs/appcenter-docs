@@ -3,7 +3,7 @@
 
 title: Crashes | Sample App Tutorials
 description: Tutorial on viewing crashes from a sample iOS app in App Center
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/28/2017

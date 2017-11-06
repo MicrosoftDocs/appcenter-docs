@@ -3,7 +3,7 @@
 
 title: Build | Sample App Tutorials
 description: Tutorial to build sample iOS app in App Center.
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/27/2017

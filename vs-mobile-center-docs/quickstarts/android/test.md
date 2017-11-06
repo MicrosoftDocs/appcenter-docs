@@ -3,7 +3,7 @@
 
 title: Run Included Tests with App Center | Android Sample App Tutorials
 description: Tutorial to run a test using Android sample app with App Center.
-keywords: mobile-center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017

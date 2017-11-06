@@ -3,7 +3,7 @@
 
 title: Test| Sample App Tutorials
 description: Tutorial to test the sample ios app with App Center.
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017

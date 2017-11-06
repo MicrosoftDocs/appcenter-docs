@@ -3,7 +3,7 @@
 
 title: Overview | Sample App Tutorials
 description: Landing page to navigate through tutorials.
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017

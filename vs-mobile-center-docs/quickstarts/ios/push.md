@@ -3,7 +3,7 @@
 
 title: Push | Sample App Tutorials
 description: Tutorial to send a push notification to the sample ios app.
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017

@@ -3,7 +3,7 @@
 
 title: Analytics | Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
-keywords: mobile-center
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017

@@ -3,7 +3,7 @@
 
 title: Getting Started | Android Sample App Tutorials
 description: Getting started prerequisites to onboard an Android application in App Center
-keywords: mobile-center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017

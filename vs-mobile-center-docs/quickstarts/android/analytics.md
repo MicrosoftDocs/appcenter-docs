@@ -3,7 +3,7 @@
 
 title: View Custom Events and Track User Analytics | Android Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
-keywords: mobile-center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
