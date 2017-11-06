@@ -10,4 +10,4 @@ ms.service: mobile-center
 
 # Migrating Test Cloud Accounts
 
-Migrating your Test Cloud accounts, teams, organizations, and apps to Mobile Center.
+Migrating your Test Cloud accounts, teams, organizations, and apps to App Center.

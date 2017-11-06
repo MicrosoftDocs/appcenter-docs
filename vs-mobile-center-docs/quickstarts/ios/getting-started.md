@@ -2,7 +2,7 @@
 # required metadata
 
 title: Getting Started | Sample App Tutorials
-description: Tutorial to onboard an iOS application in Mobile Center
+description: Tutorial to onboard an iOS application in App Center
 keywords: mobile-center
 authors: sabrinaj206
 ms.author: t-sajia
@@ -24,7 +24,7 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # Getting Started - Sample Swift App and Tutorials
 
-In this tutorial, you will learn how to set up a sample Swift app with Mobile Center for iOS. Note that both Objective-C and Swift are supported.
+In this tutorial, you will learn how to set up a sample Swift app with App Center for iOS. Note that both Objective-C and Swift are supported.
 
 ### Prerequisites
 - [GitHub account](https://github.com/join)
@@ -53,11 +53,11 @@ In this tutorial, you will learn how to set up a sample Swift app with Mobile Ce
 
   <!--![Install Cocoapods](images/install_cocoapods_ios.gif)-->
 
-## Sign in to Mobile Center
-1. Open the [Mobile Center portal](https://mobile.azure.com).
+## Sign in to App Center
+1. Open the [App Center portal](https://mobile.azure.com).
 2. Click **Connect with GitHub** and log in, or use another provider.
 
-## Create a new app in Mobile Center
+## Create a new app in App Center
 1. Click **Add new app**.
 2. Name the app **Sample iOS App**.
 3. Choose **iOS** and **Objective-C / Swift**.
@@ -66,9 +66,9 @@ In this tutorial, you will learn how to set up a sample Swift app with Mobile Ce
 
 ## Replace the App Secret
 
-In order for the sample app to send information to Mobile Center, the app secret must be changed in Xcode.
+In order for the sample app to send information to App Center, the app secret must be changed in Xcode.
 
-1. Navigate to the **Settings** page in Mobile Center.
+1. Navigate to the **Settings** page in App Center.
 2. Copy the **App Secret** at the top.
 3. Open the **.xcworkspace** from the sample app folder.
 4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
@@ -80,7 +80,7 @@ In order for the sample app to send information to Mobile Center, the app secret
 
 _Codesigning is optional, but recommended._
 
-Codesigning assures users that the app is from a trustworthy developer, and has not been altered by someone else. In Mobile Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+Codesigning assures users that the app is from a trustworthy developer, and has not been altered by someone else. In App Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
 When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
 
@@ -94,4 +94,4 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
 
     ![Codesigning](images/Manual_sign_ios.png)
 
-You're all set up to try out a Mobile Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.
+You're all set up to try out a App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.

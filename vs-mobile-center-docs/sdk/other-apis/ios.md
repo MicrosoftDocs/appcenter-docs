@@ -1,6 +1,6 @@
 ---
 title: Other iOS APIs
-description: Other APIs in the Mobile Center SDK for iOS
+description: Other APIs in the App Center SDK for iOS
 keywords: sdk
 author: troublemakerben
 ms.author: bereimol
@@ -26,7 +26,7 @@ dev_langs:
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from Mobile Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `MSLogLevelAssert` for the App Store environment and `MSLogLevelWarning` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `MSLogLevelAssert` for the App Store environment and `MSLogLevelWarning` otherwise.
 
 To have as many log messages as possible, use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
 
@@ -39,7 +39,7 @@ MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 
 ## Identify installations
 
-The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```objc
 NSUUID *installId = [MSMobileCenter  installId];
@@ -50,7 +50,7 @@ var installId = MSMobileCenter.installId()
 
 ## Disable all services at runtime
 
-If you want to disable all Mobile Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to Mobile Center.
+If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to App Center.
 
 ```objc
 [MSMobileCenter setEnabled:NO];
@@ -68,9 +68,9 @@ To enable all services at once again, use the same API but pass `YES`/`true` as 
 MSMobileCenter.setEnabled(true)
 ```
 
-## Check if Mobile Center is enabled
+## Check if App Center is enabled
 
-You can also check if Mobile Center is enabled or not.
+You can also check if App Center is enabled or not.
 
 ```objc
 [MSMobileCenter isEnabled];
@@ -79,9 +79,9 @@ You can also check if Mobile Center is enabled or not.
 MSMobileCenter.isEnabled()
 ```
 
-## Check Mobile Center SDK version at runtime
+## Check App Center SDK version at runtime
 
-You can get the version of Mobile Center SDK that you are currently using.
+You can get the version of App Center SDK that you are currently using.
 
 ```objc
 [MSMobileCenter sdkVersion];
@@ -92,7 +92,7 @@ MSMobileCenter.sdkVersion()
 
 ## Use custom properties
 
-Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
 You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
@@ -112,7 +112,7 @@ MSMobileCenter.setCustomProperties(customProperties)
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
+You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```objc
 MSCustomProperties *customProperties = [MSCustomProperties new];

@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Build for Xamarin.iOS
+title: App Center Build for Xamarin.iOS
 description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
@@ -32,19 +32,19 @@ After selecting a repository, select the branch you want to build. By default al
 Before your first build, the Xamarin project needs to be configured.
 
 ### 3.1. Project/solution
-Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
+App Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
 
 #### 3.1.1. Building from the solution file (.sln)
 In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](solution-configuration-mappings.md) you can read.
 
 #### 3.1.2. Building from the project file (.csproj/.fsproj)
-In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
+In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
 
 ### 3.2. Configuration
 Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
 ### 3.3. Mono version
-Mobile Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono you will see the Xamarin.iOS SDK version which is bundled with it. For more information about Xamarin SDK version updates, you can read posts in [Xamarin release blog](https://releases.xamarin.com/).
+App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono you will see the Xamarin.iOS SDK version which is bundled with it. For more information about Xamarin SDK version updates, you can read posts in [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Xcode Version
 Current version of Xamarin requires Xcode 8.0 or higher.
@@ -65,7 +65,7 @@ A successful device build will produce an ipa file. In order to install the buil
 Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
 
 ### 3.10. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
 To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
 
 ```
@@ -103,7 +103,7 @@ After a build has been triggered, it can be in the following states:
 * **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 ```
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
@@ -116,16 +116,16 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.ipa or .app)
-The .ipa is an iPhone application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center](../../code-signing/index.md).
+The .ipa is an iPhone application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](../../code-signing/index.md).
 
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 
 ### 4.3. The symbol files (.dsym)
 Symbol files are only generated for device builds.
 The .dsym files contains the debug symbols for the app.
-* If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports.
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports.
 * If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable crash reports.
 
 ## Supported versions and requirements
-Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
-Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: Click on the blue bubble on the bottom right corner once you're logged in to Mobile Center and share your feedback with us.
+App Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
+App Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: Click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.

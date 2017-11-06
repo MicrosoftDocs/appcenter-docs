@@ -1,7 +1,7 @@
 ---
-title: Mobile Center Analytics
-description: Help using the Analytics feature on Mobile Center
-keywords: mobile center, analytics
+title: App Center Analytics
+description: Help using the Analytics feature on App Center
+keywords: app center, analytics
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017
@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Analytics
 
-Mobile Center Analytics is a mobile apps measurement tool that lets developers understand their end-user population and usage patterns.
+App Center Analytics is a mobile apps measurement tool that lets developers understand their end-user population and usage patterns.
 
 ## Key Features
 
@@ -28,7 +28,7 @@ Mobile Center Analytics is a mobile apps measurement tool that lets developers u
 ## Get Started
 
 Getting Analytics only requires you to add the SDK into the app and initialize it with one line of code.
-Doing this will get the data flowing to Mobile Center and your Analytics immediately.
+Doing this will get the data flowing to App Center and your Analytics immediately.
 The Overview page will represent your data, albeit minimal, within seconds of your app run.
 
 [Get Started on Android](~/sdk/getting-started/android.md)

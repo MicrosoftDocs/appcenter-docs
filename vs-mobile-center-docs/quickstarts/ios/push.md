@@ -24,7 +24,7 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 
 
 # Push - Sample Swift App and Tutorials
-In this tutorial you will learn how to send push notifications to users through Mobile Center. Code allowing Mobile Center to send notifications is included in the sample Swift app.
+In this tutorial you will learn how to send push notifications to users through App Center. Code allowing App Center to send notifications is included in the sample Swift app.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
@@ -44,27 +44,27 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 1. **Add, commit, and push the changes to Github.**
 2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification will not appear on a simulator.
 
-## Set up Push in Mobile Center
-1. Go to the **Push** service in [Mobile Center](https://mobile.azure.com/apps).
+## Set up Push in App Center
+1. Go to the **Push** service in [App Center](https://mobile.azure.com/apps).
 2. Click **next** to skip the first page. The code shown here is already included.
 
 ## Get your Apple Push Notification service Key
 1. Go to your **[Keys](https://developer.apple.com/account/ios/authkey/)** on the Apple Developer website.
 2. Create a new APNs Key if you don't have one. Fill in a Key name and check the **APNs** checkbox.
-3. Copy the **Key ID** and download the **key file**. Paste it in the box in Mobile Center.
+3. Copy the **Key ID** and download the **key file**. Paste it in the box in App Center.
 
 ## Get the sample app's Prefix and ID
 1. Go to your **[App IDs](https://developer.apple.com/account/ios/identifier/bundle)** on the Apple Developer Website.
 2. Click on the sample app's ID.
-3. Copy the **Prefix** and paste it in the box in Mobile Center.
-4. Copy the **ID** and paste it in the box in Mobile Center.
+3. Copy the **Prefix** and paste it in the box in App Center.
+4. Copy the **ID** and paste it in the box in App Center.
 5. Open the **key file** from your **Key ID**, and copy the authentication token. Paste it in the box.
 5. Choose **Sandbox**.
 6. Click **Done** at the bottom.
 
 ## Set up a Push notification
 1. Follow the [Distribute tutorial](distribute.md) to download the app to your device.
-2. Navigate to the **Push** service in Mobile Center.
+2. Navigate to the **Push** service in App Center.
 3. Click **Send notification**.
 4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
 

@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Pricing Info
-description: Information about Mobile Center pricing plans
+title: App Center Pricing Info
+description: Information about App Center pricing plans
 keywords: pricing
 author: joemellin
 ms.author: joemel
@@ -12,7 +12,7 @@ ms.service: mobile-center
 
 # Pricing
 
-The Mobile Center is free to use while we are in the current “preview” period. We aren’t quite ready to announce pricing yet, but you can be sure that our pricing will be competitive.  We’ll also have an ongoing level of free Mobile Center services to support lower-scale apps.
+The App Center is free to use while we are in the current “preview” period. We aren’t quite ready to announce pricing yet, but you can be sure that our pricing will be competitive.  We’ll also have an ongoing level of free App Center services to support lower-scale apps.
 
 During the preview period we have to set a few usage limits as we get everything working just how you’d expect:
 
@@ -34,7 +34,7 @@ During the preview period we have to set a few usage limits as we get everything
 #### Analytics
 * 30 day retention
 
-Once the preview period is complete, we’ll offer a guaranteed service level so you can count on us for your mission-critical apps. If our free tier in Mobile Center isn’t enough to meet your needs, you will be able to purchase Mobile Center services.  All billing will be through your Azure account, enabling direct purchasing via credit card, purchasing via the Microsoft Enterprise Agreement, and purchasing via partners who are in the Cloud Solution Provider program.
+Once the preview period is complete, we’ll offer a guaranteed service level so you can count on us for your mission-critical apps. If our free tier in App Center isn’t enough to meet your needs, you will be able to purchase App Center services.  All billing will be through your Azure account, enabling direct purchasing via credit card, purchasing via the Microsoft Enterprise Agreement, and purchasing via partners who are in the Cloud Solution Provider program.
 
 
 # We want your feedback!

@@ -1,6 +1,6 @@
 ---
 title: Other Xamarin APIs
-description: Other APIs in the Mobile Center SDK for Xamarin
+description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
@@ -23,7 +23,7 @@ ms.tgt_pltfrm: xamarin
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from Mobile Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
 To have as many log messages as possible, use `LogLevel.Verbose`.
 
@@ -33,7 +33,7 @@ MobileCenter.LogLevel = LogLevel.Verbose;
 
 ## Identify installations
 
-The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```csharp
 System.Guid installId = await MobileCenter.GetInstallIdAsync();
@@ -41,7 +41,7 @@ System.Guid installId = await MobileCenter.GetInstallIdAsync();
 
 ## Disable all services at runtime
 
-If you want to disable all Mobile Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to Mobile Center.
+If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
 
 ```csharp
 MobileCenter.SetEnabledAsync(false);
@@ -55,17 +55,17 @@ MobileCenter.SetEnabledAsync(true);
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
-## Check if Mobile Center is enabled
+## Check if App Center is enabled
 
-You can also check if Mobile Center is enabled or not.
+You can also check if App Center is enabled or not.
 
 ```csharp
 bool enabled = await MobileCenter.IsEnabledAsync();
 ```
 
-## Check Mobile Center SDK version at runtime
+## Check App Center SDK version at runtime
 
-You can get the version of Mobile Center SDK that you are currently using.
+You can get the version of App Center SDK that you are currently using.
 
 ```csharp
 MobileCenter.SdkVersion;
@@ -73,7 +73,7 @@ MobileCenter.SdkVersion;
 
 ## Use custom properties
 
-Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
 You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 
@@ -86,7 +86,7 @@ MobileCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
+You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

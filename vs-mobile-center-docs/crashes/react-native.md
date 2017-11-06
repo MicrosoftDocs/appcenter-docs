@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Crash Reporting for React Native
-description: Reporting crashes from React Native apps in Mobile Center
+title: App Center Crash Reporting for React Native
+description: Reporting crashes from React Native apps in App Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde
@@ -35,17 +35,17 @@ ms.tgt_pltfrm: react-native
 
         react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
 
-    > The Mobile Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
+    > The App Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
 
-2. Open the *Incoming* page under *Crash Reporting* on Mobile Center of the app.
+2. Open the *Incoming* page under *Crash Reporting* on App Center of the app.
 3. Upload the zip file.
-4. After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
+4. After the zip file is indexed by App Center new incoming crashes will be symbolicated.
 
 ## Troubleshooting
 
-1. *How does Mobile Center parse your .zip file?*
+1. *How does App Center parse your .zip file?*
 
-    Mobile Center first looks for dsym directories at any level. Then it looks for a source map by the title of **index.ios.map**. If **index.ios.map** does not exist, it uses the first **.map** file that is found.
+    App Center first looks for dsym directories at any level. Then it looks for a source map by the title of **index.ios.map**. If **index.ios.map** does not exist, it uses the first **.map** file that is found.
 
 2. *Why are crash reports not visible after a few minutes?*
 

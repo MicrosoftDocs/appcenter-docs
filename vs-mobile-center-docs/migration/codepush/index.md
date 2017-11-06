@@ -10,4 +10,4 @@ ms.service: mobile-center
 
 # CodePush Migration
 
-Migrating existing CodePush apps to Mobile Center.
+Migrating existing CodePush apps to App Center.

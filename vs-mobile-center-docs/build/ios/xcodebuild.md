@@ -1,6 +1,6 @@
 ---
 
-title: Mobile Center Build for Native ios apps - xcodebuild
+title: App Center Build for Native ios apps - xcodebuild
 description: How an xcode build is done
 keywords: build, ios, xcode
 author: meiravf

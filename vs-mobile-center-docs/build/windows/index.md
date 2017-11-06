@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Build for Windows
-description: How to use Mobile Center Build for Windows
+title: App Center Build for Windows
+description: How to use App Center Build for Windows
 keywords: build, windows
 author: siminapasat
 ms.author: siminap

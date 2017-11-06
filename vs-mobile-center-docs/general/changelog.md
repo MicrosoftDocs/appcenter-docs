@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Changelog
+title: App Center Changelog
 description: History of updates to the product
 keywords: update,history
 author: joemellin
@@ -30,8 +30,8 @@ Events leading up to a crash are now listed, helping you diagnose issues more ea
 - **Added Webhooks and VSTS bug tracker integration**:
 Notify 3rd party applications and VSTS when events like crash groups are created or a new version of your app is released. Check out our docs for more details for configuring [Webhooks](~/dashboard/webhooks/index.md) and [VSTS integration](~/dashboard/bugtracker/index.md)
 
-- **Published Mobile Center Slack Bot**:
-Get Mobile Center notifications and updates directly in your existing Slack channels.
+- **Published App Center Slack Bot**:
+Get App Center notifications and updates directly in your existing Slack channels.
 
 - **Display of attachments sent from Crashes SDK**:
 Attachments from the a crash can now be viewed within the portal
@@ -46,48 +46,48 @@ Know of which symbols need to be uploaded to get symbolicated crash reports
 You can now [configure](https://docs.microsoft.com/mobile-center/build/custom/scripts/) your build to run custom scripts at pre-defined stages of the build process. 
 
 - **Use popular command line tools straight from your build**:
-The build VMs come now with fastlane and the Mobile Center CLI pre-installed, so you can take the customization of your builds even a step further.
+The build VMs come now with fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.
 
 - **Better UDID management**: 
-Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from Mobile Center.
+Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from App Center.
 
 
 ### **July, 2017**
 
 - **Carthage support for your iOS builds**:
-If you use Carthage to manage your dependencies for iOS apps written in Objective C/Swift, Mobile Center will automatically detect this and resolve the dependencies as part of the build process.
+If you use Carthage to manage your dependencies for iOS apps written in Objective C/Swift, App Center will automatically detect this and resolve the dependencies as part of the build process.
 
 - **Faster builds**:
 Xamarin and UWP builds which rely on restoring NuGet packages and iOS builds using Cocoapods are now faster.
 
 - **Public Distribution Groups**:
-You can now mark distribution groups as public. These groups will no longer require an account login to download and install apps. You can publish the URL through any mechanism and allow any number of users to install the app without the need for a Mobile Center account.
+You can now mark distribution groups as public. These groups will no longer require an account login to download and install apps. You can publish the URL through any mechanism and allow any number of users to install the app without the need for a App Center account.
 
 - **Distribute your iOS and Android apps to Intune**:
-You can now setup a new distribution store targeting Intune cloud. If you use Intune for rich device and application management you can now streamline the release of new application packages to Intune via Mobile Center.
+You can now setup a new distribution store targeting Intune cloud. If you use Intune for rich device and application management you can now streamline the release of new application packages to Intune via App Center.
 
 
 ### **June, 22 2017**
 
 - **Engage with your users using Push Notifications:**
-Mobile Center Push allows you to engage your users by sending them push notifications. You can target these notifications to a specific set of users defined by a combination of device and custom properties.
+App Center Push allows you to engage your users by sending them push notifications. You can target these notifications to a specific set of users defined by a combination of device and custom properties.
 
 - **Now Build apps with C# 7:**
-Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in Mobile Center here.
+Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-Automatically increment the build number of your builds with a specific format. Choose the continuous Mobile Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
+Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
 
 ### **June 8, 2017**
 
 - **Get deeper insights by attaching your own logs to crashes:** 
-The Mobile Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash. 
+The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash. 
 
 - **Annotate your findings to crash groups:** 
-It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in Mobile Centers using the new Crash Group annotation feature. 
+It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature. 
 
-- **Use CodePush in Mobile Center:** 
-Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the Mobile Center across multiple deployments. Keep an eye out for more features and improvements here! 
+- **Use CodePush in App Center:** 
+Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the App Center across multiple deployments. Keep an eye out for more features and improvements here! 
 
 - **Updates in CLI:** 
 With the new CLI version  – 0.9.1, you can now upload missing symbol files for crashes and run analytics commands to get information about your app audience, session and events. We also support browser login, so you can easily login to CLI with your GitHub or Microsoft account. 
@@ -101,29 +101,29 @@ We now support Build, distribute and Analytics for Universal Windows Platform (U
 It’s easier to configure your build for continuous integration with a new and improved user experience. As always, you have options to tweak your build configuration; sign your app; and automatically queue successful builds for Distribution.
 
 - **Fastlane plugin for uploading your releases:** 
-Automate uploading your releases and symbol files to Mobile Center through the Mobile Center fastlane plugin.
+Automate uploading your releases and symbol files to App Center through the App Center fastlane plugin.
 
 - **Latest tools for your iOS builds:** 
 All iOS apps written in Swift, Objective-C and React Native now use the latest tooling as recommended by Apple. 
 
 - **Sign in with Google & Facebook:** 
-Register and sign into Mobile Center using your Google or Facebook credentials.
+Register and sign into App Center using your Google or Facebook credentials.
 
 - **Manage email notifications for Crashes and Distribution:** 
-You can now instantly get notified via email when a new crash group gets created and manage these notifications in Mobile Center. 
+You can now instantly get notified via email when a new crash group gets created and manage these notifications in App Center. 
 
 ### **Apr 27, 2017**
 - **Avoid failures when your testers install your distributed app** 
-Mobile Center now supports the capture and reporting of tester UDIDs for your distributed iOS app so you can easily create a valid ad-hoc provisioning profile including all your testers. This makes sure that there are no failures when your testers try to use your distributed app. 
+App Center now supports the capture and reporting of tester UDIDs for your distributed iOS app so you can easily create a valid ad-hoc provisioning profile including all your testers. This makes sure that there are no failures when your testers try to use your distributed app. 
 
 - **Automatically verify that your app launches successfully**
 After each successful build, verify that your app is launching on a real device hosted in our device center. You can configure this in your build settings. 
 
-- **Manage API tokens in Mobile Center portal**
-You can now easily create an API token for use with Mobile Center REST APIs right from Mobile Center portal by going to Settings -> API Tokens. 
+- **Manage API tokens in App Center portal**
+You can now easily create an API token for use with App Center REST APIs right from App Center portal by going to Settings -> API Tokens. 
 
 - **Build apps using latest Xcode versions and tooling**
-You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on Mobile Center. Additionally, new builds will now be run using xcodebuild. 
+You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using xcodebuild. 
 
 ### **Apr 13, 2017**
 - **Build your apps hosted from a VSTS repository**: 
@@ -133,10 +133,10 @@ In addition to previously supported GitHub and Bitbucket, you can now connect to
 Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, simply select this option in the "new test run" dialog.
 
 - **Get the latest build from distribution with in-app updates**:
-Notify testers of the latest releases from inside your distributed application. Simply integrate the latest Mobile Center SDK to automatically enable in-app update notifications each time you push a new release. 
+Notify testers of the latest releases from inside your distributed application. Simply integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release. 
 
 - **Auto-detect missing symbols in your Crash reports**: 
-If you forget to upload symbols for your iOS app, Mobile Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.
+If you forget to upload symbols for your iOS app, App Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.
 
 - **Distribute your app via the CLI**:
 Create & manage your distribution groups, upload your release and distribute it using the new CLI version 0.8.0. 
@@ -148,12 +148,12 @@ Create & manage your distribution groups, upload your release and distribute it 
 - Build React Native apps with Yarn: Use the popular JavaScript package manager, Yarn, when building React Native apps. Dependency installs are now also faster and deterministic.
 - Release notes from your commits: When building, release notes now auto-populate with the corresponding commit message.  
 - Xamarin Cycle 9: Build apps using Xamarin Cycle 9 (Service Release 0) and use NuGet URL v3. See the full list of cloud build machines.
-- New iOS test devices: Choose iOS 10.3 devices to run tests using Mobile Center Test service.
+- New iOS test devices: Choose iOS 10.3 devices to run tests using App Center Test service.
 
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.   
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and Mobile Center will update your access automatically.  Mobile Center now also displays the account you are using to login to install the build so there is no more confusion about it.  
+- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you are using to login to install the build so there is no more confusion about it.  
 
 ### **Mar 02, 2017**
 
@@ -186,7 +186,7 @@ Create & manage your distribution groups, upload your release and distribute it 
 
 **Add testers for Distribution much easily now**
 
--   You can now invite any tester to a distribution group through their email, without having them first join Mobile Center.
+-   You can now invite any tester to a distribution group through their email, without having them first join App Center.
 -   You can also delete distributed releases now
 
 **Crash metrics now available**

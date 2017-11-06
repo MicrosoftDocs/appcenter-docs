@@ -13,7 +13,7 @@ ms.tgt_pltfrm: windows
 ---
 
 # Configure a Windows build
-The general idea for setting up a build is similar across all platforms. Firstly you need to give Mobile Center access to your source control, then select a repository and a branch to build, and then setup the build configuration depending on the platform your app is being developed on.
+The general idea for setting up a build is similar across all platforms. Firstly you need to give App Center access to your source control, then select a repository and a branch to build, and then setup the build configuration depending on the platform your app is being developed on.
 
 The specific steps can be found on the platform-specific pages:
 * [UWP C#](uwp.md)

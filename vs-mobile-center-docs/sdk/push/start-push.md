@@ -1,4 +1,4 @@
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 Add the following using statement to the top of the file you are referencing `Push` from: 
 
@@ -6,7 +6,7 @@ Add the following using statement to the top of the file you are referencing `Pu
 using Microsoft.Azure.Mobile.Push
 ```
 
-Next, add `typeof(Push)` to your `MobileCenter.Start()` method to start Mobile Center Push service.
+Next, add `typeof(Push)` to your `MobileCenter.Start()` method to start App Center Push service.
 
 ```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Push));

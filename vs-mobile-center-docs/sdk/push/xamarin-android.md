@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Mobile Center Push for Xamarin.Android Apps
-description: Integrating Mobile Center Push into Xamarin.Android applications
+title: App Center Push for Xamarin.Android Apps
+description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
@@ -14,7 +14,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin.android
 ---
 
-# Mobile Center Push
+# App Center Push
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: xamarin.android
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 > [!NOTE]
 > Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.
@@ -35,7 +35,7 @@ Mobile Center Push enables you to send push notifications to users of your app f
 
 ### 1. Create a Firebase project
 
-The first step in integrating your application with Mobile Center Push is to integrate it with Firebase Cloud Messaging. Start by creating a Firebase project in Google's [Firebase console](https://console.firebase.google.com). Sign in with your Google account and proceed to the console. To create a Firebase project, select the **add project** button. Next, enter a project name and select **Create Project**.
+The first step in integrating your application with App Center Push is to integrate it with Firebase Cloud Messaging. Start by creating a Firebase project in Google's [Firebase console](https://console.firebase.google.com). Sign in with your Google account and proceed to the console. To create a Firebase project, select the **add project** button. Next, enter a project name and select **Create Project**.
 
 Now that you've created a Firebase project, you must configure your application to receive Firebase notifications. On the side menu, select **Notifications** to navigate to the notifications page. To configure your application to receive notifications, select the Android logo (the button to the right of the one that says "iOS").
 
@@ -44,7 +44,7 @@ Now that you've created a Firebase project, you must configure your application 
 Follow steps **one** and **two** in the setup window. Since you are creating a Xamarin application, you may ignore step **three**. Finally, make sure to note where you save the *google-services.json* file, as you will need it later.
 
 ### 2. Obtain your Android API Key
-Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the Mobile Center Push portal.
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to include in the App Center Push portal.
 
 ### 3. Customize Proguard configuration
 
@@ -70,11 +70,11 @@ In your Xamarin.Android project, please add the following lines to your `proguar
 -keep class com.microsoft.azure.mobile.push.PushMessagingService
 ```
 
-## Add Mobile Center Push to your app
+## Add App Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
 
-### 1. Add the Mobile Center Push module
+### 1. Add the App Center Push module
 
 [!include[](add-nuget.md)]
 
@@ -88,7 +88,7 @@ Locate the *google-services.json* file from step 1 and add it to your project. S
 ![google-services-json-build-action](images/google-services-json-build-action.png)
 
 > [!IMPORTANT]
-> If you do not see this option under build actions, make sure you've added the Mobile Center Push NuGet package already. If you have and it still doesn't appear, try restarting your IDE.
+> If you do not see this option under build actions, make sure you've added the App Center Push NuGet package already. If you have and it still doesn't appear, try restarting your IDE.
 
 ### 3. Modify AndroidManifest.xml
 
@@ -110,7 +110,7 @@ Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into
   </receiver>
 ```
 
-### 4. Start Mobile Center Push
+### 4. Start App Center Push
 
 [!include[](start-push.md)]
 
@@ -150,7 +150,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 ## Existing Firebase Analytics users
 
-Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call `Push.EnableFirebaseAnalytics()` before `MobileCenter.Start()` like so:
 

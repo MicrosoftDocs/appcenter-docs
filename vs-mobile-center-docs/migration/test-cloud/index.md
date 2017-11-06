@@ -10,4 +10,4 @@ ms.service: mobile-center
 
 # Test Cloud Migration
 
-General info about migrating from Xamarin Test Cloud to Mobile Center.
+General info about migrating from Xamarin Test Cloud to App Center.

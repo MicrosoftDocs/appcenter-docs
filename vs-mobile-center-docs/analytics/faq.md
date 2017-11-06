@@ -1,7 +1,7 @@
 ---
-title: Mobile Center Analytics Frequently Asked Questions
-description: Help using the Analytics features of Mobile Center
-keywords: mobile center, analytics, faq
+title: App Center Analytics Frequently Asked Questions
+description: Help using the Analytics features of App Center
+keywords: app center, analytics, faq
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017

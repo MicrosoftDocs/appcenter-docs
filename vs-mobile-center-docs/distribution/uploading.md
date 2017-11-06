@@ -1,5 +1,5 @@
 ---
-title: Upload a Build to Distribute via Mobile Center
+title: Upload a Build to Distribute via App Center
 description: Distribute a completed build to users
 keywords: distribution
 author: JoshuaWeber
@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Release a Build
 
-In order to distribute a release via Mobile Center, you must first upload your application binary package to Mobile Center. Mobile Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
+In order to distribute a release via App Center, you must first upload your application binary package to App Center. App Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
 
 ## Generating an application binary package
 
@@ -37,13 +37,13 @@ For Android you will need to produce a properly signed apk file. For full detail
 
 ## Uploading the package
 
-To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
+To upload a package to App Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via App Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via App Center.
 
 ![](images/new_release_button.png "new release button top right")
 
 ### Uploading using the APIs
 
-1. Pre-req: [Obtain an API token][api-token-docs]. API Token is used for authentication for all Mobile Center API calls.
+1. Pre-req: [Obtain an API token][api-token-docs]. API Token is used for authentication for all App Center API calls.
 2. Upload a new release. This is 3 or more API calls. 
     
     a. Create an upload resource and get an `upload_url` (good for 24 hours) — [POST /createReleaseUpload][POST_releaseUpload]

@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Asynchronous APIs
+title: App Center Asynchronous APIs
 description: Usage of asynchronous APIs in the Android SDK
 keywords: sdk
 author: guperrot

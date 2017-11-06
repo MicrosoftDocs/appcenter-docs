@@ -19,7 +19,7 @@ Push.setListener({
       message = "<empty>";
     }
 
-    // Custom name/value pairs set in the Mobile Center web portal are in customProperties
+    // Custom name/value pairs set in the App Center web portal are in customProperties
     if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
       message += '\nCustom properties:\n' + JSON.stringify(pushNotification.customProperties);
     }

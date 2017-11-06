@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-description: Frequently asked questions about the Mobile Center dashboard.
+description: Frequently asked questions about the App Center dashboard.
 keywords: dashboard faq
 author: joemellin
 ms.author: joemel

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Distribute Installable Sample App to Users | Android Sample App Tutorials
-description: Tutorial to distribute a sample Android app to a group of users in Mobile Center.
+description: Tutorial to distribute a sample Android app to a group of users in App Center.
 keywords: mobile-center
 authors: sshibu
 ms.author: t-shshib
@@ -31,7 +31,7 @@ ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 ## Choose a build to distribute
 There are **two ways you can distribute** the app.
 If you have already completed the [Build tutorial](build.md) and built the sample app:
-1. Navigate to the **Build** service in Mobile Center and click on settings from your latest successful build.
+1. Navigate to the **Build** service in App Center and click on settings from your latest successful build.
 2. Turn **Distribute builds** on and select a collaborator group. You can edit groups and add new groups in the **Distribute** service.
 3. Click **Save** and allow the branch to build again.
   ![Distribute from Build](images/distributeFromBuild.gif)
@@ -50,4 +50,4 @@ Another way is to upload your own .apk file:
 
 ## Install the sample app
 1. You, and all other specified testers, should receive an email with a link to download the sample app.
-2. Open the link and follow the instructions to register your device with Mobile Center, and the app will begin installing.
+2. Open the link and follow the instructions to register your device with App Center, and the app will begin installing.

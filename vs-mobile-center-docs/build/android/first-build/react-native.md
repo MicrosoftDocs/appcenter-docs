@@ -1,5 +1,5 @@
 ---
-title: Configure a React Native Android build in Mobile Center
+title: Configure a React Native Android build in App Center
 description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # Building React Native Android apps
 
-Mobile Center can build React Native apps written in React Native version 0.34 or newer.
+App Center can build React Native apps written in React Native version 0.34 or newer.
 
 To start building your first React Native Android app, you will need to the following:
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
@@ -35,7 +35,7 @@ After selecting a repository, select the branch you want to build. By default, a
 Before your first build, the React Native project needs to be configured.
 
 ### 3.1. Project
-Select your project’s `package.json`. Mobile Center will automatically extract information from its associated `build.gradle` file, including including dependencies, build tools version, build types, and product flavors.
+Select your project’s `package.json`. App Center will automatically extract information from its associated `build.gradle` file, including including dependencies, build tools version, build types, and product flavors.
 
 ### 3.2. Build variant
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
@@ -67,7 +67,7 @@ After a build has been triggered, it can be in the following states:
 * **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 ```
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
@@ -89,13 +89,13 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 
 ### 6.1. Yarn
 
-[Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then Mobile Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
+[Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then App Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
 
 ### 6.2. Custom build scripts
 
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
 
-Mobile Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+App Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
 
 ```
   "scripts": {

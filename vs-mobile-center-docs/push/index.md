@@ -1,7 +1,7 @@
 ---
-title: Mobile Center Push
-description: Help using the Push on Mobile Center
-keywords: mobile center, push
+title: App Center Push
+description: Help using the Push on App Center
+keywords: app center, push
 author: blparr
 ms.author: blparr
 ms.date: 06/20/2017
@@ -13,12 +13,12 @@ ms.custom: push
 
 # Push Notifications
 
-Mobile Center Push allows you to engage your users by sending them targeted push notifications.
+App Center Push allows you to engage your users by sending them targeted push notifications.
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the Mobile Center Push portal, as well as in the Mobile Center SDK docs.
-You can follow the instructions provided in the Mobile Center portal, along with our detailed instructions found in the following links:
+In order to set up Push Notifications, you will have to set up the Push App Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the App Center Push portal, as well as in the App Center SDK docs.
+You can follow the instructions provided in the App Center portal, along with our detailed instructions found in the following links:
 
 - [Android](~/sdk/push/android.md)
 - [iOS](~/sdk/push/ios.md)
@@ -31,7 +31,7 @@ You can follow the instructions provided in the Mobile Center portal, along with
 
 ## Sending Push Notifications
 
-Once Mobile Center Push is configured following the instructions above, you are ready to start sending notifications to your users. By clicking the "Send Notification" button on top right of the page, a panel will show up where you will have to include:
+Once App Center Push is configured following the instructions above, you are ready to start sending notifications to your users. By clicking the "Send Notification" button on top right of the page, a panel will show up where you will have to include:
 - Campaign Name: this name will be used to track the campaign but your users will not see it.
 - Title: title of the notification that your user will receive.
 - Message: content of the push notification.

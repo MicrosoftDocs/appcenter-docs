@@ -1,6 +1,6 @@
 ---
-title: Mobile Center General Info
-description: General information about Mobile Center
+title: App Center General Info
+description: General information about App Center
 keywords: roadmap, pricing
 author: joemellin
 ms.author: joemel
@@ -13,10 +13,10 @@ ms.service: mobile-center
 # General
 
 ## Changelog
-Check out our [changelog](changelog.md) to find out which features we have delivered recently to Mobile Center.
+Check out our [changelog](changelog.md) to find out which features we have delivered recently to App Center.
 
 ## Product roadmap
 Interested in knowing what our team is working on? View the [product roadmap](roadmap.md) and let us know what you think.
 
 ## Pricing
-Mobile Center is free during the preview. Read about our [pricing plans](pricing.md) and tell us if you like it.
+App Center is free during the preview. Read about our [pricing plans](pricing.md) and tell us if you like it.

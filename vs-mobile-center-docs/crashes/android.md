@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Crash Reporting for Android
-description: Reporting crashes from Android apps in Mobile Center
+title: App Center Crash Reporting for Android
+description: Reporting crashes from Android apps in App Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde

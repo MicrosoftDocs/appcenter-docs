@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Build for Android
-description: How to use Mobile Center Build for Android
+title: App Center Build for Android
+description: How to use App Center Build for Android
 keywords: android
 author: siminapasat
 ms.author: siminap

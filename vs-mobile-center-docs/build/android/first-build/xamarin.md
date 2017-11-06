@@ -1,5 +1,5 @@
 ---
-title: Configure a Xamarin.Android build in Mobile Center
+title: Configure a Xamarin.Android build in App Center
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: siminapasat
@@ -39,7 +39,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
 
 ### 3.3. Mono version
-Mobile Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
+App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Increment version number
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
@@ -51,7 +51,7 @@ A successful build will produce an apk file. In order to release the build to th
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.7. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
 To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
 
 ```
@@ -92,7 +92,7 @@ After a build has been triggered, it can be in the following states:
 
 ### 4.1. Build logs
 
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 
 ```
 |-- 1_build.txt (this is the general build log)
@@ -110,5 +110,5 @@ The build step specific logs (located in the build/ directory of the archive) ar
 The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
 ## Supported versions and requirements
-Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
-Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: click on the blue bubble on the bottom right corner once you're logged in to Mobile Center and share your feedback with us.
+App Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
+App Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.

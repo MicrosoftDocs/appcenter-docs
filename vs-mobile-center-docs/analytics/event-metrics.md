@@ -1,7 +1,7 @@
 ---
-title: Understanding Mobile Center Events Metrics
-description: Help using the Events Metrics on Mobile Center
-keywords: mobile center, analytics
+title: Understanding App Center Events Metrics
+description: Help using the Events Metrics on App Center
+keywords: app center, analytics
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017
@@ -18,7 +18,7 @@ Event properties provide contextual information about the events.
 
 Examples of events are: *"FileUpload", "Launch","LogOut"*.
 
-Mobile Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. Note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value name. More information about how to define the events can be found at the [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md) and [UWP](~/sdk/analytics/uwp.md).
+App Center provides information about your custom events and their custom properties. To track these events, you will need to use the trackEvent method once you have started the SDK. Note that there is a maximum of 256 characters supported per event name and 64 characters per event property name and event property value name. More information about how to define the events can be found at the [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md) and [UWP](~/sdk/analytics/uwp.md).
 
 By tracking events with properties to your app, you will be able to answers questions like:
 - What is the top N content viewed?
@@ -56,11 +56,11 @@ Below there is an example of an event with one property and several property val
 *Event Property Values: "png", "jpeg", "pdf"*
 
 
-The maximum number of properties currently supported in Mobile Center is five. For each property, we will show the counts for the ten event property values with highest count, along with their distribution. Our property values are currently optimized for values of type String.
+The maximum number of properties currently supported in App Center is five. For each property, we will show the counts for the ten event property values with highest count, along with their distribution. Our property values are currently optimized for values of type String.
 
 
 ## Breadcrumbs (Events before a crash)
 
-Events can also be used to help you identify the root cause of your crashes. As part of the Mobile Center Crashes service, you can see all the events that happened before a crash for a specific session. 
+Events can also be used to help you identify the root cause of your crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session. 
 
 In order to see the events before a crash, the Analytics SDK needs to be integrated and events need to be defined.

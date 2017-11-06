@@ -10,4 +10,4 @@ ms.service: mobile-center
 
 # CodePush App Updates
 
-Migrate your CodePush app updates to Mobile Center.
+Migrate your CodePush app updates to App Center.

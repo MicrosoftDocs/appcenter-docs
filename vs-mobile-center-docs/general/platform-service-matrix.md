@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Platform Services Matrix
-description: Mobile Center matrix for platforms and services
+title: App Center Platform Services Matrix
+description: App Center matrix for platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
@@ -12,7 +12,7 @@ ms.service: mobile-center
 
 # Platform and Services Matrix
 
-The table below lists all the platforms and their supported services in Mobile Center:
+The table below lists all the platforms and their supported services in App Center:
 
 | Platform | Build | Test | Distribute | Crashes | Analytics | Push |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

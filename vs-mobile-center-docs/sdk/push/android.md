@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Push for Android
-description: Using Push in Mobile Center
+title: App Center Push for Android
+description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
@@ -14,13 +14,13 @@ ms.tgt_pltfrm: android
 
 [!include[](introduction-android.md)]
 
-## Add Mobile Center Push to your app
+## Add App Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
-### 1. Add the Mobile Center Push module
+### 1. Add the App Center Push module
 
-The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating the Push module, add the following lines:
 
@@ -33,11 +33,11 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
-### 2. Start Mobile Center Push
+### 2. Start App Center Push
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `MobileCenter.start()` method to start Mobile Center Push service.
+Add `Push.class` to your `MobileCenter.start()` method to start App Center Push service.
 
 ```java
 MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
@@ -126,7 +126,7 @@ public class MyPushListener implements PushListener {
 ## Existing Firebase Analytics users
 
 >[!NOTE]
->Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+>App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
 
@@ -135,14 +135,14 @@ Push.enableFirebaseAnalytics(getApplication());
 MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 
-## Enable or disable Mobile Center Push at runtime
+## Enable or disable App Center Push at runtime
 
-You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 ```java
 Push.setEnabled(false);
 ```
-To enable Mobile Center Push again, use the same API but pass `true` as a parameter.
+To enable App Center Push again, use the same API but pass `true` as a parameter.
 
 ```java
 Push.setEnabled(true);
@@ -150,9 +150,9 @@ Push.setEnabled(true);
 
 [!include[](../android-see-async.md)]
 
-## Check if Mobile Center Push is enabled
+## Check if App Center Push is enabled
 
-You can also check if Mobile Center Push is enabled or not:
+You can also check if App Center Push is enabled or not:
 
 ```java
 Push.isEnabled();

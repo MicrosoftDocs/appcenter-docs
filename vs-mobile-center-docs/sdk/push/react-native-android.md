@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Push for React Native Android
-description: Using Push in Mobile Center
+title: App Center Push for React Native Android
+description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
@@ -14,12 +14,12 @@ ms.tgt_pltfrm: react-native
 
 [!include[](introduction-android.md)]
 
-## Add Mobile Center Push to your app
+## Add App Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
-The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
+The App Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
-1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
+1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
     ```
     npm install mobile-center-push --save
@@ -53,7 +53,7 @@ You can set up a listener to be notified whenever a push notification is receive
 ## Existing Firebase Analytics users
 
 >[!NOTE]
->Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+>App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `RNPushPackage` is instantiated, like from `MainApplication.onCreate`:
 
@@ -65,9 +65,9 @@ import com.microsoft.azure.mobile.push.Push;
 Push.enableFirebaseAnalytics(getApplication());
 ```
 
-## Enable or disable Mobile Center Push at runtime
+## Enable or disable App Center Push at runtime
 
-You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 
 ```javascript
@@ -79,9 +79,9 @@ await Push.setEnabled(false);      // Disable push
 await Push.setEnabled(true);       // Re-enable it
 ```
 
-## Check if Mobile Center Push is enabled
+## Check if App Center Push is enabled
 
-You can also check if Mobile Center Push is enabled or not:
+You can also check if App Center Push is enabled or not:
 
 ```javascript
 import Push from 'mobile-center-push';

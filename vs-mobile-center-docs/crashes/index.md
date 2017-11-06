@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Crash Reporting
-description: Reporting crashes in Mobile Center
+title: App Center Crash Reporting
+description: Reporting crashes in App Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde
@@ -13,7 +13,7 @@ ms.custom: crashes
 
 # Crashes
 
-Mobile Center Crash Reporting lets developers collect crashes in their apps whether they occur in testing or in production.
+App Center Crash Reporting lets developers collect crashes in their apps whether they occur in testing or in production.
 
 # Key Features
 
@@ -22,7 +22,7 @@ Crashes are grouped together by similarities like the reason for the crash and w
 
 
 # Getting Started
-To leverage this feature it is required to integrate the Mobile Center SDK and its crash reporting module into the app. As the SDK runs in the same process as the app, the crash report will be sent the next time the app starts.
+To leverage this feature it is required to integrate the App Center SDK and its crash reporting module into the app. As the SDK runs in the same process as the app, the crash report will be sent the next time the app starts.
 
 [Get Started on Android](~/crashes/android.md)
 

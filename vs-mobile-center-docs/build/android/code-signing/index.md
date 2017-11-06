@@ -1,5 +1,5 @@
 ---
-title: Code Signing Android Apps in Mobile Center
+title: Code Signing Android Apps in App Center
 description: How to set up code signing for Android apps
 keywords: android
 author: siminapasat

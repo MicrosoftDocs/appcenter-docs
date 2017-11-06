@@ -1,6 +1,6 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Visual Studio Mobile Center
+title: Visual Studio App Center
 metadata:
   description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
   author: conceptdev
@@ -8,7 +8,7 @@ metadata:
   ms.date: 05-09-2017
   ms.topic: landing-page
 abstract:
-  description: <a href="https://mobile.azure.com/">Mobile Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
+  description: <a href="https://mobile.azure.com/">App Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
   menu:
     items:
     - href: https://docs.mobile.azure.com/api/
@@ -27,7 +27,7 @@ sections:
 - title: Get Started
   items:
   - type: paragraph
-    text: Learn how to add the SDK to your app and get started with Mobile Center.
+    text: Learn how to add the SDK to your app and get started with App Center.
   - type: list
     style: icon48
     items:

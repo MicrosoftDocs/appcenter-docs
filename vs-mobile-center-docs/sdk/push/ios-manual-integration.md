@@ -1,8 +1,8 @@
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
-1. Download the [Mobile Center SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
+1. Download the [App Center SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you will see a folder called **MobileCenter-SDK-Apple/iOS** that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you will see a folder called **MobileCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party-libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.

@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Crash Reporting for iOS
-description: Reporting crashes from iOS apps in Mobile Center
+title: App Center Crash Reporting for iOS
+description: Reporting crashes from iOS apps in App Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde
@@ -30,9 +30,9 @@ ms.tgt_pltfrm: ios
 ## Uploading symbols
 
 1. Create a ZIP file for the dSYM package on your Mac.
-2. Open the *Incoming* page under *Crash Reporting* on Mobile Center of the app.
+2. Open the *Incoming* page under *Crash Reporting* on App Center of the app.
 3. Upload the zip file.
-4. After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
+4. After the zip file is indexed by App Center new incoming crashes will be symbolicated.
 
 ## Troubleshooting
 

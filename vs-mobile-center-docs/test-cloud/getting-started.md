@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Test Cloud
-description: How to start using Test Cloud in Mobile Center
+description: How to start using Test Cloud in App Center
 keywords: test cloud
 author: glennwester
 ms.author: glwest
@@ -13,15 +13,15 @@ ms.custom: test
 
 # Getting Started with Test Cloud
 
-The requisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
+The requisite steps below must be completed before a project can be used with App Center Test Cloud.
 
-## 1. Create a Mobile Center account
-Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com) to gain access to Test Cloud.
+## 1. Create a App Center account
+Create a App Center account at [mobile.azure.com](https://mobile.azure.com) to gain access to Test Cloud.
 
-## 2. Install the Mobile Center CLI
-Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](~/cli/index.md) to install. After installation, run `mobile-center login` to link a Mobile Center account with the tool.
+## 2. Install the App Center CLI
+Test runs are executed using the App Center CLI. If not already installed, follow [these instructions](~/cli/index.md) to install. After installation, run `mobile-center login` to link a App Center account with the tool.
 
-## 3. Create an app in Mobile Center
+## 3. Create an app in App Center
 All test assets and operations are within the context of an app. Create the app project to be tested.
 
 ## 4. Review the core concepts

@@ -21,9 +21,9 @@ ms.tgt_pltfrm: ios
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
-The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
+The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up Mobile Center iOS SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute](~/sdk/distribute/ios.md).
+Let's get started with setting up App Center iOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, please have a look at the [documentation for App Center Distribute](~/sdk/distribute/ios.md).
 
 ## 1. Prerequisites
 
@@ -33,9 +33,9 @@ Before you begin, please make sure that the following prerequisites are met:
 * You are targeting devices running on iOS 8.0 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 
-## 2. Create your app in the Mobile Center Portal to obtain the App Secret
+## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the Mobile Center portal, you can skip this step.
+If you have already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [mobile.azure.com](https://mobile.azure.com).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -43,18 +43,18 @@ If you have already created your app in the Mobile Center portal, you can skip t
 4. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
 
-## 3. Add the Mobile Center SDK modules
+## 3. Add the App Center SDK modules
 
-The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
+The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
 ### 3.1  Integration via Cocoapods
 
-1. Add the following dependencies to your `podfile` to include Mobile Center Analytics and Mobile Center Crashes into your app. This will pull in the following frameworks: **MobileCenter**, **MobileCenterAnalytics** and **MobileCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on MobileCenter. It will get pulled in automatically.
+1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **MobileCenter**, **MobileCenterAnalytics** and **MobileCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on MobileCenter. It will get pulled in automatically.
 
 	```ruby
-	# Use the following line to use Mobile Center Analytics and Crashes.
+	# Use the following line to use App Center Analytics and Crashes.
 	pod 'MobileCenter'
 
 	# Use the following lines if you want to specify which service you want to use.
@@ -69,14 +69,14 @@ The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](ht
 > If you see an error like ```[!] Unable to find a specification for `MobileCenter` ```
 >  while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
 
-Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ### 3.2 Integration by copying the binaries into your project
-Below are the steps on how to integrate the compiled binaries in your Xcode project to set up Mobile Center Analytics and Mobile Center Crashes for your iOS app.
+Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
-1. Download the [Mobile Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
+1. Download the [App Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you will see a folder called **MobileCenter-SDK-Apple/iOS** that contains different frameworks for each Mobile Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you will see a folder called **MobileCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
@@ -89,11 +89,11 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
     * Now drag and drop **MobileCenter.framework**, **MobileCenterAnalytics.framework** and **MobileCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **MobileCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
-Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the Mobile Center services.
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
 
-In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 
@@ -137,17 +137,17 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 
 ### 4.3 Replace the placeholder with your App Secret
 
-Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.
+Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the App Center portal or through the **Manage App** button.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the `start:withServices` method and include both Mobile Center Analytics and Mobile Center Crashes.
+The example above shows how to use the `start:withServices` method and include both App Center Analytics and App Center Crashes.
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to Mobile Center Analytics, you should modify the `start:withServices` API call as follows:
+For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
 **Objective-C**
 
@@ -163,8 +163,8 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentation for [Mobile Center Analytics](~/sdk/analytics/ios.md) and [Mobile Center Crashes](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
+Look at the documentation for [App Center Analytics](~/sdk/analytics/ios.md) and [App Center Crashes](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
 
-To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](~/sdk/distribute/ios.md).
+To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/ios.md).
 
-To learn how to get started with Push, read the documentation of [Mobile Center Push](~/sdk/push/ios.md).
+To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/ios.md).

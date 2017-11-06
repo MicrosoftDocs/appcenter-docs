@@ -1,6 +1,6 @@
 ---
 title: Preparing Tests for Upload
-description: How to upload tests to Mobile Center Test Cloud
+description: How to upload tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest

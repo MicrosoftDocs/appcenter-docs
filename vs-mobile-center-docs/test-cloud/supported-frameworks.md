@@ -1,6 +1,6 @@
 ---
 title: Supported Test Frameworks
-description: List of test frameworks supported by Mobile Center
+description: List of test frameworks supported by App Center
 keywords: test cloud
 author: glennwester
 ms.author: glwest

@@ -8,4 +8,4 @@ ms.assetid: 7FB974BC-7D91-423C-A7A1-D6D0AD33FC7D
 ms.service: mobile-center
 ---
 
-# HockeyApp Crashes in Mobile Center
+# HockeyApp Crashes in App Center

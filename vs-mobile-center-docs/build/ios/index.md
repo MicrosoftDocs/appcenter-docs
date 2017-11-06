@@ -1,6 +1,6 @@
 ---
-title: Mobile Center Build for iOS
-description: How to use Mobile Center Build for iOS
+title: App Center Build for iOS
+description: How to use App Center Build for iOS
 keywords: build, ios
 author: siminapasat
 ms.author: siminap

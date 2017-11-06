@@ -1,6 +1,6 @@
 ---
-title: iOS Code Signing in Mobile Center
-description: Code signing apps built with Mobile Center
+title: iOS Code Signing in App Center
+description: Code signing apps built with App Center
 keywords: code signing,  ios
 author: siminapasat
 ms.author: siminap
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: ios
 
 To run an app on a real device during the development process through a beta program or in the App Store, it is required that the app is code signed. 
 
-You can code sign a build by uploading your provisioning profile (.mobileprovision) and your certificate (.p12) when [configuring the build](../first-build/index.md). You will also need to include the password you have set for the certificate. To ensure that the settings work, make sure that the settings in the project and project targets are compatible with the uploaded files, e.g. if you choose a development code signing identity in Xcode, make sure to upload a development certificate to Mobile Center for building.
+You can code sign a build by uploading your provisioning profile (.mobileprovision) and your certificate (.p12) when [configuring the build](../first-build/index.md). You will also need to include the password you have set for the certificate. To ensure that the settings work, make sure that the settings in the project and project targets are compatible with the uploaded files, e.g. if you choose a development code signing identity in Xcode, make sure to upload a development certificate to App Center for building.
 
 * A **provisioning profile** (.mobileprovision) contains the list of devices that can run the application and knows which certificates are connected to the profile.
     * A **development** provisioning profile is used to install development apps on test devices and contains a set of UDIDs (Unique Device Identifiers). The signed app can be downloaded and installed only on the devices listed in the provisioning profile.

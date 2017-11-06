@@ -1,7 +1,7 @@
 ---
-title: Mobile Center Push Audiences
-description: Help using the Push Audiences on Mobile Center
-keywords: mobile center, push, audiences
+title: App Center Push Audiences
+description: Help using the Push Audiences on App Center
+keywords: app center, push, audiences
 author: blparr
 ms.author: blparr
 ms.date: 06/20/2017

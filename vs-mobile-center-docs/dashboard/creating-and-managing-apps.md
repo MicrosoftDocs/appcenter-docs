@@ -1,6 +1,6 @@
 ---
 title: Creating and managing apps
-description: Using the dashboard to create and access app info in Mobile Center.
+description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
