@@ -19,7 +19,7 @@ The requisite steps below must be completed before a project can be used with Ap
 Create a App Center account at [appcenter.ms](https://appcenter.ms) to gain access to Test Cloud.
 
 ## 2. Install the App Center CLI
-Test runs are executed using the App Center CLI. If not already installed, follow [these instructions](~/cli/index.md) to install. After installation, run `mobile-center login` to link a App Center account with the tool.
+Test runs are executed using the App Center CLI. If not already installed, follow [these instructions](~/cli/index.md) to install. After installation, run `appcenter login` to link a App Center account with the tool.
 
 ## 3. Create an app in App Center
 All test assets and operations are within the context of an app. Create the app project to be tested.

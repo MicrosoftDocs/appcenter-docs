@@ -56,7 +56,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
 	```
-	npm install mobile-center mobile-center-analytics mobile-center-crashes --save
+	npm install appcenter mobile-center-analytics mobile-center-crashes --save
 	```
 
 	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **mobile-center-analytics** and

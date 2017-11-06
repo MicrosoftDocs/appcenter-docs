@@ -26,7 +26,7 @@ ms.date: 07/26/2017
 3. Run the command below and follow the directions to log in to App Center:
 
   ```shell
-  mobile-center login
+  appcenter login
   ```  
 
 ## Build the project and test APK files

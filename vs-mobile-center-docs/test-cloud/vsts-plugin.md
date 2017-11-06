@@ -46,7 +46,7 @@ Select the devices for the test run. The general rule of a device selection is t
 
 On the next page select your test series or create a new one. Test series is a way of managing your test runs. Choose something which makes sense and will make it easy to find the results later. Examples is VSTS which tells where the test is send from. It can be changed later so it matches your existing test series. Select Appium as framework and click `Next` to proceed.
 ```
-mobile-center test run appium --app "username/appname" --devices 209ed689
+appcenter test run appium --app "username/appname" --devices 209ed689
  --app-path pathToFile.apk --test-series "master" --locale "en_US"
   --build-dir target/upload
 ```
@@ -80,7 +80,7 @@ Select the devices for the test run. The general rule of a device selection is t
 On the next page select your test series or create a new one. Test series is a way of managing your test runs. Choose something which makes sense and will make it easy to find the results later. Examples is VSTS which tells where the test is send from. It can be changed later so it matches your existing test series. Select Espresso as framework and click `Next` to proceed.
 
 ```
-mobile-center test run espresso --app "username/appname" --devices 209ed689
+appcenter test run espresso --app "username/appname" --devices 209ed689
  --app-path pathToFile.apk --test-series "master" --locale "en_US"
   --build-dir pathToEspressoBuildFolder
 ```
@@ -117,7 +117,7 @@ Select the devices for the test run. The general rule of a device selection is t
 On the next page select your test series or create a new one. Test series is a way of managing your test runs. Choose something which makes sense and will make it easy to find the results later. Examples is VSTS which tells where the test is send from. It can be changed later so it matches your existing test series. Select Xamarin.UITest as framework and click `Next` to proceed.
 
 ```
-mobile-center test run uitest --app "username/appname" --devices 209ed689
+appcenter test run uitest --app "username/appname" --devices 209ed689
  --app-path pathToFile.apk --test-series "master" --locale "en_US"
   --build-dir pathTUITestBuildDir
 ```

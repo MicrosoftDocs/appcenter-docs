@@ -43,7 +43,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 3. Run the command below and follow the directions to log in to App Center:
 
   ```bash
-  mobile-center login
+  appcenter login
   ```  
   ![Install CLI and login](images/Install_CLI_login_ios.gif)
 

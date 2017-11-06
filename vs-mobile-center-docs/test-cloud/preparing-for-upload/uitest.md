@@ -23,12 +23,12 @@ When the Test Run Wizard is finished, it will provide a sample command line that
 For a Xamarin.Android application, the Test Run wizard will create a command line similar to this snippet:  
 
 ```
-mobile-center test run uitest --app "<APP NAME>" --devices "<DEVICE SET NAME>" --app-path <PATH_TO_APK> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
+appcenter test run uitest --app "<APP NAME>" --devices "<DEVICE SET NAME>" --app-path <PATH_TO_APK> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
 ```
 For Xamarin.iOS, the Test Run wizard will create a command line that resembles the following snippet: 
 
 ```
-mobile-center test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-path <PATH TO IPA> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
+appcenter test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-path <PATH TO IPA> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
 ```
 
 The command line parameters include the following pieces of information that is specific to the rest run that was created:
