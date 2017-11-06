@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # Platform and Services Matrix

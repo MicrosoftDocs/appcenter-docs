@@ -7,7 +7,7 @@ ms.author: bereimol
 ms.date: 08/07/2017
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---

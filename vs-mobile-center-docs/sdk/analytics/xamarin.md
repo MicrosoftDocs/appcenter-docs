@@ -7,7 +7,7 @@ ms.author: bereimol
 ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---

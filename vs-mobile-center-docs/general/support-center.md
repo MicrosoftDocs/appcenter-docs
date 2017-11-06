@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 03/14/2017
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # App Center Support 

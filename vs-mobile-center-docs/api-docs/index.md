@@ -7,7 +7,7 @@ ms.author: jawh
 ms.date: 04/11/2017
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: api
 ---
 

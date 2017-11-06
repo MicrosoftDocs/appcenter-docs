@@ -9,7 +9,7 @@ ms.author: emalani
 ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin.forms
 ---

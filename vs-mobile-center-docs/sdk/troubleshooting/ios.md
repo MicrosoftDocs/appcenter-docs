@@ -7,7 +7,7 @@ ms.author: bereimol
 ms.date: 07/13/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 dev_langs:  
  - swift

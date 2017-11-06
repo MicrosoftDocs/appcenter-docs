@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 10/06/2017
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ---
 

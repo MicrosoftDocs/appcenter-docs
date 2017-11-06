@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---

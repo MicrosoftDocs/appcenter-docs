@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 10/31/2017
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: uwp
 ---

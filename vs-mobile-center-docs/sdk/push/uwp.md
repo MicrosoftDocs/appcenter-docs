@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 10/04/2017
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---

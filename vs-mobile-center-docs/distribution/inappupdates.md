@@ -6,7 +6,7 @@ author: JoshuaWeber
 ms.author: JoshuaWeber
 ms.date: 04/20/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: distribute
 ---
 

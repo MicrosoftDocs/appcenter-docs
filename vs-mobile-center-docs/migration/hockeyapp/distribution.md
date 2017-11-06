@@ -5,7 +5,7 @@ ms.author: joemel
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: 78E2160E-DD37-4844-956B-11A85FD45855
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # HockeyApp Distribution in App Center

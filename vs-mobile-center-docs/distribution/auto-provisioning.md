@@ -9,7 +9,7 @@ ms.author: vigimm
 
 ms.date: 07/03/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 
 ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
 

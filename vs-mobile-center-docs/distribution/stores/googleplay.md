@@ -6,7 +6,7 @@ author: pnghub
 ms.author: gned
 ms.date: 09/28/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: distribute
 ---
 

@@ -8,7 +8,7 @@ authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom:
 ms.prod:
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb

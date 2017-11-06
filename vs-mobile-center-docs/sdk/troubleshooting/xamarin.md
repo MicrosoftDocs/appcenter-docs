@@ -7,7 +7,7 @@ ms.author: bereimol
 ms.date: 07/12/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---

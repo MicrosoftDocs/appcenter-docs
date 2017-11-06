@@ -7,7 +7,7 @@ ms.author: dihei
 ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: uwp
 ---

@@ -7,7 +7,7 @@ ms.author: blparr
 ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: audiences
 ---
 

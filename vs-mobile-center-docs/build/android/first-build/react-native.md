@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: react-native
 ---

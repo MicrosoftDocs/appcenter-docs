@@ -8,7 +8,7 @@ authors: sshibu
 ms.author: t-shshib
 ms.date: 07/28/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom:
 ms.prod: .net-core
 ms.assetid: 9e2c6890-26e9-4b8a-a4fb-f43c8e55c1fb

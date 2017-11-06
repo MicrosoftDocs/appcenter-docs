@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 04/07/2017
 ms.topic: article
 ms.assetid: 0E94BEBC-F61E-4CAB-8CDF-CC191860D59F
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # Dashboard FAQ

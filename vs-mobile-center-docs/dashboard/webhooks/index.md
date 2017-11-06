@@ -6,7 +6,7 @@ author: achewqy
 ms.author: amchew
 ms.date: 2017-09-13
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.assetid: 836f00da-66a8-4d5e-8535-1f965bf12f3f
 ---
 

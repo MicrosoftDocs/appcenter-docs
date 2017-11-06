@@ -7,7 +7,7 @@ ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: test
 ---
 

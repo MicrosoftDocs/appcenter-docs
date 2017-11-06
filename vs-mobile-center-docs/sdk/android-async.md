@@ -7,7 +7,7 @@ ms.author: guperrot
 ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 610b8797-6884-4dd4-bad3-7c05f39b3922
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 ---

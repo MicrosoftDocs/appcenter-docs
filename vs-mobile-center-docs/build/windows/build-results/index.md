@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: 8dc56007-d4a7-4cbf-b9f4-5e9a2d29ee01
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: windows
 ---

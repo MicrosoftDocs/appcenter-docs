@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 10/18/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ---
 

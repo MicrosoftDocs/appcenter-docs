@@ -7,7 +7,7 @@ ms.author: anlinde
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 38624f1c-15fe-4c9f-8b64-e22348e2dcbc
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: crashes
 ms.tgt_pltfrm: android
 ---

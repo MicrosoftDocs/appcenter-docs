@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 10/20/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # Product Roadmap

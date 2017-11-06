@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 04/07/2017
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # Creating and managing apps

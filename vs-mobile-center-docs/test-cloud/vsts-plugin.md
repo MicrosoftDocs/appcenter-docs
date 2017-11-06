@@ -8,7 +8,7 @@ author: Oddj0b
 
 ms.date: 05/02/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 
 ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9 
 

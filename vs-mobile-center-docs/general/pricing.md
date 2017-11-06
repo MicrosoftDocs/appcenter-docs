@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 06/13/2017
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # Pricing

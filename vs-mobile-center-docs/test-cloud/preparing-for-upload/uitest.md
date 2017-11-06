@@ -8,7 +8,7 @@ ms.reviewer: crdun
 ms.date: 09/15/2017
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: test
 ---
 

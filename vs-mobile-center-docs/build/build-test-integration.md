@@ -8,7 +8,7 @@ author: siminapasat
 ms.author: siminap
 ms.date: 03/28/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.assetid: ccc7e62f-90ad-4634-a25b-2e720fb34dff 
 
 ms.reviewer: vigimm

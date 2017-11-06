@@ -7,7 +7,7 @@ ms.author: v-yuneva
 ms.date: 06/27/2017
 ms.topic: article
 ms.assetid: 1f49c30b-3657-4e8e-9ffa-9a07f16a6751
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: xamarin
 ---

@@ -7,7 +7,7 @@ ms.author: joemel
 ms.date: 10/20/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 # Changelog
 

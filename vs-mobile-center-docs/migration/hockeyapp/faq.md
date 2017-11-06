@@ -5,7 +5,7 @@ ms.author: joemel
 ms.date: 04/10/2017
 ms.topic: article
 ms.assetid: 65485D34-735A-4454-BD6D-0D04B9E173F2
-ms.service: mobile-center
+ms.service: vs-appcenter
 ---
 
 # HockeyApp Transition FAQ

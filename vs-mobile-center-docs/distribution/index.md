@@ -7,7 +7,7 @@ ms.author: JoshuaWeber
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: dda0e037-9f42-4e63-8ef8-e645d3e8fbda
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: distribute
 ---
 

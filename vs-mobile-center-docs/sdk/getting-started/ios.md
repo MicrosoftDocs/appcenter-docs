@@ -7,7 +7,7 @@ ms.author: bereimol
 ms.date: 08/03/2017
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---

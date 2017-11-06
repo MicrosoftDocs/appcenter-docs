@@ -7,7 +7,7 @@ ms.author: v-daada
 ms.date: 06/27/2017
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ---
 
