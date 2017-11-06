@@ -29,9 +29,9 @@ You can control the amount of log messages that show up from App Center. Log mes
 To have as many log messages as possible, use `LogLevelVerbose`.
 
 ```javascript
-import MobileCenter from 'mobile-center';
+import AppCenter from 'app-center';
 
-await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
+await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
 ```
 
 > [!NOTE]
@@ -39,18 +39,18 @@ await MobileCenter.setLogLevel(MobileCenter.LogLevelVerbose);
 >
 > If you wish to increase logging for app startup, use the native App Center setLogLevel APIs.
 >
-> In iOS, call `[MSMobileCenter setLogLevel: MSLogLevelVerbose];` before any call to `[RNMobileCenter register];` (or `RNAnalytics` or `RNCrashes` or `RNPush`) in **AppDelegate.m**. You have to add `@import MobileCenter;` if missing in that file.
+> In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[RNAppCenter register];` (or `RNAnalytics` or `RNCrashes` or `RNPush`) in **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
 >
-> In Android, call `MobileCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
+> In Android, call `AppCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
 ## Identify installations
 
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data on Android. The following API is useful for debugging purposes.
 
 ```javascript
-import MobileCenter from 'mobile-center';
+import AppCenter from 'app-center';
 
-const installId = await MobileCenter.getInstallId();   // Returned as a string
+const installId = await AppCenter.getInstallId();   // Returned as a string
 ```
 
 ## Disable all services at runtime
@@ -58,15 +58,15 @@ const installId = await MobileCenter.getInstallId();   // Returned as a string
 If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
 
 ```javascript
-import MobileCenter from 'mobile-center';
+import AppCenter from 'app-center';
 
-await MobileCenter.setEnabled(false);
+await AppCenter.setEnabled(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```javascript
-await MobileCenter.setEnabled(true);
+await AppCenter.setEnabled(true);
 ```
 
 ## Check if App Center is enabled
@@ -74,7 +74,7 @@ await MobileCenter.setEnabled(true);
 You can also check if App Center is enabled or not.
 
 ```javascript
-const enabled = await MobileCenter.isEnabled();
+const enabled = await AppCenter.isEnabled();
 ```
 
 ## Check App Center SDK version at runtime
@@ -82,7 +82,7 @@ const enabled = await MobileCenter.isEnabled();
 You can get the version of App Center SDK that you are currently using.
  
 ```javascript
-MobileCenter.getSdkVersion();
+AppCenter.getSdkVersion();
 ```
 
 ## Use custom properties
@@ -92,11 +92,11 @@ App Center allows you to define custom properties as key value pairs in your app
 You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Javascript types: `string`, `number`, `boolean` and `Date`. 
 
 ```javascript
-import MobileCenter, {CustomProperties} from 'mobile-center';
+import AppCenter, {CustomProperties} from 'app-center';
 
 const properties = new CustomProperties();
 properties.set("color", "blue").set("score", 10);
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```
 
 > [!NOTE]
@@ -105,9 +105,9 @@ MobileCenter.setCustomProperties(properties);
 You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```javascript
-import MobileCenter, {CustomProperties} from 'mobile-center';
+import AppCenter, {CustomProperties} from 'app-center';
 
 const properties = new CustomProperties();
 properties.clear("score");
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```

@@ -37,7 +37,7 @@ Once you have started the SDK, use the `trackEvent` method to track your events 
 
 ```javascript
 // import App Center Analytics at the top of the file.
-import Analytics from "mobile-center-analytics";
+import Analytics from "app-center-analytics";
 
 Analytics.trackEvent("Video clicked", { Category: "Music", FileName: "favorite.avi" });
 ```

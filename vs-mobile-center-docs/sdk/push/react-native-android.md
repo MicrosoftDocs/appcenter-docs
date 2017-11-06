@@ -22,13 +22,13 @@ The App Center SDK is designed with a modular approach – you only need to inte
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
     ```
-    npm install mobile-center-push --save
+    npm install app-center-push --save
     ```
 
 2. Link the plugin to the React Native app by using the react-native link command.
 
     ```
-    react-native link mobile-center-push
+    react-native link app-center-push
     ```
 
 Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
@@ -58,7 +58,7 @@ You can set up a listener to be notified whenever a push notification is receive
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `RNPushPackage` is instantiated, like from `MainApplication.onCreate`:
 
 ```java
-import com.microsoft.azure.mobile.push.Push;
+import com.microsoft.appcenter.push.Push;
 
 ...
 
@@ -71,7 +71,7 @@ You can enable and disable App Center Push at runtime. If you disable it, the SD
 
 
 ```javascript
-import Push from 'mobile-center-push';
+import Push from 'app-center-push';
 
 ...
 
@@ -84,7 +84,7 @@ await Push.setEnabled(true);       // Re-enable it
 You can also check if App Center Push is enabled or not:
 
 ```javascript
-import Push from 'mobile-center-push';
+import Push from 'app-center-push';
 
 ...
 

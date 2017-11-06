@@ -28,7 +28,7 @@ You can control the amount of log messages that show up from App Center in the c
 To have as many log messages as possible, use `LogLevel.Verbose`.
 
 ```csharp
-MobileCenter.LogLevel = LogLevel.Verbose;
+AppCenter.LogLevel = LogLevel.Verbose;
 ```
 
 ## Identify installations
@@ -36,7 +36,7 @@ MobileCenter.LogLevel = LogLevel.Verbose;
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```csharp
-System.Guid installId = await MobileCenter.GetInstallIdAsync();
+System.Guid installId = await AppCenter.GetInstallIdAsync();
 ```
 
 ## Disable all services at runtime
@@ -44,13 +44,13 @@ System.Guid installId = await MobileCenter.GetInstallIdAsync();
 If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
 
 ```csharp
-MobileCenter.SetEnabledAsync(false);
+AppCenter.SetEnabledAsync(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```csharp
-MobileCenter.SetEnabledAsync(true);
+AppCenter.SetEnabledAsync(true);
 ```
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
@@ -60,7 +60,7 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 You can also check if App Center is enabled or not.
 
 ```csharp
-bool enabled = await MobileCenter.IsEnabledAsync();
+bool enabled = await AppCenter.IsEnabledAsync();
 ```
 
 ## Check App Center SDK version at runtime
@@ -68,7 +68,7 @@ bool enabled = await MobileCenter.IsEnabledAsync();
 You can get the version of App Center SDK that you are currently using.
 
 ```csharp
-MobileCenter.SdkVersion;
+AppCenter.SdkVersion;
 ```
 
 ## Use custom properties
@@ -80,7 +80,7 @@ You can set custom properties by calling the `SetCustomProperties()` API. A vali
 ```csharp
 CustomProperties properties = new CustomProperties();
 properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
-MobileCenter.SetCustomProperties(properties);
+MoAppCenter.SetCustomProperties(properties);
 ```
 
 > [!NOTE]
@@ -91,5 +91,5 @@ You may remove any custom property by calling the `Clear()` API. This will only 
 ```csharp
 CustomProperties properties = new CustomProperties();
 properties.Clear("score");
-MobileCenter.SetCustomProperties(properties);
+AppCenter.SetCustomProperties(properties);
 ```

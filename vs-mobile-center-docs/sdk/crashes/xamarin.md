@@ -56,7 +56,7 @@ If your app crashed previously, you can get details about the last crash.
 ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#customize-your-usage-of-mobile-center-crashes).
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#customize-your-usage-of-app-center-crashes).
 
 ## Customize your usage of App Center Crashes
 

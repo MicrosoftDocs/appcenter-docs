@@ -51,22 +51,22 @@ The App Center SDK for iOS can be integrated into your app via [Cocoapods](https
 
 ### 3.1  Integration via Cocoapods
 
-1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **MobileCenter**, **MobileCenterAnalytics** and **MobileCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on MobileCenter. It will get pulled in automatically.
+1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics** and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has it's own subspec and they all rely on AppCenter. It will get pulled in automatically.
 
 	```ruby
 	# Use the following line to use App Center Analytics and Crashes.
-	pod 'MobileCenter'
+	pod 'AppCenter'
 
 	# Use the following lines if you want to specify which service you want to use.
-	pod 'MobileCenter/Analytics'
-	pod 'MobileCenter/Crashes'
+	pod 'AppCenter/Analytics'
+	pod 'AppCenter/Crashes'
 	```
 
 2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
 
 
 > [!NOTE]
-> If you see an error like ```[!] Unable to find a specification for `MobileCenter` ```
+> If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
 >  while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
@@ -74,19 +74,19 @@ Now that you've integrated the frameworks in your application, it's time to star
 ### 3.2 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
-1. Download the [App Center iOS SDK](https://github.com/Microsoft/MobileCenter-SDK-iOS/releases) frameworks provided as a zip file.
+1. Download the [App Center iOS SDK](https://github.com/Microsoft/AppCenter-SDK-iOS/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you will see a folder called **MobileCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `MobileCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
     * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
-4. Open Finder and copy the previously unzipped **MobileCenter-SDK-Apple/iOS** folder into your project's folder at the location where you want it to reside.
+4. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** folder into your project's folder at the location where you want it to reside.
 
 5. Add the SDK frameworks to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop **MobileCenter.framework**, **MobileCenterAnalytics.framework** and **MobileCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **MobileCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
+    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
@@ -102,9 +102,9 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 Open your **AppDelegate.m** file and add the following import statements:
 
 ```obj-c
-@import MobileCenter;
-@import MobileCenterAnalytics;
-@import MobileCenterCrashes;
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 ```
 
 **Swift**
@@ -112,9 +112,9 @@ Open your **AppDelegate.m** file and add the following import statements:
 Open your **AppDelegate.swift** file and add the following import statements:
 
 ```swift
-import MobileCenter
-import MobileCenterAnalytics
-import MobileCenterCrashes
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 ```
 
 ### 4.2 Add the `start:withServices:` method
@@ -124,7 +124,7 @@ import MobileCenterCrashes
 Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
 
 ```obj-c
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
 
 **Swift**
@@ -132,7 +132,7 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
 
 ```swift
-MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -152,13 +152,13 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 **Objective-C**
 
 ```obj-c
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
 ```
 
 **Swift**
 
 ```swift
-MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.

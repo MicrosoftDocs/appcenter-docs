@@ -38,7 +38,7 @@ Push notifications work differently on UWP, iOS, and Android, therefore, before 
 * [UWP](uwp.md)
 
 >[!IMPORTANT]
->Even if you only access the `MobileCenter` or `Push` class from your shared or PCL project, the App Center NuGet packages must be added to each platform-specific project.
+>Even if you only access the `AppCenter` or `Push` class from your shared or PCL project, the App Center NuGet packages must be added to each platform-specific project.
 
 ## Add App Center Push to your app
 
@@ -106,7 +106,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
         if (rootFrame.Content == null)
         {
-            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call MobileCenter.Start
+            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call AppCenter.Start
             rootFrame.Navigate(typeof(MainPage), e.Arguments);
         }
         Window.Current.Activate();

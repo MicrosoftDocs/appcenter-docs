@@ -47,7 +47,7 @@ Replace `{version}` with the .NET standard version of your project.
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   ```csharp
-  MobileCenter.LogLevel = LogLevel.Verbose;
+  AppCenter.LogLevel = LogLevel.Verbose;
   ```
 
 5. Make sure your device is online.

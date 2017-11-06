@@ -78,15 +78,15 @@ The App Center SDK can be integrated using Xamarin Studio, Visual Studio, or the
 ### Visual Studio for Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.Azure.Mobile.Analytics** and **Microsoft.Azure.Mobile.Crashes** packages.
+* Search for **App Center**, then install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 * Type the following commands:
 
-   `PM> Install-Package Microsoft.Azure.Mobile.Analytics`
-   `PM> Install-Package Microsoft.Azure.Mobile.Crashes`
+   `PM> Install-Package Microsoft.AppCenter.Analytics`
+   `PM> Install-Package Microsoft.AppCenter.Crashes`
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -107,9 +107,9 @@ Add the appropriate namespaces before you get started with using our APIs.
 * **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following lines below the existing `using` statements:
 
 ```csharp
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
-using Microsoft.Azure.Mobile.Crashes;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 ```
 
 ### 4.2 Add the `Start()` method
@@ -119,7 +119,7 @@ using Microsoft.Azure.Mobile.Crashes;
 Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 #### 4.2.2 Xamarin.iOS
@@ -127,7 +127,7 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunching()` method
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 ##### 4.2.3 Xamarin.Forms
@@ -135,7 +135,7 @@ MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the **constructor**.
 
 ```csharp
-MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
+AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -155,13 +155,13 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 #### 4.3.1 Xamarin.Android and Xamarin.iOS
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics));
+AppCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
 
 #### 4.3.2 Xamarin.Forms
 
 ```csharp
-MobileCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
+AppCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
 ```
 
 ---

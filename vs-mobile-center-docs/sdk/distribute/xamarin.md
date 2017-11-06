@@ -88,7 +88,7 @@ Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunch
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
-MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
+AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 ```
 
 ##### Xamarin.Android
@@ -96,7 +96,7 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
-MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
+AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 ```
 
 ##### Xamarin.Forms
@@ -104,7 +104,7 @@ MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
+AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
 ```
 
 For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplicaton`:
@@ -119,7 +119,7 @@ This step is not necessary on Android where the debug configuration is detected 
 
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
-3. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+3. Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
 > If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
@@ -129,7 +129,7 @@ This step is not necessary on Android where the debug configuration is detected 
 >		<dict>
 >			<key>CFBundleURLSchemes</key>
 >			<array>
->				<string>mobilecenter-${APP_SECRET}</string>
+>				<string>appcenter-${APP_SECRET}</string>
 >			</array>
 >		</dict>
 >	</array>
@@ -143,12 +143,12 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback. You need to register the callback before calling `MobileCenter.Start` as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback. You need to register the callback before calling `AppCenter.Start` as shown in the following example:
 
 ```csharp
 // In this example OnReleaseAvailable is a method name in same class
 Distribute.ReleaseAvailable = OnReleaseAvailable;
-MobileCenter.Start(...);
+AppCenter.Start(...);
 ```
 
 Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
@@ -286,7 +286,7 @@ While it is possible to use App Center Distribute to distribute a new version of
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist** file.
-2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
 
 ```csharp

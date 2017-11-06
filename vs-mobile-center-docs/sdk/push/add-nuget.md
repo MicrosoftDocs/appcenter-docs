@@ -7,13 +7,13 @@
 #### Visual Studio for Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.Azure.Mobile.Push**.
+* Search for **App Center**, then install **Microsoft.AppCenter.Push**.
 
 #### Package Manager Console
 
 * Type the following command in Package Manager Console:
 
-    `PM> Install-Package Microsoft.Azure.Mobile.Push`
+    `PM> Install-Package Microsoft.AppCenter.Push`
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages

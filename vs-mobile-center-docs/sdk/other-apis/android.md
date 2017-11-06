@@ -23,12 +23,12 @@ ms.tgt_pltfrm: android
 
 ## Adjust the log level
 
-You can control the amount of log messages by App Center that show up in LogCat. Use the `MobileCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
+You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
 
 To have as many log messages as possible, use `Log.Verbose`.
 
 ```java
-MobileCenter.setLogLevel(Log.VERBOSE);
+AppCenter.setLogLevel(Log.VERBOSE);
 ```
 
 ## Identify installations
@@ -36,7 +36,7 @@ MobileCenter.setLogLevel(Log.VERBOSE);
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
 
 ```java
-MobileCenter.getInstallId();
+AppCenter.getInstallId();
 ```
 
 [!include[](../android-see-async.md)]
@@ -46,13 +46,13 @@ MobileCenter.getInstallId();
 If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
 
 ```java
-MobileCenter.setEnabled(false);
+AppCenter.setEnabled(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```java
-MobileCenter.setEnabled(true);
+AppCenter.setEnabled(true);
 ```
 
 [!include[](../android-see-async.md)]
@@ -62,7 +62,7 @@ MobileCenter.setEnabled(true);
 You can also check if App Center is enabled or not.
 
 ```java
-MobileCenter.isEnabled();
+AppCenter.isEnabled();
 ```
 
 [!include[](../android-see-async.md)]
@@ -72,7 +72,7 @@ MobileCenter.isEnabled();
 You can get the version of App Center SDK that you are currently using.
 
 ```java
-MobileCenter.getSdkVersion();
+AppCenter.getSdkVersion();
 ```
 
 ## Use custom properties
@@ -84,7 +84,7 @@ You can set custom properties by calling the `setCustomProperties()` API. A vali
 ```java
 CustomProperties properties = new CustomProperties();
 properties.set("color", "blue").set("score", 10);
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```
 
 > [!NOTE]
@@ -95,5 +95,5 @@ You may remove any custom property by calling the `clear()` API. This will only 
 ```java
 CustomProperties properties = new CustomProperties();
 properties.clear("score");
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```

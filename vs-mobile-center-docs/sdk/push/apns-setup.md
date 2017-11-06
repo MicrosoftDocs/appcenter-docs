@@ -2,7 +2,7 @@
 
 Log in to the App Center portal, select your application, click on the **Push** button from the left menu then click **Next** to reveal the push notification settings UI:
 
-![mobile-center-push-settings](images/ios-push-settings-mc-portal.png)
+![app-center-push-settings](images/ios-push-settings-mc-portal.png)
 
 * On the bottom of the page, select **Sandbox** for initial development or **Production** for production version of your application.
 

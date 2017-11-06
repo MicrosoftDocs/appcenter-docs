@@ -68,7 +68,7 @@ MSErrorReport *crashReport = [MSCrashes lastSessionCrashReport];
 var crashReport = MSCrashes.lastSessionCrashReport()
 ```
 
-There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#customize-your-usage-of-mobile-center-crashes).
+There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#customize-your-usage-of-app-center-crashes).
 
 ## Customize your usage of App Center Crashes
 
@@ -220,11 +220,11 @@ The `disableMachExceptionHandler`-method provides an option to disable catching 
 
 ```objc
 [MSCrashes disableMachExceptionHandler];
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
 ```swift
 MSCrashes.disableMachExceptionHandler()
-MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
 ## Enable or disable App Center Crashes at runtime

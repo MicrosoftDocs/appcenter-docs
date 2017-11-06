@@ -31,10 +31,10 @@ You can control the amount of log messages that show up from App Center in the c
 To have as many log messages as possible, use `MSLogLevelVerbose`/`MSLogLevel.Verbose`.
 
 ```objc
-[MSMobileCenter setLogLevel:MSLogLevelVerbose];
+[MSAppCenter setLogLevel:MSLogLevelVerbose];
 ```
 ```swift
-MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+MSAppCenter.setLogLevel(MSLogLevel.Verbose)
 ```
 
 ## Identify installations
@@ -42,10 +42,10 @@ MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```objc
-NSUUID *installId = [MSMobileCenter  installId];
+NSUUID *installId = [MSAppCenter  installId];
 ```
 ```swift
-var installId = MSMobileCenter.installId()
+var installId = MSAppCenter.installId()
 ```
 
 ## Disable all services at runtime
@@ -53,19 +53,19 @@ var installId = MSMobileCenter.installId()
 If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to App Center.
 
 ```objc
-[MSMobileCenter setEnabled:NO];
+[MSAppCenter setEnabled:NO];
 ```
 ```swift
-MSMobileCenter.setEnabled(false)
+MSAppCenter.setEnabled(false)
 ```
 
 To enable all services at once again, use the same API but pass `YES`/`true` as a parameter.
 
 ```objc
-[MSMobileCenter setEnabled:YES];
+[MSAppCenter setEnabled:YES];
 ```
 ```swift
-MSMobileCenter.setEnabled(true)
+MSAppCenter.setEnabled(true)
 ```
 
 ## Check if App Center is enabled
@@ -73,10 +73,10 @@ MSMobileCenter.setEnabled(true)
 You can also check if App Center is enabled or not.
 
 ```objc
-[MSMobileCenter isEnabled];
+[MSAppCenter isEnabled];
 ```
 ```swift
-MSMobileCenter.isEnabled()
+MSAppCenter.isEnabled()
 ```
 
 ## Check App Center SDK version at runtime
@@ -84,10 +84,10 @@ MSMobileCenter.isEnabled()
 You can get the version of App Center SDK that you are currently using.
 
 ```objc
-[MSMobileCenter sdkVersion];
+[MSAppCenter sdkVersion];
 ```
 ```swift
-MSMobileCenter.sdkVersion()
+MSAppCenter.sdkVersion()
 ```
 
 ## Use custom properties
@@ -100,13 +100,13 @@ You can set custom properties by calling the `setCustomProperties` API. A valid 
 MSCustomProperties *customProperties = [MSCustomProperties new];
 [customProperties setString:@"blue" forKey:@"color"];
 [customProperties setNumber:@(10) forKey:@"score"];
-[MSMobileCenter setCustomProperties:customProperties];
+[MSAppCenter setCustomProperties:customProperties];
 ```
 ```swift
 var customProperties = MSCustomProperties()
 customProperties.setSring("blue", forKey: "color")
 customProperties.setNumber(10, forKey: "score")
-MSMobileCenter.setCustomProperties(customProperties)
+MSAppCenter.setCustomProperties(customProperties)
 ```
 
 > [!NOTE]
@@ -117,10 +117,10 @@ You may remove any custom property by calling the `clearPropertyForKey` API. Thi
 ```objc
 MSCustomProperties *customProperties = [MSCustomProperties new];
 [customProperties clearPropertyForKey:@"score"];
-[MSMobileCenter setCustomProperties:customProperties];
+[MSAppCenter setCustomProperties:customProperties];
 ```
 ```swift
 var customProperties = MSCustomProperties()
 customProperties.clearProperty(forKey: "score")
-MSMobileCenter.setCustomProperties(customProperties)
+MSAppCenter.setCustomProperties(customProperties)
 ```

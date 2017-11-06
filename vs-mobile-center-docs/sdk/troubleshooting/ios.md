@@ -25,7 +25,7 @@ dev_langs:
 ## Issues during setup
 
 1. In the console, look for an Assert log with the message - "App Center SDK configured successfully". This verifies that the SDK is configured successfully.
-2. If you are using Cocoapods to integrate App Center in your iOS app and run into an error with the message - `CocoaPods - Unable to find a specification for MobileCenter`, run `pod repo update` to update your local Cocoapods repository and then run `pod install` again.
+2. If you are using Cocoapods to integrate App Center in your iOS app and run into an error with the message - `CocoaPods - Unable to find a specification for AppCenter`, run `pod repo update` to update your local Cocoapods repository and then run `pod install` again.
 3. If you are manually integrating the SDK binaries, make sure you have modules enabled for your project.
 
 ## Analytics data doesn't show up in the portal.
@@ -36,10 +36,10 @@ dev_langs:
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   	```objc
-  	[MSMobileCenter setLogLevel:MSLogLevelVerbose]
+  	[MSAppCenter setLogLevel:MSLogLevelVerbose]
   	```
     ```swift
-	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+	MSAppCenter.setLogLevel(MSLogLevel.Verbose)
 	```
 	
 5. Make sure your device is online.
@@ -55,10 +55,10 @@ dev_langs:
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
 	```objc
- 	[MSMobileCenter setLogLevel:MSLogLevelVerbose]
+ 	[MSAppCenter setLogLevel:MSLogLevelVerbose]
  	```
  	```swift
-	MSMobileCenter.setLogLevel(MSLogLevel.Verbose)
+	MSAppCenter.setLogLevel(MSLogLevel.Verbose)
 	```
 
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
@@ -69,13 +69,13 @@ dev_langs:
 
 ## The Alert that prompts users for an update doesn't contain strings, but just the keys for them.
 
-This means that the `MobileCenterDistributeResources.bundle` wasn't added to the project. Make sure you have drag'n'dropped the file into your Xcode project, and it appears in your app target's `Copy Bundle Resources` build phase. The later should be the case if you have added the file through drag'n'drop – Xcode does it automatically for you. If the file is missing from the build phase, add it so it gets compiled into your app's bundle.
+This means that the `AppCenterDistributeResources.bundle` wasn't added to the project. Make sure you have drag'n'dropped the file into your Xcode project, and it appears in your app target's `Copy Bundle Resources` build phase. The later should be the case if you have added the file through drag'n'drop – Xcode does it automatically for you. If the file is missing from the build phase, add it so it gets compiled into your app's bundle.
 
 If you are using Cocoapods, it takes care of the resources automatically. Try re-installing the pod.
 
 ## You are seeing messages in the console that indicate that the database could not be opened
 
-Starting with version 0.11.0 of the iOS SDK, App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[MobileCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.13.0 or later.
+Starting with version 0.11.0 of the iOS SDK, App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.13.0 or later.
 
 ## Distribute and in-app updates are blocking my automated UI tests
 

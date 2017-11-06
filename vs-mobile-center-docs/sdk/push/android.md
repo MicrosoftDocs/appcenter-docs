@@ -26,8 +26,8 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.13.0'
-       compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+       def appCenterSdkVersion = '1.0.0'
+       compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
     ```
 
@@ -37,10 +37,10 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `MobileCenter.start()` method to start App Center Push service.
+Add `Push.class` to your `AppCenter.start()` method to start App Center Push service.
 
 ```java
-MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
+AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -48,8 +48,8 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 Android Studio will automatically suggest the required import statement once you add `Push.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
-import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.push.Push;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.push.Push;
 ```
 
 ## Intercept push notifications
@@ -67,11 +67,11 @@ You can set up a listener to be notified whenever a push notification is receive
 > The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
 > **Title** and **message** are only available in **foreground** pushes.
 
-You need to register the listener before calling `MobileCenter.start` as shown in the following example:
+You need to register the listener before calling `AppCenter.start` as shown in the following example:
 
 ```java
 Push.setListener(new MyPushListener());
-MobileCenter.start(...);
+AppCenter.start(...);
 ```
 
 If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
@@ -128,11 +128,11 @@ public class MyPushListener implements PushListener {
 >[!NOTE]
 >App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
-If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `MobileCenter.start`:
+If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());
-MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
+AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 
 ## Enable or disable App Center Push at runtime

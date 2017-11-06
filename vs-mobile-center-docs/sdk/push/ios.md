@@ -58,7 +58,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
-pod 'MobileCenter/Push'
+pod 'AppCenter/Push'
 ```
 
 #### Integration by copying the binaries into your project
@@ -74,12 +74,12 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 Open your **AppDelegate.m** file  in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
 
 ```objc
-@import MobileCenter;
-@import MobileCenterPush;
+@import AppCenter;
+@import AppCenterPush;
 ```
 ```swift
-import MobileCenter
-import MobileCenterPush
+import AppCenter
+import AppCenterPush
 ```
 
 #### 2.2 Add the `start:withServices:` method
@@ -89,17 +89,17 @@ Add `MSPush` to your `start:withServices:` method to start App Center Distribute
 Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
-MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 #### 2.3 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
+If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-app-center-services) to implement a callback to receive push notifications.
 
 ## Intercept push notifications
 
@@ -110,15 +110,15 @@ You can set up a delegate to be notified whenever a push notification is receive
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-You need to register the delegate before starting MobileCenter as shown in the following example:
+You need to register the delegate before starting AppCenter as shown in the following example:
 
 ```objc
 [MSPush setDelegate:self];
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
 MSPush.setDelegate(self)
-MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push notification has been clicked:
@@ -201,7 +201,7 @@ var enabled = MSPush.isEnabled()
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist file**.
-2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
     Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.

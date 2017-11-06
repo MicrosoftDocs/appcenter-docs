@@ -39,8 +39,8 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def mobileCenterSdkVersion = '0.13.0'
-       compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
+       def appCenterSdkVersion = '0.13.0'
+       compile "com.microsoft.azure.mobile:app-center-distribute:${appCenterSdkVersion}"
     }
     ```
 
@@ -50,16 +50,16 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Distribute.class` to your `MobileCenter.start()` method to start App Center Distribute service.
+Add `Distribute.class` to your `AppCenter.start()` method to start App Center Distribute service.
 
 ```java
-MobileCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
+AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
-import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.AppCenter;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
 
@@ -71,11 +71,11 @@ You can easily provide your own resource strings if you'd like to change or loca
 
 ### 2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `DistributeListener` interface. You need to register the listener before calling `MobileCenter.start` as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `DistributeListener` interface. You need to register the listener before calling `AppCenter.start` as shown in the following example:
 
 ```java
 Distribute.setListener(new MyDistributeListener());
-MobileCenter.start(...);
+AppCenter.start(...);
 ```
 
 Here is an example of the listener implementation that replaces the SDK dialog with a custom one:

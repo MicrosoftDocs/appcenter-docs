@@ -1,7 +1,7 @@
 The following example demonstrates how to use the push event.
 
 ```csharp
-// This should come before MobileCenter.Start() is called
+// This should come before AppCenter.Start() is called
 Push.PushNotificationReceived += (sender, e) => {
 
     // Add the notification message and title to the message

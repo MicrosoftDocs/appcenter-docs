@@ -58,13 +58,13 @@ The default integration of the SDK uses Cocoapods for iOS.
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
   ```
-  npm install mobile-center-push --save
+  npm install app-center-push --save
   ```
 
 2. Link the plugin to the React Native app by using the `react-native link command`.
 
   ```
-  react-native link mobile-center-push
+  react-native link app-center-push
   ```
 
 #### Integrate the iOS SDK manually
@@ -91,7 +91,7 @@ Note that when the app calls `register` for the first time after being installed
 
 #### 2.2 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
 
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-mobile-center-services) to implement a callback to receive push notifications.
+If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-app-center-services) to implement a callback to receive push notifications.
 
 ## Intercept push notifications
 
@@ -109,7 +109,7 @@ By default, iOS does not generate notifications when the push is received in for
 You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
   ```javascript
-  import Push from 'mobile-center-push';
+  import Push from 'app-center-push';
 
   ...
 
@@ -122,7 +122,7 @@ You can enable and disable App Center Push at runtime. If you disable it, the SD
 You can also check if App Center Push is enabled or not:
 
   ```javascript
-  import Push from 'mobile-center-push';
+  import Push from 'app-center-push';
 
   ...
 
@@ -134,14 +134,14 @@ You can also check if App Center Push is enabled or not:
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist file**.
-2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    You will have to add `@import MobileCenterPush` and `@import RNMobileCenterShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    You will have to add `@import AppCenterPush` and `@import RNAppCenterShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
     ```objc
-    @import MobileCenterPush;
-    @import RNMobileCenterShared;
+    @import AppCenterPush;
+    @import RNAppCenterShared;
 
     - (void)application:(UIApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

@@ -45,7 +45,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
-pod 'MobileCenter/Distribute'
+pod 'AppCenter/Distribute'
 ```
 
 #### Integration by copying the binaries into your project
@@ -61,12 +61,12 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 Open your **AppDelegate.m** file in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
 
 ```objc
-@import MobileCenter;
-@import MobileCenterDistribute;
+@import AppCenter;
+@import AppCenterDistribute;
 ```
 ```swift
-import MobileCenter
-import MobileCenterDistribute
+import AppCenter
+import AppCenterDistribute
 ```
 
 #### 2.2 Add the `start:withServices:` method
@@ -76,10 +76,10 @@ Add `MSDistribute` to your `start:withServices:` method to start App Center Dist
 Insert the following line to start the SDK in your app's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
-[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
+[MSApCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
 ```
 ```swift
-MSMobileCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -88,7 +88,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your **Info.plist** file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
-3. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+3. Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
 > If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
@@ -98,7 +98,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 >		<dict>
 >			<key>CFBundleURLSchemes</key>
 >			<array>
->				<string>mobilecenter-${APP_SECRET}</string>
+>				<string>appcenter-${APP_SECRET}</string>
 >			</array>
 >		</dict>
 >	</array>
@@ -108,7 +108,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/app-center-sdk-ios/blob/develop/AppCenterDistribute/AppCenterDistribute/Resources/en.lproj/AppCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 2. Customize the update dialog
 
@@ -196,16 +196,16 @@ App Center Distribute will pop up it's UI/browser at application start. While th
 
  ```objc
  #if DEBUG
- 	[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+ 	[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
  #else
- 	[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
+ 	[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
  #endif
  ```
  ```swift
  #if DEBUG
- 	MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+ 	MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
  #else
- 	MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+ 	MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
  #endif
  ```
 
@@ -255,7 +255,7 @@ While it is possible to use App Center Distribute to distribute a new version of
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist file**.
-2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Add `openURL` callback in your `AppDelegate` file.
 
 ```objc

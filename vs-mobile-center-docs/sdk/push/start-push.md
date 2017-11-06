@@ -3,13 +3,13 @@ In order to use App Center, you need to opt in to the module(s) that you want to
 Add the following using statement to the top of the file you are referencing `Push` from: 
 
 ```csharp
-using Microsoft.Azure.Mobile.Push
+using Microsoft.AppCenter.Push
 ```
 
-Next, add `typeof(Push)` to your `MobileCenter.Start()` method to start App Center Push service.
+Next, add `typeof(Push)` to your `AppCenter.Start()` method to start App Center Push service.
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Push));
+AppCenter.Start("{Your App Secret}", typeof(Push));
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your app secret.

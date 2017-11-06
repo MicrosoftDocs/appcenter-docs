@@ -66,8 +66,8 @@ In your Xamarin.Android project, please add the following lines to your `proguar
 -dontwarn com.google.android.gms.**
 -keep class com.google.firebase.provider.FirebaseInitProvider
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver
--keep class com.microsoft.azure.mobile.push.TokenService
--keep class com.microsoft.azure.mobile.push.PushMessagingService
+-keep class com.microsoft.appcenter.push.TokenService
+-keep class com.microsoft.appcenter.push.PushMessagingService
 ```
 
 ## Add App Center Push to your app
@@ -115,7 +115,7 @@ Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into
 [!include[](start-push.md)]
 
 >[!NOTE]
->If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+>If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notifications
 
@@ -152,11 +152,11 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
-If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call `Push.EnableFirebaseAnalytics()` before `MobileCenter.Start()` like so:
+If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call `Push.EnableFirebaseAnalytics()` before `AppCenter.Start()` like so:
 
 ```csharp
 Push.EnableFirebaseAnalytics();
-MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Push));
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Push));
 ```
 
 ## Enable or disable Push at runtime

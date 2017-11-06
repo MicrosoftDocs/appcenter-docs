@@ -58,7 +58,7 @@ Crashes.getLastSessionCrashReport();
 
 [!include[](../android-see-async.md)]
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-mobile-center-crashes).
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-app-center-crashes).
 
 ## Customize your usage of App Center Crashes
 

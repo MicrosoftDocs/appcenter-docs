@@ -38,7 +38,7 @@ None of these permissions require user approval at runtime, those are all instal
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   ```java
-  MobileCenter.setLogLevel(Log.VERBOSE);
+  AppCenter.setLogLevel(Log.VERBOSE);
   ```
 
 5. Make sure your device is online.
@@ -54,7 +54,7 @@ None of these permissions require user approval at runtime, those are all instal
 5. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
   ```java
-  MobileCenter.setLogLevel(Log.VERBOSE);
+  AppCenter.setLogLevel(Log.VERBOSE);
   ```
 
 6. Make sure your device is online.

@@ -29,10 +29,10 @@ Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you hav
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc.
 
-Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can use the following code before `MobileCenter.Start(... typeof(Analytics) ...);`:
+Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can use the following code before `AppCenter.Start(... typeof(Analytics) ...);`:
 
 ```csharp
-MobileCenter.SetCountryCode("us");
+AppCenter.SetCountryCode("us");
 ```
 
 ## Custom events

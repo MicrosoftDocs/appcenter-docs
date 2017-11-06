@@ -50,9 +50,9 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 	```groovy
 	dependencies {
-		def mobileCenterSdkVersion = '0.13.0'
-   		compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
-   		compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
+		def appCenterSdkVersion = '1.0.0'
+   		compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+   		compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 	}
 	```
 
@@ -67,7 +67,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate`-callback to use **App Center Analytics** and **App Center Crashes**:
 
 ```java
-MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
+AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
 ```
 
 ### 4.2 Replace the placeholder with your App Secret
@@ -85,15 +85,15 @@ Note that, unless you explicitly specify each module as parameters in the start 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start()` API call as follows:
 
 ```java
-MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
+AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 ```
 
 Android Studio will automatically suggest the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
-import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.analytics.Analytics;
-import com.microsoft.azure.mobile.crashes.Crashes;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.

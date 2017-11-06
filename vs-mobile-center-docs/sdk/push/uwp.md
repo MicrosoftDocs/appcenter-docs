@@ -75,7 +75,7 @@ Now that you've integrated App Center Push in your application, it's time to sta
 [!include[](start-push.md)]
 
 >[!NOTE]
->If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `MobileCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+>If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notifications
 
@@ -83,12 +83,12 @@ App Center Push makes it possible to intercept push notifications but there is s
 
 ### Additional setup
 
-Call `Push.CheckLaunchedFromNotification(e);` after `MobileCenter.Start` in `OnLaunched` method.
+Call `Push.CheckLaunchedFromNotification(e);` after `AppCenter.Start` in `OnLaunched` method.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
-    MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
+    AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
     Push.CheckLaunchedFromNotification(e);
 }
 ```

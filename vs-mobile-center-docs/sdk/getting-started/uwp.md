@@ -59,13 +59,13 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 
 1. Navigate to the **Project > Manage NuGet Packages...**
 
-2. Search for **App Center**, and install **Microsoft.Azure.Mobile.Analytics**.
+2. Search for **App Center**, and install **Microsoft.AppCenter.Analytics**.
 
 ### Package Manager Console
 
 * Type the following commands:
 
-   `PM> Install-Package Microsoft.Azure.Mobile.Analytics`
+   `PM> Install-Package Microsoft.AppCenter.Analytics`
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -82,8 +82,8 @@ In order to use App Center, you need to opt in to the services that you want to 
 Add the appropriate namespaces before you use our APIs.
 
 ```csharp
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.AppCentee;
+using Microsoft.AppCenter.Analytics;
 ```
 
 ### 4.2 Add the `Start()` method
@@ -91,7 +91,7 @@ using Microsoft.Azure.Mobile.Analytics;
 Add the following call to your application's **constructor**:
 
 ```csharp
-MobileCenter.Start("{Your App Secret}", typeof(Analytics));
+AppCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
 
 ### 4.3 Replace the placeholder with your App Secret

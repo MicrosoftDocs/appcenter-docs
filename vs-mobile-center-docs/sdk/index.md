@@ -95,7 +95,7 @@ Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or la
 
 The App Center SDKs is open-source and available publicly on GitHub:
 
-* [App Center SDK for Android](https://github.com/Microsoft/mobile-center-sdk-android/tree/master)
-* [App Center SDK for iOS](https://github.com/Microsoft/mobile-center-sdk-ios/tree/master)
-* [App Center SDK for React Native](https://github.com/Microsoft/MobileCenter-SDK-react-native)
-* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/mobile-center-sdk-xamarin/tree/master)
+* [App Center SDK for Android](https://github.com/Microsoft/app-center-sdk-android/tree/master)
+* [App Center SDK for iOS](https://github.com/Microsoft/app-center-sdk-ios/tree/master)
+* [App Center SDK for React Native](https://github.com/Microsoft/app-center-SDK-react-native)
+* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/app-center-sdk-xamarin/tree/master)
