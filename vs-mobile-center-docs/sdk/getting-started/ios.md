@@ -37,7 +37,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 If you have already created your app in the App Center portal, you can skip this step.
 
-1. Head over to [mobile.azure.com](https://mobile.azure.com).
+1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
 3. Enter a name and an optional desciption for your app.
 4. Select **iOS** as the OS and **Objective-C/Swift** as a platform.

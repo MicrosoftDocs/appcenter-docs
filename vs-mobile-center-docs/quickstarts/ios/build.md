@@ -32,7 +32,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Set up the repository
-1. Go to the **Build** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Build** service in [App Center](https://appcenter.ms/apps).
 2. Choose **GitHub** as the service to Build with.
 3. Sign in to GitHub, and click **Authorize MobileCenter**.
 4. Choose **sampleapp-ios-swift**.

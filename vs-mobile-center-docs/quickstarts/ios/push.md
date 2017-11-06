@@ -45,7 +45,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification will not appear on a simulator.
 
 ## Set up Push in App Center
-1. Go to the **Push** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Push** service in [App Center](https://appcenter.ms/apps).
 2. Click **next** to skip the first page. The code shown here is already included.
 
 ## Get your Apple Push Notification service Key

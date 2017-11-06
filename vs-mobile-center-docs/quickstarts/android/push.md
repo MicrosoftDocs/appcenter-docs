@@ -58,7 +58,7 @@ MobileCenter.start(getApplication(), "<APP SECRET HERE>",
 
 
 ## Set up Push in App Center
-1. Go to the **Push** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Push** service in [App Center](https://appcenter.ms/apps).
 2. Click **Next** twice and skip the first and second pages.
 3. Go to the [Firebase Console](https://console.firebase.google.com/) and select the project.
 4. Navigate to Project Settings and copy your server key.

@@ -40,7 +40,7 @@ Start by adding the App Center Test task to the build definition - read how that
 
 In the Prepare Tests section, first make sure the _Prepare Tests_ checkbox is checked and that Appium is chosen under `Test Framework`. Insert the path to the Appium test-classes, dependency-jars and the `pom.xml` file into the `Build directory` field. These three artifacts is usually located in the `upload` folder.
 
-If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://mobile.azure.com/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
+If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
 
 Select the devices for the test run. The general rule of a device selection is that more devices equal longer testing time. Start small with 1-3 devices, and when everything is working, create a new test run with more devices. Finish your selection by clicking next.
 
@@ -73,7 +73,7 @@ You're all set to initiate the build.
 ### VSTS setup
 Start by adding the App Center Test task to the build definition - read how that is done in the [VSTS general setup](#vsts-general-setup)
 
-If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://mobile.azure.com/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
+If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
 
 Select the devices for the test run. The general rule of a device selection is that more devices equal longer testing time. Start small with 1-3 devices, and when everything is working, create a new test run with more devices. Finish your selection by clicking next.
 
@@ -110,7 +110,7 @@ Start by adding the App Center Test task to the build definition - read how that
 
 In the Prepare Tests section, first make sure the _Prepare Tests_ checkbox is checked and that _UI Test_ is chosen under `Test Framework`. Insert the path to your build directory, under most circumstances its folder path is: `<ProjectName>/bin/<configuration>`.
 
-If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://mobile.azure.com/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
+If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
 
 Select the devices for the test run. The general rule of a device selection is that more devices equal longer testing time. Start small with 1-3 devices, and when everything is working, create a new test run with more devices. Finish your selection by clicking next.
 
@@ -142,7 +142,7 @@ You're all set to initiate the build.
 
 Before you can start testing, the following steps are required.
 * You will need the application binary (`.apk` or `.ipa` file)
-* Activate your trial for App Center Test - this is done on [App Center](https://mobile.azure.com/). First select your app and then select Test in the left-hand menu.
+* Activate your trial for App Center Test - this is done on [App Center](https://appcenter.ms/). First select your app and then select Test in the left-hand menu.
 
 ### VSTS General Setup
 
@@ -168,5 +168,5 @@ Back in VSTS, click `add` next to the App Center Connection field. Inside `name`
 
 The second method is using your log-in credentials. When selecting _Credentials_ from the `Authentication Method`  dropdown menu two new fields appear. `App Center Username` and `App Center Password` insert the your username and password in the aptly named fields. 
 
-You can find your [username here](https://mobile.azure.com/settings/profile). There is a limitation while logging in using your Microsoft credentials, where you might need to create a specific password for App Center. You can set a [new password here](https://mobile.azure.com/settings/password).
+You can find your [username here](https://appcenter.ms/settings/profile). There is a limitation while logging in using your Microsoft credentials, where you might need to create a specific password for App Center. You can set a [new password here](https://appcenter.ms/settings/password).
 

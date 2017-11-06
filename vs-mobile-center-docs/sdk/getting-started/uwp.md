@@ -39,7 +39,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 If you have already created your app in the App Center portal, you can skip this step.
 
-1. To learn how to get started with Push, read the [mobile.azure.com](https://mobile.azure.com) documentation.
+1. To learn how to get started with Push, read the [appcenter.ms](https://appcenter.ms) documentation.
 
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
 

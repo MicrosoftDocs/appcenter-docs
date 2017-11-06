@@ -20,7 +20,7 @@ Today we recommend you to not use App Center for production use but continue usi
 
 ## [HockeyApp](~/migration/hockeyapp/index.md)
 
-Today customers can [sign-in](https://mobile.azure.com/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using their existing HockeyApp account. We are also working to get your existing apps and data from HockeyApp moved into App Center, so you don’t have to do any migration. Get the [high-level overview](https://www.hockeyapp.net/mobile-center/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md).
+Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using their existing HockeyApp account. We are also working to get your existing apps and data from HockeyApp moved into App Center, so you don’t have to do any migration. Get the [high-level overview](https://www.hockeyapp.net/mobile-center/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md).
 
 ## Xamarin Test Cloud
 

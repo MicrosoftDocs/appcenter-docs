@@ -16,7 +16,7 @@ We're committed to migrating your HockeyApp account with zero hassle. That's why
 
 Transitioning should be low-risk for all HockeyApp users, that's why we've synchronized your existing apps into App Center. Your apps are now two places at once with back-and-forward synchronicity, so you and your team are always up-to-date.
 
-To get started, [sign-in](https://mobile.azure.com/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using your existing HockeyApp credentials.
+To get started, [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using your existing HockeyApp credentials.
 
 We're starting with HockeyApp Preseason program participants, and will slowly roll-out to more and more of the HockeyApp user base. If you would like to try our preview, please contact support@hockeyapp.net.
 

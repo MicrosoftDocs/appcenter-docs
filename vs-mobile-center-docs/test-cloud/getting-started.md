@@ -16,7 +16,7 @@ ms.custom: test
 The requisite steps below must be completed before a project can be used with App Center Test Cloud.
 
 ## 1. Create a App Center account
-Create a App Center account at [mobile.azure.com](https://mobile.azure.com) to gain access to Test Cloud.
+Create a App Center account at [appcenter.ms](https://appcenter.ms) to gain access to Test Cloud.
 
 ## 2. Install the App Center CLI
 Test runs are executed using the App Center CLI. If not already installed, follow [these instructions](~/cli/index.md) to install. After installation, run `mobile-center login` to link a App Center account with the tool.

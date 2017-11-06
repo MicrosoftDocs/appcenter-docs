@@ -39,7 +39,7 @@ ms.date: 07/26/2017
   ```
 
 ## Prepare to run tests in App Center
-1. Go to the **Test** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Test** service in [App Center](https://appcenter.ms/apps).
 2. Click on **Start testing your app**.
 3. Select the first device, the **Google Pixel XL**, and press **Select one device** at the bottom.  
 4. Choose **Espresso** as the Test framework.   

@@ -48,7 +48,7 @@ To upload a package to App Center, use the navigation bar on the left to navigat
     
     a. Create an upload resource and get an `upload_url` (good for 24 hours) — [POST /createReleaseUpload][POST_releaseUpload]
     
-    ` curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APIExample/release_uploads' `
+    ` curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads' `
     
     b. Upload to upload_url (will be a rink.hockeyapp.net URL). Use `multipart/form-data` where the `key` is ipa (key is always ipa even when uploading APKs)
     
@@ -56,11 +56,11 @@ To upload a package to App Center, use the navigation bar on the left to navigat
     
     c. After upload has finished, update upload resource's status to committed and get a `release_url` — [PATCH /updateReleaseUpload][PATCH_updateReleaseUplolad]
     
-    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634' `
+    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634' `
 
 3. Distribute the uploaded release to a distribution group — [PATCH /updateRelease][PATCH_updateRelease]
     
-    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
+    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [apple-devices]: ./auto-provisioning.md
@@ -68,7 +68,7 @@ To upload a package to App Center, use the navigation bar on the left to navigat
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
 [api-token-docs]: ~/api-docs/index.md
-[POST_releaseUpload]: https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload
-[PATCH_updateReleaseUplolad]: https://docs.mobile.azure.com/api/#!/distribute/updateReleaseUpload
-[PATCH_updateRelease]: https://docs.mobile.azure.com/api/#!/distribute/updateRelease
-[GET_DGs]: https://docs.mobile.azure.com/api/#!/account/distributionGroups_list
+[POST_releaseUpload]: https://docs.appcenter.ms/api/#!/distribute/createReleaseUpload
+[PATCH_updateReleaseUplolad]: https://docs.appcenter.ms/api/#!/distribute/updateReleaseUpload
+[PATCH_updateRelease]: https://docs.appcenter.ms/api/#!/distribute/updateRelease
+[GET_DGs]: https://docs.appcenter.ms/api/#!/account/distributionGroups_list

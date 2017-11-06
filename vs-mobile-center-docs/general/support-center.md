@@ -46,7 +46,7 @@ SDKs (open sourced on GitHub)
 
 ## App Center status page
 
-Check if there are any ongoing issues on the [status page](https://status.mobile.azure.com).
+Check if there are any ongoing issues on the [status page](https://status.appcenter.ms).
 
 ## Contact us 
 Report a bug or a make a feature request using the blue button at the bottom right of every App Center portal page and the product team will respond to you. 

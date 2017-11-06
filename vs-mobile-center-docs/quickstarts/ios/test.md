@@ -63,7 +63,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
   <!--![Build the Test Folder](images/Build_test_folder_ios.gif)-->
 
 ## Prepare to run tests in App Center
-1. Go to the **Test** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Test** service in [App Center](https://appcenter.ms/apps).
 2. Click on **Start testing your app**.
 3. Select the first device, the **Apple iPhone 7 Plus**, and press **Select one device** at the bottom.  
 4. Choose **XCUITest** as the Test framework.   

@@ -19,12 +19,12 @@ App Center’s webhooks are useful in empowering users to send automatic notific
 - a crash group is created
 - a version is released
 
-The main goal of webhooks is to communicate important information from App Center to users rather than having users come to the portal to get this information. App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks can be registered on your specific application under [App Center Apps](https://mobile.azure.com/apps).
+The main goal of webhooks is to communicate important information from App Center to users rather than having users come to the portal to get this information. App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks can be registered on your specific application under [App Center Apps](https://appcenter.ms/apps).
 
 
 ## Getting Started
 
-1. Navigate to https://mobile.azure.com/apps, and select the specific app you would like for webhooks integration.
+1. Navigate to https://appcenter.ms/apps, and select the specific app you would like for webhooks integration.
 
 1. In your app, select **Settings**, and click the **edit** button.
 

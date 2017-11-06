@@ -26,7 +26,7 @@ In this tutorial, you will learn how to set up a sample Android app with App Cen
 
 
 ## Sign in to App Center
-1. Open the [App Center portal](https://mobile.azure.com).
+1. Open the [App Center portal](https://appcenter.ms).
 2. Click **Connect with GitHub** and log in, or use another provider.
 
 ## Create a new app in App Center

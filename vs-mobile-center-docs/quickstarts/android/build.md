@@ -16,7 +16,7 @@ ms.date: 07/27/2017
 - Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
 ## Set up the repository
-1. Go to the **Build** service in [App Center](https://mobile.azure.com/apps).
+1. Go to the **Build** service in [App Center](https://appcenter.ms/apps).
 2. Choose **GitHub** as the selected service.
 3. Sign in to GitHub, and click **Authorize MobileCenter**.
 4. Choose **sampleapp-android**.

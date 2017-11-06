@@ -17,7 +17,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 ## Getting Started
 
-1. Navigate to https://mobile.azure.com/apps, and select the specific app you would like for bug tracker integration.
+1. Navigate to https://appcenter.ms/apps, and select the specific app you would like for bug tracker integration.
 
 1. In your app, select **Settings**, **Services**, and click the **edit** button.
 
