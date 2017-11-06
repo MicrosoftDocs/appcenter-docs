@@ -29,7 +29,7 @@ Test Cloud does not currently support the following features:
 - Manual testing
 - Network condition simulation
 - Cellular network connections
-- VPN (coming soon)
+- VPN
 - Load testing
 
 Before getting started, it is recommended to become familiar with Test Cloud's [Core Concepts](~/test-cloud/core-concepts.md).
