@@ -33,7 +33,7 @@ To run scripts post-clone, add the following file next to the project file in yo
     git clone https://github.com/example/SomeProject
 
     # Example: Install App Center CLI
-    npm install -g mobile-center-cli
+    npm install -g appcenter-cli
     ```
 
 - **mobile-center-post-clone.ps1** (PowerShell for UWP)

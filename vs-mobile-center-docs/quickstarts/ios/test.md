@@ -37,7 +37,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 2. Open the terminal and run the command below to install the App Center CLI:
 
   ```shell
-  npm install -g mobile-center-cli
+  npm install -g appcenter-cli
   ```
 
 3. Run the command below and follow the directions to log in to App Center:

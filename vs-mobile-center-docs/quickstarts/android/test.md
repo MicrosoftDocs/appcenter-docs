@@ -20,7 +20,7 @@ ms.date: 07/26/2017
 2. Open the terminal and run the command below to install the App Center CLI:
 
   ```shell
-  npm install -g mobile-center-cli
+  npm install -g appcenter-cli
   ```
 
 3. Run the command below and follow the directions to log in to App Center:
