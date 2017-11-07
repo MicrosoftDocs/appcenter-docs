@@ -56,11 +56,11 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
 	```
-	npm install appcenter app-center-analytics app-center-crashes --save
+	npm install appcenter appcenter-analytics appcenter-crashes --save
 	```
 
-	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **app-center-analytics** and
-	**app-center-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **app-center** provides general
+	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and
+	**appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general
 	purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.
 
 2. Link the plugins to the React Native app by using the react-native link command.
@@ -74,16 +74,16 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	> 
 	> If you are using that version, please link all modules separately:
 	> ```
-	> react-native link app-center
-	> react-native link app-center-analytics
-	> react-native link app-center-crashes
+	> react-native link appcenter
+	> react-native link appcenter-analytics
+	> react-native link appcenter-crashes
 	> ```
 
 	For iOS, it will try to download the iOS App Center SDK from **Cocoapods**, if you see an error like:
 
 	```
 	Added code to initialize iOS App Center SDK in ios/reactnativesample/AppDelegate.m
-	Analyzing dependencies [!] Unable to find a specification for RNAppCenterShared (~> {version})	
+	Analyzing dependencies [!] Unable to find a specification for AppCenterReactNativeShared (~> {version})	
 	```
 
 	Please run the following command:
@@ -137,21 +137,21 @@ We **strongly** recommend integrating the SDK via Cocoapods as described above. 
 >
 > The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
-1. Download the [App Center SDK for React Native](https://github.com/Microsoft/app-center-sdk-react-native/releases/latest) frameworks provided as a zip file.
+1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file.
 
 2. From the release notes on Github, please also download the corresponding frameworks of the App Center SDK for iOS.
 
-3. Unzip both archives and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **RNAppCenterShared** which contains a single framework for the React Native bridge for iOS which is also required.
+3. Unzip both archives and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **AppCenterReactNativeShared** which contains a single framework for the React Native bridge for iOS which is also required.
 
 4. [Optional] Create a subdirectory for 3rd-party libraries.
     * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
     * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
-5. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **RNAppCenterShared** folders into your project's folder at the location where you want it to reside.
+5. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.
 
 6. Add the SDK frameworks to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **RNAppCenterShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **RNAppCenterShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK

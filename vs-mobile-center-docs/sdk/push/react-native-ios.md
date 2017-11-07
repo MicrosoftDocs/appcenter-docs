@@ -58,13 +58,13 @@ The default integration of the SDK uses Cocoapods for iOS.
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
   ```
-  npm install app-center-push --save
+  npm install appcenter-push --save
   ```
 
 2. Link the plugin to the React Native app by using the `react-native link command`.
 
   ```
-  react-native link app-center-push
+  react-native link appcenter-push
   ```
 
 #### Integrate the iOS SDK manually
@@ -78,11 +78,11 @@ If you wish to manually integrate the module, follow the manual integration step
 App Center Push is started by this call:
 
   ```objc
-  #import <RNPush/RNPush.h>
+  #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
 
   ...
 
-  [RNPush register];
+  [AppCenterReactNativePush register];
   ```
 
 That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
@@ -109,7 +109,7 @@ By default, iOS does not generate notifications when the push is received in for
 You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
   ```javascript
-  import Push from 'app-center-push';
+  import Push from 'appcenter-push';
 
   ...
 
@@ -122,7 +122,7 @@ You can enable and disable App Center Push at runtime. If you disable it, the SD
 You can also check if App Center Push is enabled or not:
 
   ```javascript
-  import Push from 'app-center-push';
+  import Push from 'appcenter-push';
 
   ...
 
@@ -137,11 +137,11 @@ App Center uses swizzling to automatically forward your application delegate's m
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    You will have to add `@import AppCenterPush` and `@import RNAppCenterShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    You will have to add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
     ```objc
     @import AppCenterPush;
-    @import RNAppCenterShared;
+    @import AppCenterReactNativeShared;
 
     - (void)application:(UIApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

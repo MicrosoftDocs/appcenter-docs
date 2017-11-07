@@ -29,7 +29,7 @@ You can control the amount of log messages that show up from App Center. Log mes
 To have as many log messages as possible, use `LogLevelVerbose`.
 
 ```javascript
-import AppCenter from 'app-center';
+import AppCenter from 'appcenter';
 
 await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
 ```
@@ -39,7 +39,7 @@ await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
 >
 > If you wish to increase logging for app startup, use the native App Center setLogLevel APIs.
 >
-> In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[RNAppCenter register];` (or `RNAnalytics` or `RNCrashes` or `RNPush`) in **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
+> In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[AppCenterReactNative register];` (or `AppCenterReactNativeAnalytics` or `AppCenterReactNativeCrashes` or `AppCenterReactNativePush`) in **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
 >
 > In Android, call `AppCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
@@ -48,7 +48,7 @@ await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data on Android. The following API is useful for debugging purposes.
 
 ```javascript
-import AppCenter from 'app-center';
+import AppCenter from 'appcenter';
 
 const installId = await AppCenter.getInstallId();   // Returned as a string
 ```
@@ -58,7 +58,7 @@ const installId = await AppCenter.getInstallId();   // Returned as a string
 If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
 
 ```javascript
-import AppCenter from 'app-center';
+import AppCenter from 'appcenter';
 
 await AppCenter.setEnabled(false);
 ```
@@ -92,7 +92,7 @@ App Center allows you to define custom properties as key value pairs in your app
 You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Javascript types: `string`, `number`, `boolean` and `Date`. 
 
 ```javascript
-import AppCenter, {CustomProperties} from 'app-center';
+import AppCenter, {CustomProperties} from 'appcenter';
 
 const properties = new CustomProperties();
 properties.set("color", "blue").set("score", 10);
@@ -105,7 +105,7 @@ AppCenter.setCustomProperties(properties);
 You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```javascript
-import AppCenter, {CustomProperties} from 'app-center';
+import AppCenter, {CustomProperties} from 'appcenter';
 
 const properties = new CustomProperties();
 properties.clear("score");

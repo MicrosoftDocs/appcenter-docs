@@ -1,7 +1,7 @@
 You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
 
 ```javascript
-import Push from 'app-center-push';
+import Push from 'appcenter-push';
 import { AppState, Alert } from 'react-native';
 
 class MyApp extends Component {

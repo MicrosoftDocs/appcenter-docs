@@ -22,16 +22,16 @@ The App Center SDK is designed with a modular approach – you only need to inte
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
     ```
-    npm install app-center-push --save
+    npm install appcenter-push --save
     ```
 
 2. Link the plugin to the React Native app by using the react-native link command.
 
     ```
-    react-native link app-center-push
+    react-native link appcenter-push
     ```
 
-Those steps modify your **MainApplication.java** file, adding `RNPushPackage` there.
+Those steps modify your **MainApplication.java** file, adding `AppCenterReactNativePushPackage` there.
 
 ## Intercept push notifications
 
@@ -55,7 +55,7 @@ You can set up a listener to be notified whenever a push notification is receive
 >[!NOTE]
 >App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
 
-If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `RNPushPackage` is instantiated, like from `MainApplication.onCreate`:
+If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenterReactNativePushPackage` is instantiated, like from `MainApplication.onCreate`:
 
 ```java
 import com.microsoft.appcenter.push.Push;
@@ -71,7 +71,7 @@ You can enable and disable App Center Push at runtime. If you disable it, the SD
 
 
 ```javascript
-import Push from 'app-center-push';
+import Push from 'appcenter-push';
 
 ...
 
@@ -84,7 +84,7 @@ await Push.setEnabled(true);       // Re-enable it
 You can also check if App Center Push is enabled or not:
 
 ```javascript
-import Push from 'app-center-push';
+import Push from 'appcenter-push';
 
 ...
 
