@@ -1,12 +1,12 @@
 ---
-title: iOS SDK Troubleshooting
-description: Troubleshooting the App Center SDK for iOS
+title: macOS SDK Troubleshooting
+description: Troubleshooting the App Center SDK for macOS
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/21/2017
+author: jaelim-ms
+ms.author: jaelim
+ms.date: 11/15/2017
 ms.topic: article
-ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
+ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
 ms.custom: sdk
 dev_langs:  
@@ -14,7 +14,7 @@ dev_langs:
  - objc 
 ---
 
-# iOS SDK Troubleshooting
+# macOS SDK Troubleshooting
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -67,24 +67,3 @@ dev_langs:
 8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
-
-## The Alert that prompts users for an update doesn't contain strings, but just the keys for them.
-
-This means that the `AppCenterDistributeResources.bundle` wasn't added to the project. Make sure you have drag'n'dropped the file into your Xcode project, and it appears in your app target's `Copy Bundle Resources` build phase. The later should be the case if you have added the file through drag'n'drop – Xcode does it automatically for you. If the file is missing from the build phase, add it so it gets compiled into your app's bundle.
-
-If you are using Cocoapods, it takes care of the resources automatically. Try re-installing the pod.
-
-## You are seeing messages in the console that indicate that the database could not be opened
-
-Starting with version 0.11.0 of the iOS SDK, App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.13.0 or later.
-
-## Distribute and in-app updates are blocking my automated UI tests
-
-If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target. 
-
-## Why is the SDK distributed as a "static library"?
-
-The primary design goals for the App Center SDK are to have a minimal impact on the app that is using App Center and to have a modular SDK. This would result in the SDK being distributed as several dynamic linked shared libraries.
-Historically, iOS didn't support dynamic linked shared libraries as Landon Fuller explains in a [great blogpost](http://landonf.bikemonkey.org/code/ios/Radar_15800975_iOS_Frameworks.20140112.html) but was added in iOS 8. Yet, App Center is distributed as a static linked shared library that is wrapped in a "fat" fake framework. It means that the SDK is linked at **compile time** and not at launch time. The reason is straight forward: performance. Loading multiple dynamic linked shared libraries takes time. Apple recommends to optimize app launch to take not more than 400ms in a[WWDC session](https://developer.apple.com/videos/play/wwdc2016/406/). They specifically recommend static shared libraries over dynamic shared ones to achieve this goal. Distributing the App Center SDK for iOS as a static linked shared library follows Apple's recommendation to provide the best performance and a minimal impact to the app that includes the SDK.
-
-To learn more about static linked shared libraries vs. dynamic linked shared libraries, we recommend Apple's [general documentation on the topic](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html). To learn more about the performance impact of dynamic linked shared libraries, read Eric Horacek's [blogpost](https://blog.automatic.com/how-we-cut-our-ios-apps-launch-time-in-half-with-this-one-cool-trick-7aca2011e2ea).

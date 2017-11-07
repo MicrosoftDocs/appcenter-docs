@@ -4,7 +4,7 @@ description: Reporting crashes in App Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde
-ms.date: 01/20/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.assetid: 9006c330-eafc-4a8e-a27e-c57437ef9e81
 ms.service: vs-appcenter
@@ -29,3 +29,5 @@ To leverage this feature it is required to integrate the App Center SDK and its 
 [Get Started on iOS](~/crashes/ios.md)
 
 [Get Started with React Native](~/crashes/react-native.md)
+
+[Get Started on macOS](~/crashes/macos.md)

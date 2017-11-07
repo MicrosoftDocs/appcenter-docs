@@ -4,7 +4,7 @@ description: App Center Analytics for UWP
 keywords: analytics
 author: dhei
 ms.author: dihei
-ms.date: 07/11/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
@@ -20,6 +20,7 @@ ms.tgt_pltfrm: uwp
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 

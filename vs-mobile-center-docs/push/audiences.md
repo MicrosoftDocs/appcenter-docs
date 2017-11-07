@@ -44,6 +44,7 @@ You can set these custom properties by using our SDK methods for each platform:
    - [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
    - [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
    - [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
+   - [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
 
 ## Create Audiences
 

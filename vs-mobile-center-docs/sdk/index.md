@@ -43,6 +43,7 @@ App Center Push enables you to send push notifications to users of your app from
 * [App Center SDK for React Native](getting-started/react-native.md)
 * [App Center SDK for Xamarin](getting-started/xamarin.md)
 * [App Center SDK for UWP](getting-started/uwp.md)
+* [App Center SDK for macOS](getting-started/macos.md)
 
 ## Requirements
 
@@ -90,12 +91,21 @@ Distribute | not available | not available            | not available
 Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
+### macOS
+
+ Service          | macOS Version   | Xcode
+ -----------------|-----------------|-------
+ Analytics        | 10.9 or later   | 8.2 and later
+ Crashes          | 10.9 or later   | 8.2 and later
+ Push             | 10.9 or later   | 8.2 and later
+
+
 
 ## Source code
 
 The App Center SDKs is open-source and available publicly on GitHub:
 
 * [App Center SDK for Android](https://github.com/Microsoft/app-center-sdk-android/tree/master)
-* [App Center SDK for iOS](https://github.com/Microsoft/app-center-sdk-ios/tree/master)
+* [App Center SDK for iOS and macOS](https://github.com/Microsoft/app-center-sdk-ios/tree/master)
 * [App Center SDK for React Native](https://github.com/Microsoft/app-center-SDK-react-native)
 * [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/app-center-sdk-xamarin/tree/master)

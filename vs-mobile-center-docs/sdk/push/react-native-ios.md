@@ -23,6 +23,7 @@ ms.tgt_pltfrm: react-native
 > * [Xamarin.Forms](xamarin-forms.md)
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
+> * [macOS](macos.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -34,9 +35,9 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
  In Xcode's project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
 
-![enable-push-capability](images/ios-enable-push-capability.png)
+![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](apns-setup.md)]
+[!include[](ios-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
 

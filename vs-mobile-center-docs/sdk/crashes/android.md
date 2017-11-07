@@ -19,6 +19,7 @@ ms.tgt_pltfrm: android
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 

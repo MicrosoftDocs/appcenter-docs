@@ -20,6 +20,7 @@ ms.tgt_pltfrm: xamarin
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 

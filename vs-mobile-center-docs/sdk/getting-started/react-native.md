@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/07/2017
+ms.date: 08/21/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -20,6 +20,7 @@ ms.tgt_pltfrm: react-native
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 

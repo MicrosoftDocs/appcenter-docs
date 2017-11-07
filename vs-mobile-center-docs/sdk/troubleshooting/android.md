@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/12/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: vs-appcenter
@@ -18,6 +18,7 @@ ms.custom: sdk
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 ## What Android permissions are required?
 

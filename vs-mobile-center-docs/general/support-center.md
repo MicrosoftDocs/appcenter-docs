@@ -4,7 +4,7 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: joemellin
 ms.author: joemel
-ms.date: 03/14/2017
+ms.date: 09/06/2017
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
@@ -28,6 +28,8 @@ ms.service: vs-appcenter
 
 [Xamarin SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
 
+[macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
+
 [Build service FAQs](~/build/faq.md)
 
 ## Recent updates  
@@ -36,9 +38,9 @@ ms.service: vs-appcenter
 
 SDKs (open sourced on GitHub)
 
-- [iOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
-
 - [Android SDK](https://github.com/Microsoft/mobile-center-sdk-android)
+
+- [iOS/macOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
 
 - [Xamarin SDK](https://github.com/Microsoft/mobile-center-sdk-dotnet)
 

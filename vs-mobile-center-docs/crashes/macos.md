@@ -1,18 +1,18 @@
 ---
-title: App Center Crash Reporting for iOS
-description: Reporting crashes from iOS apps in App Center
+title: App Center Crash Reporting for macOS
+description: Reporting crashes from macOS apps in App Center
 keywords: crash reporting
-author: anlinde
-ms.author: anlinde
-ms.date: 08/21/2017
+author: jaelim-ms
+ms.author: jaelim
+ms.date: 11/15/2017
 ms.topic: article
-ms.assetid: 76a80967-b68e-4ca7-ad89-65a557682108
+ms.assetid: 738c652a-b054-11e7-abc4-cec278b6b50a
 ms.service: vs-appcenter
 ms.custom: crashes
-ms.tgt_pltfrm: ios
+ms.tgt_pltfrm: macos
 ---
 
-# iOS Crashes
+# macOS Crashes
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -22,7 +22,7 @@ ms.tgt_pltfrm: ios
 
 ## Getting Started
 
-1. Integrate the SDK as described in the [Getting Started with iOS](~/sdk/getting-started/ios.md) documentation.
+1. Integrate the SDK as described in the [Getting Started with macOS](~/sdk/getting-started/macos.md) documentation.
 2. Upload the symbols that are created with each build using the *Incoming* page under the app.
 3. Add a test crash to the app's code by calling the `generateTestCrash` method of the crash reporting module as an action to a button.
 4. Run the app without the debugger connected, crash it and restart it.

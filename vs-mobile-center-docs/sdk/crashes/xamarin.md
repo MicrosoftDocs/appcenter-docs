@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarn
 keywords: sdk, crash
 author: troublemakerben
 ms.author: bereimol
-ms.date: 07/27/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -19,12 +19,13 @@ ms.tgt_pltfrm: xamarin
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
 Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your application yet.
 
-Also note that Crash logs on iOS require Symbolication, please check out the [App Center Crashes documentation](~/crashes/ios.md) that explains how to provide symbols for your app.
+Also note that crash logs on iOS require Symbolication, please check out the [App Center Crashes documentation](~/crashes/ios.md) that explains how to provide symbols for your app.
 
 ## Generate a test crash
 

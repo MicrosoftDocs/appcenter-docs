@@ -51,6 +51,10 @@ sections:
         src: https://docs.microsoft.com/media/logos/logo_xamarin.svg
       text: Xamarin
       href: ~/sdk/getting-started/xamarin/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+      text: macOS
+      href: ~/sdk/getting-started/macos/
 - title: Services
   items:
   - type: grid

@@ -2,7 +2,7 @@
 
 Log in to the App Center portal, select your application, click on the **Push** button from the left menu then click **Next** to reveal the push notification settings UI:
 
-![app-center-push-settings](images/ios-push-settings-mc-portal.png)
+![app-center-push-settings](images/apple-push-settings-mc-portal.png)
 
 * On the bottom of the page, select **Sandbox** for initial development or **Production** for production version of your application.
 
@@ -37,6 +37,6 @@ Log in to the App Center portal, select your application, click on the **Push** 
   3. **Push Token**
     * Open your key file with a text editor and copy the authentication token it contains.
 
-    ![auth-key-file](images/ios-auth-key-file.png)
+    ![auth-key-file](images/apple-auth-key-file.png)
 
     * On the App Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration.

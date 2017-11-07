@@ -1,15 +1,15 @@
 ---
-title: App Center Push for iOS
+title: App Center Push for macOS
 description: Using Push in App Center
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
-ms.date: 10/04/2017
+author: jaelim-ms
+ms.author: jaelim
+ms.date: 11/15/2017
 ms.topic: article
-ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
+ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: ios
+ms.tgt_pltfrm: macos
 dev_langs:
  - swift
  - objc
@@ -40,13 +40,9 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](ios-apns-setup.md)]
+[!include[](macos-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
-
-#### [Optional] Enable silent notifications
-
-[!include[](ios-enable-silent-notifications.md)]
 
 [!include[](introduction-apple.md)]
 
@@ -54,7 +50,7 @@ For more information, refer to the [Apple documentation](http://help.apple.com/x
 
 Add `MSPush` to your `start:withServices:` method to start App Center Push together with the other services that you want to use in your app.
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `applicationDidFinishLaunching` method.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
@@ -63,20 +59,13 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
-
-#### 2.3 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
-
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-app-center-services) to implement a callback to receive push notifications.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
 
 ## Intercept push notifications
 
-You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
+You can set up a delegate to be notified whenever a push notification is received while the application is active (currently frontmost) or a notification in Notification Center has been clicked by the user.
 
->[!NOTE]
->If silent notifications are enabled and you push a notification with `content-available: 1`, then the delegate may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
-
-By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+By default, App Center Push does not generate notifications when the push is received while the application is active, you can use the delegate to customize the push experience when received while the application is active or do a specific action when the application is being active by clicking on the notification from Notification Center when received while the application is inactive. *App Center Push will not generate any notifications if the push is received while the application is not running.*
 
 You need to register the delegate before starting App Center as shown in the following example:
 
@@ -100,19 +89,13 @@ Here is an example of the delegate implementation that displays an alert dialog 
     ([customData length] == 0) ? customData = [NSMutableString new] : [customData appendString:@", "];
     [customData appendFormat:@"%@: %@", key, [pushNotification.customData objectForKey:key]];
   }
-  if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground) {
-    NSLog(@"Notification received in background, title: \"%@\", message: \"%@\", custom data: \"%@\"", title, message,
-          customData);
-  } else {
-    message = [NSString stringWithFormat:@"%@%@%@", (message ? message : @""), (message && customData ? @"\n" : @""),
-                                         (customData ? customData : @"")];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:message
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-  }
+  message = [NSString stringWithFormat:@"%@%@%@", (message ? message : @""), (message && customData ? @"\n" : @""),
+                                        customData ? customData : @"")];
+  NSAlert *alert = [[NSAlert alloc] init];
+  [alert setMessageText:title];
+  [alert setInformativeText:message];
+  [alert addButtonWithTitle:@"OK"];
+  [alert runModal];
 }
 ```
 ```swift
@@ -123,13 +106,12 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   for item in pushNotification.customData {
     customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
   }
-  if (UIApplication.shared.applicationState == .background) {
-    NSLog("Notification received in background, title: \"\(title ?? "")\", message: \"\(message)\", custom data: \"\(customData)\"");
-  } else {
-    message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
-    let alert = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
-    alert.show()
-  }
+  message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
+  let alert: NSAlert = NSAlert()
+  alert.messageText = title
+  alert.informativeText = message
+  alert.addButton(withTitle: "OK")
+  alert.runModal()
 }
 ```
 
@@ -175,14 +157,14 @@ App Center uses swizzling to automatically forward your application delegate's m
     Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
 
     ```objc
-    - (void)application:(UIApplication *)application
+    - (void)application:(NSApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
       // Pass the device token to MSPush.
       [MSPush didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
     }
 
-    - (void)application:(UIApplication *)application
+    - (void)application:(NSApplication *)application
         didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error {
 
       // Pass the error to MSPush.
@@ -190,13 +172,13 @@ App Center uses swizzling to automatically forward your application delegate's m
     }
     ```
     ```swift
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 
       // Pass the device token to MSPush.
       MSPush.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
     }
 
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    func application(_ application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 
       // Pass the error to MSPush.
       MSPush.didFailToRegisterForRemoteNotificationsWithError(error)
@@ -205,28 +187,16 @@ App Center uses swizzling to automatically forward your application delegate's m
 
 4. Implement the callback to receive push notifications
 
-    Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to forward push notifications to the Push service.
+    Implement the `application:didReceiveRemoteNotification:` callback to forward push notifications to the Push service.
 
     ```objc
-    - (void)application:(UIApplication *)application
-        didReceiveRemoteNotification:(NSDictionary *)userInfo
-              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-      BOOL result = [MSPush didReceiveRemoteNotification:userInfo];
-      if (result) {
-        completionHandler(UIBackgroundFetchResultNewData);
-      } else {
-        completionHandler(UIBackgroundFetchResultNoData);
-      }
+    - (void)application:(NSApplication *)application
+        didReceiveRemoteNotification:(NSDictionary *)userInfo {
+      [MSPush didReceiveRemoteNotification:userInfo];
     }
     ```
     ```swift
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-      let result: Bool = MSPush.didReceiveRemoteNotification(userInfo)
-      if result {
-        completionHandler(.newData)
-      }
-      else {
-        completionHandler(.noData)
-      }
+    func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [String : Any]) {
+      MSPush.didReceiveRemoteNotification(userInfo)
     }
     ```

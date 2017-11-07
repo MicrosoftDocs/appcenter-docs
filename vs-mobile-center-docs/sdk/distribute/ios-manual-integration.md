@@ -21,7 +21,7 @@ ms.tgt_pltfrm: ios
 
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
-1. Download the [App Center iOS SDK](https://github.com/Microsoft/AppCenter-SDK-iOS/releases) frameworks provided as a zip file.
+1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-iOS/releases) frameworks provided as a zip file.
 
 2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 

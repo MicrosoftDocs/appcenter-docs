@@ -25,6 +25,7 @@ ms.tgt_pltfrm: xamarin.ios
 > * [Xamarin.Forms](xamarin-forms.md)
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
+> * [macOS](macos.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -37,7 +38,7 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 Double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. This will open the Entitlements.plist editor. Check the **Enable Push Notifications** checkbox from the **Push Notifications** section.
 ![enable-push-capability](images/xamarin-ios-enable-push-capability.png)
 
-[!include[](apns-setup.md)]
+[!include[](ios-apns-setup.md)]
 
 For more information, refer to the [Xamarin documentation](https://developer.xamarin.com/guides/ios/platform_features/introduction-to-ios10/user-notifications/enhanced-user-notifications/#Configuring-the-Remote-Notifications-Environment).
 

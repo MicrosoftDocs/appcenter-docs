@@ -21,3 +21,4 @@ The table below lists all the platforms and their supported services in App Cent
 | `React Native` | Yes  | Yes  | Yes | Yes | Yes | Yes |
 | `Windows UWP` | Yes  | No  | Yes | No | Yes | Yes |
 | `Xamarin` | Yes  | Yes  | Yes | Yes | Yes | Yes |
+| `macOS` | Yes  | No  | Yes | Yes | Yes | Yes |

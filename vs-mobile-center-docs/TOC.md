@@ -68,6 +68,7 @@
 ## [Android](crashes/android.md)
 ## [iOS](crashes/ios.md)
 ## [React Native](crashes/react-native.md)
+## [macOS](crashes/macos.md)
 
 # [Analytics](analytics/index.md)
 ## [Overview](analytics/overview.md)
@@ -88,17 +89,20 @@
 ### [React Native](sdk/getting-started/react-native.md)
 ### [Xamarin](sdk/getting-started/xamarin.md)
 ### [UWP](sdk/getting-started/uwp.md)
+### [macOS](sdk/getting-started/macos.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [iOS](sdk/analytics/ios.md)
 ### [React Native](sdk/analytics/react-native.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
 ### [UWP](sdk/analytics/uwp.md)
+### [macOS](sdk/analytics/macos.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [iOS](sdk/crashes/ios.md)
 ### [React Native](sdk/crashes/react-native.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
+### [macOS](sdk/crashes/macos.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
@@ -112,6 +116,7 @@
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
 ### [React Native Android](sdk/push/react-native-android.md)
 ### [React Native iOS](sdk/push/react-native-ios.md)
+### [macOS](sdk/push/macos.md)
 
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
@@ -119,11 +124,13 @@
 ### [React Native](sdk/other-apis/react-native.md)
 ### [UWP](sdk/other-apis/uwp.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
+### [macOS](sdk/other-apis/macos.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ### [UWP](sdk/troubleshooting/uwp.md)
+### [macOS](sdk/troubleshooting/macos.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)

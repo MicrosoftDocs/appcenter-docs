@@ -1,15 +1,15 @@
 ---
-title: App Center Crashes for iOS
-description: App Center Crashes for iOS
+title: App Center Crashes for macOS
+description: App Center Crashes for macOS
 keywords: sdk, crash
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/21/2017
+author: jaelim-ms
+ms.author: jaelim
+ms.date: 11/15/2017
 ms.topic: article
-ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
+ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: ios
+ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
  - objc 
@@ -26,9 +26,9 @@ dev_langs:
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting Started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 
-Also note that crash logs on iOS require Symbolication, please check out the [App Center Crashes documentation](~/crashes/ios.md) that explains how to provide symbols for your app.
+Also note that crash logs on macOS require Symbolication, please check out the [App Center Crashes documentation](~/crashes/macos.md) that explains how to provide symbols for your app.
 
 [!include[](apple-common-methods-1.md)]
 
@@ -46,12 +46,15 @@ The following method shows how to set up a user confirmation handler:
 ```objc
 [MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  [[[UIAlertView alloc] initWithTitle:@"Sorry we crashed."
-                              message:@"Do you want to send a report about the crash to the developer?"
-                             delegate:self
-                    cancelButtonTitle:@"Don't send"
-                    otherButtonTitles:@"Always send", @"Send", nil] show];
+  // Your code to present your UI to the user, e.g. an NSAlert.
+  NSAlert *alert = [[NSAlert alloc] init];
+  [alert setMessageText:@"Sorry we crashed."];
+  [alert setInformativeText:@"Do you want to send a report about the crash to the developer?"];
+  [alert setAlertStyle:NSWarningAlertStyle];
+  [alert addButtonWithTitle:@"Always send"];
+  [alert addButtonWithTitle:@"Send"];
+  [alert addButtonWithTitle:@"Don't send"];
+  [alert runModal];
 
   return YES; // Return YES if the SDK should await user confirmation, otherwise NO.
 })];
@@ -59,8 +62,15 @@ The following method shows how to set up a user confirmation handler:
 ```swift
 MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  UIAlertView.init(title: "Sorry we crashed!", message: "Do you want to send a Crash Report?", delegate: self, cancelButtonTitle: "No", otherButtonTitles:"Always send", "Send").show()
+  // Your code to present your UI to the user, e.g. an NSAlert.
+  let alert: NSAlert = NSAlert()
+  alert.messageText = "Sorry we crashed."
+  alert.informativeText = "Do you want to send a report about the crash to the developer?"
+  alert.alertStyle = NSWarningAlertStyle
+  alert.addButton(withTitle: "Always send")
+  alert.addButton(withTitle: "Send")
+  alert.addButton(withTitle: "Don't send")
+  alert.runModal()
 
   return true // Return true if the SDK should await user confirmation, otherwise return false.
 })
