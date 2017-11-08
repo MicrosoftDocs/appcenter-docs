@@ -1,13 +1,13 @@
 ---
-title: Understanding the App Center Log Flow Page
-description: Help using the Log Flow Page on App Center
-keywords: app center, analytics
+title: Understanding the Mobile Center Log Flow Page
+description: Help using the Log Flow Page on Mobile Center
+keywords: mobile center, analytics
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: be4ee0a0-cd06-486a-bef1-22b6ab5dc896
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: analytics
 ---
 
@@ -41,6 +41,6 @@ The main use case of Log Flow is to check that "the SDK integration works". Data
 When doing a 1-line integration, you should expect a "STARTSESSION" with the session Id, everytime the app is started.
 
 ## Checking the data received
-The other use case is to check that the App Center backend receives exactly the events with the names and properties that are expected to send.
+The other use case is to check that the Mobile Center backend receives exactly the events with the names and properties that are expected to send.
 
-It is a good idea to check the SDK integration, and especially Events by going through all the features and actions that are instrumented, in order to check that App Center properly receives what is expected.
+It is a good idea to check the SDK integration, and especially Events by going through all the features and actions that are instrumented, in order to check that Mobile Center properly receives what is expected.

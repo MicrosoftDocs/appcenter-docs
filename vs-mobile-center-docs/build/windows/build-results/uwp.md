@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: c41b61bb-c405-4e69-9c03-b1ebc9a1c1fe
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: build
 ms.tgt_pltfrm: windows
 ---
@@ -23,13 +23,13 @@ After a build has been triggered, it can be in the following states:
 ### 1.1. The AppPackages
 Building your app for Release will result in a folder called "AppPackages" that contains a `.appxupload` file for the store and the Test folder that contains the `.appxbundle` files for sideloading, one for each platform.
 
-App Center always generates an app bundle. However, Debug builds are not meant to be used for sideloading. You won't get the `.appxupload` file and the provided `.appxbundle` files in the Test folder do not contain required dependencies.
+Mobile Center always generates an app bundle. However, Debug builds are not meant to be used for sideloading. You won't get the `.appxupload` file and the provided `.appxbundle` files in the Test folder do not contain required dependencies.
 
 ### 1.2. The symbols files
 The `.appxsym` files contain the debug symbols for the app. There is one symbols file for each platform your app supports.
 
 ### 1.3. Build logs
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
 ```
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)

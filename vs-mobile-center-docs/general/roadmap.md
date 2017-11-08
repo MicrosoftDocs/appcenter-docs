@@ -1,23 +1,23 @@
 ---
-title: App Center Roadmap
-description: App Center roadmap for future features/updates
+title: Mobile Center Roadmap
+description: Mobile Center roadmap for future features/updates
 keywords: roadmap
 author: joemellin
 ms.author: joemel
 ms.date: 10/20/2017
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
-ms.service: vs-appcenter
+ms.service: mobile-center
 ---
 
 # Product Roadmap
 
-The list below presents the tentative roadmap for App Center for the next 3-6 months.
+The list below presents the tentative roadmap for Mobile Center for the next 3-6 months.
 
 ## General
 
-* Apps & data from HockeyApp visible in App Center
-* Apps & data from Xamarin Test Cloud visible in App Center
+* Apps & data from HockeyApp visible in Mobile Center
+* Apps & data from Xamarin Test Cloud visible in Mobile Center
 * macOS and tvOS support for some services
 
 	
@@ -25,7 +25,7 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 
 * Universal Windows Platform (UWP) SDK support for Crashes service.
 * macOS and tvOS SDK support.
-* Full CLI support for all App Center services to enable automation.
+* Full CLI support for all Mobile Center services to enable automation.
 
 
 ## Build service

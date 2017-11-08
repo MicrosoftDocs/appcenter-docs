@@ -1,4 +1,4 @@
-# App Center Push
+# Mobile Center Push
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -9,9 +9,8 @@
 > * [Xamarin.Forms](xamarin-forms.md)
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
-> * [macOS](macos.md)
 
-App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
 
@@ -20,7 +19,7 @@ Note that only devices having the [Google Play](https://play.google.com) store a
 
 ## Prerequisite - Add Firebase to your app
 
-Before using App Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
+Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
 
 ### 1. Prerequisites
 
@@ -42,7 +41,7 @@ Please learn about [Prerequisites](https://firebase.google.com/docs/android/setu
 
     2. Add FCM to your app
 
-Step 3 is managed by App Center SDK automatically, so you can stop after step 2.
+Step 3 is managed by Mobile Center SDK automatically, so you can stop after step 2.
 
 > [!NOTE]
 > 
@@ -55,4 +54,4 @@ Step 3 is managed by App Center SDK automatically, so you can stop after step 2.
 
 ### 4. Obtain your Android API Key
 
-Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the App Center Push portal.
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.

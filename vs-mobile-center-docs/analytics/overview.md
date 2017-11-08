@@ -1,13 +1,13 @@
 ---
-title: Understanding the App Center Overview Page
-description: Help using the Overview Page on App Center
-keywords: app center, analytics
+title: Understanding the Mobile Center Overview Page
+description: Help using the Overview Page on Mobile Center
+keywords: mobile center, analytics
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: analytics
 ---
 

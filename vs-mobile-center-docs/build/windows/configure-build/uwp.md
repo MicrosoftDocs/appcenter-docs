@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 05/10/2017
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: build
 ms.tgt_pltfrm: windows
 ---
@@ -44,10 +44,10 @@ When enabled, the version number of your app automatically increments for each b
 Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
 ### 3.6. Code signing
-Uploading your own certificate is optional. In case you don't provide one, App Center will automatically generate a temporary certificate and sign the build for you. Please note that the certificate is unique for each build.
+Uploading your own certificate is optional. In case you don't provide one, Mobile Center will automatically generate a temporary certificate and sign the build for you. Please note that the certificate is unique for each build.
 
 ### 3.7. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, Mobile Center will auto-restore the NuGet feed. 
 To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
 
 ```

@@ -1,7 +1,7 @@
 You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
 
 ```javascript
-import Push from 'appcenter-push';
+import Push from 'mobile-center-push';
 import { AppState, Alert } from 'react-native';
 
 class MyApp extends Component {
@@ -19,7 +19,7 @@ Push.setListener({
       message = "<empty>";
     }
 
-    // Custom name/value pairs set in the App Center web portal are in customProperties
+    // Custom name/value pairs set in the Mobile Center web portal are in customProperties
     if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
       message += '\nCustom properties:\n' + JSON.stringify(pushNotification.customProperties);
     }

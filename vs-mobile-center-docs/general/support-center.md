@@ -1,16 +1,16 @@
 ---
-title: App Center Support
+title: Mobile Center Support
 description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: joemellin
 ms.author: joemel
-ms.date: 09/06/2017
+ms.date: 03/14/2017
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
-ms.service: vs-appcenter
+ms.service: mobile-center
 ---
 
-# App Center Support 
+# Mobile Center Support 
 
 ## Documentation
 
@@ -28,8 +28,6 @@ ms.service: vs-appcenter
 
 [Xamarin SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
 
-[macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
-
 [Build service FAQs](~/build/faq.md)
 
 ## Recent updates  
@@ -38,17 +36,17 @@ ms.service: vs-appcenter
 
 SDKs (open sourced on GitHub)
 
-- [Android SDK](https://github.com/Microsoft/mobile-center-sdk-android)
+- [iOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
 
-- [iOS/macOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
+- [Android SDK](https://github.com/Microsoft/mobile-center-sdk-android)
 
 - [Xamarin SDK](https://github.com/Microsoft/mobile-center-sdk-dotnet)
 
 - [React Native SDK](https://github.com/Microsoft/mobile-center-sdk-react-native)
 
-## App Center status page
+## Mobile Center status page
 
-Check if there are any ongoing issues on the [status page](https://status.appcenter.ms).
+Check if there are any ongoing issues on the [status page](https://status.mobile.azure.com).
 
 ## Contact us 
-Report a bug or a make a feature request using the blue button at the bottom right of every App Center portal page and the product team will respond to you. 
+Report a bug or a make a feature request using the blue button at the bottom right of every Mobile Center portal page and the product team will respond to you. 

@@ -1,20 +1,20 @@
 ---
 # required metadata
 
-title: App Center Push for Xamarin.Forms Apps
-description: Integrating App Center Push into Xamarin.Forms applications
+title: Mobile Center Push for Xamarin.Forms Apps
+description: Integrating Mobile Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
 ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin.forms
 ---
 
-# App Center Push
+# Mobile Center Push
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -25,9 +25,8 @@ ms.tgt_pltfrm: xamarin.forms
 > * [Xamarin.Forms](xamarin-forms.md)
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
-> * [macOS](macos.md)
 
-App Center Push enables you to send push notifications to users of your app from the App Center portal.
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
 ## Prerequisite - Perform platform-specific setup
 
@@ -39,13 +38,13 @@ Push notifications work differently on UWP, iOS, and Android, therefore, before 
 * [UWP](uwp.md)
 
 >[!IMPORTANT]
->Even if you only access the `AppCenter` or `Push` class from your shared or PCL project, the App Center NuGet packages must be added to each platform-specific project.
+>Even if you only access the `MobileCenter` or `Push` class from your shared or PCL project, the Mobile Center NuGet packages must be added to each platform-specific project.
 
-## Add App Center Push to your app
+## Add Mobile Center Push to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
 
-### 1. Add the App Center Push module
+### 1. Add the Mobile Center Push module
 
 [!include[](add-nuget.md)]
 
@@ -53,13 +52,13 @@ You may have the following known issues while building on Android:
 
 [!include[](../xamarin-android-push-setup-issues.md)]
 
-### 2. Start App Center Push
+### 2. Start Mobile Center Push
 
 [!include[](start-push.md)]
 
 ## Intercept push notifications
 
-App Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in plaform specific projects.
+Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in plaform specific projects.
 
 ### iOS additional steps
 
@@ -107,7 +106,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
         if (rootFrame.Content == null)
         {
-            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call AppCenter.Start
+            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call MobileCenter.Start
             rootFrame.Navigate(typeof(MainPage), e.Arguments);
         }
         Window.Current.Activate();
