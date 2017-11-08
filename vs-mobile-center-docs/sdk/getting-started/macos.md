@@ -30,7 +30,7 @@ Let's get started with setting up App Center macOS SDK in your app to use App Ce
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 8 or later on macOS version 10.12.
+* Your macOS project is set up in Xcode 8 or later on macOS version 10.12 or later.
 * You are targeting devices running on macOS 10.9 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 

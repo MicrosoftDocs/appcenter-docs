@@ -40,7 +40,7 @@ dev_langs:
     [MSAppCenter setLogLevel:MSLogLevelVerbose]
     ```
     ```swift
-    MSAppCenter.setLogLevel(MSLogLevel.Verbose)
+    MSAppCenter.setLogLevel(.verbose)
     ```
 	
 5. Make sure your device is online.
@@ -59,7 +59,7 @@ dev_langs:
     [MSAppCenter setLogLevel:MSLogLevelVerbose]
     ```
     ```swift
-    MSAppCenter.setLogLevel(MSLogLevel.Verbose)
+    MSAppCenter.setLogLevel(.verbose)
     ```
 
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
