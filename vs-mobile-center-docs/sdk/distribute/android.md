@@ -39,8 +39,8 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '0.13.0'
-       compile "com.microsoft.azure.mobile:app-center-distribute:${appCenterSdkVersion}"
+       def appCenterSdkVersion = '1.0.0'
+       compile "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
 
@@ -59,8 +59,8 @@ AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
-import com.microsoft.azure.mobile.AppCenter;
-import com.microsoft.azure.mobile.distribute.Distribute;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.distribute.Distribute;
 ```
 
 ## Customize or localize the in-app update dialog
@@ -81,6 +81,16 @@ AppCenter.start(...);
 Here is an example of the listener implementation that replaces the SDK dialog with a custom one:
 
 ```java
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.net.Uri;
+
+import com.microsoft.appcenter.distribute.Distribute;
+import com.microsoft.appcenter.distribute.DistributeListener;
+import com.microsoft.appcenter.distribute.ReleaseDetails;
+import com.microsoft.appcenter.distribute.UpdateAction;
+
 public class MyDistributeListener implements DistributeListener {
 
     @Override
@@ -98,7 +108,7 @@ public class MyDistributeListener implements DistributeListener {
         dialogBuilder.setMessage(releaseNotes);
 
         // Mimic default SDK buttons
-        dialogBuilder.setPositiveButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_download, new DialogInterface.OnClickListener() {
+        dialogBuilder.setPositiveButton(com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_download, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -110,7 +120,7 @@ public class MyDistributeListener implements DistributeListener {
 
         // We can postpone the release only if the update is not mandatory
         if (!releaseDetails.isMandatoryUpdate()) {
-            dialogBuilder.setNegativeButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
+            dialogBuilder.setNegativeButton(com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -121,7 +131,7 @@ public class MyDistributeListener implements DistributeListener {
             });
         }
         dialogBuilder.setCancelable(false); // if it's cancelable you should map cancel to postpone, but only for optional updates
-        dialogBuilder.create().show();        
+        dialogBuilder.create().show();
 
         // Return true if you are using your own dialog, false otherwise
         return true;

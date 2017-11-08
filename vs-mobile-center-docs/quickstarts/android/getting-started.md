@@ -49,7 +49,7 @@ In order for the sample app to send information to App Center, the app secret mu
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-        MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+        AppCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
 ```
 

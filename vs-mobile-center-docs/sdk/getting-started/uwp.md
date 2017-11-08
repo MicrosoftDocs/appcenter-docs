@@ -83,7 +83,7 @@ In order to use App Center, you need to opt in to the services that you want to 
 Add the appropriate namespaces before you use our APIs.
 
 ```csharp
-using Microsoft.AppCentee;
+using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 ```
 

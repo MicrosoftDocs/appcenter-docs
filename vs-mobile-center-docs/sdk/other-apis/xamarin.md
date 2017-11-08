@@ -81,7 +81,7 @@ You can set custom properties by calling the `SetCustomProperties()` API. A vali
 ```csharp
 CustomProperties properties = new CustomProperties();
 properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
-MoAppCenter.SetCustomProperties(properties);
+AppCenter.SetCustomProperties(properties);
 ```
 
 > [!NOTE]

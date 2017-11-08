@@ -24,22 +24,22 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ``` java
 dependencies {  
-      def mobileCenterSdkVersion = ' 0.11.0'
-      compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+      def appCenterSdkVersion = '1.0.0'
+      compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
 }
 ```
 
 2. Locate the App Center import statement in **MainActivity.java** and add the push import statement below it:
 
 ```java
-import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.push.Push;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.push.Push;
 ```
 
-3. Locate **onCreate** and add `Push.class` to `MobileCenter.start`:
+3. Locate **onCreate** and add `Push.class` to `AppCenter.start`:
 
 ```java
-MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+AppCenter.start(getApplication(), "<APP SECRET HERE>",
          Analytics.class, Crashes.class, Push.class);
 ```
 

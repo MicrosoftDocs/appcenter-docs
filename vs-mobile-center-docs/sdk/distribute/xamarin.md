@@ -49,13 +49,13 @@ The App Center SDK is designed with a modular approach – a developer only need
 #### Visual Studio for Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.Azure.Mobile.Distribute**.
+* Search for **App Center**, then install **Microsoft.AppCenter.Distribute**.
 
 #### Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
 
-  `PM> Install-Package Microsoft.Azure.Mobile.Distribute`
+  `PM> Install-Package Microsoft.AppCenter.Distribute`
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
@@ -74,8 +74,8 @@ Add the appropriate namespaces before you get started with using our APIs.
 * **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following using statements
 
 ```csharp
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Distribute;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Distribute;
 ```
 
 #### 2.2 Add the `Start()` method

@@ -22,9 +22,3 @@ ms.custom: sdk
 ### Xamarin
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the Xamarin runtime.
-
-## Known Issues
-
-### Xamarin
-
-1. If you are using the Xamarin IDE alpha release, there is an issue causing the forms previewer not to work when working on a Xamarin.Forms application that integrates App Center. The exact error is: `Invalid XAML: Could not create an native instance of the type 'Microsoft.Azure.Mobile.iOS.Bindings.MSWrapperSdk': the native class hasn't been loaded`
