@@ -7,7 +7,7 @@ ms.author: v-yuneva
 ms.date: 06/27/2017
 ms.topic: article
 ms.assetid: 1f49c30b-3657-4e8e-9ffa-9a07f16a6751
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: build
 ms.tgt_pltfrm: xamarin
 ---
@@ -27,7 +27,7 @@ The way you can change your **Configuration Mapping** depends on IDE you use. He
 ### 2. Select the desired active solution configuration and platform
 ![Visual Studio for Windows Configuration Manager General View](images/vswindows-configuration-manager.png)
 
-Choose the desired active solution configuration and platform in the upper drop-downs and then select respective project configurations (via dropdowns) and **Build/Deploy** options (via checkboxes). Note that **Deploy** option has no effect for building in App Center. 
+Choose the desired active solution configuration and platform in the upper drop-downs and then select respective project configurations (via dropdowns) and **Build/Deploy** options (via checkboxes). Note that **Deploy** option has no effect for building in Mobile Center. 
 
 You can read additional configuration mappings information in [Visual Studio official documentation](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/configuration-options-overview).
 
@@ -51,4 +51,4 @@ When you change any project option in your IDE, it can belong to different proje
 The project configuration usually consists of two parts, one being the name itself and the other is the platform specification. So for Xamarin.iOS application, the configuration can look like *Release | iPhone* or *Debug | iPhoneSimulator*. If you use Xamarin.Forms for cross-platform development your PCL project can have just *Release* and *Debug* configurations without platform specification since it is there by default.
 
 # Solution Configurations
-Solution configurations direct the behavior for your Run/Build command in IDE and also the way App Center builds your application when the **.sln** file is specified for the source. Your solution can have a different set of interdependent projects and the configurations for it can differ from those you have in each project. To arrange those different configuration options under one solution configuration and to opt in or out various projects building you can [change a Configuration Mappings](#changing-a-solution-configuration-mappings). You may want to skip building of Android and UWP projects here, since it is enabled by default when you create your solution or add the new projects.
+Solution configurations direct the behavior for your Run/Build command in IDE and also the way Mobile Center builds your application when the **.sln** file is specified for the source. Your solution can have a different set of interdependent projects and the configurations for it can differ from those you have in each project. To arrange those different configuration options under one solution configuration and to opt in or out various projects building you can [change a Configuration Mappings](#changing-a-solution-configuration-mappings). You may want to skip building of Android and UWP projects here, since it is enabled by default when you create your solution or add the new projects.

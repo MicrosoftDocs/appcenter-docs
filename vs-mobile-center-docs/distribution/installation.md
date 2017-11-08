@@ -1,5 +1,5 @@
 ---
-title: Install a Build from App Center
+title: Install a Build from Mobile Center
 description: Intructions on how to install a build
 keywords: distribution
 author: JoshuaWeber
@@ -7,13 +7,13 @@ ms.author: JoshuaWeber
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 89a78fd8-ee2d-4f2d-9026-756047866351
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: distribute
 ---
 
 # Install a Build
 
-Installation of an application being distributed by App Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing App Center, you can instead [create a new account][signup]. Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
+Installation of an application being distributed by Mobile Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing Mobile Center, you can instead [create a new account][signup]. Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
 
 > [!IMPORTANT]
 > On iOS you must open the email install link in Safari, only Safari supports the installation APIs.
@@ -28,7 +28,7 @@ To install a windows package requires a trusted root certificate installed in th
 
 You can install a test signed app by first installing the test certificate (which is automatically included in the app package) by following these steps.
 
-1. Right-click on the .appxbundle package you downloaded via App Center and select **properties**.
+1. Right-click on the .appxbundle package you downloaded via Mobile Center and select **properties**.
 2. Under the **Digital Signatures** tab you should see the test certificate. Click to select the certificate and click on **Details** button.
 3. Select the button **View Certificate**.
 4. Select the button **Install Certificate**.

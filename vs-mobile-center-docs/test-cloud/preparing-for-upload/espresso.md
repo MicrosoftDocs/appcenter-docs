@@ -1,13 +1,13 @@
 ---
 title: Preparing Espresso Tests for Upload
-description: How to upload Espresso tests to App Center Test Cloud
+description: How to upload Espresso tests to Mobile Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: test
 ---
 

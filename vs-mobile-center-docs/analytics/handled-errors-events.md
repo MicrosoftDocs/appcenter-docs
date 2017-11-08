@@ -1,20 +1,20 @@
 ---
-title: Understanding App Center Events Metrics
-description: Help using the Events Metrics on App Center
-keywords: app center, analytics, exceptions
+title: Understanding Mobile Center Events Metrics
+description: Help using the Events Metrics on Mobile Center
+keywords: mobile center, analytics, exceptions
 author: blparr
 ms.author: blparr
 ms.date: 03/22/2017
 ms.topic: article
 ms.assetid: 8F9AE70D-9153-4EFE-8173-BA1749F4BB0D
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: analytics
 ---
 
 # How to Use Events for Handled Errors 
 
 > [!IMPORTANT]
-> Handled Errors are not available yet as part of the Crashes service in App Center. One workaround is to use Custom Events. This is not how "Handled Errors" are intended to be supported and it is not the main purpose of Events either. However, this page contains advice on how to best leverage Events to report on handled errors.
+> Handled Errors are not available yet as part of the Crashes service in Mobile Center. One workaround is to use Custom Events. This is not how "Handled Errors" are intended to be supported and it is not the main purpose of Events either. However, this page contains advice on how to best leverage Events to report on handled errors.
 
 In this section, you will learn how to use events to get information about your handled errors. Such events for handled errors are helpful if you are interested in counting the number of times an error has happened. You will get six different measures per event: count, count change, users, user change, count per user and count per session.
 

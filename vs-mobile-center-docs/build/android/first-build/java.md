@@ -1,5 +1,5 @@
 ---
-title: Configure a Java Android build in App Center
+title: Configure a Java Android build in Mobile Center
 description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: build
 ms.tgt_pltfrm: android
 ---
@@ -65,7 +65,7 @@ After a build has been triggered, it can be in the following states:
 * **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
 
 ```
 |-- 1_build.txt (this is the general build log)

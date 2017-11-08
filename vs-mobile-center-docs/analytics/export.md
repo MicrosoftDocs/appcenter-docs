@@ -1,13 +1,13 @@
 ---
-title: App Center Export
+title: Mobile Center Export
 description: Explain Export feature
-keywords: app center, analytics, export
+keywords: mobile center, analytics, export
 author: blparr
 ms.author: blparr
 ms.date: 08/27/2017
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: analytics
 ---
 
@@ -16,7 +16,7 @@ ms.custom: analytics
 > [!IMPORTANT]
 > In order to set up Export, you will need to use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
 
-App Center Analytics allows you to continuously export all your Analytics raw data into Azure, specifically into Blob Storage and Application Insights. By exporting the data, you benefit from:
+Mobile Center Analytics allows you to continuously export all your Analytics raw data into Azure, specifically into Blob Storage and Application Insights. By exporting the data, you benefit from:
 - Unlimited retention by keeping your data as long as you need to and access to it when needed
 - Get answers by querying your raw data
 - Customize your own analytics dashboards
@@ -24,12 +24,12 @@ App Center Analytics allows you to continuously export all your Analytics raw da
 
 The data will be continously exported since the moment export is configured. The data for the two days previous to the export being configured will also be exported.
 
-App Center offers two ways to export your data: *standard export* and *custom export*. Standard export will allow you to export the data with a one-click experience, using the azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
+Mobile Center offers two ways to export your data: *standard export* and *custom export*. Standard export will allow you to export the data with a one-click experience, using the azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
 
 ## Azure Subscription Linking
 
 > [!NOTE]
-> This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attached the azure subscription to App Center.
+> This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attached the azure subscription to Mobile Center.
 
 Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization admin.
 
@@ -57,17 +57,17 @@ This option allows you to customize your export configurations in [Azure](https:
 **For Blob Storage:**
 
 - Create a new resource of type *Storage account* of type *blob*.
-- Copy the *connection string* and add it into your App Center custom configurations. You will find the connection string in the Azure portal under Access Keys in the Settings tab. 
+- Copy the *connection string* and add it into your Mobile Center custom configurations. You will find the connection string in the Azure portal under Access Keys in the Settings tab. 
 
-![Add the connection string in App Center](~/analytics/images/connectionstring.png)
+![Add the connection string in Mobile Center](~/analytics/images/connectionstring.png)
 
 **For Application Insights:**
 
 - Create a new resource of type *Application Insights*.
-- Select the Application Type to be *app center app* type.
-- Copy the *instrumentation key* from the Azure portal and add it into your App Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
+- Select the Application Type to be *mobile center app* type.
+- Copy the *instrumentation key* from the Azure portal and add it into your Mobile Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
 
-![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
+![Add the instrumentation key in Mobile Center](~/analytics/images/instrumentationkey.png)
 
 ## Azure Blob Storage
 
@@ -79,7 +79,7 @@ The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
 ## Azure Application Insights
 
-Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into a App Center app-type Application Insights resource, you will get access to the following features:
+Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your Mobile Center event data. By adding the Mobile Center SDK to your app and exporting the data into a Mobile Center app-type Application Insights resource, you will get access to the following features:
 
 - [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics). Use a powerful query language to analyze your raw event data and create visualizations. You can export the results of your queries into PowerBI or Excel.
 - [Users, Sessions and Events](https://docs.microsoft.com/azure/application-insights/app-insights-usage-segmentation). Learn how many people are using each page and feature of your app, then segment by country, browser, or other properties to understand why.

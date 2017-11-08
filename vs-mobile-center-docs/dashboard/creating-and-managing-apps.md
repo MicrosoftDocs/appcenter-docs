@@ -1,13 +1,13 @@
 ---
 title: Creating and managing apps
-description: Using the dashboard to create and access app info in App Center.
+description: Using the dashboard to create and access app info in Mobile Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
 ms.date: 04/07/2017
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
-ms.service: vs-appcenter
+ms.service: mobile-center
 ---
 
 # Creating and managing apps

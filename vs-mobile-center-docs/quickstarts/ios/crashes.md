@@ -2,13 +2,13 @@
 # required metadata
 
 title: Crashes | Sample App Tutorials
-description: Tutorial on viewing crashes from a sample iOS app in App Center
-keywords: app center
+description: Tutorial on viewing crashes from a sample iOS app in Mobile Center
+keywords: mobile-center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/28/2017
 ms.topic: article
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom:
 ms.prod:
 ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
@@ -23,12 +23,12 @@ ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 ---
 
 # Crashes - Sample Swift App and Tutorials
-In this tutorial, you will learn to view crashes from a sample Swift app in App Center.
+In this tutorial, you will learn to view crashes from a sample Swift app in Mobile Center.
 
 If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Get the symbols
-In order to symbolicate crashes in iOS, App Center needs you to upload a **symbol file to App Center**. You can download symbols from a build in App Center, or skip this section and use your own.
+In order to symbolicate crashes in iOS, Mobile Center needs you to upload a **symbol file to Mobile Center**. You can download symbols from a build in Mobile Center, or skip this section and use your own.
 
 If you already completed the [Build tutorial](build.md) and built the sample app:
 1. Navigate to the **Build** service in the portal.
@@ -51,10 +51,10 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 
 ## Crashing the sample app
 1. Swipe over to the **Crashes** page. Tap the **Send a sample crash** button to crash the app.
-2. **Reopen the app.** This sends the crash report to the App Center backend.  
+2. **Reopen the app.** This sends the crash report to the Mobile Center backend.  
 
   ![Crash the sample app](images/Crash_ios_app.gif)
 
-## View the crashes in App Center
-1. Navigate to the **Crashes** service in App Center. It may take a couple minutes for the crash report to show up after reopening the app.
+## View the crashes in Mobile Center
+1. Navigate to the **Crashes** service in Mobile Center. It may take a couple minutes for the crash report to show up after reopening the app.
 2. Click on the crash to view its details, such as its stack trace, affected devices, and more.

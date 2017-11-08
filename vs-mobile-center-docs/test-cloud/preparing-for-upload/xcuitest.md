@@ -1,13 +1,13 @@
 ---
 title: Preparing XCUITest Tests for Upload
-description: How to upload XCUITests to App Center Test Cloud
+description: How to upload XCUITests to Mobile Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.date: 9/25/2017
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: test
 ---
 
@@ -16,7 +16,7 @@ ms.custom: test
 The steps necessary to prepare an app and its corresponding test suite for upload
 to Test Cloud vary depending on the test framework. The section below provides instructions for installing the XCUITest extensions for Test Cloud and preparing your tests for upload.
 
-By default, App Center will take screenshots and label them after each test method has completed. The [**VSMobileCenterExtensions.framework**](https://github.com/xamarinhq/test-cloud-xcuitest-extensions) is a library that allows screenshots to be taken and labelled while the test method is running.
+By default, Mobile Center will take screenshots and label them after each test method has completed. The [**VSMobileCenterExtensions.framework**](https://github.com/xamarinhq/test-cloud-xcuitest-extensions) is a library that allows screenshots to be taken and labelled while the test method is running.
  
 ## Requirements
 
@@ -160,7 +160,7 @@ The [VSMobileCenterExtensions project](https://github.com/xamarinhq/test-cloud-x
 
 ## Preparing Your Application Bundles
 
-In order to run a test in App Center, it is necessary to build the application and XCUITest runner bundles. To do this, run the following command from the root of the application project directory:
+In order to run a test in Mobile Center, it is necessary to build the application and XCUITest runner bundles. To do this, run the following command from the root of the application project directory:
 
 ```shell
 $ rm -rf ddp #remove the derivedDataPath if it exists
@@ -181,7 +181,7 @@ For more information about Xcode schemes, see the [Apple Developer Documentation
 
 ### UI Testing Failure
 
-When performing gestures in App Center Test, the following error may occur:
+When performing gestures in Mobile Center Test, the following error may occur:
 
 ```
 UI Testing Failure - Failed to scroll to visible (by AX action) Button
@@ -217,7 +217,7 @@ func waitAndTap(element: XCUIElement) {
 }
 ```
 
-Note that in App Center Test, this issue appears to only be prevelant on iPhone 7 devices.
+Note that in Mobile Center Test, this issue appears to only be prevelant on iPhone 7 devices.
 
 ### Xcode 8.3 and Swift
 

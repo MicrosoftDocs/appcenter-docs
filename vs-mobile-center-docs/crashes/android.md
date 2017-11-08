@@ -1,13 +1,13 @@
 ---
-title: App Center Crash Reporting for Android
-description: Reporting crashes from Android apps in App Center
+title: Mobile Center Crash Reporting for Android
+description: Reporting crashes from Android apps in Mobile Center
 keywords: crash reporting
 author: anlinde
 ms.author: anlinde
-ms.date: 08/21/2017
+ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 38624f1c-15fe-4c9f-8b64-e22348e2dcbc
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: crashes
 ms.tgt_pltfrm: android
 ---
@@ -15,10 +15,9 @@ ms.tgt_pltfrm: android
 # Android Crashes
 
 > [!div class="op_single_selector"]
-> * [Android](android.md)
 > * [iOS](ios.md)
+> * [Android](android.md)
 > * [React Native](react-native.md)
-> * [macOS](macos.md)
 
 ## Getting Started
 

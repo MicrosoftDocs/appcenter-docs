@@ -1,18 +1,18 @@
 ---
-title: App Center Platform Services Matrix
-description: App Center matrix for platforms and services
+title: Mobile Center Platform Services Matrix
+description: Mobile Center matrix for platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
 ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
-ms.service: vs-appcenter
+ms.service: mobile-center
 ---
 
 # Platform and Services Matrix
 
-The table below lists all the platforms and their supported services in App Center:
+The table below lists all the platforms and their supported services in Mobile Center:
 
 | Platform | Build | Test | Distribute | Crashes | Analytics | Push |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -21,4 +21,3 @@ The table below lists all the platforms and their supported services in App Cent
 | `React Native` | Yes  | Yes  | Yes | Yes | Yes | Yes |
 | `Windows UWP` | Yes  | No  | Yes | No | Yes | Yes |
 | `Xamarin` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `macOS` | Yes  | No  | Yes | Yes | Yes | Yes |

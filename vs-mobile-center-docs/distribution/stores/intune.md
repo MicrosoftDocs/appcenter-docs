@@ -6,13 +6,13 @@ author: pnghub
 ms.author: gned
 ms.date: 08/15/2017
 ms.topic: article
-ms.service: vs-appcenter
+ms.service: mobile-center
 ms.custom: distribute
 ---
 
 # Intune Company Portal Distribution 
 
-Publish new and upgrade existing line of business(LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
+Publish new and upgrade existing line of business(LOB) iOS and Android applications from Mobile Center into Company Portal on your Intune Cloud instance.
 
 ### Pre-requisites
 
@@ -25,7 +25,7 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 For more information review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
 
 
-### Step 1: Create an Intune connection in App Center
+### Step 1: Create an Intune connection in Mobile Center
 
 1. In the Distribution beacon select **Stores** and click on **Add Connection**.  
 2. Select the store type as Intune Company Portal and click **Next**. 
@@ -34,7 +34,7 @@ For more information review the [introduction to Intune](https://docs.microsoft.
 5. **Select Category** of the app from the drop down. 
 6. For **Audience**, provide the distribution list (email-id) for sharing this application. Note that the email-id used here should be an Azure AD group. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to.
 7. Click **Connect**.
-8. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in App Center.
+8. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in Mobile Center.
 
 ### Step 2: Publish your application to the Intune Company Portal.
 
@@ -43,7 +43,7 @@ For more information review the [introduction to Intune](https://docs.microsoft.
 3. Upload the app package. 
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Intune Company Portal**. The status for this release on the store details page will show as **Submitted.**
-6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Published**.
+6. Once Mobile Center has completed the hand-over of the app to Intune, the status of the app will change to **Published**.
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message. 
 
 For any issues, you can contact us via Intercom. 
