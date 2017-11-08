@@ -1,38 +1,39 @@
 ---
-title: Mobile Center Crashes for React Native
-description: Mobile Center Crashes for React Native
+title: App Center Crashes for React Native
+description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
 ms.date: 10/31/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# Mobile Center Crashes
+# App Center Crashes
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
-Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
+App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 
 Please follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up the SDK in your application yet.
 
-Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
+Wherever you are using App Center Crashes, add the following import at the top of the file.
 ```javascript
-// Import Mobile Center Crashes at the top of the file.
-import Crashes from "mobile-center-crashes";
+// Import App Center Crashes at the top of the file.
+import Crashes from "appcenter-crashes";
 ```
 
 ## Generate a test crash
 
-Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
+App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
 ```
 Crashes.generateTestCrash();
@@ -45,11 +46,11 @@ throw new Error("This is a test javascript crash!");
 ```
 
 > [!TIP]
-> Your React Native app needs to be compiled in **release mode** for this crash to be sent to Mobile Center.
+> Your React Native app needs to be compiled in **release mode** for this crash to be sent to App Center.
 
 ## Get more information about a previous crash
 
-Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
+App Center Crashes has two APIs that give you more information in case your app has crashed.
 
 ### Did the app crash in the previous session?
 
@@ -69,9 +70,9 @@ If your app crashed previously, you can get details about the last crash.
 const crashReport = await Crashes.lastSessionCrashReport();
 ```
 
-## Customize your usage of Mobile Center Crashes
+## Customize your usage of App Center Crashes
 
-Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
+App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 ### <a name="process"></a> Processing crashes in JavaScript
 
@@ -83,7 +84,7 @@ in this document, but you need to set one event listener that define all callbac
 
 ### Should the crash be processed?
 
-Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
+Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```javascript
 Crashes.setListener({
@@ -104,9 +105,9 @@ Crashes.setListener({
 
 ### Ask for the users' consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
@@ -132,7 +133,7 @@ Crashes.setListener({
 If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
 
 ```javascript
-import Crashes, { UserConfirmation } from "mobile-center-crashes";
+import Crashes, { UserConfirmation } from "appcenter-crashes";
 
 // Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
 Crashes.notifyUserConfirmation(UserConfirmation.DONT_SEND);
@@ -147,7 +148,7 @@ Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND);
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
 
 To do that you have to define an event listener in your code as in the following example:
 
@@ -177,10 +178,10 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
 
 ```javascript
-import Crashes, { ErrorAttachmentLog } from "mobile-center-crashes";
+import Crashes, { ErrorAttachmentLog } from "appcenter-crashes";
 
 Crashes.setListener({
     getErrorAttachments(report) {
@@ -200,23 +201,23 @@ Crashes.setListener({
 >
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
-## Enable or disable Mobile Center Crashes at runtime
+## Enable or disable App Center Crashes at runtime
 
-You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
 
 ```javascript
 await Crashes.setEnabled(false);
 ```
 
-To enable Mobile Center Crashes again, use the same API but pass `true` as a parameter.
+To enable App Center Crashes again, use the same API but pass `true` as a parameter.
 
 ```javascript
 await Crashes.setEnabled(true);
 ```
 
-## Check if Mobile Center Crashes is enabled
+## Check if App Center Crashes is enabled
 
-You can also check if Mobile Center Crashes is enabled or not:
+You can also check if App Center Crashes is enabled or not:
 
 ```java
 const enabled = await Crashes.isEnabled();

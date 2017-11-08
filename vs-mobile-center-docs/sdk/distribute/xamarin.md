@@ -1,25 +1,25 @@
 ---
-title: Mobile Center Distribute for Xamarin
-description: Using in-app updates in Mobile Center Distribute
+title: App Center Distribute for Xamarin
+description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
 ms.date: 07/27/2017
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# Mobile Center Distribute – In-app updates
+# App Center Distribute – In-app updates
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
 
-Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
 
 This feature will NOT work if your app is deployed to the app store.
 
@@ -27,15 +27,15 @@ This feature will NOT work if your app is deployed to the app store.
 > There are a few things to consider when using in-app updates:
 > 1. In-app updates are currently not working on iOS 8 devices.
 > 2. If you have released your app in the App Store or Google Play, in-app updates will be disabled.
-> 3. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the Mobile Center backend. We recommend to not enable Mobile Center Distribute for your UI tests. 
+> 3. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
 
 ## Add in-app updates to your app
 
 Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
 
-### 1. Add the Mobile Center Distribute module
+### 1. Add the App Center Distribute module
 
-The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 > [!NOTE]
 > In-app updates is currently not working on iOS 8 devices.
@@ -43,29 +43,29 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 #### Visual Studio for Mac or Xamarin Studio
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
-* Search for **Mobile Center**, and select **Mobile Center Distribute**.
+* Search for **App Center**, and select **App Center Distribute**.
 * Click **Add Packages**.
 
 #### Visual Studio for Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
-* Search for **Mobile Center**, then install **Microsoft.Azure.Mobile.Distribute**.
+* Search for **App Center**, then install **Microsoft.AppCenter.Distribute**.
 
 #### Package Manager Console
 
 * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
 
-  `PM> Install-Package Microsoft.Azure.Mobile.Distribute`
+  `PM> Install-Package Microsoft.AppCenter.Distribute`
 
 > [!NOTE]
-> If you use the Mobile Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
 > in each of the projects: the portable, Android and iOS ones.
 
-### 2. Start Mobile Center Distribute
+### 2. Start App Center Distribute
 
-In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-#### 2.1 Add the using statement for Mobile Center Distribute
+#### 2.1 Add the using statement for App Center Distribute
 
 Add the appropriate namespaces before you get started with using our APIs.
 
@@ -74,13 +74,13 @@ Add the appropriate namespaces before you get started with using our APIs.
 * **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following using statements
 
 ```csharp
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Distribute;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Distribute;
 ```
 
 #### 2.2 Add the `Start()` method
 
-Add `Distribute` to your `Start()` method to start Mobile Center Distribute service.
+Add `Distribute` to your `Start()` method to start App Center Distribute service.
 
 ##### Xamarin.iOS
 
@@ -88,7 +88,7 @@ Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunch
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
-MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
+AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 ```
 
 ##### Xamarin.Android
@@ -96,15 +96,15 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
-MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
+AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 ```
 
 ##### Xamarin.Forms
 
-For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
+AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
 ```
 
 For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplicaton`:
@@ -119,7 +119,7 @@ This step is not necessary on Android where the debug configuration is detected 
 
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
-3. Enter `mobilecenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
+3. Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
 > If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
@@ -129,7 +129,7 @@ This step is not necessary on Android where the debug configuration is detected 
 >		<dict>
 >			<key>CFBundleURLSchemes</key>
 >			<array>
->				<string>mobilecenter-${APP_SECRET}</string>
+>				<string>appcenter-${APP_SECRET}</string>
 >			</array>
 >		</dict>
 >	</array>
@@ -143,12 +143,12 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback. You need to register the callback before calling `MobileCenter.Start` as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `ReleaseAvailable` callback. You need to register the callback before calling `AppCenter.Start` as shown in the following example:
 
 ```csharp
 // In this example OnReleaseAvailable is a method name in same class
 Distribute.ReleaseAvailable = OnReleaseAvailable;
-MobileCenter.Start(...);
+AppCenter.Start(...);
 ```
 
 Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
@@ -212,15 +212,15 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
-## Enable or disable Mobile Center Distribute at runtime
+## Enable or disable App Center Distribute at runtime
 
-You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
+You can enable and disable App Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in App Center portal.
 
 ```csharp
 Distribute.SetEnabledAsync(false);
 ```
 
-To enable Mobile Center Distribute again, use the same API but pass `true` as a parameter.
+To enable App Center Distribute again, use the same API but pass `true` as a parameter.
 
 ```csharp
 Distribute.SetEnabledAsync(true);
@@ -228,9 +228,9 @@ Distribute.SetEnabledAsync(true);
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
-## Check if Mobile Center Distribute is enabled
+## Check if App Center Distribute is enabled
 
-You can also check if Mobile Center Distribute is enabled or not:
+You can also check if App Center Distribute is enabled or not:
 
 ```csharp
 bool enabled = await Distribute.IsEnabledAsync();
@@ -240,10 +240,10 @@ bool enabled = await Distribute.IsEnabledAsync();
 
 The in-app updates feature works as follows:
 
-1. This feature will ONLY work with **RELEASE** builds that are distributed using **Mobile Center Distribute** service.
-2. Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email. 
+1. This feature will ONLY work with **RELEASE** builds that are distributed using **App Center Distribute** service.
+2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email. 
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
-4. Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 
 	* On iOS 8 and 9, the user will be redirected to the Safari app where they will be authenticated, and then redirected to the app.
 	* On iOS 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
@@ -263,30 +263,30 @@ The in-app updates feature works as follows:
 
 ## How do I test in-app updates?
 
-You need to upload release builds (that use the Distribute module of the Mobile Center SDK) to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
+You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
-1. Create your app in the Mobile Center Portal if you haven't done that already.
+1. Create your app in the App Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
+3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below.
 5. Click on the **Distribute new release** button in the portal and upload your build of the app.
 6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
 7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 9. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android)
 10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
 
 > [!TIP]
-> Please have a look at the information on how to [utilize Mobile Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-While it is possible to use Mobile Center Distribute to distribute a new version of your app without adding any code, adding Mobile Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+> Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 
-## Disable automatic forwarding of application delegate's methods to Mobile Center services
+## Disable automatic forwarding of application delegate's methods to App Center services
 
-Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist** file.
-2. Add `MobileCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all Mobile Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
 
 ```csharp

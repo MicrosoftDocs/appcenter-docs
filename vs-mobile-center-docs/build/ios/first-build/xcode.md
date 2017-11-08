@@ -1,5 +1,5 @@
 ---
-title: Building Xcode iOS apps in Mobile Center
+title: Building Xcode iOS apps in App Center
 description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat
@@ -7,7 +7,7 @@ ms.author: siminap
 ms.date: 04/26/2017
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: ios
 ---
@@ -32,7 +32,7 @@ After selecting a repository, select the branch you want to build. By default, a
 Before your first build, the iOS project needs to be configured.
 
 ### 3.1 Project/workspace and scheme
-For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
+For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. App Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
 
 ![Mark scheme as shared][xcode-share-scheme]
@@ -47,7 +47,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.5. Tests
-If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. Mobile Center can currently run XCTest unit tests.
+If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests.
 
 ### 3.6. Code signing
 A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../code-signing/uploading-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](../code-signing/index.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
@@ -56,8 +56,8 @@ A successful build will produce a .ipa file. In order to install the build on a 
 Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md).
 
 ### 3.8. CocoaPods
-Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
-If the repository already contains a */Pods* folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform `pod install`.
+App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
+If the repository already contains a */Pods* folder, App Center assumes you have checked in the pods in your repository and will no longer perform `pod install`.
 
 ### 3.9. Distribute to a distribution group**
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
@@ -73,7 +73,7 @@ After a build has been triggered, it can be in the following states:
 * **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
-For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 ```
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
@@ -87,13 +87,13 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 ### 4.2. The app (.ipa)
 The .ipa file is an iPhone application archive file which contains the iOS app.
-* If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be found [here](../code-signing/index.md).
+* If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found [here](../code-signing/index.md).
 * If the build has not been signed, the .ipa file can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator).
 * All builds kicked off after May 17th are generated by [xcodebuild](~/build/ios/xcodebuild.md). Unsigned builds will not produce an .ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
 ### 4.3. The symbols file (.dsym)
 The .dsym files contain the debug symbols for the app.
-* If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports.
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports.
 * If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable crash reports.
 
 Keep in mind that the .dsym files do not change upon code signing the .ipa. If you decide to code sign the build later, the .dsym generated before code signing is still valid.

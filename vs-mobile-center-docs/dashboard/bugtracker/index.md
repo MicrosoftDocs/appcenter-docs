@@ -1,23 +1,23 @@
 ---
-title: Mobile Center bug tracker Documentation
-description: how to integrate Mobile Center with bug trackers like Visual Studio Team Services (VSTS) and Github
-keywords: mobile center, bug tracker, bugtracker, documentation, hockeyapp, integration VSTS, integration github
+title: App Center bug tracker Documentation
+description: how to integrate App Center with bug trackers like Visual Studio Team Services (VSTS) and Github
+keywords: app center, bug tracker, bugtracker, documentation, hockeyapp, integration VSTS, integration github
 author: achewqy
 ms.author: amchew
 ms.date: 2017-09-15
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
 ---
 
-# Mobile Center bug tracker integration
+# App Center bug tracker integration
 ## Overview
 
-Mobile Center has bug tracker integration for the crashes service. Users can be quickly informed about critical Mobile Center events within the tools that you use regularly in your day to day flow for a seamless experience. Mobile Center supports bug trackers like Visual Studio Team Services (VSTS) and Github. Users need to have manage permissions to be able to configure the bug tracker.
+App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Visual Studio Team Services (VSTS) and Github. Users need to have manage permissions to be able to configure the bug tracker.
 
 ## Getting Started
 
-1. Navigate to https://mobile.azure.com/apps, and select the specific app you would like for bug tracker integration.
+1. Navigate to https://appcenter.ms/apps, and select the specific app you would like for bug tracker integration.
 
 1. In your app, select **Settings**, **Services**, and click the **edit** button.
 
@@ -42,7 +42,7 @@ Mobile Center has bug tracker integration for the crashes service. Users can be 
 
 			![How to add a bug tracker for GitHub](media/addBugTrackerGitHub.gif)
 
-1. Done! Your bug tracker is now configured. When a new crash group is created in Mobile Center, it will trigger the creation of a bug in the configured bug tracker.
+1. Done! Your bug tracker is now configured. When a new crash group is created in App Center, it will trigger the creation of a bug in the configured bug tracker.
 
 1. Toggle to the extreme right hand of the bug tracker to **Configure** or **Disconnect** it.
 

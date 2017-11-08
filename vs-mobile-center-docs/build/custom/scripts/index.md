@@ -7,7 +7,7 @@ ms.author: v-daada
 ms.date: 06/27/2017
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ---
 
@@ -32,8 +32,8 @@ To run scripts post-clone, add the following file next to the project file in yo
     # Example: Clone a required repository
     git clone https://github.com/example/SomeProject
 
-    # Example: Install Mobile Center CLI
-    npm install -g mobile-center-cli
+    # Example: Install App Center CLI
+    npm install -g appcenter-cli
     ```
 
 - **mobile-center-post-clone.ps1** (PowerShell for UWP)

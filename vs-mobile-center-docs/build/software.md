@@ -1,5 +1,5 @@
 ---
-title: Mobile Center Cloud Build Machines
+title: App Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
 author: siminapasat
@@ -7,13 +7,13 @@ ms.author: siminap
 ms.date: 10/25/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ---
 
 # Cloud Build Machines
 
-Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on Mobile Center servers.
+Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on App Center servers.
 
 ## Operating System
 
@@ -57,7 +57,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Tools
 
 - fastlane 2.62.0
-- Mobile Center CLI 0.11.0
+- App Center CLI 0.11.0
 
 ## Xcode
 
