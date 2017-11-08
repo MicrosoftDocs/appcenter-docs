@@ -2,13 +2,13 @@
 # required metadata
 
 title: Build | Sample App Tutorials
-description: Tutorial to build sample iOS app in Mobile Center.
-keywords: mobile-center
+description: Tutorial to build sample iOS app in App Center.
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/27/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom:
 ms.prod:
 ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
@@ -23,7 +23,7 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 ---
 
 # Build - Sample Swift App and Tutorials
-In this tutorial, you will learn to build a sample Swift app in Mobile Center.
+In this tutorial, you will learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
@@ -32,7 +32,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Set up the repository
-1. Go to the **Build** service in [Mobile Center](https://mobile.azure.com/apps).
+1. Go to the **Build** service in [App Center](https://appcenter.ms/apps).
 2. Choose **GitHub** as the service to Build with.
 3. Sign in to GitHub, and click **Authorize MobileCenter**.
 4. Choose **sampleapp-ios-swift**.

@@ -2,8 +2,8 @@
 # required metadata
 
 title: Getting Started | Android Sample App Tutorials
-description: Getting started prerequisites to onboard an Android application in Mobile Center
-keywords: mobile-center
+description: Getting started prerequisites to onboard an Android application in App Center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
@@ -13,7 +13,7 @@ ms.date: 07/26/2017
 
 # Getting Started by Creating App and Codesigning
 
-In this tutorial, you will learn how to set up a sample Android app with Mobile Center.
+In this tutorial, you will learn how to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
 - Create [GitHub account](https://github.com/join).
@@ -25,11 +25,11 @@ In this tutorial, you will learn how to set up a sample Android app with Mobile 
 3. Click **Fork** at the top right hand corner of the page.
 
 
-## Sign in to Mobile Center
-1. Open the [Mobile Center portal](https://mobile.azure.com).
+## Sign in to App Center
+1. Open the [App Center portal](https://appcenter.ms).
 2. Click **Connect with GitHub** and log in, or use another provider.
 
-## Create a new app in Mobile Center
+## Create a new app in App Center
 1. Click **Add new app**.
 2. Name the app **Sample Android App**.
 3. Choose **Android** and **Java** respectively.
@@ -38,18 +38,18 @@ In this tutorial, you will learn how to set up a sample Android app with Mobile 
 
 ## Replace the App Secret
 
-In order for the sample app to send information to Mobile Center, the app secret must be changed to match the one provided for your specific Mobile Center project.
+In order for the sample app to send information to App Center, the app secret must be changed to match the one provided for your specific App Center project.
 
-1. Navigate to **Settings** in Mobile Center.
+1. Navigate to **Settings** in App Center.
 2. Copy the **App Secret** at the top of the page.
   ![Make a new app](images/AppSecret.jpg)
 3. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**, located in /app/src/main/java/com/example/mobilecenter/sampleapp_android.
-4. In **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the Mobile Center portal.*
+4. In **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the App Center portal.*
 
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-        MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+        AppCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
 ```
 
@@ -77,7 +77,7 @@ In order to run tests, distribute the app to users, and send push notifications,
 
 
   ## Optional: Run app in Android Studio and read descriptions
-  The crashes and analytics services have to be linked to the app, see [crashes](crashes.md) and [analytics](analytics.md) tutorials, in order for the crashes and analytics buttons to send trackable data to Mobile Center.
+  The crashes and analytics services have to be linked to the app, see [crashes](crashes.md) and [analytics](analytics.md) tutorials, in order for the crashes and analytics buttons to send trackable data to App Center.
   This is how the app looks running on the Android Studio Emulator:
 
   ![App running on Android Studio Emulator](images/androidAppSampleDemo.gif)

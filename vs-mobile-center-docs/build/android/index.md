@@ -1,13 +1,13 @@
 ---
-title: Mobile Center Build for Android
-description: How to use Mobile Center Build for Android
+title: App Center Build for Android
+description: How to use App Center Build for Android
 keywords: android
 author: siminapasat
 ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 4c0cf21f-fbc3-43de-9feb-45daa6cf6564
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: android
 ---

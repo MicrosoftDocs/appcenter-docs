@@ -1,22 +1,22 @@
 ---
 # required metadata
 
-title: Build Sample Android App on Mobile Center | Android Sample App Tutorials
-description: Tutorial to build sample Android app in Mobile Center.
-keywords: mobile-center
+title: Build Sample Android App on App Center | Android Sample App Tutorials
+description: Tutorial to build sample Android app in App Center.
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/27/2017
 ---
 
-# Build Sample Android App on Mobile Center
+# Build Sample Android App on App Center
 
 ### Prerequisites
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 - Optional: signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.
 
 ## Set up the repository
-1. Go to the **Build** service in [Mobile Center](https://mobile.azure.com/apps).
+1. Go to the **Build** service in [App Center](https://appcenter.ms/apps).
 2. Choose **GitHub** as the selected service.
 3. Sign in to GitHub, and click **Authorize MobileCenter**.
 4. Choose **sampleapp-android**.

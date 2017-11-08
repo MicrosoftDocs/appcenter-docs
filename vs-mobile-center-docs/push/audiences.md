@@ -1,13 +1,13 @@
 ---
-title: Mobile Center Push Audiences
-description: Help using the Push Audiences on Mobile Center
-keywords: mobile center, push, audiences
+title: App Center Push Audiences
+description: Help using the Push Audiences on App Center
+keywords: app center, push, audiences
 author: blparr
 ms.author: blparr
 ms.date: 06/20/2017
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: audiences
 ---
 
@@ -44,6 +44,7 @@ You can set these custom properties by using our SDK methods for each platform:
    - [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
    - [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
    - [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
+   - [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
 
 ## Create Audiences
 

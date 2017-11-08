@@ -3,12 +3,12 @@
 
 title: Overview | Android Sample App Tutorials
 description: Landing page to navigate through Android tutorials.
-keywords: mobile-center
+keywords: app center
 authors: sshibu
 ms.author: t-shshib
 ms.date: 07/26/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: samples
 ms.prod: .net-core
 ms.assetid: d99d49f4-a1a7-4764-9b83-ef88ae5c2eef
@@ -25,7 +25,7 @@ ms.assetid: d99d49f4-a1a7-4764-9b83-ef88ae5c2eef
 
 # Android Sample Overview
 
-This tutorial series, in conjunction with this [sample Android app written in Java](https://github.com/MobileCenter/sampleapp-android), will help you get started with Mobile Center for Android.
+This tutorial series, in conjunction with this [sample Android app written in Java](https://github.com/MobileCenter/sampleapp-android), will help you get started with App Center for Android.
 
 Begin with the [Getting Started](getting-started.md) tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 

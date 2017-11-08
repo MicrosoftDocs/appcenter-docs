@@ -2,13 +2,13 @@
 # required metadata
 
 title: Distribute | Sample App Tutorials
-description: Tutorial to distribute a sample iOS app to a group in Mobile Center.
-keywords: mobile-center
+description: Tutorial to distribute a sample iOS app to a group in App Center.
+keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/27/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom:
 ms.prod:
 ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
@@ -60,4 +60,4 @@ By creating groups of users, you can easily distribute to them all at once, and 
 
 ## Install the sample app
 1. You should receive an email with a link to download the sample app.
-2. Open the link and follow the instructions to register your device with Mobile Center, and the app will begin installing.
+2. Open the link and follow the instructions to register your device with App Center, and the app will begin installing.
