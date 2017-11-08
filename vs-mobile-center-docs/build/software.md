@@ -61,6 +61,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
+- Xcode 9.1
+- Xcode 9.0.1
 - Xcode 9.0
 - Xcode 8.3.3
 - Xcode 8.3.2
