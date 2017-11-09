@@ -31,7 +31,7 @@ If you have set up your application with preview version of our old SDKs, now is
 
 The App Center SDKs are open-source and available publicly on GitHub:
 
-* [App Center SDK for Android](https://github.com/Microsoft/appcenter-sdk-android)
-* [App Center SDK for iOS and macOS](https://github.com/Microsoft/appcenter-sdk-apple)
-* [App Center SDK for React Native](https://github.com/Microsoft/appcenter-SDK-react-native)
-* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/appcenter-sdk-dotnet)
+* [App Center SDK for Android](https://github.com/Microsoft/AppCenter-SDK-Android)
+* [App Center SDK for iOS and macOS](https://github.com/Microsoft/AppCenter-SDK-Apple)
+* [App Center SDK for React Native](https://github.com/Microsoft/AppCenter-SDK-React-Native)
+* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/AppCenter-SDK-DotNet)
