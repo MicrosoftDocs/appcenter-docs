@@ -75,7 +75,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 ### 3.2 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
-1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-iOS/releases) frameworks provided as a zip file.
+1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
 2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 

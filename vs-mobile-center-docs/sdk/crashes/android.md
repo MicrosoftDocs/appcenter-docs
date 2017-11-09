@@ -129,7 +129,7 @@ Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
 
-As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.13.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
+As an example you can refer to [our custom dialog example](https://aka.ms/custom-dialog-android).
 
 ### Get information about the sending status for a crash log
 

@@ -105,7 +105,7 @@ Crashes.NotifyUserConfirmation(UserConfirmation.Send);
 Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
 ```
 
-As an example you can refer to [our custom dialog example](https://github.com/Microsoft/mobile-center-sdk-dotnet/blob/27e426b56af2a882aa6ba06f5a9e56859df70cbb/Apps/Contoso.Forms.Demo/Contoso.Forms.Demo/App.xaml.cs#L149).
+As an example you can refer to [our custom dialog example](https://aka.ms/custom-dialog-xamarin).
 
 ### Get information about the sending status for a crash log
 
