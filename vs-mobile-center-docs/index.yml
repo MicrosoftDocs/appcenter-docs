@@ -21,7 +21,7 @@ abstract:
       text: Pricing
     - href: ~/general/changelog/
       text: Changelog
-    - href: http://status.appcenter.ms/
+    - href: https://azure.microsoft.com/en-us/status/
       text: Service Status
 sections:
 - title: Get Started
