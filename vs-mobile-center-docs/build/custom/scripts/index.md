@@ -24,7 +24,7 @@ The post-clone script runs immediately after the repository was cloned but befor
 
 To run scripts post-clone, add the following file next to the project file in your repository:
 
-- **mobile-center-post-clone.sh** (Bash for iOS & Android)
+- **appcenter-post-clone.sh** (Bash for iOS & Android)
 
     ```
     #!/usr/bin/env bash
@@ -36,33 +36,33 @@ To run scripts post-clone, add the following file next to the project file in yo
     npm install -g appcenter-cli
     ```
 
-- **mobile-center-post-clone.ps1** (PowerShell for UWP)
+- **appcenter-post-clone.ps1** (PowerShell for UWP)
 
 ## Pre-build
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-build, add the following file next to the project file in your repository:
 
-- **mobile-center-pre-build.sh** (Bash for iOS & Android)
+- **appcenter-pre-build.sh** (Bash for iOS & Android)
 
     ```
     #!/usr/bin/env bash
 
     # Example: Change bundle name of an iOS app for non-production
-    if [ "$MOBILECENTER_BRANCH" != "master" ];
+    if [ "$APPCENTER_BRANCH" != "master" ];
     then
-        plutil -replace CFBundleName -string "\$(PRODUCT_NAME) Beta" $MOBILECENTER_SOURCE_DIRECTORY/MyApp/Info.plist
+        plutil -replace CFBundleName -string "\$(PRODUCT_NAME) Beta" $APPCENTER_SOURCE_DIRECTORY/MyApp/Info.plist
     fi
     ```
 
-- **mobile-center-pre-build.ps1** (PowerShell for UWP)
+- **appcenter-pre-build.ps1** (PowerShell for UWP)
 
 ## Post-build
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
-- **mobile-center-post-build.sh** (Bash for iOS & Android)
+- **appcenter-post-build.sh** (Bash for iOS & Android)
 
     ```
     #!/usr/bin/env bash
@@ -71,44 +71,44 @@ To run scripts post-build, add the following file next to the project file in yo
     HOCKEYAPP_APP_ID={APP_ID}
 
     # Example: Upload master branch app binary to HockeyApp using the API
-    if [ "$MOBILECENTER_BRANCH" == "master" ];
+    if [ "$APPCENTER_BRANCH" == "master" ];
     then
         curl \
         -F "status=2" \
-        -F "ipa=@$MOBILECENTER_OUTPUT_DIRECTORY/MyApps.ipa" \
+        -F "ipa=@$APPCENTER_OUTPUT_DIRECTORY/MyApps.ipa" \
         -H "X-HockeyAppToken: $HOCKEYAPP_API_TOKEN" \
         https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
     else
-        echo "Current branch is $MOBILECENTER_BRANCH"
+        echo "Current branch is $APPCENTER_BRANCH"
     fi
     ```
 
-- **mobile-center-post-build.ps1** (PowerShell for UWP)
+- **appcenter-post-build.ps1** (PowerShell for UWP)
 
-## Environment variables
+## App Center variables
 We set the following environment variables, so you can access them from your build scripts.
 
 | **General variables** | **Description** |
 | --------------------------------- | --- |
-| `MOBILECENTER_BUILD_ID` | The unique identifier for the current build |
-| `MOBILECENTER_BRANCH` | Name of the branch that is being built from |
-| `MOBILECENTER_SOURCE_DIRECTORY` | Location of the source code on the build machine |
-| `MOBILECENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
-| `MOBILECENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
+| `APPCENTER_BUILD_ID` | The unique identifier for the current build |
+| `APPCENTER_BRANCH` | Name of the branch that is being built from |
+| `APPCENTER_SOURCE_DIRECTORY` | Location of the source code on the build machine |
+| `APPCENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
+| `APPCENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
 | <br> **iOS specific** | |
-| `MOBILECENTER_XCODE_PROJECT` | Selected Xcode project |
-| `MOBILECENTER_XCODE_SCHEME` | Selected Xcode scheme |
+| `APPCENTER_XCODE_PROJECT` | Selected Xcode project |
+| `APPCENTER_XCODE_SCHEME` | Selected Xcode scheme |
 | <br> **Android specific** | |
-| `MOBILECENTER_ANDROID_VARIANT` | Selected Android variant |
-| `MOBILECENTER_ANDROID_MODULE` | Selected Android module |
+| `APPCENTER_ANDROID_VARIANT` | Selected Android variant |
+| `APPCENTER_ANDROID_MODULE` | Selected Android module |
 | <br> **UWP specific** | |
-| `MOBILECENTER_UWP_SOLUTION` | Selected solution |
-| `MOBILECENTER_UWP_CONFIGURATION` | Selected configuration |
+| `APPCENTER_UWP_SOLUTION` | Selected solution |
+| `APPCENTER_UWP_CONFIGURATION` | Selected configuration |
 | <br> **Xamarin specific** | |
-| `MOBILECENTER_XAMARIN_PROJECT` | Selected project|
-| `MOBILECENTER_XAMARIN_CONFIGURATION` | Selected configuration|
+| `APPCENTER_XAMARIN_PROJECT` | Selected project|
+| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration|
 | <br> **React Native specific** | |
-| `MOBILECENTER_REACTNATIVE_PACKAGE` | Selected package|
+| `APPCENTER_REACTNATIVE_PACKAGE` | Selected package|
 
 
 [build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
