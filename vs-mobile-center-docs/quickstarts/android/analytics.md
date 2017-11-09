@@ -29,7 +29,9 @@ If you have not already, first follow the [getting started tutorial](getting-sta
 
 ## Open the app and view user analytics
 1. Navigate to the app repository in your local machine and open the app module in Android Studio.
+
 2. Click **Run > Run 'app'** from the toolbar. Create a new virtual device of your choice if one is not available to you already, select it, and open the app in the Android Emulator.
+
 3. Go to the **Analytics** service in [App Center](https://appcenter.ms/apps).
 
 Once the app runs on any device or simulator, you should start seeing users, session, and other information on the Overview page.
@@ -37,9 +39,13 @@ Once the app runs on any device or simulator, you should start seeing users, ses
 ## Send and view custom events
 
 1. Swipe over to the **Analytics** page in the Android Emulator in Android Studio.
+
 2. In the sample app, press the **Send a sample event** button.
+
 3. In the sample app, press the **Send event with color property** button. Choose a color.
+
 4. Navigate to the **Analytics** service in [App Center](https://appcenter.ms/apps) and go to the **Events** section.
+
 5. You should see data for both the sample and color event buttons. Click on the color event to see that the color you chose has been pressed at least once.  
 
 

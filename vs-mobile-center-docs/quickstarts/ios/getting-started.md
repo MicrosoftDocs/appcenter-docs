@@ -32,11 +32,14 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
+
 2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-ios-swift).
+
 3. Click **Fork** at the top right hand corner of the page, and clone the repository.
 
 ## Integrate CocoaPods
 1. Open a terminal and go to the sample app's directory.
+
 2. Run the command below to install CocoaPods:
 
   ```bash
@@ -51,30 +54,37 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
 
-  <!--![Install Cocoapods](images/install_cocoapods_ios.gif)-->
 
 ## Sign in to App Center
+
 1. Open the [App Center portal](https://appcenter.ms).
+
 2. Click **Connect with GitHub** and log in, or use another provider.
 
 ## Create a new app in App Center
-1. Click **Add new app**.
-2. Name the app **Sample iOS App**.
-3. Choose **iOS** and **Objective-C / Swift**.
-4. Click **Add new app** at the bottom.  
-  <!--![Make a new app](images/Make_new_app_ios.gif)-->
 
+1. Click **Add new app**.
+
+2. Name the app **Sample iOS App**.
+
+3. Choose **iOS** and **Objective-C / Swift**.
+
+4. Click **Add new app** at the bottom.  
+  
 ## Replace the App Secret
 
 In order for the sample app to send information to App Center, the app secret must be changed in Xcode.
 
 1. Navigate to the **Settings** page in App Center.
+
 2. Copy the **App Secret** at the top.
+
 3. Open the **.xcworkspace** from the sample app folder.
+
 4. In **AppDelegate.swift**, edit the **didFinishLaunchingWithOptions** delegate method and paste your App Secret at the placeholder.
+
 5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
-  ![Replace the App Secret](images/Change_app_secret_ios.gif)
 
 ## Codesign the project
 
@@ -87,11 +97,13 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
   ![Push App Service](images/AppID_push_ios.png)
 
   1. Open **.xcworkspace** from the sample app's folder.
-  2. Go to **General** within the .xcworkspace file.
-  3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
-  4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
-  5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
-    ![Codesigning](images/Manual_sign_ios.png)
+  2. Go to **General** within the .xcworkspace file.
+
+  3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
+
+  4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
+
+  5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
 You're all set up to try out a App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.

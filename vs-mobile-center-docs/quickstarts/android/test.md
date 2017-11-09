@@ -39,19 +39,30 @@ ms.date: 07/26/2017
   ```
 
 ## Prepare to run tests in App Center
-1. Go to the **Test** service in [App Center](https://appcenter.ms/apps).
-2. Click on **Start testing your app**.
-3. Select the first device, the **Google Pixel XL**, and press **Select one device** at the bottom.  
-4. Choose **Espresso** as the Test framework.   
-5. Click **Next**.  
-  ![SetUpTests](images/testSetUp.gif)
 
+1. Go to the **Test** service in [App Center](https://appcenter.ms/apps).
+
+2. Click on **Start testing your app**.
+
+3. Select the first device, the **Google Pixel XL**, and press **Select one device** at the bottom.
+
+4. Choose **Espresso** as the Test framework.
+
+5. Click **Next**.  
+  
 
 ## Run the tests
+
 1. In the **Submit** step, copy the custom command under **Running tests**.
+
 2. Paste it into terminal while in the project directory.
+
 3. Navigate into **sampleapp-android/app/build/outputs/apk**.
+
 4. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
+
 5. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
+
 6. Run the command. You will see the tests begin to run.
+
 7. In App Center, click **Done** to close the panel.  
