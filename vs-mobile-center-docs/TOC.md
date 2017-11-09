@@ -117,7 +117,6 @@
 ### [React Native Android](sdk/push/react-native-android.md)
 ### [React Native iOS](sdk/push/react-native-ios.md)
 ### [macOS](sdk/push/macos.md)
-
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)
@@ -131,6 +130,13 @@
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ### [UWP](sdk/troubleshooting/uwp.md)
 ### [macOS](sdk/troubleshooting/macos.md)
+
+## [SDK Migration](sdk/sdk-migration/index.md)
+### [Android](sdk/sdk-migration/android.md)
+### [iOS](sdk/sdk-migration/ios.md)
+### [UWP](sdk/sdk-migration/uwp.md)
+### [Xamarin](sdk/sdk-migration/xamarin.md)
+### [React Native](sdk/sdk-migration/react-native.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
