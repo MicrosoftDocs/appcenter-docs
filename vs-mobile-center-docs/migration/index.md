@@ -22,10 +22,6 @@ Today we recommend you to not use App Center for production use but continue usi
 
 Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using their existing HockeyApp account. We are also working to get your existing apps and data from HockeyApp moved into App Center, so you don’t have to do any migration. Get the [high-level overview](https://www.hockeyapp.net/mobile-center/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md).
 
-## Xamarin Test Cloud
-
-Today, customers can try the new Test experience in App Center. In the next few months, all current Test Cloud customers will have their accounts seamlessly migrated to App Center with no additional work. Coming Summer 2017.
-
 <!-- ## [Microsoft CodePush](~/migration/codepush/index.md) Ian Geoghegan placeholder -->
 
 ## Xamarin Insights
