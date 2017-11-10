@@ -1,8 +1,8 @@
 ---
 title: App Center Webhooks Documentation
 description: how to configure App Center webhooks to applications like Slack, Microsoft Teams
-keywords: app center, webhook, webhooks, documentation, Slack, Microsoft Teams
-author: achewqy
+keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
+author: amchew
 ms.author: amchew
 ms.date: 2017-09-13
 ms.topic: article
@@ -33,7 +33,9 @@ The main goal of webhooks is to communicate important information from App Cente
     - Webhook name
     - Webhook url
     
-    You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft Teams). In App Center, click on the **radio buttons** to decide what events will trigger the webhook alerts. Once these events happen, alerts from App Center will be posted into your integrated applications.
+    You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft Teams. Here are details on how to [obtain the webhook URL from Microsoft Teams](https://msdn.microsoft.com/en-us/microsoft-teams/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack)). 
+    
+    In App Center, click on the **checkbox** to decide what events will trigger the webhook alerts. Once these events happen, alerts from App Center will be posted into your integrated applications.
     
     ![How to create a new webhook](media/createANewWebhook.gif)
 
@@ -45,12 +47,3 @@ The main goal of webhooks is to communicate important information from App Cente
   - **disable** keeps the webhook inactive but present in your dashboard.
   - **delete** will remove the webhook from your dashboard.
 
-    Here are how the alerts will look like in your connected applications:
-
-    ### Slack
-
-    ![Alert Webhook in Slack](media/alertWebhookInSlack.png)
-
-    ### Microsoft Teams
-
-    ![Alert Webhook in Microsoft Teams](media/alertWebhookInTeams.png)

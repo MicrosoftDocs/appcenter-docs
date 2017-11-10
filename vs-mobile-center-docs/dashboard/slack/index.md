@@ -3,8 +3,8 @@
 
 title: App Center Slack App Documentation
 description: how to use App Center Slack App
-keywords: app center, slack app, slackbot, slack bot, documentation, integration, slack
-author: achewqy
+keywords: app center, appcenter, visual studio app center, visual studio appcenter, slack app, slackbot, slack bot, documentation, integration, slack
+author: amchew
 ms.author: amchew
 ms.date: 2017-09-14
 ms.topic: article
@@ -30,9 +30,7 @@ Our aim is to enable users to quickly access App Center services and respond to 
 
 ## Getting Started
 
-1. Navigate to [App Center's Slack App](https://slack.com/apps/A5ZK2MYJC), and install and authorize the app:  
-
-	![How to add install App Center's Slack App](media/installSlackApp.gif)
+1. Navigate to [App Center's Slack App](https://slack.com/apps/A5ZK2MYJC), and install and authorize the app.
 
 1. Navigate to your Slack workspace and select any direct message or channel.
 
@@ -58,6 +56,3 @@ Our aim is to enable users to quickly access App Center services and respond to 
 	| `/appcenter help`      |   View list of App Center commands|  
 
 1. You can pin a specific App Center app to the Slack channel or message. Run the slash command `/appcenter` and click on **set current app** to choose the default app. To remove the default app, run the slash command `/appcenter` and click on **clear current app**.  
-
-	![How to pin a specific App Center app to the Slack channel](media/pinSpecificAppToSlackChannel.gif)
-
