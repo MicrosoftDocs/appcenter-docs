@@ -41,8 +41,8 @@ In order to connect to another Bitbucket account to build your apps, first step 
 
 ![Remove Bitbucket Oauth Token][remove-bitbucket-oauth-token]
 
-[remove-vsts-oauth-token]: ~/build/images/remove-vsts-oauth-token.png "Remove VSTS token"
-[remove-github-oauth-token]: ~/build/images/remove-github-oauth-token.png "Remove GitHub token"
-[remove-bitbucket-oauth-token]: ~/build/images/remove-bitbucket-oauth-token.png "Remove Bitbucket token"
+[remove-vsts-oauth-token]: ~/build/images/remove-vsts-oauth-token.jpg "Remove VSTS token"
+[remove-github-oauth-token]: ~/build/images/remove-github-oauth-token.jpg "Remove GitHub token"
+[remove-bitbucket-oauth-token]: ~/build/images/remove-bitbucket-oauth-token.jpg "Remove Bitbucket token"
 
 

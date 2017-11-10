@@ -57,6 +57,6 @@ Drag the `PROV` icon from the details view in Xcode and drop it right into the p
 ## Manual provisioning
 You can configure Xcode to use a specific certificate and provisioning profile to sign a build. Make sure that you upload the exact same files to App Center.
 
-[xcode-provisioning-profile-name]: images/xcode-8-provisioning-profile-name.png
+[xcode-provisioning-profile-name]: images/xcode-8-provisioning-profile-name.jpg
 
 
