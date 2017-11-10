@@ -17,11 +17,23 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
 
 ## 1. Changes to the build system
+First you'll need to add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the `build.gradle` in your project root directory:
+
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
+
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.xamarin.testcloud:espresso-support:1.1')
+androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.0')
 ```
+
+On newer Android SDKs `androidTestCompile` is deprecated and you should use `androidTestImplementation` instead.
 
 This will ensure the reportHelper is available at compile time. The reportHelper enables the `label` feature. See Step 3 for more detail on the `label` feature.
 
@@ -33,8 +45,8 @@ Import these packages into your test classes:
 
 ```java
 import android.support.test.runner.AndroidJUnit4;
-import com.xamarin.testcloud.espresso.Factory;
-import com.xamarin.testcloud.espresso.ReportHelper;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 ```
 
 ### Step 2 - Instantiate the ReportHelper
