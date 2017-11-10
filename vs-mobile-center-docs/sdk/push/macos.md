@@ -82,7 +82,7 @@ Here is an example of the delegate implementation that displays an alert dialog 
 
 ```objc
 - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
-  NSString *title = pushNotification.title;
+  NSString *title = pushNotification.title ?: @"";
   NSString *message = pushNotification.message;
   NSMutableString *customData = nil;
   for (NSString *key in pushNotification.customData) {
@@ -90,7 +90,7 @@ Here is an example of the delegate implementation that displays an alert dialog 
     [customData appendFormat:@"%@: %@", key, [pushNotification.customData objectForKey:key]];
   }
   message = [NSString stringWithFormat:@"%@%@%@", (message ? message : @""), (message && customData ? @"\n" : @""),
-                                        customData ? customData : @"")];
+                                       (customData ? customData : @"")];
   NSAlert *alert = [[NSAlert alloc] init];
   [alert setMessageText:title];
   [alert setInformativeText:message];
@@ -100,18 +100,27 @@ Here is an example of the delegate implementation that displays an alert dialog 
 ```
 ```swift
 func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
-  let title: String? = pushNotification.title
-  var message: String = pushNotification.message ?? ""
-  var customData: String = ""
-  for item in pushNotification.customData {
-    customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
-  }
-  message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
   let alert: NSAlert = NSAlert()
-  alert.messageText = title
-  alert.informativeText = message
-  alert.addButton(withTitle: "OK")
-  alert.runModal()
+  alert.messageText = "Sorry about that!"
+  alert.informativeText = "Do you want to send an anonymous crash report so we can fix the issue?"
+  alert.addButton(withTitle: "Always send")
+  alert.addButton(withTitle: "Send")
+  alert.addButton(withTitle: "Don't send")
+  alert.alertStyle = NSWarningAlertStyle
+
+  switch (alert.runModal()) {
+  case NSAlertFirstButtonReturn:
+    MSCrashes.notify(with: .always)
+    break;
+  case NSAlertSecondButtonReturn:
+    MSCrashes.notify(with: .send)
+    break;
+  case NSAlertThirdButtonReturn:
+    MSCrashes.notify(with: .dontSend)
+    break;
+  default:
+    break;
+  }
 }
 ```
 

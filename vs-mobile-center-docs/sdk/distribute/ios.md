@@ -126,20 +126,49 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 ```objc
 - (BOOL)distribute:(MSDistribute *)distribute releaseAvailableWithDetails:(MSReleaseDetails *)details {
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  [[[UIAlertView alloc] initWithTitle:@"Update availble."
-                              message:@"Do you want to update?"
-                             delegate:self
-                    cancelButtonTitle:@"Postpone"
-                    otherButtonTitles:@"Update", nil] show];
+  // Your code to present your UI to the user, e.g. an UIAlertController.
+  UIAlertController *alertController = [UIAlertController
+      alertControllerWithTitle:@"Update availble."
+                       message:@"Do you want to update?"
+                preferredStyle:UIAlertControllerStyleAlert];
+
+  [alertController
+      addAction:[UIAlertAction actionWithTitle:@"Update"
+                                         style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action) {
+                                         [MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
+                                       }]];
+
+  [alertController
+      addAction:[UIAlertAction actionWithTitle:@"Postpone"
+                                         style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action) {
+                                         [MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
+                                       }]];
+
+  // Show the alert controller.
+  [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
   return YES;
 }
 ```
 ```swift
 func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  UIAlertView.init(title: "Update available", message: "Do you want to update?", delegate: self, cancelButtonTitle: "Postpone", otherButtonTitles: "Update").show()
+  // Your code to present your UI to the user, e.g. an UIAlertController.
+  let alertController = UIAlertController(title: "Update availble.",
+                                        message: "Do you want to update?",
+                                 preferredStyle:.alert)
+
+  alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
+    MSDistribute.notify(.update)
+  })
+
+  alertController.addAction(UIAlertAction(title: "Postpone", style: .default) {_ in
+    MSDistribute.notify(.postpone)
+  })
+
+  // Show the alert controller.
+  self.window?.rootViewController?.present(alertController, animated: true)
   return true;
 }
 ```

@@ -46,22 +46,59 @@ The following method shows how to set up a user confirmation handler:
 ```objc
 [MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  [[[UIAlertView alloc] initWithTitle:@"Sorry we crashed."
-                              message:@"Do you want to send a report about the crash to the developer?"
-                             delegate:self
-                    cancelButtonTitle:@"Don't send"
-                    otherButtonTitles:@"Always send", @"Send", nil] show];
+  // Your code to present your UI to the user, e.g. an UIAlertController.
+  UIAlertController *alertController = [UIAlertController
+      alertControllerWithTitle:@"Sorry about that!"
+                      message:@"Do you want to send an anonymous crash report so we can fix the issue?"
+                preferredStyle:UIAlertControllerStyleAlert];
 
+  [alertController
+      addAction:[UIAlertAction actionWithTitle:@"Don't send"
+                                        style:UIAlertActionStyleCancel
+                                      handler:^(UIAlertAction *action) {
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+                                      }]];
+
+  [alertController
+      addAction:[UIAlertAction actionWithTitle:@"Send"
+                                        style:UIAlertActionStyleDefault
+                                      handler:^(UIAlertAction *action) {
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+                                      }]];
+
+  [alertController
+      addAction:[UIAlertAction actionWithTitle:@"Always send"
+                                        style:UIAlertActionStyleDefault
+                                      handler:^(UIAlertAction *action) {
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+                                      }]];
+  // Show the alert controller.
+  [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
   return YES; // Return YES if the SDK should await user confirmation, otherwise NO.
 })];
 ```
 ```swift
 MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 
-  // Your code to present your UI to the user, e.g. an UIAlertView.
-  UIAlertView.init(title: "Sorry we crashed!", message: "Do you want to send a Crash Report?", delegate: self, cancelButtonTitle: "No", otherButtonTitles:"Always send", "Send").show()
+  // Your code to present your UI to the user, e.g. an UIAlertController.
+  let alertController = UIAlertController(title: "Sorry about that!",
+                                          message: "Do you want to send an anonymous crash report so we can fix the issue?",
+                                          preferredStyle:.alert)
 
+  alertController.addAction(UIAlertAction(title: "Don't send", style: .cancel) {_ in
+    MSCrashes.notify(with: .dontSend)
+  })
+
+  alertController.addAction(UIAlertAction(title: "Send", style: .default) {_ in
+    MSCrashes.notify(with: .send)
+  })
+
+  alertController.addAction(UIAlertAction(title: "Always send", style: .default) {_ in
+    MSCrashes.notify(with: .always)
+  })
+
+  // Show the alert controller.
+  self.window?.rootViewController?.present(alertController, animated: true)
   return true // Return true if the SDK should await user confirmation, otherwise return false.
 })
 ```
@@ -76,9 +113,9 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSCrashes.notify(with: MSUserConfirmation.dontSend)
-MSCrashes.notify(with: MSUserConfirmation.send)
-MSCrashes.notify(with: MSUserConfirmation.always)
+MSCrashes.notify(with: .dontSend)
+MSCrashes.notify(with: .send)
+MSCrashes.notify(with: .always)
 ```
 
 [!include[](apple-common-methods-2.md)]

@@ -93,7 +93,7 @@ Here is an example of the delegate implementation that displays an alert dialog 
 
 ```objc
 - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
-  NSString *title = pushNotification.title;
+  NSString *title = pushNotification.title ?: @"";
   NSString *message = pushNotification.message;
   NSMutableString *customData = nil;
   for (NSString *key in pushNotification.customData) {
@@ -106,29 +106,34 @@ Here is an example of the delegate implementation that displays an alert dialog 
   } else {
     message = [NSString stringWithFormat:@"%@%@%@", (message ? message : @""), (message && customData ? @"\n" : @""),
                                          (customData ? customData : @"")];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:message
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+
+    UIAlertController *alertController =
+        [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+
+    // Show the alert controller.
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
   }
 }
 ```
 ```swift
 func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
-  let title: String? = pushNotification.title
+  let title: String = pushNotification.title ?? ""
   var message: String = pushNotification.message ?? ""
   var customData: String = ""
   for item in pushNotification.customData {
     customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
   }
   if (UIApplication.shared.applicationState == .background) {
-    NSLog("Notification received in background, title: \"\(title ?? "")\", message: \"\(message)\", custom data: \"\(customData)\"");
+    NSLog("Notification received in background, title: \"\(title)\", message: \"\(message)\", custom data: \"\(customData)\"");
   } else {
     message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
-    let alert = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
-    alert.show()
+
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
+    
+    // Show the alert controller.
+    self.window?.rootViewController?.present(alertController, animated: true)
   }
 }
 ```

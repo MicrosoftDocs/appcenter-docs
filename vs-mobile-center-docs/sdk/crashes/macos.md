@@ -48,13 +48,26 @@ The following method shows how to set up a user confirmation handler:
 
   // Your code to present your UI to the user, e.g. an NSAlert.
   NSAlert *alert = [[NSAlert alloc] init];
-  [alert setMessageText:@"Sorry we crashed."];
-  [alert setInformativeText:@"Do you want to send a report about the crash to the developer?"];
-  [alert setAlertStyle:NSWarningAlertStyle];
+  [alert setMessageText:@"Sorry about that!"];
+  [alert setInformativeText:@"Do you want to send an anonymous crash report so we can fix the issue?"];
   [alert addButtonWithTitle:@"Always send"];
   [alert addButtonWithTitle:@"Send"];
   [alert addButtonWithTitle:@"Don't send"];
-  [alert runModal];
+  [alert setAlertStyle:NSWarningAlertStyle];
+
+  switch ([alert runModal]) {
+  case NSAlertFirstButtonReturn:
+    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+    break;
+  case NSAlertSecondButtonReturn:
+    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+    break;
+  case NSAlertThirdButtonReturn:
+    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+    break;
+  default:
+    break;
+  }
 
   return YES; // Return YES if the SDK should await user confirmation, otherwise NO.
 })];
@@ -64,13 +77,26 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an NSAlert.
   let alert: NSAlert = NSAlert()
-  alert.messageText = "Sorry we crashed."
-  alert.informativeText = "Do you want to send a report about the crash to the developer?"
-  alert.alertStyle = NSWarningAlertStyle
+  alert.messageText = "Sorry about that!"
+  alert.informativeText = "Do you want to send an anonymous crash report so we can fix the issue?"
   alert.addButton(withTitle: "Always send")
   alert.addButton(withTitle: "Send")
   alert.addButton(withTitle: "Don't send")
-  alert.runModal()
+  alert.alertStyle = NSWarningAlertStyle
+
+  switch (alert.runModal()) {
+  case NSAlertFirstButtonReturn:
+    MSCrashes.notify(with: .always)
+    break;
+  case NSAlertSecondButtonReturn:
+    MSCrashes.notify(with: .send)
+    break;
+  case NSAlertThirdButtonReturn:
+    MSCrashes.notify(with: .dontSend)
+    break;
+  default:
+    break;
+  }
 
   return true // Return true if the SDK should await user confirmation, otherwise return false.
 })
@@ -86,9 +112,9 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSCrashes.notify(with: MSUserConfirmation.dontSend)
-MSCrashes.notify(with: MSUserConfirmation.send)
-MSCrashes.notify(with: MSUserConfirmation.always)
+MSCrashes.notify(with: .dontSend)
+MSCrashes.notify(with: .send)
+MSCrashes.notify(with: .always)
 ```
 
 [!include[](apple-common-methods-2.md)]
