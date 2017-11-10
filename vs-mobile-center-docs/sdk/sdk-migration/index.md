@@ -15,7 +15,7 @@ ms.custom: sdk
 
 App Center is your continuous integration, delivery and learning solution for iOS, Android, Windows, and macOS apps.
 
-If you have set up your application with preview version of our old SDKs, now is the time to update them to App Center SDK v1.0.0. Here are the guidelines to update your application to App Center SDKs. You can reach us on Intercom (blue icon in lower right of App Center portal) and open a support ticket if you have any questions on the SDK migration. 
+If you have set up your application with preview version of our old SDKs, now is the time to update them to App Center SDK v1.0.0. Here are the guidelines to update your application to App Center SDKs.
 
 ## Guidelines
 
