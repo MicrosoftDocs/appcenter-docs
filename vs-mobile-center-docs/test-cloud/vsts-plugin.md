@@ -26,8 +26,6 @@ With the App Center Test task for Visual Studio Team Services (VSTS), you can ru
 
 Each framework will have its own section in this document, where you can read about the basic requirements for setting up a build step definition in VSTS.
 
-![Task](images/vsts-task.png)
-
 ## Appium
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
 * Prepare your repository for Appium - read more [here](preparing-for-upload/appium.md).
@@ -52,8 +50,6 @@ appcenter test run appium --app "username/appname" --devices 209ed689
 ```
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
-
-![Run](images/vsts-appium-run.png)
 
 * First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
@@ -86,8 +82,6 @@ appcenter test run espresso --app "username/appname" --devices 209ed689
 ```
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
-
-![Run](images/vsts-appium-run.png)
 
 * First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
@@ -124,8 +118,6 @@ appcenter test run uitest --app "username/appname" --devices 209ed689
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
 
-![Run](images/vsts-appium-run.png)
-
 * First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
 * Your device selection which is a mixture of letters and numbers, is specified in the `Devices` field. On the submit page it is the `--devices` parameter.
@@ -145,8 +137,6 @@ Before you can start testing, the following steps are required.
 * Activate your trial for App Center Test - this is done on [App Center](https://appcenter.ms/). First select your app and then select Test in the left-hand menu.
 
 ### VSTS General Setup
-
-![General](images/vsts-general.png)
 
 You start by adding the App Center Test task to your build definition. The App Center task in the build definition is divided up into sections - where focus will be on _General_, _Prepare Tests_ and _Run Test_ sections. In the general section it is required to insert the path to your app binary (`.apk` or `.ipa`) in the `Binary Application File Path` field.
 
