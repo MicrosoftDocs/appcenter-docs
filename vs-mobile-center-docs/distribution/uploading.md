@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Release a Build
 
-In order to distribute a release via App Center, you must first upload your application binary package to App Center. App Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
+In order to distribute a release via App Center, you must first upload your application binary package to App Center. App Center supports package uploads for iOS, Android, UWP and macOS.
 
 ## Generating an application binary package
 
@@ -37,7 +37,7 @@ For Android you will need to produce a properly signed apk file. For full detail
 
 ## Uploading the package
 
-To upload a package to App Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via App Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via App Center.
+To upload a package to App Center, use the navigation bar on the left to navigate to Distirbution. Then click "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Next you have the option to include release notes. Both plain text and markdown formats are supported. Click next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via App Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via App Center.
 
 ![](images/new_release_button.png "new release button top right")
 
@@ -61,6 +61,10 @@ To upload a package to App Center, use the navigation bar on the left to navigat
 3. Distribute the uploaded release to a distribution group — [PATCH /updateRelease][PATCH_updateRelease]
     
     ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
+
+## Re-Release a build
+
+To release a build to another distribution group, navigate to the release details page either through the Releases tab on the distribution group page, or from the Releases page in the left sidebar menu. Click on the "Distribute" button in the upper right-hand corner of the screen to initiate the re-release process. Once the modal has opened, select the distribution group you would like to release the build to. After selecting the group and reviewing the release details, click the "Distribute" button to send the release to testers.  
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [apple-devices]: ./auto-provisioning.md
