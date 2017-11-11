@@ -13,7 +13,7 @@ ms.custom: api
 
 # API Documentation
 
-Explore the App Center API Service with [swagger](https://docs.appcenter.ms/api/).
+Explore the App Center API Service with [swagger](https://openapi.appcenter.ms).
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ Explore the App Center API Service with [swagger](https://docs.appcenter.ms/api/
 3. Select **API Tokens** from the menu list
 4. Click **New API token**  at the top and enter an appropriate description into the text field
 5. This will generate a pop up with your API token. Copy and store it in a secure location for later use
-6. Navigate to https://docs.appcenter.ms/api/ and click on the **Authorize** button on the top.
+6. Navigate to https://openapi.appcenter.ms and click on the **Authorize** button on the top.
 7. Under **Api key authorization** section, paste the API key token value that you just copied into the text field and click **Authorize**
 
 	![Setting api token value to authorize our API's](~/api-docs/images/authorization_withtoken.PNG)
