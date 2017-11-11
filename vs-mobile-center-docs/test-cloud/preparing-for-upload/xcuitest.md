@@ -14,7 +14,7 @@ ms.custom: test
 # Preparing XCUITest Tests for Upload
 
 [**AppCenter XCUITest
-Extensions**](https://github.com/xamarinhq/test-cloud-xcuitest-extensions)
+Extensions**](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions)
 is an iOS Framework for taking screenshots and labeling test steps when
 running XCUITest test in App Center or Xamarin Test Cloud. At the
 conclusion of each test method, a label and screenshot are automatically
@@ -25,7 +25,7 @@ screenshots to track your app's progress during a test method.
 Xamarin Test Cloud.**
 
 If you encounter a problem, please file a GitHub
-[issue](https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions/issues).
+[issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
 
 ## Requirements
 
@@ -35,17 +35,19 @@ If you encounter a problem, please file a GitHub
 
 You must launch your application using the `ACTLaunch` API.
 
-```
 ### Objective-C
+
+```objective-c
 
 XCUIApplication *app = act_launch
 XCUIApplication *app = act_launch_app([[XCUIApplication alloc] init]);
 
 XCUIApplication *app = [ACTLaunch launch];
 XCUIApplication *app = [ACTLaunch launchApplication:[[XCUIApplication alloc] init]];
-
+```
 ### Swift
 
+```swift
 let app = ACTLaunch.launch();
 let app = ACTLaunch.launch(XCUIApplication())
 ```
@@ -55,8 +57,8 @@ let app = ACTLaunch.launch(XCUIApplication())
 Be sure that you launch your app with the `ACTLaunch` API. See the
 examples in the [Requirements](#requirements) section.
 
-* **[ACTLabelTest.m](https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions/blob/master/TestApp/Tests/UI/ACLabelTest.m)** &ndash; Examples in Objective-C
-* **[ACTLabelTest.swift](https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions/blob/master/TestApp/Tests/UI/MCLabelTest.swift)** &ndash; Examples in Swift
+* **[ACTLabelTest.m](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/ACLabelTest.m)** &ndash; Examples in Objective-C
+* **[ACTLabelTest.swift](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/MCLabelTest.swift)** &ndash; Examples in Swift
 
 ## Adding the AppCenterXCUITestExtensions to an Xcode Project
 
@@ -79,7 +81,7 @@ $ brew install carthage
 Create a `Cartfile` with the following contents:
 
 ```
-github "xamarinhq/appcenter-test-cloud-xcuitest-extensions"
+github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 ```
 
 Follow the [Carthage
@@ -94,8 +96,8 @@ linked with the XCUITest target and _not_ the iOS application.
 ##### 1. Make the AppCenterXCUITestExtensions.framework
 
 ```shell
-$ git clone https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions.git
-$ cd appcenter-test-cloud-xcuitest-extensions
+$ git clone git@github.com:Microsoft/AppCenter-Test-XCUITest-Extensions.git
+$ cd AppCenter-Test-XCUITest-Extensions
 $ make
 ...
 INFO: Installed Products/framework/AppCenterXCUITestExtensions.framework
@@ -193,17 +195,17 @@ $ xcrun xcodebuild -list
 ```
 
 For a concrete example of generating an app and an XCUITest bundle, see
-**[bin/make/build-for-testing.sh](https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions/blob/master/bin/make/build-for-testing.sh)**.
+**[bin/make/build-for-testing.sh](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/bin/make/build-for-testing.sh)**.
 
 ## Uploading Tests to App Center
 
 Tests are uploaded to App Center using the `appcenter` command line tool.
 
-To install, follow the instructions in the README of the [appcenter-cli
-GitHub](https://github.com/Microsoft/appcenter-cli) repository.
+To install, follow the instructions in the README of the [AppCenter-CLI
+GitHub](https://github.com/Microsoft/AppCenter-CLI) repository.
 
-Use the App Center Test page to generate a device set token (devices to
-tests against) and an example command-line invocation.
+Use the App Center Test page to generate a device selection and 
+an example command-line invocation. For more information, see [Starting a Test run](~/test-cloud/starting-a-test-run.md).
 
 ```
 # Follow the instructions to generate a resuable API token.
@@ -225,4 +227,4 @@ $ appcenter test run xcuitest \
 ```
 
 For a concrete example of submitting tests to App Center, see
-**[bin/make/appcenter.sh](https://github.com/xamarinhq/appcenter-test-cloud-xcuitest-extensions/blob/master/bin/make/appcenter.sh)**.
+**[bin/make/appcenter.sh](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/bin/make/appcenter.sh)**.
