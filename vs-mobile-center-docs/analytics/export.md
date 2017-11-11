@@ -88,7 +88,38 @@ Application Insights is an application performance management (APM) service that
 - [Workbooks](https://docs.microsoft.com/azure/application-insights/app-insights-usage-workbooks). Create interactive workbooks that combine usage analysis visualizations, Application Insights Analytics queries, and text to share insights on your team.
  
 
-[Learn more about Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+The App Center fields are mapped into Application Insights format. Here is the equivalence between the mapped fields:
+
+| Application Insights            | App Center                                             |
+| ------------------------------- | ------------------------------------------------------ |
+| timestamp                       | Time of the event                                      |
+| name                            | Name of the custom event or type of data               |
+| customDimensions                | This includes several fields shown in the table below  |   
+| session_Id                      | Uniquely session identifier                            |
+| user_Id                         | Uniquely user identifier                               |
+| application_Version             | Version of the application                             |
+| client_Type, client_Model       | Device Model                                           |
+| client_OS                       | OS type and version                                    |
+| sdkVersion                      | App Center SDK version                                 |
+
+
+The table below shows the field mapping for the "customDimensions" field.
+
+| Application Insights            | App Center                                     |
+| ------------------------------- | ---------------------------------------------- |
+|  MessageType                    | Type of event (session, event, ...)            |
+|  AppId                          | App Center App ID                              |
+|  CarrierCountry                 | Carrier Country                                |
+|  TimeZoneOffset                 | Time Zone Offset                               |
+|  CarrierName                    | Carrier Type                                   |
+|  Properties                     | Properties attached to a custom event          |
+|  ScreenSize                     | Device's screen size                           |
+|  OsApiLevel                     | API Level                                      |
+|  Locale                         | Device language                                |
+
+
+Learn more about [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) and the [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart).
+
 
 ## Pricing
 

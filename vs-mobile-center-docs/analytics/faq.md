@@ -13,29 +13,29 @@ ms.custom: analytics
 
 # Analytics FAQ
 
-**Is the data Sampled?**
+**Is the data sampled?**
 
-No, Analytics takes into account all the data it is sent, unless it has an incorrect format.
+The data is not sampled. Analytics will use all the data that is sent, unless it is sent in the wrong format or some of the known limits is reached.
 <br><br>
 
-**What is the latency between a log sent and its representation in the charts?**
+**What is the latency between a log sent and its representation in the Analytics dashboards?**
 
-The normal latency is a few seconds. It may be longer on occasions though.
+The latency is typically just a few seconds.
 <br><br>
 
-**What is the precision of the displayed numbers?**
+**If the app is offline, does the SDK store the logs and then send them once it is back online?**
 
-The error margin of the numbers displayed is under 1%.
+Yes. If the app is offline, the SDK will store up to 300 logs in storage. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
 <br><br>
 
-**I cannot the session information, why?**
+**Session duration is zero seconds, why?**
 
-A session is defined as the time between the app coming to the foreground and the last event before going to the background. This means that you will need to define custom events, in order to measure the session length. 
+A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
 <br><br>
 
-**Why are some charts such as "OS Distribution" for example showing more devices than the total number of installed app?**
+**Why is my "OS Distribution" chart showing more devices than the number of installs?**
 
-The distributions are not snapshots, they are counts of devices that match the metric displayed within the time-range. For example in "OS Distributions" if users upgrade massively from one version to the next within the represented time-range, they will be counted in both versions.
+OS Distribution counts are not snapshots. They are counts of devices that match the selected time period. For example, if users massively upgrade from one version to the next one within the selected time period, they will be counted in both versions.
 <br><br>
 
 **Why is the country information not showing? / The country information doesn't seem to be correct.**
@@ -45,7 +45,7 @@ The country is determined by the carrier country and requires that the device ha
 
 **What is the maximum number of distinct events that can be sent per app?**
 
-You will be able to send 200 events with distinct names. However, there is no limit on the maximum number of events instances sent per device.
+The maximum number of distinct custom events that we will track per day is 200. This count will be reset daily at 12am UTC. However, there is no limit on the maximum number of events instances sent per device.
 <br><br>
 
 **What is the maximum number of event properties that I can define per event? What happens if I send more than the limit?**
@@ -55,8 +55,15 @@ The maximum number of event properties is currently set to five. If more than fi
 
 **What is the maximum number of property values that I can send per event?**
 
-You will see the count and distribution for the ten property values with highest count.
+You will see the count for the ten property values with highest count.
+<br><br>
+
+**Why am I not seeing any data in log flow?**
+
+The log flow page will show you the incoming logs as they come in. In order to start seeing the logs flowing, you will need to open the log flow page, and then start sending logs from the app.
+<br><br>
 
 **Can I export the raw data?**
 
-Yes. Under app settings, you can export your Analytics raw data into Azure Blob Storage and Application Insights.
+Yes. Under app settings, you can export all your Analytics raw data into Azure Blob Storage and Application Insights.
+<br><br>

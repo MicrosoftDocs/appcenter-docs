@@ -13,48 +13,34 @@ ms.custom: analytics
 
 # Analytics
 
-App Center Analytics is a mobile apps measurement tool that lets developers understand their end-user population and usage patterns.
+App Center Analytics will help you understand more about your app users and their behavior when using your app.
 
 ## Key Features
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md), [macOS](~/sdk/getting-started/macos.md) | Simple steps to integrate the SDK and start understanding your users|
-| [Overview](~/analytics/overview.md) | Key metric about the app usage and users devices|
-| [Custom Events](~/analytics/event-metrics.md)| Count, user count and custom properties analytics of custom events|
-| [Log Flow](~/analytics/log-flow.md)| Check that your SDK is connected and see logs incoming in realtime|
-| [Export to Azure](~/analytics/export.md)| Export your raw data into Azure for extended retention and query capabilites.|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md) | Simple steps to integrate the SDK which will provide you out-of-the-box insights about your users.|
+| [Overview](~/analytics/overview.md) | Key metrics about your users and their app usage.|
+| [Custom Events](~/analytics/event-metrics.md)| Understand the actions that your users take in your app.|
+| [Log Flow](~/analytics/log-flow.md)| See incoming logs in real time to check wether your SDK is properly integrated.|
+| [Export to Azure](~/analytics/export.md)| Continuously export your raw data into Azure for extended retention and query capabilites.|
 
-## Get Started
+## Integrate the Analytics SDK to get started
 
-Getting Analytics only requires you to add the SDK into the app and initialize it with one line of code.
-Doing this will get the data flowing to App Center and your Analytics immediately.
-The Overview page will represent your data, albeit minimal, within seconds of your app run.
+In order to get started with Analytics, you will need to integrate the App Center SDK. By doing this, you will get out-of-the-box insights about your users.
+In order to get started with our SDK, follow the platform specific documentation at [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md).
 
-[Get Started on Android](~/sdk/getting-started/android.md)
 
-[Get Started on iOS](~/sdk/getting-started/ios.md)
+## General information
 
-[Get Started on React Native](~/sdk/getting-started/react-native.md)
+Check out our [Frequently Asked Questions](~/analytics/faq.md) for general questions or concerns.
 
-[Get Started on Xamarin](~/sdk/getting-started/xamarin.md)
 
-[Get Started on UWP](~/sdk/getting-started/uwp.md)
+## Custom Events
 
-[Get Started on macOS](~/sdk/getting-started/macos.md)
+Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md).
 
-## Understand your users
-
-Find more details about the [overview page](~/analytics/overview.md) and [answers to commonly asked questions](~/analytics/faq.md)
-
-## Events Metrics
-
-The documentation for Custom Events can be found at [Events Metrics](~/analytics/event-metrics.md). In order to track events follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md).
-
-## Log Flow
-
-See your incoming activity using Log Flow. More details can be found at [Log Flow](~/analytics/log-flow.md).
 
 ## Export
 
-Export all your Analytics data into Azure Blob Storage or Application Insights. This will allow you to keep your data as long as you need, as well as further insights into your data with powerful filtering, data visualizations and query capabilities.
+[Continuously Export](~/analytics/export.md) all your Analytics data into Azure Blob Storage or Application Insights. This will allow you to keep your data as long as you need, as well as provide you with further insights into your data with powerful filtering, data visualizations and query capabilities.
