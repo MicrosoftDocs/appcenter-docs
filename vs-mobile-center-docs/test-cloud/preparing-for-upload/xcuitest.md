@@ -57,8 +57,8 @@ let app = ACTLaunch.launch(XCUIApplication())
 Be sure that you launch your app with the `ACTLaunch` API. See the
 examples in the [Requirements](#requirements) section.
 
-* **[ACTLabelTest.m](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/ACLabelTest.m)** &ndash; Examples in Objective-C
-* **[ACTLabelTest.swift](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/MCLabelTest.swift)** &ndash; Examples in Swift
+* **[ACTLabelTest.m](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/ACTLabelTest.m)** &ndash; Examples in Objective-C
+* **[ACTLabelTest.swift](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/TestApp/Tests/UI/ACTLabelTest.swift)** &ndash; Examples in Swift
 
 ## Adding the AppCenterXCUITestExtensions to an Xcode Project
 
