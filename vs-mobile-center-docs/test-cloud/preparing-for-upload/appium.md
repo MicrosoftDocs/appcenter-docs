@@ -53,7 +53,7 @@ Then add a dependency for the Appium test extensions:
 This will ensure the enhanced Android and iOS drivers are available at compile time. The enhanced drivers are provided primarily to enable the `label` feature. See Step 4 for more detail on the `label` feature.
 
 ### Step 2 - Add upload profile
-Copy [this snippet](https://github.com/microsoft/app-center-test-cloud-appium-java-extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
+Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
 The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
 
 ## 1b. Changes to the build system for Gradle users
@@ -75,11 +75,11 @@ Then add the following snippet to the `build.gradle` in the `app` folder:
 androidTestCompile('com.microsoft.appcenter:appium-test-extension:1.0')
 ```
 
-On newer Android SDKs `androidTestCompile` is deprecated and you should use `androidTestImplementation` instead.
+Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
 
 ### Step 2 - Automate pom file generation
 
-The uploader requires a `pom.xml` file to work. Add the following snippet to the `build.gradle` in the `app` folder to automatatically build the pom file:
+The uploader requires a `pom.xml` file to work. Add the following snippet to the `build.gradle` in the `app` folder to automatically build the pom file:
 
 ```gradle
 apply plugin: 'maven'
@@ -98,7 +98,7 @@ task createPom {
             }
 
             def profilesNode = asNode().appendNode('profiles')
-            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/microsoft/app-center-test-cloud-appium-java-extensions/master/gradleuploadprofilesnippet.xml'))
+            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/master/gradleuploadprofilesnippet.xml'))
         }
     }.writeTo("pom.xml")
 ```
