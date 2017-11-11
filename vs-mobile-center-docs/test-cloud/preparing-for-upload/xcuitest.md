@@ -205,7 +205,7 @@ To install, follow the instructions in the README of the [AppCenter-CLI
 GitHub](https://github.com/Microsoft/AppCenter-CLI) repository.
 
 Use the App Center Test page to generate a device selection and 
-an example command-line invocation. For more information, see [Starting a Test run](~/test-cloud/starting-a-test-run.md).
+an example command-line invocation. For more information, see [Starting a Test run](../starting-a-test-run.md).
 
 ```
 # Follow the instructions to generate a resuable API token.
