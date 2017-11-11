@@ -17,18 +17,8 @@ App Center Push allows you to engage your users by sending them targeted push no
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to set up the Push App Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the App Center Push portal, as well as in the App Center SDK docs.
-You can follow the instructions provided in the App Center portal, along with our detailed instructions found in the following links:
+In order to set up Push Notifications, you will have to first set up the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). Then, you will need to integrate the Push App Center SDK. Note that the portal configuration needs to happen before the SDK configuration. You can follow specific instructions on how to set up Push Notifications in the Push portal or in our SDK documentation [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/push/xamarin-android.md), [Xamarin iOS](~/sdk/push/xamarin-ios.md), [Xamarin Forms](~/sdk/push/xamarin-forms.md), [React Native Android](~/sdk/push/react-native-android.md), [React Native iOS](~/sdk/push/react-native-ios.md) and [macOS](~/sdk/push/macos.md).
 
-- [Android](~/sdk/push/android.md)
-- [iOS](~/sdk/push/ios.md)
-- [UWP](~/sdk/push/uwp.md)
-- [Xamarin Android](~/sdk/push/xamarin-android.md)
-- [Xamarin iOS](~/sdk/push/xamarin-ios.md)
-- [Xamarin Forms](~/sdk/push/xamarin-forms.md)
-- [React Native Android](~/sdk/push/react-native-android.md)
-- [React Native iOS](~/sdk/push/react-native-ios.md)
-- [macOS](~/sdk/push/macos.md)
 
 ## Sending Push Notifications
 
@@ -44,8 +34,8 @@ You can also attach custom data along with your notification. More information o
 
 The next step is to select your target. You can send the notification to:
 - All registered devices: all your users with push notifications opt-in will received the message.
-- Custom devices list: the notification will be sent to the list of install IDs that you include. You can get the install IDs by using our [API](~/sdk/other-apis/android.md).
-- [Audiences](~/push/audiences.md): this will send a notification to a segment of your users based on a set of device and custom properties.
+- Custom devices list: the notification will be sent to the list of install IDs that you include. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
+- [Audiences](~/push/audiences.md): this will send a notification to a segment of your users based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
 
 ## Custom Data in your notifications
 
