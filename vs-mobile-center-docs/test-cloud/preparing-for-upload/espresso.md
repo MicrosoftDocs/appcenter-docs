@@ -33,9 +33,9 @@ Add the following dependency in your app module's `build.gradle` file:
 androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.0')
 ```
 
-On newer Android SDKs `androidTestCompile` is deprecated and you should use `androidTestImplementation` instead.
+Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
 
-This will ensure the reportHelper is available at compile time. The reportHelper enables the `label` feature. See Step 3 for more detail on the `label` feature.
+This will add the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature.
 
 ## 2. Changes to the tests
 

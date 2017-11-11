@@ -29,5 +29,5 @@ Select the test framework, set the device locale, and select a test series. Devi
 Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
 
 ```
-appcenter test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+appcenter test run espresso --app "mobile-center-username/app-name" --devices "mobile-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
