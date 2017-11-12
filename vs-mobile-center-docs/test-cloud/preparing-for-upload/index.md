@@ -24,3 +24,5 @@ instructions for each of the supported test frameworks.
 [Preparing Calabash tests for upload](calabash.md)
 
 [Preparing Xamarin.UITest tests for upload](uitest.md)
+
+[Preparing XCUITest tests for upload](xcuitest.md)
