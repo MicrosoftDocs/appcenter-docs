@@ -7,5 +7,5 @@
     topicHref: /visualstudio/products
     items:
       - name: App Center
-        tocHref: /mobile-center/
-        topicHref: /mobile-center
+        tocHref: /appcenter/
+        topicHref: /appcenter
