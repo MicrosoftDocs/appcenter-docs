@@ -197,9 +197,9 @@ app-center codepush deployment list MyApp
 
 # Helpful Resources
 
-* [CodePush Documentation](~/distribution/codepush)
-* [App Center/CodePush Roadmap](~/general/roadmap)
+* [CodePush Documentation](~/distribution/codepush/index.md)
+* [App Center/CodePush Roadmap](~/general/roadmap.md)
 * [App Center](https://appcenter.ms)
-* [App Center Documentation](~/)
+* [App Center Documentation](~/index.yml)
 
 

@@ -51,7 +51,7 @@ appcenter test run appium --app "username/appname" --devices 209ed689
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
 
-* First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
+* First step is creating an App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
 * Your device selection which is a mixture of letters and numbers, is specified in the `Devices` field. On the submit page it is the `--devices` parameter.
 * Test series is a free text - it can be anything. It's the `--test-series` parameter
@@ -83,7 +83,7 @@ appcenter test run espresso --app "username/appname" --devices 209ed689
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
 
-* First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
+* First step is creating an App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
 * Your device selection which is a mixture of letters and numbers, is specified in the `Devices` field. On the submit page it is the `--devices` parameter.
 * Test series is a free text - it can be anything. It's the `--test-series` parameter
@@ -118,7 +118,7 @@ appcenter test run uitest --app "username/appname" --devices 209ed689
 
 Leave the submit page (last page on test run setup) open, as there is information needed for setting up the test run on VSTS. 
 
-* First step is creating a App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
+* First step is creating an App Center connection. See the [Connecting to App Center](#connecting-to-mobile-center-test) section of this document.
 * The app slug is structured as `<username>/<appname>`. Insert that into the `App Slug` field. On the submit page it is the `--app` parameter
 * Your device selection which is a mixture of letters and numbers, is specified in the `Devices` field. On the submit page it is the `--devices` parameter.
 * Test series is a free text - it can be anything. It's the `--test-series` parameter

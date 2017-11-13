@@ -73,7 +73,7 @@ As new core components are released, which support referencing assets, we'll upd
 
 ## Getting Started
 
-Once you've followed the general-purpose ["getting started"](./codepush.md) instructions for setting up your CodePush account, you can start CodePush-ifying your React Native app by running the following command from within your app's root directory:
+Once you've followed the general-purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your React Native app by running the following command from within your app's root directory:
 
 ```shell
 npm install --save react-native-code-push

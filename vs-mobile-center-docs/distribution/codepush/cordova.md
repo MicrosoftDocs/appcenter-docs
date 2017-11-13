@@ -47,7 +47,7 @@ cordova platform update ios
 
 ## Getting Started
 
-Once you've followed the general-purpose ["getting started"](./codepush.md#) instructions for setting up your CodePush account, you can start CodePush-ifying your Cordova app by running the following command from within your app's root directory:
+Once you've followed the general-purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your Cordova app by running the following command from within your app's root directory:
 
 ```shell
 cordova plugin add cordova-plugin-code-push@latest

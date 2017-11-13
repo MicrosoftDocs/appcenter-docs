@@ -61,7 +61,7 @@ If you use Carthage to manage your dependencies for iOS apps written in Objectiv
 Xamarin and UWP builds which rely on restoring NuGet packages and iOS builds using Cocoapods are now faster.
 
 - **Public Distribution Groups**:
-You can now mark distribution groups as public. These groups will no longer require an account login to download and install apps. You can publish the URL through any mechanism and allow any number of users to install the app without the need for a App Center account.
+You can now mark distribution groups as public. These groups will no longer require an account login to download and install apps. You can publish the URL through any mechanism and allow any number of users to install the app without the need for an App Center account.
 
 - **Distribute your iOS and Android apps to Intune**:
 You can now setup a new distribution store targeting Intune cloud. If you use Intune for rich device and application management you can now streamline the release of new application packages to Intune via App Center.
