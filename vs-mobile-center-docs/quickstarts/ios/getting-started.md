@@ -106,4 +106,4 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
 
   5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
-You're all set up to try out a App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.
+You're all set up to try out an App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.
