@@ -19,4 +19,4 @@ Check out our [changelog](changelog.md) to find out which features we have deliv
 Interested in knowing what our team is working on? View the [product roadmap](roadmap.md) and let us know what you think.
 
 ## Pricing
-App Center is free during the preview. Read about our [pricing plans](pricing.md) and tell us if you like it.
+App Center has both a free and paid tier. Read about our [pricing plans](pricing.md) for more details.
