@@ -25,7 +25,7 @@ ms.custom: distribute
 4. [Release](#releasing-updates) an update for your app
 5. Live long and prosper! ([details](https://en.wikipedia.org/wiki/Vulcan_salute))
 
-## Account Management
+## <a name="account-creation"/>Account Management
 
 Before you can begin releasing app updates, you need to create a log in to your existing CodePush account or create a new App Center account. You can do this by simply running the following command once you've installed the CLI:
 
@@ -221,7 +221,7 @@ The install metrics have the following meaning:
 
 When the metrics cell reports `No installs recorded`, that indicates that the server hasn't seen any activity for this release. This could either be because it precluded the plugin versions that included telemetry support, or no end-users have synchronized with the CodePush server yet. As soon as an install happens, you will begin to see metrics populate in the CLI for the release.
 
-## Releasing Updates
+## <a name="releasing-app-updates" />Releasing Updates
 
 Once your app has been configured to query for updates against the App Center server, you can begin releasing updates to it. In order to provide both simplicity and flexibility, the App Center CLI includes three different commands for releasing updates:
 
@@ -616,7 +616,7 @@ Specifies whether you want to run `cordova build` instead of `cordova prepare` (
 > [!TIP]
 > This parameter can be set using either `--build` or `-b`*
 
-## Patching Update Metadata
+## <a name="updating-existing-releases" />Patching Update Metadata
 
 After releasing an update, there may be scenarios where you need to modify one or more of the metadata attributes associated with it (e.g. you forgot to mark a critical bug fix as mandatory, you want to increase the rollout percentage of an update). You can easily do this by running the following command:
 
@@ -727,7 +727,7 @@ This is the same parameter as the one described in the [above section](#target-b
 app-center codepush promote -a <ownerName>/MyApp-iOS Staging Production -t "*"
 ```
 
-## Rolling Back Updates
+## <a name="rolling-back-undesired-updates" />Rolling Back Updates
 
 A deployment's release history is immutable, so you cannot delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
 

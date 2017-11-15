@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Visual Studio Te
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 2017-09-15
+ms.date: 09/15/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4

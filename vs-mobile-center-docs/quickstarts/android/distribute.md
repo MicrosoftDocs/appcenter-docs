@@ -4,13 +4,12 @@
 title: Distribute Installable Sample App to Users | Android Sample App Tutorials
 description: Tutorial to distribute a sample Android app to a group of users in App Center.
 keywords: app center
-authors: sshibu
+author: sshibu
 ms.author: t-shshib
 ms.date: 07/27/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: samples
-ms.prod: .net-core
 ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 
 # optional metadata

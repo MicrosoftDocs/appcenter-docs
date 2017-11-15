@@ -58,7 +58,7 @@ You can configure the sliders to add more Builds, Tests or upgrade your push ser
  
 1. After you have customized your plan, click on continue.
 
-    - To connect your org/user to an Azure subscription, jump to this [section](/azure-subscriptions/index.md).
+    - To connect your org/user to an Azure subscription, jump to this [section](~/general/azure-subscriptions/index.md).
 
     - Otherwise, if you already have one ore more subscriptions associated to your org/user settings and you can choose which one to use for billing.
 

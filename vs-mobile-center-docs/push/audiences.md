@@ -12,7 +12,7 @@ ms.custom: audiences
 ---
 
 
-## Audiences
+# Audiences
 
 Audiences let you segment your user base based on a set of properties and send them targeted notifications.
 

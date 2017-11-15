@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 9/25/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter

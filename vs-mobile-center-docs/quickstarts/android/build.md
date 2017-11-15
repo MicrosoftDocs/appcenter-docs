@@ -4,8 +4,10 @@
 title: Build Sample Android App on App Center | Android Sample App Tutorials
 description: Tutorial to build sample Android app in App Center.
 keywords: app center
-authors: sshibu
+author: sshibu
 ms.author: t-shshib
+ms.topic: article
+ms.service: vs-appcenter
 ms.date: 07/27/2017
 ---
 
