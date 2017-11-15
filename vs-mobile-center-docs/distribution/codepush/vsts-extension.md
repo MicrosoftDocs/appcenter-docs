@@ -23,7 +23,7 @@ These tasks can be used with either VSTS or TFS 2015 Update 2 and are intended t
 
 Follow these steps to automate the release and promotion of app updates via CodePush:
 
-1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for VSTS CI builds (e.g. `app-center codepush token create -d "VSTS CI"`)
+1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for VSTS CI builds (e.g. `appcenter codepush token create -d "VSTS CI"`)
 
  > [!NOTE]
  > You can use the API key that is displayed in the App Center portal, and don't need to generate an additional token via the App Center CLI.
@@ -56,7 +56,7 @@ In addition to specifying your access token directly within each build task inst
 1. Generate or retrieve your access token as described above
 	
 	> [!NOTE]
-	> If you need to retrieve a previously generated access token, you can run the `app-center token list` command and look for the token with the description you specified when initially creating it.*
+	> If you need to retrieve a previously generated access token, you can run the `appcenter token list` command and look for the token with the description you specified when initially creating it.*
 
 2. Go into your Visual Studio Team Services or TFS project and click on the gear icon in the upper right corner
 
@@ -89,7 +89,7 @@ In addition to the custom service endpoint, this extension also contributes the 
 
 ### CodePush - Release
 
-Allows you to release a CodePush update to the App Center server. This task behaves equivalently to the [`app-center codepush release`](./cli.md#releasing-updates-general) command in the App Center CLI, and includes the following options:
+Allows you to release a CodePush update to the App Center server. This task behaves equivalently to the [`appcenter codepush release`](./cli.md#releasing-updates-general) command in the App Center CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the App Center server. The available options are:
 
@@ -121,7 +121,7 @@ In addition to the basic properties, the follow options provide more advanced co
 
 ### CodePush - Release (Cordova)
 
-Allows you to release Cordova app CodePush updates to the App Center server. It provides a simplified experience over the general-purpose release task by automatically generating the release contents for you (via `cordova prepare`), and inferring your app's version in order to appropriately target the update. This task behaves equivalently to the [`app-center codepush release-cordova`](./cli.md#releasing-updates-cordova) command in the App Center CLI, and includes the following options:
+Allows you to release Cordova app CodePush updates to the App Center server. It provides a simplified experience over the general-purpose release task by automatically generating the release contents for you (via `cordova prepare`), and inferring your app's version in order to appropriately target the update. This task behaves equivalently to the [`appcenter codepush release-cordova`](./cli.md#releasing-updates-cordova) command in the App Center CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the App Center server. The available options are:
 
@@ -153,7 +153,7 @@ In addition to the basic properties, the follow options provide more advanced co
 
 ### CodePush - Patch
 
-Allows you to update the metadata for a previously released update. This task behaves equivalently to the [`app-center codepush patch`](./cli.md#patching-update-metadata) command in the App Center CLI, and includes the following options:
+Allows you to update the metadata for a previously released update. This task behaves equivalently to the [`appcenter codepush patch`](./cli.md#patching-update-metadata) command in the App Center CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the CodePush server. The available options are:
 
@@ -185,7 +185,7 @@ By default, no release attributes are modified by the patch operation, so in ord
 
 ### CodePush - Promote
 
-Allows you to promote a previously released update from one deployment to another (e.g. `Staging` -> `Production`), and enables the use of [VSTS Release Management](https://www.visualstudio.com/en-us/features/release-management-vs.aspx) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`app-center codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
+Allows you to promote a previously released update from one deployment to another (e.g. `Staging` -> `Production`), and enables the use of [VSTS Release Management](https://www.visualstudio.com/en-us/features/release-management-vs.aspx) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`appcenter codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the CodePush server. The available options are:
 

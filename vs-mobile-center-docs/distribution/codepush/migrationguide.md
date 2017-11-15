@@ -51,7 +51,7 @@ The back-end migration of CodePush into App Center was completed on June 2nd, 20
 <br/><br/>
 If you specify that your app is a Cordova or Windows application, you may notice that we don't yet support these platforms within the portal; if this is the case, please do not despair as you will still be able to use the App Center CLI and we are working on supporting these platforms in the portal. App Center's mission is to provide quality support for as many mobile platforms as possible; we are working hard to make it so. Periodically check out our [blog](https://blogs.msdn.microsoft.com/appcenter/) for news and updates and our product [roadmap](https://docs.microsoft.com/appcenter/general/roadmap).
 <br/><br/>
-If your imported app's platform is React Native or if you are starting a new React Native app from scratch, you should see an app overview panel that lets you manage your app and provides you with instruction on how to integrate other App Center SDKs. Please note that your app secret is *not* the same as your CodePush deployment keys; the latter can be discovered by running `app-center codepush deployment list <ownerName>/<appName>` from the CLI and soon will also be exposed in the App Center dashboard. The app secret is what allows your app to send information to App Center.
+If your imported app's platform is React Native or if you are starting a new React Native app from scratch, you should see an app overview panel that lets you manage your app and provides you with instruction on how to integrate other App Center SDKs. Please note that your app secret is *not* the same as your CodePush deployment keys; the latter can be discovered by running `appcenter codepush deployment list <ownerName>/<appName>` from the CLI and soon will also be exposed in the App Center dashboard. The app secret is what allows your app to send information to App Center.
 <br/><br/>
 <br/><br/>
 
@@ -61,10 +61,10 @@ If your imported app's platform is React Native or if you are starting a new Rea
 In order to start releasing updates to your end users, you must install the App Center CLI. To install it, please use:
 
 ```
-npm install -g app-center-cli
+npm install -g appcenter-cli
 ```
 
-Once installed, use the `app-center` command. Also, see below for the available commands. To log in to your account use the `app-center login`. This command will open the App Center website and present you with an authentication token.
+Once installed, use the `appcenter` command. Also, see below for the available commands. To log in to your account use the `appcenter login`. This command will open the App Center website and present you with an authentication token.
 
 ![AuthToken](./images/mg-auth.png)
 
@@ -86,7 +86,7 @@ If your application has a history of releases for a given deployment, these rele
 <br/><br/>
 ![Release Detail](./images/mg-portal-3.png)
 <br/><br/>
-Clicking the "Edit" button will provide you with a panel for patching your release. Editing the items on this page would be equivalent to using `app-center codepush patch`.
+Clicking the "Edit" button will provide you with a panel for patching your release. Editing the items on this page would be equivalent to using `appcenter codepush patch`.
 <br/><br/>
 ![Release Patch](./images/mg-portal-4.png)
 <br/><br/>
@@ -97,8 +97,8 @@ For now, developers using CodePush must distribute releases using the release co
 Or you can use the following commands in the App Center CLI to create the recommended deployments prior to pushing a release:
 
 ```
-app-center codepush deployment add -a <ownerName>/<appName> Staging
-app-center codepush deployment add -a <ownerName>/<appName> Production
+appcenter codepush deployment add -a <ownerName>/<appName> Staging
+appcenter codepush deployment add -a <ownerName>/<appName> Production
 ```
 
 # The App Center CLI Experience
@@ -108,32 +108,32 @@ app-center codepush deployment add -a <ownerName>/<appName> Production
 This section was constructed to enable you to see some of the most common CodePush commmands and how they have changed within the App Center CLI. 
 
 > [!TIP]
-> Most App Center CLI commmands can be shortened by using `app-center apps set-current <ownerName>/<appName>`. By setting an appp as the current app you no longer have to use the -a flag to specify the app you're trying to perform the command on.*
+> Most App Center CLI commmands can be shortened by using `appcenter apps set-current <ownerName>/<appName>`. By setting an appp as the current app you no longer have to use the -a flag to specify the app you're trying to perform the command on.*
 
 
 **Creating an App in the App Center CLI:**
 ```
-app-center apps create -p "React-Native" -o "ios" -d "MyApp"
+appcenter apps create -p "React-Native" -o "ios" -d "MyApp"
 ```
 **Releasing an Update App Center CLI:**
 ```
-app-center codepush release-react MyApp 
+appcenter codepush release-react MyApp 
 ```
 **List App Deployments App Center CLI:**
 ```
-app-center codepush deployment list MyApp
+appcenter codepush deployment list MyApp
 ```
 
 **CLI Command Comparison:**
 
 | CodePush                              | App Center                               |
 | ------------------------------------- | ---------------------------------------- |
-| `code-push app add MyApp ios react-native` | `app-center app create -d MyApp -o iOS -p React-Native` |
-|  N/A                                     |   `app-center apps set-current <ownerName>/MyApp`  |                
-|  N/A                                     |   `app-center apps get-current`  |    
-| `code-push deployment add myApp <DeploymentName>` | if current app is set: `app-center codepush deployment add <DeploymentName>`<br/>if not: `app-center codepush deployment add -a <ownerName>/MyApp <DeploymentName>` |
-| `code-push release-react MyApp ios` | if current app is set: `app-center codepush release-react`<br/>if not: `app-center codepush release-react -a <ownerName>/MyApp`  |
-| `code-push access-key list` | `app-center tokens list` 
+| `code-push app add MyApp ios react-native` | `appcenter app create -d MyApp -o iOS -p React-Native` |
+|  N/A                                     |   `appcenter apps set-current <ownerName>/MyApp`  |                
+|  N/A                                     |   `appcenter apps get-current`  |    
+| `code-push deployment add myApp <DeploymentName>` | if current app is set: `appcenter codepush deployment add <DeploymentName>`<br/>if not: `appcenter codepush deployment add -a <ownerName>/MyApp <DeploymentName>` |
+| `code-push release-react MyApp ios` | if current app is set: `appcenter codepush release-react`<br/>if not: `appcenter codepush release-react -a <ownerName>/MyApp`  |
+| `code-push access-key list` | `appcenter tokens list` 
 
 <br/>
 <br/>
@@ -142,27 +142,27 @@ app-center codepush deployment list MyApp
 
 | Command                               | Description                              |  Example               |
 | ------------------------------------- | ---------------------------------------- | ---------------------- |
-| `app-center help` | Get command or category help | `-`
-| `app-center login` | Log the CLI into App Center | `-`
-| `app-center logout` | Log the CLI out of App Center | `-`
-| `app-center profile` | View and manage profile information | `-`
-| `app-center tokens` | Manage API tokens | `app-center tokens list`
-| `app-center orgs` | Manage organizations | `app-center orgs list`
+| `appcenter help` | Get command or category help | `-`
+| `appcenter login` | Log the CLI into App Center | `-`
+| `appcenter logout` | Log the CLI out of App Center | `-`
+| `appcenter profile` | View and manage profile information | `-`
+| `appcenter tokens` | Manage API tokens | `appcenter tokens list`
+| `appcenter orgs` | Manage organizations | `appcenter orgs list`
 | | |
-| `app-center apps create` |  Create a new app | `app-center apps create -d MyApp -p React-Native -o ios`
-| `app-center apps delete` | Delete an app | `app-center apps delete -a ownerName/MyApp`
-| `app-center apps get-current` |  Get the application that's set as default for all CLI commands | `-`
-| `app-center apps list` |  Get list of configured applications | `-`
-| `app-center apps set-current` |  Set default application for all CLI commands | `app-center apps set-current <ownerName>/MyApp`
+| `appcenter apps create` |  Create a new app | `appcenter apps create -d MyApp -p React-Native -o ios`
+| `appcenter apps delete` | Delete an app | `appcenter apps delete -a ownerName/MyApp`
+| `appcenter apps get-current` |  Get the application that's set as default for all CLI commands | `-`
+| `appcenter apps list` |  Get list of configured applications | `-`
+| `appcenter apps set-current` |  Set default application for all CLI commands | `appcenter apps set-current <ownerName>/MyApp`
 | | |
-| `app-center codepush deployment`| View and manage your app deployments | `app-center codepush deployment list`
-| `app-center codepush help`| Get CodePush specific command or category help | `-`
-| `app-center codepush patch` | Update the metadata for an existing release | `app-center codepush patch -m`
-| `app-center codepush promote`| Promote the latest release from one app deployment to another | `app-center codepush promote Staging Production` 
-| `app-center codepush release`| Release an update to an app deployment |  `app-center codepush release -a ownerName/MyApp`
-| `app-center codepush release-cordova`| Release a Cordova update to an app deployment | `app-center codepush release-cordova --description "mofified assets" `
-| `app-center codepush release-react`| Release a React Native update to an app deployment | `app-center codepush release-react -x`
-| `app-center codepush rollback`| Rollback the latest release for an app deployment | `app-center codepush rollback Staging`
+| `appcenter codepush deployment`| View and manage your app deployments | `appcenter codepush deployment list`
+| `appcenter codepush help`| Get CodePush specific command or category help | `-`
+| `appcenter codepush patch` | Update the metadata for an existing release | `appcenter codepush patch -m`
+| `appcenter codepush promote`| Promote the latest release from one app deployment to another | `appcenter codepush promote Staging Production` 
+| `appcenter codepush release`| Release an update to an app deployment |  `appcenter codepush release -a ownerName/MyApp`
+| `appcenter codepush release-cordova`| Release a Cordova update to an app deployment | `appcenter codepush release-cordova --description "mofified assets" `
+| `appcenter codepush release-react`| Release a React Native update to an app deployment | `appcenter codepush release-react -x`
+| `appcenter codepush rollback`| Rollback the latest release for an app deployment | `appcenter codepush rollback Staging`
 
 # FAQ
 
