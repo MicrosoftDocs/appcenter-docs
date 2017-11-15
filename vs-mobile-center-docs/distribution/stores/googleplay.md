@@ -18,7 +18,7 @@ Publish an upgrade to Google Play, including the Alpha and Beta tracks from App 
 
 * Google requires the first version of your Google Play application to be published to production through the Google console.
 * A Google Play Developer account. If you don’t have one, register for a [developer account](https://play.google.com/apps/publish/signup).
-* For Mobile center to create a Google Store connection and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
+* For App Center to create a Google Store connection and to access Google API’s on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
 * Review [pre-requisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
 
 For more information, review [How to use the Google Play console] (https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
