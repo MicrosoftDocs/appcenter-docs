@@ -1,13 +1,13 @@
 ---
 title: Preparing Tests for Upload
-description: How to upload tests to Mobile Center Test Cloud
+description: How to upload tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 34081aed-dc96-4781-b24e-04042ae77ddd
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: test
 ---
 
@@ -24,3 +24,5 @@ instructions for each of the supported test frameworks.
 [Preparing Calabash tests for upload](calabash.md)
 
 [Preparing Xamarin.UITest tests for upload](uitest.md)
+
+[Preparing XCUITest tests for upload](xcuitest.md)

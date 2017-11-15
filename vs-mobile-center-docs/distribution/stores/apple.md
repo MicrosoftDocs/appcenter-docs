@@ -6,7 +6,7 @@ author: pnghub
 ms.author: gned
 ms.date: 10/31/2017
 ms.topic: article
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: distribute
 ---
 
@@ -24,7 +24,7 @@ Publish iOS app upgrades to the App Store and TestFlight.
 For more information, review the [App Distribution Guide] (https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012582-CH1-SW1).
 
 
-### Set up the connection between Mobile Center to iTunes and TestFlight
+### Set up the connection between App Center to iTunes and TestFlight
 
 1. Select **Stores** under Distribution. 
 2. Click on **Add Connection**.
@@ -38,7 +38,7 @@ For more information, review the [App Distribution Guide] (https://developer.app
     * An App Store connection named **Production**.
     * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **iTunes Connect users**. 
     * External tester groups connections based on the external groups created in the iTunes Connect console. 
-6. Setting up this connection is a one time process for an app in Mobile Center.
+6. Setting up this connection is a one time process for an app in App Center.
 
 ### Publish an iOS package to the App Store (Production)
 
@@ -47,7 +47,7 @@ For more information, review the [App Distribution Guide] (https://developer.app
 3. Upload the iOS app package. 
 4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish**. The status for this release on the store details page will show as **Submitted**. 
-6. Once Mobile Center has completed the hand-over of the app to iTunes, the status of the app will change to **Published**.
+6. Once App Center has completed the hand-over of the app to iTunes, the status of the app will change to **Published**.
 7. In case of a failure while publishing by Apple, the status on the store details page will change to **Failed** with the appropriate error message. 
 Review Apple's [app review] (https://developer.apple.com/support/app-review/) process.
 
@@ -58,7 +58,7 @@ Review Apple's [app review] (https://developer.apple.com/support/app-review/) pr
 3. Upload the iOS app package. 
 4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **iTunes Connect users** group in TestFlight. The status for this release on the store details page will show as **Submitted**. 
-6. Once Mobile Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
+6. Once App Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
 7. In case of a failure while publishing by Apple, the status will change to **Failed** with the appropriate error message.
 
 ### Publish an iOS package to TestFlight (External Testers)    
@@ -68,12 +68,12 @@ Review Apple's [app review] (https://developer.apple.com/support/app-review/) pr
 3. Upload the iOS app package. 
 4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the external group store. The status for this release on the store details page will show as **Submitted**. 
-6. Once Mobile Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
+6. Once App Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
 7. In case of a failure with publishing by Apple, the status will change to **Failed** with the appropriate error message.
 
 
 ### Note
-Currently when submitting the deliver file to iTunes Connect, Mobile Center is defaulting certain parameters as below:
+Currently when submitting the deliver file to iTunes Connect, App Center is defaulting certain parameters as below:
 ``` 
  add_id_info_uses_idfa: false
  export_compliance_uses_encryption: false

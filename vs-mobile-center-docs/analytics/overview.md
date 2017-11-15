@@ -1,31 +1,26 @@
 ---
-title: Understanding the Mobile Center Overview Page
-description: Help using the Overview Page on Mobile Center
-keywords: mobile center, analytics
+title: Understanding the App Center Overview Page
+description: Help using the Overview Page on App Center
+keywords: app center, analytics
 author: blparr
 ms.author: blparr
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: analytics
 ---
 
 # Overview Page
 
-The Overview page objective is to provide the key metrics about your app users population: their devices, their locations, activity and engagement.
-This will enable answers to questions such as:
+The objective of the Overview page is to provide you with the key metrics about your app users. This includes their devices, location, activity and engagement.
+This will allow you to answer questions such as:
+- What are the main devices being used?
+- Can I remove support for an old OS version?
 - Should I translate my app into a new language?
-- Are my users majoritarily on the lastest version?
-- What are the main devices used?
-- Can I remove support for that old OS version?
-and many more.
+- Are my users adapting my lastest version?
 
-## General information
-All the data in the Overview page represent the device population in the selected **time range** and filters.
-For example the Languages will show the number of devices configured for a given language that was active in the selected time-range.
-It is possible to further filter the charts by selecting a number of app versions. Note that we only have support for Semver2.0.
-You can also export your data into Application Insights. This will provide you with powerful filtering and data visualizations, as well as query capabilities which you can use to create your own custom dashboards.
+All the data in the Overview page can be filtered by **time range** and **app version**, so you can further drill down into your charts. Note that the app version needs to follow the [Semver 2.0](http://semver.org/spec/v2.0.0.html) format.
 
 ## Active users
 Represents the number of unique app installations that launched the app in the last:
@@ -33,31 +28,35 @@ Represents the number of unique app installations that launched the app in the l
 - 7 calendar days for the "weekly"
 - 30 calendar days for the "monthly"
 
-All days start at 12am UTC.
+A new day starts at 12am UTC.
 
 ## Engagement
-Engagement measures the app sessions count and duration.
+Engagement measures the daily sessions per user and session duration.
 
-A **session** is defined as the time between the app coming to the foreground and the last event before going to the background.
-However if the app goes to the background for less than 20 seconds, the session will be maintained.
+A **session** is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
 
-- Session count per user: the number of sessions per active device for each time interval in the time range
-- Total sessions: the total number of sessions in the time range
-- Average sessions per day: the number of session per day averaged over the time range
-- Session lengths: a distribution of the number of sessions over some duration intervals
-- Average session length: an average of all the session durations in the time range
+Analytics will offer you the following information:
+- Daily sessions per user: Daily average number of sessions per user.
+- Total sessions: Total number of sessions.
+- Average sessions per day: Number of session per day averaged over the time range.
+- Session duration: Distribution of the number of sessions over a few duration intervals.
+- Average session length: Average of all the session durations in the selected time range.
 
-## Devices
+## Devices and OS 
 The Devices panel gives information about the users' devices:
-- Device model distribution: shows the count and percentage of the top-4 most used device models
-- OS distribution: shows the relative percentage of the top-4 most used OS versions
+- Device model distribution: Shows the count and percentage of the top most used device models. 
+- OS distribution: Shows the relative percentage of the top most used OS versions.
 
-## Country/Region and Languages
-The country/region and languages panel display information about devices geographical location and language setting.
-The country/region is determined by the carrier country and requires the device to have a SIM. Note that if you are using a simulator, the country shown will probably not be accurate as it is selected by default. The language is the one defined at the OS level by the user.
-- The map shows shaded regions depending on the number of active devices. The more devices, the darker the shade
-- Country/Region distribution: shows the top 7 country/region by number of active devices
-- Language distribution: shows the top 7 major language device setting
+## Countries and Languages
+The Countries and Languages panel display information about devices geographical location and language settings in the device.
 
-## Version
-Version shows the top 20 app version distribution for active devices in the time range.
+The country is determined by the carrier country and requires the device to have a SIM card. Note that if you are using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
+
+- The map shows shaded countries depending on the number of active devices. The more devices, the darker the shade.
+- You will see the top seven countries by number of active devices.
+
+The language is the one defined at the OS level by the user.
+- The panel will show the top 7 major languages.
+
+## Active Devices per Version
+This chart shows how many devices are using a given version. It will show the distribution for the top 20 app version.

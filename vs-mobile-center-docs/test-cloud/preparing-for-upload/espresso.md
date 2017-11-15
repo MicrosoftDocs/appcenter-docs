@@ -1,13 +1,13 @@
 ---
 title: Preparing Espresso Tests for Upload
-description: How to upload Espresso tests to Mobile Center Test Cloud
+description: How to upload Espresso tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: test
 ---
 
@@ -17,13 +17,25 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
 
 ## 1. Changes to the build system
+First you'll need to add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the `build.gradle` in your project root directory:
+
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
+
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.xamarin.testcloud:espresso-support:1.1')
+androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.0')
 ```
 
-This will ensure the reportHelper is available at compile time. The reportHelper enables the `label` feature. See Step 3 for more detail on the `label` feature.
+Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
+
+This will add the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature.
 
 ## 2. Changes to the tests
 
@@ -33,8 +45,8 @@ Import these packages into your test classes:
 
 ```java
 import android.support.test.runner.AndroidJUnit4;
-import com.xamarin.testcloud.espresso.Factory;
-import com.xamarin.testcloud.espresso.ReportHelper;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 ```
 
 ### Step 2 - Instantiate the ReportHelper
