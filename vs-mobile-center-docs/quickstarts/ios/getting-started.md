@@ -33,7 +33,7 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
 
-2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-ios-swift).
+2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-ios-swift).
 
 3. Click **Fork** at the top right hand corner of the page, and clone the repository.
 

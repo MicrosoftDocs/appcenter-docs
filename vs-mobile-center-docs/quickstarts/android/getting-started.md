@@ -23,7 +23,7 @@ In this tutorial, you will learn how to set up a sample Android app with App Cen
 
 ## Login to Github and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
-2. Access the [sample app's GitHub repository](https://github.com/MobileCenter/sampleapp-android).
+2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-android).
 3. Click **Fork** at the top right hand corner of the page.
 
 
