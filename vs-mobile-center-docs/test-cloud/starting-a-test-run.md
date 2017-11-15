@@ -23,11 +23,11 @@ With the App Center CLI tool installed and upload preparation complete, initiati
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
 
 ### Test run configuration
-Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [this section](~/test-cloud/core-concepts.md).
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [this section](~/test-cloud/core-concepts.md)
 
 ### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
 
 ```
-appcenter test run espresso --app "app-center-username/app-name" --devices "mobile-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+appcenter test run espresso --app "app-center-username/app-name" --devices "app-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
