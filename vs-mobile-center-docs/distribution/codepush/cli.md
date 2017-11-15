@@ -158,8 +158,8 @@ Once added, all collaborators will immediately have the following permissions wi
 1. View the app, its collaborators, [deployments](#deployment-management) and [release history](#viewing-release-history)
 1. [Release](#releasing-updates) updates to any of the app's deployments
 1. [Promote](#promoting-updates) an update between any of the app's deployments
-1. [Rollback](#rolling-back-undesired-updates) any of the app's deployments
-1. [Patch](#updating-existing-releases) any releases within any of the app's deployments
+1. [Rollback](#rolling-back-updates) any of the app's deployments
+1. [Patch](#patching-update-metadata) any releases within any of the app's deployments
 
 Inversely, that means that an app collaborator cannot do any of the following:
 
@@ -213,7 +213,7 @@ The install metrics have the following meaning:
 
 * **Pending** - The number of times this release has been downloaded, but not yet installed (i.e. the app was restarted to apply the changes). Therefore, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume and/or restart to apply an update (e.g. I want to rollback an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that initiates sending install reports and marks installed updates as being considered successful.
 
-* **Rollbacks** - The number of times that this release has been automatically rolled back on the client. Ideally this number should be zero, and in that case, this metric isn't even shown. However, if you released an update that includes a crash as part of the installation process, the CodePush plugin will roll the end-user back to the previous release, and report that issue back to the server. This allows your end-users to remain unblocked in the event of broken releases, and by being able to see this telemetry in the CLI, you can identify erroneous releases and respond to them by [rolling it back](#rolling-back-undesired-updates) on the server.
+* **Rollbacks** - The number of times that this release has been automatically rolled back on the client. Ideally this number should be zero, and in that case, this metric isn't even shown. However, if you released an update that includes a crash as part of the installation process, the CodePush plugin will roll the end-user back to the previous release, and report that issue back to the server. This allows your end-users to remain unblocked in the event of broken releases, and by being able to see this telemetry in the CLI, you can identify erroneous releases and respond to them by [rolling it back](#rolling-back-updates) on the server.
 
 * **Rollout** - Indicates the percentage of users that are eligible to receive this update. This property will only be displayed for releases that represent an "active" rollout, and therefore, have a rollout percentage that is less than 100%. Additionally, since a deployment can only have one active rollout at any given time, this label would only be present on the latest release within a deployment.
 
@@ -616,7 +616,7 @@ Specifies whether you want to run `cordova build` instead of `cordova prepare` (
 > [!TIP]
 > This parameter can be set using either `--build` or `-b`*
 
-## <a name="updating-existing-releases" />Patching Update Metadata
+## <a name="patching-update-metadata" />Patching Update Metadata
 
 After releasing an update, there may be scenarios where you need to modify one or more of the metadata attributes associated with it (e.g. you forgot to mark a critical bug fix as mandatory, you want to increase the rollout percentage of an update). You can easily do this by running the following command:
 
@@ -727,7 +727,7 @@ This is the same parameter as the one described in the [above section](#target-b
 app-center codepush promote -a <ownerName>/MyApp-iOS Staging Production -t "*"
 ```
 
-## <a name="rolling-back-undesired-updates" />Rolling Back Updates
+## <a name="rolling-back-updates" />Rolling Back Updates
 
 A deployment's release history is immutable, so you cannot delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
 
