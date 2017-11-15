@@ -30,7 +30,12 @@
 			"contributors_to_exclude": ["conceptdev", "meganbradley"],
 			"breadcrumb_path": "~/_breadcrumb/toc.yml",
 			"manager": "crdun",
-			"audience": "developer"
+			"audience": "developer",
+			"_op_documentIdPathDepotMapping": {
+        			"./": {
+          				"depot_name": "MSDN.vs-mobile-center-docs"
+        			}
+			}
 		},
 		"fileMetadata": {},
 		"template": [],
