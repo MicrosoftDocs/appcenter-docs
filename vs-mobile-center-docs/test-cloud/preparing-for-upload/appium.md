@@ -1,13 +1,13 @@
 ---
 title: Preparing Appium Tests for Upload
-description: How to upload Appium tests to Mobile Center Test Cloud
+description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.date: 01/20/2017
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: test
 ---
 
@@ -29,23 +29,57 @@ Note the following limitations for Appium support:
 ## 1a. Changes to the build system for Maven users
 _See the section below for instructions if you use Gradle for your project,
 such as Android Studio builds._
-### Step 1 - Add dependency
-Add the following dependency in your `pom.xml` file:
+### Step 1 - Add repository and dependency
+You will need to add the JCenter repository to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+      <id>jcenter</id>
+      <url>https://jcenter.bintray.com/</url>
+    </repository>
+</repositories>
+```
+
+Then add a dependency for the Appium test extensions:
 ```xml
 <dependency>
-    <groupId>com.xamarin.testcloud</groupId>
-    <artifactId>appium</artifactId>
+    <groupId>com.microsoft.appcenter</groupId>
+    <artifactId>appium-test-extension</artifactId>
     <version>1.0</version>
 </dependency>
 ```
+
 This will ensure the enhanced Android and iOS drivers are available at compile time. The enhanced drivers are provided primarily to enable the `label` feature. See Step 4 for more detail on the `label` feature.
 
 ### Step 2 - Add upload profile
-Copy [this snippet](https://github.com/xamarinhq/test-cloud-appium-java-extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
+Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
 The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
 
 ## 1b. Changes to the build system for Gradle users
-Add the following snippet to the `build.gradle in the 'app' folder:
+
+### Step 1 - Add repository and dependency
+Ensure you have the JCenter repository enabled in the `build.gradle` in your project's root folder:
+
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
+
+Then add the following snippet to the `build.gradle` in the `app` folder:
+
+```gradle
+androidTestCompile('com.microsoft.appcenter:appium-test-extension:1.0')
+```
+
+Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
+
+### Step 2 - Automate pom file generation
+
+The uploader requires a `pom.xml` file to work. Add the following snippet to the `build.gradle` in the `app` folder to automatically build the pom file:
 
 ```gradle
 apply plugin: 'maven'
@@ -64,7 +98,7 @@ task createPom {
             }
 
             def profilesNode = asNode().appendNode('profiles')
-            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/xamarinhq/test-cloud-appium-java-extensions/master/gradleuploadprofilesnippet.xml'))
+            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/master/gradleuploadprofilesnippet.xml'))
         }
     }.writeTo("pom.xml")
 ```
@@ -73,8 +107,8 @@ task createPom {
 ### Step 1 - Add imports
 Import these packages into your test classes:
 ```java
-import com.xamarin.testcloud.appium.Factory;
-import com.xamarin.testcloud.appium.EnhancedAndroidDriver;
+import com.microsoft.appcenter.appium.Factory;
+import com.microsoft.appcenter.appium.EnhancedAndroidDriver;
 import org.junit.rules.TestWatcher;
 import org.junit.Rule;
 ```

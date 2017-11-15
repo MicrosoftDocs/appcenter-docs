@@ -1,13 +1,13 @@
 ---
 title: Other Android APIs
-description: Other APIs in the Mobile Center SDK for Android
+description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 10/23/2017
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
@@ -20,80 +20,81 @@ ms.tgt_pltfrm: android
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [macOS](macos.md)
 
 ## Adjust the log level
 
-You can control the amount of log messages by Mobile Center that show up in LogCat. Use the `MobileCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
+You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
 
 To have as many log messages as possible, use `Log.Verbose`.
 
 ```java
-MobileCenter.setLogLevel(Log.VERBOSE);
+AppCenter.setLogLevel(Log.VERBOSE);
 ```
 
 ## Identify installations
 
-The Mobile Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
 
 ```java
-MobileCenter.getInstallId();
+AppCenter.getInstallId();
 ```
 
 [!include[](../android-see-async.md)]
 
 ## Disable all services at runtime
 
-If you want to disable all Mobile Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to Mobile Center.
+If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
 
 ```java
-MobileCenter.setEnabled(false);
+AppCenter.setEnabled(false);
 ```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```java
-MobileCenter.setEnabled(true);
+AppCenter.setEnabled(true);
 ```
 
 [!include[](../android-see-async.md)]
 
-## Check if Mobile Center is enabled
+## Check if App Center is enabled
 
-You can also check if Mobile Center is enabled or not.
+You can also check if App Center is enabled or not.
 
 ```java
-MobileCenter.isEnabled();
+AppCenter.isEnabled();
 ```
 
 [!include[](../android-see-async.md)]
 
-## Check Mobile Center SDK version at runtime
+## Check App Center SDK version at runtime
 
-You can get the version of Mobile Center SDK that you are currently using.
+You can get the version of App Center SDK that you are currently using.
 
 ```java
-MobileCenter.getSdkVersion();
+AppCenter.getSdkVersion();
 ```
 
 ## Use custom properties
 
-Mobile Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
 
 You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
 
 ```java
 CustomProperties properties = new CustomProperties();
 properties.set("color", "blue").set("score", 10);
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```
 
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from Mobile Center portal.
+You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```java
 CustomProperties properties = new CustomProperties();
 properties.clear("score");
-MobileCenter.setCustomProperties(properties);
+AppCenter.setCustomProperties(properties);
 ```

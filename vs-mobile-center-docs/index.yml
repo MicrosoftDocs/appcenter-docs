@@ -1,17 +1,18 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Visual Studio Mobile Center
+title: Visual Studio App Center
 metadata:
   description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
   author: conceptdev
   ms.author: apexprodleads
-  ms.date: 05-09-2017
+  ms.date: 11/15/2017
   ms.topic: landing-page
+  ms.service: vs-appcenter
 abstract:
-  description: <a href="https://mobile.azure.com/">Mobile Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
+  description: <a href="https://appcenter.ms/">App Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
   menu:
     items:
-    - href: https://docs.mobile.azure.com/api/
+    - href: https://openapi.appcenter.ms
       text: API Swagger
     - href: ~/migration/
       text: Migration guidance for existing customers
@@ -21,13 +22,13 @@ abstract:
       text: Pricing
     - href: ~/general/changelog/
       text: Changelog
-    - href: http://status.mobile.azure.com/
+    - href: https://azure.microsoft.com/en-us/status/
       text: Service Status
 sections:
 - title: Get Started
   items:
   - type: paragraph
-    text: Learn how to add the SDK to your app and get started with Mobile Center.
+    text: Learn how to add the SDK to your app and get started with App Center.
   - type: list
     style: icon48
     items:
@@ -51,6 +52,10 @@ sections:
         src: https://docs.microsoft.com/media/logos/logo_xamarin.svg
       text: Xamarin
       href: ~/sdk/getting-started/xamarin/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+      text: macOS
+      href: ~/sdk/getting-started/macos/
 - title: Services
   items:
   - type: grid
@@ -112,4 +117,4 @@ sections:
     - title: Command line
       html: <p><a href="~/cli/">Overview</a></p>
     - title: APIs
-      html: <p><a href="~/api-docs/">REST Interface</a></p><p><a href="https://docs.mobile.azure.com/api/">Swagger</a></p>
+      html: <p><a href="~/api-docs/">REST Interface</a></p><p><a href="https://openapi.appcenter.ms">Swagger</a></p>

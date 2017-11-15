@@ -1,52 +1,53 @@
 ---
-title: Mobile Center SDK Documentation
-description: Using the Mobile Center SDK
+title: App Center SDK Documentation
+description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 10/06/2017
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
-ms.service: mobile-center
+ms.service: vs-appcenter
 ms.custom: sdk
 ---
 
-# Mobile Center SDK
+# App Center SDK
 
-Mobile Center is mission control for mobile apps.
+App Center is your continuous integration, delivery and learning solution for iOS, Android, Windows, and macOS apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
 
-## Mobile Center Services
+## App Center Services
 
-The Mobile Center SDKs use a modular architecture so you can use any or all of the services below. To learn more about how each service works for your platform, check out the in-depth documentation.
+The App Center SDKs use a modular architecture so you can use any or all of the services below. To learn more about how each service works for your platform, check out the in-depth documentation.
 
-### Mobile Center Analytics
+### App Center Analytics
 
-Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to your business. All the information captured is available in the Mobile Center portal for you to analyze the data.
+App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to your business. All the information captured is available in the App Center portal for you to analyze the data.
 
-### Mobile Center Crashes
+### App Center Crashes
 
-Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash log will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store or Google Play. Crash logs contain valuable information for you to help fix the crash.
+App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash log will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store or Google Play. Crash logs contain valuable information for you to help fix the crash.
 
-### Mobile Center Distribute
+### App Center Distribute
 
-The Mobile Center SDK will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
+The App Center SDK will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
 
-### Mobile Center Push
+### App Center Push
 
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
 ## Get started
 
-* [Mobile Center SDK for Android](getting-started/android.md)
-* [Mobile Center SDK for iOS](getting-started/ios.md)
-* [Mobile Center SDK for React Native](getting-started/react-native.md)
-* [Mobile Center SDK for Xamarin](getting-started/xamarin.md)
-* [Mobile Center SDK for UWP](getting-started/uwp.md)
+* [App Center SDK for Android](getting-started/android.md)
+* [App Center SDK for iOS](getting-started/ios.md)
+* [App Center SDK for React Native](getting-started/react-native.md)
+* [App Center SDK for Xamarin](getting-started/xamarin.md)
+* [App Center SDK for UWP](getting-started/uwp.md)
+* [App Center SDK for macOS](getting-started/macos.md)
 
 ## Requirements
 
-The tables below show the required minimum supported versions of the different Mobile Center services.
+The tables below show the required minimum supported versions of the different App Center services.
 
 ### Android
 
@@ -90,12 +91,21 @@ Distribute | not available | not available            | not available
 Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
+### macOS
+
+ Service          | macOS Version   | Xcode
+ -----------------|-----------------|-------
+ Analytics        | 10.9 or later   | 8.2 and later
+ Crashes          | 10.9 or later   | 8.2 and later
+ Push             | 10.9 or later   | 8.2 and later
+
+
 
 ## Source code
 
-The Mobile Center SDKs is open-source and available publicly on GitHub:
+The App Center SDKs is open-source and available publicly on GitHub:
 
-* [Mobile Center SDK for Android](https://github.com/Microsoft/mobile-center-sdk-android/tree/master)
-* [Mobile Center SDK for iOS](https://github.com/Microsoft/mobile-center-sdk-ios/tree/master)
-* [Mobile Center SDK for React Native](https://github.com/Microsoft/MobileCenter-SDK-react-native)
-* [Mobile Center SDK for UWP and Xamarin](https://github.com/Microsoft/mobile-center-sdk-xamarin/tree/master)
+* [App Center SDK for Android](https://github.com/Microsoft/AppCenter-SDK-Android)
+* [App Center SDK for iOS and macOS](https://github.com/Microsoft/AppCenter-SDK-Apple)
+* [App Center SDK for React Native](https://github.com/Microsoft/AppCenter-SDK-React-Native)
+* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/AppCenter-SDK-DotNet)
