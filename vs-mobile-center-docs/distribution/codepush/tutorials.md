@@ -189,16 +189,16 @@ The following is required to complete this module:
 
 Start by creating your app and setting it up to work with the CodePush service:
 ```
-app-center apps create -d VSTSCDSample-Android -o android -p react-native
+appcenter apps create -d VSTSCDSample-Android -o android -p react-native
 ```
 Then use the following commmands to create both `Staging` and `Production` deployments:
 ```
-app-center codepush deployment add -a <ownerName>/VSTSCDSample-Android Staging
-app-center codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
+appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Staging
+appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
 ```
 To view the deployment keys use:
 ```
-app-center codepush deployment list -a <ownerName>/VSTSCDSample-Android
+appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android
 ```
 ![CodePush CLI providing deployment keys](images/tutorials1.png)
 
@@ -365,7 +365,7 @@ Create the described release definition by following these steps:
 
 1. Rename the default environment to `Staging` by clicking on the "Environment 1" label, typing the new name and pressing enter.
 
-1. Use the `CodePush CLI` to create an access key for VSTS by typing `app-center codepush tokens create -d "VSTS integration"`. Save the key for the next step.
+1. Use the `CodePush CLI` to create an access key for VSTS by typing `appcenter codepush tokens create -d "VSTS integration"`. Save the key for the next step.
 
 1. Back to VSTS, configure the `Staging` environment to release CodePush updates to users in the "staging ring" by clicking on `Add tasks` and selecting `CodePush - Release` from the `Deploy` category. Select it and specify the following settings:
     - Use `Access Key` as the `Authentication Method`

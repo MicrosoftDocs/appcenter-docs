@@ -17,7 +17,7 @@ CodePush is an App Center cloud service that enables Cordova and React Native de
 
 ## 1. Install the App Center CLI
 
-You manage most of CodePush's functionality using the App Center CLI. To install it, open a command prompt or terminal, and type `npm install -g app-center-cli`
+You manage most of CodePush's functionality using the App Center CLI. To install it, open a command prompt or terminal, and type `npm install -g appcenter-cli`
 
  > [!NOTE]
  > On macOS and Linux, you may need to prefix this command with `sudo`
@@ -36,15 +36,15 @@ After making changes to your app’s code or assets, push the update to your sta
 ### React Native
 Run the `release-react` command in the App Center CLI, which will handle bundling your JavaScript and asset files and releasing the update to the App Center server. 
 
-For example: `app-center codepush release-react -a <ownerName>/MyApp`.
+For example: `appcenter codepush release-react -a <ownerName>/MyApp`.
 
 ### Cordova
 Run the `release-cordova` command in the App Center CLI, which will handle bundling your JavaScript and asset files and releasing the update to the App Center server. 
 
-For example: `app-center codepush release-cordova -a <ownerName>/MyApp`.
+For example: `appcenter codepush release-cordova -a <ownerName>/MyApp`.
 
 > [!TIP]
-> One important new functionality in the App Center CLI is the ability to set an app as the current app by using `app-center apps set-current <ownerName>/<appName>`. By setting an app as the current app you don't have to use the -a flag. For example, the command `app-center codepush deployment list -a <ownerName>/<appName>` can be typed as `app-center codepush deployment list` if current app is set. You can check which app is set as your account's current app by using `app-center apps get-current`. Utilizing this command make most of the CLI commands shorter.
+> One important new functionality in the App Center CLI is the ability to set an app as the current app by using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you don't have to use the -a flag. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be typed as `appcenter codepush deployment list` if current app is set. You can check which app is set as your account's current app by using `appcenter apps get-current`. Utilizing this command make most of the CLI commands shorter.
 
 ## 4. Run your app
 

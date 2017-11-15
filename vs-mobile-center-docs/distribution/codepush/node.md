@@ -21,10 +21,10 @@ A JavaScript library for programmatically managing your App Center account (e.g.
 1. Create a token to authenticate with the App Center server using the following App Center command:
 
     ```shell
-    app-center tokens create -d "DESCRIPTION_OF_THE_KEY"
+    appcenter tokens create -d "DESCRIPTION_OF_THE_KEY"
     ```
     
-    If you already created a token that you want to use here, then you can retrieve it by running `app-center tokens list` and using the value of the `ID` column for the key you wish to use.
+    If you already created a token that you want to use here, then you can retrieve it by running `appcenter tokens list` and using the value of the `ID` column for the key you wish to use.
     
 2. Install the management SDK by running `npm install code-push --save`
 
