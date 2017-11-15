@@ -22,7 +22,7 @@ ms.custom: distribute
 1. Create an [App Center account](https://appcenter.ms) or log in throught the CLI by using `app-center login` 
 2. Register your [app](#app-management) with CodePush, and optionally [share it](#app-collaboration) with other developers on your team
 3. CodePush-ify your app and point it at the deployment you wish to use ([Cordova](./cordova.md) and [React Native](./react-native.md))
-4. [Release](#releasing-updates) an update for your app
+4. [Release](#releasing-app-updates) an update for your app
 5. Live long and prosper! ([details](https://en.wikipedia.org/wiki/Vulcan_salute))
 
 ## <a name="account-creation"/>Account Management
@@ -156,7 +156,7 @@ If you will be working with other developers on the same CodePush app, you can a
 Once added, all collaborators will immediately have the following permissions with regards to the newly shared app:
 
 1. View the app, its collaborators, [deployments](#deployment-management) and [release history](#viewing-release-history)
-1. [Release](#releasing-updates) updates to any of the app's deployments
+1. [Release](#releasing-app-updates) updates to any of the app's deployments
 1. [Promote](#promoting-updates) an update between any of the app's deployments
 1. [Rollback](#rolling-back-updates) any of the app's deployments
 1. [Patch](#patching-update-metadata) any releases within any of the app's deployments
