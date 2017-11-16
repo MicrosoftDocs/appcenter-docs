@@ -2,16 +2,19 @@
 # required metadata
 
 title: Distribute | Sample App Tutorials
-description: Tutorial to distribute a sample iOS app to a group in App Center.
+description: Tutorial to distribute a sample macOS app to a group in App Center.
 keywords: app center
-authors: sabrinaj206
-ms.author: t-sajia
+authors: clpolet
+ms.author: clpolet
 ms.date: 06/27/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom:
 ms.prod:
-ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
+ms.assetid: 35ee91dd-9660-480f-8db2-f3f4a04673f8
+ms.tgt_pltfrm: macos
+dev_langs:  
+ - swift
 
 # optional metadata
 
@@ -29,7 +32,7 @@ If you have not already, first follow the [getting started tutorial](getting-sta
 
 
 ### Prerequisites
- - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+ - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample app with.
 
 ## Choose a build to Distribute
 There are **two ways you can distribute** the app.
@@ -45,12 +48,12 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 
 6. Click **Next** twice. Leave the **Release notes** blank.
 
-Another way is to upload your own .ipa file from Xcode. Skip this if you followed the steps to distribute above.
+Another way is to upload your own .app bundle zipped from Xcode. Skip this if you followed the steps to distribute above.
 1. From the **Distribute** service, click **Distribute new release** at the top.
 
 2. Click **Distribute new release** at the top of the page.
-  
-3. Upload your **.ipa** file.
+
+3. Upload your **.app** bundle.
 
 4. Click **Next** twice. Leave the **Release notes** blank.
 

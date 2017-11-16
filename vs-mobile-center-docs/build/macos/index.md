@@ -16,7 +16,7 @@ ms.tgt_pltfrm: macos
 
 You can build Mac apps written in [Objective-C or Swift](first-build.md).
 
-While in preview, some of the features might not be available to all users. If you have interest in a specific feature, but you cannot find it in the UI, contact us and we can get you early access in case we're already testing it.
+While in preview, some of the features might not be available to all users. If you have interest in a specific feature, but you cannot find it in the UI, [contact us](https://intercom.help/appcenter/) and we can get you early access in case we're already testing it.
 
 - [Configuring your first build](first-build.md)
 - [Code Signing](code-signing.md)

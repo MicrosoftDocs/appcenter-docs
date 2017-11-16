@@ -94,4 +94,4 @@ AppCenter.start(getApplication(), "<APP SECRET HERE>",
 
 > [!NOTE]
 > A push notification will be sent to the device you
-> distributed to. It will not show up in the simulator.
+> distributed the app to. It will not show up in the simulator.
