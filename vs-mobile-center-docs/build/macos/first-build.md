@@ -47,12 +47,12 @@ By default, a new build is triggered every time a developer pushes to a configur
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.5. Tests
-If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests. In preview, App Center does not support launch tests for Mac builds.
+If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests. App Center does not support launch tests for Mac builds.
 
 ### 3.6. Code signing
 A successful build will produce a .app file. In order to install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](./uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. A provisioning profile is optional for code signing.
 
-In preview, App Center will only support these signing configurations:
+Currently, App Center only supports these signing configurations:
 - Manual signing using the Development export method with a development certificate only
 - Manual signing using the Developer ID export method
 - Automatic signing using the Development export method
