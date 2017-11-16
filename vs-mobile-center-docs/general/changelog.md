@@ -13,7 +13,7 @@ ms.service: vs-appcenter
 
 ### **October 20, 2017**
 - **Improved Xamarin iOS Mono/SDK mapping and Xcode version handling**:
-We have improved the automatic mapping between your iOS SDK versions with Mono and XCode to ensure a smoother and more consistent build experience out of the box.
+We have improved the automatic mapping between your iOS SDK versions with Mono and Xcode to ensure a smoother and more consistent build experience out of the box.
 
 - **Support for Android Oreo & iOS 11**:
 We have added support to allow you build and test apps targeting iOS 11 and Android Oreo.

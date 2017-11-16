@@ -2,23 +2,17 @@
 # required metadata
 
 title: Push | Sample App Tutorials
-description: Tutorial to send a push notification to the sample ios app.
+description: Tutorial to send a push notification to the sample macOS app.
 keywords: app center
-authors: sabrinaj206
-ms.author: t-sajia
-ms.date: 06/26/2017
+authors: clpolet
+ms.author: clpolet
+ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter
-ms.custom:
-ms.prod:
-ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
+ms.assetid: 430aa509-2695-4d14-a6c3-85129d900d0f
+ms.tgt_pltfrm: macos
+dev_langs:  
+ - swift
 
 ---
 
@@ -28,7 +22,7 @@ In this tutorial you will learn how to send push notifications to users through 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ### Prerequisites
- - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+ - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample app with.
 
 
 ## Enable Push notifications in Xcode
@@ -36,14 +30,14 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 2. Under the **Capabilities** tab, turn **Push Notifications** on.  
 
-  ![Enable Push in Xcode](images/Enable_push_ios.png)
+  ![Enable Push in Xcode](images/Enable_push_macOS.png)
 
-  If you encounter an error, your codesigning may not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/ios/identifier/bundle/) and edit the App ID to allow Push Notifications.
+  If you encounter an error, your codesigning may not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/mac/identifier/bundle/) and edit the App ID to allow Push Notifications.
 
 ## Build and Distribute the app
 1. **Add, commit, and push the changes to Github.**
 
-2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification will not appear on a simulator.
+2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**.
 
 ## Set up Push in App Center
 1. Go to the **Push** service in [App Center](https://appcenter.ms/apps).
@@ -51,14 +45,14 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 2. Click **next** to skip the first page. The code shown here is already included.
 
 ## Get your Apple Push Notification service Key
-1. Go to your **[Keys](https://developer.apple.com/account/ios/authkey/)** on the Apple Developer website.
+1. Go to your **[Keys](https://developer.apple.com/account/mac/authkey/)** on the Apple Developer website.
 
 2. Create a new APNs Key if you don't have one. Fill in a Key name and check the **APNs** checkbox.
 
 3. Copy the **Key ID** and download the **key file**. Paste it in the box in App Center.
 
 ## Get the sample app's Prefix and ID
-1. Go to your **[App IDs](https://developer.apple.com/account/ios/identifier/bundle)** on the Apple Developer Website.
+1. Go to your **[App IDs](https://developer.apple.com/account/mac/identifier/bundle)** on the Apple Developer Website.
 
 2. Click on the sample app's ID.
 
@@ -90,4 +84,4 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 3. Click **Next** and **Send notification** at the bottom.
 
   >[!WARNING]
-  > **A push notification will be sent to the device you distributed the app to - it will not show up in the simulator.**
+  > **A push notification will be sent to the device you distributed the app to.**
