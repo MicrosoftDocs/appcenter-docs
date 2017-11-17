@@ -12,6 +12,13 @@ ms.service: vs-appcenter
 
 # Creating and managing organizations
 
+## The benefits of organizations
+
+As there are no fees associated with an organization, we recommend it for all commercial apps or apps with many collaborators.
+
+Benefits of an org:
+- Orgs can create teams of users and more easily control permissions to apps.
+
 ## Creating an organization
 
 To create an organization, log in and click the **Add new** dropdown and choose **Add new organization**.
@@ -53,7 +60,7 @@ Select the organization, and then click on the **People** tab in the left naviga
 To leave an organization, click on your avatar and navigate to **Settings**. From there, select **Organizations**. There you can click **Leave** on any organization you belong to.
 
 > [!NOTE]
-> If you the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the organization.
+> If you are the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the organization.
 
 ## Deleting an organization
 
