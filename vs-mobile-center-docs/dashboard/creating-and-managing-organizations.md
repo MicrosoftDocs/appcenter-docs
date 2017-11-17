@@ -60,7 +60,7 @@ Select the organization, and then click on the **People** tab in the left naviga
 To leave an organization, click on your avatar and navigate to **Settings**. From there, select **Organizations**. There you can click **Leave** on any organization you belong to.
 
 > [!NOTE]
-> If you the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the organization.
+> If you are the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the organization.
 
 ## Deleting an organization
 
