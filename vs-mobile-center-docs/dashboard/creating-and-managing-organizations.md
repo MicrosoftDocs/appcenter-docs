@@ -12,6 +12,13 @@ ms.service: vs-appcenter
 
 # Creating and managing organizations
 
+## The benefits of organizations
+
+As there are no fees associated with an organization, we recommend it for all commercial apps or apps with many collaborators.
+
+Benefits of an org:
+- Orgs can create teams of users and more easily control permissions to apps.
+
 ## Creating an organization
 
 To create an organization, log in and click the **Add new** dropdown and choose **Add new organization**.

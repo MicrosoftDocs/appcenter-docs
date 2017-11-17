@@ -41,3 +41,9 @@ To share your app with others, select an app and then click **Manage app** to ad
 
 > [!NOTE]
 > If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
+
+## Transfering an app
+
+We currently only enable the transfer of apps from users to organization accounts.
+
+To do so, go to your app settings, select the menu at the top right (three dots) corner, select **Transfer app to organization**.
