@@ -2,14 +2,37 @@
 title: App Center Changelog
 description: History of updates to the product
 keywords: update,history
-author: joemellin
-ms.author: joemel
-ms.date: 10/20/2017
+author: jwhitedev
+ms.author: jawh
+ms.date: 11/17/2017
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **November 17, 2017**
+- **Added support for re-releasing builds for distribution**:
+You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
+
+- **Shipped support for publishing directly to the Apple Store and Testflight**:
+You can create new stores that target release to the production Apple Store or beta TestFlight service.
+
+- **Build support for custom environment variables**:
+You now have the ability to create variables for sensitive infromation to include in your build process without including it in your repository.
+
+- **UWP Crash preview released**:
+Visual Studio App Center now offers a preview of our support for getting Crash data from your UWP apps.
+
+- **macOS preview released**:
+Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services
+
+- **HockeyApp side by side enabled**:
+We have now enabled a HockeyApp and App Center side by side experience for all HockeyApp customers. To view the side by side experience, just login to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
+
+### **November 15, 2017**
+- **Visual Studio App Center launches!**:
+Visual Studio App Center is made [generally available](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) to everyone and is officially rebranded from Visual Studio Mobile Center to Visual Studio App Center.
 
 ### **October 20, 2017**
 - **Improved Xamarin iOS Mono/SDK mapping and Xcode version handling**:
