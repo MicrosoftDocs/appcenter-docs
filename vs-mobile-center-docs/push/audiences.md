@@ -61,3 +61,4 @@ Another way to create an audience, is when selecting the Audience as a target in
 
 - The maximum number of audiences that can be created per app is 5. If you would like to create more than 5 audiences (up to 200), select the "Advanced" option in your billing plan settings.
 - There is a maximum of 60 properties that you can define per app.
+- Limit of 1000 devices per audience
