@@ -103,10 +103,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then App Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
 
 ### 5.2. Custom build scripts
-
-In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
-
-App Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md) you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts) for example when your React Native app uses TypeScript and you have to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
 
 ```
   "scripts": {
