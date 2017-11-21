@@ -92,10 +92,7 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then App Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
 
 ### 6.2. Custom build scripts
-
-In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the `tsc` compiler at build start.
-
-App Center will have a [dedicated feature](~/general/roadmap.md#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a `postinstall` script in package.json, adding a command like this:
+In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md) you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts) for example when your React Native app uses TypeScript and you have to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
 
 ```
   "scripts": {
@@ -104,7 +101,7 @@ App Center will have a [dedicated feature](~/general/roadmap.md#build-service) f
   },
 ```
 
-### 6.3. Building multiple APKs
-For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). In general, make sure that `universalApk` is set to `true` for your React Native build configuration.
-
 Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.
+
+### 6.3. Building multiple APKs
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. App Center's build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). Consequently, make sure that `universalApk` is set to `true` for your React Native build configuration.
