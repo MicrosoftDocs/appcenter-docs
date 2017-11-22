@@ -132,7 +132,7 @@ This section was constructed to enable you to see some of the most common CodePu
 
 **Creating an App in the App Center CLI:**
 ```
-appcenter apps create -p "React-Native" -o "ios" -d "MyApp"
+appcenter apps create -p "React-Native" -o "iOS" -d "MyApp"
 ```
 **Releasing an Update App Center CLI:**
 ```
@@ -169,7 +169,7 @@ appcenter codepush deployment list MyApp
 | `appcenter tokens` | Manage API tokens | `appcenter tokens list`
 | `appcenter orgs` | Manage organizations | `appcenter orgs list`
 | | |
-| `appcenter apps create` |  Create a new app | `appcenter apps create -d MyApp -p React-Native -o ios`
+| `appcenter apps create` |  Create a new app | `appcenter apps create -d MyApp -p React-Native -o iOS`
 | `appcenter apps delete` | Delete an app | `appcenter apps delete -a ownerName/MyApp`
 | `appcenter apps get-current` |  Get the application that's set as default for all CLI commands | `-`
 | `appcenter apps list` |  Get list of configured applications | `-`
