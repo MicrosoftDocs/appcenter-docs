@@ -15,8 +15,12 @@ ms.custom: build
 
 App Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours.
 
-To get started, a member of the app in App Center needs to connect to their source control and select the repository where the app is located and then start building your app with only a few clicks.
+To get started, a member of the app in App Center needs to connect to their source control, select the repository where the app is located at and then simply set up the desired branch to be build.
 
-Currently, you can build apps hosted on Git repositories in GitHub, Bitbucket and Visual Studio Team Services (VSTS).
+App Center currently suppports to build apps with Git source control (TFVC is not supported) hosted on:
+
+    - Bitbucket
+    - GitHub
+    - Visual Studio Team Services (VSTS)
 
 We are constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.
