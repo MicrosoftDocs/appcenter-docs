@@ -4,7 +4,7 @@ description: Limitations and known issues with the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/15/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: vs-appcenter
@@ -22,3 +22,9 @@ ms.custom: sdk
 ### Xamarin
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the Xamarin runtime.
+2. You can't use most AppCenter SDK APIs in Xamarin Forms application constructor if you want to use the previewer because the Xamarin previewer does not support native code.
+3. An application using the AppCenter SDK cannot be deployed to the Xamarin Live Player as the SDK contains native code.
+
+### Android, Xamarin.Android (including Forms on Android), React Native for Android
+
+1. The size limit for each crash attachment on Android is currently 1.4 MB (while iOS limit is 10 MB).

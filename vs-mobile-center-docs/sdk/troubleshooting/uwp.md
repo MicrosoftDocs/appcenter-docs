@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 08/21/2017
+ms.date: 11/29/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -20,25 +20,6 @@ ms.tgt_pltfrm: uwp
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
-
-## Issues during setup
-
-1. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this `frameworks` section to your **project.json** file:
-
-    ```javascript
-    {
-        "dependencies": {
-            "NETStandard.Library": "1.6.1"
-        },
-        "frameworks": {
-            "netstandard1.{version}": {
-                "imports": "portable-net45+win8+wpa81"
-            }
-        }
-    }
-    ```
-
-Replace `{version}` with the .NET standard version of your project.
 
 ## Analytics data doesn't show up in the portal
 
