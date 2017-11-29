@@ -116,6 +116,7 @@
 ### [React Native](sdk/crashes/react-native.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
 ### [macOS](sdk/crashes/macos.md)
+### [UWP](sdk/crashes/uwp.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
