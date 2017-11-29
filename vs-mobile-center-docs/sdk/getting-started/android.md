@@ -43,7 +43,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **Android** as the OS and **Java** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
 
 ## 3. Add the App Center SDK modules
 
@@ -73,7 +73,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 
 ### 4.2 Replace the placeholder with your App Secret
 
-Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the App Center portal or through the **Manage App** button.
+Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
