@@ -14,7 +14,7 @@ ms.custom: build
 # Build FAQ
 
 ## The repository I want to connect to is not listed in the Connect to Repository step
-* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFSVC, etc), it will not show up in the repository list.
+* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFVC, etc), it will not show up in the repository list.
 * If connecting to a repository that belongs to an organization on GitHub or team on Bitbucket, first request admin access to the repository.
 In order to use a repository for building apps with App Center, you need to have admin rights to that repository. Admin rights are required because App Center will register a webhook on your repository coming from the [appcenter.ms](https://appcenter.ms) domain.
 For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions here](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
