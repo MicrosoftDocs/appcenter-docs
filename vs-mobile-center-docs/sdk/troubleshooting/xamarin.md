@@ -20,6 +20,7 @@ ms.tgt_pltfrm: xamarin
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [React Native](react-native.md)
 
 ## Issues during setup
 

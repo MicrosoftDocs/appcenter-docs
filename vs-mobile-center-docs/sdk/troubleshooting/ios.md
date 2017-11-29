@@ -22,6 +22,7 @@ dev_langs:
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [React Native](react-native.md)
 
 ## Issues during setup
 

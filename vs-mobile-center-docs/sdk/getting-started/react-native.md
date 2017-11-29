@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/21/2017
+ms.date: 11/28/2017
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * You are using a React Native project that runs React Native 0.34 or later.
 * You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 8.0 or later.
-* The default way to use the SDK requires [Cocoapods](https://cocoapods.org). Nonetheless, it is possible to link the SDK manually.
+* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, please follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -48,17 +48,18 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 ## 3. Add the App Center SDK modules
 
-The default integration of the SDK uses Cocoapods for iOS. If you are not using Cocoapods in your app, you need to integrate the React Native SDK manually for your iOS app.
+The default integration of the SDK uses CocoaPods for iOS. If you are not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
 
 ### 3.1 Integrate the SDK automatically
-
-#### 3.1 Add App Center SDK modules
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
 	```
 	npm install appcenter appcenter-analytics appcenter-crashes --save
 	```
+
+	> [!NOTE]
+	> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your `package.json` file.
 
 	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and
 	**appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general
@@ -80,7 +81,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 	> react-native link appcenter-crashes
 	> ```
 
-	For iOS, it will try to download the iOS App Center SDK from **Cocoapods**, if you see an error like:
+	For iOS, it will try to download the [App Center SDK for iOS and macOS](https://cocoapods.org/pods/AppCenter) from **CocoaPods**, if you see an error like:
 
 	```
 	Added code to initialize iOS App Center SDK in ios/reactnativesample/AppDelegate.m
@@ -131,7 +132,7 @@ The default integration of the SDK uses Cocoapods for iOS. If you are not using 
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
-We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
+We **strongly** recommend integrating the SDK via CocoaPods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
 > [!NOTE]
 > The latest App Center React Native SDK doesn't necessarily depend on the latest App Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
@@ -156,5 +157,37 @@ We **strongly** recommend integrating the SDK via Cocoapods as described above. 
     * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
+
+Now you can build and launch your application either from command line or Xcode/Android Studio.
+
+### 4.1 Build and run your application from command line
+
+You may build and launch your iOS application by the following command:
+
+```
+react-native run-ios
+```
+
+> [!TIP]
+> You can launch it on an **iOS simulator** or **iOS device** by specifying the iOS device name in `react-native run-ios --device "myDeviceName"`.
+
+
+You may build and launch your Android application by the following command:
+
+```
+react-native run-android
+```
+
+> [!TIP]
+> You can launch it on an **android emulator** or **android device** by specifying the device id in `react-native run-android --deviceId "myDeviceId"` (`deviceId` from `adb devices` command).
+
+### 4.2 Build and run your application from Xcode or Android Studio
+
+For iOS, open your **ios/{appname}.xcworkspace** or **ios/{appname}.xcodeproj** in Xcode and build from there.
+
+> [!NOTE]
+> If you linked App Center automatically via `react-native link` (as in step 3.1), you should open **ios/{appname}.xcworkspace** in Xcode. Because App Center CocoaPods dependencies only works with `xcworkspace` not `xcodeproj`, and **ios/{appname}.xcodeproj** won't have App Center CocoaPods dependencies linked.
+
+For Android, import your **android** project in Android Studio and build from there.
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.

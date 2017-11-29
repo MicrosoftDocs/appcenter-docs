@@ -19,6 +19,7 @@ ms.custom: sdk
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [React Native](react-native.md)
 
 ## What Android permissions are required?
 

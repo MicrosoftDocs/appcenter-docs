@@ -144,7 +144,7 @@
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ### [UWP](sdk/troubleshooting/uwp.md)
 ### [macOS](sdk/troubleshooting/macos.md)
-
+### [React Native](sdk/troubleshooting/react-native.md)
 ## [SDK Migration](sdk/sdk-migration/index.md)
 ### [Android](sdk/sdk-migration/android.md)
 ### [iOS](sdk/sdk-migration/ios.md)
