@@ -2,9 +2,9 @@
 title: App Center Crashes for iOS
 description: App Center Crashes for iOS
 keywords: sdk, crash
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/21/2017
+author: elamalani
+ms.author: emalani
+ms.date: 11/29/2017
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: vs-appcenter

@@ -61,6 +61,9 @@ func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MS
 }
 ```
 
+> [!NOTE]
+> The size limit is currently 10 MB. Attempting to send a larger attachment will trigger an error.
+
 ## Disabling Mach exception handling
 
 By default, App Center Crashes uses the Mach exception handler to catch fatal signals, e.g. stack overflows, via a Mach exception server.

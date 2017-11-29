@@ -2,9 +2,9 @@
 title: Xamarin SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 08/21/2017
+author: elamalani
+ms.author: emalani
+ms.date: 11/29/2017
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -28,22 +28,6 @@ ms.tgt_pltfrm: xamarin
 3. If you have this error when building for Xamarin.iOS: `MTOUCH: Error MT5210: Native linking failed, undefined symbol: _OBJC_METACLASS_$_MS{SomeSdkClassName}. Please verify that all the necessary frameworks have been referenced and native libraries are properly linked in. (MT5210)` or a similar error (`MT5211` code with similar message mentioning App Center), please make sure you call `AppCenter.Start` before using the APIs of a specific service. If you are calling `Start` but have this issue, you need to update Xamarin.iOS component to version **10.4.0.128** or more recent.
 4. If you are using Visual Studio for Mac and can't see an update to Xamarin.iOS and your Xamarin.iOS version is older than **10.4.0.128**, please install Xamarin Studio and update Xamarin.iOS from Xamarin Studio then you will be able to use the same Xamarin.iOS version on Visual Studio for Mac.
 5. In the console, look for an Assert log with the message - "App Center SDK configured successfully". This verifies that the SDK is configured successfully.
-6. **Invalid restore input. No target frameworks specified.** : If you are using **.NET standard** portable project, you need to add this `frameworks` section to your **project.json** file:
-
-    ```javascript
-    {
-        "dependencies": {
-            "NETStandard.Library": "1.6.1"
-        },
-        "frameworks": {
-            "netstandard1.{version}": {
-                "imports": "portable-net45+win8+wpa81"
-            }
-        }
-    }
-    ```
-
-Replace `{version}` with the .NET standard version of your project.
 
 ## Analytics data doesn't show up in the portal
 
@@ -90,4 +74,3 @@ If you are running automated UI tests, enabled in-app updates will block your au
 ## You are seeing messages in the console that indicate that the database could not be opened on iOS
 
 App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.16.0 or later.
-

@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -201,6 +201,9 @@ Crashes.setListener({
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
 >
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+> [!NOTE]
+> The size limit is currently 1.4 MB on Android and 10 MB on iOS. Attempting to send a larger attachment will trigger an error.
 
 ## Enable or disable App Center Crashes at runtime
 

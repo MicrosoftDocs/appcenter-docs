@@ -44,7 +44,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **macOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
 
 ## 3. Add the App Center SDK modules
 

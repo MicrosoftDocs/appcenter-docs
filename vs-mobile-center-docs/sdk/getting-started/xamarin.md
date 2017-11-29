@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -64,7 +64,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS and platform depending on your project as described above.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
 
 ## 3. Add the App Center SDK to your solution
 
@@ -133,7 +133,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 ##### 4.2.3 Xamarin.Forms
 
-To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the **constructor**.
+To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
 
 ```csharp
 AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
@@ -141,7 +141,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 
 ### 4.3 Replace the placeholder with your App Secret
 
-Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the App Center portal or through the **Manage App** button.
+Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
