@@ -90,8 +90,7 @@
     {
         "source_path": "vs-mobile-center-docs/sdk/azure/identity/android.md",
         "redirect_url": "/mobile-center/azure/"
-    }
-    ,
+    },
     {
         "source_path": "vs-mobile-center-docs/sdk/azure/identity/ios.md",
         "redirect_url": "/mobile-center/azure/"
@@ -103,6 +102,10 @@
     {
         "source_path": "vs-mobile-center-docs/sdk/azure/ios.md",
         "redirect_url": "/mobile-center/azure/"
+    },
+    {
+	"source_path": "vs-mobile-center-docs/distribution/auto-provisioning-feature.md",
+	"redirect_url": "/mobile-center/distribution/auto-provisioning"
     }
   ]
 }
