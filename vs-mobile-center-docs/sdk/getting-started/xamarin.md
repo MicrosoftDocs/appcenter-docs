@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/29/2017
+ms.date: 11/30/2017
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -64,7 +64,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS and platform depending on your project as described above.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
 
 ## 3. Add the App Center SDK to your solution
 
@@ -117,6 +117,9 @@ using Microsoft.AppCenter.Crashes;
 
 #### 4.2.1 Xamarin.Android
 
+> [!NOTE]
+> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK.
+
 Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
@@ -124,6 +127,9 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 #### 4.2.2 Xamarin.iOS
+
+> [!NOTE]
+> Remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
 Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunching()` method
 
@@ -138,6 +144,9 @@ To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you
 ```csharp
 AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+> [!NOTE]
+> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
 ### 4.3 Replace the placeholder with your App Secret
 
