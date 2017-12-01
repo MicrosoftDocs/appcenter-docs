@@ -20,6 +20,10 @@ In order to use a repository for building apps with App Center, you need to have
 For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions here](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 * If connecting to a repository owned by a user, you need to be the owner of the repository. If you are not the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 
+## What can I do if am using Team Foundation Version Control (TFVC)?
+
+App Center Build only supports Git repositories. For projects using a TFVC repository, unless you want to [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents as well as build tasks for App Center Distribution and Test.
+
 
 ## No Xcode scheme is found
 In order to build a xcworkspace or a xcproject, a shared Xcode scheme is required. Xcode schemes are saved locally so that Xcode has access to them, but by default they are not shared with others and they are not included in source control.
