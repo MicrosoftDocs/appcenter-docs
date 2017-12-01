@@ -33,7 +33,7 @@ The main goal of webhooks is to communicate important information from App Cente
     - Webhook name
     - Webhook url
     
-    You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft Teams. Here are details on how to [obtain the webhook URL from Microsoft Teams](https://msdn.microsoft.com/en-us/microsoft-teams/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack)). 
+    You can obtain the webhook url from the application's settings that you are integrating with (for example, Slack, Microsoft Teams. Here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)). 
     
     In App Center, click on the **checkbox** to decide what events will trigger the webhook alerts. Once these events happen, alerts from App Center will be posted into your integrated applications.
     
