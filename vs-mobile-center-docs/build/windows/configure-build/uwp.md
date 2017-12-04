@@ -47,8 +47,7 @@ Simulator builds can only be ran on simulators and cannot be installed on the de
 Uploading your own certificate is optional. In case you don't provide one, App Center will automatically generate a temporary certificate and sign the build for you. Please note that the certificate is unique for each build.
 
 ### 3.7. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
-To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -63,13 +62,13 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
   </activePackageSource>
   <packageSourceCredentials>
     <MyAuthNuget>
-      <add key="Username" value="myusername" />
-      <add key="ClearTextPassword" value="password" />
+      <add key="Username" value="%USER_VARIABLE%" />
+      <add key="ClearTextPassword" value="%PASSWORD_VARIABLE%" />
     </MyAuthNuget>
   </packageSourceCredentials>
 </configuration>
 ```
-If you have complex configurations and need more information, please refer to [Configuring Nuget behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.8. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
