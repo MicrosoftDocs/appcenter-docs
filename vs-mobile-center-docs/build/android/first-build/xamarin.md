@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -51,8 +51,7 @@ A successful build will produce an apk file. In order to release the build to th
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.7. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
-To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -67,13 +66,13 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
   </activePackageSource>
   <packageSourceCredentials>
     <MyAuthNuget>
-      <add key="Username" value="myusername" />
-      <add key="ClearTextPassword" value="password" />
+      <add key="Username" value="$USER_VARIABLE" />
+      <add key="ClearTextPassword" value="$PASSWORD_VARIABLE" />
     </MyAuthNuget>
   </packageSourceCredentials>
 </configuration>
 ```
-If you have complex configurations and need more information, please refer to [Configuring Nuget behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.8. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
@@ -110,5 +109,5 @@ The build step specific logs (located in the build/ directory of the archive) ar
 The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
 ## Supported versions and requirements
-App Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
+App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
 App Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.

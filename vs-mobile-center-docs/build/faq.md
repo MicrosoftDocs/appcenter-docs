@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 10/18/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: vs-appcenter
@@ -62,8 +62,9 @@ For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now.
 
 ## How to restore a private NuGet feed?
-To restore private NuGet feeds, you include the credentials in the **NuGet.config** file:
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md).
 
+For Mac build machines:
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -77,12 +78,16 @@ To restore private NuGet feeds, you include the credentials in the **NuGet.confi
   </activePackageSource>
   <packageSourceCredentials>
     <MyAuthNuget>
-      <add key="Username" value="myusername" />
-      <add key="ClearTextPassword" value="password" />
+      <add key="Username" value="$USER_VARIABLE" />
+      <add key="ClearTextPassword" value="$PASSWORD_VARIABLE" />
     </MyAuthNuget>
   </packageSourceCredentials>
 </configuration>
 ```
+For Windows build machines, please refer to [UWP C#](~/build/windows/configure-build/uwp.md).
+
+If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+
 ## Where is my .ipa file?
 If you have [resaved your branch settings](~/build/ios/xcodebuild.md), your build is no longer using xcrun to generate an .ipa file; it uses xcodebuild instead. Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed-unsigned builds produce an .xcarchive instead.
 If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.

@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 08/01/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -65,8 +65,7 @@ A successful device build will produce an ipa file. In order to install the buil
 Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
 
 ### 3.10. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root, App Center will auto-restore the NuGet feed. 
-To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config** file:
+If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,13 +80,13 @@ To restore private NuGet feeds, make sure you include the credentials in the **N
   </activePackageSource>
   <packageSourceCredentials>
     <MyAuthNuget>
-      <add key="Username" value="myusername" />
-      <add key="ClearTextPassword" value="password" />
+      <add key="Username" value="$USER_VARIABLE" />
+      <add key="ClearTextPassword" value="$PASSWORD_VARIABLE" />
     </MyAuthNuget>
   </packageSourceCredentials>
 </configuration>
 ```
-If you have complex configurations and need more information, please refer to [Configuring Nuget behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.11. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
@@ -127,5 +126,5 @@ The .dsym files contains the debug symbols for the app.
 * If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable crash reports.
 
 ## Supported versions and requirements
-App Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard.
+App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
 App Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: Click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.
