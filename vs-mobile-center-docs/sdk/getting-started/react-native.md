@@ -61,6 +61,12 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 	> [!NOTE]
 	> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your `package.json` file.
 
+	In case you prefer `yarn` over `npm`, use the following command to install App Center:
+
+	```
+	yarn add appcenter appcenter-analytics appcenter-crashes
+	```
+
 	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and
 	**appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general
 	purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.

@@ -22,6 +22,16 @@ ms.tgt_pltfrm: react-native
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 
+## React Native link command unrecognized
+
+If you have `yarn` installed on your machine, `react-native init {myapp}` will initialize your app and install dependencies using `yarn` rather than `npm`. If you see the following error message when running `react-native link`, chances are appcenter dependencies are installed from `npm install {package}` instead of `yarn add {package}` so that `npm` and `yarn` are mixed during installation.
+
+```
+Command `link` unrecognized. Make sure that you have run `npm install` and that you are inside a react-native project.
+```
+
+In this case, run `npm install` and try `react-native link` again.
+
 ## CocoaPods unable to find a specification for AppCenterReactNativeShared during react-native link
 
 If you see the following CocoaPods error message during `react-native link`, chances are your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up-to-date.
