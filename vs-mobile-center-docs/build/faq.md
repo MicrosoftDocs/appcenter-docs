@@ -42,7 +42,7 @@ The files uploaded for code signing and the password for the certificate are als
 ## A code signed build cannot be installed on an iOS device
 There are many reasons why a build cannot be installed on a user's device. A common case is that the provisioning profile does not contain the UDID of the user's device, in case of a development or ad-hoc distribution build. In the case of development provisioning profiles and ad-hoc distribution, you have to manually include the UDID of your users' devices in the provisioning profile in the Apple Developer Center, re-download the provisioning profile and upload it to the App Center build configuration. If you use enterprise distribution, you do not need to worry about collecting UDIDs.
 
-[xcode-share-scheme]: ~/build/ios/first-build/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
+[xcode-share-scheme]: ~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
 ## Why is the build in App Center taking longer than my local build?
 There are many reasons why build duration can be higher when using a build service:
@@ -84,13 +84,12 @@ For Mac build machines:
   </packageSourceCredentials>
 </configuration>
 ```
-For Windows build machines, please refer to [UWP C#](~/build/windows/configure-build/uwp.md).
+For Windows build machines, please refer to [UWP C#](~/build/windows/uwp/first-build.md).
 
 If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ## Where is my .ipa file?
-If you have [resaved your branch settings](~/build/ios/xcodebuild.md), your build is no longer using xcrun to generate an .ipa file; it uses xcodebuild instead. Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed-unsigned builds produce an .xcarchive instead.
-If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
+Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed. Unsigned builds produce an .xcarchive instead. If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
 
 ![Export xcarchive file using xcode][export-xcode-xcarchive-organizer]
 

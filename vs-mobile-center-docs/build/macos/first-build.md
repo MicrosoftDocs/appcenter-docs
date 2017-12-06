@@ -1,5 +1,5 @@
 ---
-title: Configure a Mac build in App Center
+title: Configure a Objective-C or Swift Mac build in App Center
 description: How to set up a build for a Mac app
 keywords: build, macos, mac
 author: andyzg
@@ -12,7 +12,7 @@ ms.custom: build
 ms.tgt_pltfrm: macos
 ---
 
-# Building Mac apps
+# Building Objective-C or Swift apps for macOS
 
 To start building your first Mac app, you will need to do the following:
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
@@ -50,14 +50,14 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests. App Center does not support launch tests for Mac builds.
 
 ### 3.6. Code signing
-A successful build will produce a .app file. In order to install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](./uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. A provisioning profile is optional for code signing.
+A successful build will produce a .app file. In order to install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](~/build/macos/uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. A provisioning profile is optional for code signing.
 
 Currently, App Center only supports these signing configurations:
 - Manual signing using the Development export method with a development certificate only
 - Manual signing using the Developer ID export method
 - Automatic signing using the Development export method
 
-You can read more about code signing [here](./code-signing.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+You can read more about code signing [here](~/build/macos/code-signing.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
 
 ### 3.7. CocoaPods
 App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
@@ -93,7 +93,7 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 ### 4.2. The app (.app)
 The .app file is a Mac application archive file which contains the Mac app.
-* If the build has been signed correctly, the .app file can be installed on a device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found [here](./code-signing.md).
+* If the build has been signed correctly, the .app file can be installed on a device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found [here](~/build/macos/code-signing.md).
 * If the build has not been signed, the .app file can be signed by the developer (e.g. locally using codesign).
 
 ### 4.3. The symbols file (.dsym)
@@ -106,7 +106,7 @@ Keep in mind that the .dsym files do not change upon code signing the .app. If y
 [xcode-share-scheme]: images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
 ## Build internals
-To build your project, we use `xcodebuild`, a command-line tool that allows you to perform build, query, analyze, test, and archive operations on your Xcode projects and workspaces. You can learn more about `xcodebuild` [here](../ios/xcodebuild.md).
+To build your project, we use `xcodebuild`, a command-line tool that allows you to perform build, query, analyze, test, and archive operations on your Xcode projects and workspaces.
 
 ## Supported versions and requirements
 The following versions of Xcode are supported on our VMs for macOS builds.

@@ -1,5 +1,5 @@
 ---
-title: Configure a Xamarin.Android build in App Center
+title: Configure a Xamarin Android build in App Center
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: siminapasat
@@ -12,7 +12,7 @@ ms.custom: build
 ms.tgt_pltfrm: xamarin-android
 ---
 
-# Building Xamarin.Android apps
+# Building Xamarin apps for Android
 
 To start building your first Xamarin Android app, you will need to the following:
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
@@ -45,7 +45,7 @@ App Center allows using different Mono environments bundled with the respective 
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Code signing
-A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/android/code-signing/xamarin.md).
+A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md).
 
 ### 3.6. Launch your successful build on a real device
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).

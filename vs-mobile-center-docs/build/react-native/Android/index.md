@@ -12,7 +12,7 @@ ms.custom: build
 ms.tgt_pltfrm: react-native
 ---
 
-# Building React Native Android apps
+# Building React Native apps for Android
 
 App Center can build React Native apps written in React Native version 0.34 or newer.
 
@@ -50,7 +50,7 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
 ### 3.6. Code signing
-A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing [here](~/build/android/code-signing/setup.md).
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about Android code signing [here](~/build/android/code-signing.md).
 
 ### 3.7. Distribute to a distribution group
 

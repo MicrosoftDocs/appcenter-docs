@@ -14,10 +14,9 @@ ms.tgt_pltfrm: android
 
 # Android Build
 
-You can build Android apps written in the following languages/frameworks:
+You can build Android apps written in [Java](~/build/android/first-build.md):
 
-* [Java](first-build/java.md)
-* [Xamarin](first-build/xamarin.md)
-* [React Native](first-build/react-native.md)
+- [Configuring your first build](~/build/android/first-build.md)
+- [Code Signing](~/build/android/code-signing.md)
 
 We are constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.
