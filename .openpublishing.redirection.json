@@ -108,10 +108,6 @@
     "redirect_url": "/mobile-center/distribution/auto-provisioning"
     },
     {
-    "source_path": "vs-mobile-center-docs/build/ios/first-build/index.md",
-    "redirect_url": "/mobile-center/build/ios/first-build"
-    },
-    {
     "source_path": "vs-mobile-center-docs/build/ios/first-build/xcode.md",
     "redirect_url": "/mobile-center/build/ios/first-build"
     },
@@ -128,10 +124,6 @@
     "redirect_url": "/mobile-center/build/react-native/ios/"
     },
     {
-    "source_path": "vs-mobile-center-docs/build/ios/code-signing/index.md",
-    "redirect_url": "/mobile-center/build/ios/code-signing"
-    },
-    {
     "source_path": "vs-mobile-center-docs/build/ios/code-signing/uploading-files.md",
     "redirect_url": "/mobile-center/build/ios/code-signing"
     },
@@ -144,10 +136,6 @@
     "redirect_url": "/mobile-center/build/ios/code-signing"
     },
     {
-    "source_path": "vs-mobile-center-docs/build/android/first-build/index.md",
-    "redirect_url": "/mobile-center/build/android/first-build"
-    },
-    {
     "source_path": "vs-mobile-center-docs/build/android/first-build/java.md",
     "redirect_url": "/mobile-center/build/android/first-build"
     },
@@ -158,10 +146,6 @@
     {
     "source_path": "vs-mobile-center-docs/build/android/first-build/react-native.md",
     "redirect_url": "/mobile-center/build/react-native/android/"
-    },
-    {
-    "source_path": "vs-mobile-center-docs/build/android/code-signing/index.md",
-    "redirect_url": "/mobile-center/build/android/code-signing"
     },
     {
     "source_path": "vs-mobile-center-docs/build/android/code-signing/setup.md",
