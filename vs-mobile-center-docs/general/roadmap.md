@@ -28,7 +28,8 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 ## Build service
 
 * Performance improvements for Mac-based builds
-
+* Build status notifications via email and webhooks
+* Upload multiple certificates & provisioning profiles to fully support automatic signing and app extensions for iOS & macOS
 
 ## Test service
 
