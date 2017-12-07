@@ -188,7 +188,7 @@ Crashes.setListener({
     getErrorAttachments(report) {
         return [
             ErrorAttachmentLog.attachmentWithText('Hello text attachment!', 'hello.txt'),
-            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, 'logo.png', 'image/png');
+            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, 'logo.png', 'image/png')
         ];
     }
 
