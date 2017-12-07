@@ -100,27 +100,18 @@ Here is an example of the delegate implementation that displays an alert dialog 
 ```
 ```swift
 func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
-  let alert: NSAlert = NSAlert()
-  alert.messageText = "Sorry about that!"
-  alert.informativeText = "Do you want to send an anonymous crash report so we can fix the issue?"
-  alert.addButton(withTitle: "Always send")
-  alert.addButton(withTitle: "Send")
-  alert.addButton(withTitle: "Don't send")
-  alert.alertStyle = NSWarningAlertStyle
-
-  switch (alert.runModal()) {
-  case NSAlertFirstButtonReturn:
-    MSCrashes.notify(with: .always)
-    break;
-  case NSAlertSecondButtonReturn:
-    MSCrashes.notify(with: .send)
-    break;
-  case NSAlertThirdButtonReturn:
-    MSCrashes.notify(with: .dontSend)
-    break;
-  default:
-    break;
+  let title: String = pushNotification.title ?? ""
+  var message: String = pushNotification.message ?? ""
+  var customData: String = ""
+  for item in pushNotification.customData {
+    customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
   }
+  message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
+  let alert: NSAlert = NSAlert()
+  alert.messageText = title
+  alert.informativeText = message
+  alert.addButton(withTitle: "OK")
+  alert.runModal()
 }
 ```
 
