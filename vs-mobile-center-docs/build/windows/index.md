@@ -14,7 +14,9 @@ ms.tgt_pltfrm: windows
 
 # Windows Build
 
-You can build Windows apps written in the following frameworks/languages:
-* [UWP C#](configure-build/uwp.md)
+You can build Windows [UWP](uwp/first-build.md) apps written in C#. 
 
-While in limited preview, some of the features might not be available to all users. If you have interest in a specific feature, but you cannot find it in the UI, contact us to get access to the latest bits.
+- [Configuring your first build](uwp/first-build.md)
+- [Build results](uwp/results.md)
+
+We are constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.

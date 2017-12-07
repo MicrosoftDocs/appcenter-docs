@@ -38,9 +38,9 @@ Once you have started the SDK, use the `trackEvent` method to track your events 
 
 ```javascript
 // import App Center Analytics at the top of the file.
-import Analytics from "appcenter-analytics";
+import Analytics from 'appcenter-analytics';
 
-Analytics.trackEvent("Video clicked", { Category: "Music", FileName: "favorite.avi" });
+Analytics.trackEvent('Video clicked', { Category: 'Music', FileName: 'favorite.avi' });
 ```
 
 This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
@@ -48,7 +48,7 @@ This function returns a promise, in which the success case returns an empty stri
 Properties for events are entirely optional. If you just want to track an event, use this sample instead:
 
 ```javascript
-Analytics.trackEvent("Video clicked");
+Analytics.trackEvent('Video clicked');
 ```
 
 ## Enable or disable App Center Analytics at runtime

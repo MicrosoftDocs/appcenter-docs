@@ -95,7 +95,7 @@ You can set custom properties by calling the `setCustomProperties()` API. A vali
 import AppCenter, {CustomProperties} from 'appcenter';
 
 const properties = new CustomProperties();
-properties.set("color", "blue").set("score", 10);
+properties.set('color', 'blue').set('score', 10);
 AppCenter.setCustomProperties(properties);
 ```
 
@@ -108,6 +108,6 @@ You may remove any custom property by calling the `clear()` API. This will only 
 import AppCenter, {CustomProperties} from 'appcenter';
 
 const properties = new CustomProperties();
-properties.clear("score");
+properties.clear('score');
 AppCenter.setCustomProperties(properties);
 ```

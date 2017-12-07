@@ -14,6 +14,8 @@ ms.tgt_pltfrm: android
 
 # Setting up an Android project for code signing
 
+To run an app on real devices during the development process or to distribute it via a beta program or in the Play Store it is required that the app is signed. Without code signing, the app can be only ran on an emulator.
+
 When App Center builds an Android application with a debug build type, a keystore associated with a developer is not required but can be uploaded. These builds will be automatically code signed with a debug key. For a release build that will be deployed, App Center will require a keystore to be uploaded.
 
 ## Generating a keystore
@@ -53,6 +55,6 @@ android {
 
 ```
 
-In the code above, the variable names allow security in keeping your signing credentials safe – the values will be encrypted and only available to the build agents at build time. You may choose to hardcode these if you prefer. You will be prompted for these values when [configuring a branch](~/build/android/first-build/index.md).
+In the code above, the variable names allow security in keeping your signing credentials safe – the values will be encrypted and only available to the build agents at build time. You may choose to hardcode these if you prefer. You will be prompted for these values when [configuring a branch](~/build/android/first-build.md).
 
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.

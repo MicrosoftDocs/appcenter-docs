@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Testing your latest build on a real device | App Center Build
+title: Testing your latest build on a real device
 description: How to test if your app starts on a real device
 keywords: test, build, ios, android
 author: siminapasat
@@ -10,16 +8,15 @@ ms.date: 03/28/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: ccc7e62f-90ad-4634-a25b-2e720fb34dff 
-
+ms.custom: build
 ms.reviewer: vigimm
-
 ---
 
 # Testing on Real Devices
 In this document, you'll learn how a successful build can be launched on a real device using App Center Test. Launching your app is very helpful when validating that your latest build is working.
 
 ## Configuring your branch
-First, the branch needs to be setup before it's ready to run the launch test. You can read more about configuring your branch in the Configure a build respectively for [Android](android/first-build/index.md) and [iOS](ios/first-build/index.md).
+First, the branch needs to be setup before it's ready to run the launch test. You can read more about configuring your branch in the Configure a build respectively for [Android](~/build/android/first-build.md) and [iOS](~/build/ios/first-build.md).
 
 Secondly, you need a subscription to App Center Test before you can enable launch test. If you're a first-time user of App Center Test, there's a free trial so you can see how it works. To activate your free trial, you can use the link below the _Run a launch test on a device_ option.
 

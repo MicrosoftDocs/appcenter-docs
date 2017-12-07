@@ -1,5 +1,5 @@
 ---
-title: App Center Build for Xamarin.iOS
+title: Configure a Xamarin iOS build in App Center
 description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
@@ -12,7 +12,7 @@ ms.custom: build
 ms.tgt_pltfrm: xamarin-ios
 ---
 
-# Building Xamarin.iOS apps
+# Building Xamarin apps for iOS
 
 To start building your first Xamarin iOS app, you will need to the following:
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
@@ -35,7 +35,7 @@ Before your first build, the Xamarin project needs to be configured.
 App Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
 
 #### 3.1.1. Building from the solution file (.sln)
-In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](solution-configuration-mappings.md) you can read.
+In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](~/build/xamarin/ios/solution-configuration-mappings.md) you can read.
 
 #### 3.1.2. Building from the project file (.csproj/.fsproj)
 In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
@@ -59,7 +59,7 @@ Simulator builds can only be ran on simulators and cannot be installed on the de
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.8. Code signing
-A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](../../code-signing/uploading-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
+A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
 ### 3.9. Launch your successful build on a real device
 Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
@@ -115,7 +115,7 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.ipa or .app)
-The .ipa is an iPhone application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](../../code-signing/index.md).
+The .ipa is an iPhone application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](~/build/ios/code-signing.md).
 
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 

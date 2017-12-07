@@ -1,5 +1,5 @@
 ---
-title: Building UWP apps
+title: Configure a C# UWP app in App Center
 description: How to set up a build for UWP C#
 keywords: build, windows
 author: siminapasat
@@ -30,6 +30,9 @@ Before your first build, the UWP project needs to be configured.
 
 ### 3.1. Select solution
 First, make sure the right solution is selected.
+
+> [!NOTE]
+> All projects referenced in the solution will be built, make sure those are only for UWP and in C#.
 
 ### 3.2. Configuration
 The available build configurations will populate from your solution. By default it is [Debug and Release](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#rwdxOEJDZ2piSGPk.97). Select which configuration should be built.

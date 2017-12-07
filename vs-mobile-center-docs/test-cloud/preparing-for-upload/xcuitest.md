@@ -29,7 +29,7 @@ If you encounter a problem, please file a GitHub
 
 ## Requirements
 
-* Xcode >= 9.0
+* XCode >= 9.0
 * Sierra or High Sierra
 * iOS >= 9.0
 

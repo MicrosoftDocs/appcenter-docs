@@ -6,7 +6,7 @@ author: siminapasat
 ms.author: siminap
 ms.date: 01/20/2017
 ms.topic: article
-ms.assetid: 72f1d1cc-d17f-4e37-91b7-1b835bd0885e
+ms.assetid: 3ebe875a-e8e0-4b76-bba1-277047a321b7
 ms.service: vs-appcenter
 ms.custom: build
 ---
@@ -19,8 +19,8 @@ To get started, a member of the app in App Center needs to connect to their sour
 
 App Center currently suppports to build apps with Git source control (TFVC is not supported) hosted on:
 
-    - Bitbucket
-    - GitHub
-    - Visual Studio Team Services (VSTS)
+- Bitbucket
+- GitHub
+- Visual Studio Team Services (VSTS)
 
 We are constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.
