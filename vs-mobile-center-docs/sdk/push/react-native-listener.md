@@ -15,8 +15,8 @@ Push.setListener({
     if (message === null || message === undefined) {
       // Android messages received in the background don't include a message. On Android, that fact can be used to
       // check if the message was received in the background or foreground. For iOS the message is always present.
-      title = "Android background";
-      message = "<empty>";
+      title = 'Android background';
+      message = '<empty>';
     }
 
     // Custom name/value pairs set in the App Center web portal are in customProperties

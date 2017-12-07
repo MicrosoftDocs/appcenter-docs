@@ -29,7 +29,7 @@ Please follow the [Getting Started](~/sdk/getting-started/react-native.md) secti
 Wherever you are using App Center Crashes, add the following import at the top of the file.
 ```javascript
 // Import App Center Crashes at the top of the file.
-import Crashes from "appcenter-crashes";
+import Crashes from 'appcenter-crashes';
 ```
 
 ## Generate a test crash
@@ -43,7 +43,7 @@ Crashes.generateTestCrash();
 It's also easy to generate a JavaScript crash. Add the following line to your code, which throws a JavaScript error and causes a crash.
 
 ```javascript
-throw new Error("This is a test javascript crash!");
+throw new Error('This is a test javascript crash!');
 ```
 
 > [!TIP]
@@ -134,7 +134,7 @@ Crashes.setListener({
 If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
 
 ```javascript
-import Crashes, { UserConfirmation } from "appcenter-crashes";
+import Crashes, { UserConfirmation } from 'appcenter-crashes';
 
 // Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
 Crashes.notifyUserConfirmation(UserConfirmation.DONT_SEND);
@@ -182,13 +182,13 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
 
 ```javascript
-import Crashes, { ErrorAttachmentLog } from "appcenter-crashes";
+import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
 
 Crashes.setListener({
     getErrorAttachments(report) {
         return [
-            ErrorAttachmentLog.attachmentWithText("Hello text attachment!", "hello.txt"),
-            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, "logo.png", "image/png");
+            ErrorAttachmentLog.attachmentWithText('Hello text attachment!', 'hello.txt'),
+            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, 'logo.png', 'image/png');
         ];
     }
 
