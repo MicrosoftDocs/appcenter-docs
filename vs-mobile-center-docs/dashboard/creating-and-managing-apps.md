@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 04/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -19,6 +19,10 @@ To create an app, log in and click the **Add new** dropdown and choose **Add new
 ## Accessing apps
 
 All apps you belong to can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
+
+## App secrets
+
+App secret is like an api key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## App roles
 
