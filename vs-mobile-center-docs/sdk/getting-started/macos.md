@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 11/15/2017
+ms.date: 12/06/2017
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -45,6 +45,9 @@ If you have already created your app in the App Center portal, you can skip this
 5. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
+
+> [!NOTE]
+> App secret is like an api key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## 3. Add the App Center SDK modules
 
