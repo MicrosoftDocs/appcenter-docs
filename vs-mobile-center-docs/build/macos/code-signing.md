@@ -22,7 +22,7 @@ When **Automatically manage signing** is enabled only signing with a Mac Develop
 >To build your project with App Center, make sure that the files you are uploading match the code signing in the targets of your project. App Center will build the "build configuration" selected in the scheme.
 
 ### Automatic signing and CI
-With automatic signing, there are two steps to exporting an app: Archive and Export. Archive creates an archive file signed with **development code signing**. Export then re-signs the archive with a **certificate matching the export method** (App Store, Developer ID, with or without Provisioning Profile). If the used export method is not Development then the signing process requires two different certificates and optionally provisioning profiles: one for the Archive action and one for the Export action.
+When using automatic signing the `Archive` action first creates an archive file signed with **development code signing**. Then, the `Export` action re-signs the archive with a **certificate matching the export method** (App Store, Developer ID, Development with or without Provisioning Profile). If the used export method is not `development` then the signing process requires two different certificates and optionally provisioning profiles: one for the `Archive` action and one for the `Export` action.
 
 >[!IMPORTANT]
 >At the moment, App Center only supports to sign your app with the Mac Developer certificate when "Automatically manage signing" is enabled. We will add support to sign with a Developer ID or App Store certificate at a later time.
