@@ -21,7 +21,7 @@ In this tutorial, you will learn how to set up a sample Android app with App Cen
 - Create [GitHub account](https://github.com/join).
 - [Download Android Studio](https://developer.android.com/studio/index.html) and [install it on your local machine](https://developer.android.com/studio/install.html).
 
-## Login to Github and fork the repository
+## Login to GitHub and fork the repository
 1. Login to your [GitHub account](https://github.com/join).
 2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-android).
 3. Click **Fork** at the top right hand corner of the page.

@@ -13,7 +13,7 @@ ms.custom: test
 
 # App Center Test
 
-App Center Test is a test automation service for native and hybrid mobile apps, also known as Test Cloud. Tests written using supported frameworks can be run with little modification on hundreds of unique device model and operating system configurations hosted in a Microsoft data center. Test runs can be initiated using the [App Center Command Line Interface (CLI) tool](~/cli/index.md) or the public [REST API](https://docs.appcenter.ms/api/#/test). Test results, including all associated media assets, are stored in App Center for viewing at any time.
+App Center Test is a test automation service for native and hybrid mobile apps, also known as Test Cloud. Tests written using supported frameworks can be run with little modification on hundreds of unique device model and operating system configurations hosted in a Microsoft data center. Test runs can be initiated using the [App Center Command Line Interface (CLI) tool](~/cli/index.md) or the public [REST API](https://openapi.appcenter.ms/#/test). Test results, including all associated media assets, are stored in App Center for viewing at any time.
 
 Test runs are executed in a hosted fashion, meaning the necessary assets (typically an app binary and test files) are uploaded to Test Cloud and the test run is executed entirely within our data center environment. Generated assets such as screenshots, video, and device logs are retained for test report viewing.
 

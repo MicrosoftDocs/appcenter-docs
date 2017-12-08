@@ -158,7 +158,7 @@ appcenter codepush deployment list MyApp
 
 
 
-## Mobile Center CLI CodePush Cheat Sheet:
+## App Center CLI CodePush Cheat Sheet:
 
 | Command                               | Description                              |  Example               |
 | ------------------------------------- | ---------------------------------------- | ---------------------- |
