@@ -35,7 +35,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
   If you encounter an error, your codesigning may not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/mac/identifier/bundle/) and edit the App ID to allow Push Notifications.
 
 ## Build and Distribute the app
-1. **Add, commit, and push the changes to Github.**
+1. **Add, commit, and push the changes to GitHub.**
 
 2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**.
 

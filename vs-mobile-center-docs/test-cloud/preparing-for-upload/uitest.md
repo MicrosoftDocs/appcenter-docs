@@ -42,7 +42,7 @@ The command line parameters include the following pieces of information that is 
 After the test run has been created, ensure that the following software is installed on the computer that will submit the tests: 
 
 1. Ensure that the computer has [Node.js](https://nodejs.org/en/) 6.3 installed.
-2. Install the [App Center CLI](~/cli/index.md). Instructions for [installing the App Center CLI](https://github.com/Microsoft/AppCenter-CLI#installation) maybe be found in the [README.md on Github](https://github.com/Microsoft/AppCenter-CLI).
+2. Install the [App Center CLI](~/cli/index.md). Instructions for [installing the App Center CLI](https://github.com/Microsoft/AppCenter-CLI#installation) maybe be found in the [README.md on GitHub](https://github.com/Microsoft/AppCenter-CLI).
 
 ## Preparing Xamarin.Android Apps
 

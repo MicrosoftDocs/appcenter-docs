@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for your interest in contributing to the Mobile Center documentation!
+Thank you for your interest in contributing to the App Center documentation!
 
-In this topic, you'll see the basic process for adding or updating content in the [Mobile Center documentation site](https://docs.microsoft.com/mobile-center).
+In this topic, you'll see the basic process for adding or updating content in the [App Center documentation site](https://docs.microsoft.com/appcenter).
 
 In this topic, we'll cover:
 
@@ -52,7 +52,7 @@ The Visual Studio team will review your PR and let you know if the change looks 
 
 The maintainers will merge your PR into the master branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from master branch into the live branch and then you'll be able to see your contribution live at https://docs.microsoft.com/mobile-center/.
+On a certain cadence, we push all commits from master branch into the live branch and then you'll be able to see your contribution live at https://docs.microsoft.com/appcenter/.
 
 ## DOs and DON'Ts
 

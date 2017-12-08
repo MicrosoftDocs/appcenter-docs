@@ -38,19 +38,19 @@ By default, a new build is triggered every time a developer pushes to a configur
 ### 3.2. Build variant
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
-### 3.4. Increment version number
+### 3.3. Increment version number
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
-### 3.3. Code signing
+### 3.4. Code signing
 A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing [here](~/build/android/code-signing.md).
 
-### 3.4. Launch your successful build on a real device
+### 3.5. Launch your successful build on a real device
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md)
 
-### 3.5. build.gradle File
+### 3.6. build.gradle File
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
-### 3.6. Distribute to a distribution group
+### 3.7. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.

@@ -150,7 +150,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file.
 
-2. From the release notes on Github, please also download the corresponding frameworks of the App Center SDK for iOS.
+2. From the release notes on GitHub, please also download the corresponding frameworks of the App Center SDK for iOS.
 
 3. Unzip both archives and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **AppCenterReactNativeShared** which contains a single framework for the React Native bridge for iOS which is also required.
 

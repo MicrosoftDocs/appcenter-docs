@@ -166,7 +166,7 @@ Create & manage your distribution groups, upload your release and distribute it 
 
 ### **Mar 30, 2017**
 - Organizations: Share apps among your team members by creating and grouping them within an Organization. Find them under Settings.
-- Bitbucket: Connect to source code repositories using GitHub... and now BitBucket, too! VSTS support coming soon.  
+- Bitbucket: Connect to source code repositories using GitHub... and now Bitbucket, too! VSTS support coming soon.  
 - New Build commands in the CLI: Trigger a new build for pre-configured branches, view the build status of a branch, download logs for a build and get a list of branches for your app using CLI v0.7.0.
 - Build React Native apps with Yarn: Use the popular JavaScript package manager, Yarn, when building React Native apps. Dependency installs are now also faster and deterministic.
 - Release notes from your commits: When building, release notes now auto-populate with the corresponding commit message.  

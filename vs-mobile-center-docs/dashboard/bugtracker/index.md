@@ -1,6 +1,6 @@
 ---
 title: App Center bug tracker Documentation
-description: how to integrate App Center with bug trackers like Visual Studio Team Services (VSTS) and Github
+description: how to integrate App Center with bug trackers like Visual Studio Team Services (VSTS) and GitHub
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
@@ -13,7 +13,7 @@ ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
 # App Center bug tracker integration
 ## Overview
 
-App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Visual Studio Team Services (VSTS) and Github. Users need to have manage or developer permissions to be able to create and configure the bug tracker.
+App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Visual Studio Team Services (VSTS) and GitHub. Users need to have manage or developer permissions to be able to create and configure the bug tracker.
 
 ## Getting Started
 
@@ -37,8 +37,8 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 	1. For GitHub:
 
-		1. Login with your Github credentials and click **Authorize MobileCenter**.
-		1. Select which Github repository to integrate the bug tracker with and click **Next**.
+		1. Login with your GitHub credentials and click **Authorize MobileCenter**.
+		1. Select which GitHub repository to integrate the bug tracker with and click **Next**.
 		1. Under **Add Bug Tracker**, fill in fields for **Number of crashes** and click **Add**:
 			- Number of crashses is a threshold you can set for the minimum number of crashes to happen in a crash group before an issue is created in GitHub.
 
