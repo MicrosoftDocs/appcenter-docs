@@ -29,10 +29,11 @@ After selecting a repository, select the branch you want to build. By default, a
 Before your first build, the UWP project needs to be configured.
 
 ### 3.1. Select solution
-First, make sure the right solution is selected.
+First, make sure the right solution is selected. The available solutions in your repository will populate if they are located within the range of analysis. 
 
 > [!NOTE]
-> All projects referenced in the solution will be built, make sure those are only for UWP and in C#.
+> All projects referenced in the solution will be built, make sure those are only for UWP and in C#.</br>
+> For best performance, the analysis is limited to two directory levels including the root of your repository. 
 
 ### 3.2. Configuration
 The available build configurations will populate from your solution. By default it is [Debug and Release](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#rwdxOEJDZ2piSGPk.97). Select which configuration should be built.

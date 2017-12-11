@@ -36,7 +36,9 @@ Before your first build, the Xamarin project needs to be configured.
 By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.2. Project and Configuration
-The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
+The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and selecte the appropriate configuration. 
+> [!NOTE]
+> For best performance, the analysis is currently limited to four directory levels including the root of your repository. 
 
 ### 3.3. Mono version
 App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).

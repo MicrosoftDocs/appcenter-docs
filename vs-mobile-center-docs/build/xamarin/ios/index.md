@@ -32,7 +32,9 @@ After selecting a repository, select the branch you want to build. By default al
 Before your first build, the Xamarin project needs to be configured.
 
 ### 3.1. Project/solution
-App Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
+App Center automatically detects the solution and project files in your repository if they are located within the range of analysis. Select the **.sln** or **.csproj/.fsproj** you would like to build. 
+> [!NOTE]
+> For best performance, the analysis is currently limited to two directory levels for **.sln** and four directory levels for **.csproj/fsproj** including the root of your repository. 
 
 #### 3.1.1. Building from the solution file (.sln)
 In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](~/build/xamarin/ios/solution-configuration-mappings.md) you can read.
