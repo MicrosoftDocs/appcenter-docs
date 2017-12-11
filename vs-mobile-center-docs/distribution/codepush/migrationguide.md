@@ -132,7 +132,7 @@ This section was constructed to enable you to see some of the most common CodePu
 
 **Creating an App in the App Center CLI:**
 ```
-appcenter apps create -p "React-Native" -o "iOS" -d "MyApp"
+appcenter apps create -d MyApp -o iOS -p React-Native
 ```
 **Releasing an Update App Center CLI:**
 ```
