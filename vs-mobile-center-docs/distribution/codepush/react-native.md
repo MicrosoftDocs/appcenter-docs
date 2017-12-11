@@ -312,6 +312,8 @@ After installing the plugin and syncing your Android Studio project with Gradle,
 
 **For React Native >= v0.29**
 
+If you are integrating CodePush into React Native application please do the following steps:
+
 Update the `MainApplication.java` file to use CodePush via the following changes:
 
 ```java
@@ -342,6 +344,40 @@ public class MainApplication extends Application implements ReactApplication {
             );
         }
     };
+}
+```
+
+If you are integrating React Native into existing native application please do the following steps:
+
+Update `MyReactActivity.java` (it could be named differently in your app) file to use CodePush via the following changes:
+
+```java
+...
+// 1. Import the plugin class.
+import com.microsoft.codepush.react.CodePush;
+
+public class MyReactActivity extends Activity {
+    private ReactRootView mReactRootView;
+    private ReactInstanceManager mReactInstanceManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        ...
+        mReactInstanceManager = ReactInstanceManager.builder()
+                // ...
+                // Add CodePush package
+                .addPackage(new CodePush("deployment-key-here", getApplicationContext(), BuildConfig.DEBUG))
+                // Get the JS Bundle File via CodePush
+                .setJSBundleFile(CodePush.getJSBundleFile())
+                // ...
+                
+                .build();
+        mReactRootView.startReactApplication(mReactInstanceManager, "MyReactNativeApp", null);
+
+        setContentView(mReactRootView);
+    }
+
+    ...
 }
 ```
 
@@ -635,7 +671,7 @@ Taking advantage of the `Staging` and `Production` deployments allows you to ach
 4. Run your production/release build of your app, sync the update from the server and verify it works as expected
 
  > [!TIP]
- > If you want to get really fancy, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (e.g. did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (e.g. `code-push promote -a <ownerName>/<appName> Staging Production -r 20%`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100%`.*
+ > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (e.g. did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (e.g. `code-push promote -a <ownerName>/<appName> Staging Production -r 20%`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100%`.
 
 You'll notice that the above steps refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is just like handling environment-specific config for any other service your app uses (e.g. Facebook). However, if you're looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platform(s) your app is targeting.
 
@@ -1522,8 +1558,4 @@ Additionally, if you'd like more details of what a complete mobile CI/CD workflo
 ## TypeScript Consumption
 
 This module ships its `*.d.ts` file as part of its NPM package, which allows you to simply `import` it, and receive intellisense in supporting editors (e.g. Visual Studio Code), as well as compile-time type checking if you're using TypeScript. For the most part, this behavior should just work out of the box, however, if you've specified `es6` as the value for either the `target` or `module` [compiler option](http://www.typescriptlang.org/docs/handbook/compiler-options.html) in your [`tsconfig.json`](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, then just make sure that you also set the `moduleResolution` option to `node`. This ensures that the TypeScript compiler will look within the `node_modules` for the type definitions of imported modules. Otherwise, you'll get an error like the following when trying to import the `react-native-code-push` module: `error TS2307: Cannot find module 'react-native-code-push'`.
-
----
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
