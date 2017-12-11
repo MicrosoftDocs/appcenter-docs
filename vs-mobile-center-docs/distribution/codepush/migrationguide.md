@@ -147,7 +147,7 @@ appcenter codepush deployment list MyApp
 
 | CodePush                              | App Center                               |
 | ------------------------------------- | ---------------------------------------- |
-| `code-push app add MyApp ios react-native` | `appcenter app create -d MyApp -o iOS -p React-Native` |
+| `code-push app add MyApp ios react-native` | `appcenter apps create -d MyApp -o iOS -p React-Native` |
 |  N/A                                     |   `appcenter apps set-current <ownerName>/MyApp`  |                
 |  N/A                                     |   `appcenter apps get-current`  |    
 | `code-push deployment add myApp <DeploymentName>` | if current app is set: `appcenter codepush deployment add <DeploymentName>`<br/>if not: `appcenter codepush deployment add -a <ownerName>/MyApp <DeploymentName>` |
@@ -169,7 +169,7 @@ appcenter codepush deployment list MyApp
 | `appcenter tokens` | Manage API tokens | `appcenter tokens list`
 | `appcenter orgs` | Manage organizations | `appcenter orgs list`
 | | |
-| `appcenter apps create` |  Create a new app | `appcenter apps create -d MyApp -p React-Native -o iOS`
+| `appcenter apps create` |  Create a new app | `appcenter apps create -d MyApp -o Android -p React-Native`
 | `appcenter apps delete` | Delete an app | `appcenter apps delete -a ownerName/MyApp`
 | `appcenter apps get-current` |  Get the application that's set as default for all CLI commands | `-`
 | `appcenter apps list` |  Get list of configured applications | `-`
