@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 11/29/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -186,10 +186,30 @@ import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
 
 Crashes.setListener({
     getErrorAttachments(report) {
-        return [
-            ErrorAttachmentLog.attachmentWithText('Hello text attachment!', 'hello.txt'),
-            ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, 'logo.png', 'image/png')
-        ];
+        const textAttachment = ErrorAttachmentLog.attachmentWithText('Hello text attachment!', 'hello.txt');
+        const binaryAttachment = ErrorAttachmentLog.attachmentWithBinary(`${imageAsBase64string}`, 'logo.png', 'image/png');
+        return [textAttachment, binaryAttachment];
+    }
+
+    // Other callbacks must also be defined at the same time if used.
+    // Default values are used if a method with return parameter is not defined.
+});
+```
+
+In case you want to setup the `getErrorAttachments` callback to work with ES2107 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
+
+```javascript
+import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
+
+Crashes.setListener({
+    getErrorAttachments(report) {
+        return (async () => {
+            const textContent = await readTextFileAsync(); // use your async function to read text file
+            const binaryContent = await readBinaryFileAsync(); // use your async function to read binary file
+            const textAttachment = ErrorAttachmentLog.attachmentWithText(textContent, 'hello.txt');
+            const binaryAttachment = ErrorAttachmentLog.attachmentWithBinary(binaryContent, 'logo.png', 'image/png');
+            return [textAttachment, binaryAttachment];
+        })();
     }
 
     // Other callbacks must also be defined at the same time if used.
