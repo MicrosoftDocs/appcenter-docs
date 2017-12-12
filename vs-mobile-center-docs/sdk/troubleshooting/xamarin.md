@@ -68,10 +68,6 @@ ms.tgt_pltfrm: xamarin
 
 If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
 
-## Push setup issues
-
-[!include[](../xamarin-android-push-setup-issues.md)]
-
 ## You are seeing messages in the console that indicate that the database could not be opened on iOS
 
 App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.16.0 or later.

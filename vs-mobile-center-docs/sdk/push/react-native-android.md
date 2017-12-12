@@ -33,42 +33,46 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 Those steps modify your **MainApplication.java** file, adding `AppCenterReactNativePushPackage` there.
 
+## Set the Sender ID
+
+The App Center Push SDK requires the **Sender ID** obtained in the "Prerequisites" section. Look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
+
+```java
+Push.setSenderId("{Your Sender ID}");
+SoLoader.init(this, false);
+```
+
+Make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. Please check out the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
+
 ## Intercept push notifications
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> Firebase does not generate notifications when the push is received in foreground.
+> A notification is not generated when your application receives a push in the foreground.
 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
 > The event is triggered when you click on the notification.
 
 > [!NOTE]
-> The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
-> **title** and message are only available in **foreground** pushes.
+> The background notification click callback does **NOT** expose **title** and **message**.
+> **Title** and **message** are only available in **foreground** pushes.
 
 [!include[](react-native-listener.md)]
 
 ## Existing Firebase Analytics users
 
->[!NOTE]
->App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
-
-If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenterReactNativePushPackage` is instantiated, like from `MainApplication.onCreate`:
+The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
 
 ```java
-import com.microsoft.appcenter.push.Push;
-
-...
-
 Push.enableFirebaseAnalytics(getApplication());
+SoLoader.init(this, false);
 ```
 
 ## Enable or disable App Center Push at runtime
 
 You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
-
 
 ```javascript
 import Push from 'appcenter-push';

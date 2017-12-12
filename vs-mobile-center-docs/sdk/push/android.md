@@ -26,7 +26,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '1.0.0'
+       def appCenterSdkVersion = '1.1.0'
        compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
     ```
@@ -37,13 +37,14 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `AppCenter.start()` method to start App Center Push service.
+Add `Push.class` to your `AppCenter.start()` method to start App Center Push service. You must set the **Sender ID** before calling `AppCenter.start()`.
 
 ```java
+Push.setSenderId("{Your Sender ID}");
 AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
 Android Studio will automatically suggest the required import statement once you add `Push.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
@@ -57,14 +58,14 @@ import com.microsoft.appcenter.push.Push;
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> Firebase does not generate notifications when the push is received in foreground.
+> A notification is not generated when your application receives a push in the foreground.
 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
 > The event is triggered when you click on the notification.
 
 > [!NOTE]
-> The Firebase SDK does **NOT** expose **title** and **message** to the background notification click callback.
+> The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.
 
 You need to register the listener before calling `AppCenter.start` as shown in the following example:
@@ -125,10 +126,7 @@ public class MyPushListener implements PushListener {
 
 ## Existing Firebase Analytics users
 
->[!NOTE]
->App Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. App Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
-
-If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
+App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());
