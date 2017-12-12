@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: sdk
 ---
 
-# Migrate to App Center Xamarin SDK v1.0.0
+# Migrate to App Center Xamarin SDK
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -20,7 +20,7 @@ ms.custom: sdk
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
-Follow these steps to update your current preview SDK to App Center Xamarin SDK v1.0.0:
+Follow these steps to update your current preview SDK to App Center Xamarin SDK.
 
 1. Replace the following NuGet packages:
 
@@ -29,8 +29,6 @@ Follow these steps to update your current preview SDK to App Center Xamarin SDK 
     * Uninstall **Microsoft.Azure.Mobile.Distribute** and install **Microsoft.AppCenter.Distribute**.
     * Uninstall **Microsoft.Azure.Mobile.Push** and install **Microsoft.AppCenter.Push**.
     * Uninstall **Microsoft.Azure.Mobile** after you replaced other packages if you still have it.
-
-    If you are using **project.json** you can just search and replace the packages IDs and restore (in that case you also need to change version to **1.0.0**), but that does not work for **packages.config**-based projects (for those you have to uninstall and reinstall).
 
     Don't forget to update your PCL or .NET standard projects along with your Android or iOS specific projects if you have Mobile Center integrated in portable code (such as when you use **Xamarin Forms**).
 

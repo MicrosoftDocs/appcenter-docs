@@ -26,7 +26,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ``` java
 dependencies {  
-      def appCenterSdkVersion = '1.0.0'
+      def appCenterSdkVersion = '1.1.0'
       compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
 }
 ```
