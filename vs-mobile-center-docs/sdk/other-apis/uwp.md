@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.service: vs-appcenter
@@ -75,6 +75,9 @@ AppCenter.SdkVersion;
 ## Use custom properties
 
 App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+
+> [!NOTE]
+> Only devices that have [Push](../push/uwp.md) successfully registered are matched in audiences.
 
 You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# datatypes: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 

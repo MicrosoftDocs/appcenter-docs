@@ -2,9 +2,9 @@
 title: Other iOS APIs
 description: Other APIs in the App Center SDK for iOS
 keywords: sdk
-author: troublemakerben
-ms.author: bereimol
-ms.date: 09/27/2017
+author: elamalani
+ms.author: emalani
+ms.date: 12/12/2017
 ms.topic: article
 ms.assetid: f79abed4-6e50-4d1c-aa1e-0b78b764908d
 ms.service: vs-appcenter
