@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani 
 ms.author: elamalani 
-ms.date: 11/17/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -26,14 +26,11 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
-
 > [!IMPORTANT]
-> Crash reporting on windows requires the app to be distributed through the Windows Store.
-
-
-> [!NOTE]
-> Crashes will only be sent if the device is plugged in to power, this includes phones.
-
+> * Crash reporting is enabled only on devices running Windows 10 Creators update or more recent (version 10.0.15063).
+> * Crash reporting on Windows requires the app to be distributed through the Microsoft Store.
+> * Crashes will only be sent if the device is plugged in to power, this includes phones.
+> * Crashes sent via application associated with the Microsoft Store but not installed from the Microsoft Store (like when using bundle directly, which includes installing via App Center portal) will appear on the portal without the symbols (no method names or class names).
 
 ### Users consent to send a crash log
 
@@ -63,3 +60,6 @@ Add or edit the following call to your application's **constructor** to include 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Crashes));
 ```
+
+> [!IMPORTANT]
+> None of the other API calls provided by the `Crashes` class are supported on UWP, they work only for Xamarin. UWP only supports starting Crashes with `AppCenter.Start`.
