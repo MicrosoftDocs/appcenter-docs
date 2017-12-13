@@ -223,7 +223,7 @@ Crashes.setListener({
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 > [!NOTE]
-> The size limit is currently 1.4 MB on Android and 10 MB on iOS. Attempting to send a larger attachment will trigger an error.
+> The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
 
 ## Enable or disable App Center Crashes at runtime
 
