@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: vs-appcenter
@@ -45,7 +45,7 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 3. Modify AndroidManifest.xml
 
-Edit **AndroidManifest.xml** and insert the following `<receiver>` elements into the `<application>` section:
+Edit **AndroidManifest.xml** and insert the following permission **before** the `<application>` section:
 
 ```xml
     <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
