@@ -70,6 +70,7 @@
 ### [Tutorials](distribution/codepush/Tutorials.md)
 ### [VSTS Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
+## [Distribution with VSTS](distribution/vsts-deploy.md)
 
 # [Crashes](crashes/index.md)
 ## [Android](crashes/android.md)
