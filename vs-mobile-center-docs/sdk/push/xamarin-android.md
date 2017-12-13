@@ -17,18 +17,19 @@ ms.tgt_pltfrm: xamarin.android
 
 ### 3. Customize Proguard configuration
 
-To ensure that the Proguard optimizer doesn't remove certain classes, you must customize its configuration.
+If you use Proguard, you have to customize its configuration for Push.
 
 #### 3.1. Create a Proguard configuration file
 
 >[!NOTE]
->If you already have a Proguard configuration file in your project, you may skip to step 1.3.2.
+>If you don't use Proguard or if you already have a Proguard configuration file in your project, you may skip this section.
 
 Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
 
 ![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
 
 #### 3.2. Add customization to Proguard configuration file
+
 In your Xamarin.Android project, please add the following line to your `proguard.cfg` file:
 
 ```
@@ -48,8 +49,8 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 Edit **AndroidManifest.xml** and insert the following permission **before** the `<application>` section:
 
 ```xml
-    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
-    <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+<uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+<permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 ```
 
 ### 4. Start App Center Push
