@@ -62,7 +62,7 @@ func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MS
 ```
 
 > [!NOTE]
-> The size limit is currently 10 MB. Attempting to send a larger attachment will trigger an error.
+> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 ## Disabling Mach exception handling
 

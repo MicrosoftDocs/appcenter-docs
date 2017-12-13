@@ -27,4 +27,4 @@ ms.custom: sdk
 
 ### Android, Xamarin.Android (including Forms on Android), React Native for Android
 
-1. The size limit for each crash attachment on Android is currently 1.4 MB (while iOS limit is 10 MB).
+1. The size limit for each crash attachment on Android is currently 1.4 MB (while iOS limit is 7 MB).
