@@ -145,4 +145,25 @@ To resolve this issue, either remove PackageTargetFallback (tends to be in older
 ## My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
 
 It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If yes, you need to go to your Pods project and ensure it is set to use the same signing method as your Main project. If you set both Pods project and Main project to have the same singing configuration, this should resolve the issue. 
-If your Pods are not checked-in into your repository, it might be different issues and there are few workarounds you can use with [pre-build scripts](~/build/custom/scripts/index.md#pre-build) in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964).
+If your Pods are not checked-in into your repository, it might be different issues and there are few workarounds you can use with [pre-build script](~/build/custom/scripts/index.md#pre-build) in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964).
+
+## I want to run unit tests for my Xamarin application, how can that be done?
+
+To run unit tests in your Xamarin builds you have to use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run and display the results:
+
+```bash
+echo "Found NUnit test projects:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*Test.*\.csproj' -exec echo {} \;
+echo
+echo "Building NUnit test projects:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*Test.*\.csproj' -exec msbuild {} \;
+echo
+echo "Compiled projects to run NUnit tests:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*Test.*\.dll' -exec echo {} \;
+echo
+echo "Running NUnit tests:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*Test.*\.dll' -exec nunit3-console {} \;
+echo
+echo "NUnit tests result:"
+find . -name 'TestResult.xml' -exec cat {} \;
+```
