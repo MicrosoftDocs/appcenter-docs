@@ -12,6 +12,7 @@ ms.service: vs-appcenter
 
 # Creating and managing apps
 
+
 ## Creating an app
 
 To create an app, log in and click the **Add new** dropdown and choose **Add new app**.
