@@ -62,9 +62,12 @@ Lastly, add some release notes for your distribution.
 
 By default, your app will distibuted to the Collaborators group.
 Optionally, you can specify a distribution group by providing the App Center
-Distribution Group ID.
-
-![Distribution group][vsts-deploy-app-center-group]
+Distribution Group ID. This can be found by first selecting a distribution group, and
+then viewing the distribution group settings.
+![Finding the page with the distribution group ID][vsts-deploy-group-id]
+You'll be able to find the distribution group ID below the distribution group
+name.
+![Location of the distribution group ID][vsts-deploy-app-center-group]
 
 ### Distributing the signed builds to App Center
 
@@ -83,5 +86,6 @@ can download the signed build directly from App Center, or further re-distribute
 [vsts-deploy-app-center-slug]: images/vsts-deploy-app-center-slug.png
 [vsts-deploy-app-center-binary]: images/vsts-deploy-app-center-binary.png
 [vsts-deploy-app-center-notes]: images/vsts-deploy-app-center-notes.png
+[vsts-deploy-group-id]: images/vsts-deploy-group-id.png
 [vsts-deploy-app-center-group]: images/vsts-deploy-app-center-group.png
 [vsts-deploy-app-center-releases]: images/vsts-deploy-app-center-releases.png
