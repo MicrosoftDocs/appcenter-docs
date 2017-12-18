@@ -4,7 +4,7 @@ description: Migration to App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/15/2017
+ms.date: 12/18/2017
 ms.topic: article
 ms.assetid: 279e0ad3-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -145,9 +145,9 @@ Follow these steps to update your current preview SDK to App Center React Native
 13. [JavaScript] Replace the old `mobile-center` import statements in JS with `appcenter`:
 
     ```javascript
-    import Analytics from 'appcenter-analytics';
-    import Crashes from 'appcenter-crashes';
-    import Push from 'appcenter-push';
+    import Analytics from 'mobile-center-analytics';
+    import Crashes from 'mobile-center-crashes';
+    import Push from 'mobile-center-push';
     import MobileCenter from 'mobile-center';
     ```
 
