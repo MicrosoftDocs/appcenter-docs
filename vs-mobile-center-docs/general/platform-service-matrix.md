@@ -1,6 +1,6 @@
 ---
-title: App Center Platform Services Matrix
-description: App Center matrix for platforms and services
+title: App Center Operating System/Platform Services Matrix
+description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
@@ -10,15 +10,17 @@ ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
 ---
 
-# Platform and Services Matrix
+# OS/Platform and Services Matrix
 
-The table below lists all the platforms and their supported services in App Center:
+The table below lists all the Operating System and Platforms and their supported services in App Center:
 
-| Platform | Build | Test | Distribute | Crashes | Analytics | Push |
+| OS/Platform | Build | Test | Distribute | Crashes | Analytics | Push |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
 | `iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `React Native` | Yes  | Yes  | No | Yes | Yes | Yes |
-| `Windows UWP` | Yes  | No  | Yes | No | Yes | Yes |
-| `Xamarin` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `macOS` | Yes  | No  | Yes | Yes | Yes | Yes |
+| `macOS` | Yes  | -  | Yes | Yes | Yes | Yes |
+| `React Native - iOS` | Yes  | Yes  | - | Yes | Yes | Yes |
+| `React Native - Android` | Yes  | Yes  | - | Yes | Yes | Yes |
+| `Windows - UWP` | Yes  | -  | Yes | Yes | Yes | Yes |
+| `Xamarin - iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
+| `Xamarin - Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
