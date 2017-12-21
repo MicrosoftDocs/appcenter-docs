@@ -6,13 +6,30 @@ description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/13/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin.android
 ---
+
+# App Center Push
+
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+> * [Xamarin.Android](xamarin-android.md)
+> * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
+> * [macOS](macos.md)
+
+> [!NOTE]
+> If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/xamarin-android.md).
+
 [!include[](introduction-android.md)]
 
 ### 3. Customize Proguard configuration
