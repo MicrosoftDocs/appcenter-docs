@@ -1,16 +1,3 @@
-# App Center Push
-
-> [!div class="op_single_selector"]
-> * [Android](android.md)
-> * [iOS](ios.md)
-> * [UWP](uwp.md)
-> * [Xamarin.Android](xamarin-android.md)
-> * [Xamarin.iOS](xamarin-ios.md)
-> * [Xamarin.Forms](xamarin-forms.md)
-> * [React Native Android](react-native-android.md)
-> * [React Native iOS](react-native-ios.md)
-> * [macOS](macos.md)
-
 App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.

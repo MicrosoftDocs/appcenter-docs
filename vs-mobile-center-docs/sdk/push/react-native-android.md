@@ -4,13 +4,29 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
+
+# App Center Push
+
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+> * [Xamarin.Android](xamarin-android.md)
+> * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
+> * [macOS](macos.md)
+
+> [!NOTE]
+> If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/react-native-android.md).
 
 [!include[](introduction-android.md)]
 
@@ -35,7 +51,7 @@ Those steps modify your **MainApplication.java** file, adding `AppCenterReactNat
 
 ## Set the Sender ID
 
-The App Center Push SDK requires the **Sender ID** obtained in the "Prerequisites" section. Look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
+The App Center Push SDK requires the **Sender ID** obtained in the "Prerequisites" section. Look for the `onCreate` method in the **MainApplication.java** file and add the following before `SoLoader.init`:
 
 ```java
 Push.setSenderId("{Your Sender ID}");

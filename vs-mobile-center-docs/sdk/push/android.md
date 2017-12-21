@@ -4,13 +4,29 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/23/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
+
+# App Center Push
+
+> [!div class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [UWP](uwp.md)
+> * [Xamarin.Android](xamarin-android.md)
+> * [Xamarin.iOS](xamarin-ios.md)
+> * [Xamarin.Forms](xamarin-forms.md)
+> * [React Native Android](react-native-android.md)
+> * [React Native iOS](react-native-ios.md)
+> * [macOS](macos.md)
+
+> [!NOTE]
+> If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/android.md).
 
 [!include[](introduction-android.md)]
 
