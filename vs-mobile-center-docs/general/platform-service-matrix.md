@@ -17,6 +17,8 @@ The table below lists all the Operating System and Platforms and their supported
 | OS/Platform | Build | Test | Distribute | Crashes | Analytics | Push |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
+| `Cordova - iOS` | No  | Yes  | - | Yes | Yes | Yes |
+| `Cordova - Android` | No  | Yes  | - | Yes | Yes | Yes |
 | `iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
 | `macOS` | Yes  | -  | Yes | Yes | Yes | Yes |
 | `React Native - iOS` | Yes  | Yes  | - | Yes | Yes | Yes |

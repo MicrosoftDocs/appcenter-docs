@@ -39,6 +39,7 @@ App Center Push enables you to send push notifications to users of your app from
 ## Get started
 
 * [App Center SDK for Android](getting-started/android.md)
+* [App Center SDK for Cordova](getting-started/cordova.md)
 * [App Center SDK for iOS](getting-started/ios.md)
 * [App Center SDK for React Native](getting-started/react-native.md)
 * [App Center SDK for Xamarin](getting-started/xamarin.md)

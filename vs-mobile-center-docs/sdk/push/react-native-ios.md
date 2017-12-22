@@ -24,6 +24,8 @@ ms.tgt_pltfrm: react-native
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
+> * [Cordova Andriod](cordova-android.md)
+> * [Cordova iOS](cordova-ios.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 

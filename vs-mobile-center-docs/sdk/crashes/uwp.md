@@ -21,6 +21,7 @@ ms.tgt_pltfrm: UWP
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [UWP](uwp.md)
+> * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is sent to App Center through the Windows crash reporting service built into Windows devices. Crash logs contain valuable information for you to help fix the crash. The crash will be reported to App Center even if the app is not restarted.
 

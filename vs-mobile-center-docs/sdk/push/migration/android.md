@@ -4,7 +4,7 @@ description: How to remove Firebase SDK
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/21/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.assetid: cdd0a651-29b6-4fb2-8fc5-4a25b54eb2ca
 ms.service: vs-appcenter
@@ -25,9 +25,7 @@ If you are not using Firebase, you can remove the following lines from **app/bui
 
 ## 2. google-services.json
 
-If you are not using Firebase, you can also remove everything related to
-**google-services.json** and replace that file processing
-by a single call to **Push.setSenderId**.
+If you are not using Firebase, you can also remove the **google-services.json** file by using the following steps.
 
 ### 2.1. Get your Sender ID
 

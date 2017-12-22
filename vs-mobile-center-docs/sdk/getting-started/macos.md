@@ -21,6 +21,7 @@ ms.tgt_pltfrm: macos
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
