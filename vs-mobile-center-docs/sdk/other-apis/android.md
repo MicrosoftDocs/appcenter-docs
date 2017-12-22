@@ -21,6 +21,8 @@ ms.tgt_pltfrm: android
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [Cordova](cordova.md)
+
 
 ## Adjust the log level
 

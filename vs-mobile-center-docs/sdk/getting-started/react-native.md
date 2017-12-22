@@ -21,6 +21,7 @@ ms.tgt_pltfrm: react-native
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
@@ -40,7 +41,7 @@ If you have already created your app in the App Center portal, you can skip this
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional desciption for your app.
+3. Enter a name and an optional description for your app.
 4. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
 5. Hit the button at the bottom right that says **Add new app**.
 

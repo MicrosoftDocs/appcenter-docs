@@ -99,6 +99,7 @@
 ### [Xamarin](sdk/getting-started/xamarin.md)
 ### [UWP](sdk/getting-started/uwp.md)
 ### [macOS](sdk/getting-started/macos.md)
+### [Cordova](sdk/getting-started/cordova.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [iOS](sdk/analytics/ios.md)
@@ -106,6 +107,7 @@
 ### [Xamarin](sdk/analytics/xamarin.md)
 ### [UWP](sdk/analytics/uwp.md)
 ### [macOS](sdk/analytics/macos.md)
+### [Cordova](sdk/analytics/cordova.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [iOS](sdk/crashes/ios.md)
@@ -113,6 +115,7 @@
 ### [Xamarin](sdk/crashes/xamarin.md)
 ### [macOS](sdk/crashes/macos.md)
 ### [UWP](sdk/crashes/uwp.md)
+### [Cordova](sdk/crashes/cordova.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
@@ -127,6 +130,8 @@
 ### [React Native Android](sdk/push/react-native-android.md)
 ### [React Native iOS](sdk/push/react-native-ios.md)
 ### [macOS](sdk/push/macos.md)
+### [Cordova Andoid](sdk/push/cordova-android.md)
+### [Cordova iOS](sdk/push/cordova-ios.md)
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)
@@ -134,6 +139,7 @@
 ### [UWP](sdk/other-apis/uwp.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ### [macOS](sdk/other-apis/macos.md)
+### [Cordova](sdk/other-apis/cordova.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
