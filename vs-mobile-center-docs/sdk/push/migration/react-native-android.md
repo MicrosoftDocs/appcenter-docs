@@ -4,7 +4,7 @@ description: How to remove Firebase SDK
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/21/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.assetid: 7fe521e7-66fc-42ac-b804-a779525ad39e
 ms.service: vs-appcenter

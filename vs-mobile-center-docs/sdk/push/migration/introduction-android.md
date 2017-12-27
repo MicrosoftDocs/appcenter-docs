@@ -1,4 +1,4 @@
-# Introduction
+# How to remove Firebase SDK dependencies
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
