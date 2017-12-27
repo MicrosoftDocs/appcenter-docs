@@ -36,7 +36,7 @@ Before your first build, the Xamarin project needs to be configured.
 By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.2. Project and Configuration
-The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and selecte the appropriate configuration. 
+The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration. 
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository. 
 

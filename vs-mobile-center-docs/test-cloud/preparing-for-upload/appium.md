@@ -21,7 +21,7 @@ Note the following limitations for Appium support:
 * No support for TestNG
 * No support for Android 4.2 or prior
 * Maven version must be atleast 3.3.9
-* Support for Appium version 1.6 only
+* Support for Appium version 1.7.1 only
 * JUnit 4.9 or newer
 * Automating browsers (web testing) is not supported.
 * Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
