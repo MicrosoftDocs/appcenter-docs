@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 12/15/2017
+ms.date: 12/27/2017
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -31,10 +31,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.8.0_152
 - Java 9.0.1
 - Node.js v6.12.2
-- PowerShell v6.0.0-rc
+- PowerShell v6.0.0-rc.2
 - Python 2.7.10
-- Python 3.6.3
-- Ruby 2.4.2p198 (2017-09-14 revision 59899)
+- Python 3.6.4
+- Ruby 2.4.3p205 (2017-12-14 revision 61247)
 - .NET Core SDK 2.0.3
 
 ### Package Management
@@ -42,7 +42,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.0
 - Carthage 0.27.0
 - CocoaPods 1.3.1
-- Homebrew 1.4.0
+- Homebrew 1.4.1
 - NPM 3.10.10
 - Yarn 1.3.2
 - NuGet: 4.3.0
@@ -62,7 +62,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.69.0
+- fastlane 2.70.2
 - App Center CLI 1.0.6
 
 ## Xcode
@@ -497,38 +497,23 @@ Apple Watch Series 3 - 42mm
 
 ### Device Pairs
 ```
-515B680F-46D4-495A-8159-2DD555881C91
-    Watch: Apple Watch Series 2 - 38mm
-    Phone: iPhone 7
-0EE6A287-DC65-491D-8F42-083085445E9A
-    Watch: Apple Watch Series 2 - 42mm
-    Phone: iPhone 7 Plus
-C3753CD7-F6B6-4C15-9A07-50004B40B57F
-    Watch: Apple Watch Series 3 - 38mm
-    Phone: iPhone 8
-77B00662-7075-4D2C-B5A2-5C81E6A7091E
-    Watch: Apple Watch Series 3 - 42mm
-    Phone: iPhone 8 Plus
-    Watch: Apple Watch Series 2 - 38mm
-    Phone: iPhone 7
-    Watch: Apple Watch Series 2 - 42mm
-    Phone: iPhone 7 Plus
-    Watch: Apple Watch - 38mm
-    Phone: iPhone 6s
-    Watch: Apple Watch - 42mm
-    Phone: iPhone 6s Plus
-    Watch: Apple Watch Series 2 - 38mm
-    Phone: iPhone 7
-    Watch: Apple Watch Series 2 - 42mm
-    Phone: iPhone 7 Plus
-    Watch: Apple Watch Series 2 - 38mm
-    Phone: iPhone 7
-    Watch: Apple Watch Series 2 - 42mm
-    Phone: iPhone 7 Plus
-    Watch: Apple Watch Series 3 - 38mm
-    Phone: iPhone 8
-    Watch: Apple Watch Series 3 - 42mm
-    Phone: iPhone 8 Plus
+Watch: Apple Watch - 38mm
+Phone: iPhone 6s
+
+Watch: Apple Watch - 42mm
+Phone: iPhone 6s Plus
+
+Watch: Apple Watch Series 2 - 38mm
+Phone: iPhone 7
+
+Watch: Apple Watch Series 2 - 42mm
+Phone: iPhone 7 Plus
+
+Watch: Apple Watch Series 3 - 38mm
+Phone: iPhone 8
+
+Watch: Apple Watch Series 3 - 42mm
+Phone: iPhone 8 Plus
 ```
 
 ## Android
@@ -586,6 +571,8 @@ C3753CD7-F6B6-4C15-9A07-50004B40B57F
 | build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
 | build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
 | build-tools-27.0.0    | Android SDK Build-tools, Revision 27.0.0  |
+| build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
+| build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
 
 ### Utils
 
@@ -595,6 +582,7 @@ C3753CD7-F6B6-4C15-9A07-50004B40B57F
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 16.1.4479499                              |
 | ProGuard              | 5.3.3                                     |
+| Android Emulator      | 27.0.2                                    |
 
 ### Google APIs
 
@@ -612,6 +600,7 @@ C3753CD7-F6B6-4C15-9A07-50004B40B57F
 | extra-android-m2repository        | Android Support Repository, revision 47  |
 | extra-google-google_play_services | Google Play services, revision 46        |
 | extra-google-m2repository         | Google Repository, revision 58           |
+| Hardware_Accelerated_Execution_Man| Intel x86 Emulator Accelerator 6.2.1     |
 
 ## Xamarin
 

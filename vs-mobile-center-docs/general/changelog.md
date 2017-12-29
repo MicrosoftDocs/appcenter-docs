@@ -10,6 +10,9 @@ ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+### **December 16, 2017**
+- **Build support for Xcode 9.2**:
+Build your iOS and macOS apps using Xcode 9.2.
 
 ### **November 17, 2017**
 - **Added support for re-releasing builds for distribution**:
