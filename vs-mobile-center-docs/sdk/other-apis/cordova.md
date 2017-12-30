@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
-# Other React Native APIs
+# Other Cordova APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
