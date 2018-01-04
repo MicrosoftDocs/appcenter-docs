@@ -10,6 +10,10 @@ ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+### **December 21, 2017**
+- **Cordova platform preview released**:
+Visual Studio App Center now offers preview support for Cordova apps with our Test, Distribute, Analytics, Crash and Push Notifications services.
+
 ### **December 16, 2017**
 - **Build support for Xcode 9.2**:
 Build your iOS and macOS apps using Xcode 9.2.
@@ -28,7 +32,7 @@ You now have the ability to create variables for sensitive infromation to includ
 Visual Studio App Center now offers a preview of our support for getting Crash data from your UWP apps.
 
 - **macOS preview released**:
-Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services
+Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services.
 
 - **HockeyApp side by side enabled**:
 We have now enabled a HockeyApp and App Center side by side experience for all HockeyApp customers. To view the side by side experience, just login to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
