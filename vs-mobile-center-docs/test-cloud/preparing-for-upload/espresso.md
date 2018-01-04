@@ -14,7 +14,7 @@ ms.custom: test
 # Preparing Espresso Tests for Upload
 
 The steps necessary to prepare an app and its corresponding test suite for upload
-to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
+to App Center vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
 
 ## 1. Changes to the build system
 First you'll need to add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the `build.gradle` in your project root directory:
@@ -30,7 +30,7 @@ allprojects {
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.0')
+androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.1')
 ```
 
 Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
