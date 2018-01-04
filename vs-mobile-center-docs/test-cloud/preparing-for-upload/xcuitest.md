@@ -38,6 +38,9 @@ You must launch your application using the `ACTLaunch` API.
 ### Objective-C
 
 ```objective-c
+//Insert before @interface
+#import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
+
 
 XCUIApplication *app = act_launch
 XCUIApplication *app = act_launch_app([[XCUIApplication alloc] init]);
@@ -48,7 +51,10 @@ XCUIApplication *app = [ACTLaunch launchApplication:[[XCUIApplication alloc] ini
 ### Swift
 
 ```swift
-let app = ACTLaunch.launch();
+//insert before class
+import AppCenterXCUITestExtensions
+
+let app = ACTLaunch.launch()
 let app = ACTLaunch.launch(XCUIApplication())
 ```
 
@@ -85,11 +91,13 @@ github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 ```
 
 Follow the [Carthage
-Instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
+Instructions](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework)
 for installing frameworks from a Cartfile.
 
 Remember that the **AppCenterXUITestExtensions.framework** needs to be
 linked with the XCUITest target and _not_ the iOS application.
+
+You can check this test code as an example for setting up App Center XCUITest [Example code](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido)
 
 ### <a name="building_from_source" /> Building from Source
 
@@ -144,6 +152,8 @@ following:
 src="images/xcuitest-build-settings.png">
 </p>
 
+Here is a Swift example [Code example](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/StickShift)
+
 ### <a name="cocoapods" /> Cocoapods
 
 If you are not already using CocoaPods, we recommend you use Carthage or
@@ -162,6 +172,8 @@ target 'MyAppUITests' do pod 'AppCenterXCUITestExtensions' end
 ```shell
 $ pod install
 ```
+
+Code example for CocoaPods [Code example](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/BeetIt)
 
 ## Build For Testing
 
