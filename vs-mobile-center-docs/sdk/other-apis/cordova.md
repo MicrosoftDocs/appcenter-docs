@@ -1,6 +1,6 @@
 ---
-title: Other Cordova APIs
-description: Other APIs in the App Center SDK for Cordova
+title: Other Apache Cordova APIs
+description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
-# Other Cordova APIs
+# Other Apache Cordova APIs
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

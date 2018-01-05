@@ -24,6 +24,8 @@ ms.tgt_pltfrm: android
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
+> * [Cordova Andriod](cordova-android.md)
+> * [Cordova iOS](cordova-ios.md)
 
 > [!NOTE]
 > If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/android.md).

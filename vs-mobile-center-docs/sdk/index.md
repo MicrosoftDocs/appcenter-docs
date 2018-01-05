@@ -39,12 +39,12 @@ App Center Push enables you to send push notifications to users of your app from
 ## Get started
 
 * [App Center SDK for Android](getting-started/android.md)
-* [App Center SDK for Cordova](getting-started/cordova.md)
 * [App Center SDK for iOS](getting-started/ios.md)
 * [App Center SDK for React Native](getting-started/react-native.md)
 * [App Center SDK for Xamarin](getting-started/xamarin.md)
 * [App Center SDK for UWP](getting-started/uwp.md)
 * [App Center SDK for macOS](getting-started/macos.md)
+* [App Center SDK for Apache Cordova](getting-started/cordova.md)
 
 ## Requirements
 
@@ -88,7 +88,7 @@ Service    |  RN version   | iOS Version              | Android Version
  ----------|---------------|--------------------------|-------
 Analytics  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 Crashes    | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Distribute | not available | not available            | not available
+Distribute | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
@@ -100,6 +100,14 @@ Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or la
  Crashes          | 10.9 or later   | 8.2 and later
  Push             | 10.9 or later   | 8.2 and later
 
+ ### Apache Cordova 
+
+Service    |  AC CLI version | iOS Version     | Android Version
+ ----------|----------------------|-----------------|----------------
+Analytics  | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
+Crashes    | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
+Distribute | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
+Push       | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 
 
 ## Source code
@@ -110,3 +118,5 @@ The App Center SDKs is open-source and available publicly on GitHub:
 * [App Center SDK for iOS and macOS](https://github.com/Microsoft/AppCenter-SDK-Apple)
 * [App Center SDK for React Native](https://github.com/Microsoft/AppCenter-SDK-React-Native)
 * [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/AppCenter-SDK-DotNet)
+* [App Center SDK for Apache Cordova](https://github.com/Microsoft/appcenter-sdk-cordova)
+

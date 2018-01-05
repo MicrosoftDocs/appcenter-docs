@@ -37,7 +37,7 @@ You must launch your application using the `ACTLaunch` API.
 
 ### Objective-C
 
-```objective-c
+```obj-c
 //Insert before @interface
 #import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
 
@@ -122,10 +122,7 @@ $ ditto Products/framework/AppCenterXCUITestExtensions.framework \
   path/to/MyApp/AppCenterXCUITestExtensions.framework
 ```
 
-<p align="center">
-<img width="720" alt="appcenter.framework-in-Finder"
-src="images/xcuitest-appcenter-framework-in-Finder.png">
-</p>
+![Locate AppCenterXCUITestExtensions.framework in Finder](images/xcuitest-appcenter-framework-in-Finder.png)
 
 ##### 3. Link AppCenterXCUITestExtensions.framework with the XCUITest target
 
@@ -139,18 +136,12 @@ and add the `AppCenterXCUITestExtensions.framework`.
 
 Note that your project may already have a 'Copy Files' phase.
 
-<p align="center">
-<img width="720" alt="link-framework"
-src="images/xcuitest-link-framework.gif">
-</p>
+![Inside Xcode select Frameworks in Destination](images/xcuitest-link-framework.gif)
 
 When you are finished, your Build Phases pane should resemble the
 following:
 
-<p align="center">
-<img width="720" alt="build-settings"
-src="images/xcuitest-build-settings.png">
-</p>
+![Showing the configured Build Phases pane](images/xcuitest-build-settings.png)
 
 Here is a Swift example [Code example](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/StickShift)
 

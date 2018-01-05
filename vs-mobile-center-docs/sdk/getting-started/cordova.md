@@ -1,10 +1,10 @@
 ---
-title: Get Started with Cordova
+title: Get Started with Apache Cordova
 description: Get Started
 keywords: sdk
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 12/19/2017
+ms.date: 01/02/2018
 ms.topic: get-started-article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
-# Get Started with Cordova
+# Get Started with Apache Cordova
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)
@@ -23,69 +23,113 @@ ms.tgt_pltfrm: cordova
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
-The App Center SDK uses a modular architecture so you can use any or all of the services.
+The App Center SDK uses a modular architecture so you can easily use one, several, or all of the App Center services in your Apache Cordova application.
 
-Let's get started with setting up App Center Cordova SDK in your app to use App Center Analytics and App Center Crashes.
+In this article, you'll learn how to add the App Center SDK to your Apache Cordova applications, then configure App Center Analytics and App Center Crashes capabilities in an application.
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that the following prerequisites are met:
+Before you begin, ensure that your Apache Cordova application project meets the following minimum requirements:
 
-* You are using a Cordova project that runs the following:
-	* `cordova` engine 6.4.0 or later
+	* `Cordova CLI` engine 6.4.0 or later
 	* `cordova-android` engine 4.1.0 or later
 	* `cordova-ios` engine 4.3.0 or later
-* For iOS, the default way to use the SDK requires CocoaPods. If you haven't installed CocoaPods, please follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so.
 
-## 2. Create your app in the App Center Portal to obtain the App Secret
+To determine your Cordova CLI version, open a terminal window or Windows command prompt and execute the following command:
 
-If you have already created your app in the App Center portal, you can skip this step.
+```shell
+cordova -v
+```
 
-1. Head over to [appcenter.ms](https://appcenter.ms).
-2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional description for your app.
-4. Select the appropriate OS (Android or iOS) and select **Cordova** as the platform.
-5. Hit the button at the bottom right that says **Add new app**.
+To determine the `cordova-android` and `cordova-ios` versions, open the project's `config.xml` file, you'll find the platform engines defined in the `engine` elements shown below:
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
+```xml
+<engine name="android" spec="~6.2.3" />
+<engine name="ios" spec="~4.4.0" />
+```
+
+## 2. Getting the App Center App Secret
+
+In order for the App Center SDK to connect with your application project in App Center, the SDK needs your App Center project's **App Secret**. You'll learn later how to configure the App Center Apache Cordova SDK with this value, but for now, lets see where to find it. 
+
+If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You'll find the app secret on the app's **Getting Started** page. You can also find the app secret on the application project's **Settings** page - access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
+
+If you do not have an application created in the App Center Dashboard, complete the following steps.
+
+1. Register for an App Center account, or Login to an existing App Center account at [https://appcenter.ms](https://appcenter.ms).
+2. In the App Center Dashboard, click the **Add new** drop-down in the upper-right corner of the page. Select **Add new app** from the menu.
+3. Enter a name for your application project, adding an optional description as needed.
+4. Select the appropriate OS for your application project (Android or iOS only), then select the **Cordova** platform option.
+5. Click the **Add new app** button on the bottom-right corner of the page.
+6. Locate the project's app secret on the new app's Getting Started page. You can also find the app secret on the application project's **Settings** page - access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
 
 > [!NOTE]
-> App secret is like an api key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
+> In App Center, an application project's app secret is like an API key for your app; it enables remote systems to interact with your application project. It doesn't provide any access to your account, nor can it be used to invoke App Center REST APIs (to trigger builds or send push notifications for example). With App Center Analytics or Crashes, for example, the app secret connects event and telemetry data to a specific application in App Center. If you're publishing your application source code in a public location (if you are working on an open source project, for example) you must not include the app secret with your project's code. Either inject the app secret at build time, or store the secret in an external file that is not deployed with the project during publishing to an online repository.
 
-## 3. Add the App Center SDK modules
+## 3. Add the App Center SDK to the project
 
-1. Open a Terminal and navigate to the root of your Cordova project, then add any of the following plugins using the CLI to access analytics, crash, or push respectively:
+### Installing the SDK
 
-	```
-    cordova plugin add cordova-plugin-appcenter-analytics
-    cordova plugin add cordova-plugin-appcenter-crashes
-    cordova plugin add cordova-plugin-appcenter-push
-    ```
+For Apache Cordova projects, the SDK is distributed through standard Apache Cordova plugins. Add the App Center SDK to your Cordova project using the instructions provided in this section. Start by opening a Terminal window or Windows command prompt, then navigate to your Cordova project's root folder.
 
-	The App Center SDK uses a modular approach, where you add only those modules that you want to use. It makes sense to add **cordova-plugin-appcenter-analytics** and **cordova-plugin-appcenter-crashes** almost to every app, as they provide information without any additional setup required.
+To add support for **App Center Analytics** to your project, execute the following command:
 
-2.  Link the plugins to the Cordova app
+```shell 
+cordova plugin add cordova-plugin-appcenter-analytics
+```
 
-    To get it working in your app you will need to add some configuration values to your app `config.xml` file. See list of available parameters below
+To add support for **App Center Crashes** to your project, execute the following command:
 
-- `APP_SECRET` - _(required)_ App secret enables App Center to map this app to the right user account
+```shell 
+cordova plugin add cordova-plugin-appcenter-crashes
+```
 
-  Example:
+To add support for **App Center Push** to your project, execute the following command:
 
-  ```xml
-  <platform name="android">
-      <preference name="APP_SECRET" value="0000-0000-0000-0000-000000000000" />
-  </platform>
-  <platform name="ios">
-      <preference name="APP_SECRET" value="0000-0000-0000-0000-000000000000" />
-  </platform>
-  ```
+```shell 
+cordova plugin add cordova-plugin-appcenter-push
+```
 
-  Notice that it's likely that Android and iOS platforms will be associated with different applications on App Center portal so you would need to add this preference twice - one for Android (as in example above) and another for iOS.
+To add plugins for all of the App Center capabilities to your project with one command, execute the following command:
 
-## 4. Configuration Preferences 
+```shell 
+cordova plugin add cordova-plugin-appcenter-analytics cordova-plugin-appcenter-crashes cordova-plugin-appcenter-push
+```
 
-- `APPCENTER_ANALYTICS_ENABLE_IN_JS` - _(optional, default is false)_ This preference controls whether Analytics will be enabled automatically (default option) or will require `Analytics.setEnabled()` to be called in JS code before sending any data about app usage to App Center portal. This might be useful e.g. in case when you want to ask users whether they want to share analytics information before sending it. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
+> [!NOTE]
+> You should add **cordova-plugin-appcenter-analytics** and **cordova-plugin-appcenter-crashes** most every app that uses App Center; they provide useful information for developers without any additional setup or coding.
+
+### Configuring the plugins
+
+#### App Secret
+
+Before you can use the App Center SDK in your Apache Cordova project, you must first configure the project with your App Center project app secret.
+
+Open the Apache Cordova project's `config.xml` file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
+
+```xml
+<preference name="APP_SECRET" value="0000-0000-0000-0000-000000000000" />
+```
+In this example, you're adding an element with a `name` attribute with a value of `APP_SECRET`, and a `value` attribute with the value shown in the example. Here, the `0000-0000-0000-0000-000000000000` shown in the example is an arbitrary representation of a App Center project app secret. Replace the app secret shown in the example with the actual app secret for your App Center project.
+
+As a complete example, for a Apache Cordova project that supports both Android and iOS targets, you'll have separate app project definitions in App Center, and therefore different app secret values for each target platform. The relevant section of the project's `config.xml` file will look like the following:
+
+```xml
+<platform name="android">
+   <preference name="APP_SECRET" value="0000-0000-0000-0000-000000000001" />
+</platform>
+<platform name="ios">
+   <preference name="APP_SECRET" value="0000-0000-0000-0000-000000000002" />
+</platform>
+```
+> [!Note]
+> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. Notice that the app secrets are different, this is because you'll have unique secrets for your Android and iOS application projects in App Center.
+
+#### Analytics Preferences
+
+If you're using App Center Analytics in your app, there's some additional configuration steps you must perform. Open the Apache Cordova project's `config.xml` file in an editor, and add one or more of the following `preferences` elements to the file:
+
+- `APPCENTER_ANALYTICS_ENABLE_IN_JS` - _(optional, default is false)_ Controls whether Analytics is enabled automatically. When `false` Analytics is enabled by default. When `true`, the application must call `Analytics.setEnabled()` (in its JavaScript code) to enable Analytics before sending data App Center. This preference is useful when you want to ask users whether they want to share analytics information before enabling it within the application. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
 
   Example:
 
@@ -93,7 +137,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
   <preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />
   ```
 
-- `APPCENTER_CRASHES_ALWAYS_SEND` - _(optional, default is true)_ Specifies whether crash reports will be sent automatically or not, in the latter case they would be available for processing in JavaScript code. Choosing to process crashes first of all means more work for the developer, but it also provides greater control over user privacy and allows you to attach a message with crash report. [Learn more about processing on crash reports in JS](~/sdk/crashes/cordova.md).
+- `APPCENTER_CRASHES_ALWAYS_SEND` - _(optional, default is true)_ Specifies whether crash reports are automatically sent to App Center when the app crashes. When sending crash reports automatically, every crash is reported, potentially overwhelming the engineering and support teams. When sending crash reports manually (setting `APPCENTER_CRASHES_ALWAYS_SEND` to `false`), code within your application can triage crashes, and decide when crash reports are sent to App Center, what data is included in the reports, and so on. This means more work for the developer, but it also provides greater control over user privacy and allows you to attach a message with crash report. [Learn more about processing on crash reports in JS](~/sdk/crashes/cordova.md).
 
   Example:
 
@@ -101,38 +145,6 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
   <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
   ```
   
-## 5. Start the SDK
-
-Now you can build and launch your application either from command line or from Xcode/Android Studio.
-
-### 5.1 Build and run your application from command line
-
-You may build and launch your _iOS_ application using the following command:
-
-```shell
-cordova run ios
-```
-
-> [!TIP]
-> You can launch it on an **iOS simulator** or **iOS device** by specifying the iOS device name in 
-
-> `cordova run ios --target="myDeviceName".`
-
-You may build and launch your _Android_ application using the following command:
-
-```shell
-cordova run android
-```
-
-> [!TIP]
-> You can launch it on an **android emulator** or **android device** by specifying the device id in 
->
-> `cordova run android --target="myDeviceId"` (`deviceId` can be retrieved using `adb devices` command).
-
-### 5.2 Build and run your application from Xcode or Android Studio
-
-For iOS, open your **ios** application (`ios/{appname}.xcworkspace`) in Xcode and build it from there.
-
-For Android, open your **android** project in Android Studio and build it from there.
+ ## 4. Where to go next?
 
 Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There is no additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.
