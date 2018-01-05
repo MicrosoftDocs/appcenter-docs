@@ -17,20 +17,19 @@ Test Cloud is a test automation service for native and hybrid mobile application
 
 To file a request for a new test framework or vote for an existing request, visit the [feature request portal](https://testcloud.ideas.aha.io).
 
-|Test framework| Vendor |Documentation & resources |
-|--|--|--|
-| Appium | Open Source | [https://appium.io](https://appium.io) |
-| Calabash | Microsoft | [http://calaba.sh](http://calaba.sh) |
-| Espresso | Google | [https://google.github.io/android-testing-support-library/docs/espresso/](https://google.github.io/android-testing-support-library/docs/espresso/) |
-| Xamarin.UITest | Microsoft | [https://developer.xamarin.com/guides/testcloud/uitest/](https://developer.xamarin.com/guides/testcloud/uitest/)|
+| Test framework | Vendor      | Documentation & resources                |
+| -------------- | ----------- | ---------------------------------------- |
+| Appium         | Open Source | [https://appium.io](https://appium.io)   |
+| Calabash       | Microsoft   | [http://calaba.sh](http://calaba.sh)     |
+| Espresso       | Google      | [https://google.github.io/android-testing-support-library/docs/espresso/](https://google.github.io/android-testing-support-library/docs/espresso/) |
+| Xamarin.UITest | Microsoft   | [https://developer.xamarin.com/guides/testcloud/uitest/](https://developer.xamarin.com/guides/testcloud/uitest/) |
+| XCUITest       | Apple       | [Testing with Xcode - User Interface Testing](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
 
-> [!NOTE]
-> Support for XCUITest is planned for early 2017.
 
 For teams selecting a test framework for the first time, it is recommended to use the framework that is native to the platform.
 
 - Espresso for Android apps
 - Xamarin.UITest for Xamarin cross-platform apps
-- And, once supported, XCUITest for iOS apps
+- XCUITest for iOS apps
 
 The outlier to this approach is Appium. Appium may be a good choice for teams with either Appium or Selenium experience or for teams with non-Xamarin apps that desire cross-platform tests. More information is available on the [Appium website](http://appium.io/slate/en/master/#about-appium).

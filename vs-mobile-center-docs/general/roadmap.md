@@ -34,7 +34,6 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 ## Test service
 
 * Preview support for testing of UWP apps.
-* iPhone X support.
 
 
 ## Distribution service
