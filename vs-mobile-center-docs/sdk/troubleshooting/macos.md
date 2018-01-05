@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for macOS
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 11/15/2017
+ms.date: 1/3/2018
 ms.topic: article
 ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -44,7 +44,14 @@ dev_langs:
     MSAppCenter.setLogLevel(.verbose)
     ```
 	
-5. Make sure your device is online.
+5. Make sure your device is online and the app has internet access.
+
+	>[!Note]
+	> If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+	Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
+	>
+	> Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, add the capabilities for incoming and outgoing connections.
+
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 7. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
 
@@ -64,7 +71,14 @@ dev_langs:
     ```
 
 6. Don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your app.
-7. Make sure your device is online.
+7. Make sure your device is online and the app has internet access.
+
+	>[!Note]
+	> If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+	Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
+	>
+	> Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
+
 8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.

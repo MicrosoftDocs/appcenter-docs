@@ -30,7 +30,7 @@ allprojects {
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.1')
+androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.2')
 ```
 
 Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.

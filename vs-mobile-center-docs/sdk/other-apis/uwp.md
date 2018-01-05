@@ -39,7 +39,7 @@ AppCenter.LogLevel = LogLevel.Verbose;
 The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
 
 ```csharp
-System.Guid installId = await AppCenter.GetInstallIdAsync();
+System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
 
 ## Disable all services at runtime

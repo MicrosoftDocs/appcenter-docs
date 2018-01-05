@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 12/06/2017
+ms.date: 1/3/2018
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -160,6 +160,15 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
+
+### 4.4 Add internet capabilities for sandboxed apps
+
+If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
+
+Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
+
+---
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 

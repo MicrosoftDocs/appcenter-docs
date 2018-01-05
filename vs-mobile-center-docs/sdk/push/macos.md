@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 11/15/2017
+ms.date: 1/3/2018
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.service: vs-appcenter
@@ -62,6 +62,13 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
+
+### 2.3 Add internet capabilities for sandboxed apps
+
+If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
+
+Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
 
 ## Intercept push notifications
 
