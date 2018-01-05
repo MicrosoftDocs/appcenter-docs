@@ -19,6 +19,7 @@ Visual Studio App Center offers both a generous free tier as well as paid tier o
   - 1 concurrent build pipeline per organization or user account and up to 30 minutes for each build.
   - Push notifications to up to 5 audiences.
   - Unlimited distribution to users, and stores.
+  - Unlimited use of CodePush.
   - Unlimited launch tests, and a 30-day free trial for Tests with unlimited device hours.
 
   You can update the following App Center services as your team grows: 
