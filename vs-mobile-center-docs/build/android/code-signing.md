@@ -40,9 +40,9 @@ android {
     signingConfigs {
         releaseSigningConfig {
             storeFile rootProject.file("app/testapp.jks")
-            storePassword System.getProperty("MOBILECENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getProperty("MOBILECENTER_KEY_ALIAS")
-            keyPassword System.getProperty("MOBILECENTER_KEY_PASSWORD")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
         }
     }
 
