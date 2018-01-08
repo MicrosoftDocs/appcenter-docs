@@ -130,7 +130,7 @@
 ### [Xamarin.iOS](sdk/push/xamarin-ios.md)
 ### [Xamarin.Android](sdk/push/xamarin-android.md)
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
-### [Cordova Andoid](sdk/push/cordova-android.md)
+### [Cordova Android](sdk/push/cordova-android.md)
 ### [Cordova iOS](sdk/push/cordova-ios.md)
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
