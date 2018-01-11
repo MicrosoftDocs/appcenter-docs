@@ -90,9 +90,9 @@ LoadApplication(new App());
 
 You can now remove **google-services.json** file.
 
-## 4. Proguard
+## 4. ProGuard
 
-If you are using Proguard, you need to update the rules in the **proguard.cfg** file.
+If you are using ProGuard, you need to update the rules in the **proguard.cfg** file.
 
 Remove the following lines:
 

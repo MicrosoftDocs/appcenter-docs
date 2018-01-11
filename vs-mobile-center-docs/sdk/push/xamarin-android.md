@@ -34,20 +34,20 @@ ms.tgt_pltfrm: xamarin.android
 
 [!include[](introduction-android.md)]
 
-### 3. Customize Proguard configuration
+### 3. Customize ProGuard configuration
 
-If you use Proguard, you have to customize its configuration for Push.
+If you use ProGuard, you have to customize its configuration for Push.
 
-#### 3.1. Create a Proguard configuration file
+#### 3.1. Create a ProGuard configuration file
 
 >[!NOTE]
->If you don't use Proguard or if you already have a Proguard configuration file in your project, you may skip this section.
+>If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
 
 Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
 
 ![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
 
-#### 3.2. Add customization to Proguard configuration file
+#### 3.2. Add customization to ProGuard configuration file
 
 In your Xamarin.Android project, please add the following line to your `proguard.cfg` file:
 
