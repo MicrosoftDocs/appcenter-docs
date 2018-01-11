@@ -63,7 +63,7 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 	```
 
 	> [!NOTE]
-	> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your `package.json` file.
+	> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
 
 	In case you prefer `yarn` over `npm`, use the following command to install App Center:
 
