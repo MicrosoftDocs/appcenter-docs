@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani 
 ms.author: elamalani 
-ms.date: 12/13/2017
+ms.date: 01/11/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -33,9 +33,9 @@ Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you
 > * Crashes will only be sent if the device is plugged in to power, this includes phones.
 > * Crashes sent via application associated with the Microsoft Store but not installed from the Microsoft Store (like when using bundle directly, which includes installing via App Center portal) will appear on the portal without the symbols (no method names or class names).
 
-### Users consent to send a crash log
+### User consent to send a crash log
 
-App Center Crashes for UWP will utilize the built in Windows crash reporting service; therefore they honor the users default privacy settings for sending crash reports in Windows.
+App Center Crashes for UWP will utilize the built in Windows crash reporting service; therefore it honors the user's default [privacy settings](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy) for sending crash reports in Windows.
 
 ## Adding the crashes module
 

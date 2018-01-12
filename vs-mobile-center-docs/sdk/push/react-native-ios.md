@@ -76,7 +76,7 @@ If you wish to manually integrate the module, follow the manual integration step
 
 ### 2.Start App Center Push
 
-#### 2.1 Register for notifications
+#### Register for notifications
 
 App Center Push is started by this call:
 
@@ -91,10 +91,6 @@ App Center Push is started by this call:
 That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
 Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `register` call.
-
-#### 2.2 [Optional] Receive push notifications if you have already implemented `application:didReceiveRemoteNotification:fetchCompletionHandler` method
-
-If you or one of your third party libraries already implements `application:didReceiveRemoteNotification:fetchCompletionHandler` method, then follow [step 4](#disable-automatic-forwarding-of-application-delegates-methods-to-app-center-services) to implement a callback to receive push notifications.
 
 ## Intercept push notifications
 
