@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 12/27/2017
+ms.date: 1/14/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -30,11 +30,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.7.0_80
 - Java 1.8.0_152
 - Java 9.0.1
-- Node.js v6.12.2
-- PowerShell v6.0.0-rc.2
+- Node.js v6.12.3
+- PowerShell v6.0.0
 - Python 2.7.10
 - Python 3.6.4
-- Ruby 2.4.3p205 (2017-12-14 revision 61247)
+- Ruby 2.5.0p0
 - .NET Core SDK 2.0.3
 
 ### Package Management
@@ -42,7 +42,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.0
 - Carthage 0.27.0
 - CocoaPods 1.3.1
-- Homebrew 1.4.1
+- Homebrew 1.4.3
 - NPM 3.10.10
 - Yarn 1.3.2
 - NuGet: 4.3.0
@@ -51,19 +51,19 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.5.2
-- Gradle 4.4
+- Gradle 4.4.1
 
 ### Utilities
 
-- curl 7.54.0 (x86_64-apple-darwin16.0) libcurl/7.54.0 SecureTransport zlib/1.2.8
+- curl 7.54.0 (SecureTransport zlib/1.2.8)
 - Git 2.15.1
 - Git LFS 2.3.4
 - GNU Wget 1.19.2
 
 ### Tools
 
-- fastlane 2.70.2
-- App Center CLI 1.0.6
+- fastlane 2.75.1
+- App Center CLI 1.0.7
 
 ## Xcode
 
@@ -81,7 +81,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xcode Support Tools
 
-- Nomad CLI 2.6.14
+- Nomad CLI 2.7.4
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.2.8
 - xctool 0.3.4
@@ -528,7 +528,7 @@ Phone: iPhone 8 Plus
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 27.0.0 |
+| platform-tools        | Android SDK Platform-tools, revision 27.0.1 |
 
 ### Android Platforms
 
@@ -573,6 +573,7 @@ Phone: iPhone 8 Plus
 | build-tools-27.0.0    | Android SDK Build-tools, Revision 27.0.0  |
 | build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
 | build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
+| build-tools-27.0.3    | Android SDK Build-tools, Revision 27.0.3  |
 
 ### Utils
 
@@ -582,7 +583,7 @@ Phone: iPhone 8 Plus
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 16.1.4479499                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.0.2                                    |
+| Android Emulator      | 27.0.5                                    |
 
 ### Google APIs
 
