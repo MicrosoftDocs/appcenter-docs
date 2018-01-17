@@ -32,7 +32,7 @@ In order to connect to another VSTS account to build your apps, first step is to
 #### GitHub
 If you logged in into App Center with a GitHub acoount, you can only build apps from repositories under that GitHub account.
 
-If you logged in into App Center with another method, but you have connected to the wrong GitHub account, first step is to revoke the Oauth token: go to https://github.com/settings/profile > Authorized Applications > Revoke App Center token. Then, go back to App Center in the build tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from GitHub first.
+If you logged in into App Center with another method, but you have connected to the wrong GitHub account, first step is to revoke the Oauth token: go to https://github.com/settings/profile > Applications > Authorized OAuth Apps > Revoke App Center token. Then, go back to App Center in the build tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from GitHub first.
 
 ![Remove GitHub Oauth Token][remove-github-oauth-token]
 
