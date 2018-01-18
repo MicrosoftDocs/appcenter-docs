@@ -31,6 +31,8 @@
 			"breadcrumb_path": "~/_breadcrumb/toc.yml",
 			"manager": "crdun",
 			"audience": "developer",
+			"ms.topic": "article",
+			"searchScope": ["App Center"],
 			"_op_documentIdPathDepotMapping": {
         			"./": {
           				"depot_name": "MSDN.vs-mobile-center-docs"
