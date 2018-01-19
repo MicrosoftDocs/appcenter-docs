@@ -2,7 +2,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "vs-appcenter",
-      "build_source_folder": "vs-mobile-center-docs",
+      "build_source_folder": "docs",
       "build_output_subfolder": "vs-appcenter",
       "locale": "en-us",
       "monikers": [],
