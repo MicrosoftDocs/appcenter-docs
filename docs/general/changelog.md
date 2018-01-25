@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/17/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -17,6 +17,9 @@ Visual Studio App Center now offers preview support for Cordova apps with our Te
 ### **December 16, 2017**
 - **Build support for Xcode 9.2**:
 Build your iOS and macOS apps using Xcode 9.2.
+
+- **Updated Xamarin SDKs**:
+Build your Xamarin apps with SDK releases [15.5](https://releases.xamarin.com/release-15-5/) and [15.5.1](https://releases.xamarin.com/service-release-15-5-1/) (including Xcode 9.2 support for Xamarin.iOS)
 
 ### **November 17, 2017**
 - **Added support for re-releasing builds for distribution**:
