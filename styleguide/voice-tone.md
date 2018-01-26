@@ -1,6 +1,6 @@
 # Voice and tone guidelines
 
-Developers will be reading your documents to learn .NET core, and to use it in their regular work.
+Developers will be reading your documents to learn App Center, and to use it in their regular work.
 Your goal is to create useful documentation that helps the reader on their journey. Our guidelines
 help with that. Our style guide contains four recommendations:
 - [Use a Conversational Tone](#use-a-conversational-tone)
@@ -10,19 +10,22 @@ help with that. Our style guide contains four recommendations:
 
 You will see examples of each of these as you read this style guide. We've written this guide
 following our guidelines to provide examples for you to follow as you build documentation
-for .NET core. We also provide contrasting samples so you can see what articles look like
+for App Center. We also provide contrasting samples so you can see what articles look like
 when you don't follow our guidelines.
 
 ## Details on each guideline
 
 ### Use a Conversational Tone
-#### Appropriate Style:
+
+#### Appropriate Style
+
 We want our documentation to have a conversational tone. You should feel as though you
 are having a conversation with the author as you read any of our tutorials or explanations.
 Your experience as a reader should be informal, conversational, and informative. You should
 feel as though you are listening to the author explain the concepts to you.
 
-#### Inappropriate Style:
+#### Inappropriate Style
+
 One might see the contrast between a conversational style and the style one finds with
 more academic treatments of technical topics. Those resources are very useful, but the authors
 have written those articles in a very different style than our documentation. When one reads
@@ -33,13 +36,16 @@ The first paragraph above follows our recommendation conversational style. The s
 is a more academic style. You see the difference immediately.
 
 ### Write in second person
-#### Appropriate Style:
+
+#### Appropriate Style
+
 You should write your articles as though you are speaking directly to the reader. You
 should use second person often (as I just have in these two sentences). 2nd person doesn't
 always mean using the word 'you'. Write directly to the reader. Write imperative sentences.
 Tell your reader what you want them to learn.
 
-#### Inappropriate Style:
+#### Inappropriate Style
+
 An author could also choose to write in third person. In that model, an author must find some
 pronoun or noun to use when referring to the reader. A reader might often find this third
 person style less engaging and less enjoyable to read.
@@ -53,9 +59,9 @@ Write your articles in active voice. Active voice means that the subject of the 
 the action (verb) of that sentence. It contrasts with passive voice, where the sentence is arranged
 such that the subject of the sentence is acted upon. Contrast these two examples:
 
->The compiler transformed source code into an executable.
+> The compiler transformed source code into an executable.
 
->The source code was transformed into an executable by the compiler.
+> The source code was transformed into an executable by the compiler.
 
 The first sentence uses active voice. The second sentence was written in passive voice.
 (Those two sentences provide another example of each style).
@@ -74,5 +80,5 @@ Programming, Class, and Object, Function and Method will all be familiar terms. 
 reading your articles will have a formal computer science degree. Terms like 'idempotent' probably
 need to be defined if you use it:
 
->The Close() method is idempotent, meaning that you can call it multiple times and the effect is
+> The `Close()` method is idempotent, meaning that you can call it multiple times and the effect is
 the same as if you called it once.

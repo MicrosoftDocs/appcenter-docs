@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/21/2017
+ms.date: 01/26/2018
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: vs-appcenter
@@ -33,27 +33,6 @@ ms.tgt_pltfrm: xamarin.android
 > If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/xamarin-android.md).
 
 [!include[](introduction-android.md)]
-
-### 3. Customize ProGuard configuration
-
-If you use ProGuard, you have to customize its configuration for Push.
-
-#### 3.1. Create a ProGuard configuration file
-
->[!NOTE]
->If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
-
-Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
-
-![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
-
-#### 3.2. Add customization to ProGuard configuration file
-
-In your Xamarin.Android project, please add the following line to your `proguard.cfg` file:
-
-```
--dontwarn com.microsoft.appcenter.push.**
-```
 
 ## Add App Center Push to your app
 
@@ -86,6 +65,27 @@ Make sure that you replace `{Your Sender ID}` with the **Sender ID** you obtaine
 
 >[!NOTE]
 >If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+
+### 5. Customize ProGuard configuration
+
+If you use ProGuard, you have to customize its configuration for Push.
+
+#### 5.1. Create a ProGuard configuration file
+
+>[!NOTE]
+>If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
+
+Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
+
+![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
+
+#### 5.2. Add customization to ProGuard configuration file
+
+In your Xamarin.Android project, please add the following line to your `proguard.cfg` file:
+
+```
+-dontwarn com.microsoft.appcenter.push.**
+```
 
 ## Intercept push notifications
 
