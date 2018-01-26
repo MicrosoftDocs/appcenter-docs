@@ -1,0 +1,171 @@
+{
+  "redirections": [
+    {
+        "source_path": "vs-mobile-center-docs/analytics/android.md",
+        "redirect_url": "/mobile-center/sdk/analytics/android"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/ios.md",
+        "redirect_url": "/mobile-center/sdk/analytics/ios"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/react-native.md",
+        "redirect_url": "/mobile-center/sdk/analytics/react-native"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/dashboard/index.md",
+        "redirect_url": "/mobile-center/dashboard/creating-and-managing-apps"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/android.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/android"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/ios.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/ios"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/react-native.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/react-native"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/advanced-apis/xamarin.md",
+        "redirect_url": "/mobile-center/sdk/other-apis/xamarin"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/troubleshooting.md",
+        "redirect_url": "/mobile-center/sdk/troubleshooting/xamarin"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/general/guidance.md",
+        "redirect_url": "/mobile-center/migration/"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-audience.md",
+        "redirect_url": "/mobile-center/analytics/overview"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-events.md",
+        "redirect_url": "/mobile-center/analytics/event-metrics"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/analytics/understand-log-flow.md",
+        "redirect_url": "/mobile-center/analytics/log-flow"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/analytics/logged-errors-events.md",
+        "redirect_url": "/mobile-center/analytics/handled-errors-events"
+    },
+
+    {
+        "source_path": "vs-mobile-center-docs/azure/tables/index.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/azuread.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/facebook.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/google.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/index.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/microsoft.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/azure/identity/twitter.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/identity/android.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/identity/ios.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/android.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+        "source_path": "vs-mobile-center-docs/sdk/azure/ios.md",
+        "redirect_url": "/mobile-center/azure/"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/distribution/auto-provisioning-feature.md",
+    "redirect_url": "/mobile-center/distribution/auto-provisioning"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/first-build/xcode.md",
+    "redirect_url": "/mobile-center/build/ios/first-build"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/first-build/xamarin/index.md",
+    "redirect_url": "/mobile-center/build/xamarin/ios/"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/first-build/xamarin/solution-configuration-mappings.md",
+    "redirect_url": "/mobile-center/build/xamarin/ios/solution-configuration-mappings.md"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/first-build/react-native.md",
+    "redirect_url": "/mobile-center/build/react-native/ios/"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/code-signing/uploading-files.md",
+    "redirect_url": "/mobile-center/build/ios/code-signing"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/code-signing/xcode-project.md",
+    "redirect_url": "/mobile-center/build/ios/code-signing"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/ios/xcodebuild.md",
+    "redirect_url": "/mobile-center/build/ios/code-signing"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/android/first-build/java.md",
+    "redirect_url": "/mobile-center/build/android/first-build"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/android/first-build/xamarin.md",
+    "redirect_url": "/mobile-center/build/xamarin/android/"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/android/first-build/react-native.md",
+    "redirect_url": "/mobile-center/build/react-native/android/"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/android/code-signing/setup.md",
+    "redirect_url": "/mobile-center/build/android/code-signing"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/android/code-signing/xamarin.md",
+    "redirect_url": "/mobile-center/build/xamarin/android/code-signing.md"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/windows/configure-build/index.md",
+    "redirect_url": "/mobile-center/build/windows/first-build.md"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/windows/configure-build/uwp.md",
+    "redirect_url": "/mobile-center/build/windows/first-build.md"
+    },
+    {
+    "source_path": "vs-mobile-center-docs/build/windows/build-results/index.md",
+    "redirect_url": "/mobile-center/build/windows/results.md"
+    }
+  ]
+}

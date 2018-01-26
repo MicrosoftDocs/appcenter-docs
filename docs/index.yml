@@ -1,0 +1,124 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Visual Studio App Center
+metadata:
+  description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
+  author: conceptdev
+  ms.author: apexprodleads
+  ms.date: 01/12/2018
+  ms.topic: landing-page
+  ms.service: vs-appcenter
+abstract:
+  description: <a href="https://appcenter.ms/">App Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
+  menu:
+    items:
+    - href: https://openapi.appcenter.ms
+      text: API Swagger
+    - href: ~/migration/
+      text: Migration guidance for existing customers
+    - href: ~/general/roadmap/
+      text: Roadmap
+    - href: ~/general/pricing/
+      text: Pricing
+    - href: ~/general/changelog/
+      text: Changelog
+    - href: https://azure.microsoft.com/en-us/status/
+      text: Service Status
+sections:
+- title: Get Started
+  items:
+  - type: paragraph
+    text: Learn how to add the SDK to your app and get started with App Center.
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_android.svg
+      text: Android
+      href: ~/sdk/getting-started/android/
+    - image:
+        src: ~/media/logo_ios.svg
+      text: iOS
+      href: ~/sdk/getting-started/ios/
+    - image:
+        src: ~/media/logo_react.svg
+      text: React Native
+      href: ~/sdk/getting-started/react-native/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+      text: UWP
+      href: ~/sdk/getting-started/uwp/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
+      text: Xamarin
+      href: ~/sdk/getting-started/xamarin/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+      text: macOS
+      href: ~/sdk/getting-started/macos/
+    - image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_cordova.svg
+      text: Cordova
+      href: ~/sdk/getting-started/cordova/
+- title: Services
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/build/
+        html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS). No additional build hardware required.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
+          href: ~/build/
+        title: Build
+      - href: ~/test-cloud/
+        html: Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS). Backed by Xamarin Test Cloud.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
+          href: ~/test-cloud/
+        title: Test
+      - href: ~/distribution/
+        html: Users can install the app via email distribution lists for testing, much as they'd download an app from the app store.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
+          href: ~/distribution/
+        title: Distribute
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/crashes/
+        html: Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
+          href: ~/crashes/
+        title: Crashes
+      - href: ~/analytics/
+        html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/analytics.svg
+          href: ~/analytics/
+        title: Analytics
+      - href: ~/push/
+        html: Engage your users by sending them targeted messages to specific sets of users at exactly the right time. Create segments of users based on device and custom properties.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
+          href: ~/push/
+        title: Push Notifications
+- title: Reference
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: SDKs
+      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p>
+    - title: Command line
+      html: <p><a href="~/cli/">Overview</a></p>
+    - title: APIs
+      html: <p><a href="~/api-docs/">REST Interface</a></p><p><a href="https://openapi.appcenter.ms">Swagger</a></p>

@@ -1,0 +1,46 @@
+{
+	"build": {
+		"content": [{
+			"files": [
+				"**/*.md",
+				"**/*.yml"
+			],
+			"exclude": [
+				"**/obj/**",
+				"vs-mobile-center-docs/**",
+				"**/includes/**"
+			]
+		}],
+		"resource": [{
+			"files": [
+				"**/*.png",
+				"**/*.jpg",
+				"**/*.svg",
+				"**/*.gif"
+			],
+			"exclude": [
+				"**/obj/**",
+				"vs-mobile-center-docs/**",
+				"**/includes/**"
+			]
+		}],
+		"overwrite": [],
+		"externalReference": [],
+		"globalMetadata": {
+			"contributors_to_exclude": ["conceptdev", "meganbradley"],
+			"breadcrumb_path": "~/_breadcrumb/toc.yml",
+			"manager": "crdun",
+			"audience": "developer",
+			"ms.topic": "article",
+			"searchScope": ["App Center"],
+			"_op_documentIdPathDepotMapping": {
+        			"./": {
+          				"depot_name": "MSDN.vs-mobile-center-docs"
+        			}
+			}
+		},
+		"fileMetadata": {},
+		"template": [],
+		"dest": "vs-mobile-center-docs"
+	}
+}
