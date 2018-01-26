@@ -8,63 +8,65 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 07/26/2017
+ms.date: 01/26/2018
 ---
 
-
 # Send Push Notifications to Users
+
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
-### Prerequisites
- - Signed APK.
- - Distributed sample app to your device (not running on emulator).
- - Google account.
+## Prerequisites
+
+ - A Google account.
+ - A device with Play Store installed or an emulator using a Google APIs image (API level >= 15).
+
+## Set up Firebase Cloud Messaging
+
+Push on App Center for Android uses **Firebase Cloud Messaging** servers.
+You need a Google Account and use the Firebase console.
+
+1. Create a project on the [Firebase console](https://console.firebase.google.com/).
+2. Go to project settings (the cog icon).
+3. Go to **Cloud Messaging** tab.
+4. Copy the **Server Key**. You will need this key as part of the configuration of Push on the App Center portal for your application.
+5. Copy the **Sender ID**, as you will need it in SDK integration.
 
 ## Integrate App Center SDK
+
 *The following directions are also located in the push service on App Center.*
+
 1. Locate the following in **app/build.gradle** and add the compile statement:
 
-``` java
-dependencies {  
-      def appCenterSdkVersion = '1.2.0'
-      compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
-}
-```
+  ``` java
+  dependencies {
+        def appCenterSdkVersion = '1.2.0'
+        compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
+  }
+  ```
 
 2. Locate the App Center import statement in **MainActivity.java** and add the push import statement below it:
 
-```java
-import com.microsoft.appcenter.AppCenter;
-import com.microsoft.appcenter.push.Push;
-```
+  ```java
+  import com.microsoft.appcenter.AppCenter;
+  import com.microsoft.appcenter.push.Push;
+  ```
 
-3. Locate **onCreate** and add `Push.class` to `AppCenter.start`:
+3. Locate **onCreate** and add the following code:
 
-```java
-AppCenter.start(getApplication(), "<APP SECRET HERE>",
-         Analytics.class, Crashes.class, Push.class);
-```
+  ```java
+  Push.setSenderId("<Your Sender ID HERE>");
+  AppCenter.start(getApplication(), "<APP SECRET HERE>", Push.class);
+  ```
 
-## Use Firebase Assistant to set up Firebase Cloud Messaging
-1. Navigate to the app in Android Studio.
-
-2. Go to the Firebase Assistant from the tool bar by clicking on **Tools > Firebase**.
-
-3. Click on Cloud Messaging and click on **Set up Firebase Cloud Messaging**.
-
-4. Connect your app to Firebase.
-
-5. Add Firebase Cloud Messaging to your app. Ignore all other steps in the Firebase Assistant.
-
-6. The App Center SDK manages the following for you; if added automatically, please remove to avoid errors:
+If you also use other services like Analytics or Crashes then modify the existing `start` call like in the following example:
 
 ```java
-  compile "com.google.firebase:firebase-core:${version}"
-  compile "com.google.firebase:firebase-messaging:${version}"
+Push.setSenderId("<Your Sender ID HERE>");
+AppCenter.start(getApplication(), "<APP SECRET HERE>", Analytics.class, Crashes.class, Push.class);
 ```
-
 
 ## Set up Push in App Center
+
 1. Go to the **Push** service in [App Center](https://appcenter.ms/apps).
 
 2. Click **Next** twice and skip the first and second pages.
@@ -75,9 +77,11 @@ AppCenter.start(getApplication(), "<APP SECRET HERE>",
 
 5. Paste your server key in App Center.
 
-
 ## Set up a push notification
-1. Follow the [Distribute tutorial](distribute.md) to download the app to your device.
+
+1. Run your app on your device or emulator.
+
+2. Press the **HOME** button (a circle icon on modern devices) as Push notifications are only displayed if the application is in background.
 
 2. Navigate to the **Push** service in App Center.
 
@@ -86,12 +90,9 @@ AppCenter.start(getApplication(), "<APP SECRET HERE>",
 4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
 
 ## Send a push notification
+
 1. Click **Next** at the bottom.
 
 2. Choose **All registered devices**.
 
 3. Click **Next** and **Send notification** at the bottom.
-
-> [!NOTE]
-> A push notification will be sent to the device you
-> distributed the app to. It will not show up in the simulator.

@@ -5,12 +5,12 @@ Note that only devices having the [Google Play](https://play.google.com) store a
 > [!NOTE]
 > A notification appears in the system notification center only if the application is in the background at the moment the Push is received.
 
-## Prerequisites
+## Set up Firebase Cloud Messaging
 
-### 1. Connect your app to Firebase
+You need a Google Account and use the Firebase console.
 
-Before using App Center Push service, you need to connect your application to Firebase. Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites).
-
-### 2. Obtain your Android API Key and Sender ID
-
-In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. Navigate to the **Cloud Messaging** tab. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal. Also make a note of the **Sender ID**, as you will need it later.
+1. Create a project on the [Firebase console](https://console.firebase.google.com/).
+2. Go to project settings (the cog icon).
+3. Go to **Cloud Messaging** tab.
+4. Copy the **Server Key**. You will need this key as part of the configuration of Push on the App Center portal for your application.
+5. Copy the **Sender ID**, as you will need it in SDK integration.
