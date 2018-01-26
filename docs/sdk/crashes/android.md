@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 11/29/2017
+ms.date: 01/25/2018
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -188,7 +188,7 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 ```
 
 > [!NOTE]
-> The size limit is currently 1.4 MB. Attempting to send a larger attachment will trigger an error.
+> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 ## Enable or disable App Center Crashes at runtime
 

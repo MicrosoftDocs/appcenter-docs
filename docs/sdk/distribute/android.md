@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 10/23/2017
+ms.date: 01/25/2018
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -39,7 +39,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '1.1.0'
+       def appCenterSdkVersion = '1.2.0'
        compile "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```

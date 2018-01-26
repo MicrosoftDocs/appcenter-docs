@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/21/2017
+ms.date: 01/25/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -66,6 +66,12 @@ The App Center Push SDK requires the **Sender ID** obtained in the "Prerequisite
 ```java
 Push.setSenderId("{Your Sender ID}");
 SoLoader.init(this, false);
+```
+
+You also need to add the following import statement to the same file:
+
+```java
+import com.microsoft.appcenter.push.Push;
 ```
 
 Make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. Please check out the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
