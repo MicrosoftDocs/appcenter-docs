@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Build
+# Build (Edited by lobrien)
 
 App Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours.
 
