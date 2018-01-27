@@ -13,9 +13,9 @@ ms.service: vs-appcenter
 # Dashboard FAQ
 
 ## Can I transfer apps in between users & Organizations?
-* Currently, no. This is on our near-term roadmap.
+* You can only transfer a personal app into an organization. In order to transfer an app to an organization, you must be the current owner of the app, as well as an admin in the organization you're trying to transfer the app to.
 
 ## How can I add the same group of people to multiple apps?
-* We're in the process of building 'Teams', which will allow you to quickly add groups of Collaborators to apps.
+* You can [create a team](~/dashboard/creating-and-managing-teams.md) inside an organization which will allow you to quickly add groups of Collaborators to apps.
 
 *Have further questions? Add them to the comments below!*
