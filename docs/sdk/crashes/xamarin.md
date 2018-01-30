@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 01/29/2017
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -157,7 +157,7 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 ```
 
 > [!NOTE]
-> The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
+> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 ## Enable or disable App Center Crashes at runtime
 
