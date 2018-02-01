@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 09/25/2017
+ms.date: 01/31/2018
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter
@@ -225,7 +225,7 @@ $ appcenter test run xcuitest \
   --devices DEVICE_SET \
   --test-series "master" \
   --locale "en_US" \
-  --build-dir DerivedData \
+  --build-dir DerivedData/Build/Products/Debug-iphoneos \
   --token APP_CENTER_API_TOKEN
 ```
 
