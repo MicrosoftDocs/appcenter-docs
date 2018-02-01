@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2017
+ms.date: 02/01/2018
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -148,6 +148,9 @@ To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you
 ```csharp
 AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+> [!IMPORTANT]
+> The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
 
 > [!NOTE]
 > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
