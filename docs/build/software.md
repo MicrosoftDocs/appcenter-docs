@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 1/29/2018
+ms.date: 2/1/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.12.6 (16G1114)
+- OS X 10.12.6 (16G1212)
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -31,7 +31,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.8.0_162
 - Java 9.0.4
 - Node.js 6.12.3
-- PowerShell 6.0.0
+- PowerShell 6.0.1
 - Python 2.7.10
 - Python 3.6.4
 - Ruby 2.5.0p0
@@ -52,7 +52,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.5.2
-- Gradle 4.4.1
+- Gradle 4.5
 
 ### Utilities
 
