@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani 
 ms.author: elamalani 
-ms.date: 01/11/2017
+ms.date: 02/01/2018
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you
 > * Crash reporting is enabled only on devices running Windows 10 Creators update or more recent (version 10.0.15063).
 > * Crash reporting on Windows requires the app to be distributed through the Microsoft Store.
 > * Crashes will only be sent if the device is plugged in to power, this includes phones.
-> * Crashes sent via application associated with the Microsoft Store but not installed from the Microsoft Store (like when using bundle directly, which includes installing via App Center portal) will appear on the portal without the symbols (no method names or class names).
+> * Some crashes might appear unsymbolicated (missing method names or file names or even class names) from applications that are associated with Microsoft Store (such as when you add WNS push) before the application is actually published. This behavior can happen but there is no guarantee that it will.
 
 ### User consent to send a crash log
 
