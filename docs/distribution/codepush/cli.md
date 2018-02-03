@@ -724,7 +724,7 @@ This is the same parameter as the one described in the [above section](#target-b
 ```
 # Promote the release to production and make it
 # available to all versions using that deployment
-appcenter codepush promote -a <ownerName>/MyApp-iOS Staging Production -t "*"
+appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t "*"
 ```
 
 ## <a name="rolling-back-updates" />Rolling Back Updates
