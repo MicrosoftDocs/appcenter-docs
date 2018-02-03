@@ -178,7 +178,7 @@ appcenter codepush deployment list MyApp
 | `appcenter codepush deployment`| View and manage your app deployments | `appcenter codepush deployment list`
 | `appcenter codepush help`| Get CodePush specific command or category help | `-`
 | `appcenter codepush patch` | Update the metadata for an existing release | `appcenter codepush patch -m`
-| `appcenter codepush promote`| Promote the latest release from one app deployment to another | `appcenter codepush promote Staging Production` 
+| `appcenter codepush promote`| Promote the latest release from one app deployment to another | `appcenter codepush promote -s Staging -d Production` 
 | `appcenter codepush release`| Release an update to an app deployment |  `appcenter codepush release -a ownerName/MyApp`
 | `appcenter codepush release-cordova`| Release a Cordova update to an app deployment | `appcenter codepush release-cordova --description "mofified assets" `
 | `appcenter codepush release-react`| Release a React Native update to an app deployment | `appcenter codepush release-react -x`
