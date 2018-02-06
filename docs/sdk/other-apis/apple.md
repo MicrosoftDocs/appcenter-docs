@@ -91,7 +91,7 @@ MSCustomProperties *customProperties = [MSCustomProperties new];
 ```
 ```swift
 var customProperties = MSCustomProperties()
-customProperties.setSring("blue", forKey: "color")
+customProperties.setString("blue", forKey: "color")
 customProperties.setNumber(10, forKey: "score")
 MSAppCenter.setCustomProperties(customProperties)
 ```
