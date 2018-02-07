@@ -32,7 +32,7 @@ Let's get started with setting up App Center React Native SDK in your app to use
 Before you begin, please make sure that the following prerequisites are met:
 
 * You are using a React Native project that runs React Native 0.34 or later.
-* You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 8.0 or later.
+* You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 9.0 or later.
 * For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, please follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret

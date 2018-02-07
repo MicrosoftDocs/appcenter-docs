@@ -27,9 +27,8 @@ App Center Distribute will let your users install a new version of the app when 
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
 > 
-> 1. In-app updates are currently not working on iOS 8 devices.
-> 2. If you have released your app in the App Store, in-app updates will be disabled.
-> 3. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target. 
+> 1. If you have released your app in the App Store, in-app updates will be disabled.
+> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target. 
 
 ## Add in-app updates to your app
 
@@ -247,9 +246,8 @@ The in-app updates feature works as follows:
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment).
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a _one time_ step that will not occur for subsequent releases of your app.
 
-	* On iOS 8 and 9, the user will be redirected to the Safari app where they will be authenticated, and then redirected to the app.
-	* On iOS 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
-	* On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
+	* On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
+	* On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
 
 5. Once the above step is successful, they should be navigated back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
