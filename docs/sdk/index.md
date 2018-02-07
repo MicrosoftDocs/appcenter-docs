@@ -66,10 +66,10 @@ Android Studio 2.2 or later.
 
  Service          | iOS Version     | Xcode
  -----------------|-----------------|-------
- Analytics        | 8.0 or later    | 8.2 and later
- Crashes          | 8.0 or later    | 8.2 and later
- Distribute       | 8.0 or later    | 8.2 and later
- Push             | 8.0 or later    | 8.2 and later
+ Analytics        | 9.0 or later    | 8.2 and later
+ Crashes          | 9.0 or later    | 8.2 and later
+ Distribute       | 9.0 or later    | 8.2 and later
+ Push             | 9.0 or later    | 8.2 and later
 
 
 ### Windows UWP
@@ -86,10 +86,10 @@ Android Studio 2.2 or later.
 
 Service    |  RN version   | iOS Version              | Android Version
  ----------|---------------|--------------------------|-------
-Analytics  | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Crashes    | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Distribute | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Push       | 0.34 or later | 8.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Distribute | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
+Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
 
 
 ### macOS
