@@ -71,9 +71,50 @@ This option allows you to customize your export configurations in [Azure](https:
 
 ## Azure Blob Storage
 
-Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately. Exporting the data to Blob Storage is a good choice for the case where you want to have an extended retention but not necessarily plan to access to the data very often. The data will be exported every minute and a new subfolder will be created. The data will be stored as in the format of *year/month/day/hour/minute*.
+Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately. Exporting the data to Blob Storage is a good choice for the case where you want to have an extended retention but not necessarily plan to access to the data very often. The data will be exported every minute and a new subfolder will be created. The data will be stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data will take up to 5 minutes to be shown in Azure Blob Storage.
+The contents of the blob file is a JSON array of client device logs, that looks like this:
+```
+[
+    {
+        "AppId": "046d56b8-ea26-4653-97ba-12b8f99c3ef5",
+        "Timestamp": "2017-12-09T04:02:53.618Z",
+        "InstallId": "e589a371-ea0c-4479-9a7b-9f834adec040",
+        "MessageType": "EventLog",
+        "IngressTimestamp": "2017-12-09T04:02:57.987Z",
+        "MessageId": "980e21a0-0cbb-48ac-8820-28acf4beb00d",
+        "EventId": "ad980536-e743-48a9-ab7e-cb043602d2c9",
+        "EventName": "log_out",
+        "CorrelationId": "83a2daa9-e5b4-4082-ba4a-ce34b95ab859",
+        "IsTestMessage": "False",
+        "SdkVersion": "1.0",
+        "Model": "PC",
+        "OemName": "Samsung",
+        "OsName": "Android",
+        "OsVersion": "8.1.0",
+        "OsApiLevel": "2",
+        "Locale": "EN",
+        "TimeZoneOffset": "PT2M",
+        "ScreenSize": "320x240",
+        "AppVersion": "1.1.0",
+        "AppBuild": "1",
+        "AppNamespace": "com.microsoft.test",
+        "CarrierName": "AT&T",
+        "CarrierCountry": "US",
+        "CountryCode": "US",
+        "WrapperSdkVersion": "1.0",
+        "WrapperSdkName": "mobilecenter.xamarin",
+        "Properties": "{\"extra_00\":\"5bcacf3598ca44ebbbc99e4488cfc854\",\"extra_01\":\"2673e48867c74d51af8dc24c762a8b28\",\"extra_02\":\"5b76c801e5074cd3a13ea37253b94484\",\"extra_03\":\"c1e76aa252c947d4b4bcd4d1d96a7be6\",\"extra_04\":\"caea50034c4f441a963700fa3cf70d03\"}",
+        "SessionId": "10df497a-4261-4995-b466-3fd77ac47395",
+        "SdkName": "mobilecenter.android",
+        "OsBuild": "2",
+        "WrapperRuntimeVersion": "None",
+        "LiveUpdateDeploymentKey": "stage",
+        "LiveUpdatePackageHash": "dsadsdasd3211321233",
+        "LiveUpdateReleaseLabel": "2.0"
+    }
+]
+```
 
 [Learn more about Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 
@@ -117,8 +158,18 @@ The table below shows the field mapping for the "customDimensions" field.
 |  OsApiLevel                     | API Level                                      |
 |  Locale                         | Device language                                |
 
+A sample AI query to retrieve custom events:
+```
+customEvents
+ | where name == "YourEventName"
+ | extend Properties = todynamic(tostring(customDimensions.Properties))
+ | extend YourPropertyName = Properties.YourPropertyName    
+ ```
 
-Learn more about [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) and the [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart).
+More information about Application Insights and App Center:
+* Learn about [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) in general
+* Learn about [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
+* Learn about [Better Decisions Through Better Analytics](https://blogs.msdn.microsoft.com/vsappcenter/better-decisions-through-better-analytics-visual-studio-app-center-with-azure-application-insights/) on App Center blog
 
 
 ## Pricing
