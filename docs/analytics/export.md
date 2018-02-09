@@ -71,10 +71,10 @@ This option allows you to customize your export configurations in [Azure](https:
 
 ## Azure Blob Storage
 
-Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately. Exporting the data to Blob Storage is a good choice for the case where you want to have an extended retention but not necessarily plan to access to the data very often. The data will be exported every minute and a new subfolder will be created. The data will be stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
+Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately. Exporting the data to Blob Storage is a good choice for the case where you want to have an extended retention but not necessarily plan to access to the data very often. The data will be exported every minute and a new subfolder will be created. The data will be stored the *year/month/day/hour/minute* format (for example, *https://&lt;blob-storage-account&gt;.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
 The contents of the blob file is a JSON array of client device logs, that looks like this:
-```
+```JSON
 [
     {
         "AppId": "046d56b8-ea26-4653-97ba-12b8f99c3ef5",
