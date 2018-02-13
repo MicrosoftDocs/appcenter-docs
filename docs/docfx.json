@@ -29,6 +29,7 @@
 		"globalMetadata": {
 			"contributors_to_exclude": ["conceptdev", "meganbradley"],
 			"breadcrumb_path": "~/_breadcrumb/toc.yml",
+			"extendBreadcrumb": true,
 			"manager": "crdun",
 			"audience": "developer",
 			"ms.topic": "article",
