@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 11/03/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -74,6 +74,10 @@ The App Center SDK is designed with a modular approach – a developer only need
 > If silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
 [!include[](dotnet-push-event-example.md)]
+
+## Custom data in your notifications
+
+[!include[](custom-data-ios.md)]
 
 ## Enable or disable Push at runtime
 

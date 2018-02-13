@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/04/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: vs-appcenter
@@ -135,6 +135,10 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   }
 }
 ```
+
+## Custom data in your notifications
+
+[!include[](custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

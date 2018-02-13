@@ -11,7 +11,7 @@ Push.SetEnabledAsync(true);
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
-# Check if App Center Push is enabled
+## Check if App Center Push is enabled
 
 You can also check if App Center Push is enabled or not:
 

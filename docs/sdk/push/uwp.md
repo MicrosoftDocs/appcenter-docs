@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/04/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: vs-appcenter
@@ -112,6 +112,16 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 > **Title** and **message** are only available in **foreground** pushes.
 
 [!include[](dotnet-push-event-example.md)]
+
+## Custom data in your notifications
+
+You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback.
+
+There are few reserved keywords that can be set via custom data.
+
+### Reserved keywords in Windows platform
+- **audio**: Add this key when you want the to play a sound. this will modify the audio attribute for toast notifications.
+- **image**: Add this key when you want to modify the image attribute for tile and toast notifications.
 
 ## Enable or disable App Center Push at runtime
 

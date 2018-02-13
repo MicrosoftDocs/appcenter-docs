@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 12/21/2017
+ms.date: 02/08/2018
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311
 ms.service: vs-appcenter
@@ -117,6 +117,10 @@ var app = {
 
 app.initialize();
 ```
+
+## Custom data in your notifications
+
+[!include[](custom-data-android.md)]
 
 ## Enable or disable App Center Push at runtime
 

@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/31/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -102,6 +102,10 @@ You can set up a listener to be notified whenever a push notification is receive
 By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 [!include[](react-native-listener.md)]
+
+## Custom data in your notifications
+
+[!include[](custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

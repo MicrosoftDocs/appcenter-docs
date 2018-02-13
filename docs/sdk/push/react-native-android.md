@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 01/26/2018
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -92,6 +92,10 @@ You can set up a listener to be notified whenever a push notification is receive
 > **Title** and **message** are only available in **foreground** pushes.
 
 [!include[](react-native-listener.md)]
+
+## Custom data in your notifications
+
+[!include[](custom-data-android.md)]
 
 ## Existing Firebase Analytics users
 

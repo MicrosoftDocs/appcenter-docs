@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 01/26/2018
+ms.date: 02/08/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -141,6 +141,10 @@ public class MyPushListener implements PushListener {
     }
 });
 ```
+
+## Custom data in your notifications
+
+[!include[](custom-data-android.md)]
 
 ## Existing Firebase Analytics users
 
