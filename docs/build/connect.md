@@ -37,7 +37,7 @@ If you logged in into App Center with another method, but you have connected to 
 ![Remove GitHub Oauth Token][remove-github-oauth-token]
 
 #### Bitbucket
-In order to connect to another Bitbucket account to build your apps, first step is to revoke the Oauth token: go to https://bitbucket.org/account/ > Access Management (Oauth) > Revoke App Center token. Then, go back to App Center in the build tab, reconnect to VSTS and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first. 
+In order to connect to another Bitbucket account to build your apps, first step is to revoke the Oauth token: go to https://bitbucket.org/account/ > Access Management (Oauth) > Revoke App Center token. Then, go back to App Center in the build tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first. 
 
 ![Remove Bitbucket Oauth Token][remove-bitbucket-oauth-token]
 
