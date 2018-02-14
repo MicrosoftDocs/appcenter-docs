@@ -79,7 +79,7 @@ App Center Crashes provides callbacks for developers to perform additional actio
 ### <a name="process"></a> Processing crashes in JavaScript
 
 During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. You need to answer
-to process in Javascript for any of the `Crash.setListener` methods to work as expected.
+to process in Javascript for any of the `Crashes.setListener` methods to work as expected.
 
 All the different callbacks of the event listener are discussed one by one
 in this document, but you need to set one event listener that define all callbacks at once.
