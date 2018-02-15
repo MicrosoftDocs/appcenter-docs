@@ -217,7 +217,7 @@ $ app-center login
 
 # Generate an XCUITest bundle and your iOS application as describe above.
 $ rm -rf DerivedData
-$ xcrun xcodebuild build-for-testing [args] -derivedDataPath DerivedData
+$ xcrun xcodebuild build-for-testing [args] -derivedDataPath DerivedData -scheme YOUR_APP_SCHEME
 
 # Upload your test to App Center
 $ appcenter test run xcuitest \
