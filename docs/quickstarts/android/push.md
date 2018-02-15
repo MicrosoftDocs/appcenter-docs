@@ -8,7 +8,7 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 01/26/2018
+ms.date: 02/15/2018
 ---
 
 # Send Push Notifications to Users
@@ -39,7 +39,7 @@ You need a Google Account and use the Firebase console.
 
   ``` java
   dependencies {
-        def appCenterSdkVersion = '1.2.0'
+        def appCenterSdkVersion = '1.3.0'
         compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
   }
   ```
