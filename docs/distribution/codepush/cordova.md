@@ -27,7 +27,7 @@ In order to ensure that your end users always have a functioning version of your
 
 ## Supported Cordova Platforms
 
-Cordova 5.0.0+ is fully supported, along with the following asociated platforms:
+Cordova 5.0.0+ is fully supported, along with the following associated platforms:
 
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - *Including CrossWalk!* 
 * iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - *Note: In order to use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.*
@@ -38,7 +38,7 @@ To check which versions of each Cordova platform you are currently using, you ca
 cordova platform ls
 ```
 
-If you're running an older Android and/or iOS platform than is mentioned above, and would be open to upgrading, you can easily do so by running the following commands (omitting a platform if it isn't neccessary):
+If you're running an older Android and/or iOS platform than is mentioned above, and would be open to upgrading, you can easily do so by running the following commands (omitting a platform if it isn't necessary):
 
 ```shell
 cordova platform update android
@@ -69,7 +69,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
     As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can simply run `appcenter codepush deployment list -a <ownerName>/<appName>`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
     
     > [!IMPORTANT]
-    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample illustrates declaring seperate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
+    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample illustrates declaring separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
     
 2. If you're using an `<access origin="*" />` element in your `config.xml` file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
  
@@ -130,7 +130,7 @@ Additionally, if you would like to display an update confirmation dialog (an "ac
 
 ## Releasing Updates
 
-Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` comand in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server. 
+Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server. 
 
 In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
@@ -344,7 +344,7 @@ Immediately restarts the app. This method is for advanced scenarios, and is prim
 codePush.sync(syncCallback?, syncOptions?, downloadProgress?);
 ```
 
-Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which simply checks for the presence of an update, and let's you control what to do next, `sync` handles the update check, download and installation experience for you.
+Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which simply checks for the presence of an update, and lets you control what to do next, `sync` handles the update check, download and installation experience for you.
 
 This method provides support for two different (but customizable) "modes" to easily enable apps with different requirements:
 
@@ -468,7 +468,7 @@ The `sync` method can be called anywhere you'd like to check for an update. That
 
 ### Package objects
 
-The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide acces to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:
+The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide access to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:
 
 1. `LocalPackage`: Represents a downloaded update that is either already running, or has been installed and is pending an app restart.
 
