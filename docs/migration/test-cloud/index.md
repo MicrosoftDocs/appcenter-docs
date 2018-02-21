@@ -16,7 +16,7 @@ ms.custom: test
 Microsoft will seamlessly upgrade active paid Xamarin Test Cloud subscriptions to [Visual Studio App Center](http://appcenter.ms). Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
 
 ## Timeline
-* March 31st, 2018 
+* March 31st, 2018  
 	1. Teams / Orgs / Apps / previous test reports will import into App Center. 
 	2. All your test results that are being uploaded via our XTC CLIs will automatically route your test results into your App Center account.
 	3. The [Xamarin Test Cloud](http://testcloud.xamarin.com) website will redirect to [Visual Studio App Center](http://appcenter.ms).
