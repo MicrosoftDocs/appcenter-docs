@@ -2,8 +2,8 @@
 title: Test Cloud Migration Guide
 description: "Xamarin Test Cloud to AppCenter test tranition guide. Relevant to Xamarin Test Cloud subscribers that will be automatically upgraded from Xamarin Test Cloud to Visual Studio App Center on March 31, 2018"
 keywords: testcloud
-author: glwest
-ms.author: glwest
+author: glennwester
+ms.author: glennwester
 ms.date: 2/21/2018
 ms.topic: article
 ms.assetid: 4a110ae0-21d6-46c4-bcca-963ac0e2c3d7
