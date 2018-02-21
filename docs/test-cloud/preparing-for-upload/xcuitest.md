@@ -213,7 +213,7 @@ an example command-line invocation. For more information, see [Starting a Test r
 ```
 # Follow the instructions to generate a resuable API token.
 # Save this token, you will use it later, but keep it private.
-$ app-center login
+$ appcenter login
 
 # Generate an XCUITest bundle and your iOS application as describe above.
 $ rm -rf DerivedData
