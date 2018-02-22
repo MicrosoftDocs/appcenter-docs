@@ -2,7 +2,7 @@
 title: Test Cloud Migration Guide
 description: "Upgrading Xamarin Test Cloud to Visual Studio App Center"
 keywords: testcloud
-author: glwest
+author: glennwester
 ms.author: glwest
 ms.date: 2/21/2018
 ms.topic: article
