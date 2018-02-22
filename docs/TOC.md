@@ -90,12 +90,10 @@
 ## [React Native](crashes/react-native.md)
 ## [macOS](crashes/macos.md)
 
-# [Errors](errors/index.md)
-## [Feature Set](errors/featureset.md)
-
 # [Analytics](analytics/index.md)
 ## [Overview](analytics/overview.md)
 ## [Events Metrics](analytics/event-metrics.md)
+## [Handled Errors using Events](analytics/handled-errors-events.md)
 ## [Log Flow](analytics/log-flow.md)
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
