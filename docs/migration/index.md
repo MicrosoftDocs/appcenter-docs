@@ -5,7 +5,7 @@ ms.author: joemel
 ms.date: 04/10/2017
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
-ms.service: vs-appcenter
+ms.service: vs-appcenter 
 ---
 
 # Migrating Existing Services
@@ -23,6 +23,10 @@ Today we recommend you to not use App Center for production use but continue usi
 Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using their existing HockeyApp account credentials. We've synchronized your existing HockeyApp apps and data with App Center. This allows you to login to App Center using your HockeyApp credentials and try out all the services App Center offers without affecting your HockeyApp workflow. Your apps are now two places at once with back-and-forward synchronicity. You can continue to use HockeyApp as you would normally. Get the [high-level overview](https://www.hockeyapp.net/mobile-center/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md).
 
 <!-- ## [Microsoft CodePush](~/migration/codepush/index.md) Ian Geoghegan placeholder -->
+
+## [Xamarin Test Cloud](~/migration/testcloud/index.md)
+Microsoft will seamlessly upgrade active paid Xamarin Test Cloud subscriptions to Visual Studio App Center. Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
+
 
 ## Xamarin Insights
 
