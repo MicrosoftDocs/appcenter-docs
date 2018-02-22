@@ -1,8 +1,8 @@
 ---
 title: "Migration"
-author: joemellin
-ms.author: joemel
-ms.date: 04/10/2017
+author: glennwester
+ms.author: glwest
+ms.date: 02/22/2018
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
 ms.service: vs-appcenter 
