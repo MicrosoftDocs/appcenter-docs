@@ -27,7 +27,6 @@ Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_lin
 ## [Xamarin Test Cloud](~/migration/test-cloud/index.md)
 Microsoft will seamlessly upgrade active paid Xamarin Test Cloud subscriptions to Visual Studio App Center. Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
 
-
 ## Xamarin Insights
 
 If you are a Xamarin Insights customer, we do not have any plans to move your data to App Center. We recommend that you move your production apps to HockeyApp as soon as possible, as HockeyApp will offer a transition path to App Center.
