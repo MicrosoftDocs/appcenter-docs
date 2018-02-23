@@ -29,7 +29,7 @@ App Center offers two ways to export your data: *standard export* and *custom ex
 ## Azure Subscription Linking
 
 > [!NOTE]
-> This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attached the azure subscription to App Center.
+> This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attach the Azure subscription to App Center.
 
 Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization admin.
 
