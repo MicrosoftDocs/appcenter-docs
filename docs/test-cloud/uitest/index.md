@@ -95,7 +95,6 @@ The relative path example tells `AppBundle` to go up three directories from the 
 
 `ConfigureApp` does have other methods to help configure `IApp`. See the [iOSAppConfigurator](http://developer.xamarin.com/api/type/Xamarin.UITest.Configuration.iOSAppConfigurator/) class for more details. Some of the more interesting methods are described in the following table:
 
-
 | Method | Description |
 | --- | ---|
 | `AppBundle` | This method specifies the path to the app bundle to use when testing. |
@@ -129,7 +128,7 @@ IApp app = ConfigureApp
 
 The relative path example tells `AppBundle` to go up three directories from the UITest assembly, and then navigate down the project tree of the Android application project to find the app bundle.
 
-If there is more than one device or emulator connected, UITest will hat test execution and display an error message as it is unable to resolve what the intended target is for the test. In this case, it will be necessary to initialize provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
+If there is more than one device or emulator connected, UITest will halt test execution and display an error message as it is unable to resolve what the intended target is for the test. In this case, it will be necessary to initialize provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
 
 ```bash
 $ adb devices
