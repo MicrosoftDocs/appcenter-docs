@@ -63,9 +63,6 @@ If you do not have an application created in the App Center Dashboard, complete 
 5. Click the **Add new app** button on the bottom-right corner of the page.
 6. Locate the project's app secret on the new app's Getting Started page. You can also find the app secret on the application project's **Settings** page - access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
 
-> [!NOTE]
-> In App Center, an application project's app secret is like an API key for your app; it enables remote systems to interact with your application project. It doesn't provide any access to your account, nor can it be used to invoke App Center REST APIs (to trigger builds or send push notifications for example). With App Center Analytics or Crashes, for example, the app secret connects event and telemetry data to a specific application in App Center. If you're publishing your application source code in a public location (if you are working on an open source project, for example) you must not include the app secret with your project's code. Either inject the app secret at build time, or store the secret in an external file that is not deployed with the project during publishing to an online repository.
-
 ## 3. Add the App Center SDK to the project
 
 ### Installing the SDK
