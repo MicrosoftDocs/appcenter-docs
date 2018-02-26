@@ -23,7 +23,7 @@ App Center Analytics will help you understand more about your app users and thei
 | [Overview](~/analytics/overview.md) | Key metrics about your users and their app usage.|
 | [Custom Events](~/analytics/event-metrics.md)| Understand the actions that your users take in your app.|
 | [Log Flow](~/analytics/log-flow.md)| See incoming logs in real time to check wether your SDK is properly integrated.|
-| [Export to Azure](~/analytics/export.md)| Continuously export your raw data into Azure for extended retention and query capabilites.|
+| [Export to Azure](~/analytics/export.md)| Continuously export your raw data into Azure for extended retention and query capabilities.|
 
 ## Integrate the Analytics SDK to get started
 
