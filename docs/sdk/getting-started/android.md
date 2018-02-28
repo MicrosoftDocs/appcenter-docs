@@ -52,7 +52,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 	```groovy
 	dependencies {
-		def appCenterSdkVersion = '1.3.0'
+		def appCenterSdkVersion = '1.4.0'
    		compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
    		compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 	}

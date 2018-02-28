@@ -39,7 +39,7 @@ You need a Google Account and use the Firebase console.
 
   ``` java
   dependencies {
-        def appCenterSdkVersion = '1.3.0'
+        def appCenterSdkVersion = '1.4.0'
         compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
   }
   ```

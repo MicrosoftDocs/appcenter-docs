@@ -44,7 +44,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '1.3.0'
+       def appCenterSdkVersion = '1.4.0'
        compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
     ```
