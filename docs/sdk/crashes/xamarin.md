@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 01/29/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -72,8 +72,8 @@ Set this callback if you'd like to decide if a particular crash needs to be proc
 ```csharp
 Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 {
- 	// Check the report in here and return true or false depending on the ErrorReport.
-	return true;
+     // Check the report in here and return true or false depending on the ErrorReport.
+    return true;
 };
 ```
 
@@ -91,10 +91,10 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-	// Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
-	return true;
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+    return true;
 };
 ```
 
@@ -118,7 +118,7 @@ At times, you would like to know the status of your app crash. A common use case
 ```csharp
 Crashes.SendingErrorReport += (sender, e) =>
 {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 };
 ```
 
@@ -127,7 +127,7 @@ Crashes.SendingErrorReport += (sender, e) =>
 ```csharp
 Crashes.SentErrorReport += (sender, e) =>
 {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 };
 ```
 
@@ -136,7 +136,7 @@ Crashes.SentErrorReport += (sender, e) =>
 ```csharp
 Crashes.FailedToSendErrorReport += (sender, e) =>
 {
-	// Your code goes here.
+    // Your code goes here.
 };
 ```
 
@@ -147,12 +147,12 @@ You can add **one binary** and **one text** attachment to a crash report. The SD
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
 {
-	// Your code goes here.
-	return new ErrorAttachmentLog[]
-	{
-		ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
-		ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
-	};
+    // Your code goes here.
+    return new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
 };
 ```
 
@@ -181,4 +181,32 @@ You can also check if App Center Crashes is enabled or not:
 
 ```csharp
 bool isEnabled = await Crashes.IsEnabledAsync();
+```
+
+## Handled Errors in Xamarin
+
+App Center also allows you to track errors by using handled exceptions in Xamarin.
+In order to do so, simply use the `TrackError` method:
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    Crashes.TrackError(exception);
+}
+```
+
+For further context about your error, you can also attach properties to it. To do so, pass these properties as a dictionary of strings. This step is optional.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var properties = new Dictionary<string, string>
+    {
+        { "Category", "Music" },
+        { "Wifi", "On"}
+    };
+    Crashes.TrackError(exception, properties); 
+}
 ```
