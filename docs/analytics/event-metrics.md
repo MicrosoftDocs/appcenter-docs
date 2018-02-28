@@ -72,3 +72,8 @@ Note that property values are optimized for values of type 'String'.
 Events can also be used to help you identify the root cause of your crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session. 
 
 In order to see the events before a crash, the Analytics SDK needs to be integrated and events need to be defined.
+
+
+## Handled Errors
+
+In order to track handled errors in App Center, we recommend that you use the specific functionality for it. Check out more information on this topic in our [official documentation](~/errors/index.md).
