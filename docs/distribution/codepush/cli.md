@@ -243,7 +243,7 @@ appcenter codepush release -a <ownerName>/<appName> -c <updateContentsPath> -t <
 [-t|--target-binary-version <version>] 
 [-с|--update-contents-path <updateContentsPath>] 
 [-r|--rollout <rolloutPercentage>] 
-[--no-duplicate-release-error]
+[--disable-duplicate-release-error]
 [-k|--private-key-path <privateKeyPath>] 
 [-m|--mandatory] 
 [-x|--disabled] 
@@ -393,7 +393,7 @@ appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t
 [--development] 
 [-b|--bundle-name <bundleName>]
 [-r|--rollout <rolloutPercentage>] 
-[--no-duplicate-release-error] 
+[--disable-duplicate-release-error] 
 [-k|--private-key-path <privateKeyPath>] 
 [-m|--mandatory] 
 [-x|--disabled]
@@ -540,7 +540,7 @@ appcenter codepush release-cordova -a <ownerName>/<appName> -d <deploymentName> 
 [--is-release-build-type] 
 [-b|--build] 
 [-r|--rollout <rolloutPercentage>]
-[--no-duplicate-release-error] 
+[--disable-duplicate-release-error] 
 [-k|--private-key-path <privateKeyPath>] 
 [-m|--mandatory] 
 [-x|--disabled] 
@@ -680,11 +680,13 @@ appcenter codepush patch -a <ownerName>/MyApp-iOS Staging -t "1.0.0 - 1.0.5"
 Once you've tested an update against a specific deployment (e.g. `Staging`), and you want to promote it "downstream" (e.g. dev->staging, staging->production), you can simply use the following command to copy the release from one deployment to another:
 
 ```
-appcenter codepush promote -a <ownerName>/<appName> <sourceDeploymentName> <destDeploymentName>
+appcenter codepush promote -a <ownerName>/<appName> -s <sourceDeploymentName> -d <destDeploymentName>
+[-s|--source-deployment-name <sourceDeploymentName>]
+[-d|--destination-deployment-name <destDeploymentName>]
 [-t|--target-binary-version <targetBinaryVersion>] 
 [-r|--rollout <rolloutPercentage>]
-[--no-duplicate-release-error]
-[-d|--description <description>]
+[--disable-duplicate-release-error]
+[--description <description>]
 [-a|--app <ownerName>/<appName>] 
 [--disable-telemetry] 
 ```
