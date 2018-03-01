@@ -2,8 +2,8 @@
 title: Build Scripts
 description: 
 keywords: build, pre, post, custom, scripts
-author: danieladams
-ms.author: v-daada
+author: derpixeldan
+ms.author: daadam
 ms.date: 06/27/2017
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af

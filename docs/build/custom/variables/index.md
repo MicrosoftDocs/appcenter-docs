@@ -2,8 +2,8 @@
 title: Environment Variables
 description: 
 keywords: build, pre, post, custom, scripts
-author: danieladams
-ms.author: v-daada
+author: derpixeldan
+ms.author: daadam
 ms.date: 11/06/2017
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
