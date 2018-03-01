@@ -60,7 +60,7 @@ You can enable and disable App Center Analytics at runtime. If you disable it, t
 await Analytics.setEnabled(false);
 ```
 
-This function returns a promise, in which the success case returns an empty string, and the error case returns the error.
+This function returns a promise that resolves to void.
 
 To enable App Center Analytics again, use the same API but pass `true` as a parameter.
 
@@ -76,7 +76,7 @@ You can also check if App Center Analytics is enabled or not.
 const enabled = await Analytics.isEnabled();
 ```
 
-This function returns a promise, in which the success case returns a `boolean`, and the error case returns the error.
+This function returns a promise that resolves to a `boolean`.
 
 ## Wait for JS to enable App Center Analytics
 
