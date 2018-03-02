@@ -110,13 +110,13 @@ Distribute | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 Push       | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 
 
-## Source code
+## Source Code and Release Notes
 
-The App Center SDKs is open-source and available publicly on GitHub:
+The App Center SDKs are open-source and available publicly on GitHub:
 
-* [App Center SDK for Android](https://github.com/Microsoft/AppCenter-SDK-Android)
-* [App Center SDK for iOS and macOS](https://github.com/Microsoft/AppCenter-SDK-Apple)
-* [App Center SDK for React Native](https://github.com/Microsoft/AppCenter-SDK-React-Native)
-* [App Center SDK for UWP and Xamarin](https://github.com/Microsoft/AppCenter-SDK-DotNet)
-* [App Center SDK for Apache Cordova](https://github.com/Microsoft/appcenter-sdk-cordova)
+* [App Center SDK for Android code](https://github.com/Microsoft/AppCenter-SDK-Android) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Android/releases)
+* [App Center SDK for iOS and macOS code](https://github.com/Microsoft/AppCenter-SDK-Apple) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Apple/releases)
+* [App Center SDK for React Native code](https://github.com/Microsoft/AppCenter-SDK-React-Native) and [release notes](https://github.com/Microsoft/AppCenter-SDK-React-Native/releases)
+* [App Center SDK for UWP and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
+* [App Center SDK for Apache Cordova code](https://github.com/Microsoft/appcenter-sdk-cordova) and [release notes](https://github.com/Microsoft/appcenter-sdk-cordova/releases)
 
