@@ -16,7 +16,10 @@ ms.custom: errors
 App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. This section examines how to catch and report the errors in your app. Learn more about best practices about when and how to use errors [in the official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 
 > [!NOTE]
-> We currently only support Handled Errors in Xamarin platform.
+> Handled Errors are currently in preview, behind a feature flag. To try out this feature during the preview, contact us via our support system in the App Center portal, and we will provide you with access.
+
+> [!NOTE]
+> Handled Errors are currently only supported on the Xamarin platform.
 
 
 ## General information
@@ -84,3 +87,8 @@ catch (FileNotFoundException ex)
 ```
 
 Here the full exception (ex) is still being sent back to the App Center service, but in addition to this, a Dictionary containing additional debugging information is also being created and sent.
+
+### Limitations
+
+- You can define a maximum of 5 properties per error, anything beyond that limit will be rejected.
+- The maximum number of characters per error property key and error property value is 64 characters.
