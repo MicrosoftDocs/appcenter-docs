@@ -141,3 +141,30 @@ A recommended practice is to have a call to label in the `@After` method, this w
         driver.quit();
     }
 ```
+
+## 3. Upload to App Center Test
+Steps to upload a test:
+1. Generate an App Center Test upload command. [Instructions](https://github.com/King-of-Spades/AppCenter-Test-Samples#appcentertest-command-line)
+2. Pack your test classes and all dependencies into the `target/upload` folder:
+```
+mvn -DskipTests -P prepare-for-upload package
+```
+3. Perform upload:
+```
+appcenter test run appium --app "<user/appname>" --devices "<selection>" --app-path <pathToFile.apk>  --test-series "<series>" --locale "<locale>" --build-dir target/upload 
+```
+
+## 4. Performance Troubleshooting
+Tests run on devices in the AppCenter may execute slightly slower than on a local device under certain circumstances. Normally, this is outweighed by the fact that you have many more devices available and therefore potentially able to parallelize test runs.
+
+There are two main sources of potential slow test runs: re-signing and re-installation.
+
+#### Re-signing (on iOS)
+Before being installed on the iOS device, your app goes through a process called re-signing. This is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. This does rarely cause performance degrades because re-signed apps are cached. The time consuming process will only run once per binary.
+
+If you have a very automated Continuous Delivery setup where the IPA is having it’s version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
+
+#### Re-installation
+On a shared device cloud, it is very important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.
+Running tests locally does not inflict any penalty because the app mostly stays installed through all tests. In App Center Test, the app is automatically uninstalled after each test. The next test will then have to re-install the app before running the test. This can slow down your tests in the cloud.
+Luckily, there’s a solution. Instead of having the appium driver create a new session for each test case, just have one session and re-use it for all tests. To control the app state, make a call to `driver.resetApp()` before each test. This will only incur a 5-second delay between test cases. You can implement this by moving the driver initialization code from the `setUp` method to the `setUpClass` method. 
