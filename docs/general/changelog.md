@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/24/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+### **March 06, 2018**
+- **Updated Xamarin SDKs**:
+Build your Xamarin apps with SDK release [15.5.5](https://releases.xamarin.com/service-release-15-5-5/)
+
 ### **December 21, 2017**
 - **Cordova platform preview released**:
 Visual Studio App Center now offers preview support for Cordova apps with our Test, Distribute, Analytics, Crash and Push Notifications services.
