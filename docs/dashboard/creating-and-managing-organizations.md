@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app organizations in App C
 keywords: dashboard organizations
 author: joemellin
 ms.author: joemel
-ms.date: 04/07/2017
+ms.date: 03/06/2016
 ms.topic: article
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
 ms.service: vs-appcenter
@@ -68,3 +68,9 @@ To delete an organization, select the organization, and then click on **Manage**
 
 > [!NOTE]
 > Only organization 'Admins' can delete organizations.
+
+# Next steps
+
+* [Create a team in your organization](~/dashboard/creating-and-managing-teams.md)
+* [Connect to your repository (GitHub, Bitbucket, VSTS)](~/build/index.md)
+* [Add App Center's SDK to your app](~/sdk/index.md)

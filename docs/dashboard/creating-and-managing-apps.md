@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 12/06/2017
+ms.date: 03/06/2018
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -52,3 +52,9 @@ To share your app with others, select an app and then click **Manage app** to ad
 We currently only enable the transfer of apps from users to organization accounts.
 
 To do so, go to your app settings, select the menu at the top right (three dots) corner, select **Transfer app to organization**.
+
+# Next steps
+
+* [Create an organization](~/dashboard/creating-and-managing-organizations.md)
+* [Connect to your repository (GitHub, Bitbucket, VSTS)](~/build/index.md)
+* [Add App Center's SDK to your app](~/sdk/index.md)
