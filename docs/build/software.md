@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 2/1/2018
+ms.date: 3/5/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.12.6 (16G1212)
+- OS X 10.13.2 (17C205) **High Sierra**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -30,43 +30,43 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.7.0_80
 - Java 1.8.0_162
 - Java 9.0.4
-- Node.js 6.12.3
+- Node.js 6.13.0
 - PowerShell 6.0.1
 - Python 2.7.10
 - Python 3.6.4
 - Ruby 2.5.0p0
-- .NET Core SDK 2.0.3
-- Go 1.9.3
+- .NET Core SDK 1.0.4, 2.0.3
+- Go 1.10
 
 ### Package Management
 
-- Bundler 1.16.0
-- Carthage 0.27.0
+- Bundler 1.16.1
+- Carthage 0.28.0
 - CocoaPods 1.4.0
-- Homebrew 1.5.2
+- Homebrew 1.5.5
 - NPM 3.10.10
-- Yarn 1.3.2
-- NuGet 4.3.0
+- Yarn 1.5.1
+- NuGet 4.3.0.4406
 - pip 9.0.1
 
 ### Project Management
 
 - Apache Maven 3.5.2
-- Gradle 4.5
+- Gradle 4.6
 
 ### Utilities
 
-- curl 7.54.0 (SecureTransport zlib/1.2.8)
-- Git 2.16.1
+- curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
+- Git 2.16.2
 - Git LFS 2.3.4
 - GNU Wget 1.19.4
 - Subversion (SVN) 1.9.7
 
 ### Tools
 
-- fastlane 2.78.0
-- App Center CLI 1.0.8
-- Azure-CLI 2.0.25
+- fastlane 2.83.0
+- App Center CLI 1.0.11
+- Azure-CLI 2.0.28
 
 ## Xcode
 
@@ -84,7 +84,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xcode Support Tools
 
-- Nomad CLI 2.7.4
+- Nomad CLI 2.7.6
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.2.8
 - xctool 0.3.4
@@ -550,7 +550,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 16.1.4479499                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.0.5                                    |
+| Android Emulator      | 27.1.10                                    |
 
 ### Google APIs
 
@@ -568,13 +568,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-android-m2repository        | Android Support Repository, revision 47  |
 | extra-google-google_play_services | Google Play services, revision 46        |
 | extra-google-m2repository         | Google Repository, revision 58           |
-| Hardware_Accelerated_Execution_Man| Intel x86 Emulator Accelerator 6.2.1     |
+| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 6.2.1     |
 
 ## Xamarin
 
 ### Visual Studio for Mac
 
-- 7.3.0.799
+- 7.3.3.7
 
 ### Mono
 
@@ -586,7 +586,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
-- 11.6.1.2
+- 11.6.1.4
 - 11.2.0.11
 - 11.0.0.0
 - 10.10.0.36
@@ -594,7 +594,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
-- 8.1.0-24
+- 8.1.5-0
 - 8.0.0-33
 - 7.4.5-1
 - 7.3.1-2
@@ -602,7 +602,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
-- 4.0.0.214
+- 4.0.0.216
 - 3.8.0.49
 - 3.6.3.3
 - 3.4.0.36
