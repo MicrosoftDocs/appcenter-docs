@@ -16,9 +16,6 @@ ms.custom: errors
 App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. This section examines how to catch and report the errors in your app. Learn more about best practices about when and how to use errors [in the official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 
 > [!NOTE]
-> Handled Errors are currently in preview, behind a feature flag. To try out this feature during the preview, contact us via our support system in the App Center portal, and we will provide you with access.
-
-> [!NOTE]
 > Handled Errors are currently only supported on the Xamarin platform.
 
 
