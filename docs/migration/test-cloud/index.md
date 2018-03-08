@@ -16,7 +16,7 @@ Microsoft will seamlessly upgrade active Xamarin Test Cloud subscriptions to [Vi
 * March 31st, 2018 
 	1. Teams / Orgs / Apps / previous test reports imported into App Center. 
 	2. All test results uploaded via Xamarin Test Cloud CLIs will automatically route into App Center account.
-	3. The [Xamarin Test Cloud](http://testcloud.xamarin.com) website will redirect to [Visual Studio App Center](http://appcenter.ms).
+	3. The [Xamarin Test Cloud](http://testcloud.xamarin.com) portal will redirect to [Visual Studio App Center](http://appcenter.ms).
 * Later this Spring
 	1. Xamarin Test Cloud CLIs deprecated, everyone must use the [App Center CLI](https://github.com/Microsoft/appcenter-cli) to continue uploading.
 
@@ -80,6 +80,10 @@ Read more about the [appcenter-cli]((https://github.com/Microsoft/appcenter-cli)
 **Q:** *Who can I reach out to with additional questions?*
 
 **A:** For more information about the upgrade, please don't hesitate to reach out on Intercom with any questions.
+
+### Other upcoming product changes
+* **Upload to Test Cloud (Visual Studio for Mac feature)** – Microsoft will discontinue support for the “Upload to Xamarin Test Cloud” function in Visual Studio for Mac (invoked by right-clicking the Unit test tree) on March 31st, 2018. Moving forward tests must submitted through the Visual Studio [App Center CLI](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
+* **Xamarin Test Recorder** - Microsoft will discontinue development of Xamarin Test Recorder on macOS and the Visual Studio extension for Windows on March 31st, 2018. Upload to Test Cloud functionality from Xamarin Test Recorder will no longer be supported after this date. Moving forward tests must submitted through the Visual Studio [App Center CLI](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
 
 ### Helpful Resources
 * [App Center](https://appcenter.ms)
