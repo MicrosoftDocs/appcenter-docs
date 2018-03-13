@@ -63,4 +63,4 @@ AppCenter.Start("{Your App Secret}", typeof(Crashes));
 ```
 
 > [!IMPORTANT]
-> None of the other API calls provided by the `Crashes` class are supported on UWP, they work only for Xamarin. UWP only supports starting Crashes with `AppCenter.Start`.
+> UWP only supports starting Crashes with `AppCenter.Start` and none of the other API calls provided by the `Crashes` class are supported on UWP, They only work for Xamarin.iOS, Xamarin.Android and Xamarin.Forms apps deployed to iOS and Android. 
