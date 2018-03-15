@@ -103,12 +103,12 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 
 	And then retry running `react-native link`.
 
-3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account.
+3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
 
 	```
-	What is the Android App Secret? 0000-0000-0000-0000-000000000000
-
-	What is the iOS App Secret? 0000-0000-0000-0000-000000000000
+	What secret does your Android app use? [None]
+	
+	What secret does your iOS app use? [None]
 	```
 
 	If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
