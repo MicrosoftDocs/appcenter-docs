@@ -26,6 +26,34 @@ Note the following limitations for Appium support:
 * Automating browsers (web testing) is not supported.
 * Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
 
+## Prerequisites
+
+Tests will be run using Maven Surefire. This requires tests to follow [certain naming conventions](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
+
+```
+"**/Test*.java" - includes all of its subdirectories and all Java filenames that start with "Test".
+"**/*Test.java" - includes all of its subdirectories and all Java filenames that end with "Test".
+"**/*Tests.java" - includes all of its subdirectories and all Java filenames that end with "Tests".
+"**/*TestCase.java" - includes all of its subdirectories and all Java filenames that end with "TestCase".
+```
+
+Before attempting to upload to App Center Test, please make sure that running tests locally on your machine using Maven works:
+
+```
+➜  AppiumTest git:(master) ✗ mvn verify
+...
+Running MainTest
+started: SimpleTest (MainTest)
+Setting up capabilities
+failed
+finished
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.728 sec <<< FAILURE!
+SimpleTest(MainTest)  Time elapsed: 0.594 sec  <<< ERROR!
+...
+```
+
+If you're unable to run the tests using command line locally, tests will also not work in App Center Test.
+
 ## 1a. Changes to the build system for Maven users
 _See the section below for instructions if you use Gradle for your project,
 such as Android Studio builds._
