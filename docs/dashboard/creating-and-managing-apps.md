@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 03/06/2018
+ms.date: 03/16/2018
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -47,7 +47,7 @@ To share your app with others, select an app and then click **Manage app** to ad
 > [!NOTE]
 > If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
 
-## Transfering an app
+## Transferring an app
 
 We currently only enable the transfer of apps from users to organization accounts.
 
