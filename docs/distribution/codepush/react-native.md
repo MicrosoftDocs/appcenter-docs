@@ -337,7 +337,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             // 3. Instantiate an instance of the CodePush runtime and add it to the list of
             // existing packages, specifying the right deployment key. If you don't already
-            // have it, you can run "code-push deployment ls <appName> -k" to retrieve your key.
+            // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve your key.
             return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
                 new CodePush("deployment-key-here", MainApplication.this, BuildConfig.DEBUG)
@@ -404,7 +404,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         // 3. Instantiate an instance of the CodePush runtime and add it to the list of
         // existing packages, specifying the right deployment key. If you don't already
-        // have it, you can run "code-push deployment ls <appName> -k" to retrieve your key.
+        // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve your key.
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             new CodePush("deployment-key-here", this, BuildConfig.DEBUG)
@@ -507,7 +507,7 @@ class AppReactPage : ReactPage
     // 3. Update the JavaScriptBundleFile property to initalize the CodePush runtime,
     // specifying the right deployment key, then use it to return the bundle URL from
     // CodePush instead of statically from the binary. If you don't already have your
-    // deployment key, you can run "code-push deployment ls <appName> -k" to retrieve it.
+    // deployment key, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve it.
     public override string JavaScriptBundleFile
     {
         get
@@ -815,7 +815,7 @@ To set this up, perform the following steps:
 
     ![Setting Keys](./images/rn-ios-11.png)
 
-    *NOTE: As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
+    *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName>` from your terminal.*
 
 10. Open your project's `Info.plist` file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
