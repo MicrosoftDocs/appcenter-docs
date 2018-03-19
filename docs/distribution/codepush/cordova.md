@@ -132,6 +132,9 @@ Additionally, if you would like to display an update confirmation dialog (an "ac
 
 Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server. 
 
+ > [!NOTE]
+ > Before you can start releasing updates, please log into App Center by running the `appcenter login` command 
+
 In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
 ```
