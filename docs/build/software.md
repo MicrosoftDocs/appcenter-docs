@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 3/5/2018
+ms.date: 3/20/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -30,7 +30,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.7.0_80
 - Java 1.8.0_162
 - Java 9.0.4
-- Node.js 6.13.0
+- Node.js 6.13.1
 - PowerShell 6.0.1
 - Python 2.7.10
 - Python 3.6.4
@@ -43,7 +43,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.28.0
 - CocoaPods 1.4.0
-- Homebrew 1.5.5
+- Homebrew 1.5.10
 - NPM 3.10.10
 - Yarn 1.5.1
 - NuGet 4.3.0.4406
@@ -51,22 +51,22 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Project Management
 
-- Apache Maven 3.5.2
+- Apache Maven 3.5.3
 - Gradle 4.6
 
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
 - Git 2.16.2
-- Git LFS 2.3.4
+- Git LFS 2.4.0
 - GNU Wget 1.19.4
 - Subversion (SVN) 1.9.7
 
 ### Tools
 
-- fastlane 2.83.0
-- App Center CLI 1.0.11
-- Azure-CLI 2.0.28
+- fastlane 2.85.0
+- App Center CLI 1.0.13
+- Azure-CLI 2.0.29
 
 ## Xcode
 
@@ -550,7 +550,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 16.1.4479499                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.1.10                                    |
+| Android Emulator      | 27.1.12                                    |
 
 ### Google APIs
 
@@ -566,7 +566,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-google_play_services | Google Play services, revision 46        |
+| extra-google-google_play_services | Google Play services, revision 48        |
 | extra-google-m2repository         | Google Repository, revision 58           |
 | Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 6.2.1     |
 
@@ -574,10 +574,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 7.3.3.7
+- 7.4.0.1033
 
 ### Mono
 
+- 5.8.0
 - 5.4.1.7
 - 5.4.0.201
 - 5.2.0.224
@@ -586,6 +587,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 11.8.0.20
 - 11.6.1.4
 - 11.2.0.11
 - 11.0.0.0
@@ -594,6 +596,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 8.2.0-15
 - 8.1.5-0
 - 8.0.0-33
 - 7.4.5-1
@@ -602,6 +605,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 4.2.0.20
 - 4.0.0.216
 - 3.8.0.49
 - 3.6.3.3
