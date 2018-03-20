@@ -179,9 +179,10 @@
 
 # [Migration](migration/index.md)
 ## [HockeyApp](migration/hockeyapp/index.md)
-## [TestCloud](migration/test-cloud/index.md)
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
+## [TestCloud](migration/test-cloud/index.md)
+
 
 # Reference
 ## [API docs](api-docs/index.md)
