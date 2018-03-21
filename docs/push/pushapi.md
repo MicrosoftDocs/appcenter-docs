@@ -14,7 +14,7 @@ ms.custom: push
 
 # API for Push Notifications
 
-App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on how to get stared with our [APIs](~/api-docs/index.md).
+App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
 
 
 ## Push API
