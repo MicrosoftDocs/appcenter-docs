@@ -30,8 +30,6 @@ ms.tgt_pltfrm: cordova
 If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
 
 ```javascript
-import AppCenter from 'appcenter';
-
 await AppCenter.setEnabled(false);
 ```
 
