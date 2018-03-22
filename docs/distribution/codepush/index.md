@@ -29,7 +29,7 @@ You manage most of CodePush's functionality using the App Center CLI. To install
 Add the appropriate CodePush client SDKs to your app and configure them to query for updates against one of your app deployments. The following provide details on how to do this for each unique app type:
 
   - [Cordova][cordova]
-  - [React Native (iOS)][react-native]
+  - [React Native][react-native]
 
 ## 3. Release an app update
 
