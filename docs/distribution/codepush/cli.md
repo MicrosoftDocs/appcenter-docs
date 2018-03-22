@@ -38,8 +38,6 @@ This will launch a browser, asking you to authenticate with either your GitHub o
 > [!NOTE]
 > After registering, you are automatically logged-in with the CLI, so until you explicitly log out, you don't need to login again from the same machine.
 
-
-
 ### Authentication
 
 Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you need to login using the GitHub or Microsoft account you used when registering. You can do this by running the following command:
@@ -85,7 +83,6 @@ appcenter login --token <accessToken>
 
 When logging in using this method, the access token will not be automatically invalidated on logout, and can be used in future sessions until it is explicitly removed from the App Center server. However, it is still recommended that you log out once your session is complete, in order to remove your credentials from disk.
 
-
 ## App Management
 
 Before you can deploy any updates, you need to create an app with App Center using the following command:
@@ -94,22 +91,21 @@ Before you can deploy any updates, you need to create an app with App Center usi
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
 ```
 
-If your app targets both iOS and Android, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. The naming convention that most folks use is to suffix the app name with `-iOS` and `-Android`. For example:
+If your app targets both iOS and Android, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-iOS` and `-Android`. For example:
 
 ```
 appcenter apps create -d MyApp-Android -o Android -p React-Native
 appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 ```
 
-
 > [!NOTE]
 > Using the same app for iOS and Android may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
 
 > [!TIP]
-> One important new functionality in the App Center CLI is the ability to set an app as the current app by using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the -a flag. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be typed as `appcenter codepush deployment list` if current app is set. You can check which app is set as your account's current app by using `appcenter apps get-current`. Utilizing this command make most of the CLI commands shorter.
+> One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
 
+With the original CodePush, apps automatically had to two deployments (`Staging` and `Production`). In App Center, you'll have to create them yourself using the following commands:
 
-New apps do not automatially come with two deployments. Previously, they came with two deployments (`Staging` and `Production`). These deployments can be created using the following commands:
 ```
 appcenter codepush deployment add -a <ownerName>/<appName> Staging
 appcenter codepush deployment add -a <ownerName>/<appName> Production
@@ -124,7 +120,7 @@ If you decide that you don't like the name you gave to an app, you can rename it
 appcenter apps update -n <newName> -a <ownerName>/<appName>
 ``` 
 
-The app's name is only meant to be recognizable from the management side, and therefore, you can feel free to rename it as necessary. It won't actually impact the running app, since update queries are made via deployment keys.
+The app's name is only meant to be recognizable from the management side, so feel free to rename it as necessary. It won't actually impact the running app, since update queries are made via deployment keys.
 
 If at some point you no longer need an app, you can remove it from the server using the following command:
 
@@ -132,10 +128,9 @@ If at some point you no longer need an app, you can remove it from the server us
 appcenter apps delete -a <ownerName>/<appName>
 ```
 
-Do this with caution since any apps that have been configured to use it will obviously stop receiving updates.
+Use caution when doing this as any apps that have been configured to use it will obviously stop receiving updates.
 
-Finally, if you want to list all apps that you've registered with the App Center server,
-you can run the following command:
+Finally, if you want to list all apps that you've registered with the App Center server, run the following command:
 
 ```
 appcenter apps list 
@@ -145,15 +140,15 @@ appcenter apps list
 
 If you will be working with other developers on the same CodePush app, you can add them as collaborators using the App Center portal by following the set of instructions below:
 
-1. Choose the desired app you would like to add collaborators to in the App Center portal
-2. Click settings, which is located on the bottom of the list view located on the left side of the portal
-3. Click the collaborators link, which will open the collaborators menu.
+1. In the App Center portal, select the app for which you would like to add collaborators
+2. In the navigation area on the left side of the page, click **Settings**
+3. Click the **Collaborators** link
 4. Within the collaborators menu, enter the email addresses of the desired collaborators to invite them
 
 > [!IMPORTANT]
-> This expects the developer to have already [registered](#account-creation) with App Center  using the specified e-mail address, so ensure that they have done that before attempting to share the app with them.*
+> App Center's Collaborators feature expects that each collaborator has already [registered with App Center](#account-creation) using the specified e-mail address.
 
-Once added, all collaborators will immediately have the following permissions with regards to the newly shared app:
+Once added, all collaborators will immediately have the following permissions in the shared app:
 
 1. View the app, its collaborators, [deployments](#deployment-management) and [release history](#viewing-release-history)
 1. [Release](#releasing-app-updates) updates to any of the app's deployments
@@ -161,7 +156,7 @@ Once added, all collaborators will immediately have the following permissions wi
 1. [Rollback](#rolling-back-updates) any of the app's deployments
 1. [Patch](#patching-update-metadata) any releases within any of the app's deployments
 
-Inversely, that means that an app collaborator cannot do any of the following:
+Collaborators cannot do any of the following:
 
 1. Rename or delete the app
 1. Create, rename or delete new deployments within the app
@@ -175,14 +170,12 @@ Over time, if someone is no longer working on an app with you, you can also remo
 
 In addition to this, if at any time you want to list all collaborators that have been added to an app, you can simply visit the collaborater menu in the portal.
 
-
 ### Deployment Management
 
-From the CodePush perspective, an app is simply a named grouping for one or more things called "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (e.g. the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end-users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a dev's personal environment to a testing/QA/staging environment, before finally making their way into production.
+From the CodePush perspective, an app is simply a named grouping for one or more "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (e.g. the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end-users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a dev's personal environment to a testing/QA/staging environment, before finally making their way into production.
 
 > [!NOTE]
 > As you'll see below, the `release`, `promote` and `rollback` commands require both an app name and a deployment name in order to work, because it is the combination of the two that uniquely identifies a point of distribution (e.g. I want to release an update of my iOS app to my beta testers).
-
 
 Whenever an app is registered with the CodePush service, we recommend you create the following deployments: `Staging` and `Production`. This allows you to begin releasing updates to an internal environment, where you can thoroughly test each update before pushing them out to your end-users. This workflow is critical for ensuring your releases are ready for mass-consumption, and is a practice that has been established in the web for a long time.
 
@@ -237,6 +230,7 @@ Which of these commands you should use is mostly a matter of requirements and/or
 > Only the 50 most recent releases in a deployment can be discovered and downloaded by the clients.
 
 ### Releasing Updates (General)
+
 ```
 appcenter codepush release -a <ownerName>/<appName> -c <updateContentsPath> -t <targetBinaryVersion> -d <deploymentName>
 
@@ -310,14 +304,12 @@ The following table outlines the version value that CodePush expects your update
 > [!NOTE]
 > If the app store version in the metadata files are missing a patch version, e.g. `2.0`, it will be treated as having a patch version of `0`, i.e. `2.0 -> 2.0.0`.
 
-
 #### Deployment name parameter
 
 This specifies which deployment you want to release the update to. This defaults to `Staging`, but when you're ready to deploy to `Production`, or one of your own custom deployments, just explicitly set this argument.
 
 > [!TIP]
 > The parameter can be set using either `--deployment-name` or `-d`.
-
 
 #### Description parameter
 
@@ -430,7 +422,7 @@ Achieving the equivalent behavior with the `release-react` command would simply 
 appcenter codepush release-react -a <ownerName>/MyApp-iOS 
 ```
 > [!NOTE]
-> We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, please don't hesistate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!*
+> We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, please don't hesistate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!
 
 #### App name parameter
 
@@ -691,7 +683,7 @@ appcenter codepush promote -a <ownerName>/<appName> -s <sourceDeploymentName> -d
 [--disable-telemetry] 
 ```
 
-The `promote` command will create a new release for the destination deployment, which includes the **exact code and metadata** (description, mandatory and target binary version) from the latest release of the source deployment. While you could use the `release` command to "manually" migrate an update from one environment to another, the `promote` command has the following benefits:
+The `promote` command creates a new release for the destination deployment, which includes the **exact code and metadata** (description, mandatory and target binary version) from the latest release of the source deployment. While you could use the `release` command to "manually" migrate an update from one environment to another, the `promote` command has the following benefits:
 
 1. It's quicker, since you don't need to reassemble the release assets you want to publish or remember the description/app store version that are associated with the source deployment's release.
 
