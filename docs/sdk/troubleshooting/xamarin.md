@@ -59,7 +59,7 @@ ms.tgt_pltfrm: xamarin
 
   Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
-5. On iOS, don't use any other library that provides Crash Reporting functionality. You can only have one crash reporting SDK integrated in your iOS app.
+5. Don't use any other library that provides Crash Reporting functionality, such as Xamarin insights. You can only have one crash reporting SDK integrated.
 6. If you use Hockey App in Android, make sure it's initialized after App Center.
 7. Make sure your device is online.
 8. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
