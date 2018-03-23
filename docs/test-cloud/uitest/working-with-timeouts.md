@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 01/11/2019
+ms.date: 01/11/2018
 ms.topic: article
 ms.assetid: E72E94A6-479F-4D65-9394-C6310F670DD9
 ms.service: vs-appcenter
