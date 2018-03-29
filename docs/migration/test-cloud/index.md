@@ -26,9 +26,12 @@ Users must log into app center with the same email they used in Xamarin Test Clo
 * **If you do not have an App Center account**
 	* [Create](http://appcenter.ms/) one today, use same email as you use in Xamarin Test Cloud.
 	*  If you do not wish to try App Center before March 31st, you can simply wait until that day and we'll create the account and import your data for you.
+	*  We'll send an email to the Xamarin Test Cloud account inviting you to complete your App Center account setup.
 
 * **If you already have an App Center account (email matches Xamarin Test Cloud)**
-	* Relevant Teams / Orgs / Apps / previous test reports will import into App Center automatically.
+	* All of your existing data from the Xamarin Test Cloud will import into your new App Center account.
+    	* We'll send an email to the Xamarin Test Cloud account inviting you to log into your App Center account.
+	
 
 ### FAQ
 
@@ -51,6 +54,22 @@ Read more about the [appcenter-cli]((https://github.com/Microsoft/appcenter-cli)
 **Q:** *How is support handled in App Center?*
 
 **A:** Support will now be handled in [Intercom](https://intercom.help/appcenter). If you have a question you can click the blue circle at the bottom right-hand side of your App Center dashboard to begin a conversation with one of agents.
+
+**Q:** How will I know if my organization was imported from Xamarin Test Cloud?
+
+**A:** The migrated organization will get the prefix "[xtc]" e.g. [xtc]MyOrg.
+
+**Q:** *If my imported organization does not have a subscription, how do I initiate a trial for my app in App Center*
+
+**A:** To enroll in a 30-day Test trial:
+
+- In the App Center portal's navigation area, select the organzation (designated with [xtc]) and then select an app.
+
+- In the application menu on the left, select **Test**
+
+- Select **Start testing your app**.
+
+- From the pop-up window, select “Start 30-day trial”.
 
 **Q:** *What do I need to do during this upgrade?*
 
