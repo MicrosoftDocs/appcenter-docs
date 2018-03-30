@@ -30,5 +30,4 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 
 ## Crashes service
 
-* Managed exceptions.
 * ProGuard, NDK support.

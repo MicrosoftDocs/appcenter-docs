@@ -13,6 +13,8 @@ ms.service: vs-appcenter
 ### **March 22, 2018**
 - **Updated Xamarin SDKs**:
 Build your Xamarin apps with SDK release [15.6](https://releases.xamarin.com/release-15-6/) including Mono 5.8.
+- **Handled Errors preview released**:
+Added support for Errors for Xamarin iOS and Xamarin Android. This allows you to track your handled exceptions and report them in App Center Diagnostics.
 
 ### **March 06, 2018**
 - **Updated Xamarin SDKs**:
