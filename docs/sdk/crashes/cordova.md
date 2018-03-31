@@ -32,7 +32,7 @@ Please follow the [Getting Started](~/sdk/getting-started/cordova.md) section if
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
 ```js
-Appcenter.Crashes.generateTestCrash();
+AppCenter.Crashes.generateTestCrash();
 ```
 
 > [!NOTE]
@@ -55,7 +55,7 @@ var error = function(error) {
     console.error(error);
 }
 
-Appcenter.Crashes.hasCrashedInLastSession(success, error);
+AppCenter.Crashes.hasCrashedInLastSession(success, error);
 ```
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers may want to show something to apologize to their users, or to get in touch after a crash has occured.
@@ -73,7 +73,7 @@ var error = function(error) {
     console.error(error);
 }
 
-Appcenter.Crashes.lastSessionCrashReport(success, error);
+AppCenter.Crashes.lastSessionCrashReport(success, error);
 ```
 
 ## Customize your usage of App Center Crashes
@@ -196,12 +196,3 @@ var error = function(error) {
 }
 AppCenter.Crashes.isEnabled(success, error);
 ```
-
-
-
-
-
-
-
-
-
