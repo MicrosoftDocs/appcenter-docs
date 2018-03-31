@@ -10,6 +10,9 @@ ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
+dev_langs:  
+ - swift
+ - objc 
 ---
 
 # Get Started with iOS
@@ -99,20 +102,13 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 
 ### 4.1 Add the import statements
 
-**Objective-C**
+Open your **AppDelegate** file and add the following import statements:
 
-Open your **AppDelegate.m** file and add the following import statements:
-
-```obj-c
+```objc
 @import AppCenter;
 @import AppCenterAnalytics;
 @import AppCenterCrashes;
 ```
-
-**Swift**
-
-Open your **AppDelegate.swift** file and add the following import statements:
-
 ```swift
 import AppCenter
 import AppCenterAnalytics
@@ -121,18 +117,10 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-**Objective-C**
-
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `didFinishLaunchingWithOptions` method.
-
-```obj-c
+Insert the following line to start the SDK in your app's **AppDelegate** class in the `didFinishLaunchingWithOptions` method.
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
-
-**Swift**
-
-Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `didFinishLaunchingWithOptions` method.
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
@@ -151,14 +139,9 @@ Note that, unless you explicitly specify each module as parameters in the start 
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
 ```
-
-**Swift**
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
