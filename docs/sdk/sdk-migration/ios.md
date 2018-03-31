@@ -9,6 +9,10 @@ ms.topic: article
 ms.assetid: 278e0ad2-2616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
 ms.custom: sdk
+ms.tgt_pltfrm: ios
+dev_langs:  
+ - swift
+ - objc 
 ---
 
 # Migrate to App Center iOS SDK v1.0.0
@@ -68,7 +72,7 @@ This step can be done easily by globally searching for `MobileCenter` and replac
 
     Open your **AppDelegate.m** file for Objective-C or **AppDelegate.swift** file for Swift and add the following import statements:
 
-    ```obj-c
+    ```objc
     @import AppCenter;
     @import AppCenterAnalytics;
     @import AppCenterCrashes;
@@ -86,7 +90,7 @@ This step can be done easily by globally searching for `MobileCenter` and replac
 2. Remove the imports for `MobileCenter` and its modules. Replace them with their `AppCenter` equivalents.
 3. Replace the `start` method API signature in your app's code:
 	
-    ```obj-c
+    ```objc
     [MSMobileCenter start: ...]; 
     ```
     ```swift
@@ -95,7 +99,7 @@ This step can be done easily by globally searching for `MobileCenter` and replac
     
     with
     
-    ```obj-c
+    ```objc
     [MSAppCenter start: ...];
     ```    
     ```swift
