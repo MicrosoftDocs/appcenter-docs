@@ -101,7 +101,7 @@ The following steps explain how to set up the connection between App Center and 
 4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
 6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Note that Google could take upto 24 hours to show up the app on the Play store.
-7. In case of a failure with publishing by Google, app owner will receive a notiifcation to the registered google mail. 
+7. In case of a failure with publishing by Google, app owner will receive a notification to the registered google mail. 
 
 
 
