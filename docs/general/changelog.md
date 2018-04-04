@@ -10,6 +10,11 @@ ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+### **April 2, 2018**
+- **CLI version 1.0.14 released**
+Added --test-output-dir and --merge-nunit-xml options to appcenter test run commands.
+Misc. fixes to codepush commands.
+
 ### **March 22, 2018**
 - **Updated Xamarin SDKs**:
 Build your Xamarin apps with SDK release [15.6](https://releases.xamarin.com/release-15-6/) including Mono 5.8.
@@ -86,12 +91,12 @@ Know of which symbols need to be uploaded to get symbolicated crash reports
 ### **August, 23 2017**
 
 - **Advanced build customization options**:
-You can now [configure](~/build/custom/scripts/index.md) your build to run custom scripts at pre-defined stages of the build process. 
+You can now [configure](~/build/custom/scripts/index.md) your build to run custom scripts at pre-defined stages of the build process.
 
 - **Use popular command line tools straight from your build**:
 The build VMs come now with fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.
 
-- **Better UDID management**: 
+- **Better UDID management**:
 Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from App Center.
 
 
@@ -123,84 +128,84 @@ Automatically increment the build number of your builds with a specific format. 
 
 ### **June 8, 2017**
 
-- **Get deeper insights by attaching your own logs to crashes:** 
-The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash. 
+- **Get deeper insights by attaching your own logs to crashes:**
+The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash.
 
-- **Annotate your findings to crash groups:** 
-It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature. 
+- **Annotate your findings to crash groups:**
+It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.
 
-- **Use CodePush in App Center:** 
-Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the App Center across multiple deployments. Keep an eye out for more features and improvements here! 
+- **Use CodePush in App Center:**
+Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the App Center across multiple deployments. Keep an eye out for more features and improvements here!
 
-- **Updates in CLI:** 
-With the new CLI version  – 0.9.1, you can now upload missing symbol files for crashes and run analytics commands to get information about your app audience, session and events. We also support browser login, so you can easily login to CLI with your GitHub or Microsoft account. 
+- **Updates in CLI:**
+With the new CLI version  – 0.9.1, you can now upload missing symbol files for crashes and run analytics commands to get information about your app audience, session and events. We also support browser login, so you can easily login to CLI with your GitHub or Microsoft account.
 
 ### **May 18, 2017**
 
 - **UWP support:**
-We now support Build, distribute and Analytics for Universal Windows Platform (UWP) apps. 
+We now support Build, distribute and Analytics for Universal Windows Platform (UWP) apps.
 
-- **Streamlined UX for configuring Builds:** 
+- **Streamlined UX for configuring Builds:**
 It’s easier to configure your build for continuous integration with a new and improved user experience. As always, you have options to tweak your build configuration; sign your app; and automatically queue successful builds for Distribution.
 
-- **Fastlane plugin for uploading your releases:** 
+- **Fastlane plugin for uploading your releases:**
 Automate uploading your releases and symbol files to App Center through the App Center fastlane plugin.
 
-- **Latest tools for your iOS builds:** 
-All iOS apps written in Swift, Objective-C and React Native now use the latest tooling as recommended by Apple. 
+- **Latest tools for your iOS builds:**
+All iOS apps written in Swift, Objective-C and React Native now use the latest tooling as recommended by Apple.
 
-- **Sign in with Google & Facebook:** 
+- **Sign in with Google & Facebook:**
 Register and sign into App Center using your Google or Facebook credentials.
 
-- **Manage email notifications for Crashes and Distribution:** 
-You can now instantly get notified via email when a new crash group gets created and manage these notifications in App Center. 
+- **Manage email notifications for Crashes and Distribution:**
+You can now instantly get notified via email when a new crash group gets created and manage these notifications in App Center.
 
 ### **Apr 27, 2017**
-- **Avoid failures when your testers install your distributed app** 
-App Center now supports the capture and reporting of tester UDIDs for your distributed iOS app so you can easily create a valid ad-hoc provisioning profile including all your testers. This makes sure that there are no failures when your testers try to use your distributed app. 
+- **Avoid failures when your testers install your distributed app**
+App Center now supports the capture and reporting of tester UDIDs for your distributed iOS app so you can easily create a valid ad-hoc provisioning profile including all your testers. This makes sure that there are no failures when your testers try to use your distributed app.
 
 - **Automatically verify that your app launches successfully**
-After each successful build, verify that your app is launching on a real device hosted in our device center. You can configure this in your build settings. 
+After each successful build, verify that your app is launching on a real device hosted in our device center. You can configure this in your build settings.
 
 - **Manage API tokens in App Center portal**
-You can now easily create an API token for use with App Center REST APIs right from App Center portal by going to Settings -> API Tokens. 
+You can now easily create an API token for use with App Center REST APIs right from App Center portal by going to Settings -> API Tokens.
 
 - **Build apps using latest Xcode versions and tooling**
-You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using xcodebuild. 
+You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using xcodebuild.
 
 ### **Apr 13, 2017**
-- **Build your apps hosted from a VSTS repository**: 
-In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps. 
+- **Build your apps hosted from a VSTS repository**:
+In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps.
 
 - **XCUITest now available for testing iOS apps**:
 Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, simply select this option in the "new test run" dialog.
 
 - **Get the latest build from distribution with in-app updates**:
-Notify testers of the latest releases from inside your distributed application. Simply integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release. 
+Notify testers of the latest releases from inside your distributed application. Simply integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release.
 
-- **Auto-detect missing symbols in your Crash reports**: 
+- **Auto-detect missing symbols in your Crash reports**:
 If you forget to upload symbols for your iOS app, App Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.
 
 - **Distribute your app via the CLI**:
-Create & manage your distribution groups, upload your release and distribute it using the new CLI version 0.8.0. 
+Create & manage your distribution groups, upload your release and distribute it using the new CLI version 0.8.0.
 
 ### **Mar 30, 2017**
 - Organizations: Share apps among your team members by creating and grouping them within an Organization. Find them under Settings.
-- Bitbucket: Connect to source code repositories using GitHub... and now Bitbucket, too! VSTS support coming soon.  
+- Bitbucket: Connect to source code repositories using GitHub... and now Bitbucket, too! VSTS support coming soon.
 - New Build commands in the CLI: Trigger a new build for pre-configured branches, view the build status of a branch, download logs for a build and get a list of branches for your app using CLI v0.7.0.
 - Build React Native apps with Yarn: Use the popular JavaScript package manager, Yarn, when building React Native apps. Dependency installs are now also faster and deterministic.
-- Release notes from your commits: When building, release notes now auto-populate with the corresponding commit message.  
+- Release notes from your commits: When building, release notes now auto-populate with the corresponding commit message.
 - Xamarin Cycle 9: Build apps using Xamarin Cycle 9 (Service Release 0) and use NuGet URL v3. See the full list of cloud build machines.
 - New iOS test devices: Choose iOS 10.3 devices to run tests using App Center Test service.
 
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
-- Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.   
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you are using to login to install the build so there is no more confusion about it.  
+- Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.
+- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you are using to login to install the build so there is no more confusion about it.
 
 ### **Mar 02, 2017**
 
-- Upload symbol files and get symbolicated crash reports using the latest CLI, v0.6.0.  
+- Upload symbol files and get symbolicated crash reports using the latest CLI, v0.6.0.
 - Gain deeper insight into user engagement with up to 10 Analytics custom event properties
 - Run automated UI tests for iOS 10 and Android 7 with Appium 1.6.3
 - FIXED: Analytics events appear correctly even if you have an adblocker in the browser
@@ -213,13 +218,13 @@ Create & manage your distribution groups, upload your release and distribute it 
 
 **Run Jest based tests for React Native apps**
 
-- For React Native apps, you can now run Jest based unit tests during the build process. Enable unit tests during build setup and the snapshots of the app you checked in get compared to the test runs. 
+- For React Native apps, you can now run Jest based unit tests during the build process. Enable unit tests during build setup and the snapshots of the app you checked in get compared to the test runs.
 
 ### **Jan 31, 2017**
 
 **Espresso testing for Android apps**
 
--   You can now run Espresso tests for Android apps using the Test service. 
+-   You can now run Espresso tests for Android apps using the Test service.
 
 ### **Jan 24, 2017**
 
