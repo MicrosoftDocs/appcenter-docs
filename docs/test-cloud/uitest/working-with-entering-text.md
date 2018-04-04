@@ -36,7 +36,7 @@ app.EnterText(c=>c.Marked("creditCardTextField"), new string('9', 15));
 
 `IApp.EnterText` will fail if the iOS simulator is configured to use the hardware keyboard. Before running your UITests locally, ensure that the simulator is configured to use the soft keyboard.
 
-[ ![Screenshot of the Keyboard menu in the iOS Simulator](./images/working-with-entering-text-01-sml.png)](./images/working-with-entering-text-01.png)
+[ ![Screenshot of the Keyboard menu in the iOS Simulator](./images/working-with-entering-text-01-sml.png)](./images/working-with-entering-text-01.png#lightbox)
 
 ## Clearing Text
 

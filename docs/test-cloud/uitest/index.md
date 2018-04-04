@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 01/19/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -140,7 +140,9 @@ List of devices attached
 The device can be specified using the `DeviceSerial` method:
 
 ```csharp
-IApp app = ConfigureApp.Android.ApkFile("/path/to/android.apk").DeviceSerial("03f80ddae07844d3").StartApp();
+IApp app = ConfigureApp.Android.ApkFile("/path/to/android.apk")
+                               .DeviceSerial("03f80ddae07844d3")
+                               .StartApp();
 ```
 
 ## Interacting with the User Interface
@@ -201,15 +203,15 @@ public class ValidateCreditCard
 
 To run the test by right clicking in the gutter of Visual Studio and selecting **Run**:
 
-[ ![Screenshot of the popup menu with the run options for a test](./images/index-01-xs-sml.png)](./images/index-01-xs.png)
+[ ![Screenshot of the popup menu with the run options for a test](./images/index-01-xs-sml.png)](./images/index-01-xs.png#lightbox)
 
 The test will run, and when the `Repl` method is invoked, Xamarin.UITest will start the REPL in a terminal session, as shown in the following screenshot:
 
-[ ![Screenshot of the OS X terminal running the UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png)
+[ ![Screenshot of the OS X terminal running the UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
 
 Notice that the REPL has initialized an instance of `IApp` that is called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
 
-[ ![Screenshot of a sample application running on an iPhone](./images/index-03-xs-sml.png)](./images/index-03-xs.png)
+[ ![Screenshot of a sample application running on an iPhone](./images/index-03-xs-sml.png)](./images/index-03-xs.png#lightbox)
 
 
 We can use the `tree` command to display the following hierarchy of this screen:
@@ -303,10 +305,10 @@ The following table demonstrates some other examples of using `AppQuery` to loca
 
 | Syntax | Results |
 | --- | --- | 
-| `app.Query(c=&gt;c.Class("UILabel"))` | The `.Class()` method will query for views that are a subclass of an iOS `UILabel`. |
-| `app.Query(c=&gt;c.Id("txtUserName"))` | The `.Class()` method will query for views with an `Id<` of **txtUserName**. |
-| `app.Query(c=&gt;c.Class("UILabel").Text("Hello, World"))` | Locates all `UILabel` classes that have the text "Hello, World".|
-| `results = app.Query(c=&gt;c.Marked("ValidateButton"))` | Returns all views that are _marked_ with the specified text. The `Marked` method is a very useful method that can simplify queries. It will be covered in the following section. |
+| `app.Query(c=>c.Class("UILabel"))` | The `.Class()` method will query for views that are a subclass of an iOS `UILabel`. |
+| `app.Query(c=>c.Id("txtUserName"))` | The `.Class()` method will query for views with an `Id<` of **txtUserName**. |
+| `app.Query(c=>c.Class("UILabel").Text("Hello, World"))` | Locates all `UILabel` classes that have the text "Hello, World".|
+| `results = app.Query(c=>c.Marked("ValidateButton"))` | Returns all views that are _marked_ with the specified text. The `Marked` method is a very useful method that can simplify queries. It will be covered in the following section. |
 
 The next table lists some (but not all) of the methods provided by `IApp` that can be used to interact with or manipulate views on the screen:
 
@@ -321,7 +323,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `Flash` | This method will cause the the selected view to "flash" or "flicker" on the screen. |
 
 
-For more information on the [`IApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.IApp/) interface, please consult the [API documentation](http://developer.xamarin.com/api/root/Xamarin.UITest.Docs/) for [`IApp`](/api/type/Xamarin.UITest.IApp/), [`AndroidApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.iOS.iOSApp/).
+For more information on the [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/) interface, please consult the [API documentation](http://developer.xamarin.com/api/root/Xamarin.UITest.Docs/) for [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/), [`AndroidApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.iOS.iOSApp/).
 
 As an example of how to use these methods, consider the following test for the screenshot that was displayed above. This test will enter a 17-digit number for a credit card into a text field and then tap a button on the screen. It will then inspect the screen for an error message informing the user that the number is too long to be a valid credit card number:
 

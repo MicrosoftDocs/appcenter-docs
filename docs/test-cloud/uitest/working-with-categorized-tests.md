@@ -4,7 +4,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 01/10/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.assetid: EBA22D3B-EB39-400E-8881-B78D621301D4
 ms.service: vs-appcenter
@@ -67,7 +67,7 @@ There are two ways to run UITests according to category:
 
 ## Running Tests Locally by Category
 
-[[ide name="vs"]]
+# [Visual Studio](#tab/vswin)
 
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `/include` identifies the test categories to run, while the switch `/exclude` specifies the test categories to ignore.
 
@@ -75,9 +75,8 @@ Running tests locally is accomplished using **nunit-console.exe**, NUnit's comma
 nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iOS.UITests.dll /include:flerp
 ```
 
-[[/ide]]
 
-[[ide name="xs"]]
+# [Visual Studio for Mac](#tab/vsmac)
 
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `-include` identifies the test categories to run, while the switch `-exclude` specifies the test categories to ignore.
 
@@ -85,7 +84,8 @@ Running tests locally is accomplished using **nunit-console.exe**, NUnit's comma
 $ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll -include=flerp
 ```
 
-[[/ide]]
+-----
+
 
 ## Submitting Tests to App Center Test by Category
 

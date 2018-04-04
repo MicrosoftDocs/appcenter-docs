@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 01/15/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04
 ms.service: vs-appcenter
@@ -13,12 +13,13 @@ ms.custom: test
 ---
 
 # UITest Cheat Sheet
+
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing_tests)
     * [Initializing Xamarin.UITests on iOS](#initializing_tests_on_ios)
     * [Determine the Device ID for an iOS Simulator](#get_device_id_for_ios_simulator)
-    * [Start a Particular iOS Instance](#start_simulator_by_device_id")
+    * [Start a Particular iOS Instance](#start_simulator_by_device_id)
     * [Reset an iOS Simulator to Factory Defaults](#reset_ios_simulator_to_factory_defaults)
 * [Code Snippets](#code_snippets)
     * [Querying Elements Based on Property Values](#query_elements_by_property_value)
@@ -102,10 +103,10 @@ namespace MyApp.MyCrossPlatformUITests
 }
 ```
 
-Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](/guides/xamarin-forms/deployment,_testing,_and_metrics/uitest-and-test-cloud/).
+Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](/xamarin/xamarin-forms/deploy-test/uitest-and-test-cloud).
 
 > [!NOTE]
-> Xamarin.UITest requires NUnit 2.6.3 or higher to run tests. Xamarin.UITest is not compatible with NUnit 3.x
+> Xamarin.UITest requires NUnit 2.6.3 or higher to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
 
 <a name="initializing_tests_on_ios"></a>
 ### Initializing Xamarin.UITest on iOS
@@ -126,7 +127,7 @@ Xamarin.Calabash.Start();
 
 The Xamarin Test Cloud Agent makes uses of non public Apple API's which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
-<a name="#get_device_id_for_ios_simulator"></a>
+<a name="get_device_id_for_ios_simulator"></a>
 ### Determine the Device ID for an iOS Simulator
 
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
@@ -171,9 +172,12 @@ This code snippet can be used to stop a given iOS simulator and reset it back to
 ```csharp
 static void ResetSimulator(string deviceId)
 {
-    var shutdownProcess = Process.Start("xcrun", string.Format("simctl shutdown {0}", deviceId));
+    var shutdownCmdLine = string.Format("simctl shutdown {0}", deviceId);
+    var shutdownProcess = Process.Start("xcrun", shutdownCmdLine);
     shutdownProcess.WaitForExit();
-    var eraseProcess = Process.Start("xcrun", string.Format("simctl erase {0}", deviceId));
+
+    var eraseCmdLine = string.Format("simctl erase {0}", deviceId);
+    var eraseProcess = Process.Start("xcrun", eraseCmdLine);
     eraseProcess.WaitForExit();
 }
 ```
@@ -205,7 +209,7 @@ This will put the screenshots in the directory where the test assembly where the
 <a name="invoke_method_on_an_appResult_or_UIElement"></a>
 ### Invoke a Method on an AppResult or UI Element
 
-It is possible to execute native methods on underlying views with the `AppQuery.Invoke` method. The method being invoked must mach the native method name, not the C# method name. For example, to invoke the [`setGravity`](http://developer.android.com/reference/android/widget/TextView.html#setGravity(int)) method on an Android `TextView`:
+It is possible to execute native methods on underlying views with the `AppQuery.Invoke` method. The method being invoked must mach the native method name, not the C# method name. For example, to invoke the [`setGravity`](https://developer.android.com/reference/android/widget/TextView.html#setGravity(int)) method on an Android `TextView`:
 
 ```csharp
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text

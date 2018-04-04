@@ -12,7 +12,6 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-
 # Working With the REPL
 
 One of the important tools in creating UITests is the the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment in which the developer enters expressions or a commands. It will then evaluate those expressions, and display the results to the user.
@@ -47,12 +46,14 @@ When the test is run and `.Repl()` is invoked, UITest will halt the test and sta
 
 
 # [Visual Studio](#tab/vswin)
-[ ![The UITest REPL on Windows](./images/working-with-repl-01-vs-sml.png)](./images/working-with-repl-01-vs.png)
+
+[ ![The UITest REPL on Windows](./images/working-with-repl-01-vs-sml.png)](./images/working-with-repl-01-vs.png#lightbox)
 
 
 
 # [Visual Studio for Mac](#tab/vsmac)
-[ ![The UITest REPL on macOS Terminal](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png)
+
+[ ![The UITest REPL on macOS Terminal](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
 
 -----
 
@@ -75,11 +76,13 @@ A common workflow is to use the `tree` command or `IApp.Flash` to identify views
 The `tree` command will display a hierarchical list of the views that are visible on the screen: 
 
 #[Visual Studio](#tab/vswin)
-[ ![The Tree command running in the REPL](./images/working-with-repl-02-vs-sml.png)](./images/working-with-repl-02-vs.png)
+
+[ ![The Tree command running in the REPL](./images/working-with-repl-02-vs-sml.png)](./images/working-with-repl-02-vs.png#lightbox)
 
 
 #[Visual Studio for Mac](#tab/vsmac)
-[ ![Tree command running in the REPL](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png)
+
+[ ![Tree command running in the REPL](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
 
 -----
 
