@@ -23,10 +23,12 @@ ms.tgt_pltfrm: react-native
 ## Getting Started
 
 1. Integrate the SDK as described in the [Getting Started with React Native](~/sdk/getting-started/react-native.md) documentation.
-2. Upload the symbols that are created with each build using the *Incoming* page under the app.
-3. Add a test crash to the app's code by calling the `generateTestCrash` method of the crash reporting module as an action to a button.
-4. Run the app without the debugger connected, crash it and restart it.
-5. After a few minutes the crash report should be visible in the UI.
+2. Go to [App Center](https://appcenter.ms/apps) and select your app.
+3. Navigate to the **Diagnostics** section from the left menu, then navigate to **Symbols** under this section.
+4. Click **Upload symbols** in the top right corner and upload the symbols.
+5. Add a test crash to the app's code by calling the `Crashes.generateTestCrash()` method of the crash reporting module as an action to a button.
+6. Run the app without the debugger connected, crash it, and then restart it.
+7. After a few minutes the crash report should be visible in the App Center portal.
 
 ## Uploading symbols
 
@@ -38,9 +40,10 @@ ms.tgt_pltfrm: react-native
 
     > The App Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
 
-2. Open the *Incoming* page under *Crash Reporting* on App Center of the app.
-3. Upload the zip file.
-4. After the zip file is indexed by App Center new incoming crashes will be symbolicated.
+2. Go to [App Center](https://appcenter.ms/apps) and select your app.
+3. Navigate to the **Diagnostics** section from the left menu, then navigate to **Symbols** under this section.
+4. Click **Upload symbols** in the top right corner and upload the zip file.
+5. After the zip file is indexed by App Center new incoming crashes will be symbolicated.
 
 ## Troubleshooting
 
