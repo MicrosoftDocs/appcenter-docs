@@ -17,7 +17,7 @@ App Center helps you build the mobile apps you and your team is working on, usin
 
 To get started, a member of the app in App Center needs to connect to their source control, select the repository where the app is located at and then simply set up the desired branch to be build.
 
-App Center currently suppports to build apps with Git source control (TFVC is not supported) hosted on:
+App Center currently supports to build apps with Git source control (TFVC is not supported) hosted on:
 
 - Bitbucket
 - GitHub
