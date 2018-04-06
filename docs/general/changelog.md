@@ -10,8 +10,12 @@ ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **April 6, 2018**
+- **CLI version 1.0.15 released**: Added bug fixes for JsZip in Test Cloud.
+
 ### **April 2, 2018**
-- **CLI version 1.0.14 released**
+- **CLI version 1.0.14 released**:
 Added --test-output-dir and --merge-nunit-xml options to appcenter test run commands.
 Misc. fixes to codepush commands.
 
