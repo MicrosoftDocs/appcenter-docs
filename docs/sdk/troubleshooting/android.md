@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/31/2018
+ms.date: 04/05/2018
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: vs-appcenter
@@ -69,3 +69,22 @@ None of these permissions require user approval at runtime, those are all instal
 ## Distribute and in-app updates are blocking my automated UI tests
 
 If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
+
+## What's the impact of the App Center SDK on my Android app's size?
+
+The App Center SDK is designed to have a minimal impact on your application's installation size.
+
+To illustrate this, we have created an empty java application by using Android Studio's "blank app" template. We build the app in the release configuration and installed the app on a device running Android 7.0.
+
+The tests were run without Proguard enabled.
+
+Please note that the numbers below can vary and depend on your build settings, so consider them a rough guide. The SDK's impact to your app will be even lower if you use Proguard.
+
+App Center modules used   | Exported APK size | Installation size (as reported by the device)
+--------------------------|-------------------|--------------------
+None (blank app)          |  1.3MB            | 3.43MB
+App Center Analytics      |  1.4MB            | 3.63MB
+App Center Crash          |  1.4MB            | 3.70MB
+App Center Distribute     |  1.4MB            | 3.71MB
+App Center Push           |  1.4MB            | 3.64MB
+All App Center modules    |  1.4MB            | 3.82MB
