@@ -21,14 +21,14 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 1. In your app, select **Settings**, **Services**, and click the **edit** button.
 
-1. <a name="step3"/>Select which bug tracker (Jira, VSTS or GitHub) to integrate with:
+1. <a name="step3"/>Select which bug tracker (Jira, VSTS or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it. 
 
     1. For Jira:
 
         1. Login with your Jira credentials (username, password and base URL) and click **Add**. Please see here on [how to find your base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html).
         1. Select which Jira projects to integrate the bug tracker with and click **Next**.
         1. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
-            - Number of crashses is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Jira.
+            - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Jira.
 
                 ![How to add a bug tracker for Jira](media/addBugTrackerJira.gif)
                 
