@@ -182,6 +182,7 @@
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 ## [TestCloud](migration/test-cloud/index.md)
+## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 
 # Reference

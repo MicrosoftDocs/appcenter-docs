@@ -28,7 +28,7 @@ The latency is typically just a few seconds.
 Yes. If the app is offline, the SDK will store up to 300 logs in storage. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
 <br><br>
 
-**Session duration is zero seconds, why?**
+**Session duration is unknown, why?**
 
 A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
 <br><br>
