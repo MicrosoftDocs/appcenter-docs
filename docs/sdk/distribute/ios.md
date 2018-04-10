@@ -127,7 +127,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   UIAlertController *alertController = [UIAlertController
-      alertControllerWithTitle:@"Update availble."
+      alertControllerWithTitle:@"Update available."
                        message:@"Do you want to update?"
                 preferredStyle:UIAlertControllerStyleAlert];
 
@@ -154,7 +154,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
-  let alertController = UIAlertController(title: "Update availble.",
+  let alertController = UIAlertController(title: "Update available.",
                                         message: "Do you want to update?",
                                  preferredStyle:.alert)
 
