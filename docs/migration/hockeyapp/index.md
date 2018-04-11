@@ -37,8 +37,8 @@ HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xa
 
 * During this period, all app management (Collaborators, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of the 'Getting Started' page in your app.
 
-## Migrating to App Center - Mid 2018
+## Migrating to App Center
 
-We're working on the specific timing, but currently we expect the option to fully migrate off of HockeyApp to App Center to be available in mid-2018. At that time, you can start officially migrating all of your apps, data, organizations, and users with the click of a button. This will make App Center the official owner of your apps.
+We're still working on the specific timing, but once we're there, you can start officially migrating all of your apps, data, organizations, and users with the click of a button. This will make App Center the official owner of your apps.
 
 This will also be the moment when you can migrate your apps to the new App Center SDK. The App Center SDK is built to be faster and more modular than the HockeySDK. Ship the App Center SDK in a future release, and still receive data from the HockeyApp SDK in App Center from past releases. You’ll have a full year to transition SDKs at your own pace.
