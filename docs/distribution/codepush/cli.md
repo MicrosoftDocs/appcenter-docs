@@ -104,7 +104,7 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 > [!TIP]
 > One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
 
-With the original CodePush, apps automatically had to two deployments (`Staging` and `Production`). In App Center, you'll have to create them yourself using the following commands:
+With the original CodePush, apps automatically had two deployments (`Staging` and `Production`). In App Center, you'll have to create them yourself using the following commands:
 
 ```
 appcenter codepush deployment add -a <ownerName>/<appName> Staging
@@ -250,7 +250,7 @@ appcenter codepush release -a <ownerName>/<appName> -c <updateContentsPath> -t <
 
 #### App name parameter
 
-This specifies the name of the App Center app that this update is being released for. If you need to look it up, you can run the `appcenter codepush app list` command to see your list of apps.
+This specifies the name of the App Center app that this update is being released for. If you need to look it up, you can run the `appcenter apps list` command to see your list of apps.
 
 #### Update contents parameter
 
