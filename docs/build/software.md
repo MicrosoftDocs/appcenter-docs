@@ -31,20 +31,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.8.0_162
 - Java 9.0.4
 - Java 10
-- Node.js 6.13.1
+- Node.js 6.14.1
 - PowerShell 6.0.2
 - Python 2.7.10
-- Python 3.6.4
-- Ruby 2.5.0p0
+- Python 3.6.5
+- Ruby 2.5.1p57
 - .NET Core SDK 1.0.4, 2.0.3
-- Go 1.10
+- Go 1.10.1
 
 ### Package Management
 
 - Bundler 1.16.1
 - Carthage 0.29.0
 - CocoaPods 1.4.0
-- Homebrew 1.5.12
+- Homebrew 1.5.14
 - NPM 3.10.10
 - Yarn 1.5.1
 - NuGet 4.3.0.4406
@@ -58,16 +58,16 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.16.2
+- Git 2.16.3
 - Git LFS 2.4.0
 - GNU Wget 1.19.4
 - Subversion (SVN) 1.9.7
 
 ### Tools
 
-- fastlane 2.86.2
+- fastlane 2.88.0
 - App Center CLI 1.0.13
-- Azure-CLI 2.0.29
+- Azure-CLI 2.0.30
 
 ## Xcode
 
@@ -103,6 +103,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.0                  | iphoneos11.0 |
 | iOS 11.1                  | iphoneos11.1 |
 | iOS 11.2                  | iphoneos11.2 |
+| iOS 11.3                  | iphoneos11.3 |
 | iOS Simulator 10.0        | iphonesimulator10.0 |
 | iOS Simulator 10.1        | iphonesimulator10.1 |
 | iOS Simulator 10.2        | iphonesimulator10.2 |
@@ -110,30 +111,35 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS Simulator 11.0        | iphonesimulator11.0 |
 | iOS Simulator 11.1        | iphonesimulator11.1 |
 | iOS Simulator 11.2        | iphonesimulator11.2 |
+| iOS Simulator 11.3        | iphonesimulator11.3 |
 | tvOS 10.0                 | appletvos10.0 |
 | tvOS 10.1                 | appletvos10.1 |
 | tvOS 10.2                 | appletvos10.2 |
 | tvOS 11.0                 | appletvos11.0 |
 | tvOS 11.1                 | appletvos11.1 |
 | tvOS 11.2                 | appletvos11.2 |
+| tvOS 11.3                 | appletvos11.3 |
 | tvOS Simulator 10.0       | appletvsimulator10.0 |
 | tvOS Simulator 10.1       | appletvsimulator10.1 |
 | tvOS Simulator 10.2       | appletvsimulator10.2 |
 | tvOS Simulator 11.0       | appletvsimulator11.0 |
 | tvOS Simulator 11.1       | appletvsimulator11.1 |
 | tvOS Simulator 11.2       | appletvsimulator11.2 |
+| tvOS Simulator 11.3       | appletvsimulator11.3 |
 | watchOS 3.0               | watchos3.0 |
 | watchOS 3.1               | watchos3.1 |
 | watchOS 3.2               | watchos3.2 |
 | watchOS 4.0               | watchos4.0 |
 | watchOS 4.1               | watchos4.1 |
 | watchOS 4.2               | watchos4.2 |
+| watchOS 4.3               | watchos4.3 |
 | watchOS Simulator 3.0     | watchsimulator3.0 |
 | watchOS Simulator 3.1     | watchsimulator3.1 |
 | watchOS Simulator 3.2     | watchsimulator3.2 |
 | watchOS Simulator 4.0     | watchsimulator4.0 |
 | watchOS Simulator 4.1     | watchsimulator4.1 |
 | watchOS Simulator 4.2     | watchsimulator4.2 |
+| watchOS Simulator 4.3     | watchsimulator4.3 |
 
 ### Installed Simulators
 
@@ -185,17 +191,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 10.3 | 14E269 |
 | iOS 11.1 | 15B87 |
 | iOS 11.2 | 15C107 |
+| iOS 11.3 | 15E217 |
 | tvOS 10.0 | 14T328 |
 | tvOS 10.1 | 14U591 |
 | tvOS 10.2 | 14W260 |
 | tvOS 11.1 | 15J580 |
 | tvOS 11.2 | 15K104 |
+| tvOS 11.3 | 15L211 |
 | watchOS 3.0 | 14S326 |
 | watchOS 3.1 | 14S471a |
 | watchOS 3.2 | 14V243 |
 | watchOS 4.0 | 15R372 |
 | watchOS 4.1 | 15R844 |
 | watchOS 4.2 | 15S100 |
+| watchOS 4.3 | 15T212 |
 
 #### Devices
 
@@ -396,6 +405,27 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (12.9-inch) (2nd generation)
 - iPad Pro (10.5-inch)
 
+#### iOS 11.3
+
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPhone 7
+- iPhone 7 Plus
+- iPhone 8
+- iPhone 8 Plus
+- iPhone SE
+- iPhone X
+- iPad Air
+- iPad Air 2
+- iPad (5th generation)
+- iPad Pro (9.7-inch)
+- iPad Pro (12.9-inch)
+- iPad Pro (12.9-inch) (2nd generation)
+- iPad Pro (10.5-inch)
+
 #### tvOS 10
 
 - Apple TV 1080p
@@ -421,6 +451,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple TV 4K (at 1080p)
 
 #### tvOS 11.2
+
+- Apple TV
+- Apple TV 4K
+- Apple TV 4K (at 1080p)
+
+#### tvOS 11.3
 
 - Apple TV
 - Apple TV 4K
@@ -466,6 +502,15 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 3 - 42mm
 
 #### watchOS 4.2
+
+- Apple Watch - 38mm
+- Apple Watch - 42mm
+- Apple Watch Series 2 - 38mm
+- Apple Watch Series 2 - 42mm
+- Apple Watch Series 3 - 38mm
+- Apple Watch Series 3 - 42mm
+
+#### watchOS 4.3
 
 - Apple Watch - 38mm
 - Apple Watch - 42mm
