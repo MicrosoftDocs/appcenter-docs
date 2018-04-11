@@ -4,7 +4,7 @@ description: "Moving from Xamarin Insights to Visual Studio App Center"
 keywords: xamarin insights
 author: blparr
 ms.author: blparr
-ms.date: 04/06/2018
+ms.date: 04/11/2018
 ms.topic: article
 ms.assetid: 4A553E23-D8FF-44A7-B2EA-23AA9B80FAA7
 ms.service: vs-appcenter
@@ -24,7 +24,9 @@ April 30th, 2018: Xamarin Insights portal will be retired and you will no longer
 
 If you are ready to make the full move to App Center, these are the steps you will need to follow for a successful and smooth migration.
 
-- Remove the Xamarin Insights SDK from all your apps. While the presence of the SDK will not prevent the apps from working, you will need to eventually remove the Xamarin Insights SDK from all your apps to ensure continuity.
+- Remove the Xamarin Insights SDK from all your apps:
+
+    After the Xamarin Insights retirement date, we will set up a service that consumes any logs still being sent by the Xamarin Insights SDK. This consists of a fake ingestion backend endpoint that will be behind the ingestion DNS once the production Insights system goes away. However, this service will just run for a few months after retirement. At that point, without the endpoint being available to the SDKs out there, there is a possibility of the client attempting to cache logs on the device which in turn will cause memory problems and lead to problems in your users apps. Therefore, you must remove the Xamarin Insights SDK to ensure continuity in your apps.
 - If you haven’t done so, [sign up in App Center](https://appcenter.ms/apps).
 - Integrate the App Center SDK for your [preferred platform](~/sdk/getting-started/xamarin.md). To get the equivalent features as you did in Xamarin Insights, integrate the [Crashes SDK](~/sdk/crashes/xamarin.md) and the [Analytics SDK](~/sdk/analytics/xamarin.md).
 - Everything you see in the App Center portal has API support. If you are using the Xamarin Insights APIs, you will have to make the changes to use the [App Center APIs](~/api-docs/index.md). Change the existing Xamarin Insights APIs to the App Center ones. In specific, you will need to look at the [Crashes APIs](https://openapi.appcenter.ms/#/crash) and the [Analytics APIs](https://openapi.appcenter.ms/#/analytics).
