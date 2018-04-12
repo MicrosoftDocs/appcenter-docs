@@ -94,15 +94,16 @@ Read more about the [appcenter-cli]((https://github.com/Microsoft/appcenter-cli)
 
 **Q:** *How do I purchase a test plan in App Center?*
 
-**A:** If your plan is now expired you can purchase a test plan App Center through the "Billing" section . Note, paid services in App Center require an [Azure subscription](https://docs.microsoft.com/en-us/appcenter/general/azure-subscriptions/) for billing.
+**A:** When your plan expires you can purchase a test plan App Center through the "Billing" section . Note, paid services in App Center require an [Azure subscription](~/general/azure-subscriptions/index.md) for billing.
 
 **Q:** *Who can I reach out to with additional questions?*
 
 **A:** For more information about the upgrade, please don't hesitate to reach out on Intercom with any questions.
 
 ### Other upcoming product changes
-* **Upload to Test Cloud (Visual Studio for Mac feature)** – Microsoft will discontinue support for the “Upload to Xamarin Test Cloud” function in Visual Studio for Mac (invoked by right-clicking the Unit test tree) on March 31st, 2018. Moving forward tests must submitted through the Visual Studio [App Center CLI](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
-* **Xamarin Test Recorder** - Microsoft will discontinue development of Xamarin Test Recorder on macOS and the Visual Studio extension for Windows on March 31st, 2018. Upload to Test Cloud functionality from Xamarin Test Recorder will no longer be supported after this date. Moving forward tests must submitted through the Visual Studio [App Center CLI](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
+* **Upload to Test Cloud (Visual Studio for Mac feature)** – Microsoft will discontinue support for the “Upload to Xamarin Test Cloud” function in Visual Studio for Mac (invoked by right-clicking the Unit test tree) on March 31st, 2018. Moving forward tests must submitted through the Visual Studio [App Center CLI](~/test-cloud/preparing-for-upload/index.md).
+* **Xamarin Test Recorder** - Microsoft will discontinue development of Xamarin Test Recorder on macOS and the Visual Studio extension for Windows on March 31st, 2018. Upload to Test Cloud functionality from Xamarin Test Recorder will no longer be supported after this date. Moving forward tests must submitted through the Visual Studio [App Center CLI](~/test-cloud/preparing-for-upload/index.md).
+* **Calabash** - After delivering support for next major release of the iOS and Android operating systems, Microsoft will discontinue our contributions to developing Calabash, the open-source mobile app testing tool. We hope that the community will continue to fully adopt and maintain it. As part of our transition on the development of Calabash, we've provided an overview of mobile app UI and end-to-end testing frameworks as a starting point for teams who are looking to re-evaluate their testing strategy. Please see our [Mobile App Testing Frameworks Overview](~/migration/test-cloud/frameworks.md) document. 
 
 ### Helpful Resources
 * [App Center](https://appcenter.ms)
