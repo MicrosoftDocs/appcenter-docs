@@ -16,8 +16,8 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 
 ## General
 
-* Manual bug tracker support - integrate crash groups with your bug trackers directly to follow actionable work items.
-
+* Manual bug tracker support - Integrate crash groups with your bug trackers directly to follow actionable work items.
+* Build status notifications - Receive email and webhook notifications for build success or failure.
 
 ## Distribution service
 
