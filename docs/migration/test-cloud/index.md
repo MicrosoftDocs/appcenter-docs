@@ -4,9 +4,9 @@ description: "Upgrading Xamarin Test Cloud to Visual Studio App Center"
 keywords: testcloud
 author: glennwester
 ms.author: glwest
-ms.date: 4/13/2018
+ms.date: 2/21/2018
 ms.topic: article
-ms.assetid: c60aeb9d-d4bc-4f78-8ad8-c6227d3455f6
+ms.assetid: 
 ms.service: vs-appcenter
 ms.custom: test
 ---
@@ -103,7 +103,7 @@ Read more about the [appcenter-cli]((https://github.com/Microsoft/appcenter-cli)
 ### Other upcoming product changes
 * **Upload to Test Cloud (Visual Studio for Mac feature)** – Microsoft will discontinue support for the “Upload to Xamarin Test Cloud” function in Visual Studio for Mac (invoked by right-clicking the Unit test tree) on March 31st, 2018. Moving forward tests must submitted through the Visual Studio [App Center CLI](~/test-cloud/preparing-for-upload/index.md).
 * **Xamarin Test Recorder** - Microsoft will discontinue development of Xamarin Test Recorder on macOS and the Visual Studio extension for Windows on March 31st, 2018. Upload to Test Cloud functionality from Xamarin Test Recorder will no longer be supported after this date. Moving forward tests must submitted through the Visual Studio [App Center CLI](~/test-cloud/preparing-for-upload/index.md).
-* **Calabash** - After delivering support for the final releases of iOS 11 and Android 8 operating systems, Microsoft will discontinue our contributions to developing Calabash, the open-source mobile app testing tool. We hope that the community will continue to fully adopt and maintain it. As part of our transition on the development of Calabash, we've provided an overview of mobile app UI and end-to-end testing frameworks as a starting point for teams who are looking to re-evaluate their testing strategy. Please see our [Mobile App Testing Frameworks Overview](~/migration/test-cloud/frameworks.md) document. 
+* **Calabash** - After delivering support for next major release of the iOS and Android operating systems, Microsoft will discontinue our contributions to developing Calabash, the open-source mobile app testing tool. We hope that the community will continue to fully adopt and maintain it. As part of our transition on the development of Calabash, we've provided an overview of mobile app UI and end-to-end testing frameworks as a starting point for teams who are looking to re-evaluate their testing strategy. Please see our [Mobile App Testing Frameworks Overview](~/migration/test-cloud/frameworks.md) document. 
 
 ### Helpful Resources
 * [App Center](https://appcenter.ms)
