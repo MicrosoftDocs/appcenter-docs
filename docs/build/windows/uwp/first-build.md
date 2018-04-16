@@ -4,7 +4,7 @@ description: How to set up a build for UWP C#
 keywords: build, windows
 author: siminapasat
 ms.author: siminap
-ms.date: 05/10/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ To start building your first UWP app, you will need to the following:
 If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your UWP project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
 
 ## 3. Setting up your first build
 Before your first build, the UWP project needs to be configured.

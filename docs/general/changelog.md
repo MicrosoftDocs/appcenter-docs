@@ -16,7 +16,8 @@ ms.service: vs-appcenter
 Build your iOS and macOS apps using Xcode 9.3.
 
 ### **April 6, 2018**
-- **CLI version 1.0.15 released**: Added bug fixes for JsZip in Test Cloud.
+- **CLI version 1.0.15 released**:
+Added bug fixes for JsZip in Test Cloud.
 
 ### **April 2, 2018**
 - **CLI version 1.0.14 released**:

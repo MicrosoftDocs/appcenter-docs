@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 12/04/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -27,7 +27,7 @@ To start building your first Xamarin Android app, you will need to the following
 If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your Xamarin project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
 
 ## 3. Configuring Your Build
 Before your first build, the Xamarin project needs to be configured.

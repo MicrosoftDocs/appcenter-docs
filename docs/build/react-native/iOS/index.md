@@ -4,7 +4,7 @@ description: How to set up a build for React Native iOS apps
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ To start building your first React Native iOS app, you will need to the followin
 If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your iOS project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
-After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
+After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
 
 ## 3. Setting up your first build
 Before your first build, the React Native project needs to be configured.
