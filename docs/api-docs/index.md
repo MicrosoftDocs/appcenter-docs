@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: jwhiteDev
 ms.author: jawh
-ms.date: 04/11/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -40,7 +40,7 @@ Explore the App Center API Service with [swagger](https://openapi.appcenter.ms).
 
 	![Setting api token value to authorize our API's](~/api-docs/images/authorization_withtoken.PNG)
 
-13. If it shows 'Authorized' and a Logout-Button, authorization was successfull. On the top right corner of the pop up, click the "X" to exit the pop up.
+13. If it shows "Authorized" and a Logout-Button, authorization was successful. On the top right corner of the pop up, click the "X" to exit the pop up.
 14. You are now able to use any App Center API and see the response. Enjoy!
 
 ### Running your first API call
@@ -53,6 +53,3 @@ This section shows you how to use App Center's [swagger page](https://openapi.ap
 4. On the left-hand corner, click the **Try it out** button.
 5. Click the **Execute** button under the **Parameters** section.
 6. Awesome! You can now see the response under the **Responses** section.
-
-
-
