@@ -4,6 +4,7 @@
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [Creating and managing teams](dashboard/creating-and-managing-teams.md)
+## [Email notifications](dashboard/email-notifications/index.md)
 ## [Bug Tracker Integration](dashboard/bugtracker/index.md)
 ## [Webhooks](dashboard/webhooks/index.md)
 ## [Slack App](dashboard/slack/index.md)

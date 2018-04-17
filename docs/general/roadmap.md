@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwhitedev
 ms.author: jawh
-ms.date: 4/16/2018
+ms.date: 4/17/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -17,7 +17,6 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 ## General
 
 * Manual bug tracker support - Integrate crash groups with your bug trackers directly to follow actionable work items.
-* Build status notifications - Receive email and webhook notifications for build success or failure.
 
 ## Distribution service
 

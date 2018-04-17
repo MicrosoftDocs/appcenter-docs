@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 04/08/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **April 16, 2018**
+- **Build status notifications**:
+Receive email and webhook notifications for build success or failure.
 
 ### **April 9, 2018**
 - **Build support for Xcode 9.3**:
