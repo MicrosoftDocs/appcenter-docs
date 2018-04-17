@@ -71,7 +71,7 @@ The difference is introduced by the usage of the `updateDialog` parameter.
     codePush.sync({ updateDialog: true });
 ```
 
-If an update is available, the app automatically launches a native prompt asking end users for permission to download and install the update. Once the user accepts, the update is silently downloaded and inmmediatly applied., and installed the next time the app is restarted (either explicitly by the end user or by the OS).
+If an update is available, the app automatically launches a native prompt asking end users for permission to download and install the update. Once the user accepts, the update is silently downloaded and immediately applied, and installed the next time the app is restarted (either explicitly by the end user or by the OS).
 
 #### Update dialog customization
 
