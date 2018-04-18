@@ -146,6 +146,10 @@ public class MyPushListener implements PushListener {
 
 [!include[](custom-data-android.md)]
 
+## Configure notification's default values
+
+[!include[](android-configure-notifications.md)]
+
 ## Existing Firebase Analytics users
 
 App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
