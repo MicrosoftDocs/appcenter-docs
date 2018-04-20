@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: vs-appcenter
@@ -121,6 +121,10 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 ## Custom data in your notifications
 
 [!include[](custom-data-android.md)]
+
+## Configure notification's default values
+
+[!include[](android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 

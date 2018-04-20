@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: vs-appcenter
@@ -155,6 +155,10 @@ There are few reserved keywords in each platform that can be set via custom data
 - **color**: The notification's icon color, expressed in `#rrggbb` format. Will be applied only on devices with Android 5.0 and later.
 - **icon**: The notification's icon. You should specify **name** of the icon resource. Supports `drawable` and `mipmap` types. If this value isn't specified application icon will be used.
 - **sound**: Add this key when you want the to play a sound when the device receives the notification. Supports `default` or the filename of a sound resource bundled in the app. Sound files must reside in `/res/raw/`. This is effective only for devices running or targeting an Android version lower than 8. Sound is set by default on Android 8 and user can change notification settings for the group of notifications coming from AppCenter.
+
+#### Configure notification's default values
+
+[!include[](android-configure-notifications.md)]
 
 ### iOS
 - **badge**: Add this key when you want to modify the badge of your app icon. If this key is not included, the badge is not changed. To remove the badge, set the value of this key to 0.
