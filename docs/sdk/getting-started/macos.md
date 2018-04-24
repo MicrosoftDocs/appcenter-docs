@@ -160,10 +160,13 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 
 ### 4.4 Add internet capabilities for sandboxed apps
 
-If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
-Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
+If your app is using the App Sandbox, you have to set the capability to allow outgoing (Client) connections to allow the app to have access to the internet.
+Xcode 9 enables the App Sandbox by default but the capabilities for outgoing connections need to be set explicitly.
 
-Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
+Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable outgoing connections.
+
+> [!NOTE]
+> If your app has App Center Push enabled, incoming (Server) connections has to be set as well.
 
 ---
 
