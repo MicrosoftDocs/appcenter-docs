@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -90,7 +90,7 @@ App Center Push is started by this call:
 
 That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
-Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the `register` call.
+Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications.
 
 ## Intercept push notifications
 
