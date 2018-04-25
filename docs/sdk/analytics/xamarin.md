@@ -4,7 +4,7 @@ description: App Center Analytics for Xamarin
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 08/21/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.service: vs-appcenter
@@ -33,9 +33,9 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 ## Custom events
 
-You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
+You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+Once you have started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {

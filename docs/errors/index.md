@@ -4,7 +4,7 @@ description: Errors in App Center
 keywords: app center, errors, exceptions, handled
 author: blparr
 ms.author: blparr
-ms.date: 01/26/2018
+ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: C0320343-CCA1-4C2B-91D6-DF88608E8446
 ms.service: vs-appcenter
@@ -87,5 +87,5 @@ Here the full exception (ex) is still being sent back to the App Center service,
 
 ### Limitations
 
-- You can define a maximum of 5 properties per error, anything beyond that limit will be rejected.
-- The maximum number of characters per error property key and error property value is 64 characters.
+- You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
+- The maximum number of characters per error property key and error property value is 125 characters.

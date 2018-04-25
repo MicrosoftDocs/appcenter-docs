@@ -4,7 +4,7 @@ description: App Center Analytics for Apache Cordova
 keywords: sdk, analytics
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 08/21/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: 8900A8A7-92E0-4904-890F-97E4831118F8
 ms.service: vs-appcenter
@@ -32,9 +32,9 @@ Once you add App Center Analytics to your app and the SDK is started, it will au
 
 ## Custom events
 
-You can track your own custom events with up to five properties to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
+You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```js
 var success = function() {
