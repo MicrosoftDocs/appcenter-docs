@@ -38,6 +38,8 @@
 ## [Environment variables](build/custom/variables/index.md)
 ## [Cloud build machines](build/software.md)
 ## [Test on a real device](build/build-test-integration.md)
+## [Distribute builds to store](build/build-to-store.md)
+
 ## [FAQ](build/faq.md)
 
 # [Test](test-cloud/index.md)
