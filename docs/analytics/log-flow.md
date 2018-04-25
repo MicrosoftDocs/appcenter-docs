@@ -4,7 +4,7 @@ description: Help using the Log Flow Page on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 01/20/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: be4ee0a0-cd06-486a-bef1-22b6ab5dc896
 ms.service: vs-appcenter
@@ -15,7 +15,7 @@ ms.custom: analytics
 
 Log Flow will show you what is being received by the backend in real time.
 The main use cases for log flow are:
-- Check if the SDK is properly integarted and if our backend is receiving data. Similar to when you do a microphone check: "Is this on?".
+- Check if the SDK is properly integrated and if our backend is receiving data. Similar to when you do a microphone check: "Is this on?".
 - Ensure that the backend is receiving what the app is supposed to send.
 
 ## General information
