@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 04/17/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **April 26, 2018**
+- **Signing improvements for iOS and macOS builds**:
+Apps are signed with the provided assets regardless of the project settings.
 
 ### **April 16, 2018**
 - **Build status notifications**:
