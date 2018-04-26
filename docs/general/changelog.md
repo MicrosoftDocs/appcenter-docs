@@ -12,8 +12,16 @@ ms.service: vs-appcenter
 # Changelog
 
 ### **April 26, 2018**
+
 - **Signing improvements for iOS and macOS builds**:
 Apps are signed with the provided assets regardless of the project settings.
+
+### **April 25, 2018**
+
+- **Increased number of property keys**:
+Increased the number of property keys from five to twenty for both errors and custom events.
+- **Increased number of characters allowed in property keys and values**:
+Increased the number of characters allowed in custom event and error property keys and values.
 
 ### **April 16, 2018**
 - **Build status notifications**:
