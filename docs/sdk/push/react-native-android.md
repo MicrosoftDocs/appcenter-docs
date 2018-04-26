@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -96,6 +96,10 @@ You can set up a listener to be notified whenever a push notification is receive
 ## Custom data in your notifications
 
 [!include[](custom-data-android.md)]
+
+## Configure notification's default values
+
+[!include[](android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 
