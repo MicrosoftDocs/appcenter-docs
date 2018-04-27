@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 04/26/2018
+ms.date: 04/27/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **April 27, 2018**
+- **Updated Xamarin SDKs**:
+Build your Xamarin apps with SDK release [15.6.5](https://releases.xamarin.com/service-release-15-6-5/) including Mono 5.8.1.
 
 ### **April 26, 2018**
 
