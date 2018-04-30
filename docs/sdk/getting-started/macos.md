@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 1/3/2018
+ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter

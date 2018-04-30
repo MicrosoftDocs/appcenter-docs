@@ -5,23 +5,15 @@ title: Using Team Services for UI Testing | App Center Test
 description: How to get started with UI Testing in VSTS
 keywords: test, VSTS, espresso, appium, xamarin.uitest
 author: Oddj0b
-
+ms.author: vigimm
 ms.date: 05/02/2017
 ms.topic: article
 ms.service: vs-appcenter
-
 ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-ms.reviewer: vigimm
-
 ---
 
 # Add UI tests to your VSTS builds
+
 With the App Center Test task for Visual Studio Team Services (VSTS), you can run your Appium, Calabash, Espresso and Xamarin.UITest test suite in App Center Test. It is the next generation of Xamarin Test Cloud task which also is available in VSTS. You can read more about the frameworks on the [Supported frameworks](supported-frameworks.md) page. 
 
 Each framework will have its own section in this document, where you can read about the basic requirements for setting up a build step definition in VSTS.
@@ -29,11 +21,12 @@ Each framework will have its own section in this document, where you can read ab
 ![VSTS Task screen for App Center Test](images/vsts-task.png)
 
 ## Appium
+
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
 * Prepare your repository for Appium - read more [here](preparing-for-upload/appium.md).
 
-
 ### VSTS setup
+
 Start by adding the App Center Test task to the build definition - read how that is done in the [VSTS general setup](#vsts-general-setup)
 
 ![Prepare test section for the Appium framework](images/vsts-appium-prepare.png)
@@ -66,11 +59,12 @@ You can read more about starting a test run on the [Starting a test run](startin
 You're all set to initiate the build.
 
 ## Espresso
+
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
 * Prepare your repository for Espresso - read more [here](preparing-for-upload/espresso.md).
 
-
 ### VSTS setup
+
 Start by adding the App Center Test task to the build definition - read how that is done in the [VSTS general setup](#vsts-general-setup)
 
 If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
@@ -100,10 +94,12 @@ You can read more about starting a test run on the [Starting a test run](startin
 You're all set to initiate the build.
 
 ## Xamarin.UITest
+
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
 * Prepare your repository for Xamarin.UITest - read more [here](preparing-for-upload/uitest.md).
 
 ### VSTS setup
+
 Start by adding the App Center Test task to the build definition - read how that is done in the [VSTS general setup](#vsts-general-setup)
 
 ![Prepare test section for the Xamarin.UITest framework](images/vsts-uitest-prepare.png)
@@ -152,7 +148,7 @@ You start by adding the App Center Test task to your build definition. The App C
 
 ### Connecting to App Center Test
 
-It is required to login into App Center before using the service; there are 2 methods of authentication. 
+You must login into App Center before using the service; there are 2 methods of authentication. 
 
 The first method is using an API token - you can acquire one by going to App Center and clicking the settings icon at the buttom of the left-hand menu.
 
@@ -169,4 +165,3 @@ Back in VSTS, click `add` next to the App Center Connection field. Inside `name`
 The second method is using your log-in credentials. When selecting _Credentials_ from the `Authentication Method`  dropdown menu two new fields appear. `App Center Username` and `App Center Password` insert the your username and password in the aptly named fields. 
 
 You can find your [username here](https://appcenter.ms/settings/profile). There is a limitation while logging in using your Microsoft credentials, where you might need to create a specific password for App Center. You can set a [new password here](https://appcenter.ms/settings/password).
-

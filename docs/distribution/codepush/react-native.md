@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/15/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -160,7 +160,6 @@ And that's it! Isn't RNPM awesome? :)
     
     > [!NOTE]
     > Alternatively, if you prefer, you can add the `-lz` flag to the `Other Linker Flags` field in the `Linking` section of the `Build Settings`.*
-
 
 ### Plugin Configuration (iOS)
 
@@ -1368,6 +1367,7 @@ The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, t
 Contains details about an update that has been downloaded locally or already installed. You can get a reference to an instance of this object either by calling the module-level `getUpdateMetadata` method, or as the value of the promise returned by the `RemotePackage.download` method.
 
 ###### Properties
+
 - __appVersion__: The app binary version that this update is dependent on. This is the value that was specified via the `appStoreVersion` parameter when calling the CLI's `release` command. *(String)*
 - __deploymentKey__: The deployment key that was used to originally download this update. *(String)*
 - __description__: The description of the update. This is the same value that you specified in the CLI when you released the update. *(String)*
@@ -1563,4 +1563,3 @@ Additionally, if you'd like more details of what a complete mobile CI/CD workflo
 ## TypeScript Consumption
 
 This module ships its `*.d.ts` file as part of its NPM package, which allows you to simply `import` it, and receive intellisense in supporting editors (e.g. Visual Studio Code), as well as compile-time type checking if you're using TypeScript. For the most part, this behavior should just work out of the box, however, if you've specified `es6` as the value for either the `target` or `module` [compiler option](http://www.typescriptlang.org/docs/handbook/compiler-options.html) in your [`tsconfig.json`](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, then just make sure that you also set the `moduleResolution` option to `node`. This ensures that the TypeScript compiler will look within the `node_modules` for the type definitions of imported modules. Otherwise, you'll get an error like the following when trying to import the `react-native-code-push` module: `error TS2307: Cannot find module 'react-native-code-push'`.
-
