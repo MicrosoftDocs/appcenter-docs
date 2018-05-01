@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.assetid: B9DEA1B2C-ED45-40F4-BA00-D46F982ECC5A
 ms.service: vs-appcenter
@@ -45,9 +45,6 @@ UITest provides the [AppQuery.Class](https://developer.xamarin.com/api/member/Xa
 ```text
 >>> app.Query(c=>c.Class("WKWebView"))
 ```                
-
-> [!NOTE]
-> [Bug 375](https://github.com/calabash/calabash-ios-server/issues/375) prevents the use of `AppQuery.WebView` to locate a `WKWebViewControl`.
 
 ## Interacting with DOM Elements in a web view control
 
