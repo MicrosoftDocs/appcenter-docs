@@ -1,171 +1,164 @@
 {
-  "redirections": [
-    {
-        "source_path": "docs/analytics/android.md",
-        "redirect_url": "/appcenter/sdk/analytics/android"
-    },
-    {
-        "source_path": "docs/analytics/ios.md",
-        "redirect_url": "/appcenter/sdk/analytics/ios"
-    },
-    {
-        "source_path": "docs/analytics/react-native.md",
-        "redirect_url": "/appcenter/sdk/analytics/react-native"
-    },
-    {
-        "source_path": "docs/dashboard/index.md",
-        "redirect_url": "/appcenter/dashboard/creating-and-managing-apps"
-    },
-    {
-        "source_path": "docs/sdk/advanced-apis/android.md",
-        "redirect_url": "/appcenter/sdk/other-apis/android"
-    },
-    {
-        "source_path": "docs/sdk/advanced-apis/ios.md",
-        "redirect_url": "/appcenter/sdk/other-apis/ios"
-    },
-    {
-        "source_path": "docs/sdk/advanced-apis/react-native.md",
-        "redirect_url": "/appcenter/sdk/other-apis/react-native"
-    },
-    {
-        "source_path": "docs/sdk/advanced-apis/xamarin.md",
-        "redirect_url": "/appcenter/sdk/other-apis/xamarin"
-    },
-    {
-        "source_path": "docs/sdk/troubleshooting.md",
-        "redirect_url": "/appcenter/sdk/troubleshooting/xamarin"
-    },
-    {
-        "source_path": "docs/general/guidance.md",
-        "redirect_url": "/appcenter/migration/"
-    },
-
-    {
-        "source_path": "docs/analytics/understand-audience.md",
-        "redirect_url": "/appcenter/analytics/overview"
-    },
-    {
-        "source_path": "docs/analytics/understand-events.md",
-        "redirect_url": "/appcenter/analytics/event-metrics"
-    },
-    {
-        "source_path": "docs/analytics/understand-log-flow.md",
-        "redirect_url": "/appcenter/analytics/log-flow"
-    },
-
-    {
-        "source_path": "docs/analytics/logged-errors-events.md",
-        "redirect_url": "/appcenter/analytics/handled-errors-events"
-    },
-
-    {
-        "source_path": "docs/azure/tables/index.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/azuread.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/facebook.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/google.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/index.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/microsoft.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/azure/identity/twitter.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/sdk/azure/identity/android.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/sdk/azure/identity/ios.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/sdk/azure/android.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-        "source_path": "docs/sdk/azure/ios.md",
-        "redirect_url": "/appcenter/azure/"
-    },
-    {
-    "source_path": "docs/distribution/auto-provisioning-feature.md",
-    "redirect_url": "/appcenter/distribution/auto-provisioning"
-    },
-    {
-    "source_path": "docs/build/ios/first-build/xcode.md",
-    "redirect_url": "/appcenter/build/ios/first-build"
-    },
-    {
-    "source_path": "docs/build/ios/first-build/xamarin/index.md",
-    "redirect_url": "/appcenter/build/xamarin/ios/"
-    },
-    {
-    "source_path": "docs/build/ios/first-build/xamarin/solution-configuration-mappings.md",
-    "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings.md"
-    },
-    {
-    "source_path": "docs/build/ios/first-build/react-native.md",
-    "redirect_url": "/appcenter/build/react-native/ios/"
-    },
-    {
-    "source_path": "docs/build/ios/code-signing/uploading-files.md",
-    "redirect_url": "/appcenter/build/ios/code-signing"
-    },
-    {
-    "source_path": "docs/build/ios/code-signing/xcode-project.md",
-    "redirect_url": "/appcenter/build/ios/code-signing"
-    },
-    {
-    "source_path": "docs/build/ios/xcodebuild.md",
-    "redirect_url": "/appcenter/build/ios/code-signing"
-    },
-    {
-    "source_path": "docs/build/android/first-build/java.md",
-    "redirect_url": "/appcenter/build/android/first-build"
-    },
-    {
-    "source_path": "docs/build/android/first-build/xamarin.md",
-    "redirect_url": "/appcenter/build/xamarin/android/"
-    },
-    {
-    "source_path": "docs/build/android/first-build/react-native.md",
-    "redirect_url": "/appcenter/build/react-native/android/"
-    },
-    {
-    "source_path": "docs/build/android/code-signing/setup.md",
-    "redirect_url": "/appcenter/build/android/code-signing"
-    },
-    {
-    "source_path": "docs/build/android/code-signing/xamarin.md",
-    "redirect_url": "/appcenter/build/xamarin/android/code-signing.md"
-    },
-    {
-    "source_path": "docs/build/windows/configure-build/index.md",
-    "redirect_url": "/appcenter/build/windows/first-build.md"
-    },
-    {
-    "source_path": "docs/build/windows/configure-build/uwp.md",
-    "redirect_url": "/appcenter/build/windows/first-build.md"
-    },
-    {
-    "source_path": "docs/build/windows/build-results/index.md",
-    "redirect_url": "/appcenter/build/windows/results.md"
-    }
-  ]
+    "redirections": [
+        {
+            "source_path": "docs/analytics/android.md",
+            "redirect_url": "/appcenter/sdk/analytics/android"
+        },
+        {
+            "source_path": "docs/analytics/ios.md",
+            "redirect_url": "/appcenter/sdk/analytics/ios"
+        },
+        {
+            "source_path": "docs/analytics/react-native.md",
+            "redirect_url": "/appcenter/sdk/analytics/react-native"
+        },
+        {
+            "source_path": "docs/sdk/advanced-apis/android.md",
+            "redirect_url": "/appcenter/sdk/other-apis/android"
+        },
+        {
+            "source_path": "docs/sdk/advanced-apis/ios.md",
+            "redirect_url": "/appcenter/sdk/other-apis/ios"
+        },
+        {
+            "source_path": "docs/sdk/advanced-apis/react-native.md",
+            "redirect_url": "/appcenter/sdk/other-apis/react-native"
+        },
+        {
+            "source_path": "docs/sdk/advanced-apis/xamarin.md",
+            "redirect_url": "/appcenter/sdk/other-apis/xamarin"
+        },
+        {
+            "source_path": "docs/sdk/troubleshooting.md",
+            "redirect_url": "/appcenter/sdk/troubleshooting/xamarin"
+        },
+        {
+            "source_path": "docs/general/guidance.md",
+            "redirect_url": "/appcenter/migration/"
+        },
+        {
+            "source_path": "docs/analytics/understand-audience.md",
+            "redirect_url": "/appcenter/analytics/overview"
+        },
+        {
+            "source_path": "docs/analytics/understand-events.md",
+            "redirect_url": "/appcenter/analytics/event-metrics"
+        },
+        {
+            "source_path": "docs/analytics/understand-log-flow.md",
+            "redirect_url": "/appcenter/analytics/log-flow"
+        },
+        {
+            "source_path": "docs/analytics/logged-errors-events.md",
+            "redirect_url": "/appcenter/analytics/handled-errors-events"
+        },
+        {
+            "source_path": "docs/azure/tables/index.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/azuread.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/facebook.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/google.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/index.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/microsoft.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/azure/identity/twitter.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/sdk/azure/identity/android.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/sdk/azure/identity/ios.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/sdk/azure/android.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/sdk/azure/ios.md",
+            "redirect_url": "/appcenter/azure/"
+        },
+        {
+            "source_path": "docs/distribution/auto-provisioning-feature.md",
+            "redirect_url": "/appcenter/distribution/auto-provisioning"
+        },
+        {
+            "source_path": "docs/build/ios/first-build/xcode.md",
+            "redirect_url": "/appcenter/build/ios/first-build"
+        },
+        {
+            "source_path": "docs/build/ios/first-build/xamarin/index.md",
+            "redirect_url": "/appcenter/build/xamarin/ios/"
+        },
+        {
+            "source_path": "docs/build/ios/first-build/xamarin/solution-configuration-mappings.md",
+            "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings.md"
+        },
+        {
+            "source_path": "docs/build/ios/first-build/react-native.md",
+            "redirect_url": "/appcenter/build/react-native/ios/"
+        },
+        {
+            "source_path": "docs/build/ios/code-signing/uploading-files.md",
+            "redirect_url": "/appcenter/build/ios/code-signing"
+        },
+        {
+            "source_path": "docs/build/ios/code-signing/xcode-project.md",
+            "redirect_url": "/appcenter/build/ios/code-signing"
+        },
+        {
+            "source_path": "docs/build/ios/xcodebuild.md",
+            "redirect_url": "/appcenter/build/ios/code-signing"
+        },
+        {
+            "source_path": "docs/build/android/first-build/java.md",
+            "redirect_url": "/appcenter/build/android/first-build"
+        },
+        {
+            "source_path": "docs/build/android/first-build/xamarin.md",
+            "redirect_url": "/appcenter/build/xamarin/android/"
+        },
+        {
+            "source_path": "docs/build/android/first-build/react-native.md",
+            "redirect_url": "/appcenter/build/react-native/android/"
+        },
+        {
+            "source_path": "docs/build/android/code-signing/setup.md",
+            "redirect_url": "/appcenter/build/android/code-signing"
+        },
+        {
+            "source_path": "docs/build/android/code-signing/xamarin.md",
+            "redirect_url": "/appcenter/build/xamarin/android/code-signing.md"
+        },
+        {
+            "source_path": "docs/build/windows/configure-build/index.md",
+            "redirect_url": "/appcenter/build/windows/first-build.md"
+        },
+        {
+            "source_path": "docs/build/windows/configure-build/uwp.md",
+            "redirect_url": "/appcenter/build/windows/first-build.md"
+        },
+        {
+            "source_path": "docs/build/windows/build-results/index.md",
+            "redirect_url": "/appcenter/build/windows/results.md"
+        }
+    ]
 }
