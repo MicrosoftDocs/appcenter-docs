@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 04/30/2018
+ms.date: 05/01/2018
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -26,31 +26,49 @@ App secret is like an api key for your app, it allows events and telemetry to be
 
 ## App roles
 
-On each app there are three roles:
+On each app there are three roles: 
 
-* **Managers** can manage app settings, collaborators, and integrations.
+* **Managers** can manage app settings, collaborators, and integrations. 
 
 * **Developers** can manage app services (e.g. create builds, run tests).
 
 * **Viewers** can view and download all data but cannot make changes.
 
-To change the permission of a collaborator, select an app, click **Manage app** and use the dropdown to re-assign the role. Only 'Managers' can change collaborator permissions.
+For every app you create, whether owned by you or your organization, you are automatically assigned as manager for the app. Additionally, all organization admins are assigned as managers for all apps within the organization. Collaborators can be assigned any of the three roles listed above for each app. Learn more about [managing collaborators and admins.](~/dashboard/creating-and-managing-organizations.md)
 
 > [!NOTE]
 > Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.
 
+## Changing app roles
+
+To change the permission of a collaborator or admin:
+1. Select an app from the dashboard
+2. In the left side navigation, select **Settings**
+3. Select **Collaborators**
+3. Next to the name of the user you wish to change roles of, reassign the role by making a selection from the drop-down
+
+> [!NOTE]
+> Only managers can change collaborator permissions.
+
 ## Adding collaborators to apps
 
-To share your app with others, select an app and then click **Manage app** to add collaborators by typing in the user's email address.
+To share your app with others, select an app from the dashboard and then click **Manage app** to add collaborators by typing in the user's email address.
 
 > [!NOTE]
 > If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
 
 ## Transferring an app
 
-We currently only enable the transfer of apps from users to organization accounts.
+You can only transfer apps from user to organization accounts.
 
-To do so, go to your app settings, select the menu at the top right (three dots) corner, select **Transfer app to organization**.
+The transfer an app:
+1. Select an app from the dashboard
+2. In the left side navigation, select **Settings**
+3. In the top right corner, select the menu (three dots)
+4. Select **Transfer app to organization**
+
+> [!NOTE]
+> Only the app creator can transfer an app into an organization they are an admin of.
 
 ## Next steps
 

@@ -16,10 +16,14 @@ Any [collaborator](~/dashboard/creating-and-managing-apps.md) within an organiza
 
 ## Creating teams
 
-Any collaborator can create teams within an organization. Organizations can have multiple teams but each team belongs to only one organization. 
+Any collaborator can create teams within an organization. Organizations can have multiple teams but each team belongs to only one organization. To create a team:
 
-1. Select your organization on the left navigation and click **People**.
-2. Select **Teams** and click on the **Add New Team** button.
+1. On the left side navigation, select your organization
+2. Select **People**
+3. Select **Teams** 
+4. Click on the **Add New Team** button
+5. Enter a team name
+6. Click **Create Team** button
 
 ## Adding users to a team
 
@@ -36,29 +40,36 @@ The team creator, any [app manager](~/dashboard/creating-and-managing-apps.md), 
 There are two ways to add a team to an app: 
 
 ### In team setting 
-1. Select the team organization in the left navigation and click on **People**.
-2. Click on **Teams** and select the team you wish to add to an app.
-3. Select **APPS** in the top navigation and type the app name you wish to add.
+1. On the left side navigation, select the team organization
+2. Select **People**
+3. Select **Teams** 
+4. Select the team you wish to add to an app
+5. In the top navigation, select **APPS** 
+6. In the search box, type the app name you wish to add
 
 ### In app setting  
-1. In the dashboard, select the app you wish to add a team to.
-2. Click on **Settings** in the left navigation.
-2. Click on **Collaborators** and type the team you wish to add to the app.
+1. In the dashboard, select the app you wish to add a team to
+2. In the left navigation, select **Settings** 
+3. Click on **Collaborators** 
+4. Type the team you wish to add to the app
 
 ## Removing the team from an app:
 The team creator or any organization admin can remove a team from an app and the team member's permission to the app will be revoked. 
 There are two ways to remove a team from an app:
 
 ### In team setting
-1. Select the team organization in the left navigation and click on **People**.
-2. Click on **Teams** and select the team you wish to add to an app.
-3. Select **APPS** in the top navigation.
-4. Hover your cursor to the app you want to remove and click on the delete icon on the right.
+1. In the left side navigation, select the team organization 
+2. Select **People**.
+3. Click on **Teams** 
+4. Select the team you wish to add to an app
+5. Select **APPS** in the top navigation
+6. Hover your cursor to the app you want to remove and click on the delete icon on the right
 
 ### In app setting
-1. Select the app you wish to remove from a team in the dashboard.
-2. Click on **Settings** in the left navigation and open **Collaborators**.
-3. Hover your cursor to the app you want to remove and click on the delete icon on the right.
+1. In the dashboard, select the app you wish to add a team to
+2. In the left navigation, select **Settings** 
+3. Select **Collaborators**.
+3. Hover your cursor to the app you want to remove and click on the delete icon on the right
 
 ## Changing Permissions
 
