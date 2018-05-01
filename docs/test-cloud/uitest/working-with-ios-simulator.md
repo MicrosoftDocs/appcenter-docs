@@ -65,7 +65,7 @@ There are two ways to list the simulators and their device identifiers:
 
 2. Xcode provides another way to obtain a list of devices and their device identifiers. Once Xcode is running, select **Window > Devices**:
 
-[ ![Device Identifiers for simulator images](./images/working-with-ios-simulator-01-sml.png)](./images/working-with-ios-simulator-01.png#lightbox)
+![Device Identifiers for simulator images](./images/working-with-ios-simulator-01-sml.png)]
 
 
 Xcode will present a window showing the simulators installed on the computer. When a simulator is selected the device identifier can be seen in the right hand side of the window:
