@@ -42,7 +42,8 @@ Examples of custom properties are:
 | Favorite Sport | Premium |
 
 
-To create a custom property, you have to set it in your app. Once you have set it, it will appear as option in the audiences creation page on AppCenter website.
+App Center allows you to define custom properties as key value pairs in your app using the App Center SDK. You can then choose this property when you're creating an audience.
+
 You can set these custom properties by using our SDK methods for each platform:
 
    - [Android](~/sdk/other-apis/android.md#use-custom-properties) 
@@ -56,6 +57,9 @@ You can set these custom properties by using our SDK methods for each platform:
 
 From the audiences tab, select the necessary conditions to create your segment (both custom and device properties), and save your segment. You can later on use this segment when sending a notification.
 Another way to create an audience, is when selecting the Audience as a target in the send notification flow.
+
+> [!NOTE]
+> Only devices that have Push successfully registered are matched in audiences.
 
 
 ## Limits
