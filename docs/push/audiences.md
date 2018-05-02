@@ -42,6 +42,7 @@ Examples of custom properties are:
 | Favorite Sport | Premium |
 
 
+To create a custom property, you have to set it in your app. Once you have set it, it will appear as option in the audiences creation page on AppCenter website.
 You can set these custom properties by using our SDK methods for each platform:
 
    - [Android](~/sdk/other-apis/android.md#use-custom-properties) 
