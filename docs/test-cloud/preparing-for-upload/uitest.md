@@ -5,7 +5,7 @@ keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 09/15/2017
+ms.date: 05/02/2018
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
 ms.service: vs-appcenter
@@ -57,5 +57,33 @@ The two steps detail what is necessary to prepare a Xamarin.Android app and UITe
     On Visual Studio for Mac, look in the **Project Options**, under **Build > Android Build**. The **Packaging and Deployment** section of the  **General** tab will have a checkbox for the **Shared Mono Runtime**.
 
 ## Preparing Xamarin.iOS Apps
+Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the IPA. The Xamarin Test Cloud Agent is an special embedded HTTP server that allows UITests to interact with the iOS user interface. The Test Cloud Agent is added to the iOS project via NuGet. 
 
-Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the IPA. If necessary, see the guide [Adding Xamarin.UITests to a Solution](https://developer.xamarin.com/guides/testcloud/uitest/adding-uitest/#Adding_the_Xamarin_Test_Cloud_Agent_to_the_iOS_Project) on the Xamarin website for details to how to add the Xamarin Test Cloud Agent to a Xamarin.iOS application.
+> [!TIP]
+> Non-Xamarin.iOS apps are also supported by Xamarin.UITest, but instead of the Xamarin Test Cloud Agent require [linking Calabash]( https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode).
+
+### Visual Studio (Mac)
+For an iOS project In Visual Studio for Mac, right click on the **Packages** folder, select **Add Package**. Search for **Xamarin Test Cloud Agent**, and click **Add Package**:
+
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-xs.png)
+
+### Visual Studio (Windows)
+> [!IMPORTANT]
+> Xamarin.UITests for iOS apps cannot be executed locally on Windows. You can still be create, compile and uploade to App Center Test from Windows.
+
+For an iOS project In Visual Studio for Windows, right click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
+
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-vs.png)
+
+### Initialize the Xamarin Test Cloud Agent
+After adding the Xamarin Test Cloud Agent to the iOS project, you must initialize the Xamarin Test Cloud Agent when the iOS project starts up. Edit the `AppDelegate` class and add the following snippet to the `FinishedLaunching` method:
+
+```csharp
+#if ENABLE_TEST_CLOUD
+Xamarin.Calabash.Start();
+#endif
+```
+> [!WARNING]
+> Your app will be rejected by Apple if you submit an app that includes the Xamarin Test Cloud Agent. The Xamarin Test Cloud Agent is only supported for apps signed with Development Provisioning Profiles.
+
+When you surround the initialization code in the **ENABLE_TEST_CLOUD** conditional compile statement, the Xamarin linker will leave the Xamarin Test Cloud Agent in builds that use the **ENABLE_TEST_CLOUD** flag; conventionally **Debug** builds but not **Release** builds. New Xamarin.iOS apps created in Visual Studio use this approach.
