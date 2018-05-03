@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 04/26/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -44,7 +44,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.29.0
 - CocoaPods 1.5.0
-- Homebrew 1.6.1
+- Homebrew 1.6.2
 - NPM 3.10.10
 - Yarn 1.6.0
 - NuGet 4.3.0.4406
@@ -65,7 +65,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.92.1
+- fastlane 2.93.1
 - App Center CLI 1.0.16
 - Azure-CLI 2.0.31
 
@@ -309,7 +309,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Android
 
-### Android SDK tools
+### Android SDK Tools
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
@@ -321,7 +321,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 |-----------------------|---------------------------------------------|
 | platform-tools        | Android SDK Platform-tools, revision 27.0.1 |
 
-### Android Platforms
+### Android SDK Platforms
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -339,7 +339,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 1       |
 
-### SDK Build tools
+### Android SDK Build-tools
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
