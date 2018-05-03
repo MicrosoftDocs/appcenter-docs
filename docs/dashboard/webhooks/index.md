@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 04/13/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 836f00da-66a8-4d5e-8535-1f965bf12f3f
@@ -27,7 +27,7 @@ App Center's webhooks empower users to send automatic notifications to connected
         - **Only if previously successful**: when your app has failed to build after one or more successful builds
         - **Never**: you will not receive notifications for build failure
 - Crashes: when a crash group is created
-- Distribute: when a version is released
+- Distribute: when a new version is released
 
 App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have have manager or developer permissions in the app to be able to create and configure the webhooks.
 

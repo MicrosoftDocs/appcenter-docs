@@ -4,7 +4,7 @@ description: How to configure App Center email notifications
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group
 author: amchew
 ms.author: amchew
-ms.date: 04/16/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
@@ -25,9 +25,9 @@ You can choose to have email notifications automatically sent for the following 
         - **Only if previously successful**: when your app has failed to build after one or more successful builds
         - **Never**: you will not receive notifications for build failure
 - Crashes: when a crash group is created
-- Distribute: when a version is released
+- Distribute: when a new version is released
 
-Email notifications can be enabled at two levels, at the user level and at the app level. The email notifications configured at the user level will override all email notifications at the app level.
+App Center sends email notifications at two levels: per user and per user per app level.  User level email notifications settings will override all app level email notifications settings.
 
 ## Getting Started
 
