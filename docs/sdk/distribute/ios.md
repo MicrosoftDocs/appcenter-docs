@@ -75,7 +75,7 @@ Add `MSDistribute` to your `start:withServices:` method to start App Center Dist
 Insert the following line to start the SDK in your app's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
-[MSApCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
 ```
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
