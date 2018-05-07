@@ -4,12 +4,17 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 04/27/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **May 2, 2018**
+
+- **Export Diagnostics data (Crashes and Errors)**:
+Ability to export Crashes and Errors as part of our Continuous Export feature to Azure Blob Storage.
 
 ### **April 27, 2018**
 

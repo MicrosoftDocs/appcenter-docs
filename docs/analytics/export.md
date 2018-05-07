@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 08/27/2017
+ms.date: 05/02/2018
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -14,29 +14,30 @@ ms.custom: analytics
 # Export
 
 > [!IMPORTANT]
-> In order to set up Export, you will need to use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
+> To set up an export, you will need to use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
 
-App Center Analytics allows you to continuously export all your Analytics raw data into Azure, specifically into Blob Storage and Application Insights. By exporting the data, you benefit from:
+App Center allows you to continuously export all your Analytics and Diagnostics (crashes and errors) raw data into Azure. Export Analytics data to both Blob Storage and Application Insights, and export Diagnostics data (crashes and errors) to Blob Storage. By exporting the data, you benefit from:
 - Unlimited retention by keeping your data as long as you need to and access to it when needed
 - Get answers by querying your raw data
 - Customize your own analytics dashboards
 - New feature set within Application Insights such as filtering and funnels
 
-The data will be continously exported since the moment export is configured. The data for the two days previous to the export being configured will also be exported.
+For Application Insights, data is continuously exported from the moment export is configured along with 2 days of backfilled data.
+For Blob Storage, data is continuously exported from the moment export is configured along with 28 days of backfilled data.
 
-App Center offers two ways to export your data: *standard export* and *custom export*. Standard export will allow you to export the data with a one-click experience, using the azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
+App Center offers two ways to export your data: *standard export* and *custom export*. Standard export allows you to export the data with a one-click experience, using the Azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
 
 ## Azure Subscription Linking
 
 > [!NOTE]
 > This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attach the Azure subscription to App Center.
 
-Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization admin.
+Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an Azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization's admin.
 
 ### Adding an Azure Subscription
 - **App belonging to an organization:** If you are the organization admin, go to the "Manage" section under the organization where the app belongs to.
-- **App belonging to an user:** If you are the app owner, go to user settings.
-- Under Azure, click "Add subscription". Then, you will need to add your Azure credentials and it will let you choose your preferred option from all the Azure subscriptions you have access to.
+- **App belonging to a user:** If you are the app owner, go to user settings.
+- Under Azure, click **Add subscription**. Then, you will need to add your Azure credentials and it will let you choose your preferred option from all the Azure subscriptions you have access to.
 
 ### Linking an app to an Azure Subscription
 Once you have added an Azure Subscription into your user/organization settings, you need to provide apps with access so that the subscription can be used within that app. By doing this, you are allowing any manager/developer in that app to use the subscription for exporting purposes. Note that this will have an associated cost that will be charge into your Azure Subscription.
@@ -49,7 +50,7 @@ Once you have added an Azure Subscription into your user/organization settings, 
 4. Select the type of configuration you want (standard vs custom).
 
 ### Standard Export
-This provides a one-click experience. When selecting this option, all the resources will be created for you in Azure and the Azure Subscription attached to that app will be used. As mentioned above, this requires to have an Azure Subscription linked to your app.
+This provides a one-click experience. When selecting this option, all the resources will be created for you in Azure and the Azure Subscription attached to that app will be used. As mentioned above, this requires having an Azure Subscription linked to your app.
 
 ### Custom Export
 This option allows you to customize your export configurations in [Azure](https://portal.azure.com).
@@ -71,9 +72,16 @@ This option allows you to customize your export configurations in [Azure](https:
 
 ## Azure Blob Storage
 
-Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately. Exporting the data to Blob Storage is a good choice for the case where you want to have an extended retention but not necessarily plan to access to the data very often. The data will be exported every minute and a new subfolder will be created. The data will be stored the *year/month/day/hour/minute* format (for example, *https://&lt;blob-storage-account&gt;.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
+Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
 
-The contents of the blob file is a JSON array of client device logs, that looks like this:
+The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
+
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments".
+
+![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
+
+
+The contents of the blob file is a JSON array of client device logs, that looks like this for Analytics data:
 ```JSON
 [
     {
