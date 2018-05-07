@@ -40,6 +40,7 @@
 ## [Cloud build machines](build/software.md)
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
+## [Using the GitHub App](build/github-app.md)
 
 ## [FAQ](build/faq.md)
 
