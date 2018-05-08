@@ -196,7 +196,7 @@ appcenter codepush deployment list MyApp
 
 **Q:** *What changes for CodePush?*
 
-**A:** As of now, the only big change is the use of the App Center CLI and the structure of the commands. No changes in your code will be neccesarry until the release of the new SDK next year. In addition to this, CodePush will no longer be open sourced. The CodePush team would like to extend our graditude for your help in making CodePush what it is today. None of this would be possible without such an amazing community. 
+**A:** As of now, the only big change is the use of the App Center CLI and the structure of the commands. No changes in your code will be neccesarry until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our graditude for your help in making CodePush what it is today. None of this would be possible without such an amazing community. 
 
 **Q:** *Is using CodePush functionality still free?*
 
