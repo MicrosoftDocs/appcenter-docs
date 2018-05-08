@@ -6,7 +6,7 @@ description: how to use App Center Slack App
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, slack app, slackbot, slack bot, documentation, integration, slack
 author: amchew
 ms.author: amchew
-ms.date: 09/14/2017
+ms.date: 05/07/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: d019ce2d-24b6-4a07-a9a2-e3484fcbb005
@@ -32,18 +32,18 @@ Our aim is to enable users to quickly access App Center services and respond to 
 
 1. Navigate to [App Center's Slack App](https://slack.com/apps/A5ZK2MYJC), and install and authorize the app.
 
-1. Navigate to your Slack workspace and select any direct message or channel.
+2. Navigate to your Slack workspace and select any direct message or channel.
 
-1. In the **message** tab, run the Slash command `/appcenter`.
+3. In the **message** tab, run the Slash command `/appcenter`.
 
-1. Authorize App Center's Slack App by following the instructions below:
+4. Authorize App Center's Slack App by following the instructions below:
 
 	1. Go to https://appcenter.ms/settings/apitokens and create a new Full Access API token.
 		- Here are details on how to [create a new Full Access API token](~/api-docs/index.md), in particular please see steps 4-5.
-	1. Go back to Slack and run `/appcenter login <your token>` command.
-	1. Welcome! You've successfully authorized your app.
+	2. Go back to Slack and run `/appcenter login <your token>`.
+	3. Welcome! You've successfully authorized your app.
 	
-1. You may run `/appcenter help` to see a complete list of App Center commands. Below is the list of commands supported by App Center Slack App:
+5. You may run `/appcenter help` to see a complete list of App Center commands. Below is the list of commands supported by App Center Slack App:
 	
 	| Command       | Description           | 
 	|---	|---	|
@@ -55,4 +55,15 @@ Our aim is to enable users to quickly access App Center services and respond to 
 	| `/appcenter crashes <app>`      |   crashes information | 
 	| `/appcenter help`      |   View list of App Center commands|  
 
-1. You can pin a specific App Center app to the Slack channel or message. Run the slash command `/appcenter` and click on **set current app** to choose the default app. To remove the default app, run the slash command `/appcenter` and click on **clear current app**.  
+6. You can pin a specific App Center app to the Slack channel or message. Run the slash command `/appcenter` and click on **set current app** to choose the default app. To remove the default app, run the slash command `/appcenter` and click on **clear current app**.  
+
+## FAQ
+
+#### What should I do when I receive an error message `Looks like there is an error with your request` after running `/appcenter [command]`?
+
+This is because the API token used has been deleted. To resolve this,
+
+  1. Go to [https://appcenter.ms](https://appcenter.ms) and create a new [Full Access API token](~/api-docs/index.md). Copy this API token.
+  2. Navigate to your Slack workspace and select any direct message or channel.
+  3. In the **message** tab, run `/appcenter logout`.
+  4. In the **message** tab, run `/appcenter login <your token>`.
