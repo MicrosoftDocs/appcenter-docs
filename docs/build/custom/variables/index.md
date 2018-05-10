@@ -45,11 +45,12 @@ If you're building a Xamarin or UWP app, you might want to connect to a private 
 ```
 <packageSourceCredentials>
   <MyAuthNuget>
-    <add key="Username" value="%USER_VARIABLE%" />
-    <add key="ClearTextPassword" value="%PASSWORD_VARIABLE%" />
+    <add key="Username" value="$USER_VARIABLE" />
+    <add key="ClearTextPassword" value="$PASSWORD_VARIABLE" />
   </MyAuthNuget>
 </packageSourceCredentials>
 ```
+
 
 ## build.gradle for Android 
 For Android apps you can access your variables in the `build.gradle` config. For more details please read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
