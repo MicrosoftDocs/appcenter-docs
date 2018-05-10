@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 12/04/2017
+ms.date: 05/10/2018
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: vs-appcenter
@@ -78,8 +78,8 @@ For Mac build machines:
   </activePackageSource>
   <packageSourceCredentials>
     <MyAuthNuget>
-      <add key="Username" value="$USER_VARIABLE" />
-      <add key="ClearTextPassword" value="$PASSWORD_VARIABLE" />
+      <add key="Username" value="%USER_VARIABLE%" />
+      <add key="ClearTextPassword" value="%PASSWORD_VARIABLE%" />
     </MyAuthNuget>
   </packageSourceCredentials>
 </configuration>
