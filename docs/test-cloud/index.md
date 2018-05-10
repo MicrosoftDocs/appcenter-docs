@@ -22,7 +22,7 @@ Test runs execute in a hosted fashion; upload the necessary assets (typically an
 | Real devices | Test Cloud uses real mobile devices that are not rooted or jailbroken, providing the best approximation of your users' environment. |
 | Screenshots | Screenshots are automatically captured and attached to each test step and can be viewed side-by-side for all targeted devices in a test run. |
 | Logs | View the device log for all target devices in a test run and stack traces for failed test steps. |
-| Concurrent runs | Run tests on multiple devices simultaneously to speed up time to results. You can learn more about concurrency in the [LINK] core concepts section. |
+| Concurrent runs | Run tests on multiple devices simultaneously to speed up time to results. You can learn more about concurrency in the [Core Concepts](~/test-cloud/core-concepts.md) section. |
 | Popular framework support | Test Cloud supports the test frameworks that are demonstrated as popular by their adoption in the developer community. Supported frameworks include Appium (Java with JUnit) for Android and iOS, Espresso (Java) for Android, Calabash for Android and iOS, and Xamarin.UITest for Android and iOS. (XCUITest for iOS coming soon) |
 
 Test Cloud does not currently support the following features:
