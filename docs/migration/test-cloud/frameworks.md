@@ -101,7 +101,7 @@ Below you can find a tabular overview of these tools in terms of features and tr
 |         | Espresso           | XCUITest  |  Xamarin.UITest   | Appium  | EarlGrey  |
 | ------------- |:-------------:| :-----:|:-------------:| :-------------:|:-------------:|
 | **Platforms**      | Android |  iOS | Android, iOS | Android, iOS (Windows) | iOS |
-| **Languages**      | Java & JVM based    |   Objective-C, Switf | C# | Java, Javascript, Ruby, Python (and more) | Objective-C & Swift |
+| **Languages**      | Java & JVM based    |   Objective-C, Swift | C# | Java, Javascript, Ruby, Python (and more) | Objective-C & Swift |
 | **Open Source** | Yes      |    No | No | Yes | Yes |
 | **Steward** | Google      |   Apple  | Microsoft | jQuery Foundation | Google |
 | **BDD Options** | [Cucumber](https://github.com/sebaslogen/espresso-cucumber) [JVM](https://github.com/sebaslogen/espresso-cucumber)      |   [XCFit](https://shashikant86.github.io/XCFit/) [Cucumberish](https://github.com/Ahmed-Ali/Cucumberish) | SpecFlow | Yes (depends on client test framework) | Unknown |
