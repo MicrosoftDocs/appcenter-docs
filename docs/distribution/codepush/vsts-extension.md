@@ -23,7 +23,7 @@ These tasks can be used with either VSTS or TFS 2015 Update 2 and are intended t
 
 Follow these steps to automate the release and promotion of app updates via CodePush:
 
-1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for VSTS CI builds (e.g. `appcenter codepush token create -d "VSTS CI"`)
+1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for VSTS CI builds (e.g. `appcenter tokens create -d "VSTS-CI"`)
 
  > [!NOTE]
  > You can use the API key that is displayed in the App Center portal, and don't need to generate an additional token via the App Center CLI.
