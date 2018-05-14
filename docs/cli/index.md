@@ -4,7 +4,7 @@ description: How to use the CLI to access App Center features
 keywords: command line, app center, visual studio app center, CLI, command line interface
 author: elamalani
 ms.author: emalani
-ms.date: 05/11/2018
+ms.date: 05/14/2018
 ms.topic: article
 ms.assetid: f98b1b59-ee20-4ed0-beb9-ec8fd4596ad1
 ms.service: vs-appcenter
@@ -32,19 +32,22 @@ Open a terminal/command prompt, and run `npm install -g appcenter-cli`.
 1. Open a terminal/command window.
 2. Run `appcenter login`. This will open a browser with an `authentication token`.
 3. Copy the `authentication token` from the browser, and paste this into the command window.
+  ![Image of browser token](~/cli/images/browserToken.png)
 4. The command window will display `Logged in as {user-name}`.
+  ![Image of terminal login](~/cli/images/terminalLogin.png)
 5. Congratulations! You are successfully logged in and can run CLI commands. 
 
 There are two ways to use App Center CLI commands without running `appcenter login` prior:
 
-- ##### Using the `--token` parameter:
+Using the `--token` parameter:
 
 1. Create a `Full Access` [API token](https://docs.microsoft.com/en-us/appcenter/api-docs/) (See steps 1-5).
 2. Open a terminal/command window.
 3. Add the `--token` switch to the CLI command you are running. For example, run `appcenter apps list --token {API-token}` to get a list of your configured applications. 
 
-- ##### Using the `APPCENTER_ACCESS_TOKEN` environment variable:
-  You can set the `APPCENTER_ACCESS_TOKEN` environment variable with your API token. This will work without having to append the `--token` switch to each CLI command.
+Using the `APPCENTER_ACCESS_TOKEN` environment variable:
+  
+You can set the `APPCENTER_ACCESS_TOKEN` environment variable with your API token. This will work without having to append the `--token` switch to each CLI command.
 
 ### Running your first CLI command
 
