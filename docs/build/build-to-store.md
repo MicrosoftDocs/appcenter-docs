@@ -24,4 +24,4 @@ Use the branch configuration to define the target store for the build. If you ha
 With the store connected, simply choose the store you'd like to automatically distribute successful builds to. Ensure you've signed the app with the correct signing credentials to distribute to a store. After you pick the store you want to distribute to, click **Save** or **Save and Build**. Your app will be distributed to the selected store on each successful build!
 
 > [!TIP]
-> The recommended workflow is configuring a branch to distribute to the store with the correct signing crednetials and configuration. Merge to and build this branch only when you want to distribute to a store.
+> The recommended workflow is configuring a branch to distribute to the store with the correct signing credentials and configuration. Merge to and build this branch only when you want to distribute to a store.
