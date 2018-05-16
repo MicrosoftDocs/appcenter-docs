@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: jwhiteDev
 ms.author: jawh
-ms.date: 05/02/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -56,6 +56,7 @@ This section shows you how to use App Center's [swagger page](https://openapi.ap
 6. Awesome! You can now see the response under the **Responses** section.
 
 ### How to find your app name and owner name
+
 Some of App Center's API and CLI require an app name and owner name as parameters. An example is the API call to remove the user from the app, [`DELETE /v0.1/apps/{owner_name}/{app_name}/users/{user_email}`](https://openapi.appcenter.ms/#/account/apps_removeUser).
 
 You can find the app name and owner name from your App Center app URL, or using the [App Center CLI](https://github.com/Microsoft/appcenter-cli).
@@ -63,6 +64,7 @@ You can find the app name and owner name from your App Center app URL, or using 
 Here are the steps to do so:
 
 #### From App Center app URL
+
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. Navigate to your app.
 3. When you look at your app's URL, it is in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
