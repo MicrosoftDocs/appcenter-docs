@@ -182,6 +182,9 @@
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Support Center](general/support-center.md)
 
+# [GDPR](gdpr/index.md)
+## [Your Data](gdpr/your-data.md)
+
 # [Migration](migration/index.md)
 ## [HockeyApp](migration/hockeyapp/index.md)
 ### [Distribution](migration/hockeyapp/distribution.md)
@@ -189,6 +192,7 @@
 ## [TestCloud](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
+
 
 # Reference
 ## [API docs](api-docs/index.md)
