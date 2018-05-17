@@ -43,12 +43,22 @@ In the [build scripts](~/build/custom/scripts/index.md) you can access the varia
 If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed which requires authentication. In the `NuGet.config` you can simply consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` please read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```
-<packageSourceCredentials>
-  <MyAuthNuget>
-    <add key="Username" value="%USER_VARIABLE%" />
-    <add key="ClearTextPassword" value="%PASSWORD_VARIABLE%" />
-  </MyAuthNuget>
-</packageSourceCredentials>
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<packageSources>
+		<add key="nuget" value="https://api.nuget.org/v3/index.json" />
+		<add key="PrivateNuget" value="https://xamurai.foo/nuget" />
+	</packageSources>
+	<activePackageSource>
+		<add key="All" value="(Aggregate source)" />
+	</activePackageSource>
+	<packageSourceCredentials>
+		<PrivateNuget>
+			<add key="Username" value="%USER_VARIABLE%" />
+			<add key="ClearTextPassword" value="%PASSWORD_VARIABLE%" />
+		</PrivateNuget>
+	</packageSourceCredentials>
+</configuration>
 ```
 
 ## build.gradle for Android 
