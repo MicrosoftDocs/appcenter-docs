@@ -4,7 +4,7 @@ description: Read how to securely store your Apple ID and iOS signing certificat
 keywords: Secret storage, Apple ID, certicates
 author: oddj0b
 ms.author: vigimm 
-ms.date: 05/01/2018
+ms.date: 05/04/2018
 ms.topic: article 
 ms.assetid: 505ce61e-7647-41cf-8500-459f110944f4
 ms.service: vs-appcenter
@@ -20,6 +20,11 @@ Your Apple ID and certificate are stored securely in an encrypted vault designed
 You can add your Apple ID and signing certificate as part of the distribution workflow or from **Account settings** -> **Developer accounts** by clicking the blue + button. Secrets are store in a secure vault, to protect the confidentiality of your credentials.
 
 App Center uses your Apple ID to manage your provisioning profile and your signing certificate to re-sign for a release which includes all testers.
+
+## Two factor authentication
+App Center supports Apple IDs with two-factor authentication protection and asks for a 6-digit code in a separate dialog after username and password have been entered.
+
+Any of your trusted Apple device can generate a 6-digit code by clicking "Allow." Once you have a code, fill out the dialogue and App Center uses the same session next time it is needed. A 6-digit code only lasts for 30 days and will require renewal thereafter. Renewing a code is done by removing the Apple ID and adding it again, this prompts for username, password, and a 6-digit code.
 
 ## Planned work
 - Enhance secret storage so updates to your credentials are stored across your distribution groups.
