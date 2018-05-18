@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 05/10/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -43,7 +43,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Bundler 1.16.1
 - Carthage 0.29.0
-- CocoaPods 1.5.0
+- CocoaPods 1.5.2
 - Homebrew 1.6.3
 - NPM 3.10.10
 - Yarn 1.6.0
@@ -65,12 +65,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.94.0
+- fastlane 2.95.0
 - App Center CLI 1.0.16
 - Azure-CLI 2.0.32
 
 ## Xcode
 
+- Xcode 9.3.1
 - Xcode 9.3
 - Xcode 9.2
 - Xcode 9.1
@@ -372,9 +373,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 |-----------------------|-------------------------------------------|
 | cmake                 | 3.6.4111459                               |
 | lldb                  | 2.3.3614996                               |
-| ndk-bundle            | 16.1.4479499                              |
+| ndk-bundle            | 17.0.4754217                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.1.12                                    |
+| Android Emulator      | 27.1.12                                   |
 
 ### Google APIs
 
@@ -390,7 +391,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|
 | extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-google_play_services | Google Play services, revision 48        |
+| extra-google-google_play_services | Google Play services, revision 49        |
 | extra-google-m2repository         | Google Repository, revision 58           |
 | Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 6.2.1     |
 
