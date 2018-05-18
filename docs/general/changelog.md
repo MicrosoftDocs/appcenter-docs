@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 05/02/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **May 17, 2018**
+- **Build support for Xcode 9.3.1**:
+Build your apps using Xcode 9.3.1.
 
 ### **May 2, 2018**
 
