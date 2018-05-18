@@ -4,7 +4,7 @@ description: Simplify distribution of line of business mobile applications to th
 keywords: distribution store
 author: pnghub
 ms.author: gned
-ms.date: 08/15/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -23,7 +23,6 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 * You need to [create groups](https://docs.microsoft.com/intune/groups-add) to organize users or devices by geographic location, department or hardware characteristics.
 * It is important to note that Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. This requires a consent to be given by the tenants Azure Active Directory (AD) global admin. To provide this consent, the global admin of your company's Azure Active Directory global admin will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph API's. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). This is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, should be able to navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
 * For more information review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
-
 
 ### Step 1: Create an Intune connection in App Center
 
@@ -46,4 +45,4 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Published**.
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message. 
 
-For any issues, you can contact us via Intercom. 
+For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page. 
