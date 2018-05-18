@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 02/08/2018
+ms.date: 05/17/2018
 ms.topic: get-started-article
 ms.assetid: 0953B40C-ED43-430A-9609-43ED212A1884
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ ms.tgt_pltfrm: cordova
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
-> * [Cordova Andriod](cordova-android.md)
+> * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
 
 App Center Push enables you to send push notifications to your app users from the App Center portal.

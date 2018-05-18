@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 4/30/2018
+ms.date: 05/17/2018
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -41,7 +41,7 @@ If you have already created your app in the App Center portal, you can skip this
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional desciption for your app.
+3. Enter a name and an optional description for your app.
 4. Select **macOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 

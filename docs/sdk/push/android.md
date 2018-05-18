@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ ms.tgt_pltfrm: android
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
-> * [Cordova Andriod](cordova-android.md)
+> * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
 
 > [!NOTE]

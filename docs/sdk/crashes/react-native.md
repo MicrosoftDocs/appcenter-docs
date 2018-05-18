@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -62,7 +62,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 const didCrash = await Crashes.hasCrashedInLastSession();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
 ### Details about the last crash
 

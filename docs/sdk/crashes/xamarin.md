@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/06/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ Also note that crash logs on iOS require Symbolication, please check out the [Ap
 
 ## Generate a test crash
 
-App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can use only use it when debuging as it won't work for release apps.
+App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can use only use it when debugging as it won't work for release apps.
 
 ```csharp
 Crashes.GenerateTestCrash();
@@ -49,7 +49,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
 ### Details about the last crash
 

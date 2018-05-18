@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: xamarin.ios
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
-> * [Cordova Andriod](cordova-android.md)
+> * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.

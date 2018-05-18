@@ -4,7 +4,7 @@ description: Migration to App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/18/2017
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 279e0ad3-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -133,7 +133,7 @@ Follow these steps to update your current preview SDK to App Center React Native
     
     AppCenter.setLogLevel(Log.VERBOSE);
     ```
-11. [Android optional] If you use `mobile-center-anlytics` or `mobile-center-crashes`, you may remove mobile center string resources in **android/app/src/main/res/values/strings.xml**:
+11. [Android optional] If you use `mobile-center-analytics` or `mobile-center-crashes`, you may remove mobile center string resources in **android/app/src/main/res/values/strings.xml**:
 
     ```xml
     <string moduleConfig="true" name="mobileCenterCrashes_whenToSendCrashes">ALWAYS_SEND</string>

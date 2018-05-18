@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/25/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -103,7 +103,7 @@ For creating a Xamarin.Forms application targeting both iOS and Android platform
 AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
 ```
 
-For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplicaton`:
+For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplication`:
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();

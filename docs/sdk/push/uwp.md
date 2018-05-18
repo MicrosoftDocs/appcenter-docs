@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/08/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ ms.tgt_pltfrm: UWP
 > * [React Native Android](react-native-android.md)
 > * [React Native iOS](react-native-ios.md)
 > * [macOS](macos.md)
-> * [Cordova Andriod](cordova-android.md)
+> * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal and relies on [Windows Notification Services](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.

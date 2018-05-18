@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 11/29/2017
+ms.date: 05/17/2018
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ Analyzing dependencies [!] Unable to find a specification for AppCenterReactNati
 
 You should run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, please see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
-## How to update React Native SDK to the lastest version
+## How to update React Native SDK to the latest version
 
 If you have already integrated our SDK into your application and want to upgrade to a newer version of the sdk, plesae follow the following steps to upgrade:
 

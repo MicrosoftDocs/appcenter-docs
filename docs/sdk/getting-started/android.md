@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2018
+ms.date: 05/17/2018
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -40,7 +40,7 @@ If you have already created your app in the App Center portal, you can skip this
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional desciption for your app.
+3. Enter a name and an optional description for your app.
 4. Select **Android** as the OS and **Java** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 

@@ -4,7 +4,7 @@ description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 12/21/2017
+ms.date: 05/17/2018
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.service: vs-appcenter
@@ -58,7 +58,7 @@ var error = function(error) {
 AppCenter.Crashes.hasCrashedInLastSession(success, error);
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers may want to show something to apologize to their users, or to get in touch after a crash has occured.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers may want to show something to apologize to their users, or to get in touch after a crash has occurred.
 
 ### Details about the last crash
 
