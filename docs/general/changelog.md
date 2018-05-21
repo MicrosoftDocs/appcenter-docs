@@ -4,14 +4,21 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 05/17/2018
+ms.date: 05/18/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
 
+### **May 16, 2018**
+
+- **CLI version 1.0.17 released**: 
+
+Added functionality to configure Travis CI for pull request checks. Misc. bug fixes to codepush, test, crashes, and help commands.
+
 ### **May 17, 2018**
+
 - **Build support for Xcode 9.3.1**:
 Build your apps using Xcode 9.3.1.
 
@@ -38,8 +45,14 @@ Increased the number of property keys from five to twenty for both errors and cu
 Increased the number of characters allowed in custom event and error property keys and values.
 
 ### **April 16, 2018**
+
 - **Build status notifications**:
 Receive email and webhook notifications for build success or failure.
+
+### **April 13, 2018**
+
+- **CLI version 1.0.16 released**: 
+Added functionality to enable the use of app archives on all platforms, to download test report artifacts and to be called in `--async` mode.
 
 ### **April 9, 2018**
 - **Build support for Xcode 9.3**:
@@ -51,7 +64,7 @@ Added bug fixes for JsZip in Test Cloud.
 
 ### **April 2, 2018**
 - **CLI version 1.0.14 released**:
-Added --test-output-dir and --merge-nunit-xml options to appcenter test run commands.
+Added `--test-output-dir` and `--merge-nunit-xml` options to appcenter test run commands.
 Misc. fixes to codepush commands.
 
 ### **March 22, 2018**
