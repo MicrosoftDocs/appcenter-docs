@@ -4,7 +4,7 @@ description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/15/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.assetid: 591025F9-C7DA-400E-8CCA-DF39514B3DD0
 ms.service: vs-appcenter
@@ -126,7 +126,7 @@ document.addEventListener("resume", function () {
 Additionally, if you would like to display an update confirmation dialog (an "active install"), configure when an available update is installed (e.g. force an immediate restart) or customize the update experience in any way, refer to the `sync` method's API reference for information on how to tweak this default behavior.
 
 > [!IMPORTANT]
-> While [Apple's developer agreement](https://developer.apple.com/programs/ios/information/iOS_Program_Information_4_3_15.pdf) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
+> While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
 
 ## Releasing Updates
 

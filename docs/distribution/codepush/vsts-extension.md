@@ -4,7 +4,7 @@ description: "Setting up and using the CodePush VSTS extension"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/15/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.assetid: F0FB00A7-C0E3-4753-81DF-64D5F8100DDA
 ms.service: vs-appcenter
@@ -185,7 +185,7 @@ By default, no release attributes are modified by the patch operation, so in ord
 
 ### CodePush - Promote
 
-Allows you to promote a previously released update from one deployment to another (e.g. `Staging` -> `Production`), and enables the use of [VSTS Release Management](https://www.visualstudio.com/en-us/features/release-management-vs.aspx) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`appcenter codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
+Allows you to promote a previously released update from one deployment to another (e.g. `Staging` -> `Production`), and enables the use of [VSTS Release Management](https://docs.microsoft.com/vsts/build-release/concepts/definitions/release/what-is-release-management) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`appcenter codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the CodePush server. The available options are:
 
