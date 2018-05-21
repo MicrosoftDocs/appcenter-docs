@@ -4,7 +4,7 @@ description: Key features of App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 04/13/2018
+ms.date: 05/18/2018
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
 ms.service: vs-appcenter
@@ -16,6 +16,8 @@ ms.custom: test
 App Center Test is a test automation service for native and hybrid mobile apps, also known as Test Cloud. Tests written using [supported frameworks](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/) can be run with little modification on hundreds of unique device model and operating system configurations hosted in a Microsoft data center. Initiate test runs using the [App Center Command Line Interface](~/cli/index.md) or the public [REST API](https://openapi.appcenter.ms/#/test). App Center stores test results, including all associated media assets, for viewing at any time.
 
 Test runs execute in a hosted fashion; upload the necessary assets (typically an app binary and test files) to Test Cloud to execute tests within our data center environment. Generated assets, such as screenshots and device logs, are retained for test report viewing.
+
+App Center Test maintains a (1) year data retention policy for test report data. All test reports older thatn 1 year from present date will be removed.
 
 | Key Features | |
 | --- | --- |

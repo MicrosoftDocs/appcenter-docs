@@ -21,7 +21,7 @@ To file a request for a new test framework or vote for an existing request, visi
 | -------------- | ----------- | ---------------------------------------- |
 | Appium         | Open Source | [https://appium.io](https://appium.io)   |
 | Calabash       | Microsoft   | [http://calaba.sh](http://calaba.sh)     |
-| Espresso       | Google      | [https://google.github.io/android-testing-support-library/docs/espresso/](https://google.github.io/android-testing-support-library/docs/espresso/) |
+| Espresso       | Google      | [https://developer.android.com/training/testing/espresso/](https://developer.android.com/training/testing/espresso/) |
 | Xamarin.UITest | Microsoft   | [https://developer.xamarin.com/guides/testcloud/uitest/](https://developer.xamarin.com/guides/testcloud/uitest/) |
 | XCUITest       | Apple       | [Testing with Xcode - User Interface Testing](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
 
