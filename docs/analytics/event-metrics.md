@@ -4,7 +4,7 @@ description: Help using the Events Metrics on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 04/25/2018
+ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688
 ms.service: vs-appcenter
@@ -72,6 +72,8 @@ Note that property values are optimized for values of type 'String'.
 Events can also be used to help you identify the root cause of your crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session. 
 
 In order to see the events before a crash, the Analytics SDK needs to be integrated and events need to be defined.
+
+Breadcrumbs are stored for just 28 days, while crashes can potentially be store indefinitely. This means that if you are looking at a crash which is older than 28 days, you will not see the corresponding breadrumbs.
 
 
 ## Handled Errors

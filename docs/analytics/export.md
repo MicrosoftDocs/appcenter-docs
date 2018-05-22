@@ -70,6 +70,12 @@ This option allows you to customize your export configurations in [Azure](https:
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
+### Export crashes, attachments and errors
+In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create): "POST /v0.1/apps/{owner_name}/{app_name}/export_configurations".
+
+In "exportEntities", you need to indicate what type of data you wish to export: crashes, errors, attachments.
+
+
 ## Azure Blob Storage
 
 Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
