@@ -6,7 +6,7 @@ description: How to get started with UI Testing in VSTS
 keywords: test, VSTS, espresso, appium, xamarin.uitest
 author: Oddj0b
 ms.author: vigimm
-ms.date: 05/02/2017
+ms.date: 05/23/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9 
@@ -142,9 +142,10 @@ Before you can start testing, the following steps are required.
 
 ### VSTS General Setup
 
-![The general sectino of the VSTS task](images/vsts-general.png)
+![The general section of the VSTS task](images/vsts-general.png)
 
-You start by adding the App Center Test task to your build definition. The App Center task in the build definition is divided up into sections - where focus will be on _General_, _Prepare Tests_ and _Run Test_ sections. In the general section it is required to insert the path to your app binary (`.apk` or `.ipa`) in the `Binary Application File Path` field.
+First, locate your project and select "Build and release" on the projects row. Top of the screen you select "Definitions" and hover your mouse over the definitions row and click "…" which presents a context menu select "Edit." On this screen, you click "+" to add a new task and search for "App center."  On the left-hand side of the screen, you can select and modify your test task by clicking it.
+The App Center task in the build definition is divided up into sections - in the _General_ section you should insert the path to your app binary (`.apk` or `.ipa`) in the `Binary Application File Path` field.
 
 ### Connecting to App Center Test
 
