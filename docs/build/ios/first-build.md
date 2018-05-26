@@ -50,10 +50,10 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests.
 
 ### 3.6. Code signing
-A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing [here](~/build/ios/code-signing.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing in [App Center's iOS code signing documentation](~/build/ios/code-signing.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
 
 ### 3.7. Launch your successful build on a real device
-Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](~/build/build-test-integration.md).
+Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.8. CocoaPods
 App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed. 
@@ -87,7 +87,7 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 ### 4.2. The app (.ipa)
 The .ipa file is an iPhone application archive file which contains the iOS app.
-* If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found [here](~/build/ios/code-signing.md).
+* If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
 * If the build has not been signed, the .ipa file can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator).
 * Unsigned builds will not produce an .ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
@@ -101,6 +101,6 @@ Keep in mind that the .dsym files do not change upon code signing the .ipa. If y
 [xcode-share-scheme]: images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
 ## Supported versions and requirements
-You can check out which Xcode versions we support [here](~/build/software.md#xcode).
+[Build machine Xcode version details](~/build/software.md#xcode) are updated each time a new version of Xcode is added.
 
 The build machines are running OS X 10.11.6 (15G1004). We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
