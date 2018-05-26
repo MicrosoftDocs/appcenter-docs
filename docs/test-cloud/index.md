@@ -17,7 +17,7 @@ App Center Test is a test automation service for native and hybrid mobile apps, 
 
 Test runs execute in a hosted fashion; upload the necessary assets (typically an app binary and test files) to Test Cloud to execute tests within our data center environment. Generated assets, such as screenshots and device logs, are retained for test report viewing.
 
-App Center Test maintains a (1) year data retention policy for test report data. All test reports older thatn 1 year from present date will be removed.
+App Center Test maintains a (1) year data retention policy for test report data. All test reports older than 1 year from present date will be removed.
 
 | Key Features | |
 | --- | --- |
