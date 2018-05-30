@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 05/10/2018
+ms.date: 05/30/2018
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: vs-appcenter
@@ -52,7 +52,7 @@ There are many reasons why build duration can be higher when using a build servi
 
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
 
-## Why do I get an extended build time when "Run launch test on a device" is enabled
+## Why do I get an extended build time when "Run launch test on a device" is enabled?
 We run the test as part of the build operation, which gives the added build time. What happens is that while App Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, etc. After that it's time to wait for a device. Third, it's running the app on a phone, which takes very little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additional **10 minutes of build time**.
@@ -61,7 +61,7 @@ Expect an additional **10 minutes of build time**.
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now.
 
-## How to restore a private NuGet feed?
+## How do I restore a private NuGet feed?
 If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md).
 
 For Mac build machines:
@@ -116,7 +116,7 @@ In order to successfully build and test your app,  ensure the linking type of **
 
 [mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
 
-## My Xamarin.Android build failed with **Error: No APK files found**; what can be done?
+## My Xamarin.Android build failed with **Error: No APK files found**. What can be done?
 One common reason for a build failing during **Xamarin Android Postprocess** task can be an incorrect value in the `<OutputPath>` property in Xamarin.Android project file. To check it, go to **YourXamarin.Android > Project Options > Build > Output** and verify that for your build configuration (Debug/Release) it points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
 
 ## I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information, why is that?
@@ -126,14 +126,14 @@ If you selected **Sign builds: Off** in the App Center branch configuration and 
 
 [xamarin-ios-empty-codesigning]: images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application"
 
-## My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error, how to fix that?
+## My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error. How do I fix that?
 When you create Xamarin.iOS project in Visual Studio the default configuration for iPhoneSimulator has **i386 + x86_64** supported architectures. The **.app** file that builds from such configuration will fail to upload into simulator. Open **Project Options > Build > iOS Build** and for iPhoneSimulator configuration change **Supported architectures** to just **i386** or **x86\_64**.
 
 ![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
 
 [xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
 
-## My Xamarin build fails with error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly, what can be done?
+## My Xamarin build fails with error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly. What can be done?
 
 Looks like your solution contains PCL or older .NET Standard projects together with newer .NET Standard projects. That means they may contain both `PackageTargetFallback` and `AssetTargetFallback` references in .csproj files. Your build logs will also contain messages like this:
 ```
@@ -142,12 +142,25 @@ error MSB4018: NuGet.Commands.RestoreCommandException: PackageTargetFallback and
 
 To resolve this issue, either remove PackageTargetFallback (tends to be in older PCL .csproj files) or rename it to AssetTargetFallback? The solution is also described in [this StackOverflow thread](https://stackoverflow.com/questions/45569378/upgrading-to-net-core-2-0-packagetargetfallback-and-assettargetfallback-cannot).
 
+## My Xamarin build fails with error: This project references NuGet package(s) that are missing on this computer. What can be done?
+Looks like not all packages were restored to build your application. Your build logs will also contain messages like these:
+```
+warning MSB3245: Could not resolve this reference. Could not locate the assembly "ASSEMBLY_NAME". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+error CS0246: The type or namespace name 'TYPE_OR_NAMESPACE_NAME' could not be found (are you missing a using directive or an assembly reference?)
+```
+To resolve this issue you can use [pre-build script](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following script which will restore all packages for each solution in your repostirory:
+```
+#!/bin/bash
+find $APPCENTER_SOURCE_DIRECTORY -name '*.sln' -print0 | xargs -0 -n1 nuget restore -DisableParallelProcessing
+CODE_SECTION
+```
+
 ## My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
 
 It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If yes, you need to go to your Pods project and ensure it is set to use the same signing method as your Main project. If you set both Pods project and Main project to have the same singing configuration, this should resolve the issue. 
 If your Pods are not checked-in into your repository, it might be different issues and there are few workarounds you can use with [pre-build script](~/build/custom/scripts/index.md#pre-build) in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964).
 
-## I want to run unit tests for my Xamarin application, how can that be done?
+## I want to run unit tests for my Xamarin application, how can I do that?
 
 To run unit tests in your Xamarin builds you have to use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run and display the results:
 
