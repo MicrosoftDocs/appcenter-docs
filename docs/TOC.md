@@ -184,6 +184,23 @@
 
 # [GDPR](gdpr/index.md)
 ## [Your Data](gdpr/your-data.md)
+## [Your End-User's Data](gdpr/data-from-your-end-users.md)
+### [Does it apply to me?](gdpr/does-it-apply-to-me.md)
+### [Stop Collection](gdpr/how-to-stop-collecting-data.md)
+### [Install ID](gdpr/install-id.md)
+### Analytics
+#### [Delete](gdpr/analytics-forget-me.md)
+#### [Export](gdpr/analytics-export.md)
+### Errors
+#### [Delete](gdpr/errors-forget-me.md)
+#### [Export](gdpr/errors-export.md)
+### Crashes
+#### [Delete](gdpr/crashes-forget-me.md)
+#### [Export](gdpr/crashes-export.md)
+#### [Consent](gdpr/crashes-consent.md)
+### Push
+#### [Delete](gdpr/push-forget-me.md)
+#### [Export](gdpr/push-export.md)
 
 # [Migration](migration/index.md)
 ## [HockeyApp](migration/hockeyapp/index.md)
@@ -192,7 +209,6 @@
 ## [TestCloud](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
-
 
 # Reference
 ## [API docs](api-docs/index.md)
