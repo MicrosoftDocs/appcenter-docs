@@ -80,6 +80,7 @@
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [CodePush](distribution/codepush/index.md)
+### [Using the CodePush UI](distribution/codepush/using-ui.md)
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
 ### [Cordova Client SDK](distribution/codepush/Cordova.md)
