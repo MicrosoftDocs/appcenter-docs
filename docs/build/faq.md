@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 05/30/2018
+ms.date: 06/01/2018
 ms.topic: article
 ms.assetid: 090e12fa-c788-4cd3-8178-c8c0769195af
 ms.service: vs-appcenter
@@ -69,7 +69,7 @@ For Mac build machines:
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
-    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
     <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
     <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
   </packageSources>

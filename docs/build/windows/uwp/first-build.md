@@ -4,7 +4,7 @@ description: How to set up a build for UWP C#
 keywords: build, windows
 author: siminapasat
 ms.author: siminap
-ms.date: 04/16/2018
+ms.date: 06/01/2018
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f
 ms.service: vs-appcenter
@@ -57,7 +57,7 @@ If the **NuGet.config** file is checked-in into the repository and sitting next 
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
-    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
     <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
     <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
   </packageSources>
