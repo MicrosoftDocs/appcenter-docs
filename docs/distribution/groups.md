@@ -4,7 +4,7 @@ description: Distribute mobile apps to groups of users
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 01/20/2017
+ms.date: 06/01/2018
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
 ms.service: vs-appcenter
@@ -26,6 +26,14 @@ Clicking on a Distribution Group will allow for management of the group. You can
 ## Public Distribution Groups
 
 If you would like users to be able to download your latest release through an unauthenticated install or through a public download link, you have the option of making a distribution group public. If you are creating a new distribution group, the option is available during the setup process. After giving your group a name, you can toggle on "Allow public access". If you would like to make an existing distribution group public, open the distribution group and click on the settings icon in the upper right-hand corner of the screen. From the settings modal, you can toggle on "Allow public access". If you've added testers to the group, they will receive the new release notification email but will not be required to login to their App Center account in order to download. Additionally, a public download link is displayed underneath the group name at the top of the distribution group page. 
+
+## Automatically manage devices
+
+When releasing an iOS app signed with an ad-hoc or development provisioning profile you must obtain your testers device IDs (UDID) and add them to the provisioning profile before compiling a release. If you toggle on "Automatically manage devices" App Center performs a series of automated task which will remove the requirement of knowing your testers device IDs before compiling your app. However, username and password for your Apple ID and a certificate in a `.p12`  format is required as part of automating the workflow.
+
+App Center starts the automated tasks when you distribute a new release or one of your testers registers a new device. First, all devices from the target distribution group will be registered, using your Apple ID, in your developer portal and all provisioning profiles used in the app will be generated with both new and existing device ID. Afterward, the newly generated provisioning profiles are downloaded to App Center servers. Second, App Center uses your saved certificate and the downloaded provisioning profiles to re-sign your app so it can be installed on any device in the releases distribution group. Your testers will not have to wait for you to create a new release as the existing release is being updated and a download link will be available through the [App Center Install portal](https://install.appcenter.ms).
+
+Click on either to read more about [what is re-signing](auto-provisioning.md#what-is-re-signing) and [about privacy for how your Apple ID and certificate is stored](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
 ## Releasing a Build to a Distribution Group
 
