@@ -45,7 +45,7 @@ The POST method call will return a status code but also an export ID which can l
 
 To get status for this Export request you can use the [following](https://openapi.appcenter.ms/#/push/Push_ExportDevicesStatus) GET API method:
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/devices/export/{export_id}
+https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/device_exports/{export_id}
 ```
 A status indicating completion indicates that the data will has been copied the Azure Blob storage container provided in the export request. 
 
