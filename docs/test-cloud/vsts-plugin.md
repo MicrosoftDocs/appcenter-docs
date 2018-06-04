@@ -23,7 +23,7 @@ Each framework will have its own section in this document, where you can read ab
 ## Appium
 
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
-* Prepare your repository for Appium - read more [here](preparing-for-upload/appium.md).
+* [Read how to prepare your repository for Appium](preparing-for-upload/appium.md).
 
 ### VSTS setup
 
@@ -61,7 +61,7 @@ You're all set to initiate the build.
 ## Espresso
 
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
-* Prepare your repository for Espresso - read more [here](preparing-for-upload/espresso.md).
+* [Read how to prepare your repository for Espresso](preparing-for-upload/espresso.md).
 
 ### VSTS setup
 
@@ -96,7 +96,7 @@ You're all set to initiate the build.
 ## Xamarin.UITest
 
 * There are some requirements before starting. See the [Before you start](#before-you-start) section of this document.
-* Prepare your repository for Xamarin.UITest - read more [here](preparing-for-upload/uitest.md).
+* [Read how to prepare your repository for Xamarin.UITest](preparing-for-upload/uitest.md).
 
 ### VSTS setup
 
