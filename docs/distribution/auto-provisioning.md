@@ -22,7 +22,6 @@ ms.reviewer: siminap
 ---
 
 # Device registration and app re-signing
-**Preview feature** 
 
 As a prerequisite for distributing your app to iOS devices, it is necessary to obtain the correct device ID and register it in the Apple developer portal. App Center has two features to help you release apps to internal testers: 
 
@@ -80,6 +79,9 @@ Apple periodically updates its license agreement, and for continued Developer po
 
 ### Multifactor authentication
 Apple supports multifactor authentication (MFA) for its developer portal and soon so will App Center. For now, the only option is to disable MFA for your Apple ID. Visit [appleid.apple.com](https://appleid.apple.com) for details.
+
+### Our tester did not register their device ID
+If you accidentally clicked **I already registered it** you can register your devices by visiting [https://install.appcenter.ms/register-device](https://install.appcenter.ms/register-device) on your mobile device.  Click **Register** and follow the on-screen instructions.
 
 ## Feedback
 Contact us with questions or suggestions about device registration, by commenting on below or through App Center by clicking on the round blue chat button in the lower right-hand side of the screen.
