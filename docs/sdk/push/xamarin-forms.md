@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: vs-appcenter
@@ -83,7 +83,9 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 
 ### Android additional steps
 
-If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need add this in the activity `OnNewIntent` method:
+#### Launch mode
+
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `OnNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)
@@ -91,6 +93,28 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
             base.OnNewIntent(intent);
             Push.CheckLaunchedFromNotification(this, intent);
         }
+```
+
+#### Splash screen activity
+
+This section applies if you have a [Splash Screen activity](https://docs.microsoft.com/en-us/xamarin/android/user-interface/splash-screen) (or a similar concept) that starts the main activity and main activity is the one creating the forms application.
+
+When you click on the push notification if the application is not launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity in order to process that information.
+
+The simplest way of doing that is to locate the code where you start your main activity from the launcher activity:
+
+```csharp
+    // Most apps have this
+    StartActivity(new Intent(this, typeof(MainActivity)));
+```
+
+And modify it like this:
+
+```csharp
+    var intent = new Intent(this, typeof(MainActivity));
+    if (Intent.Extras != null)
+        intent.PutExtras(Intent.Extras); // copy push info from splash to main
+    StartActivity(intent);
 ```
 
 ### UWP additional steps
