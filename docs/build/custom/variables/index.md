@@ -55,7 +55,7 @@ If you're building a Xamarin or UWP app, you might want to connect to a private 
 For Android apps you can access your variables in the `build.gradle` config. For more details please read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
 
 ```
-buildConfigField("string", "API_KEY", "${System.env.API_KEY}")
+buildConfigField("String", "API_KEY", "\"${System.env.API_KEY}\"")
 ```
 
 [environment-variables]: ~/build/custom/variables/images/environment-variables.png "Custom environment variables"
