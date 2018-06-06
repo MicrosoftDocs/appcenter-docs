@@ -32,7 +32,7 @@ After installing the GitHub App, sign in to App Center or create a new App Cente
 You must configure a branch before a build can start. Read more about configuring your branch in the Configure a build articles respectively for [Android](~/build/android/first-build.md), [iOS](~/build/ios/first-build.md), and [Windows](~/build/windows/uwp/first-build.md). If you’re building a pull request, specify the configuration for the target branch of that pull request.
 
 ## Reporting Build Status to GitHub
-Opening a pull request on GitHub will start an App Center build, copying the build configuration of the target branch. App Center will skip the test and distribution steps during this build. As the build runs and completes, App Center reports build status back to GitHub in the Checks tab of the pull request view. Navigate back to the build on App Center by clicking the **View more details on App Center** link. Pull requests from a forked repository will not build until merged or show under the Checks tab.
+Opening a pull request on GitHub will start an App Center build, copying the build configuration of the target branch. App Center will skip the Launch Test and Distribution steps during this build. As the build runs and completes, App Center reports build status back to GitHub in the Checks tab of the pull request view. Navigate back to the build on App Center by clicking the **View more details on App Center** link. Pull requests from a forked repository will not build until merged or show under the Checks tab.
 
 ![An image showing the Checks tab in GitHub's pull request view](~/build/images/github-checks-tab.png)
 
