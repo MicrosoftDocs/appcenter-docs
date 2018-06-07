@@ -86,13 +86,13 @@ The most common scenario is to have personal information in the Error Property V
 
 Error property value:
 
-```java
+```Csharp
 try { 
   // your code here. 
   
 } catch (Exception exception) { 
-    var properties = new Dictionary<string, string> { 
-        { "email_address", blXXX@microsoft.com"}, 
+    var properties = new Dictionary<string, string>() { 
+        { "email_address", "blXXX@microsoft.com"}, 
         { "phone_number", "555-123-XXX"} 
     }; 
     Crashes.TrackError(exception, properties); 
@@ -105,12 +105,12 @@ This is a less common case because they are static defined by the developer just
 
 Personal information in the error property key:
 
-```java
+```Csharp
 try { 
   // your code here. 
   
 } catch (Exception exception) { 
-    var properties = new Dictionary<string, string> { 
+    var properties = new Dictionary<string, string>() { 
         { "blXXX@microsoft.com", "@microsoft.com" }, 
         { "555-123-XXX", "Washington number" } 
     }; 
