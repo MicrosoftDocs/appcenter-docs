@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 05/17/2018
+ms.date: 06/06/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -43,10 +43,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Bundler 1.16.1
 - Carthage 0.29.0
-- CocoaPods 1.5.2
-- Homebrew 1.6.3
+- CocoaPods 1.5.3
+- Homebrew 1.6.6
 - NPM 3.10.10
-- Yarn 1.6.0
+- Yarn 1.7.0
 - NuGet 4.3.0.4406
 - pip 10.0.1
 
@@ -58,19 +58,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.17.0
-- Git LFS 2.4.0
+- Git 2.17.1
+- Git LFS 2.4.2
 - GNU Wget 1.19.5
 - Subversion (SVN) 1.10.0
 
 ### Tools
 
-- fastlane 2.95.0
-- App Center CLI 1.0.16
-- Azure-CLI 2.0.32
+- fastlane 2.96.1
+- App Center CLI 1.0.17
+- Azure-CLI 2.0.33
 
 ## Xcode
 
+- Xcode 9.4
 - Xcode 9.3.1
 - Xcode 9.3
 - Xcode 9.2
@@ -105,6 +106,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.1                  | iphoneos11.1 |
 | iOS 11.2                  | iphoneos11.2 |
 | iOS 11.3                  | iphoneos11.3 |
+| iOS 11.4                  | iphoneos11.4 |
 | iOS Simulator 10.0        | iphonesimulator10.0 |
 | iOS Simulator 10.1        | iphonesimulator10.1 |
 | iOS Simulator 10.2        | iphonesimulator10.2 |
@@ -113,6 +115,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS Simulator 11.1        | iphonesimulator11.1 |
 | iOS Simulator 11.2        | iphonesimulator11.2 |
 | iOS Simulator 11.3        | iphonesimulator11.3 |
+| iOS Simulator 11.4        | iphonesimulator11.4 |
 | tvOS 10.0                 | appletvos10.0 |
 | tvOS 10.1                 | appletvos10.1 |
 | tvOS 10.2                 | appletvos10.2 |
@@ -120,6 +123,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS 11.1                 | appletvos11.1 |
 | tvOS 11.2                 | appletvos11.2 |
 | tvOS 11.3                 | appletvos11.3 |
+| tvOS 11.4                 | appletvos11.4 |
 | tvOS Simulator 10.0       | appletvsimulator10.0 |
 | tvOS Simulator 10.1       | appletvsimulator10.1 |
 | tvOS Simulator 10.2       | appletvsimulator10.2 |
@@ -127,6 +131,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS Simulator 11.1       | appletvsimulator11.1 |
 | tvOS Simulator 11.2       | appletvsimulator11.2 |
 | tvOS Simulator 11.3       | appletvsimulator11.3 |
+| tvOS Simulator 11.4       | appletvsimulator11.4 |
 | watchOS 3.0               | watchos3.0 |
 | watchOS 3.1               | watchos3.1 |
 | watchOS 3.2               | watchos3.2 |
@@ -193,12 +198,14 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.1 | 15B87 |
 | iOS 11.2 | 15C107 |
 | iOS 11.3 | 15E217 |
+| iOS 11.4 | 15F79 |
 | tvOS 10.0 | 14T328 |
 | tvOS 10.1 | 14U591 |
 | tvOS 10.2 | 14W260 |
 | tvOS 11.1 | 15J580 |
 | tvOS 11.2 | 15K104 |
 | tvOS 11.3 | 15L211 |
+| tvOS 11.4 | 15L576 |
 | watchOS 3.0 | 14S326 |
 | watchOS 3.1 | 14S471a |
 | watchOS 3.2 | 14V243 |
@@ -250,7 +257,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (9.7 inch)
 - iPad Pro (12.9 inch)
 
-#### iOS 11, 11.1, 11.2, 11.3
+#### iOS 11, 11.1, 11.2, 11.3, 11.4
 
 - iPhone 5s
 - iPhone 6
@@ -338,7 +345,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-24            | Android SDK Platform 24, Revision 2       |
 | android-25            | Android SDK Platform 25, Revision 3       |
 | android-26            | Android SDK Platform 26, Revision 2       |
-| android-27            | Android SDK Platform 27, Revision 1       |
+| android-27            | Android SDK Platform 27, Revision 3       |
 
 ### Android SDK Build-tools
 
@@ -375,7 +382,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 17.0.4754217                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.1.12                                   |
+| Android Emulator      | 27.2.9                                    |
 
 ### Google APIs
 
@@ -393,16 +400,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-android-m2repository        | Android Support Repository, revision 47  |
 | extra-google-google_play_services | Google Play services, revision 49        |
 | extra-google-m2repository         | Google Repository, revision 58           |
-| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 6.2.1     |
+| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.2.0     |
 
 ## Xamarin
 
 ### Visual Studio for Mac
 
-- 7.4.2.12
+- 7.5.0.1254
 
 ### Mono
 
+- 5.10.1
 - 5.8.1
 - 5.8.0
 - 5.4.1.7
@@ -413,6 +421,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 11.10.1.177
 - 11.9.1.24
 - 11.8.0.20
 - 11.6.1.4
@@ -423,6 +432,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 8.3.0-19
 - 8.2.0-16
 - 8.2.0-15
 - 8.1.5-0
@@ -433,6 +443,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 4.4.1.176
 - 4.2.1.28
 - 4.2.0.20
 - 4.0.0.216
