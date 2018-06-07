@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 12/06/2017
+ms.date: 06/06/2018
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -51,28 +51,26 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 The default integration of the SDK uses CocoaPods for iOS. If you are not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
 
+Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
+
+```
+npm install appcenter appcenter-analytics appcenter-crashes --save
+```
+
+> [!NOTE]
+> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
+
+In case you prefer `yarn` over `npm`, use the following command to install App Center:
+
+```
+yarn add appcenter appcenter-analytics appcenter-crashes
+```
+
+The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and **appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.
+
 ### 3.1 Integrate the SDK automatically
 
-1. Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
-
-	```
-	npm install appcenter appcenter-analytics appcenter-crashes --save
-	```
-
-	> [!NOTE]
-	> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
-
-	In case you prefer `yarn` over `npm`, use the following command to install App Center:
-
-	```
-	yarn add appcenter appcenter-analytics appcenter-crashes
-	```
-
-	The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and
-	**appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general
-	purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.
-
-2. Link the plugins to the React Native app by using the react-native link command.
+1. Link the plugins to the React Native app by using the react-native link command.
 
 	```
 	react-native link
@@ -103,7 +101,7 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 
 	And then retry running `react-native link`.
 
-3. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
+2. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
 
 	```
 	What secret does your Android app use? [None]
@@ -160,8 +158,58 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 6. Add the SDK frameworks to the project in Xcode:
     * Make sure the Project Navigator is visible (⌘+1).
-    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
-    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
+    * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+    * A dialog will appear, make sure your app target is checked, then click **Finish**.
+
+7. Link AppCenter React Native plugins projects to your app's project:
+    * Make sure the Project Navigator is visible (⌘+1).
+    * For each AppCenter React Native plugin navigate to the folder containing source code. Paths respectively will be
+		* /node_modules/appcenter/ios
+		* /node_modules/appcenter-analytics/ios
+		* /node_modules/appcenter-crashes/ios
+		* /node_modules/appcenter-push/ios
+	* Drag and drop `.xcodeproj` files from the Finder into Xcode's Project Navigator. Typically under **Libraries** group.
+
+8. Link libraries for AppCenter React Native plugins.
+  Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section add new items referencing target libraries added on the previuos step: 
+	* libAppCenterReactNative.a
+	* libAppCenterReactNativeAnalytics.a
+	* libAppCenterReactNativeCrashes.a
+	* libAppCenterReactNativePush.a
+
+9. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
+  Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
+	* $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
+	* $(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics
+	* $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
+	* $(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush
+
+10. Modify your app's AppDelegate.m file to include code for starting SDK:
+	*  Add these lines to import section
+	```objc
+	#import <AppCenterReactNative/AppCenterReactNative.h>
+	#import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
+	#import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
+	#import <AppCenterReactNativePush/AppCenterReactNativePush.h>
+	```
+	* Add these lines to the `didFinishLaunchingWithOptions` method
+	```objc
+	[AppCenterReactNative register];
+	[AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+	[AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+	[AppCenterReactNativePush register];
+	```
+11. Create new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+	```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+		<dict>
+		<key>AppSecret</key>
+		<string>{APP_SECRET_VALUE}</string>
+		</dict>
+	</plist>
+	``` 
 
 ## 4. Start the SDK
 
