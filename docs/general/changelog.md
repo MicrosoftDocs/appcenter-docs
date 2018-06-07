@@ -11,6 +11,11 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **June 6, 2018**
+
+- **Updated Xamarin SDKs**:
+Build your Xamarin apps with [SDK release 15.7](https://releases.xamarin.com/release-15-7/) including support for Xcode 9.4.
+
 ### **May 17, 2018**
 
 - **Build support for Xcode 9.3.1**:
