@@ -186,6 +186,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 10. Modify your app's AppDelegate.m file to include code for starting SDK:
 	*  Add these lines to import section
+
 	```objc
 	#import <AppCenterReactNative/AppCenterReactNative.h>
 	#import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
@@ -193,6 +194,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 	#import <AppCenterReactNativePush/AppCenterReactNativePush.h>
 	```
 	* Add these lines to the `didFinishLaunchingWithOptions` method
+
 	```objc
 	[AppCenterReactNative register];
 	[AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
@@ -200,6 +202,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 	[AppCenterReactNativePush register];
 	```
 11. Create new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+
 	```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
