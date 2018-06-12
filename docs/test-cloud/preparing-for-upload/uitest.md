@@ -5,7 +5,7 @@ keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 05/02/2018
+ms.date: 06/07/2018
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
 ms.service: vs-appcenter
@@ -46,6 +46,8 @@ After the test run has been created, ensure that the following software is insta
 2. Install the [App Center CLI](~/cli/index.md). Instructions for [installing the App Center CLI](https://github.com/Microsoft/AppCenter-CLI#installation) maybe be found in the [README.md on GitHub](https://github.com/Microsoft/AppCenter-CLI).
 
 ## Preparing Xamarin.Android Apps
+> [!IMPORTANT]
+> Running Xamarin.UITest on Windows requires [setting the ANDROID_HOME environment variable with the path to the Android SDK](https://www.360logica.com/blog/how-to-set-path-environmental-variable-for-sdk-in-windows/)
 
 The two steps detail what is necessary to prepare a Xamarin.Android app and UITest for submission to App Center for Test:
 

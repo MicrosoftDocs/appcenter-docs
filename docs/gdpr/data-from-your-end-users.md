@@ -1,5 +1,5 @@
 ---
-title: Data from your end users 
+title: Data from Your Users 
 description: App Center help on GDPR compliance
 keywords: GDPR, DSR, privacy, EU
 author: kpiteira
@@ -10,7 +10,7 @@ ms.assetid: 0DA5C4FB-B64F-40F4-9077-4B7D31B746CD
 ms.service: vs-appcenter
 ---
 
-# Data From Your End-Users
+# Data From Your Users
 
 This section and all its sub-documents will provide information and API pointers to help you, as an app developer using App Center, accommodate your customers as data subjects.
 
