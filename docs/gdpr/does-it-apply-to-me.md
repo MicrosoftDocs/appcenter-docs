@@ -87,20 +87,16 @@ The most common scenario is to have personal information in the Error Property V
 
 Error property value:
 
-```cs
-try 
-{
-  // your code here.
-} 
-catch (Exception exception) 
-{
-    var properties = new Dictionary<string, string> 
-    {
-        { "email_address", "blXXX@microsoft.com"},
-        { "phone_number", "555-123-XXX"}
-    };
-    Crashes.TrackError(exception, properties);
-}
+```Csharp
+try { 
+  // your code here. 
+  
+} catch (Exception exception) { 
+    var properties = new Dictionary<string, string>() { 
+        { "email_address", "blXXX@microsoft.com"}, 
+        { "phone_number", "555-123-XXX"} 
+    }; 
+    Crashes.TrackError(exception, properties); 
 ```
 
 #### Error property key
@@ -109,20 +105,16 @@ This is a less common case because they are static,  defined by the developer ju
 
 Personal information in the error property key:
 
-```cs
-try 
-{
-  // your code here.
-} 
-catch (Exception exception) 
-{
-    var properties = new Dictionary<string, string> 
-    {
-        { "blXXX@microsoft.com", "@microsoft.com" },
-        { "555-123-XXX", "Washington number" }
-    };
-    Crashes.TrackError(exception, properties);
-}
+```Csharp
+try { 
+  // your code here. 
+  
+} catch (Exception exception) { 
+    var properties = new Dictionary<string, string>() { 
+        { "blXXX@microsoft.com", "@microsoft.com" }, 
+        { "555-123-XXX", "Washington number" } 
+    }; 
+    Crashes.TrackError(exception, properties); 
 ```
 
 ### Scenario 5: Push - I added personal information in Push
