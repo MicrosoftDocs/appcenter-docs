@@ -101,7 +101,7 @@ Below you can find a tabular overview of these tools in terms of features and tr
 |         | Espresso           | XCUITest  |  Xamarin.UITest   | Appium  | EarlGrey  |
 | ------------- |:-------------:| :-----:|:-------------:| :-------------:|:-------------:|
 | **Platforms**      | Android |  iOS | Android, iOS | Android, iOS (Windows) | iOS |
-| **Languages**      | Java & JVM based    |   Objective-C, Swift | C# | Java, Javascript, Ruby, Python (and more) | Objective-C & Swift |
+| **Languages**      | Java & JVM based    |   Objective-C, Swift | C#/F# | Java, Javascript, Ruby, Python (and more) | Objective-C & Swift |
 | **Open Source** | Yes      |    No | No | Yes | Yes |
 | **Steward** | Google      |   Apple  | Microsoft | jQuery Foundation | Google |
 | **BDD Options** | [Cucumber](https://github.com/sebaslogen/espresso-cucumber) [JVM](https://github.com/sebaslogen/espresso-cucumber)      |   [XCFit](https://shashikant86.github.io/XCFit/) [Cucumberish](https://github.com/Ahmed-Ali/Cucumberish) | SpecFlow | Yes (depends on client test framework) | Unknown |
@@ -121,7 +121,7 @@ We recommend asking yourself the questions:
 [Xamarin.UITest](~/test-cloud/uitest/index.md), being based on the same software infrastructure as Calabash, is very mature. It's a good fit for Calabash users, who are not intimately linked to the Ruby programming language. Xamarin.UITest also works well with SpecFlow which provides a way to leverage the '.feature' specifications in a Calabash project. (Xamarin.UITest also works with just NUnit so BDD-style testing is not a requirement.).
 *	**Dev vs QA:** For Xamarin developers, it's an excellent choice, but basic usage of C# is enough. Can work for both Dev and QA, assuming the team is comfortable with C#.
 *	**Cross-Platform:** Supported.
-*	**Languages:** C#
+*	**Languages:** C#/F#
 *	**Selenium:** No.
 *	**BDD:** Optional, but fully supported with SpecFlow
 *	**Calabash:** If you like and leverage the Calabash feature set (e.g. backdoors, invoking methods, keychain, ...), Xamarin.UITest supports them.
