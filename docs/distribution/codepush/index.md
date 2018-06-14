@@ -22,7 +22,7 @@ You manage most of CodePush's functionality using the App Center CLI. To install
  > [!NOTE]
  > On macOS and Linux, you may need to prefix this command with `sudo`
 
- After successfuly installing the App Center CLI, please run the `appcenter login` command in order to use the CLI's functionaltiy. 
+ After successfuly installing the App Center CLI, please run the `appcenter login` command in order to use the CLI's functionality. 
 
 ## 2. CodePush-ify your app
 
