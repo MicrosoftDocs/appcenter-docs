@@ -4,17 +4,17 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: joemellin
 ms.author: joemel
-ms.date: 09/06/2017
+ms.date: 06/14/2018
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
 ---
 
-# App Center Support 
+# App Center Support
 
 ## Documentation
 
-[Product documentation](~/index.yml) 
+[Product documentation](~/index.yml)
 
 [API documentation](~/api-docs/index.md)
 
@@ -48,7 +48,8 @@ SDKs (open sourced on GitHub)
 
 ## App Center status page
 
-Check if there are any ongoing issues on the [status page](https://status.appcenter.ms).
+Check if there are any ongoing issues on the [App Center status page](https://status.appcenter.ms).
 
-## Contact us 
-Report a bug or a make a feature request using the blue button at the bottom right of every App Center portal page and the product team will respond to you. 
+## Contact us
+
+Report a bug or a make a feature request using the blue chat button at the bottom-right corner of every App Center portal page. Our dedicated support team is available to help you. [Read more about support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center).
