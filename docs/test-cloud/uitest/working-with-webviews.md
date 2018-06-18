@@ -14,7 +14,7 @@ ms.custom: test
 
 # Working with Web Views
 
-Xamarin.UITest provides API's for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use web views to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](https://developer.xamarin.com/api/type/UIKit.UIWebView/) or [WKWebView](https://developer.xamarin.com/api/type/WebKit.WKWebView/). UIWebKit is older and compatible with all versions of iOS, while WKWebKit is for iOS 8 and higher.
+Xamarin.UITest provides API's for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use web views to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](https://developer.xamarin.com/api/type/UIKit.UIWebView/) or [WKWebView](https://developer.xamarin.com/api/type/WebKit.WKWebView/). UIWebView is older and compatible with all versions of iOS, while WKWebView is for iOS 8 and higher.
   
 Interacting with web views is a bit more involved as UITest must first obtain a reference to the web view, and then to the DOM elements it contains.
 
