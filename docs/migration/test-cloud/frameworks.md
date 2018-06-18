@@ -62,9 +62,9 @@ The natural target audience is Android native developers.
 
 XCUITest (or UI Testing with XCTest and Xcode) is Apple's official UI Testing framework for iOS. It was announced with iOS 9 and supports iOS 9 and higher. Tests can be written in Swift or Objective-C. 
 
-Similar to Apple's UIAutomation is based on the iOS accessibility system, e.g., identifying buttons via accessibility traits, identifiers and labels. XCUITest is integrated in Xcode and has a Test Recorder. 
+Similar to Apple's UIAutomation, XCUITest is based on the iOS accessibility system, e.g., identifying buttons via accessibility traits, identifiers and labels. XCUITest is integrated in Xcode and has a Test Recorder. 
 
-XCUITest is a powerful framework and is much easier to use than the predecessor UIAutomation, but still suffers a bit from lack of maturity. It's is, however, being actively updated and improved. 
+XCUITest is a powerful framework and is much easier to use than the predecessor UIAutomation, but still suffers a bit from lack of maturity. It is, however, being actively updated and improved. 
 Since it's iOS-only and based on Swift/Objective-C there is no support for cross-platform testing.
 
 The natural target audience is iOS native developers.
