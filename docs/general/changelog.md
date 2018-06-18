@@ -14,12 +14,12 @@ ms.service: vs-appcenter
 ### **June 14, 2018**
 
 - **Updated Xamarin SDKs**:
-Build your Xamarin apps with [SDK release 15.7.3](https://releases.xamarin.com/servicing-update-15-7-3/) including Mono 5.10.1.
+Build your Xamarin apps with [SDK release 15.7.3](https://releases.xamarin.com/servicing-update-15-7-3/) including support for Xcode 9.4.
 
 ### **June 6, 2018**
 
 - **Updated Xamarin SDKs**:
-Build your Xamarin apps with [SDK release 15.7](https://releases.xamarin.com/release-15-7/) including support for Xcode 9.4.
+Build your Xamarin apps with [SDK release 15.7](https://releases.xamarin.com/release-15-7/) including Mono 5.10.1.
 - **Build support for Xcode 9.4**:
 Build your apps using Xcode 9.4.
 
