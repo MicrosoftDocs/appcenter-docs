@@ -15,7 +15,6 @@ ms.custom: test
 
 Test Cloud is a test automation service for native and hybrid mobile applications. Several popular test frameworks are supported and the list of supported frameworks is evaluated continually based on user requests and market popularity. The list below outlines the test frameworks currently supported.
 
-To file a request for a new test framework or vote for an existing request, visit the [feature request portal](https://testcloud.ideas.aha.io).
 
 | Test framework | Vendor      | Documentation & resources                |
 | -------------- | ----------- | ---------------------------------------- |
