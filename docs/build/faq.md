@@ -51,6 +51,30 @@ The files uploaded for code signing and the password for the certificate are als
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
 For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now.
 
+## Android
+
+### Why was my app not found? Why does a build step fail to find my app build results?
+In order to scan and analyze your Android (Java & React Native) app in your repository, App Center identifies the Gradle wrappers in your repository. Both platforms use the Gradle build system on Android. The default Gradle project directory structure looks like the following:
+
+```
+MyProject
+├── app
+│   ├── build.gradle
+│   ├── build
+│   ├── src
+├── build.gradle
+├── gradle
+│   └── wrapper
+├── gradle.properties
+├── gradlew
+└── settings.gradle
+```
+
+While not all files in this listing are required – it is important to understand, that App Center repository analysis expects the `gradlew` file at the root of your project directory. All the other Gradle project components modules are based relative to the Gradle wrapper location.
+In this case, your project would have a module named `app` (because of the `build.gradle` file in the `app` directory). The output of the build (e.g. the APK) is then scanned in the `app/build` directory.
+
+If a step in your build fails, because it can't find build results, this might mean that the `gradlew` file was not found in the expected directory and you might want to consider changing the project layout so it fits the standard Gradle project layout.
+
 ## iOS
 ### No Xcode scheme is found
 In order to build a xcworkspace or a xcproject, a shared Xcode scheme is required. Xcode schemes are saved locally so that Xcode has access to them, but by default they are not shared with others and they are not included in source control.
