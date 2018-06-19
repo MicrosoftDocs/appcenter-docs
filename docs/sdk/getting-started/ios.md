@@ -34,7 +34,7 @@ Let's get started with setting up App Center iOS SDK in your app to use App Cent
 
 The following requirements must be met to use App Center SDK:
 
-* Your iOS project is set up in Xcode 8 or later on macOS version 10.12 or later.
+* Your iOS project is set up in Xcode 8.3.3 or later on macOS version 10.12 or later.
 * You are targeting devices running on iOS 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 
