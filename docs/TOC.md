@@ -202,6 +202,9 @@
 ### Push
 #### [Delete](gdpr/push-forget-me.md)
 #### [Export](gdpr/push-export.md)
+### Test
+#### [Delete](gdpr/test-forget-me.md)
+#### [Export](gdpr/test-export.md)
 
 # [Migration](migration/index.md)
 ## [HockeyApp](migration/hockeyapp/index.md)
