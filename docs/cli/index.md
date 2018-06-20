@@ -30,8 +30,8 @@ Open a terminal/command prompt, and run `npm install -g appcenter-cli`.
 ### Logging in
 
 1. Open a terminal/command window.
-2. Run `appcenter login`. This will open a browser with an `authentication token`.
-3. Copy the `authentication token` from the browser, and paste this into the command window.
+2. Run `appcenter login`. This will open a browser and generate a new `API token`.
+3. Copy the `API token` from the browser, and paste this into the command window.
   ![Image of browser token](~/cli/images/browserToken.png)
 4. The command window will display `Logged in as {user-name}`.
   ![Image of terminal login](~/cli/images/terminalLogin.png)
