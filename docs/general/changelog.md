@@ -11,6 +11,11 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **June 20, 2018**
+
+- **Build support for Xcode 9.4.1**:
+Build your apps using Xcode 9.4.1.
+
 ### **June 14, 2018**
 
 - **Updated Xamarin SDKs**:
