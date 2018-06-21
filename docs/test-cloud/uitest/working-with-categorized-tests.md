@@ -88,6 +88,8 @@ $ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.
 
 
 ## Submitting Tests to App Center Test by Category
+> [!WARNING]
+>️ NUnit category names which contain spaces cannot be specified for upload.
 
 You can instruct Test Cloud to run a subset of your tests using the 
 `--include-category` parameter.  
