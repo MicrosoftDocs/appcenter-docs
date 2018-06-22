@@ -1,5 +1,6 @@
 ---
 title: "Migration"
+description: App Center migration guide
 author: glennwester
 ms.author: glwest
 ms.date: 05/16/2018

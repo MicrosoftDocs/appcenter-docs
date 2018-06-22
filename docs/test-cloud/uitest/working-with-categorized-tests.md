@@ -1,5 +1,6 @@
 ---
-title: Working With - Categorized Tests
+title: Working With Categorized Tests
+description: Working with categorized tests in App Center
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
@@ -58,8 +59,8 @@ public class Tests
 ```
 There are two ways to run UITests according to category:
 
-* `appcenter` &ndash; this is the [Command Line Interface](/appcenter/cli/index) for App Center.
-* `nunit-console.exe` &ndash; this is the command line runner for NUnit tests. It is also used to run UITests locally.
+* `appcenter` - this is the [Command Line Interface](/appcenter/cli/index) for App Center.
+* `nunit-console.exe` - this is the command line runner for NUnit tests. It is also used to run UITests locally.
 
 
 > [!NOTE]
@@ -71,7 +72,7 @@ There are two ways to run UITests according to category:
 
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `/include` identifies the test categories to run, while the switch `/exclude` specifies the test categories to ignore.
 
-```text
+```shell
 nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iOS.UITests.dll /include:flerp
 ```
 
@@ -80,8 +81,8 @@ nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iO
 
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `-include` identifies the test categories to run, while the switch `-exclude` specifies the test categories to ignore.
 
-```bash
-$ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll -include=flerp
+```shell
+nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll -include=flerp
 ```
 
 -----

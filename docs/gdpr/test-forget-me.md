@@ -18,29 +18,29 @@ This document covers the scenario where an App Center Test customer has a client
 
 When a client requests deletion of their test reports, service this request using the follow process:
 
-**1.	[Generate an API token](https://docs.microsoft.com/en-us/appcenter/api-docs/).**
+**1. [Generate an API token](https://docs.microsoft.com/en-us/appcenter/api-docs/).**
 
-**2.	Make the following [API call](https://openapi.appcenter.ms/#/test) to acquire a list of all the test runs ids owned by the client requesting deletion. You will need the owner name (this could be a user name or organization name) and the app name.**
+**2. Make the following [API call](https://openapi.appcenter.ms/#/test) to acquire a list of all the test runs ids owned by the client requesting deletion. You will need the owner name (this could be a user name or organization name) and the app name.**
 
-```
+```HTTP
 GET /v0.1/apps/{owner_name}/{app_name}/test_runs
 ```
 
 For example:
 
-```
+```HTTP
 GET https://appcenter.ms/api/v0.1/apps/CompanyOrg1/AndroidApp1/test_runs
 ```
  
 **3. For each of the app ids gathered in the previous step, make the following API call to delete the test run**
 
-```
+```HTTP
 DELETE /v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}
 ```
 
-For example: 
+For example:
 
-```
+```HTTP
 DELETE https://appcenter.ms/api/v0.1/apps/CompanyOrg1/AndroidApp1/test_runs/0ce0x71b-82ce-4d7a-8ce5-404a6a50d91a
 ```
 

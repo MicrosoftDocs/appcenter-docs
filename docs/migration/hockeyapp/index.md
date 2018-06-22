@@ -1,5 +1,6 @@
 ---
 title: "HockeyApp Migration"
+description: Migrating from HockeyApp to App Center
 author: joemellin
 ms.author: joemel
 ms.date: 04/11/2018

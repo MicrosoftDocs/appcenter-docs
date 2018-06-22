@@ -1,24 +1,13 @@
 ---
-# required metadata
-
-title: Device registration | App Center Distribution
-description: 
+title: Device registration
+description: Registering a device for App Center Distribution
 keywords: UDID, Distribution,
 author: oddj0b
 ms.author: vigimm
-
 ms.date: 07/03/2017
 ms.topic: article
 ms.service: vs-appcenter
-
 ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.reviewer: siminap
-
 ---
 
 # Device registration and app re-signing

@@ -1,5 +1,5 @@
 ---
-title: App Center bug tracker Documentation
+title: App Center bug tracker documentation
 description: how to integrate App Center with bug trackers like Jira, Visual Studio Team Services (VSTS) and GitHub
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
@@ -11,6 +11,7 @@ ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
 ---
 
 # App Center bug tracker integration
+
 ## Overview
 
 App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira, Visual Studio Team Services (VSTS) and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
@@ -21,7 +22,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 1. In your app, select **Settings**, **Services**, and click the **edit** button.
 
-1. <a name="step3"/>Select which bug tracker (Jira, VSTS or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it. 
+1. <a name="step3"/>Select which bug tracker (JIRA, VSTS or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it. 
 
     1. For Jira:
 
@@ -31,7 +32,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
             - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Jira.
 
                 ![How to add a bug tracker for Jira](media/addBugTrackerJira.gif)
-                
+
     1. For VSTS:
 
         1. Login with your VSTS credentials and click **Accept** when prompted on app authorization.
@@ -41,8 +42,6 @@ App Center has bug tracker integration for the crashes service. Users can be qui
             - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/vsts/integrate/#Getaworkitemtype) for additional information.
 
                 ![How to add a bug tracker for VSTS](media/addBugTrackerVSTS.gif)
-
-
 
     1. For GitHub:
 

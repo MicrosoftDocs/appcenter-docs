@@ -1,5 +1,6 @@
 ---
 title: "Migrating HockeyApp Distribution"
+description: Migrating from HockeyApp Distribution
 author: joemellin
 ms.author: joemel
 ms.date: 05/10/2017
