@@ -1,5 +1,5 @@
 ---
-title: Configure a Objective-C or Swift Mac build in App Center
+title: Configure a Objective-C or Swift Mac build
 description: How to set up a build for a Mac app
 keywords: build, macos, mac
 author: andyzg

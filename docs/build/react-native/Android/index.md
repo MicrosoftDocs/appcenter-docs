@@ -1,5 +1,5 @@
 ---
-title: Configure a React Native Android build in App Center
+title: Configure a React Native Android build
 description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat

@@ -1,5 +1,5 @@
 ---
-title: App Center Operating System/Platform Services Matrix
+title: App Center Platform Services Matrix
 description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani

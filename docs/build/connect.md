@@ -1,5 +1,5 @@
 ---
-title: Connect to a repository to start building your mobile app
+title: Connect to a repository to build your app
 description: How to connect/reconnect to a repository to start building your app
 keywords: android
 author: siminapasat

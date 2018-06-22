@@ -12,6 +12,7 @@ ms.custom: distribute
 ---
 
 # React Native Client SDK
+
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your React Native app(s).
 
 ## How does it work?
@@ -649,7 +650,6 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  --rollout 25% --d
 # Release an update that targets users running any 1.1.* binary, as opposed to
 # limiting the update to exact version name in the build.gradle file
 appcenter codepush release-react -a <ownerName>/MyApp-Android  --target-binary-version "~1.1.0"
-
 ```
 
 The CodePush client supports differential updates, so even though you are releasing your JS bundle and assets on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
@@ -704,7 +704,7 @@ To set this up, perform the following steps:
             releaseStaging {
                 ...
                 buildConfigField "String", "CODEPUSH_KEY", '"<INSERT_STAGING_KEY>"'
-                
+
                 // Note: It is a good idea to provide matchingFallbacks for the new buildType you create to prevent build issues
                 // Add the following line if not already there
                 matchingFallbacks = ['release']
@@ -720,7 +720,7 @@ To set this up, perform the following steps:
         ...
     }
     ```
-    
+
      > [!TIP]
      > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName>` from your terminal.
 
@@ -812,7 +812,7 @@ To set this up, perform the following steps:
 7. Go to `Build Location -> Per-configuration Build Products Path -> Staging` and change `Staging` value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
 
    ![BuildFilesPath](./images/rn-ios-9.png)
-    
+
      > [!NOTE]
      > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
 

@@ -1,5 +1,5 @@
 ---
-title: Configure a Objective-C or Swift iOS build in App Center
+title: Configure a Objective-C or Swift iOS build
 description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat
