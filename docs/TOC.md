@@ -1,5 +1,7 @@
 # [App Center Overview](index.yml)
 
+# [Help & Feedback](help.md)
+
 # [Dashboard](dashboard/index.md)
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
