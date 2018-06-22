@@ -24,38 +24,49 @@ To start building your first Xamarin Android app, you will need to the following
 > For the app to run on a real device, the build needs to be code signed with a valid KeyStore.
 
 ## 1. Linking your repository
+
 If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your Xamarin project is located. In order to setup a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
+
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
 
 ## 3. Configuring Your Build
+
 Before your first build, the Xamarin project needs to be configured.
 
 ### 3.1. Build triggers
+
 By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.2. Project and Configuration
-The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration. 
+
+The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
+
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository. 
 
 ### 3.3. Mono version
+
 App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Increment version number
+
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Code signing
+
 A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md).
 
 ### 3.6. Launch your successful build on a real device
+
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.7. NuGet restore
+
 If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
@@ -74,9 +85,11 @@ If the **NuGet.config** file is checked-in into the repository and sitting next 
   </packageSourceCredentials>
 </configuration>
 ```
+
 If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.8. Distribute to a distribution group
+
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
@@ -95,7 +108,7 @@ After a build has been triggered, it can be in the following states:
 
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 
-```
+```NA
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
     |-- <build-step-1>
@@ -111,5 +124,7 @@ The build step specific logs (located in the build/ directory of the archive) ar
 The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
 ## Supported versions and requirements
-App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
-App Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.
+
+App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
+
+App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: click on the blue chat icon in the bottom-right corner once you're logged in to App Center and share your feedback with us.

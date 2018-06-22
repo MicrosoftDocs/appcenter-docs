@@ -12,6 +12,7 @@ ms.custom: build
 ---
 
 # Build scripts
+
 You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (**.xcodeproj**, **build.gradle**, **.csproj**, **.sln** or **package.json**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
 >[!NOTE]
@@ -20,13 +21,14 @@ You can add up to three custom build steps that run at pre-defined stages during
 ![Save detected scripts][build-scripts-detected]
 
 ## Post-clone
+
 The post-clone script runs immediately after the repository was cloned but before we do anything else on our end.
 
 To run scripts post-clone, add the following file next to the project file in your repository:
 
 - **appcenter-post-clone.sh** (Bash for iOS & Android)
 
-    ```
+    ```shell
     #!/usr/bin/env bash
 
     # Example: Clone a required repository
@@ -39,13 +41,14 @@ To run scripts post-clone, add the following file next to the project file in yo
 - **appcenter-post-clone.ps1** (PowerShell for UWP)
 
 ## Pre-build
+
 The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-build, add the following file next to the project file in your repository:
 
 - **appcenter-pre-build.sh** (Bash for iOS & Android)
 
-    ```
+    ```shell
     #!/usr/bin/env bash
 
     # Example: Change bundle name of an iOS app for non-production
@@ -58,13 +61,14 @@ To run scripts pre-build, add the following file next to the project file in you
 - **appcenter-pre-build.ps1** (PowerShell for UWP)
 
 ## Post-build
+
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
 - **appcenter-post-build.sh** (Bash for iOS & Android)
 
-    ```
+    ```shell
     #!/usr/bin/env bash
 
     HOCKEYAPP_API_TOKEN={API_Token}
@@ -86,6 +90,7 @@ To run scripts post-build, add the following file next to the project file in yo
 - **appcenter-post-build.ps1** (PowerShell for UWP)
 
 ## App Center variables
+
 We set the following environment variables, so you can access them from your build scripts.
 
 | **General variables** | **Description** |
@@ -109,6 +114,5 @@ We set the following environment variables, so you can access them from your bui
 | `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration|
 | <br> **React Native specific** | |
 | `APPCENTER_REACTNATIVE_PACKAGE` | Selected package|
-
 
 [build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"

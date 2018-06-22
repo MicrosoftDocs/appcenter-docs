@@ -17,6 +17,7 @@ ms.custom: analytics
 > To set up an export, you will need to use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
 
 App Center allows you to continuously export all your Analytics and Diagnostics (crashes and errors) raw data into Azure. Export Analytics data to both Blob Storage and Application Insights, and export Diagnostics data (crashes and errors) to Blob Storage. By exporting the data, you benefit from:
+
 - Unlimited retention by keeping your data as long as you need to and access to it when needed
 - Get answers by querying your raw data
 - Customize your own analytics dashboards
@@ -35,11 +36,13 @@ App Center offers two ways to export your data: *standard export* and *custom ex
 Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an Azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization's admin.
 
 ### Adding an Azure Subscription
+
 - **App belonging to an organization:** If you are the organization admin, go to the "Manage" section under the organization where the app belongs to.
 - **App belonging to a user:** If you are the app owner, go to user settings.
 - Under Azure, click **Add subscription**. Then, you will need to add your Azure credentials and it will let you choose your preferred option from all the Azure subscriptions you have access to.
 
 ### Linking an app to an Azure Subscription
+
 Once you have added an Azure Subscription into your user/organization settings, you need to provide apps with access so that the subscription can be used within that app. By doing this, you are allowing any manager/developer in that app to use the subscription for exporting purposes. Note that this will have an associated cost that will be charge into your Azure Subscription.
 
 ## Set up Export
@@ -50,15 +53,17 @@ Once you have added an Azure Subscription into your user/organization settings, 
 4. Select the type of configuration you want (standard vs custom).
 
 ### Standard Export
+
 This provides a one-click experience. When selecting this option, all the resources will be created for you in Azure and the Azure Subscription attached to that app will be used. As mentioned above, this requires having an Azure Subscription linked to your app.
 
 ### Custom Export
+
 This option allows you to customize your export configurations in [Azure](https://portal.azure.com).
 
 **For Blob Storage:**
 
 - Create a new resource of type *Storage account* of type *blob*.
-- Copy the *connection string* and add it into your App Center custom configurations. You will find the connection string in the Azure portal under Access Keys in the Settings tab. 
+- Copy the *connection string* and add it into your App Center custom configurations. You will find the connection string in the Azure portal under Access Keys in the Settings tab.
 
 ![Add the connection string in App Center](~/analytics/images/connectionstring.png)
 
@@ -71,10 +76,13 @@ This option allows you to customize your export configurations in [Azure](https:
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
 ### Export crashes, attachments and errors
-In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create): "POST /v0.1/apps/{owner_name}/{app_name}/export_configurations".
+In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create): 
+
+```NA
+POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
+```
 
 In "exportEntities", you need to indicate what type of data you wish to export: crashes, errors, attachments.
-
 
 ## Azure Blob Storage
 
@@ -86,8 +94,8 @@ The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" 
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
-
 The contents of the blob file is a JSON array of client device logs, that looks like this for Analytics data:
+
 ```JSON
 [
     {
@@ -141,7 +149,6 @@ Application Insights is an application performance management (APM) service that
 - [Funnels](https://docs.microsoft.com/azure/application-insights/usage-funnels) and [User flows](https://docs.microsoft.com/azure/application-insights/app-insights-usage-flows). Understand how users navigate through your app. Identify bottlenecks. Discover ways to increase conversion rates and eliminate pain points.
 - [Retention](https://docs.microsoft.com/azure/application-insights/app-insights-usage-retention). Discover how many users return to use your app. Find out where and why they drop out.
 - [Workbooks](https://docs.microsoft.com/azure/application-insights/app-insights-usage-workbooks). Create interactive workbooks that combine usage analysis visualizations, Application Insights Analytics queries, and text to share insights on your team.
- 
 
 The App Center fields are mapped into Application Insights format. Here is the equivalence between the mapped fields:
 
@@ -149,14 +156,13 @@ The App Center fields are mapped into Application Insights format. Here is the e
 | ------------------------------- | ------------------------------------------------------ |
 | timestamp                       | Time of the event                                      |
 | name                            | Name of the custom event or type of data               |
-| customDimensions                | This includes several fields shown in the table below  |   
+| customDimensions                | This includes several fields shown in the table below  |
 | session_Id                      | Uniquely session identifier                            |
 | user_Id                         | Uniquely user identifier                               |
 | application_Version             | Version of the application                             |
 | client_Type, client_Model       | Device Model                                           |
 | client_OS                       | OS type and version                                    |
 | sdkVersion                      | App Center SDK version                                 |
-
 
 The table below shows the field mapping for the "customDimensions" field.
 
@@ -173,7 +179,8 @@ The table below shows the field mapping for the "customDimensions" field.
 |  Locale                         | Device language                                |
 
 A sample AI query to retrieve custom events:
-```
+
+```NA
 customEvents
  | where name == "YourEventName"
  | extend Properties = todynamic(tostring(customDimensions.Properties))
@@ -181,10 +188,10 @@ customEvents
  ```
 
 More information about Application Insights and App Center:
+
 * Learn about [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) in general
 * Learn about [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
 * Learn about [Better Decisions Through Better Analytics](https://blogs.msdn.microsoft.com/vsappcenter/better-decisions-through-better-analytics-visual-studio-app-center-with-azure-application-insights/) on App Center blog
-
 
 ## Pricing
 

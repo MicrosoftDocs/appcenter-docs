@@ -35,8 +35,10 @@ ms.tgt_pltfrm: react-native
 1. Create a ZIP file with the dSYM package on your Mac and the JavaScript source map of your app. The source map should named "index.ios.map".
 
     The commands below will generate the source map for release builds:
-
-        react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
+    
+    ```shell
+    react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
+    ```
 
     > The App Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
 
@@ -55,10 +57,10 @@ ms.tgt_pltfrm: react-native
 
     Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
 
-2. *What could be another reason for the crash report to not appear?*
+3. *What could be another reason for the crash report to not appear?*
 
     Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation for any 3rd party crash reporting service.
 
-3. *The symbols are uploaded but the previous crash reports are not appearing.*
+4. *The symbols are uploaded but the previous crash reports are not appearing.*
 
     As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.

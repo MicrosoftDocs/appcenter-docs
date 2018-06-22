@@ -29,7 +29,7 @@ ms.custom: distribute
 
 Before you can begin releasing app updates, you need to create a log in to your existing CodePush account or create a new App Center account. You can do this by simply running the following command once you've installed the CLI:
 
-```
+```shell
 appcenter login
 ```
 
@@ -42,7 +42,7 @@ This will launch a browser, asking you to authenticate with either your GitHub o
 
 Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you need to login using the GitHub or Microsoft account you used when registering. You can do this by running the following command:
 
-```
+```shell
 appcenter login
 ```
 
@@ -50,20 +50,20 @@ This will launch a browser, asking you to authenticate with either your GitHub o
 
 If at any time you want to determine if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
 
-```
+```shell
 appcenter profile list
 ```
 
 When you login from the CLI, your access key is persisted to disk for the duration of your session so that you don't have to login every time you attempt to access your account. In order to end your session and delete this access key, simply run the following command:
 
-```
+```shell
 appcenter logout
 ```
 
 If you forget to logout from a machine you'd prefer not to leave a running session on (e.g. your friend's laptop), you can use the following commands to list and remove any current login sessions.
 
-```
-appcenter tokens list 
+```shell
+appcenter tokens list
 appcenter tokens delete <machineName>
 ```
 
@@ -71,13 +71,14 @@ appcenter tokens delete <machineName>
 
 If you need to be able to authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (e.g. in a CI environment), you can run the following command to create an "access token" (along with a name describing what it is for):
 
-```
+```shell
 appcenter tokens create -d "VSTS Integration"
 ```
-For security, the key will only be shown once on creation, so remember to save it somewhere if needed!
-After creating the new key, you can specify its value using the `--token` flag of the `login` command, which allows you to perform "headless" authentication, as opposed to launching a browser. 
 
-```
+For security, the key will only be shown once on creation, so remember to save it somewhere if needed!
+After creating the new key, you can specify its value using the `--token` flag of the `login` command, which allows you to perform "headless" authentication, as opposed to launching a browser.
+
+```shell
 appcenter login --token <accessToken>
 ```
 
@@ -87,13 +88,13 @@ When logging in using this method, the access token will not be automatically in
 
 Before you can deploy any updates, you need to create an app with App Center using the following command:
 
-```
+```shell
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
 ```
 
 If your app targets both iOS and Android, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-iOS` and `-Android`. For example:
 
-```
+```shell
 appcenter apps create -d MyApp-Android -o Android -p React-Native
 appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 ```
@@ -106,17 +107,16 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 
 With the original CodePush, apps automatically had two deployments (`Staging` and `Production`). In App Center, you'll have to create them yourself using the following commands:
 
-```
+```shell
 appcenter codepush deployment add -a <ownerName>/<appName> Staging
 appcenter codepush deployment add -a <ownerName>/<appName> Production
 ```
 
 After you create the deployments, you can access the deployment keys for both deployments using `appcenter codepush deployment list`, which you can begin using to configure your mobile clients via their respective SDKs (details for [Cordova](./cordova.md) and [React Native](./react-native.md)).
 
-
 If you decide that you don't like the name you gave to an app, you can rename it at any time using the following command:
 
-```
+```shell
 appcenter apps update -n <newName> -a <ownerName>/<appName>
 ``` 
 
@@ -124,7 +124,7 @@ The app's name is only meant to be recognizable from the management side, so fee
 
 If at some point you no longer need an app, you can remove it from the server using the following command:
 
-```
+```shell
 appcenter apps delete -a <ownerName>/<appName>
 ```
 
@@ -132,8 +132,8 @@ Use caution when doing this as any apps that have been configured to use it will
 
 Finally, if you want to list all apps that you've registered with the App Center server, run the following command:
 
-```
-appcenter apps list 
+```Nshell
+appcenter apps list
 ```
 
 ### App Collaboration
@@ -181,20 +181,20 @@ Whenever an app is registered with the CodePush service, we recommend you create
 
 If having a staging and production version of your app is enough to meet your needs, then you don't need to do anything else. However, if you want an alpha, dev, etc. deployment, you can easily create them using the following command:
 
-```
+```shell
 appcenter codepush deployment add -a <ownerName>/<appName> <deploymentName>
 ```
 
 Just like with apps, you can remove and rename deployments as well, using the following commands respectively:
 
-```
+```shell
 appcenter codepush deployment remove -a <ownerName>/<appName> <deploymentName>
 appcenter codepush deployment rename -a <ownerName>/<appName> <deploymentName> <newDeploymentName>
 ```
 
 If at any time you'd like to view the list of deployments that a specific app includes, you can simply run the following command:
 
-```
+```shell
 appcenter codepush deployment list -a <ownerName>/<appName>
 ```
 
@@ -231,7 +231,7 @@ Which of these commands you should use is mostly a matter of requirements and/or
 
 ### Releasing Updates (General)
 
-```
+```NA
 appcenter codepush release -a <ownerName>/<appName> -c <updateContentsPath> -t <targetBinaryVersion> -d <deploymentName>
 
 [-t|--target-binary-version <version>] 
@@ -286,7 +286,6 @@ If you ever want an update to target multiple versions of the app store binary, 
 | `>=1.2.3 <1.2.7` | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (exclusive) |
 | `~1.2.3`         | Equivalent to `>=1.2.3 <1.3.0`                                                         |
 | `^1.2.3`         | Equivalent to `>=1.2.3 <2.0.0`                                                         |
-
 
 > [!NOTE]
 > If your semver expression starts with a special shell character or operator such as `>`, `^`, or **
@@ -373,7 +372,7 @@ This specifies the percentage of users (as an integer between `1` and `100`) tha
 
 ### Releasing Updates (React Native)
 
-```
+```NA
 appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion> 
 [-t|--target-binary-version <targetBinaryVersion>] 
 [-o|--output-dir] 
@@ -404,7 +403,7 @@ The `release-react` command is a React Native-specific version of the "vanilla" 
 
 To illustrate the difference that the `release-react` command can make, the following is an example of how you might generate and release an update for a React Native app using the "vanilla" `release` command:
 
-```
+```shell
 mkdir ./CodePush
 
 react-native bundle --platform ios \
@@ -418,9 +417,10 @@ appcenter codepush release -a <ownerName>/MyApp-iOS -c ./CodePush -t 1.0.0
 
 Achieving the equivalent behavior with the `release-react` command would simply require the following command, which is generally less error-prone:
 
-```
+```shell
 appcenter codepush release-react -a <ownerName>/MyApp-iOS 
 ```
+
 > [!NOTE]
 > We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, please don't hesistate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!
 
@@ -485,21 +485,22 @@ This specifies the relative path to the app's root/entry JavaScript file. If lef
 
 This specifies the relative path to the `build.gradle` file that the CLI should use when attempting to auto-detect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find your `build.grade` file in "standard" React Native projects. However, if your gradle file is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter. Since `build.gradle` is a required file name, specifying the path to the containing folder or the full path to the file itself will both achieve the same effect.
 
-```
+```shell
 appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/"
 appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/build.gradle"
 ```
+
 > [!TIP]
 > This parameter can be set using either `--gradle-file`  or `-g`*
-
 
 #### Plist file parameter (iOS only)
 
 This specifies the relative path to the `Info.plist` file that the CLI should use when attempting to auto-detect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find your `Info.plist` file in "standard" React Native projects, and you can use the `--plistFilePrefix` parameter in order to support per-environment plist files (e.g. `STAGING-Info.plist`). However, if your plist is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter.
 
-```
+```shell
 appcenter codepush release-react -a <ownerName>/MyApp-iOS ios -p "./foo/bar/MyFile.plist"
 ```
+
 > [!TIP]
 > This parameter can be set using either `--plist-file`  or `-p`*
 
@@ -526,7 +527,7 @@ This specifies the relative path to where the generated JS bundle's sourcemap fi
 
 ### Releasing Updates (Cordova)
 
-```
+```NA
 appcenter codepush release-cordova -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion> 
 [-t|--target-binary-version <targetBinaryVersion>] 
 [--is-release-build-type] 
@@ -551,14 +552,14 @@ The `release-cordova` command is a Cordova-specific version of the "vanilla" [`r
 
 To illustrate the difference that the `release-cordova` command can make, the following is an example of how you might generate and release an update for a Cordova app using the "vanilla" `release` command:
 
-```
+```shell
 cordova prepare ios
 appcenter codepush release -a <ownerName>/MyApp-iOS -c ./platforms/ios/www -t 1.0.0
 ```
 
 Achieving the equivalent behavior with the `release-cordova` command would simply require the following command, which is generally less error-prone:
 
-```
+```shell
 appcenter codepush release-cordova -a <ownerName>/MyApp-iOS ios
 ```
 
@@ -612,7 +613,7 @@ Specifies whether you want to run `cordova build` instead of `cordova prepare` (
 
 After releasing an update, there may be scenarios where you need to modify one or more of the metadata attributes associated with it (e.g. you forgot to mark a critical bug fix as mandatory, you want to increase the rollout percentage of an update). You can easily do this by running the following command:
 
-```
+```NA
 appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-release-label>
 [-r|--rollout <rolloutPercentage>] 
 [-d|--description <description>] 
@@ -621,12 +622,13 @@ appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-rel
 [--disable-telemetry] 
 [-v|--version]
 ```
+
 > [!NOTE]
 > This command doesn't allow modifying the actual update contents of a release (e.g. `www` folder of a Cordova app). If you need to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the approrpriate fix when it is available.*
 
 Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update just a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
 
-```
+```shell
 # Mark the latest production release as mandatory
 appcenter codepush patch -a <ownerName>/MyApp-iOS Production -m
 
@@ -661,7 +663,7 @@ Additionally, as mentioned above, when you release an update without a rollout v
 
 This is the same parameter as the one described in the [above section](#target-binary-version-parameter), and simply allows you to update the semver range that indicates which binary version(s) a release is compatible with. This can be useful if you made a mistake when originally releasing an update (e.g. you specified `1.0.0` but meant `1.1.0`) or you want to increase or decrease the version range that a release supports (e.g. you discovered that a release doesn't work with `1.1.2` after all). If this paremeter is ommitted, no change will be made to the value of the target release's version property.
 
-```
+```shell
 # Add a "max binary version" to an existing release
 # by scoping its eligibility to users running >= 1.0.5
 appcenter codepush patch -a <ownerName>/MyApp-iOS Staging -t "1.0.0 - 1.0.5"
@@ -671,7 +673,7 @@ appcenter codepush patch -a <ownerName>/MyApp-iOS Staging -t "1.0.0 - 1.0.5"
 
 Once you've tested an update against a specific deployment (e.g. `Staging`), and you want to promote it "downstream" (e.g. dev->staging, staging->production), you can simply use the following command to copy the release from one deployment to another:
 
-```
+```NA
 appcenter codepush promote -a <ownerName>/<appName> -s <sourceDeploymentName> -d <destDeploymentName>
 [-s|--source-deployment-name <sourceDeploymentName>]
 [-d|--destination-deployment-name <destDeploymentName>]
@@ -715,7 +717,7 @@ This is the same parameter as the one described in the [above section](#rollout-
 
 This is the same parameter as the one described in the [above section](#target-binary-version-parameter), and simply allows you to override the target binary version that will be used for the promoted release. If unspecified, the new release will inherit the target binary version property from the release being promoted.
 
-```
+```shell
 # Promote the release to production and make it
 # available to all versions using that deployment
 appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t "*"
@@ -725,7 +727,7 @@ appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t 
 
 A deployment's release history is immutable, so you cannot delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
 
-```
+```shell
 appcenter codepush rollback <ownerName>/<appName> <deploymentName>
 appcenter codepush rollback -a <ownerName>/MyApp-iOS Production
 ```
@@ -751,9 +753,10 @@ End-users that had already acquired `v3` would now be "moved back" to `v2` when 
 
 If you would like to rollback a deployment to a release other than the previous (e.g. `v3` -> `v2`), you can specify the optional `--target-release` parameter:
 
-```
+```shell
 appcenter codepush rollback -a <ownerName>/MyApp-iOS Production --target-release v34
 ```
+
 > [!NOTE]
 > The release produced by a rollback will be annotated in the output of the `deployment history` command to help identify them more easily.*
 
@@ -761,7 +764,7 @@ appcenter codepush rollback -a <ownerName>/MyApp-iOS Production --target-release
 
 You can view a history of the 50 most recent releases for a specific app deployment using the following command:
 
-```
+```shell
 appcenter codepush deployment history -a <ownerName>/<appName> <deploymentName>
 ```
 
@@ -779,7 +782,7 @@ By default, the history doesn't display the author of each release, but if you a
 
 You can clear the release history associated with a deployment using the following command:
 
-```
+```shell
 appcenter codepush deployment clear -a <ownerName>/<appName> <deploymentName>
 ```
 
