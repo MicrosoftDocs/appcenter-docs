@@ -4,13 +4,13 @@ description: How to delete personal information from Test
 keywords: GDPR, DSR, privacy, EU
 author: glennwester
 ms.author: glwest
-ms.date: 06/12/2018
+ms.date: 06/26/2018
 ms.topic: article 
 ms.assetid: 9ced3f3e-b047-4fb7-851f-4e3c6b62b77f
 ms.service: vs-appcenter
 ---
 
-## Overview
+# Deleting Test Data
 
 This document covers the scenario where an App Center Test customer has a client of their own whose test report data resides on the same account. When this client of the customer requests deletion of their data, App Center Test has APIs to satisfy this request. All the APIs detailed are public, exposed in our swagger and discoverable through [https://openapi.appcenter.ms/#/test](https://openapi.appcenter.ms/#/test). For more information, refer to the [App Center GDPR documentation](https://docs.microsoft.com/en-us/appcenter/gdpr/your-data).
 
