@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Distribute
 
-App Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. App Center Distribution supports the distribution of application packages for iOS, Android, UWP, and macOS.
+App Center Distribution is a tool for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. App Center Distribution supports the distribution of application packages for iOS, Android, UWP, and macOS.
 
 ## Getting Started
 
