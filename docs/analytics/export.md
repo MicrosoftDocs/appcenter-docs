@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 05/02/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.custom: analytics
 # Export
 
 > [!IMPORTANT]
-> To set up an export, you will need to use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
+> To set up an export, you must use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
 
 App Center allows you to continuously export all your Analytics and Diagnostics (crashes and errors) raw data into Azure. Export Analytics data to both Blob Storage and Application Insights, and export Diagnostics data (crashes and errors) to Blob Storage. By exporting the data, you benefit from:
 
@@ -24,6 +24,7 @@ App Center allows you to continuously export all your Analytics and Diagnostics 
 - New feature set within Application Insights such as filtering and funnels
 
 For Application Insights, data is continuously exported from the moment export is configured along with 2 days of backfilled data.
+
 For Blob Storage, data is continuously exported from the moment export is configured along with 28 days of backfilled data.
 
 App Center offers two ways to export your data: *standard export* and *custom export*. Standard export allows you to export the data with a one-click experience, using the Azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
@@ -78,17 +79,29 @@ This option allows you to customize your export configurations in [Azure](https:
 ### Export crashes, attachments and errors
 In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create): 
 
-```NA
+```HTTP
 POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
-In "exportEntities", you need to indicate what type of data you wish to export: crashes, errors, attachments.
+In `export_entities`, indicate what type of data you wish to export: crashes, errors, attachments.
+
+In `blob_path_format_kind`, indicate the prefix type for the path to the exported blobs: `WithoutAppId` (default) is *year/month/day/hour/minute*, `WithAppId` is *appId/year/month/day/hour/minute*.
+
+### Exporting multiple apps to the same storage account
+
+When configuring export for multiple apps, you should create or update a configuration with the `blob_path_format_kind` set to `WithAppId`, which prefixes the export path with the respective appID's. The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
+
+```HTTP
+PATCH /v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}
+```
+
+The changes will take time to propogate, and entities from that point will then be written to the new path.
 
 ## Azure Blob Storage
 
 Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
 
-The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*). The data will take up to 5 minutes to be shown in Azure Blob Storage.
+The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
 The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments".
 
@@ -180,7 +193,7 @@ The table below shows the field mapping for the "customDimensions" field.
 
 A sample AI query to retrieve custom events:
 
-```NA
+```text
 customEvents
  | where name == "YourEventName"
  | extend Properties = todynamic(tostring(customDimensions.Properties))
