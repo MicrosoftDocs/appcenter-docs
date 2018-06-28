@@ -344,7 +344,7 @@ Immediately restarts the app. This method is for advanced scenarios, and is prim
 ### codePush.sync
 
 ```javascript
-codePush.sync(syncCallback?, syncOptions?, downloadProgress?);
+codePush.sync(syncCallback?, syncOptions?, downloadProgress?, syncErrback?);
 ```
 
 Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which simply checks for the presence of an update, and lets you control what to do next, `sync` handles the update check, download and installation experience for you.
@@ -382,6 +382,8 @@ While the sync method tries to make it easy to perform silent and active updates
     - __totalBytes__ *(Number)* - The total number of bytes expected to be received for this update (i.e. the size of the set of files which changed from the previous release).
     
     - __receivedBytes__ *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
+    
+- __syncErrback__: Called when there is an error in any of sync internal steps. The method is called with a standard javascript `Error` object as first argument.
 
 #### SyncOptions
 
