@@ -31,7 +31,7 @@ Also note that crash logs on iOS require Symbolication, please check out the [Ap
 
 ## Generate a test crash
 
-App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can use only use it when debugging as it won't work for release apps.
+App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can only use it when debugging as it won't work for release apps.
 
 ```csharp
 Crashes.GenerateTestCrash();
