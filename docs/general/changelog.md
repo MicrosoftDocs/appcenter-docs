@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 06/29/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -12,9 +12,14 @@ ms.service: vs-appcenter
 # Changelog
 
 ### **June 29, 2018**
+
 - **Improved app transfer**:
 Ability to [transfer applications between organization.](~/dashboard/creating-and-managing-apps.md#transferring-an-app)
 
+### **June 26, 2018**
+
+- **Test run notifications**:
+Per popular request, all app collaborators will receive email notifications when a test run is completed. The behavior can be configured in app settings.
 
 ### **June 20, 2018**
 
