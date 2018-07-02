@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 05/01/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -58,17 +58,22 @@ To share your app with others, select an app from the dashboard and then click *
 > If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
 
 ## Transferring an app
+When you transfer an app into an organization, all app data will be transferred over. The admins of the new organization will also gain access to the app that was transferred in.
 
-You can only transfer apps from user to organization accounts.
 
-The transfer an app:
+To transfer an app from your personal account to an organization or from one organization to another:
 1. Select an app from the dashboard
 2. In the left side navigation, select **Settings**
 3. In the top right corner, select the menu (three dots)
 4. Select **Transfer app to organization**
+5. Select the organization you wish to transfer the app into
 
 > [!NOTE]
-> Only the app creator can transfer an app into an organization they are an admin of.
+> * You can only transfer an app in and out of organizations you are an admin of.
+> * After transferring an app into an organization, you cannot transfer it back to your personal account. 
+
+
+
 
 ## Next steps
 
