@@ -5,7 +5,7 @@ keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 06/13/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ The command parameters include the following pieces of information specific to t
 
 After the test run has been created, ensure that the following software is installed on the computer that will submit the tests:
 
-1. [Node.js](https://nodejs.org/en/) 6.3
+1. [Node.js](https://nodejs.org/en/) version 8 or better
 2. [App Center CLI](~/cli/index.md)
 
 Instructions for [installing the App Center CLI](https://github.com/Microsoft/AppCenter-CLI#installation) maybe be found in the [README.md on GitHub](https://github.com/Microsoft/AppCenter-CLI).
