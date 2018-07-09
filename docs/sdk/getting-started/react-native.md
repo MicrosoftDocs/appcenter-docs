@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 06/06/2018
+ms.date: 07/05/2018
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -69,6 +69,17 @@ yarn add appcenter appcenter-analytics appcenter-crashes
 The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and **appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.
 
 ### 3.1 Integrate the SDK automatically
+
+> [!NOTE]
+> If you are using [Jest test framework](https://facebook.github.io/jest/) in your application, App Center SDK automatically sets up mocks for App Center modules in jest section of package.json file during installation. But due to a bug in the [Yarn package manager](https://yarnpkg.com/en/) this may not always be the case, so you might have to do it manually if you are not using npm. Depending on modules you are using add the following to the jest section of package.json file:
+> ```
+> "setupFiles": [
+>    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
+>    "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+>    "<rootDir>/node_modules/appcenter-crashes/test/AppCenterCrashesMock.js",
+>    "<rootDir>/node_modules/appcenter-push/test/AppCenterPushMock.js"
+> ]
+> ```
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
