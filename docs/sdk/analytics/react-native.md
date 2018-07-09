@@ -80,7 +80,7 @@ This function returns a promise that resolves to a `boolean`.
 
 ## Wait for JS to enable App Center Analytics
 
-If you wish to collect analytics information but ask for users permission before tracking them, you have the option to not enable analytics on startup, but wait until the right time and enable it in JavaScript. In that case, during installation, you should select `Enable in JavaScript` instead of `Enable Automatically` during `react-native link`.
+If you wish to collect analytics information for your app users but want to get user permission first, you have the option to not enable analytics on startup, but wait until the right time and enable it in JavaScript instead. In that case, during installation, you should select `Enable in JavaScript` instead of `Enable Automatically` during `react-native link`.
 
 ```
 For the [platform] app, should user tracking be enabled automatically ? (Use arrow keys)
