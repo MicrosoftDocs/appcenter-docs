@@ -2,9 +2,9 @@
 title: App Center Analytics for React Native
 description: App Center Analytics for React Native
 keywords: analytics
-author: troublemakerben
-ms.author: bereimol
-ms.date: 04/25/2018
+author: elamalani
+ms.author: elamalani
+ms.date: 07/04/2018
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: vs-appcenter
@@ -80,7 +80,7 @@ This function returns a promise that resolves to a `boolean`.
 
 ## Wait for JS to enable App Center Analytics
 
-In some cases, an application may want to ask users whether they want to share analytics information. In that case, during installation, you should select `Enable in JavaScript` during `react-native link`.
+If you wish to collect analytics information but ask for users permission before tracking them, you have the option to not enable analytics on startup, but wait until the right time and enable it in JavaScript. In that case, during installation, you should select `Enable in JavaScript` instead of `Enable Automatically` during `react-native link`.
 
 ```
 For the [platform] app, should user tracking be enabled automatically ? (Use arrow keys)
@@ -88,7 +88,7 @@ For the [platform] app, should user tracking be enabled automatically ? (Use arr
         > Enable in JavaScript
 ```
 
-This means that for any information to be sent to App Center (even basic session information), the developer must first enable App Center Analytics inside the app by adding the following line to their code.
+This means that for any information to be sent to App Center (even basic session information), you must first enable App Center Analytics inside the app by adding the following line to their code.
 
 ```javascript
 await Analytics.setEnabled(true);
