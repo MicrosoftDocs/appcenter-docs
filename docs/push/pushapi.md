@@ -65,6 +65,8 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
 }
 ```
 
+## Length Limitations
+Name should be 64 characters or less, title should be 128 characters or less, otherwise you will get an error 400 Bad Request when sending the push to the API.
 
 
 ## Send notifications to Audiences using API
