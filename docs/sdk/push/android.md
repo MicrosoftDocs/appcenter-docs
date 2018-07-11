@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -45,9 +45,12 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     dependencies {
        def appCenterSdkVersion = '1.6.1'
-       compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
+       implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
     ```
+
+    > [!NOTE]
+    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 

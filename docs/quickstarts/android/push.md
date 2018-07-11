@@ -8,7 +8,7 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 06/18/2018
+ms.date: 07/10/2018
 ---
 
 # Send Push Notifications to Users
@@ -35,14 +35,17 @@ You need a Google Account and use the Firebase console.
 
 *The following directions are also located in the push service on App Center.*
 
-1. Locate the following in **app/build.gradle** and add the compile statement:
+1. Locate the following in **app/build.gradle** and add the following dependencies:
 
   ``` java
   dependencies {
         def appCenterSdkVersion = '1.6.1'
-        compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
+        implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
   }
   ```
+
+  > [!NOTE]
+  > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Locate the App Center import statement in **MainActivity.java** and add the push import statement below it:
 

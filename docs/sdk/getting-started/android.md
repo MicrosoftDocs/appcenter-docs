@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2018
+ms.date: 07/10/2018
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -57,6 +57,9 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
    		compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 	}
 	```
+
+	> [!NOTE]
+	> If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
