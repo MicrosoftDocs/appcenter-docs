@@ -36,7 +36,7 @@ App Center sends email notifications at two levels: per user and per user per ap
 
 ### User level email notifications
 
-1. Navigate to <https://appcenter.ms> and login with your account information.
+1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login with your account information.
 
 2. On the bottom left corner, click your username and select **Account Settings**.
 
@@ -52,7 +52,7 @@ The default email notification settings at the user level are toggled **On**.
 
 App level email notifications send information for the specific app to the user.
 
-1. Navigate to <https://appcenter.ms/apps>, and select the app you would like to configure email notifications for.
+1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the app you would like to configure email notifications for.
 
 2. In the left panel, select **Settings** from the menu list.
 

@@ -37,7 +37,7 @@ Our aim is to enable users to quickly access App Center services and respond to 
 
 4. Authorize App Center's Slack App by following the instructions below:
 
-   1. Go to <https://appcenter.ms/settings/apitokens> and create a new Full Access API token.
+   1. Go to [https://appcenter.ms/settings/apitokens](https://appcenter.ms/settings/apitokens) and create a new Full Access API token.
       - Here are details on how to [create a new Full Access API token](~/api-docs/index.md), in particular please see steps 4-5.
 
    2. Go back to Slack and run `/appcenter login <your token>`.
