@@ -12,12 +12,12 @@ ms.custom: sdk
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
- - objc 
+ - objc
 ---
 
 # App Center Crashes
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)

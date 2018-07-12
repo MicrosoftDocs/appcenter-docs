@@ -14,7 +14,7 @@ ms.tgt_pltfrm: cordova
 
 # Get Started with Apache Cordova
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -126,7 +126,7 @@ As a complete example, for a Apache Cordova project that supports both Android a
 
 If you're using App Center Analytics in your app, there's some additional configuration steps you must perform. Open the Apache Cordova project's `config.xml` file in an editor, and add one or more of the following `preferences` elements to the file:
 
-- `APPCENTER_ANALYTICS_ENABLE_IN_JS` - _(optional, default is false)_ Controls whether Analytics is enabled automatically. When `false` Analytics is enabled by default. When `true`, the application must call `Analytics.setEnabled()` (in its JavaScript code) to enable Analytics before sending data App Center. This preference is useful when you want to ask users whether they want to share analytics information before enabling it within the application. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
+- `APPCENTER_ANALYTICS_ENABLE_IN_JS` - *(optional, default is false)* Controls whether Analytics is enabled automatically. When `false` Analytics is enabled by default. When `true`, the application must call `Analytics.setEnabled()` (in its JavaScript code) to enable Analytics before sending data App Center. This preference is useful when you want to ask users whether they want to share analytics information before enabling it within the application. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
 
   Example:
 
@@ -134,7 +134,7 @@ If you're using App Center Analytics in your app, there's some additional config
   <preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />
   ```
 
-- `APPCENTER_CRASHES_ALWAYS_SEND` - _(optional, default is true)_ Specifies whether crash reports are automatically sent to App Center when the app crashes. When sending crash reports automatically, every crash is reported, potentially overwhelming the engineering and support teams. When sending crash reports manually (setting `APPCENTER_CRASHES_ALWAYS_SEND` to `false`), code within your application can triage crashes, and decide when crash reports are sent to App Center, what data is included in the reports, and so on. This means more work for the developer, but it also provides greater control over user privacy and allows you to attach a message with crash report. [Learn more about processing on crash reports in JS](~/sdk/crashes/cordova.md).
+- `APPCENTER_CRASHES_ALWAYS_SEND` - *(optional, default is true)* Specifies whether crash reports are automatically sent to App Center when the app crashes. When sending crash reports automatically, every crash is reported, potentially overwhelming the engineering and support teams. When sending crash reports manually (setting `APPCENTER_CRASHES_ALWAYS_SEND` to `false`), code within your application can triage crashes, and decide when crash reports are sent to App Center, what data is included in the reports, and so on. This means more work for the developer, but it also provides greater control over user privacy and allows you to attach a message with crash report. [Learn more about processing on crash reports in JS](~/sdk/crashes/cordova.md).
 
   Example:
 
@@ -142,6 +142,6 @@ If you're using App Center Analytics in your app, there's some additional config
   <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
   ```
   
- ## 4. Where to go next?
+  ## 4. Where to go next?
 
 Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There is no additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.

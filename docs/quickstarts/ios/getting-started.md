@@ -19,7 +19,6 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 #audience:
 #ms.devlang:
 #ms.reviewer: [ALIAS]
-
 ---
 
 # Getting Started - Sample Swift App and Tutorials
@@ -42,15 +41,15 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 
 2. Run the command below to install CocoaPods:
 
-  ```bash
-  sudo gem install cocoapods
-  ```
+   ```bash
+   sudo gem install cocoapods
+   ```
 
 3. The included Podfile lists the dependencies in the source code. To install them, run the command below:
 
-  ```bash
-  pod install
-  ```
+   ```bash
+   pod install
+   ```
 
 4. Open the **.xcworkspace** and press **Run**. The app should build without error.
 
@@ -70,7 +69,7 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 3. Choose **iOS** and **Objective-C / Swift**.
 
 4. Click **Add new app** at the bottom.  
-  
+
 ## Replace the App Secret
 
 In order for the sample app to send information to App Center, the app secret must be changed in Xcode.
@@ -88,7 +87,7 @@ In order for the sample app to send information to App Center, the app secret mu
 
 ## Codesign the project
 
-_Codesigning is optional, but recommended._
+*Codesigning is optional, but recommended.*
 
 Codesigning assures users that the app is from a trustworthy developer, and has not been altered by someone else. In App Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
@@ -96,14 +95,14 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
 
   ![Push App Service](images/AppID_push_ios.png)
 
-  1. Open **.xcworkspace** from the sample app's folder.
+1. Open **.xcworkspace** from the sample app's folder.
 
-  2. Go to **General** within the .xcworkspace file.
+2. Go to **General** within the .xcworkspace file.
 
-  3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
+3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
 
-  4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
+4. Import and select the provisioning profile under **Signing (Debug)** and **Signing (Release)**.
 
-  5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
+5. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
 
 You're all set up to try out an App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.

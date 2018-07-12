@@ -62,6 +62,7 @@ This is useful for the following reasons:
 
 If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a semver range expression. That way, any client device running a version of the binary that satisfies the range expression (i.e. semver.satisfies(version, range) returns true) will get the update. Examples of valid semver range expressions are as follows:
 
+
 | Expression     | Who gets the update?                                                               |
 | -------------- | ---------------------------------------------------------------------------------- |
 | 1.2.3          | Only devices running the specific binary app store version 1.2.3 of your app       |
@@ -98,6 +99,7 @@ Specifies whether a particular release is required (for example, when it include
 > This setting corresponds to the [CLI's mandatory parameter](https://github.com/Microsoft/code-push/tree/master/cli#mandatory-parameter).
 
 The required attribute is unique because the server will dynamically modify it, as necessary, in order to ensure that the semantics of your releases are maintained for your end-users. For example, imagine that you released the following three updates to your app:
+
 
 | Release | Mandatory? |
 | ------- | ---------- |

@@ -14,31 +14,31 @@ ms.date: 07/26/2017
 # Run Included Tests with App Center
 
 ### Prerequisite
- - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
+- Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Install App Center Command Line Interface
 
 1. Install [Node.js](https://nodejs.org/en/) version 6.3 or later.
 2. Open the terminal and run the command below to install the App Center CLI:
 
-  ```shell
-  npm install -g appcenter-cli
-  ```
+   ```shell
+   npm install -g appcenter-cli
+   ```
 
 3. Run the command below and follow the directions to log in to App Center:
 
-  ```shell
-  appcenter login
-  ```  
+   ```shell
+   appcenter login
+   ```  
 
 ## Build the project and test APK files
 1. Open terminal and go to the project directory.
 2. Run each of the following commands:
 
-  ```
-  ./gradlew assembleDebug
-  ./gradlew assembleDebugAndroidTest
-  ```
+   ```
+   ./gradlew assembleDebug
+   ./gradlew assembleDebugAndroidTest
+   ```
 
 ## Prepare to run tests in App Center
 

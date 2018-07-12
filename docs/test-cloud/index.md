@@ -19,6 +19,7 @@ Test runs execute in a hosted fashion; upload the necessary assets (typically an
 
 App Center Test maintains a (1) year data retention policy for test report data. All test reports older than 1 year from present date will be removed.
 
+
 | Key Features | |
 | --- | --- |
 | Real devices | Test Cloud uses real mobile devices that are not rooted or jailbroken, providing the best approximation of your users' environment. |

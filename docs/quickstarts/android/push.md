@@ -17,8 +17,8 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 ## Prerequisites
 
- - A Google account.
- - A device with Play Store installed or an emulator using a Google APIs image (API level >= 15).
+- A Google account.
+- A device with Play Store installed or an emulator using a Google APIs image (API level >= 15).
 
 ## Set up Firebase Cloud Messaging
 
@@ -37,29 +37,29 @@ You need a Google Account and use the Firebase console.
 
 1. Locate the following in **app/build.gradle** and add the following dependencies:
 
-  ``` java
-  dependencies {
+   ``` java
+   dependencies {
         def appCenterSdkVersion = '1.6.1'
         implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
-  }
-  ```
+   }
+   ```
 
-  > [!NOTE]
-  > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+   > [!NOTE]
+   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Locate the App Center import statement in **MainActivity.java** and add the push import statement below it:
 
-  ```java
-  import com.microsoft.appcenter.AppCenter;
-  import com.microsoft.appcenter.push.Push;
-  ```
+   ```java
+   import com.microsoft.appcenter.AppCenter;
+   import com.microsoft.appcenter.push.Push;
+   ```
 
 3. Locate **onCreate** and add the following code:
 
-  ```java
-  Push.setSenderId("<Your Sender ID HERE>");
-  AppCenter.start(getApplication(), "<APP SECRET HERE>", Push.class);
-  ```
+   ```java
+   Push.setSenderId("<Your Sender ID HERE>");
+   AppCenter.start(getApplication(), "<APP SECRET HERE>", Push.class);
+   ```
 
 If you also use other services like Analytics or Crashes then modify the existing `start` call like in the following example:
 
@@ -86,11 +86,11 @@ AppCenter.start(getApplication(), "<APP SECRET HERE>", Analytics.class, Crashes.
 
 2. Press the **HOME** button (a circle icon on modern devices) as Push notifications are only displayed if the application is in background.
 
-2. Navigate to the **Push** service in App Center.
+3. Navigate to the **Push** service in App Center.
 
-3. Click **Send notification**.
+4. Click **Send notification**.
 
-4. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
+5. Set the **Campaign Name** as "Using Push Notifications". Set the **Message** as "Testing".  
 
 ## Send a push notification
 

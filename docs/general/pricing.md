@@ -15,29 +15,29 @@ ms.service: vs-appcenter
 Visual Studio App Center offers both a generous free tier as well as paid tier options, paid through an Azure subscription. 
 ## The free tier
 
-  - Unlimited apps, unlimited organizations, and unlimited teams
-  - Crashes and Analytics features completely free 
-  - 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
-  - Push notifications to up to 5 audience groups
-  - Unlimited distribution to users, and stores
-  - Unlimited use of CodePush
-  - Unlimited launch tests
-  - A 30-day free trial for 1 device with unlimited device hours 
+- Unlimited apps, unlimited organizations, and unlimited teams
+- Crashes and Analytics features completely free 
+- 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
+- Push notifications to up to 5 audience groups
+- Unlimited distribution to users, and stores
+- Unlimited use of CodePush
+- Unlimited launch tests
+- A 30-day free trial for 1 device with unlimited device hours 
 
 ## Build paid tier 
 
-  - Upgrade your build pipeline with unlimited build minutes and up to 60 minutes per build 
-  - Add additional concurrent build pipelines with unlimited build minutes and up to 60 minutes per build 
+- Upgrade your build pipeline with unlimited build minutes and up to 60 minutes per build 
+- Add additional concurrent build pipelines with unlimited build minutes and up to 60 minutes per build 
   
 ## Test paid tier 
   
-  - Basic tier: pay per concurrent device up to 30 hours per device per month 
-  - Enterprise tier: pay per concurrent device with unlimited hours per device per month
+- Basic tier: pay per concurrent device up to 30 hours per device per month 
+- Enterprise tier: pay per concurrent device with unlimited hours per device per month
 
 ## Push paid tier 
 
-  - Choose more than 5 audience groups 
-  - Pricing will not take effect until second half of 2018
+- Choose more than 5 audience groups 
+- Pricing will not take effect until second half of 2018
 
 
 > You can see the full breakdown of the pricing on the official [pricing page](https://www.visualstudio.com/app-center/pricing)    
@@ -51,18 +51,18 @@ Here's how to get started with billing:
 1. If configuring for your account, click on the user's menu and click on **settings > billing**. If configuring for your org, go to **org > manage > billing**. 
    
 2. In the billing settings page, click on **configure plan**.
-This view will walk you through purchasing your new plan. By default, the sliders will be set to the free tier. 
-You can configure the sliders to add more Builds, Tests or upgrade your push service. 
+   This view will walk you through purchasing your new plan. By default, the sliders will be set to the free tier. 
+   You can configure the sliders to add more Builds, Tests or upgrade your push service. 
 
-    - To choose the concurrent device(s) without device hours limits, click the drop-down and choose **Enterprise usage**. 
+   - To choose the concurrent device(s) without device hours limits, click the drop-down and choose **Enterprise usage**. 
 
-    - To use more than 5 audience groups, click the drop-down and choose **Advance** 
+   - To use more than 5 audience groups, click the drop-down and choose **Advance** 
  
 3. After you have customized your plan, click on continue.
 
-    - To connect your org/user to an Azure subscription, refer to this [section](~/general/azure-subscriptions/index.md).
+   - To connect your org/user to an Azure subscription, refer to this [section](~/general/azure-subscriptions/index.md).
 
-    - If you already have one or more subscriptions associated with your org/user settings and you can choose which one to use for billing.
+   - If you already have one or more subscriptions associated with your org/user settings and you can choose which one to use for billing.
 
 4. Click on **Configure**, and wait for the final screen.
 
@@ -70,9 +70,9 @@ You can configure the sliders to add more Builds, Tests or upgrade your push ser
 
 - What tier should I choose?
 
-    - Build: depends on the branches you have configured, number of users in your app, and number of apps within your Org. For example: If you have an org, with 3 apps, maximum of 2 branches each and 5 developers on the team, you might consider starting with 2 concurrent build pipelines to ensure a low queue time and fast development cycle. 
+  - Build: depends on the branches you have configured, number of users in your app, and number of apps within your Org. For example: If you have an org, with 3 apps, maximum of 2 branches each and 5 developers on the team, you might consider starting with 2 concurrent build pipelines to ensure a low queue time and fast development cycle. 
 
-    - Test: depends on the number of apps you have, number of tests per day, average length of your tests and number of devices in your device set. 
+  - Test: depends on the number of apps you have, number of tests per day, average length of your tests and number of devices in your device set. 
 
 - What is a concurrent device?
 

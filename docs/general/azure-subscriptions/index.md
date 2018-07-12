@@ -28,42 +28,42 @@ With an Azure subscription you can manage all the billing and control the differ
 If you already have an Azure subscription that you have an "Owner" role on, you can connect it to your org/user settings. 
 
 > [!WARNING]
-
+> 
 > Once you add an Azure subscription to an org, any org admin can use it to change billing settings within the same org. Org admins can make these changes to your Azure subscription without having to have an "Owner" role assigned to them.
 
 
-1.	First, you will have to choose the plan you would like to purchase for your org/user settings. If you haven't connected your org/user to an Azure subscription before, you will see a pop-up asking your to connect your Azure Subscription. Click **Connect**.
+1. First, you will have to choose the plan you would like to purchase for your org/user settings. If you haven't connected your org/user to an Azure subscription before, you will see a pop-up asking your to connect your Azure Subscription. Click **Connect**.
 
-1.	Enter your email to sign-in to Azure. You need a Work/School account or a Microsoft account. 
+2. Enter your email to sign-in to Azure. You need a Work/School account or a Microsoft account. 
 
-1. After signing-in, select your subscription from the list of subscriptions.
+3. After signing-in, select your subscription from the list of subscriptions.
 
-1. You will be re-directed to the billing page and you can continue your checkout process. 
+4. You will be re-directed to the billing page and you can continue your checkout process. 
 
 ## Create a new Azure Subscription
 
 Creating a new Azure Subscription is easy and takes few minutes. 
  
-1.	First, you will have to choose the plan you would like to purchase for your org/user settings. If you haven't connected your org/user to an Azure subscription before, you will see a pop-up asking your to connect your Azure Subscription. Click **Connect**.
+1. First, you will have to choose the plan you would like to purchase for your org/user settings. If you haven't connected your org/user to an Azure subscription before, you will see a pop-up asking your to connect your Azure Subscription. Click **Connect**.
 
 
-1.	Enter your email to sign-in to Azure. You need a Work/School account or a Microsoft account. If you already have an account skip to step 5.
+2. Enter your email to sign-in to Azure. You need a Work/School account or a Microsoft account. If you already have an account skip to step 5.
 
-1. If you don't have an account already,enter your email, then click on **get a new Microsoft account**.
+3. If you don't have an account already,enter your email, then click on **get a new Microsoft account**.
 
-1. Enter your email (username), password, and follow the verification step.
+4. Enter your email (username), password, and follow the verification step.
 
-1. After signing-in, if you don't have any subscriptions, click on **Create New Subscription**.
+5. After signing-in, if you don't have any subscriptions, click on **Create New Subscription**.
 
-1. Choose the account you just created from the list.
+6. Choose the account you just created from the list.
 
-1.	You'll be re-directed to an Azure subscription creation page (Pay as you go) subscription.
+7. You'll be re-directed to an Azure subscription creation page (Pay as you go) subscription.
 
-5.	Enter your billing information and the rest of required information.
+8. Enter your billing information and the rest of required information.
 
-6.	Click "Done"
+9. Click "Done"
 
-7.	After few minutes, you will be redirected back to App Center billing page to proceed with your checkout.
+10. After few minutes, you will be redirected back to App Center billing page to proceed with your checkout.
 
 ## FAQ
 
@@ -84,9 +84,9 @@ Creating a new Azure Subscription is easy and takes few minutes.
 
     You can see your billing information as part of your Azure Subscription monthly bill. Here's how to get your invoice to your email as a .pdf document:
  
-    1.	Select your subscription from the Subscriptions page. Opt-in for each subscription you own. Click Invoices then Email my invoice.
-    2.	Click Opt in and accept the terms.
-    3.	Once you've accepted the agreement, you can configure additional recipients.
-    4.	If you don't get an email after following the steps, make sure your email address is correct in the communication preferences on your profile.
-    More options and information about this can be found here.
+  1. Select your subscription from the Subscriptions page. Opt-in for each subscription you own. Click Invoices then Email my invoice.
+  2. Click Opt in and accept the terms.
+  3. Once you've accepted the agreement, you can configure additional recipients.
+  4. If you don't get an email after following the steps, make sure your email address is correct in the communication preferences on your profile.
+     More options and information about this can be found here.
 

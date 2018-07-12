@@ -13,7 +13,7 @@ ms.tgt_pltfrm: cordova
 ---
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -74,10 +74,10 @@ You can set up a listener to be notified whenever a push notification is receive
 
 > [!NOTE]
 > A notification is not generated when your application receives a push in the foreground.
-
+> 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.
-
+> 
 > [!NOTE]
 > The background notification click callback does **NOT** expose **title** and **message**. **Title** and **message** are only available in **foreground** pushes.
 

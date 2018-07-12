@@ -36,6 +36,7 @@ These properties can be of two types:
 These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
 Examples of custom properties are:
 
+
 | Key            | Value   |
 | -------------- | ------- |
 | Type           | Premium |
@@ -46,12 +47,12 @@ App Center allows you to define custom properties as key value pairs in your app
 
 You can set these custom properties by using our SDK methods for each platform:
 
-   - [Android](~/sdk/other-apis/android.md#use-custom-properties) 
-   - [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
-   - [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
-   - [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
-   - [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
-   - [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
+- [Android](~/sdk/other-apis/android.md#use-custom-properties) 
+- [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
+- [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
+- [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
+- [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
+- [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
 
 ## Create Audiences
 

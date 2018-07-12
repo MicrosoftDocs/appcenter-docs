@@ -165,6 +165,7 @@ Application Insights is an application performance management (APM) service that
 
 The App Center fields are mapped into Application Insights format. Here is the equivalence between the mapped fields:
 
+
 | Application Insights            | App Center                                             |
 | ------------------------------- | ------------------------------------------------------ |
 | timestamp                       | Time of the event                                      |
@@ -178,6 +179,7 @@ The App Center fields are mapped into Application Insights format. Here is the e
 | sdkVersion                      | App Center SDK version                                 |
 
 The table below shows the field mapping for the "customDimensions" field.
+
 
 | Application Insights            | App Center                                     |
 | ------------------------------- | ---------------------------------------------- |

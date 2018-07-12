@@ -46,8 +46,8 @@ This gives the user access to the organization as a collaborator. However, they 
 **In-directly through an app:**
 1. Select an app within an organization
 2. On the left side havigation, select the **Settings** page
-2. Select **People** 
-3. Type the user's email address to add the user
+3. Select **People** 
+4. Type the user's email address to add the user
 
 Adding a user from outside the organization to an app automatically adds them to the organization. However, the user will only see the app(s) they were invited to.
 

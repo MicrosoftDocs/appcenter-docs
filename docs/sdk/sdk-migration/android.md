@@ -13,7 +13,7 @@ ms.custom: sdk
 
 # Migrate to App Center Android SDK v1.6.1
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -43,8 +43,8 @@ Follow these steps to update your current preview SDK to App Center Android SDK 
     implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     ```
 
-    > [!NOTE]
-    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+   > [!NOTE]
+   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Remove the old import statements for Mobile Center and update them with below:
 

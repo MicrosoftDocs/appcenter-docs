@@ -14,7 +14,7 @@ ms.tgt_pltfrm: android
 
 # Get Started with Android
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -58,8 +58,8 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 	}
 	```
 
-	> [!NOTE]
-	> If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+   > [!NOTE]
+   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 

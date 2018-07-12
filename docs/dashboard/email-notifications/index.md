@@ -16,14 +16,16 @@ ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
 You can choose to have email notifications automatically sent for the following events:
 
 - Build: 
-    - Build success:
-        - **Always**: when your app builds successfully
-        - **Only if previously failed**: when your app has successfully built after one or more failed builds
-        - **Never**: you will not receive notifications for build success
-    - Build failure:
-        - **Always**: when your app fails to build
-        - **Only if previously successful**: when your app has failed to build after one or more successful builds
-        - **Never**: you will not receive notifications for build failure
+  - Build success:
+    - **Always**: when your app builds successfully
+    - **Only if previously failed**: when your app has successfully built after one or more failed builds
+    - **Never**: you will not receive notifications for build success
+
+  - Build failure:
+    - **Always**: when your app fails to build
+    - **Only if previously successful**: when your app has failed to build after one or more successful builds
+    - **Never**: you will not receive notifications for build failure
+
 - Crashes: when a crash group is created
 - Distribute: when a new version is released
 - Test: when a test run completes

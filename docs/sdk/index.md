@@ -54,6 +54,7 @@ The tables below show the required minimum supported versions of the different A
 
 Android Studio 2.2 or later.
 
+
  Service          | Android OS Version | API Level
  -----------------|-------------------|-----------
  Analytics        | 4.0.3 and later   | 15 and later
@@ -63,6 +64,7 @@ Android Studio 2.2 or later.
 
 
 ### iOS
+
 
  Service          | iOS Version     | Xcode
  -----------------|-----------------|-------
@@ -74,6 +76,7 @@ Android Studio 2.2 or later.
 
 ### Windows UWP
 
+
  Service          | Windows Version    | Visual Studio
  -----------------|--------------------|-------
  Analytics        | 10 build 10240     | Visual Studio 2015 or later
@@ -83,6 +86,7 @@ Android Studio 2.2 or later.
 
 
 ### React Native
+
 
 Service    |  RN version   | iOS Version              | Android Version
  ----------|---------------|--------------------------|-------
@@ -94,6 +98,7 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or la
 
 ### macOS
 
+
  Service          | macOS Version   | Xcode
  -----------------|-----------------|-------
  Analytics        | 10.9 or later   | 8.2 and later
@@ -101,6 +106,7 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or la
  Push             | 10.9 or later   | 8.2 and later
 
  ### Apache Cordova 
+
 
 Service    |  AC CLI version | iOS Version     | Android Version
  ----------|----------------------|-----------------|----------------

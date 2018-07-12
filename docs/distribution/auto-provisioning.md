@@ -50,7 +50,7 @@ The prerequisite for using this guide is to have an Apple production certificate
 	
 	A. If the private key is not present, you need to either create a new certificate or get it from the machine where the certificate was created.
 
-3. Make sure both the certificate and the private key are selected, then right click on the items to get the context menu and select **Export 2 items…**. ![Export certificate from keychain][export-certificate]
+3. Make sure both the certificate and the private key are selected, then right click on the items to get the context menu and select **Export 2 items…**. ![Export certificate from keychain](images/ios-keychain-certificates.png)
 4. Select a location on disk to save the file as a .p12 – it is recommended that you choose a strong password for the file.
 
 [export-certificate]: images/ios-keychain-certificates.png

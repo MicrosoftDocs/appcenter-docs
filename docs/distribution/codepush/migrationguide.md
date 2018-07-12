@@ -31,8 +31,8 @@ Depending on the status of your account, the process is a little different:
 
 * **New CodePush users:** Please create an account on [App Center](https://appcenter.ms).
 
- > [!NOTE]
- > If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
+  > [!NOTE]
+  > If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
 
 **2. Getting Set up in the App Center Portal**
 
@@ -71,7 +71,7 @@ The token must be put into the CLI for authentication and to complete the login 
 ![Login](./images/mg-terminalkey.png)
 
 After completing this, you are free to use CodePush functionality in your apps through the App Center CLI.
- 
+
 ## Using CodePush in the App Center Portal
 
 CodePush can be found within the Distribution section of the App Center portal. CodePush is only visible in App Center when using React Native and, in the near future, Cordova applications.
@@ -124,6 +124,7 @@ appcenter codepush deployment list MyApp
 
 **CLI Command Comparison:**
 
+
 | CodePush                                   | App Center                               |
 | ------------------------------------------ | ---------------------------------------- |
 | `code-push app add MyApp ios react-native` | `appcenter apps create -d MyApp -o iOS -p React-Native` |
@@ -134,6 +135,7 @@ appcenter codepush deployment list MyApp
 | `code-push access-key list`                | `appcenter tokens list` |
 
 ## App Center CLI CodePush Cheat Sheet
+
 
 | Command                              | Description                              |  Example               |
 | ------------------------------------ | ---------------------------------------- | ---------------------- |

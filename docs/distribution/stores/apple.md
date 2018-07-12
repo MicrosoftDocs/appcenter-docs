@@ -21,7 +21,7 @@ Publish iOS app upgrades to the App Store and TestFlight.
 * An [Apple ID](https://appleid.apple.com/) to manage your Apple account.
 * An [Apple Developer Program](https://developer.apple.com/programs/enroll/) account.
 
-For more information, review the [App Distribution Guide] (https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012582-CH1-SW1).
+For more information, review the [App Distribution Guide](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012582-CH1-SW1).
 
 
 ### Set up the connection between App Center to iTunes and TestFlight
@@ -35,10 +35,11 @@ For more information, review the [App Distribution Guide] (https://developer.app
 7. Now a list of apps for the team selected will be available for selection.
 8. Select to app to be upgraded.
 9. Store connections for the selected app will be automatially set up
-    * An App Store connection named **Production**.
-    * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **iTunes Connect users**. 
-    * External tester groups connections based on the external groups created in the iTunes Connect console. 
-6. Setting up this connection is a one time process for an app in App Center.
+   * An App Store connection named **Production**.
+   * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **iTunes Connect users**. 
+   * External tester groups connections based on the external groups created in the iTunes Connect console. 
+
+10. Setting up this connection is a one time process for an app in App Center.
 
 ### Publish an iOS package to the App Store (Production)
 
@@ -49,7 +50,7 @@ For more information, review the [App Distribution Guide] (https://developer.app
 5. Click on **Publish**. The status for this release on the store details page will show as **Submitted**. 
 6. Once App Center has completed the hand-over of the app to iTunes, the status of the app will change to **Published**.
 7. In case of a failure while publishing by Apple, the status on the store details page will change to **Failed** with the appropriate error message. 
-Review Apple's [app review] (https://developer.apple.com/support/app-review/) process.
+   Review Apple's [app review](https://developer.apple.com/support/app-review/) process.
 
 ### Publish an iOS package to TestFlight (Internal Testers)    
 

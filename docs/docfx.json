@@ -1,53 +1,63 @@
 {
-	"build": {
-		"content": [{
-			"files": [
-				"**/*.md",
-				"**/*.yml"
-			],
-			"exclude": [
-				"**/obj/**",
-				"vs-mobile-center-docs/**",
-				"**/includes/**"
-			]
-		}],
-		"resource": [{
-			"files": [
-				"**/*.png",
-				"**/*.jpg",
-				"**/*.svg",
-				"**/*.gif"
-			],
-			"exclude": [
-				"**/obj/**",
-				"vs-mobile-center-docs/**",
-				"**/includes/**"
-			]
-		}],
-		"overwrite": [],
-		"externalReference": [],
-		"globalMetadata": {
-			"contributors_to_exclude": ["conceptdev", "meganbradley"],
-			"breadcrumb_path": "~/_breadcrumb/toc.yml",
-			"titleSuffix": "Visual Studio App Center",
-			"extendBreadcrumb": true,
-			"manager": "jowargo",
-			"audience": "developer",
-			"ms.service": "vs-appcenter",
-			"ms.topic": "article",
-			"searchScope": ["App Center"],
-			"_op_documentIdPathDepotMapping": {
-        			"./": {
-          				"depot_name": "MSDN.vs-mobile-center-docs"
-        			}
-			},
-			"feedback_system": "GitHub",
-			"feedback_github_repo": "MicrosoftDocs/appcenter-docs",
-			"feedback_product_url": "https://intercom.help/appcenter/getting-started/getting-help-with-app-center",
-			"uhfHeaderId": "MSDocsHeader-AppCenter"
-		},
-		"fileMetadata": {},
-		"template": [],
-		"dest": "vs-mobile-center-docs"
-	}
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "vs-mobile-center-docs/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.svg",
+          "**/*.gif"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "vs-mobile-center-docs/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "contributors_to_exclude": [
+        "conceptdev",
+        "meganbradley"
+      ],
+      "breadcrumb_path": "~/_breadcrumb/toc.yml",
+      "titleSuffix": "Visual Studio App Center",
+      "extendBreadcrumb": true,
+      "manager": "jowargo",
+      "audience": "developer",
+      "ms.service": "vs-appcenter",
+      "ms.topic": "article",
+      "searchScope": [
+        "App Center"
+      ],
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "MSDN.vs-mobile-center-docs"
+        }
+      },
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/appcenter-docs",
+      "feedback_product_url": "https://intercom.help/appcenter/getting-started/getting-help-with-app-center",
+      "uhfHeaderId": "MSDocsHeader-AppCenter"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "vs-mobile-center-docs",
+    "markdownEngineName": "markdig"
+  }
 }

@@ -36,7 +36,7 @@ The comments feature of our documentation is intended to enable customers to sug
 1. The **Feedback** section of the page lists two buttons; use the **Product Feedback** button to connect with the App Center Support team (as described in the previous section), use the **Content Feedback** button to suggest changes to the docs.
 2. In the bottom-right corner of the page you'll find a prompt asking you if the current page is helpful. Your vote here helps us understand how we're doing.
 
->[!Note]
+> [!Note]
 > Option 1 is the preferred method to provide feedback; the feedback you provide here goes directly to the App Center product team and will get you the quickest response. Option 2 simply records your vote (and comments), but doesn't provide a way for us to respond to you.
 
 ## Contributing to the docs

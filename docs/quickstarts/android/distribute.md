@@ -18,7 +18,6 @@ ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 #audience:
 #ms.devlang: dotnet
 #ms.reviewer: [ALIAS]
-
 ---
 
 # Distribute Installable Sample App to Users
@@ -35,14 +34,14 @@ If you have already completed the [Build tutorial](build.md) and built the sampl
 2. Turn **Distribute builds** on and select a collaborator group. You can edit groups and add new groups in the **Distribute** service.
 
 3. Click **Save** and allow the branch to build again.
-  
+
 
 Another way is to upload your own .apk file:
-*Optional: From the Distribute service, click **New Group** at the top of the page to add people to test the app or collaborate with you.*
+<em>Optional: From the Distribute service, click **New Group</em>* at the top of the page to add people to test the app or collaborate with you.*
 1. Click **Distribute new release** at the top of the page.
 
 2. Under **Upload your release**, navigate to the app-release.apk file that was generated when you signed the APK. Click Next.  
-  
+
 3. Leave Release notes blank. Click Next.
 
 4. Under **Who are you distributing this release to?** select the distribution group. Click Next.

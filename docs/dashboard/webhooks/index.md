@@ -18,14 +18,16 @@ Webhooks are a simple way to notify third party applications when a specified ev
 App Center's webhooks empower users to send automatic notifications to connected applications for the following events:
 
 - Build: 
-    - Build success:
-        - **Always**: when your app builds successfully
-        - **Only if previously failed**: when your app has successfully built after one or more failed builds
-        - **Never**: you will not receive notifications for build success
-    - Build failure:
-        - **Always**: when your app fails to build
-        - **Only if previously successful**: when your app has failed to build after one or more successful builds
-        - **Never**: you will not receive notifications for build failure
+  - Build success:
+    - **Always**: when your app builds successfully
+    - **Only if previously failed**: when your app has successfully built after one or more failed builds
+    - **Never**: you will not receive notifications for build success
+
+  - Build failure:
+    - **Always**: when your app fails to build
+    - **Only if previously successful**: when your app has failed to build after one or more successful builds
+    - **Never**: you will not receive notifications for build failure
+
 - Crashes: when a crash group is created
 - Distribute: when a new version is released
 
@@ -39,27 +41,27 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 2. In your app, in the far left hand panel, select **Settings**
 
 3. In the row panel titled **Webhooks**, go to the right hand corner and click on the **pencil icon**. This will bring up the **Webhooks** panel.
-    
+
     ![How to edit the webhook's settings](media/editWebhook.png)
 
 4. <a name="step3"></a>In the top right hand corner, click the blue **New Webhook** button and enter: 
 
-    - Webhook name
-    - Webhook URL
-  
-    You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)). 
-    
-    Select the **dropdown** for Build status notifications and the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts. 
-    
-    ![How to create a new webhook](media/createNewWebhook.gif)
+   - Webhook name
+   - Webhook URL
+
+     You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)). 
+
+     Select the **dropdown** for Build status notifications and the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts. 
+
+     ![How to create a new webhook](media/createNewWebhook.gif)
 
 5. Done! Your webhook is now created and enabled. You may create multiple webhooks by repeating [step 3](#step3).
 
 6. Toggle to the extreme right hand of the webhook to **test, disable or delete** the webhook.  
 
-  - **test** will send a test alert to your connected application.
-  - **disable** keeps the webhook inactive but present in your dashboard.
-  - **delete** will remove the webhook from your dashboard.
+   - **test** will send a test alert to your connected application.
+   - **disable** keeps the webhook inactive but present in your dashboard.
+   - **delete** will remove the webhook from your dashboard.
 
 When these events happen, App Center notifications are posted into your integrated applications. For example, here is how a Build success notification looks like with a connected Slack application: 
 

@@ -12,12 +12,12 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:  
  - swift
- - objc 
+ - objc
 ---
 
 # App Center Analytics
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)

@@ -56,12 +56,12 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
 
 ```
 {
- "notification_content" : {
-  "name" : "First Push From App Center",
-  "title" : "Push From App Center",
-  "body" : "Welcome!",
-  "custom_data" : {"key1" : "val1", "key2" : "val2"}
-  }
+ "notification_content" : {
+  "name" : "First Push From App Center",
+  "title" : "Push From App Center",
+  "body" : "Welcome!",
+  "custom_data" : {"key1" : "val1", "key2" : "val2"}
+  }
 }
 ```
 
@@ -100,7 +100,6 @@ Here is an example for an audiences based on a device property where country is 
   "definition" : "CarrierCountry eq 'US'",
   "description" : "Users in the United States"
 }
-
 ```
 
 
@@ -127,16 +126,16 @@ You will need to add this custom properties using our SDK for each platform: [An
 
 ```
 {
- "notification_content" : {
-  "name" : "First Push From App Center",
-  "title" : "Push From App Center",
-  "body" : "Welcome!",
-  "custom_data" : {"key1" : "val1", "key2" : "val2"}
-  },
-    "notification_target" : {
-    "type" : "audiences_target",
-    "audiences" : ["a-1", "a-2"]
-  }
+ "notification_content" : {
+  "name" : "First Push From App Center",
+  "title" : "Push From App Center",
+  "body" : "Welcome!",
+  "custom_data" : {"key1" : "val1", "key2" : "val2"}
+  },
+    "notification_target" : {
+    "type" : "audiences_target",
+    "audiences" : ["a-1", "a-2"]
+  }
 }
 ```
 
@@ -149,16 +148,16 @@ Below, you will find an example where we target the follwing devices IDs: `00000
 
 ```
 {
- "notification_content" : {
-  "name" : "First Push From App Center",
-  "title" : "Push From App Center",
-  "body" : "Welcome!",
-  "custom_data" : {"key1" : "val1", "key2" : "val2"}
-  },
-    "notification_target" : {
-    "type" : "devices_target",
-    "devices" : ["00000000-0000-0000-0000-000000000001","00000000-0000-0000-0000-000000000002", "00000000-0000-0000-0000-000000000003"]
-  }
+ "notification_content" : {
+  "name" : "First Push From App Center",
+  "title" : "Push From App Center",
+  "body" : "Welcome!",
+  "custom_data" : {"key1" : "val1", "key2" : "val2"}
+  },
+    "notification_target" : {
+    "type" : "devices_target",
+    "devices" : ["00000000-0000-0000-0000-000000000001","00000000-0000-0000-0000-000000000002", "00000000-0000-0000-0000-000000000003"]
+  }
 }
 ```
 

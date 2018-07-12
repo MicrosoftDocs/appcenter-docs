@@ -45,18 +45,15 @@ public class Tests
 When the test is run and `.Repl()` is invoked, UITest will halt the test and start the REPL in a terminal window:
 
 
-# [Visual Studio](#tab/vswin)
-
+#### [Visual Studio](#tab/vswin/)
 [ ![The UITest REPL on Windows](./images/working-with-repl-01-vs-sml.png)](./images/working-with-repl-01-vs.png#lightbox)
 
 
 
-# [Visual Studio for Mac](#tab/vsmac)
-
+#### [Visual Studio for Mac](#tab/vsmac/)
 [ ![The UITest REPL on macOS Terminal](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
 
------
-
+* * *
 There are three ways to exit the REPL:
 
 * Pressing **Ctrl-C**
@@ -75,18 +72,14 @@ A common workflow is to use the `tree` command or `IApp.Flash` to identify views
 
 The `tree` command will display a hierarchical list of the views that are visible on the screen: 
 
-#[Visual Studio](#tab/vswin)
-
+#### [Visual Studio](#tab/vswin/)
 [ ![The Tree command running in the REPL](./images/working-with-repl-02-vs-sml.png)](./images/working-with-repl-02-vs.png#lightbox)
 
 
-#[Visual Studio for Mac](#tab/vsmac)
-
+#### [Visual Studio for Mac](#tab/vsmac/)
 [ ![Tree command running in the REPL](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
 
------
-
-
+* * *
 ## Discovering Views with IApp.Flash
 
 Many of the UITest API's take an `AppQuery` object to locate views on the screen. The `IApp.Flash()` method can be very helpful in testing these queries in the REPL. `IApp.Flash()` will highlight the results of the query by making them flash, and return some details about the views in the results.

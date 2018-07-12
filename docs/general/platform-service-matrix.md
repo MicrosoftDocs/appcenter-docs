@@ -14,15 +14,17 @@ ms.service: vs-appcenter
 
 The table below lists all the Operating System and Platforms and their supported services in App Center:
 
-| OS/Platform | Build | Test | Distribute | Crashes | Analytics | Push |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `macOS` | Yes  | -  | Yes | Yes | Yes | Yes |
-| `React Native - iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `React Native - Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `Windows - UWP` | Yes  | -  | Yes | Yes | Yes | Yes |
-| `Xamarin - iOS` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `Xamarin - Android` | Yes  | Yes  | Yes | Yes | Yes | Yes |
-| `Cordova - iOS` | No  | Yes  | Yes | Yes | Yes | Yes |
-| `Cordova - Android` | No  | Yes  | Yes | Yes | Yes | Yes |
+
+| OS/Platform              | Build | Test | Distribute | Crashes | Analytics | Push |
+|:-------------------------|:------|:-----|:-----------|:--------|:----------|:-----|
+| `Android`                | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `iOS`                    | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `macOS`                  | Yes   | -    | Yes        | Yes     | Yes       | Yes  |
+| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `Windows - UWP`          | Yes   | -    | Yes        | Yes     | Yes       | Yes  |
+| `Xamarin - iOS`          | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `Xamarin - Android`      | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `Cordova - iOS`          | No    | Yes  | Yes        | Yes     | Yes       | Yes  |
+| `Cordova - Android`      | No    | Yes  | Yes        | Yes     | Yes       | Yes  |
+

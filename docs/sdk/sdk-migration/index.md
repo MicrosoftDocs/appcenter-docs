@@ -21,11 +21,11 @@ If you have set up your application with preview version of our old SDKs, now is
 
 1. Preview SDK is still going to work but we highly recommend you to transition to the latest stable SDK.
 2. You will need to rename and update few SDK APIs. Detailed documentation is here:
-    * [Android](android.md)
-    * [iOS](ios.md)
-    * [React Native](react-native.md)
-    * [UWP](uwp.md)
-    * [Xamarin](xamarin.md)
+   * [Android](android.md)
+   * [iOS](ios.md)
+   * [React Native](react-native.md)
+   * [UWP](uwp.md)
+   * [Xamarin](xamarin.md)
 
 ## Source code
 

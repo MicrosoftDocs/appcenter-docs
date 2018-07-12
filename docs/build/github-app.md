@@ -24,7 +24,7 @@ To install the app, open a pull request in GitHub in a repository with a mobile 
 Follow the link in the notification to the mobile CI category of apps and choose the App Center app. Pick one of four plans, including a free tier, and install the app. The app can be installed in both your personal GitHub account and GitHub organizations.
 
 ## Onboarding Repositories using the GitHub App
-After installing the GitHub App, sign in to App Center or create a new App Center account. Next, select the repository to set up and follow the wizard to create your app(s). The repositories shown are the ones App Center is authorized to see. Additional repositories can be shared by changing the [GitHub app configuration] (https://github.com/settings/installations).
+After installing the GitHub App, sign in to App Center or create a new App Center account. Next, select the repository to set up and follow the wizard to create your app(s). The repositories shown are the ones App Center is authorized to see. Additional repositories can be shared by changing the [GitHub app configuration](https://github.com/settings/installations).
 
 > [!NOTE]
 > If the GitHub app was installed in a GitHub organization, an App Center organization is automatically created and that organization will be the owner of the new apps. Other members must be added to the App Center organization to see or edit the apps in App Center. You can read more about [App Center organizations](~/dashboard/creating-and-managing-apps.md).

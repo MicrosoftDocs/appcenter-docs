@@ -11,12 +11,12 @@ ms.service: vs-appcenter
 ms.custom: sdk
 dev_langs:  
  - swift
- - objc 
+ - objc
 ---
 
 # iOS SDK Troubleshooting
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -105,12 +105,13 @@ The tests were run **without Bitcode** enabled and did not use **App Thinning**.
 
 Please note that the numbers below can vary and depend on your build settings, so consider them a rough guide. That said, adding the App Center SDK to your app has a minimal impact on the size of your application binary.
 
-App Center modules used   | Exported IPA size | Installation size
---------------------------|-------------------|--------------------
-None (blank app)          |  24KB             | 132KB
-App Center Analytics      |  120KB            | 377KB
-App Center Crash          |  239KB            | 705KB
-App Center Distribute     |  163KB            | 528KB
-App Center Push           |  115KB            | 377KB
-All App Center modules    |  314KB            | 930KB
- 
+
+| App Center modules used | Exported IPA size | Installation size |
+|-------------------------|-------------------|-------------------|
+|    None (blank app)     |       24KB        |       132KB       |
+|  App Center Analytics   |       120KB       |       377KB       |
+|    App Center Crash     |       239KB       |       705KB       |
+|  App Center Distribute  |       163KB       |       528KB       |
+|     App Center Push     |       115KB       |       377KB       |
+| All App Center modules  |       314KB       |       930KB       |
+

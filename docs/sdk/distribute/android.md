@@ -14,7 +14,7 @@ ms.tgt_pltfrm: android
 
 # App Center Distribute – In-app updates
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
@@ -44,8 +44,8 @@ The App Center SDK is designed with a modular approach – a developer only need
     }
     ```
 
-    > [!NOTE]
-    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+   > [!NOTE]
+   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Save your `build.gradle` file and make sure to trigger a Gradle sync in Android Studio.
 
@@ -191,8 +191,8 @@ The in-app updates feature works as follows:
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
 
-    * a higher value of `versionCode` or
-    * an equal value of `versionCode` but a higher value of `versionName`.
+   * a higher value of `versionCode` or
+   * an equal value of `versionCode` but a higher value of `versionName`.
 
 > [!TIP]
 > If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical.
@@ -214,4 +214,4 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+> While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.

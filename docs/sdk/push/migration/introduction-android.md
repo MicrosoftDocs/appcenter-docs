@@ -1,6 +1,6 @@
 # How to remove Firebase SDK dependencies
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [Xamarin.Android](xamarin-android.md)
 > * [React Native Android](react-native-android.md)

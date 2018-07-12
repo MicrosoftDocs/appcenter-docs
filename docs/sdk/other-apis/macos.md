@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
- - objc 
+ - objc
 ---
 
 # Other macOS APIs

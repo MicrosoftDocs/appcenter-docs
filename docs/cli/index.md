@@ -32,9 +32,9 @@ Open a terminal/command prompt, and run `npm install -g appcenter-cli`.
 1. Open a terminal/command window.
 2. Run `appcenter login`. This will open a browser and generate a new `API token`.
 3. Copy the `API token` from the browser, and paste this into the command window.
-  ![Image of browser token](~/cli/images/browserToken.png)
+   ![Image of browser token](~/cli/images/browserToken.png)
 4. The command window will display `Logged in as {user-name}`.
-  ![Image of terminal login](~/cli/images/terminalLogin.png)
+   ![Image of terminal login](~/cli/images/terminalLogin.png)
 5. Congratulations! You are successfully logged in and can run CLI commands. 
 
 There are two ways to use App Center CLI commands without running `appcenter login` prior:

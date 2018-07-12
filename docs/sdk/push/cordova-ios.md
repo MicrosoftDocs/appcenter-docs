@@ -13,7 +13,7 @@ ms.tgt_pltfrm: cordova
 ---
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -50,39 +50,39 @@ Log in to the App Center portal, select your application, click on the **Push** 
 
   1. **Prefix** and **ID**
 
-      * Go to your Apple developer account and select your application from the [App ID list](https://developer.apple.com/account/ios/identifier/bundle) in **Identifiers**.
+     * Go to your Apple developer account and select your application from the [App ID list](https://developer.apple.com/account/ios/identifier/bundle) in **Identifiers**.
 
-      * Copy the **Prefix** value from this window and paste it to the App Center push settings.
+     * Copy the **Prefix** value from this window and paste it to the App Center push settings.
 
-      * Do the same with the **ID** value.
+     * Do the same with the **ID** value.
 
-      ![apple-dev-center-app-id](~/sdk/push/images/ios-app-id-apple-portal.png)
+       ![apple-dev-center-app-id](~/sdk/push/images/ios-app-id-apple-portal.png)
 
   2. **Key ID**
 
-      * In your Apple developer account create a [new key](https://developer.apple.com/account/ios/authkey/create) in **Certificates, Identifiers & Profiles/Keys**.
+     * In your Apple developer account create a [new key](https://developer.apple.com/account/ios/authkey/create) in **Certificates, Identifiers & Profiles/Keys**.
 
-      * Make sure to check the APNs checkbox.
+     * Make sure to check the APNs checkbox.
 
-      * Fill in the key name
+     * Fill in the key name
 
-      * Press **Continue** then **Confirm**.
+     * Press **Continue** then **Confirm**.
 
-      ![apple-dev-center-new-auth-key](~/sdk/push/images/ios-new-auth-key-apple-portal.png)
+       ![apple-dev-center-new-auth-key](~/sdk/push/images/ios-new-auth-key-apple-portal.png)
 
-      * On the next screen, copy the **Key ID** value and paste it to the App Center push settings.
+     * On the next screen, copy the **Key ID** value and paste it to the App Center push settings.
 
-      * Download the key file.
+     * Download the key file.
 
-      ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
+       ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
 
   3. **Push Token**
 
-      * Open your key file with a text editor and copy the authentication token it contains.
+     * Open your key file with a text editor and copy the authentication token it contains.
 
-      ![auth-key-file](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/apple-auth-key-file.png)
+       ![auth-key-file](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/apple-auth-key-file.png)
 
-      * In the App Center push settings, paste this token to the Push Token field then click Done to complete this configuration.
+     * In the App Center push settings, paste this token to the Push Token field then click Done to complete this configuration.
 
 For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
 

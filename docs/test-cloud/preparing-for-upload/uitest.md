@@ -66,7 +66,7 @@ To prepare a Xamarin.Android app and UITest for submission to App Center for Tes
 Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .ipa file. The Xamarin Test Cloud Agent is an special, embedded HTTP server that allows UITests to interact with the iOS user interface. The Test Cloud Agent is added to the iOS project via NuGet.
 
 > [!TIP]
-> Non-Xamarin.iOS apps are also supported by Xamarin.UITest, but instead of the Xamarin Test Cloud Agent require [linking Calabash]( https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode).
+> Non-Xamarin.iOS apps are also supported by Xamarin.UITest, but instead of the Xamarin Test Cloud Agent require [linking Calabash](https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode).
 
 ### Visual Studio (Mac)
 

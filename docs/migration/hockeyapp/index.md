@@ -32,7 +32,7 @@ HockeyApp apps that are **iOS** or **Android**, and built using **Native**, **Xa
 * App Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using App Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md)
 
 * App Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into App Center. Note that the App Center Crash service is currently in preview for HockeyApp apps. You can join the preview on the Crash page in App Center to begin collecting crash data. 
-<!-- Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside App Center. -->
+  <!-- Read more about HockeyApp [Crashes](~/migration/hockeyapp/crashes.md) and [Analytics](~/migration/hockeyapp/analytics.md) inside App Center. -->
 
 ### Limitations
 

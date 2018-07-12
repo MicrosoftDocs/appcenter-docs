@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin.android
 
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -28,7 +28,7 @@ ms.tgt_pltfrm: xamarin.android
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
-
+> 
 > [!NOTE]
 > If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/xamarin-android.md).
 
@@ -63,8 +63,8 @@ Push.SetSenderId("{Your Sender ID}");
 
 Make sure that you replace `{Your Sender ID}` with the **Sender ID** you obtained in the "Prerequisites" step. The method should be called **before** `AppCenter.Start` is called. This means that in a Xamarin.Forms project, it must go before the call to `LoadApplication(new App());` in your Xamarin.Android project's `OnCreate()` method for the main `Activity` class.
 
->[!NOTE]
->If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+> [!NOTE]
+> If your Xamarin.Android project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.Android portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ### 5. Customize ProGuard configuration
 
@@ -72,8 +72,8 @@ If you use ProGuard, you have to customize its configuration for Push.
 
 #### 5.1. Create a ProGuard configuration file
 
->[!NOTE]
->If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
+> [!NOTE]
+> If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
 
 Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
 
@@ -107,11 +107,11 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 > [!NOTE]
 > A notification is not generated when your application receives a push in the foreground.
-
+> 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
 > The event is triggered when you click on the notification.
-
+> 
 > [!NOTE]
 > The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.

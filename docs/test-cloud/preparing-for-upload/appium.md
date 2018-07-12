@@ -55,8 +55,8 @@ SimpleTest(MainTest)  Time elapsed: 0.594 sec  <<< ERROR!
 If you're unable to run the tests using command line locally, tests will also not work in App Center Test.
 
 ## 1a. Changes to the build system for Maven users
-_See the section below for instructions if you use Gradle for your project,
-such as Android Studio builds._
+<em>See the section below for instructions if you use Gradle for your project,
+such as Android Studio builds.</em>
 ### Step 1 - Add repository and dependency
 You will need to add the JCenter repository to your `pom.xml`:
 
@@ -147,12 +147,12 @@ Insert this declaration in each of your test classes:
     public TestWatcher watcher = Factory.createWatcher();
 ```
 ### Step 3 - Update your driver declaration
-Replace your _declaration_ of `AndroidDriver<MobileElement>` with `EnhancedAndroidDriver<MobileElement>` or `IOSDriver<MobileElement>` with `EnhancedIOSDriver<MobileElement>`
+Replace your *declaration* of `AndroidDriver<MobileElement>` with `EnhancedAndroidDriver<MobileElement>` or `IOSDriver<MobileElement>` with `EnhancedIOSDriver<MobileElement>`
 ```java
     private static EnhancedAndroidDriver<MobileElement> driver;
 ```
 ### Step 4 - Update your driver instantiations
-Replace the way you _instantiate_ your driver, such that lines in the form of:
+Replace the way you *instantiate* your driver, such that lines in the form of:
 ```java
     driver = new AndroidDriver<MobileElement>(url, capabilities);
 ```
@@ -174,13 +174,13 @@ A recommended practice is to have a call to label in the `@After` method, this w
 Steps to upload a test:
 1. Generate an App Center Test upload command. [Instructions](https://github.com/King-of-Spades/AppCenter-Test-Samples#appcentertest-command-line)
 2. Pack your test classes and all dependencies into the `target/upload` folder:
-```
-mvn -DskipTests -P prepare-for-upload package
-```
+   ```
+   mvn -DskipTests -P prepare-for-upload package
+   ```
 3. Perform upload:
-```
-appcenter test run appium --app "<user/appname>" --devices "<selection>" --app-path <pathToFile.apk>  --test-series "<series>" --locale "<locale>" --build-dir target/upload 
-```
+   ```
+   appcenter test run appium --app "<user/appname>" --devices "<selection>" --app-path <pathToFile.apk>  --test-series "<series>" --locale "<locale>" --build-dir target/upload 
+   ```
 
 ## 4. Performance Troubleshooting
 Tests run on devices in the AppCenter may execute slightly slower than on a local device under certain circumstances. Normally, this is outweighed by the fact that you have many more devices available and therefore potentially able to parallelize test runs.

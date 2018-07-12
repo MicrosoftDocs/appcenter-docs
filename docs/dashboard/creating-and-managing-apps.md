@@ -45,7 +45,7 @@ To change the permission of a collaborator or admin:
 1. Select an app from the dashboard
 2. In the left side navigation, select **Settings**
 3. Select **Collaborators**
-3. Next to the name of the user you wish to change roles of, reassign the role by making a selection from the drop-down
+4. Next to the name of the user you wish to change roles of, reassign the role by making a selection from the drop-down
 
 > [!NOTE]
 > Only managers can change collaborator permissions.

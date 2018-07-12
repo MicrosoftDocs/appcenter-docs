@@ -17,14 +17,15 @@ ms.custom: test
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing_tests)
-    * [Initializing Xamarin.UITests on iOS](#initializing_tests_on_ios)
-    * [Determine the Device ID for an iOS Simulator](#get_device_id_for_ios_simulator)
-    * [Start a Particular iOS Instance](#start_simulator_by_device_id)
-    * [Reset an iOS Simulator to Factory Defaults](#reset_ios_simulator_to_factory_defaults)
+  * [Initializing Xamarin.UITests on iOS](#initializing_tests_on_ios)
+  * [Determine the Device ID for an iOS Simulator](#get_device_id_for_ios_simulator)
+  * [Start a Particular iOS Instance](#start_simulator_by_device_id)
+  * [Reset an iOS Simulator to Factory Defaults](#reset_ios_simulator_to_factory_defaults)
+
 * [Code Snippets](#code_snippets)
-    * [Querying Elements Based on Property Values](#query_elements_by_property_value)
-    * [Enable Screenshots Locally](#enable_screenshots_locally)
-    * [Invoke a Method on an AppResult or UI Element](#invoke_method_on_an_appResult_or_UIElement)
+  * [Querying Elements Based on Property Values](#query_elements_by_property_value)
+  * [Enable Screenshots Locally](#enable_screenshots_locally)
+  * [Invoke a Method on an AppResult or UI Element](#invoke_method_on_an_appResult_or_UIElement)
 
 <a name="writing_tests"></a>
 ## Writing Tests
@@ -214,5 +215,5 @@ It is possible to execute native methods on underlying views with the `AppQuery.
 ```csharp
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
-    
+
 Notice that the `Invoke` uses Java **TextView.setGravity** method and not the C# **TextView.[Gravity](http://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)** property.

@@ -25,21 +25,21 @@ Follow these steps to automate the release and promotion of app updates via Code
 
 1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for VSTS CI builds (e.g. `appcenter tokens create -d "VSTS-CI"`)
 
- > [!NOTE]
- > You can use the API key that is displayed in the App Center portal, and don't need to generate an additional token via the App Center CLI.
+   > [!NOTE]
+   > You can use the API key that is displayed in the App Center portal, and don't need to generate an additional token via the App Center CLI.
     
 2. Install the **CodePush** extension from the [VSTS Marketplace](https://marketplace.visualstudio.com/items/ms-vsclient.code-push)
 
 3. Go to your Visual Studio Team Services or TFS project, click on the **Build** tab, and create a new build definition (the "+" icon) that is hooked up to your project's appropriate source repo
 	
-	> [!NOTE]
-	> If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release defintion in order to work.
+   > [!NOTE]
+   > If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release defintion in order to work.
     
 4. Click **Add build step...** and select one of the following tasks from the **Deploy** category, depending on your app type and/or requirements:
 
-	1. **CodePush - Release (Cordova)** - Select this if you're releasing updates for a Cordova app. See the [reference docs](./cli.md#releasing-updates-cordova) for details about how it works.
+   1. **CodePush - Release (Cordova)** - Select this if you're releasing updates for a Cordova app. See the [reference docs](./cli.md#releasing-updates-cordova) for details about how it works.
 	
-	2. **CodePush - Release** - Select this if you're not releasing updates for a Cordova app or you want additional flexibility beyond what the platform-specific tasks provide you. See the [reference docs](./cli.md#releasing-updates-general) for details about how it works.
+   2. **CodePush - Release** - Select this if you're not releasing updates for a Cordova app or you want additional flexibility beyond what the platform-specific tasks provide you. See the [reference docs](./cli.md#releasing-updates-general) for details about how it works.
 
 5. Configure the release task with the access token created or retrieved in step #1, specifying your app name (e.g. `MyApp-iOS`), deployment name and all other required parameters. See the reference docs below in order to find details on each option. 
 
@@ -55,8 +55,8 @@ In addition to specifying your access token directly within each build task inst
 
 1. Generate or retrieve your access token as described above
 	
-	> [!NOTE]
-	> If you need to retrieve a previously generated access token, you can run the `appcenter token list` command and look for the token with the description you specified when initially creating it.*
+   > [!NOTE]
+   > If you need to retrieve a previously generated access token, you can run the `appcenter token list` command and look for the token with the description you specified when initially creating it.*
 
 2. Go into your Visual Studio Team Services or TFS project and click on the gear icon in the upper right corner
 
@@ -64,8 +64,8 @@ In addition to specifying your access token directly within each build task inst
 
 4. Click on **New Service Endpoint** and select **CodePush**
 
-	> [!NOTE]
-	> If you're using CodePush as part of an integration with HockeyApp, you can also select the __HockeyApp__ service endpoint type instead.*
+   > [!NOTE]
+   > If you're using CodePush as part of an integration with HockeyApp, you can also select the **HockeyApp** service endpoint type instead.*
 
 5. Give the new endpoint a name (e.g. "MyApp-iOS") and enter the access token you generated in step #1
 
@@ -79,13 +79,13 @@ In addition to specifying your access token directly within each build task inst
 
 In addition to the custom service endpoint, this extension also contributes the following build and release tasks:
 
-* [__CodePush - Release__](#codepush---release) - Allows automating the release of general-purpose content to the CodePush server. This task provides the most flexibility, but should only be used if the platform-specific tasks (e.g. Cordova) aren't appropriate for your needs.
+* [**CodePush - Release**](#codepush---release) - Allows automating the release of general-purpose content to the CodePush server. This task provides the most flexibility, but should only be used if the platform-specific tasks (e.g. Cordova) aren't appropriate for your needs.
 
-* [__CodePush - Release (Cordova)__](#codepush---release-cordova) - Allows automating the generation and release of Cordova app updates. Represents a simplified, Cordova-specific version of general-purposes release task, and is recommended for all Cordova scenarios.
+* [**CodePush - Release (Cordova)**](#codepush---release-cordova) - Allows automating the generation and release of Cordova app updates. Represents a simplified, Cordova-specific version of general-purposes release task, and is recommended for all Cordova scenarios.
 
-* [__CodePush - Patch__](#codepush---patch) - Allows automating the modification of a previously released update. This can be useful for scenarios such as increasing the rollout of a release that was originally "flighted" (e.g. to `25%` of users)  or enabling a release that was disabled by default.
+* [**CodePush - Patch**](#codepush---patch) - Allows automating the modification of a previously released update. This can be useful for scenarios such as increasing the rollout of a release that was originally "flighted" (e.g. to `25%` of users)  or enabling a release that was disabled by default.
 
-* [__CodePush - Promote__](#codepush---promote) - Allows automating the promotion of a previously released update from one deployment to another (e.g. `Staging` -> `Production`). 
+* [**CodePush - Promote**](#codepush---promote) - Allows automating the promotion of a previously released update from one deployment to another (e.g. `Staging` -> `Production`). 
 
 ### CodePush - Release
 
@@ -93,11 +93,11 @@ Allows you to release a CodePush update to the App Center server. This task beha
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the App Center server. The available options are:
 
-    1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the App Center CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
+   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the App Center CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
     
-    2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
+   2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
     
-    4. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
+   3. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
 
 2. **App Owner/App Name** *(String, Required)* - Name of the app owner and app you want to release the update for (e.g. `<ownerName>/MyApp-iOS`).
 
@@ -113,11 +113,11 @@ In addition to the basic properties, the follow options provide more advanced co
 
 1. **Rollout** *(String)* - Percentage of users this release should be immediately available to. Defaults to `100%`.
 
-6. **Description** *(String)* - Description of the changes made to the app in this release. When this task is used within a VSTS release definition, this field can be set to the `$(Release.ReleaseDescription)` variable in order to inherit the description that was given to the release.
+2. **Description** *(String)* - Description of the changes made to the app in this release. When this task is used within a VSTS release definition, this field can be set to the `$(Release.ReleaseDescription)` variable in order to inherit the description that was given to the release.
 
-2. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Defaults to `false`.
+3. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Defaults to `false`.
 
-3. **Disabled** *(Boolean)* - Specifies whether this release should be immediately downloadable. Defaults to `false`.
+4. **Disabled** *(Boolean)* - Specifies whether this release should be immediately downloadable. Defaults to `false`.
 
 ### CodePush - Release (Cordova)
 
@@ -125,11 +125,11 @@ Allows you to release Cordova app CodePush updates to the App Center server. It 
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the App Center server. The available options are:
 
-    1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the App Center CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
+   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the App Center CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
     
-    2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
+   2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
     
-    4. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
+   3. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
 
 2. **App Owner/App Name** *(String, Required)* - Name of the app you want to release the update for (e.g. `<ownerName>/MyApp-iOS`).
 
@@ -157,11 +157,11 @@ Allows you to update the metadata for a previously released update. This task be
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the CodePush server. The available options are:
 
-    1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the CodePush CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
+   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the CodePush CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
     
-    2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
+   2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
     
-    4. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
+   3. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
 
 2. **App Owner/App Name** *(String, Required)* - Name of the app that includes the release you want to update (e.g. `<ownerName>/MyApp-iOS`).
 
@@ -189,11 +189,11 @@ Allows you to promote a previously released update from one deployment to anothe
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the CodePush server. The available options are:
 
-    1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the CodePush CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
+   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the CodePush CLI, or provided to you by the App Center portal after you auto-provisioned your account and app.
     
-    2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
+   2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
     
-    4. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
+   3. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
 
 2. **App Owner/App Name** *(String, Required)* - Name of the app that has the deployments you are targeting for promotion (e.g. `<ownerName>/MyApp-iOS`).
 

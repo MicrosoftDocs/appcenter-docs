@@ -19,7 +19,6 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 #audience:
 #ms.devlang:
 #ms.reviewer: [ALIAS]
-
 ---
 
 # Test - Sample Swift App and Tutorials
@@ -29,37 +28,37 @@ XCUITests are included with the sample app. In this tutorial, you will learn to 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ### Prerequisites
- - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+- Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Install App Center Command Line Interface
 
 1. Install [Node.js](https://nodejs.org/en/) version 6.3 or later.
 2. Open the terminal and run the command below to install the App Center CLI:
 
-  ```shell
-  npm install -g appcenter-cli
-  ```
+   ```shell
+   npm install -g appcenter-cli
+   ```
 
 3. Run the command below and follow the directions to log in to App Center:
 
-  ```bash
-  appcenter login
-  ```  
+   ```bash
+   appcenter login
+   ```  
 
 ## Make the test folder
 1. Open a terminal and go to the project directory.
 
 2. Run the command below to remove the derivedDataPath if it exists:
 
-  ```bash
-  rm -rf ddp
-  ```
+   ```bash
+   rm -rf ddp
+   ```
 
 3. Run the command below to make the build folder for tests:
 
-  ```bash
-  xcrun xcodebuild build-for-testing -configuration Debug -workspace sampleapp-ios-swift.xcworkspace -sdk iphoneos -scheme sampleapp-ios-swift -derivedDataPath ddp
-  ```  
+   ```bash
+   xcrun xcodebuild build-for-testing -configuration Debug -workspace sampleapp-ios-swift.xcworkspace -sdk iphoneos -scheme sampleapp-ios-swift -derivedDataPath ddp
+   ```  
 
 ## Prepare to run tests in App Center
 
@@ -82,9 +81,9 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 3. Replace ```pathToXCUItestBuildFolder``` with the text below:
 
-  ```bash
-  ddp/Build/Products/Debug-iphoneos
-  ```
+   ```bash
+   ddp/Build/Products/Debug-iphoneos
+   ```
 
 4. Run the command. You will see the tests begin to run.
 

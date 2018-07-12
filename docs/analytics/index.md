@@ -17,6 +17,7 @@ App Center Analytics will help you understand more about your app users and thei
 
 ## Key Features
 
+
 | Scenario | Description |
 |--|--|
 | One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md) | Simple steps to integrate the SDK which will provide you out-of-the-box insights about your users.|

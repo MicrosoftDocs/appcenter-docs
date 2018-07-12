@@ -9,7 +9,7 @@ ms.author: vigimm
 ms.date: 05/23/2018
 ms.topic: article
 ms.service: vs-appcenter
-ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9 
+ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9
 ---
 
 # Add UI tests to your VSTS builds
@@ -31,7 +31,7 @@ Start by adding the App Center Test task to the build definition - read how that
 
 ![Prepare test section for the Appium framework](images/vsts-appium-prepare.png)
 
-In the Prepare Tests section, first make sure the _Prepare Tests_ checkbox is checked and that Appium is chosen under `Test Framework`. Insert the path to the Appium test-classes, dependency-jars and the `pom.xml` file into the `Build directory` field. These three artifacts is usually located in the `upload` folder.
+In the Prepare Tests section, first make sure the *Prepare Tests* checkbox is checked and that Appium is chosen under `Test Framework`. Insert the path to the Appium test-classes, dependency-jars and the `pom.xml` file into the `Build directory` field. These three artifacts is usually located in the `upload` folder.
 
 If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
 
@@ -104,7 +104,7 @@ Start by adding the App Center Test task to the build definition - read how that
 
 ![Prepare test section for the Xamarin.UITest framework](images/vsts-uitest-prepare.png)
 
-In the Prepare Tests section, first make sure the _Prepare Tests_ checkbox is checked and that _UI Test_ is chosen under `Test Framework`. Insert the path to your build directory, under most circumstances its folder path is: `<ProjectName>/bin/<configuration>`.
+In the Prepare Tests section, first make sure the *Prepare Tests* checkbox is checked and that *UI Test* is chosen under `Test Framework`. Insert the path to your build directory, under most circumstances its folder path is: `<ProjectName>/bin/<configuration>`.
 
 If everything is done correctly - preparations are done and it is time to configure the test run. All the information needed is found by creating a new test under Test in App Center. Navigate your browser to [App Center](https://appcenter.ms/) and select your app. Go to the Test service and click on `New test run` in the upper right hand side of the screen
 
@@ -145,7 +145,7 @@ Before you can start testing, the following steps are required.
 ![The general section of the VSTS task](images/vsts-general.png)
 
 First, locate your project and select "Build and release" on the projects row. Top of the screen you select "Definitions" and hover your mouse over the definitions row and click "…" which presents a context menu select "Edit." On this screen, you click "+" to add a new task and search for "App center."  On the left-hand side of the screen, you can select and modify your test task by clicking it.
-The App Center task in the build definition is divided up into sections - in the _General_ section you should insert the path to your app binary (`.apk` or `.ipa`) in the `Binary Application File Path` field.
+The App Center task in the build definition is divided up into sections - in the *General* section you should insert the path to your app binary (`.apk` or `.ipa`) in the `Binary Application File Path` field.
 
 ### Connecting to App Center Test
 
@@ -163,6 +163,6 @@ A windows appears with the token. When you click close the token will dissappear
 
 Back in VSTS, click `add` next to the App Center Connection field. Inside `name` you can insert app-center and the token into the `API token` field. Finish the setup by clicking close. Make sure your newly created connection appears in the App Center Connection field.
 
-The second method is using your log-in credentials. When selecting _Credentials_ from the `Authentication Method`  dropdown menu two new fields appear. `App Center Username` and `App Center Password` insert the your username and password in the aptly named fields. 
+The second method is using your log-in credentials. When selecting *Credentials* from the `Authentication Method`  dropdown menu two new fields appear. `App Center Username` and `App Center Password` insert the your username and password in the aptly named fields. 
 
 You can find your [username here](https://appcenter.ms/settings/profile). There is a limitation while logging in using your Microsoft credentials, where you might need to create a specific password for App Center. You can set a [new password here](https://appcenter.ms/settings/password).

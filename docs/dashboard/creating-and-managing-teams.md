@@ -69,7 +69,7 @@ There are two ways to remove a team from an app:
 1. In the dashboard, select the app you wish to add a team to
 2. In the left navigation, select **Settings** 
 3. Select **Collaborators**.
-3. Hover your cursor to the app you want to remove and click on the delete icon on the right
+4. Hover your cursor to the app you want to remove and click on the delete icon on the right
 
 ## Changing Permissions
 

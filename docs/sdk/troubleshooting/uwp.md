@@ -14,7 +14,7 @@ ms.tgt_pltfrm: uwp
 
 # UWP SDK Troubleshooting
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -29,9 +29,9 @@ ms.tgt_pltfrm: uwp
 3. In the console, look for an Assert log with the message - "App Center SDK configured successfully". This verifies that the SDK is configured successfully and your logs will be forwarded.
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
-  ```csharp
-  AppCenter.LogLevel = LogLevel.Verbose;
-  ```
+   ```csharp
+   AppCenter.LogLevel = LogLevel.Verbose;
+   ```
 
 5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.

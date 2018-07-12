@@ -13,7 +13,6 @@ ms.assetid: 42f54f33-d032-4d1b-a81a-72978c146bfe
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
-
 ---
 
 # Build - Sample Swift App and Tutorials
@@ -41,9 +40,9 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
 
-  ![Signing Builds](images/Signing_builds_macOS.png)  
+   ![Signing Builds](images/Signing_builds_macOS.png)  
 
-  **If your build fails because of a codesigning error:** double check that all your changes have been pushed to the remote repository.
+   **If your build fails because of a codesigning error:** double check that all your changes have been pushed to the remote repository.
 
 4. Click **Save** at the bottom of the page, and the build will begin.
 

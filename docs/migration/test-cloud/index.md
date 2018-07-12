@@ -17,25 +17,25 @@ Microsoft will seamlessly upgrade active Xamarin Test Cloud subscriptions to [Vi
 ### Timeline
 
 * March 31st, 2018 
-    1. Existing Teams, Orgs, Apps, and previous test reports imported into App Center. 
-    2. All test results uploaded via Xamarin Test Cloud CLIs will automatically route into the user's App Center account.
-    3. The [Xamarin Test Cloud](http://testcloud.xamarin.com) portal will redirect to [Visual Studio App Center](http://appcenter.ms).
+  1. Existing Teams, Orgs, Apps, and previous test reports imported into App Center. 
+  2. All test results uploaded via Xamarin Test Cloud CLIs will automatically route into the user's App Center account.
+  3. The [Xamarin Test Cloud](http://testcloud.xamarin.com) portal will redirect to [Visual Studio App Center](http://appcenter.ms).
 
 * April 31st, 2018
-    1. Xamarin Test Cloud CLIs deprecated, everyone must use the [App Center CLI](https://github.com/Microsoft/appcenter-cli) to continue uploading.
+  1. Xamarin Test Cloud CLIs deprecated, everyone must use the [App Center CLI](https://github.com/Microsoft/appcenter-cli) to continue uploading.
 
 ### Next steps
 
 Users must log into app center with the same email address they used in Xamarin Test Cloud to benefit from the import. If a user doesn't have an App Center account, one will be created and user will need to set a password for the account.
 
 * **If you do not have an App Center account**
-    * [Create and App Center account](http://appcenter.ms/), use the same email address you used in Xamarin Test Cloud.
-    *  If you do not wish to try App Center before March 31st, you can simply wait until that day and we'll create the account and import your data for you.
-    *  We'll send an email to the Xamarin Test Cloud account inviting you to complete your App Center account setup.
+  * [Create and App Center account](http://appcenter.ms/), use the same email address you used in Xamarin Test Cloud.
+  * If you do not wish to try App Center before March 31st, you can simply wait until that day and we'll create the account and import your data for you.
+  * We'll send an email to the Xamarin Test Cloud account inviting you to complete your App Center account setup.
 
 * **If you already have an App Center account (email matches Xamarin Test Cloud)**
-	* All of your existing data from the Xamarin Test Cloud will import into your new App Center account.
-    * We'll send an email to the Xamarin Test Cloud account inviting you to log into your App Center account.
+  * All of your existing data from the Xamarin Test Cloud will import into your new App Center account.
+  * We'll send an email to the Xamarin Test Cloud account inviting you to log into your App Center account.
 	
 ### FAQ
 
@@ -49,7 +49,7 @@ To install the App Center CLI, open a terminal window or command prompt,and exec
 npm install -g appcenter-cli
 ```
 
-Read more about the [App Center CLI]((https://github.com/Microsoft/appcenter-cli) and how to use it to upload to App Center.
+Read more about the [App Center CLI]((<https://github.com/Microsoft/appcenter-cli>) and how to use it to upload to App Center.
 
 **Q:** Is the team that built App Center Test different than Xamarin Test Cloud? 
 

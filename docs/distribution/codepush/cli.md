@@ -101,7 +101,7 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 
 > [!NOTE]
 > Using the same app for iOS and Android may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
-
+> 
 > [!TIP]
 > One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
 
@@ -151,17 +151,17 @@ If you will be working with other developers on the same CodePush app, you can a
 Once added, all collaborators will immediately have the following permissions in the shared app:
 
 1. View the app, its collaborators, [deployments](#deployment-management) and [release history](#viewing-release-history)
-1. [Release](#releasing-app-updates) updates to any of the app's deployments
-1. [Promote](#promoting-updates) an update between any of the app's deployments
-1. [Rollback](#rolling-back-updates) any of the app's deployments
-1. [Patch](#patching-update-metadata) any releases within any of the app's deployments
+2. [Release](#releasing-app-updates) updates to any of the app's deployments
+3. [Promote](#promoting-updates) an update between any of the app's deployments
+4. [Rollback](#rolling-back-updates) any of the app's deployments
+5. [Patch](#patching-update-metadata) any releases within any of the app's deployments
 
 Collaborators cannot do any of the following:
 
 1. Rename or delete the app
-1. Create, rename or delete new deployments within the app
-1. Clear a deployment's release history
-1. Add or remove collaborators from the app (*)
+2. Create, rename or delete new deployments within the app
+3. Clear a deployment's release history
+4. Add or remove collaborators from the app (*)
 
 > [!NOTE]
 > A developer can remove him/herself as a collaborator from an app that was shared with them.
@@ -258,11 +258,12 @@ This specifies the location of the updated app code and assets you want to relea
 
 It's important that the path you specify refers to the platform-specific, prepared/bundled version of your app. The following table outlines which command you should run before releasing, as well as the location you can subsequently refer to using the `updateContentsPath` parameter:
 
+
 | Platform                         | Prepare command                                                                                                                                            | Package path (relative to project root)                                                                     |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Cordova (Android)                | `cordova prepare android`                                                                                                                                  | `./platforms/android/assets/www` directory 																 |
-| Cordova (iOS)                    | `cordova prepare ios`                                                                                                                                      | `./platforms/ios/www ` directory          															|
-| React Native wo/assets (Android) | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`                                               | Value of the `--bundle-output` option      																 |
+| Cordova (Android)                | `cordova prepare android`                                                                                                                                  | `./platforms/android/assets/www` directory                                                                 |
+| Cordova (iOS)                    | `cordova prepare ios`                                                                                                                                      | `./platforms/ios/www ` directory                                                                      |
+| React Native wo/assets (Android) | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`                                               | Value of the `--bundle-output` option                                                                      |
 | React Native w/assets (Android)  | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <releaseFolder>/<bundleOutput> --assets-dest <releaseFolder> --dev false` | Value of the `--assets-dest` option, which should represent a newly created directory that includes your assets and JS bundle |
 | React Native wo/assets (iOS)     | `react-native bundle --platform ios --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`                                                   | Value of the `--bundle-output` option                                                                 |
 | React Native w/assets (iOS)      | `react-native bundle --platform ios --entry-file <entryFile> --bundle-output <releaseFolder>/<bundleOutput> --assets-dest <releaseFolder> --dev false` | Value of the `--assets-dest` option, which should represent a newly created directory that includes your assets and JS bundle |
@@ -277,6 +278,7 @@ This specifies the store/binary version of the application you are releasing the
 
 If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a [semver range expression](https://github.com/npm/node-semver#advanced-range-syntax). That way, any client device running a version of the binary that satisfies the range expression (i.e. `semver.satisfies(version, range)` returns `true`) will get the update. Examples of valid semver range expressions are as follows:
 
+
 | Range Expression | Who gets the update                                                                    |
 |------------------|----------------------------------------------------------------------------------------|
 | `1.2.3`          | Only devices running the specific binary app store version `1.2.3` of your app         |
@@ -289,9 +291,10 @@ If you ever want an update to target multiple versions of the app store binary, 
 
 > [!NOTE]
 > If your semver expression starts with a special shell character or operator such as `>`, `^`, or **
-*, the command may not execute correctly if you do not wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it is best to wrap your `targetBinaryVersion` parameter in double quotes when calling the `release` command, e.g. `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
+> *, the command may not execute correctly if you do not wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it is best to wrap your `targetBinaryVersion` parameter in double quotes when calling the `release` command, e.g. `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
 
 The following table outlines the version value that CodePush expects your update's semver range to satisfy for each respective app type:
+
 
 | Platform               | Source of app store version                                                  |
 |------------------------|------------------------------------------------------------------------------|
@@ -332,6 +335,7 @@ This specifies whether the update should be considered mandatory or not (e.g. it
 > This parameter is simply a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (e.g. `--mandatory true`), however, simply specifying `--mandatory` is sufficient for marking a release as mandatory.*
 
 The mandatory attribute is unique because the server will dynamically modify it as necessary in order to ensure that the semantics of your releases are maintained for your end-users. For example, imagine that you released the following three updates to your app:
+
 
 | Release | Mandatory? |
 |---------|------------|
@@ -734,6 +738,7 @@ appcenter codepush rollback -a <ownerName>/MyApp-iOS Production
 
 This has the effect of creating a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. For example, imagine that you released the following updates to your app:
 
+
 | Release | Description       | Mandatory |
 |---------|-------------------|-----------|
 | v1      | Initial release!  | Yes       |
@@ -741,6 +746,7 @@ This has the effect of creating a new release for the deployment that includes t
 | v3      | Bug fixes         | Yes       |
 
 If you ran the `rollback` command on that deployment, a new release (`v4`) would be created that included the contents of the `v2` release.
+
 
 | Release                     | Description       | Mandatory |
 |-----------------------------|-------------------|-----------|

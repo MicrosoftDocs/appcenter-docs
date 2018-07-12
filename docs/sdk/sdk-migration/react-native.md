@@ -13,7 +13,7 @@ ms.custom: sdk
 
 # Migrate to App Center React Native SDK v1.0.0
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -48,7 +48,7 @@ Follow these steps to update your current preview SDK to App Center React Native
     pod 'MobileCenter/Push'
     ```
 
-5. [iOS] Remove the old import statements and `register` method calls for Mobile Center in **AppDelegate.m**:
+4. [iOS] Remove the old import statements and `register` method calls for Mobile Center in **AppDelegate.m**:
 
     ```obj-c
     #import <RNMobileCenter/RNMobileCenter.h>
@@ -62,7 +62,7 @@ Follow these steps to update your current preview SDK to App Center React Native
     [RNPush register];
     ```
 
-6. [iOS optional] If you use native iOS Mobile Center `setLogLevel` API to adjust log level, you will need to replace the method call from `MSMobileCenter` to `MSAppCenter`:
+5. [iOS optional] If you use native iOS Mobile Center `setLogLevel` API to adjust log level, you will need to replace the method call from `MSMobileCenter` to `MSAppCenter`:
 
     ```obj-c
     @import MobileCenter;
@@ -78,7 +78,7 @@ Follow these steps to update your current preview SDK to App Center React Native
     [MSAppCenter setLogLevel: MSLogLevelVerbose];
     ```
 
-7. [Android] Remove the old import statements for Mobile Center in **MainApplication.java**:
+6. [Android] Remove the old import statements for Mobile Center in **MainApplication.java**:
 
     ```java
     import com.microsoft.azure.mobile.react.mobilecenter.RNMobileCenterPackage;
@@ -87,7 +87,7 @@ Follow these steps to update your current preview SDK to App Center React Native
     import com.microsoft.azure.mobile.react.analytics.RNAnalyticsPackage;
     ```
 
-8. [Android] Remove the initialization call in `@Override protected List<ReactPackage> getPackages` method in **MainApplication.java**:
+7. [Android] Remove the initialization call in `@Override protected List<ReactPackage> getPackages` method in **MainApplication.java**:
 
     ```java
     new RNPushPackage(MainApplication.this),

@@ -96,6 +96,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - xctool 0.3.4
 
 ### Installed SDKs
+
 | SDK                       | SDK name    |
 |---------------------------|-------------|
 | macOS 10.12               | macosx10.12 |
@@ -194,6 +195,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 3 - 42mm
 
 #### Runtimes
+
 | OS      | Version |
 |---------|---------|
 | iOS 8.4 | 12H141 |
@@ -341,6 +343,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Device Pairs
 
+
 | Watch                       | Phone          |
 |-----------------------------|----------------|
 | Apple Watch - 38mm          | iPhone 6s      |
@@ -354,17 +357,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android SDK Tools
 
+
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | tools                 | Android SDK Tools, revision 26.1.1          |
 
 ### Android SDK Platform-tools
 
+
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | platform-tools        | Android SDK Platform-tools, revision 28.0.0 |
 
 ### Android SDK Platforms
+
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -384,6 +390,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android SDK Build-tools
 
+
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | build-tools-19.1.0    | Android SDK Build-tools, Revision 19.1.0  |
@@ -400,16 +407,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
-| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
-| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
-| build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
-| build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
+| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
+| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
+| build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
+| build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
 | build-tools-27.0.0    | Android SDK Build-tools, Revision 27.0.0  |
 | build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
 | build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
 | build-tools-27.0.3    | Android SDK Build-tools, Revision 27.0.3  |
 
 ### Utils
+
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -421,6 +429,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Google APIs
 
+
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | google_apis-google-21 | Google APIs, Android API 21, revision 1   |
@@ -429,6 +438,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | google_apis-google-24 | Google APIs, Android API 24, revision 1   |
 
 ### Extra packages
+
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|

@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin
 
 # Get Started with Xamarin
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -148,7 +148,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 
 > [!IMPORTANT]
 > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
-
+> 
 > [!NOTE]
 > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 

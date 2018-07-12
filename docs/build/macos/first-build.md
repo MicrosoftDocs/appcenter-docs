@@ -40,7 +40,7 @@ Before your first build, the Mac project needs to be configured.
 For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. App Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
 
-![Mark scheme as shared][xcode-share-scheme]
+![Mark scheme as shared](images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
 ### 3.2. Xcode version
 

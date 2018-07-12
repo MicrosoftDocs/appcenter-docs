@@ -13,7 +13,6 @@ ms.assetid: 00d04bcd-b0a1-408c-a84c-2afd2992c792
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
-
 ---
 
 # Crashes - Sample Swift App and Tutorials
@@ -45,7 +44,7 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 
 3. Press the **Stop** icon to stop running the app.
 
-5. Reopen the app by clicking on its icon in the dock.  
+4. Reopen the app by clicking on its icon in the dock.  
 
 ## Crashing the sample app
 1. Navigate to the **Crashes** page. Click the **Send a sample crash** button to crash the app.

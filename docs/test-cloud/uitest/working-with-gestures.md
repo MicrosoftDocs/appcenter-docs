@@ -54,6 +54,7 @@ app.ScrollDown("save_button")
 `IApp.Scroll*` accepts a second optional parameter that will describe how UITest should simulate scrolling. The possible choices are encapsulated in the `ScrollStrategy` enum:
 
 
+
 | Value  | Description |
 |---|---|
 | `ScrollStrategy.Auto`  | This is the default value. UITest will use either `Programmatically` or `Gesture` when trying to scroll. It is biased towards `Programmatically`. |
