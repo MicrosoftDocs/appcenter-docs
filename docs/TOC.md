@@ -111,6 +111,7 @@
 # [Push](push/index.md)
 ## [Audiences](push/audiences.md)
 ## [API](push/pushapi.md)
+## [FAQ](push/faq.md)
 
 
 # [SDK](sdk/index.md)
