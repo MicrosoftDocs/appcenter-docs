@@ -4,7 +4,7 @@ description: How to upload Espresso tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 01/20/2017
+ms.date: 07/16/2018
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
 ms.service: vs-appcenter
@@ -30,7 +30,7 @@ allprojects {
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.2')
+androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.3')
 ```
 
 Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
