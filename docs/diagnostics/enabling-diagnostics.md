@@ -17,7 +17,7 @@ ms.custom: analytics
 
 To enable App Center’s diagnostics for your app, make sure you have the App Center SDK integrated for your app. Learn more about App Center’s SDKs and how to add it to your app projects in the [SDK documentation](~/sdk/index.md).
 
-Learn how to generate a test crash, get more information about a previous crash, and customize your usage of App Center crashes for your [Android](~/sdk/crashes/android.md), [iOS](~/sdk/crashes/ios.md), [macOS](~/sdk/crashes/macos.md), [UWP](~/sdk/crashes/uwp.md), [React Native](~/sdk/crashes/react-native), [Xamarin](~/sdk/crashes/xamarin.md), and [Apache Cordova](~/sdk/crashes/cordova.md) apps.  
+Learn how to generate a test crash, get more information about a previous crash, and customize your usage of App Center crashes for your [Android](~/sdk/crashes/android.md), [iOS](~/sdk/crashes/ios.md), [macOS](~/sdk/crashes/macos.md), [UWP](~/sdk/crashes/uwp.md), [React Native](~/sdk/crashes/react-native.md), [Xamarin](~/sdk/crashes/xamarin.md), and [Apache Cordova](~/sdk/crashes/cordova.md) apps.  
 
 ## Next steps
 

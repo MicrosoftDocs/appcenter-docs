@@ -34,7 +34,7 @@ App Center Diagnostics groups crashes by similarities, for example the reason fo
 
 In the App Center Diagnostics UI, you can attach, view and download one binary and one text attachment to your crash reports.
 
-You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android#add-attachments-to-a-crash-report.md), [iOS](~/sdk/crashes/ios#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos#add-attachments-to-a-crash-report.md), [React Native](~/sdk/crashes/react-native#add-attachments-to-a-crash-report.md), [Xamarin](~/sdk/crashes/xamarin#add-attachments-to-a-crash-report.md), and [Apache Cordova](~/sdk/crashes/cordova#add-attachments-to-a-crash-report.md) apps.
+You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report), and [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report) apps.
 
 To view and download the attachments, select a crash group, a specific device report and then click on the attachments tab.
 
@@ -112,8 +112,8 @@ Stay on top of your crashes by configuring your App Center app definition settin
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
-You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications.md).  
+You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md).  
 
 ## Create a Bug Tracker
 
-You can integrate third party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker.md) to learn how to get started.  
+You can integrate third party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.  
