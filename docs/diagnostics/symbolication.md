@@ -1,0 +1,38 @@
+---
+title: Using the Diagnostics UI
+description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
+keywords: crashes, errors, iOS, MacOS, symbols, symbolication
+author: winnieli1208
+ms.author: yuli1
+ms.date: 07/02/2018
+ms.topic: article
+ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
+ms.service: vs-appcenter
+ms.custom: analytics 
+---
+
+# Symbolication
+
+## Overview
+
+MacOS and iOS crash reports show the stack traces for all running threads of your app of the time a crash is occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names and line numbers that are needed to read and understand the crashes.
+
+To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required to make this happen.  You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
+
+### To find the `.dSYM` bundle
+
+1. In Xcode, chose Window > Organizer
+2. Select the Archives tab
+3. Select your app in the left sidebar
+4. Right-click on the latest archive and select Show in Finder
+5. Right-click the `.xcarchive` file in Finder and select Show Package Contents
+6. You should see a folder named `dSYMs` which contains your dSYM bundle
+
+### To upload symbols
+
+1. Create a ZIP file for the dSYM package on your Mac
+2. Log into App Center and select your app
+3. In the left menu, navigate to the Diagnostics section
+4. Select Symbols
+5. In the top right corner, click Upload symbols and upload the zip file
+6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
