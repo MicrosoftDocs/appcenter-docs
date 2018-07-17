@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/10/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ ms.tgt_pltfrm: android
 > * [Cordova iOS](cordova-ios.md)
 > 
 > [!NOTE]
-> If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/android.md).
+> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [migration guide](migration/android.md).
 
 [!include[](introduction-android.md)]
 
@@ -40,32 +40,60 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating the Push module, add the following lines:
+1. Modify the **project root** level **build.gradle** file:
 
     ```groovy
-    dependencies {
-       def appCenterSdkVersion = '1.6.1'
-       implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
+    buildscript {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
+
+        dependencies {
+            // Add this line
+            classpath 'com.google.gms:google-services:4.0.1'
+        }
+    }
+
+    allprojects {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
     }
     ```
 
-   > [!NOTE]
-   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+2. Modify the **app** level **build.gradle** file:
 
-2. Make sure to trigger a Gradle sync in Android Studio.
+    ```groovy
+    dependencies {
+        // Add App Center Push module dependency
+        def appCenterSdkVersion = '1.7.0'
+        implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
+    }
+
+    // Add this line at the bottom
+    apply plugin: 'com.google.gms.google-services'
+    ```
+    
+    > [!NOTE]
+    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+
+3. Make sure to trigger a Gradle sync in Android Studio.
 
 ### 2. Start App Center Push
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `AppCenter.start()` method to start App Center Push service. You must set the **Sender ID** before calling `AppCenter.start()`.
+Add `Push.class` to your `AppCenter.start()` method to start App Center Push service.
 
 ```java
-Push.setSenderId("{Your Sender ID}");
 AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
 Android Studio will automatically suggest the required import statement once you add `Push.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
