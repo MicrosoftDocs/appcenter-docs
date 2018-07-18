@@ -55,8 +55,8 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
       def appCenterSdkVersion = '1.7.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-	}
-	```
+  }
+  ```
 
   > [!NOTE]
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
