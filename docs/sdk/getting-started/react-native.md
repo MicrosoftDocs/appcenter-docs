@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 07/05/2018
+ms.date: 07/17/2018
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -33,6 +33,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * You are using a React Native project that runs React Native 0.34 or later.
 * You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 9.0 or later.
+* You are not using any other library that provides Crash Reporting functionality on iOS.
 * For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, please follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
