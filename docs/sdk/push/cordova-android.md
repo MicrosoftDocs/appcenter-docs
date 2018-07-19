@@ -2,9 +2,9 @@
 title: App Center Push for Apache Cordova Android
 description: Using Push in App Center
 keywords: sdk, push
-author: ruslan-bikkinin
-ms.author: v-rubikk
-ms.date: 05/17/2018
+author: elamalani
+ms.author: emalani
+ms.date: 07/06/2018
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311
 ms.service: vs-appcenter
@@ -26,6 +26,9 @@ ms.tgt_pltfrm: cordova
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
 
+> [!NOTE]
+> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [migration guide](migration/cordova-android.md).
+
 App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 Note that only devices having the [Google Play](https://play.google.com/) store application or emulators with Google APIs images can receive the notifications.
@@ -35,13 +38,16 @@ Note that only devices having the [Google Play](https://play.google.com/) store 
 
 ## Prerequisites
 
-### 1. Connect your app to Firebase
+### 1. Set up Firebase Cloud Messaging
 
-Before using App Center Push service, you need to connect your application to Firebase. Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites).
+- Create a project on the [Firebase Console](https://console.firebase.google.com).
+- Click on the Android logo to create an application matching your package name.
+- Go to **Project Settings** and download the **google-services.json** file.
+- Copy this file to the root of your project.
 
-### 2. Obtain your Android API Key and Sender ID
+### 2. Obtain your Android API Key
 
-In the [Firebase Console](https://console.firebase.google.com/), go to **Project Settings**. Navigate to the **Cloud Messaging** tab. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal. Also make a note of the **Sender ID**, as you will need it later.
+In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. Navigate to the **Cloud Messaging** tab. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.
 
 ## Add App Center Push to your app
 
@@ -53,20 +59,18 @@ To add App Center Push to your app open a Terminal and navigate to the root of y
 cordova plugin add cordova-plugin-appcenter-push
 ```
 
-## Set the Sender ID
-
-App Center Push SDK requires the **Sender ID** obtained in the "Prerequisites" section. Add following preference to `android` platform in your `config.xml`:
-
-```js
-<preference name="FIREBASE_SENDER_ID" value="'{Your Sender ID}'" />
-```
-
-Make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. 
-
-> [!NOTE]
-> It is important to surround `{Your Sender ID}` with single quotes because there is a [bug](https://issuetracker.google.com/issues/37009529) in android platform that leads to incorrect interpretation of numerical strings (such format Firebase uses for **Sender ID**). Otherwise, your push notifications may not be working.
-
 Please check out the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet.
+
+## Edit config.xml
+
+Open the Apache Cordova project's `config.xml` file, and add **google-services.json** as resource-file inside platform android:
+
+```xml
+<platform name="android">
+    <!-- Add this line -->
+    <resource-file src="google-services.json" target="app/google-services.json" />
+</platform>
+```
 
 ## Intercept push notifications
 
