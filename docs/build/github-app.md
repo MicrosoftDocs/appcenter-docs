@@ -4,7 +4,7 @@ description: How to use the App Center GitHub App
 keywords: build, ios, android, github
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 05/18/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.assetid: 7868b0c8-bbe7-49e3-a059-0630f4d54a6d
 ms.service: vs-appcenter
@@ -40,7 +40,12 @@ Opening a pull request on GitHub will start an App Center build, copying the bui
 > When opening a pull request on an unconfigured branch, the Checks tab will show that there is **Action Required**. Click the **Resolve** link to configure the branch.
 
 ## Connecting a New Repository
-Once you install the GitHub app, App Center sends a welcome email. Connect a new repository via the GitHub app by clicking the **Connect your repository** button in the email and repeat the process to create a new connection.
+Add a new app by adding repository access to your GitHub app installation. [Configure your GitHub app installation](https://github.com/settings/installations) and select the new repository to grant access to and connect. After clicking **Save** you will be redirected to App Center to configure your new app.
+
+> [!NOTE]
+> The best way to take advantage of this is to choose access for **Only select repositories** and add each repository as you want to configure it.
+
+Additionally after you install the GitHub app, App Center sends a welcome email. Connect a new repository via the GitHub app by clicking the **Connect your repository** button in the email and repeat the process to create a new connection.
 
 ## Connecting Existing Apps
 Existing App Center apps connected to GitHub without onboarding with the steps above cannot currently report back build status to GitHub. Create a new app via the email link to take advantage of this feature.
