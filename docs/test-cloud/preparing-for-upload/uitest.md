@@ -55,11 +55,11 @@ Instructions for [installing the App Center CLI](https://github.com/Microsoft/Ap
 To prepare a Xamarin.Android app and UITest for submission to App Center for Test:
 
 1. Ensure that the app requests the `INTERNET` permission.
-2. Disable the **Shared Mono Runtime**. The Shared Mono Runtime will prevent UITests from running in App Center for Test.
+2. Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent UITests from running in App Center for Test.
 
-    In Visual Studio 2017, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck **Shared Mono Runtime**.
+    In Visual Studio 2017, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck the **Use Shared Runtime** checkbox.
 
-    In Visual Studio for Mac, Open **Build > Android Build** then select **Project Options**. On the **General** tab, look for **Packaging and Deployment** and uncheck the **Shared Mono Runtime** checkbox.
+    In Visual Studio for Mac, Open **Build > Android Build** then select **Project Options**. On the **General** tab, look for **Packaging and Deployment** and uncheck the **Use Shared Mono Runtime** checkbox.
 
 ## Preparing Xamarin.iOS Apps
 
