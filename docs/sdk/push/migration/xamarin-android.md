@@ -1,10 +1,10 @@
 ---
-title: How to remove Firebase SDK
-description: How to remove Firebase SDK
+title: How to add Firebase SDK
+description: Contains instructions for how to configure your project to use Firebase Cloud Messaging
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/22/2017
+ms.date: 07/05/2018
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498
 ms.service: vs-appcenter
@@ -14,43 +14,41 @@ ms.tgt_pltfrm: android
 
 [!include[](introduction-android.md)]
 
-## 1. NuGet dependencies
+## 1. Mono version
 
-If you are not using Firebase, you can uninstall the following packages:
+If your Android project does not target Mono framework version 8.1 or higher, you will not be able to update the Push package.
 
-* Xamarin.Firebase.Analytics
-* Xamarin.Firebase.Analytics.Impl
-* Xamarin.Firebase.Common
-* Xamarin.Firebase.Core
-* Xamarin.Firebase.Iid
-* Xamarin.Firebase.Messaging
-* Xamarin.GooglePlayServices.Basement
-* Xamarin.GooglePlayServices.Tasks
+You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
+
+If you are using App Center Build, you must make sure Mono version is 5.8 or higher (in **Build Config > Build app > More options**).
 
 ## 2. AndroidManifest.xml
 
-If you have removed the **Xamarin.Firebase** packages, you need to modify your
-**AndroidManifest.xml** file.
-
-Remove the following lines:
+Edit the project's **AndroidManifest.xml** file, then insert the following lines **inside** the <application> section:
 
 ```xml
-<receiver 
-    android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" 
-    android:exported="false" />
-<receiver 
-    android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" 
-    android:exported="true" 
-    android:permission="com.google.android.c2dm.permission.SEND">
-    <intent-filter>
-        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-        <category android:name="${applicationId}" />
-    </intent-filter>
-</receiver>
+<application ...>
+    
+    <!-- Add these lines -->
+    <receiver
+        android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+        android:exported="false" />
+    <receiver
+        android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+        android:exported="true"
+        android:permission="com.google.android.c2dm.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            <category android:name="${applicationId}" />
+        </intent-filter>
+    </receiver>
+    <!-- end of section to add -->
+
+</application>
 ```
 
-Then add the following lines **before** the `<application>` section:
+Remove the following lines from the project's **AndroidManifest.xml** file:
 
 ```xml
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
@@ -59,42 +57,28 @@ Then add the following lines **before** the `<application>` section:
 
 ## 3. google-services.json
 
-If you are not using Firebase, you can also remove the **google-services.json**
-file by using the following steps.
-
-### 3.1. Get your Sender ID
-
-In the [Firebase Console](https://console.firebase.google.com),
-go to **Project Settings**.
-Navigate to the **Cloud Messaging** tab. Copy the **Sender ID** value.
-
-### 3.2. Set Sender ID
-
-If you are using **Xamarin.Android**, you need to set the **Sender ID**
-in the code before the **AppCenter.Start** call as follows:
-
-```csharp
-Push.SetSenderId("{SenderId}");
-AppCenter.Start("{appSecret}", typeof(Push));
-```
-
-If you are using **Xamarin.Forms**, you need to set the **Sender ID** in your
-**MainActivity.cs** file, in the `OnCreate` method, before the `LoadApplication` call:
-
-```csharp
-Push.SetSenderId("{SenderId}");
-LoadApplication(new App());
-```
-
-### 3.3. Remove google-services.json
-
-You can now remove **google-services.json** file.
+* Go to the [Firebase console](https://console.firebase.google.com/).
+* Click on the project corresponding to your application.
+* Go to **Project settings** (using the cog icon).
+* Find your application in the list.
+* Download the **google-services.json** file.
+* Copy **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
+* Close and reopen your solution. 
+* The next step depends if you are on Mac or Windows:
+    * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.
+    * On Visual Studio for Windows, select the **google-services.json** file in the Solution explorer. In **Properties > Advanced > Build Action**, select **GoogleServicesJson**.
 
 ## 4. ProGuard
 
-If you are using ProGuard, you need to update the rules in the **proguard.cfg** file.
+If you are using ProGuard, you must update the rules in the **proguard.cfg** file.
 
-Remove the following lines:
+Remove the following line:
+
+```
+-dontwarn com.microsoft.appcenter.push.**
+```
+
+And add the following lines:
 
 ```
 -dontwarn com.google.android.gms.**
@@ -102,10 +86,4 @@ Remove the following lines:
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver
 -keep class com.microsoft.appcenter.push.TokenService
 -keep class com.microsoft.appcenter.push.PushMessagingService
-```
-
-And just add this line instead:
-
-```
--dontwarn com.microsoft.appcenter.push.**
 ```
