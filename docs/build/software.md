@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 06/20/2018
+ms.date: 07/20/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -34,17 +34,19 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Node.js 6.14.3
 - PowerShell 6.0.2
 - Python 2.7.10
-- Python 3.6.5
+- Python 3.7.0
 - Ruby 2.5.1p57
-- .NET Core SDK 1.0.4, 2.0.3
+- .NET Core SDK 1.0.1, 1.0.4, 1.1.4, 1.1.5, 1.1.7, 1.1.8, 1.1.9, 2.0.0, 2.0.3,
+2.1.100, 2.1.101, 2.1.102, 2.1.103, 2.1.104, 2.1.105, 2.1.2, 2.1.200, 2.1.201, 2.1.300, 2.1.301, 2.1.4
 - Go 1.10.3
+- Miniconda 4.5.4
 
 ### Package Management
 
 - Bundler 1.16.1
-- Carthage 0.29.0
+- Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.6.8
+- Homebrew 1.6.9
 - NPM 3.10.10
 - Yarn 1.7.0
 - NuGet 4.3.0.4406
@@ -52,22 +54,22 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Project Management
 
-- Apache Maven 3.5.3
-- Gradle 4.8
+- Apache Maven 3.5.4
+- Gradle 4.8.1
 
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.17.1
+- Git 2.18.0
 - Git LFS 2.4.2
 - GNU Wget 1.19.5
 - Subversion (SVN) 1.10.0
 
 ### Tools
 
-- fastlane 2.97.0
-- App Center CLI 1.0.17
-- Azure-CLI 2.0.37
+- fastlane 2.99.0
+- App Center CLI 1.1.0
+- Azure-CLI 2.0.41
 
 ## Xcode
 
