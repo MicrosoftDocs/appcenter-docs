@@ -36,26 +36,26 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-#### Visual Studio for Mac or Xamarin Studio
+#### Visual Studio for Mac
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
 * Search for **App Center**, and select **App Center Distribute**.
 * Click **Add Packages**.
 
-#### Visual Studio for Windows
+#### Visual Studio on Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
 * Search for **App Center**, then install **Microsoft.AppCenter.Distribute**.
 
 #### Package Manager Console
 
-* Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
+* Make sure the Package Manager Console is opened in either Visual Studio 2017 or Visual Studio for Mac (you will have to install an add-in for Visual Studio for Mac). Type the following command:
 
   `PM> Install-Package Microsoft.AppCenter.Distribute`
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable, Android and iOS ones.
+> in each of the projects: the portable, Android, and iOS ones.
 
 ### 2. Start App Center Distribute
 

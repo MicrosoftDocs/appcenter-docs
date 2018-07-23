@@ -1,10 +1,10 @@
-#### Visual Studio for Mac or Xamarin Studio
+#### Visual Studio for Mac
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
 * Search for **App Center**, and select **App Center Push**.
 * Click **Add Packages**.
 
-#### Visual Studio for Windows
+#### Visual Studio on Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
 * Search for **App Center**, then install **Microsoft.AppCenter.Push**.

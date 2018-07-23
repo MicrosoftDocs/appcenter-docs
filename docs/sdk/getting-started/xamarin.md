@@ -31,7 +31,7 @@ Let's get started with setting up App Center Xamarin SDK in your app to use App 
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is set up in Xamarin Studio or Xamarin for Visual Studio.
+* Your project is set up in Visual Studio 2017 or Visual Studio for Mac.
 * You are targeting devices running iOS 9.0 or later or Android 4.0.3 (API level 15) or later
 * You are not using any other SDK that provides Crash Reporting functionality.
 
@@ -39,7 +39,7 @@ The App Center SDK for Xamarin supports the following platforms:
 
 * Xamarin.Android
 * Xamarin.iOS
-* Xamarin.Forms (iOS, Android and UWP)
+* Xamarin.Forms (iOS, Android, and UWP)
 
 ### 1.1 About Xamarin.Android
 
@@ -49,7 +49,7 @@ Choose this option if you target no other platform but Android. You need to crea
 
 Choose this option if you target no other platform but iOS. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-### 1.3 About Xamarin.Forms (iOS, Android and UWP)
+### 1.3 About Xamarin.Forms (iOS, Android, and UWP)
 
 Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in App Center – one for each OS.
 
@@ -69,22 +69,22 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 ## 3. Add the App Center SDK to your solution
 
-The App Center SDK can be integrated using Xamarin Studio, Visual Studio, or the Package Manager Console.
+The App Center SDK can be integrated using Visual Studio 2017, Visual Studio for Mac, or the Package Manager Console.
 
-### Visual Studio for Mac or Xamarin Studio
+### Visual Studio for Mac
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
 * Search for **App Center**, and select **App Center Analytics** and **App Center Crashes**.
 * Click **Add Packages**.
 
-### Visual Studio for Windows
+### Visual Studio on Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
 * Search for **App Center**, then install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
-* Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
+* Make sure the Package Manager Console is opened in either Visual Studio 2017 or Visual Studio for Mac (you will have to install an add-in for Visual Studio for Mac).
 * Type the following commands:
 
    `PM> Install-Package Microsoft.AppCenter.Analytics`
