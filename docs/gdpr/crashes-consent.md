@@ -18,12 +18,12 @@ If you want to get your users' confirmation before sending a crash report to App
 
 You can read more about how to ask for the users' consent to send a crash log per platform:
 
-- [Android](~/sdk/crashes/android#ask-for-the-users-consent-to-send-a-crash-log)
-- [iOS](~/sdk/crashes/ios#ask-for-the-users-consent-to-send-a-crash-log)
-- [macOS](~/sdk/crashes/macos#ask-for-the-users-consent-to-send-a-crash-log)
-- [UWP](~/sdk/crashes/uwp#user-consent-to-send-a-crash-log)
-- [React Native](~/sdk/crashes/react-native#ask-for-the-users-consent-to-send-a-crash-log)
-- [Xamarin](~/sdk/crashes/xamarin#ask-for-the-users-consent-to-send-a-crash-log)
+- [Android](~/sdk/crashes/android.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [iOS](~/sdk/crashes/ios.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [macOS](~/sdk/crashes/macos.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [UWP](~/sdk/crashes/uwp.md#user-consent-to-send-a-crash-log)
+- [React Native](~/sdk/crashes/react-native.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [Xamarin](~/sdk/crashes/xamarin.md#ask-for-the-users-consent-to-send-a-crash-log)
 
 <!--
 ## Disable App Center Errors from Your App
