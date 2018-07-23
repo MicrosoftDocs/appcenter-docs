@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ ms.tgt_pltfrm: react-native
 > * [Cordova iOS](cordova-ios.md)
 > 
 > [!NOTE]
-> If you have integrated Push in earlier versions of the SDK, you can optionally [remove Firebase SDK dependencies](migration/react-native-android.md).
+> For Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its required at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. For additional information, please refer to the [App Center React Native migration guide](migration/react-native-android.md).
 
 [!include[](introduction-android.md)]
 
@@ -49,32 +49,42 @@ The App Center SDK is designed with a modular approach – you only need to inte
     react-native link appcenter-push
     ```
 
-    Those steps modify your **MainApplication.java** file, adding `AppCenterReactNativePushPackage` there.
+    Those steps modify your project's **MainApplication.java** file, adding `AppCenterReactNativePushPackage` there.
 
-3. (Optional) In case you enabled ProGuard in your Android project, please add the following line to your ProGuard configuration file (**android/app/proguard-rules.pro**):
+## Integrate Firebase in your application
 
+- Copy the **google-services.json** file to your Android project app module folder (it should be **android/app** folder for most projects).
+- Modify the **android/build.gradle** file:
+
+    ```groovy
+    buildscript {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
+
+        dependencies {
+            // Add this line
+            classpath 'com.google.gms:google-services:4.0.1'
+        }
+    }
+
+    allprojects {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
+    }
     ```
-    -dontwarn com.microsoft.appcenter.push.**
+
+- Modify the **android/app/build.gradle** file:
+
+    ```groovy
+    // Add this line at the bottom
+    apply plugin: 'com.google.gms.google-services'
     ```
-
-    If you haven't enabled or don't use ProGuard, you may skip this step.
-
-## Set the Sender ID
-
-The App Center Push SDK requires the **Sender ID** obtained in the "Prerequisites" section. Look for the `onCreate` method in the **MainApplication.java** file and add the following before `SoLoader.init`:
-
-```java
-Push.setSenderId("{Your Sender ID}");
-SoLoader.init(this, false);
-```
-
-You also need to add the following import statement to the same file:
-
-```java
-import com.microsoft.appcenter.push.Push;
-```
-
-Make sure that you have replaced `{Your Sender ID}` with the **Sender ID** obtained in the "Prerequisites" section. Please check out the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
 
 ## Intercept push notifications
 
