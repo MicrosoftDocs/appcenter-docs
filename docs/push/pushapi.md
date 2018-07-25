@@ -4,18 +4,16 @@ description: API usage on Push
 keywords: app center, push, audiences, API
 author: blparr
 ms.author: blparr
-ms.date: 11/17/2017
+ms.date: 107/25/2018
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-
 # API for Push Notifications
 
 App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
-
 
 ## Push API
 
@@ -24,20 +22,15 @@ Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported
 
 ![Push Swagger](~/push/images/push-swagger.png)
 
-
-
 ## Send notifications via API
 
 In this documentation we will assume that you already have an app which is ready to receive push notifications. Follow our Push SDK documentation for the different supported platforms: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [React Native Android](~/sdk/push/react-native-android.md), [React Native iOS](~/sdk/push/react-native-ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/push/xamarin-android.md), [Xamarin iOS](~/sdk/push/xamarin-ios.md), [Xamarin Forms](~/sdk/push/xamarin-forms.md)  and [macOS](~/sdk/push/macOS.md).
-
 
 ### API Tokens
 
 The first thing you will need to do is to create an API Token from your [user settings](https://appcenter.ms/settings/apitokens), as shown in the image below.
 
 ![Push API Token](~/push/images/API-tokens.png)
-
-
 
 ### User and Application
 
@@ -54,7 +47,7 @@ https://appcenter.ms/api/v0.1/apps/<YOUR_USER_NAME>/<YOUR_APP_NAME>/push/notific
 
 You can send a push using this [POST push API](https://openapi.appcenter.ms/#/push/Push_Send). The push request body is in JSON format (`application/json` content type). Here is an example:
 
-```
+```JSON
 {
  "notification_content" : {
   "name" : "First Push From App Center",
@@ -65,29 +58,22 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
 }
 ```
 
-
-
 ## Send notifications to Audiences using API
 
 [Audiences](~/push/audiences.md) allow you to segment your user base based on device and custom properties. 
-
-
 
 ### Define an audience
 
 In order to define an audience using properties, you use the following symbols:
 
-```
 | Definition                | Symbol  | Equivalent |
 | ------------------------- | ------- | ---------- |
-| equals                    |    =    |     eq     |
-| not equals                |    !=   |     ne     |
-| less than                 |    <    |     lt     |
-| greater than              |    >    |     gt     |
-| less than or equal to     |    <=   |     le     |
-| greater than or equal to  |    >=   |     ge     |
-```
-
+| equals                    |    `=`    |     `eq`     |
+| not equals                |    `!=`   |     `ne`     |
+| less than                 |    `<`    |     `lt`     |
+| greater than              |    `>`    |     `gt`     |
+| less than or equal to     |    `<=`   |     `le`     |
+| greater than or equal to  |    `>=`   |     `ge`     |
 
 ### Audiences based on device properties
 
@@ -95,20 +81,18 @@ You can send push to a group of users that match certain criteria (e.g. all user
 
 Here is an example for an audiences based on a device property where country is `United States`:
 
-```
+```JSON
 {
   "definition" : "CarrierCountry eq 'US'",
   "description" : "Users in the United States"
 }
 ```
 
-
-
 ### Audiences based on custom properties
 
 Here is an example for an audiences based 2 custom properties (boolean and string properties):
 
-```
+```JSON
 {
   "definition": "myBooleanProperty eq true and myStringPropety eq 'myStringValue'",
   "custom_properties": {
@@ -120,11 +104,9 @@ Here is an example for an audiences based 2 custom properties (boolean and strin
 
 You will need to add this custom properties using our SDK for each platform: [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/ios.md), [React Native](~/sdk/other-apis/react-native.md), [UWP](~/sdk/other-apis/uwp.md), [Xamarin](~/sdk/other-apis/xamarin.md) and [macOS](~/sdk/other-apis/macOS.md).
 
-
-
 ### Send push notification to an audience
 
-```
+```JSON
 {
  "notification_content" : {
   "name" : "First Push From App Center",
@@ -139,14 +121,13 @@ You will need to add this custom properties using our SDK for each platform: [An
 }
 ```
 
-
 ## Send notifications to Device IDs
 
 This is an example of sending a Push Notifications to a set of Device IDs. To get the install ID, you can use our APIs: [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/ios.md), [React Native](~/sdk/other-apis/react-native.md), [UWP](~/sdk/other-apis/uwp.md), [Xamarin](~/sdk/other-apis/xamarin.md) and [macOS](~/sdk/other-apis/macOS.md).
 
 Below, you will find an example where we target the follwing devices IDs: `00000000-0000-0000-0000-000000000001`,`00000000-0000-0000-0000-000000000002`, `00000000-0000-0000-0000-000000000003`.
 
-```
+```JSON
 {
  "notification_content" : {
   "name" : "First Push From App Center",
@@ -161,5 +142,18 @@ Below, you will find an example where we target the follwing devices IDs: `00000
 }
 ```
 
+## Send notifications to all registered devices
 
+This is an example of sending a Push Notifications to all registered devices.
 
+```JSON
+{
+ "notification_content" : {
+  "name" : "First Push From App Center",
+  "title" : "Push From App Center",
+  "body" : "Welcome!",
+  "custom_data" : {"key1" : "val1", "key2" : "val2"}
+  },
+    "notification_target" : null
+}
+```
