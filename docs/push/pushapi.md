@@ -65,8 +65,8 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
 }
 ```
 
-## Length Limitations
-Name should be 64 characters or less, title should be 128 characters or less, otherwise you will get an error 400 Bad Request when sending the push to the API.
+## Campaign
+  Campaign Name should be 64 characters or less, and title should be 128 characters or less. Otherwise you will get an error    400 Bad Request when sending the push via the API. To ensure you are within the limits, try constructing the name and title from the Campaign UI before pushing it via the API. 
 
 
 ## Send notifications to Audiences using API
