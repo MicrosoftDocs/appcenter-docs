@@ -13,6 +13,9 @@ ms.custom: diagnostics
 
 # Diagnostics
 
+> [!IMPORTANT]
+> The Diagnostics service is currently in Preview, as we are actively working on making this service more stable and with new capabilities.
+
 ## Overview
 
 App Center Diagnostics is a cloud service that helps developers monitor the health of an application, delivering the data needed to understand what happens when an app fails during testing or in the wild. The App Center Diagnostics SDK collects information about crashes and errors in your apps and uploads them to the App Center portal for analysis by the development team - eliminating the guesswork about what really happened in the app when it failed.
@@ -75,4 +78,4 @@ catch (FileNotFoundException ex)
 }
 ```
 
-Here the full exception (`ex`) is still being sent back to the App Center service, but in addition to this, a dictionary containing additional debugging information is also being created and sent.
+Here the full exception (ex) is still sent to the App Center service, but the SDK adds a dictionary containing additional debugging information and sends it to the server with the error report.
