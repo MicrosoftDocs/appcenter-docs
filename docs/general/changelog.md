@@ -11,6 +11,18 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **Jul 2, 2018**
+
+- **CLI version 1.1.0 released**:
+In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
+
+  Bug fixes: 
+  - NUnit report download intermittent failures, 
+  - validate uploaded .dll.config files to avoid UITest stalls, 
+  - better error messages when app name is wrong, 
+  - fixed encoding error for generated test urls.
+
+
 ### **June 29, 2018**
 
 - **Improved app transfer**:
