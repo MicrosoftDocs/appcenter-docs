@@ -4,12 +4,17 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 07/02/2018
+ms.date: 09/01/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **Jul 31, 2018**
+
+- **CLI version 1.1.1 released**:
+Added misc. bug fixes for Test, including enabling the `--test-output-dir` switch only when you're using the UITest or Appium test frameworks.
 
 ### **Jul 2, 2018**
 
@@ -17,10 +22,10 @@ ms.service: vs-appcenter
 In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
 
   Bug fixes: 
-  - NUnit report download intermittent failures, 
-  - validate uploaded .dll.config files to avoid UITest stalls, 
-  - better error messages when app name is wrong, 
-  - fixed encoding error for generated test urls.
+  - NUnit report download intermittent failure
+  - validate uploaded .dll.config files to avoid UITest stalls
+  - better error messages when app name is wrong 
+  - fixed encoding error for generated test urls
 
 
 ### **June 29, 2018**
@@ -98,7 +103,7 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
 
 ### **April 6, 2018**
 - **CLI version 1.0.15 released**:
-  Added bug fixes for JsZip in Test Cloud.
+  Added bug fixes for JsZip in Test.
 
 ### **April 2, 2018**
 - **CLI version 1.0.14 released**:
