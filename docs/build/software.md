@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 07/27/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -46,11 +46,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.7.0
+- Homebrew 1.7.1
 - NPM 3.10.10
-- Yarn 1.7.0
+- Yarn 1.9.2
 - NuGet 4.3.0.4406
-- pip 10.0.1
+- pip 18.0
 - nvm 0.33.11
 
 ### Project Management
@@ -62,7 +62,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
 - Git 2.18.0
-- Git LFS 2.4.2
+- Git LFS 2.5.0
 - GNU Wget 1.19.5
 - Subversion (SVN) 1.10.2
 
