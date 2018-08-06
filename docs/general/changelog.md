@@ -11,6 +11,10 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **August 6, 2018**
+ - **Added support ReactNative 0.56.x**:
+Build your React Native apps with [React Native 0.56.0](https://github.com/facebook/react-native/releases/tag/v0.56.0).
+
 ### **Jul 31, 2018**
 
 - **CLI version 1.1.1 released**:
