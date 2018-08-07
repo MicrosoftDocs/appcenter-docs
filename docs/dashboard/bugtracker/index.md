@@ -48,7 +48,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
       1. Login with your GitHub credentials and click **Authorize App Center**.
       2. Select which GitHub repository to integrate the bug tracker with and click **Next**.
       3. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
-         - Number of crashses is a threshold you can set for the minimum number of crashes to happen in a crash group before an issue is created in GitHub.
+         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before an issue is created in GitHub.
 
            ![How to add a bug tracker for GitHub](media/addBugTrackerGitHub.gif)
 
