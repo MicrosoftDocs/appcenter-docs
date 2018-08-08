@@ -4,7 +4,7 @@ description: "Mobile App Testing Frameworks Overview"
 keywords: testcloud
 author: glennwester
 ms.author: glwest
-ms.date: 04/30/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 9cdf95db-1ad5-4541-a21c-c20492d4607f
 ms.service: vs-appcenter
@@ -22,11 +22,11 @@ As part of our transition on the development of Calabash, we've provided an over
 
 Microsoft is committed to ensuring that Calabash works up until and including the next minor releases of the iOS and Android OS versions, that is, iOS 11.x and Android O / Android 8.x. After securing those releases, we will discontinue dedicated engineering contributions. Given the open source nature of Calabash, we hope the community will step up and continue to maintain and develop the tool. If you're interested in staying with Calabash, you'll want to take note to see if an individual or group steps up to take over maintenance. You may also see this as an opportunity to take matters into your own hands and devote engineering resources to maintain Calabash. If you're interested in taking over Calabash stewardship, please contact [appcentertest@microsoft.com](mailto:appcentertest@microsoft.com).
 
-Calabash will continue to be supported in Visual Studio App Center and Xamarin Test Cloud up until and including iOS 11.x and Android 8.x. At this time, the tool will become a 3rd party testing framework supported in Test Cloud.
+Calabash will continue to be supported in Visual Studio App Center up until and including iOS 11.x and Android 8.x. At this time, the tool will become a 3rd party testing framework supported in App Center Test.
 
 Still have questions about how it works? Read on for our FAQ:
 
-**Q: Will we be able to continue to use Calabash to run tests on my devices and simulators? Will Calabash continue to be supported in Xamarin Test Cloud & Visual Studio App Center?**
+**Q: Will we be able to continue to use Calabash to run tests on my devices and simulators? Will Calabash continue to be supported in App Center?**
 
 **A:** Yes, you can continue to use Calabash. There is a risk that the community will not find a maintainer and that Calabash might not support OS versions greater than iOS 11.x and Android 8.x.
 

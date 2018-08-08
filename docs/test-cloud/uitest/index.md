@@ -1,11 +1,11 @@
 ---
 title: Xamarin.UITest
-description: Key features of App Center Test Cloud
+description: Key features of App Center Test 
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -26,9 +26,9 @@ The best time get started with UITest is during the development of a mobile appl
 
 1. Develop the feature in the Android and/or iOS application.
 2. Write the tests and run them locally to verify functionality.
-3. Create a new Test Run in Test Cloud, or use an existing Test Run.
-4. Compile the iOS app bundle or the Android APK and then upload this along with the tests to Test Cloud.
-5. Fix any issues or bugs that are exposed by Test Cloud.
+3. Create a new Test Run in App Center Test, or use an existing Test Run.
+4. Compile the iOS app bundle or the Android APK and then upload this along with the tests to App Center Test.
+5. Fix any issues or bugs that are exposed by App Center Test.
 6. Repeat the process by moving on to the next feature for the application.
 
 For existing applications that are no longer under active development it may not be cost-effective to retroactively add automated tests. Instead, a better approach is to use UITest when fixing bugs. For example, consider an application that has no automated testing, and a user reports a bug. A developer assigned to fix that bug might take some (or all) following actions:
@@ -354,4 +354,4 @@ public void CreditCardNumber_TooLong_DisplayErrorMessage()
 }
 ```
 
-This test also uses the `Screenshot` method to take pictures at key points during the test execution. When this test is run, Xamarin Test Cloud will take the screenshots and display them in the test results. This provides a way to break a test up into steps and a provide a description of what the screenshot is about.
+This test also uses the `Screenshot` method to take pictures at key points during the test execution. When this test is run, App Center will take the screenshots and display them in the test results. This provides a way to break a test up into steps and a provide a description of what the screenshot is about.

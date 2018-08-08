@@ -1,6 +1,6 @@
 ---
 title: Starting a Test Run
-description: How to start a test run in Test Cloud
+description: How to start a test run in App Center Test
 keywords: test cloud
 author: glennwester
 ms.author: glwest
@@ -12,11 +12,12 @@ ms.custom: test
 ---
 
 # Starting a Test Run
-This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload](~/test-cloud/preparing-for-upload/index.md).
 
-Initiating a test run in Test Cloud requires the [App Center CLI tool](~/cli/index.md).
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to App Center, see [preparing tests for upload](~/test-cloud/preparing-for-upload/index.md).
 
-With the App Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the **new test run** button will launch a dialog which will lead you through the 3 steps of preparing a test run.
+Initiating a test run in App Center Test requires the [App Center CLI tool](~/cli/index.md).
+
+With the App Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test section within the desired app. Clicking the **new test run** button will launch a dialog which will lead you through the 3 steps of preparing a test run.
 
 ## Device selection
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.

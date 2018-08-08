@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: EBA22D3B-EB39-400E-8881-B78D621301D4
 ms.service: vs-appcenter
@@ -64,7 +64,7 @@ There are two ways to run UITests according to category:
 
 
 > [!NOTE]
-> Xamarin Test Cloud does not honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
+> App Center does not honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
 
 ## Running Tests Locally by Category
 
@@ -88,7 +88,7 @@ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iO
 > [!WARNING]
 > ️ NUnit category names which contain spaces cannot be specified for upload.
 
-You can instruct Test Cloud to run a subset of your tests using the 
+You can instruct App Center Test to run a subset of your tests using the 
 `--include-category` parameter.  
 
 ```bash

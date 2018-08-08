@@ -4,7 +4,7 @@ description: List of test frameworks supported by App Center
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 05/18/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: test
 
 # Supported Test Frameworks
 
-Test Cloud is a test automation service for native and hybrid mobile applications. Several popular test frameworks are supported and the list of supported frameworks is evaluated continually based on user requests and market popularity. The list below outlines the test frameworks currently supported.
+App Center Test is a test automation service for native and hybrid mobile applications. Several popular test frameworks are supported and the list of supported frameworks is evaluated continually based on user requests and market popularity. The list below outlines the test frameworks currently supported.
 
 
 

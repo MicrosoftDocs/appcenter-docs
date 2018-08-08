@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 01/31/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter
@@ -21,8 +21,7 @@ conclusion of each test method, a label and screenshot are automatically
 generated for the test report. You can create additional labels and
 screenshots to track your app's progress during a test method.
 
-<strong>This framework is *required* for running XCUITests in App Center and
-Xamarin Test Cloud.</strong>
+<strong>This framework is *required* for running XCUITests in App Center.</strong>
 
 If you encounter a problem, please file a GitHub
 [issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
@@ -168,7 +167,7 @@ Code example for CocoaPods [Code example](https://github.com/Microsoft/AppCenter
 
 ## Build For Testing
 
-In order to run a test in App Center or Xamarin Test Cloud, you will
+In order to run a test in App Center, you will
 need to build your application and an XCUITest bundle. To do this, run
 the following command from the root of your application project
 directory:

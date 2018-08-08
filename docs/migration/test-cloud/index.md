@@ -4,7 +4,7 @@ description: "Upgrading Xamarin Test Cloud to Visual Studio App Center"
 keywords: testcloud
 author: glennwester
 ms.author: glwest
-ms.date: 04/13/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.custom: test
 ---
 # Upgrading all Xamarin Test Cloud subscribers to Visual Studio App Center<br/>
 
-Microsoft will seamlessly upgrade active Xamarin Test Cloud subscriptions to [Visual Studio App Center](http://appcenter.ms). Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
+Microsoft seamlessly upgraded active Xamarin Test Cloud subscriptions to [Visual Studio App Center](http://appcenter.ms). Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
 
 ### Timeline
 
