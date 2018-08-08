@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/01/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **August 8, 2018**
+ - **Daily Digest notifications for Distribution**:
+  Users can choose to receive a daily email of all the new releases of their app.
 
 ### **August 6, 2018**
  - **Added support ReactNative 0.56.x**:
