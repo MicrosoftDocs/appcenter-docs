@@ -4,7 +4,7 @@ description: Details on how to write build scripts to enhance the build process
 keywords: build, pre, post, custom, scripts
 author: derpixeldan
 ms.author: daadam
-ms.date: 06/27/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
@@ -14,6 +14,8 @@ ms.custom: build
 # Build scripts
 
 You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (**.xcodeproj**, **build.gradle**, **.csproj**, **.sln** or **package.json**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+
+You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter-build-scripts-examples). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
 
 > [!NOTE]
 > Once your build scripts have been detected for the first time or you moved them to a different location, make sure to save the branch configuration to apply the changes!
