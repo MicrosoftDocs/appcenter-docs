@@ -59,12 +59,15 @@ ms.date: 07/26/2017
 
 2. Paste it into terminal while in the project directory.
 
-3. Navigate into **sampleapp-android/app/build/outputs/apk**.
+> [!NOTE]
+> `--app-path` should point to a mobile app apk and `--build-dir` should point to where the test apk is located at.
 
-4. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
+1. Navigate into **sampleapp-android/app/build/outputs/apk**.
 
-5. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
+2. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
 
-6. Run the command. You will see the tests begin to run.
+3. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
 
-7. In App Center, click **Done** to close the panel.  
+4. Run the command. You will see the tests begin to run.
+
+5. In App Center, click **Done** to close the panel.  
