@@ -4,7 +4,7 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: joemellin
 ms.author: joemel
-ms.date: 06/14/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ ms.service: vs-appcenter
 
 [iOS SDK troubleshooting](~/sdk/troubleshooting/ios.md)
 
-[Xamarin SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
+[.NET SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
 
 [macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
 
@@ -38,13 +38,13 @@ ms.service: vs-appcenter
 
 SDKs (open sourced on GitHub)
 
-- [Android SDK](https://github.com/Microsoft/mobile-center-sdk-android)
+- [Android SDK](http://github.com/microsoft/appcenter-sdk-android)
 
-- [iOS/macOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios)
+- [Apple SDK](https://github.com/microsoft/appcenter-sdk-apple)
 
-- [Xamarin SDK](https://github.com/Microsoft/mobile-center-sdk-dotnet)
+- [.NET SDK](https://github.com/microsoft/appcenter-sdk-dotnet)
 
-- [React Native SDK](https://github.com/Microsoft/mobile-center-sdk-react-native)
+- [React Native SDK](https://github.com/Microsoft/appcenter-sdk-react-native)
 
 ## App Center status page
 

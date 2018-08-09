@@ -60,7 +60,7 @@ Here's how to get started with billing:
  
 3. After you have customized your plan, click on continue.
 
-   - To connect your org/user to an Azure subscription, refer to this [section](~/general/azure-subscriptions/index.md).
+   - To connect your org/user to an Azure subscription, refer to this document about [Azure Subscriptions](~/general/azure-subscriptions/index.md).
 
    - If you already have one or more subscriptions associated with your org/user settings and you can choose which one to use for billing.
 

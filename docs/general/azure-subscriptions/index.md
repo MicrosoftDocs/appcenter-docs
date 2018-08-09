@@ -73,7 +73,7 @@ Creating a new Azure Subscription is easy and takes few minutes.
 
 - Can I use an Azure Subscription with spending limits?
 
-    No, before you can select your subscription you need to turn spending limits off permanently. Learn more [here](https://docs.microsoft.com/azure/billing/billing-spending-limit).
+    No, before you can select your subscription you need to turn spending limits off permanently. Follow this document to [Understand Azure spending limit and how to remove it](https://docs.microsoft.com/azure/billing/billing-spending-limit).
 
 - How often will I see charges from App Center on my Azure bill?
 
