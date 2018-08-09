@@ -13,15 +13,18 @@ ms.custom: test
 
 # Preparing XCUITest Tests for Upload
 
+The steps necessary to prepare an app and its corresponding test suite for upload
+to App Center vary depending on the test framework. The section below provides instructions for preparing XCUITests tests for upload to App Center Test.
+
 [<strong>AppCenter XCUITest
 Extensions</strong>](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions)
 is an iOS Framework for taking screenshots and labeling test steps when
-running XCUITest test in App Center or Xamarin Test Cloud. At the
+running XCUITest test in App Center. At the
 conclusion of each test method, a label and screenshot are automatically
 generated for the test report. You can create additional labels and
 screenshots to track your app's progress during a test method.
 
-<strong>This framework is *required* for running XCUITests in App Center.</strong>
+**This framework is *required* for running XCUITests in App Center.**
 
 If you encounter a problem, please file a GitHub
 [issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
@@ -47,6 +50,7 @@ XCUIApplication *app = act_launch_app([[XCUIApplication alloc] init]);
 XCUIApplication *app = [ACTLaunch launch];
 XCUIApplication *app = [ACTLaunch launchApplication:[[XCUIApplication alloc] init]];
 ```
+
 ### Swift
 
 ```swift
@@ -201,13 +205,7 @@ For a concrete example of generating an app and an XCUITest bundle, see
 
 ## Uploading Tests to App Center
 
-Tests are uploaded to App Center using the `appcenter` command line tool.
-
-To install, follow the instructions in the README of the [AppCenter-CLI
-GitHub](https://github.com/Microsoft/AppCenter-CLI) repository.
-
-Use the App Center Test page to generate a device selection and 
-an example command-line invocation. For more information, see [Starting a Test run](~/test-cloud/starting-a-test-run.md).
+Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
 
 ```
 # Follow the instructions to generate a resuable API token.

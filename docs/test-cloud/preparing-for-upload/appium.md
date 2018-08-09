@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 07/23/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -13,8 +13,7 @@ ms.custom: test
 
 # Preparing Appium Tests for Upload
 
-The steps necessary to prepare an app and its corresponding test suite for upload
-to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/docs/en/about-appium/intro/)
+The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/docs/en/about-appium/intro/)
 
 Note the following limitations for Appium support:
 
@@ -39,7 +38,7 @@ Tests will be run using Maven Surefire. This requires tests to follow [certain n
 
 Before attempting to upload to App Center Test, please make sure that running tests locally on your machine using Maven works:
 
-```
+```text
 ➜  AppiumTest git:(master) ✗ mvn verify
 ...
 Running MainTest
@@ -55,10 +54,12 @@ SimpleTest(MainTest)  Time elapsed: 0.594 sec  <<< ERROR!
 If you're unable to run the tests using command line locally, tests will also not work in App Center Test.
 
 ## 1a. Changes to the build system for Maven users
-<em>See the section below for instructions if you use Gradle for your project,
-such as Android Studio builds.</em>
+
+See the section below for instructions if you use Gradle for your project, such as Android Studio builds.
+
 ### Step 1 - Add repository and dependency
-You will need to add the JCenter repository to your `pom.xml`:
+
+You will need to add the JCenter repository to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -70,6 +71,7 @@ You will need to add the JCenter repository to your `pom.xml`:
 ```
 
 Then add a dependency for the Appium test extensions:
+
 ```xml
 <dependency>
     <groupId>com.microsoft.appcenter</groupId>
@@ -81,12 +83,14 @@ Then add a dependency for the Appium test extensions:
 This will ensure the enhanced Android and iOS drivers are available at compile time. The enhanced drivers are provided primarily to enable the `label` feature. See Step 4 for more detail on the `label` feature.
 
 ### Step 2 - Add upload profile
+
 Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
 The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
 
 ## 1b. Changes to the build system for Gradle users
 
 ### Step 1 - Add repository and dependency
+
 Ensure you have the JCenter repository enabled in the `build.gradle` in your project's root folder:
 
 ```gradle
@@ -132,36 +136,53 @@ task createPom {
 ```
 
 ## 2. Changes to the tests
+
 ### Step 1 - Add imports
+
 Import these packages into your test classes:
+
 ```java
 import com.microsoft.appcenter.appium.Factory;
 import com.microsoft.appcenter.appium.EnhancedAndroidDriver;
 import org.junit.rules.TestWatcher;
 import org.junit.Rule;
 ```
+
 ### Step 2 - Instantiate the TestWatcher
+
 Insert this declaration in each of your test classes:
+
 ```java
     @Rule
     public TestWatcher watcher = Factory.createWatcher();
 ```
+
 ### Step 3 - Update your driver declaration
+
 Replace your *declaration* of `AndroidDriver<MobileElement>` with `EnhancedAndroidDriver<MobileElement>` or `IOSDriver<MobileElement>` with `EnhancedIOSDriver<MobileElement>`
+
 ```java
     private static EnhancedAndroidDriver<MobileElement> driver;
 ```
+
 ### Step 4 - Update your driver instantiations
+
 Replace the way you *instantiate* your driver, such that lines in the form of:
+
 ```java
     driver = new AndroidDriver<MobileElement>(url, capabilities);
 ```
-...become:
+
+...is now:
+
 ```java
     driver = Factory.createAndroidDriver(url, capabilities);
 ```
+
 Using these drivers will still allow you to run your tests locally without additional modifications, but enables you to "label" test steps in your test execution using `driver.label("text")`. The text and a screenshot from the device will be visible in test report in  Test Cloud.
+
 A recommended practice is to have a call to label in the `@After` method, this will include a screenshot of the app final state in the test report. The screenshot will be taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
+
 ```java
     @After
     public void TearDown(){
@@ -171,28 +192,36 @@ A recommended practice is to have a call to label in the `@After` method, this w
 ```
 
 ## 3. Upload to App Center Test
+
 Steps to upload a test:
-1. Generate an App Center Test upload command. [Instructions](https://github.com/King-of-Spades/AppCenter-Test-Samples#appcentertest-command-line)
+
+1. Generate an App Center Test upload command. Documentation is found on our doc for [starting a test run](~/test-cloud/starting-a-test-run.md)
 2. Pack your test classes and all dependencies into the `target/upload` folder:
-   ```
+
+   ```shell
    mvn -DskipTests -P prepare-for-upload package
    ```
+
 3. Perform upload:
-   ```
+
+   ```shell
    appcenter test run appium --app "<user/appname>" --devices "<selection>" --app-path <pathToFile.apk>  --test-series "<series>" --locale "<locale>" --build-dir target/upload 
    ```
 
 ## 4. Performance Troubleshooting
+
 Tests run on devices in the AppCenter may execute slightly slower than on a local device under certain circumstances. Normally, this is outweighed by the fact that you have many more devices available and therefore potentially able to parallelize test runs.
 
 There are two main sources of potential slow test runs: re-signing and re-installation.
 
-#### Re-signing (on iOS)
+### Re-signing (on iOS)
+
 Before being installed on the iOS device, your app goes through a process called re-signing. This is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. This does rarely cause performance degrades because re-signed apps are cached. The time consuming process will only run once per binary.
 
 If you have a very automated Continuous Delivery setup where the IPA is having it’s version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
 
-#### Re-installation
+### Re-installation
+
 On a shared device cloud, it is very important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.
 Running tests locally does not inflict any penalty because the app mostly stays installed through all tests. In App Center Test, the app is automatically uninstalled after each test. The next test will then have to re-install the app before running the test. This can slow down your tests in the cloud.
-Luckily, there’s a solution. Instead of having the appium driver create a new session for each test case, just have one session and re-use it for all tests. To control the app state, make a call to `driver.resetApp()` before each test. This will only incur a 5-second delay between test cases. You can implement this by moving the driver initialization code from the `setUp` method to the `setUpClass` method. 
+Luckily, there’s a solution. Instead of having the appium driver create a new session for each test case, just have one session and re-use it for all tests. To control the app state, make a call to `driver.resetApp()` before each test. This will only incur a 5-second delay between test cases. You can implement this by moving the driver initialization code from the `setUp` method to the `setUpClass` method.
