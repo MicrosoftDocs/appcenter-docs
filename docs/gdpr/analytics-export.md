@@ -22,7 +22,7 @@ To export Analytics data, configure export from your app settings in the App Cen
 
 You can also use our Export API to do so:
 
-```
+```NA
 POST https://openapi.appcenter.ms/v0.1/apps/{username}/{appname}/export_configurations
 ```
 

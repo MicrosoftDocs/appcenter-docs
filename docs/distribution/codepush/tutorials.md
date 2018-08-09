@@ -4,7 +4,7 @@ description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/15/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: E5791947-AF21-47D0-84A0-90D5F06DC8A9
 ms.service: vs-appcenter
@@ -29,18 +29,19 @@ Silent mode updates are the simplest way to update an app and the least invasive
 ```javascript
 codePush.sync();
 ```
+
 If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS). However, developers can modify the install behavior if they so choose, by leveraging the `installMode` parameter:
 
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: The update is downloaded but not installed immediately. The new content will be available the next time the application is started.
 * **ON_NEXT_RESUME**: The update is downloaded but not installed immediately. The new content will be available the next time the application is resumed or restarted, whichever event happens first.
 
-
 For example, to download and install an update immediately, developers can use the `installMode` parameter as follows:
 
 ```javascript
 codePush.sync({installMode: InstallMode.IMMEDIATE});
 ```
+
 #### Recommendation
 
 Depending on the complexity of the app, pushing an update immediately might be a jarring experience for end users (e.g. changing the UI or losing the current state can be frustrating and confusing).  Because of this, we recommend updates are installed only after a certain period of app inactivity has been reached. To achieve this experience, developers can use the InstallMode.ON_NEXT_RESUME and minimumBackgroundDuration parameters as follows:
@@ -51,9 +52,10 @@ Depending on the complexity of the app, pushing an update immediately might be a
 // We recommend doing this call on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova)
 codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 60 * 10 });
 ```
+
 > [!NOTE]
 > If `codePush.sync()` is not called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
-> 
+ 
 > [!NOTE]
 > For Cordova, the first parameter that `codePush.sync()` expects is a `syncStatusCallback`, so to do the same thing, you should insert `null` as the first parameter to the call, i.e:
 
@@ -88,11 +90,11 @@ To customize the update dialog, developers can create an updateDialogOption obje
 
     codePush.sync({ updateDialog: updateDialogOptions});
 ```
+
 Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./react-native.md#api-reference) API Reference pages for a full description of all the avaiable UpdateDialogOptions options.
 
 > [!IMPORTANT]
 > While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
-
 
 ### 3.  Custom mode
 
@@ -170,7 +172,6 @@ The CodePush service provides a VSTS extension with a set of deployment tasks th
 
 Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can simply push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
-
 ### Prerequisites
 
 The following is required to complete this module:
@@ -185,18 +186,24 @@ The following is required to complete this module:
 ### 1. Create your Application
 
 Start by creating your app and setting it up to work with the CodePush service:
-```
+
+```shell
 appcenter apps create -d VSTSCDSample-Android -o android -p react-native
 ```
+
 Then use the following commmands to create both `Staging` and `Production` deployments:
-```
+
+```shell
 appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Staging
 appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
 ```
+
 To view the deployment keys use:
-```
+
+```shell
 appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android
 ```
+
 ![CodePush CLI providing deployment keys](images/tutorials1.png)
 
 Save the `Staging` deployment key as it will be used to set up your project.
@@ -225,13 +232,13 @@ Once the project is created, copy the remote string as you will use it to update
 
 Update the repository's remote URL using the following [command](https://help.github.com/articles/changing-a-remote-s-url):
 
-```
+```shell
  git remote set-url origin replaceWithVSTSRepositoryURL
 ```
 
 Once the new remote URL is set, push the repository to VSTS via [Git push](https://help.github.com/articles/pushing-to-a-remote/)
 
-```
+```shell
  git push -u origin --all
 ```
 

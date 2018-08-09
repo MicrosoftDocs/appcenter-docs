@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 05/21/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -110,12 +110,12 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 #### Plugin Installation (iOS - RNPM)
 
 1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
-    ```
+    ```shell
     react-native link react-native-code-push
     ```
 
     If your app uses a version of React Native that is lower than v0.27, run the following:
-    ```
+    ```shell
     rnpm link react-native-code-push
     ```
    > [!NOTE]
@@ -267,12 +267,12 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 #### Plugin Installation (Android - RNPM)
 
 1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
-    ```
+    ```shell
     react-native link react-native-code-push
     ```
 
     If your app uses a version of React Native that is lower than v0.27, run the following:
-    ```
+    ```shell
     rnpm link react-native-code-push
     ```
    > [!NOTE]
@@ -645,7 +645,7 @@ Once your app has been configured and distributed to your users, and you've made
 
 In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
-```
+```shell
 appcenter codepush release-react -a <ownerName>/<appName> 
 
 appcenter codepush release-react -a <ownerName>/MyApp-iOS

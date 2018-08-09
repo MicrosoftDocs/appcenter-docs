@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 04/16/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202
 ms.service: vs-appcenter
@@ -68,7 +68,7 @@ After a build has been triggered, it can be in the following states:
 
 ### 4.1. Build logs
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
-```
+```NA
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
     |-- <build-step-1>
@@ -94,7 +94,7 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 ### 6.2. Custom build scripts
 In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md) you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts) for example when your React Native app uses TypeScript and you have to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
 
-```
+```javascript
   "scripts": {
     ...
     "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]

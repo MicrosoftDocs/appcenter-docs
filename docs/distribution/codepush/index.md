@@ -4,7 +4,7 @@ description: Fix bugs and add content quickly
 keywords: distribution
 author: iageoghe
 ms.author: iageoghe
-ms.date: 06/19/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: F19F4122-B9F0-42CC-85B8-E3C344AE5419
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ CodePush is an App Center cloud service that enables Apache Cordova and React Na
 
 You manage most of CodePush's functionality using the App Center CLI. To install the CLI, open a terminal window or command prompt and exeute the following command:
 
-```
+```shell
 npm install -g appcenter-cli
 ```
 
@@ -43,7 +43,7 @@ After making changes to your app’s code or assets, publish the update to App C
 
 Execute the App Center CLI `release-react` command to bundle your app's code and asset files, then publish them to the App Center server as a new release. For example:
 
-```
+```shell
 appcenter codepush release-react -a <ownerName>/MyApp
 ```
 
@@ -51,7 +51,7 @@ appcenter codepush release-react -a <ownerName>/MyApp
 
 Execute the App Center CLI `release-cordova` command to bundle your app's code and asset files, then publish them to the App Center server as a new release. For example:
 
-```
+```shell
 appcenter codepush release-cordova -a <ownerName>/MyApp
 ```
 

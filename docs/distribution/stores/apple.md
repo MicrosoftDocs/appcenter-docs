@@ -75,7 +75,7 @@ For more information, review the [App Distribution Guide](https://developer.appl
 
 ### Note
 Currently when submitting the deliver file to iTunes Connect, App Center is defaulting certain parameters as below:
-``` 
+```javascript
  add_id_info_uses_idfa: false
  export_compliance_uses_encryption: false
  export_compliance_encryption_updated: false

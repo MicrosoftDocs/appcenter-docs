@@ -4,7 +4,7 @@ description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 05/21/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 591025F9-C7DA-400E-8CCA-DF39514B3DD0
 ms.service: vs-appcenter
@@ -137,7 +137,7 @@ Once your app has been configured and distributed to your users, and you've made
 
 In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
-```
+```shell
 appcenter codepush release-cordova -a <ownerName>/<appName> 
 
 appcenter codepush release-cordova -a <ownerName>/MyApp-ios 
@@ -152,7 +152,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-Android
 
 The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and therefore, can generate your update and know exactly which files to upload. Additionally, in order to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).  
 
-```
+```shell
 # Release a mandatory update with a changelog
 code-push release-cordova -a <ownerName>/MyApp-ios -m --description "Modified the header color"
 
