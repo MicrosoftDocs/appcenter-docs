@@ -4,7 +4,7 @@ description: help using the Diagnostics UI in App Center
 keywords: crashes, errors, annotate, status, download
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/02/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 5c420816-0fe9-4da1-bfaf-bc2a1fb6739b
 ms.service: vs-appcenter
@@ -41,6 +41,8 @@ Mark each of your crash groups as open, closed, or ignored. To mark the status o
 1. Select a crash group or select multiple crash groups
 2. Click on the **Mark as** button  
 3. Select the state (open, closed, ignored)
+
+Any new crash instance which is part of a closed or ignored crash group will not reopen or unignore the corresponding crash group.
 
 ![Track the status of your crash and error groups](~/diagnostics/images/track-status.png)
 
