@@ -19,7 +19,7 @@ App Center’s Diagnostics service is designed for you easily monitor your apps 
 
 1. Login to the App Center Portal
 2. Select an application
-3. In the navigation area on the left, select Diagnostics
+3. In the navigation area on the left, select **Diagnostics**
 
 You’ll see a high-level overview of how many crashes and crash free users your app has along with a list of crash groups. Click on a crash group to find more information including a list of specific crash reports, devices and OSs affected.
 
@@ -29,7 +29,7 @@ You can annotate your crash groups in App Center diagnostics to keep track of no
 
 1. Select the Diagnostics service
 2. Select a crash group
-3. In the upper right-hand corner, click the annotate button
+3. In the upper right-hand corner, click the **annotate** button
 4. Leave a text in the text box and your note will be automatically saved
 
 ![Annotate a crash group](~/diagnostics/images/annotate.png)
@@ -53,9 +53,9 @@ Use the **Filter** option in the upper-right corner of the page to filter crashe
 You can download your diagnostics data to access raw data for further analysis. To download your diagnostics data:  
 
 1. Navigate to the Diagnostics section
-2. Select Crashes or Errors
+2. Select **Crashes** or **Errors**
 3. Select on a specific crash group
 4. Select a specific crash report
-5. In the upper right-hand corner, click on the Download button and select a format (JSON or Text)
+5. In the upper right-hand corner, click on the **Download** button and select a format (JSON or Text)
 
 ![Download diagnostics data](~/diagnostics/images/download.png)

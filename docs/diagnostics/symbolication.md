@@ -21,20 +21,20 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 
 ### To find the `.dSYM` bundle
 
-1. In Xcode, chose Window > Organizer
-2. Select the Archives tab
+1. In Xcode, chose **Window > Organizer**
+2. Select the **Archives** tab
 3. Select your app in the left sidebar
-4. Right-click on the latest archive and select Show in Finder
-5. Right-click the `.xcarchive` file in Finder and select Show Package Contents
+4. Right-click on the latest archive and select **Show in Finder**
+5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
 6. You should see a folder named `dSYMs` which contains your dSYM bundle
 
 ### To upload symbols
 
 1. Create a ZIP file for the dSYM package on your Mac
 2. Log into App Center and select your app
-3. In the left menu, navigate to the Diagnostics section
-4. Select Symbols
-5. In the top right corner, click Upload symbols and upload the zip file
+3. In the left menu, navigate to the **Diagnostics** section
+4. Select **Symbols**
+5. In the top right corner, click **Upload symbols** and upload the zip file
 6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
 
 ## Bitcode
