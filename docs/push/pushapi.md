@@ -2,9 +2,9 @@
 title: App Center Push API
 description: API usage on Push
 keywords: app center, push, audiences, API
-author: blparr
-ms.author: blparr
-ms.date: 107/25/2018
+author: dimazaid
+ms.author: dimazaid
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA
 ms.service: vs-appcenter
@@ -21,6 +21,9 @@ Sending Push Notifications via API will allow you to automate the process of eng
 Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs. 
 
 ![Push Swagger](~/push/images/push-swagger.png)
+
+> [!NOTE]
+> In the Push API calls, "owner_name" could be either the app owner's user id, or the name of the org the app falls under.
 
 ## Send notifications via API
 

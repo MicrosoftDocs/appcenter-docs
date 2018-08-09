@@ -17,6 +17,9 @@ Log in to the App Center portal, select your application, click on the **Push** 
 
      ![apple-dev-center-app-id](images/ios-app-id-apple-portal.png)
 
+  > [!NOTE]
+  > As per guidance from the [Apple Developer documentation](https://developer.apple.com/library/archive/technotes/tn2311/_index.html), all new app developers who joined after 2011 will have the Team ID same as the App Prefix ID. If you have joined before, you will need to get the Team ID instead. 
+
   2. **Key ID**
      * In your Apple developer account create a [new key](https://developer.apple.com/account/ios/authkey/create) in **Certificates, Identifiers & Profiles**/**Keys**.
 
