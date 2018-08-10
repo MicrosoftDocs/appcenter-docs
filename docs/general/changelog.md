@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/08/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -19,12 +19,12 @@ ms.service: vs-appcenter
  - **Added support ReactNative 0.56.x**:
 Build your React Native apps with [React Native 0.56.0](https://github.com/facebook/react-native/releases/tag/v0.56.0).
 
-### **Jul 31, 2018**
+### **July 31, 2018**
 
 - **CLI version 1.1.1 released**:
 Added misc. bug fixes for Test, including enabling the `--test-output-dir` switch only when you're using the UITest or Appium test frameworks.
 
-### **Jul 2, 2018**
+### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
 In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
