@@ -4,7 +4,7 @@ description: Simplify distribution of line of business mobile applications to th
 keywords: distribution store
 author: pnghub
 ms.author: gned
-ms.date: 05/18/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
