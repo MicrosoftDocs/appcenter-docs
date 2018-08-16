@@ -64,7 +64,7 @@ Xamarin.Calabash.Start();
 ```
 
 > [!WARNING]
-> Apple will reject your app if you submit an app that includes the Xamarin Test Cloud Agent. The Xamarin Test Cloud Agent is only supported for apps signed with Development Provisioning Profiles.
+> Apple will reject your app if you submit an app that includes the Xamarin Test Cloud Agent. The Xamarin Test Cloud Agent is only supported for apps signed with Development Provisioning Profiles. When submitted to App Center Test, IPAs are automatically re-signed with one of our Development Provisioning Profiles if possible.
 
 When you surround the initialization code in the **ENABLE_TEST_CLOUD** conditional compile statement, the Xamarin linker will leave the Xamarin Test Cloud Agent in builds that use the **ENABLE_TEST_CLOUD** flag; conventionally **Debug** builds but not **Release** builds. New Xamarin.iOS apps created in Visual Studio use this approach.
 
