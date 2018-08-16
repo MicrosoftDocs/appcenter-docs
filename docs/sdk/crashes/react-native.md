@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -197,7 +197,7 @@ Crashes.setListener({
 });
 ```
 
-In case you want to setup the `getErrorAttachments` callback to work with ES2107 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
+In case you want to setup the `getErrorAttachments` callback to work with ES2017 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
