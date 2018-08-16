@@ -25,16 +25,29 @@ Initiating a test run in App Center Test requires the [App Center CLI tool](~/cl
 6. Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [this section](~/test-cloud/core-concepts.md)
 7. Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
 
-## Device selection
-Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
+### Device selection
+
+Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. 
+
+To get started:
+
+1. Navigate to [https://appcenter.ms/](https://appcenter.ms/).
+2. In the left hand column, click **Test** and **Device sets**.
+3. In the top right hand corner, click **New device set**.
+4. In the **Set name** field, choose a name for your device set.
+5. Under **Devices**, on the left hand column of each row, you can **check** the checkboxes to select the devices in your device set. 
+6. When you have completed selecting your devices, at the bottom right hand corner, click **New device set**.
+7. Congrats! You've created a device set. 
 
 ## Test run configuration
+
 Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [this section](~/test-cloud/core-concepts.md)
 
 ## The generated command
+
 Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
 
-```
+```shell
 appcenter test run espresso --app "<app-center-username/app-name>" --devices "app-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
 
@@ -50,6 +63,7 @@ With the App Center CLI tool installed and upload preparation complete, initiati
 8. Copy this generated command and execute it using the `appcenter` command line tool. Additionally, you may want to save the command to use in future test runs.
 
 ## Getting help
+
 You can always contact us through [the chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). Be aware that we do not provide 24/7 support, but will strive to reply as fast as possible.
 
 To help debug your test run, you can navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
