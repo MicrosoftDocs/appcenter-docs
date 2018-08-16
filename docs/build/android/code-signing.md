@@ -28,7 +28,11 @@ App Center supports three different configurations of setting up code signing fo
 If you would like to specify signing details in the build.gradle file with all credentials and the keystore available in the repository, add all the items needed to your code and repository and leave the revealed checkbox enabled, to mark that your configuration takes care of signing automatically.
 
 ### 2. Upload everything to App Center
-To use this method, there should be no signing configurations in the Gradle configuration in the repository. Uncheck the checkbox stating signing details are in the Gradle file. This enables further configuration:
+If you decide not to put your signing credentials into your repository, you can also upload the keystore and configure the signing credentials through App Center. In this case, App Center will first build your Android app and then perform a manual signing step after the successful build.
+
+Since trying to sign a build twice is not supported, please make sure that if you provide the signing credentials manually, you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant.
+
+Uncheck the checkbox stating signing details are in the Gradle file. This enables further configuration:
 
 Keystore files have the extension **.keystore** or **.jks**. After toggling on "Sign builds" in the branch configuration, either click the upload box to choose or drag your keystore file into it. Enter the keystore password, the key alias, and the key password to allow App Center to complete the signing of your APK.
 
