@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Jira, Visual Stu
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 09/15/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
@@ -39,7 +39,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
       2. Select which VSTS projects to integrate the bug tracker with and click **Next**.
       3. Under **Add bug tracker**, fill in the fields for **Number of crashes**, **Area** and **Default Payload**, and click **Add**:
          - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in VSTS.
-         - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/vsts/integrate/#Getaworkitemtype) for additional information.
+         - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/en-us/rest/api/vsts/wit/work%20item%20types) for additional information.
 
              ![How to add a bug tracker for VSTS](media/addBugTrackerVSTS.gif)
 

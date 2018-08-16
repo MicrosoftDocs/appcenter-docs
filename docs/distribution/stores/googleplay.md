@@ -42,37 +42,45 @@ Before you can access the API, you must link your Google Play Console to an API 
 * Choose the project you’d like to link.
 * Click on "Link".
 
-
 ### Setting Up API Access Clients
+
 **Using a service account**
 
 You can also create a [service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
 
 * Go to the [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page on the Google Play Console.
-  <img src="..//images/image1.png">
 
-* Under **Service Accounts**, click **Create Service Account**.
-  <img src=".././images/image2.png">
+  ![Google Play: configuring API access](~/distribution/images/image1.png)
+  
+* Under **Service Accounts**, click the **Create Service Account** button.
 
-* Follow the instructions on the page to create your service account.
-  <img src="../images/image3.png">
+  ![Google Play: Create service account button highlighted](~/distribution/images/image2.png)
+  
+* Follow the instructions on the dialog to create your service account.
 
-* On click of [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace) link. Proceed by clicking **CREATE SERVICE ACCOUNT**.
-  <img src="../images/image4.png">
+  ![Google Play: Create Service Account instructions](~/distribution/images/image3.png)
+  
+* In the instructions, click the link to the [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace). On the page the opens, click the **CREATE SERVICE ACCOUNT** button.
 
-  1. Configure it as
-     <img src="../images/image5.png">
+  ![Google Play: Service Accounts](~/distribution/images/image4.png)
+  
+  The **Create service account** dialog opens.
+  
+  ![Google Play: Create Service Account Dialog](~/distribution/images/image5.png)
+  
+  Choose a name for the new Service Account, and click the **Select a role** drop-down menu. Select **Project**, then **Owner** (full access to the integration).
+  
+  ![Google Play: Service Account Role Selection](~/distribution/images/image6.png)
+    
+  Select (check) **Furnish a new private key**, then select the **JSON Key Type** option.
+  
+  ![Google Play: Furnish Private Key](~/distribution/images/image7.png)
 
-  2. Choose a name for your Service Account and click **Select a role** drop-down menu. select **Owner** (full access to the integration) under **Project**<img src="../images/image6.png">
-
-  3. Choose a **JSON Key Type**, by clicking on "Furnish a new private key".
-     <img src="../images/image7.png">
-
-  4. Click **Create** to complete the service account creation. As you have chosen a JSON Key Type, a file with a .json extension will be downloaded on your machine. This file is required to publish your application.
+  Click the **Create** buttn to complete the service account creation. Since you have chosen a JSON Key Type, a file with a `.json` extension downloaded on your system; this file is required to publish your application.
 
 * Once you’ve created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 
-<img src="../images/image8.png">
+  ![Google Play: Service Account Created](~/distribution/images/image8.png)
 
 * Click **Grant Access** to provide the service account the necessary rights to perform actions. You should now be able to access the API through the service account. For more information on OAuth 2.0, review [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
 
@@ -103,9 +111,3 @@ The following steps explain how to set up the connection between App Center and 
 5. Click on **Publish** to push the app to the **Google Play store**. The status for this release on the store details page will show as **Submitted.**
 6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Note that Google could take upto 24 hours to show up the app on the Play store.
 7. In case of a failure with publishing by Google, app owner will receive a notification to the registered google mail. 
-
-
-
-
-
-

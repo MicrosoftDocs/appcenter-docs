@@ -34,30 +34,37 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_android.svg
+        alt: logo-Android
       text: Android
       href: ~/sdk/getting-started/android/
     - image:
         src: ~/media/logo_ios.svg
+        alt: logo-iOS
       text: iOS
       href: ~/sdk/getting-started/ios/
     - image:
         src: ~/media/logo_react.svg
+        alt: logo-ReactNative
       text: React Native
       href: ~/sdk/getting-started/react-native/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+        alt: logo-Windows
       text: UWP
       href: ~/sdk/getting-started/uwp/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
+        alt: logo-Xamarin
       text: Xamarin
       href: ~/sdk/getting-started/xamarin/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+        alt: logo-macOS
       text: macOS
       href: ~/sdk/getting-started/macos/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_cordova.svg
+        alt: logo-Cordova
       text: Cordova
       href: ~/sdk/getting-started/cordova/
 - title: Services
@@ -74,18 +81,21 @@ sections:
         html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS). No additional build hardware required.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
+          alt: build-icon
           href: ~/build/
         title: Build
       - href: ~/test-cloud/
         html: Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS). The next generation of Xamarin Test Cloud.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
+          alt: test-icon
           href: ~/test-cloud/
         title: Test
       - href: ~/distribution/
         html: Users can install the app via email distribution lists for testing, much as they'd download an app from the app store.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
+          alt: distribution-icon
           href: ~/distribution/
         title: Distribute
     - type: list
@@ -96,18 +106,21 @@ sections:
         html: Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
+          alt: crashes-icon
           href: ~/crashes/
         title: Crashes
       - href: ~/analytics/
         html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/analytics.svg
+          alt: analytics-icon
           href: ~/analytics/
         title: Analytics
       - href: ~/push/
         html: Engage your users by sending them targeted messages to specific sets of users at exactly the right time. Create segments of users based on device and custom properties.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
+          alt: push-icon
           href: ~/push/
         title: Push Notifications
 - title: Reference
