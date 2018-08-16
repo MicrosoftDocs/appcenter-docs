@@ -45,7 +45,6 @@ Here is an example on how to use this information to send push notifications:
 https://appcenter.ms/api/v0.1/apps/<YOUR_USER_NAME>/<YOUR_APP_NAME>/push/notifications
 ```
 
-
 ### Send the notification
 
 You can send a push using this [POST push API](https://openapi.appcenter.ms/#/push/Push_Send). The push request body is in JSON format (`application/json` content type). Here is an example:
@@ -60,6 +59,10 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
   }
 }
 ```
+
+## Campaign
+
+Campaign Name should be 64 characters or less, and title should be 128 characters or less. Otherwise you will get an error 400 Bad Request when sending the push via the API. To ensure you are within the limits, try constructing the name and title from the Campaign UI before pushing it via the API. 
 
 ## Send notifications to Audiences using API
 
