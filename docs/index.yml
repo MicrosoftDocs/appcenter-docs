@@ -102,13 +102,12 @@ sections:
       style: cards
       className: cardsB
       items:
-      - href: ~/crashes/
-        html: Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
+      - href: ~/diagnostics/
+        html: Collect crash data from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
-          alt: crashes-icon
-          href: ~/crashes/
-        title: Crashes
+          alt: diagnostics-icon
+        title: Diagnostics (Formerly Crashes)
       - href: ~/analytics/
         html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
         image:
