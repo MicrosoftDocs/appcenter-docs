@@ -13,7 +13,7 @@ ms.custom: sdk
 
 # Android SDK Troubleshooting
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -38,11 +38,11 @@ None of these permissions require user approval at runtime, those are all instal
 2. Make sure correct App Secret is included along with the `start()` method call. You can copy the exact `start()` code by opening the app in the portal and navigating to Getting Started page.
 3. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
-  ```java
-  AppCenter.setLogLevel(Log.VERBOSE);
-  ```
+   ```java
+   AppCenter.setLogLevel(Log.VERBOSE);
+   ```
 
-  Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
+   Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
 4. Make sure your device is online.
 5. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
@@ -55,11 +55,11 @@ None of these permissions require user approval at runtime, those are all instal
 3. You need to restart the app after a crash and our SDK will forward the crash log only after it is restarted.
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
-  ```java
-  AppCenter.setLogLevel(Log.VERBOSE);
-  ```
+   ```java
+   AppCenter.setLogLevel(Log.VERBOSE);
+   ```
 
-  Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
+   Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
 5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
@@ -80,11 +80,13 @@ The tests were run without Proguard enabled.
 
 Please note that the numbers below can vary and depend on your build settings, so consider them a rough guide. The SDK's impact to your app will be even lower if you use Proguard.
 
-App Center modules used   | Exported APK size | Installation size (as reported by the device)
---------------------------|-------------------|--------------------
-None (blank app)          |  1.3MB            | 3.43MB
-App Center Analytics      |  1.4MB            | 3.63MB
-App Center Crash          |  1.4MB            | 3.70MB
-App Center Distribute     |  1.4MB            | 3.71MB
-App Center Push           |  1.4MB            | 3.64MB
-All App Center modules    |  1.4MB            | 3.82MB
+
+| App Center modules used | Exported APK size | Installation size (as reported by the device) |
+|-------------------------|-------------------|-----------------------------------------------|
+|    None (blank app)     |       1.3MB       |                    3.43MB                     |
+|  App Center Analytics   |       1.4MB       |                    3.63MB                     |
+|    App Center Crash     |       1.4MB       |                    3.70MB                     |
+|  App Center Distribute  |       1.4MB       |                    3.71MB                     |
+|     App Center Push     |       1.4MB       |                    3.64MB                     |
+| All App Center modules  |       1.4MB       |                    3.82MB                     |
+

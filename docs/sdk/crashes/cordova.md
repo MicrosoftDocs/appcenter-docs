@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # App Center Crashes
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -122,7 +122,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 > [!NOTE]
 > To use this feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in `config.xml` to `false`.
->
+> 
 > This feature is thus dependent on [Processing Crashes](#processing-crashes-in-javascript) in JavaScript.
 
 ### Add attachments to a crash report
@@ -146,9 +146,9 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 > [!NOTE]
 > To use that feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in `config.xml` to `false`.
->
+> 
 > This feature is thus dependent on [Processing Crashes](#processing-crashes-in-javascript) in JavaScript.
-
+> 
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
 

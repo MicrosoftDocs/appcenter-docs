@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 06/20/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -28,50 +28,54 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Language and Runtime
 
 - Java 1.7.0_80
-- Java 1.8.0_172
+- Java 1.8.0_181
 - Java 9.0.4
-- Java 10.0.1
+- Java 10.0.2
 - Node.js 6.14.3
-- PowerShell 6.0.2
+- Node.js v8.11.3
+- PowerShell 6.0.3
 - Python 2.7.10
-- Python 3.6.5
+- Python 3.7.0
 - Ruby 2.5.1p57
-- .NET Core SDK 1.0.4, 2.0.3
+- .NET Core SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4
 - Go 1.10.3
+- Miniconda 4.5.4
+- MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
 
 ### Package Management
 
 - Bundler 1.16.1
-- Carthage 0.29.0
+- Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.6.8
+- Homebrew 1.7.1
 - NPM 3.10.10
-- Yarn 1.7.0
+- Yarn 1.9.4
 - NuGet 4.3.0.4406
-- pip 10.0.1
+- pip 18.0
+- nvm 0.33.11
 
 ### Project Management
 
-- Apache Maven 3.5.3
-- Gradle 4.8
+- Apache Maven 3.5.4
+- Gradle 4.9
 
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.17.1
-- Git LFS 2.4.2
+- Git 2.18.0
+- Git LFS 2.5.1
 - GNU Wget 1.19.5
-- Subversion (SVN) 1.10.0
+- Subversion (SVN) 1.10.2
 
 ### Tools
 
-- fastlane 2.97.0
-- App Center CLI 1.0.17
-- Azure-CLI 2.0.37
+- fastlane 2.101.1
+- App Center CLI 1.1.1
+- Azure-CLI 2.0.43
 
 ## Xcode
 
-- Xcode 10 beta
+- Xcode 10 beta 5
 - Xcode 9.4.1
 - Xcode 9.4
 - Xcode 9.3.1
@@ -96,6 +100,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - xctool 0.3.4
 
 ### Installed SDKs
+
 | SDK                       | SDK name    |
 |---------------------------|-------------|
 | macOS 10.12               | macosx10.12 |
@@ -194,6 +199,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 3 - 42mm
 
 #### Runtimes
+
 | OS      | Version |
 |---------|---------|
 | iOS 8.4 | 12H141 |
@@ -341,6 +347,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Device Pairs
 
+
 | Watch                       | Phone          |
 |-----------------------------|----------------|
 | Apple Watch - 38mm          | iPhone 6s      |
@@ -354,17 +361,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android SDK Tools
 
+
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | tools                 | Android SDK Tools, revision 26.1.1          |
 
 ### Android SDK Platform-tools
 
+
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
 | platform-tools        | Android SDK Platform-tools, revision 28.0.0 |
 
 ### Android SDK Platforms
+
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -384,6 +394,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android SDK Build-tools
 
+
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | build-tools-19.1.0    | Android SDK Build-tools, Revision 19.1.0  |
@@ -400,16 +411,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-25.0.0    | Android SDK Build-tools, Revision 25.0.0  |
 | build-tools-25.0.1    | Android SDK Build-tools, Revision 25.0.1  |
 | build-tools-25.0.2    | Android SDK Build-tools, Revision 25.0.2  |
-| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
-| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
-| build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
-| build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
+| build-tools-25.0.3    | Android SDK Build-tools, Revision 25.0.3  |
+| build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
+| build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
+| build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
 | build-tools-27.0.0    | Android SDK Build-tools, Revision 27.0.0  |
 | build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
 | build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
 | build-tools-27.0.3    | Android SDK Build-tools, Revision 27.0.3  |
 
 ### Utils
+
 
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
@@ -421,6 +433,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Google APIs
 
+
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | google_apis-google-21 | Google APIs, Android API 21, revision 1   |
@@ -429,6 +442,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | google_apis-google-24 | Google APIs, Android API 24, revision 1   |
 
 ### Extra packages
+
 
 | Package name                      | Description                              |
 |-----------------------------------|------------------------------------------|

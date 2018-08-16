@@ -19,7 +19,6 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 #audience:
 #ms.devlang:
 #ms.reviewer: [ALIAS]
-
 ---
 
 # Distribute - Sample Swift App and Tutorials
@@ -29,7 +28,7 @@ If you have not already, first follow the [getting started tutorial](getting-sta
 
 
 ### Prerequisites
- - Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+- Optional: Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 ## Choose a build to Distribute
 There are **two ways you can distribute** the app.
@@ -39,17 +38,17 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 
 2. Click **Choose branch and build** at the bottom of the page.
 
-4. Choose the **master** branch.  
+3. Choose the **master** branch.  
 
-5. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](build.md) has steps to do so.
+4. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](build.md) has steps to do so.
 
-6. Click **Next** twice. Leave the **Release notes** blank.
+5. Click **Next** twice. Leave the **Release notes** blank.
 
 Another way is to upload your own .ipa file from Xcode. Skip this if you followed the steps to distribute above.
 1. From the **Distribute** service, click **Distribute new release** at the top.
 
 2. Click **Distribute new release** at the top of the page.
-  
+
 3. Upload your **.ipa** file.
 
 4. Click **Next** twice. Leave the **Release notes** blank.

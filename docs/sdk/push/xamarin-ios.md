@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin.ios
 
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -61,8 +61,8 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 [!include[](start-push.md)]
 
->[!NOTE]
->If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+> [!NOTE]
+> If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notifications
 
@@ -107,8 +107,8 @@ App Center uses swizzling to automatically forward your application delegate's m
     }
     ```
 
-    >[!NOTE]
-    >You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the App Center lines of code above alongside existing code in your implementation of these methods.
+   > [!NOTE]
+   > You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the App Center lines of code above alongside existing code in your implementation of these methods.
 
 4. Implement the callback to enable push event
 

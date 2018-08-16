@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app organizations in App C
 keywords: dashboard organizations
 author: joemellin
 ms.author: joemel
-ms.date: 04/30/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
 ms.service: vs-appcenter
@@ -28,6 +28,17 @@ To create an organization, log in and click the **Add new** dropdown and choose 
 > [!NOTE]
 > When you create an organization, you automatically become an 'Admin'.
 
+## Uploading an organization icon
+
+You can customize your organization by uploading an org icon. 
+
+1. On the left side navigation, select the organization
+2. Select the **Manage** tab
+3. On the right side of the screen, click the placeholder org icon
+4. Select an image file no larger than 512px and does not exceed 1 MB
+
+![How to upload org icon](images/org-upload-icon.png)
+
 ## Accessing organizations
 
 All of your organizations are accessible in the left navigation.
@@ -37,7 +48,7 @@ All of your organizations are accessible in the left navigation.
 There are two ways to add users to an organization:
 
 **Directly to the organization:**
-1. On the left side havigation, select the organization
+1. On the left side navigation, select the organization
 2. Select **People**
 3. Type the user's email address to add the user
 
@@ -46,8 +57,8 @@ This gives the user access to the organization as a collaborator. However, they 
 **In-directly through an app:**
 1. Select an app within an organization
 2. On the left side havigation, select the **Settings** page
-2. Select **People** 
-3. Type the user's email address to add the user
+3. Select **People** 
+4. Type the user's email address to add the user
 
 Adding a user from outside the organization to an app automatically adds them to the organization. However, the user will only see the app(s) they were invited to.
 

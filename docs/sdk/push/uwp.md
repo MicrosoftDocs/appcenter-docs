@@ -14,7 +14,7 @@ ms.tgt_pltfrm: UWP
 
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -46,8 +46,8 @@ Before you can send notification using WNS, your app must be registered with the
 
 3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
 
->[!NOTE]
->You will need a Windows Developer account to send push notifications to your UWP app. You can [register a developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
+> [!NOTE]
+> You will need a Windows Developer account to send push notifications to your UWP app. You can [register a developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
 
 ### 2. Get Package SID and Application secret from Application Registration Portal
 
@@ -77,8 +77,8 @@ Now that you've integrated App Center Push in your application, it's time to sta
 
 [!include[](start-push.md)]
 
->[!NOTE]
->If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+> [!NOTE]
+> If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notifications
 
@@ -102,11 +102,11 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 > [!NOTE]
 > No toast is shown when the push is received in foreground.
-
+> 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
 > The event is triggered when you click on the notification.
-
+> 
 > [!NOTE]
 > UWP toasts do **NOT** expose **title** and **message** to the background notification click callback.
 > **Title** and **message** are only available in **foreground** pushes.

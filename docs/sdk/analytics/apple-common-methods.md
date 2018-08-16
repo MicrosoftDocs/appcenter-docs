@@ -6,7 +6,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
-Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};

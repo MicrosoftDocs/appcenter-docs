@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin
 
 # App Center Distribute – In-app updates
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Xamarin](xamarin.md)
@@ -36,26 +36,26 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-#### Visual Studio for Mac or Xamarin Studio
+#### Visual Studio for Mac
 
 * Under your project, select **Packages**, open context menu and click **Add packages**.
 * Search for **App Center**, and select **App Center Distribute**.
 * Click **Add Packages**.
 
-#### Visual Studio for Windows
+#### Visual Studio on Windows
 
 * Navigate to the **Project > Manage NuGet Packages...**
 * Search for **App Center**, then install **Microsoft.AppCenter.Distribute**.
 
 #### Package Manager Console
 
-* Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
+* Make sure the Package Manager Console is opened in either Visual Studio 2017 or Visual Studio for Mac (you will have to install an add-in for Visual Studio for Mac). Type the following command:
 
   `PM> Install-Package Microsoft.AppCenter.Distribute`
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable, Android and iOS ones.
+> in each of the projects: the portable, Android, and iOS ones.
 
 ### 2. Start App Center Distribute
 
@@ -121,15 +121,15 @@ This step is not necessary on Android where the debug configuration is detected 
 > If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
 > ```
 > <key>CFBundleURLTypes</key>
->	<array>
->		<dict>
->			<key>CFBundleURLSchemes</key>
->			<array>
->				<string>appcenter-${APP_SECRET}</string>
->			</array>
->		</dict>
->	</array>
->	```
+>   <array>
+>       <dict>
+>           <key>CFBundleURLSchemes</key>
+>           <array>
+>               <string>appcenter-${APP_SECRET}</string>
+>           </array>
+>       </dict>
+>   </array>
+>   ```
 
 ## Customize or localize the in-app update dialog
 
@@ -152,43 +152,43 @@ Here is an example on **Xamarin.Forms** of the callback implementation that repl
 ```csharp
 bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 {
-	// Look at releaseDetails public properties to get version information, release notes text or release notes URL
-	string versionName = releaseDetails.ShortVersion;
-	string versionCodeOrBuildNumber = releaseDetails.Version;
-	string releaseNotes = releaseDetails.ReleaseNotes;
-	Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
+    // Look at releaseDetails public properties to get version information, release notes text or release notes URL
+    string versionName = releaseDetails.ShortVersion;
+    string versionCodeOrBuildNumber = releaseDetails.Version;
+    string releaseNotes = releaseDetails.ReleaseNotes;
+    Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
 
-	// custom dialog
-	var title = "Version " + versionName + " available!";
-	Task answer;
+    // custom dialog
+    var title = "Version " + versionName + " available!";
+    Task answer;
 
-	// On mandatory update, user cannot postpone
-	if (releaseDetails.MandatoryUpdate)
-	{
-		answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install");
-	}
-	else
-	{
-		answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install", "Maybe tomorrow...");
-	}
-	answer.ContinueWith((task) =>
-	{
-		// If mandatory or if answer was positive
-		if (releaseDetails.MandatoryUpdate || (task as Task<bool>).Result)
-		{
-			// Notify SDK that user selected update
-			Distribute.NotifyUpdateAction(UpdateAction.Update);
-		}
-		else
-		{
-			// Notify SDK that user selected postpone (for 1 day)
-			// Note that this method call is ignored by the SDK if the update is mandatory
-			Distribute.NotifyUpdateAction(UpdateAction.Postpone);
-		}
-	});
+    // On mandatory update, user cannot postpone
+    if (releaseDetails.MandatoryUpdate)
+    {
+        answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install");
+    }
+    else
+    {
+        answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install", "Maybe tomorrow...");
+    }
+    answer.ContinueWith((task) =>
+    {
+        // If mandatory or if answer was positive
+        if (releaseDetails.MandatoryUpdate || (task as Task<bool>).Result)
+        {
+            // Notify SDK that user selected update
+            Distribute.NotifyUpdateAction(UpdateAction.Update);
+        }
+        else
+        {
+            // Notify SDK that user selected postpone (for 1 day)
+            // Note that this method call is ignored by the SDK if the update is mandatory
+            Distribute.NotifyUpdateAction(UpdateAction.Postpone);
+        }
+    });
 
-	// Return true if you are using your own dialog, false otherwise
-	return true;
+    // Return true if you are using your own dialog, false otherwise
+    return true;
 }
 ```
 
@@ -241,17 +241,18 @@ The in-app updates feature works as follows:
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 
-	* On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
-	* On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
+   * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
+   * On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
 
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
-    * iOS: 
-        * a higher value of `CFBundleShortVersionString` or
-        * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
-    * Android:
-        * a higher value of `versionCode` or
-        * an equal value of `versionCode` but a higher value of `versionName`.
+   * iOS: 
+     * a higher value of `CFBundleShortVersionString` or
+     * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
+
+   * Android:
+     * a higher value of `versionCode` or
+     * an equal value of `versionCode` but a higher value of `versionName`.
 
 > [!TIP]
 > If you upload the same apk/ipa a second time, the dialog will **NOT** appear as the binaries are identical. On iOS, if you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it is a **different** binary. On Android, binaries are considered the same if both version properties are the same.
@@ -273,7 +274,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+> While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 
 ## Disable automatic forwarding of application delegate's methods to App Center services
@@ -287,7 +288,7 @@ App Center uses swizzling to automatically forward your application delegate's m
 ```csharp
 public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
-	Distribute.OpenUrl(url);
-	return true;
+    Distribute.OpenUrl(url);
+    return true;
 }
 ```

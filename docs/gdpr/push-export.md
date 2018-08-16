@@ -56,8 +56,8 @@ A status indicating completion indicates that the data will has been copied the 
 
 Additional information can be found in the [Push Export API documentation](https://openapi.appcenter.ms/#/push/Push_ExportDevicesStatus).
 
->[!NOTE]
->Each row of the exported document will be a valid JSON Object, but the whole document will not be a valid JSON file.
+> [!NOTE]
+> Each row of the exported document will be a valid JSON Object, but the whole document will not be a valid JSON file.
 
 **2. Search in the data you exported in step 1 for user identifier data**
 

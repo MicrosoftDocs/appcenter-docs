@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2018
+ms.date: 07/12/2018
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: android
 
 # Get Started with Android
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -50,13 +50,16 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
 
-	```groovy
-	dependencies {
-		def appCenterSdkVersion = '1.6.1'
-   		compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-   		compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-	}
-	```
+  ```groovy
+  dependencies {
+      def appCenterSdkVersion = '1.7.0'
+      implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+      implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+  }
+  ```
+
+  > [!NOTE]
+  > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 

@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # App Center Crashes
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -102,7 +102,7 @@ Crashes.setListener({
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
->
+> 
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 ### Ask for the users' consent to send a crash log
@@ -145,7 +145,7 @@ Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND);
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
->
+> 
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 ### Get information about the sending status for a crash log
@@ -175,7 +175,7 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
->
+> 
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
 
 ### Add attachments to a crash report
@@ -197,7 +197,7 @@ Crashes.setListener({
 });
 ```
 
-In case you want to setup the `getErrorAttachments` callback to work with ES2107 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
+In case you want to setup the `getErrorAttachments` callback to work with ES2017 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
@@ -220,9 +220,9 @@ Crashes.setListener({
 
 > [!NOTE]
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
->
+> 
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
-
+> 
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
 

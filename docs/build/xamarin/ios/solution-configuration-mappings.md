@@ -20,8 +20,7 @@ If you just like to fix your Xamarin.iOS configuration you can apply the instruc
 ## Changing a Solution Configuration Mappings
 The way you can change your **Configuration Mapping** depends on IDE you use. Here you may change specific project building with current solution configuration using the checkboxes in the Build column. You may want to disable building Android projects for your iOS application here. To disable building UWP projects you will need to use VS for Windows or edit your **.sln** file manually.
 
-# [Visual Studio](#tab/vswin)
-
+#### [Visual Studio](#tab/vswin/)
 ### 1. In your solution explorer right click the solution and open the **Configuration manager**
 ![Visual Studio for Windows Solution Explorer](images/vswindows-solution-explorer.png)
 
@@ -32,8 +31,7 @@ Choose the desired active solution configuration and platform in the upper drop-
 
 You can read additional configuration mappings information in [Visual Studio official documentation](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/configuration-options-overview).
 
-# [Visual Studio for Mac](#tab/vsmac)
-
+#### [Visual Studio for Mac](#tab/vsmac/)
 ### 1. Double click on your solution name in the **Solution Explorer**
 ![Visual Studio for Mac Solution Explorer](images/vsmac-solution-explorer.png)
 
@@ -45,8 +43,7 @@ The process for selecting an active configuration and building options is the sa
 
 There is also additional [configuration mappings information for different Xamarin IDE for Mac](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/projects-and-solutions/#Solution_Configurations).
 
------
-
+* * *
 ## Project Configurations
 When you change any project option in your IDE, it can belong to different project configurations. Projects can have multiple configurations, namely *Debug* or *Release*. Switching between those configurations allows for different outputs at build time. For example, when you use a Debug configuration, the output will include debugging symbols, which allows the debugger to resolve function name, parameters, or variables from a crash applications stack trace. This, however, leads to an increased file size and should not be used for publishing in stores.
 

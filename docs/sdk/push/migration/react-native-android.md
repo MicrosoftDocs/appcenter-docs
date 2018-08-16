@@ -1,10 +1,10 @@
 ---
-title: How to remove Firebase SDK
-description: How to remove Firebase SDK
+title: How to add Firebase SDK
+description: Contains instructions for how to configure your project to use Firebase Cloud Messaging
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/22/2017
+ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7fe521e7-66fc-42ac-b804-a779525ad39e
 ms.service: vs-appcenter
@@ -14,48 +14,42 @@ ms.tgt_pltfrm: android
 
 [!include[](introduction-android.md)]
 
-## 1. Gradle dependencies
+## 1. Integrate Firebase in application
 
-If you are not using Firebase, you can remove the following lines from **app/build.gradle**:
+- In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**.
+- Download the **google-services.json** file to your Android project's app module (for most projects, it will be the project's **android/app** folder).
+- Modify the **android/build.gradle** file:
 
-```groovy
-    compile "com.google.firebase:firebase-core:${version}"
-    compile "com.google.firebase:firebase-messaging:${version}"
-```
+    ```groovy
+    buildscript {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
 
-## 2. google-services.json
+        dependencies {
+            // Add this line
+            classpath 'com.google.gms:google-services:4.0.1'
+        }
+    }
 
-If you are not using Firebase, you can also remove the **google-services.json**
-file by using the following steps.
+    allprojects {
+        repositories {
+            // Add google line if missing before jcenter
+            google()
+            jcenter()
+        }
+    }
+    ```
 
-### 2.1. Get your Sender ID
+- Modify the project's **android/app/build.gradle** file:
 
-In the [Firebase Console](https://console.firebase.google.com),
-go to **Project Settings**.
-Navigate to the **Cloud Messaging** tab. Copy the **Sender ID** value.
+    ```groovy
+    // Add this line at the bottom
+    apply plugin: 'com.google.gms.google-services'
+    ```
 
-### 2.2. Set Sender ID
+## 2. Remove Sender ID
 
-Look for the `onCreate` method in the **MainApplication.java** file
-and add the following call before `SoLoader.init`:
-
-```java
-Push.setSenderId("{Your Sender ID}");
-SoLoader.init(this, false);
-```
-
-### 2.3. Remove Google Services plugin dependencies
-
-At the root of the android project **build.gradle** file, remove the following line:
-
-```groovy
-    classpath 'com.google.gms:google-services:${version}'
-```
-
-In the **app/build.gradle** file, remove the following line:
-
-```groovy
-apply plugin: 'com.google.gms.google-services'
-```
-
-You can now remove **google-services.json** file and you are now all set.
+Remove the `Push.setSenderId("{Your Sender ID}")` method call from **MainApplication.java**.

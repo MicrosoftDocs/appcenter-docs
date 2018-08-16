@@ -13,7 +13,7 @@ ms.custom: sdk
 
 # Migrate to App Center UWP SDK v1.0.0
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -24,13 +24,13 @@ Follow these steps to update your current preview SDK to App Center UWP SDK v1.0
 
 1. Replace following NuGet packages:
 
-    * Uninstall **Microsoft.Azure.Mobile.Analytics** and install **Microsoft.AppCenter.Analytics**.
-    * Uninstall **Microsoft.Azure.Mobile.Push** and install **Microsoft.AppCenter.Push**.
-    * Uninstall **Microsoft.Azure.Mobile** after you replaced other packages if you still have it.
+   * Uninstall **Microsoft.Azure.Mobile.Analytics** and install **Microsoft.AppCenter.Analytics**.
+   * Uninstall **Microsoft.Azure.Mobile.Push** and install **Microsoft.AppCenter.Push**.
+   * Uninstall **Microsoft.Azure.Mobile** after you replaced other packages if you still have it.
 
-    If you are using **project.json** you can just search and replace the packages IDs and restore (in that case you also need to change version to **1.0.0**), but that does not work for **packages.config**-based projects (for those you have to uninstall and reinstall).
+     If you are using **project.json** you can just search and replace the packages IDs and restore (in that case you also need to change version to **1.0.0**), but that does not work for **packages.config**-based projects (for those you have to uninstall and reinstall).
 
-    Don't forget to update your PCL or .NET standard projects along with your UWP-specific project if you have Mobile Center integrated in portable code (such as when you use **Xamarin Forms**).
+     Don't forget to update your PCL or .NET standard projects along with your UWP-specific project if you have Mobile Center integrated in portable code (such as when you use **Xamarin Forms**).
 
 2. Replace the using statements:
 

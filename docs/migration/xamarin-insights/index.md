@@ -4,7 +4,7 @@ description: "Moving from Xamarin Insights to Visual Studio App Center"
 keywords: xamarin insights
 author: blparr
 ms.author: blparr
-ms.date: 05/16/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 4A553E23-D8FF-44A7-B2EA-23AA9B80FAA7
 ms.service: vs-appcenter
@@ -14,11 +14,9 @@ ms.custom: insights
 
 Visual Studio App Center is the next generation of Xamarin Insights, offering similar feature set and performance, along with a set of other services which will improve your app development pipeline, such as cloud-based builds, app distribution and testing and push notifications.
 
-
 ## Timeline
 
 April 30th, 2018: Xamarin Insights portal was retired and you no longer have access to the Xamarin Insights portal.
-
 
 ## Next steps
 
@@ -31,7 +29,6 @@ These are the steps you will need to follow for a successful and smooth migratio
 - Integrate the App Center SDK for your [preferred platform](~/sdk/getting-started/xamarin.md). To get the equivalent features as you did in Xamarin Insights, integrate the [Crashes SDK](~/sdk/crashes/xamarin.md) and the [Analytics SDK](~/sdk/analytics/xamarin.md).
 - Everything you see in the App Center portal has API support. If you are using the Xamarin Insights APIs, you must change your app to use the [App Center APIs](~/api-docs/index.md). Change the existing Xamarin Insights APIs to the App Center ones. For Crashes, look at the [App Center Crashes APIs](https://openapi.appcenter.ms/#/crash) and, for Analytics, the [App Center Analytics APIs](https://openapi.appcenter.ms/#/analytics).
 - If you have any questions during this process, please contact us via our support system (blue button at the bottom right-hand side).
-
 
 ## Similarities and differences
 
@@ -70,7 +67,6 @@ Both products offer very similar feature set, providing crash/error groups, cras
 
 Learn more about [Crashes](~/crashes/index.md) and [Errors](~/errors/index.md) in App Center.
 
-
 ### Additions in App Center feature set
 
 App Center is the next generation of Xamarin Insights and as such, it provides a set of new and improved features. Learn more about all the [services](~/index.yml) that App Center offers.
@@ -81,33 +77,29 @@ You can export your data to Blob Storage and build your favorite warehousing sol
 
 Learn more about [Continuous Export](~/analytics/export.md).
 
-
 ### Users
 
 App Center does not currently have a portal experience to identify users and analyze their behavior at the user level. However, we are considering to add this feature in App Center, so please reach out to us with your use cases and help us gather the right requirements!
 
-
 ## Frequently Asked Questions
 
-**Q:** Will my apps with the Xamarin Insights SDK keep working after retirement?
+**Will my apps with the Xamarin Insights SDK keep working after retirement?**
 
-**A:** While your apps with the Xamarin Insights SDK will continue to work for some time, you will need to eventually remove the Xamarin Insights SDK from all your apps to ensure continuity.
+While your apps with the Xamarin Insights SDK will continue to work for some time, you will need to eventually remove the Xamarin Insights SDK from all your apps to ensure continuity.
+
+**Can I upgrade to App Center before Xamarin Insights gets retired?**
+
+Absolutely! We encourage you to move to App Center as soon as possible to have the maximum time to do the upgrade. This upgrade includes upgrading the SDKs and APIs, as well as getting familiar with the App Center offering.
 <br><br>
 
-**Q:** Can I upgrade to App Center before Xamarin Insights gets retired?
+**Do I have to pay in App Center to get the equivalent services I used to get in Xamarin Insights?**Hi 
 
-**A:** Absolutely! We encourage you to move to App Center as soon as possible to have the maximum time to do the upgrade. This upgrade includes upgrading the SDKs and APIs, as well as getting familiar with the App Center offering.
-<br><br>
+No. App Center Analytics and Diagnostics are completely free services.
 
-**Q:** Do I have to pay in App Center to get the equivalent services I used to get in Xamarin Insights?
-**A:** No. App Center Analytics and Diagnostics are completely free services.
-<br><br>
+**How is support handled in App Center?**
 
-**Q:** How is support handled in App Center?
-**A:** App Center provides in portal support. Click in the blue button at the bottom right-hand side and ask your question or provide feedback.
-<br><br>
+App Center provides in portal support. Click in the blue chat button at the bottom-right corner of any App Center page and ask your question or provide feedback.
 
-**Q:** Can I access my existing Xamarin Insights dashboards after retirement?
-**A:** No. Once we reach the retirement date, you will not be able to access the Xamarin Insights portal. Please, make sure you copy over any information you might need.
-<br><br>
+**Can I access my existing Xamarin Insights dashboards after retirement?**
 
+No. Once we reach the retirement date, you will not be able to access the Xamarin Insights portal. Please, make sure you copy over any information you might need.

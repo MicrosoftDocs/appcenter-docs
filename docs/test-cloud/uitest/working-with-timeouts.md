@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: E72E94A6-479F-4D65-9394-C6310F670DD9
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ Sometimes it is necessary to pause test execution while waiting for the user int
 
 The methods `IApp.WaitForElement`, and `IApp.WaitForNoElement` fundamentally work the same: they will wait for a query to be satisfied and will throw a `TimeoutException` if it is not satisfied in the specified time limit.
 
-By default, UITests waits 15 seconds for tests running locally and one minute for tests running in Test Cloud before throwing the exception.
+By default, UITests waits 15 seconds for tests running locally and one minute for tests running in App Center Tests before throwing the exception.
 
 `IApp.WaitForElement` is useful for situations where the test needs to confirm the presence of a view that provides important information to the user, such as a success message or perhaps an icon. This is an example of `IApp.WaitForElement` that will wait 90 seconds for a view that is marked with `success_message_label` to appear on the screen:
 

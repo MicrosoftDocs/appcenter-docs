@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin
 
 # App Center Analytics
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)

@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 01/31/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter
@@ -13,16 +13,18 @@ ms.custom: test
 
 # Preparing XCUITest Tests for Upload
 
-[**AppCenter XCUITest
-Extensions**](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions)
+The steps necessary to prepare an app and its corresponding test suite for upload
+to App Center vary depending on the test framework. The section below provides instructions for preparing XCUITests tests for upload to App Center Test.
+
+[<strong>AppCenter XCUITest
+Extensions</strong>](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions)
 is an iOS Framework for taking screenshots and labeling test steps when
-running XCUITest test in App Center or Xamarin Test Cloud. At the
+running XCUITest test in App Center. At the
 conclusion of each test method, a label and screenshot are automatically
 generated for the test report. You can create additional labels and
 screenshots to track your app's progress during a test method.
 
-**This framework is _required_ for running XCUITests in App Center and
-Xamarin Test Cloud.**
+**This framework is *required* for running XCUITests in App Center.**
 
 If you encounter a problem, please file a GitHub
 [issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
@@ -48,6 +50,7 @@ XCUIApplication *app = act_launch_app([[XCUIApplication alloc] init]);
 XCUIApplication *app = [ACTLaunch launch];
 XCUIApplication *app = [ACTLaunch launchApplication:[[XCUIApplication alloc] init]];
 ```
+
 ### Swift
 
 ```swift
@@ -69,7 +72,7 @@ examples in the [Requirements](#requirements) section.
 ## Adding the AppCenterXCUITestExtensions to an Xcode Project
 
 The **AppCenterXCUITestExtensions.framework** needs to be linked with
-the project's XCUITest target.  The framework should _not_ be linked
+the project's XCUITest target.  The framework should *not* be linked
 with the project's iOS application.
 
 1. [Carthage](#carthage) &ndash; Preferred. This is a dependency manager for iOS and macOS.
@@ -95,7 +98,7 @@ Instructions](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tes
 for installing frameworks from a Cartfile.
 
 Remember that the **AppCenterXUITestExtensions.framework** needs to be
-linked with the XCUITest target and _not_ the iOS application.
+linked with the XCUITest target and *not* the iOS application.
 
 You can check this test code as an example for setting up App Center XCUITest [Example code](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido)
 
@@ -126,7 +129,7 @@ $ ditto Products/framework/AppCenterXCUITestExtensions.framework \
 
 ##### 3. Link AppCenterXCUITestExtensions.framework with the XCUITest target
 
-In Xcode, in the 'Build Phases' tab of the _XCUITest target_ (not the
+In Xcode, in the 'Build Phases' tab of the *XCUITest target* (not the
 main application target), add the
 `AppCenterXCUITestExtensions.framework` in the 'Link Binary With
 Libraries' phase.
@@ -168,7 +171,7 @@ Code example for CocoaPods [Code example](https://github.com/Microsoft/AppCenter
 
 ## Build For Testing
 
-In order to run a test in App Center or Xamarin Test Cloud, you will
+In order to run a test in App Center, you will
 need to build your application and an XCUITest bundle. To do this, run
 the following command from the root of your application project
 directory:
@@ -202,13 +205,7 @@ For a concrete example of generating an app and an XCUITest bundle, see
 
 ## Uploading Tests to App Center
 
-Tests are uploaded to App Center using the `appcenter` command line tool.
-
-To install, follow the instructions in the README of the [AppCenter-CLI
-GitHub](https://github.com/Microsoft/AppCenter-CLI) repository.
-
-Use the App Center Test page to generate a device selection and 
-an example command-line invocation. For more information, see [Starting a Test run](~/test-cloud/starting-a-test-run.md).
+Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
 
 ```
 # Follow the instructions to generate a resuable API token.

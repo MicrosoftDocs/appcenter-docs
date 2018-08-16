@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin.forms
 
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -40,8 +40,8 @@ Push notifications work differently on UWP, iOS, and Android, therefore, before 
 * [Xamarin.iOS](xamarin-ios.md)
 * [UWP](uwp.md)
 
->[!IMPORTANT]
->Even if you only access the `AppCenter` or `Push` class from your shared or PCL project, the App Center NuGet packages must be added to each platform-specific project.
+> [!IMPORTANT]
+> Even if you only access the `AppCenter` or `Push` class from your shared or PCL project, the App Center NuGet packages must be added to each platform-specific project.
 
 ## Add App Center Push to your app
 
@@ -61,8 +61,8 @@ App Center Push makes it possible to intercept push notifications but there is s
 
 ### iOS additional steps
 
->[!NOTE]
->You only need this step if you disabled method swizzling while setting up [Xamarin.iOS](xamarin-ios.md).
+> [!NOTE]
+> You only need this step if you disabled method swizzling while setting up [Xamarin.iOS](xamarin-ios.md).
 
 To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
 
@@ -162,8 +162,8 @@ When the push is received in **foreground**, the event is fired right away but
 
 > [!NOTE]
 > When the push is clicked from background on **Android and UWP**, the event **does not** have **title**
-and **message** in the event arguments, only iOS expose those fields for all events.
-
+> and **message** in the event arguments, only iOS expose those fields for all events.
+> 
 > [!NOTE]
 > On iOS only, if silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 

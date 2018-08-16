@@ -17,7 +17,6 @@ ms.assetid: 9e2c6890-26e9-4b8a-a4fb-f43c8e55c1fb
 #audience:
 #ms.devlang: dotnet
 #ms.reviewer: [ALIAS]
-
 ---
 
 # View Crashes Sent From Android App in App Center

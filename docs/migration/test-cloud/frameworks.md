@@ -4,7 +4,7 @@ description: "Mobile App Testing Frameworks Overview"
 keywords: testcloud
 author: glennwester
 ms.author: glwest
-ms.date: 04/30/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 9cdf95db-1ad5-4541-a21c-c20492d4607f
 ms.service: vs-appcenter
@@ -22,11 +22,11 @@ As part of our transition on the development of Calabash, we've provided an over
 
 Microsoft is committed to ensuring that Calabash works up until and including the next minor releases of the iOS and Android OS versions, that is, iOS 11.x and Android O / Android 8.x. After securing those releases, we will discontinue dedicated engineering contributions. Given the open source nature of Calabash, we hope the community will step up and continue to maintain and develop the tool. If you're interested in staying with Calabash, you'll want to take note to see if an individual or group steps up to take over maintenance. You may also see this as an opportunity to take matters into your own hands and devote engineering resources to maintain Calabash. If you're interested in taking over Calabash stewardship, please contact [appcentertest@microsoft.com](mailto:appcentertest@microsoft.com).
 
-Calabash will continue to be supported in Visual Studio App Center and Xamarin Test Cloud up until and including iOS 11.x and Android 8.x. At this time, the tool will become a 3rd party testing framework supported in Test Cloud.
+Calabash will continue to be supported in Visual Studio App Center up until and including iOS 11.x and Android 8.x. At this time, the tool will become a 3rd party testing framework supported in App Center Test.
 
 Still have questions about how it works? Read on for our FAQ:
 
-**Q: Will we be able to continue to use Calabash to run tests on my devices and simulators? Will Calabash continue to be supported in Xamarin Test Cloud & Visual Studio App Center?**
+**Q: Will we be able to continue to use Calabash to run tests on my devices and simulators? Will Calabash continue to be supported in App Center?**
 
 **A:** Yes, you can continue to use Calabash. There is a risk that the community will not find a maintainer and that Calabash might not support OS versions greater than iOS 11.x and Android 8.x.
 
@@ -41,16 +41,16 @@ Still have questions about how it works? Read on for our FAQ:
 ## The Tools Landscape beyond Calabash
 
 The landscape of good mobile UI & app testing frameworks has expanded over the last few years. In addition to Calabash, there are 6 major app testing frameworks available for iOS and Android: 
-*	**Espresso**
-*	**XCUITest** 
-*	**Xamarin.UITest** 
-*	**Appium** 
-*	**EarlGrey**
-*	**KIF**
+* **Espresso**
+* **XCUITest** 
+* **Xamarin.UITest** 
+* **Appium** 
+* **EarlGrey**
+* **KIF**
 
 Below you can find a brief description of the tools, a tabular overview and finally some general advice to help inform your test framework and tooling selection.
 
->Note: this guide was written in the fall of 2017. It still provides a valid overview, but the space may have changed, and more data would be available. For example, in the React Native community, the [detox testing framework](https://github.com/wix/detox) has been gaining popularity.
+> Note: this guide was written in the fall of 2017. It still provides a valid overview, but the space may have changed, and more data would be available. For example, in the React Native community, the [detox testing framework](https://github.com/wix/detox) has been gaining popularity.
 
 #### Espresso
 
@@ -98,6 +98,7 @@ The natural target audience is iOS developers, particularly for teams that use E
 
 Below you can find a tabular overview of these tools in terms of features and traits: Platform support, Programming languages, Open source/proprietary, Stewardship, BDD runner support. 
 
+
 |         | Espresso           | XCUITest  |  Xamarin.UITest   | Appium  | EarlGrey  |
 | ------------- |:-------------:| :-----:|:-------------:| :-------------:|:-------------:|
 | **Platforms**      | Android |  iOS | Android, iOS | Android, iOS (Windows) | iOS |
@@ -110,53 +111,53 @@ Below you can find a tabular overview of these tools in terms of features and tr
 
 We recommend asking yourself the questions:
 * **Dev vs QA:** Do we want developers to write tests, or do we have a QA engineering team writing tests? 
-*	**Cross-Platform:** Do we want to write cross-platform tests, sharing Test logic across iOS and Android platforms, or do we want more autonomy for iOS and Android teams.
-*	**Languages:** Do we have strict requirements for supported programming languages and test frameworks?
-*	**Selenium:** Can prior Selenium/WebDriver knowledge be leveraged to ease migration?
-*	**BDD:** Do we want to use Behavior Driven Development (BDD)? 
-*	**Calabash:** are you using the more advanced features in Calabash like backdoors, invoking methods on objects, keychain interactions, and spoofing the device location, intent mocking, … This would also be technically supported by Espresso/EarlGray, however not through their API.
+* **Cross-Platform:** Do we want to write cross-platform tests, sharing Test logic across iOS and Android platforms, or do we want more autonomy for iOS and Android teams.
+* **Languages:** Do we have strict requirements for supported programming languages and test frameworks?
+* **Selenium:** Can prior Selenium/WebDriver knowledge be leveraged to ease migration?
+* **BDD:** Do we want to use Behavior Driven Development (BDD)? 
+* **Calabash:** are you using the more advanced features in Calabash like backdoors, invoking methods on objects, keychain interactions, and spoofing the device location, intent mocking, … This would also be technically supported by Espresso/EarlGray, however not through their API.
 
 #### When to migrate to Xamarin.UITest
 
 [Xamarin.UITest](~/test-cloud/uitest/index.md), being based on the same software infrastructure as Calabash, is very mature. It's a good fit for Calabash users, who are not intimately linked to the Ruby programming language. Xamarin.UITest also works well with SpecFlow which provides a way to leverage the '.feature' specifications in a Calabash project. (Xamarin.UITest also works with just NUnit so BDD-style testing is not a requirement.).
-*	**Dev vs QA:** For Xamarin developers, it's an excellent choice, but basic usage of C# is enough. Can work for both Dev and QA, assuming the team is comfortable with C#.
-*	**Cross-Platform:** Supported.
-*	**Languages:** C#/F#
-*	**Selenium:** No.
-*	**BDD:** Optional, but fully supported with SpecFlow
-*	**Calabash:** If you like and leverage the Calabash feature set (e.g. backdoors, invoking methods, keychain, ...), Xamarin.UITest supports them.
+* **Dev vs QA:** For Xamarin developers, it's an excellent choice, but basic usage of C# is enough. Can work for both Dev and QA, assuming the team is comfortable with C#.
+* **Cross-Platform:** Supported.
+* **Languages:** C#/F#
+* **Selenium:** No.
+* **BDD:** Optional, but fully supported with SpecFlow
+* **Calabash:** If you like and leverage the Calabash feature set (e.g. backdoors, invoking methods, keychain, ...), Xamarin.UITest supports them.
 
 #### When to migrate to Appium
 
 [Appium](http://appium.io/), is a strong open-source player which is quite mature. Being based on the Selenium/WebDriver APIs and architecture and supporting the same programming languages, it attaches to the large set of Selenium QA engineers and the Selenium ecosystem. Appium is unopinionated about programming language and test runner. However, on-boarding is hard, particularly if you're not already familiar with Selenium. Recently Appium has transitioned away from SauceLabs and onto the jQuery foundation.
-*	**Dev vs QA:** Best suited for QA teams as mobile app developers, unless already familiar and comfortable with the Selenium API tend to feel that it's unproductive and hard to learn (anecdotally).
-*	**Cross-Platform:** Supported.
-*	**Languages:** Most every language is supported, for example, Java, Ruby, Python and JavaScript. 
-*	**Selenium:** Yes.
-*	**BDD:** Optional, depends of choice of language and framework.
-*	**Calabash:** If you're not leveraging the advanced Calabash feature set (e.g. backdoors, invoking methods, keychain, etc).
-Appium provides flexibility and standardization, but it might be hard to engage developers. Also be cautious about the future of the project (e.g. timely support for new iOS and Android releases).
+* **Dev vs QA:** Best suited for QA teams as mobile app developers, unless already familiar and comfortable with the Selenium API tend to feel that it's unproductive and hard to learn (anecdotally).
+* **Cross-Platform:** Supported.
+* **Languages:** Most every language is supported, for example, Java, Ruby, Python and JavaScript. 
+* **Selenium:** Yes.
+* **BDD:** Optional, depends of choice of language and framework.
+* **Calabash:** If you're not leveraging the advanced Calabash feature set (e.g. backdoors, invoking methods, keychain, etc).
+  Appium provides flexibility and standardization, but it might be hard to engage developers. Also be cautious about the future of the project (e.g. timely support for new iOS and Android releases).
 
 #### When to migrate to Espresso
 
 [Espresso](https://developer.android.com/training/testing/espresso/index.html) is targeted at Android native developers, who believe that automated testing is an integral part of the development lifecycle. While it can be used for black-box testing, Espresso’s full power is unlocked by those who are familiar with the codebase under test. This means that Espresso is best suited for native Android developers using Java and Android studio. 
-*	**Dev vs QA:** Works very well for native Android developers, comfortable with Java, Android Studio and Android. Can work for all QA teams familiar with Java and Android. 
-*	**Cross-Platform:** No: Android only
-*	**Languages:** Java (JVM based)
-*	**Selenium:** No.
-*	**BDD:** Optional, 3rd party open source: via Cucumber/JVM: Espresso-cucumber
-*	**Calabash:** Given the architectural similarity to Calabash, it should be possible with some work to leverage advanced Calabash Android features. 
+* **Dev vs QA:** Works very well for native Android developers, comfortable with Java, Android Studio and Android. Can work for all QA teams familiar with Java and Android. 
+* **Cross-Platform:** No: Android only
+* **Languages:** Java (JVM based)
+* **Selenium:** No.
+* **BDD:** Optional, 3rd party open source: via Cucumber/JVM: Espresso-cucumber
+* **Calabash:** Given the architectural similarity to Calabash, it should be possible with some work to leverage advanced Calabash Android features. 
 
 
 #### When to migrate to XCUITest
 
 [XCUITest](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) is Apple's extension of the XCTest framework to UI testing. The UI testing features can be used for 'black-box' testing where the test author has no knowledge about the internals of the app. Since XCUITest is integrated in Xcode and supports Objective-C and Swift, it works well for developers already familiar with those programming environments.
-*	**Dev vs QA:** Works very well for native iOS developers (Swift or Objective-C). Not many QA teams will be familiar with this environment, but can be trained.
-*	**Cross-Platformm:** No: iOS only
-*	**Languages:** Swift or Objective-C
-*	**Selenium:** No.
-*	**BDD:** Optional, 3rd party open source: XCFit and Cucumberish
-*	**Calabash:** No easy way to do it
+* **Dev vs QA:** Works very well for native iOS developers (Swift or Objective-C). Not many QA teams will be familiar with this environment, but can be trained.
+* **Cross-Platformm:** No: iOS only
+* **Languages:** Swift or Objective-C
+* **Selenium:** No.
+* **BDD:** Optional, 3rd party open source: XCFit and Cucumberish
+* **Calabash:** No easy way to do it
 
 #### When to migrate to EarlGrey or KIF
 
@@ -166,9 +167,9 @@ EarlGrey and KIF are very similar and we don't have the necessary knowledge to r
 
 EarlGrey is inspired by Espresso and "automatically synchronizes with the UI, network requests, and various queues; but still allows you to manually implement customized timings, if needed" (from GitHub: [EarlGrey](https://github.com/google/EarlGrey)). In theory, this should make writing tests easier and test should execute faster. If considering KIF vs. EarlGrey, you should wait with you decision until EarlGrey 2.0 which is shipping in the next 2-3 months.
 
-*	**Dev vs QA:** Works very well for native iOS developers (Swift or Objective-C). Not many QA teams will be familiar with this environment, but can be trained.
-*	**Cross-Platform:** No: iOS only
-*	**Languages:** Swift or Objective-C
-*	**Selenium:** No.
-*	**BDD:** Optional, 3rd party open source: [XCFit](https://shashikant86.github.io/XCFit/) and [Cucumberish](https://github.com/Ahmed-Ali/Cucumberish)
-*	**Calabash:** Given the architectural similarity to Calabash, it should be possible with some work to leverage advanced Calabash iOS features. 
+* **Dev vs QA:** Works very well for native iOS developers (Swift or Objective-C). Not many QA teams will be familiar with this environment, but can be trained.
+* **Cross-Platform:** No: iOS only
+* **Languages:** Swift or Objective-C
+* **Selenium:** No.
+* **BDD:** Optional, 3rd party open source: [XCFit](https://shashikant86.github.io/XCFit/) and [Cucumberish](https://github.com/Ahmed-Ali/Cucumberish)
+* **Calabash:** Given the architectural similarity to Calabash, it should be possible with some work to leverage advanced Calabash iOS features. 

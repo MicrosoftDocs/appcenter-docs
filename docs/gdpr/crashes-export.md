@@ -98,8 +98,8 @@ GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/crash_groups
 
 <span>2. Store the results to an Azure SQL database consisting of one table with two columns:</span> 
 
-  1. Crash-Guid
-  2. HasBeenRetrieved (bool default to false)
+1. Crash-Guid
+2. HasBeenRetrieved (bool default to false)
 
 ### Export your full crashes data
 

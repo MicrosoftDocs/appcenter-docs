@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:  
  - swift
- - objc 
+ - objc
 ---
 
 # Other iOS APIs

@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # React Native Crashes
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -40,7 +40,7 @@ ms.tgt_pltfrm: react-native
     react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
     ```
 
-    > The App Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
+   > The App Center Build service automatically generates a valid dSYM and source map .zip file, and uploads it to the Crashes service, meaning you can skip all these steps.
 
 2. Go to [App Center](https://appcenter.ms/apps) and select your app.
 3. Navigate to the **Diagnostics** section from the left menu, then navigate to **Symbols** under this section.

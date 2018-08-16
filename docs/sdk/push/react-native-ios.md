@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # App Center Push
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)
@@ -60,15 +60,15 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
-  ```
-  npm install appcenter-push --save
-  ```
+   ```
+   npm install appcenter-push --save
+   ```
 
 2. Link the plugin to the React Native app by using the `react-native link command`.
 
-  ```
-  react-native link appcenter-push
-  ```
+   ```
+   react-native link appcenter-push
+   ```
 
 #### Integrate the iOS SDK manually
 
@@ -96,8 +96,8 @@ Note that when the app calls `register` for the first time after being installed
 
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
 
->[!NOTE]
->If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+> [!NOTE]
+> If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 

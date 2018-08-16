@@ -48,66 +48,66 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 
 ### Constructors
 
-- __CodePush(accessKey: string)__ - Creates a new instance of the CodePush management SDK, using the specified access key to authenticated with the server.
+- **CodePush(accessKey: string)** - Creates a new instance of the CodePush management SDK, using the specified access key to authenticated with the server.
 
 ### Methods
 
-- __addAccessKey(description: string): Promise&lt;AccessKey&gt;__ - Creates a new access key with the specified description (e.g. "VSTS CI").
+- **addAccessKey(description: string): Promise&lt;AccessKey&gt;** - Creates a new access key with the specified description (e.g. "VSTS CI").
 
-- __addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;__ - Creates a new CodePush app with the specified name, os, and platform. If manuallyProvisionDeployments is set to true, the app will not create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
+- **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If manuallyProvisionDeployments is set to true, the app will not create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
 
-- __addCollaborator(appName: string, email: string): Promise&lt;void&gt;__ - Adds the specified CodePush user as a collaborator to the specified CodePush app.
+- **addCollaborator(appName: string, email: string): Promise&lt;void&gt;** - Adds the specified CodePush user as a collaborator to the specified CodePush app.
 
-- __addDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;__ - Creates a new deployment with the specified name, and associated with the specified app.
+- **addDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Creates a new deployment with the specified name, and associated with the specified app.
 
-- __clearDeploymentHistory(appName: string, deploymentName: string): Promise&lt;void&gt;__ - Clears the release history associated with the specified app deployment.
+- **clearDeploymentHistory(appName: string, deploymentName: string): Promise&lt;void&gt;** - Clears the release history associated with the specified app deployment.
 
-- __getAccessKey(accessKey: string): Promise&lt;AccessKey&gt;__ - Retrieves the metadata about the specific access key.
+- **getAccessKey(accessKey: string): Promise&lt;AccessKey&gt;** - Retrieves the metadata about the specific access key.
 
-- __getAccessKeys(): Promise&lt;AccessKey[]&gt;__ - Retrieves the list of access keys associated with your CodePush account.
+- **getAccessKeys(): Promise&lt;AccessKey[]&gt;** - Retrieves the list of access keys associated with your CodePush account.
 
-- __getApp(appName: string): Promise&lt;App&gt;__ - Retrieves the metadata about the specified app.
+- **getApp(appName: string): Promise&lt;App&gt;** - Retrieves the metadata about the specified app.
 
-- __getApps(): Promise&lt;App[]&gt;__ - Retrieves the list of apps associated with your CodePush account.
+- **getApps(): Promise&lt;App[]&gt;** - Retrieves the list of apps associated with your CodePush account.
 
-- __getCollaborators(appName: string): Promise&lt;CollaboratorMap&gt;__ - Retrieves the list of collaborators associated with the specified app.
+- **getCollaborators(appName: string): Promise&lt;CollaboratorMap&gt;** - Retrieves the list of collaborators associated with the specified app.
 
-- __getDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;__ - Retrieves the metadata for the specified app deployment.
+- **getDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Retrieves the metadata for the specified app deployment.
 
-- __getDeploymentHistory(appName: string, deploymentName: string): Promise&lt;Package[]&gt;__ - Retrieves the list of releases that have been made to the specified app deployment.
+- **getDeploymentHistory(appName: string, deploymentName: string): Promise&lt;Package[]&gt;** - Retrieves the list of releases that have been made to the specified app deployment.
 
-- __getDeploymentMetrics(appName: string, deploymentName): Promise&lt;DeploymentMetrics&gt;__ - Retrieves the installation metrics for the specified app deployment. 
+- **getDeploymentMetrics(appName: string, deploymentName): Promise&lt;DeploymentMetrics&gt;** - Retrieves the installation metrics for the specified app deployment. 
 
-- __getDeployments(appName: string): Promose&lt;Deployment[]&gt;__ - Retrieves the list of deployments associated with the specified app.
+- **getDeployments(appName: string): Promose&lt;Deployment[]&gt;** - Retrieves the list of deployments associated with the specified app.
 
-- __patchRelease(appName: string, deploymentName: string, label: string, updateMetadata: PackageInfo): Promise&lt;void&gt;__ - Updates the specified release's metadata with the given information.
+- **patchRelease(appName: string, deploymentName: string, label: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Updates the specified release's metadata with the given information.
 
-- __promote(appName: string, sourceDeploymentName: string, destinationDeploymentName: string, updateMetadata: PackageInfo): Promise&lt;void&gt;__ - Promotes the latest release from one deployment to another for the specified app and updates the release with the given metadata.
+- **promote(appName: string, sourceDeploymentName: string, destinationDeploymentName: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Promotes the latest release from one deployment to another for the specified app and updates the release with the given metadata.
 
-- __release(appName: string, deploymentName: string, updateContentsPath: string, targetBinaryVersion: string, updateMetadata: PackageInfo): Promise&lt;void&gt;__ - Releases a new update to the specified deployment with the given metadata.
+- **release(appName: string, deploymentName: string, updateContentsPath: string, targetBinaryVersion: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Releases a new update to the specified deployment with the given metadata.
 
-- __removeAccessKey(accessKey: string): Promise&lt;void&gt;__ - Removes the specified access key from your CodePush account.
+- **removeAccessKey(accessKey: string): Promise&lt;void&gt;** - Removes the specified access key from your CodePush account.
 
-- __removeApp(appName: string): Promise&lt;void&gt;__ - Deletes the specified CodePush app from your account.
+- **removeApp(appName: string): Promise&lt;void&gt;** - Deletes the specified CodePush app from your account.
 
-- __removeCollaborator(appName: string, email: string): Promise&lt;void&gt;__ - Removes the specified account as a collaborator from the specified app.
+- **removeCollaborator(appName: string, email: string): Promise&lt;void&gt;** - Removes the specified account as a collaborator from the specified app.
 
-- __removeDeployment(appName: string, deploymentName: string): Promise&lt;void&gt;__ - Removes the specified deployment from the specified app.
+- **removeDeployment(appName: string, deploymentName: string): Promise&lt;void&gt;** - Removes the specified deployment from the specified app.
 
-- __renameApp(oldAppName: string, newAppName: string): Promise&lt;void&gt;__ - Renames an existing app.
+- **renameApp(oldAppName: string, newAppName: string): Promise&lt;void&gt;** - Renames an existing app.
 
-- __renameDeployment(appName: string, oldDeploymentName: string, newDeploymentName: string): Promise&lt;void&gt;__ - Renames an existing deployment within the specified app.
+- **renameDeployment(appName: string, oldDeploymentName: string, newDeploymentName: string): Promise&lt;void&gt;** - Renames an existing deployment within the specified app.
 
-- __rollback(appName: string, deploymentName: string, targetRelease?: string): Promise&lt;void&gt;__ - Rolls back the latest release within the specified deployment. Optionally allows you to target a specific release in the deployment's history, as opposed to rolling to the previous release.
+- **rollback(appName: string, deploymentName: string, targetRelease?: string): Promise&lt;void&gt;** - Rolls back the latest release within the specified deployment. Optionally allows you to target a specific release in the deployment's history, as opposed to rolling to the previous release.
 
 ### Error Handling
 
 When an error occurs in any of the methods, the promise will be rejected with a CodePushError object with the following properties:
 
-- __message__: A user-friendly message that describes the error.
-- __statusCode__: An HTTP response code that identifies the category of error:
-    - __CodePush.ERROR_GATEWAY_TIMEOUT__: A network error prevented you from connecting to the CodePush server.
-    - __CodePush.ERROR_INTERNAL_SERVER__: An error occurred internally on the CodePush server.
-    - __CodePush.ERROR_NOT_FOUND__: The resource you are attempting to retrieve does not exist.
-    - __CodePush.ERROR_CONFLICT__: The resource you are attempting to create already exists.
-    - __CodePush.ERROR_UNAUTHORIZED__: The access key you configured is invalid or expired.
+- **message**: A user-friendly message that describes the error.
+- **statusCode**: An HTTP response code that identifies the category of error:
+  - **CodePush.ERROR_GATEWAY_TIMEOUT**: A network error prevented you from connecting to the CodePush server.
+  - **CodePush.ERROR_INTERNAL_SERVER**: An error occurred internally on the CodePush server.
+  - **CodePush.ERROR_NOT_FOUND**: The resource you are attempting to retrieve does not exist.
+  - **CodePush.ERROR_CONFLICT**: The resource you are attempting to create already exists.
+  - **CodePush.ERROR_UNAUTHORIZED**: The access key you configured is invalid or expired.

@@ -3,10 +3,10 @@ title: "Migration"
 description: App Center migration guide
 author: glennwester
 ms.author: glwest
-ms.date: 05/16/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
-ms.service: vs-appcenter 
+ms.service: vs-appcenter
 ---
 
 # Migrating Existing Services
@@ -23,7 +23,7 @@ Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_lin
 
 ## [Xamarin Test Cloud](~/migration/test-cloud/index.md)
 
-Microsoft will seamlessly upgrade active paid Xamarin Test Cloud subscriptions to Visual Studio App Center. Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
+Microsoft has seamlessly upgraded active paid Xamarin Test Cloud subscriptions to Visual Studio App Center. Visual Studio App Center offers the same devices, performance, and features as Xamarin Test Cloud, plus an upgraded API, unified CLI, and new features like saved device sets. It also integrates our automated test lab with our other App Center services, like cloud-based builds, app distribution, crash reporting, user analytics, and push notifications.
 
 ## [Xamarin Insights](~/migration/xamarin-insights/index.md)
 

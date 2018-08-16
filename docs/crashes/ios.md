@@ -2,9 +2,9 @@
 title: App Center Crash Reporting for iOS
 description: Reporting crashes from iOS apps in App Center
 keywords: crash reporting
-author: anlinde
-ms.author: anlinde
-ms.date: 08/21/2017
+author: blparr
+ms.author: blparr
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 76a80967-b68e-4ca7-ad89-65a557682108
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ios
 
 # iOS Crashes
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)

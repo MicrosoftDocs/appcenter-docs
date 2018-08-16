@@ -4,7 +4,7 @@ description: Details on how to write build scripts to enhance the build process
 keywords: build, pre, post, custom, scripts
 author: derpixeldan
 ms.author: daadam
-ms.date: 06/27/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
@@ -15,10 +15,12 @@ ms.custom: build
 
 You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (**.xcodeproj**, **build.gradle**, **.csproj**, **.sln** or **package.json**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
->[!NOTE]
+You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter-build-scripts-examples). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
+
+> [!NOTE]
 > Once your build scripts have been detected for the first time or you moved them to a different location, make sure to save the branch configuration to apply the changes!
 
-![Save detected scripts][build-scripts-detected]
+![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 
 ## Post-clone
 
@@ -93,6 +95,7 @@ To run scripts post-build, add the following file next to the project file in yo
 
 We set the following environment variables, so you can access them from your build scripts.
 
+
 | **General variables** | **Description** |
 | --------------------------------- | --- |
 | `APPCENTER_BUILD_ID` | The unique identifier for the current build |
@@ -101,7 +104,7 @@ We set the following environment variables, so you can access them from your bui
 | `APPCENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
 | `APPCENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
 | <br> **iOS specific** | |
-| `APPCENTER_XCODE_PROJECT` | Selected Xcode project |
+| `APPCENTER_XCODE_PROJECT` | Selected Xcode project |
 | `APPCENTER_XCODE_SCHEME` | Selected Xcode scheme |
 | <br> **Android specific** | |
 | `APPCENTER_ANDROID_VARIANT` | Selected Android variant |

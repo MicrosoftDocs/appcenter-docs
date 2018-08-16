@@ -12,7 +12,7 @@ Push.setListener({
     let message = pushNotification.message;
     let title = pushNotification.title;
 
-    if (message === null || message === undefined) {
+    if (message === null) {
       // Android messages received in the background don't include a message. On Android, that fact can be used to
       // check if the message was received in the background or foreground. For iOS the message is always present.
       title = 'Android background';
@@ -35,5 +35,4 @@ Push.setListener({
     }
   }
 });
-
 ```

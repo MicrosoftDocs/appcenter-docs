@@ -33,7 +33,7 @@ Log flow will show you the following information:
 - The fact that a crash occurred
 - Events, including the event name and its properties
 
-All data includes a subset of the _installation id_ which uniquely identifies devices and the time in local timezone at which the log was emitted in the application.
+All data includes a subset of the *installation id* which uniquely identifies devices and the time in local timezone at which the log was emitted in the application.
 
 ## "Is this on?"
 The main use case of Log Flow is to check that the SDK was properly integrated. Open the page, send some logs, and verify whether your 1-line integration worked after the first run. You should expect to see a "STARTSESSION" log with the session ID, everytime the app is started.

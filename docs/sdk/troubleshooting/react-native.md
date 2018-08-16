@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # React Native SDK Troubleshooting
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [UWP](uwp.md)

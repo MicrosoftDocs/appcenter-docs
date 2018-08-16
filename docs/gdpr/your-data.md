@@ -4,11 +4,13 @@ description: How to manage your personal information.
 keywords: GDPR, DSR, privacy, EU
 author: iageoghe
 ms.author: iageoghe
-ms.date: 07/06/2018 
+ms.date: 07/18/2018 
 ms.topic: article 
 ms.assetid: A044F6C1-A7BC-4F68-AD0F-6170EA55F08A
 ms.service: vs-appcenter
 ---
+
+# GDPR 
 
 App Center customers who wish to exercise their rights as data subjects may do so by submitting DSR (Data Subject Right) requests using GDPR specific API methods created for this purpose. 
 

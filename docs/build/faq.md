@@ -41,8 +41,8 @@ Expect an additional **10 minutes of build time**.
 
 * Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFVC, etc), it will not show up in the repository list.
 * If connecting to a repository that belongs to an organization on GitHub or team on Bitbucket, first request admin access to the repository.
-In order to use a repository for building apps with App Center, you must have admin rights to that repository. Admin rights are required because App Center will register a webhook on your repository coming from the appcenter.ms domain.
-For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
+  In order to use a repository for building apps with App Center, you must have admin rights to that repository. Admin rights are required because App Center will register a webhook on your repository coming from the appcenter.ms domain.
+  For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 * If connecting to a repository owned by a user, you must be the owner of the repository. If you are not the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 
 ### What can I do if am using Team Foundation Version Control (TFVC)?
@@ -92,7 +92,7 @@ In order to build a xcworkspace or a xcproject, a shared Xcode scheme is require
 
 To share a scheme, click on "Manage schemes" in Xcode and make sure that the scheme used for building your xcproject/xcworkspace is marked as shared. The scheme's container needs to be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
 
-![Mark scheme as shared][xcode-share-scheme]
+![Mark scheme as shared](../build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
 [xcode-share-scheme]: ../build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
@@ -104,7 +104,7 @@ There are many reasons why a build cannot be installed on a user's device. A com
 
 Xcodebuild, unlike xcrun, doesn't allow generating an .ipa file if the build is not signed. Unsigned builds produce an .xcarchive instead. If you wish to generate an .ipa file with the artifacts of an unsigned build, you can use the .xcarchive file to do so.
 
-![Export xcarchive file using xcode][export-xcode-xcarchive-organizer]
+![Export xcarchive file using xcode](images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer")
 
 [export-xcode-xcarchive-organizer]: images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
@@ -125,7 +125,7 @@ A common reason for tests to fail is where the linker commands fail with an erro
 The likely cause of this error is the linking type of **Apple Mach-O Linker** is not set to **static library**. 
 In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
 
-![Apple Mach-O Linker][mach-o-apple-linkage]
+![Apple Mach-O Linker](images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library")
 
 [mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
 
@@ -151,7 +151,7 @@ One common reason for a build failing during **Xamarin Android Postprocess** tas
 
 If you selected **Sign builds: Off** in the App Center branch configuration and your build log contains `RequireProvisioningProfile: True`, it means that your project itself is configured for signing and will try to apply signing despite the App Center configuration. To fix it open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (e.g., **Debug|iPhoneSimulator**) does not contain any signing information other than **Automatic**.
 
-![Disable signing for Debug configuration in Xamarin.iOS application][xamarin-ios-empty-codesigning]
+![Disable signing for Debug configuration in Xamarin.iOS application](images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application")
 
 [xamarin-ios-empty-codesigning]: images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application"
 
@@ -159,7 +159,7 @@ If you selected **Sign builds: Off** in the App Center branch configuration and 
 
 When you create Xamarin.iOS project in Visual Studio the default configuration for iPhoneSimulator has **i386 + x86_64** supported architectures. The **.app** file that builds from such configuration will fail to upload into a simulator. Open **Project Options > Build > iOS Build** and for iPhoneSimulator configuration change **Supported architectures** to just **i386** or **x86\_64**.
 
-![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application][xamarin-ios-iphonesimulator-supported-architecture]
+![Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application](images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application")
 
 [xamarin-ios-iphonesimulator-supported-architecture]: images/xamarin-ios-iphonesimulator-supported-architecture.png "Set x86_64 in Supported Architectures for iPhoneSimulator configuration in Xamarin.iOS application"
 

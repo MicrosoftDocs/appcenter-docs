@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4c468e82-f2cb-4cfd-87d4-1e5f761aa61a
 ms.service: app-center
 ms.custom: build
-ms.tgt_pltfrm: macos 
+ms.tgt_pltfrm: macos
 ---
 
 # Uploading code signing files
@@ -23,14 +23,14 @@ Your certificate can be found in your Keychain or through simply exporting it fr
 1. In Xcode, click on "Xcode" in the menubar, "Preferences", then "Accounts"
 2. Select the Apple ID on the left and then the desired team that contains your certificate on the right
 3. Click on "Manage Certificates..."
-![Export certificate][xcode-certificate-export]
+   ![Export certificate](images/xcode-certificate-export.jpg)
 4. Right click the certificate you're looking for, click "Export Certificate", choose a destination and enter a password.
 5. Go to the build configuration of the branch you want to sign in App Center and upload the certificate you just exported and provide the correct password.
 
 ## (Optional) Download the provisioning profile
 
 The provisioning profiles can be found from the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles. Make sure you've switched to the "macOS" section in the top left corner. Once you've downloaded your provisioning profile, you can upload it to App Center in the build configuration.
-![Download provisioning profile][download-provisioning-profile]
+![Download provisioning profile](images/provisioning-profile-blurred.png)
 3. After saving the provisioning profile locally, you can upload it to App Center when [configuring a branch](~/build/macos/first-build.md).
 
 [xcode-certificate-export]: images/xcode-certificate-export.jpg

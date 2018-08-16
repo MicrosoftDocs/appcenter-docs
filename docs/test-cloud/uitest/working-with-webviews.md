@@ -249,9 +249,9 @@ If we examine the view hierarchy of this Activity in the REPL, we can see the fo
 
 The output from the `tree` command tells us that the web view has an the ID `webView1`, and contains three DOM elements:
 
-  * an HTML button called `show_secret` with the markup `<button id="show_secret">Toggle the Secret</button>`
-  * an HTML input field `firstname`, with the markup `<input type="text" name="firstname" id='firstname'>`
-  * an HTML input field `lastname`, with the markup `<input type="text" name="lastname" id='lastname'>`
+* an HTML button called `show_secret` with the markup `<button id="show_secret">Toggle the Secret</button>`
+* an HTML input field `firstname`, with the markup `<input type="text" name="firstname" id='firstname'>`
+* an HTML input field `lastname`, with the markup `<input type="text" name="lastname" id='lastname'>`
 
 The `show_secret` button is visible on the screen, but `firstname` and `lastname` are not. Before a UITest may interact with those DOM elements, it is necessary to use the scrolling API's to bring those fields into view. The following snippet from the REPL shows how to can scroll the HTML input elements into view using the `ScrollDownTo` API:
 

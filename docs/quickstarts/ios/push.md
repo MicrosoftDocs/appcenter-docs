@@ -19,7 +19,6 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 #audience:
 #ms.devlang:
 #ms.reviewer: [ALIAS]
-
 ---
 
 # Push - Sample Swift App and Tutorials
@@ -28,7 +27,7 @@ In this tutorial you will learn how to send push notifications to users through 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ### Prerequisites
- - Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
+- Provisioning Profile and Certificate. Go to the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) to learn about creating an App ID to codesign the sample iOS app with.
 
 
 ## Enable Push notifications in Xcode
@@ -36,9 +35,9 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 2. Under the **Capabilities** tab, turn **Push Notifications** on.  
 
-  ![Enable Push in Xcode](images/Enable_push_ios.png)
+   ![Enable Push in Xcode](images/Enable_push_ios.png)
 
-  If you encounter an error, your codesigning may not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/ios/identifier/bundle/) and edit the App ID to allow Push Notifications.
+   If you encounter an error, your codesigning may not support Push Notifications. Go to the [Apple Developer portal](https://developer.apple.com/account/ios/identifier/bundle/) and edit the App ID to allow Push Notifications.
 
 ## Build and Distribute the app
 1. **Add, commit, and push the changes to GitHub.**
@@ -68,9 +67,9 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 5. Open the **key file** from your **Key ID**, and copy the authentication token. Paste it in the box.
 
-5. Choose **Sandbox**.
+6. Choose **Sandbox**.
 
-6. Click **Done** at the bottom.
+7. Click **Done** at the bottom.
 
 ## Set up a Push notification
 1. Follow the [Distribute tutorial](distribute.md) to download the app to your device.
@@ -89,5 +88,5 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 3. Click **Next** and **Send notification** at the bottom.
 
-  >[!WARNING]
-  > **A push notification will be sent to the device you distributed the app to - it will not show up in the simulator.**
+   > [!WARNING]
+   > **A push notification will be sent to the device you distributed the app to - it will not show up in the simulator.**

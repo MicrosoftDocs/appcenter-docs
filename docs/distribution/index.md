@@ -22,7 +22,8 @@ Distributing with App Center is easy, and only requires a few steps. No need for
 1. [Add users to your app][add_users] to grant access to all releases.
 2. [Create Distribution Groups][dist_groups] to manage access.
 3. [Upload][upload] a new application release.
-    - At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
+   - At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
+
 4. [Install][install] the release onto your device by clicking on the link in the email.
 5. Enable [In-App Updates][in-app-updates] to help your users stay always on the latest release.
 

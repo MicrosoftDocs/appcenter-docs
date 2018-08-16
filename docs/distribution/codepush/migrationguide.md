@@ -19,7 +19,7 @@ The movement of CodePush into App Center is a step forward in improving the over
 
 Regardless, change is hard. Because of this, this guide was made to ensure that moving from CodePush to App Center is a seamless experience for you, so you can focus on development and not be impeded by the learning curve of navigating  a new product. Besides the use of a new CLI, we have tried to limit the amount of changes you have to make at the time of this announcement. You will not have to make any changes in your code until the release of the new SDK next year.
 
-If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by simply logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by creating an account [here](https://appcenter.ms).
+If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by simply logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by [creating an account](https://appcenter.ms).
 
 ## Getting Started
 
@@ -31,8 +31,8 @@ Depending on the status of your account, the process is a little different:
 
 * **New CodePush users:** Please create an account on [App Center](https://appcenter.ms).
 
- > [!NOTE]
- > If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
+  > [!NOTE]
+  > If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
 
 **2. Getting Set up in the App Center Portal**
 
@@ -71,7 +71,7 @@ The token must be put into the CLI for authentication and to complete the login 
 ![Login](./images/mg-terminalkey.png)
 
 After completing this, you are free to use CodePush functionality in your apps through the App Center CLI.
- 
+
 ## Using CodePush in the App Center Portal
 
 CodePush can be found within the Distribution section of the App Center portal. CodePush is only visible in App Center when using React Native and, in the near future, Cordova applications.
@@ -124,6 +124,7 @@ appcenter codepush deployment list MyApp
 
 **CLI Command Comparison:**
 
+
 | CodePush                                   | App Center                               |
 | ------------------------------------------ | ---------------------------------------- |
 | `code-push app add MyApp ios react-native` | `appcenter apps create -d MyApp -o iOS -p React-Native` |
@@ -134,6 +135,7 @@ appcenter codepush deployment list MyApp
 | `code-push access-key list`                | `appcenter tokens list` |
 
 ## App Center CLI CodePush Cheat Sheet
+
 
 | Command                              | Description                              |  Example               |
 | ------------------------------------ | ---------------------------------------- | ---------------------- |

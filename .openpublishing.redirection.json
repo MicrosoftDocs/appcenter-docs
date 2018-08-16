@@ -159,6 +159,26 @@
         {
             "source_path": "docs/build/windows/build-results/index.md",
             "redirect_url": "/appcenter/build/windows/results.md"
-        }
+        },
+        {
+            "source_path": "docs/crashes/index.md",
+            "redirect_url": "appcenter/diagnostics/"
+        },
+        {
+            "source_path": "docs/crashes/android.md",
+            "redirect_url": "appcenter/sdk/crashes/android/"
+        }, 
+        {
+            "source_path": "docs/crashes/ios.md",
+            "redirect_url": "appcenter/sdk/crashes/ios/"
+        },
+        {
+            "source_path": "docs/crashes/macos.md",
+            "redirect_url": "appcenter/sdk/crashes/macos/"
+        },
+        {
+            "source_path": "docs/crashes/react-native.md",
+            "redirect_url": "appcenter/sdk/crashes/react-native/"
+        }      
     ]
 }

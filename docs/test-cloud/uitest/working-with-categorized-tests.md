@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: EBA22D3B-EB39-400E-8881-B78D621301D4
 ms.service: vs-appcenter
@@ -64,12 +64,11 @@ There are two ways to run UITests according to category:
 
 
 > [!NOTE]
-> Xamarin Test Cloud does not honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
+> App Center does not honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
 
 ## Running Tests Locally by Category
 
-# [Visual Studio](#tab/vswin)
-
+#### [Visual Studio](#tab/vswin/)
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `/include` identifies the test categories to run, while the switch `/exclude` specifies the test categories to ignore.
 
 ```shell
@@ -77,22 +76,19 @@ nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iO
 ```
 
 
-# [Visual Studio for Mac](#tab/vsmac)
-
+#### [Visual Studio for Mac](#tab/vsmac/)
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command line runner. The command line switch `-include` identifies the test categories to run, while the switch `-exclude` specifies the test categories to ignore.
 
 ```shell
 nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll -include=flerp
 ```
 
------
-
-
+* * *
 ## Submitting Tests to App Center Test by Category
 > [!WARNING]
->️ NUnit category names which contain spaces cannot be specified for upload.
+> ️ NUnit category names which contain spaces cannot be specified for upload.
 
-You can instruct Test Cloud to run a subset of your tests using the 
+You can instruct App Center Test to run a subset of your tests using the 
 `--include-category` parameter.  
 
 ```bash
@@ -106,12 +102,11 @@ It is also possible to exclude certain tests by category using the the
 ```bash
 appcenter test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-path <PATH TO IPA> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY> 
 --exclude-category erp
-
 ```
 
-Please the see the [NUnit console documentation](http://www.nunit.org/index.php?p=consoleCommandLine&r=2.6.4) for more information on how to use _category expressions_ to include or exclude tests according to category combinations.
+Please the see the [NUnit console documentation](http://www.nunit.org/index.php?p=consoleCommandLine&r=2.6.4) for more information on how to use *category expressions* to include or exclude tests according to category combinations.
 
 > [!NOTE]
->️ When running tests locally, `IApp` must be configured with the path to the application and the application bundle.
+> ️ When running tests locally, `IApp` must be configured with the path to the application and the application bundle.
 
 

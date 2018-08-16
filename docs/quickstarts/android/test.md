@@ -14,31 +14,31 @@ ms.date: 07/26/2017
 # Run Included Tests with App Center
 
 ### Prerequisite
- - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
+- Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Install App Center Command Line Interface
 
 1. Install [Node.js](https://nodejs.org/en/) version 6.3 or later.
 2. Open the terminal and run the command below to install the App Center CLI:
 
-  ```shell
-  npm install -g appcenter-cli
-  ```
+   ```shell
+   npm install -g appcenter-cli
+   ```
 
 3. Run the command below and follow the directions to log in to App Center:
 
-  ```shell
-  appcenter login
-  ```  
+   ```shell
+   appcenter login
+   ```  
 
 ## Build the project and test APK files
 1. Open terminal and go to the project directory.
 2. Run each of the following commands:
 
-  ```
-  ./gradlew assembleDebug
-  ./gradlew assembleDebugAndroidTest
-  ```
+   ```
+   ./gradlew assembleDebug
+   ./gradlew assembleDebugAndroidTest
+   ```
 
 ## Prepare to run tests in App Center
 
@@ -59,12 +59,15 @@ ms.date: 07/26/2017
 
 2. Paste it into terminal while in the project directory.
 
-3. Navigate into **sampleapp-android/app/build/outputs/apk**.
+> [!NOTE]
+> `--app-path` should point to a mobile app apk and `--build-dir` should point to where the test apk is located at.
 
-4. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
+1. Navigate into **sampleapp-android/app/build/outputs/apk**.
 
-5. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
+2. Copy the pathname and replace the placeholder text `pathToEspressoBuildFolder` in the custom command with the pathname text.
 
-6. Run the command. You will see the tests begin to run.
+3. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
 
-7. In App Center, click **Done** to close the panel.  
+4. Run the command. You will see the tests begin to run.
+
+5. In App Center, click **Done** to close the panel.  

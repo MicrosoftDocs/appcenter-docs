@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # Other React Native APIs
 
-> [!div class="op_single_selector"]
+> [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
@@ -38,11 +38,11 @@ await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
 
 > [!NOTE]
 > The JavaScript `setLogLevel` API can't increase logging for app startup code, before JavaScript is loaded.
->
+> 
 > If you wish to increase logging for app startup, use the native App Center setLogLevel APIs.
->
+> 
 > In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[AppCenterReactNative register];` (or `AppCenterReactNativeAnalytics` or `AppCenterReactNativeCrashes` or `AppCenterReactNativePush`) in **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
->
+> 
 > In Android, call `AppCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
 
 ## Identify installations
