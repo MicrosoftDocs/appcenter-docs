@@ -4,7 +4,7 @@ description: Simplify distribution of line of business mobile applications to th
 keywords: distribution store
 author: pnghub
 ms.author: gned
-ms.date: 05/18/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -31,7 +31,7 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 3. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
 4. On successful login, you will be asked to enter a **Store name**.
 5. **Select Category** of the app from the drop down. 
-6. For **Audience**, provide the distribution list (email-id) for sharing this application. Note that the email-id used here should be an Azure AD group. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to.
+6. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be elligible and appear in the auto-complete drop down.
 7. Click **Connect**.
 8. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in App Center.
 
