@@ -44,7 +44,17 @@
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
 
-## [FAQ](build/faq.md)
+## [Troubleshooting](build/troubleshooting/index.md)
+
+### [General](build/troubleshooting/general.md)
+
+### [Code Repositories](build/troubleshooting/code-repos.md)
+
+### [iOS](build/troubleshooting/ios.md)
+
+### [Xamarin](build/troubleshooting/xamarin.md)
+
+### [React Native](build/troubleshooting/react-native.md)
 
 # [Test](test-cloud/index.md)
 ## [Getting Started](test-cloud/getting-started.md)

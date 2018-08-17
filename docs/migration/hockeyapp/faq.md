@@ -3,7 +3,7 @@ title: Migrating HockeyApp Analytics
 description: Migrating HockeyApp Analytics to App Center
 author: joemellin
 ms.author: joemel
-ms.date: 04/10/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 65485D34-735A-4454-BD6D-0D04B9E173F2
 ms.service: vs-appcenter
@@ -35,7 +35,7 @@ While your distribution history data will be synced to App Center, your crashes 
 
 **I like a certain feature in HockeyApp. Does App Center have feature-parity with HockeyApp?**
 
-Our goal is to have feature-parity with HockeyApp. [View our roadmap](~/general/roadmap.md) to keep track of this progress. If you have a feature request that is not listed, share it with us using the round blue intercom button located in the lower right corner of all App Center pages.
+Our goal is to have feature-parity with HockeyApp. [View our roadmap](~/general/roadmap.md) to keep track of this progress. If you have a feature request that please contact [App Center support]((https://intercom.help/appcenter/getting-started/getting-help-with-app-center).
 
 **When will App Center be ready for me to migrate my apps completely off of HockeyApp?**
 

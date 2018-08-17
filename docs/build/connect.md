@@ -32,7 +32,7 @@ If you have connected to a source repository service with the wrong account, you
 
 ### Bitbucket
 
-To connect to another GitHub account, first revoke the Oauth token. Go to [the bitbucket accounts web page](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first. 
+To connect to another GitHub account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first. 
 
 ![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-oauth-token.jpg "Remove Bitbucket token")
 

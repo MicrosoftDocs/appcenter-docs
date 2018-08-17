@@ -179,6 +179,10 @@
         {
             "source_path": "docs/crashes/react-native.md",
             "redirect_url": "appcenter/sdk/crashes/react-native/"
-        }      
+        },
+        {
+            "source_path": "docs/build/faq.md",
+            "redirect_url": "appcenter/build/"
+        }         
     ]
 }

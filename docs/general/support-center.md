@@ -30,8 +30,6 @@ ms.service: vs-appcenter
 
 [macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
 
-[Build service FAQs](~/build/faq.md)
-
 ## Recent updates  
 
 [Product Changelog](~/general/changelog.md)
