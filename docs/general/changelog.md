@@ -11,6 +11,11 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **August 20, 2018**
+
+- **Build support for Xcode 10 beta 5**:
+  Build your apps using Xcode 10 beta 5.
+
 ### **August 8, 2018**
  - **Daily Digest notifications for Distribution**:
   Users can choose to receive a daily email of all the new releases of their app.

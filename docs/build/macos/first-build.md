@@ -44,7 +44,7 @@ If no scheme can be found, make sure that the scheme you want to build with is s
 
 ### 3.2. Xcode version
 
-Select the Xcode version to run the build on. In preview, we only support Xcode versions 9.x.
+Select the Xcode version to run the build on.
 
 ### 3.3. Build triggers
 
@@ -133,6 +133,7 @@ To build your project, we use `xcodebuild`, a command-line tool that allows you 
 
 The following versions of Xcode are supported on our VMs for macOS builds.
 
+* Xcode 10 beta 5
 * Xcode 9.1
 * Xcode 9.0.1
 * Xcode 9.0
