@@ -165,6 +165,10 @@
             "redirect_url": "appcenter/diagnostics/"
         },
         {
+            "source_path": "docs/crashes/",
+            "redirect_url": "appcenter/diagnostics/"
+        },
+        {
             "source_path": "docs/crashes/android.md",
             "redirect_url": "appcenter/sdk/crashes/android/"
         }, 
