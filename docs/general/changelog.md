@@ -14,13 +14,15 @@ ms.service: vs-appcenter
 ### **August 20, 2018**
 
 - **Build support for Xcode 10 beta 5**:
-  Build your apps using Xcode 10 beta 5.
+  Added support for building your apps with Xcode 10 beta 5.
 
 ### **August 8, 2018**
+
  - **Daily Digest notifications for Distribution**:
   Users can choose to receive a daily email of all the new releases of their app.
 
 ### **August 6, 2018**
+
  - **Added support ReactNative 0.56.x**:
 Build your React Native apps with [React Native 0.56.0](https://github.com/facebook/react-native/releases/tag/v0.56.0).
 
@@ -39,7 +41,6 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   - validate uploaded .dll.config files to avoid UITest stalls
   - better error messages when app name is wrong 
   - fixed encoding error for generated test urls
-
 
 ### **June 29, 2018**
 

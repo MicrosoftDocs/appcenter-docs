@@ -209,7 +209,7 @@ To run the test by right clicking in the gutter of Visual Studio and selecting *
 
 The test will run, and when the `Repl` method is invoked, Xamarin.UITest will start the REPL in a terminal session, as shown in the following screenshot:
 
-[ ![Screenshot of the OS X terminal running the UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
+[ ![Screenshot of the macOS terminal running the UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
 
 Notice that the REPL has initialized an instance of `IApp` that is called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
 

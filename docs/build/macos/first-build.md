@@ -38,6 +38,7 @@ Before your first build, the Mac project needs to be configured.
 ### 3.1. Project/workspace and scheme
 
 For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. App Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
+
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
 
 ![Mark scheme as shared](images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
@@ -116,10 +117,10 @@ The .app file is a Mac application archive file which contains the Mac app.
 
 ### 4.3. The symbols file (.dsym)
 
-The .dsym files contain the debug symbols for the app.
+The `.dsym` files contain the debug symbols for the app.
 
-* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human-readable (symbolicated) crash reports.
-* If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human-readable crash reports.
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this `.dsym` file for a build in order to display human-readable (symbolicated) crash reports.
+* If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the `.dsym` file in order to display human-readable crash reports.
 
 Keep in mind that the .dsym files do not change upon code signing the .app. If you decide to code sign the build later, the .dsym generated before code signing is still valid.
 
@@ -138,4 +139,4 @@ The following versions of Xcode are supported on our VMs for macOS builds.
 * Xcode 9.0.1
 * Xcode 9.0
 
-[Build machine version details](../software.md) are updated each time a new version of OS X is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
+[Build machine version details](../software.md) are updated each time a new version of macOS is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
