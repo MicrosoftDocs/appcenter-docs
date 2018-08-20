@@ -162,31 +162,27 @@
         },
         {
             "source_path": "docs/crashes/index.md",
-            "redirect_url": "appcenter/diagnostics/"
-        },
-        {
-            "source_path": "docs/crashes/",
-            "redirect_url": "appcenter/diagnostics/"
+            "redirect_url": "/appcenter/diagnostics/"
         },
         {
             "source_path": "docs/crashes/android.md",
-            "redirect_url": "appcenter/sdk/crashes/android/"
+            "redirect_url": "/appcenter/sdk/crashes/android/"
         }, 
         {
             "source_path": "docs/crashes/ios.md",
-            "redirect_url": "appcenter/sdk/crashes/ios/"
+            "redirect_url": "/appcenter/sdk/crashes/ios/"
         },
         {
             "source_path": "docs/crashes/macos.md",
-            "redirect_url": "appcenter/sdk/crashes/macos/"
+            "redirect_url": "/appcenter/sdk/crashes/macos/"
         },
         {
             "source_path": "docs/crashes/react-native.md",
-            "redirect_url": "appcenter/sdk/crashes/react-native/"
+            "redirect_url": "/appcenter/sdk/crashes/react-native/"
         },
         {
             "source_path": "docs/build/faq.md",
-            "redirect_url": "appcenter/build/"
+            "redirect_url": "/appcenter/build/"
         }         
     ]
 }

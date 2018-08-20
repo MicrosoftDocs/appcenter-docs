@@ -33,4 +33,4 @@ App Center first looks for `dsym` directories at any level, then it looks for a 
 
 *I know I updated my symbols for the right executable of my app in the store, but the crash reports are still garbage.*
 
-This is probably due to the fact that App Center Crash Reporting doesn't support **bitcode** yet. Look at the doc on [how to disable bitcode](~/diagnostics/symbolication#bitcode) to learn more and fix that issue.
+This is probably due to the fact that App Center Crash Reporting doesn't support **bitcode** yet. Look at the doc on [how to disable bitcode](~/diagnostics/symbolication.md#bitcode) to learn more and fix that issue.
