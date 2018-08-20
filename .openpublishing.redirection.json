@@ -182,7 +182,7 @@
         },
         {
             "source_path": "docs/build/faq.md",
-            "redirect_url": "/appcenter/build/"
+            "redirect_url": "/appcenter/build/troubleshooting/"
         }         
     ]
 }
