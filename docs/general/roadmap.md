@@ -23,7 +23,7 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 * Native Apps – View and install apps via a dedicated native app experience available for iOS and Android.
 * Azure Active Directory (AAD) support – Reuse your existing Active Directory Groups to grant access in App Center.
 * User metrics for distribution groups.
-* Support for Build-publish directly to store workflow.
+* Publishing MAM wrapped iOS apps to the Intune store.
 
 
 ## Crashes service
