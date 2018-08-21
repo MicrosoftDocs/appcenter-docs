@@ -4,14 +4,14 @@ description: Migration to App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/12/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.assetid: 298e0ad2-2626-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
 ms.custom: sdk
 ---
 
-# Migrate to App Center Android SDK v1.7.0
+# Migrate to App Center Android SDK v1.8.0
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -20,7 +20,7 @@ ms.custom: sdk
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
-Follow these steps to update your current preview SDK to App Center Android SDK v1.7.0:
+Follow these steps to update your current preview SDK to App Center Android SDK v1.8.0:
 
 1. Change **build.gradle** in your project that specifies Mobile Center to App Center.
     Open your app level **build.gradle** file (**app/build.gradle**) and change group ID, artifact ID and the SDK version:
@@ -36,7 +36,7 @@ Follow these steps to update your current preview SDK to App Center Android SDK 
     with
 
     ```groovy
-    def appCenterSdkVersion = '1.7.0'
+    def appCenterSdkVersion = '1.8.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
