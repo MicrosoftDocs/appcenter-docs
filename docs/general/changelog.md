@@ -11,6 +11,11 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **August 22, 2018**
+
+- **Support for Android Pie**:
+  We have added support to allow you build apps targeting Android Pie.
+
 ### **August 20, 2018**
 
 - **Build support for Xcode 10 beta 5**:

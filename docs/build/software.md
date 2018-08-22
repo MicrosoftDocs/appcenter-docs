@@ -391,6 +391,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-25            | Android SDK Platform 25, Revision 3       |
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
+| android-28            | Android SDK Platform 28, Revision 1       |
 
 ### Android SDK Build-tools
 
@@ -419,6 +420,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
 | build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
 | build-tools-27.0.3    | Android SDK Build-tools, Revision 27.0.3  |
+| build-tools-28.0.0    | Android SDK Build-tools, Revision 28.0.0  |
+| build-tools-28.0.1    | Android SDK Build-tools, Revision 28.0.1  |
+| build-tools-28.0.2    | Android SDK Build-tools, Revision 28.0.2  |
 
 ### Utils
 
