@@ -4,10 +4,10 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 04/30/2018
+ms.date: 08/22/2018
 ms.topic: article
 ms.service: vs-appcenter
-ms.assetid: 836f00da-66a8-4d5e-8535-1f965bf12f3f
+ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
 ---
 
 # App Center Webhooks
@@ -32,7 +32,6 @@ App Center's webhooks empower users to send automatic notifications to connected
 - Distribute: when a new version is released
 
 App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have have manager or developer permissions in the app to be able to create and configure the webhooks.
-
 
 ## Getting Started
 
@@ -66,3 +65,9 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 When these events happen, App Center notifications are posted into your integrated applications. For example, here is how a Build success notification looks like with a connected Slack application: 
 
    ![Build success notification on Slack](media/buildSuccessNotificationOnSlack.png)
+
+An example of a webhook payload in JSON is:
+
+```JSON
+{"app_name":"myFirstApp","branch":"master","build_status":"Succeeded","build_id":"33","build_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33","build_reason":"manual","finish_time":"2018-06-14T23:59:05.2542221Z","icon_link":"https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9130028703e417a6a0df02c6b587f0.png","notification_settings_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications","os":"iOS","start_time":"2018-06-14T23:57:03.4379381Z","source_version":"55820a357ba26831f2eeb3be9973a4ef20618b73","sent_at":"2018-06-14T23:59:08.4897604Z"}
+```

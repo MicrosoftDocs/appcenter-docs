@@ -2,9 +2,9 @@
 title: App Center API Documentation
 description: Explore the App Center API with Swagger
 keywords: swagger
-author: jwhiteDev
-ms.author: jawh
-ms.date: 05/16/2018
+author: amchew
+ms.author: amchew
+ms.date: 08/22/2018
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter

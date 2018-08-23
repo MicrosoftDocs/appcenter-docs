@@ -16,7 +16,7 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 
 ## General
 
-* Manual bug tracker support - Integrate crash groups with your bug trackers directly to follow actionable work items.
+* Manual bug tracker support - Add support for manually adding a crash group as a bug in a third-party bug tracking tool (e.g. VSTS, Jira, GitHub). This enables developers to track work items outside of App Center. 
 
 ## Distribution service
 
