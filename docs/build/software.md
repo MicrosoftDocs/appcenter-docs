@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/14/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.13.5 (17А77) **High Sierra**
+- OS X 10.13.6 (17G65) **High Sierra**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -31,13 +31,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 1.8.0_181
 - Java 9.0.4
 - Java 10.0.2
-- Node.js 6.14.3
+- Node.js 6.14.4
 - Node.js v8.11.3
-- PowerShell 6.0.3
+- PowerShell 6.0.4
 - Python 2.7.10
 - Python 3.7.0
 - Ruby 2.5.1p57
-- .NET Core SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4
+- .NET SDK 1.0.1 1.0.4 1.1.10 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400
 - Go 1.10.3
 - Miniconda 4.5.4
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
@@ -52,7 +52,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Yarn 1.9.4
 - NuGet 4.3.0.4406
 - pip 18.0
-- nvm 0.33.11
 
 ### Project Management
 
@@ -69,9 +68,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.101.1
+- fastlane 2.102.1
 - App Center CLI 1.1.1
-- Azure-CLI 2.0.43
+- Azure-CLI 2.0.44
 
 ## Xcode
 
@@ -96,7 +95,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Nomad CLI 2.7.6
 - Nomad CLI IPA 0.14.3
-- xcpretty 0.2.8
+- xcpretty 0.3.0
 - xctool 0.3.4
 
 ### Installed SDKs
