@@ -4,7 +4,7 @@ description: Read how to securely store your Apple ID and iOS signing certificat
 keywords: Secret storage, Apple ID, certicates
 author: oddj0b
 ms.author: vigimm 
-ms.date: 05/04/2018
+ms.date: 08/23/2018
 ms.topic: article 
 ms.assetid: 505ce61e-7647-41cf-8500-459f110944f4
 ms.service: vs-appcenter
@@ -25,6 +25,8 @@ App Center uses your Apple ID to manage your provisioning profile and your signi
 App Center supports Apple IDs with two-factor authentication protection and asks for a 6-digit code in a separate dialog after username and password have been entered.
 
 Any of your trusted Apple device can generate a 6-digit code by clicking "Allow." Once you have a code, fill out the dialogue and App Center uses the same session next time it is needed. A 6-digit code only lasts for 30 days and will require renewal thereafter. Renewing a code is done by removing the Apple ID and adding it again, this prompts for username, password, and a 6-digit code.
+
+App Store Connect (portal for App Store and TestFlight) requires both the 6-digit code and an [app-specific password](https://support.apple.com/en-us/HT204397) to log in with 2FA, and at the moment it is not supported. However, there is a workaround which you can read more about on the [Apple Stores documentation](../distribution/stores/apple.md#two-factor-authentication-workaround)
 
 ## Planned work
 - Enhance secret storage so updates to your credentials are stored across your distribution groups.
