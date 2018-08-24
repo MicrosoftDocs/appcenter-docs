@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/23/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -12,11 +12,12 @@ ms.service: vs-appcenter
 
 # Product Roadmap
 
-The list below presents the tentative roadmap for App Center for the next 3-6 months.
+This document provides a peek into what's next for [Visual Studio App Center](https://appcenter.ms), and lists the features we are currently committed to delivering. It is not a comprehensive list of all new features, but is intended to provide some visibility into our key investments. Due to the nature of the software development process and the resources we have available to work on these features, we're unable to guarantee delivery dates for these features, but know that we're working hard to make App Center better every day.
 
-## General
+## Diagnostics
 
-* Manual bug tracker support - Add support for manually adding a crash group as a bug in a third-party bug tracking tool (e.g. VSTS, Jira, GitHub). This enables developers to track work items outside of App Center. 
+* Manual bug tracker support - Add support for manually adding a crash group as a bug in a third-party bug tracking tool (e.g. VSTS, Jira, GitHub). This enables developers to track work items outside of App Center.
+* ProGuard, NDK support.
 
 ## Distribution service
 
@@ -25,10 +26,6 @@ The list below presents the tentative roadmap for App Center for the next 3-6 mo
 * User metrics for distribution groups.
 * Publishing MAM wrapped iOS apps to the Intune store.
 * Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
-
-## Crashes service
-
-* ProGuard, NDK support.
 
 ## SDK
 
