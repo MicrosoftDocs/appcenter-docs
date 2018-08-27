@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/21/2018
+ms.date: 08/27/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -18,7 +18,7 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 
 * Google requires the first version of your Google Play application to be published to production through the Google console.
 * A Google Play Developer account. If you do not have one, you can sign-up at the [developer account portal](https://play.google.com/apps/publish/signup).
-* For App Center to create a Google Store connection and to access Google API's on your behalf, you will need to make sure that you have an API project and a Service account, a one time process.
+* Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google API's on your behalf.
 * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
 
 For more information, review [How to use the Google Play console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
@@ -44,9 +44,7 @@ Before you can access the API, you must link your Google Play Console to an API 
 
 ## Setting Up API Access Clients
 
-**Using a service account**
-
-You can also create a [Google service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) to access the API from a build server without providing your personal user credentials:
+One of the added benefits of creating a [Google service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) is access to the API from a build server without providing your personal user credentials, below is a step-by-step guide on how to set up Google service account:
 
 Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAccessPlace) on the Google Play Console.
 
@@ -88,8 +86,8 @@ The following steps explain how to set up the connection between App Center and 
 
 ## Step 1: Create a Google Play connection in App Center
 
-1. Click on **Stores** under Distribution in the left-hand menu. 
-2. Click on **Add Connection** in the upper right-hand corner.
+1. Click on **Stores** under Distribution in the left menu. 
+2. Click on **Add Connection** in the upper-right corner.
 3. Select **Google Play** store.
 4. Click on **Next**.
 5. Upload the **private key JSON** file which you downloaded while creating the service account. If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google Play Developer console as per the [prerequisite section above](#prerequisites).
@@ -99,9 +97,9 @@ The following steps explain how to set up the connection between App Center and 
 ## Step 2: Publish your APK to the Google Play Store
 
 1. From the **Stores** home page select any of the tracks created above.
-2. Click on **Publish to Store** on the button in the upper right-hand corner.
+2. Click on **Publish to Store** on the button in the upper-right corner.
 3. Upload the app package. A few points to note:
-   * Application type should be correct and signed with a valid key store before uploading.
+   * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
    * Google Play Store supports application packages up to a maximum of 100 MB. If the application exceeds 100 MB, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don't support Expansion files in App Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
    * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
    * The version of the .apk must be strictly greater than the current version in production.
