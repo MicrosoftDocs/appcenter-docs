@@ -34,6 +34,6 @@ Finding your launch test result can be done in two ways:
 When a build is running, the build configuration is composed of several parts: the build definitions you made in the code or in the IDE, and the settings you have chosen in App Center. The way configurations work is platform and language specific. Below are some known configurations where launch test is not supported.
 
 * Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable **Generate one package(.apk) per selected ABI** in your Android Build options, only one APK is created.
-* Simulator builds for Xamarin apps don't output a binary and therefore can't be tested. This is the case for both Android and iOS.
+* Simulator builds for Xamarin apps don't output a binary executable file, and therefore can't be tested. This is the case for both Android and iOS.
 * Android apps without Internet permissions cannot be tested using App Center Test. Internet permissions are needed for the test infrastructure to communicate with your app. In order to use launch test for your Android project, make sure to declare internet permissions in your app manifest
 * iOS unsigned builds don't generate an `.ipa` file and they can't be tested on a real device.
