@@ -4,12 +4,17 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/09/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **August 23, 2018**
+
+- **CLI version 1.1.2 released**:
+  In CLI version 1.1.2, we added a verification error for `appcenter test run` for the `--include` parameter on Appium and XCUITest test frameworks, updated launch tests with the latest UITest version, fixed an access token error for Codepush, and updated npm package dependencies.
 
 ### **August 22, 2018**
 
