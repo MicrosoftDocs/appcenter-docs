@@ -4,7 +4,7 @@ description: How to add Firebase SDK
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/12/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: cdd0a651-29b6-4fb2-8fc5-4a25b54eb2ca
 ms.service: vs-appcenter
@@ -42,6 +42,9 @@ ms.tgt_pltfrm: android
         }
     }
     ```
+
+    > [!NOTE]
+    > Google introduced the `google()` repository with Gradle v4. If your Gradle version is lower than v4, then you need to use `maven { url 'https://maven.google.com' }` instead of `google()`.
 
 - Modify the **app** level **build.gradle** file:
 

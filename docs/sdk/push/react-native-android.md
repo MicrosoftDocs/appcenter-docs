@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -78,6 +78,9 @@ The App Center SDK is designed with a modular approach – you only need to inte
         }
     }
     ```
+
+    > [!NOTE]
+    > Google introduced the `google()` repository with Gradle v4. If your Gradle version is lower than v4, then you need to use `maven { url 'https://maven.google.com' }` instead of `google()`.
 
 - Modify the **android/app/build.gradle** file:
 

@@ -4,7 +4,7 @@ description: Contains instructions for how to configure your project to use Fire
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/23/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: 7fe521e7-66fc-42ac-b804-a779525ad39e
 ms.service: vs-appcenter
@@ -42,6 +42,9 @@ ms.tgt_pltfrm: android
         }
     }
     ```
+
+    > [!NOTE]
+    > Google introduced the `google()` repository with Gradle v4. If your Gradle version is lower than v4, then you need to use `maven { url 'https://maven.google.com' }` instead of `google()`.
 
 - Modify the project's **android/app/build.gradle** file:
 
