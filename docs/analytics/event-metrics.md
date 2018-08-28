@@ -16,11 +16,12 @@ ms.custom: analytics
 Events are actions that users take in your app. By tracking events in your app, you will learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
 
 Tracking events in your app will allow you to answer questions like:
+
 - What is the top N content viewed?
 - What is the most liked content?
 - What type of files do my users send?
 
-In order to track custom events in your app, you can use our trackEvent API using the Analytics SDK. More information on how to define custom events using our SDK can be found in our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md). 
+In order to track custom events in your app, you can use our trackEvent API using the Analytics SDK. More information on how to define custom events using our SDK can be found in our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md).
 
 ## General information
 
@@ -49,6 +50,7 @@ You can also remove individual events from this page by clicking the settings op
 Events Properties provide contextual information about the events. They allow to have a deeper understanding about the actions that the users take in your app.
 
 Examples of events and properties are:
+
 - *Event Name:* "File Upload", *Event properties:* ".PDF", ".txt", ".PNG".
 - *Event Name:* "Question answered", *Event properties:* "Accept", "Decline", "Ignore".
 
@@ -60,7 +62,6 @@ Note that property values are optimized for values of type 'String'.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed and the rest are automatically dropped.
 
 - The portal will show up the ten property values with highest count.
-
 
 ## Breadcrumbs (Events before a crash)
 
