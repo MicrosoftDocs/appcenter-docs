@@ -4,7 +4,7 @@ description: Help using the Events Metrics on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 05/22/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688
 ms.service: vs-appcenter
@@ -56,7 +56,7 @@ Note that property values are optimized for values of type 'String'.
 
 ## Limits
 
-- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12am UTC. However, there is no limit on the maximum number of events instances sent per device.
+- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12 AM UTC. However, there is no limit on the maximum number of events instances sent per device.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped.
 - The portal will show up the ten property values with highest count.
 
