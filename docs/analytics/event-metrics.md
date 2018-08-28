@@ -78,4 +78,4 @@ Breadcrumbs are stored for just 28 days, while crashes can potentially be store 
 
 ## Handled Errors
 
-In order to track handled errors in App Center, we recommend that you use the specific functionality for it. Check out more information on this topic in our [official documentation](~/errors/index.md).
+In order to track handled errors in App Center, we recommend that you use the specific functionality for it. Check out more information on this topic in our [official documentation](~/diagnostics/index.md/#errors).

@@ -10,7 +10,7 @@ ms.assetid: FF9FA102-581A-445F-A875-3F90CF0B86A4
 ms.service: vs-appcenter
 ms.custom: errors
 ---
-# Feature Set
+# Errors Feature Set
 
 In this page, you will learn about the feature set available for Xamarin errors.
 
