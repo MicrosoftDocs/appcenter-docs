@@ -1,10 +1,10 @@
 ---
-title: Using the Diagnostics UI
+title: Symbolication
 description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/08/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
@@ -19,16 +19,17 @@ MacOS and iOS crash reports show the stack traces for all running threads of you
 
 To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required to make this happen.  You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
 
-### To find the `.dSYM` bundle
+## Finding the `.dSYM` bundle
 
-1. In Xcode, chose **Window > Organizer**
+1. In Xcode, open the **Window** menu, then select **Organizer**
 2. Select the **Archives** tab
 3. Select your app in the left sidebar
 4. Right-click on the latest archive and select **Show in Finder**
 5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
 6. You should see a folder named `dSYMs` which contains your dSYM bundle
 
-### To upload symbols
+## Uploading symbols
+### App Center Portal
 
 1. Create a ZIP file for the dSYM package on your Mac
 2. Log into App Center and select your app
@@ -36,6 +37,13 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 4. Select **Symbols**
 5. In the top right corner, click **Upload symbols** and upload the zip file
 6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
+
+### App Center API
+
+1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create). 
+This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property.
+2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This will upload the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
+3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of this request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed). 
 
 ## Bitcode
 
