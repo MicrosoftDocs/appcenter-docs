@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/23/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -37,8 +37,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Python 2.7.10
 - Python 3.7.0
 - Ruby 2.5.1p57
-- .NET SDK 1.0.1 1.0.4 1.1.10 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400
-- Go 1.10.3
+- .NET SDK 1.0.1 1.0.4 1.1.10 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401
+- Go 1.11
 - Miniconda 4.5.4
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
 
@@ -47,10 +47,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.7.1
+- Homebrew 1.7.2
 - NPM 3.10.10
 - Yarn 1.9.4
-- NuGet 4.3.0.4406
+- NuGet 4.7.0.5148
 - pip 18.0
 
 ### Project Management
@@ -69,7 +69,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Tools
 
 - fastlane 2.102.1
-- App Center CLI 1.1.1
+- App Center CLI 1.1.2
 - Azure-CLI 2.0.44
 
 ## Xcode
@@ -458,10 +458,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 7.5.2.40
+- 7.6.0.2188
 
 ### Mono
 
+- 5.12.0
 - 5.10.1
 - 5.8.1
 - 5.8.0
@@ -473,6 +474,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 11.14.0.13
 - 11.12.0.4
 - 11.9.1.24
 - 11.8.0.20
@@ -484,6 +486,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 9.0.0-18
 - 8.3.3-2
 - 8.2.0-16
 - 8.2.0-15
@@ -495,6 +498,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 4.6.0.13
 - 4.4.1.193
 - 4.2.1.28
 - 4.2.0.20
