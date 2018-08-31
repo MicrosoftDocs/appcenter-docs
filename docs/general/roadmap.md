@@ -30,3 +30,10 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 ## SDK
 
 * Add support for the [Unity](https://unity3d.com/) cross-platform game engine. This feature includes supporting Unity apps in the App Center portal and shipping the App Center SDK for Unity.  SDK will support App Center Analytics, Distribution, and Diagnostics at launch.
+
+## Test
+
+* Add support for running Xamarin.UITest iOS tests locally on iOS 12 devices and simulators.
+* Add support for running iOS UI automation frameworks (Appium, XCUITest, Xamarin.UITest) in the App Center device lab.
+* Add devices running iOS 12 to the App Center device lab.
+* Add support for Apple's latest devices [announcement expected in September, 2018] to the App Center device lab.
