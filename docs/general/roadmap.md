@@ -24,7 +24,7 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 * Native App Experience – View and install apps via a dedicated native app experience available for Android and iOS.
 * Azure Active Directory (AAD) support – Reuse existing Active Directory Groups to grant access to applications in App Center.
 * User metrics for distribution groups.
-* Publishing MAM wrapped iOS apps to the Intune store.
+* Publishing MAM wrapped iOS apps to the Intune store. Wrap your internal apps with [Microsoft Intune Mobile Application Management (MAM)](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). All apps published to an Intune connection in your organization will be made MAM aware for better data protection. Your Intune administrator can apply policies from the Intune portal, and no steps are needed when publishing your apps.
 * Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
 
 ## SDK
