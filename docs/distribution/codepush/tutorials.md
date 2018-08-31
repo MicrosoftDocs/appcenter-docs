@@ -176,7 +176,7 @@ Leveraging the workflow discussed below can greatly reduce the effort needed to 
 
 The following is required to complete this module:
 
-- VSTS Account (Sign up for a free VSTS account [here](https://www.visualstudio.com/products/free-developer-offers-vs))
+- VSTS Account ([Sign up for a free VSTS account(https://www.visualstudio.com/products/free-developer-offers-vs))
 - App Center Account (Follow these [steps](~/distribution/codepush/index.md) to get set up)
 - React Native "CodePush ready" [sample app](https://github.com/rub8n/VSTSCDSample) (Use your own app or download the "bare bones" sample app to speed things up)
 

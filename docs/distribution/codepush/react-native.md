@@ -145,7 +145,7 @@ And that's it! Isn't RNPM awesome? :)
 2. Run `pod install`
 
 > [!NOTE]
-> The CodePush `.podspec` depends on the `React` pod, and so in order to ensure that it can correctly use the version of React Native that your app is built with, please make sure to define the `React` dependency in your app's `Podfile` as explained [here](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
+> The CodePush `.podspec` depends on the `React` pod, and so in order to ensure that it can correctly use the version of React Native that your app is built with, please make sure to define the `React` dependency in your app's `Podfile` as explained in the [React Native integration documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
 
 #### Plugin Installation (iOS - Manual)
 
@@ -807,7 +807,7 @@ buildTypes {
 
 5. Optionally, create "mirrored" directories in the `app/src/debug/res` directory for all of your app's icons that you want to change for your debug build. This part isn't technically critical, but it can make it easier to quickly spot your debug builds on a device if its icon is noticeable different.
 
-And that's it! View [here](http://tools.android.com/tech-docs/new-build-system/resource-merging) for more details on how resource merging works in Android.
+And that's it! Refer to [resource merging](http://tools.android.com/tech-docs/new-build-system/resource-merging) for more information on how resource merging works in Android.
 
 ### iOS
 
