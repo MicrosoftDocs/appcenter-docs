@@ -33,7 +33,7 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 
 * [The repository I want to connect to is not listed in the Connect to Repository step](~/build/troubleshooting/code-repos.md#not-listed)
 
-* [Can I use on-premise repositories?](~/build/troubleshooting/code-repos.md#on-premises)
+* [Can I use on-premises repositories?](~/build/troubleshooting/code-repos.md#on-premises)
 
 * [I have connected to the wrong Bitbucket account. How can I re-connect to the correct one?](~/build/troubleshooting/code-repos.md#wrong-bitbucket)
 
