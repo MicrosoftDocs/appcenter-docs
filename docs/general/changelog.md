@@ -11,6 +11,11 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **August 31, 2018**
+
+- **Build support for Xcode 10 beta 6**:
+  Added support for building your apps with Xcode 10 beta 6.
+
 ### **August 23, 2018**
 
 - **CLI version 1.1.2 released**:
