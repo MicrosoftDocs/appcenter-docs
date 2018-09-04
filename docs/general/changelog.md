@@ -11,6 +11,15 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **September 3, 2018**
+
+- **Updated Xamarin SDKs**:
+  Build your Xamarin apps with SDK release 15.8.
+  - Xamarin Mono 5.12.0
+  - Xamarin.iOS 11.14.0.13
+  - Xamarin.Android 9.0.0.18
+  - Visual Studio For Mac 7.6.0.2188
+
 ### **August 31, 2018**
 
 - **Build support for Xcode 10 beta 6**:
