@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 08/22/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
@@ -48,7 +48,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
    - Webhook name
    - Webhook URL
 
-     You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)). 
+     You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-custom-connectors#develop-custom-connectors) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)). 
 
      Select the **dropdown** for Build status notifications and the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts. 
 
@@ -70,4 +70,5 @@ An example of a webhook payload in JSON is:
 
 ```JSON
 {"app_name":"myFirstApp","branch":"master","build_status":"Succeeded","build_id":"33","build_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33","build_reason":"manual","finish_time":"2018-06-14T23:59:05.2542221Z","icon_link":"https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9130028703e417a6a0df02c6b587f0.png","notification_settings_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications","os":"iOS","start_time":"2018-06-14T23:57:03.4379381Z","source_version":"55820a357ba26831f2eeb3be9973a4ef20618b73","sent_at":"2018-06-14T23:59:08.4897604Z"}
+
 ```
