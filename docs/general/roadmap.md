@@ -17,7 +17,6 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 ## Diagnostics
 
 * Manual bug tracker support - Add support for manually adding a crash group as a bug in a third-party bug tracking tool (e.g. VSTS, Jira, GitHub). This enables developers to track work items outside of App Center.
-* ProGuard, NDK support.
 
 ## Distribution
 
