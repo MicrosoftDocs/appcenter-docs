@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 08/29/2018
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ Let's get started with setting up App Center Xamarin SDK in your app to use App 
 Before you begin, please make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2017 or Visual Studio for Mac.
-* You are targeting devices running iOS 9.0 or later or Android 4.0.3 (API level 15) or later
+* You are targeting devices running iOS 9.0 or later or Android 4.1 (API level 16) or later.
 * You are not using any other SDK that provides Crash Reporting functionality.
 
 The App Center SDK for Xamarin supports the following platforms:

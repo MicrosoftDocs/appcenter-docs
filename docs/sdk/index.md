@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/06/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -54,67 +54,56 @@ The tables below show the required minimum supported versions of the different A
 
 Android Studio 2.2 or later.
 
-
  Service          | Android OS Version | API Level
- -----------------|-------------------|-----------
- Analytics        | 4.0.3 and later   | 15 and later
- Crashes          | 4.0.3 and later   | 15 and later
- Distribute       | 4.0.3 and later   | 15 and later
- Push             | 4.0.3 and later   | 15 and later
-
+ -----------------|--------------------|-------------
+ Analytics        | 4.1 and later      | 16 and later
+ Crashes          | 4.1 and later      | 16 and later
+ Distribute       | 4.1 and later      | 16 and later
+ Push             | 4.1 and later      | 16 and later
 
 ### iOS
 
-
  Service          | iOS Version     | Xcode
- -----------------|-----------------|-------
+ -----------------|-----------------|--------------
  Analytics        | 9.0 or later    | 8.2 and later
  Crashes          | 9.0 or later    | 8.2 and later
  Distribute       | 9.0 or later    | 8.2 and later
  Push             | 9.0 or later    | 8.2 and later
 
-
 ### Windows UWP
 
-
  Service          | Windows Version    | Visual Studio
- -----------------|--------------------|-------
+ -----------------|--------------------|----------------------------
  Analytics        | 10 build 10240     | Visual Studio 2015 or later
  Crashes          | not available      | not available
  Distribute       | not available      | not available
  Push             | 10 build 10240     | Visual Studio 2015 or later
 
-
 ### React Native
 
-
 Service    |  RN version   | iOS Version              | Android Version
- ----------|---------------|--------------------------|-------
-Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Distribute | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.0.3/API Level 15 or later
-
+ ----------|---------------|--------------------------|----------------------------
+Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
+Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
+Distribute | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
+Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
 
 ### macOS
 
-
  Service          | macOS Version   | Xcode
- -----------------|-----------------|-------
+ -----------------|-----------------|--------------
  Analytics        | 10.9 or later   | 8.2 and later
  Crashes          | 10.9 or later   | 8.2 and later
  Push             | 10.9 or later   | 8.2 and later
 
  ### Apache Cordova 
 
-
-Service    |  AC CLI version | iOS Version     | Android Version
- ----------|----------------------|-----------------|----------------
+Service    |  AC CLI version      | iOS Version     | Android Version
+-----------|----------------------|-----------------|----------------
 Analytics  | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 Crashes    | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 Distribute | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
 Push       | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
-
 
 ## Source Code and Release Notes
 
@@ -125,4 +114,3 @@ The App Center SDKs are open-source and available publicly on GitHub:
 * [App Center SDK for React Native code](https://github.com/Microsoft/AppCenter-SDK-React-Native) and [release notes](https://github.com/Microsoft/AppCenter-SDK-React-Native/releases)
 * [App Center SDK for UWP and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
 * [App Center SDK for Apache Cordova code](https://github.com/Microsoft/appcenter-sdk-cordova) and [release notes](https://github.com/Microsoft/appcenter-sdk-cordova/releases)
-

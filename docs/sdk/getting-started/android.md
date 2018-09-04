@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 08/21/2018
+ms.date: 08/29/2018
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ Let's get started with setting up App Center Android SDK in your app to use App 
 Before you begin, please make sure that the following prerequisites are met:
 
 * Your Android project is set up in Android Studio.
-* You are targeting devices running Android Version 4.0.3 (API level 15) or later.
+* You are targeting devices running Android Version 4.1 (API level 16) or later.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

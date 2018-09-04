@@ -8,7 +8,7 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 08/21/2018
+ms.date: 08/29/2018
 ---
 
 # Send Push Notifications to Users
@@ -18,7 +18,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 ## Prerequisites
 
 - A Google account.
-- A device with Play Store installed or an emulator using a Google APIs image (API level >= 15).
+- A device with Play Store installed or an emulator using a Google APIs image (API level >= 16).
 
 ## Set up Firebase Cloud Messaging
 
