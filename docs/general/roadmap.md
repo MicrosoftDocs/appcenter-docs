@@ -2,9 +2,9 @@
 title: App Center Product Roadmap
 description: App Center roadmap for future features/updates
 keywords: roadmap
-author: jwhitedev
-ms.author: jawh
-ms.date: 08/24/2018
+author: jwargo
+ms.author: jowargo
+ms.date: 09/05/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
