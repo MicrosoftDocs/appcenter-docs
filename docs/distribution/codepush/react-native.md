@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 08/08/2018
+ms.date: 09/05/2018
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -127,20 +127,35 @@ And that's it! Isn't RNPM awesome? :)
 
 #### Plugin Installation (iOS - CocoaPods)
 
-1. Add the CodePush plugin dependency to your `Podfile`, pointing at the path where NPM installed it
+1. Add the React Native and CodePush plugin dependencies to your `Podfile`, pointing at the path where NPM has installed modules
 
-    ```ruby
+    ```Ruby
+    # React Native requirements
+    pod 'React', :path => '../node_modules/react-native', :subspecs => [
+       'Core',
+       'CxxBridge', # Include this for RN >= 0.47
+       'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+       'RCTText',
+       'RCTNetwork',
+       'RCTWebSocket', # Needed for debugging
+       'RCTAnimation', # Needed for FlatList and animations running on native UI thread
+       # Add any other subspecs you want to use in your project
+    ]
+    # Explicitly include Yoga if you are using RN >= 0.42.0
+    pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+    pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+    pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+    pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+      
+    # CodePush plugin dependency
     pod 'CodePush', :path => '../node_modules/react-native-code-push'
     ```
 
-    CodePush depends on an internal copy of the `SSZipArchive` library, so if your project already includes it (either directly or via a transitive dependency), then you can install a version of CodePush which excludes it by depending specifically on the `Core` subspec:
-
-    ```ruby
-    pod 'CodePush', :path => '../node_modules/react-native-code-push', :subspecs => ['Core']
-    ```
    > [!NOTE]
-   > The above paths needs to be relative to your app's `Podfile`, so adjust it as nec
-   >  cessary.*
+   > File paths for dependencies must be relative to your app's `Podfile` location.
+
+   > [!NOTE]
+   > The project's `JWT` library must be version 3.0.x or higher
 
 2. Run `pod install`
 
