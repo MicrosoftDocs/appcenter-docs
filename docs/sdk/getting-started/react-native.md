@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/29/2018
+ms.date: 09/05/2018
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -54,7 +54,7 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 
 Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
-```
+```shell
 npm install appcenter appcenter-analytics appcenter-crashes --save
 ```
 
@@ -63,7 +63,7 @@ npm install appcenter appcenter-analytics appcenter-crashes --save
 
 In case you prefer `yarn` over `npm`, use the following command to install App Center:
 
-```
+```shell
 yarn add appcenter appcenter-analytics appcenter-crashes
 ```
 
@@ -73,7 +73,8 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 > [!NOTE]
 > If you are using [Jest test framework](https://facebook.github.io/jest/) in your application, App Center SDK automatically sets up mocks for App Center modules in jest section of package.json file during installation. But due to a bug in the [Yarn package manager](https://yarnpkg.com/en/) this may not always be the case, so you might have to do it manually if you are not using npm. Depending on modules you are using add the following to the jest section of package.json file:
-> ```
+
+> ```JSON
 > "setupFiles": [
 >    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
 >    "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
@@ -84,7 +85,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
-    ```
+    ```shell
     react-native link
     ```
 
@@ -92,7 +93,8 @@ The App Center SDK uses a modular approach, where you just add the modules for A
    > On React Native **0.47.0**, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using link without parameters.
    > 
    > If you are using that version, please link all modules separately:
-   > ```
+   
+   > ```shell
    > react-native link appcenter
    > react-native link appcenter-analytics
    > react-native link appcenter-crashes
@@ -100,14 +102,14 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     For iOS, it will try to download the [App Center SDK for iOS and macOS](https://cocoapods.org/pods/AppCenter) from **CocoaPods**, if you see an error like:
 
-    ```
+    ```NA
     Added code to initialize iOS App Center SDK in ios/reactnativesample/AppDelegate.m
     Analyzing dependencies [!] Unable to find a specification for AppCenterReactNativeShared (~> {version}) 
     ```
 
     Please run the following command:
 
-    ```
+    ```shell
     pod repo update
     ```
 
@@ -115,7 +117,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 2. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
 
-    ```
+    ```NA
     What secret does your Android app use? [None]
 
     What secret does your iOS app use? [None]
@@ -125,7 +127,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md#wait-for-js-to-enable-app-center-analytics)
 
-    ```
+    ```NA
     For the Android app, should user tracking be enabled automatically? (Use arrow keys)
         ❯ Enable Automatically
           Enable in JavaScript
@@ -137,7 +139,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md#customize-your-usage-of-app-center-crashes).
 
-    ```
+    ```NA
     For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
         ❯ Automatically
           Processed in JavaScript by user
@@ -146,6 +148,12 @@ The App Center SDK uses a modular approach, where you just add the modules for A
         ❯ Automatically
           Processed in JavaScript by user
     ```
+
+    > [!NOTE]
+    > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
+
+    > [!TIP]
+    > If you want to change your answers from the Analytics or Crash prompts later, just run `react-native link` again. The **secret** is prompted only once. If you need to update the secret value after the initial prompt, you must edit **android/app/src/main/assets/appcenter-config.json** in Android or **ios/{YourAppName}/AppCenter-Config.plist** on iOS.
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
@@ -169,11 +177,13 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 5. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.
 
 6. Add the SDK frameworks to the project in Xcode:
+
    * Make sure the Project Navigator is visible (⌘+1).
    * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
-7. Link AppCenter React Native plugins projects to your app's project:
+7. Link AppCenter React Native plugins projects to your app's project:.
+
    * Make sure the Project Navigator is visible (⌘+1).
    * For each AppCenter React Native plugin navigate to the folder containing source code. Paths respectively will be
      * /node_modules/appcenter/ios
@@ -192,6 +202,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 9. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
+   
    * $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
    * $(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics
    * $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
@@ -200,7 +211,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 10. Modify your app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
 
-    ```objc
+    ```objective-c
     #import <AppCenterReactNative/AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
@@ -208,7 +219,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     ```
     * Add these lines to the `didFinishLaunchingWithOptions` method
 
-    ```objc
+    ```objective-c
     [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
@@ -235,7 +246,7 @@ Now you can build and launch your application either from command line or Xcode/
 
 You may build and launch your iOS application by the following command:
 
-```
+```shell
 react-native run-ios
 ```
 
@@ -245,7 +256,7 @@ react-native run-ios
 
 You may build and launch your Android application by the following command:
 
-```
+```shell
 react-native run-android
 ```
 
