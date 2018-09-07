@@ -1,10 +1,10 @@
 ---
-title: Configure a Xamarin Android build in App Center
+title: Building Xamarin apps for Android
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 06/01/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -14,26 +14,27 @@ ms.tgt_pltfrm: xamarin-android
 
 # Building Xamarin apps for Android
 
-To start building your first Xamarin Android app, you will need to the following:
+To start building your first Xamarin Android app, you must:
+
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
 2. Select a repository and a branch where your app lives.
 3. Choose the Android project you want to build.
 4. Set up your first build.
 
 > [!NOTE]
-> For the app to run on a real device, the build needs to be code signed with a valid KeyStore.
+> For the app to run on a real device, you must sign the build the build with a valid KeyStore.
 
 ## 1. Linking your repository
 
-If you haven't previously connected to your repository service account, you will need to do this. Once your account is connected, select the repository where your Xamarin project is located. In order to setup a build for a repository, you need admin and pull permission for it.
+If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your Xamarin project is located. You must have admin and pull permissions to setup a build for a repository.
 
 ## 2. Selecting a branch
 
-After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
+After selecting a repository, select the branch you want to build. By default, App Center lists all active branches.
 
 ## 3. Configuring Your Build
 
-Before your first build, the Xamarin project needs to be configured.
+The Xamarin project must be configured before your first build.
 
 ### 3.1. Build triggers
 
@@ -44,11 +45,13 @@ By default, a new build is triggered every time a developer pushes to a configur
 The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
 
 > [!NOTE]
-> For best performance, the analysis is currently limited to four directory levels including the root of your repository. 
+> For best performance, the analysis is currently limited to four directory levels including the root of your repository.
 
 ### 3.3. Mono version
 
-App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
+App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. 
+
+When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
 ### 3.4. Increment version number
 
@@ -56,15 +59,15 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 
 ### 3.5. Code signing
 
-A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md).
+A successful build will produce an `.apk` file. To release the build to the Play Store, it must be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md).
 
 ### 3.6. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
+Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.7. NuGet restore
 
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
+If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,13 +93,13 @@ If you have complex configurations and need more information, please refer to [C
 
 ### 3.8. Distribute to a distribution group
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called **Collaborators** that includes all the users who have access to the app.
 
-Once you save the configuration, a new build will be kicked off automatically.
+Once you save the configuration, a new build will kick off automatically.
 
 ## 4. Build results
 
-After a build has been triggered, it can be in the following states:
+After a build triggers, the build will be in one of the following states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up
 * **building** - the build is running and performing the predefined tasks
@@ -121,7 +124,7 @@ The build step specific logs (located in the build/ directory of the archive) ar
 
 ### 4.2. The app (.apk)
 
-The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
+The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build has not been signed, the app can run on an emulator or be used for other purposes.
 
 ## Supported versions and requirements
 
