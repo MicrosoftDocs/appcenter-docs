@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/30/2018
+ms.date: 09/10/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -39,7 +39,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Ruby 2.5.1p57
 - .NET SDK 1.0.1 1.0.4 1.1.10 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401
 - Go 1.11
-- Miniconda 4.5.4
+- Miniconda 4.5.11
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
 
 ### Package Management
@@ -47,7 +47,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.7.2
+- Homebrew 1.7.3
 - NPM 3.10.10
 - Yarn 1.9.4
 - NuGet 4.7.0.5148
@@ -56,7 +56,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.5.4
-- Gradle 4.9
+- Gradle 4.10
 
 ### Utilities
 
@@ -68,9 +68,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.102.1
+- fastlane 2.103.0
 - App Center CLI 1.1.2
-- Azure-CLI 2.0.44
+- Azure-CLI 2.0.45
 
 ## Xcode
 
@@ -370,7 +370,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 28.0.0 |
+| platform-tools        | Android SDK Platform-tools, revision 28.0.1 |
 
 ### Android SDK Platforms
 
@@ -447,18 +447,19 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Extra packages
 
 
-| Package name                      | Description                              |
-|-----------------------------------|------------------------------------------|
-| extra-android-m2repository        | Android Support Repository, revision 47  |
-| extra-google-google_play_services | Google Play services, revision 49        |
-| extra-google-m2repository         | Google Repository, revision 58           |
-| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.2.0     |
+| Package name                           | Description                              |
+|----------------------------------------|------------------------------------------|
+| extra-android-m2repository             | Android Support Repository, revision 47  |
+| extra-google-google_play_services      | Google Play services, revision 49        |
+| extra-google-m2repository              | Google Repository, revision 58           |
+| extras;google;instantapps              | Google Play Instant Development SDK 1.4.0|
+| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.0     |
 
 ## Xamarin
 
 ### Visual Studio for Mac
 
-- 7.6.0.2188
+- 7.6.1.9
 
 ### Mono
 
@@ -474,6 +475,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 11.99.3.538
 - 11.14.0.13
 - 11.12.0.4
 - 11.9.1.24
@@ -498,6 +500,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 4.99.3.658
 - 4.6.0.13
 - 4.4.1.193
 - 4.2.1.28
