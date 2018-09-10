@@ -29,7 +29,7 @@ Crashes are what happens when a runtime exception occurs from an unexpected even
 Experienced developers know where code can fail and wrap potentially risky code with error checking or try/catch blocks to handle problems as they occur. For Xamarin apps, App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. Learn more about best practices about when and how to use errors in the [official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 
 > [!NOTE]
-> App Center Errors is only supported for Xamarin apps. Learn more about our feature set in [our Errors documentation](~/errors/featureset.md).
+> App Center Errors is only supported for Xamarin apps.
 
 ### Inside a Try/Catch Enclosure (Errors)
 
