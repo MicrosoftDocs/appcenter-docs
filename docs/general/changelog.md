@@ -4,12 +4,19 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/23/2018
+ms.date: 09/11/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **September 11, 2018**
+
+- **Added Xamarin iOS Preview**
+  Build your Xamarin iOS apps with [Xamarin.iOS Preview](https://releases.xamarin.com/preview-release-xcode-10-beta-6/) and Xcode 10 beta 6 support
+  - Xamarin.iOS 11.99
+  - Visual Studio For Mac 7.6.1.9
 
 ### **September 3, 2018**
 
