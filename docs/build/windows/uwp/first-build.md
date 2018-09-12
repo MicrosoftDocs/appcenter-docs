@@ -4,7 +4,7 @@ description: How to set up a build for UWP C#
 keywords: build, windows
 author: siminapasat
 ms.author: siminap
-ms.date: 06/01/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: windows
 
 To start building your first UWP app, you will need to the following:
 
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Set up your first build.
 

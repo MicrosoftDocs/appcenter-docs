@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 06/01/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin-ios
 
 To start building your first Xamarin iOS app, you will need to the following:
 
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Configure the build's project or workspace, and the scheme you would like to build.
 

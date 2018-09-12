@@ -4,7 +4,7 @@ description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 04/16/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: vs-appcenter
@@ -15,9 +15,10 @@ ms.tgt_pltfrm: ios
 # Building Objective-C or Swift apps for iOS
 
 To start building your first native iOS app, you will need to the following:
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
-2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps)
+2. Select a repository and a branch where your app lives
+3. Configure the build's project or workspace, and the scheme you would like to build
 
 > [!NOTE]
 > For the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.

@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 08/31/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202
 ms.service: vs-appcenter
@@ -18,7 +18,7 @@ App Center can build React Native apps using React Native version 0.34 or newer.
 
 To start building your first React Native Android app, you must:
 
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Choose the project's `package.json` that you want to build.
 4. Set up your first build.
@@ -75,11 +75,11 @@ Once you save the configuration, a new build kicks off automatically.
 
 After a build triggers, the build will be in one of the following states:
 
-* **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and performing the predefined tasks
-* **succeeded** - the build is completed and it has succeeded
-* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-* **canceled** - the build has been canceled by a user action or it has timed out
+- **queued** -  the build is in a queue waiting for resources to be freed up
+- **building** - the build is running and performing the predefined tasks
+- **succeeded** - the build is completed and it has succeeded
+- **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+- **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
 

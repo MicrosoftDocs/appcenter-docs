@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 01/20/2017
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
 ms.service: vs-appcenter
@@ -15,7 +15,7 @@ ms.tgt_pltfrm: android
 # Building Java apps for Android
 
 To start building your first Android app, you will need to the following:
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Choose the Android project you want to build.
 4. Set up your first build.

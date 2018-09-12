@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/11/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -49,25 +49,26 @@ ms.service: vs-appcenter
 
 ### **August 8, 2018**
 
- - **Daily Digest notifications for Distribution**:
+- **Daily Digest notifications for Distribution**:
   Users can choose to receive a daily email of all the new releases of their app.
 
 ### **August 6, 2018**
 
- - **Added support ReactNative 0.56.x**:
-Build your React Native apps with [React Native 0.56.0](https://github.com/facebook/react-native/releases/tag/v0.56.0).
+- **Added support ReactNative 0.56.x**:
+  Build your React Native apps with [React Native 0.56.0](https://github.com/facebook/react-native/releases/tag/v0.56.0).
 
 ### **July 31, 2018**
 
 - **CLI version 1.1.1 released**:
-Added misc. bug fixes for Test, including enabling the `--test-output-dir` switch only when you're using the UITest or Appium test frameworks.
+  Added misc. bug fixes for Test, including enabling the `--test-output-dir` switch only when you're using the UITest or Appium test frameworks.
 
 ### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
-In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
+  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
 
-  Bug fixes: 
+  Bug fixes:
+
   - NUnit report download intermittent failure
   - validate uploaded .dll.config files to avoid UITest stalls
   - better error messages when app name is wrong 
@@ -143,33 +144,40 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   Added functionality to enable the use of app archives on all platforms, to download test report artifacts and to be called in `--async` mode.
 
 ### **April 9, 2018**
+
 - **Build support for Xcode 9.3**:
   Build your iOS and macOS apps using Xcode 9.3.
 
 ### **April 6, 2018**
+
 - **CLI version 1.0.15 released**:
   Added bug fixes for JsZip in Test.
 
 ### **April 2, 2018**
+
 - **CLI version 1.0.14 released**:
   Added `--test-output-dir` and `--merge-nunit-xml` options to appcenter test run commands.
   Misc. fixes to codepush commands.
 
 ### **March 22, 2018**
+
 - **Updated Xamarin SDKs**:
   Build your Xamarin apps with [SDK release 15.6](https://releases.xamarin.com/release-15-6/) including Mono 5.8.
 - **Handled Errors preview released**:
   Added support for Errors for Xamarin iOS and Xamarin Android. This allows you to track your handled exceptions and report them in App Center Diagnostics.
 
 ### **March 06, 2018**
+
 - **Updated Xamarin SDKs**:
   Build your Xamarin apps with [SDK release 15.5.5](https://releases.xamarin.com/service-release-15-5-5/).
 
 ### **December 21, 2017**
+
 - **Cordova platform preview released**:
   Visual Studio App Center now offers preview support for Cordova apps with our Test, Distribute, Analytics, Crash and Push Notifications services.
 
 ### **December 16, 2017**
+
 - **Build support for Xcode 9.2**:
   Build your iOS and macOS apps using Xcode 9.2.
 
@@ -177,6 +185,7 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   Build your Xamarin apps with [SDK releases 15.5](https://releases.xamarin.com/release-15-5/) and [SDK release 15.5.1](https://releases.xamarin.com/service-release-15-5-1/) (including Xcode 9.2 support for Xamarin.iOS).
 
 ### **November 17, 2017**
+
 - **Added support for re-releasing builds for distribution**:
   You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
 
@@ -196,10 +205,12 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   We have now enabled a HockeyApp and App Center side by side experience for all HockeyApp customers. To view the side by side experience, just login to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
 
 ### **November 15, 2017**
+
 - **Visual Studio App Center launches!**:
   Visual Studio App Center is made [generally available](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) to everyone and is officially rebranded from Visual Studio Mobile Center to Visual Studio App Center.
 
 ### **October 20, 2017**
+
 - **Improved Xamarin iOS Mono/SDK mapping and Xcode version handling**:
   We have improved the automatic mapping between your iOS SDK versions with Mono and Xcode to ensure a smoother and more consistent build experience out of the box.
 
@@ -216,7 +227,8 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   Events leading up to a crash are now listed, helping you diagnose issues more easily.
 
 - **Added Webhooks and VSTS bug tracker integration**:
-  Notify 3rd party applications and VSTS when events like crash groups are created or a new version of your app is released. Check out our docs for more details for configuring [Webhooks](~/dashboard/webhooks/index.md) and [VSTS integration](~/dashboard/bugtracker/index.md)
+  
+Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when events like crash groups are created or a new version of your app is released. Check out our docs for more details for configuring [Webhooks](~/dashboard/webhooks/index.md) and [Azure DevOps integration](~/dashboard/bugtracker/index.md)
 
 - **Published App Center Slack Bot**:
   Get App Center notifications and updates directly in your existing Slack channels.
@@ -226,7 +238,6 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
 
 - **Missing Symbols experience improved**:
   Know of which symbols need to be uploaded to get symbolicated crash reports
-
 
 ### **August, 23 2017**
 
@@ -238,7 +249,6 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
 
 - **Better UDID management**:
   Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from App Center.
-
 
 ### **July, 2017**
 
@@ -253,7 +263,6 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
 
 - **Distribute your iOS and Android apps to Intune**:
   You can now setup a new distribution store targeting Intune cloud. If you use Intune for rich device and application management you can now streamline the release of new application packages to Intune via App Center.
-
 
 ### **June, 22 2017**
 
@@ -314,6 +323,7 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
   You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using xcodebuild.
 
 ### **Apr 13, 2017**
+
 - **Build your apps hosted from a VSTS repository**:
   In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps.
 
@@ -383,8 +393,8 @@ In CLI version 1.1.0, the CLI now informs you if a newer version is available. W
 
 We also updated our build machines to support the latest Xcode, Android, ProGuard and Node.js tooling
 
-
 ### **Dec 15, 2016**
+
 * **Build support for Xamarin Android apps.**
   You can now set up builds for building Xamarin Android apps by going to the [Build](~/build/android/index.md) section.
 * **Username made editable now!**
@@ -395,6 +405,7 @@ We also updated our build machines to support the latest Xcode, Android, ProGuar
 * **Xcode 8.2 support for building iOS apps**
 
 ### **Dec 8, 2016**
+
 * **Events for Analytics.**
   Going beyond understanding how many and who your users are, you can now learn about your users' actions.
   Find "Events" under the Analytics section to get detailed data about your events and their properties.
@@ -403,6 +414,7 @@ We also updated our build machines to support the latest Xcode, Android, ProGuar
   You can now set up builds for building native Android apps by going to the [Build](~/build/android/index.md) section.
 
 ### **Dec 1, 2016**
+
 * **React Native has arrived.**
   You can build, capture crash reports and see analytics data for your iOS app. Read the [docs](~/sdk/getting-started/react-native.md) or start by connecting any React Native repository.
 * **Xamarin developers can build for iOS.**

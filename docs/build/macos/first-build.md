@@ -4,7 +4,7 @@ description: How to set up a build for a Mac app
 keywords: build, macos, mac
 author: andyzg
 ms.author: t-anzha
-ms.date: 10/31/2017
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 7e04c8d4-8b72-46ea-906d-596fa174d126
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: macos
 
 To start building your first Mac app, you will need to do the following:
 
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Configure the build's project or workspace, and the scheme you would like to build.
 
@@ -87,11 +87,11 @@ Once you save the configuration, a new build will be kicked off automatically.
 
 After a build has been triggered, it can be in the following states:
 
-* **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and performing the predefined tasks
-* **succeeded** - the build is completed and it has succeeded
-* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-* **canceled** - the build has been canceled by a user action or it has timed out
+- **queued** -  the build is in a queue waiting for resources to be freed up
+- **building** - the build is running and performing the predefined tasks
+- **succeeded** - the build is completed and it has succeeded
+- **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+- **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
 
@@ -112,15 +112,15 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 The .app file is a Mac application archive file which contains the Mac app.
 
-* If the build has been signed correctly, the .app file can be installed on a device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's macOS code signing documentation](~/build/macos/code-signing.md).
-* If the build has not been signed, the .app file can be signed by the developer (e.g. locally using codesign).
+- If the build has been signed correctly, the .app file can be installed on a device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's macOS code signing documentation](~/build/macos/code-signing.md).
+- If the build has not been signed, the .app file can be signed by the developer (e.g. locally using codesign).
 
 ### 4.3. The symbols file (.dsym)
 
 The `.dsym` files contain the debug symbols for the app.
 
-* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this `.dsym` file for a build in order to display human-readable (symbolicated) crash reports.
-* If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the `.dsym` file in order to display human-readable crash reports.
+- If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this `.dsym` file for a build in order to display human-readable (symbolicated) crash reports.
+- If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the `.dsym` file in order to display human-readable crash reports.
 
 Keep in mind that the .dsym files do not change upon code signing the .app. If you decide to code sign the build later, the .dsym generated before code signing is still valid.
 
@@ -134,9 +134,9 @@ To build your project, we use `xcodebuild`, a command-line tool that allows you 
 
 The following versions of Xcode are supported on our VMs for macOS builds.
 
-* Xcode 10 beta 6
-* Xcode 9.1
-* Xcode 9.0.1
-* Xcode 9.0
+- Xcode 10 beta 6
+- Xcode 9.1
+- Xcode 9.0.1
+- Xcode 9.0
 
-[Build machine version details](../software.md) are updated each time a new version of macOS is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
+[Build machine version details](~/build/software.md) are updated each time a new version of macOS is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.

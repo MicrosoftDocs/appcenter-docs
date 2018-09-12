@@ -1,26 +1,25 @@
 ---
 # required metadata
 
-title: Deploy VSTS Builds with App Center
-description: Deploy VSTS builds with App Center
+title: Deploy Azure DevOps Builds with App Center
+description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/24/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.service: vs-appcenter
 
 ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 ---
 
-# Deploy VSTS Builds with App Center
+# Deploy Azure DevOps Builds with App Center
 
-With the **Deploy with App Center** Task in Visual Studio Team Services, you can deploy your apps from VSTS
-to App Center. By deploying to App Center, you will be able to distribute your builds to your users.
+With the **Deploy with App Center** Task in Visual Studio Team Services, you can deploy your apps from Azure DevOps (formerly known as VSTS) to App Center. By deploying to App Center, you will be able to distribute your builds to your users.
 
 ## Creating a signed build
 
-Before deploying your app to App Center, ensure your existing VSTS build definition produces a signed build; only signed builds can be deployed and installed to devices.
+Before deploying your app to App Center, ensure your existing Azure DevOps build definition produces a signed build; only signed builds can be deployed and installed to devices.
 
 ## Setting up distribution with App Center
 
@@ -30,11 +29,11 @@ When configuring the App Center Distribute task, you'll need your App Center API
 
 ![Get your API key from App Center](images/vsts-deploy-api.png)
 
-Create a new API token, making sure the API token has full access (so that VSTS can create new releases for distribution), then copy the key. Switch back to VSTS and the App Center Distribute task and create a new **App Center Connection**. Paste the API key you copied from App Center, and give the connection a name.
+Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. Paste the API key you copied from App Center, and give the connection a name.
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 
-After you've created the connection between VSTS and App Center, VSTS needs to know which app you want to distribute the signed build to. Grab the app slug from App Center; you can find this by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/andyzg/apps/vanilla-android` is `andyzg/vanilla-android`.
+After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. Grab the app slug from App Center; you can find this by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/andyzg/apps/vanilla-android` is `andyzg/vanilla-android`.
 
 ![Copy your App Slug from App Center](images/vsts-deploy-app-center-slug.png)
 

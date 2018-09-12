@@ -78,7 +78,7 @@ sections:
       className: cardsB
       items:
       - href: ~/build/
-        html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS). No additional build hardware required.
+        html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Azure DevOps (formerly known as Visual Studio Team Services (VSTS)). No additional build hardware required.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
           alt: build-icon

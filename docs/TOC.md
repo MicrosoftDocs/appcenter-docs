@@ -3,6 +3,7 @@
 # [Help & Feedback](help.md)
 
 # [Dashboard](dashboard/index.md)
+
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [Creating and managing teams](dashboard/creating-and-managing-teams.md)
@@ -14,6 +15,7 @@
 ## [FAQ](dashboard/faq.md)
 
 # [Build](build/index.md)
+
 ## [Android](build/android/index.md)
 ### [Configure a build](build/android/first-build.md)
 ### [Code Signing](build/android/code-signing.md)
@@ -47,16 +49,13 @@
 ## [Troubleshooting](build/troubleshooting/index.md)
 
 ### [General](build/troubleshooting/general.md)
-
 ### [Code Repositories](build/troubleshooting/code-repos.md)
-
 ### [iOS](build/troubleshooting/ios.md)
-
 ### [Xamarin](build/troubleshooting/xamarin.md)
-
 ### [React Native](build/troubleshooting/react-native.md)
 
 # [Test](test-cloud/index.md)
+
 ## [Getting Started](test-cloud/getting-started.md)
 ## [Devices Available](test-cloud/devices.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
@@ -70,7 +69,7 @@
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
-## [Testing in VSTS](test-cloud/vsts-plugin.md)
+## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
 ## [Xamarin.UITest](test-cloud/uitest/index.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [Working With](test-cloud/uitest/working-with.md)
@@ -84,6 +83,7 @@
 #### [Webviews](test-cloud/uitest/working-with-webviews.md)
 
 # [Distribute](distribution/index.md)
+
 ## [Release a build](distribution/uploading.md)
 ## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
@@ -105,6 +105,7 @@
 ## [Distribution with VSTS](distribution/vsts-deploy.md)
 
 # [Diagnostics](diagnostics/index.md)
+
 ## [Enabling Diagnostics](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
 ### [Apache Cordova](sdk/crashes/cordova.md)
@@ -120,6 +121,7 @@
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 
 # [Analytics](analytics/index.md)
+
 ## [Overview](analytics/overview.md)
 ## [Events Metrics](analytics/event-metrics.md)
 ## [Log Flow](analytics/log-flow.md)
@@ -127,12 +129,13 @@
 ## [FAQ](analytics/faq.md)
 
 # [Push](push/index.md)
+
 ## [Audiences](push/audiences.md)
 ## [API](push/pushapi.md)
 ## [FAQ](push/faq.md)
 
-
 # [SDK](sdk/index.md)
+
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
 ### [iOS](sdk/getting-started/ios.md)
@@ -197,6 +200,7 @@
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
+
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
@@ -205,6 +209,7 @@
 ## [Support Center](general/support-center.md)
 
 # [GDPR](gdpr/index.md)
+
 ## [Your Data](gdpr/your-data.md)
 ## [Your End-User's Data](gdpr/data-from-your-end-users.md)
 ### [Does it apply to me?](gdpr/does-it-apply-to-me.md)
@@ -228,6 +233,7 @@
 #### [Export](gdpr/test-export.md)
 
 # [Migration](migration/index.md)
+
 ## [HockeyApp](migration/hockeyapp/index.md)
 ### [Distribution](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
@@ -236,10 +242,12 @@
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Reference
+
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
 # Quickstarts
+
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
 ### [Build](quickstarts/ios/build.md)

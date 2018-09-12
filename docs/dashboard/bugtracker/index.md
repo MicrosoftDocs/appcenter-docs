@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Jira, Visual Stu
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 08/08/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
@@ -14,7 +14,7 @@ ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
 
 ## Overview
 
-App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira, Visual Studio Team Services (VSTS) and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
+App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira, Visual Studio Team Services (VSTS), Azure DevOps, and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 2. In your app, select **Settings**, **Services**, and click the **edit** button.
 
-3. <a name="step3"/>Select which bug tracker (Jira, VSTS or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it. 
+3. <a name="step3"/>Select which bug tracker (Jira, VSTS, Azure DevOps, or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it.
 
    1. For Jira:
 
@@ -33,15 +33,15 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
              ![How to add a bug tracker for Jira](media/addBugTrackerJira.gif)
 
-   2. For VSTS:
+   2. For Azure DevOps (formerly VSTS):
 
-      1. Login with your VSTS credentials and click **Accept** when prompted on app authorization.
-      2. Select which VSTS projects to integrate the bug tracker with and click **Next**.
+      1. Login with your Azure DevOps credentials and click **Accept** when prompted on app authorization.
+      2. Select which Azure DevOps projects to integrate the bug tracker with and click **Next**.
       3. Under **Add bug tracker**, fill in the fields for **Number of crashes**, **Area** and **Default Payload**, and click **Add**:
-         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in VSTS.
+         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Azure DevOps.
          - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/en-us/rest/api/vsts/wit/work%20item%20types) for additional information.
 
-             ![How to add a bug tracker for VSTS](media/addBugTrackerVSTS.gif)
+             ![How to add a bug tracker for Azure DevOps](media/addBugTrackerVSTS.gif)
 
    3. For GitHub:
 

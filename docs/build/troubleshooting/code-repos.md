@@ -4,7 +4,7 @@ description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 08/08/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ ms.custom: build
 
 ## <a name="on-premises"/>Can I use on-premises repositories?
 
-App Center currently supports cloud hosted git repositories on Visual Studio Team Services (VSTS), Bitbucket and Github, but does not support on-premises repositories.
+App Center currently supports cloud hosted git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and Github, but does not support on-premises repositories.
 
 ## <a name="wrong-bitbucket"/>I have connected to the wrong Bitbucket account. How can I re-connect to the correct one?
 
@@ -33,18 +33,18 @@ Disconnect the connected Bitbucket account and [re-connect to the correct accoun
 
 Disconnect the connected GitHub account and [re-connect to the correct account](~/build/connect.md#github).
 
-## <a name="wrong-VSTS"/>I have connected to the wrong VSTS account. How can I re-connect to the correct one?
+## <a name="wrong-VSTS"/>I have connected to the wrong Azure DevOps account. How can I re-connect to the correct one?
 
-Disconnect the connected VSTS account and [re-connect to the correct account](~/build/connect.md#visual-studio-team-services-vsts).
+Disconnect the connected Azure DevOps (formerly VSTS) account and [re-connect to the correct account](~/build/connect.md#vsts).
 
-## <a name="not-listed"/>When connecting a VSTS repository, I see "No Projects Found"
+## <a name="not-listed"/>When connecting a Azure DevOps repository, I see "No Projects Found"
 
-It is possible when you first attempt to connect AppCenter to VSTS, it's authorized under the wrong organization. Determine [which VSTS accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the OAuth flow, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [re-connect to the correct account](#wrong-VSTS) if you connected to the wrong account.
+It is possible when you first attempt to connect AppCenter to Azure DevOps (formerly VSTS), it's authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the OAuth flow, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [re-connect to the correct account](#wrong-VSTS) if you connected to the wrong account.
 
 ## <a name="git-sub"/>Are Git submodules supported?
 
 For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
-For repositories hosted on Bitbucket or VSTS, only un-authenticated Git submodules are supported for now.
+For repositories hosted on Bitbucket or Azure DevOps (formerly VSTS), only un-authenticated Git submodules are supported for now.
 
 ## <a name="bitbucket-git"/>I'm connected to Bitbucket and my builds fail with Git error
 
@@ -69,5 +69,4 @@ App Center Build only supports Git repositories. For projects using a TFVC repos
 
 ## <a name="code-source-secure"/>Is my source code secure?
 
-App Center uses virtual machines to build your code. There is a clean virtual machine provisioned especially for your build which gets discarded once the build finishes.
-The files uploaded for code signing and the password for the certificate are also stored securely on our servers.
+App Center uses virtual machines to build your code. There is a clean virtual machine provisioned especially for your build which gets discarded once the build finishes. The files uploaded for code signing and the password for the certificate are also stored securely on our servers.

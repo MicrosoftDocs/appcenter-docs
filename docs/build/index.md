@@ -4,7 +4,7 @@ description: Building apps with App Center
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 08/27/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 3ebe875a-e8e0-4b76-bba1-277047a321b7
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ App Center supports building apps in Git repositories hosted on:
 
 - Bitbucket
 - GitHub
-- Visual Studio Team Services (VSTS)
+- Azure DevOps (formerly Visual Studio Team Services or VSTS)
 
 App Center does not support Team Foundation Version Control (TFVC)
 

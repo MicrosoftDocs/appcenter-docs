@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 08/08/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 8835183e-4261-4bae-b119-8a8beca72ad4
 ms.service: vs-appcenter
@@ -40,9 +40,9 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 * [I have connected to the wrong GitHub account. How can I re-connect to the correct one?](~/build/troubleshooting/code-repos.md#reconnect-github)
 
 
-* [I have connected to the wrong VSTS account. How can I re-connect to the correct one?](~/build/troubleshooting/code-repos.md#wrong-VSTS)
+* [I have connected to the wrong Azure DevOps (formerly VSTS) account. How can I re-connect to the correct one?](~/build/troubleshooting/code-repos.md#wrong-VSTS)
 
-* [When connecting a VSTS repository, I see "No Projects Found"](~/build/troubleshooting/code-repos.md#not-listed)
+* [When connecting an Azure DevOps (formerly VSTS) repository, I see "No Projects Found"](~/build/troubleshooting/code-repos.md#not-listed)
 
 * [Are Git submodules supported?](~/build/troubleshooting/code-repos.md#git-sub)
 

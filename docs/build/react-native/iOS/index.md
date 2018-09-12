@@ -4,7 +4,7 @@ description: How to set up a build for React Native iOS apps
 keywords: build, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 04/16/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a
 ms.service: vs-appcenter
@@ -18,7 +18,7 @@ App Center can build React Native apps written in React Native version 0.34 or n
 
 To start building your first React Native iOS app, you will need to the following:
 
-1. Connect to your repository service account (GitHub, Bitbucket, VSTS).
+1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Configure the build's project or workspace, and the scheme you would like to build.
 
@@ -75,11 +75,11 @@ Once you save the configuration, a new build will be automatically kicked off.
 
 After a build has been triggered, it can be in the following states:
 
-* **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and performing the predefined tasks
-* **succeeded** - the build is completed and it has succeeded
-* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-* **canceled** - the build has been canceled by a user action or it has timed out
+- **queued** -  the build is in a queue waiting for resources to be freed up
+- **building** - the build is running and performing the predefined tasks
+- **succeeded** - the build is completed and it has succeeded
+- **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+- **canceled** - the build has been canceled by a user action or it has timed out
 
 ### 4.1. Build logs
 
@@ -100,16 +100,16 @@ The build step specific logs (located in the `build/` directory of the archive) 
 
 The .ipa file is an iPhone application archive file which contains the iOS app.
 
-* If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
-* If the build has not been signed, the .ipa file can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator).
-* Unsigned builds will not produce an .ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+- If the build has been signed correctly, the .ipa file can be installed on a real device corresponding to the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
+- If the build has not been signed, the .ipa file can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator).
+- Unsigned builds will not produce an .ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
 ### 4.3. The source maps and symbol files
 
 Upon building a React Native iOS app, a JavaScript source map and one or multiple .dsym files are automatically generated with each build and can be downloaded once the build is completed.
 
-* if you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this .dsym file and the JavaScript sourcemap for a build in order to display human readable (symbolicated) crash reports
-* if you have previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the .dsym file and the JavaScript sourcemap in order to display human readable (symbolicated) crash reports
+- if you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this .dsym file and the JavaScript sourcemap for a build in order to display human readable (symbolicated) crash reports
+- if you have previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the .dsym file and the JavaScript sourcemap in order to display human readable (symbolicated) crash reports
 
 Keep in mind that the .dsym file does not change upon code signing the .ipa. If you decide to code sign the build later, the .dsym generated before code signing is still valid.
 

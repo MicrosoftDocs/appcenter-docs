@@ -3,7 +3,7 @@ title: Using App Center
 description: Managing your App Center account and settings
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/25/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0
 ms.service: vs-appcenter
@@ -35,7 +35,7 @@ Manage your email preferences to sign up for automatic notifications for builds,
 
 ### Bug Tracker Integration
 
-Integrate bug trackers like Jira, Visual Studio Team Services (VSTS), and GitHub to stay informed when your app crashes.
+Integrate bug trackers like Jira, Visual Studio Team Services (VSTS), Azure DevOps, and GitHub to stay informed when your app crashes.
 
 ### Webhooks
 

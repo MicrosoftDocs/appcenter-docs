@@ -4,7 +4,7 @@ description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 08/08/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: E5791947-AF21-47D0-84A0-90D5F06DC8A9
 ms.service: vs-appcenter
@@ -147,15 +147,15 @@ var onDownloadProgress = function (downloadProgress) {
 codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, onError);
 ```
 
-## Automate your deployments with VSTS
+## Automate your deployments with Azure DevOps
 
 Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to leverage the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
-This tutorial covers how to leverage Visual Studio Team Services (VSTS) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to setup the CD environment.
+This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to setup the CD environment.
 
 ### Overview
 
-VSTS is a collection of services that let teams share code, track work, and ship software—for any language.
+Azure DevOps is a collection of services that let teams share code, track work, and ship software—for any language.
 
 From a high-level it provides developers with:
 
@@ -166,9 +166,9 @@ From a high-level it provides developers with:
 - Enterprise-grade services scale to any team size
 - Free for up to five users
 
-In addition, VSTS allows developers to extend the service by creating VSTS extensions that can help with tasks covering the full CI and CD spectrum.
+In addition, Azure DevOps allows developers to extend the service by creating Azure DevOps extensions that can help with tasks covering the full CI and CD spectrum.
 
-The CodePush service provides a VSTS extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
+The CodePush service provides a Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
 
 Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can simply push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
@@ -176,7 +176,7 @@ Leveraging the workflow discussed below can greatly reduce the effort needed to 
 
 The following is required to complete this module:
 
-- VSTS Account ([Sign up for a free VSTS account(https://www.visualstudio.com/products/free-developer-offers-vs))
+- Azure DevOps Account ([Sign up for a free Azure DevOps account(https://www.visualstudio.com/products/free-developer-offers-vs))
 - App Center Account (Follow these [steps](~/distribution/codepush/index.md) to get set up)
 - React Native "CodePush ready" [sample app](https://github.com/rub8n/VSTSCDSample) (Use your own app or download the "bare bones" sample app to speed things up)
 
@@ -216,19 +216,19 @@ Navigate to line #2 and add the previously recorded `Staging` deployment key:
 
 ![Adding new deployment keys](images/tutorials2.png)
 
-### 3. Push the source code to a VSTS team project
+### 3. Push the source code to a Azure DevOps team project
 
-Create a new project in VSTS by clicking on `New`:
+Create a new project in Azure DevOps by clicking on `New`:
 
-![Create new VSTS project](images/tutorials3.png)
+![Create new Azure DevOps project](images/tutorials3.png)
 
 Give it a name and ensure `Git` is selected for `Version control`:
 
 ![New project dialog](images/tutorials4.png)
 
-Once the project is created, copy the remote string as you will use it to update the local repository's remote URL to point to your new VSTS project:
+Once the project is created, copy the remote string as you will use it to update the local repository's remote URL to point to your new Azure DevOps project:
 
-![Getting VSTS remote](images/tutorials5.png)
+![Getting Azure DevOps remote](images/tutorials5.png)
 
 Update the repository's remote URL using the following [command](https://help.github.com/articles/changing-a-remote-s-url):
 
@@ -236,48 +236,48 @@ Update the repository's remote URL using the following [command](https://help.gi
  git remote set-url origin replaceWithVSTSRepositoryURL
 ```
 
-Once the new remote URL is set, push the repository to VSTS via [Git push](https://help.github.com/articles/pushing-to-a-remote/)
+Once the new remote URL is set, push the repository to Azure DevOps via [Git push](https://help.github.com/articles/pushing-to-a-remote/)
 
 ```shell
  git push -u origin --all
 ```
 
-A few seconds later, the source will be added to your VSTS repository:
+A few seconds later, the source will be added to your Azure DevOps repository:
 
 ![New project dialog](images/tutorials6.png)
 
 ### 4. Configure the CI environment
 
-#### Install VSTS extension
+#### Install Azure DevOps extension
 
-To build the project you will need to install an extension from the VSTS Marketplace.
+To build the project you will need to install an extension from the Azure DevOps Marketplace.
 
 For React Native projects do the following:
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
-![Open the VSTS marketplace](images/tutorials7.png)
+    ![Open the Azure DevOps marketplace](images/tutorials7.png)
 
-2. Enter the term `react` in the search box and press enter. Open and install the `React Native` VSTS extension made by the `Visual Studio Client Tools` team:
+2. Enter the term `react` in the search box and press enter. Open and install the `React Native` Azure DevOps extension made by the `Visual Studio Client Tools` team:
 
-![Browse the VSTS marketplace](images/tutorials8.png)
+    ![Browse the Azure DevOps marketplace](images/tutorials8.png)
 
 #### Create a new build definition
 
 1. In the top menu bar, click BUILD to open the build hub. In the menu on the left, click the green + button to create a new build definition.
 
-![Creating new VSTS build definition](images/tutorials9.png)
+    ![Creating new Azure DevOps build definition](images/tutorials9.png)
 
 2. Select `Empty` from the list of build templates and click `Next`.
 
-![Selecting empty definition](images/tutorials10.png)
+    ![Selecting empty definition](images/tutorials10.png)
 
 3. Make sure that the repo settings are correct (it should be the master branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
 
-![Configuring empty definition](images/tutorials11.png)
+    ![Configuring empty definition](images/tutorials11.png)
 
 > [!NOTE]
-> The `Continuous Integration` trigger tells VSTS to kick-off an instance of this build each time code is pushed to the `master` branch.
+> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` branch.
 
 #### Configure the build task
 
@@ -330,23 +330,23 @@ Pressing `OK` on the "Queue build" dialog starts the build process:
 
 As a best practice, we recommend creating three release environments: "Staging", "Rollout" and "Production". This configuration allows you to continuously deploy to "Staging", rollout to a small percentage of production users and finally release to all production users when confidence is high.
 
-#### Install VSTS extension
+#### Install Azure DevOps extension
 
-To leverage the CodePush service as the release vehicle, you will need to install another extension from the VSTS Marketplace.
+To leverage the CodePush service as the release vehicle, you will need to install another extension from the Azure DevOps Marketplace.
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
-![Open the VSTS marketplace](images/tutorials15.png)
+![Open the Azure DevOps marketplace](images/tutorials15.png)
 
-2. Enter the term `codepush` in the search box and press enter. Open and install the `React Native` VSTS extension made by the `Visual Studio Client Tools` team:
+2. Enter the term `codepush` in the search box and press enter. Open and install the `React Native` Azure DevOps extension made by the `Visual Studio Client Tools` team:
 
-![Browse the VSTS marketplace](images/tutorials16.png)
+![Browse the Azure DevOps marketplace](images/tutorials16.png)
 
 #### Create a new release definition
 
 1. In the top menu bar, click RELEASE to open the release hub. In the menu on the left, click the green + button to create a new release definition.
 
-![Creating new VSTS release definition](images/tutorials17.png)
+![Creating new Azure DevOps release definition](images/tutorials17.png)
 
 2. Select `Empty` from the list of release templates and click `Next`.
 
@@ -357,7 +357,7 @@ To leverage the CodePush service as the release vehicle, you will need to instal
 ![Configuring empty definition](images/tutorials19.png)
 
 > [!NOTE]
-> The `Continuous deployment` trigger tells VSTS to kick-off a release each time a successful build completes. This behavior can be modified to release automatically or after a release is formally approved.
+> The `Continuous deployment` trigger tells Azure DevOps to kick-off a release each time a successful build completes. This behavior can be modified to release automatically or after a release is formally approved.
 
 #### Configure the deployment task
 
@@ -369,9 +369,10 @@ Create the described release definition by following these steps:
 
 1. Rename the default environment to `Staging` by clicking on the "Environment 1" label, typing the new name and pressing enter.
 
-2. Use the `CodePush CLI` to create an access key for VSTS by typing `appcenter codepush tokens create -d "VSTS integration"`. Save the key for the next step.
+2. Use the `CodePush CLI` to create an access key for Azure DevOps by typing `appcenter codepush tokens create -d "VSTS integration"`. Save the key for the next step.
 
-3. Back to VSTS, configure the `Staging` environment to release CodePush updates to users in the "staging ring" by clicking on `Add tasks` and selecting `CodePush - Release` from the `Deploy` category. Select it and specify the following settings:
+3. Back to Azure DevOps, configure the `Staging` environment to release CodePush updates to users in the "staging ring" by clicking on `Add tasks` and selecting `CodePush - Release` from the `Deploy` category. Select it and specify the following settings:
+
    - Use `Access Key` as the `Authentication Method`
    - Use the key created in the previous step as the `Access Key`
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
@@ -379,10 +380,12 @@ Create the described release definition by following these steps:
    - Use the browse button to set `Update Contents Path` to point towards the "Artifacts" folder created during the build process.
 
 4. Add a second environment and name it `Rollout` by clicking on `Add environment` then on "Create new environment". Select `Empty`, press `Next` and specify the following settings:
+
    - Set `Specific users` under `Pre-deployment approval` to control what users decide to approve deployments to the `Rollout` environment.
    - Select the `trigger` to ensure this step kicks off automatically after the `Staging` release completes.
 
 5. Configure the environment to target only a fixed number of production users, by clicking on "Add tasks" and selecting `CodePush - Promote` from the `Deploy` category. Select it and specify the following settings:
+
    - Use `Access Key` as the `Authentication Method`
    - Use the key created in the previous step as the `Access Key`
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
@@ -393,6 +396,7 @@ Create the described release definition by following these steps:
 6. Save and name the release definition by pressing the Save toolbar button.
 
 7. Add a third environment and name it `Production` by clicking on `Add environment` then on "Create new environment". Select `Empty`, press `Next` and specify the following settings:
+
    - Set `Specific users` under `Pre-deployment approval` to control what users decide to approve deployments to the `Rollout` environment.
    - Select the `trigger` to ensure this step kicks off automatically after the `Rollout` release completes.
 
@@ -416,9 +420,10 @@ You can create a "release" version of the app by generating a signed APK and ins
 
 Deploy the app per the instructions linked above, do a small code change and commit the change to master.
 
-VSTS allows you to edit the source code on the CODE hub:
+Azure DevOps allows you to edit the source code on the CODE hub:
+
 ![VSTS code changes](images/tutorials21.png)
 
 ### Summary
 
-This tutorial shows how VSTS and CodePush make your developer experience better. From a high level, VSTS provides teams with great tools and allows them to fully automate the build and release process while CodePush provides the flexibility to deploy automated updates from Staging to Production.
+This tutorial shows how Azure DevOps and CodePush make your developer experience better. From a high level, Azure DevOps provides teams with great tools and allows them to fully automate the build and release process while CodePush provides the flexibility to deploy automated updates from Staging to Production.

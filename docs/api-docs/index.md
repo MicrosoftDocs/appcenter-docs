@@ -20,7 +20,7 @@ Explore the App Center API Service with [swagger](https://openapi.appcenter.ms).
 ### <a name="section1"/>How to acquire an API token from App Center and make calls to the App Center API
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login with your account information.
-2. On the bottom left corner, click your username and select **Account Settings**.
+2. On the lower-left corner of the App Center portal, click your account user name, then select **Account Settings**.
 
    ![The account details menu to select Settings](~/api-docs/images/mc_menu_dialog.PNG)
 
