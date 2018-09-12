@@ -237,3 +237,78 @@ App Center uses swizzling to automatically forward your application delegate's m
       }
     }
     ```
+
+## Handle a push notification while the app is in foreground
+
+App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
+
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+
+> [!NOTE]
+> The solution below requires iOS 10 or later.
+
+1. In your `AppDelegate`, add the following to the `didFinishLaunching:withOptions:` to register as a `UNUserNotificationCenterDelegate`:
+
+    ```objc
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    ```
+
+    ```swift
+    UNUserNotificationCenter.current().delegate = self
+    ```
+
+2. Implement the following callback to detect a foreground notification:
+
+    ```objc
+    //iOS 10 and up, called when a notification is delivered to an app that is in the foreground.
+    -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+
+        // Do something, e.g. set a BOOL @property to track the foreground state.
+        self.isInForeground = YES;
+    }
+    ```
+
+    ```swift
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        // Do something, e.g. set a Boolean property to track the foreground state.
+        self.isInForeground = true
+    }
+    ```
+
+3. (Optional) If you have implemented the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
+
+    ```objc
+
+    // Continued from previous example.
+    - (void)push:(MSPush *)push
+        didReceivePushNotification:(MSPushNotification *)pushNotification {
+
+        // Do something differently if the push notification was received while in foreground.
+        if (self.isInForeground) {
+            // Handle the push notification that was received while in foreground.
+        }
+        else {
+
+            // Handle the push notification that was received while app was in background.
+        }
+    }
+    ```
+
+    ```swift
+
+    // Continued from previous example.
+    func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
+
+        // Do something differently if the push notification was received while in foreground.
+        if (self.isInForeground) {
+
+            // Handle the push notification that was received while in foreground
+        }
+        else {
+
+            // Handle the push notification that was received while app was in background.
+        }
+    }
+    ```

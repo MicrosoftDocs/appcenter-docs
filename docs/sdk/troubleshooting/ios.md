@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/03/2018
+ms.date: 09/03/2018
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: vs-appcenter
@@ -92,7 +92,6 @@ Historically, iOS didn't support dynamic linked shared libraries as Landon Fulle
 
 To learn more about static linked shared libraries vs. dynamic linked shared libraries, we recommend Apple's [general documentation on the topic](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html). To learn more about the performance impact of dynamic linked shared libraries, read Eric Horacek's [blogpost](https://blog.automatic.com/how-we-cut-our-ios-apps-launch-time-in-half-with-this-one-cool-trick-7aca2011e2ea).
 
-
 ## Why are the SDK binaries "THAT" big? I am concerned about my app's size.
 
 The AppCenter binaries are distributed as "fat" frameworks that contain slices for all iPhone architectures as well as for the iPhone simulator. This is why, e.g. *AppCenter.framework* is 10.5MB to download.
@@ -105,7 +104,6 @@ The tests were run **without Bitcode** enabled and did not use **App Thinning**.
 
 Please note that the numbers below can vary and depend on your build settings, so consider them a rough guide. That said, adding the App Center SDK to your app has a minimal impact on the size of your application binary.
 
-
 | App Center modules used | Exported IPA size | Installation size |
 |-------------------------|-------------------|-------------------|
 |    None (blank app)     |       24KB        |       132KB       |
@@ -114,4 +112,3 @@ Please note that the numbers below can vary and depend on your build settings, s
 |  App Center Distribute  |       163KB       |       528KB       |
 |     App Center Push     |       115KB       |       377KB       |
 | All App Center modules  |       314KB       |       930KB       |
-

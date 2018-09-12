@@ -24,7 +24,7 @@ ms.tgt_pltfrm: react-native
 
 ## React Native link command unrecognized
 
-If you have `yarn` installed on your machine, `react-native init {myapp}` will initialize your app and install dependencies using `yarn` rather than `npm`. If you see the following error message when running `react-native link`, chances are appcenter dependencies are installed from `npm install {package}` instead of `yarn add {package}` so that `npm` and `yarn` are mixed during installation.
+If you have `yarn` installed on your machine, `react-native init {myapp}` will initialize your app and install dependencies using `yarn` rather than `npm`. If you see the following error message when running `react-native link`, chances are App Center dependencies are installed from `npm install {package}` instead of `yarn add {package}` so that `npm` and `yarn` are mixed during installation.
 
 ```Text
 Command `link` unrecognized. Make sure that you have run `npm install` and that you are inside a react-native project.
@@ -68,11 +68,11 @@ You should run `pod repo update` to update the spec repo, and try `react-native 
 
 ## How to update React Native SDK to the latest version
 
-If you have already integrated our SDK into your application and want to upgrade to a newer version of the sdk, plesae follow the following steps to upgrade:
+If you have already integrated our SDK into your application and want to upgrade to a newer version of the SDK, please follow the following steps to upgrade:
 
-1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to uninstall old appcenter packages.
+1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to uninstall old App Center packages.
 
-2. `npm install --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest appcenter packages.
+2. `npm install --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest App Center packages.
 
 3. `pod repo update` to make sure your CocoaPods spec repo is up-to-date.
 

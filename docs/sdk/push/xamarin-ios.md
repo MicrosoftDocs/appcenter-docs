@@ -130,3 +130,73 @@ App Center uses swizzling to automatically forward your application delegate's m
     ```
 
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
+
+## Handle a push notification while the app is in foreground
+
+> [!NOTE]
+> The solution below works for iOS only.
+
+App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
+
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+
+> [!NOTE]
+> The solution below requires iOS 10 or later.
+
+1. Implement your own UNUserNotificationCenterDelegate class and implement the `WillPresentNotification(...)` callback.
+
+    ```csharp
+    public class YourOwnUNUserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+    {
+        // This is a property that it is exposed so it can be used elsewhere.
+        public Boolean isInForeground {
+                get;
+                set;
+        }
+
+        public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
+        {
+            // Do something, e.g. set a Boolean property to track the foreground state.
+            this.isInForeground = true;
+        }
+    }
+    ```
+
+2. In your `AppDelegate`, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationenterDelegate`:
+
+    ```csharp
+    // Continued from previous example.
+    public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+
+        // Your code, e.g. App Center setup code is here.
+
+        this.myOwnNotificationDelegate = YourOwnUNUserNotificationCenterDelegate();
+        UNUserNotificationCenter.Current.Delegate = this.myOwnNotificationDelegate;
+
+        return true;
+    }
+    ```
+
+3. (Optional) If you have implemented the App Center Push SDK `PushNotificationReceived:` callback, you may want adjust its behavior to a handle the foreground detection:
+
+    ```csharp
+    // Continued from previous example.
+    if (!AppCenter.Configured)
+    {
+        Push.PushNotificationReceived += (sender, e) =>
+        {
+            if (this.myOwnNotificationDelegate.isInForeground)
+            {
+                // Handle the push notification that was received while in foreground.
+            }
+            else
+            {
+                // Handle the push notification that was received while in background.
+            }
+        };
+    }
+
+    // AppCenter.start after
+    AppCenter.Start(..., ... ,typeof(Push), ...);
+    ```
