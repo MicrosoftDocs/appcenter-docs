@@ -4,12 +4,18 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/12/2018
+ms.date: 09/13/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **September 13, 2018**
+
+- **Intune app protection policies**
+  Publish [managed iOS line-of-business apps](https://docs.microsoft.com/en-us/intune/app-protection-policy) to the Intune store
+
 
 ### **September 11, 2018**
 

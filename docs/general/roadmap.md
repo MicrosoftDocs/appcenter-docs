@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 09/12/2018
+ms.date: 09/13/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -29,7 +29,7 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 ## Distribution
 
 * iOS Native App Experience - View and install apps via a dedicated native app experience
-* Publishing MAM wrapped iOS apps to the Intune store. Wrap your internal apps with [Microsoft Intune Mobile Application Management (MAM)](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). All apps published to an Intune connection in your organization will be made MAM aware for better data protection. Your Intune administrator can apply policies from the Intune portal, and no steps are needed when publishing your apps.
+* [SHIPPED] Publishing MAM wrapped iOS apps to the Intune store. Wrap your internal apps with [Microsoft Intune Mobile Application Management (MAM)](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). All apps published to an Intune connection in your organization will be made MAM aware for better data protection. Your Intune administrator can apply policies from the Intune portal, and no steps are needed when publishing your apps.
 * Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
 * [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience
 * [SHIPPED] Azure Active Directory (AAD) support – Reuse existing Active Directory Groups to grant access to applications in App Center.
