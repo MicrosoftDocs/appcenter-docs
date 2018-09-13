@@ -70,6 +70,7 @@
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## [Troubleshooting](test-cloud/troubleshooting.md)
 ## [Xamarin.UITest](test-cloud/uitest/index.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [Working With](test-cloud/uitest/working-with.md)
