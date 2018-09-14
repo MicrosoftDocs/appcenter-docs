@@ -44,6 +44,8 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 ## SDK
 
 * Add support for the [Unity](https://unity3d.com/) cross-platform game engine. This feature includes supporting Unity apps in the App Center portal and shipping the App Center SDK for Unity.  SDK will support App Center Analytics, Distribution, and Diagnostics at launch.
+* Pause and Resume data transmission – Adding APIs that let you control when to send data and can be called by application code to signal the SDK to pause/resume transmission. When the transmission is paused, the SDK continues to collect the Analytics data, it just doesn’t send the data to App Center backend until the operation is resumed.
+* Set SDK storage size – This API will let you configure the size of SDK storage for scenarios where developers need the ability to store as many logs as possible when the device is offline, or when they want to send the data only few times a day. In those cases, you can configure the storage size according to your needs.
 
 ## Test
 
