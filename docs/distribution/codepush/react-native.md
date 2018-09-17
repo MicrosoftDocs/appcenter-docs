@@ -34,7 +34,6 @@ In order to ensure that your end users always have a functioning version of your
 
 We try our best to maintain backwards compatability of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it is possible that you need to use a specific version of the CodePush plugin in order to support the exact version of React Native you are using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
-
 | React Native version(s) | Supporting CodePush version(s)                       |
 |-------------------------|------------------------------------------------------|
 | <0.14                   | **Unsupported**                                      |
@@ -51,14 +50,13 @@ We try our best to maintain backwards compatability of our plugin with previous 
 | v0.46                   | v4.0+ *(RN refactored js bundle loader code)*         |
 | v0.46-v0.53             | v5.1+ *(RN removed unused registration of JS modules)*|
 | v0.54-v0.55             | v5.3+ *(Android Gradle Plugin 3.x integration)*       |
-| v0.56                   | v5.4+ *(RN upgraded versions for Android tools)*      |
+| v0.56-v0.57             | v5.4+ *(RN upgraded versions for Android tools)*      |
 
-We work hard to respond to new RN releases, but they do occasionally break us. We will update this chart with each RN release, so that users can check to see what our "official" support is.
+We work hard to respond to new React Native releases, but they do occasionally break us. We will update this chart with each React Native release, so that users can check to see what our "official" support is.
 
 ### Supported Components
 
 When using the React Native assets system (i.e. using the `require("./foo.png")` syntax), the following list represents the set of core components (and props) that support having their referenced images updated via CodePush:
-
 
 | Component                                       | Prop(s)                                  |
 |-------------------------------------------------|------------------------------------------|
@@ -69,7 +67,6 @@ When using the React Native assets system (i.e. using the `require("./foo.png")`
 | `ToolbarAndroid` <br />*(React Native 0.21.0+)* | `actions[].icon`, `logo`, `overflowIcon` |
 
 The following list represents the set of components (and props) that don't currently support their assets being updated via CodePush, due to their dependency on static images (i.e. using the `{ uri: "foo" }` syntax):
-
 
 | Component   | Prop(s)                                                              |
 |-------------|----------------------------------------------------------------------|
