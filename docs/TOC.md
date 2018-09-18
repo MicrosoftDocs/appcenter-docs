@@ -102,9 +102,9 @@
 ### [Cordova Client SDK](distribution/codepush/Cordova.md)
 ### [React Native Client SDK](distribution/codepush/React-Native.md)
 ### [Tutorials](distribution/codepush/Tutorials.md)
-### [VSTS Extension](distribution/codepush/vsts-extension.md)
+### [Azure DevOps (formerly VSTS) Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
-## [Distribution with VSTS](distribution/vsts-deploy.md)
+## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
 
 # [Diagnostics](diagnostics/index.md)
 
