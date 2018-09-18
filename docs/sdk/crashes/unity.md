@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/11/2018
+ms.date: 09/18/2018
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -187,16 +187,15 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 ## Check if App Center Crashes is enabled
 
-You can also check if App Center Crashes is enabled or not:
+You can also check whether App Center Crashes is enabled:
 
 ```csharp
 bool isEnabled = await Crashes.IsEnabledAsync();
 ```
 
-## Handled Errors in Unity
+## Handled Exceptions in Unity
 
-App Center also allows you to track errors by using handled exceptions in Unity.
-In order to do so, simply use the `TrackError` method:
+App Center also allows you to track errors using handled exceptions in Unity. To do this, use the `TrackError` method:
 
 ```csharp
 try {
@@ -206,7 +205,7 @@ try {
 }
 ```
 
-For further context about your error, you can also attach properties to it. To do so, pass these properties as a dictionary of strings. This step is optional.
+For further context about your error, you can also attach properties to it. Pass the properties as a dictionary of strings. This step is optional.
 
 ```csharp
 try {
@@ -219,4 +218,18 @@ try {
     };
     Crashes.TrackError(exception, properties);
 }
+```
+
+## Unhandled Exceptions in Unity
+
+By default, the App Center SDK does not report any unhandled exceptions thrown in your Application that do not cause a fatal crash (which is then reported as a crash). To enable this functionality, call the following API:
+
+```csharp
+    Crashes.ReportUnhandledExceptions(true);
+```
+
+Going forward all unhandled exceptions logged will be as Issues in the App Center portal, similar to handled exceptions mentioned earlier. To disable this, call the same API passing `false` as the parameter.
+
+```csharp
+    Crashes.ReportUnhandledExceptions(false);
 ```
