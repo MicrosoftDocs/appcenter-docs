@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 09/17/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -33,7 +33,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 10.0.2
 - Node.js 6.14.4
 - Node.js v8.11.3
-- PowerShell 6.0.4
+- PowerShell 6.1.0
 - Python 2.7.10
 - Python 3.7.0
 - Ruby 2.5.1p57
@@ -47,7 +47,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.7.4
+- Homebrew 1.7.5
 - NPM 3.10.10
 - Yarn 1.9.4
 - NuGet 4.7.0.5148
@@ -56,13 +56,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.5.4
-- Gradle 4.10
+- Gradle 4.10.1
 
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
 - Git 2.19.0
-- Git LFS 2.5.1
+- Git LFS 2.5.2
 - GNU Wget 1.19.5
 - Subversion (SVN) 1.10.2
 
@@ -74,7 +74,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
-- Xcode 10 beta 6
+- Xcode 10 (10A255)
 - Xcode 9.4.1
 - Xcode 9.4
 - Xcode 9.3.1
@@ -459,7 +459,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 7.6.1.9
+- 7.6.5.20
 
 ### Mono
 
@@ -475,6 +475,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.0.0.10
 - 11.99.3.538
 - 11.14.0.13
 - 11.12.0.4
