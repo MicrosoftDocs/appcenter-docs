@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/13/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **September 19, 2018**
+- **Build support for final Xcode 10.0**:
+  Added support for building your apps with Xcode 10.0 (10A255)
 
 ### **September 13, 2018**
 
