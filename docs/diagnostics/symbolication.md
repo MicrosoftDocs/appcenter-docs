@@ -59,4 +59,4 @@ App Center crash reporting does not completely support the symbolication of cras
 4. In the result change the value from Yes to **No**
 5. Rebuild your app
 
-With these simple steps, you will have your App Center crash reporting behave as usual.
+With these simple steps, App Center crash reporting will behave as usual.
