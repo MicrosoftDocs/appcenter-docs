@@ -4,7 +4,7 @@ description: A guide on how to setup Intune app protection with App Center when 
 keywords: MAM, Intune, Distribution, Stores
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/19/2018
+ms.date: 09/20/2018
 ms.topic: article 
 ms.assetid: 3df16ba1-544f-48d9-84fa-db1763c20d66
 ms.service: vs-appcenter
@@ -28,5 +28,5 @@ App Center offers an automatic flow where all iOS releases to Intune will be mad
 3. In the new menu select **Compliance & Security**.
 4. Click the blue **Configure** button.
 5. On the configuration screen, you must select the same certificate used to sign production builds.
-	* If the certificate used selected here does isn't the same as used for building your app, there is a certificate mismatch, applying Intune app protection will must likely fail.
+  * If the certificate selected here isn't the same as the one used for building your app, you'll have a certificate mismatch and applying Intune app protection will most likely fail.
 6. After you have selected a certificate and clicked **Done** all iOS apps in your organization will be made MAM aware when released to an Intune store connection.
