@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 08/13/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -171,7 +171,7 @@ App Center uses swizzling to automatically forward your application delegate's m
              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
       NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
       UIAlertController *alert = [UIAlertController alertControllerWithTitle:[dictionary valueForKey:@"title"]
-                                                                    message:[dictionary valueForKey:@"body"] 
+                                                                    message:[dictionary valueForKey:@"body"]
                                                             preferredStyle:UIAlertControllerStyleAlert];
       UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
                                                   style:UIAlertActionStyleDefault
@@ -183,7 +183,9 @@ App Center uses swizzling to automatically forward your application delegate's m
     }
     ```
 
-## Handle a push notification while the app is in foreground
+## Common tasks for push notifications
+
+### Handle a push notification while the app is in foreground
 
 > [!NOTE]
 > The solution below works for iOS only.
@@ -211,7 +213,7 @@ To distinguish between notifications received in the foreground and notification
     ```objc
     // Continued from previous example.
 
-    //iOS 10 and up, called when a notification is delivered to an app that is in the foreground.
+    // iOS 10 and later, called when a notification is delivered to an app that is in the foreground.
     -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
         // Do something, e.g. set a BOOL @property to track the foreground state.
@@ -237,5 +239,55 @@ To distinguish between notifications received in the foreground and notification
 
             // Handle the push notification that was received while app was in background.
         }
+    }
+    ```
+
+### Detecting when a user has tapped on a push notification
+
+Sometimes it is helpful to determine if user has tapped or dismissed push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+
+> [!NOTE]
+> The solution below requires iOS 10 or later.
+
+1. Implement didFinishLaunching:withOptions: in your AppDelegate and add the following code to register to the user notification center.
+
+    ```objc
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    ```
+
+    ```swift
+    UNUserNotificationCenter.current().delegate = self
+    ```
+2. Implement the following callback to detect various actions performed by users with push notifications:
+
+    ```objc
+    // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+
+      // Perform the task associated with the action.
+      if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
+
+        // User tapped on notification
+      } else if ([[response actionIdentifier] isEqualToString:UNNotificationDismissActionIdentifier]) {
+
+        // User dismissed notification
+      }
+    }
+    ```
+
+    ```swift
+    func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+      // Perform the task associated with the action.
+      switch response.actionIdentifier {
+      case UNNotificationDefaultActionIdentifier:
+
+        // User tapped on notification
+      break
+      case UNNotificationDismissActionIdentifier:
+
+        // User dismissed notification
+      break
     }
     ```

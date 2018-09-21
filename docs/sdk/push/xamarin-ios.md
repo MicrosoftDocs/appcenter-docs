@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -131,7 +131,9 @@ App Center uses swizzling to automatically forward your application delegate's m
 
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
 
-## Handle a push notification while the app is in foreground
+## Common tasks for push notifications
+
+### Handle a push notification while the app is in foreground
 
 > [!NOTE]
 > The solution below works for iOS only.
@@ -199,4 +201,64 @@ To distinguish between notifications received in the foreground and notification
 
     // AppCenter.start after
     AppCenter.Start(..., ... ,typeof(Push), ...);
+    ```
+
+### Detecting when a user has tapped on a push notification
+
+Sometimes it is helpful to determine if user has tapped or dismissed push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+
+> [!NOTE]
+> The solution below requires iOS 10 or later.
+
+1. Implement your own UNUserNotificationCenterDelegate class and implement the `DidReceiveNotificationResponse(...)` callback.
+
+    ```csharp
+    public class YourOwnUNUserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+    {
+        public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, Action action)
+        {
+            if (response.IsDefaultAction)
+            {
+                // User tapped on notification
+            }
+            else if (response.IsDismissAction)
+            {
+                // User dismissed notification
+            }
+        }
+    }
+    ```
+
+2. In your `AppDelegate`, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationenterDelegate`:
+
+    ```csharp
+    // Continued from previous example.
+    public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+
+        // Your code, e.g. App Center setup code is here.
+
+        this.myOwnNotificationDelegate = YourOwnUNUserNotificationCenterDelegate();
+        UNUserNotificationCenter.Current.Delegate = this.myOwnNotificationDelegate;
+
+        return true;
+    }
+    ```
+
+2. Implement the following callback to detect various actions performed by users with push notifications:
+
+    ```swift
+    func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+      // Perform the task associated with the action.
+      switch response.actionIdentifier {
+      case UNNotificationDefaultActionIdentifier:
+
+        // User tapped on notification
+      break
+      case UNNotificationDismissActionIdentifier:
+
+        // User dismissed notification
+      break
+    }
     ```
