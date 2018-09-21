@@ -17,7 +17,7 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 ## Portal UI
 
 * Update the App Center Portal UI to render properly on mobile browsers.  The App Center portal was originally designed for desktop browsers; to accommodate mobile browsers, we’ll deliver a series of updates to create a mobile-friendly experience for our customers. It won’t come at once, but will get better over time.
-* Upload app icon – Allows App Center users to upload an app icon visible in the App Center portal and notification emails. The uploaded app icon overrides the icon extracted from an uploaded build. This gives customers a more customizable product and an easier way to distinguish apps in the landing page.
+* [SHIPPED] Upload app icon – Allows App Center users to upload an app icon visible in the App Center portal and notification emails. The uploaded app icon overrides the icon extracted from an uploaded build. This gives customers a more customizable product and an easier way to distinguish apps in the landing page.
 
 ## Build
 
