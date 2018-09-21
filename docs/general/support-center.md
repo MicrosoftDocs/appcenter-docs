@@ -4,7 +4,7 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: joemellin
 ms.author: joemel
-ms.date: 08/08/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
@@ -14,11 +14,11 @@ ms.service: vs-appcenter
 
 ## Documentation
 
-[Product documentation](~/index.yml)
+[Product Documentation](~/index.yml)
 
-[API documentation](~/api-docs/index.md)
+[API Documentation](~/api-docs/index.md)
 
-[Product roadmap](~/general/roadmap.md)
+[Product Roadmap](~/general/roadmap.md)
 
 ## Troubleshooting
 
