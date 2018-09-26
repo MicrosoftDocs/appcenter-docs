@@ -21,7 +21,7 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 
 * [Why is the build in App Center taking longer than my local build?](~/build/troubleshooting/general.md#longer-build)
 
-* [Build Notificaitons](~/build/troubleshooting/general.md#build-notifications)
+* [Build Notifications](~/build/troubleshooting/general.md#build-notifications)
 
 * [Why do I get an extended build time when "Run launch test on a device" is enabled?](~/build/troubleshooting/general.md#launch-test)
 
