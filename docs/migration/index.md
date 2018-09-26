@@ -17,7 +17,9 @@ It provides a unified suite of capabilities that will greatly benefit a mobile a
 
 ## [HockeyApp](~/migration/hockeyapp/index.md)
 
-Today customers can [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using their existing HockeyApp account credentials. We've synchronized your existing HockeyApp apps and data with App Center. This allows you to login to App Center using your HockeyApp credentials and try out all the services App Center offers without affecting your HockeyApp workflow. Your apps are now two places at once with back-and-forward synchronicity. You can continue to use HockeyApp as you would normally. Get the [high-level overview](https://www.hockeyapp.net/mobile-center/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md).
+App Center is the new home for the next generation of HockeyApp’s distribution, crash reporting and analytics services. We will at some point in the future announce plans to shut down HockeyApp and migrate all customers and their data to App Center. Prior to the announcement and during the subsequent year-long shutdown period, customers will be able to use both HockeyApp and App Center together. 
+
+We've synchronized your existing HockeyApp apps and data with App Center in what we consider our side-by-side experience. This allows you to [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center today using your HockeyApp credentials and try out all the new services App Center offers without affecting your HockeyApp workflow. Your apps are now two places at once with back-and-forward synchronicity. You can continue to use HockeyApp as you would normally.  Get the [high-level overview](https://www.hockeyapp.net/appcenter/about/) on the process or [read the documentation](~/migration/hockeyapp/index.md). 
 
 <!-- ## [Microsoft CodePush](~/migration/codepush/index.md) Ian Geoghegan placeholder -->
 
