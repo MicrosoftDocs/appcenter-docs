@@ -11,6 +11,12 @@ ms.service: vs-appcenter
 ---
 # Changelog
 
+### **September 26, 2018**
+- **Added build support for Xamarin.iOS 12.0**
+  Build your Xamarin apps with [Xamarin.iOS 12.0](https://releases.xamarin.com/stable-release-xcode-10/) and Xcode 10.0 support
+  - Xamarin.iOS 12.0.0.15
+  - Visual Studio For Mac 7.6.6.17
+
 ### **September 19, 2018**
 - **Build support for final Xcode 10.0**:
   Added support for building your apps with Xcode 10.0 (10A255)
