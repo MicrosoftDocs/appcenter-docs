@@ -3,7 +3,7 @@ title: "Side-by-Side Experience"
 description: Using HockeyApp and App Center Side-by-Side
 author: gaknoll
 ms.author: gaknoll
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.assetid: 79c7beae-c1cd-11e8-a355-529269fb1459
 ms.service: vs-appcenter
@@ -20,19 +20,23 @@ As a HockeyApp customer, your account has automatically been synced and is ready
 
 1.	[Sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center with your HockeyApp Credentials
 
-<!-- ![App Center Sign-In](~/migration/hockeyapp/images/appcenter-sign-in.png) -->
+![App Center Sign-In](~/migration/hockeyapp/images/appcenter-sign-in.png)
 
 2.	Once logged in, you'll see a list of all of your existing HockeyApp apps. HockeyApp side-by-side apps are marked with a blue HockeyApp icon. 
 
-<!-- ![HockeyApp apps in App Center](~/migration/hockeyapp/images/hockeyapp-apps-in-appcenter.png) -->
+![HockeyApp apps in App Center](~/migration/hockeyapp/images/hockeyapp-apps-in-appcenter.png)
 
 ## Getting the Most from the Side-by-Side Experience
 
-* Extend your test suite using our brand new cloud based [continuous integration](~/build/index.md) and [automated UI testing](~/test-cloud/index.md) services without affecting your HockeyApp workflow.
+* Start using App Center's **Distribute** service to upload and [distribute new releases](~/migration/hockeyapp/distribution.md) to your HockeyApp app testers. New releases will be synced and reflected in both App Center and HockeyApp. 
 
-* App Center's **Distribute** service works alongside HockeyApp. Upload and distribute your new releases using App Center, all while automatically syncing with your HockeyApp account. [More details here](~/migration/hockeyapp/distribution.md)
+* Integrate your HockeyApp app in App Center with the public app stores. Submit builds to the Apple App Store, TestFlight, Google Play Store, and Intune in just a few clicks, all without leaving App Center. Learn more [here](~/distribution/stores/index.md).
 
-* App Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into App Center. Note that the App Center Crash service is currently in preview for HockeyApp apps. You can join the preview on the Crash page in App Center to begin collecting crash data. 
+* App Center's **Crashes** and **Analytics** services will automatically stream data collected from your existing HockeyApp SDK directly into App Center. With App Center's new rich analytics dashboards you'll get straightforward answers to the questions you care most about, faster.
+
+* Using App Center's **Build** service, connect your HockeyApp app to your repo and within minutes automatically distribute successful builds to your HockeyApp groups or public app stores.
+
+* Extend your test suite using our new cloud based [automated UI testing](~/test-cloud/index.md) services. All without affecting your HockeyApp workflow.
 
 ## Side-by-Side Limitations
 
