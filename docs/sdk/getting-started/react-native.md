@@ -55,7 +55,7 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
 ```shell
-npm install appcenter appcenter-analytics appcenter-crashes --save
+npm install appcenter appcenter-analytics appcenter-crashes appcenter-push --save
 ```
 
 > [!NOTE]
@@ -98,6 +98,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
    > react-native link appcenter
    > react-native link appcenter-analytics
    > react-native link appcenter-crashes
+   > react-native link appcenter-push   
    > ```
 
     For iOS, it will try to download the [App Center SDK for iOS and macOS](https://cocoapods.org/pods/AppCenter) from **CocoaPods**, if you see an error like:
@@ -179,7 +180,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 6. Add the SDK frameworks to the project in Xcode:
 
    * Make sure the Project Navigator is visible (⌘+1).
-   * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+   * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework**,**AppCenterPush.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
 7. Link AppCenter React Native plugins projects to your app's project:.
