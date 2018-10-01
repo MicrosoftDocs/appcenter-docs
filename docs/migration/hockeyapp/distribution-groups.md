@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Managing Testers with Distribution Groups
 
-App Center first introduced the concept of [distribution groups](~/distribution/groups) as a way to organize your testers. This concept was later brought to HockeyApp as a way to prepare HockeyApp customers for the transition to App Center. A distribution group could be based on types of users such as beta testers or internal stakeholders, or based on different stages of the development cycle such as nightly build or staging. Invite testers to your groups with just an email address. When distributing a new release in App Center, you’ll select one of your distribution groups as the destination. 
+App Center introduced the concept of [distribution groups](~/distribution/groups) as a way to organize your testers. This concept was later brought to HockeyApp as a way to prepare HockeyApp customers for the transition to App Center. A distribution group can be based on types of users such as beta testers or internal stakeholders, or based on different stages of the development cycle such as nightly build or staging. Invite testers to your groups with just an email address. When distributing a new release in App Center, you’ll select one of your distribution groups as the destination. 
 
 For side-by-side apps, you’ll see a list of HockeyApp distribution groups ready for you to use in App Center. 
 
@@ -43,4 +43,4 @@ For HockeyApp distribution groups you must continue to manage your testers and c
 
 ## Creating New Groups in App Center
 
-In addition to using your HockeyApp distribution groups, you can create new distribution groups in App Center. It is important to note that new App Center distribution groups will not be synced with HockeyApp and will only appear in App Center. Unlike HockeyApp distribution groups, new groups created in App Center will be fully editable in App Center.
+In addition to using your HockeyApp distribution groups, you can create new distribution groups in App Center. New App Center distribution groups will not sync with HockeyApp and will only appear in App Center. Unlike HockeyApp distribution groups, new groups created in App Center will be fully editable in App Center.
