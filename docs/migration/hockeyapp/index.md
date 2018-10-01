@@ -15,7 +15,7 @@ App Center is the future home for your HockeyApp apps. We’ve spent the last ye
 
 ## Your HockeyApp apps & data in App Center - Available Today
 
-To help make this transition as easy as possible for you, we’ve created what we call our side-by-side experience. With the side-by-side experience, we’ve synced your HockeyApp apps with App Center. This allows you to explore and interact with App Center using your HockeyApp apps. Work in App Center, or in both App Center and HockeyApp as you normally would. Changes in one will be reflected in the other. To get started with the side-by-side experience, simply [sign-in](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) to App Center using your existing HockeyApp credentials. 
+To help make this transition as easy as possible for you, we’ve created what we call our side-by-side experience. With the side-by-side experience, we’ve synchronized your HockeyApp apps with App Center. This allows you to explore and interact with App Center using your HockeyApp apps. Work in App Center, or in both App Center and HockeyApp as you normally would. Changes in one will automatically reflect in the other. To get started with the side-by-side experience, simply [sign-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) using your existing HockeyApp credentials. 
 
 Learn more about the side-by-side experience [here](~/migration/hockeyapp/side-by-side.md). 
 
