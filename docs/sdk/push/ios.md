@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 09/21/2018
+ms.date: 09/28/2018
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: vs-appcenter
@@ -68,7 +68,7 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 > [!NOTE]
-> The first time the push service starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start the push service later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured. 
+> The first time the push service starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start the push service later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured.
 
 ## Intercept push notifications
 
@@ -252,118 +252,173 @@ To distinguish between notifications received in the foreground and notification
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. In your `AppDelegate`, add the following to the `didFinishLaunching:withOptions:` to register as a `UNUserNotificationCenterDelegate`:
+1. In your `AppDelegate` and add import in the top of file:
 
     ```objc
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    center.delegate = self;
+    #import <UserNotifications/UserNotifications.h>
     ```
 
     ```swift
-    UNUserNotificationCenter.current().delegate = self
+    import UserNotifications
     ```
 
-2. Implement the following callback to detect a foreground notification:
+2. Add the following to the `didFinishLaunching:withOptions:` to register as a `UNUserNotificationCenterDelegate`:
+
+    ```objc
+    if (@available(iOS 10.0, *)) {
+      UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+      center.delegate = self;
+    }
+    ```
+
+    ```swift
+    if #available(iOS 10.0, *) {
+      UNUserNotificationCenter.current().delegate = self
+    }
+    ```
+
+3. Implement the following callback to detect a foreground notification:
 
     ```objc
     // iOS 10 and later, called when a notification is delivered to an app that is in the foreground.
-    -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center
+          willPresentNotification:(UNNotification *)notification
+            withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
 
         // Do something, e.g. set a BOOL @property to track the foreground state.
-        self.isInForeground = YES;
+        self.didReceiveNotificationInForeground = YES;
+
+        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
+        [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
+
+        // Complete handling the notification.
+        completionHandler(UNNotificationPresentationOptionNone);
     }
     ```
 
     ```swift
+    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
-        // Do something, e.g. set a Boolean property to track the foreground state.
-        self.isInForeground = true
+        // Do something, e.g. set a Bool property to track the foreground state.
+        self.didReceiveNotificationInForeground = true
+
+        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
+        MSPush.didReceiveRemoteNotification(notification.request.content.userInfo)
+
+        // Complete handling the notification.
+        completionHandler([])
     }
     ```
 
-3. (Optional) If you have implemented the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
+    > [!NOTE]
+    > If you pass `.alert` to the `completionHandler`, the default callback will also be called when the user clicked the notification. In this case, you don't need to call `MSPush.didReceiveRemoteNotification` explicitly here to avoid duplication.
+
+4. (Optional) If you have implemented the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
 
     ```objc
-
-    // Continued from previous example.
-    - (void)push:(MSPush *)push
-        didReceivePushNotification:(MSPushNotification *)pushNotification {
+    - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
 
         // Do something differently if the push notification was received while in foreground.
-        if (self.isInForeground) {
+        if (self.didReceiveNotificationInForeground) {
+
             // Handle the push notification that was received while in foreground.
-        }
-        else {
+        } else {
 
             // Handle the push notification that was received while app was in background.
         }
+
+        // Reset the property for next notifications.
+        self.didReceiveNotificationInForeground = NO;
     }
     ```
 
     ```swift
-
-    // Continued from previous example.
+    @available(iOS 10.0, *)
     func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
 
         // Do something differently if the push notification was received while in foreground.
-        if (self.isInForeground) {
+        if (self.didReceiveNotificationInForeground) {
 
             // Handle the push notification that was received while in foreground
-        }
-        else {
+        } else {
 
             // Handle the push notification that was received while app was in background.
         }
+
+        // Reset the property for next notifications.
+        self.didReceiveNotificationInForeground = false
     }
     ```
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it is helpful to determine if user has tapped or dismissed push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. Implement didFinishLaunching:withOptions: in your AppDelegate and add the following code to register to the user notification center.
+1. In your `AppDelegate` and add import in the top of file:
 
     ```objc
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    center.delegate = self;
+    #import <UserNotifications/UserNotifications.h>
     ```
 
     ```swift
-    UNUserNotificationCenter.current().delegate = self
+    import UserNotifications
     ```
-2. Implement the following callback to detect various actions performed by users with push notifications:
+
+2. Add the following to the `didFinishLaunching:withOptions:` to register as a `UNUserNotificationCenterDelegate`:
+
+    ```objc
+    if (@available(iOS 10.0, *)) {
+      UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+      center.delegate = self;
+    }
+    ```
+
+    ```swift
+    if #available(iOS 10.0, *) {
+      UNUserNotificationCenter.current().delegate = self
+    }
+    ```
+
+3. Implement the following callback to detect various actions performed by users with push notifications:
 
     ```objc
     // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.
-    - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center
+        didReceiveNotificationResponse:(UNNotificationResponse *)response
+                withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
       // Perform the task associated with the action.
       if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
 
         // User tapped on notification
-      } else if ([[response actionIdentifier] isEqualToString:UNNotificationDismissActionIdentifier]) {
-
-        // User dismissed notification
       }
+
+      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
+      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
+
+      // Complete handling the notification.
+      completionHandler();
     }
     ```
 
     ```swift
+    @available(iOS 10.0, *)
     func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
       // Perform the task associated with the action.
-      switch response.actionIdentifier {
-      case UNNotificationDefaultActionIdentifier:
+      if (response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
 
-        // User tapped on notification
-      break
-      case UNNotificationDismissActionIdentifier:
+        // User tapped on notification.
+      }
 
-        // User dismissed notification
-      break
+      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
+      MSPush.didReceiveRemoteNotification(response.notification.request.content.userInfo)
+
+      // Complete handling the notification.
+      completionHandler()
     }
     ```
