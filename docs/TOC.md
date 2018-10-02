@@ -238,7 +238,9 @@
 # [Migration](migration/index.md)
 
 ## [HockeyApp](migration/hockeyapp/index.md)
-### [Distribution](migration/hockeyapp/distribution.md)
+### [Side-by-Side Experience](migration/hockeyapp/side-by-side.md)
+#### [Distribution Groups](migration/hockeyapp/distribution-groups.md)
+#### [Distributing Releases](migration/hockeyapp/distribution.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 ## [TestCloud](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)

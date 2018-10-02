@@ -1,30 +1,23 @@
 ---
-title: "Migrating HockeyApp Distribution"
-description: Migrating from HockeyApp Distribution
-author: joemellin
-ms.author: joemel
-ms.date: 05/10/2017
+title: "Distributing Releases"
+description: Distributing New Releases with the Side-by-Side Experience
+author: gaknoll
+ms.author: gaknoll
+ms.date: 10/01/2018
 ms.topic: article
 ms.assetid: 78E2160E-DD37-4844-956B-11A85FD45855
 ms.service: vs-appcenter
 ---
 
-# HockeyApp Distribution in App Center
+# Distributing Releases
 
-HockeyApp distribution is now supported in App Center. Both web portals are linked and a full side by side experience is possible. Feel free to take advantage of our new App Center UI and have it seamlessly integrate with your existing Hockeyapp apps.
+App Center has the next generation of HockeyApp’s distribution features. During the HockeyApp transition period, use our [side-by-side experience]( ~/migration/hockeyapp/side-by-side.md) to get familiar with the new interface and begin exploring powerful new distribution features exclusive to App Center. You can distribute new releases in both App Center and HockeyApp for your HockeyApp apps. 
 
-## What's new about distribution in App Center
+## Distributing to a HockeyApp Distribution Group in App Center 
 
-New in App Center is the concept of Distribution Groups. Distribution Groups provide a direct way of managing groups of testers. It is now possible to have a single app instance but still manage and control releases to multiple independent groups of testers. In addition, in App Center you can take advantage of the Build service which has native integration to quickly setup a full CI/CD pipeline from commit to build to distribution.
+You can distribute new releases for your HockeyApp apps in App Center. When you distribute a new release in App Center to one of your HockeyApp side-by-side distribution groups, your HockeyApp testers will continue to receive the notification from HockeyApp. Additionally, the new release will appear in both App Center and HockeyApp. 
 
-### Manging your testers
+## Distributing to an App Center Distribution Group
 
-In HockeyApp, testers and your fellow developers are combined into a single user list. To make the management of testers easier we have introduced the concept of [distribution groups][dist-groups]. You can have unlimitted groups per app to control different audiences. A distribution group could be based on types of users such as beta testers or internal stakeholders, or based on different stages of the development cycle such as nightly build or staging. Invite testers to your groups with just an email address.
+In addition to using your HockeyApp distribution groups, you can also create new distribution groups for your HockeyApp apps in App Center. It is important to note that releases distributed to a group created in App Center will not be reflected in HockeyApp. Also, the testers you invite to your new App Center distribution groups will receive app invitations and new release notifications from App Center, not HockeyApp. 
 
-## Available now: Preview your apps & data in App Center
-
-With the side-by-side experience all your HockeyApp apps will be automatically available in App Center. In addition, all your HockeyApp distribution groups will be available in App Center. All releases that have been done through HockeyApp will also be visible in App Center as well.
-
-With the side by side experience, upload of new releases can be done in either HockeyApp or App Center, either location will be kept in sync in both experiences. Legacy distribution groups will be automatically created in App Center. These legacy groups will by kept in sync with HockeyApp. Any release to a legacy distribution group will be added to HockeyApp and testers will be notified and install unchanged via the HockeyApp experience.
-
-[dist-groups]: ~/distribution/groups.md
