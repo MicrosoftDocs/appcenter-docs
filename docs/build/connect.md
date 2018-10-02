@@ -32,7 +32,7 @@ If you have connected to a source repository service with the wrong account, you
 
 ### Bitbucket
 
-To connect to another GitHub account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first.
+To connect to another Bitbucket account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first.
 
 ![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-oauth-token.jpg "Remove Bitbucket token")
 
@@ -40,7 +40,7 @@ To connect to another GitHub account, first revoke the Oauth token. Go to [https
 
 If you logged in into App Center with a GitHub account, you can only build apps from repositories under that GitHub account.
 
-To connect to [the Bitbucket profile web page](https://github.com/settings/profile) > Applications > Authorized OAuth Apps > Revoke App Center token. Logout of the GitHub browser session, then, In App Center's **Build** tab, reconnect to GitHub and repeat the Oauth flow.
+To connect to another GitHub account, first revoke the OAuth token. Go to [the GitHub profile web page](https://github.com/settings/profile) > Applications > Authorized OAuth Apps > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and repeat the Oauth flow. Make sure that before you re-do the Oauth flow in App Center, you logout in that browser from GitHub first. 
 
 ![Remove GitHub Oauth Token](~/build/images/remove-github-oauth-token.jpg "Remove GitHub token")
 
