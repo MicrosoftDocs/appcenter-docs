@@ -25,7 +25,6 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 
 ## Diagnostics
 
-* Manual bug tracker support - Add support for manually adding a crash group as a bug in a third-party bug tracking tool (e.g. VSTS, Azure DevOps, Jira, GitHub). This enables developers to track work items outside of App Center.
 * Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
 * UI Improvements:
   + Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
