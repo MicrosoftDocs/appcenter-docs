@@ -52,7 +52,7 @@ The App Center Unity packages are downloaded from the [App Center Unity SDK GitH
 
 ### 3.2 Import the package
 
-Now open your Unity project. Once it is open, simply open the Unity package you just downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Do this for each package you downloaded and plan to use with your project.
+Open your Unity project, then double-click the package you just downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Do this for each package you downloaded and plan to use in your project.
 
 ## 4. Enable the SDK
 
@@ -62,10 +62,10 @@ App Center works as a component that you attach to a game object in the scene th
 
 ### 4.2 Attach the App Center script
 
-In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script whose icon is the App Center logo, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
+In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script with the App Center logo as its icon, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
 
 > [!NOTE]
-You do not need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
+> You do not need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
 
 ### 4.3 Configure App Center settings
 
@@ -74,7 +74,7 @@ Click on this new "App Center" object and add your app secrets to the correspond
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 
 > [!NOTE]
-If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
+> If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
 
 ---
 Great, you are all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK collects automatically.
