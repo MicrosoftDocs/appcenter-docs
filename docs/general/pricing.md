@@ -4,7 +4,7 @@ description: Information about Visual Studio App Center pricing plans
 keywords: pricing
 author: joemellin
 ms.author: joemel
-ms.date: 11/13/2017
+ms.date: 10/03/2018
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
 ms.service: vs-appcenter
@@ -76,11 +76,11 @@ Here's how to get started with billing:
 
 - What is a concurrent device?
 
-  Concurrent devices determine the number of devices you can use simultaneously. For example, with 5 concurrent devices, you can test 5 different device configurations in the same amount of time it would normally take to test 1.
+  Concurrent devices determine the number of devices you can run tests on simultaneously. For example, with 5 concurrent devices, you can test 5 different device configurations in the same amount of time it would normally take to test 1. Concurrency does not limit the number of devices you can run during a test. For example, a test run on 5 devices with 1 concurrency will run on 1 device at a time to completion. Concurrency applies to all apps within an Org or account.
 
 - What are device hours?
 
-  We measure usage in device hours, which is a calculation of all activities on a device initiated by your test. For example, a 12-minute test suite run on 5 device configurations will consume 60 minutes or 1 device hour. Time spent downloading apps, processing screenshots, and generating test reports do not count as billable time.
+  We measure usage in device hours, which is a calculation of all activities on a device initiated by your test. For example, a 12-minute test suite run on 5 device configurations will consume 60 minutes or 1 device hour. Time spent downloading apps, processing screenshots, and generating test reports do not count as billable time. Device hours are tracked across all apps in the Org or account. Running a 12-minute test on 5 iOS and 5 Android devices would be billed as two device hours toward your monthly total.
 
 - What happens if I upgrade mid-month?
 
