@@ -81,7 +81,16 @@ Currently when submitting the deliver file to iTunes Connect, App Center is defa
  export_compliance_encryption_updated: false
  ```
 
-## Two-factor authentication workaround
+## Adding Two-factor authentication
 
-Apple requires two-factor authentication for newly created Apple IDs. However, old Apple IDs can still connect to [App store connect](https://appstoreconnect.apple.com) without two-factor authentication.
-App Center stores Apple IDs enabling a team member to set up a store connection and share with others. If you have a team member with an Apple ID without the mandatory two-factor authentication, let that person establish the store connection. With that in place, app collaborators can publish to Testflight and App Store connect. 
+After adding an Apple account with two-factor authentication to the Secret Storage, you can additionally add an App-specific password to your account by navigating to [Developer accounts in your Account settings](https://appcenter.ms/settings/accounts).
+
+* Only App Store and Testflight require an app-specific password.
+* Only Apple IDs with two-factor authentication enabled can select **Update app-specific password**.
+
+1. Hover over an item in the **Accounts** list.
+2. Click the three vertical dots on the right side of the list
+3. Select **Update app-specific password**.
+4. Generate an app-specific password using the [Apple ID portal](https://appleid.apple.com/), and the name is for your benefit so that you remember which service or app is using the app-specific password.
+5. Copy the generated app-specific password and paste it into the dialogue.
+6. Save by clicking **Update**.
