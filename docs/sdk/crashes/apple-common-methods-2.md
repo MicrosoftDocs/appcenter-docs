@@ -36,7 +36,7 @@ func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport
 }
 ```
 ```swift
-func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
+func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, withError error: Error!) {
   // Your code goes here.
 }
 ```
