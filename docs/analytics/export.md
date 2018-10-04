@@ -183,15 +183,33 @@ The table below shows the field mapping for the "customDimensions" field.
 
 | Application Insights            | App Center                                     |
 | ------------------------------- | ---------------------------------------------- |
-|  MessageType                    | Type of event (session, event, ...)            |
+|  AppBuild                       | Application build number                       |
 |  AppId                          | App Center App ID                              |
-|  CarrierCountry                 | Carrier Country                                |
-|  TimeZoneOffset                 | Time Zone Offset                               |
-|  CarrierName                    | Carrier Type                                   |
+|  AppNamespace                   | Application namespace                          |
+|  CarrierCountry                 | Carrier country                                |
+|  CarrierName                    | Carrier type                                   |
+|  CountryCode                    | Two-letter country code                        |
+|  EventId                        | App Center Event ID                            |
+|  IngressTimestamp               | Log ingestion timestamp                        |
+|  IsTestMessage                  | Flag indicating if the message is a test one   |
+|  LiveUpdateDeploymentKey        | App Center Code Push deployment key            |
+|  LiveUpdatePackageHash          | App Center Code Push package hash              |
+|  LiveUpdateReleaseLabel         | App Center Code Push release label             |
+|  Locale                         | Device language                                |
+|  MessageId                      | App Center message identifier                  |
+|  MessageType                    | Type of event (session, event, ...)            |
+|  OsApiLevel                     | OS API level                                   |
+|  OsBuild                        | OS build number                                |
+|  OsName                         | OS name                                        |
+|  OsVersion                      | OS version                                     |
 |  Properties                     | Properties attached to a custom event          |
 |  ScreenSize                     | Device's screen size                           |
-|  OsApiLevel                     | API Level                                      |
-|  Locale                         | Device language                                |
+|  SdkName                        | App Center SDK name                            |
+|  SdkVersion                     | App Center SDK version                         |
+|  TimeZoneOffset                 | Time zone offset                               |
+|  WrapperRuntimeVersion          | App Center SDK wrapper runtime version         |
+|  WrapperSdkName                 | App Center SDK wrapper name                    |
+|  WrapperSdkVersion              | App Center SDK wrapper version                 |
 
 A sample AI query to retrieve custom events:
 
