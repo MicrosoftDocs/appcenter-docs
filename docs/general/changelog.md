@@ -12,11 +12,15 @@ ms.service: vs-appcenter
 # Changelog
 
 ### **October 4, 2018**
+- **Added Xcode 10.0 support for React Native apps**:
+  Build your React Native iOS apps with Xcode 10.0
+  - The build process uses the Xcode legacy build system as described in this [github issue](https://github.com/facebook/react-native/issues/19573). Currently React Native doesn't have full support of new build system that was added in Xcode 10.0
+
 - **Two-factor authentication for Apple App Store**
   Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store conncetion. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the 6-digit code.
 
 ### **September 26, 2018**
-- **Added build support for Xamarin.iOS 12.0**
+- **Added build support for Xamarin.iOS 12.0**:
   Build your Xamarin apps with [Xamarin.iOS 12.0](https://releases.xamarin.com/stable-release-xcode-10/) and Xcode 10.0 support
   - Xamarin.iOS 12.0.0.15
   - Visual Studio For Mac 7.6.6.17
