@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 09/25/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -47,9 +47,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.16.1
 - Carthage 0.30.0
 - CocoaPods 1.5.3
-- Homebrew 1.7.5
+- Homebrew 1.7.6
 - NPM 3.10.10
-- Yarn 1.9.4
+- Yarn 1.10.1
 - NuGet 4.7.0.5148
 - pip 18.0
 
@@ -68,9 +68,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- fastlane 2.104.0
+- fastlane 2.105.2
 - App Center CLI 1.1.2
-- Azure-CLI 2.0.45
+- Azure-CLI 2.0.46
 
 ## Xcode
 
@@ -429,6 +429,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-28.0.0    | Android SDK Build-tools, Revision 28.0.0  |
 | build-tools-28.0.1    | Android SDK Build-tools, Revision 28.0.1  |
 | build-tools-28.0.2    | Android SDK Build-tools, Revision 28.0.2  |
+| build-tools-28.0.3    | Android SDK Build-tools, Revision 28.0.3  |
 
 ### Utils
 
@@ -459,7 +460,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-android-m2repository             | Android Support Repository, revision 47  |
 | extra-google-google_play_services      | Google Play services, revision 49        |
 | extra-google-m2repository              | Google Repository, revision 58           |
-| extras;google;instantapps              | Google Play Instant Development SDK 1.4.0|
+| extras;google;instantapps              | Google Play Instant Development SDK 1.5.0|
 | Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.0     |
 
 ## Xamarin
