@@ -4,12 +4,16 @@ description: History of updates to the product
 keywords: update,history
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/19/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
 # Changelog
+
+### **October 4, 2018**
+- **Two-factor authentication for Apple App Store**
+  Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store conncetion. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the 6-digit code.
 
 ### **September 26, 2018**
 - **Added build support for Xamarin.iOS 12.0**
