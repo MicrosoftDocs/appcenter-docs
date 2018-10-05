@@ -77,7 +77,7 @@ This option allows you to customize your export configurations in [Azure](https:
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
 ### Export crashes, attachments and errors
-In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create): 
+In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create):
 
 ```HTTP
 POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
@@ -188,15 +188,9 @@ The table below shows the field mapping for the "customDimensions" field.
 |  AppNamespace                   | Application namespace                          |
 |  CarrierCountry                 | Carrier country                                |
 |  CarrierName                    | Carrier type                                   |
-|  CountryCode                    | Two-letter country code                        |
 |  EventId                        | App Center Event ID                            |
 |  IngressTimestamp               | Log ingestion timestamp                        |
-|  IsTestMessage                  | Flag indicating if the message is a test one   |
-|  LiveUpdateDeploymentKey        | App Center Code Push deployment key            |
-|  LiveUpdatePackageHash          | App Center Code Push package hash              |
-|  LiveUpdateReleaseLabel         | App Center Code Push release label             |
 |  Locale                         | Device language                                |
-|  MessageId                      | App Center message identifier                  |
 |  MessageType                    | Type of event (session, event, ...)            |
 |  OsApiLevel                     | OS API level                                   |
 |  OsBuild                        | OS build number                                |
@@ -217,7 +211,7 @@ A sample AI query to retrieve custom events:
 customEvents
  | where name == "YourEventName"
  | extend Properties = todynamic(tostring(customDimensions.Properties))
- | extend YourPropertyName = Properties.YourPropertyName    
+ | extend YourPropertyName = Properties.YourPropertyName
  ```
 
 More information about Application Insights and App Center:
