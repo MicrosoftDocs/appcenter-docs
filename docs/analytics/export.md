@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 06/27/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -77,7 +77,8 @@ This option allows you to customize your export configurations in [Azure](https:
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
 ### Export crashes, attachments and errors
-In order to export crashes, attachments and errors, you will need to call the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create):
+
+To export crashes, attachments and errors, you must execute the [Export Configurations API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create):
 
 ```HTTP
 POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
