@@ -13,7 +13,7 @@ ms.service: vs-appcenter
 
 ### **October 4, 2018**
 - **Added Xcode 10.0 support for React Native apps**:
-  Build your React Native iOS apps with Xcode 10.0
+  Build your React Native iOS apps with Xcode 10.0 (only available for React Native 0.56+)
   - The build process uses the Xcode legacy build system as described in this [github issue](https://github.com/facebook/react-native/issues/19573). Currently React Native doesn't have full support of new build system that was added in Xcode 10.0
 
 - **Two-factor authentication for Apple App Store**
