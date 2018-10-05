@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/23/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -18,7 +18,6 @@ Publish iOS app upgrades to the App Store and TestFlight.
 
 * The first version of an iOS application is required to be published through iTunes Connect.
 * App should be ready for submission and pass the App Store [guidelines](https://developer.apple.com/app-store/review/guidelines/).
-* An [Apple ID](https://appleid.apple.com/) without two-factor authentication to manage your Apple account.
 * An [Apple Developer Program](https://developer.apple.com/programs/enroll/) account.
 
 For more information, review the [App Distribution Guide](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012582-CH1-SW1).
