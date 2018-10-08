@@ -11,21 +11,34 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
+## App Center XCUITest Extensions framework
+
+This framework has been _deprecated_.
+
+This framework is _no longer required_ for running XCUITest tests in App
+Center.
+
+This framework will not be updated to be compatible versions of Xcode > 10.0.
+
+Users need to migrate their tests to use Apple's
+`XCTContext runActivityNamed:block` API.
+
+If you are just starting with XCUITest, do not link this framework.
+
 ## Preparing XCUITest Tests for Upload with Extensions
 
-**This framework is *no longer required* for running XCUITest in App Center.**
+If you are already running XCUITest in App Center using the
+AppCenterXCUITestExtensions.framework, you need to migrate your tests to
+use Apple's `XCTContext runActivityNamed:block` API.
 
-Running XCUITest in App Center Test no longer requires the proprietary extensions described here. If you are just starting out with XCUITest in App Center do not use this approach. If you are already running XCUITest in App Center with these extensions consider migrating to the extension-less approach.
 
-For additional information, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
+For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
 
 The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework. The section below provides instructions for preparing XCUITest tests for upload to App Center Test.
 
 [AppCenter XCUITest Extensions](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions) is an iOS Framework for taking screenshots and labeling test steps when running XCUITest test in App Center. At the conclusion of each test method, a label and screenshot are automatically generated for the test report. You can create additional labels and screenshots to track your app's progress during a test method.
 
 **This framework is *no longer required* for running XCUITest in App Center.** See the note at the top of this page.
-
-If you encounter a problem, please file a [Github issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
 
 ## Requirements
 
