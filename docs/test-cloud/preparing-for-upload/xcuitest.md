@@ -42,7 +42,6 @@ This will build your app and an XCUITest bundle into the `DerivedData/Build` dir
 ```shell
 $ xcrun xcodebuild -list
 ```
-For a concrete example of generating an app and an XCUITest bundle, see [this shell script that builds for testing](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/bin/make/build-for-testing.sh).
 
 ## Uploading Tests to App Center
 
