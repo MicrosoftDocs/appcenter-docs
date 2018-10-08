@@ -17,7 +17,7 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 
 ## Requirements
 
-* XCode >= 9.0
+* Xcode >= 9.0
 * Sierra or High Sierra
 * iOS >= 9.0
 

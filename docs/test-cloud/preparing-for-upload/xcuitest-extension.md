@@ -29,7 +29,7 @@ If you encounter a problem, please file a [Github issue](https://github.com/Micr
 
 ## Requirements
 
-* XCode >= 9.0
+* Xcode >= 9.0
 * Sierra or High Sierra
 * iOS >= 9.0
 
