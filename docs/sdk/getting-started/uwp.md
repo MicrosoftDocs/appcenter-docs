@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2017
+ms.date: 10/08/2018
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -75,11 +75,15 @@ Now that you've integrated the SDK in your application, it's time to start the S
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
 > in each of the projects: the portable and UWP ones.
 
-## 4. Start the SDK
+## 4. Add the `Internet (Client)` capability
+
+In Visual Studio solution explorer, double-click the **Package.appxmanifest** file for your application. Click the **Capabilities** tab then check the **Internet (Client)** capability.
+
+## 5. Start the SDK
 
 In order to use App Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
-### 4.1 Add the using statements
+### 5.1 Add the using statements
 
 Add the appropriate namespaces before you use our APIs.
 
@@ -88,7 +92,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 ```
 
-### 4.2 Add the `Start()` method
+### 5.2 Add the `Start()` method
 
 Add the following call to your application's **constructor**:
 
@@ -96,7 +100,7 @@ Add the following call to your application's **constructor**:
 AppCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
 
-### 4.3 Replace the placeholder with your App Secret
+### 5.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
