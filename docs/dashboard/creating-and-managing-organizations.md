@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app organizations in App C
 keywords: dashboard organizations
 author: joemellin
 ms.author: joemel
-ms.date: 09/12/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
 ms.service: vs-appcenter
@@ -81,7 +81,7 @@ Removing a collaborator from an organization will remove the user from all apps 
 
 ## Leaving an organization
 
-1. On the bottom left side, click on your avatar
+1. Click on the App Center user menu in the upper-right corner of any page
 2. Select **Account Settings**
 3. Select **Organizations**
 4. Click the **Leave** button by the orgnaization you would like to leave

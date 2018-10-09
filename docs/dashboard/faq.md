@@ -1,20 +1,20 @@
 ---
-title: Frequently Asked Questions
+title: Dashboard Frequently Asked Questions
 description: Frequently asked questions about the App Center dashboard.
 keywords: dashboard faq
 author: joemellin
 ms.author: joemel
-ms.date: 08/08/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.assetid: 0E94BEBC-F61E-4CAB-8CDF-CC191860D59F
 ms.service: vs-appcenter
 ---
 
-# Dashboard FAQ
+# Dashboard Frequently Asked Questions
 
-**Can I transfer apps in between users & Organizations?**
+**Can I transfer apps in between users & organizations?**
 
-You can only transfer a personal app into an organization. In order to transfer an app to an organization, you must be the current owner of the app, as well as an admin in the organization you're trying to transfer the app to.
+In order to transfer an app to an organization, you must be the current owner of the app, as well as an admin in the organization you're trying to transfer the app to. To transfer an app into a different organization, see [Managing apps in the Dashboard](~/dashboard/creating-and-managing-apps#transferring-an-app.md).
 
 **How can I add the same group of people to multiple apps?**
 
