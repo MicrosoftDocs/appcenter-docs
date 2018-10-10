@@ -324,7 +324,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `EnterText` | Enters text into the view. In an iOS application, Xamarin.UITest will enter the text using the soft keyboard. In contrast, Xamarin.UITest will not use the Android keyboard, it will directly enter the text into the view. |
 | `WaitForElement` | Pauses the execution of the test until the views appear on the screen. |
 | `Screenshot(String)` | Takes a screenshot of the application in it's current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
-| `Flash` | This method will cause the the selected view to "flash" or "flicker" on the screen. |
+| `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |
 
 
 For more information on the [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/) interface, please consult the [API documentation](http://developer.xamarin.com/api/root/Xamarin.UITest.Docs/) for [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/), [`AndroidApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.iOS.iOSApp/).
