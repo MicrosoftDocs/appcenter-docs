@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 10/04/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -29,8 +29,8 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 * UI Improvements:
   + Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
   + Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
-* NDK – Improve the support for Android NDK. This enables developers to track their native Android crashes in App Center.
-* Proguard – Improve the support for Proguard in App Center.
+* [SHIPPED] NDK – Improve the support for Android NDK. This enables developers to track their native Android crashes in App Center.
+* [SHIPPED] Proguard – Improve the support for Proguard in App Center.
 
 ## Distribution
 
@@ -38,13 +38,7 @@ This document provides a peek into what's next for [Visual Studio App Center](ht
 * [SHIPPED] Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
 * [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience
 * [SHIPPED] Azure Active Directory (AAD) support – Reuse existing Active Directory Groups to grant access to applications in App Center.
-* [SHIPPED] Auto-Provisioning – iOS developers no longer need to know the UDIDs of tester devices. App Center automatically registers the new device, adds it to the app’s provisioning profile, re-signs the binary with the updated profile, and creates a new release that is ready for testers to install.
-* [SHIPPED] Distribution Statistics - User metrics for distribution groups that give improved insight into tester engagement.
-* [SHIPPED] Shared Groups – share a distribution group across multiple apps in an organization.
-* [SHIPPED] Redesigned Tester Experience – complete overhaul of the user experience and visual design for our tester install portal.
-* [SHIPPED] Mandatory App Updates – ensure testers update to the latest version of your app by marking the release as mandatory.
-* [SHIPPED] Resend Tester Notifications – resend app invites and new release notifications to increase tester engagement in your app.
-* [SHIPPED] Build Information in the Install Portal – When distributing a release using the App Center Build service, you can now see the branch name, commit hash, and commit message in addition to the release notes.
+
 
 ## SDK
 
