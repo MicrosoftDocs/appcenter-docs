@@ -227,7 +227,7 @@ Here is a quick description of the parameters:
 As a example of using these API's consider the screenshots of a web view embedded in an Android application:
 
 
-[ ![Screenshot showing the the WebView used in the following example.](./images/working-with-webviews-android-02-sml.png)](./images/working-with-webviews-android-02.png#lightbox)
+[ ![Screenshot showing the WebView used in the following example.](./images/working-with-webviews-android-02-sml.png)](./images/working-with-webviews-android-02.png#lightbox)
 
 If we examine the view hierarchy of this Activity in the REPL, we can see the following:
 

@@ -14,7 +14,7 @@ ms.custom: test
 
 # Working With the REPL
 
-One of the important tools in creating UITests is the the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment in which the developer enters expressions or a commands. It will then evaluate those expressions, and display the results to the user.
+One of the important tools in creating UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment in which the developer enters expressions or a commands. It will then evaluate those expressions, and display the results to the user.
 
 The REPL is helpful when creating UITests &ndash; it allows us to explore the user interface and create the queries and statements so that the test may interact with the application.
 
