@@ -96,8 +96,7 @@ appcenter test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-pat
 --include-category flerp 
 ```
 
-It is also possible to exclude certain tests by category using the 
-`--exclude-category` parameter.
+It is also possible to exclude certain tests by category using the `--exclude-category` parameter.
 
 ```bash
 appcenter test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-path <PATH TO IPA> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY> 
