@@ -2,8 +2,8 @@
 title: App Center Changelog
 description: History of updates to the product
 keywords: update,history
-author: jwhitedev
-ms.author: jawh
+author: jwargo
+ms.author: jowargo
 ms.date: 10/10/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
