@@ -14,6 +14,8 @@ ms.service: vs-appcenter
 
 This document provides a peek into what's next for [Visual Studio App Center](https://appcenter.ms), and lists the features we are currently committed to delivering. It is not a comprehensive list of all new features, but is intended to provide some visibility into our key investments. Due to the nature of the software development process and the resources we have available to work on these features, we're unable to guarantee delivery dates for these features, but know that we're working hard to make App Center better every day.
 
+As features ship, we'll mark them as [SHIPPED] here for a few weeks before removing them from the roadmap. As soon as we mark them as shipped here, we'll add them to the [App Center Changelog](~/general/changelog.md).
+
 ## Portal UI
 
 * Update the App Center Portal UI to render properly on mobile browsers.  The App Center portal was originally designed for desktop browsers; to accommodate mobile browsers, we’ll deliver a series of updates to create a mobile-friendly experience for our customers. It won’t come at once, but will get better over time.
