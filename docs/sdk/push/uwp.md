@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---
 
-# App Center Push
+# App Center Push for Universal Windows Platform
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -47,7 +47,7 @@ Before you can send notification using WNS, your app must be registered with the
 3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
 
 > [!NOTE]
-> You will need a Windows Developer account to send push notifications to your UWP app. You can [register a developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
+> You must have a Windows Developer account to send push notifications to your UWP app. You can [register a Microsoft developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
 
 ### 2. Get Package SID and Application secret from Application Registration Portal
 
@@ -78,7 +78,7 @@ Now that you've integrated App Center Push in your application, it's time to sta
 [!include[](start-push.md)]
 
 > [!NOTE]
-> If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+> If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application in the `OnStart` callback.
 
 ## Intercept push notifications
 
@@ -86,15 +86,21 @@ App Center Push makes it possible to intercept push notifications but there is s
 
 ### Additional setup
 
-Call `Push.CheckLaunchedFromNotification(e);` after `AppCenter.Start` in `OnLaunched` method.
+Call `Push.CheckLaunchedFromNotification(e);` at the end of the `OnLaunched` method in your UWP application source file (not in the portable application file if you use Xamarin.Forms).
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
-    AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Push));
+    // other code...
+
+    // This should be the last instruction
     Push.CheckLaunchedFromNotification(e);
 }
 ```
+
+> [!NOTE]
+> * If you use Xamarin.Forms, make sure the `AppCenter.start` call is made in the `OnStart` callback of the Xamarin.Forms application class.
+> * If you don't use Xamarin.Forms, make sure the `AppCenter.start` call is made  in the application constructor or before `Push.CheckLaunchedFromNotification`.
 
 ### Subscribe to the push event
 
@@ -104,12 +110,10 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 > No toast is shown when the push is received in foreground.
 > 
 > [!NOTE]
-> If the push is received in background, the event is **NOT** triggered at receive time.
-> The event is triggered when you click on the notification.
+> If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.
 > 
 > [!NOTE]
-> UWP toasts do **NOT** expose **title** and **message** to the background notification click callback.
-> **Title** and **message** are only available in **foreground** pushes.
+> UWP toasts do **NOT** expose **title** and **message** to the background notification click callback. **Title** and **message** are only available in **foreground** pushes.
 
 [!include[](dotnet-push-event-example.md)]
 
