@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: amchew
 ms.author: amchew
-ms.date: 08/22/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -20,10 +20,7 @@ Explore the App Center API Service with [swagger](https://openapi.appcenter.ms).
 ### <a name="section1"/>How to acquire an API token from App Center and make calls to the App Center API
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login with your account information.
-2. On the lower-left corner of the App Center portal, click your account user name, then select **Account Settings**.
-
-   ![The account details menu to select Settings](~/api-docs/images/mc_menu_dialog.PNG)
-
+2. On the top right corner of the App Center portal, click your account user name, then select **Account Settings**.
 3. In the middle panel, select **API Tokens** from the menu list.
 4. On the top right corner, click **New API token**.
 5. In the text field, enter a descriptive name for your token.

@@ -4,7 +4,7 @@ description: How to configure App Center email notifications
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group, test, test run, test run completed, test run complete
 author: amchew
 ms.author: amchew
-ms.date: 08/06/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
@@ -47,7 +47,7 @@ App Center sends notifications using the alias `no-reply@mail.appcenter.ms`.
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login with your account information.
 
-2. On the bottom left corner, click your username and select **Account Settings**.
+2. On the top right corner, click your user icon and select **Account Settings**.
 
 3. In the middle panel, select **Email notifications** from the menu list.
 
