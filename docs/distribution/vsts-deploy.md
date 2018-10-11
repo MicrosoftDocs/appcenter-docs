@@ -27,7 +27,7 @@ Once you're done with the signing task, add the build task **App Center Distribu
 
 When configuring the App Center Distribute task, you'll need your App Center API key. To obtain this key, open a browser, and navigate to the [App Center dashboard](https://appcenter.ms), then open your Account Settings.
 
-![Get your API key from App Center](images/vsts-deploy-api.png)
+![Get your API key from App Center](images/distribution_new-api-token.png)
 
 Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. Paste the API key you copied from App Center, and give the connection a name.
 
@@ -47,11 +47,11 @@ Finally, add release notes to your distribution.
 
 App Center deploys to your Collaborators group by default. Optionally, you can specify a distribution group ID or a store connection ID. The distribution group ID can be found by first selecting a distribution group, and then viewing the distribution group settings.
 
-![Finding the page with the distribution group ID](images/vsts-deploy-group-id.png)
+![Finding the page with the distribution group ID](images/distribution_edit-settings-icon.png)
 
 You'll find the distribution group ID below the distribution group name.
 
-![Location of the distribution group ID](images/vsts-deploy-app-center-group.png)
+![Location of the distribution group ID](images/distribution_group-id.png)
 
 Obtain the Store connection ID using an API call; learn [how to use the App Center API](../api-docs/index.md) elsewhere in the documentation.
 
@@ -84,7 +84,7 @@ Call the API using the following link: https://openapi.appcenter.ms/#/distribute
 
 Once you finished configuring the App Center Distribute task, you can Save and Queue your build. If it's successful, your signed build will be uploaded to the releases of the defined distribution group.
 
-![Releases](images/vsts-deploy-app-center-releases.png)
+![Releases](images/distribution_successful-release.png)
 
 Now that your signed build is in App Center, you're all set! You and your users can download the signed build directly from App Center, or further re-distribute the release to another group.
 

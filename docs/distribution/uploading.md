@@ -39,7 +39,7 @@ For Android you will need to produce a properly signed apk file. For full detail
 
 To upload a package to App Center, use the navigation bar on the left to navigate to Distirbution. Then click "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Next you have the option to include release notes. Both plain text and markdown formats are supported. Click next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via App Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via App Center.
 
-![Distributing a new release](~/distribution/images/new_release_button.png)
+![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
 ### Uploading using the App Center Command Line Interface
 
