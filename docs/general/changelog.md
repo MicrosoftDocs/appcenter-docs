@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 10/10/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -12,6 +12,7 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
 
 ### **October 10, 2018**
 
@@ -25,6 +26,12 @@ This document lists new features as they're added to [Visual Studio App Center](
 
 - **Two-factor authentication for Apple App Store**
   Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store conncetion. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the 6-digit code.
+
+### **October 3, 2018**
+
+- **CLI version 1.1.4 released**:
+  Added bug fixes for editing distribution group names, tab completion, Xamarin.UITest Android sign-info option, and improved error handling for generating a launch test.
+  *Note: CLI v1.1.13 was an empty release, hence the latest version is v1.1.14.*
 
 ### **September 26, 2018**
 - **Added build support for Xamarin.iOS 12.0**:
@@ -65,7 +72,7 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **August 23, 2018**
 
 - **CLI version 1.1.2 released**:
-  In CLI version 1.1.2, we added a verification error for `appcenter test run` for the `--include` parameter on Appium and XCUITest test frameworks, updated launch tests with the latest UITest version, fixed an access token error for Codepush, and updated npm package dependencies.
+  In CLI version 1.1.2, we added a verification error for `appcenter test run` for the `--include` parameter on Appium and XCUITest test frameworks, updated launch tests command with the latest UITest version, fixed an access token error for Codepush, and updated npm package dependencies.
 
 ### **August 22, 2018**
 
