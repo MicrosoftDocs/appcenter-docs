@@ -1,36 +1,35 @@
 ---
-title: Preparing XCUITest Tests for Upload with Extensions
+title: Preparing XCUITest Tests for Upload with App Center Extensions Framework
 description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 09/07/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-## Preparing XCUITest Tests for Upload with Extensions
+# Preparing XCUITest Tests for Upload with App Center Extensions Framework
 
-**This framework is *no longer required* for running XCUITest in App Center.**
+This framework has been *deprecated*.
 
-Running XCUITest in App Center Test no longer requires the proprietary extensions described here. If you are just starting out with XCUITest in App Center do not use this approach. If you are already running XCUITest in App Center with these extensions consider migrating to the extension-less approach.
+This framework is *no longer required* for running XCUITest tests in App Center.
 
-For additional information, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
+This framework will not be updated to be compatible with versions of Xcode > 10.0.
 
-The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework. The section below provides instructions for preparing XCUITest tests for upload to App Center Test.
+If you are just starting with XCUITest, do not link this framework.
+
+If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
+
+For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
 
 [AppCenter XCUITest Extensions](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions) is an iOS Framework for taking screenshots and labeling test steps when running XCUITest test in App Center. At the conclusion of each test method, a label and screenshot are automatically generated for the test report. You can create additional labels and screenshots to track your app's progress during a test method.
 
-**This framework is *no longer required* for running XCUITest in App Center.** See the note at the top of this page.
-
-If you encounter a problem, please file a [Github issue](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/issues).
-
 ## Requirements
 
-* XCode >= 9.0
-* Sierra or High Sierra
+* Xcode >= 9.4.1
 * iOS >= 9.0
 
 You must launch your application using the `ACTLaunch` API.
@@ -38,7 +37,6 @@ You must launch your application using the `ACTLaunch` API.
 ```obj-c
 //Insert before @interface
 #import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
-
 
 XCUIApplication *app = act_launch
 XCUIApplication *app = act_launch_app([[XCUIApplication alloc] init]);
@@ -91,7 +89,6 @@ Follow the [Carthage Instructions for adding frameworks to unit tests or a frame
 For more information on using Carthage, see the [Carthage GitHub repoository](https://github.com/Carthage/Carthage).
 
 Remember that the `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
-
 
 ### <a name="building_from_source" /> Building from Source
 

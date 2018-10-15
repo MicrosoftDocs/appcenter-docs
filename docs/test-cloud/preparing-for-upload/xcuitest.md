@@ -17,8 +17,7 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 
 ## Requirements
 
-* XCode >= 9.0
-* Sierra or High Sierra
+* Xcode >= 9.4.1
 * iOS >= 9.0
 
 ## Build For Testing
@@ -42,7 +41,6 @@ This will build your app and an XCUITest bundle into the `DerivedData/Build` dir
 ```shell
 $ xcrun xcodebuild -list
 ```
-For a concrete example of generating an app and an XCUITest bundle, see [this shell script that builds for testing](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/blob/master/bin/make/build-for-testing.sh).
 
 ## Uploading Tests to App Center
 
