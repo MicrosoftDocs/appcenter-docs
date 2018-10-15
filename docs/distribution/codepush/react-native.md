@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 09/05/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -118,7 +118,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by simply running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
 
-2. You will be prompted for the deployment key you'd like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName>`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. You will be prompted for the deployment key you'd like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it! Isn't RNPM awesome? :)
 
@@ -222,7 +222,7 @@ NSURL *jsCodeLocation;
 #endif
 ```
 
-To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (e.g. the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName>` in the CodePush CLI  and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (e.g. Staging) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (e.g. the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` in the CodePush CLI  and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (e.g. Staging) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
 
 ![Deployment list](./images/rn-key-4.png)
 
@@ -290,7 +290,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by simply running `npm i -g rnpm` and then executing the above command.*
 
-2. If you're using RNPM >=1.6.0, you will be prompted for the deployment key you'd like to use. If you don't already have it, you can retreive this value by running `appcenter codepush deployment list -a <ownerName>/<appName>`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. If you're using RNPM >=1.6.0, you will be prompted for the deployment key you'd like to use. If you don't already have it, you can retreive this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-android) section to complete the setup.
 
@@ -356,7 +356,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             // 3. Instantiate an instance of the CodePush runtime and add it to the list of
             // existing packages, specifying the right deployment key. If you don't already
-            // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve your key.
+            // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys" to retrieve your key.
             return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
                 new CodePush("deployment-key-here", MainApplication.this, BuildConfig.DEBUG)
@@ -423,7 +423,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         // 3. Instantiate an instance of the CodePush runtime and add it to the list of
         // existing packages, specifying the right deployment key. If you don't already
-        // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve your key.
+        // have it, you can run "appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys" to retrieve your key.
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             new CodePush("deployment-key-here", this, BuildConfig.DEBUG)
@@ -526,7 +526,7 @@ class AppReactPage : ReactPage
     // 3. Update the JavaScriptBundleFile property to initalize the CodePush runtime,
     // specifying the right deployment key, then use it to return the bundle URL from
     // CodePush instead of statically from the binary. If you don't already have your
-    // deployment key, you can run "appcenter codepush deployment list -a <ownerName>/<appName>" to retrieve it.
+    // deployment key, you can run "appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys" to retrieve it.
     public override string JavaScriptBundleFile
     {
         get
@@ -754,7 +754,7 @@ To set this up, perform the following steps:
     ```
 
    > [!TIP]
-   > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName>` from your terminal.
+   > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.
    > 
    > [!NOTE]
    > The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
@@ -856,7 +856,7 @@ To set this up, perform the following steps:
 
     ![Setting Keys](./images/rn-ios-11.png)
 
-    *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName>` from your terminal.*
+    *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
 
 10. Open your project's `Info.plist` file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
@@ -1582,7 +1582,7 @@ Now you'll be able to see CodePush logs in release mode, on both iOS or Android.
 |-----------------|-------------------|
 | Compilation Error | Double-check that your version of React Native is [compatible](#supported-react-native-platforms) with the CodePush version you are using. |
 | Network timeout / hang when calling `sync` or `checkForUpdate` in the iOS Simulator | Try resetting the simulator by selecting the `Simulator -> Reset Content and Settings..` menu item, and then re-running your app. |
-| Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your `Info.plist` (iOS), `build.gradle` (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName>` to view the correct keys for your app deployments. |
+| Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your `Info.plist` (iOS), `build.gradle` (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName> --displayKeys` to view the correct keys for your app deployments. |
 | Update not being discovered | Double-check that the version of your running app (e.g. `1.0.0`) matches the version you specified when releasing the update to CodePush. Additionally, make sure that you are releasing to the same deployment that your app is configured to sync with. |
 | Update not being displayed after restart | If you're not calling `sync` on app start (e.g. within `componentDidMount` of your root component), then you need to explicitly call `notifyApplicationReady` on app start, otherwise, the plugin will think your update failed and roll it back. |
 | I've released an update for iOS but my Android app also shows an update and it breaks it | Be sure you have different deployment keys for each platform in order to receive updates correctly |

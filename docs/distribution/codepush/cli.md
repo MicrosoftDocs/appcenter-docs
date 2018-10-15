@@ -1,16 +1,17 @@
 ---
-title: Use the App Center CLI to release CodePush updates 
+title: Releasing CodePush updates using the App Center CLI
 description: "How to use and set up the App Center CLI to release CodePush updates"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/15/2017
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
 ms.custom: distribute
 ---
-# Management CLI
+
+# Releasing CodePush updates using the App Center CLI
 
 ## Installation
 
@@ -19,15 +20,14 @@ ms.custom: distribute
 
 ## Getting Started
 
-1. Create an [App Center account](https://appcenter.ms) or log in throught the CLI by using `appcenter login` 
-2. Register your [app](#app-management) with CodePush, and optionally [share it](#app-collaboration) with other developers on your team
-3. CodePush-ify your app and point it at the deployment you wish to use ([Cordova](./cordova.md) and [React Native](./react-native.md))
-4. [Release](#releasing-app-updates) an update for your app
-5. Live long and prosper! ([details](https://en.wikipedia.org/wiki/Vulcan_salute))
+1. Create an [App Center account](https://appcenter.ms) or log in throught the CLI by using `appcenter login`.
+2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
+3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/react-native.md)).
+4. [Release and update for your app](#releasing-app-updates).
 
 ## <a name="account-creation"/>Account Management
 
-Before you can begin releasing app updates, you need to create a log in to your existing CodePush account or create a new App Center account. You can do this by simply running the following command once you've installed the CLI:
+Before you can begin releasing app updates, you must create a login to your existing CodePush account or create a new App Center account. You can do this by simply running the following command once you've installed the CLI:
 
 ```shell
 appcenter login
@@ -40,13 +40,13 @@ This will launch a browser, asking you to authenticate with either your GitHub o
 
 ### Authentication
 
-Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you need to login using the GitHub or Microsoft account you used when registering. You can do this by running the following command:
+Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must login using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
 
 ```shell
 appcenter login
 ```
 
-This will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. This will generate an access key that you need to copy/paste into the CLI (it will prompt you for it). You are now successfully authenticated and can safely close your browser window.
+This will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. This will generate an access key that you need to copy/paste into the CLI (it will prompt you for it). You are now successfully authenticated and can safely close your browser window.
 
 If at any time you want to determine if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
 
@@ -54,7 +54,7 @@ If at any time you want to determine if you're already logged in, you can run th
 appcenter profile list
 ```
 
-When you login from the CLI, your access key is persisted to disk for the duration of your session so that you don't have to login every time you attempt to access your account. In order to end your session and delete this access key, simply run the following command:
+When you login from the CLI, your access key persists to disk for the duration of your session so that you don't have to login every time you attempt to access your account. To end your session and delete this access key, simply execute the following command:
 
 ```shell
 appcenter logout
@@ -69,30 +69,29 @@ appcenter tokens delete <machineName>
 
 ### Access Tokens
 
-If you need to be able to authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (e.g. in a CI environment), you can run the following command to create an "access token" (along with a name describing what it is for):
+To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (e.g. in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it is for):
 
 ```shell
 appcenter tokens create -d "VSTS Integration"
 ```
 
-For security, the key will only be shown once on creation, so remember to save it somewhere if needed!
-After creating the new key, you can specify its value using the `--token` flag of the `login` command, which allows you to perform "headless" authentication, as opposed to launching a browser.
+The key will only display once, so remember to save it somewhere if needed! After creating the new key, you can specify its value using the `--token` flag of the `login` command, which allows you to perform "headless" authentication, as opposed to launching a browser.
 
 ```shell
 appcenter login --token <accessToken>
 ```
 
-When logging in using this method, the access token will not be automatically invalidated on logout, and can be used in future sessions until it is explicitly removed from the App Center server. However, it is still recommended that you log out once your session is complete, in order to remove your credentials from disk.
+When logging in using this method, the access token will not automatically invalidate on logout, and can be used in future sessions until it is explicitly removed from the App Center server. However, you should log out once your session is complete, to remove your credentials from disk.
 
 ## App Management
 
-Before you can deploy any updates, you need to create an app with App Center using the following command:
+Before deploying updates, you must create an app with App Center using the following command:
 
 ```shell
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
 ```
 
-If your app targets both iOS and Android, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-iOS` and `-Android`. For example:
+If your app targets both Android and iOS, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-Android` and `-iOS`. For example:
 
 ```shell
 appcenter apps create -d MyApp-Android -o Android -p React-Native
@@ -100,7 +99,7 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 ```
 
 > [!NOTE]
-> Using the same app for iOS and Android may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
+> Using the same app for Android and iOS may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
 > 
 > [!TIP]
 > One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
@@ -112,7 +111,7 @@ appcenter codepush deployment add -a <ownerName>/<appName> Staging
 appcenter codepush deployment add -a <ownerName>/<appName> Production
 ```
 
-After you create the deployments, you can access the deployment keys for both deployments using `appcenter codepush deployment list`, which you can begin using to configure your mobile clients via their respective SDKs (details for [Cordova](./cordova.md) and [React Native](./react-native.md)).
+After you create the deployments, you can access the deployment keys for both deployments using `appcenter codepush deployment list --displayKeys`, which you can begin using to configure your mobile clients via their respective SDKs (details for [Cordova](./cordova.md) and [React Native](./react-native.md)).
 
 If you decide that you don't like the name you gave to an app, you can rename it at any time using the following command:
 

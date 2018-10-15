@@ -4,7 +4,7 @@ description: "How to migrate from CodePush to App Center"
 keywords: distribution
 author: zakeelm
 ms.author: zakeelm 
-ms.date: 06/26/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 94769F28-24C6-4A14-84F9-9A8D82AE1D13
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ If you specify that your app is a Cordova application, you may notice that we do
 If your imported app's platform is React Native or if you are starting a new React Native app from scratch, you should see an app overview panel that lets you manage your app and provides you with instruction on how to integrate other App Center SDKs. Your App Center app secret is what allows your app to send information to App Center, it is *not* the same as your CodePush deployment keys; the latter can be discovered by open a terminal window and executing:
 
 ```shell
-appcenter codepush deployment list <ownerName>/<appName>
+appcenter codepush deployment list <ownerName>/<appName> --displayKeys
 ```
 
 **3. Install the App Center CLI**

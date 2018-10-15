@@ -4,7 +4,7 @@ description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 09/12/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: E5791947-AF21-47D0-84A0-90D5F06DC8A9
 ms.service: vs-appcenter
@@ -201,7 +201,7 @@ appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
 To view the deployment keys use:
 
 ```shell
-appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android
+appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android --displayKeys
 ```
 
 ![CodePush CLI providing deployment keys](images/tutorials1.png)
