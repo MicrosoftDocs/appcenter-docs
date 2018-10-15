@@ -24,7 +24,7 @@ With ProGuard enabled in your Android app, your stack traces will need to be deo
 3. In the left menu, navigate to the **Diagnostics** section
 4. Select **Mappings**
 5. Click the **Upload Mappings** button in the upper right
-6. Fill in the Version Name and Version Code (these must match that build's Graddle configuration in order for the mapping to work for a particular build)
+6. Fill in the Version Name and Version Code (these must match that build's Gradle configuration in order for the mapping to work for a particular build)
 7. Upload the `mapping.txt` file from your app module's build directory.
 8. Click the **Save** button
 
