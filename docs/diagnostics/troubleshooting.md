@@ -4,7 +4,7 @@ description: Help troubleshooting Diagnostics in App Center
 keywords: crashes, errors, troubleshooting, diagnostics
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/08/2018
+ms.date: 10/12/2018
 ms.topic: article
 ms.assetid: 601a597e-37e5-4714-bdf5-fff29373cae5
 ms.service: vs-appcenter
@@ -19,9 +19,9 @@ If your app crashes on startup, the SDK won't be able to send any crash reports.
 
 For iOS and MacOS apps, crash reports are only visible if they are symbolicated. For that to happen the proper symbols (dSYM file) must be uploaded to App Center. Learn more about symbolication and how to find and upload your .dSYM file in the [symbolication documentation](~/diagnostics/symbolication.md). Currently, only new incoming crashes are symbolicated.  
 
-*How can I see de-obfuscated stack traces?*
+*How can I see deobfuscated stack traces?*
 
-We have some known issues with mappings upload. If you run into issues, please contact [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) by clicking the blue chat button in the lower-right corner of any App Center page.
+To see deobfuscated stack traces for ProGuard enabled Android apps, follow the instructions in [App Center's ProGuard documentation](~/diagnostics/ProGuard.md) to upload mapping files for your app. 
 
 *Is there support for Android NDK?*
 
