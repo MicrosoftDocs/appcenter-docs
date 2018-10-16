@@ -121,6 +121,7 @@
 ## [Features](diagnostics/features.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Symbolication](diagnostics/symbolication.md)
+## [ProGuard](diagnostics/ProGuard.md) 
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 
