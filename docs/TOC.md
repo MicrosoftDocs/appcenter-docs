@@ -109,6 +109,7 @@
 
 # [Diagnostics](diagnostics/index.md)
 
+## [New Diagnostics](diagnostics/pre-merge.md)
 ## [Enabling Diagnostics](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
 ### [Apache Cordova](sdk/crashes/cordova.md)
