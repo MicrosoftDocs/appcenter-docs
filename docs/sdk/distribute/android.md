@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 08/21/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ App Center Distribute will let your users install a new version of the app when 
 
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
-> 
+>
 > 1. If you have released your app in the Play Store, in-app updates will be disabled.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
@@ -39,7 +39,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '1.8.0'
+       def appCenterSdkVersion = '1.9.0'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```

@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 08/28/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: android
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
-> 
+>
 > [!NOTE]
 > For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [migration guide](migration/android.md).
 
@@ -73,14 +73,14 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     dependencies {
         // Add App Center Push module dependency
-        def appCenterSdkVersion = '1.8.0'
+        def appCenterSdkVersion = '1.9.0'
         implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
 
     // Add this line at the bottom
     apply plugin: 'com.google.gms.google-services'
     ```
-    
+
     > [!NOTE]
     > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
@@ -111,11 +111,11 @@ You can set up a listener to be notified whenever a push notification is receive
 
 > [!NOTE]
 > A notification is not generated when your application receives a push in the foreground.
-> 
+>
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
 > The event is triggered when you click on the notification.
-> 
+>
 > [!NOTE]
 > The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.

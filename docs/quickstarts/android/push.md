@@ -8,7 +8,7 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 08/29/2018
+ms.date: 10/17/2018
 ---
 
 # Send Push Notifications to Users
@@ -67,14 +67,14 @@ You need a Google Account and use the Firebase console.
   ```groovy
   dependencies {
       // Add App Center Push module dependency
-      def appCenterSdkVersion = '1.8.0'
+      def appCenterSdkVersion = '1.9.0'
       implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
   }
 
   // Add this line at the bottom
   apply plugin: 'com.google.gms.google-services'
   ```
-  
+
   > [!NOTE]
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 

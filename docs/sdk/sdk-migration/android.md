@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: sdk
 ---
 
-# Migrate to App Center Android SDK v1.8.0
+# Migrate to App Center Android SDK v1.9.0
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -20,7 +20,7 @@ ms.custom: sdk
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 
-Follow these steps to update your current preview SDK to App Center Android SDK v1.8.0:
+Follow these steps to update your current preview SDK to App Center Android SDK v1.9.0:
 
 1. Change **build.gradle** in your project that specifies Mobile Center to App Center.
     Open your app level **build.gradle** file (**app/build.gradle**) and change group ID, artifact ID and the SDK version:
@@ -36,7 +36,7 @@ Follow these steps to update your current preview SDK to App Center Android SDK 
     with
 
     ```groovy
-    def appCenterSdkVersion = '1.8.0'
+    def appCenterSdkVersion = '1.9.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
@@ -68,7 +68,7 @@ Follow these steps to update your current preview SDK to App Center Android SDK 
     AppCenter.start(...);
     ```
 
-    Do the same class name replacement for any other `MobileCenter` call that you might have, such as `SetLogLevel` or `SetEnabled`.    
+    Do the same class name replacement for any other `MobileCenter` call that you might have, such as `SetLogLevel` or `SetEnabled`.
 
 4. If you customized or translated in-app updates texts, please update the string keys from `mobile_center_distribute_*` to `appcenter_distribute_*`.
 
