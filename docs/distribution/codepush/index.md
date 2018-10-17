@@ -17,7 +17,7 @@ CodePush is an App Center cloud service that enables Apache Cordova and React Na
 
 ## 1. Install the App Center CLI
 
-You manage most of CodePush's functionality using the App Center CLI. To install the CLI, open a terminal window or command prompt and exeute the following command:
+You manage most of CodePush's functionality using the App Center CLI. To install the CLI, open a terminal window or command prompt and execute the following command:
 
 ```shell
 npm install -g appcenter-cli
