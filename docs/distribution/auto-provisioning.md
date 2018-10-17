@@ -30,21 +30,21 @@ The flow requires username and password for the [Apple developer portal](https:/
 
 ## Device registration
 
-To initiate the device registration flow, select a distribution group with unprovisioned devices and navigate to the devices tab this is not possible in a **Public distribution group**. Click the **Devices** tab and click the **Register devices** button. A dialog prompts for your username and password used in the [Apple developer portal](https://developer.apple.com/). Once you log in with your Apple username and password, App Center can add the unprovisioned devices to both your Apple developer account and the corresponding provisioning profile. Optionally you can upload a .p12 file to resign the app and have it distributed to the newly added devices. If you just want to add devices and make a distribution later you can leave resign unchecked and download the updated provisioning profile with the button on the review screen. Alternatively, the profile is available to download through Xcode or the Apple developer portal. You can read more on [how to generate a .p12 file here](#generating-a-p12-file)
+To initiate the device registration flow, select a distribution group with unprovisioned devices and navigate to the devices tab, this is not possible in a **Public distribution group**. Click the **Devices** tab and click the **Register devices** button. A dialog prompts for your username and password used in the [Apple developer portal](https://developer.apple.com/). Once you log in with your Apple username and password, App Center can add the unprovisioned devices to both your Apple developer account and the corresponding provisioning profile. Optionally you can upload a .p12 file to resign the app and have it distributed to the newly added devices. If you just want to add devices and make a distribution later you can leave resign unchecked and download the updated provisioning profile with the button on the review screen. Alternatively, the profile is available to download through Xcode or the Apple developer portal. You can read more on [how to generate a .p12 file here](#generating-a-p12-file)
 
 ## Privacy concerns on username and password
 
-When adding Apple credentials and signing certificate to App Center, using a secure connection, it is uploaded and saved in an encrypted vault. It is not possible for any user to download or retrieve sensitive information from the vault.
+When adding Apple credentials and a signing certificate to App Center, using a secure connection, it is uploaded and saved in an encrypted vault. It is not possible for any user to download or retrieve sensitive information from the vault.
 
-By using a set of credentials and certificates, it is automatically available to app collaborators but only for that specific service. As an example developer X adds credentials and certificates to distribution group "Tester," when developer Y distributes a new release to the Tester group X's username, password, and certificate are by default selected. App Center only uses your Apple ID during the transaction, and it does not use for any other means.
+By using a set of credentials and certificates, it is automatically available to app collaborators but only for that specific service. As an example, developer X adds credentials and certificates to distribution group "Tester," when developer Y distributes a new release to the Tester group, X's username, password, and certificate are by default selected. App Center only uses your Apple ID during the transaction, and it does not use it for any other means.
 
 ## What is happening when you click register devices
 
-App Center registers device IDs in your Apple developer account and adds them to the provisioning profile used for distribution. An Apple Developer account has a finite number of spots for devices split by device type. Apple works with five device types, which are iPad, iPhone, iPod, Apple TV, and Apple Watches. Each of these has a limitation of 100 devices, i.e., if you register six devices all of which is iPhones, you have 94 devices IDs left for iPhones and still have 100 left for each of the four other device types. You can read more about it in [Apple's documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW10).
+App Center registers device IDs in your Apple developer account and adds them to the provisioning profile used for distribution. An Apple Developer account has a finite number of spots for devices split by device type. Apple works with five device types: iPad, iPhone, iPod, Apple TV, and Apple Watch. Each of these has a limitation of 100 devices, i.e. if you register six devices all of which are iPhones you have 94 devices IDs left for iPhones and still have 100 left for each of the four other device types. You can read more about it in [Apple's documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW10).
 
 ## What is re-signing
 
-For app distribution, code signing is necessity set by Apple; this is the same for distribution through Xcode, App Center, or iTunes Stores. Furthermore, code signing is a precaution to make sure nobody has tampered with your app. You can read more about it in [Apple documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW2).
+For app distribution, code signing is a necessity set by Apple; this is the same for distribution through Xcode, App Center, or the iTunes Store. Furthermore, code signing is a precaution to make sure nobody has tampered with your app. You can read more about it in the [Apple documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW2).
 
 When you sign your app with an ad-hoc distribution provisioning profile, it includes a list of devices which can install your app. When App Center re-signs an app, it first updates the provisioning profile to include all devices in a distribution group and then re-signs with the updated provisioning profile so that all devices can install the latest release. 
 
@@ -52,7 +52,7 @@ When you sign your app with an ad-hoc distribution provisioning profile, it incl
 
 The prerequisite for using this guide is to have an Apple production certificate stored on your local machine. If this is not the case, you will be missing a private key.
 
-1. Head to the **Keychain Access** app on your Mac, and select the **My Certificates** section on the left.
+1. Head to the **Keychain Access** app on your Mac and select the **My Certificates** section on the left.
 2. Find the right distribution certificate and expand it to see the corresponding private key.
 	
 	A. If the private key is not present, you need to either create a new certificate or get it from the machine where the certificate was created.
@@ -70,7 +70,7 @@ When logging into Apple through App Center, the provisioning profile(s) included
 
 ### Team not found
 
-When logging into Apple through App Center, the team included in your application are checked against those in your developer account. If any team used in the binary cannot be found in the used Apple developer account, App Center will not be able to re-sign your application. To resolve this, ensure that your Apple developer account contains the team used in your application; you can check the applications team in "General" tab of Xcode project settings or the **[iOS bundle signing options](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/#iOS_Bundle_Signing_Tab)** in Visual Studio for Mac.
+When logging into Apple through App Center, the team included in your application are checked against those in your developer account. If any team used in the binary cannot be found in the used Apple developer account, App Center will not be able to re-sign your application. To resolve this, ensure that your Apple developer account contains the team used in your application; you can check the applications team in the "General" tab of Xcode project settings or the **[iOS bundle signing options](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/#iOS_Bundle_Signing_Tab)** in Visual Studio for Mac.
 
 ### Updated license agreement
 
