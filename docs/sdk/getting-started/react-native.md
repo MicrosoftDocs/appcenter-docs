@@ -71,18 +71,6 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 ### 3.1 Integrate the SDK automatically
 
-> [!NOTE]
-> If you are using [Jest test framework](https://facebook.github.io/jest/) in your application, App Center SDK automatically sets up mocks for App Center modules in jest section of package.json file during installation. But due to a bug in the [Yarn package manager](https://yarnpkg.com/en/) this may not always be the case, so you might have to do it manually if you are not using npm. Depending on modules you are using add the following to the jest section of package.json file:
-
-> ```JSON
-> "setupFiles": [
->    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
->    "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
->    "<rootDir>/node_modules/appcenter-crashes/test/AppCenterCrashesMock.js",
->    "<rootDir>/node_modules/appcenter-push/test/AppCenterPushMock.js"
-> ]
-> ```
-
 1. Link the plugins to the React Native app by using the react-native link command.
 
     ```shell
@@ -148,6 +136,17 @@ The App Center SDK uses a modular approach, where you just add the modules for A
         ❯ Automatically
           Processed in JavaScript by user
     ```
+
+    > [!NOTE]
+    > App Center SDK does not set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    > ```JSON
+    > "setupFiles": [
+    >    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
+    >    "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+    >    "<rootDir>/node_modules/appcenter-crashes/test/AppCenterCrashesMock.js",
+    >    "<rootDir>/node_modules/appcenter-push/test/AppCenterPushMock.js"
+    > ]
+    >```
 
     > [!NOTE]
     > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
