@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 10/11/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -16,6 +16,13 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **October 17, 2018**
 
 - **Added crash symbolication support for the new arm64e architecture in iPhone XS and XS Max**: This allows developers to view symbolicated crash reports for the iPhone XS and iPhone XS Max.
+
+### **October 16, 2018**
+
+- **CLI version 1.1.5 released**:
+  - Added metadata, install metrics, and deployment keys information for `appcenter codepush deployment list` 
+  - Added metadata and install metrics information for `appcenter codepush deployment history`
+
 
 ### **October 10, 2018**
 
@@ -75,7 +82,10 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **August 23, 2018**
 
 - **CLI version 1.1.2 released**:
-  In CLI version 1.1.2, we added a verification error for `appcenter test run` for the `--include` parameter on Appium and XCUITest test frameworks, updated launch tests command with the latest UITest version, fixed an access token error for Codepush, and updated npm package dependencies.
+  In CLI version 1.1.2, we
+  - Added a verification error when the user runs the `--include` parameter on Appium and XCUITest test frameworks for `appcenter test run` command
+  - Updated launch tests command with the latest UITest version so that it downloads the latest NuGet package 
+  - Fixed an access token error for Codepush, and updated npm package dependencies.
 
 ### **August 22, 2018**
 
