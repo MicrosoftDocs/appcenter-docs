@@ -17,7 +17,6 @@ App Center Analytics will help you understand more about your app users and thei
 
 ## Key Features
 
-
 | Scenario | Description |
 |--|--|
 | One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md) | Simple steps to integrate the SDK which will provide you out-of-the-box insights about your users.|
@@ -28,19 +27,16 @@ App Center Analytics will help you understand more about your app users and thei
 
 ## Integrate the Analytics SDK to get started
 
-In order to get started with Analytics, you will need to integrate the App Center SDK. By doing this, you will get out-of-the-box insights about your users.
-In order to get started with our SDK, follow the platform specific documentation at [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md).
-
+To get started with Analytics, you must integrate the App Center SDK. By doing this, you will get out-of-the-box insights about your users.
+To get started with our SDK, follow the platform specific documentation at [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [UWP](~/sdk/getting-started/uwp.md) and [macOS](~/sdk/getting-started/macos.md).
 
 ## General information
 
 Check out our [Frequently Asked Questions](~/analytics/faq.md) for general questions or concerns.
 
-
 ## Custom Events
 
 Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md).
-
 
 ## Export
 

@@ -13,4 +13,4 @@ ms.custom: tables
 
 # Tables & Identity removed from App Center Preview
 
-The Tables and Identity services were removed from App Center while we make architectural changes to provide a better experience for our customers. You can still access the Tables and Identity services previously created in App Center by logging in to the [Azure portal](https://azure.microsoft.com/).    
+The Tables and Identity services were removed from App Center while we make architectural changes to provide a better experience for our customers. You can still access the Tables and Identity services previously created in App Center by logging in to the [Azure portal](https://azure.microsoft.com/).

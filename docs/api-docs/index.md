@@ -69,7 +69,6 @@ Here are the steps to do so:
 
 Owners can be user or org. For example,
 
-
 | Owner| URL                                                      | Owner name     | App name   |
 | -----| -------------------------------------------------------- | -------------- | ---------- |
 | User | `https://appcenter.ms/users/amandachew/apps/DiceOut-01`  | amandachew     | DiceOut-01 |

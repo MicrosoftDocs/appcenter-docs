@@ -115,8 +115,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.2                  | iphoneos11.2 |
 | iOS 11.3                  | iphoneos11.3 |
 | iOS 11.4                  | iphoneos11.4 |
-| iOS 12.0                 | iphoneos12.0 |
-| iOS 12.1                 | iphoneos12.1 |
+| iOS 12.0                  | iphoneos12.0 |
+| iOS 12.1                  | iphoneos12.1 |
 | iOS Simulator 10.0        | iphonesimulator10.0 |
 | iOS Simulator 10.1        | iphonesimulator10.1 |
 | iOS Simulator 10.2        | iphonesimulator10.2 |
@@ -206,37 +206,37 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 #### Runtimes
 
-| OS      | Version |
-|---------|---------|
-| iOS 8.4 | 12H141 |
-| iOS 9.0 | 13A344 |
-| iOS 9.1 | 13B143 |
-| iOS 9.2 | 13C75 |
-| iOS 9.3 | 13E233 |
-| iOS 10.0 | 14A345 |
-| iOS 10.1 | 14B72 |
-| iOS 10.2 | 14C89 |
-| iOS 10.3 | 14E269 |
-| iOS 11.1 | 15B87 |
-| iOS 11.2 | 15C107 |
-| iOS 11.3 | 15E217 |
-| iOS 11.4 | 15F79 |
-| iOS 12.0 | 16A5288q |
-| tvOS 10.0 | 14T328 |
-| tvOS 10.1 | 14U591 |
-| tvOS 10.2 | 14W260 |
-| tvOS 11.1 | 15J580 |
-| tvOS 11.2 | 15K104 |
-| tvOS 11.3 | 15L211 |
-| tvOS 11.4 | 15L576 |
-| tvOS 12.0 | 16J5283n |
-| watchOS 3.0 | 14S326 |
-| watchOS 3.1 | 14S471a |
-| watchOS 3.2 | 14V243 |
-| watchOS 4.0 | 15R372 |
-| watchOS 4.1 | 15R844 |
-| watchOS 4.2 | 15S100 |
-| watchOS 4.3 | 15T212 |
+| OS          | Version  |
+|-------------|----------|
+| iOS 8.4     | 12H141   |
+| iOS 9.0     | 13A344   |
+| iOS 9.1     | 13B143   |
+| iOS 9.2     | 13C75    |
+| iOS 9.3     | 13E233   |
+| iOS 10.0    | 14A345   |
+| iOS 10.1    | 14B72    |
+| iOS 10.2    | 14C89    |
+| iOS 10.3    | 14E269   |
+| iOS 11.1    | 15B87    |
+| iOS 11.2    | 15C107   |
+| iOS 11.3    | 15E217   |
+| iOS 11.4    | 15F79    |
+| iOS 12.0    | 16A5288q |
+| tvOS 10.0   | 14T328   |
+| tvOS 10.1   | 14U591   |
+| tvOS 10.2   | 14W260   |
+| tvOS 11.1   | 15J580   |
+| tvOS 11.2   | 15K104   |
+| tvOS 11.3   | 15L211   |
+| tvOS 11.4   | 15L576   |
+| tvOS 12.0   | 16J5283n |
+| watchOS 3.0 | 14S326   |
+| watchOS 3.1 | 14S471a  |
+| watchOS 3.2 | 14V243   |
+| watchOS 4.0 | 15R372   |
+| watchOS 4.1 | 15R844   |
+| watchOS 4.2 | 15S100   |
+| watchOS 4.3 | 15T212   |
 | watchOS 5.0 | 16R5283q |
 
 #### Devices

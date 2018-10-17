@@ -96,7 +96,7 @@ When configuring export for multiple apps, you should create or update a configu
 PATCH /v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}
 ```
 
-The changes will take time to propogate, and entities from that point will then be written to the new path.
+The changes will take time to propagate, and entities from that point will then be written to the new path.
 
 ## Azure Blob Storage
 
