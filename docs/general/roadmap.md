@@ -32,7 +32,7 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
   + Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
   + Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
 * [SHIPPED] NDK – Improve the support for Android NDK. This enables developers to track their native Android crashes in App Center.
-* [SHIPPED] Proguard – Improve the support for Proguard in App Center.
+* [SHIPPED] ProGuard – Improve the support for ProGuard in App Center.
 
 ## Distribution
 
@@ -40,7 +40,6 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 * [SHIPPED] Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
 * [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience
 * [SHIPPED] Azure Active Directory (AAD) support – Reuse existing Active Directory Groups to grant access to applications in App Center.
-
 
 ## SDK
 

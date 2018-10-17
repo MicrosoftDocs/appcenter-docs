@@ -13,6 +13,9 @@ ms.service: vs-appcenter
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
+### **October 17, 2018**
+
+- **Added crash symbolication support for the new arm64e architecture in iPhone XS and XS Max**: This allows developers to view symbolicated crash reports for the iPhone XS and iPhone XS Max.
 
 ### **October 10, 2018**
 
