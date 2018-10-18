@@ -4,7 +4,7 @@ description: "Learn how to utilize the Management SDK"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 09/12/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.assetid: 5A294968-C232-41B4-BAD3-EF23981C91F2
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ A JavaScript library for programmatically managing your App Center account (e.g.
     appcenter tokens create -d "DESCRIPTION_OF_THE_KEY"
     ```
 
-    If you already created a token that you want to use here, then you can retrieve it by running `appcenter tokens list` and using the value of the `ID` column for the key you wish to use.
+    `API Token` will be displayed only once, so remember to save it somewhere if needed!
 
 2. Install the management SDK by running `npm install code-push --save`
 
@@ -34,10 +34,10 @@ A JavaScript library for programmatically managing your App Center account (e.g.
     var CodePush = require("code-push");
     ```
 
-4. Create an instance of the `CodePush` class, passing it the access key you created or retrieved in step #1:
+4. Create an instance of the `CodePush` class, passing it the `API Token` you created in step #1:
 
     ```javascript
-    var codePush = new CodePush("YOUR_ACCESS_KEY");
+    var codePush = new CodePush("YOUR_API_TOKEN");
     ```
 
 5. Begin automating the management of your account! For more details on what you can do with this `codePush` object, refer to the API reference section below.
