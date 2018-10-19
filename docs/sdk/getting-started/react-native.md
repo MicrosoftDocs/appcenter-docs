@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 09/11/2018
+ms.date: 10/19/2018
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -55,7 +55,7 @@ The default integration of the SDK uses CocoaPods for iOS. If you are not using 
 Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
 ```shell
-npm install appcenter appcenter-analytics appcenter-crashes --save
+npm install appcenter appcenter-analytics appcenter-crashes --save-exact
 ```
 
 > [!NOTE]
@@ -64,7 +64,7 @@ npm install appcenter appcenter-analytics appcenter-crashes --save
 In case you prefer `yarn` over `npm`, use the following command to install App Center:
 
 ```shell
-yarn add appcenter appcenter-analytics appcenter-crashes
+yarn add appcenter appcenter-analytics appcenter-crashes --exact
 ```
 
 The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and **appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.

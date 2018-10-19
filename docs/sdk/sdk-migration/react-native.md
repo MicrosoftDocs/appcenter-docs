@@ -4,7 +4,7 @@ description: Migration to App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/17/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.assetid: 279e0ad3-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -31,10 +31,10 @@ Follow these steps to update your current preview SDK to App Center React Native
     npm uninstall mobile-center-crashes --save
     npm uninstall mobile-center-push --save
 
-    npm install appcenter-analytics --save
-    npm install appcenter-crashes --save
-    npm install appcenter-push --save
-    npm install appcenter --save
+    npm install appcenter-analytics --save-exact
+    npm install appcenter-crashes --save-exact
+    npm install appcenter-push --save-exact
+    npm install appcenter --save-exact
     ```
 
 2. Remove `ios/{appname}/MobileCenter-config.plist` where `{appname}` is your app name. Remove `android/app/src/main/assets/mobile-center-config.json`.

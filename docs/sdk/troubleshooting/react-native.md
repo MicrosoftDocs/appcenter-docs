@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 09/04/2018
+ms.date: 10/19/2018
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -72,7 +72,7 @@ If you have already integrated our SDK into your application and want to upgrade
 
 1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to uninstall old App Center packages.
 
-2. `npm install --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest App Center packages.
+2. `npm install --save-exact appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest App Center packages.
 
 3. `pod repo update` to make sure your CocoaPods spec repo is up-to-date.
 

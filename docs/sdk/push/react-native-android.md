@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 08/28/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -40,7 +40,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
     ```
-    npm install appcenter-push --save
+    npm install appcenter-push --save-exact
     ```
 
 2. Link the plugin to the React Native app by using the react-native link command.
