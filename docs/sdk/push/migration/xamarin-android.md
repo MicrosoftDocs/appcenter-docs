@@ -4,7 +4,7 @@ description: Contains instructions for how to configure your project to use Fire
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/05/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498
 ms.service: vs-appcenter
@@ -87,3 +87,7 @@ And add the following lines:
 -keep class com.microsoft.appcenter.push.TokenService
 -keep class com.microsoft.appcenter.push.PushMessagingService
 ```
+
+## 5. Remove Sender ID
+
+Remove the `Push.SetSenderId("{Your Sender ID}")` method call before `AppCenter.start`.
