@@ -49,7 +49,7 @@ To install the App Center CLI, open a terminal window or command prompt,and exec
 npm install -g appcenter-cli
 ```
 
-Read more about the [App Center CLI]((<https://github.com/Microsoft/appcenter-cli>) and how to use it to upload to App Center.
+Read more about the [App Center CLI](https://github.com/Microsoft/appcenter-cli) and how to use it to upload to App Center.
 
 **Is the team that built App Center Test different than Xamarin Test Cloud?**
 
