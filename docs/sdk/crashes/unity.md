@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/18/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -80,9 +80,6 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 
 ### Ask for the users' consent to send a crash log
 
-> [!NOTE]
-> User consent support is coming in an upcoming release of the SDK, but is currently not available in the preview.
-
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
 
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
@@ -115,15 +112,12 @@ As an example you can refer to [our custom dialog example](https://aka.ms/custom
 
 ### Get information about the sending status for a crash log
 
-> [!NOTE]
-> Error reports are coming in an upcoming release of the SDK, but is currently not available in the preview.
-
 At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes provides three different callbacks that you can use in your app to be notified of what is going on:
 
 #### The following callback will be invoked before the SDK sends a crash log
 
 ```csharp
-Crashes.SendingErrorReport += (sender, e) =>
+Crashes.SendingErrorReport += (errorReport) =>
 {
     // Your code, e.g. to present a custom UI.
 };
@@ -132,7 +126,7 @@ Crashes.SendingErrorReport += (sender, e) =>
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
-Crashes.SentErrorReport += (sender, e) =>
+Crashes.SentErrorReport += (errorReport) =>
 {
     // Your code, e.g. to hide the custom UI.
 };
@@ -141,16 +135,13 @@ Crashes.SentErrorReport += (sender, e) =>
 #### The following callback will be invoked if the SDK has failed to send a crash log
 
 ```csharp
-Crashes.FailedToSendErrorReport += (sender, e) =>
+Crashes.FailedToSendErrorReport += (errorReport) =>
 {
     // Your code goes here.
 };
 ```
 
 ### Add attachments to a crash report
-
-> [!NOTE]
-> Attachment support is coming in an upcoming release of the SDK, but is currently not available in the preview.
 
 You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report:
 

@@ -4,7 +4,7 @@ description: Help using the Diagnostic service on App Center
 keywords: app center, crashes, errors, diagnostics
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/11/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
 ms.service: vs-appcenter
@@ -26,10 +26,11 @@ Crashes are what happens when a runtime exception occurs from an unexpected even
 
 ## Errors
 
-Experienced developers know where code can fail and wrap potentially risky code with error checking or try/catch blocks to handle problems as they occur. For Xamarin apps, App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. Learn more about best practices about when and how to use errors in the [official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
+Experienced developers know where code can fail and wrap potentially risky code with error checking or try/catch blocks to handle problems as they occur. For Xamarin and Unity apps, App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. Learn more about best practices about when and how to use errors in the [official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 
 > [!NOTE]
-> App Center Errors is only supported for Xamarin apps.
+> App Center Errors is only supported for Xamarin and Unity apps.
+
 
 ### Inside a Try/Catch Enclosure (Errors)
 

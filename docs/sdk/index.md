@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 08/29/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -42,6 +42,7 @@ App Center Push enables you to send push notifications to users of your app from
 * [App Center SDK for iOS](getting-started/ios.md)
 * [App Center SDK for React Native](getting-started/react-native.md)
 * [App Center SDK for Xamarin](getting-started/xamarin.md)
+* [App Center SDK for Unity](getting-started/unity.md)
 * [App Center SDK for UWP](getting-started/uwp.md)
 * [App Center SDK for macOS](getting-started/macos.md)
 * [App Center SDK for Apache Cordova](getting-started/cordova.md)
@@ -69,6 +70,14 @@ Android Studio 2.2 or later.
  Crashes          | 9.0 or later    | 8.2 and later
  Distribute       | 9.0 or later    | 8.2 and later
  Push             | 9.0 or later    | 8.2 and later
+
+### Unity
+
+Service    |  Unity version  | iOS Version  | Android Version            | UWP Version
+ ----------|-----------------|--------------|----------------------------|---------------------
+Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
+Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
+Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
 
 ### Windows UWP
 

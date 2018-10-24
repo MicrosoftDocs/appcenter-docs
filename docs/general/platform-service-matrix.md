@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
-ms.date: 09/11/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -27,7 +27,7 @@ The table below lists all the Operating System and Platforms and their supported
 | `Xamarin - Android`      | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  |
 | `Unity - iOS`            | No    | Yes  | Yes        | Yes     | Yes       | No   |
 | `Unity - Android`        | No    | Yes  | Yes        | Yes     | Yes       | No   |
-| `Unity - UWP`            | No    | Yes  | Yes        | Yes*    | Yes       | No   |
+| `Unity - UWP`            | No    | No   | Yes        | No      | Yes       | No   |
 | `Cordova - iOS`          | No    | Yes  | Yes        | Yes     | Yes       | Yes  |
 | `Cordova - Android`      | No    | Yes  | Yes        | Yes     | Yes       | Yes  |
 

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 9/11/2018
+ms.date: 10/24/2018
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -25,7 +25,7 @@ Before you begin, please make sure that your project is set up in Unity 2017.1 o
 The App Center SDK for Unity supports the following platforms:
 
 * iOS (9.0 or later)
-* Android (5.0/API 21 or later)
+* Android (4.1/API 16 or later)
 * UWP (Build 10240 or later)
 
 Please also note that the App Center SDK for Unity is only available in C#.
