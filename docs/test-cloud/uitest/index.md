@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 08/08/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -14,15 +14,15 @@ ms.custom: test
 
 # Xamarin.UITest
 
-*Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in [NUnit](http://www.nunit.org/) to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would, enter text, tapping buttons, and performing gestures &#x2013; such as swipes. For more information on the components enable Xamarin.UITest to automate a mobile application, please read about the [core concepts](~/test-cloud/core-concepts.md).
+*Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in C# using the [NUnit](http://www.nunit.org/) unit testing framework to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would: entering text, tapping buttons, and performing gestures &#x2013; such as swipes.
 
-Typically, each UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be peformed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
+Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be peformed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
 
 1. **Arrange** &ndash; The test will setup conditions and initialize things so that the test can be actioned.
 2. **Act** &ndash; The test will interact with the application, enter text, pushing buttons, and so on.
 3. **Assert** &ndash; The test examines the results of the actions performed in the Act step to determine correctness. For example, the application may verify that a particular error message is displayed.
 
-The best time get started with UITest is during the development of a mobile application. Automated tests are written as a feature is being developed according to the steps described in the following list:
+The best time to get started with Xamarin.UITest is during the development of a mobile application. Automated tests are written as a feature is being developed according to the steps described in the following list:
 
 1. Develop the feature in the Android and/or iOS application.
 2. Write the tests and run them locally to verify functionality.
@@ -31,7 +31,7 @@ The best time get started with UITest is during the development of a mobile appl
 5. Fix any issues or bugs that are exposed by App Center Test.
 6. Repeat the process by moving on to the next feature for the application.
 
-For existing applications that are no longer under active development it may not be cost-effective to retroactively add automated tests. Instead, a better approach is to use UITest when fixing bugs. For example, consider an application that has no automated testing, and a user reports a bug. A developer assigned to fix that bug might take some (or all) following actions:
+For existing applications that are no longer under active development it may not be cost-effective to retroactively add automated tests. Instead, a better approach is to use Xamarin.UITest when fixing bugs. For example, consider an application that has no automated testing, and a user reports a bug. A developer assigned to fix that bug might take some (or all) of the following actions:
 
 * Verify the bug or the regression manually.
 * Write a test using Xamarin.UITest that demonstrates the bug.
@@ -41,10 +41,10 @@ For existing applications that are no longer under active development it may not
 * Submit the fixes and test to App Center Test to verify that the bug has been fixed on the relevant devices.
 * Check the passing tests into version control.  
 
-Automate UI testing relies heavily on being able to locate and interact with views on the screen. Xamarin.UITest addresses this requirement with two important sets of APIs that work with each other:
+Automated UI testing relies heavily on being able to locate and interact with views on the screen. Xamarin.UITest addresses this requirement with two important sets of APIs that work with each other:
 
-1. *Actions* that can be performed on views &ndash; UITest provides APIs that allow a test to simulate common user actions such as tapping on the view, enter text, or swiping on the view.
-2. *Queries* to locate views on the screen &ndash; Part of the UITest framework are APIs that will locate the views on a screen. Queries locate views at run time by inspecting attributes associated with the view and returning an object that the actions may work upon. Querying in such a manner is a very powerful technique that allows tests to be written for user interfaces regardless of the screen size, orientation, or layout
+1. *Actions* that can be performed on views &ndash; Xamarin.UITest provides APIs that allow a test to simulate common user actions such as tapping on the view, entering text, or swiping on the view.
+2. *Queries* to locate views on the screen &ndash; Part of the Xamarin.UITest framework are APIs that will locate the views on a screen. Queries locate views at run time by inspecting attributes associated with the view and returning an object that the actions may work upon. Querying in such a manner is a powerful technique that allows tests to be written for user interfaces regardless of the screen size, orientation, or layout
 
 To help with writing tests, Xamarin.UITest provides a *read-eval-print-loop* ([*REPL*](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)). The REPL allows developers and testers to interact with a screen while the application is running and simplifies creating the queries.
 
@@ -57,9 +57,9 @@ All test interactions with the mobile application occur through an instance of `
 
 `iOSApp` and `AndroidApp` objects are not instantiated directly. Instead, they are created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
 
-It is recommended that a new `IApp` instance be used for each test &nbsp; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
+It is recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
 
-* **In `SetUp` method** &nbsp; Typically, a test fixture is a logical grouping of related tests, each of them running independent of the other. In this scenario the `IApp` should be initialized in the `SetUp` method, ensuring that a new `IApp` is available for each test.
+* **In the `SetUp` method** &nbsp; Typically, a test fixture is a logical grouping of related tests, each of them running independent of the other. In this scenario the `IApp` should be initialized in the `SetUp` method, ensuring that a new `IApp` is available for each test.
 * **In the `TestFixtureSetup` method** &nbsp; In some situations a single test may require its own test fixture. In this case it may make more sense to initialize the `IApp` object once in the `TestFixtureSetup` method.
 
 Once `IApp` has been configured, a test may begin to interact with the application being tested. To do so, it is necessary to obtain references to the views that are visible on the screen. Many methods in Xamarin.UITest take a `Func<AppQuery, AppQuery>` parameter to locate the views. For example, the following snippet shows how to tap on a button:
@@ -68,7 +68,7 @@ Once `IApp` has been configured, a test may begin to interact with the applicati
 app.Tap(c=>c.Button("ValidateButton"));
 ```
 
-There are two implementations of the `IApp` interface within the UITest framework, one for iOS and one for Android.
+There are two implementations of the `IApp` interface within the Xamarin.UITest framework, one for iOS and one for Android.
 
 ### Initialize IApp for iOS Applications
 
@@ -82,7 +82,7 @@ IApp app = ConfigureApp
     .AppBundle("/path/to/iosapp.app")
     .StartApp();
 ```
-To use a relative path, the path must be relative to the UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
+To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
 
 ```csharp
 IApp app = ConfigureApp
@@ -91,7 +91,7 @@ IApp app = ConfigureApp
     .StartApp();
 ```
 
-The relative path example tells `AppBundle` to go up three directories from the UITest assembly, and then navigate down the project tree of the iOS application project to find the app bundle.
+The relative path example tells `AppBundle` to go up three directories from the Xamarin.UITest assembly, and then navigate down the project tree of the iOS application project to find the app bundle.
 
 `ConfigureApp` does have other methods to help configure `IApp`. See the [iOSAppConfigurator](http://developer.xamarin.com/api/type/Xamarin.UITest.Configuration.iOSAppConfigurator/) class for more details. Some of the more interesting methods are described in the following table:
 
@@ -101,10 +101,9 @@ The relative path example tells `AppBundle` to go up three directories from the 
 | `AppBundle` | This method specifies the path to the app bundle to use when testing. |
 | `Debug` | This method will enable debug logging messages in the test runner. This method is useful to troubleshoot problems with running the application on the simulator. |
 | `DeviceIdentifier` | Configures the device to use with the device identifier. This method will be described in more detail below. |
-| `EnableLocalScreenshots` | Enable screenshots when running tests locally. Screenshots are always enable when tests are running in the cloud. |
-| `Repl` | This method will halt the test execution and invoke the REPL in a terminal prompt. |
+| `EnableLocalScreenshots` | Enable screenshots when running tests locally. Screenshots are always enabled when tests are running in the cloud. |
 
-For more information on how to run iOS tests on a specific iOS Simulator, please see [Selecting an iOS Simulator for Local Tests](http://developer.xamarin.com/guides/testcloud/uitest/selecting-simulator).
+For more information on how to run iOS tests on a specific iOS Simulator, please see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/en-us/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
 
@@ -118,7 +117,7 @@ IApp app = ConfigureApp
     .ApkFile("/path/to/android.apk")
     .StartApp();
 ```
-To use a relative path, the path must be relative to the UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
+To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is an example of how to use a relative path to locate the app bundle:
 
 ```csharp
 IApp app = ConfigureApp
@@ -127,9 +126,9 @@ IApp app = ConfigureApp
     .StartApp();
 ```
 
-The relative path example tells `AppBundle` to go up three directories from the UITest assembly, and then navigate down the project tree of the Android application project to find the app bundle.
+The relative path example tells `AppBundle` to go up three directories from the Xamarin.UITest assembly, and then navigate down the project tree of the Android application project to find the app bundle.
 
-If there is more than one device or emulator connected, UITest will halt test execution and display an error message as it is unable to resolve what the intended target is for the test. In this case, it will be necessary to initialize provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
+If there is more than one device or emulator connected, Xamarin.UITest will halt test execution and display an error message as it is unable to resolve what the intended target is for the test. In this case, it will be necessary to provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
 
 ```bash
 $ adb devices
@@ -159,7 +158,7 @@ To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](
 | `Class`  |Will try to locate views that are of a specified class. |
 | `Id` | Will try to locate a view with the specified Id. |
 | `Index`| Will return one view from a collection of matching views. Usually used in conjunction with other methods. Takes a zero-based index. | 
-| `Marked` | Will return a view according to the heuristics that were previously mentioned. |
+| `Marked` | Will return a view according to the heuristics discussed below. |
 | `Text` | Will match views that contain the provided text. |
 | `TextField` | Will match an Android <code>EditText</code> or iOS <code>UITextField</code>. |
 
@@ -178,7 +177,7 @@ app.Tap(c=>c.Marked("Pending")
 ```
 Here, the `AppQuery` will first find a view marked `Pending`, then select the first parent of that view that is a `AppointmentListCell` type.
 
-It can be tricky trying to create these queries by just looking at a mobile app. Xamarin.UITest provides a REPL that can be used to explore the view hierarchy of a screen, experiment with creating queries, and use them to interact with an application. 
+It can be tricky trying to create these queries by just looking at a mobile app. Xamarin.UITest provides a REPL that can be used to explore the view hierarchy of a screen, experiment with creating queries, and use them to interact with an application.
 
 ## Using the REPL
 
@@ -209,7 +208,7 @@ To run the test by right clicking in the gutter of Visual Studio and selecting *
 
 The test will run, and when the `Repl` method is invoked, Xamarin.UITest will start the REPL in a terminal session, as shown in the following screenshot:
 
-[ ![Screenshot of the macOS terminal running the UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
+[ ![Screenshot of the macOS terminal running the Xamarin.UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
 
 Notice that the REPL has initialized an instance of `IApp` that is called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
 
@@ -245,11 +244,11 @@ We can see that there is a `UIButton` in this view with the `id` of **ValidateBu
 app.Tap(c=>c.Marked("ValidateButton"))
 ```
 
-As commands are being entered, they are remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work that performed in the REPL to clipboard with `copy`, and then paste those commands inside a `[Test]`.
+As commands are being entered, they are remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
 
 ## Using Marked To Locate Views
 
-The [AppQuery.Marked](http://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.Marked/) method is a very convienent and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
+The [AppQuery.Marked](http://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.Marked/) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
 
 ### Finding iOS Views with Marked
 
@@ -309,9 +308,9 @@ The following table demonstrates some other examples of using `AppQuery` to loca
 | Syntax | Results |
 | --- | --- | 
 | `app.Query(c=>c.Class("UILabel"))` | The `.Class()` method will query for views that are a subclass of an iOS `UILabel`. |
-| `app.Query(c=>c.Id("txtUserName"))` | The `.Class()` method will query for views with an `Id<` of **txtUserName**. |
+| `app.Query(c=>c.Id("txtUserName"))` | The `.Class()` method will query for views with an `Id` of **txtUserName**. |
 | `app.Query(c=>c.Class("UILabel").Text("Hello, World"))` | Locates all `UILabel` classes that have the text "Hello, World".|
-| `results = app.Query(c=>c.Marked("ValidateButton"))` | Returns all views that are _marked_ with the specified text. The `Marked` method is a very useful method that can simplify queries. It will be covered in the following section. |
+| `results = app.Query(c=>c.Marked("ValidateButton"))` | Returns all views that are _marked_ with the specified text. The `Marked` method is a useful method that can simplify queries. It will be covered in the following section. |
 
 The next table lists some (but not all) of the methods provided by `IApp` that can be used to interact with or manipulate views on the screen:
 
@@ -320,7 +319,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | Example | Description |
 | --- | --- |
 | `PressEnter` |Press the enter key in the app. |
-| `Tap` | Simulates a tap on the Enter button. |
+| `Tap` | Simulates a tap / touch gesture on the matched element. |
 | `EnterText` | Enters text into the view. In an iOS application, Xamarin.UITest will enter the text using the soft keyboard. In contrast, Xamarin.UITest will not use the Android keyboard, it will directly enter the text into the view. |
 | `WaitForElement` | Pauses the execution of the test until the views appear on the screen. |
 | `Screenshot(String)` | Takes a screenshot of the application in it's current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |

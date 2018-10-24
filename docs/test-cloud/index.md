@@ -4,7 +4,7 @@ description: Key features of App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 05/18/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ App Center Test maintains a 6 month data retention policy for test report data. 
 | Screenshots | Screenshots are automatically captured and attached to each test step and can be viewed side-by-side for all targeted devices in a test run. |
 | Logs | View the device log for all target devices in a test run and stack traces for failed test steps. |
 | Concurrent runs | Run tests on multiple devices simultaneously to speed up time to results. You can learn more about concurrency in the [Core Concepts](~/test-cloud/core-concepts.md) section. |
-| Popular framework support | Test Cloud supports the test frameworks that are demonstrated as popular by their adoption in the developer community. Supported frameworks include Appium (Java with JUnit) for Android and iOS, Espresso (Java) for Android, Calabash for Android and iOS, and Xamarin.UITest for Android and iOS. (XCUITest for iOS coming soon) |
+| Popular framework support | Test Cloud supports the test frameworks that are demonstrated as popular by their adoption in the developer community. Supported frameworks include Appium (Java with JUnit) for Android and iOS, Espresso (Java) for Android, Calabash for Android and iOS, Xamarin.UITest for Android and iOS, and XCUITest for iOS. |
 
 Test Cloud does not currently support the following features:
 - Manual testing
