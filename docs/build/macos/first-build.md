@@ -4,7 +4,7 @@ description: How to set up a build for a Mac app
 keywords: build, macos, mac
 author: andyzg
 ms.author: t-anzha
-ms.date: 09/19/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 7e04c8d4-8b72-46ea-906d-596fa174d126
 ms.service: vs-appcenter
@@ -134,6 +134,7 @@ To build your project, we use `xcodebuild`, a command-line tool that allows you 
 
 The following versions of Xcode are supported on our VMs for macOS builds.
 
+- Xcode 10.1 beta 3
 - Xcode 10.0
 - Xcode 9.4.1
 - Xcode 9.4

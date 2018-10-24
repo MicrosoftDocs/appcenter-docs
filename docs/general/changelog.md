@@ -9,9 +9,15 @@ ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---
+
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **October 24, 2018**
+
+- **Build support for Xcode 10.1 beta 3**:
+  Added support for building your apps with Xcode 10.1 beta 3.
 
 ### **October 23, 2018**
 
