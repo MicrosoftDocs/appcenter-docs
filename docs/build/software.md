@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -28,26 +28,27 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Language and Runtime
 
 - Java 1.7.0_80
-- Java 1.8.0_181
+- Java 1.8.0_192
 - Java 9.0.4
 - Java 10.0.2
+- Java 11.0.1
 - Node.js 6.14.4
 - Node.js v8.11.3
 - PowerShell 6.1.0
 - Python 2.7.10
 - Python 3.7.0
-- Ruby 2.5.1p57
-- .NET SDK 1.0.1 1.0.4 1.1.10 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402
+- Ruby 2.5.2p104
+- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402
 - Go 1.11
 - Miniconda 4.5.11
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
 
 ### Package Management
 
-- Bundler 1.16.1
-- Carthage 0.30.0
+- Bundler 1.16.2
+- Carthage 0.31.1
 - CocoaPods 1.5.3
-- Homebrew 1.7.6
+- Homebrew 1.7.7
 - NPM 3.10.10
 - Yarn 1.10.1
 - NuGet 4.7.0.5148
@@ -61,20 +62,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.19.0
+- Git 2.19.1
 - Git LFS 2.5.2
 - GNU Wget 1.19.5
 - Subversion (SVN) 1.10.2
 
 ### Tools
 
-- fastlane 2.105.2
-- App Center CLI 1.1.2
-- Azure-CLI 2.0.46
+- fastlane 2.107.0
+- App Center CLI 1.1.5
+- Azure-CLI 2.0.48
 
 ## Xcode
 
-- Xcode 10.1 beta (10O23u)
+- Xcode 10.1 beta 3 (10O45e)
 - Xcode 10 (10A255)
 - Xcode 9.4.1
 - Xcode 9.4
@@ -94,7 +95,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xcode Support Tools
 
-- Nomad CLI 2.7.6
+- Nomad CLI 2.7.7
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.4
@@ -438,7 +439,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 |-----------------------|-------------------------------------------|
 | cmake                 | 3.6.4111459                               |
 | lldb                  | 2.3.3614996                               |
-| ndk-bundle            | 18.0.5002713                              |
+| ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
 | Android Emulator      | 27.2.9                                    |
 
@@ -461,7 +462,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-google-google_play_services      | Google Play services, revision 49        |
 | extra-google-m2repository              | Google Repository, revision 58           |
 | extras;google;instantapps              | Google Play Instant Development SDK 1.5.0|
-| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.0     |
+| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.2     |
 
 ## Xamarin
 
