@@ -18,6 +18,9 @@ This document lists new features as they're added to [Visual Studio App Center](
 
 - **Build support for Xcode 10.1 beta 3**:
   Added support for building your apps with Xcode 10.1 beta 3.
+- **Add support for running Xamarin.UITest iOS tests locally on iOS 12 devices and simulators.**
+- **Add support for running iOS UI automation frameworks (Appium, XCUITest, Xamarin.UITest) in the App Center device lab.**
+- **Add devices running iOS 12 to the App Center device lab.**
 
 ### **October 23, 2018**
 

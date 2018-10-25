@@ -50,7 +50,9 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Test
 
-* Add support for running Xamarin.UITest iOS tests locally on iOS 12 devices and simulators.
-* Add support for running iOS UI automation frameworks (Appium, XCUITest, Xamarin.UITest) in the App Center device lab.
-* Add devices running iOS 12 to the App Center device lab.
-* Add support for Apple's latest devices [announcement expected in September, 2018] to the App Center device lab.
+* Add support for Apple iPhone XS, iPhone XS Max, iPhone XR to the App Center device lab.
+* Add support for Appium 1.9.X.
+* Add support for iOS 12.1 (XCUITest, Xamarin.UITest)
+* [SHIPPED] Add support for running Xamarin.UITest iOS tests locally on iOS 12 devices and simulators.
+* [SHIPPED] Add support for running iOS UI automation frameworks (Appium, XCUITest, Xamarin.UITest) in the App Center device lab.
+* [SHIPPED] Add devices running iOS 12 to the App Center device lab.
