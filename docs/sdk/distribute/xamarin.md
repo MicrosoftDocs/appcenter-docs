@@ -100,10 +100,10 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
-AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
+AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute));
 ```
 
-For your iOS application, open the `AppDelegate.cs` and add the following line before the call to `LoadApplication`:
+For your iOS application, open the `AppDelegate.cs` and add the following line **before** the call to `LoadApplication`:
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
