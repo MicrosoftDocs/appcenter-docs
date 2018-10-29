@@ -3,7 +3,7 @@ title: "Side-by-Side Experience"
 description: Using HockeyApp and App Center Side-by-Side
 author: gaknoll
 ms.author: gaknoll
-ms.date: 10/01/2018
+ms.date: 10/28/2018
 ms.topic: article
 ms.assetid: 79c7beae-c1cd-11e8-a355-529269fb1459
 ms.service: vs-appcenter
@@ -40,4 +40,11 @@ As a HockeyApp customer, your apps and account information automatically synchro
 
 ## Side-by-Side Limitations
 
-During this period, all app management (Collaborators, notifications, renaming app, deleting app, etc) will remain in HockeyApp. To easily access the HockeyApp version, click the link in the upper, right-hand corner of the 'Getting Started' page in your app.
+While you can work in both services in the side-by-side experience, settings for your HockeyApp apps are only editable in HockeyApp. Therefore, the following app management tasks can only be edited in HockeyApp:
+
+* Managing app collaborators and testers.
+* Managing organization owners.
+* Editing app settings such as the app name, and its public or private access status. 
+* Managing notification settings.
+
+Throughout the App Center UI we provide direct links to the app in HockeyApp to edit the settings listed above. In App Center you can also quickly access the HockeyApp version of the app on the 'Getting Started' page. Just click the "Open in HockeyApp" button in the upper, right-hand corner of the page.

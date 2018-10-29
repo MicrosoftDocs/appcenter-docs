@@ -1,9 +1,9 @@
 ---
-title: Migrating HockeyApp Analytics
-description: Migrating HockeyApp Analytics to App Center
-author: joemellin
-ms.author: joemel
-ms.date: 08/08/2018
+title: HockeyApp Transition FAQ
+description: Frequently asked questions about transitioning from HockeyApp to App Center
+author: gaknoll
+ms.author: gaknoll
+ms.date: 10/28/2018
 ms.topic: article
 ms.assetid: 65485D34-735A-4454-BD6D-0D04B9E173F2
 ms.service: vs-appcenter
@@ -13,30 +13,30 @@ ms.service: vs-appcenter
 
 ## Transition to App Center
 
-**When will my apps arrive in App Center?**
+**How do I get started in App Center?**
 
-Starting in mid-November all HockeyApp apps and data have been synced with App Center. This allows you to explore new App Center features while still maintaining full control in HockeyApp. Login to App Center using your HockeyApp credentials to see your apps.
-
-**What if I want to continue using HockeyApp?**
-
-You should! Feel free to explore App Center at your own pace.
-
-**Do I need to change my SDK?**
-
-Not yet. Continue to use your HockeySDK and we will push your crashes and analytics into App Center seamlessly.
-
-**Can I use some apps in HockeyApp and move others over to App Center?**
-
-Yes. Feel free to use your apps in both HockeyApp and App Center simultaneously.
+As a HockeyApp customer, your HockeyApp apps have already been migrated to App Center. So getting started is as simple as [signing-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) with your HockeyApp credentials. Your apps from HockeyApp will be ready for you to use in App Center through our [side-by-side experience](~/migration/hockeyapp/side-by-side.md).
 
 **What happens to my HockeyApp data?**
 
-While your distribution history data will be synced to App Center, your crashes and analytics from the HockeySDK will be streamed to App Center. Note that Crash is currently in preview for HockeyApp apps and you will need to join the preview in App Center to start collecting crash data. We will communicate additional options starting in 2018.
+We've migrated your HockeyApp apps to App Center with no risk to your data or disruption to your existing experience in HockeyApp. Your distribution history data is continuously synced to App Center, and your crashes and analytics data from the HockeySDK is streamed to App Center. 
+
+**What can I do with my HockeyApp apps in App Center?**
+
+We’ve built a side-by-side experience that allows you to work in both App Center and HockeyApp with your HockeyApp apps. Updates in HockeyApp are reflected in App Center, and new releases to your HockeyApp distribution groups in App Center are reflected in Hockeyapp. [Learn more about the side-by-side experience](~/migration/hockeyapp/side-by-side.md) to start taking advantage of App Center's new services and features. 
+
+**What if I want to continue using HockeyApp?**
+
+You can! While we encourage you to start in App Center today, you can continue to use HockeyApp as you normally would. 
+
+**Do I need to change my SDK?**
+
+Yes, but not yet. Continue to use the HockeySDK with your HockeyApp apps and we will push your crashes and analytics into App Center seamlessly. 
 
 **I like a certain feature in HockeyApp. Does App Center have feature-parity with HockeyApp?**
 
-Our goal is to have feature-parity with HockeyApp. [View our roadmap](~/general/roadmap.md) to keep track of this progress. If you have a feature request that please contact [App Center support]((https://intercom.help/appcenter/getting-started/getting-help-with-app-center).
+App Center does not yet have all of HockeyApp's features, but we're getting close. [View our roadmap](~/general/roadmap.md) to keep track of this progress. If you have a feature request, we'd love to hear it. Share your feedback and feature requests in the App Center dashboard using the blue [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) chat button. 
 
 **When will App Center be ready for me to migrate my apps completely off of HockeyApp?**
 
-We're working on the specific timing, but currently we expect the option to fully migrate off of HockeyApp to App Center to be available in mid-2018.
+Currently we expect the option to fully migrate off of HockeyApp to App Center to be available in early 2019, but we will announce the specific timing soon.
