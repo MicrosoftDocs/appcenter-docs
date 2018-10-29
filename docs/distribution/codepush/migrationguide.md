@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Migration Guide
 
-Visual Studio App Center (previously known as Visial Studio Mobile Center) is now the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
+Visual Studio App Center (previously known as Visual Studio Mobile Center) is now the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
@@ -99,7 +99,7 @@ appcenter codepush deployment add -a <ownerName>/<appName> Production
 
 ![CLI](./images/mg-terminalpic.png)
 
-This section was constructed to enable you to see some of the most common CodePush commmands and how they have changed within the App Center CLI. 
+This section was constructed to enable you to see some of the most common CodePush commands and how they have changed within the App Center CLI. 
 
 > [!TIP]
 > Most App Center CLI commands can be shortened by using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no longer have to use the -a flag to specify the app you're trying to perform the command on.
@@ -170,7 +170,7 @@ appcenter codepush deployment list MyApp
 
 **Q:** *What changes for CodePush?*
 
-**A:** As of now, the only big change is the use of the App Center CLI and the structure of the commands. No changes in your code will be neccesarry until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our graditude for your help in making CodePush what it is today. None of this would be possible without such an amazing community.
+**A:** As of now, the only big change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today. None of this would be possible without such an amazing community.
 
 **Q:** *Is using CodePush functionality still free?*
 
@@ -186,7 +186,7 @@ appcenter codepush deployment list MyApp
 
 **Q:** *Can I continue to use the CLI?*
 
-**A:** Yes, we are commited to maintain the CLI through September 2018. You are free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid October 2018.
+**A:** Yes, we are committed to maintain the CLI through September 2018. You are free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid October 2018.
 
 **Q:** *Will I need to create a new account for App Center if I already have one?*
 
