@@ -15,6 +15,7 @@ ms.tgt_pltfrm: android
 # Building Java apps for Android
 
 To start building your first Android app, you will need to the following:
+
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Choose the Android project you want to build.
@@ -79,7 +80,7 @@ After a build has been triggered, it can be in the following states:
 
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
 
-```NA
+```text
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
     |-- <build-step-1>

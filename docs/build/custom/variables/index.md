@@ -36,7 +36,7 @@ In the [build scripts](~/build/custom/scripts/index.md) you can access the varia
     $ENVIRONMENT_VARIABLE
     ```
 
-- **Powershell** 
+- **Powershell**
 
     ```powershell
     $env:ENVIRONMENT_VARIABLE

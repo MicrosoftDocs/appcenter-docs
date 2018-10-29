@@ -95,27 +95,26 @@ To run scripts post-build, add the following file next to the project file in yo
 
 We set the following environment variables, so you can access them from your build scripts.
 
-
-| **General variables** | **Description** |
-| --------------------------------- | --- |
-| `APPCENTER_BUILD_ID` | The unique identifier for the current build |
-| `APPCENTER_BRANCH` | Name of the branch that is being built from |
-| `APPCENTER_SOURCE_DIRECTORY` | Location of the source code on the build machine |
-| `APPCENTER_OUTPUT_DIRECTORY` | Location where the build results are stored in |
-| `APPCENTER_TRIGGER` | What triggered the build, was it `manual` or `continuous` by push |
-| <br> **iOS specific** | |
-| `APPCENTER_XCODE_PROJECT` | Selected Xcode project |
-| `APPCENTER_XCODE_SCHEME` | Selected Xcode scheme |
-| <br> **Android specific** | |
-| `APPCENTER_ANDROID_VARIANT` | Selected Android variant |
-| `APPCENTER_ANDROID_MODULE` | Selected Android module |
-| <br> **UWP specific** | |
-| `APPCENTER_UWP_SOLUTION` | Selected solution |
-| `APPCENTER_UWP_CONFIGURATION` | Selected configuration |
-| <br> **Xamarin specific** | |
-| `APPCENTER_XAMARIN_PROJECT` | Selected project|
-| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration|
-| <br> **React Native specific** | |
-| `APPCENTER_REACTNATIVE_PACKAGE` | Selected package|
+| **General variables**             | **Description**                             |
+| --------------------------------- | ------------------------------------------- |
+| `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
+| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
+| `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
+| `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
+| `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
+| <br> **iOS specific**             | |
+| `APPCENTER_XCODE_PROJECT`         | Selected Xcode project                      |
+| `APPCENTER_XCODE_SCHEME`          | Selected Xcode scheme                       |
+| <br> **Android specific**         | |
+| `APPCENTER_ANDROID_VARIANT`       | Selected Android variant                    |
+| `APPCENTER_ANDROID_MODULE`        | Selected Android module                     |
+| <br> **UWP specific**             | |
+| `APPCENTER_UWP_SOLUTION`          | Selected solution                           |
+| `APPCENTER_UWP_CONFIGURATION`     | Selected configuration                      |
+| <br> **Xamarin specific**         | |
+| `APPCENTER_XAMARIN_PROJECT`       | Selected project                            |
+| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration                      |
+| <br> **React Native specific**    | |
+| `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
 
 [build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"

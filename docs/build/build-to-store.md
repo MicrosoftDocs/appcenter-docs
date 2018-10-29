@@ -1,5 +1,5 @@
 ---
-title: Distributing your build to the store
+title: Distributing a build to the store
 description: How to distribute your app to the store
 keywords: build, ios, android, store, distribute
 author: nrajpurkar

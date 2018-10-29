@@ -19,9 +19,9 @@ To get started, you, or a member of your team, logs into App Center and opens an
 
 App Center supports building apps in Git repositories hosted on:
 
+- Azure DevOps (formerly Visual Studio Team Services or VSTS)
 - Bitbucket
 - GitHub
-- Azure DevOps (formerly Visual Studio Team Services or VSTS)
 
 App Center does not support Team Foundation Version Control (TFVC)
 
