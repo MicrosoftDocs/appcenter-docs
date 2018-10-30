@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 09/24/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -180,6 +180,9 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 > To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
 > 
 > This feature is thus dependent on [Processing crashes in JavaScript](#process).
+
+> [!NOTE]
+> If `Crashes.setListener` is called more than once, the last one wins--it overrides listeners previously set by `Crashes.setListener`.
 
 ### Add attachments to a crash report
 
