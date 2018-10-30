@@ -1,28 +1,26 @@
 ---
-title: Working With iOS Simulators
+title: Working with iOS Simulators
 description: This guide will discuss how to identify and select an iOS simulator that should be used to run Xamarin.UITests locally.
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 01/11/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Working with  iOS Simulators
+# Working with iOS Simulators
 
 #### [Visual Studio](#tab/vswin/)
 It is not possible to run local iOS tests on Windows. 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-This guide will discuss how to select a specify iOS simulator when running tests locally on OS X or macOS.
+This guide will discuss how to specify an iOS simulator when running tests locally on OS X or macOS.
 
-Each iOS simulator that is configured on an Apple device will have a unique 
-*device identifier* assigned to it. UITest will use this device identifier to
- start the desired iOS simulator.
+Each iOS simulator that is configured on an Apple device will have a unique *device identifier* assigned to it. UITest will use this device identifier to start the desired iOS simulator.
 
 A UITest must use the `IApp.DeviceIdentifier` method to provide the device identifier:
 
@@ -63,7 +61,6 @@ There are two ways to list the simulators and their device identifiers:
 2. Xcode provides another way to obtain a list of devices and their device identifiers. Once Xcode is running, select **Window > Devices**:
 
 ![Device Identifiers for simulator images](./images/working-with-ios-simulator-01-sml.png)]
-
 
 Xcode will present a window showing the simulators installed on the computer. When a simulator is selected the device identifier can be seen in the right hand side of the window:
 

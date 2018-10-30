@@ -1,20 +1,20 @@
 ---
-title: Working With Gestures
+title: Working with gestures
 description: Simulate the gestures users would make when using a mobile app.
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 168B2E6C-086C-4CB3-A581-07B944669313
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Working With Gestures
+# Working with gestures
 
-Gestures are an import part of user interaction in a mobile app. Taps, swipes, and flicks allow users multiple ways to interact with an application in creative and intuitive ways. This guide discusses the API's for calabash-android and calabash-ios. 
+Gestures are an import part of user interaction in a mobile app. Taps, swipes, and flicks allow users multiple ways to interact with an application in creative and intuitive ways. This guide discusses the API's for Xamarin.UITest for Android and iOS. 
 
 UITest provides a very large number of API's to simulate gestures or physical interactions with the device. Some (but not all) of these API's are listed below:
 
@@ -31,8 +31,9 @@ These APIs all take an [`AppQuery`](https://developer.xamarin.com/api/type/Xamar
 
 ```csharp
 app.DoubleTap(c=>c.Marked("save_button"))
-```     
-Please see the [`AppQuery.Marked`](https://developer.xamarin.com/api/type/Xamarin.UITest.Queries.AppQuery/) method for details about how `Marked` works.
+```
+
+Please see the [`AppQuery.Marked` method](https://developer.xamarin.com/api/type/Xamarin.UITest.Queries.AppQuery/) for details about how `Marked` works.
 
 Starting with UITest 0.8.0, it is possible to match elements using a `string` instead of an `AppQuery`. These overloaded methods will use the string as a `Marked` selector to locate the view. For example `app.DoubleTap(c=>c.Marked("save_button"))` can be written as:
 

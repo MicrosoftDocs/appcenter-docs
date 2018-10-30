@@ -1,24 +1,23 @@
 ---
-title: Working With - Backdoors
+title: Working with backdoors
 description: Backdoors are methods that can be invoked during a test run to perform some special action to configure or set up testing state on a device.
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 04/04/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: BFFC9137-6E6B-4190-AF79-E96B574E3B4B
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Backdoors in Xamarin.UITest
+# Working with backdoors
 
 *Backdoors* are methods that are included in a Xamarin.iOS or Xamarin.Android
  app that can be invoked during a test run to perform some special action to configure or set up testing state on a device. For example, a backdoor may be used to seed a database with some test data so that all of the tests in a given fixture have the same data.
 
-The [`IApp.Invoke`](https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.Invoke/p/System.String/System.Object/) will allow a test to call a backdoor method in a
-backdoor app. 
+The [`IApp.Invoke`](https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.Invoke/p/System.String/System.Object/) allows a test to call a backdoor method in an app. 
 
 How to use `Invoke` and implement a backdoor method in an application is 
 different between iOS and Android.

@@ -4,7 +4,7 @@ description: Key features of App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 10/22/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
 ms.service: vs-appcenter
@@ -19,7 +19,6 @@ Test runs execute in a hosted fashion; upload the necessary assets (typically an
 
 App Center Test maintains a 6 month data retention policy for test report data. All test reports older than 6 months from present date will be removed.
 
-
 | Key Features | |
 | --- | --- |
 | Real devices | Test Cloud uses real mobile devices that are not rooted or jailbroken, providing the best approximation of your users' environment. |
@@ -29,6 +28,7 @@ App Center Test maintains a 6 month data retention policy for test report data. 
 | Popular framework support | Test Cloud supports the test frameworks that are demonstrated as popular by their adoption in the developer community. Supported frameworks include Appium (Java with JUnit) for Android and iOS, Espresso (Java) for Android, Calabash for Android and iOS, Xamarin.UITest for Android and iOS, and XCUITest for iOS. |
 
 Test Cloud does not currently support the following features:
+
 - Manual testing
 - Network condition simulation
 - Cellular network connections

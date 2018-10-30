@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 10/22/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -82,6 +82,7 @@ IApp app = ConfigureApp
     .AppBundle("/path/to/iosapp.app")
     .StartApp();
 ```
+
 To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
 
 ```csharp
@@ -151,7 +152,6 @@ To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](
 
 `AppQuery` is a [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) for building the queries to locate views. Of the methods that `AppQuery` provides, the `Marked` method is one of the simplest and most flexible. This method uses a heuristic to try and locate views and will be discussed in more detail in the following section. For now, it is important to understand that `IApp` has many methods for interacting with an application. These methods use a `Func<AppQuery, AppQuery>` to obtain a reference to the view to interact with. Some of the more interesting methods provided by `AppQuery` are listed below:
 
-
 | Method | Description |
 | --- | ---|
 | `Button` | Will locate one or more buttons on the screen. |
@@ -213,7 +213,6 @@ The test will run, and when the `Repl` method is invoked, Xamarin.UITest will st
 Notice that the REPL has initialized an instance of `IApp` that is called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
 
 [ ![Screenshot of a sample application running on an iPhone](./images/index-03-xs-sml.png)](./images/index-03-xs.png#lightbox)
-
 
 We can use the `tree` command to display the following hierarchy of this screen:
 
@@ -314,8 +313,6 @@ The following table demonstrates some other examples of using `AppQuery` to loca
 
 The next table lists some (but not all) of the methods provided by `IApp` that can be used to interact with or manipulate views on the screen:
 
-
-
 | Example | Description |
 | --- | --- |
 | `PressEnter` |Press the enter key in the app. |
@@ -324,7 +321,6 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `WaitForElement` | Pauses the execution of the test until the views appear on the screen. |
 | `Screenshot(String)` | Takes a screenshot of the application in it's current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
 | `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |
-
 
 For more information on the [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/) interface, please consult the [API documentation](http://developer.xamarin.com/api/root/Xamarin.UITest.Docs/) for [`IApp`](https://developer.xamarin.com/api/type/Xamarin.UITest.IApp/), [`AndroidApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](http://developer.xamarin.com/api/type/Xamarin.UITest.iOS.iOSApp/).
 

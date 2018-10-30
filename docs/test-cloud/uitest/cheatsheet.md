@@ -1,18 +1,18 @@
 ---
-title: UITest Cheat Sheet
+title: Xamarin.UITest cheat sheet
 description: This document is a cheat sheet that condenses some  UITest information for quick reference.
 keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 07/27/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# UITest Cheat Sheet
+# Xamarin.UITest cheat sheet
 
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
@@ -58,7 +58,6 @@ namespace MyApp.MyUITests
     }
 }
 ```
-
 
 For solutions involving both Android and iOS, the following code will help with writing cross platform UITests.
 
@@ -204,7 +203,7 @@ app = ConfigureApp.Android
     .EnableLocalScreenshots()
     .StartApp();
 ```
-This will put the screenshots in the directory where the test assembly where the test assemblie resides. The image will be named `screenshot-X-png`.
+This will put the screenshots in the directory where the test assembly resides. The image will be named `screenshot-X-png`.
 
 
 <a name="invoke_method_on_an_appResult_or_UIElement"></a>

@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 08/08/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -13,15 +13,15 @@ ms.custom: test
 
 # Preparing Appium Tests for Upload
 
-The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/docs/en/about-appium/intro/)
+The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/docs/en/about-appium/intro/).
 
 Note the following limitations for Appium support:
 
-* No support for TestNG
-* No support for Android 4.2 or prior
-* Maven version must be atleast 3.3.9
-* Support for Appium version 1.7.1 only
-* JUnit 4.9 or newer
+* No support for TestNG.
+* No support for Android 4.2 or prior.
+* Maven version must be at least 3.3.9.
+* Support for Appium version 1.7.1 only.
+* JUnit 4.9 or newer is required.
 * Automating browsers or WebView context is not supported.
 * Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
 
@@ -29,7 +29,7 @@ Note the following limitations for Appium support:
 
 Tests will be run using Maven Surefire. This requires tests to follow [certain naming conventions](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
 
-```
+```text
 "**/Test*.java" - includes all of its subdirectories and all Java filenames that start with "Test".
 "**/*Test.java" - includes all of its subdirectories and all Java filenames that end with "Test".
 "**/*Tests.java" - includes all of its subdirectories and all Java filenames that end with "Tests".
@@ -173,7 +173,7 @@ Replace the way you *instantiate* your driver, such that lines in the form of:
     driver = new AndroidDriver<MobileElement>(url, capabilities);
 ```
 
-...is now:
+...are changed to:
 
 ```java
     driver = Factory.createAndroidDriver(url, capabilities);
