@@ -25,12 +25,13 @@ There are two roles within an organization:
 ## Creating an organization
 
 To create an organization, log in and click the **Add new** dropdown and choose **Add new organization**.
+
 > [!NOTE]
 > When you create an organization, you automatically become an 'Admin'.
 
 ## Uploading an organization icon
 
-You can customize your organization by uploading an org icon. 
+Customize your organization by uploading an org icon:
 
 1. On the left side navigation, select the organization
 2. Select the **Manage** tab
@@ -48,6 +49,7 @@ All of your organizations are accessible in the left navigation.
 There are two ways to add users to an organization:
 
 **Directly to the organization:**
+
 1. On the left side navigation, select the organization
 2. Select **People**
 3. Type the user's email address to add the user
@@ -55,16 +57,18 @@ There are two ways to add users to an organization:
 This gives the user access to the organization as a collaborator. However, they will not see any of the apps listed in the organization unless they are explicitly invited to the app or if they are an admin of the organization.
 
 **In-directly through an app:**
+
 1. Select an app within an organization
-2. On the left side havigation, select the **Settings** page
+2. On the left side navigation, select the **Settings** page
 3. Select **People** 
 4. Type the user's email address to add the user
 
 Adding a user from outside the organization to an app automatically adds them to the organization. However, the user will only see the app(s) they were invited to.
 
 ## Changing users' organization roles
-1. On the left side havigation, select the organization
-2. Select **People** 
+
+1. On the left side navigation, select the organization
+2. Select **People**
 3. Select the user
 4. Use the dropdown to re-assign the role
 
@@ -72,7 +76,7 @@ Only 'Admins' can change the role of collaborators and other admins.
 
 ## Removing users from an organization
 
-1. On the left side havigation, select the organization
+1. On the left side navigation, select the organization
 2. Select **People**
 3. Select the collaborator
 4. Click **Remove from organization**
@@ -84,14 +88,14 @@ Removing a collaborator from an organization will remove the user from all apps 
 1. Click on the App Center user menu in the upper-right corner of any page
 2. Select **Account Settings**
 3. Select **Organizations**
-4. Click the **Leave** button by the orgnaization you would like to leave
+4. Click the **Leave** button by the organization you would like to leave
 
 > [!NOTE]
 > If you are the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.
 
 ## Deleting an organization
 
-1. On the left side havigation, select the organization
+1. On the left side navigation, select the organization
 2. Select **Manage**
 3. On the upper right hand side, click the **Delete Organization** button
 
