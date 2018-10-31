@@ -1,8 +1,8 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Overview
+title: 概覽
 metadata:
-  description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
+  description: 設定你的應用程式在每次提交時都能部署到你的beta測試版，看見在線的使用者資料，以及在一千多個真實的裝置上測試你的應用程式。
   author: conceptdev
   ms.author: apexprodleads
   ms.date: 08/08/2018
