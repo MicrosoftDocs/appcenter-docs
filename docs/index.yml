@@ -25,10 +25,10 @@ abstract:
     - href: https://status.appcenter.ms
       text: Service Status
 sections:
-- title: Get Started
+- title: 開始吧
   items:
   - type: paragraph
-    text: Learn how to add the SDK to your app and get started with App Center.
+    text: 學習如何將SDK加入你的應用程式並且與App Center一起開始。
   - type: list
     style: icon48
     items:
