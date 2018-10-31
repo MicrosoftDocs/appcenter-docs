@@ -18,10 +18,10 @@ ms.custom: distribute
 
 ## Support matrix
 
- Store | iOS | Android | UWP | MacOS
- ---|---|---|---|---
-Apple App Store | ✅ | ❌ | ❌ | ❌
-Google Play Store | ❌| ✅ | ❌| ❌
-Microsoft Intune | ✅ | ✅ | ❌ | ❌
+| Store           | iOS | Android | UWP | MacOS |
+ ---------------- |-----|---------|-----|-------|
+Apple App Store   | ✅  | ❌       | ❌  | ❌    |
+Google Play Store | ❌  | ✅       | ❌  | ❌    |
+Microsoft Intune  | ✅  | ✅       | ❌  | ❌    |
 
 We are looking for feedback, feel free to contact us through the blue chat icon in the lower right-hand corner of every App Center page.

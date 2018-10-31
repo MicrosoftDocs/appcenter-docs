@@ -12,11 +12,11 @@ ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
 
 # Device registration and app re-signing
 
-As a prerequisite for distributing your app to iOS devices, it is necessary to obtain the correct device ID and register it in the Apple developer portal. App Center has three features to help you release apps to internal testers: 
+As a prerequisite for distributing your app to iOS devices, it is necessary to obtain the correct device ID and register it in the Apple developer portal. App Center has three features to help you release apps to internal testers:
 
 1. **Automatically manage devices** under [distribution group settings](groups.md#automatically-manage-devices)
-1. An option to register devices, so they work with an existing release
-2. A step to **Distribute new release** which can register devices and re-sign the app
+2. An option to register devices, so they work with an existing release
+3. A step to **Distribute new release** which can register devices and re-sign the app
 
 ## Distribute new release
 
@@ -54,8 +54,8 @@ The prerequisite for using this guide is to have an Apple production certificate
 
 1. Head to the **Keychain Access** app on your Mac and select the **My Certificates** section on the left.
 2. Find the right distribution certificate and expand it to see the corresponding private key.
-	
-	A. If the private key is not present, you need to either create a new certificate or get it from the machine where the certificate was created.
+
+    A. If the private key is not present, you need to either create a new certificate or get it from the machine where the certificate was created.
 
 3. Make sure both the certificate and the private key are selected, then right click on the items to get the context menu and select **Export 2 items…**. ![Export certificate from keychain](images/ios-keychain-certificates.png)
 4. Select a location on disk to save the file as a .p12 – it is recommended that you choose a strong password for the file.

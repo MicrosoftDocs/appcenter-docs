@@ -43,7 +43,7 @@ To upload a package to App Center, use the navigation bar on the left to navigat
 
 ### Uploading using the App Center Command Line Interface
 
-As an alternative to uploading from the App Center site, you can also upload your release using the `appcenter distribute release` command in the [App Center CLI][appcenter-cli]. 
+As an alternative to uploading from the App Center site, you can also upload your release using the `appcenter distribute release` command in the [App Center CLI][appcenter-cli].
 
 ### Uploading using the APIs
 
@@ -51,23 +51,31 @@ One other alternative for uploading releases is using the public App Center APIs
 
 1. Pre-req: [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
 2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to upload to. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: https://appcenter.ms/users/JoshuaWeber/apps/APIExample. Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `ApiExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
-3. Upload a new release. This is done using 3 sequential API calls. 
-    
+3. Upload a new release. This is done using 3 sequential API calls.
+
     a. Create an upload resource and get an `upload_url` (good for 24 hours) — [POST /v0.1/apps/{owner_name}/{app_name}/release_uploads][POST_releaseUpload]
-    
-    ` curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads' `
-    
+
+    ```shell
+    curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
+    ```
+
     b. Copy the `upload_url` (will be a rink.hockeyapp.net URL) from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is `ipa` (key is always ipa even when uploading Android APKs) and the `value` is `@/path/to/your/build.ipa`.
-    
-    ` curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634 `
-    
+
+    ```shell
+     curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
+     ```
+
     c. After the upload has finished, update upload resource's status to committed and get a `release_url`, save that for the next step — [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
-    
-    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634' `
+
+    ```shell
+    curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
+    ```
 
 4. Distribute the uploaded release to a distribution group — [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
-    
-    ` curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2' `
+
+    ```shell
+    curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2'
+    ```
 
 ## Re-Release a build
 

@@ -17,7 +17,7 @@ This section describes the basic concepts of App Center and ways to manage your 
 
 ### Apps
 
-You'll need to add an app to your App Center account or receive an invite to someone else's app before getting started with our services. You can have different permission levels for each app: **Developer**, **Viewer**, or **Manager**.
+You must add an app to your App Center account or receive an invite to someone else's app before getting started with our services. You can have different permission levels for each app: **Developer**, **Viewer**, or **Manager**.
 
 ### Organizations
 

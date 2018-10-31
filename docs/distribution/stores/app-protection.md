@@ -19,10 +19,12 @@ The Intune app protection is mobile application management (MAM) protection for 
 App Center offers an automatic flow where all iOS releases to Intune will be made MAM aware, and you can manage it from the Intune blade in the Azure portal.
 
 ## Prerequisites
+
 * You must be an admin in an organization in App Center.
 * You should use the same signing certificate used to sign your iOS build.
 
 ## Steps to set it up
+
 1. Navigate to your organization with the app overview in front of you.
 2. In the left menu under your organization choose the **Manage** option.
 3. In the new menu select **Compliance & Security**.

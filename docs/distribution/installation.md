@@ -23,7 +23,7 @@ To install a windows package requires a trusted root certificate installed in th
 
 You can install a test signed app by first installing the test certificate (which is automatically included in the app package) by following these steps.
 
-1. Right-click on the .appxbundle package you downloaded via App Center and select **properties**.
+1. Right-click on the `.appxbundle` package you downloaded via App Center and select **properties**.
 2. Under the **Digital Signatures** tab you should see the test certificate. Click to select the certificate and click on **Details** button.
 3. Select the button **View Certificate**.
 4. Select the button **Install Certificate**.
@@ -33,7 +33,7 @@ You can install a test signed app by first installing the test certificate (whic
 8. Select the **Trusted People** certificate store. Then click the **OK** button.
 9. Click the **Next** button on the **Certificate Import Wizard** window.
 10. Click **Finish** button to complete the certificate install.
-11. You can now close all windows and double click on the .appxbundle file. It should now install properly.
+11. You can now close all windows and double click on the `.appxbundle` file. It should now install properly.
 
 
 [login]: ~/dashboard/creating-and-managing-apps.md

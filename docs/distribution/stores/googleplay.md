@@ -49,15 +49,15 @@ One of the added benefits of creating a [Google service account](https://develop
 Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAccessPlace) on the Google Play Console.
 
   ![Google Play: configuring API access](~/distribution/images/image1.png)
- 
+
 Under **Service Accounts**, click the **Create Service Account** button.
 
   ![Google Play: Create a service account button highlighted](~/distribution/images/image2.png)
- 
+
 Follow the instructions on the dialog to create your service account.
 
   ![Google Play: Create Service Account instructions](~/distribution/images/image3.png)
- 
+
 In the instructions, click the link to the [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace). On the page, the opens, click the **CREATE SERVICE ACCOUNT** button.
 
   ![Google Play: Service Accounts](~/distribution/images/image4.png)
@@ -65,11 +65,11 @@ In the instructions, click the link to the [Google API Console](https://play.goo
 The **Create service account** dialog opens.
 
   ![Google Play: Create Service Account Dialog](~/distribution/images/image5.png)
- 
+
 Choose a name for the new Service Account, and click the **Select a role** drop-down menu. Select **Project**, then **Owner** (full access to the integration).
- 
+
   ![Google Play: Service Account Role Selection](~/distribution/images/image6.png)
- 
+
 Select (check) **Furnish a new private key**, then select the **JSON Key Type** option.
 
   ![Google Play: Furnish Private Key](~/distribution/images/image7.png)
@@ -86,7 +86,7 @@ The following steps explain how to set up the connection between App Center and 
 
 ## Step 1: Create a Google Play connection in App Center
 
-1. Click on **Stores** under Distribution in the left menu. 
+1. Click on **Stores** under Distribution in the left menu.
 2. Click on **Add Connection** in the upper-right corner.
 3. Select **Google Play** store.
 4. Click on **Next**.

@@ -75,7 +75,7 @@ In addition to adding testers via email, we now support the addition of AAD grou
 3. On the azure active directory panel on the Manage page, click the **connect** button
 4. You will be redirected to a Microsoft login page, login with your Microsoft/AAD credentials
 5. You will be redirected to the App Center portal, click the desired tenant you would like to attach.
-6. At the bottom right of the presented window, click the **connect** 
+6. At the bottom right of the presented window, click the **connect**
 
 Once your tenant is connected to the organization, you can [add an AAD group as you would an individual tester](#managing-users-in-a-distribution-group).
 
@@ -85,7 +85,7 @@ To [release a new build][upload] to a Distribution Group. Make use of the **Dist
 
 ## User Download Analytics
 
-User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page as well as on the Release Details page. The total download count represents the total number of times the Install button has been hit by a tester. The unique download count represents the number of users that have installed the release. As an example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download. Note that public distribution groups will only include the total download count and not the unique download count. 
+User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page as well as on the Release Details page. The total download count represents the total number of times the Install button has been hit by a tester. The unique download count represents the number of users that have installed the release. As an example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download. Note that public distribution groups will only include the total download count and not the unique download count.
 
 [app_users]: ~/dashboard/creating-and-managing-apps.md
 [upload]: ~/distribution/uploading.md
