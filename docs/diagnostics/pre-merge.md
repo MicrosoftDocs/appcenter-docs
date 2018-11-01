@@ -15,11 +15,11 @@ ms.custom: diagnostics
 
 The Diagnostics team has been working hard to provide a better experience. On the one hand, we are releasing some relevant backend improvements, using a new pipeline that will make the App Center Diagnostics service more stable, performant, and scalable. We are also improving the portal experience to help you better prioritize your issues.
 
-We plan to enable the new Diagnostics experience by the end of this month and we want to inform you about these changes in advance.
+We plan to enable the new Diagnostics experience very soon and we want to inform you about these changes in advance.
 
 ## How does this affect your data?
 
-Because we want you to enjoy the new improved experience as early as possible, we will be enabling it at the end of this month. Customers who have set retention to 90 days may be surprised to find less than 90 days worth of data for the first few months. This is because as of launch, we will only have processed 28 days worth of data in the new pipeline. If, during this period, you need access to older data please reach out to us via the blue chat button and we will grant you with access. Note that your current retention settings have not been altered and that you still have control over these settings.
+Because we want you to enjoy the new improved experience as early as possible, we will be enabling it very soon. Customers who have set retention to 90 days may be surprised to find less than 90 days worth of data for the first few months. This is because as of launch, we will only have processed 28 days worth of data in the new pipeline. If, during this period, you need access to older data please reach out to us via the blue chat button and we will grant you with access. Note that your current retention settings have not been altered and that you still have control over these settings.
 
 ## What is different in the new experience?
 
