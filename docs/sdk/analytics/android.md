@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: troublemakerben
 ms.author: bereimol
-ms.date: 04/25/2018
+ms.date: 11/01/2018
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter
@@ -25,7 +25,7 @@ ms.tgt_pltfrm: android
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
-Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
+Please follow the [SDK Getting started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
 
 ## Session and device information
 
@@ -49,6 +49,15 @@ Properties for events are entirely optional – if you just want to track an eve
 
 ```java
 Analytics.trackEvent("Video clicked");
+```
+
+## Pause and resume sending logs
+
+Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `resume`.
+
+```java
+Analytics.pause();
+Analytics.resume();
 ```
 
 ## Enable or disable App Center Analytics at runtime

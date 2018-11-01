@@ -25,6 +25,19 @@ Properties for events are entirely optional – if you just want to track an eve
 MSAnalytics.trackEvent("Video clicked")
 ```
 
+## Pause and resume sending logs
+
+Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `resume`.
+
+```objc
+[MSAnalytics pause];
+[MSAnalytics resume];
+```
+```swift
+MSAnalytics.pause()
+MSAnalytics.resume()
+```
+
 ## Enable or disable App Center Analytics at runtime
 
 You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
