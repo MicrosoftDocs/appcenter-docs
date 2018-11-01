@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 10/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,10 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **October 31, 2018**
+
+- **Close App Center Account**: Added the ability to close an App Center account (and associated orgs) on App Center.
 
 ### **October 24, 2018**
 
@@ -33,7 +37,7 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **October 16, 2018**
 
 - **CLI version 1.1.5 released**:
-  - Added metadata, install metrics, and deployment keys information for `appcenter codepush deployment list` 
+  - Added metadata, install metrics, and deployment keys information for `appcenter codepush deployment list`
   - Added metadata and install metrics information for `appcenter codepush deployment history`
 
 ### **October 10, 2018**
