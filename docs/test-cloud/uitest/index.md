@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 10/26/2018
+ms.date: 11/02/2018
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -15,6 +15,9 @@ ms.custom: test
 # Xamarin.UITest
 
 *Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in C# using the [NUnit](http://www.nunit.org/) unit testing framework to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would: entering text, tapping buttons, and performing gestures &#x2013; such as swipes.
+
+> [!NOTE]
+> Xamarin.UITest requires NUnit 2.6.3 or 2.6.4 to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
 
 Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be peformed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
 

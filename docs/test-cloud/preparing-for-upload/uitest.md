@@ -5,7 +5,7 @@ keywords: test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 10/22/2018
+ms.date: 11/02/2018
 ms.topic: article
 ms.assetid: 10be6410-6661-45df-931d-2737ed369752
 ms.service: vs-appcenter
@@ -16,6 +16,9 @@ ms.custom: test
 
 The steps necessary to prepare an app and its corresponding test suite for upload
 to App Center vary depending on the test framework. The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test.
+
+> [!NOTE]
+> Xamarin.UITest requires NUnit 2.6.3 or 2.6.4 to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
 
 ## Preparing Xamarin.Android Apps
 
