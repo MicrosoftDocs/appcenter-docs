@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/11/2018
+ms.date: 11/02/2018
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.service: vs-appcenter
@@ -83,6 +83,15 @@ You can also check if Mobile Center Analytics is enabled or not.
 
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
+```
+
+## Pause and resume sending logs
+
+Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `Analytics.Resume`.
+
+```csharp
+Analytics.Pause();
+Analytics.Resume();
 ```
 
 [!include[](../unity-see-async.md)]
