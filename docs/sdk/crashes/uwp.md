@@ -33,7 +33,7 @@ Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you
 > * Crashes will only be sent if the device is plugged in to power, this includes phones.
 > * Some crashes might appear unsymbolicated (missing method names or file names or even class names) from applications that are associated with Microsoft Store (such as when you add WNS push) before the application is actually published. This behavior can happen but there is no guarantee that it will.
 
-### User consent to send a crash log
+## User consent to send a crash log
 
 App Center Crashes for UWP will utilize the built in Windows crash reporting service; therefore it honors the user's default [privacy settings](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy) for sending crash reports in Windows.
 
@@ -44,7 +44,6 @@ App Center Crashes for UWP will utilize the built in Windows crash reporting ser
 * Type the following commands:
 
    `PM> Install-Package Microsoft.AppCenter.Crashes`
-
 
 ### Add the using statements
 
@@ -63,4 +62,4 @@ AppCenter.Start("{Your App Secret}", typeof(Crashes));
 ```
 
 > [!IMPORTANT]
-> UWP only supports starting Crashes with `AppCenter.Start` and none of the other API calls provided by the `Crashes` class are supported on UWP, They only work for Xamarin.iOS, Xamarin.Android and Xamarin.Forms apps deployed to iOS and Android. 
+> UWP only supports starting Crashes with `AppCenter.Start` and none of the other API calls provided by the `Crashes` class are supported on UWP, They only work for Xamarin.iOS, Xamarin.Android and Xamarin.Forms apps deployed to iOS and Android.
