@@ -27,10 +27,14 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Diagnostics
 
-* Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
+
+* Diagnostics to General Availability:
+  + Diagnostics is becoming General Available very soon. This means that Diagnostics will be ready for your production apps, which a much more stable and performant offering.
 * UI Improvements:
   + Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
   + Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
+* Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
+* User Identification – Attach a user identifier to all diagnostics logs (crashes and erros) and expose it in the UI. This will allow you to know what user is affected by each crash or error instance.
 * [SHIPPED] NDK – Improve the support for Android NDK. This enables developers to track their native Android crashes in App Center.
 * [SHIPPED] ProGuard – Improve the support for ProGuard in App Center.
 
