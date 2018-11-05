@@ -2,9 +2,9 @@
 title: Publish applications to Intune Company Portal
 description: Simplify distribution of line of business mobile applications to the Company Portal on Intune
 keywords: distribution store
-author: pnghub
-ms.author: gned
-ms.date: 08/14/2018
+author: oddj0b
+ms.author: vigimm
+ms.date: 11/05/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -41,8 +41,8 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 2. Click on **Publish to Store**.
 3. Upload the app package.
 4. Once the package has been uploaded you should be able to see some details of the application. Click **Next**.
-5. Click on **Publish** to push the app to the **Intune Company Portal**. The status for this release on the store details page will show as **Submitted.**
-6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Published**.
+5. Click on **Publish** to push the app to the **Intune Company Portal**. The status for this release on the store details page will show as **Processing**.
+6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Submitted**.
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message.
 
 For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page.
