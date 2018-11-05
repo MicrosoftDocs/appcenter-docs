@@ -66,7 +66,7 @@ Events can help you identify the root cause of app crashes. As part of the App C
 
 In order to see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
 
-Breadcrumbs are stored for just 28 days, while crashes can potentially be store indefinitely. This means that if you are looking at a crash which is older than 28 days, you will not see the corresponding breadcrumbs.
+Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you are looking at a crash which is older than 28 days, you will not see the corresponding breadcrumbs.
 
 ## Handled Errors
 
