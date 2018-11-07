@@ -4,7 +4,7 @@ description: Help using the Push on App Center
 keywords: app center, push
 author: dimazaid
 ms.author: dimazaid
-ms.date: 10/09/2018
+ms.date: 10/25/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
@@ -17,30 +17,43 @@ App Center Push allows you to engage your users by sending them targeted push no
 
 ## How to set up Push Notifications
 
-In order to set up Push Notifications, you will have to first set up the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). Then, you will need to integrate the Push App Center SDK. Note that the portal configuration needs to happen before the SDK configuration. You can follow specific instructions on how to set up Push Notifications in the Push portal or in [Android SDK documentation](~/sdk/push/android.md), [iOS SDK documentation](~/sdk/push/ios.md), [UWP SDK documentation](~/sdk/push/uwp.md), [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md), [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md), [Xamarin Forms SDK documentation](~/sdk/push/xamarin-forms.md), [React Native Android SDK documentation](~/sdk/push/react-native-android.md), [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md) and [macOS SDK documentation](~/sdk/push/macos.md).
+1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). 
+2. Configure push settings in the App Center portal
+3. Integrate the Push App Center SDK
+
+Follow specific instructions on how to set up Push Notifications in the App Center portal or in the following documentation
+
+- [Android SDK documentation](~/sdk/push/android.md)
+- [iOS SDK documentation](~/sdk/push/ios.md)
+- [macOS SDK documentation](~/sdk/push/macos.md)
+- [React Native Android SDK documentation](~/sdk/push/react-native-android.md)
+- [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md) 
+- [UWP SDK documentation](~/sdk/push/uwp.md)
+- [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md)
+- [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)
+- [Xamarin Forms SDK documentation](~/sdk/push/xamarin-forms.md)
 
 ## Sending Push Notifications
 
-Once App Center Push is configured following the instructions above, you are ready to start sending notifications to your users. By clicking the "Send Notification" button on top right of the page, a panel will show up where you will have to include:
-- Campaign Name: this name will be used to track the campaign but your users will not see it.
-- Title: title of the notification that your user will receive.
-- Message: content of the push notification.
+Send notifications to devices by clicking the **Send Notification** button in the upper-right corner of the page, a panel will appear prompting you to provide:
 
-You can also attach custom data along with your notification. More information on this can be found later in this document.
+- **Campaign Name**: The name used to track the campaign; this is internal to App Center, your users will not see it.
+- **Title**: The title of the notification sent to devices.
+- **Message**: The content of the push notification.
 
 ![Send Notification](~/push/images/send-notification.png "Campaign Name and Message fields are required to send a notification")
 
-The next step is to select your target. You can send the notification to:
+The next step is to select your target; you can send the notification to:
 
-- All registered devices: all your users with push notifications opt-in will received the message.
-- Custom devices list: the notification will be sent to the list of install IDs that you include. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
-- [Audiences](~/push/audiences.md): this will send a notification to a segment of your users based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
+- **All registered devices**: all users opted-in will received the message.
+- **Custom devices list**: send a notification to the list of install IDs. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
+- **[Audiences](~/push/audiences.md)**: the notification will be sent to to a segment of your users based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
 
-## Delay showing the Push Notifications permission pop-up until the user clicks a button or a certain screen
+## Delay showing Push Notifications permission pop-up until the user clicks a button or a certain screen
 
 You can call `AppCenter.Start("{APP-SECRET}", services)` without specifying the Push service. Then, once the user has opted in to receive push notifications, you can call `AppCenter.Start(typeof(Push))` to start the Push service.
 
-Note that the second call to `Start()` does not include the app secret. Here's how: 
+Note the application doesn't need to send the app secret in the second call to `Start()`
 
 ```
 // call start with app secret WITHOUT Push
@@ -52,15 +65,15 @@ AppCenter.Start(typeof(Push));
 
 ## Custom Data in your notifications
 
-You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback.
+Optional: send custom data as part of the push payload. The data is sent in a key-value format. This custom data can be intercepted in the app through Push SDK callback.
 
 There are few reserved keywords in each platform that can be set via custom data:
 
 ### Android
 
-- **color**: The notification's icon color, expressed in `#rrggbb` format. Will be applied only on devices with Android 5.0 and later.
-- **icon**: The notification's icon. You should specify **name** of the icon resource. Supports `drawable` and `mipmap` types. If this value isn't specified application icon will be used.
-- **sound**: Add this key when you want the to play a sound when the device receives the notification. Supports `default` or the filename of a sound resource bundled in the app. Sound files must reside in `/res/raw/`. This is effective only for devices running or targeting an Android version lower than 8. Sound is set by default on Android 8 and user can change notification settings for the group of notifications coming from AppCenter.
+- **color**: The notification icon color, expressed in `#rrggbb` format. Only applies on devices running Android 5.0 and later.
+- **icon**: The notification's icon. Specify the **name** of the icon resource. Supports `drawable` and `mipmap` types. If this value isn't specified, default application icon is used.
+- **sound**: Add this key when you want the to play a sound. The value of this key is the name of a sound file in   `/res/raw/`. This option only applies on devices running or targeting an Android version lower than 8. Sound is set by default on Android 8 and users can change notification settings for the group of notifications coming from AppCenter.
 
 ### iOS
 
