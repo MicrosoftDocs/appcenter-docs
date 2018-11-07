@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 10/24/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -40,8 +40,6 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Distribution
 
-* [SHIPPED] Publishing MAM wrapped iOS apps to the Intune store. Wrap your internal apps with [Microsoft Intune Mobile Application Management (MAM)](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). All apps published to an Intune connection in your organization will be made MAM aware for better data protection. Your Intune administrator can apply policies from the Intune portal, and no steps are needed when publishing your apps.
-* [SHIPPED] Two-factor authentication for Apple App Store – connect to the Apple App Store with Apple IDs that have two-factor authentication enabled.
 * [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience
 
 ## SDK
