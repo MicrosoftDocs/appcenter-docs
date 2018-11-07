@@ -56,3 +56,7 @@ There are two ways to use App Center CLI commands without running `appcenter log
 3. Run `appcenter profile list` to get the information about logged in user.
 
 For more details on a list of CLI commands, please refer to [App Center CLI GitHub repo](https://github.com/microsoft/appcenter-cli).
+
+**A note about using the `--app` parameter:**
+
+Due to restrictions in how app name parsing is done, application names must not begin with hyphens or other ambigious characters that may confuse GNU style parsers. You can read more about this in the associated [CLI issue](https://github.com/Microsoft/appcenter-cli/issues/287). 
