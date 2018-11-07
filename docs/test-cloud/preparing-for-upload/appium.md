@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 10/24/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ Note the following limitations for Appium support:
 * No support for Android 4.2 or prior.
 * Maven version must be at least 3.3.9.
 * Support for Appium version 1.7.1 only.
-* JUnit 4.9 or newer is required.
+* JUnit 4.9 - 4.12 is supoorted; we don't support JUnit 5.
 * Automating browsers or WebView context is not supported.
 * Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
 
