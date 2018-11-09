@@ -1,70 +1,70 @@
 ---
-title: Starting a Test Run
+title: Starting a test run
 description: How to start a test run in App Center Test
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 10/26/2018
+ms.date: 11/07/2018
 ms.topic: article
 ms.assetid: fccaea20-b7ca-45d2-b111-46c23ff1832d
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Starting a Test Run
+# Starting a test run
 
-This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to App Center, see [preparing tests for upload](~/test-cloud/preparing-for-upload/index.md).
+A test run is an execution of a test suite with an application binary. This section describes how to upload and start a test run in App Center Test. Before creating a test run, complete the steps at [Getting started with App Center Test](~/test-cloud/getting-started.md).
 
-With the App Center CLI tool installed and upload preparation complete, initiating a test run is straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test section within the desired app. Clicking the **new test run** button will launch a dialog which will lead you through the steps of preparing a test run.
+Test runs are started by executing a command that invokes the App Center command line interface (CLI). This uploads your application and tests to App Center Test where they execute and generate a test report. Some of the command parameters vary based on your application platform, test framework, the test devices and other test configuration options. To generate the command, use the **New test run** dialog in App Center Test.
 
-Initiating a test run in App Center Test requires the [App Center CLI tool](~/cli/index.md).
+## App Center Test
 
-1. Log into App Center at [https://appcenter.ms](https://appcenter.ms)
-2. If you have not created your App Center app project, click **Add new** -> **Add new app**, then fill out the relevant information. More information is available in [creating and managing apps](https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-apps).
-3. On the left sidebar, select the **Test** icon (the circle with a checkmark inside).
-4. Click **New test run** to run the dialog to create a test upload command.
-5. On the next page, select the devices to test against. This collection of devices can optionally be saved as a set for future use.
-6. Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [App Center Test Core Concepts](~/test-cloud/core-concepts.md).
-7. Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run.
+1. Login to the App Center Portal.
+2. Select an application.
+3. In the navigation area on the left, select **Test** (the circle with a check mark icon).
 
-## Device selection
+You’ll see a high-level overview of existing test runs for the selected application and the **New test run** button.
 
-Select the devices to test against. This collection of devices can optionally be saved as a set for future use.
+## New test run
 
-To get started:
+Click the **New test run** button to start the dialog that creates the test run command. This dialog advances through three screens.
 
-1. Navigate to [https://appcenter.ms/](https://appcenter.ms/).
-2. In the left hand column, click **Test** and **Device sets**.
-3. In the top right hand corner, click **New device set**.
-4. In the **Set name** field, choose a name for your device set.
-5. Under **Devices**, on the left hand column of each row, **check** the checkboxes to select the devices in your device set.
-6. When you have completed selecting your devices, at the bottom right hand corner, click **New device set**.
-7. Congrats! You've created a device set.
+1. Select devices - select the devices to test against.
+2. Configure - select the test series, system language and test framework to use for the test.
+3. Submit - provides the command to start a new test run based on the previous selections.
 
-## Test run configuration
+Move between these screens by completing selections or the **Next >** and **< Previous** buttons.
 
-Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, see [this section](~/test-cloud/core-concepts.md)
+### Select devices
 
-## The generated command
+Select the devices or a device set to test against. A *device set* is a collection of devices and operating systems. If you previously saved a device set that you wish to use for this test select it from the list of device sets.
 
-Each selection from the previous steps will be used to generate a command which is used with the App Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
+Otherwise, click **Choose other device configurations** then choose the device or devices to use from the list. To save the selected devices as a device set, click **Save set** and provide a name. To proceed without saving this selection as a device set, click **Select N devices** (The value for *N* changes as you make device selections to confirm the number of devices selected).
+
+### Configure
+
+Select the test series, the system language, and the test framework. The system language determines the device locale that affects system-level device settings, such as the decimal separator. For more on test series, see [App Center Test Core concepts](~/test-cloud/core-concepts.md).
+
+### Submit
+
+Based on the previous steps a prototype command is generated to upload and start your test run. For example, a command generated for an Android app with Espresso tests might look like this:
 
 ```shell
 appcenter test run espresso --app "<app-center-username/app-name>" --devices "app-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
 
-The command parameters include the following pieces of information specific to the newly created test run:
+The command parameters include:
 
-* **APP NAME** - The name of the app in App Center.
-* **PATH TO APK / IPA** - The path to the app being tested.
-* **DEVICE SET NAME / ID** - Represents the *device set* the test will execute against. A device set is a collection of devices and operating systems.
-* **TEST SERIES** - A label used to group a series of related test runs together. By default, the value of the test series is *master*.
-* **PATH TO TEST DIRECTORY** - The path to the directory that contains your test automation.
+* **app** - The name of the application in App Center.
+* **devices** - Represents the *device set* the test executes against. A device set is a collection of devices and operating systems.
+* **app-path** - The path to the application being tested.
+* **test-series** - A label used to group a series of related test runs together. By default, the value of the test series is *master*.
+* **build-dir** - The path to the directory that contains your test automation.
 
-Copy this generated command and execute it using the `appcenter` command line tool. Additionally, you may want to save the command to use in future test runs.
+Edit any paths in the generated command to match your environment then execute it using the command line or terminal window. You may want to save the command to use for future test runs.
 
 ## Getting help
 
-You can always contact us through [the chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). Be aware that we do not provide 24/7 support, but will strive to reply as fast as possible.
+You can always contact us through [the blue chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). We do not provide 24/7 support, but will strive to reply as fast as possible.
 
-To help debug your test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
+If you want help with a test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
