@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Jira, Visual Stu
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 10/11/2018
+ms.date: 11/08/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-8834da2b51d4
@@ -52,7 +52,11 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
            ![How to add a bug tracker for GitHub](media/addBugTrackerGitHub.gif)
 
-4. Done! Your bug tracker is now configured. When a new crash group is created in App Center, it will trigger the creation of a bug in the configured bug tracker.
+4. Done! Your bug tracker is now configured. With this configuration:
+
+    - When a new crash group is created in App Center, it will trigger the creation of a bug in the configured bug tracker
+    - The bug will contain a link to the crash group in App Center 
+    - When you [change the state of the crash group](#changeState) in App Center, it changes the state of the bug in the connected bug tracker, and vice versa.
 
 5. Toggle to the extreme right hand of the bug tracker to **Configure** or **Disconnect** it.
 
@@ -64,3 +68,17 @@ App Center has bug tracker integration for the crashes service. Users can be qui
    1. Go to the **Services** page.
    2. Toggle to the extreme right hand of the bug tracker to **Disconnect** it.
    3. Repeat [step 3](#step3).
+
+## <a name="changeState"/>Changing the state of a crash group in App Center
+
+1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app that has a bug tracker integration.
+
+2. In your app, select **Diagnostics**, **Crashes**, and click on the crash group that has a connected bug associated with it.
+
+3. In the top right corner, click on the **green drop down box** that has either of the states:
+   - **Open**
+   - **Closed**
+   - **Ignored**
+ 
+ 4. Choose the state of the crash group. Once you've changed the state of the crash group in App Center, it will update the state in bug. Similarly, if you change the state of the bug in your connected bug tracker, it will update the state in the crash group as well.
+
