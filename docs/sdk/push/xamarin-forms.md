@@ -57,7 +57,7 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ## Intercept push notifications
 
-App Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in plaform specific projects.
+App Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in platform specific projects.
 
 ### iOS additional steps
 
