@@ -867,7 +867,7 @@ And that's it! Now when you run or build your app, your staging builds will auto
 > [!NOTE]
 > If you encounter the error message `ld: library not found for ...`, please consult [this issue](https://github.com/Microsoft/react-native-code-push/issues/426) for a possible solution.
 
-Additionally, if you want to give them seperate names and/or icons, you can modify the `Product Bundle Identifier`, `Product Name` and `Asset Catalog App Icon Set Name` build settings, which will allow your staging builds to be distinguishable from release builds when installed on the same device.
+Additionally, if you want to give them separate names and/or icons, you can modify the `Product Bundle Identifier`, `Product Name` and `Asset Catalog App Icon Set Name` build settings, which will allow your staging builds to be distinguishable from release builds when installed on the same device.
 
 ## Dynamic Deployment Assignment
 
@@ -1456,7 +1456,7 @@ This enum specifies when you would like your app to sync with the server for upd
 
 * **codePush.CheckFrequency.ON_APP_START** *(0)* - Indicates that you want to check for updates whenever the app's process is started.
 
-* **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a seperate payment process, etc).
+* **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a separate payment process, etc).
 
 * **codePush.CheckFrequency.MANUAL** *(2)* - Disable automatic checking for updates, but only check when [`codePush.sync()`](#codepushsync) is called in app code.
 
