@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 11/09/2018
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
@@ -103,3 +103,37 @@ CustomProperties properties = new CustomProperties();
 properties.clear("score");
 AppCenter.setCustomProperties(properties);
 ```
+
+## Storage size
+
+When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
+
+You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)]`. You may only call the API once.
+
+```java
+// Use 20MB for storage.
+AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<Boolean>() {
+
+    @Override
+    public void accept(Boolean success) {
+        // The success parameter is false when the size cannot be honored.
+    }
+});
+AppCenter.start("{your secret}", Analytics.class);
+```
+
+If you don't set the max storage size, the SDK uses a default max size of 10MB. The minimum size you are allowed to set is 20KB.
+
+> [!NOTE]
+> The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4KB.
+
+### Unsuccessful API calls
+
+There are many reasons the callback may fail.
+
+* The specified size is an invalid value (less than 20KB or greater than 140TB).
+* The current database size is larger than the specified maximum size.
+* The API has already been called. You may configure it only once per process.
+* The API has been called after `AppCenter.start(...)`.
+
+You can check warnings and errors in the console using the `AppCenter` log tag to troubleshoot configuration issues.
