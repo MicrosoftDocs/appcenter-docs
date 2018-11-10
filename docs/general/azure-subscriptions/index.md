@@ -77,7 +77,7 @@ Creating a new Azure Subscription is easy and takes few minutes.
 
 - How often will I see charges from App Center on my Azure bill?
 
-    Charges from App Center will show up daily on your Azure Subsription usage, but you will be billed once for the whole calendar month at the begining of your following billing cycle. 
+    Charges from App Center will show up daily on your Azure Subsription usage, but you will be billed once for the whole calendar month at the beginning of your following billing cycle. 
 
 
 - Where can I see my App Center billing information?
