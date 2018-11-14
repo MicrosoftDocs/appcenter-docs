@@ -174,12 +174,14 @@ BOOL enabled = [MSPush isEnabled];
 var enabled = MSPush.isEnabled()
 ```
 
-## Disable automatic forwarding of application delegate's methods to App Center services
+## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist file**.
-2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+### Application Delegate
+
+1. Open your project's `Info.plist` file.
+2. Add the `AppCenterAppDelegateForwarderEnabled` key, and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
     Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
@@ -241,6 +243,62 @@ App Center uses swizzling to automatically forward your application delegate's m
     }
     ```
 
+### User Notification Center Delegate
+
+1. Open your project's `Info.plist` file.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+
+    ```objc
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
+      
+      //...
+      
+      // Pass the notification payload to MSPush.
+      [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
+
+      // Complete handling the notification.
+      completionHandler(UNNotificationPresentationOptionNone);
+    }
+    
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
+
+      //...
+
+      // Pass the notification payload to MSPush.
+      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
+
+      // Complete handling the notification.
+      completionHandler();
+    }
+    ```
+
+    ```swift
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+      
+      //...
+
+      // Pass the notification payload to MSPush.
+      MSPush.didReceiveRemoteNotification(notification.request.content.userInfo)
+
+      // Complete handling the notification.
+      completionHandler([])
+    }
+
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+      
+      //...
+      
+      // Pass the notification payload to MSPush.
+      MSPush.didReceiveRemoteNotification(response.notification.request.content.userInfo)
+
+      // Complete handling the notification.
+      completionHandler()
+    }
+    ```
+
 ## Common tasks for push notifications
 
 ### Handle a push notification while the app is in foreground
@@ -288,9 +346,6 @@ To distinguish between notifications received in the foreground and notification
         // Do something, e.g. set a BOOL @property to track the foreground state.
         self.didReceiveNotificationInForeground = YES;
 
-        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-        [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
-
         // Complete handling the notification.
         completionHandler(UNNotificationPresentationOptionNone);
     }
@@ -303,16 +358,10 @@ To distinguish between notifications received in the foreground and notification
         // Do something, e.g. set a Bool property to track the foreground state.
         self.didReceiveNotificationInForeground = true
 
-        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-        MSPush.didReceiveRemoteNotification(notification.request.content.userInfo)
-
         // Complete handling the notification.
         completionHandler([])
     }
     ```
-
-    > [!NOTE]
-    > If you pass `.alert` to the `completionHandler`, the default callback will also be called when the user clicked the notification. In this case, you don't need to call `MSPush.didReceiveRemoteNotification` explicitly here to avoid duplication.
 
 4. (Optional) If you have implemented the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
 
@@ -397,9 +446,6 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
         // User tapped on notification
       }
 
-      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
-
       // Complete handling the notification.
       completionHandler();
     }
@@ -414,10 +460,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 
         // User tapped on notification.
       }
-
-      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-      MSPush.didReceiveRemoteNotification(response.notification.request.content.userInfo)
-
+      
       // Complete handling the notification.
       completionHandler()
     }
