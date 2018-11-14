@@ -28,6 +28,8 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
 6. You should see a folder named `dSYMs` which contains your dSYM bundle
 
+If you are using Visual Studio instead of XCode, see [Where can I find the .dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/en-us/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the .dSYM file.
+
 ## Uploading symbols
 
 ### App Center Portal
