@@ -20,7 +20,7 @@ ms.custom: distribute
 
 ## Getting Started
 
-1. Create an [App Center account](https://appcenter.ms) or log in through the CLI by using `appcenter login`.
+1. Create an [App Center account](https://appcenter.ms) or log in through the CLI using the `appcenter login` command.
 2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
 3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/react-native.md)).
 4. [Release and update for your app](#releasing-app-updates).
