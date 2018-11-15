@@ -74,6 +74,11 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   Added bug fixes for editing distribution group names, tab completion, Xamarin.UITest Android sign-info option, and improved error handling for generating a launch test.
   *Note: CLI v1.1.13 was an empty release, hence the latest version is v1.1.14.*
 
+### **October 8, 2018**
+- **Diagnostics UI Improvements**
+  - Merged the view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
+  - Improved the symbol upload experience. This allows developers to quickly identify and upload their missing symbols.
+
 ### **September 26, 2018**
 
 - **Added build support for Xamarin.iOS 12.0**:
