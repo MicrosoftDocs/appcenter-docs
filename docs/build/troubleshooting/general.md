@@ -29,7 +29,7 @@ There are many reasons why build duration can be higher when using a build servi
 
 We are always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, please reach out to us via the in-app chat (Intercom) or with a comment here.
 
-## <a name="build-notifications"/>Build Notificaitons
+## <a name="build-notifications"/>Build Notifications
 
 Email and custom webhook notifications give you continual real time updates of your build status, as well as the permanency and ability to search and be directed to your builds in App Center. This also enables faster collaboration, since you can forward the build status emails or @ mention collaborators in a chat or channel in a single workflow.
 
