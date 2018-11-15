@@ -50,23 +50,20 @@ Old APIs that now map to new APIs will be deprecated no later than Janurary 2019
 | PATCH/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id | PATCH/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId} |
 | GET/v0.1/apps/{owner_name}/{app_name}/crashes_info | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups
 
-
 ### Crashes APIs that no longer exist
-There are few crashes APIs that are deprecated since App Center is now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~migration/hockeyapp/crashes.md) to learn more about the transition.
 
+There are few crashes APIs that are deprecated since App Center is now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/crashes.md) to learn more about the transition.
 
-| Deprecated Old Crashes APIs                                         | 
+| Deprecated Old Crashes APIs                                         |
 | ------------------------------------------------------------------- |
 | GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
 | PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
- 
-
 
 ### Unaltered Crashes APIs
+
 There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there is no action needed at this time.
 
-
-| Unaltered Crashes APIs        | 
+| Unaltered Crashes APIs        |
 | ----------------------------- |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/status|
 | GET/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/location |
