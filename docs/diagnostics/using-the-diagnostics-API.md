@@ -58,7 +58,7 @@ There are few crashes APIs that are deprecated since App Center is now forwardin
 | ------------------------------------------------------------------- |
 | GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
 | PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
- 
+
 ### Unaltered Crashes APIs
 
 There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there is no action needed at this time.
