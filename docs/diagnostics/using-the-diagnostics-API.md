@@ -25,7 +25,7 @@ There are three types of crashes APIs:
 2. Crashes APIs that no longer exist after GA
 3. Crashes APIs that remain unaltered
 
-> [Note:]
+> [!Note:]
 > If you are using any old crashes APIs that map to a new API as listed below, you will need to transition to the new APIs by January 2019.
 
 ### Crashes APIs that map to new APIs
@@ -52,7 +52,7 @@ Old APIs that now map to new APIs will be deprecated no later than Janurary 2019
 
 ### Crashes APIs that no longer exist
 
-There are few crashes APIs that are deprecated since App Center is now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/crashes.md) to learn more about the transition.
+There are few crashes APIs that are deprecated since App Center is now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/index.md) to learn more about the transition.
 
 | Deprecated Old Crashes APIs                                         |
 | ------------------------------------------------------------------- |
