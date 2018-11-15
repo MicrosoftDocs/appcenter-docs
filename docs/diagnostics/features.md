@@ -124,7 +124,7 @@ You can integrate third party bug tracker tools with App Center to stay informed
 
 ## Set Data Retention
 
-You can set your diagnostics data retention to 28 or 90 days via our [APIs](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings) or in the app settings page. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features#export-diagnostics-data) to get started. 
+You can set your diagnostics data retention to 28 or 90 days via our [APIs](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings) or in the app settings page. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started. 
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
 
