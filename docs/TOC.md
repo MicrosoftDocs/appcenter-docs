@@ -121,6 +121,7 @@
 ### [Xamarin](sdk/crashes/xamarin.md)
 ## [Features](diagnostics/features.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
+## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
 ## [Symbolication](diagnostics/symbolication.md)
 ## [ProGuard](diagnostics/ProGuard.md) 
 ## [Windows Support](diagnostics/windows-support.md)

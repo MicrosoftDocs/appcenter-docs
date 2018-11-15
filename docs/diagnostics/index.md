@@ -14,7 +14,7 @@ ms.custom: diagnostics
 # Diagnostics
 
 > [!IMPORTANT]
-> The Diagnostics service is currently in Preview, as we are actively working on making this service more stable and with new capabilities.
+> The Diagnostics service is now Generally Available for all your production apps.
 
 ## Overview
 
