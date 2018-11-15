@@ -19,7 +19,7 @@ Gestures are an import part of user interaction in a mobile app. Taps, swipes, a
 UITest provides a very large number of API's to simulate gestures or physical interactions with the device. Some (but not all) of these API's are listed below:
 
 * **IApp.DoubleTap** &ndash; Performs two quick taps on the first matched view.
-* **IApp.DragCoordinates** &ndash; This method simulates a continous drag between two points.
+* **IApp.DragCoordinates** &ndash; This method simulates a continuous drag between two points.
 * **IApp.PinchToZoomIn** &ndash; This method will perform a pinch gesture on the matched view to zoom in.
 * **IApp.PinchToZoomOut** &ndash; This method will perform a pinch gesture on the matched view to zoom out.
 * **IApp.ScrollUp** / **IApp.ScrollDown** &ndash; Performs a touch gesture that scrolls down or up.
