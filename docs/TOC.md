@@ -123,6 +123,7 @@
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Symbolication](diagnostics/symbolication.md)
 ## [ProGuard](diagnostics/ProGuard.md) 
+## [Windows Support](diagnostics/windows-support.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 
