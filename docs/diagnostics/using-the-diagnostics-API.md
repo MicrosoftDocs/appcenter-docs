@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -21,15 +21,15 @@ With our App Center Diagnostics General Availability announcement, we made some 
 
 There are three types of crashes APIs:
 
-1. Crashes APIs that map to new APIs after GA 
+1. Crashes APIs that map to new APIs after GA
 2. Crashes APIs that no longer exist after GA
-3. Crashes APIs that remain unaltered 
-
+3. Crashes APIs that remain unaltered
 
 > [Note:]
 > If you are using any old crashes APIs that map to a new API as listed below, you will need to transition to the new APIs by January 2019.
 
 ### Crashes APIs that map to new APIs
+
 Old APIs that now map to new APIs will be deprecated no later than Janurary 2019. The old APIs will continue to work until then but you will need to use the new diagnostics APIs as listed in the table below before January 2019.
 
 | Old Crashes APIs                                               | New Crashes API        |
