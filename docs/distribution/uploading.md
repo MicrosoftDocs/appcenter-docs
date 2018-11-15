@@ -81,6 +81,18 @@ One other alternative for uploading releases is using the public App Center APIs
 
 To release a build to another distribution group, navigate to the release details page either through the Releases tab on the distribution group page, or from the Releases page in the left sidebar menu. Click on the "Distribute" button in the upper right-hand corner of the screen to initiate the re-release process. Once the modal has opened, select the distribution group you would like to release the build to. After selecting the group and reviewing the release details, click the "Distribute" button to send the release to testers.  
 
+## Mandatory Updates
+
+There are often cases when you want a distribution group all running a the same version of your app. In order to do so, you can elect to make a release mandatory. Doing so automatically installs the selected update on all tester devices.
+
+There are three ways to make a release mandatory:
+
+1. When distributing a release via upload in the App Center portal to a distribution group, select the **require users to use this release** checkbox before distributing the release.
+2. If you're using App Center Build, when distributing a release via an existing build to a distribution group, you can select the **require users to use this release** checkbox before distributing that build to your testers.
+3. When editing a previously distributed release within a distribution group, you can use the **Mandatory** toggle to make that release mandatory.
+
+For mandatory releases, you will see a red dot next to the release icon in your releases table under a selected distribution group. In addition, clicking the release details of a mandatory release displays a new entry confirming that the release is indeed mandatory.
+
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [apple-devices]: ./auto-provisioning.md
 [google-apk]: https://developer.android.com/studio/publish/preparing.html
