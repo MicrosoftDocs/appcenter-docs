@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -14,6 +14,15 @@ ms.service: vs-appcenter
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
+### **November 15, 2018**
+
+- **Diagnostics to General Availability**:
+Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, whith a much more stable and performant offering.
+
+- **Diagnostics UI Improvements**:
+    - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
+    - Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
+  
 ### **November 12, 2018**
 
 - **Build support for Xcode 10.1**:
