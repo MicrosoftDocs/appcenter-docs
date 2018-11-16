@@ -18,7 +18,7 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Portal UI
 
-* Update the App Center Portal UI to render properly on mobile browsers.  The App Center portal was originally designed for desktop browsers; to accommodate mobile browsers, we’ll deliver a series of updates to create a mobile-friendly experience for our customers. It won’t come at once, but will get better over time.
+* Update the App Center Portal UI to render properly on mobile browsers. The App Center portal was originally designed for desktop browsers; to accommodate mobile browsers, we’ll deliver a series of updates to create a mobile-friendly experience for our customers. It won’t come at once, but will get better over time.
 * [SHIPPED] Upload app icon – Allows App Center users to upload an app icon visible in the App Center portal and notification emails. The uploaded app icon overrides the icon extracted from an uploaded build. This gives customers a more customizable product and an easier way to distinguish apps in the landing page.
 
 ## Build
@@ -39,14 +39,18 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Distribution
 
-* [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience
+* Improved tester experience - Combine the install page with the App Center portal for a faster and better distribution experience.
+* Specific download page for releases - Share single releases with anyone that has access to the link.
+* Sparkle - Support to use [Sparkle](https://sparkle-project.org) for macOS beta distribution.
+* Notify testers optional - Choose whether or not to notify testers when releasing a new versions to a distribution group.
+* [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience.
 
 ## SDK
 
-* [SHIPPED] Add support for the [Unity](https://unity3d.com/) platform. This feature includes supporting Unity apps in the App Center portal and shipping the App Center SDK for Unity.  SDK will support App Center Analytics, Distribution, and Diagnostics at launch.
 * Pause and Resume data transmission – Adding APIs that let you control when to send data and can be called by application code to signal the SDK to pause/resume transmission. When the transmission is paused, the SDK continues to collect the Analytics data, it just doesn’t send the data to App Center backend until the operation is resumed.
 * Set SDK storage size – This API will let you configure the size of SDK storage for scenarios where developers need the ability to store as many logs as possible when the device is offline, or when they want to send the data only few times a day. In those cases, you can configure the storage size according to your needs.
 * Create a Unity Extension Editor. This editor enables developers to more easily manage their App Center SDK installation and updates from directly within Unity instead of managing each package themselves.
+* [SHIPPED] Add support for the [Unity](https://unity3d.com/) platform. This feature includes supporting Unity apps in the App Center portal and shipping the App Center SDK for Unity.  SDK will support App Center Analytics, Distribution, and Diagnostics at launch.
 
 ## Test
 
