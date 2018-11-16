@@ -250,6 +250,8 @@
 ### [Side-by-Side Experience](migration/hockeyapp/side-by-side.md)
 #### [Distribution Groups](migration/hockeyapp/distribution-groups.md)
 #### [Distributing Releases](migration/hockeyapp/distribution.md)
+#### [Diagnostics](migration/hockeyapp/crashes.md)
+#### [Analytics](migration/hockeyapp/analytics.md)
 ### [FAQ](migration/hockeyapp/faq.md)
 ## [TestCloud](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)

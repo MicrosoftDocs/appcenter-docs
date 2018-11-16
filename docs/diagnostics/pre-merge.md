@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: blparr
 ms.author: blparr
-ms.date: 10/15/2018
+ms.date: 10/30/2018
 ms.topic: article
 ms.assetid: 513252EA-C802-4606-B733-FC0916E64EC5
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: diagnostics
 
 # Updates on App Center Diagnostics are coming soon
 
-The Diagnostics team has been working hard to provide a better experience. On the one hand, we are releasing some relevant backend improvements, using a new pipeline that will make the App Center Diagnostics service more stable, performant, and scalable. We are also improving the portal experience to help you better prioritize your issues.
+The Diagnostics team has been working hard to provide a better experience. We are releasing some relevant backend improvements, using a new pipeline that will make the App Center Diagnostics service more stable, performant, and scalable. We are also improving the portal experience to help you better prioritize your issues.
 
 We plan to enable the new Diagnostics experience very soon and we want to inform you about these changes in advance.
 
@@ -27,9 +27,10 @@ Because we want you to enjoy the new improved experience as early as possible, w
 
 We have invested a lot of time and resources on building a more stable, performant and scalable backend to provide a great crash and error reporting service for your apps.
 
-### Merged view for crashes and errors (for Xamarin apps) 
+### Merged view for crashes and errors (for Xamarin and Unity apps) 
  
 By clicking on Diagnostics, you can now see all your crashes and errors in one merged view, making it easier for you to prioritize what issues are more crucial to your apps and compare your analytics for both. Note that you can still access to your crashes and errors separately by using the top left tabs on the Diagnostics overview page. 
+
 Your crashes will be indicated with a lightning icon, while your errors are indicated with a warning icon. 
  
 ![Merged view for crashes and errors](~/diagnostics/images/merged-view.png) 
