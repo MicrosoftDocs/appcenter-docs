@@ -310,7 +310,7 @@ The following table demonstrates some other examples of using `AppQuery` to loca
 | Syntax | Results |
 | --- | --- | 
 | `app.Query(c=>c.Class("UILabel"))` | The `.Class()` method will query for views that are a subclass of an iOS `UILabel`. |
-| `app.Query(c=>c.Id("txtUserName"))` | The `.Class()` method will query for views with an `Id` of **txtUserName**. |
+| `app.Query(c=>c.Id("txtUserName"))` | The `.Id()` method will query for views with an `Id` of **txtUserName**. |
 | `app.Query(c=>c.Class("UILabel").Text("Hello, World"))` | Locates all `UILabel` classes that have the text "Hello, World".|
 | `results = app.Query(c=>c.Marked("ValidateButton"))` | Returns all views that are _marked_ with the specified text. The `Marked` method is a useful method that can simplify queries. It will be covered in the following section. |
 
