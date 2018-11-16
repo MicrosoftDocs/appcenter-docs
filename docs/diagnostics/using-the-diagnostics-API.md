@@ -48,16 +48,24 @@ Old APIs that now map to new APIs will be deprecated no later than Janurary 2019
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups| GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups |
 | DELETE/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id} | DELETE 0.1/apps/{app_id}/errors/errorGroups/{errorGroupId}/errors/{errorId} |
 | PATCH/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id | PATCH/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId} |
-| GET/v0.1/apps/{owner_name}/{app_name}/crashes_info | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups
+| GET/v0.1/apps/{owner_name}/{app_name}/crashes_info | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups |
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups |
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay |
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_counts | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay|
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models |
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems |
+| GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location |
+| GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native | GET /v0.1/apps/{ownerName}/{appName}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download?format=text"|
 
 ### Crashes APIs that no longer exist
 
-There are few crashes APIs that are deprecated since App Center is now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/index.md) to learn more about the transition.
+There are few crashes APIs that are deprecated due to changes in our backend pipeline. App Center is also now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/index.md) to learn more about the transition.
 
 | Deprecated Old Crashes APIs                                         |
 | ------------------------------------------------------------------- |
 | GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
 | PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
+
 
 ### Unaltered Crashes APIs
 
