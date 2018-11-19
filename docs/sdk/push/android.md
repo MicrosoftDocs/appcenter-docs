@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/17/2018
+ms.date: 11/17/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -73,7 +73,7 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     dependencies {
         // Add App Center Push module dependency
-        def appCenterSdkVersion = '1.9.0'
+        def appCenterSdkVersion = '1.10.0'
         implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
 
