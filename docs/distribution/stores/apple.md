@@ -25,8 +25,8 @@ For more information, review the [App Distribution Guide](https://developer.appl
 ## Set up the connection between App Center to iTunes and TestFlight
 
 1. Select **Stores** under Distribution.
-2. Click on **Add Connection** in the upper-right corner.
-3. Select the store type as **iTunes Connect** from the menu.
+2. In the middle of the page, click on the **Connect to Store** button.
+3. Select the store type as **iTunes Connect** from the panel that opens.
 4. Click on **Next** in the lower-right corner.
 5. Login with your Apple developer account (a onetime activity) and click **Connect**.
 6. On successful login, if the Apple account is a member of multiple teams an option to select the team to associate the builds will be available. If the Apple account is a member of only a single team, then the selection is defaulted to the single one available.

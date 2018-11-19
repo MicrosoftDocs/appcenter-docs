@@ -26,14 +26,15 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 
 ## Step 1: Create an Intune connection in App Center
 
-1. In the Distribution beacon select **Stores** and click on **Add Connection**.  
-2. Select the store type as Intune Company Portal and click **Next**.
-3. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
-4. On successful login, you will be asked to enter a **Store name**.
-5. **Select Category** of the app from the drop down.
-6. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the auto-complete drop down.
-7. Click **Connect**.
-8. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in App Center.
+1. Select **Stores** under Distribution.
+2. In the middle of the page, click on the **Connect to Store** button.
+3. Select the store type as Intune Company Portal and click **Next**.
+4. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
+5. On successful login, you will be asked to enter a **Store name**.
+6. **Select Category** of the app from the drop down.
+7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the auto-complete drop down.
+8. Click **Connect**.
+9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. This is a one time process for an application in App Center.
 
 ## Step 2: Publish your application to the Intune Company Portal
 

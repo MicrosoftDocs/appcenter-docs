@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -17,7 +17,7 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 ## Prerequisites
 
 * Google requires the first version of your Google Play application to be published to production through the Google console.
-* A Google Play Developer account. If you do not have one, you can sign-up at the [developer account portal](https://play.google.com/apps/publish/signup).
+* A Google Play Developer account. If you do not have one, you can sign-up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
 * Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google API's on your behalf.
 * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
 
@@ -87,7 +87,7 @@ The following steps explain how to set up the connection between App Center and 
 ## Step 1: Create a Google Play connection in App Center
 
 1. Click on **Stores** under Distribution in the left menu.
-2. Click on **Add Connection** in the upper-right corner.
+2. In the middle of the page, click on the **Connect to Store** button.
 3. Select **Google Play** store.
 4. Click on **Next**.
 5. Upload the **private key JSON** file which you downloaded while creating the service account. If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google Play Developer console as per the [prerequisite section above](#prerequisites).
