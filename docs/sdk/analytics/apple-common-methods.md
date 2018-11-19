@@ -25,6 +25,33 @@ Properties for events are entirely optional – if you just want to track an eve
 MSAnalytics.trackEvent("Video clicked")
 ```
 
+## Event priority and persistence
+
+You can track business critical events that have higher importance than other events.
+
+* Developers can set persistence of events as **Normal** (`MSFlagsPersistenceNormal` in the API) or **Critical** (`MSFlagsPersistenceCritical` in the API).
+* Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
+* When the local storage is full and new events needs to be stored, the oldest events that have the lowest priority are deleted first to make room for the new ones.
+* If the storage is full of logs with **Critical** priority, then tracking an event with
+**Normal** priority will fail as the SDK cannot make room in that case.
+* If you also use the **Crashes** service, please note that crash logs are set as **Critical** and share the same storage as events.
+
+You can use the following API to track an event as **Critical**:
+
+```objc
+NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
+[MSAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSFlagsPersistenceCritical];
+
+// If you are using name only, you can pass nil as properties.
+```
+
+```swift
+let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
+MSAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
+
+// If you are using name only, you can pass nil as properties.
+```
+
 ## Pause and resume sending logs
 
 Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `resume`.

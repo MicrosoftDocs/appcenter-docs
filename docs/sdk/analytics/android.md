@@ -2,9 +2,9 @@
 title: App Center Analytics for Android
 description: App Center Analytics for Android
 keywords: analytics
-author: troublemakerben
-ms.author: bereimol
-ms.date: 11/01/2018
+author: elamalani
+ms.author: emalani
+ms.date: 11/17/2018
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter
@@ -49,6 +49,29 @@ Properties for events are entirely optional – if you just want to track an eve
 
 ```java
 Analytics.trackEvent("Video clicked");
+```
+
+## Event priority and persistence
+
+You can track business critical events that have higher importance than other events.
+
+* Developers can set persistence of events as **Normal** (`PERSISTENCE_NORMAL` in the API) or **Critical** (`PERSISTENCE_CRITICAL` in the API).
+* Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
+* When the local storage is full and new events needs to be stored, the oldest events that have the lowest priority are deleted first to make room for the new ones.
+* If the storage is full of logs with **Critical** priority, then tracking an event with
+**Normal** priority will fail as the SDK cannot make room in that case.
+* If you also use the **Crashes** service, please note that crash logs are set as **Critical** and share the same storage as events.
+
+You can use the following API to track an event as **Critical**:
+
+```java
+Map<String, String> properties = new HashMap<>();
+properties.put("Category", "Music");
+properties.put("FileName", "favorite.avi");
+
+Analytics.trackEvent("eventName", properties, Flags.PERSISTENCE_CRITICAL);
+
+// If you are using name only, you can pass null as properties.
 ```
 
 ## Pause and resume sending logs

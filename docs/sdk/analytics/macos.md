@@ -2,9 +2,9 @@
 title: App Center Analytics for macOS
 description: App Center Analytics for macOS
 keywords: analytics
-author: jaelim-ms
-ms.author: jaelim
-ms.date: 11/15/2017
+author: elamalani
+ms.author: emalani
+ms.date: 11/08/2018
 ms.topic: article
 ms.assetid: bec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
