@@ -96,6 +96,7 @@
 ### [Intune App Protection](distribution/stores/app-protection.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
+## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
 ## [CodePush](distribution/codepush/index.md)
 ### [Using the CodePush UI](distribution/codepush/using-ui.md)
 ### [Management CLI](distribution/codepush/CLI.md)
@@ -105,7 +106,10 @@
 ### [Tutorials](distribution/codepush/Tutorials.md)
 ### [Azure DevOps (formerly VSTS) Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
-## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
+## [Testers Guide](distribution/testers/index.md)
+### [Testing Android Apps](distribution/testers/testing-android.md)
+### [Testing iOS Apps](distribution/testers/testing-ios.md)
+### [Testing macOS Apps](distribution/testers/testing-macos.md)
 
 # [Diagnostics](diagnostics/index.md)
 
