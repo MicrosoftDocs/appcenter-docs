@@ -207,12 +207,6 @@
 ### [Unity](sdk/troubleshooting/unity.md)
 ### [UWP](sdk/troubleshooting/uwp.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
-## [SDK Migration](sdk/sdk-migration/index.md)
-### [Android](sdk/sdk-migration/android.md)
-### [iOS](sdk/sdk-migration/ios.md)
-### [UWP](sdk/sdk-migration/uwp.md)
-### [React Native](sdk/sdk-migration/react-native.md)
-### [Xamarin](sdk/sdk-migration/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
 # [General](general/index.md)
