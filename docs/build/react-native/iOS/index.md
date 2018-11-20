@@ -2,9 +2,9 @@
 title: Configure a React Native iOS build in App Center
 description: How to set up a build for React Native iOS apps
 keywords: build, ios
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 11/19/2018
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a
 ms.service: vs-appcenter
@@ -56,6 +56,8 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 ### 3.5. Code signing
 
 A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing in [App Center's iOS code signing documentation](~/build/ios/code-signing.md) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
+
+Apps with [app or watchOS extensions](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html) require an additional provisioning profile per extension in order to be signed.
 
 ### 3.6. Launch your successful build on a real device
 

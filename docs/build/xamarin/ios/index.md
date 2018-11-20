@@ -78,6 +78,9 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 
 A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
+> [!NOTE]
+> App Center does not currently support signing app extensions for Xamarin apps.
+
 ### 3.9. Launch your successful build on a real device
 
 Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)

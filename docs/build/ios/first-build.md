@@ -2,9 +2,9 @@
 title: Configure a Objective-C or Swift iOS build
 description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 11/19/2018
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: vs-appcenter
@@ -61,6 +61,8 @@ If the selected scheme has a test action with a test target selected, you can co
 ### 3.6. Code signing
 
 A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about code signing in [App Center's iOS code signing documentation](~/build/ios/code-signing.md) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+
+Apps with [app or watchOS extensions](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html) require an additional provisioning profile per extension in order to be signed.
 
 ### 3.7. Launch your successful build on a real device
 

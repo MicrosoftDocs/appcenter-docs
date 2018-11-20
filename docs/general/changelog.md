@@ -14,6 +14,10 @@ ms.service: vs-appcenter
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
+### **November 19, 2018**
+
+- **Build support for iOS App Extensions.** Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions.
+ 
 ### **November 15, 2018**
 
 - **Diagnostics to General Availability**:
