@@ -167,7 +167,7 @@
         {
             "source_path": "docs/crashes/android.md",
             "redirect_url": "/appcenter/sdk/crashes/android/"
-        }, 
+        },
         {
             "source_path": "docs/crashes/ios.md",
             "redirect_url": "/appcenter/sdk/crashes/ios/"
@@ -183,6 +183,30 @@
         {
             "source_path": "docs/build/faq.md",
             "redirect_url": "/appcenter/build/troubleshooting/"
-        }         
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/index.md",
+            "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/android.md",
+            "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/ios.md",
+            "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/uwp.md",
+            "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/react-native.md",
+            "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/sdk/sdk-migration/xamarin.md",
+            "redirect_url": "/appcenter/sdk/"
+        }
     ]
 }
