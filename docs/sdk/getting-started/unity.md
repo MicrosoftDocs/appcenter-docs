@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 10/24/2018
+ms.date: 11/20/2018
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -13,6 +13,16 @@ ms.tgt_pltfrm: unity
 ---
 
 # Get Started with Unity
+
+> [!div  class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [React Native](react-native.md)
+> * [UWP](uwp.md)
+> * [Xamarin](xamarin.md)
+> * [Unity](unity.md)
+> * [macOS](macos.md)
+> * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
@@ -44,13 +54,15 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
 ## 3. Add the App Center SDK to your project
 
-The App Center SDK is integrated by importing Unity Packages into your project.
+### 3a Install the Extension Editor
 
-### 3.1 Download the package(s)
+The App Center SDK is integrated by importing Unity Packages into your project. To do so, first install the [App Center Unity Editor Extensions](https://github.com/Microsoft/AppCenter-SDK-Unity-Extension) plugin. Open the Editor Extensions via the Unity menu: Window > App Center > Editor Extensions and select "Install App Center SDK".
 
-The App Center Unity packages are downloaded from the [App Center Unity SDK GitHub page](https://github.com/Microsoft/AppCenter-SDK-Unity/releases). Download the latest release of the package(s) that you want to use. Its name should be in the format **AppCenter{Analytics/Crashes/Distribute}-v{version}.unitypackage**.
+### 3.1b Install Individual Packages
 
-### 3.2 Import the package
+As an alternative, each of the individual Unity packages can be downloaded and imported. They are found on the [App Center Unity SDK GitHub page](https://github.com/Microsoft/AppCenter-SDK-Unity/releases). Download the latest release of the package(s) that you want to use. Its name should be in the format **AppCenter{Analytics/Crashes/Distribute}-v{version}.unitypackage**.
+
+### 3.2b Import the package
 
 Open your Unity project, then double-click the package you just downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Do this for each package you downloaded and plan to use in your project.
 

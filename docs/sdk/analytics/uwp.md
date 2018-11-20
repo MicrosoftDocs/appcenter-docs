@@ -4,7 +4,7 @@ description: App Center Analytics for UWP
 keywords: analytics
 author: dhei
 ms.author: dihei
-ms.date: 04/25/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
@@ -20,6 +20,7 @@ ms.tgt_pltfrm: uwp
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 

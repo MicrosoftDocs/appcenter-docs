@@ -4,7 +4,7 @@ description: App Center Analytics for Apache Cordova
 keywords: sdk, analytics
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 04/25/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.assetid: 8900A8A7-92E0-4904-890F-97E4831118F8
 ms.service: vs-appcenter
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: react-native
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 

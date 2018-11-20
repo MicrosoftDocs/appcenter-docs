@@ -4,7 +4,7 @@ description: App Center Analytics for React Native
 keywords: analytics
 author: elamalani
 ms.author: elamalani
-ms.date: 07/04/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: vs-appcenter
@@ -20,6 +20,7 @@ ms.tgt_pltfrm: react-native
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 

@@ -4,7 +4,7 @@ description: App Center Analytics for macOS
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 11/08/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.assetid: bec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -23,6 +23,7 @@ dev_langs:
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
