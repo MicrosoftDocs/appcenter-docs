@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/02/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.service: vs-appcenter
@@ -83,6 +83,26 @@ You can also check if Mobile Center Analytics is enabled or not.
 
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
+```
+
+## Event priority and persistence
+
+You can track business critical events that have higher importance than other events.
+
+Developers can set persistence of events as **Normal** (`Flags.PersistenceNormal` in the API) or **Critical** (`Flags.PersistenceCritical` in the API).
+
+You can use the following API to track an event as **Critical**:
+
+```csharp
+Analytics.TrackEvent("eventName", Flags.PersistenceCritical);
+```
+
+If you are using properties:
+```csharp
+Analytics.TrackEvent("eventName", new Dictionary<string, string> {
+	{ "Category", "Music" },
+	{ "FileName", "favorite.avi" }
+}, Flags.PersistenceCritical);
 ```
 
 ## Pause and resume sending logs
