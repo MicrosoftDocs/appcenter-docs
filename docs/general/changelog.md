@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 11/15/2018
+ms.date: 11/26/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -16,16 +16,16 @@ This document lists new features as they're added to [Visual Studio App Center](
 
 ### **November 19, 2018**
 
-- **Build support for iOS App Extensions.** Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions.
+- **Build support for iOS App Extensions.** Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions. Support Swift, Objective-C and React Native apps today.
  
 ### **November 15, 2018**
 
 - **Diagnostics to General Availability**:
-Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, whith a much more stable and performant offering.
+Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
 
 - **Diagnostics UI Improvements**:
-    - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
-    - Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
+  - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
+  - Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
   
 ### **November 12, 2018**
 
@@ -79,6 +79,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   *Note: CLI v1.1.13 was an empty release, hence the latest version is v1.1.14.*
 
 ### **October 8, 2018**
+
 - **Diagnostics UI Improvements**
   - Merged the view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes. 
   - Improved the symbol upload experience. This allows developers to quickly identify and upload their missing symbols.

@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 11/19/2018
+ms.date: 11/26/2018
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Build
 
-* [SHIPPED] iOS App Extension Support - Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions.
+* [SHIPPED] iOS App Extension Support - Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions. Supports Swift, Objective-C and React Native apps today.
 
 ## Diagnostics
 
