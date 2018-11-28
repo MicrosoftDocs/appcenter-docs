@@ -4,7 +4,7 @@ description: Registering a device for App Center Distribution
 keywords: UDID, Distribution,
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/05/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
@@ -62,6 +62,17 @@ The prerequisite for using this guide is to have an Apple production certificate
 
 [export-certificate]: images/ios-keychain-certificates.png
 
+
+## Remove certificates and Apple IDs from App Center
+
+You can remove the certificates and Apple IDs App Center in the developer accounts.
+
+ 1. Select **User settings** in the upper corner by clicking on your profile picture.
+ 2. Click **Developer accounts** in the left menu.
+ 3. Remove a secret use by clicking the three verticle dots in the right side of the table and click **Remove..**.
+
+[Read more about storing Apple secrets](../dashboard/manage-apple-secrets.md)
+
 ## Known errors
 
 ### Profile not found
@@ -74,11 +85,19 @@ When logging into Apple through App Center, the team included in your applicatio
 
 ### Updated license agreement
 
-Apple periodically updates its license agreement, and for continued Developer portal use, it is necessary to read and agree with the updated license. The fix is to visit [Apple Developer portal](https://developer.apple.com/), login, and follow the instructions on the screen. App Center is unable to help with content in the license or the flow for the license agreement.
+Apple periodically updates its license agreement, and for continued Developer portal use, you must read and agree with the updated license. 
+
+ 1. Log in to [Apple Developer portal](https://developer.apple.com/).
+ 2. Follow the instructions given to accept the license agreement.
+
+App Center is unable to help with content in the license or the flow for the license agreement.
 
 ### Our tester did not register their device ID
 
-If you accidentally clicked **I already registered it** you can register your devices by visiting [https://install.appcenter.ms/register-device](https://install.appcenter.ms/register-device) on your mobile device.  Click **Register** and follow the on-screen instructions.
+If a tester accidentally clicked **I already registered it** follow the step to manually register a device:
+
+ 1. Navigating to [https://install.appcenter.ms/register-device ](https://install.appcenter.ms/register-device)on your mobile device.
+ 2. Click **Register** and follow the on-screen instructions.
 
 ## Feedback
 
