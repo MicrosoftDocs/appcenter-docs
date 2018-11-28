@@ -83,9 +83,9 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 [!include[](enable-or-disable.md)]
 
-## Disable automatic forwarding of application delegate's methods to App Center services
+## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
 1. Open your **Info.plist file**.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
@@ -120,16 +120,46 @@ App Center uses swizzling to automatically forward your application delegate's m
         var result = Push.DidReceiveRemoteNotification(userInfo);
         if (result)
         {
-            completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+            completionHandler(UIBackgroundFetchResult.NewData);
         }
         else
         {
-            completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+            completionHandler(UIBackgroundFetchResult.NoData);
         }
     }
     ```
 
 Now, the `Push.PushNotificationReceived` event will be invoked when your application receives a push notification. This event is also accessible from the PCL part of a Xamarin.Forms project.
+
+### User Notification Center Delegate
+
+1. Open your project's `Info.plist` file.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+
+    ```csharp
+    - public override void WillPresentNotification (UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler) {
+      
+      //...
+      
+      // Pass the notification payload to MSPush.
+      Push.DidReceiveRemoteNotification(notification.Request.Content.UserInfo);
+
+      // Complete handling the notification.
+      completionHandler(UNNotificationPresentationOptions.None);
+    }
+    
+   public override void DidReceiveNotificationResponse (UNUserNotificationCenter center, UNNotificationResponse response, Action completionHandler) {
+
+      //...
+
+      // Pass the notification payload to MSPush.
+     Push.DidReceiveRemoteNotification(response.Notification.Request.Content.UserInfo);
+
+      // Complete handling the notification.
+      completionHandler();
+    }
+    ```
 
 ## Common tasks for push notifications
 

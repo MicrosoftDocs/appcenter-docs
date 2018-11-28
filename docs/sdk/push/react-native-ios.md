@@ -132,15 +132,17 @@ You can also check if App Center Push is enabled or not:
   const pushEnabled = await Push.isEnabled();
   ```
 
-## Disable automatic forwarding of application delegate's methods to App Center services
+## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist file**.
-2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+### Application Delegate
+
+1. Open your project's `Info.plist` file.
+2. Add the `AppCenterAppDelegateForwarderEnabled` key, and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    You will have to add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    You must then add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` and `application:didFailToRegisterForRemoteNotificationsWithError:` callbacks in your `AppDelegate` to register for Push notifications.
 
     ```objc
     @import AppCenterPush;
@@ -180,6 +182,36 @@ App Center uses swizzling to automatically forward your application delegate's m
       }];
       [alert addAction:ok];
       [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    }
+    ```
+
+### User Notification Center Delegate
+
+1. Open your project's `Info.plist` file.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+
+    ```objc
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
+      
+      //...
+      
+      // Pass the notification payload to MSPush.
+      [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
+
+      // Complete handling the notification.
+      completionHandler(UNNotificationPresentationOptionNone);
+    }
+    
+    - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
+
+      //...
+
+      // Pass the notification payload to MSPush.
+      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
+
+      // Complete handling the notification.
+      completionHandler();
     }
     ```
 
