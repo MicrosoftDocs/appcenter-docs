@@ -4,7 +4,7 @@ description: How to set up configuration mappings for your Xamarin solution
 keywords: build, ios, xamarin, solution, configuration, mapping
 author: nevalenny
 ms.author: v-yuneva
-ms.date: 09/12/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.assetid: 1f49c30b-3657-4e8e-9ffa-9a07f16a6751
 ms.service: vs-appcenter
@@ -41,7 +41,7 @@ You can read additional configuration mappings information in [Visual Studio off
 
 The process for selecting an active configuration and building options is the same as for Windows, just there is no the **Deploy** option.
 
-There is also additional [configuration mappings information for different Xamarin IDE for Mac](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/projects-and-solutions/#Solution_Configurations).
+There is also additional [configuration mappings information for Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations#creating-a-solution-build-configuration).
 
 * * *
 ## Project Configurations

@@ -4,7 +4,7 @@ description: List of test frameworks supported by App Center
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 08/08/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57
 ms.service: vs-appcenter
@@ -22,7 +22,7 @@ App Center Test is a test automation service for native and hybrid mobile applic
 | Appium         | Open Source | [https://appium.io](https://appium.io)   |
 | Calabash       | Microsoft   | [http://calaba.sh](http://calaba.sh)     |
 | Espresso       | Google      | [https://developer.android.com/training/testing/espresso/](https://developer.android.com/training/testing/espresso/) |
-| Xamarin.UITest | Microsoft   | [https://developer.xamarin.com/guides/testcloud/uitest/](https://developer.xamarin.com/guides/testcloud/uitest/) |
+| Xamarin.UITest | Microsoft   | [UITest](~/test-cloud/uitest/index.md) |
 | XCUITest       | Apple       | [Testing with Xcode - User Interface Testing](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
 
 For teams selecting a test framework for the first time, it is recommended to use the framework that is native to the platform.
