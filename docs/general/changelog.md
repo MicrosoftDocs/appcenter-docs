@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 11/26/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -26,6 +26,11 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 - **Diagnostics UI Improvements**:
   - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
   - Improved experience for the symbol upload process. This allows developers to quickly identify and upload their missing symbols.
+
+### **November 13, 2018**
+
+- **Ship Unity Extension Editor**:
+  Shipped a plugin editor for managing the App Center Unity SDK directly within Unity. Now users can directly install, remove and update packages without leaving the Unity editor.
   
 ### **November 12, 2018**
 
