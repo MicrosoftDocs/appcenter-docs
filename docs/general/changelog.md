@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 11/28/2018
+ms.date: 11/29/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,12 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **November 26, 2018**
+
+- **CLI version 1.1.8 released**:
+  - Changed the `event-stream` module in the npm package to v3.3.4 
+  - Added the functionality to support `appcenter apps set-current` for the `appcenter test wizard` command
 
 ### **November 19, 2018**
 
@@ -37,6 +43,12 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 - **Build support for Xcode 10.1**:
   Added support for building your apps with Xcode 10.1 (10B61).
 
+### **November 6, 2018**
+
+- **CLI version 1.1.7 released**:
+  Added support for Node.js v10.0.0.
+  *Note: CLI v1.1.6 was an unintended empty release, hence the latest version is v1.1.7.*
+  
 ### **October 31, 2018**
 
 - **Close App Center Account**: Added the ability to close an App Center account (and associated orgs) on App Center.
@@ -81,7 +93,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 
 - **CLI version 1.1.4 released**:
   Added bug fixes for editing distribution group names, tab completion, Xamarin.UITest Android sign-info option, and improved error handling for generating a launch test.
-  *Note: CLI v1.1.13 was an empty release, hence the latest version is v1.1.14.*
+  *Note: CLI v1.1.3 was an unintended empty release, hence the latest version is v1.1.4.*
 
 ### **October 8, 2018**
 
