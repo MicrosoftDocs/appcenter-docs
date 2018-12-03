@@ -9,21 +9,21 @@ metadata:
   ms.topic: landing-page
   ms.service: vs-appcenter
 abstract:
-  description: <a href="https://appcenter.ms/">App Center</a> brings together multiple services, commonly used by mobile developers, into a single, integrated product. You can build, test, distribute, and monitor your mobile apps, and also implement push notifications.
+  description: <a href="https://appcenter.ms/">Visual Studio App Center</a> brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services, and engage with users using the Push service.
   menu:
     items:
+    - href: https://status.appcenter.ms
+      text: Service Status
+    - href: ~/general/pricing/
+      text: Pricing
+    - href: ~/general/roadmap/
+      text: Roadmap
+    - href: ~/general/changelog/
+      text: Changelog
     - href: https://openapi.appcenter.ms
       text: API Swagger
     - href: ~/migration/
       text: Migration guidance for existing customers
-    - href: ~/general/roadmap/
-      text: Roadmap
-    - href: ~/general/pricing/
-      text: Pricing
-    - href: ~/general/changelog/
-      text: Changelog
-    - href: https://status.appcenter.ms
-      text: Service Status
 sections:
 - title: Get Started
   items:
@@ -129,7 +129,7 @@ sections:
     className: cardsD
     items:
     - title: SDKs
-      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Crashes</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p>
+      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Diagnostics (Crashes)</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p>
     - title: Command line
       html: <p><a href="~/cli/">Overview</a></p>
     - title: APIs
