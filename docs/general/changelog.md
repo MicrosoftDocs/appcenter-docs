@@ -17,7 +17,7 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **November 30, 2018**
 
 - **CLI version 1.1.9 released**:
-  - Updated the CLI with the correct internal URLs 
+  - Updated the CLI with the correct internal URLs
 
 ### **November 26, 2018**
 
@@ -148,9 +148,9 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 
 - **CLI version 1.1.2 released**:
   In CLI version 1.1.2, we
-  - Added a verification error when the user runs the `--include` parameter on Appium and XCUITest test frameworks for `appcenter test run` command
-  - Updated launch tests command with the latest UITest version so that it downloads the latest NuGet package 
-  - Fixed an access token error for Codepush, and updated npm package dependencies.
+  - Added a verification error when the user runs the `--include` parameter on Appium and XCUITest test frameworks for `appcenter test run` command.
+  - Updated launch tests command with the latest UITest version so that it downloads the latest NuGet package.
+  - Fixed an access token error for CodePush, and updated npm package dependencies.
 
 ### **August 22, 2018**
 
@@ -180,7 +180,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
-  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3. 
+  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3.
 
   Bug fixes:
 
@@ -255,7 +255,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 
 ### **April 13, 2018**
 
-- **CLI version 1.0.16 released**: 
+- **CLI version 1.0.16 released**:
   Added functionality to enable the use of app archives on all platforms, to download test report artifacts and to be called in `--async` mode.
 
 ### **April 9, 2018**
@@ -272,7 +272,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 
 - **CLI version 1.0.14 released**:
   Added `--test-output-dir` and `--merge-nunit-xml` options to appcenter test run commands.
-  Misc. fixes to codepush commands.
+  Misc. fixes to `codepush` commands.
 
 ### **March 22, 2018**
 
@@ -308,7 +308,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   You can create new stores that target release to the production Apple Store or beta TestFlight service.
 
 - **Build support for custom environment variables**:
-  You now have the ability to create variables for sensitive infromation to include in your build process without including it in your repository.
+  You now have the ability to create variables for sensitive information to include in your build process without including it in your repository.
 
 - **UWP Crash preview released**:
   Visual Studio App Center now offers a preview of our support for getting Crash data from your UWP apps.
@@ -322,7 +322,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **November 15, 2017**
 
 - **Visual Studio App Center launches!**:
-  Visual Studio App Center is made [generally available](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) to everyone and is officially rebranded from Visual Studio Mobile Center to Visual Studio App Center.
+  Visual Studio App Center is made [generally available](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) to everyone and is officially re-branded from Visual Studio Mobile Center to Visual Studio App Center.
 
 ### **October 20, 2017**
 
@@ -360,7 +360,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   You can now [configure](~/build/custom/scripts/index.md) your build to run custom scripts at pre-defined stages of the build process.
 
 - **Use popular command line tools straight from your build**:
-  The build VMs come now with fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.
+  The build VMs come now with Fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.
 
 - **Better UDID management**:
   Register the UDID of testers’ iOS devices with Apple and download the new provisioning profile straight from App Center.
@@ -435,7 +435,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   You can now easily create an API token for use with App Center REST APIs right from App Center portal by going to Settings -> API Tokens.
 
 - **Build apps using latest Xcode versions and tooling**
-  You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using xcodebuild.
+  You can now build iOS apps built with Xcode 8.3.1 and Xcode 8.3.2 on App Center. Additionally, new builds will now be run using `xcodebuild`.
 
 ### **Apr 13, 2017**
 
