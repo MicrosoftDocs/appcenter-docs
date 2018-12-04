@@ -4,8 +4,8 @@ description: How to export personal information from crashes to your users
 keywords: GDPR, DSR, privacy, EU
 author: iageoghe
 ms.author: iageoghe
-ms.date: 05/31/2018 
-ms.topic: article 
+ms.date: 12/03/2018
+ms.topic: article
 ms.assetid: 2B51F9FA-75B1-4B73-8587-992F22CB0631
 ms.service: vs-appcenter
 ---
@@ -43,15 +43,49 @@ POST https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configuration
 
 Additional details are available in the [Export crashes API documentation](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create).
 
-Use the following payload to export your crashes to Azure Blob Storage
+Use one of the following payloads to export your crashes to Azure Blob Storage:
 
-```
+Payload for Standard Export :
+
+```JSON
 {
   "type" : "blob_storage_linked_subscription",
   "subscription_id": "<Your-Azure-Subscription-ID",
   "exportEntities": [ "crashes" ]
 }
 ```
+
+Payload for Custom Export :
+
+```JSON
+{
+  "type" : "blob_storage_connection_string",
+  "connection_string": "<Your-blob-storage-connection-string",
+  "exportEntities": [ "crashes" ]
+}
+```
+
+Example of a POST operation
+
+```
+POST /api/v0.1/apps/{owner_name}/{app_name}/export_configurations HTTP/1.1
+Content-Type: application/json
+X-API-TOKEN: <Api-Token from the portal>
+
+{
+    "type": "blob_storage_connection_string",
+    "connection_string": "CONNECTION STRING",
+    "blob_path_format_kind": "WithAppId"
+}
+```
+
+To update the export configuration, call the following App Center API:
+
+```
+PATCH https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
+```
+
+The payload is similar to what is used in the POST operation. The property `type` is mandatory in the export configuration payload.
 
 To find the location in blob storage, call the following App Center API:
 
@@ -94,9 +128,9 @@ First get and store a list of all crash GUIDs for your app.
 
 ```
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/crash_groups
-``` 
+```
 
-<span>2. Store the results to an Azure SQL database consisting of one table with two columns:</span> 
+<span>2. Store the results to an Azure SQL database consisting of one table with two columns:</span>
 
 1. Crash-Guid
 2. HasBeenRetrieved (bool default to false)
@@ -105,7 +139,7 @@ GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/crash_groups
 
 Next you want to export the full contents of the crash log.
 
-<span>1. GET the crash log metadata for every crash in a crash group by calling:</span> 
+<span>1. GET the crash log metadata for every crash in a crash group by calling:</span>
 
 ```
 https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes
