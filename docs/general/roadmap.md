@@ -59,3 +59,6 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 * [SHIPPED] Add support for running Xamarin.UITest iOS tests locally on iOS 12 devices and simulators.
 * [SHIPPED] Add support for running iOS UI automation frameworks (Appium, XCUITest, Xamarin.UITest) in the App Center device lab.
 * [SHIPPED] Add devices running iOS 12 to the App Center device lab.
+
+## Push
+* Support sending Push notifications with Unity applications.
