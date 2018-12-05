@@ -144,6 +144,7 @@
 ## [Audiences](push/audiences.md)
 ## [API](push/pushapi.md)
 ## [FAQ](push/faq.md)
+## [Troubleshooting](push/troubleshooting.md)
 
 # [SDK](sdk/index.md)
 
