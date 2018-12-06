@@ -14,14 +14,13 @@ In this topic, we'll cover:
 
 ## Process for contributing
 
-**Step 1:** 
+**Step 1:**
 
 * For small changes, edits, and fixes, skip to Step 2.
 
 * For larger contributions of new content, _open an issue_ describing the article you wish to write and how it relates to existing content. The content inside the **docs** folder is organized into sections that are organized by content area (e.g. **build** and **distribution**). Try to determine the correct folder for your new content. Get feedback on your proposal via the issue before starting to write.
 
-
-**Step 2:** Fork the `MicrosoftDocs/appcenter-docs` repo.
+**Step 2:** Fork the `MicrosoftDocs/appcenter-docs` repository.
 
 **Step 3:** Create a `branch` for your changes.
 
@@ -54,21 +53,21 @@ The App Center team will review your PR and let you know if the change looks goo
 
 The maintainers will merge your PR into the live branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from live branch into the live site and then you'll be able to see your contribution at https://docs.microsoft.com/appcenter/.
+On a certain cadence, we push all commits from live branch into the live site and then you'll be able to see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
 
 ## DOs and DON'Ts
 
 Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
 
-- **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
-- **DO** read the [style guide](./styleguide/template.md) and [voice and tone](./styleguide/voice-tone.md) guidelines.
-- **DO** use the [template](./styleguide/template.md) file as the starting point of your work.
-- **DO** create a separate branch on your fork before working on the articles.
-- **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
-- **DO** blog and tweet (or whatever) about your contributions, frequently!
+* **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
+* **DO** read the [style guide](./styleguide/template.md) and [voice and tone](./styleguide/voice-tone.md) guidelines.
+* **DO** use the [template](./styleguide/template.md) file as the starting point of your work.
+* **DO** create a separate branch on your fork before working on the articles.
+* **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
+* **DO** blog and tweet (or whatever) about your contributions, frequently!
 
 > [!NOTE]
-> You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site. 
+> You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.
 
 ## Building the docs
 
@@ -84,11 +83,10 @@ If you are comfortable with other ways listed on the link above, feel free to us
 
 You can build and preview the resulting site locally using a built-in web server. Navigate to the core-docs folder on your machine and type the following command:
 
-```
+```shell
 docfx -t default --serve
 ```
 
-This starts the local preview on [localhost:8080](http://localhost:8080). You can then view the changes by going to `http://localhost:8080/[path]`, such as http://localhost:8080/vs-appcenter/dashboard/faq.html.
+This starts the local preview on [localhost:8080](http://localhost:8080). You can then view the changes by going to `http://localhost:8080/[path]`, such as `http://localhost:8080/vs-appcenter/dashboard/faq.html`.
 
 **Note:** the local preview currently doesn't contain any themes at the moment so the look and feel won't be the same as in the documentation site. We're working towards fixing that experience.
-

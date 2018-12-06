@@ -261,8 +261,9 @@
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# Quickstarts
+# [Quickstarts](quickstarts/index.md)
 
+## [Start Here](quickstarts/index.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
 ### [Build](quickstarts/ios/build.md)
