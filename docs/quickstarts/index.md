@@ -74,11 +74,11 @@ To create an app:
 
 When you've populated the panel as needed for your app project, click the **Add new app** button to commit your changes.
 
-At this point, you've created a new application project in App Center, but it really doesn't do anything; it's merely a place for you to manage settings and data around an application project. Your app's source code, tests and build settings are somewhere else, either on a local hard drive, in the cloud somewhere, or hosted in a source code control system (like Azure DevOps, Git, GitHub, etc.). What you do next depends on what you want App CEnter to do for you. See the next section for additional information.
+At this point, you've created a new application project in App Center, but it really doesn't do anything; it's merely a place for you to manage settings and data around an application project. Your app's source code, tests and build settings are somewhere else, either on a local hard drive, in the cloud somewhere, or hosted in a source code control system (like Azure DevOps, Git, GitHub, etc.). What you do next depends on what you want App Center to do for you. See the next section for additional information.
 
 ## Where to go next
 
-App Center offers developers a variety of services they can use to build, test and deploy compiled applications, plus App Center offers services developers can use inside their apps to deliver a better experience for app users:
+App Center offers developers a variety of services they can use to build, test and deploy compiled applications, plus offers services developers can use inside their apps to deliver a better experience for app users:
 
 **Server-side Capabilities**
 
@@ -91,6 +91,6 @@ App Center offers developers a variety of services they can use to build, test a
 + **Analytics** - The [Analytics service](~/analytics/index.md) tracks user activity and actions within an application, capture specific events and other data from the application. Data from each device running your application is aggregated in the cloud in a simple to use interface for your analysis and export.
 + **CodePush** - The [CodePush service](~/distribution/codepush/index.md) enables developers to deploy application updates directly to devices running Apache Cordova and React Native applications.
 + **Diagnostics** - The [Diagnostics service](~/diagnostics/index.md) enables developers to capture data about application crashes. Data from each device running your application is aggregated in the cloud in a simple to use interface for your analysis and export.
-+ **Push** - The [Push service](~/push/index.md) enables developers to send notifications to mobile devices. 
++ **Push** - The [Push service](~/push/index.md) enables developers to send notifications to mobile devices.
 
 Refer to the sub-documents in this area for information on how to get started using App Center for Android, iOS, and macOS application projects.
