@@ -65,7 +65,7 @@ The prerequisite for using this guide is to have an Apple production certificate
 
 ## Remove certificates and Apple IDs from App Center
 
-You can remove the certificates and Apple IDs App Center in the developer accounts.
+You can remove the certificates and Apple IDs from App Center in the developer accounts.
 
  1. Select **User settings** in the upper corner by clicking on your profile picture.
  2. Click **Developer accounts** in the left menu.
