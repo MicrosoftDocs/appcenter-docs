@@ -4,7 +4,7 @@ description: "Mobile App Testing Frameworks Overview"
 keywords: testcloud
 author: glennwester
 ms.author: glwest
-ms.date: 09/04/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.assetid: 9cdf95db-1ad5-4541-a21c-c20492d4607f
 ms.service: vs-appcenter
@@ -87,13 +87,13 @@ While Appium does have a test recorder, it does not appear to be actively mainta
 
 The natural target audience for Appium is test engineers which have experience writing tests using the Selenium API.
 
-#### EarlGrey
+#### EarlGrey 2.0
 
-EarlGrey can be considered Google's attempt to write "an Espresso for iOS". With EarlGrey, tests are written in Objective-C or Swift and run via Xcode using XCTest. Similarly to Calabash on iOS, EarlGrey uses an in-process framework which requires linking a framework into the application under test.
+EarlGrey 2.0 combines XCUITest with EarlGrey and therefore allows proper out-of-process end to end testing with XCUITest along with EarlGrey's robust synchronization and white-box testing support. EarlGrey can be considered Google's attempt to write "an Espresso for iOS". With EarlGrey, tests are written in Objective-C or Swift and run via Xcode using XCTest. Similarly to Calabash on iOS, EarlGrey uses an in-process framework which requires linking a framework into the application under test.
 
 Since it's iOS-only and based on Swift/Objective-C there is no cross-platform testing options.
 
-The natural target audience is iOS developers, particularly for teams that use Espresso on Android and want something similar on iOS. EarlGrey 2.0 is coming soon and, like Calabash and Xamarin.UITest, will leverage XCUITest.
+The natural target audience is iOS developers, particularly for teams that use Espresso on Android and want something similar on iOS. 
 #### KIF
 
 KIF, is architecturally very similar to EarlGrey in that it uses an in-process framework which requires linking a framework into the application under test. Since it's iOS-only and based on Swift/Objective-C there is no cross-platform testing options.
@@ -103,7 +103,7 @@ The natural target audience is iOS developers, particularly for teams that use E
 Below you can find a tabular overview of these tools in terms of features and traits: Platform support, Programming languages, Open source/proprietary, Stewardship, BDD runner support.
 
 
-|         | Espresso           | XCUITest  |  Xamarin.UITest   | Appium  | EarlGrey  |
+|         | Espresso           | XCUITest  |  Xamarin.UITest   | Appium  | EarlGrey 2.0 |
 | ------------- |:-------------:| :-----:|:-------------:| :-------------:|:-------------:|
 | **Platforms**      | Android |  iOS | Android, iOS | Android, iOS (Windows) | iOS |
 | **Languages**      | Java & JVM based    |   Objective-C, Swift | C#/F# | Java, Javascript, Ruby, Python (and more) | Objective-C & Swift |
@@ -167,13 +167,13 @@ We recommend asking yourself the questions:
 * **BDD:** Optional, 3rd party open source: XCFit and Cucumberish
 * **Calabash:** No easy way to do it
 
-#### When to migrate to EarlGrey or KIF
+#### When to migrate to EarlGrey 2.0 or KIF
 
-[EarlGray](https://github.com/google/EarlGrey) can be described as "Espresso for iOS": it's developed by Google and uses the same philosophy as Espresso. EarlGray is also very similar to XCUITest: it's iOS-only, supports Swift and Objective-C, leverages XCTest. However, in contrast to XCUITest, EarlGray, like Calabash, requires linking a framework into the application under test. This brings some additional power, and the expense of some added complexity. EarlGray is still relatively new, and perhaps not as stable as the other frameworks.
+[EarlGray 2.0](https://github.com/google/EarlGrey/tree/earlgrey2) can be described as "Espresso for iOS": it's developed by Google and uses the same philosophy as Espresso. EarlGray is also very similar to XCUITest: it's iOS-only, supports Swift and Objective-C, leverages XCTest. However, in contrast to XCUITest, EarlGray, like Calabash, requires linking a framework into the application under test. This brings some additional power, and the expense of some added complexity. EarlGray is still relatively new, and perhaps not as stable as the other frameworks.
 
 EarlGrey and KIF are very similar and we don't have the necessary knowledge to recommend one over the other. One thing we can say is: KIF is a lot older and is likely to be more mature than EarlGrey. On the otherhand, KIF does not have a big player like Google funding it.
 
-EarlGrey is inspired by Espresso and "automatically synchronizes with the UI, network requests, and various queues; but still allows you to manually implement customized timings, if needed" (from GitHub: [EarlGrey](https://github.com/google/EarlGrey)). In theory, this should make writing tests easier and test should execute faster. If considering KIF vs. EarlGrey, you should wait with you decision until EarlGrey 2.0 which is shipping in the next 2-3 months.
+EarlGrey is inspired by Espresso and "automatically synchronizes with the UI, network requests, and various queues; but still allows you to manually implement customized timings, if needed" (from GitHub: [EarlGrey](EarlGrey 2.0 combines XCUITest with EarlGrey and therefore allows proper out-of-process end to end testing with XCUITest along with EarlGrey's robust synchronization and white-box testing support.)). In theory, this should make writing tests easier and test should execute faster.
 
 * **Dev vs QA:** Works very well for native iOS developers (Swift or Objective-C). Not many QA teams will be familiar with this environment, but can be trained.
 * **Cross-Platform:** No: iOS only
