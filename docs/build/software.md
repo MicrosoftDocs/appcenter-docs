@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 11/10/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.13.6 (17G65) **High Sierra**
+- OS X 10.13.6 (17G3025) **High Sierra**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -34,7 +34,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 11.0.1
 - Node.js 6.14.4
 - Node.js v8.11.3
-- PowerShell 6.1.0
+- PowerShell 6.1.1
 - Python 2.7.10
 - Python 3.7.0
 - Ruby 2.3.7p456
@@ -48,7 +48,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 1.17.1
 - Carthage 0.31.2
 - CocoaPods 1.5.3
-- Homebrew 1.8.1
+- Homebrew 1.8.4
 - NPM 3.10.10
 - Yarn 1.12.1
 - NuGet 4.7.0.5148
@@ -62,16 +62,16 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 
 - curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.19.1
-- Git LFS 2.5.2
-- GNU Wget 1.19.5
+- Git 2.19.2
+- Git LFS 2.6.1
+- GNU Wget 1.20
 - Subversion (SVN) 1.10.2
 
 ### Tools
 
-- fastlane 2.108.0
-- App Center CLI 1.1.5
-- Azure-CLI 2.0.49
+- fastlane 2.109.0
+- App Center CLI 1.1.9
+- Azure-CLI 2.0.51
 
 ## Xcode
 
@@ -95,7 +95,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xcode Support Tools
 
-- Nomad CLI 2.5.2.3
+- Nomad CLI 2.7.7
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.5
@@ -484,6 +484,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.2.1.11
 - 12.0.0.15
 - 11.99.3.538
 - 11.14.0.13
