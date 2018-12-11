@@ -44,7 +44,7 @@ To run scripts post-clone, add the following file next to the project file in yo
 
 ## Pre-build
 
-The pre-build script runs before the actual build starts, but after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
+The pre-build script runs before the actual build starts. For React Native apps, the script runs before generating source maps. For other platforms, it runs after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
 
 To run scripts pre-build, add the following file next to the project file in your repository:
 
