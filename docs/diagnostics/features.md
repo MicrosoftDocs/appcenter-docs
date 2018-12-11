@@ -1,11 +1,10 @@
 ---
-
 title: Diagnostics Features
 description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/11/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -52,7 +51,6 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ![App Center allows you to track events leading up to your crash](~/diagnostics/images/events.png)
 
-
 ### Key Value Pairs
 
 Xamarin developers can tailor the error report sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional.
@@ -83,7 +81,6 @@ Here the full exception (`ex`) is sent back to the App Center service, plus a di
 > [!NOTE]
 > This feature is only supported for Xamarin Errors today.
 
-
 ### Export Diagnostics Data
 
 App Center can export diagnostics (crashes and errors) raw data to Azure. Export diagnostics data to Blob Storage for customization of the data.  
@@ -102,7 +99,6 @@ Learn more about the benefits of, and how to export your data in the [export doc
 
 In a crash report, you can see the current threads that were active when the app crashed. The thread that crashed is highlighted in red for you to better understand the state of the app.  
 
-
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
 ## Configure Alerts
@@ -116,7 +112,7 @@ Stay on top of your crashes by configuring your App Center app definition settin
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
-You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md).  
+You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md). 
 
 ## Create a Bug Tracker
 
@@ -124,7 +120,8 @@ You can integrate third party bug tracker tools with App Center to stay informed
 
 ## Set Data Retention
 
-You can set your diagnostics data retention to 28 or 90 days via our [APIs](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings) or in the app settings page. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started. 
+You can set your diagnostics data retention to 28 or 90 days via our APIs, as listed in the [App Center API documentation](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings), or in the app settings page. If you change your retention setting from 90 to 28 days, any existing diagnostics data older than 28 days will be removed and any new data will only be stored for 28 days.
+
+If you change your settings from 28 to 90 days, older diagnostics data will not be backfilled. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started. 
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
-
