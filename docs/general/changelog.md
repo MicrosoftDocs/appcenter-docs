@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 11/30/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,12 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **December, 11, 2018**
+
+- **Added build support for Xamarin.iOS 12.2**:
+  Build your Xamarin apps with [Xamarin.iOS 12.2](https://developer.xamarin.com/releases/ios/xamarin.ios_12/xamarin.ios_12.2/)
+  - Xamarin.iOS 12.2.1.11
 
 ### **November 30, 2018**
 
