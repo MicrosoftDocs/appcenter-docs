@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Migration Guide
 
-Visual Studio App Center (previously known as Visial Studio Mobile Center) is now the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
+Visual Studio App Center (previously known as Visual Studio Mobile Center) is now the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
