@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 12/13/2018
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -53,7 +53,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '1.10.0'
+      def appCenterSdkVersion = '1.11.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }
