@@ -4,7 +4,7 @@ description: Help using the Push features of App Center
 keywords: app center, push, faq
 author: dimazaid
 ms.author: dimazaid
-ms.date: 08/08/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.assetid: 0d663191-1b13-44f0-9df0-51185656d541
 ms.service: vs-appcenter
@@ -28,10 +28,9 @@ One of the reasons could be that you are using a Sandbox token to send a Push No
 Yes, you can call `AppCenter.Start("{APP-SECRET}", services)` as usual (without specifying the Push service). Then, once the user has opted in to receive push notifications, you can call `AppCenter.Start(typeof(Push))` to start just the Push service.
 Note that the second call to `Start()` does not include the app secret. Here's how: 
 
-`// call start with app secret WITHOUT Push`
-
-`AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));`
-
-`// then on button click do:`
-
-`AppCenter.Start(typeof(Push));`
+```
+// call start with app secret WITHOUT Push
+AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));
+// then on button click do:
+AppCenter.Start(typeof(Push));
+```

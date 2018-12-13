@@ -4,13 +4,12 @@ description: Help using the Push Audiences on App Center
 keywords: app center, push, audiences
 author: blparr
 ms.author: blparr
-ms.date: 05/03/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
 ms.service: vs-appcenter
 ms.custom: audiences
 ---
-
 
 # Audiences
 
@@ -36,12 +35,10 @@ These properties can be of two types:
 These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
 Examples of custom properties are:
 
-
 | Key            | Value   |
 | -------------- | ------- |
 | Type           | Premium |
 | Favorite Sport | Premium |
-
 
 App Center allows you to define custom properties as key value pairs in your app using the App Center SDK. You can then choose this property when you're creating an audience.
 
@@ -61,7 +58,6 @@ Another way to create an audience, is when selecting the Audience as a target in
 
 > [!NOTE]
 > Only devices that have Push successfully registered are matched in audiences.
-
 
 ## Limits
 
