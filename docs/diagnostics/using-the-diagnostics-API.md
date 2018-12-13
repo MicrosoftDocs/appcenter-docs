@@ -14,6 +14,8 @@ ms.custom: analytics
 > [!NOTE]
 > If you are using any old crashes APIs that map to a new API as listed below, you must transition to the new APIs by January 2019.
 
+
+
 # Using the Diagnostics API
 
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.  
