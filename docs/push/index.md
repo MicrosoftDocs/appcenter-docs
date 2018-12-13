@@ -17,7 +17,7 @@ The App Center Push service allows you to engage with application users, sending
 
 ## How to set up Push Notifications
 
-1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS).
+1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Push Notifications service (APNs), Windows Notifications Services (WNS).
 2. Configure push settings in the App Center portal
 3. Integrate the Push App Center SDK
 
@@ -27,7 +27,7 @@ Follow specific instructions on how to set up Push Notifications in the App Cent
 - [iOS SDK documentation](~/sdk/push/ios.md)
 - [macOS SDK documentation](~/sdk/push/macos.md)
 - [React Native Android SDK documentation](~/sdk/push/react-native-android.md)
-- [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md) 
+- [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md)
 - [UWP SDK documentation](~/sdk/push/uwp.md)
 - [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md)
 - [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)

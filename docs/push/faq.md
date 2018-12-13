@@ -31,6 +31,7 @@ Note that the second call to `Start()` does not include the app secret. Here's h
 ```
 // call start with app secret WITHOUT Push
 AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));
+
 // then on button click do:
 AppCenter.Start(typeof(Push));
 ```
