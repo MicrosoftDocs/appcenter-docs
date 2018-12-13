@@ -4,20 +4,20 @@ description: Help using the Push on App Center
 keywords: app center, push
 author: dimazaid
 ms.author: dimazaid
-ms.date: 10/25/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# Push Notifications
+# App Center Push
 
-App Center Push allows you to engage your users by sending them targeted push notifications.
+The App Center Push service allows you to engage with application users, sending them targeted push notifications.
 
 ## How to set up Push Notifications
 
-1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). 
+1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS).
 2. Configure push settings in the App Center portal
 3. Integrate the Push App Center SDK
 
