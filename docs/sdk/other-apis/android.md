@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/09/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
