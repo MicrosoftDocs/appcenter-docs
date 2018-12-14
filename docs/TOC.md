@@ -215,7 +215,8 @@
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
-### [Azure Subscriptions](general/azure-subscriptions/index.md)
+## [Billing](general/billing.md)
+## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Support Center](general/support-center.md)
 

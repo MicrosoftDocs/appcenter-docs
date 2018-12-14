@@ -98,7 +98,7 @@ All Xamarin Test Cloud accounts will remain active until March 31, 2018. Your cu
 
 **How do I purchase a test plan in App Center?**
 
-When your plan expires you can purchase a test plan App Center through the "Billing" section . Note, paid services in App Center require an [Azure subscription](~/general/azure-subscriptions/index.md) for billing.
+When your plan expires you can purchase a test plan App Center through the "Billing" section . Note, paid services in App Center require an [Azure subscription](~/general/azure-subscriptions.md) for billing.
 
 **Who can I reach out to with additional questions?**
 
