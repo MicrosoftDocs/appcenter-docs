@@ -1,5 +1,5 @@
 ---
-title: ProGuard
+title: Android ProGuard
 description: Learn how to deobfuscate your crash reports with ProGuard enabled
 keywords: crashes, errors, Android, obfuscate
 author: winnieli1208
@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: analytics 
 ---
 
-# ProGuard
+# Android ProGuard
 
 ProGuard is a tool to optimize and obfuscate the code of Android apps. It removes unused code, renames classes, fields, and methods with semantically obscure names, making the code base smaller and harder to reverse engineer. To enable ProGuard in your Android app, follow the [official Android Developer documentation](https://developer.android.com/studio/build/shrink-code#shrink-code). 
 
