@@ -1,5 +1,5 @@
 ---
-title: Symbolication
+title: iOS Symbolication
 description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: analytics 
 ---
 
-# Symbolication
+# iOS Symbolication
 
 ## Overview
 
@@ -33,6 +33,8 @@ If you are using Visual Studio instead of XCode, see [Where can I find the .dSYM
 ## Uploading symbols
 
 ### App Center Portal
+
+###
 
 1. Create a ZIP file for the dSYM package on your Mac
 2. Log into App Center and select your app
