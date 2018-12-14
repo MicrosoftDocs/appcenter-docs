@@ -15,7 +15,7 @@ ms.custom: push
 
 The Visual Studio App Center Push service enables app producers to engage with their users outside of the standard, in-app experience. Once a developer adds the App Center SDK [link] to an application, developers, marketers, and automated processes can send notifications to devices running the application.  
 
-## <a name="app-center-config"/>Configuring App Center for Push Notifications
+## Configuring App Center for Push Notifications
 
 Configuring Push for your application project is as simple as:
 
@@ -23,17 +23,16 @@ Configuring Push for your application project is as simple as:
 2. Create a new application project (what we call an app in App Center) or open an existing App project.
 3. Select the Push option in the project navigation pane.
 4. Configure any required settings for your app’s target platform. For example:
-    + Apple iOS devices use the Apple Push Notification service (APNs) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
-    + Google Android devices use the Firebase Cloud Messaging (FCM) service to deliver notification, so you’ll have some configuration to do in Firebase to enable Push in App Center.
+  a. Apple iOS devices use the Apple Push Notification service (APNs) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
+  b. Google Android devices use the Firebase Cloud Messaging (FCM) service to deliver notifications, so you’ll have some configuration to do in FCM to enable Push in App Center.
+  c. Windows devices uses the Windows Notifications Services (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
 5. Copy the appropriate notification service settings into your App Center App project.
 
 For additional information, refer to [Configuring the Push Service](~/push/push-configuration.md).
 
-## <a name="app-config"/>Configuring Your Application for Push
+## Configuring Your Application for Push
 
-To configure your application to handle push notifications, you’ll add the App Center SDK to your application, then write the code needed to process notifications when they arrive.  
-
-The instructions for doing this varies depending on the target platform. For additional information, refer to the Push SDK platform documentation:
+To configure your application to handle push notifications, you’ll add the App Center SDK to your application, then write the code needed to process notifications when they arrive. The instructions for doing this varies depending on the target platform. For additional information, refer to the Push SDK platform documentation:
 
 + [Android SDK documentation](~/sdk/push/android.md)
 + [iOS SDK documentation](~/sdk/push/ios.md)
@@ -45,11 +44,11 @@ The instructions for doing this varies depending on the target platform. For add
 + [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)
 + [Xamarin Forms SDK documentation](~/sdk/push/xamarin-forms.md)
 
-## <a name="device-registration"/>Device Registration
+## Device Registration
 
 App Center Push can’t just push to any device. When a user runs your Push-enabled app for the first time after installation, the App Center Push SDK initializes and automatically registers the device running the application with the appropriate notification services. It then provides App Center with the information and authorization it needs to send notifications to the device.
 
-## <a name="sending-push"/>Sending Push Notifications
+## Sending Push Notifications
 
 With the Push service configured and devices running your application registered with the proper notification services, you’re ready to send notifications to devices. You’ll send notifications using the following methods:
 
