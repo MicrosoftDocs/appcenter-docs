@@ -15,7 +15,7 @@ ms.custom: analytics
 
 ProGuard is a tool to optimize and obfuscate the code of Android apps. It removes unused code, renames classes, fields, and methods with semantically obscure names, making the code base smaller and harder to reverse engineer. To enable ProGuard in your Android app, follow the [official Android Developer documentation](https://developer.android.com/studio/build/shrink-code#shrink-code). 
 
-With ProGuard enabled in your Android app, your stack traces will need to be deobfuscated. App Center automatically deobfuscates stack traces when you upload the `mapping.txt` file created by ProGuard upon each run. This mappings file maps the original class, method, and field names to the obfuscated names making the stack traces readable. 
+With ProGuard enabled in your Android app, your stack traces will need to be deobfuscated. App Center automatically deobfuscates stack traces for your Java, Kotlin, and React Native Android apps when you upload the `mapping.txt` file created by ProGuard upon each run. This mappings file maps the original class, method, and field names to the obfuscated names making the stack traces readable. 
 
 ## Deobfuscating stack traces:
 
