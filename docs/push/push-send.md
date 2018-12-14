@@ -19,7 +19,7 @@ You can call `AppCenter.Start("{APP-SECRET}", services)` without specifying the 
 
 Note the application doesn't need to send the app secret in the second call to `Start()`
 
-```
+```Java
 // call start with app secret WITHOUT Push
 AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));
 

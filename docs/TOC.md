@@ -141,6 +141,8 @@
 
 # [Push](push/index.md)
 
+## [Configuring the Push Service](push/push-service-config.md)
+## [Sending Push Notifications](push/push-send.md)
 ## [Audiences](push/audiences.md)
 ## [API](push/pushapi.md)
 ## [FAQ](push/faq.md)
