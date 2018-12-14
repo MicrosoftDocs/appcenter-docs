@@ -37,7 +37,7 @@ Visual Studio App Center offers both a generous free tier, as well as paid tier 
 
 ## Push paid tier
 
-- Send push notifications to more than 5 audience groups
+- Create more than 5 audiences in App Center
 
 ## Configuring your billing plan
 
