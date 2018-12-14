@@ -4,7 +4,7 @@ description: An introduction to the App Center Push service
 keywords: app center,push
 author: dimazaid
 ms.author: dimazaid
-ms.date: 12/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter

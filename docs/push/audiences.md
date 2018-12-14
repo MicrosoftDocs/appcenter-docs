@@ -4,7 +4,7 @@ description: Help using the Push Audiences on App Center
 keywords: app center, push, audiences
 author: blparr
 ms.author: blparr
-ms.date: 12/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
 ms.service: vs-appcenter
