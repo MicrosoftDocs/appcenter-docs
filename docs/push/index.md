@@ -45,9 +45,9 @@ Send notifications to devices by clicking the **Send Notification** button in th
 
 The next step is to select your target; you can send the notification to:
 
-- **All registered devices**: all users opted-in will received the message.
-- **Custom devices list**: send a notification to the list of install IDs. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
-- **[Audiences](~/push/audiences.md)**: the notification will be sent to to a segment of your users based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
+- **All registered devices**: Send notifications to devices for all opted-in users.
+- **Custom devices list**: Send a notifications to the list of install IDs. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
+- **[Audiences](~/push/audiences.md)**: Send notifications to a segment of your app's user population based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
 
 ## Delay showing Push Notifications permission pop-up until the user clicks a button or a certain screen
 
