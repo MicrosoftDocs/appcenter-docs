@@ -1,53 +1,17 @@
 ---
-title: App Center Push
-description: An introduction to the App Center Push service
-keywords: app center,push
+title: Sending Push Notifications
+description: Help using the Push on App Center
+keywords: app center, push
 author: dimazaid
 ms.author: dimazaid
 ms.date: 12/13/2018
 ms.topic: article
-ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
+ms.assetid: 4db077ee-b9bf-4dc7-ac21-e8ecc8ee840e
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# App Center Push
-
-The App Center Push service allows you to engage with application users, sending them targeted push notifications.
-
-## How to set up Push Notifications
-
-1. Set up the platform specific push services: Firebase Cloud Messaging (FCM), Apple Push Notifications service (APNs), Windows Notifications Services (WNS).
-2. Configure push settings in the App Center portal
-3. Integrate the Push App Center SDK
-
-Follow specific instructions on how to set up Push Notifications in the App Center portal or in the following documentation
-
-- [Android SDK documentation](~/sdk/push/android.md)
-- [iOS SDK documentation](~/sdk/push/ios.md)
-- [macOS SDK documentation](~/sdk/push/macos.md)
-- [React Native Android SDK documentation](~/sdk/push/react-native-android.md)
-- [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md)
-- [UWP SDK documentation](~/sdk/push/uwp.md)
-- [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md)
-- [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)
-- [Xamarin Forms SDK documentation](~/sdk/push/xamarin-forms.md)
-
-## Sending Push Notifications
-
-Send notifications to devices by clicking the **Send Notification** button in the upper-right corner of the page, a panel will appear prompting you to provide:
-
-- **Campaign Name**: The name used to track the campaign; this is internal to App Center, your users will not see it.
-- **Title**: The title of the notification sent to devices.
-- **Message**: The content of the push notification.
-
-![Send Notification](~/push/images/send-notification.png "Campaign Name and Message fields are required to send a notification")
-
-The next step is to select your target; you can send the notification to:
-
-- **All registered devices**: all users opted-in will received the message.
-- **Custom devices list**: send a notification to the list of install IDs. You can get the install IDs by using our [SDK API](~/sdk/other-apis/android.md).
-- **[Audiences](~/push/audiences.md)**: the notification will be sent to to a segment of your users based on a set of device and [custom properties](~/sdk/other-apis/ios.md).
+# Sending push notifications
 
 ## Delay showing Push Notifications permission pop-up until the user clicks a button or a certain screen
 
