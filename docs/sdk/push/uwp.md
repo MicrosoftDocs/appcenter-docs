@@ -26,6 +26,8 @@ ms.tgt_pltfrm: UWP
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal and relies on [Windows Notification Services](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
 

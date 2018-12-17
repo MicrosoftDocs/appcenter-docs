@@ -26,6 +26,8 @@ ms.tgt_pltfrm: android
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
 >
 > [!NOTE]
 > For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [migration guide](migration/android.md).

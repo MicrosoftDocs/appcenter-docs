@@ -78,6 +78,7 @@ Service    |  Unity version  | iOS Version  | Android Version            | UWP V
 Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
 Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
 Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
+Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
 
 ### Windows UWP
 

@@ -25,6 +25,8 @@ ms.tgt_pltfrm: cordova
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
 
 App Center Push enables you to send push notifications to your app users from the App Center portal.
 

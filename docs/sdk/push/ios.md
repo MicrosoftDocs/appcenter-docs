@@ -29,6 +29,8 @@ dev_langs:
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
