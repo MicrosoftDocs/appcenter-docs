@@ -1,5 +1,5 @@
 ---
-title: App Center Push API
+title: Using the Push API
 description: API usage on Push
 keywords: app center, push, audiences, API
 author: dimazaid
@@ -11,14 +11,14 @@ ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# API for Push Notifications
+# Using the Push API
 
 App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
 
 ## Push API
 
 Sending Push Notifications via API will allow you to automate the process of engaging with your users.
-Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs. 
+Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs.
 
 ![Push Swagger](~/push/images/push-swagger.png)
 
@@ -39,9 +39,9 @@ The first thing you will need to do is to create an API Token from your [user se
 
 In order to send push notifications, you will need to get the user and the application name. To do so, you can use our APIs [for the user](https://openapi.appcenter.ms/#/account/users_get) and [the application](https://openapi.appcenter.ms/#/account/apps_listForOrg).
 
-Here is an example on how to use this information to send push notifications: 
+Here is an example on how to use this information to send push notifications:
 
-```
+```NA
 https://appcenter.ms/api/v0.1/apps/<YOUR_USER_NAME>/<YOUR_APP_NAME>/push/notifications
 ```
 
@@ -62,11 +62,11 @@ You can send a push using this [POST push API](https://openapi.appcenter.ms/#/pu
 
 ## Campaign
 
-Campaign Name should be 64 characters or less, and title should be 128 characters or less. Otherwise you will get an error 400 Bad Request when sending the push via the API. To ensure you are within the limits, try constructing the name and title from the Campaign UI before pushing it via the API. 
+Campaign Name should be 64 characters or less, and title should be 128 characters or less. Otherwise you will get an error 400 Bad Request when sending the push via the API. To ensure you are within the limits, try constructing the name and title from the Campaign UI before pushing it via the API.
 
 ## Send notifications to Audiences using API
 
-[Audiences](~/push/audiences.md) allow you to segment your user base based on device and custom properties. 
+[Audiences](~/push/audiences.md) allow you to segment your user base based on device and custom properties.
 
 ### Define an audience
 
@@ -83,7 +83,7 @@ In order to define an audience using properties, you use the following symbols:
 
 ### Audiences based on device properties
 
-You can send push to a group of users that match certain criteria (e.g. all users in United States). You can create groups (audiences) based on the device properties and custom properties. In order to create an audience you can use [this PUT API](https://openapi.appcenter.ms/#/analytics/Analytics_CreateOrUpdateAudience). 
+You can send push to a group of users that match certain criteria (e.g. all users in United States). You can create groups (audiences) based on the device properties and custom properties. In order to create an audience you can use [this PUT API](https://openapi.appcenter.ms/#/analytics/Analytics_CreateOrUpdateAudience).
 
 Here is an example for an audiences based on a device property where country is `United States`:
 
