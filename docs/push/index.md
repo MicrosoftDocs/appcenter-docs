@@ -27,7 +27,7 @@ Configuring Push for your application project is as simple as:
   c. Windows devices uses the Windows Notifications Services (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
 5. Copy the appropriate notification service settings into your App Center App project.
 
-For additional information, refer to [Configuring the Push Service](~/push/push-service-config.md).
+For additional information, refer to [Configuring the Push Service](~/push/service-config.md).
 
 ## Configuring Your Application for Push
 
@@ -53,8 +53,8 @@ As you'll see later, you can use the Install ID to send a notification to a spec
 
 With the Push service configured, and devices running your application registered with the proper notification services, you’re ready to send notifications to devices. You can send notifications to devices two ways:
 
-+ [App Center portal](~/push/push-send.md).
-+ [App Center REST API](~/push/push-api.md).  
++ [App Center portal](~/push/send-notification.md).
++ [App Center REST API](~/push/rest-api.md).  
 
 App Center supports the following notification targets:
 
@@ -62,4 +62,4 @@ App Center supports the following notification targets:
 + **Custom devices list**: Sends notifications to 20 devices (using the install IDs for the target devices).
 + **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
 
-For additional information, refer to [Sending Push Notifications](~/push/push-send.md).
+For additional information, refer to [Sending Push Notifications](~/push/send-notification.md).

@@ -210,7 +210,7 @@
         },
         {
             "source_path": "docs/push/pushapi.md",
-            "redirect_url": "/appcenter/push/push-api.md"
+            "redirect_url": "/appcenter/push/rest-api.md"
         }
     ]
 }
