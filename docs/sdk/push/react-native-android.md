@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/19/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -118,7 +118,7 @@ You can set up a listener to be notified whenever a push notification is receive
 
 ## Existing Firebase Analytics users
 
-The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call a method to enable it by default. To do this, look for the `onCreate` method in the **MainApplication.java** file and add the following before `SoLoader.init`:
+The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the **MainApplication.java** file and add the following before `SoLoader.init`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

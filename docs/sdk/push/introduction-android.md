@@ -9,11 +9,13 @@ Note that only devices having the [Google Play](https://play.google.com) store a
 
 ### 1. Set up Firebase Cloud Messaging
 
-- Create a project on the [Firebase Console](https://console.firebase.google.com).
-- Press on the Android logo to create an application matching your package name.
-- Go to **Project Settings** and download the **google-services.json** file.
-- Copy this file to your Android project app module.
+1. Create a project on the [Firebase Console](https://console.firebase.google.com).
+2. Click the Android logo on the page to create an application matching your package name.
+3. Go to **Project Settings** and download the **google-services.json** file.
+4. Copy this file to your Android project app module.
 
 ### 2. Obtain your Android API Key
 
-In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. Navigate to the **Cloud Messaging** tab. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.
+1. In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. 
+2. Navigate to the **Cloud Messaging** tab. 
+3. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.

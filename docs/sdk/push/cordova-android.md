@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/06/2018
+ms.date: 12/14/2018
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311
 ms.service: vs-appcenter
@@ -42,14 +42,16 @@ Note that only devices having the [Google Play](https://play.google.com/) store 
 
 ### 1. Set up Firebase Cloud Messaging
 
-- Create a project on the [Firebase Console](https://console.firebase.google.com).
-- Click on the Android logo to create an application matching your package name.
-- Go to **Project Settings** and download the **google-services.json** file.
-- Copy this file to the root of your project.
+1. Create a project on the [Firebase Console](https://console.firebase.google.com).
+2. Click on the Android logo to create an application matching your package name.
+3. Go to **Project Settings** and download the **google-services.json** file.
+4. Copy this file to the root of your project.
 
 ### 2. Obtain your Android API Key
 
-In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. Navigate to the **Cloud Messaging** tab. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.
+1. In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. 
+2. Navigate to the **Cloud Messaging** tab. 
+3. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.
 
 ## Add App Center Push to your app
 

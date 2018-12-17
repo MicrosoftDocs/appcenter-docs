@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -188,7 +188,7 @@ public class MyPushListener implements PushListener {
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
+App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());
