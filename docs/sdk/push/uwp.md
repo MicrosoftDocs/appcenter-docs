@@ -36,7 +36,7 @@ App Center Push enables you to send push notifications to users of your app from
 
 ## Prerequisite - Register your app for Windows Notification Services (WNS)
 
-Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registeration, you need to associate your app with the Windows Store in Visual Studio.
+Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registration, you need to associate your app with the Windows Store in Visual Studio.
 
 ### 1. Windows Store Association in Visual Studio
 
