@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 12/11/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,12 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **December, 14, 2018**
+
+- **Xcode 8.0-8.3.2 deprecation in App Center build:**
+    - The following Xcode versions (and related simulators) were deprecated: 8.0, 8.1, 8.2, 8.2.1, 8.3.1 and 8.3.2.
+    - Build configurations that used deprecated versions were forcibly migrated to Xcode 8.3.3
 
 ### **December, 11, 2018**
 
