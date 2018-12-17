@@ -1,6 +1,6 @@
 ---
 title: Using the Push API
-description: API usage on Push
+description: Instructions on how to send push notifications using the App Center REST API.
 keywords: app center, push, audiences, API
 author: dimazaid
 ms.author: dimazaid
@@ -12,6 +12,20 @@ ms.custom: push
 ---
 
 # Using the Push API
+
+The Visual Studio App Center Push service (ACPs) offers two ways to send notifications to registered devices:
+
++ Using the [App Center Portal](~/push/send-notification.md)
++ Using the App Center Push API (described in this document)
+
+When sending notifications through App Center, you can target destination devices (notification recipients) in the following ways:
+
++ **All registered devices**: Sends notifications to all registered devices.
++ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. For additional information about creating and managing Audiences, refer to [App Center Push Audiences](~/push/audiences.md).
+
+
+
 
 App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
 

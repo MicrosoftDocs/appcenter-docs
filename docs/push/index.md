@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Push
 
-The Visual Studio App Center Push service enables app producers to engage with their users outside of the standard, in-app experience. Once a developer adds the App Center SDK [link] to an application, developers, marketers, and automated processes can send notifications to devices running the application.  
+The Visual Studio App Center Push service (ACPs) enables app producers to engage with their users outside of the standard, in-app experience. Once a developer adds the App Center SDK [link] to an application, developers, marketers, and automated processes can send notifications to devices running the application.  
 
 ## Configuring App Center for Push Notifications
 
@@ -59,7 +59,7 @@ With the Push service configured, and devices running your application registere
 App Center supports the following notification targets:
 
 + **All registered devices**: Sends notifications to all registered devices.
-+ **Custom devices list**: Sends notifications to 20 devices (using the install IDs for the target devices).
++ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
 + **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
 
 For additional information, refer to [Sending Push Notifications](~/push/send-notification.md).
