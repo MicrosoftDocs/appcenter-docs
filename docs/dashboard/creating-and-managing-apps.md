@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: joemellin
 ms.author: joemel
-ms.date: 11/06/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -22,7 +22,7 @@ To create an app:
 
 ## Uploading an app icon
 
-Upload an app icon in the **Add new app** modal or in the settings page of your app. Note that uploading an icon in App Center does not change the icon in the app bundle, meaning the icon of the app itself when installed on devices won't reflect this change.
+Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Note that uploading an icon in App Center does not change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
 
 ## Accessing apps
 
