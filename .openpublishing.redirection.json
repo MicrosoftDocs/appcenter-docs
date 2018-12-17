@@ -207,6 +207,10 @@
         {
             "source_path": "docs/sdk/sdk-migration/xamarin.md",
             "redirect_url": "/appcenter/sdk/"
+        },
+        {
+            "source_path": "docs/push/pushapi.md",
+            "redirect_url": "/appcenter/push/push-api.md"
         }
     ]
 }

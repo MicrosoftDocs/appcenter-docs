@@ -2,13 +2,12 @@
 title: App Center Push
 description: An introduction to the App Center Push service
 keywords: app center,push
-author: dimazaid
-ms.author: dimazaid
-ms.date: 12/14/2018
+author: jwargo
+ms.author: jowargo
+ms.date: 12/17/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
-ms.custom: push
 ---
 
 # App Center Push
@@ -34,31 +33,33 @@ For additional information, refer to [Configuring the Push Service](~/push/push-
 
 To configure your application to handle push notifications, you’ll add the App Center SDK to your application, then write the code needed to process notifications when they arrive. The instructions for doing this varies depending on the target platform. For additional information, refer to the Push SDK platform documentation:
 
-+ [Android SDK documentation](~/sdk/push/android.md)
-+ [iOS SDK documentation](~/sdk/push/ios.md)
-+ [macOS SDK documentation](~/sdk/push/macos.md)
-+ [React Native Android SDK documentation](~/sdk/push/react-native-android.md)
-+ [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md)
-+ [UWP SDK documentation](~/sdk/push/uwp.md)
-+ [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md)
-+ [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)
-+ [Xamarin Forms SDK documentation](~/sdk/push/xamarin-forms.md)
++ [Android Push SDK documentation](~/sdk/push/android.md)
++ [iOS Push SDK documentation](~/sdk/push/ios.md)
++ [macOS Push SDK documentation](~/sdk/push/macos.md)
++ [React Native Android Push SDK documentation](~/sdk/push/react-native-android.md)
++ [React Native iOS Push SDK documentation](~/sdk/push/react-native-ios.md)
++ [UWP Push SDK documentation](~/sdk/push/uwp.md)
++ [Xamarin Android Push SDK documentation](~/sdk/push/xamarin-android.md)
++ [Xamarin iOS Push SDK documentation](~/sdk/push/xamarin-ios.md)
++ [Xamarin Forms Push SDK documentation](~/sdk/push/xamarin-forms.md)
 
 ## Device Registration
 
-App Center Push can’t just push to any device. When a user runs your Push-enabled app for the first time after installation, the App Center Push SDK initializes and automatically registers the device running the application with the appropriate notification services. It then provides App Center with the information and authorization it needs to send notifications to the device.
+App Center Push can’t just push to any device. When a user runs your Push-enabled app for the first time after installation, the App Center Push SDK initializes and automatically registers the device running the application with the appropriate notification services. The SDK then provides App Center with the unique key (Install ID) it needs to send notifications to the device.
+
+As you'll see later, you can use the Install ID to send a notification to a specific device.
 
 ## Sending Push Notifications
 
-With the Push service configured and devices running your application registered with the proper notification services, you’re ready to send notifications to devices. You’ll send notifications using the following methods:
+With the Push service configured, and devices running your application registered with the proper notification services, you’re ready to send notifications to devices. You can send notifications to devices two ways:
 
-+ Using the App Center portal.
-+ Using the App Center REST API.  
++ [App Center portal](~/push/push-send.md).
++ [App Center REST API](~/push/push-api.md).  
 
 App Center supports the following notification targets:
 
-+ **All registered devices**: all users opted-in will received the notification.
-+ **Custom devices list**: send a notification to the list of install IDs. You can get the install IDs by using our SDK API.
-+ **Audiences**: the notification will be sent to a segment of your users based on a set of device and custom properties.
++ **All registered devices**: Sends notifications to all registered devices.
++ **Custom devices list**: Sends notifications to 20 devices (using the install IDs for the target devices).
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
 
 For additional information, refer to [Sending Push Notifications](~/push/push-send.md).
