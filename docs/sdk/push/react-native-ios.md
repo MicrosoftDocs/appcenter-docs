@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/19/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -133,6 +133,17 @@ You can also check if App Center Push is enabled or not:
 
   const pushEnabled = await Push.isEnabled();
   ```
+
+## Delay push notification permission dialog
+
+If you want to delay requesting Push notifications permission the first time the application is run:
+
+* Open Xcode, and edit the **ios/{APPNAME}/AppCenter-Config.plist** file.
+* Add `EnablePushInJavascript` as a `Boolean` property.
+* Change the value to `YES`.
+* Once you get approval from the user to use Push at runtime, call `Push.setEnabled(true)`.
+
+After calling `Push.setEnabled(true)` once, the Push service will be started automatically the next time the application restarts.
 
 ## Disable automatic method forwarding to App Center services
 
