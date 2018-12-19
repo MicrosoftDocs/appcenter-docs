@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/11/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: vs-appcenter
@@ -28,40 +28,18 @@ ms.tgt_pltfrm: UWP
 > * [Cordova iOS](cordova-ios.md)
 > * [Unity Android](unity-android.md)
 > * [Unity iOS](unity-ios.md)
+> * [Unity Windows](unity-windows.md)
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal and relies on [Windows Notification Services](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) (WNS) to push notifications to the devices.
 
 > [!NOTE]
-> A toast is displayed only if the application is in background at the moment the Push is received.
+> The device displays a toast only if the application is in background at the moment the Push is received.
 
 ## Prerequisite - Register your app for Windows Notification Services (WNS)
 
 Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registration, you need to associate your app with the Windows Store in Visual Studio.
 
-### 1. Windows Store Association in Visual Studio
-
-1. In Visual Studio Solution Explorer, right-click the UWP project, click **Store -> Associate App with the Store...**
-
-    ![uwp store association](images/appcenter-uwp-sdk-store-association.png)
-
-2. In the wizard, click **Next**, sign in with your Windows developer account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
-
-3. After the app registration is successfully created, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
-
-> [!NOTE]
-> You must have a Windows Developer account to send push notifications to your UWP app. You can [register a Microsoft developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
-
-### 2. Get Package SID and Application secret from Application Registration Portal
-
-1. Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList), sign-in with your Microsoft account. Click the Windows Store app you associated in the previous step.
-
-    ![uwp app registration](images/appcenter-uwp-sdk-push-registration.png)
-
-2. In the registration page, make a note of the value under **Application Secrets** and the **Package SID**, which you will next use to configure your App Center Push backend.
-
-### 3. Configure Package SID and Security Key in App Center portal
-
-Navigate to your App Center app -> Push, enter **Package SID** and **Security key** that you obtained from the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList) in the previous step, click **Apply changes**.
+[!include[](windows-wns.md)]
 
 ## Add App Center Push to your app
 
