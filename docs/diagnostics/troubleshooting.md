@@ -23,10 +23,6 @@ For iOS and MacOS apps, crash reports are only visible if they are symbolicated.
 
 To see deobfuscated stack traces for ProGuard enabled Android apps, follow the instructions in [App Center's ProGuard documentation](~/diagnostics/ProGuard.md) to upload mapping files for your app. 
 
-*Is there support for Android NDK?*
-
-We have some known issues with Android NDK. If you run into issues, please contact [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) by clicking the blue chat button in the lower-right corner of any App Center page.
-
 *How does App Center parse your .zip file?*
 
 App Center first looks for `dsym` directories at any level, then it looks for a source map by the title of `index.ios.map`. If `index.ios.map` file does not exist, it uses the first `.map` it finds.
