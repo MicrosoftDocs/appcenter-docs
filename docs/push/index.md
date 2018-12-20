@@ -4,7 +4,7 @@ description: An introduction to the App Center Push service
 keywords: app center,push
 author: jwargo
 ms.author: jowargo
-ms.date: 12/17/2018
+ms.date: 12/21/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
@@ -22,9 +22,9 @@ Configuring Push for your application project is as simple as:
 2. Create a new application project (what we call an app in App Center) or open an existing App project.
 3. Select the Push option in the project navigation pane.
 4. Configure any required settings for your app’s target platform. For example:
-  a. Apple iOS devices use the Apple Push Notification service (APNs) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
-  b. Google Android devices use the Firebase Cloud Messaging (FCM) service to deliver notifications, so you’ll have some configuration to do in FCM to enable Push in App Center.
-  c. Windows devices uses the Windows Notifications Services (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
+  a. Apple iOS devices use the [Apple Push Notification service (APNs)](https://developer.apple.com/notifications/) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
+  b. Google Android devices use the [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) service to deliver notifications, so you’ll have some configuration to do in FCM to enable Push in App Center.
+  c. Windows devices use the W[Windows Notifications Services (WNS)](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
 5. Copy the appropriate notification service settings into your App Center App project.
 
 For additional information, refer to [Configuring the Push Service](~/push/service-config.md).
