@@ -16,20 +16,26 @@ You need to register the listener as shown in the following example:
 ```csharp
 Push.PushNotificationReceived += (sender, e) =>
 {
-    // The following notification properties are available.
-    string title = e.Title;
-    string message = e.Message;
-    IDictionary<string, string> customData = e.CustomData;
+    string customData = "";
+    if (e.CustomData != null)
+        foreach (var data in e.CustomData)
+            customData += data.Key + " = " + data.Value + Environment.NewLine;
 
     // Message and title cannot be read from a background notification object.
     // Message being a mandatory field, you can use that to check foreground vs background.
-    if (message != null)
+    if (string.IsNullOrEmpty(e.Message))
     {
-        // Display an alert for foreground push.
+        // Use the custom data dictionary when a background push is clicked.
+        Debug.Log("Background push notification received:" + Environment.NewLine +
+                  "Custom data: " + customData);
     }
     else
     {
-        // Use the custom data dictionary when a background push is clicked.
+        // Display an alert for foreground push.
+        Debug.Log("Foreground push notification received:" + Environment.NewLine +
+                  "Notification title: " + e.Title + Environment.NewLine +
+                  "Message: " + e.Message + Environment.NewLine +
+                  "Custom data: " + customData);
     }
 };
 ```
