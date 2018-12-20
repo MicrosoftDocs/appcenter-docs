@@ -4,7 +4,7 @@ description: Help using the Push on App Center
 keywords: app center, push
 author: dimazaid
 ms.author: dimazaid
-ms.date: 10/25/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
@@ -28,6 +28,9 @@ Follow specific instructions on how to set up Push Notifications in the App Cent
 - [macOS SDK documentation](~/sdk/push/macos.md)
 - [React Native Android SDK documentation](~/sdk/push/react-native-android.md)
 - [React Native iOS SDK documentation](~/sdk/push/react-native-ios.md)
+- [Unity Android SDK documentation](~/sdk/push/unity-android.md)
+- [Unity Android iOS documentation](~/sdk/push/unity-ios.md)
+- [Unity Android Windows documentation](~/sdk/push/unity-windows.md)
 - [UWP SDK documentation](~/sdk/push/uwp.md)
 - [Xamarin Android SDK documentation](~/sdk/push/xamarin-android.md)
 - [Xamarin iOS SDK documentation](~/sdk/push/xamarin-ios.md)

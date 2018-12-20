@@ -2,8 +2,8 @@
 title: App Center Push for Unity iOS
 description: Using Push in App Center
 keywords: sdk, push
-author: annakocheshkova
-ms.author: v-annkoc
+author: jwhitedev
+ms.author: jawh
 ms.date: 12/14/2018
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
