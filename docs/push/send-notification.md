@@ -18,7 +18,7 @@ The Visual Studio App Center Push service (ACPs) offers two ways to send notific
 + Using the App Center Portal (described in this document)
 + Using the [App Center Push API](~/push/rest-api.md)
 
-## Creating a notification
+## Create a notification
 
 To create a notification using the ACPs, complete the following steps:
 
@@ -74,9 +74,7 @@ In the wizard's **Target** panel, make the selection that makes the most sense f
 
 In the wizard's last pane, App Center summarizes the settings for the Campaign. To send the notification, click the **Send notification** button. To change the campaign before committing, click the **< Back** button.
 
-![App Center Push Campaign Review page](~/push/images/campaign-review.png)
-
-App Center returns to the Campaigns list; select (click on) the campaign to check delivery progress.
+When you're done, App Center returns to the Campaigns list; select (click on) the campaign to check delivery progress.
 
 ## Audiences
 
@@ -123,7 +121,7 @@ Developers set these custom properties in an app using the SDK methods for each 
 + [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
 + [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
 
-### Creating Audiences
+### Create an Audience
 
 App Center users can create Push Audiences two ways:
 
@@ -162,7 +160,7 @@ When you're done making changes to the Audience, click the **Save** button to sa
 > [!NOTE]
 > Only devices that have successfully registered for notifications are matched in audiences.
 
-### Editing am Audience
+### Edit an Audience
 
 To edit an Audience:
 
@@ -173,7 +171,7 @@ To edit an Audience:
 5. Select the Audience you want to edit.
 6. When the Audience opens, click the pencil icon in the upper-right corner of the page to edit the Audience.
 
-### Deleting an Audience
+### Delete an Audience
 
 To delete an Audience:
 
