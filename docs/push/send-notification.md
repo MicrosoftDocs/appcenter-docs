@@ -60,22 +60,26 @@ When you're done populating the form, click the **Next >** button to continue.
 
 When sending notifications through ACPs, you can target destination devices (notification recipients) in the following ways:
 
-+ **All registered devices**: Sends notifications to all registered devices.
-+ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
-+ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
++ **All registered devices**: Sends notifications to all registered devices. Depending on the size of your target audience, this could take a long time to complete.
++ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices). When you select this option, populate the input field with a list of the Install IDs for the devices you want to send the notification to, separating IDs with commas.
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. See [Audiences](#audiences) below for additional information.
 
 In the wizard's **Target** panel, make the selection that makes the most sense for your campaign.
 
-#### All registered devices
+> [!NOTE]
+> The only way to get the Install ID for a particular device is through the [App Center SDK](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#identify-installations). Your app must call the appropriate SDK method depending on the target platform (Android, iOS, Windows, etc.) to collect the ID, then share it with you (perhaps storing it in a server-based database) for use later.
 
+![App Center Push Campaign Target page](~/push/images/campaign-target-device-list.png)
 
-> [!WARNING]
-> No limit on how many, but may take some time
+### Review and send the message
 
-#### Custom device list
+In the wizard's last pane, App Center summarizes the settings for the Campaign. To send the notification, click the **Send notification** button. To change the campaign before committing, click the **< Back** button.
 
+![App Center Push Campaign Review page](~/push/images/campaign-review.png)
 
-#### Audiences
+App Center returns to the Campaigns list; select (click on) the campaign to check delivery progress.
+
+## Audiences
 
 Audiences let you segment your user base based on a set of properties and send them targeted notifications.
 
@@ -108,34 +112,26 @@ App Center allows you to define custom properties as key value pairs in your app
 
 You can set these custom properties by using our SDK methods for each platform:
 
-- [Android](~/sdk/other-apis/android.md#use-custom-properties)
-- [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
-- [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
-- [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
-- [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
-- [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
++ [Android](~/sdk/other-apis/android.md#use-custom-properties)
++ [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
++ [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
++ [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
++ [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
++ [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
 
-## Create Audiences
+### Create Audiences
 
 From the audiences tab, select the necessary conditions to create your segment (both custom and device properties), and save your segment. You can later on use this segment when sending a notification.
+
 Another way to create an audience, is when selecting the Audience as a target in the send notification flow.
 
 > [!NOTE]
 > Only devices that have Push successfully registered are matched in audiences.
 
-**Limitations**
+### Limitations
 
 - The maximum number of Audiences for any App Center app project is 200.
 - The default setting for new App Center accounts and accounts with **Basic campaigns** enabled in their billing plan allows for a maximum of 5 audiences per application project. To create more than 5 audiences (up to the maximum of 200), select the "Advanced" option in your billing plan's Push settings. Refer to [App Center Billing](~/general/billing.md) for information on how to change your App Center billing plan.
 - App Center limits Audiences to a maximum of 1,000 devices regardless of your billing plan. If you create an audience targeting more than 1,000 devices, App Center Push sends notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
 - You can define a maximum of 60 custom properties per app project.
 - Audiences match only devices that have a valid push registrations. For that reason, testing Audiences on an iOS simulator will fail.
-
-
-### Review and send the message
-
-In the wizard's last pane, App Center summarizes the settings for the Campaign. To send the notification, click the **Send notification** button. To change the campaign before committing, click the **< Back** button.
-
-![App Center Push Campaign Review page](~/push/images/campaign-review.png)
-
-App Center returns to the Campaigns list; select (click on) the campaign to check delivery progress.
