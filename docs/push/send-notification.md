@@ -81,57 +81,92 @@ App Center returns to the Campaigns list; select (click on) the campaign to chec
 
 ## Audiences
 
-Audiences let you segment your user base based on a set of properties and send them targeted notifications.
+Audiences allow you define a segment of your app's user base using a set of properties (both pre-defined and custom) and send them targeted notifications. App Center allows you to create multiple audiences in your app project (5 for the Free plan, and up to 200 for the Advanced plan) and stores them so you can use them with multiple campaigns.
 
-An example of an audience could be "App Version = 1.0.0" and "Country = Spain".
+There are two types of properties you can use to define audiences:
 
-These properties can be of two types:
++ Device properties
++ Custom properties
 
-**Device Properties:**
+### Device Properties
 
-    - App Version
-    - Country
-    - Mobile Carrier
-    - Language
-    - Device Model
-    - OEM (Original Equipment Manufacturer)
-    - API Level
-    - Screen Size
+The App Center SDK collects device properties automatically, retrieving them from the client application and exposing them through App Center for your use when defining audiences. The available properties are:
 
-**Custom Properties:**
+//TODO: Validate these examples
 
-These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
-Examples of custom properties are:
++ API Level (example: `2`)
++ App Version (example: `1.0.0`)
++ Country (example: `Spain`)
++ Device Model (example: `Pixel 2 XL`)
++ Language (example: `DE`)
++ Mobile Carrier (example: `AT&T`)
++ OEM (Original Equipment Manufacturer) (example: `Samsung`)
++ Screen Size (example: `1024X768`)
 
-| Key            | Value   |
-| -------------- | ------- |
-| Type           | Premium |
-| Favorite Sport | Premium |
+### Custom Properties
 
-App Center allows you to define custom properties as key value pairs in your app using the App Center SDK. You can then choose this property when you're creating an audience.
+Custom properties are custom key-value pairs defined by the developer and set in the application. They allow you to segment your app's user population based on something from your app (user settings, interests, tags, etc.). You can define a maximum of 60 custom properties per app project.
 
-You can set these custom properties by using our SDK methods for each platform:
+Some examples of possible custom properties are:
+
+| Key              | Value      |
+| ---------------- | ---------- |
+| Type             | premium    |
+| Favorite Sport   | soccer     |
+| Music Preference | electronic |
+
+Developers set these custom properties in an app using the SDK methods for each target platform:
 
 + [Android](~/sdk/other-apis/android.md#use-custom-properties)
 + [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
++ [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
++ [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
 + [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
 + [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
-+ [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
-+ [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
 
-### Create Audiences
+### Creating Audiences
 
-From the audiences tab, select the necessary conditions to create your segment (both custom and device properties), and save your segment. You can later on use this segment when sending a notification.
+App Center users can create Push Audiences two ways:
 
-Another way to create an audience, is when selecting the Audience as a target in the send notification flow.
++ From the Audiences Page in the App Center portal
++ While creating a Push Campaign
+
+To create an Audience from the Audiences page:
+
+1. Log into [App Center](https://appcenter.ms).
+2. Using the project navigator on the left side of the page, select the your user account or the organization where the app project is defined, then select the app project from the list that appears.
+3. In the project navigator that opens, select **Push**.
+4. From the sub-menu that opens, select **Audiences**.
+5. Click the **New audience** button.
+
+To create an Audience from the Campaign Wizard
+
+1. Create a Campaign using the instructions provided in [Creating a notification](#creating-a-notification).
+2. Navigate to the Campaign's **Target** page
+
+When defining an audience:
+
++ Add one or more rules until you've defined the proper selection criteria for your Audience.
++ Click the **Add rule** button to add a new rule to your Audience
++ Click the **-** button next to a rule to remove it from your Audience definition.
+
+When defining a Rule:
+
++ Select an available property from the property list (App Center shows all device properties and any custom properties you defined in your app)
++ Select the **is** or **is not** conditional from the list of options
++ Select a value from the list of options that appear (for keyword properties like country) or enter a string value
+
+As you add rules, App Center calculates the audience size for your current selection, showing percentage of your total population and an estimate for the number of devices targeted by the Audience.
+
+When you're done making changes to the Audience, click the **Save** button to save the Audience.
 
 > [!NOTE]
-> Only devices that have Push successfully registered are matched in audiences.
+> Only devices that have successfully registered for notifications are matched in audiences.
 
 ### Limitations
 
-- The maximum number of Audiences for any App Center app project is 200.
-- The default setting for new App Center accounts and accounts with **Basic campaigns** enabled in their billing plan allows for a maximum of 5 audiences per application project. To create more than 5 audiences (up to the maximum of 200), select the "Advanced" option in your billing plan's Push settings. Refer to [App Center Billing](~/general/billing.md) for information on how to change your App Center billing plan.
-- App Center limits Audiences to a maximum of 1,000 devices regardless of your billing plan. If you create an audience targeting more than 1,000 devices, App Center Push sends notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
-- You can define a maximum of 60 custom properties per app project.
-- Audiences match only devices that have a valid push registrations. For that reason, testing Audiences on an iOS simulator will fail.
++ The maximum number of Audiences for any App Center app project is 200.
++ The default setting for new App Center accounts and accounts with **Basic campaigns** enabled in their billing plan allows for a maximum of 5 audiences per application project. To create more than 5 audiences (up to the maximum of 200), select the "Advanced" option in your billing plan's Push settings. Refer to [App Center Billing](~/general/billing.md) for information on how to change your App Center billing plan.
++ App Center limits Audiences to a maximum of 1,000 devices regardless of your billing plan. If you create an audience targeting more than 1,000 devices, App Center Push sends notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
++ You can define a maximum of 60 custom properties per app project.
++ Audiences match only devices that have a valid push registrations. For that reason, testing Audiences on an iOS simulator will fail.
