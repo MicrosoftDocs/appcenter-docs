@@ -18,12 +18,6 @@ The Visual Studio App Center Push service (ACPs) offers two ways to send notific
 + Using the App Center Portal (described in this document)
 + Using the [App Center Push API](~/push/rest-api.md)
 
-When sending notifications through ACPs, you can target destination devices (notification recipients) in the following ways:
-
-+ **All registered devices**: Sends notifications to all registered devices.
-+ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
-+ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. For additional information about creating and managing Audiences, refer to [App Center Push Audiences](~/push/audiences.md).
-
 ## Creating a notification
 
 To create a notification using the ACPs, complete the following steps:
@@ -41,16 +35,41 @@ At this point, App Center opens the **Send notification** wizard and walks you t
 3. **Review**: Review the campaign settings one last time.
 4. **Send**: Send the notification to the target audience.
 
+The following sections describe each step in the process in greater detail.
+
 ### Compose
 
+The first step in the process is to define the internal name for the campaign, and the content that's sent to target devices by App Center.
 
-![App Center Push Campaign Compose Page](~/push/images/campaign-compose.png)
+![App Center Push Campaign Compose page](~/push/images/campaign-compose.png)
+
+//TODO: update the content to describe how the title's used.
+//TODO: update the content to list the maximum length allowed for the message
+
+1. Populate the **Campaign Name** field with a descriptive name for the campaign. The value you provide will display in the App Center campaign list page.
+2. (optional) Populate the **Title** field with an optional title for the notification sent to target devices. The value you provide here will be #####
+3. Populate the **Message** field with the content for the notification message. Message content is limited to ### characters.
+4. Use the **Custom data** area of the form to define up to 20 key/value data pairs that you want included with the message. Click the **+** button to add a key/value pair. Click the **-** button to remove a key/value pair from the message.
+
+> [!TIP]
+> Custom data values enable campaigns to pass data into an application or trigger one or more actions within your client application. You can pass data directly to the app through a campaign, or send a URL the app uses to retrieve data. Applications can also use data values to set configuration options with in the application, changing app behavior through the campaign. For an implementation example, refer to [A/B Test All the Things: React Native Experiments with App Center](https://blogs.msdn.microsoft.com/vsappcenter/ab-test-all-the-things-react-native-experiments-with-app-center/).
+
+When you're done populating the form, click the **Next >** button to continue.
 
 ### Target
 
+When sending notifications through ACPs, you can target destination devices (notification recipients) in the following ways:
 
-### Review
++ **All registered devices**: Sends notifications to all registered devices.
++ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. For additional information about creating and managing Audiences, refer to [App Center Push Audiences](~/push/audiences.md).
 
 
-### Send
 
+### Review and send the message
+
+In the wizard's last pane, App Center summarizes the settings for the Campaign. To send the notification, click the **Send notification** button. To change the campaign before committing, click the **< Back** button.
+
+![App Center Push Campaign Review page](~/push/images/campaign-review.png)
+
+App Center returns to the Campaigns list; select (click on) the campaign to check delivery progress.
