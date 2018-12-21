@@ -63,6 +63,6 @@ Another way to create an audience, is when selecting the Audience as a target in
 
 - App Center limits Audiences to a maximum of 1,000 devices regardless of your billing plan. If you create an audience targeting more than 1,000 devices, App Center Push will send notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
 - The maximum number of Audiences for any App Center app project is 200.
-- The default setting for new App Center accounts and accounts with **Basic campaigns** enabled in their billing plan allows for a maximum of 5 audiences per application project. To create more than 5 audiences (up to the maximum of 200), select the "Advanced" option in your billing plan settings. Refer to [App Center Billing](~/general/billing.md) for information on how to change your App Center billing plan.
+- The default setting for new App Center accounts and accounts with **Basic campaigns** enabled in their billing plan allows for a maximum of 5 audiences per application project. To create more than 5 audiences (up to the maximum of 200), select the "Advanced" option in your billing plan's Push settings. Refer to [App Center Billing](~/general/billing.md) for information on how to change your App Center billing plan.
 - There is a maximum of 60 properties that you can define per app.
 - Audiences match only devices that have a valid push registration. Testing audiences on iOS simulator is thus not supported.
