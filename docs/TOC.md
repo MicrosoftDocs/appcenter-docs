@@ -142,7 +142,7 @@
 # [Push](push/index.md)
 
 ## [Configure the Push Service](push/service-config.md)
-## [App Configuration](app-config.md)
+## [App Configuration](push/app-config.md)
 ### [Android](sdk/push/android.md)
 ### [Cordova Android](sdk/push/cordova-android.md)
 ### [Cordova iOS](sdk/push/cordova-ios.md)
