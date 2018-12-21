@@ -4,7 +4,7 @@ description: Tips and Tricks for using the App Center Push Service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 12/17/2018
+ms.date: 12/21/2018
 ms.topic: article
 ms.assetid: f0e3bd85-817a-423f-a1ca-b89c487d0180
 ms.service: vs-appcenter
