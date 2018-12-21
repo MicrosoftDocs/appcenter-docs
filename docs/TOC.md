@@ -142,7 +142,7 @@
 # [Push](push/index.md)
 
 ## [Configure the Push Service](push/service-config.md)
-## [Sendi Push Notifications](push/send-notification.md)
+## [Send Push Notifications](push/send-notification.md)
 ## [Use the REST API](push/rest-api.md)
 ## [Tips and Tricks](push/tips.md)
 ## [Troubleshooting](push/troubleshooting.md)
