@@ -44,11 +44,10 @@ The first step in the process is to define the internal name for the campaign, a
 ![App Center Push Campaign Compose page](~/push/images/campaign-compose.png)
 
 //TODO: update the content to describe how the title's used.
-//TODO: update the content to list the maximum length allowed for the message
 
 1. Populate the **Campaign Name** field with a descriptive name for the campaign. The value you provide will display in the App Center campaign list page.
 2. (optional) Populate the **Title** field with an optional title for the notification sent to target devices. The value you provide here will be #####
-3. Populate the **Message** field with the content for the notification message. Message content is limited to ### characters.
+3. Populate the **Message** field with the content for the notification message. Message content is limited to 4,000 characters.
 4. Use the **Custom data** area of the form to define up to 20 key/value data pairs that you want included with the message. Click the **+** button to add a key/value pair. Click the **-** button to remove a key/value pair from the message.
 
 > [!TIP]
@@ -88,7 +87,7 @@ There are two types of properties you can use to define audiences:
 + Device properties
 + Custom properties
 
-### Device Properties
+### Device properties
 
 The App Center SDK collects device properties automatically, retrieving them from the client application and exposing them through App Center for your use when defining audiences. The available properties are:
 
@@ -103,7 +102,7 @@ The App Center SDK collects device properties automatically, retrieving them fro
 + OEM (Original Equipment Manufacturer) (example: `Samsung`)
 + Screen Size (example: `1024X768`)
 
-### Custom Properties
+### Custom properties
 
 Custom properties are custom key-value pairs defined by the developer and set in the application. They allow you to segment your app's user population based on something from your app (user settings, interests, tags, etc.). You can define a maximum of 60 custom properties per app project.
 
@@ -162,6 +161,30 @@ When you're done making changes to the Audience, click the **Save** button to sa
 
 > [!NOTE]
 > Only devices that have successfully registered for notifications are matched in audiences.
+
+### Editing am Audience
+
+To edit an Audience:
+
+1. Log into [App Center](https://appcenter.ms).
+2. Using the project navigator on the left side of the page, select the your user account or the organization where the app project is defined, then select the app project from the list that appears.
+3. In the project navigator that opens, select **Push**.
+4. From the sub-menu that opens, select **Audiences**.
+5. Select the Audience you want to edit.
+6. When the Audience opens, click the pencil icon in the upper-right corner of the page to edit the Audience.
+
+### Deleting an Audience
+
+To delete an Audience:
+
+1. Log into [App Center](https://appcenter.ms).
+2. Using the project navigator on the left side of the page, select the your user account or the organization where the app project is defined, then select the app project from the list that appears.
+3. In the project navigator that opens, select **Push**.
+4. From the sub-menu that opens, select **Audiences**.
+5. Select the checkbox next to the Audience you want to delete.
+6. In the upper-right corner of the panel, click the **Delete** button.
+
+You can also open the Audience for editing, then in the upper-right corner of the page, click the three vertical dots and select **Delete audience** from the menu that appears.
 
 ### Limitations
 
