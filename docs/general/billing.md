@@ -14,7 +14,7 @@ ms.service: vs-appcenter
 
 You can configure a billing plan for your App Center organization or user account. If you configure a plan for an organization, all apps under the organization will bill against the configured plan. If you configure billing for your user account, all apps under your user account will bill against the configured plan.
 
-## User Account Billing Configuration
+## User account billing configuration
 
 1. Log into the [App Center Portal](https://appcenter.ms).
 2. Click on the user account icon in the upper-right corner of the App Center Portal and select **Account Settings** from the menu.
@@ -27,7 +27,7 @@ You can configure a billing plan for your App Center organization or user accoun
    - If you already have one or more subscriptions associated with your user account, you can choose which one to use for billing.
 6. Follow the remaining steps to complete the configuration process.
 
-## Organization Account Billing Configuration
+## Organization account billing configuration
 
 1. Log into the [App Center Portal](https://appcenter.ms).
 2. Select the Organization from the list of organizations in the App Center portal.  
