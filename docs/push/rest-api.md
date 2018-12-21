@@ -22,7 +22,7 @@ When sending notifications through App Center, you can target destination device
 
 + **All registered devices**: Sends notifications to all registered devices.
 + **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
-+ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. For additional information about creating and managing Audiences, refer to [App Center Push Audiences](~/push/audiences.md).
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
 
 
 
@@ -80,7 +80,7 @@ Campaign Name should be 64 characters or less, and title should be 128 character
 
 ## Send notifications to Audiences using API
 
-[Audiences](~/push/audiences.md) allow you to segment your user base based on device and custom properties.
+[Audiences](~/push/send-notification.md#audiences) allow you to segment your user base based on device and custom properties.
 
 ### Define an audience
 

@@ -143,7 +143,6 @@
 
 ## [Configuring the Push Service](push/service-config.md)
 ## [Sending Push Notifications](push/send-notification.md)
-## [Audiences](push/audiences.md)
 ## [API](push/rest-api.md)
 ## [FAQ](push/faq.md)
 ## [Troubleshooting](push/troubleshooting.md)

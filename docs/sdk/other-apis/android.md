@@ -80,7 +80,7 @@ AppCenter.getSdkVersion();
 
 ## Use custom properties
 
-App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/send-notification.md#audiences).
 
 > [!NOTE]
 > Only devices that have [Push](../push/android.md) successfully registered are matched in audiences.

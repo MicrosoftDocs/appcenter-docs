@@ -211,6 +211,10 @@
         {
             "source_path": "docs/push/pushapi.md",
             "redirect_url": "/appcenter/push/rest-api.md"
+        },
+        {
+            "source_path": "docs/push/audiences.md",
+            "redirect_url": "/appcenter/push/send-notification.md"
         }
     ]
 }
