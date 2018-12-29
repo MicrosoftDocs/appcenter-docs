@@ -21,7 +21,7 @@ App Center supports basic diagnostics features for UWP apps to help you fix your
 #### Crash grouping
 App Center groups your UWP crashes based on why and where the crash occurred. For each group, App Center displays the count, version and when the last crash in the group occurred, to help you prioritize and fix your crashes.
 
-![App Center groups your crashes based on similarities](~/diagnostics/images/UWP Crash Groups.png)
+![App Center groups your crashes based on similarities](~/diagnostics/images/UWP-Crash-Groups.png)
 
 #### Crash analytics
 App Center displays a graph that indicates the number of crashes per day based on the selected time period.
