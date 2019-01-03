@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 11/20/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -30,6 +30,7 @@ App Center Distribute will let your users install a new version of the app when 
 > 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target. 
+> 3. If you are using HockeyApp SDK for in-app updates **do not** switch to the App Center SDK. We are working on a migration strategy.
 
 ## Add in-app updates to your app
 
