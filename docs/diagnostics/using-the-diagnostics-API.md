@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/15/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -56,6 +56,7 @@ Old APIs that now map to new APIs will be deprecated no later than January 2019.
 | GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems |
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location |
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native | GET /v0.1/apps/{ownerName}/{appName}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download?format=text"|
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages |
 
 ### Crashes APIs that no longer exist
 
