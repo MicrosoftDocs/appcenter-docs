@@ -16,7 +16,6 @@ ms.custom: analytics
 Android NDK allows you to implement parts of your Android apps using C and C++. The stack traces from these apps may only contain memory addresses and don’t show class names, methods, file names and line numbers that are needed to read and understand the crashes. 
 To get these memory addresses translated for your Android NDK app, you need to upload symbols for each build using [Google's Breakpad tool](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md)
 
-
 ## Symbolication
 
 ### Obtaining symbol files
@@ -24,8 +23,7 @@ To get these memory addresses translated for your Android NDK app, you need to u
 1. Dump the symbols using the Breakpad toolchain as described in the [Breakpad documentation](https://chromium.googlesource.com/breakpad/breakpad/+/master/README.ANDROID#93).
 2. Create a symbols.zip file with the following structure:
 
-
-```
+```text
 $ unzip -l symbols.zip 
 Archive:  symbols.zip
   Length     Date   Time    Name
@@ -47,4 +45,3 @@ Archive:  symbols.zip
 3. Select the **Unsymbolicated** tab
 4. In the top right corner, click **Upload symbols** and upload the zip file
 5. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
-
