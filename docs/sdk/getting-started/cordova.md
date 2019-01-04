@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 11/20/2018
+ms.date: 12/24/2018
 ms.topic: get-started-article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903
 ms.service: vs-appcenter
@@ -48,6 +48,10 @@ To determine the `cordova-android` and `cordova-ios` versions, open the project'
 <engine name="android" spec="~6.2.3" />
 <engine name="ios" spec="~4.4.0" />
 ```
+
+You also must have [CocoaPods](https://cocoapods.org) installed. For this, run
+`sudo gem install cocoapods`
+`pod setup`
 
 ## 2. Getting the App Center App Secret
 
