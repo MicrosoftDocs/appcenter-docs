@@ -43,8 +43,9 @@ You can only send notifications to devices with the [Google Play](https://play.g
 
 1. Create a project on the [Firebase Console](https://console.firebase.google.com).
 2. Click the Android logo on the page to create an application matching your package name.
-3. Go to **Project Settings** and download the project's `google-services.json` file.
-4. Copy this file to any folder inside your Unity project.
+3. Go to **Project Settings** and select **Add Firebase to your Android App**
+4. Enter your Android package name, select *Register app* and download the project's `google-services.json` file.
+5. Copy this file to any folder inside your Unity project.
 
 ### 2. Obtain your Android API Key
 

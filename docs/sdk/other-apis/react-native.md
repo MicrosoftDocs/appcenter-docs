@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/17/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)

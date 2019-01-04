@@ -202,6 +202,7 @@
 ### [macOS](sdk/other-apis/macos.md)
 ### [UWP](sdk/other-apis/uwp.md)
 ### [React Native](sdk/other-apis/react-native.md)
+### [Unity](sdk/other-apis/unity.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ### [Cordova](sdk/other-apis/cordova.md)
 ## Troubleshooting

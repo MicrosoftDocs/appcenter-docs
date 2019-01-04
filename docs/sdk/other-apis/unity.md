@@ -1,18 +1,18 @@
 ---
-title: Other Xamarin APIs
-description: Other APIs in the App Center SDK for Xamarin
+title: Other Unity APIs
+description: Other APIs in the App Center SDK for Unity
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: jwhitedev
+ms.author: jawh
 ms.date: 01/03/2019
 ms.topic: article
-ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
+ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: xamarin
+ms.tgt_pltfrm: unity
 ---
 
-# Other Xamarin APIs
+# Other Unity APIs
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -28,7 +28,7 @@ ms.tgt_pltfrm: xamarin
 
 You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
-To have as many log messages as possible, use `LogLevel.Verbose`.
+To have as many log messages as possible, enable `LogLevel.Verbose` in the App Center settings or within your code.
 
 ```csharp
 AppCenter.LogLevel = LogLevel.Verbose;
@@ -76,13 +76,13 @@ AppCenter.SdkVersion;
 
 ## Use custom properties
 
-App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/audiences.md).
+App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to those segments by [creating targeted audiences](~/push/audiences.md).
 
 > [!NOTE]
-> Only devices that have [Push](../push/xamarin-ios.md) successfully registered are matched in audiences.
+> Only devices that have Push successfully registered are matched in audiences. Make sure to refer to the relevant getting started documentation depending on the platform you are targeting.
 > As a consequence, the iOS simulator can not be used to test audience matching.
 
-You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
+You can set custom properties by calling the `SetCustomProperties()` method. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 
 ```csharp
 CustomProperties properties = new CustomProperties();
@@ -93,7 +93,7 @@ AppCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `Clear()` method. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

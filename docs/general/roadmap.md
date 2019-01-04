@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 11/28/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -49,7 +49,6 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 * Pause and Resume data transmission – Adding APIs that let you control when to send data and can be called by application code to signal the SDK to pause/resume transmission. When the transmission is paused, the SDK continues to collect the Analytics data, it just doesn’t send the data to App Center backend until the operation is resumed.
 * Set SDK storage size – This API will let you configure the size of SDK storage for scenarios where developers need the ability to store as many logs as possible when the device is offline, or when they want to send the data only few times a day. In those cases, you can configure the storage size according to your needs.
-* [SHIPPED] Create a Unity Extension Editor. This editor enables developers to more easily manage their App Center SDK installation and updates from directly within Unity instead of managing each package themselves.
 
 ## Test
 
@@ -61,4 +60,5 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 * [SHIPPED] Add devices running iOS 12 to the App Center device lab.
 
 ## Push
-* Support sending Push notifications with Unity applications.
+
+* [SHIPPED] Support sending Push notifications with Unity applications.
