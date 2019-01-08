@@ -28,7 +28,7 @@ App Center Crashes automatically generates a crash log every time your app crash
 
 Please follow instructions in the [Unity Getting Started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
-Crash logs on iOS require Symbolication, to enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/symbolication.md) which explains how to provide symbols for your app.
+Crash logs on iOS require Symbolication, to enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) which explains how to provide symbols for your app.
 
 ## Generate a test crash
 
