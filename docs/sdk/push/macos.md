@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 05/17/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.service: vs-appcenter
@@ -199,7 +199,7 @@ App Center uses swizzling to automatically forward your application delegate's m
 
 4. Implement the callback to receive push notifications
 
-    Implement the `application:didReceiveRemoteNotification:` callback to forward push notifications to the Push service.
+    Implement the `application:didReceiveRemoteNotification:` callback to forward push notifications to App Center Push.
 
     ```objc
     - (void)application:(NSApplication *)application

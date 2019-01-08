@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/17/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -159,4 +159,4 @@ If you want to delay Push initialization the first time the application is run:
 * Add `, "enable_push_in_javascript": true` before the last `}` of the file.
 * Once you get approval from the user to use Push at runtime, call `Push.setEnabled(true)`.
 
-After calling `Push.setEnabled(true)` once, the Push service will be started automatically the next time the application restarts.
+After calling `Push.setEnabled(true)` once, App Center Push will be started automatically the next time the application restarts.

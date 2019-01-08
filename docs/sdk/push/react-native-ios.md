@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/10/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -29,6 +29,9 @@ ms.tgt_pltfrm: react-native
 > * [Unity Android](unity-android.md)
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
+
+> [!NOTE]
+> Starting with version 1.10.0, calling `push:didReceivePushNotification:` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `push:didReceivePushNotification:` callback, please refer to [the App Center SDK migration guide](migration/react-native-ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -144,7 +147,7 @@ If you want to delay requesting Push notifications permission the first time the
 * Change the value to `YES`.
 * Once you get approval from the user to use Push at runtime, call `Push.setEnabled(true)`.
 
-After calling `Push.setEnabled(true)` once, the Push service will be started automatically the next time the application restarts.
+After calling `Push.setEnabled(true)` once, App Center Push will be started automatically the next time the application restarts.
 
 ## Disable automatic method forwarding to App Center services
 
@@ -202,8 +205,8 @@ App Center uses swizzling to automatically forward various delegate methods to A
 ### User Notification Center Delegate
 
 1. Open your project's `Info.plist` file.
-2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
-3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass the notification payload to App Center Push.
 
     ```objc
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {

@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/19/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 75f504d0-2676-445e-a010-4d608c12c5fb
 ms.service: vs-appcenter
@@ -53,7 +53,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 Now that you've integrated App Center Push in your application, it's time to start the SDK and make use of App Center.
 
-### 2. Start App Center Push service
+### 2. Start App Center Push
 
 [!include[](start-push.md)]
 

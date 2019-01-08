@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: troublemakerben
 ms.author: bereimol
-ms.date: 01/03/2019
+ms.date: 11/20/2018
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter

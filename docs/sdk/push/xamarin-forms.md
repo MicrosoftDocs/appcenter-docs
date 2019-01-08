@@ -32,6 +32,9 @@ ms.tgt_pltfrm: xamarin.forms
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
 
+> [!NOTE]
+> Starting with version 1.11.0, calling `Push.DidReceiveRemoteNotification(...)` within a `UNUserNotificationCenterDelegate` is no longer necessary for iOS applications. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `Push.DidReceiveRemoteNotification(...)` callback, please refer to [the App Center SDK migration guide](migration/xamarin-ios.md) to migrate your code.
+
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
 ## Prerequisite - Perform platform-specific setup
@@ -88,7 +91,7 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 
 #### Launch mode
 
-If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `OnNewIntent` method:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity's `OnNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)

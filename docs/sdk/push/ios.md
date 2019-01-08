@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 09/28/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: vs-appcenter
@@ -32,6 +32,9 @@ dev_langs:
 > * [Unity Android](unity-android.md)
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
+
+> [!NOTE]
+> Starting with version 1.11.0, calling `push:didReceivePushNotification:` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `push:didReceivePushNotification:` callback, please refer to [the App Center SDK migration guide](migration/ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -71,11 +74,11 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 > [!NOTE]
-> The first time the push service starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start the push service later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured.
+> The first time App Center Push starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start App Center Push later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured.
 
 ## Intercept push notifications
 
-You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enabled [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md#custom-data-in-your-notifications) flag set to true.
 
 > [!NOTE]
 > If silent notifications are enabled and you push a notification with `content-available: 1`, then the delegate may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
@@ -120,6 +123,7 @@ Here is an example of the delegate implementation that displays an alert dialog 
   }
 }
 ```
+
 ```swift
 func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   let title: String = pushNotification.title ?? ""
@@ -220,7 +224,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
 4. Implement the callback to receive push notifications
 
-    Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to forward push notifications to the Push service.
+    Implement the `application:didReceiveRemoteNotification:fetchCompletionHandler` callback to forward push notifications to App Center Push.
 
     ```objc
     - (void)application:(UIApplication *)application
@@ -249,21 +253,21 @@ App Center uses swizzling to automatically forward various delegate methods to A
 ### User Notification Center Delegate
 
 1. Open your project's `Info.plist` file.
-2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
-3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass the notification's payload to App Center Push.
 
     ```objc
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
-      
+
       //...
-      
+
       // Pass the notification payload to MSPush.
       [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
 
       // Complete handling the notification.
       completionHandler(UNNotificationPresentationOptionNone);
     }
-    
+
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
       //...
@@ -279,7 +283,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
     ```swift
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-      
+
       //...
 
       // Pass the notification payload to MSPush.
@@ -291,9 +295,9 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-      
+
       //...
-      
+
       // Pass the notification payload to MSPush.
       MSPush.didReceiveRemoteNotification(response.notification.request.content.userInfo)
 
@@ -366,7 +370,7 @@ To distinguish between notifications received in the foreground and notification
     }
     ```
 
-4. (Optional) If you have implemented the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
+4. (Optional) If you have implemented the App Center Push SDK `push:didReceivePushNotification:` callback, you should adjust its behavior to a handle the foreground detection:
 
     ```objc
     - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
@@ -463,7 +467,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 
         // User tapped on notification.
       }
-      
+
       // Complete handling the notification.
       completionHandler()
     }
