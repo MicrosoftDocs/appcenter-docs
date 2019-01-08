@@ -4,7 +4,7 @@ description: Help using the Push Audiences on App Center
 keywords: app center, push, audiences
 author: blparr
 ms.author: blparr
-ms.date: 05/03/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 240ECA63-3C91-4ABD-AC7A-F51E2FE81891
 ms.service: vs-appcenter
@@ -36,23 +36,22 @@ These properties can be of two types:
 These properties are custom key-value pairs defined by the developer. This will allow you to segment your user based on properties of your app specific.
 Examples of custom properties are:
 
-
 | Key            | Value   |
 | -------------- | ------- |
 | Type           | Premium |
 | Favorite Sport | Premium |
 
-
 App Center allows you to define custom properties as key value pairs in your app using the App Center SDK. You can then choose this property when you're creating an audience.
 
 You can set these custom properties by using our SDK methods for each platform:
 
-- [Android](~/sdk/other-apis/android.md#use-custom-properties) 
+- [Android](~/sdk/other-apis/android.md#use-custom-properties)
 - [iOS](~/sdk/other-apis/ios.md#use-custom-properties)
-- [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
-- [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
-- [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
 - [macOS](~/sdk/other-apis/macos.md#use-custom-properties)
+- [React Native](~/sdk/other-apis/react-native.md#use-custom-properties)
+- [UWP](~/sdk/other-apis/uwp.md#use-custom-properties)
+- [Unity](~/sdk/other-apis/unity.md#use-custom-properties)
+- [Xamarin](~/sdk/other-apis/xamarin.md#use-custom-properties)
 
 ## Create Audiences
 
