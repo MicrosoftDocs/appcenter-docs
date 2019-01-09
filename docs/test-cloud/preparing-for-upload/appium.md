@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 11/06/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -195,7 +195,7 @@ A recommended practice is to have a call to label in the `@After` method, this w
 
 Steps to upload a test:
 
-1. Generate an App Center Test upload command. Documentation is found on our doc for [starting a test run](~/test-cloud/starting-a-test-run.md)
+1. Generate an App Center Test upload command using the instructions at [starting a test run](~/test-cloud/starting-a-test-run.md).
 2. Pack your test classes and all dependencies into the `target/upload` folder:
 
    ```shell
@@ -205,7 +205,7 @@ Steps to upload a test:
 3. Perform upload:
 
    ```shell
-   appcenter test run appium --app "<user/appname>" --devices "<selection>" --app-path <pathToFile.apk>  --test-series "<series>" --locale "<locale>" --build-dir target/upload 
+   appcenter test run appium --app "APP_ID" --devices "DEVICE_SET_ID" --app-path PATH_TO_FILE.apk  --test-series "master" --locale "en_US" --build-dir target/upload
    ```
 
 ## 4. Performance Troubleshooting
