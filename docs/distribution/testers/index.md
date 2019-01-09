@@ -36,3 +36,20 @@ To get started with installing the app you've been invited to test, please selec
 - [Testing Android Apps](./testing-android.md)
 - [Testing iOS Apps](./testing-ios.md)
 - [Testing macOS Apps](./testing-macos.md)
+
+## Stop Testing
+
+In addition to testing your apps, we also allow you to stop testing an app and remove yourself from all distribution groups for that app. By doing so, you will no longer receive notification associated with that app and you will no longer have access to the app in both the developer portal and the install portal. In order to remove yourself from an app, the following conditions must be true:
+
+- You are not an app collaborator for the app
+- You are not part of a shared group for the app
+- You are not part of an AAD group for the app
+
+If the above conditions apply to you, you will be able to remove yourself as a tester for an app. In order to do so, execute the following steps:
+
+1. Navigate to the [App Center Install Portal](https://install.appcenter.ms/) on your mobile device.
+2. Select the Aap you would like to stop testing.
+3. Located on the top right of the screen, click the 3 dots menu item.
+4. Click the **Stop testing app** button.
+
+After successfully completing these 3 steps, you will no longer be a tester of the app.
