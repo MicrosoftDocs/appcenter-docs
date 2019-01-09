@@ -50,7 +50,7 @@ Select the test series, the system language, and the test framework. The system 
 Based on the previous steps a prototype command is generated to upload and start your test run. For example, a command generated for an Android app with Espresso tests might look like this:
 
 ```shell
-appcenter test run espresso --app "app_id" --devices "device_set_id" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+appcenter test run espresso --app "APP_ID" --devices "DEVICE_SET_ID" --app-path PATH_TO_FILE.apk  --test-series "master" --locale "en_US" --build-dir PATH_TO_ESPRESSO_BUILD_FOLDER
 ```
 
 The command parameters include:
