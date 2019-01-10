@@ -26,6 +26,11 @@ This document lists new features as they're added to [Visual Studio App Center](
 
 - **Added support for Push notifications with Unity apps**:
   - Unity developers can now send Push Notifications to Android, iOS and Windows built Unity apps similar to the other supported platforms.
+  
+### **December 17th, 2018**
+
+- **Search for Crashes in Diagnostics*
+   – Added the ability to search crashes by specific fields such as method, class or reason. This allows developers to find their crashes of interest in a much faster way.
 
 ### **December, 14, 2018**
 
@@ -42,13 +47,13 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **November 30, 2018**
 
 - **CLI version 1.1.9 released**:
-  - Updated the CLI with the correct internal URLs
+  - Updated the CLI with the correct internal URLs.
 
 ### **November 26, 2018**
 
 - **CLI version 1.1.8 released**:
-  - Changed the `event-stream` module in the npm package to v3.3.4 
-  - Added the functionality to support `appcenter apps set-current` for the `appcenter test wizard` command
+  - Changed the `event-stream` module in the npm package to v3.3.4.
+  - Added the functionality to support `appcenter apps set-current` for the `appcenter test wizard` command.
 
 ### **November 19, 2018**
 

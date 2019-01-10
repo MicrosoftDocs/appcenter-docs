@@ -27,8 +27,9 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 ## Diagnostics
 
-* Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
-* User Identification – Attach a user identifier to all diagnostics logs (crashes and errors) and expose it in the UI. This will allow you to know what user is affected by each crash or error instance.
+* Search by User ID – Ability to search for crashes for a specific user ID.
+* User Identification – Attach a user identifier to all diagnostics logs (crashes and errors), expose it in the UI. This will allow you to know what user is affected by each crash or error instance.
+* [SHIPPED] Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
 * [SHIPPED] Diagnostics to General Availability:
   + Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
 * [SHIPPED] Diagnostics UI Improvements:

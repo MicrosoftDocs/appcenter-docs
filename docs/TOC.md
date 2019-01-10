@@ -124,6 +124,7 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
 ## [Features](diagnostics/features.md)
+## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
 ## [Symbolication](diagnostics/symbolication.md)
