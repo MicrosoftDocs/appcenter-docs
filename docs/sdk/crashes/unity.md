@@ -28,7 +28,7 @@ App Center Crashes automatically generates a crash log every time your app crash
 
 Please follow instructions in the [Unity Getting Started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
-Crash logs on iOS require Symbolication, to enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/symbolication.md) which explains how to provide symbols for your app.
+Crash logs on iOS require Symbolication, to enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) which explains how to provide symbols for your app.
 
 ## Generate a test crash
 
@@ -219,11 +219,11 @@ try {
 By default, the App Center SDK does not report any unhandled exceptions thrown in your Application that do not cause a fatal crash (which is then reported as a crash). To enable this functionality, call the following API:
 
 ```csharp
-    Crashes.ReportUnhandledExceptions(true);
+Crashes.ReportUnhandledExceptions(true);
 ```
 
 Going forward all unhandled exceptions logged will be as Issues in the App Center portal, similar to handled exceptions mentioned earlier. To disable this, call the same API passing `false` as the parameter.
 
 ```csharp
-    Crashes.ReportUnhandledExceptions(false);
+Crashes.ReportUnhandledExceptions(false);
 ```

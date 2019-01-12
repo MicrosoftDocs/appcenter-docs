@@ -28,7 +28,7 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your application yet.
 
-Also note that crash logs on iOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/symbolication.md) that explains how to provide symbols for your app.
+Also note that crash logs on iOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 ## Generate a test crash
 
