@@ -27,17 +27,19 @@ App Center Diagnostics allows you to search for specific crashes. In the Diagnos
 ### Search types
 
 App Center searches in the indexed fields, and can be done in two ways:
+
 1. Use the search box to include free text. Note that this text will be searched in just the indexed fields.
 
-![Free text search](~/diagnostics/images/crashes-results-freetext.png)
+  ![Free text search](~/diagnostics/images/crashes-results-freetext.png)
 
 2. Use the query builder to specify what fields you want to search on by clicking on the filtering icon.
 
-![Query builder](~/diagnostics/images/crashes-query-types.png)
+  ![Query builder](~/diagnostics/images/crashes-query-types.png)
 
 ### Indexed fields
 
 For crash reports:
+
 - User ID: Support for searching User ID is planned but not available yet.
 - Method
 - Class
@@ -46,10 +48,12 @@ For crash reports:
 - OS Version
 
 For crash groups:
+
 - Method
 - Class
 - Reason
 
 ## Considerations
+
 - The maximum number of matching reports we display is 100.
 - For now, search results show the last 30 days of data, regardless of the retention settings.
