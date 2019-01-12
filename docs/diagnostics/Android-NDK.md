@@ -4,7 +4,7 @@ description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 1/3/2019
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -13,7 +13,8 @@ ms.custom: analytics
 
 # Android NDK
 
-Android NDK allows you to implement parts of your Android apps using C and C++. The stack traces from these apps may only contain memory addresses and don’t show class names, methods, file names and line numbers that are needed to read and understand the crashes. 
+Android NDK allows you to implement parts of your Android apps using C and C++. The stack traces from these apps may only contain memory addresses and don’t show class names, methods, file names and line numbers that are needed to read and understand the crashes.
+
 To get these memory addresses translated for your Android NDK app, you must upload symbols for each build using [Google's Breakpad tool](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md)
 
 ## Symbolication

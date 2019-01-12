@@ -219,11 +219,11 @@ try {
 By default, the App Center SDK does not report any unhandled exceptions thrown in your Application that do not cause a fatal crash (which is then reported as a crash). To enable this functionality, call the following API:
 
 ```csharp
-    Crashes.ReportUnhandledExceptions(true);
+Crashes.ReportUnhandledExceptions(true);
 ```
 
 Going forward all unhandled exceptions logged will be as Issues in the App Center portal, similar to handled exceptions mentioned earlier. To disable this, call the same API passing `false` as the parameter.
 
 ```csharp
-    Crashes.ReportUnhandledExceptions(false);
+Crashes.ReportUnhandledExceptions(false);
 ```
