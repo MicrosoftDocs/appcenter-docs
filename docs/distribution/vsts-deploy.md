@@ -6,7 +6,7 @@ description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/12/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.service: vs-appcenter
 
@@ -33,7 +33,7 @@ Create a new API token, making sure the API token has full access (so that Azure
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 
-After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. Grab the app slug from App Center; you can find this by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/andyzg/apps/vanilla-android` is `andyzg/vanilla-android`.
+After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. Grab the app slug from App Center; you can find this by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/vigimm/apps/SkyTube` is `vigimm/Skytube`.
 
 ![Copy your App Slug from App Center](images/vsts-deploy-app-center-slug.png)
 
@@ -45,13 +45,13 @@ Finally, add release notes to your distribution.
 
 ![Release notes](images/vsts-deploy-app-center-notes.png)
 
-App Center deploys to your Collaborators group by default. Optionally, you can specify a distribution group ID or a store connection ID. The distribution group ID can be found by first selecting a distribution group, and then viewing the distribution group settings.
+App Center deploys to your Collaborators group by default. Optionally, you can specify a destination ID or a store connection ID. The destination ID can be found by first selecting a distribution group, and then viewing the distribution group settings.
 
-![Finding the page with the distribution group ID](images/distribution_edit-settings-icon.png)
+![Finding the page with the destination ID](images/distribution_edit-settings-icon.png)
 
-You'll find the distribution group ID below the distribution group name.
+You'll find the destination ID below the distribution group name.
 
-![Location of the distribution group ID](images/distribution_group-id.png)
+![Location of the destination ID](images/distribution_group-id.png)
 
 Obtain the Store connection ID using an API call; learn [how to use the App Center API](../api-docs/index.md) elsewhere in the documentation.
 
@@ -82,7 +82,7 @@ Call the API using the following link: https://openapi.appcenter.ms/#/distribute
 
 ### Distributing the signed builds to App Center
 
-Once you finished configuring the App Center Distribute task, you can Save and Queue your build. If it's successful, your signed build will be uploaded to the releases of the defined distribution group.
+Once you finished configuring the App Center Distribute task, you can Save and Queue your build. If it's successful, your signed build will be uploaded to the releases of the defined destination.
 
 ![Releases](images/distribution_successful-release.png)
 

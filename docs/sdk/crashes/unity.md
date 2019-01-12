@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/21/2018
+ms.date: 12/28/2018
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -34,12 +34,12 @@ Crash logs on iOS require Symbolication, to enable symbolication, refer to the [
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can only use it when debugging as it won't work for release apps.
 
-> [!NOTE]
-> On Android, Unity catches all exceptions and the app continues running, there is currently a known bug in Unity that prevents a forced crash on Android app. This does not apply to iOS applications.
-
 ```csharp
 Crashes.GenerateTestCrash();
 ```
+
+> [!NOTE]
+> This method will only work with **Development Build** setting turned on.
 
 ## Get more information about a previous crash
 
@@ -138,7 +138,7 @@ Crashes.SentErrorReport += (errorReport) =>
 #### The following callback will be invoked if the SDK has failed to send a crash log
 
 ```csharp
-Crashes.FailedToSendErrorReport += (errorReport) =>
+Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 {
     // Your code goes here.
 };

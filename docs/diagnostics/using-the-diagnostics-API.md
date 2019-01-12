@@ -4,19 +4,17 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/15/2018
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
 ms.custom: analytics 
 ---
 
+# Using the Diagnostics API
+
 > [!NOTE]
 > If you are using any old crashes APIs that map to a new API as listed below, you must transition to the new APIs by January 2019.
-
-
-
-# Using the Diagnostics API
 
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.  
 
@@ -32,7 +30,7 @@ There are three types of crashes APIs:
 
 ### Crashes APIs that map to new APIs
 
-Old APIs that now map to new APIs will be deprecated no later than Janurary 2019. The old APIs will continue to work until then but you will need to use the new diagnostics APIs as listed in the table below before January 2019.
+Old APIs that now map to new APIs will be deprecated no later than January 2019. The old APIs will continue to work until then but you will need to use the new diagnostics APIs as listed in the table below before January 2019.
 
 | Old Crashes APIs                                               | New Crashes API        |
 | -------------------------------------------------------------- |:----------------------:|
@@ -58,6 +56,7 @@ Old APIs that now map to new APIs will be deprecated no later than Janurary 2019
 | GET/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems |
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location |
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native | GET /v0.1/apps/{ownerName}/{appName}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download?format=text"|
+| GET/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages |
 
 ### Crashes APIs that no longer exist
 
@@ -67,7 +66,6 @@ There are few crashes APIs that are deprecated due to changes in our backend pip
 | ------------------------------------------------------------------- |
 | GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
 | PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
-
 
 ### Unaltered Crashes APIs
 

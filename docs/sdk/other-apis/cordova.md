@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
-ms.date: 12/21/2017
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
 ms.service: vs-appcenter
@@ -19,11 +19,10 @@ ms.tgt_pltfrm: cordova
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
-
-
 
 ## Disable all services at runtime
 
@@ -47,3 +46,10 @@ You can also check if App Center is enabled or not.
 const enabled = await AppCenter.isEnabled();
 ```
 
+## Identify installations
+
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
+
+```javascript
+AppCenter.getInstallId();
+```

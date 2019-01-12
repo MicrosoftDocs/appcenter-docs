@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 10/11/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -501,7 +501,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/bui
 This specifies the relative path to the `Info.plist` file that the CLI should use when attempting to auto-detect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find your `Info.plist` file in "standard" React Native projects, and you can use the `--plistFilePrefix` parameter in order to support per-environment plist files (e.g. `STAGING-Info.plist`). However, if your plist is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter.
 
 ```shell
-appcenter codepush release-react -a <ownerName>/MyApp-iOS ios -p "./foo/bar/MyFile.plist"
+appcenter codepush release-react -a <ownerName>/MyApp-iOS -p "./foo/bar/MyFile.plist"
 ```
 
 > [!TIP]
@@ -563,7 +563,7 @@ appcenter codepush release -a <ownerName>/MyApp-iOS -c ./platforms/ios/www -t 1.
 Achieving the equivalent behavior with the `release-cordova` command would simply require the following command, which is generally less error-prone:
 
 ```shell
-appcenter codepush release-cordova -a <ownerName>/MyApp-iOS ios
+appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]

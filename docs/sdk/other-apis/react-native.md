@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 01/03/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
@@ -26,14 +27,14 @@ ms.tgt_pltfrm: react-native
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the iOS App Store environment / Android release builds and `LogLevelWarning` otherwise.
+You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. The default level is `LogLevel.ASSERT` for the iOS App Store environment and Android release builds. Otherwise, it is set to `LogLevel.WARNING`.
 
-To have as many log messages as possible, use `LogLevelVerbose`.
+To output all log messages, use `LogLevel.VERBOSE`.
 
 ```javascript
 import AppCenter from 'appcenter';
 
-await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
+await AppCenter.setLogLevel(AppCenter.LogLevel.VERBOSE);
 ```
 
 > [!NOTE]

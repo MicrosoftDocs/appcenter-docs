@@ -54,7 +54,7 @@ Installing an app on your iOS device is done primarily from the App Center insta
 
 Once you have navigated to the install portal, you will see a list of all available apps you have been added to as a tester.
 
-When you click on an app, Ap Center displays additional information about the app. Click the **blue install button** to install the app.
+When you click on an app, App Center displays additional information about the app. Click the **blue install button** to install the app.
 
 ![App Details View in the Portal](images/i-app-detail.png)
 

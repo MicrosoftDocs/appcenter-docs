@@ -6,7 +6,7 @@ Add the following using statement to the top of the file you are referencing `Pu
 using Microsoft.AppCenter.Push
 ```
 
-Next, add `typeof(Push)` to your `AppCenter.Start()` method to start App Center Push service.
+Next, add `typeof(Push)` to your `AppCenter.Start()` method to start App Center Push.
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Push));

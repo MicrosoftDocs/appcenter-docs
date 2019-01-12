@@ -45,6 +45,7 @@
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
+## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
 
 ## [Troubleshooting](build/troubleshooting/index.md)
 
@@ -123,6 +124,7 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
 ## [Features](diagnostics/features.md)
+## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
 ## [Android NDK](diagnostics/Android-NDK.md) 
@@ -188,6 +190,9 @@
 ### [UWP](sdk/push/uwp.md)
 ### [React Native Android](sdk/push/react-native-android.md)
 ### [React Native iOS](sdk/push/react-native-ios.md)
+### [Unity Android](sdk/push/unity-android.md)
+### [Unity iOS](sdk/push/unity-ios.md)
+### [Unity Windows](sdk/push/unity-windows.md)
 ### [Xamarin.iOS](sdk/push/xamarin-ios.md)
 ### [Xamarin.Android](sdk/push/xamarin-android.md)
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
@@ -199,6 +204,7 @@
 ### [macOS](sdk/other-apis/macos.md)
 ### [UWP](sdk/other-apis/uwp.md)
 ### [React Native](sdk/other-apis/react-native.md)
+### [Unity](sdk/other-apis/unity.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ### [Cordova](sdk/other-apis/cordova.md)
 ## Troubleshooting
@@ -216,7 +222,8 @@
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Pricing](general/pricing.md)
-### [Azure Subscriptions](general/azure-subscriptions/index.md)
+## [Billing](general/billing.md)
+## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Support Center](general/support-center.md)
 

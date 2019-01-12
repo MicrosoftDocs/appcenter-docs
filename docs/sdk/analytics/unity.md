@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/14/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ ms.tgt_pltfrm: unity
 > * [MacOS](macos.md)
 > * [Cordova](Cordova.md)
 
-App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
+App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
 Please follow instructions in the [Unity Get started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
@@ -41,7 +41,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 ## Custom events
 
-You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
+You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
 Use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. There is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
@@ -79,7 +79,7 @@ Analytics.SetEnabledAsync(true);
 
 ## Check if App Center Analytics is enabled
 
-You can also check if Mobile Center Analytics is enabled or not.
+You can also check if App Center Analytics is enabled or not.
 
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();

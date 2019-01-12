@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 12/11/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,30 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **January, 8, 2019**
+
+- **Updated Xamarin SDKs: Build your Xamarin apps with Mono 5.16 and fresh versions of the Xamarin SDKs**
+    - Mono 5.16.0.221
+    - Xamarin.Android 9.1.4.2
+- **Updated Visual Studio for Mac**
+    - Visual Studio for Mac 7.7.2.21
+
+### **December 18, 2018**
+
+- **Added support for Push notifications with Unity apps**:
+  - Unity developers can now send Push Notifications to Android, iOS and Windows built Unity apps similar to the other supported platforms.
+  
+### **December 17th, 2018**
+
+- **Search for Crashes in Diagnostics*
+   – Added the ability to search crashes by specific fields such as method, class or reason. This allows developers to find their crashes of interest in a much faster way.
+
+### **December, 14, 2018**
+
+- **Xcode 8.0-8.3.2 deprecation in App Center build:**
+  - The following Xcode versions (and related simulators) were deprecated: 8.0, 8.1, 8.2, 8.2.1, 8.3.1 and 8.3.2.
+  - Build configurations that used deprecated versions were forcibly migrated to Xcode 8.3.3
 
 ### **December, 11, 2018**
 
@@ -23,21 +47,22 @@ This document lists new features as they're added to [Visual Studio App Center](
 ### **November 30, 2018**
 
 - **CLI version 1.1.9 released**:
-  - Updated the CLI with the correct internal URLs
+  - Updated the CLI with the correct internal URLs.
 
 ### **November 26, 2018**
 
 - **CLI version 1.1.8 released**:
-  - Changed the `event-stream` module in the npm package to v3.3.4 
-  - Added the functionality to support `appcenter apps set-current` for the `appcenter test wizard` command
+  - Changed the `event-stream` module in the npm package to v3.3.4.
+  - Added the functionality to support `appcenter apps set-current` for the `appcenter test wizard` command.
 
 ### **November 19, 2018**
 
 - **Build support for iOS App Extensions.** Configure, build, and sign an iOS app with app extensions. Build and ship robust iOS apps with various app extensions. Support Swift, Objective-C and React Native apps today.
- 
+
 ### **November 15, 2018**
 
 - **Diagnostics to General Availability**:
+
 Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
 
 - **Diagnostics UI Improvements**:

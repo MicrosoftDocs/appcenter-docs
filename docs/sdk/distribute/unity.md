@@ -26,6 +26,7 @@ App Center Distribution enables your users/testers to install new versions of an
 > There are a few things to consider when using in-app updates:
 > 1. If you have released your app in the App Store or Google Play, in-app updates will be disabled and no longer work.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
+> 3. If you are using HockeyApp SDK for in-app updates **do not** switch to the App Center SDK. We are working on a migration strategy.
 
 ## Add in-app updates to your app
 

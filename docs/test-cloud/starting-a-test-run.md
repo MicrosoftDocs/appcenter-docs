@@ -4,7 +4,7 @@ description: How to start a test run in App Center Test
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 11/07/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: fccaea20-b7ca-45d2-b111-46c23ff1832d
 ms.service: vs-appcenter
@@ -37,9 +37,9 @@ Move between these screens by completing selections or the **Next >** and **< Pr
 
 ### Select devices
 
-Select the devices or a device set to test against. A *device set* is a collection of devices and operating systems. If you previously saved a device set that you wish to use for this test select it from the list of device sets.
+Select the devices or a named device set to test against. A *device set* is a collection of devices and operating systems. If you previously named and saved a device set that you wish to use for this test select it from the list of named device sets.
 
-Otherwise, click **Choose other device configurations** then choose the device or devices to use from the list. To save the selected devices as a device set, click **Save set** and provide a name. To proceed without saving this selection as a device set, click **Select N devices** (The value for *N* changes as you make device selections to confirm the number of devices selected).
+Otherwise, click **Choose other device configurations** then choose the device or devices to use from the list. To save the selected devices as a named device set, click **Save set** and provide a name. To proceed without saving this selection as a named device set, click **Select N devices** (The value for *N* changes as you make device selections to confirm the number of devices selected).
 
 ### Configure
 
@@ -50,13 +50,13 @@ Select the test series, the system language, and the test framework. The system 
 Based on the previous steps a prototype command is generated to upload and start your test run. For example, a command generated for an Android app with Espresso tests might look like this:
 
 ```shell
-appcenter test run espresso --app "<app-center-username/app-name>" --devices "app-center-username/named-device-set" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+appcenter test run espresso --app "APP_ID" --devices "DEVICE_SET_ID" --app-path PATH_TO_FILE.apk  --test-series "master" --locale "en_US" --build-dir PATH_TO_ESPRESSO_BUILD_FOLDER
 ```
 
 The command parameters include:
 
-* **app** - The name of the application in App Center.
-* **devices** - Represents the *device set* the test executes against. A device set is a collection of devices and operating systems.
+* **app** - The *id* of the application in App Center.
+* **devices** - The *id* for the *device set* to execute against. If you are using a named device set the id is based on the device set name. If you are not using a named device set the id is a *device slug*. A *device slug* is a unique hexadecimal value representing the selected collection of devices and operating systems.
 * **app-path** - The path to the application being tested.
 * **test-series** - A label used to group a series of related test runs together. By default, the value of the test series is *master*.
 * **build-dir** - The path to the directory that contains your test automation.

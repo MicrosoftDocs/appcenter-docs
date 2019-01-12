@@ -47,18 +47,18 @@ Markdown uses special characters such as \*, \`, and \# for formatting. If you w
 ## File name
 
 File names use the following rules:
-* Contain only lowercase letters, numbers, and hyphens.
-* No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
-* Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
-* No small words - don't include a, and, the, in, or, etc.
-* Must be in Markdown and use the .md file extension.
-* Keep file names reasonably short. They are part of the URL for your articles.
 
-
+- Contain only lowercase letters, numbers, and hyphens.
+- No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
+- Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
+- No small words - don't include a, and, the, in, or, etc.
+- Must be in Markdown and use the .md file extension.
+- Keep file names reasonably short. They are part of the URL for your articles.
 
 ## Headings
 
 Use sentence-style capitalization. Always capitalize:
+
 - The first word of a heading.
 - The word following a colon in a title or heading (for example, "How to: Sort an array").
 
@@ -117,6 +117,7 @@ The build system has some extensions that allow us to link to .NET Core APIs wit
 When linking to an API, you can use its unique identifier (UID) that is auto-generated from the source code.
 
 You can use one of the following syntax:
+
 1. Markdown link: `[link_text](xref:UID)`
 2. Auto link: `<xref:UID>`
 3. Shorthand form: `@UID`
@@ -142,7 +143,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. Ordered
 1. List
 
-
 #### Ordered list with an embedded list
 
 1. Here
@@ -154,7 +154,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. ordered
 1. list
 
-
 ### Unordered Lists
 
 - This
@@ -162,7 +161,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 - a
 - bulleted
 - list
-
 
 ##### Unordered list with an embedded list
 
@@ -176,7 +174,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
     1. Colonel Mustard
     1. Mrs. White
 - lists
-
 
 ## Horizontal rule
 
@@ -194,8 +191,7 @@ You can use a [Markdown table generator tool](http://www.tablesgenerator.com/mar
 
 ## Code
 
-The best way to include code is to include snippets from a working sample. Create your
-sample following the instructions in the [contributing guide](../CONTRIBUTING.md#contributing-to-samples).
+The best way to include code is to include snippets from a working sample. Create your sample following the instructions in the [contributing guide](../CONTRIBUTING.md#contributing-to-samples).
 
 You can include the code using include syntax:
 
@@ -203,25 +199,20 @@ You can include the code using include syntax:
 [!code-csharp[<title>](<pathToFile>#<RegionName)]
 ```
 
-The example above shows C# syntax, but other languages are supported.
-Use `code-fsharp` for F# samples; use `code-vbnet` for Visual Basic samples.
+The example above shows C# syntax, but other languages are supported. Use `code-fsharp` for F# samples; use `code-vbnet` for Visual Basic samples.
+
 Other languages that are supported are:
-* C++: `code-cpp`
-* HTML: `code-html`
-* JavaScript: `code-javascript`
-* Powershell: `code-ps`
-* SQL: `code-sql`
-* XML: `code-xml`
 
+- C++: `code-cpp`
+- HTML: `code-html`
+- JavaScript: `code-javascript`
+- Powershell: `code-ps`
+- SQL: `code-sql`
+- XML: `code-xml`
 
+The text you place for `<title>` shows up as a rollover on the text. The `<pathToFile>` is the path to the source file. The `<RegionName>` should be a region in your source code that should be included. Use the `#region` and `#endregion` preprocessor syntax to specify the region of code to include.
 
-The text you place for `<title>` shows up as a rollover on the text. The `<pathToFile>`
-is the path to the source file. The `<RegionName>` should be a region in your source
-code that should be included. Use the `#region` and `#endregion` preprocessor syntax
-to specify the region of code to include.
-
-For cases where regions don't work, you can specify the start and end of a snippet
-using an XML element name in a single line comment. For example, you could write this in C#:
+For cases where regions don't work, you can specify the start and end of a snippet using an XML element name in a single line comment. For example, you could write this in C#:
 
 ```csharp
 // <CodeToInclude>
@@ -232,13 +223,10 @@ int sum = i + j;
 ```
 
 In other languages, use the comment syntax for that language.
-Finally, you can use line
-numbers: `#L1-L10` would include lines 1 through 10. We discourage line numbers
-because they are very brittle.
 
-Including snippets from full programs ensures that all code runs through our Continuous Integration (CI)
-system. However, if you need to show something that causes compile time or
-runtime errors, you can use inline code blocks.
+Finally, you can use line numbers: `#L1-L10` would include lines 1 through 10. However, we discourage line numbers because they are very brittle.
+
+Including snippets from full programs ensures that all code runs through our Continuous Integration (CI) system. However, if you need to show something that causes compile time or runtime errors, you can use inline code blocks.
 
 ### Inline code blocks with language identifier
 
@@ -263,6 +251,7 @@ namespace HelloWorld
     }
 }
 ```
+
 #### Python
 
 ```python
@@ -270,6 +259,7 @@ friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print "iteration {iteration} is {name}".format(iteration=i, name=name)
 ```
+
 #### PowerShell
 
 ```powershell

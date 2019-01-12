@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 12/13/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -26,9 +26,12 @@ ms.tgt_pltfrm: android
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
+> * [Unity Windows](unity-windows.md)
 >
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [migration guide](migration/android.md).
+> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow [the SDK migration guide](migration/android.md).
 
 [!include[](introduction-android.md)]
 
@@ -90,7 +93,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Push.class` to your `AppCenter.start()` method to start App Center Push service.
+Add `Push.class` to your `AppCenter.start()` method to start App Center Push.
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
@@ -186,7 +189,7 @@ public class MyPushListener implements PushListener {
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before `AppCenter.start`:
+App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());
