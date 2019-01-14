@@ -1,10 +1,10 @@
 ---
-title: Using the CodePush Azure DevOps extension
+title: Azure DevOps Extension
 description: "Setting up and using the CodePush Azure DevOps extension"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 09/12/2018
+ms.date: 01/14/2019
 ms.topic: article
 ms.assetid: F0FB00A7-C0E3-4753-81DF-64D5F8100DDA
 ms.service: vs-appcenter
@@ -30,10 +30,10 @@ Follow these steps to automate the release and promotion of app updates via Code
 
 2. Install the **CodePush** extension from the [Azure DevOps Marketplace](https://marketplace.visualstudio.com/items/ms-vsclient.code-push)
 
-3. Go to your Visual Studio Team Services or TFS project, click on the **Build** tab, and create a new build definition (the "+" icon) that is hooked up to your project's appropriate source repo
+3. Go to your Visual Studio Team Services or TFS project, click on the **Build** tab, and create a new build definition (the "+" icon) that is hooked up to your project's appropriate source repository.
 
    > [!NOTE]
-   > If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release defintion in order to work.
+   > If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release definition in order to work.
 
 4. Click **Add build step...** and select one of the following tasks from the **Deploy** category, depending on your app type and/or requirements:
 
@@ -43,7 +43,7 @@ Follow these steps to automate the release and promotion of app updates via Code
 
 5. Configure the release task with the access token created or retrieved in step #1, specifying your app name (e.g. `MyApp-iOS`), deployment name and all other required parameters. See the reference docs below in order to find details on each option. 
 
-6. Click the **Queue Build** button or push a change to your repo in order to run the newly defined build pipeline
+6. Click the **Queue Build** button or push a change to your repository in order to run the newly defined build pipeline
 
 7. Run your CodePush-ified app to see the change that was automatically deployed!
 
@@ -69,7 +69,7 @@ In addition to specifying your access token directly within each build task inst
 
 5. Give the new endpoint a name (e.g. "MyApp-iOS") and enter the access token you generated in step #1
 
-	![Service endpoint](images/vsts2.png)
+    ![Service endpoint](images/vsts2.png)
 
 6. Select this endpoint via the name you chose in #5 whenever you add a CodePush task to a build or release definition.
 
@@ -105,7 +105,7 @@ Allows you to release a CodePush update to the App Center server. This task beha
 
 4. **Update Contents Path** *(File path, Required)* - Path to the file or directory that contains the update you want to release. For Cordova this should be the platform-specific `www` folder (e.g `platforms/ios/www`) and for React Native this should point to either your generated JS bundle file (e.g. `ios/main.jsbundle`) or a directory containing your JS bundle and assets, depending on if you're using the React Native assets system. View the [CLI docs](./cli.md#update-contents-parameter) for more details.
 
-5. **Target Binary Version** *(String, Required)* - Semver expression that specifies the binary app version(s) this release is targetting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
+5. **Target Binary Version** *(String, Required)* - Semver expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
 
 ##### Update Metadata
 
@@ -177,7 +177,7 @@ By default, no release attributes are modified by the patch operation, so in ord
 
 2. **Description** *(String)* - Description of the changes made to the app in this release. Selecting `Inherit` will leave this attributes unmodified. When this task is used within a Azure DevOps release definition, this field can be set to the `$(Release.ReleaseDescription)` variable in order to inherit the description that was given to the release. Defaults to `Inherit`.
 
-3. **Target Binary Version** *(String, Required)* - Semver expression that specifies the binary app version(s) this release is targetting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting `Inherit` will leave this attributes unmodified. Defaults to `Inherit`.
+3. **Target Binary Version** *(String, Required)* - Semver expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting `Inherit` will leave this attributes unmodified. Defaults to `Inherit`.
 
 4. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Selecting `Inherit` will leave this attributes unmodified. Defaults to `Inherit`.
 
