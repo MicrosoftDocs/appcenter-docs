@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/10/2018
+ms.date: 01/14/2018
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -91,7 +91,7 @@ To export crashes, attachments and errors, you must call the [Export Configurati
 POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
-In the `exportEntities` field of the API property, you must indicate what type of data you wish to export: crashes, errors, attachments.
+In the `exportEntities` field of the API property, you must indicate what type of data you wish to export: crashes, errors, attachments. When doing so, the full symbolicated crashes and corresponding stack traces will be exported. 
 
 Learn more about the benefits of, and how to export your data in the [export documentation](~/analytics/export.md).  
 

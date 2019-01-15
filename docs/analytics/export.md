@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 10/05/2018
+ms.date: 01/14/2018
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.custom: analytics
 > [!IMPORTANT]
 > To set up an export, you must use an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to.
 
-App Center allows you to continuously export all your Analytics and Diagnostics (crashes and errors) raw data into Azure. Export Analytics data to both Blob Storage and Application Insights, and export Diagnostics data (crashes and errors) to Blob Storage. By exporting the data, you benefit from:
+App Center allows you to continuously export all your Analytics and Diagnostics (full symbolicated crashes and errors and its corresponding stack traces) raw data into Azure. Export Analytics data to both Blob Storage and Application Insights, and export Diagnostics data (crashes and errors) to Blob Storage. By exporting the data, you benefit from:
 
 - Unlimited retention by keeping your data as long as you need to and access to it when needed
 - Get answers by querying your raw data
