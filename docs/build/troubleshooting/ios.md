@@ -16,7 +16,7 @@ ms.custom: build
 
 In order to build a xcworkspace or a xcproject, a shared Xcode scheme is required. Xcode schemes are saved locally so that Xcode has access to them, but by default they are not shared with others and they are not included in source control.
 
-To share a scheme, click on "Manage schemes" in Xcode and make sure that the scheme used for building your xcproject/xcworkspace is marked as shared. The scheme's container needs to be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
+To share a scheme, select **Product** > **Scheme** > **Manage schemes** in Xcode and make sure that the scheme used for building your xcproject/xcworkspace is marked as shared. The scheme's container needs to be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
 
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
@@ -43,11 +43,11 @@ Dealing with provisioning profiles and certificates can sometimes be a challengi
 
 1. Save the build configuration in App Center after you've pushed signing changes to your project
 
-In App Center, the build configuration of any branch stores two values of your Xcode project: the CODE_SIGN_STYLE and DEVELOPMENT_TEAM (set in the project.pbxproj file in your .xcodeproj folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes, or your build will likely fail with a signing error.
+In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes, or your build will likely fail with a signing error.
 
 2. Easily drag and drop the correct provisioning profile when using automatic signing
 
-In Xcode, in the General tab of your target under Signing, click the info icon next to Xcode Managed Profile. You’ll then see a popover with profile information. Click and drag the “PROV” icon on the top left to a desired location (as shown below).
+In Xcode, in the General tab of your target under **Signing**, click the info icon next to **Xcode Managed Profile**. You’ll then see a popover with profile information. Click and drag the **PROV** icon on the top left to a desired location (as shown below).
 
 3. Take note of App Center's currently supported options when using manual and automatic signing
 
