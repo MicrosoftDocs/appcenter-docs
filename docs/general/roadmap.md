@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 01/03/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -44,6 +44,7 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 * Specific download page for releases - Share single releases with anyone that has access to the link.
 * Sparkle - Support to use [Sparkle](https://sparkle-project.org) for macOS beta distribution.
 * Notify testers optional - Choose whether or not to notify testers when releasing a new versions to a distribution group.
+* Expose Fastlane logs - Download Fastlane logs when debugging a failed TestFlight or App Store release.
 * [SHIPPED] Android Native App Experience – View and install apps via a dedicated native app experience.
 
 ## SDK
