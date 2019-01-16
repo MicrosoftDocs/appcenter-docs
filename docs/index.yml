@@ -67,6 +67,11 @@ sections:
         alt: logo-Cordova
       text: Cordova
       href: ~/sdk/getting-started/cordova/
+    - image:
+        src: ~/media/logo_unity.svg
+        alt: logo-Unity
+      text: Unity
+      href: ~/sdk/getting-started/unity/      
 - title: Services
   items:
   - type: grid
