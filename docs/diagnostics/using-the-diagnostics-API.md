@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 01/03/2019
+ms.date: 01/15/2019
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ ms.custom: analytics
 # Using the Diagnostics API
 
 > [!NOTE]
-> If you are using any old crashes APIs that map to a new API as listed below, you must transition to the new APIs by January 2019.
+> If you are using any old crashes APIs that map to a new API as listed below, you must transition to the new APIs by January 2019. The old crashes API will only be available past January 2019 for UWP apps.
 
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.  
 
@@ -31,6 +31,9 @@ There are three types of crashes APIs:
 ### Crashes APIs that map to new APIs
 
 Old APIs that now map to new APIs will be deprecated no later than January 2019. The old APIs will continue to work until then but you will need to use the new diagnostics APIs as listed in the table below before January 2019.
+
+> [!NOTE]
+> Old crashes APIs marked as deprecated will still be available past January 2019 for UWP apps.
 
 | Old Crashes APIs                                               | New Crashes API        |
 | -------------------------------------------------------------- |:----------------------:|
