@@ -4,7 +4,7 @@ description: How to export personal information from crashes to your users
 keywords: GDPR, DSR, privacy, EU
 author: iageoghe
 ms.author: iageoghe
-ms.date: 12/03/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.assetid: 2B51F9FA-75B1-4B73-8587-992F22CB0631
 ms.service: vs-appcenter
@@ -20,10 +20,10 @@ This article walks you through how to export data per your user request. There a
 To check the retention settings for your app, you can call the following App Center API:
 
 ```
-GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/retention_settings
+GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings
 ```
 
-Additional details are available in the [Retention Settings API Documentation](https://openapi.appcenter.ms/#/crash/crashes_getRetentionSettings).
+Additional details are available in the [Retention Settings API Documentation](https://openapi.appcenter.ms/#/errors/errors_getRetentionSettings).
 
 ## Option 1 - 28 Day Retention Setting
 
