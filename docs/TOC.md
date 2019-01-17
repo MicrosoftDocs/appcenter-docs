@@ -221,6 +221,7 @@
 
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
+## [Accounts in App Center](general/account.md)
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
