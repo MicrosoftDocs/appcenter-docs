@@ -4,7 +4,7 @@ description: How to test iOS Apps in App Center
 keywords: distribution
 author: Zakeelm
 ms.author: Zakeelm 
-ms.date: 11/05/2018
+ms.date: 101/0517/2018
 ms.topic: article
 ms.assetid: a4101ef9-3272-49fc-96e5-a8b9ac5a15d6
 ms.service: vs-appcenter
@@ -28,15 +28,15 @@ Adding your device consists of the following steps:
     * Click the add device button located in the email you received when a release was distributed.
     * Click the profile icon in the upper-left corner of the App Center portal.
 
-![Adding a Device](images/I-add-device.png)
+    ![Adding a Device](images/I-add-device.png)
 
 2. Click the **Add new device** button within the App Center install portal. App Center will display a dialog asking to show you a configuration profile.
 
-![Config Profile](images/i-profile.png)
+    ![Config Profile](images/i-profile.png)
 
 3. Select the **Allow** button to view this profile. This profile is a necessary part of adding your device.
 
-![Config Profile View](images/i-configview.png)
+    ![Config Profile View](images/i-configview.png)
 
 4. Click the **install button** in the upper-right corner of this screen to install this profile.
 5. Once the profile installs, App center will direct you to the install portal. The device you're using will now be in the "My Devices" table.
@@ -46,7 +46,7 @@ Adding your device consists of the following steps:
 
 ## Installing an app
 
-Installing an app on your iOS device is done primarily from the App Center install portal or our native app, which is explained in the next section. Installing your apps can be done in two different ways depending on the developer's preference:
+Installing an app on your iOS device is done primarily from the App Center install portal, which is explained in the next section. Installing your apps can be done in two different ways depending on the developer's preference:
 
 1. You will receive an email from App Center that directs you to the release in the App Center. You can also elect to go directly to the [App Center Install Portal](https://install.appcenter.ms) at any point to see apps you've been added to and their releases.
 
