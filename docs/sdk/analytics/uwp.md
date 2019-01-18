@@ -38,7 +38,7 @@ Country code is not automatically reported by the UWP SDK. If you want to report
 AppCenter.SetCountryCode(new Windows.Globalization.GeographicRegion().CodeTwoLetter);
 ```
 
-[GeographicRegion](https://docs.microsoft.com/en-us/uwp/api/windows.globalization.geographicregion) will report the user's home region they currently have selected.
+[GeographicRegion](https://docs.microsoft.com/en-us/uwp/api/windows.globalization.geographicregion) will report the user's home region they have manually selected.  You may want to report a more precise value based on their actual location if your app retrives that information for other purposes. 
 
 ## Custom events
 
