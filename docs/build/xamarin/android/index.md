@@ -67,7 +67,7 @@ Use your newly produced `.apk` file to test if your app starts on a real device.
 
 ### 3.7. NuGet restore
 
-If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
+If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
