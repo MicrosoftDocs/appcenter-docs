@@ -4,7 +4,7 @@ description: A overview of App Center's Windows support
 keywords: crashes, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/06/2018
+ms.date: 01/17/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ Select a crash report to view the crash stack trace and events. The full stack t
 
 
 ### Known Limitations 
-App Center works with the Windows crash reporting service built into Windows devices to send and process crash logs. Because of this, there are some known limitations unique to UWP apps. 
+App Center works with the Windows crash reporting service built into Windows devices to send and process crash logs. Because of this, there are some known limitations, we plan to address this year, unique to UWP apps.
 
 - Crash reporting is enabled only on devices running Windows 10 Creators update or more recent (version 10.0.15063).
 - Crash reporting on Windows requires the app to be distributed through the Microsoft Store.
@@ -71,4 +71,4 @@ Follow the [Windows packaging documentation](https://docs.microsoft.com/en-us/wi
  
 ## WinRT, WPF, and Silverlight 
 
-App Center doesn’t currently support WinRT, WPF, Silverlight or any other Windows platforms. If you have any feedback or requests, please reach out to us using the blue chat button in the lower-right corner of any App Center page.
+App Center doesn’t currently support WinRT, WPF, Silverlight or any other Windows platforms. The team is committed to supporting WPF in the future and possibly other platforms as well. If you have any feedback or requests, please reach out to us using the blue chat button in the lower-right corner of any App Center page.
