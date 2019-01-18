@@ -35,8 +35,10 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can use the following code before `AppCenter.Start(... typeof(Analytics) ...);`:
 
 ```csharp
-AppCenter.SetCountryCode("us");
+AppCenter.SetCountryCode(new Windows.Globalization.GeographicRegion().CodeTwoLetter);
 ```
+
+[GeographicRegion](https://docs.microsoft.com/en-us/uwp/api/windows.globalization.geographicregion) will report the user's home region they currently have selected.
 
 ## Custom events
 
