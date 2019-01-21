@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 01/07/2019
+ms.date: 01/18/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -272,9 +272,6 @@ To distinguish between notifications received in the foreground and notification
         // Do something, e.g. set a BOOL @property to track the foreground state.
         self.didReceiveNotificationInForeground = YES;
 
-        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-        [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
-
         // Complete handling the notification.
         completionHandler(UNNotificationPresentationOptionNone);
     }
@@ -336,9 +333,6 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 
         // User tapped on notification
       }
-
-      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
 
       // Complete handling the notification.
       completionHandler();
