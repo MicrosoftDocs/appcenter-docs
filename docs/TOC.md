@@ -68,6 +68,7 @@
 ### [XCUITest](test-cloud/preparing-for-upload/xcuitest.md)
 ### [XCUITest with Extensions](test-cloud/preparing-for-upload/xcuitest-extension.md)
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
+## [Test Reports](test-cloud/test-reports.md)
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
