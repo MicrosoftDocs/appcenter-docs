@@ -4,7 +4,7 @@ description: Help understanding symbolication for iOS and MacOS diagnostics in A
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/08/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
@@ -43,7 +43,7 @@ If you are using Visual Studio instead of XCode, see [Where can I find the .dSYM
 
 #### React Native iOS apps
 
-To obtain symbol files for React Native iOS files, create a ZIP file with the dSYM package on your Mac and the JavaScript source map of your app. The source map should named `index.ios.map`. The commands below will generate the source map for release builds:
+To obtain symbol files for React Native iOS files, create a ZIP file with the dSYM package on your Mac and the JavaScript source map of your app. The source map should be named `index.ios.map`. The commands below will generate the source map for release builds:
 
 ```shell
 react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
