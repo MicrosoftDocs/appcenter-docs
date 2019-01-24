@@ -79,10 +79,10 @@ You can find the app name and owner name from your App Center app URL, or using 
 
 Owner can be a user or an organization. For example,
 
-| Owner| URL                                                      | Owner name     | App name   |
-| -----| -------------------------------------------------------- | -------------- | ---------- |
-| User | `https://appcenter.ms/users/jodeveloper/apps/DiceOut-01` | joedeveloper   | DiceOut-01 |
-| Org  | `https://appcenter.ms/orgs/CrystalGeyser/apps/MacOS-app` | CrystalGeyser  | MacOS-app  |
+| Owner| URL                                                       | Owner name     | App name   |
+| -----| --------------------------------------------------------- | -------------- | ---------- |
+| User | `https://appcenter.ms/users/joedeveloper/apps/DiceOut-01` | joedeveloper   | DiceOut-01 |
+| Org  | `https://appcenter.ms/orgs/CrystalGeyser/apps/MacOS-app`  | CrystalGeyser  | MacOS-app  |
 
 ### From App Center CLI
 
