@@ -52,7 +52,7 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 ## SDK
 
 * Carthage support - Ability to add App Center frameworks to your iOS and macOS application using Carthage.
-* [SHIPPED] Pause and Resume data transmission – Adding APIs that let you control when to send data and can be called by application code to signal the SDK to pause/resume transmission. When the transmission is paused, the SDK continues to collect the Analytics data, it just doesn’t send the data to App Center backend until the operation is resumed.	* Carthage support - Ability to add App Center frameworks to your iOS and macOS application using Carthage.
+* [SHIPPED] Pause and Resume data transmission – Adding APIs that let you control when to send data and can be called by application code to signal the SDK to pause/resume transmission. When the transmission is paused, the SDK continues to collect the Analytics data, it just doesn’t send the data to App Center backend until the operation is resumed.
 * [SHIPPED] Set SDK storage size – This API will let you configure the size of SDK storage for scenarios where developers need the ability to store as many logs as possible when the device is offline, or when they want to send the data only few times a day. In those cases, you can configure the storage size according to your needs.
 
 ## Test
