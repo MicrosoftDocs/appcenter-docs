@@ -211,6 +211,14 @@
         {
             "source_path": "docs/azure/index.md",
             "redirect_url": "/appcenter/"
-        }
+        },
+        {
+            "source_path": "docs/diagnostics/symbolication.md",
+            "redirect_url": "/appcenter/diagnostics/iOS-symbolication"
+        },
+        {
+            "source_path": "docs/diagnostics/proguard.md",
+            "redirect_url": "/appcenter/diagnostics/android-proguard"
+        } 
     ]
 }
