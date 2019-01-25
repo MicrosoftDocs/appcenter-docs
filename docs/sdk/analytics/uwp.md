@@ -4,7 +4,7 @@ description: App Center Analytics for UWP
 keywords: analytics
 author: dhei
 ms.author: dihei
-ms.date: 11/20/2018
+ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
@@ -32,10 +32,55 @@ Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you hav
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc.
 
-Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can use the following code before `AppCenter.Start(... typeof(Analytics) ...);`:
+Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can follow these steps:
+
+1. Make sure that you [enable Location Capability](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location#enable-the-location-capability) for your app.
+2. [Obtain a Bing Maps Authentication Key](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/authentication-key#get-a-key).
+3. Use the following code in any place before you call `AppCenter.Start(... typeof(Analytics) ...);`. 
+	As `BingMapsToken`, use the key obtained in step 2.
 
 ```csharp
-AppCenter.SetCountryCode("us");
+private static async Task SetCountryCode()
+{
+    // The following country code is used only as a fallback for the main implementation.
+    // This fallback country code does not reflect the physical device location, but rather the
+    // country that corresponds to the culture it uses.
+    var countryCode = new GeographicRegion().CodeTwoLetter;
+    var accessStatus = await Geolocator.RequestAccessAsync();
+    switch (accessStatus)
+    {
+        case GeolocationAccessStatus.Allowed:
+            var geoLocator = new Geolocator
+            {
+                DesiredAccuracyInMeters = 100
+            };
+            var position = await geoLocator.GetGeopositionAsync();
+            var myLocation = new BasicGeoposition
+            {
+                Longitude = position.Coordinate.Point.Position.Longitude,
+                Latitude = position.Coordinate.Point.Position.Latitude
+            };
+            var pointToReverseGeocode = new Geopoint(myLocation);
+            MapService.ServiceToken = Constants.BingMapsAuthKey;
+            var result = await MapLocationFinder.FindLocationsAtAsync(pointToReverseGeocode);
+            if (result.Status != MapLocationFinderStatus.Success || result.Locations == null || result.Locations.Count == 0)
+            {
+                break;
+            }
+    
+            // The returned country code is in 3-letter format (ISO 3166-1 alpha-3).
+            // Below we convert it to ISO 3166-1 alpha-2 (two letter).
+            var country = result.Locations[0].Address.CountryCode;
+            countryCode = new GeographicRegion(country).CodeTwoLetter;
+            break;
+        case GeolocationAccessStatus.Denied:
+            AppCenterLog.Info(LogTag, "Geolocation access denied. In order to set country code in App Center, enable location service in Windows 10.");
+            break;
+        case GeolocationAccessStatus.Unspecified:
+            break;
+    }
+    AppCenter.SetCountryCode(countryCode);
+}
 ```
 
 ## Custom events
