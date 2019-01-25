@@ -201,7 +201,7 @@ appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
 To view the deployment keys use:
 
 ```shell
-appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android --displayKeys
+appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android
 ```
 
 ![CodePush CLI providing deployment keys](images/tutorials1.png)
