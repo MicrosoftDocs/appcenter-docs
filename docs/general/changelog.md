@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 01/08/2019
+ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -31,6 +31,8 @@ This document lists new features as they're added to [Visual Studio App Center](
 
 - **Search for Crashes in Diagnostics*
    – Added the ability to search crashes by specific fields such as method, class or reason. This allows developers to find their crashes of interest in a much faster way.
+   - Added the ability to attach a user ID to Diagnostics logs. This allows developers to visualize the user ID for each crash or error instance.
+- Added the ability to search crashes by User ID. This allows developers to find their crashes for a specific user.
 
 ### **December, 14, 2018**
 

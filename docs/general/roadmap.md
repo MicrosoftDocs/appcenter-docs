@@ -4,7 +4,7 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 01/17/2019
+ms.date: 02/25/2019
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -29,8 +29,8 @@ As features ship, we'll mark them as [SHIPPED] here for a few weeks before remov
 
 * Full crash reporting capabilities for WPF Windows apps
 * Full crash reporting capabilities for UWP Windows apps
-* Search by User ID – Ability to search for crashes for a specific user ID.
-* User Identification – Attach a user identifier to all diagnostics logs (crashes and errors), expose it in the UI. This will allow you to know what user is affected by each crash or error instance.
+* [SHIPPED] Search by User ID – Ability to search for crashes for a specific user ID.
+* [SHIPPED] User Identification – Attach a user identifier to all diagnostics logs (crashes and errors), expose it in the UI. This will allow you to know what user is affected by each crash or error instance.
 * [SHIPPED] Search – Add the ability to search crashes by specific fields (e.g. method name, reason, etc.). This allows developers to find their crashes of interest in a much faster way.
 * [SHIPPED] Diagnostics to General Availability:
   + Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
