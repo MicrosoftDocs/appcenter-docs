@@ -4,7 +4,7 @@ description: A description of the search functionality in Diagnostics
 keywords: crashes, errors, search
 author: blparr
 ms.author: blparr
-ms.date: 12/17/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.assetid: 92ABCD39-D03A-4560-BE32-31C44DE1EAC6
 ms.service: vs-appcenter
@@ -12,9 +12,6 @@ ms.custom: analytics
 ---
 
 # Search in Diagnostics
-
-> [!NOTE]
-> The search functionality is available just for crashes data (errors cannot be searched today).
 
 In this section, you will learn about the ability to search Diagnostics data in App Center.
 
@@ -40,7 +37,7 @@ App Center searches in the indexed fields, and can be done in two ways:
 
 For crash reports:
 
-- User ID: Support for searching User ID is planned but not available yet.
+- User ID
 - Method
 - Class
 - Reason
@@ -55,5 +52,6 @@ For crash groups:
 
 ## Considerations
 
+- The search functionality is available just for crashes data (errors cannot be searched today).
 - The maximum number of matching reports we display is 100.
 - For now, search results show the last 30 days of data, regardless of the retention settings.

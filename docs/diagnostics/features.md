@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 01/14/2018
+ms.date: 01/24/2018
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -30,6 +30,10 @@ Using the top-left tabs, drill down into Crashes and Errors. When you do this, t
 App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
 
 ![App Center groups crashes and errors based on similarities](~/diagnostics/images/crash-groups.png)
+
+### User Identification
+
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [React Native](~/sdk/other-apis/react-native.md), [Xamarin](~/sdk/other-apis/xamarin.md), [Apache Cordova](~/sdk/other-apis/cordova.md) and [Unity](~/sdk/other-apis/unity.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 ### Attachments
 
