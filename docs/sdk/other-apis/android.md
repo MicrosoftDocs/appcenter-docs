@@ -24,7 +24,6 @@ ms.tgt_pltfrm: android
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
-
 ## Adjust the log level
 
 You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
@@ -44,6 +43,20 @@ AppCenter.getInstallId();
 ```
 
 [!include[](../android-see-async.md)]
+
+## Identify users
+
+The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK by calling `AppCenter.start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/android.md). 
+2. Set a `userID` in the SDK using the following code:
+
+```java
+AppCenter.setUserId("your-user-id");
+```
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

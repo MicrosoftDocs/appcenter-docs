@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/03/2019
+ms.date: 01/23/2019
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.service: vs-appcenter
@@ -41,6 +41,20 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 ```csharp
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
+
+## Identify users
+
+The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK as described in the [App Center SDK Getting started guide](~/sdk/getting-started/unity.md).
+2. Set a `userID` in the SDK using the following code:
+
+```csharp
+AppCenter.SetUserId("your-user-id");
+```
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 
