@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 01/14/2019
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -283,6 +283,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 | `1.2.x`          | Devices running major version 1, minor version 2 and any patch version of your app     |
 | `1.2.3 - 1.2.7`  | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (inclusive) |
 | `>=1.2.3 <1.2.7` | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (exclusive) |
+| `1.2`            | Equivalent to `>=1.2.0 <1.3.0`                                                         |
 | `~1.2.3`         | Equivalent to `>=1.2.3 <1.3.0`                                                         |
 | `^1.2.3`         | Equivalent to `>=1.2.3 <2.0.0`                                                         |
 
