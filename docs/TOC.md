@@ -80,6 +80,7 @@
 #### [Backdoors](test-cloud/uitest/working-with-backdoors.md)
 #### [Categorizing Tests](test-cloud/uitest/working-with-categorized-tests.md)
 #### [Entering Text](test-cloud/uitest/working-with-entering-text.md)
+#### [Files](test-cloud/uitest/working-with-files.md)
 #### [Gestures](test-cloud/uitest/working-with-gestures.md)
 #### [REPL](test-cloud/uitest/working-with-repl.md)
 #### [iOS Simulator](test-cloud/uitest/working-with-ios-simulator.md)

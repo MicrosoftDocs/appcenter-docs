@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 10/25/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.assetid: 4241c097-00ad-4e3b-bc8b-db0134354bdf
 ms.service: vs-appcenter
@@ -27,6 +27,10 @@ This guide discusses how to categorize your tests, allowing you to run a subset 
 ## [Entering Text](working-with-entering-text.md)
 
 This guide discusses how to enter text into views and how to clear text from views.
+
+## [Files](working-with-files.md)
+
+This guide discusses how to upload files and access them from your tests in App Center Test.
 
 ## [Gestures](working-with-gestures.md)
 
