@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Product Roadmap
 
-In order to more actively engage with our customers (both existing and potential), we moved our public roadmap to the [AppCenter GitHub repository](https://github.com/Microsoft/appcenter). In our new roadmap, you’ll see a list of planned enhancements to the product’s current feature set, plus new services we’re planning or thinking of adding.
+In order to more actively engage with our customers (both existing and potential), we moved our public roadmap to the [App Center GitHub repository](https://github.com/Microsoft/appcenter). In our new roadmap, you’ll see a list of planned enhancements to the product’s current feature set, plus new services we’re planning or thinking of adding.
 
 Each feature exists as an issue in the repository, linked to the iteration plan (or plans) where we reference the feature. For new features, or updates to existing features, that have a user interface (UI), we’ll also publish mock-ups of our proposed UI in the issue. There’s no guarantee that everything will make it in to App Center, but you’ll know how we’re thinking.
 
