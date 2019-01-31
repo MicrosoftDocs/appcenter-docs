@@ -21,6 +21,7 @@ ms.tgt_pltfrm: uwp
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
+> * [Cordova](cordova.md)
 
 ## Analytics data doesn't show up in the portal
 

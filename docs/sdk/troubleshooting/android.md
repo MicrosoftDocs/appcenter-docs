@@ -20,6 +20,7 @@ ms.custom: sdk
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
+> * [Cordova](cordova.md)
 
 ## What Android permissions are required?
 

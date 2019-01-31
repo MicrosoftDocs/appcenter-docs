@@ -214,6 +214,7 @@
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [macOS](sdk/troubleshooting/macos.md)
 ### [React Native](sdk/troubleshooting/react-native.md)
+### [Cordova](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
 ### [UWP](sdk/troubleshooting/uwp.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
