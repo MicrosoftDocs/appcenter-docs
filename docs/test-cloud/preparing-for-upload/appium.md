@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 01/07/2019
+ms.date: 02/01/2019
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -20,10 +20,10 @@ Note the following limitations for Appium support:
 * No support for TestNG.
 * No support for Android 4.2 or prior.
 * Maven version must be at least 3.3.9.
-* Support for Appium version 1.7.1 only.
+* Support for Appium version 1.11.0 only. This appium version requires at the appium java client to be at least 6.0.0  
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
 * Automating browsers or WebView context is not supported.
-* Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
+* Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
 
 ## Prerequisites
 
@@ -53,9 +53,7 @@ SimpleTest(MainTest)  Time elapsed: 0.594 sec  <<< ERROR!
 
 If you're unable to run the tests using command line locally, tests will also not work in App Center Test.
 
-## 1a. Changes to the build system for Maven users
-
-See the section below for instructions if you use Gradle for your project, such as Android Studio builds.
+## 1. Changes to the build system
 
 ### Step 1 - Add repository and dependency
 
@@ -76,7 +74,7 @@ Then add a dependency for the Appium test extensions:
 <dependency>
     <groupId>com.microsoft.appcenter</groupId>
     <artifactId>appium-test-extension</artifactId>
-    <version>1.3</version>
+    <version>1.5</version>
 </dependency>
 ```
 
@@ -86,54 +84,6 @@ This will ensure the enhanced Android and iOS drivers are available at compile t
 
 Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
 The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
-
-## 1b. Changes to the build system for Gradle users
-
-### Step 1 - Add repository and dependency
-
-Ensure you have the JCenter repository enabled in the `build.gradle` in your project's root folder:
-
-```gradle
-allprojects {
-    repositories {
-        jcenter()
-    }
-}
-```
-
-Then add the following snippet to the `build.gradle` in the `app` folder:
-
-```gradle
-androidTestCompile('com.microsoft.appcenter:appium-test-extension:1.0')
-```
-
-Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
-
-### Step 2 - Automate pom file generation
-
-The uploader requires a `pom.xml` file to work. Add the following snippet to the `build.gradle` in the `app` folder to automatically build the pom file:
-
-```gradle
-apply plugin: 'maven'
-
-task createPom {
-    pom {
-        withXml {
-            def dependenciesNode = asNode().appendNode('dependencies')
-
-            //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
-            configurations.testCompile.allDependencies.each {
-                def dependencyNode = dependenciesNode.appendNode('dependency')
-                dependencyNode.appendNode('groupId', it.group)
-                dependencyNode.appendNode('artifactId', it.name)
-                dependencyNode.appendNode('version', it.version)
-            }
-
-            def profilesNode = asNode().appendNode('profiles')
-            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/master/gradleuploadprofilesnippet.xml'))
-        }
-    }.writeTo("pom.xml")
-```
 
 ## 2. Changes to the tests
 
@@ -222,6 +172,6 @@ If you have a very automated Continuous Delivery setup where the IPA is having i
 
 ### Re-installation
 
-On a shared device cloud, it is very important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.
-Running tests locally does not inflict any penalty because the app mostly stays installed through all tests. In App Center Test, the app is automatically uninstalled after each test. The next test will then have to re-install the app before running the test. This can slow down your tests in the cloud.
-Luckily, there’s a solution. Instead of having the appium driver create a new session for each test case, just have one session and re-use it for all tests. To control the app state, make a call to `driver.resetApp()` before each test. This will only incur a 5-second delay between test cases. You can implement this by moving the driver initialization code from the `setUp` method to the `setUpClass` method.
+On a shared device cloud, it is very important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.  In App Center Test, the app is automatically uninstalled after the completion of your test run. 
+
+This means that its possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speedup test execution. See [here](http://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details. 
