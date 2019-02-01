@@ -183,7 +183,7 @@ There are few reserved keywords in each platform that can be set via custom data
 
 ### Android
 - **color**: The notification's icon color, expressed in `#rrggbb` format. Will be applied only on devices with Android 5.0 and later.
-- **icon**: The notification's icon. You should specify **name** of the icon resource. Supports `drawable` and `mipmap` types. If this value isn't specified application icon will be used.
+- **icon**: The notification's icon. You should specify **name** of the icon resource. Supports `drawable` and `mipmap` types. If this value isn't specified application icon will be used. See [Status Bar Icons on Android Developers]( https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar) for details regarding the icon specifications. 
 - **sound**: Add this key when you want the to play a sound when the device receives the notification. Supports `default` or the filename of a sound resource bundled in the app. Sound files must reside in `/res/raw/`. This is effective only for devices running or targeting an Android version lower than 8. Sound is set by default on Android 8 and user can change notification settings for the group of notifications coming from AppCenter.
 
 #### Configure notification's default values
