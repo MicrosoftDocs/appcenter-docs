@@ -10,6 +10,9 @@ ms.assetid: 610b8797-6884-4dd4-bad3-7c05f39b3922
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # Asynchronous APIs in the Android SDK
@@ -29,6 +32,15 @@ future.thenAccept(new AppCenterConsumer<{ReturnType}>() {
     }
 });
 ```
+```kotlin
+val future = {AnyAsyncApi}()
+future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
+    override fun accept(t: {ReturnType}?) {
+        // do something with result, this is called back in U.I. thread.
+    }
+
+})
+```
 
 To avoid blocking UI thread that causes slowing down your application, consider using `thenAccept` with the callback all the time.
 
@@ -45,9 +57,19 @@ AppCenter.isEnabled().thenAccept(new AppCenterConsumer<Boolean>() {
     }
 });
 ```
+```kotlin
+AppCenter.isEnabled().thenAccept(object : AppCenterConsumer<Boolean> {
+    override fun accept(enabled: Boolean?) {
+        Log.d("MyApp", "AppCenter.isEnabled=$enabled")
+    }
+})
+```
 
 Synchronous example:
 
 ```java
 boolean enabled = AppCenter.isEnabled().get();
+```
+```kotlin
+val enabled = AppCenter.isEnabled().get()
 ```
