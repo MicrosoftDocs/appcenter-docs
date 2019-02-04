@@ -54,6 +54,9 @@ To add your custom behavior, you need to adopt the `MSCrashesDelegate`-protocol,
 MSCrashes.setDelegate(self)
 ```
 
+> [!NOTE]
+> You must set the delegate *before* calling `[MSAppCenter start]`, since App Center starts processing crashes immediately after the start.
+
 ### Should the crash be processed?
 
 Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopts the `MSCrashesDelegate`-protocol if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.

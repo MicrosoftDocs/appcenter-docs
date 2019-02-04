@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 01/17/2019
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -89,6 +89,9 @@ AbstractCrashesListener customListener = new AbstractCrashesListener() {
 };
 Crashes.setListener(customListener);
 ```
+
+> [!NOTE]
+> You must set the listener *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 

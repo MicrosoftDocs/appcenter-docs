@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 12/28/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -68,6 +68,9 @@ There are numerous use cases for this API, the most common one is people who cal
 ## Customize your usage of App Center Crashes
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
+
+> [!NOTE]
+> You must set the callback *before* App Center starts, For example in `Awake` method, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
