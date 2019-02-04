@@ -97,7 +97,6 @@
 ### [Apple App Store](distribution/stores/apple.md)
 ### [Google Play Store](distribution/stores/googleplay.md)
 ### [Microsoft Intune](distribution/stores/intune.md)
-### [Intune App Protection](distribution/stores/app-protection.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
