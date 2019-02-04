@@ -53,5 +53,6 @@ For crash groups:
 ## Considerations
 
 - The search functionality is available just for crashes data (errors cannot be searched today).
+- Only symbolicated crashes are searchable; you must upload the symbols to search for them.
 - The maximum number of matching reports we display is 100.
 - For now, search results show the last 30 days of data, regardless of the retention settings.
