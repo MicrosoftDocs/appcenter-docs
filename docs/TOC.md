@@ -77,6 +77,7 @@
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
 ### [Working With](test-cloud/uitest/working-with.md)
+#### [Android signing](test-cloud/uitest/working-with-android-signing.md)
 #### [Backdoors](test-cloud/uitest/working-with-backdoors.md)
 #### [Categorizing Tests](test-cloud/uitest/working-with-categorized-tests.md)
 #### [Entering Text](test-cloud/uitest/working-with-entering-text.md)
