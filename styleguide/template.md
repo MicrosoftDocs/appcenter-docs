@@ -374,8 +374,8 @@ You can see an example of buttons in action at the [Intune docs](https://docs.mi
 
 ```
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/using-on-windows.md)
+> * [macOS](../docs/core/tutorials/using-on-macos.md)
+> * [Windows](../docs/core/tutorials/using-on-windows.md)
 ```
 
 You can see an example of selectors in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
