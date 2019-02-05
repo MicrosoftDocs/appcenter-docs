@@ -58,7 +58,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add the Distribute module to your `AppCenter.start()` method to start App Center Distribute service.
+Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
@@ -67,7 +67,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 AppCenter.start(application, "{Your App Secret}", Distribute::class.java)
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;

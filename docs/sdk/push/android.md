@@ -96,7 +96,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add the `Push` module to your `AppCenter.start()` method to start App Center Push.
+Add the `Push` class to your `AppCenter.start()` method to start App Center Push.
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
@@ -107,7 +107,7 @@ AppCenter.start(application, "{Your App Secret}", Push::class.java)
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
-Android Studio will automatically suggest the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;

@@ -121,7 +121,7 @@ Implement this callback if you'd like to decide if a particular crash needs to b
 ```java
 @Override
 public boolean shouldProcess(ErrorReport report) {
-     return true; // return true if the crash report should be processed, otherwise false.
+	return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
 ```kotlin
@@ -243,6 +243,7 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
+	
 	/* Attach some text. */
 	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 

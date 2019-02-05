@@ -38,7 +38,6 @@ future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
     override fun accept(t: {ReturnType}?) {
         // do something with result, this is called back in U.I. thread.
     }
-
 })
 ```
 
