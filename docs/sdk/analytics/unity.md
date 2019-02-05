@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: jwhitedev
 ms.author: jawh
-ms.date: 12/19/2018
+ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: unity
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
-Please follow instructions in the [Unity Get started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
+Follow the instructions in the [Unity Get started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
 >[!NOTE]
 >To use the APIs presented below, you must add the following `using` statement to your `.cs` file:
@@ -37,13 +37,13 @@ Please follow instructions in the [Unity Get started](~/sdk/getting-started/unit
 
 ## Session and device information
 
-Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without requiring any additional code in your app.
+Once you add App Center Analytics and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without requiring any additional code in your app.
 
 ## Custom events
 
-You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
+You can track your own custom events with up to 20 properties to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
-Use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. There is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Use the `TrackEvent()` method to track your events with properties. You can send up to 200 distinct event names. There's a maximum limit of 256 characters per event name and 125 characters per event property name and value.
 
 ```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {
@@ -97,7 +97,7 @@ You can use the following API to track an event as **Critical**:
 Analytics.TrackEvent("eventName", Flags.PersistenceCritical);
 ```
 
-If you are using properties:
+If you're using properties:
 ```csharp
 Analytics.TrackEvent("eventName", new Dictionary<string, string> {
 	{ "Category", "Music" },
@@ -107,7 +107,7 @@ Analytics.TrackEvent("eventName", new Dictionary<string, string> {
 
 ## Pause and resume sending logs
 
-Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `Analytics.Resume`.
+Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they aren't sent right away. Any events your app tracks while paused will only be sent once you call `Analytics.Resume`.
 
 ```csharp
 Analytics.Pause();

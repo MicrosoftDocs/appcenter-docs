@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: unity
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
+You can control the number of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it's set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
 To have as many log messages as possible, enable `LogLevel.Verbose` in the App Center settings or within your code.
 
@@ -36,7 +36,7 @@ AppCenter.LogLevel = LogLevel.Verbose;
 
 ## Identify installations
 
-The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed. The following API is useful for debugging purposes.
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated. A new identifier is generated only when the app is reinstalled. The following API is useful for debugging purposes.
 
 ```csharp
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
@@ -58,7 +58,7 @@ AppCenter.SetUserId("your-user-id");
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK won't forward any information to App Center.
 
 ```csharp
 AppCenter.SetEnabledAsync(false);
@@ -82,7 +82,7 @@ bool enabled = await AppCenter.IsEnabledAsync();
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```csharp
 AppCenter.SdkVersion;
@@ -96,7 +96,7 @@ App Center allows you to define custom properties as key value pairs in your app
 > Only devices that have Push successfully registered are matched in audiences. Make sure to refer to the relevant getting started documentation depending on the platform you are targeting.
 > As a consequence, the iOS simulator can not be used to test audience matching.
 
-You can set custom properties by calling the `SetCustomProperties()` method. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
+You can set custom properties by calling the `SetCustomProperties()` method. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool`, and `DateTime`.
 
 ```csharp
 CustomProperties properties = new CustomProperties();
@@ -107,7 +107,7 @@ AppCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` method. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `Clear()` method. This method will only remove the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

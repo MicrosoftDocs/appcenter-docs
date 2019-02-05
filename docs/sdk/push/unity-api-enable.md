@@ -1,6 +1,6 @@
 ## Enable or disable App Center Push at runtime
 
-You can enable and disable App Center Push at runtime. If you disable it, the SDK stops updating the Google registration identifier used to push, but the existing one will continue working. Disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+You can enable and disable App Center Push at runtime. If you disable it, the SDK stops updating the Google registration identifier used to push, but the existing one will continue working. Disabling App Center Push in the SDK will NOT stop your application from receiving push notifications.
 
 ```csharp
 Push.SetEnabledAsync(false);

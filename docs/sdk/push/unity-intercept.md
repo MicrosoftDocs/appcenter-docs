@@ -1,17 +1,17 @@
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+You can set up a listener to be notified whenever a push notification is received in foreground, or a background push notification has been clicked by the user.
 
 > [!NOTE]
 > A notification is not generated when your application receives a push in the foreground.
 >
 > [!NOTE]
-> If the push is received in background, the event is **NOT** triggered at receive time.
+> If the push is received in background, the event is NOT triggered at receive time.
 > The event is triggered when you click on the notification.
 >
 > [!NOTE]
-> The background notification click callback does **NOT** expose **title** and **message**.
-> **Title** and **message** are only available in **foreground** pushes.
+> The background notification click callback does NOT expose **title** and **message**.
+> **Title** and **message** are only available in foreground pushes.
 
-You need to register the listener as shown in the following example:
+To register the listener, see the following example:
 
 ```csharp
 Push.PushNotificationReceived += (sender, e) =>
