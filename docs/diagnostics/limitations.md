@@ -4,7 +4,7 @@ description: Limitations with the Diagnostic Service in App Center
 keywords: diagnostic, crashes
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/15/2018
+ms.date: 02/05/2019
 ms.topic: article
 ms.assetid: e720dade-8d0c-44c6-8746-8b6a61da0f6f
 ms.service: vs-appcenter
@@ -16,6 +16,8 @@ ms.custom: analytics
 ## Crashes
 
 - You can only add one binary and one text attachment to a crash report.
+- Android React Native source maps are not supported.
+
 
 ## Xamarin/Unity Errors
 

@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 01/15/2019
+ms.date: 02/06/2019
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -12,9 +12,6 @@ ms.custom: analytics
 ---
 
 # Using the Diagnostics API
-
-> [!NOTE]
-> If you are using any old crashes APIs that map to a new API as listed below, you must transition to the new APIs by January 2019. The old crashes API will only be available past January 2019 for UWP apps.
 
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.  
 
@@ -60,6 +57,9 @@ Old APIs that now map to new APIs will be deprecated no later than January 2019.
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location |
 | GET/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native | GET /v0.1/apps/{ownerName}/{appName}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download?format=text"|
 | GET/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages | GET/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages |
+| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups_info | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups_info |
+| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups/{symbol_group_id} | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups/{symbol_group_id} |
+| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups |
 
 ### Crashes APIs that no longer exist
 
@@ -87,6 +87,3 @@ There are some crashes APIs that remain the same in the new pipeline. The follow
 | DELETE/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id} |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_uploads |
 | POST/v0.1/apps/{owner_name}/{app_name}/symbol_uploads |
-| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups_info |
-| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups/{symbol_group_id} |
-| GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups |
