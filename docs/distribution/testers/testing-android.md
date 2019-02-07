@@ -4,7 +4,7 @@ description: Guide on testing
 keywords: distribution
 author: Zakeelm
 ms.author: Zakeelm 
-ms.date: 11/05/2018
+ms.date: 02/07/2019
 ms.topic: article
 ms.assetid: 43e7ae62-16b2-4c1e-8798-fafcd5040ba3
 ms.service: vs-appcenter
@@ -14,6 +14,27 @@ ms.custom: distribute
 # Testing Android Apps
 
 After getting invited to test an Android Application in App Center you will receive an email notifying you of your pending invitation. The following sections outline the steps you need to take to get started testing this app.
+
+## Device configuration
+
+> [!Warning]
+> Changing security settings put your phone at risk of malicious software. Only install apps from developers you trust. [Read about Google Play Protect which helps you protect your data](https://support.google.com/nexus/answer/2812853?hl=en&ref_topic=3416293).
+
+### Android 8.x and higher
+
+* Swipe up or down from the center of the display on a Home screen, to access the apps screen.
+* Select **Settings and Apps** or **Settings** depending on the device brand.
+* Search for special access in the search bar.
+* Tap **Special access**.
+* Tap **Install unknown apps**.
+* Select your browser, then tap the **Allow from this source** switch to turn on or off.
+
+### Android 7.x and lower
+
+* From the device Home screen, navigate to **Settings**.
+* Tap **Lock screen and security** or **Security** depending on the device brand.
+* Tap the **Unknown sources** switch to turn it on.
+* Review the prompt and tap **OK**.
 
 ## Installing an app via Install Portal
 
