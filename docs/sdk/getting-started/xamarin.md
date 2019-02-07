@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/31/2019
+ms.date: 02/06/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -143,9 +143,9 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 > [!NOTE]
-> If you need to move this initialization earlier to capture early crashes, you must call it from the UI/main thread.
-> Any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
-> Once the `AppCenter.Start` returns, it is safe to try/catch null reference exceptions again.
+> If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
+> The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
+> Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
 > You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
 
 ##### 4.2.3 Xamarin.Forms
