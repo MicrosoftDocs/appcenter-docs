@@ -243,13 +243,10 @@
 ### Analytics
 #### [Delete](gdpr/analytics-forget-me.md)
 #### [Export](gdpr/analytics-export.md)
-### Errors
-#### [Delete](gdpr/errors-forget-me.md)
-#### [Export](gdpr/errors-export.md)
-### Crashes
-#### [Delete](gdpr/crashes-forget-me.md)
-#### [Export](gdpr/crashes-export.md)
-#### [Consent](gdpr/crashes-consent.md)
+### Diagnostics
+#### [Delete](gdpr/diagnostics-delete.md)
+#### [Export](gdpr/diagnostics-export.md)
+#### [Consent](gdpr/diagnostics-consent.md)
 ### Push
 #### [Delete](gdpr/push-forget-me.md)
 #### [Export](gdpr/push-export.md)
