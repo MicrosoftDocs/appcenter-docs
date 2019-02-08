@@ -171,11 +171,9 @@ AppCenter.start("{Your App Secret}", Analytics.class);
 ```
 ```kotlin
 // Use 20MB for storage.
-AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept(object : AppCenterConsumer<Boolean> {
-    override fun accept(success: Boolean) {
-        // The success parameter is false when the size cannot be honored.
-    }
-})
+AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
+    // The success parameter (it) is false when the size cannot be honored.
+}
 
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```

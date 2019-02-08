@@ -19,7 +19,7 @@ dev_langs:
 
 Asynchronous APIs return a `AppCenterFuture` object instead of returning the result directly.
 
-You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this:
+You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this, filling in the respective return types when calling the desired API:
 
 ```java
 AppCenterFuture<{ReturnType}> future = {AnyAsyncApi}();
@@ -57,11 +57,9 @@ AppCenter.isEnabled().thenAccept(new AppCenterConsumer<Boolean>() {
 });
 ```
 ```kotlin
-AppCenter.isEnabled().thenAccept(object : AppCenterConsumer<Boolean> {
-    override fun accept(enabled: Boolean?) {
-        Log.d("MyApp", "AppCenter.isEnabled=$enabled")
-    }
-})
+AppCenter.isEnabled().thenAccept { enabled -> 
+    Log.d("MyApp", "AppCenter.isEnabled=$enabled")
+}
 ```
 
 Synchronous example:
