@@ -10,6 +10,9 @@ ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # Other Android APIs
@@ -33,6 +36,9 @@ To have as many log messages as possible, use `Log.Verbose`.
 ```java
 AppCenter.setLogLevel(Log.VERBOSE);
 ```
+```kotlin
+AppCenter.setLogLevel(Log.VERBOSE)
+```
 
 ## Identify installations
 
@@ -40,6 +46,9 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 
 ```java
 AppCenter.getInstallId();
+```
+```kotlin
+AppCenter.getInstallId()
 ```
 
 [!include[](../android-see-async.md)]
@@ -54,6 +63,9 @@ The App Center SDK supports setting a **user id** that is used to augment crash 
 ```java
 AppCenter.setUserId("your-user-id");
 ```
+```kotlin
+AppCenter.setUserId("your-user-id")
+```
 
 > [!NOTE]
 > Note that the value for the user id is limited to 256 characters.
@@ -65,11 +77,17 @@ If you want to disable all App Center services at once, use the `setEnabled()` A
 ```java
 AppCenter.setEnabled(false);
 ```
+```kotlin
+AppCenter.setEnabled(false)
+```
 
 To enable all services at once again, use the same API but pass `true` as a parameter.
 
 ```java
 AppCenter.setEnabled(true);
+```
+```kotlin
+AppCenter.setEnabled(true)
 ```
 
 [!include[](../android-see-async.md)]
@@ -81,6 +99,9 @@ You can also check if App Center is enabled or not.
 ```java
 AppCenter.isEnabled();
 ```
+```kotlin
+AppCenter.isEnabled()
+```
 
 [!include[](../android-see-async.md)]
 
@@ -91,6 +112,9 @@ You can get the version of App Center SDK that you are currently using.
 ```java
 AppCenter.getSdkVersion();
 ```
+```kotlin
+AppCenter.getSdkVersion()
+```
 
 ## Use custom properties
 
@@ -99,12 +123,17 @@ App Center allows you to define custom properties as key value pairs in your app
 > [!NOTE]
 > Only devices that have [Push](../push/android.md) successfully registered are matched in audiences.
 
-You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
+Set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
 
 ```java
 CustomProperties properties = new CustomProperties();
 properties.set("color", "blue").set("score", 10);
 AppCenter.setCustomProperties(properties);
+```
+```kotlin
+val properties = CustomProperties()
+properties.set("color", "blue").set("score", 10)
+AppCenter.setCustomProperties(properties)
 ```
 
 > [!NOTE]
@@ -117,12 +146,17 @@ CustomProperties properties = new CustomProperties();
 properties.clear("score");
 AppCenter.setCustomProperties(properties);
 ```
+```kotlin
+val properties = CustomProperties()
+properties.clear("score")
+AppCenter.setCustomProperties(properties)
+```
 
 ## Storage size
 
 When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
 
-You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)]`. You may only call the API once.
+You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)`. You may only call the API once.
 
 ```java
 // Use 20MB for storage.
@@ -133,7 +167,15 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<
         // The success parameter is false when the size cannot be honored.
     }
 });
-AppCenter.start("{your secret}", Analytics.class);
+AppCenter.start("{Your App Secret}", Analytics.class);
+```
+```kotlin
+// Use 20MB for storage.
+AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
+    // The success parameter (it) is false when the size cannot be honored.
+}
+
+AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
 If you don't set the max storage size, the SDK uses a default max size of 10MB. The minimum size you are allowed to set is 20KB.

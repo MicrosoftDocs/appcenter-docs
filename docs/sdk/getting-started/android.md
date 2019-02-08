@@ -10,6 +10,9 @@ ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # Get Started with Android
@@ -75,6 +78,9 @@ In order to use App Center, you need to opt in to the module(s) that you want to
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
 ```
+```kotlin
+AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
 
 ### 4.2 Replace the placeholder with your App Secret
 
@@ -93,13 +99,22 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 ```
+```kotlin
+AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
+```
 
-Android Studio will automatically suggest the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+
+Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+```
+```kotlin
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 ```
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
