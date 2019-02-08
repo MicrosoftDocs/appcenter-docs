@@ -20,15 +20,15 @@ As a HockeyApp customer, your apps and account information automatically synchro
 
 1. [Sign-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) with your HockeyApp Credentials
 
-![App Center Sign-In](~/migration/hockeyapp/images/appcenter-sign-in.png)
+![App Center Sign-In](~/transition/images/appcenter-sign-in.png)
 
 2. Once logged in, you'll see a list of all of your existing HockeyApp apps. HockeyApp side-by-side apps are marked with a blue HockeyApp icon. 
 
-![HockeyApp apps in App Center](~/migration/hockeyapp/images/hockeyapp-apps-in-appcenter.png)
+![HockeyApp apps in App Center](~/transition/images/hockeyapp-apps-in-appcenter.png)
 
 ## Getting the Most from the Side-by-Side Experience
 
-* Start using App Center's Distribute service to upload and [distribute new releases](~/migration/hockeyapp/distribution.md) to your HockeyApp app testers. New releases will be synced and reflected in both App Center and HockeyApp. 
+* Start using App Center's Distribute service to upload and [distribute new releases](~/transition/distribution.md) to your HockeyApp app testers. New releases will be synced and reflected in both App Center and HockeyApp. 
 
 * Integrate your HockeyApp app in App Center with the public app stores. Submit builds to the Apple App Store, TestFlight, Google Play Store, and Intune in just a few clicks, all without leaving App Center. [Learn more about integrating with public app stores](~/distribution/stores/index.md).
 

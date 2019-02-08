@@ -15,31 +15,31 @@ App Center first introduced the concept of [distribution groups](~/distribution/
 
 For side-by-side apps, you’ll see a list of HockeyApp distribution groups ready for you to use in App Center. 
 
-![Distribution Groups List](~/migration/hockeyapp/images/sxs-all-groups.png)
+![Distribution Groups List](~/transition/images/sxs-all-groups.png)
 
 ## Collaborators Group
 
 The first group in the list is the Collaborators group. This group is automatically created in App Center to include all the HockeyApp app users with ‘Developer’ and ‘Member’ roles. Any changes made in HockeyApp will be reflected in App Center for all HockeyApp side-by-side groups. 
 
-![Collaborators Distribution Group](~/migration/hockeyapp/images/sxs-collab-group.png)
+![Collaborators Distribution Group](~/transition/images/sxs-collab-group.png)
 
 ## HockeyApp App Group
 
 The second group in the list is also automatically created in App Center, and shares the same name as your app. This group includes all users for your HockeyApp app. This includes users with Developer, Member and Tester roles. 
 
-![All HockeyApp Users Distribution Group](~/migration/hockeyapp/images/sxs-app-group.png)
+![All HockeyApp Users Distribution Group](~/transition/images/sxs-app-group.png)
 
 ## Distribution Groups from HockeyApp
 
 Additionally, any Distribution Groups created in HockeyApp will appear in the groups list below. HockeyApp distribution groups are designated by the blue HockeyApp icon. 
 
-![HockeyApp Distribution Groups](~/migration/hockeyapp/images/sxs-hockeyapp-groups.png)
+![HockeyApp Distribution Groups](~/transition/images/sxs-hockeyapp-groups.png)
 
 ## Editing HockeyApp Distribution Groups
 
 For HockeyApp distribution groups you must continue to manage your testers and collaborators as well as edit group settings in HockeyApp. On the testers tab of a HockeyApp distribution group, you’ll notice a banner that takes you directly to the group in HockeyApp. Once we offer the final cutover migration experience for your HockeyApp apps in early 2019, you’ll be able to manage all settings in App Center. 
 
-![Editing HockeyApp Distribution Groups](~/migration/hockeyapp/images/sxs-open-in-hockeyapp.png)
+![Editing HockeyApp Distribution Groups](~/transition/images/sxs-open-in-hockeyapp.png)
 
 ## Creating New Groups in App Center
 

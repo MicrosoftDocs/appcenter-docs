@@ -23,11 +23,11 @@ We’re committed to making this transition seamless for you. With that in mind,
 
 **What do I need to do to start preparing for the transition?**
 
-As a HockeyApp customer, your HockeyApp apps have already been migrated to App Center. So getting started is as simple as [signing-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) with your HockeyApp credentials. Your apps from HockeyApp will be ready for you to use in App Center through our [side-by-side experience](~/migration/hockeyapp/side-by-side.md).
+As a HockeyApp customer, your HockeyApp apps have already been migrated to App Center. So getting started is as simple as [signing-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) with your HockeyApp credentials. Your apps from HockeyApp will be ready for you to use in App Center through our [side-by-side experience](~/transition/side-by-side.md).
 
 **What can I do with my HockeyApp apps in App Center?**
 
-We’ve built a side-by-side experience that allows you to work in both App Center and HockeyApp with your HockeyApp apps. Updates in HockeyApp are reflected in App Center, and new releases to your HockeyApp distribution groups in App Center are reflected in HockeyApp. [Learn more about the side-by-side experience](~/migration/hockeyapp/side-by-side.md) to start taking advantage of App Center's new services and features. 
+We’ve built a side-by-side experience that allows you to work in both App Center and HockeyApp with your HockeyApp apps. Updates in HockeyApp are reflected in App Center, and new releases to your HockeyApp distribution groups in App Center are reflected in HockeyApp. [Learn more about the side-by-side experience](~/transition/side-by-side.md) to start taking advantage of App Center's new services and features. 
 
 **All of my HockeyApp apps are in App Center. Does this mean my transition to App Center is complete?**
 

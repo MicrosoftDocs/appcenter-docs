@@ -63,7 +63,7 @@ Old APIs that now map to new APIs will be deprecated no later than January 2019.
 
 ### Crashes APIs that no longer exist
 
-There are few crashes APIs that are deprecated due to changes in our backend pipeline. App Center is also now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/migration/hockeyapp/index.md) to learn more about the transition.
+There are few crashes APIs that are deprecated due to changes in our backend pipeline. App Center is also now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/transition/index.md) to learn more about the transition.
 
 | Deprecated Old Crashes APIs                                         |
 | ------------------------------------------------------------------- |

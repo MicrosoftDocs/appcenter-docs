@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Distributing Releases
 
-App Center has the next generation of HockeyApp’s distribution features. During the HockeyApp transition period, use our [side-by-side experience]( ~/migration/hockeyapp/side-by-side.md) to get familiar with the new interface and begin exploring powerful new distribution features exclusive to App Center. You can distribute new releases in both App Center and HockeyApp for your HockeyApp apps. 
+App Center has the next generation of HockeyApp’s distribution features. During the HockeyApp transition period, use our [side-by-side experience]( ~/transition/side-by-side.md) to get familiar with the new interface and begin exploring powerful new distribution features exclusive to App Center. You can distribute new releases in both App Center and HockeyApp for your HockeyApp apps. 
 
 ## Distributing to a HockeyApp Distribution Group in App Center 
 

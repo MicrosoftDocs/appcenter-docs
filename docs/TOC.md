@@ -257,15 +257,17 @@
 #### [Delete](gdpr/test-forget-me.md)
 #### [Export](gdpr/test-export.md)
 
+# [HockeyApp Transition](transition/index.md)
+
+## [Shared Data](transition/side-by-side.md)
+### [Distribution Groups](transition/distribution-groups.md)
+### [Distributing Releases](transition/distribution.md)
+### [Diagnostics](transition/crashes.md)
+### [Analytics](transition/analytics.md)
+## [FAQ](transition/faq.md)
+
 # [Migration](migration/index.md)
 
-## [HockeyApp](migration/hockeyapp/index.md)
-### [Side-by-Side Experience](migration/hockeyapp/side-by-side.md)
-#### [Distribution Groups](migration/hockeyapp/distribution-groups.md)
-#### [Distributing Releases](migration/hockeyapp/distribution.md)
-#### [Diagnostics](migration/hockeyapp/crashes.md)
-#### [Analytics](migration/hockeyapp/analytics.md)
-### [FAQ](migration/hockeyapp/faq.md)
 ## [TestCloud](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
