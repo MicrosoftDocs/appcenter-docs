@@ -4,7 +4,7 @@ description: Instructions for how to configure the App Center Push service for t
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 12/21/2018
+ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: ada98c59-08ce-4ae6-a5bf-3084f0dc6203
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ The target platforms for your app (Apple iOS, Google Android, and Microsoft Wind
 - Google Android devices use the [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) service to deliver notifications.
 - Windows devices use the [Windows Notifications Services (WNS)](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) to deliver notifications.
 
-The App Center Push service (ACPs) abstracts away the complexities of dealing with multiple vendor services, and gives you a single interface for sending notifications to devices running your app, and single SDK to use in your apps to process notifications. However, before the ACPs can send notifications to your app's registered devices, you must provide configuration details for the third-party notification service your app's target platform uses.
+The App Center Push (ACP) service abstracts away the complexities of dealing with multiple vendor services, and gives you a single interface for sending notifications to devices running your app, and single SDK to use in your apps to process notifications. However, before ACP can send notifications to your app's registered devices, you must provide configuration details for the third-party notification service your app's target platform uses.
 
 ## App project initial configuration
 

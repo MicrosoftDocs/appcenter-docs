@@ -4,7 +4,7 @@ description: Tips and Tricks for using the App Center Push Service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 12/21/2018
+ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: f0e3bd85-817a-423f-a1ca-b89c487d0180
 ms.service: vs-appcenter
@@ -17,7 +17,7 @@ This document contains tips and tricks for the App Center Push service.
 
 ## Delay showing Push Notifications permission pop-up until the user clicks a button or a certain screen
 
-You can call `AppCenter.Start("{APP-SECRET}", services)` without specifying the Push service. Then, once the user has opted in to receive push notifications, you can call `AppCenter.Start(typeof(Push))` to start the Push service.
+Execute `AppCenter.Start("{APP-SECRET}", services)` without specifying the Push service. Then, once the user has opted in to receive push notifications, execute `AppCenter.Start(typeof(Push))` to start the Push service.
 
 Note the application doesn't need to send the app secret in the second call to `Start()`
 
@@ -31,7 +31,7 @@ AppCenter.Start(typeof(Push));
 
 ## Custom Data in your notifications
 
-Optional: send custom data as part of the push payload. The data is sent in a key-value format. This custom data can be intercepted in the app through Push SDK callback.
+Optional: send custom data as part of the push payload. The data is sent in a key-value format. This custom data can be intercepted in the app through Push SDK callback. 
 
 There are few reserved keywords in each platform that can be set via custom data:
 

@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications using the App Center
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 12/21/2018
+ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: 4db077ee-b9bf-4dc7-ac21-e8ecc8ee840e
 ms.service: vs-appcenter
@@ -13,19 +13,19 @@ ms.custom: push
 
 # Sending Push Notifications
 
-The Visual Studio App Center Push service (ACPs) offers two ways to send notifications to registered devices:
+The Visual Studio App Center Push (ACP) service offers two ways to send notifications to registered devices:
 
 + Using the App Center Portal (described in this document)
 + Using the [App Center Push API](~/push/rest-api.md)
 
 ## Create a notification
 
-To create a notification using the ACPs, complete the following steps:
+To create a notification using ACP, complete the following steps:
 
 1. Log into [App Center](https://appcenter.ms).
 2. Using the project navigator on the left side of the page, select the your user account or the organization where the app project is defined, then select the app project from the list that appears.
 3. In the project navigator that opens, select **Push**.
-4. If you've already configured the ACPs, then App Center opens the app project's Push **Notifications** section and lists the existing **Campaigns** for the selected app. If App Center opens the Push getting started page, then you've not configured the service; complete the App Center Push configuration as described in [Configuring the Push Service](~/push/service-config.md) before returning here.
+4. If you've already configured ACP, then App Center opens the app project's Push **Notifications** section and lists the existing **Campaigns** for the selected app. If App Center opens the Push getting started page, then you've not configured the service; complete the App Center Push configuration as described in [Configuring the Push Service](~/push/service-config.md) before returning here.
 5. In the upper-right corner of the page, click the **Send notification** button.
 
 At this point, App Center opens the **Send notification** wizard and walks you through the process of creating a campaign and sending the notification. The process consists of the following steps:
@@ -57,7 +57,7 @@ When you're done populating the form, click the **Next >** button to continue.
 
 ### Target
 
-When sending notifications through ACPs, you can target destination devices (notification recipients) in the following ways:
+When sending notifications through ACP, you can target destination devices (notification recipients) in the following ways:
 
 + **All registered devices**: Sends notifications to all registered devices. Depending on the size of your target audience, this could take a long time to complete.
 + **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices). When you select this option, populate the input field with a list of the Install IDs for the devices you want to send the notification to, separating IDs with commas.
@@ -88,8 +88,6 @@ There are two types of properties you can use to define audiences:
 ### Device properties
 
 The App Center SDK collects device properties automatically, retrieving them from the client application and exposing them through App Center for your use when defining audiences. The available properties are:
-
-//TODO: Validate these examples
 
 + API Level (example: `2`)
 + App Version (example: `1.0.0`)
