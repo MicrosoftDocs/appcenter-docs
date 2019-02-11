@@ -212,7 +212,6 @@
             "source_path": "docs/azure/index.md",
             "redirect_url": "/appcenter/"
         },
-
         {
 	        "source_path": "docs/distribution/stores/app-protection.md",
 	        "redirect_url": "docs/distribution/stores/intune.md"
@@ -226,32 +225,32 @@
             "redirect_url": "/appcenter/diagnostics/android-proguard"
         },
         {
-            "source_path": "migration/hockeyapp/index.md",
-            "redirect_url": "transition/index.md"
+            "source_path": "docs/migration/hockeyapp/index.md",
+            "redirect_url": "/appcenter/transition/index.md"
         },
         {
-            "source_path": "migration/hockeyapp/side-by-side.md",
-            "redirect_url": "transition/side-by-side.md"
+            "source_path": "docs/migration/hockeyapp/side-by-side.md",
+            "redirect_url": "/appcenter/transition/side-by-side.md"
         },
         {
-            "source_path": "migration/hockeyapp/distribution-groups.md",
-            "redirect_url": "transition/distribution-groups.md"
+            "source_path": "docs/migration/hockeyapp/distribution-groups.md",
+            "redirect_url": "/appcenter/transition/distribution-groups.md"
         },
         {
-            "source_path": "migration/hockeyapp/distribution.md",
-            "redirect_url": "transition/distribution.md"
+            "source_path": "docs/migration/hockeyapp/distribution.md",
+            "redirect_url": "/appcenter/transition/distribution.md"
         },
         {
-            "source_path": "migration/hockeyapp/crashes.md",
-            "redirect_url": "transition/crashes.md"
+            "source_path": "docs/migration/hockeyapp/crashes.md",
+            "redirect_url": "/appcenter/transition/crashes.md"
         },
         {
-            "source_path": "migration/hockeyapp/analytics.md",
-            "redirect_url": "transition/analytics.md"
+            "source_path": "docs/migration/hockeyapp/analytics.md",
+            "redirect_url": "/appcenter/transition/analytics.md"
         },
         {
-            "source_path": "migration/hockeyapp/faq.md",
-            "redirect_url": "transition/faq.md"
+            "source_path": "docs/migration/hockeyapp/faq.md",
+            "redirect_url": "/appcenter/transition/faq.md"
         }
     ]
 }
