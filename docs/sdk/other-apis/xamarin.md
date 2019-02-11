@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 01/23/2019
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: vs-appcenter
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: xamarin
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
@@ -40,6 +41,20 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 ```csharp
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
+
+## Identify users
+
+The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
+2. Set a `userID` in the SDK using the following code:
+
+```csharp
+AppCenter.SetUserId("your-user-id");
+```
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

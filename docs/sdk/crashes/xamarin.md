@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your application yet.
 
-Also note that crash logs on iOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/symbolication.md) that explains how to provide symbols for your app.
+Also note that crash logs on iOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 ## Generate a test crash
 
@@ -65,6 +65,9 @@ There are numerous use cases for this API, the most common one is people who cal
 ## Customize your usage of App Center Crashes
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
+
+> [!NOTE]
+> You must set the callback *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 

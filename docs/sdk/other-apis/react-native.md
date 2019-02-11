@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/12/2017
+ms.date: 01/23/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [UWP](uwp.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
@@ -26,14 +27,14 @@ ms.tgt_pltfrm: react-native
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the iOS App Store environment / Android release builds and `LogLevelWarning` otherwise.
+You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. The default level is `LogLevel.ASSERT` for the iOS App Store environment and Android release builds. Otherwise, it is set to `LogLevel.WARNING`.
 
-To have as many log messages as possible, use `LogLevelVerbose`.
+To output all log messages, use `LogLevel.VERBOSE`.
 
 ```javascript
 import AppCenter from 'appcenter';
 
-await AppCenter.setLogLevel(AppCenter.LogLevelVerbose);
+await AppCenter.setLogLevel(AppCenter.LogLevel.VERBOSE);
 ```
 
 > [!NOTE]
@@ -54,6 +55,20 @@ import AppCenter from 'appcenter';
 
 const installId = await AppCenter.getInstallId();   // Returned as a string
 ```
+
+## Identify users
+
+The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK as described in the [App Center SDK Getting started guide](~/sdk/getting-started/react-native.md).
+2. Set a `userID` in the SDK using the following code:
+
+```javascript
+AppCenter.setUserId("your-user-id");
+```
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

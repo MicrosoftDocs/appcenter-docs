@@ -2,6 +2,7 @@
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Unity](unity.md)
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
@@ -30,6 +31,23 @@ NSUUID *installId = [MSAppCenter  installId];
 ```swift
 var installId = MSAppCenter.installId()
 ```
+
+## Identify users
+
+The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK by calling `:start:withServices:` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/ios.md). 
+2. Set a `userID` in the SDK using the following code:
+
+```objc
+[MSAppCenter setUserId:@"your-user-id"];
+```
+```swift
+MSAppCenter.setUserId("your-user-id");
+```
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: glennwester
 ms.author: glwest
 ms.reviewer: crdun
-ms.date: 10/25/2018
+ms.date: 01/31/2019
 ms.topic: article
 ms.assetid: 4241c097-00ad-4e3b-bc8b-db0134354bdf
 ms.service: vs-appcenter
@@ -15,6 +15,10 @@ ms.custom: test
 # Working with Xamarin.UITest
 
 The documents in this section discuss various task for writing and running Xamarin.UITests.
+
+## [Android signing](working-with-android-signing.md)
+
+Normally the default Xamarin.UITest Android signing, using a generated debug keystore, works fine. But, sometimes you may need to sign your APK and the test server with your actual Android keystore. This guide describes when it may be needed and how to specify your Android keystore information.
 
 ## [Backdoors](working-with-backdoors.md)
 
@@ -27,6 +31,10 @@ This guide discusses how to categorize your tests, allowing you to run a subset 
 ## [Entering Text](working-with-entering-text.md)
 
 This guide discusses how to enter text into views and how to clear text from views.
+
+## [Files](working-with-files.md)
+
+This guide discusses how to upload files and access them from your tests in App Center Test.
 
 ## [Gestures](working-with-gestures.md)
 

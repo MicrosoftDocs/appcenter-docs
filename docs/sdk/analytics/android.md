@@ -4,12 +4,15 @@ description: App Center Analytics for Android
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 01/17/2019
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # App Center Analytics
@@ -45,11 +48,18 @@ properties.put("FileName", "favorite.avi");
 
 Analytics.trackEvent("Video clicked", properties);
 ```
+```kotlin
+val properties = hashMapOf("Category" to "Music", "FileName" to "favorite.avi")
+Analytics.trackEvent("Video clicked", properties)
+```
 
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
 
 ```java
 Analytics.trackEvent("Video clicked");
+```
+```kotlin
+Analytics.trackEvent("Video clicked")
 ```
 
 ## Event priority and persistence
@@ -74,6 +84,12 @@ Analytics.trackEvent("eventName", properties, Flags.PERSISTENCE_CRITICAL);
 
 // If you are using name only, you can pass null as properties.
 ```
+```kotlin
+val properties = hashMapOf("Category" to "Music", "FileName" to "favorite.avi")
+Analytics.trackEvent("Video clicked", properties, Flags.PERSISTENCE_CRITICAL)
+
+// If you are using name only, you can pass null as properties.
+```
 
 ## Pause and resume sending logs
 
@@ -83,6 +99,10 @@ Pausing the event transmission can be useful in scenarios when the app needs to 
 Analytics.pause();
 Analytics.resume();
 ```
+```kotlin
+Analytics.pause()
+Analytics.resume()
+```
 
 ## Enable or disable App Center Analytics at runtime
 
@@ -91,11 +111,17 @@ You can enable and disable App Center Analytics at runtime. If you disable it, t
 ```java
 Analytics.setEnabled(false);
 ```
+```kotlin
+Analytics.setEnabled(false)
+```
 
 To enable App Center Analytics again, use the same API but pass `true` as a parameter.
 
 ```java
 Analytics.setEnabled(true);
+```
+```kotlin
+Analytics.setEnabled(true)
 ```
 
 [!include[](../android-see-async.md)]
@@ -106,6 +132,9 @@ You can also check if App Center Analytics is enabled or not.
 
 ```java
 Analytics.isEnabled();
+```
+```kotlin
+Analytics.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]

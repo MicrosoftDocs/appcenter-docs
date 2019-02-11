@@ -9,6 +9,9 @@ ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 ms.service: vs-appcenter
 ms.custom: sdk
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # Android SDK Troubleshooting
@@ -20,6 +23,7 @@ ms.custom: sdk
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
+> * [Cordova](cordova.md)
 
 ## What Android permissions are required?
 
@@ -41,6 +45,9 @@ None of these permissions require user approval at runtime, those are all instal
    ```java
    AppCenter.setLogLevel(Log.VERBOSE);
    ```
+   ```kotlin
+   AppCenter.setLogLevel(Log.VERBOSE)
+   ```
 
    Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
@@ -57,6 +64,9 @@ None of these permissions require user approval at runtime, those are all instal
 
    ```java
    AppCenter.setLogLevel(Log.VERBOSE);
+   ```
+   ```kotlin
+   AppCenter.setLogLevel(Log.VERBOSE)
    ```
 
    Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.

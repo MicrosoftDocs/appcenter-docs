@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/20/2018
+ms.date: 01/25/2019
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -26,11 +26,11 @@ ms.tgt_pltfrm: unity
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up the App Center Unity SDK in your app to use App Center Analytics and Crashes. To add App Center Distribute to your app, please have a look at the [documentation for App Center Distribute](~/sdk/distribute/unity.md).
+Let's get started and set up the App Center Unity SDK to use App Center Analytics and Crashes. To add App Center Distribute to your app, see the [documentation for App Center Distribute](~/sdk/distribute/unity.md).
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that your project is set up in Unity 2017.4 or later.
+Before you begin, make sure that your project is set up in Unity 5.6 or later.
 
 The App Center SDK for Unity supports the following platforms:
 
@@ -38,19 +38,23 @@ The App Center SDK for Unity supports the following platforms:
 * Android (4.1/API 16 or later)
 * UWP (Build 10240 or later)
 
-Please also note that the App Center SDK for Unity is only available in C#.
+> [!NOTE]
+> For older versions of Unity with UWP, only a .NET scripting backend is supported. IL2CPP as a backend is not supported.
 
-## 2. Create your app in the App Center Portal to obtain the App Secret
+Also note that the App Center SDK for Unity is only available in C#.
 
-If you have already created your app in the App Center portal, you can skip this step.
+## 2. Create your app in the App Center Portal to acquire the App Secret
+
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
-2. Sign up or log in and click the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional description for your app.
-4. Select the appropriate OS and platform depending on your project as described above.
-5. Click the **Add new app** button in the bottom-right of the page.
+2. Sign up or sign in to App Center.
+3. Click the blue button on the top-right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+4. Enter a name and an optional description for your app.
+5. Select the appropriate OS and platform depending on your project as described above.
+6. Click the **Add new app** button in the bottom-right of the page.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
+Once you've created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
 
 ## 3. Add the App Center SDK to your project
 
@@ -60,11 +64,11 @@ The App Center SDK is integrated by importing Unity Packages into your project. 
 
 ### 3.1b Install Individual Packages
 
-As an alternative, each of the individual Unity packages can be downloaded and imported. They are found on the [App Center Unity SDK GitHub page](https://github.com/Microsoft/AppCenter-SDK-Unity/releases). Download the latest release of the package(s) that you want to use. Its name should be in the format **AppCenter{Analytics/Crashes/Distribute}-v{version}.unitypackage**.
+As an alternative, each of the individual Unity packages can be downloaded and imported. They're found on the [App Center Unity SDK GitHub page](https://github.com/Microsoft/AppCenter-SDK-Unity/releases). Download the latest release of the package(s) that you want to use. Its name should be in the format **AppCenter{Analytics/Crashes/Distribute}-v{version}.unitypackage**.
 
 ### 3.2b Import the package
 
-Open your Unity project, then double-click the package you just downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Do this for each package you downloaded and plan to use in your project.
+Open your Unity project, then double-click the package you downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Repeat this step for each package you downloaded and plan to use in your project.
 
 ## 4. Enable the SDK
 
@@ -74,7 +78,7 @@ App Center works as a component that you attach to a game object in the scene th
 
 ### 4.2 Attach the App Center script
 
-In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script with the App Center logo as its icon, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
+In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
 
 > [!NOTE]
 > You do not need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
@@ -89,8 +93,10 @@ Click on this new "App Center" object and add your app secrets to the correspond
 > If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
 
 ---
-Great, you are all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK collects automatically.
+Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK will automatically collect.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) and [App Center Crashes](~/sdk/crashes/unity.md) to learn how to customize and use more advanced functionalities for both services.
+Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) and [App Center Crashes](~/sdk/crashes/unity.md) to learn how to use more advanced functionality with both services.
 
 To learn how to get started with in-app updates, read the documentation for [App Center Distribute](~/sdk/distribute/unity.md).
+
+To learn how to get started with Push, read the documentation for [App Center Push for Android](~/sdk/push/unity-android.md), [App Center Push for iOS](~/sdk/push/unity-ios.md), and [App Center Push for Windows](~/sdk/push/unity-windows.md).

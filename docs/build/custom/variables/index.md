@@ -17,6 +17,9 @@ Custom environment variables allow you to define sensitive information that is r
 
 The values of variables can be encrypted by clicking on the lock icon so they won't get exposed to the build configuration and appear obfuscated in the build logs. Please keep in mind that you can't view or edit variables with an encrypted value once they're saved, however, you can always delete and re-create them and for those with a non-encrypted value you can still encrypt them at a later time.
 
+>[!NOTE]
+> 'Platform' is reserved from use as an environment variable.
+
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
 
 ## Access the variables

@@ -4,7 +4,7 @@ description: Usage of asynchronous APIs in the Unity SDK
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 09/11/2018
+ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: e7b23bad-5cc4-4112-8122-6083351417d2
 ms.service: vs-appcenter
@@ -20,7 +20,7 @@ There are three ways to interact with these methods.
 
 ## Method 1: ContinueWith
 
-In order to perform an action after the `AppCenterTask`'s activity has completed, simply add a callback using the `ContinueWith` method.
+To perform an action after the `AppCenterTask`'s activity has completed, add a callback using the `ContinueWith` method.
 
 
 Example:
@@ -36,7 +36,7 @@ In situations where the method has an actual return value, it will return `AppCe
 
 ## Method 2: Built-in language features
 
-If you are writing code that has access to .NET 4.6 or above, then `AppCenterTask` can be `await`ed in an asynchronous context.
+If you're writing code that has access to .NET 4.6 or above, then `AppCenterTask` can be `await`ed in an asynchronous context.
 
 Example:
 

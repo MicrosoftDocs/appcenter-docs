@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 10/19/2018
+ms.date: 01/18/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -26,6 +26,12 @@ ms.tgt_pltfrm: react-native
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
+> * [Unity Windows](unity-windows.md)
+
+> [!NOTE]
+> Starting with version 1.10.0, calling `push:didReceivePushNotification:` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `push:didReceivePushNotification:` callback, please refer to [the App Center SDK migration guide](migration/react-native-ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -132,6 +138,17 @@ You can also check if App Center Push is enabled or not:
   const pushEnabled = await Push.isEnabled();
   ```
 
+## Delay push notification permission dialog
+
+If you want to delay requesting Push notifications permission the first time the application is run:
+
+* Open Xcode, and edit the **ios/{APPNAME}/AppCenter-Config.plist** file.
+* Add `EnablePushInJavascript` as a `Boolean` property.
+* Change the value to `YES`.
+* Once you get approval from the user to use Push at runtime, call `Push.setEnabled(true)`.
+
+After calling `Push.setEnabled(true)` once, App Center Push will be started automatically the next time the application restarts.
+
 ## Disable automatic method forwarding to App Center services
 
 App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
@@ -188,8 +205,8 @@ App Center uses swizzling to automatically forward various delegate methods to A
 ### User Notification Center Delegate
 
 1. Open your project's `Info.plist` file.
-2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
-3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass the notification payload to App Center Push.
 
     ```objc
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
@@ -255,9 +272,6 @@ To distinguish between notifications received in the foreground and notification
         // Do something, e.g. set a BOOL @property to track the foreground state.
         self.didReceiveNotificationInForeground = YES;
 
-        // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-        [MSPush didReceiveRemoteNotification:notification.request.content.userInfo];
-
         // Complete handling the notification.
         completionHandler(UNNotificationPresentationOptionNone);
     }
@@ -319,9 +333,6 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 
         // User tapped on notification
       }
-
-      // This callback overrides the system default behavior, so MSPush callback should be proxied manually.
-      [MSPush didReceiveRemoteNotification:response.notification.request.content.userInfo];
 
       // Complete handling the notification.
       completionHandler();

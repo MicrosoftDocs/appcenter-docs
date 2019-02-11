@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 02/06/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -122,22 +122,31 @@ using Microsoft.AppCenter.Crashes;
 > [!NOTE]
 > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK.
 
-Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
+Open the project's `MainActivity.cs` file and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+> [!NOTE]
+> If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, please look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
 
 #### 4.2.2 Xamarin.iOS
 
 > [!NOTE]
 > Remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
-Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunching()` method
+Open the project's `AppDelegate.cs` file and add the `Start()` call inside the `FinishedLaunching()` method
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+> [!NOTE]
+> If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
+> The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
+> Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
+> You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
 
 ##### 4.2.3 Xamarin.Forms
 
@@ -152,6 +161,9 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > 
 > [!NOTE]
 > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+
+> [!NOTE]
+> The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
 
 ### 4.3 Replace the placeholder with your App Secret
 

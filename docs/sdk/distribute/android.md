@@ -4,12 +4,15 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 01/17/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # App Center Distribute – In-app updates
@@ -27,6 +30,7 @@ App Center Distribute will let your users install a new version of the app when 
 >
 > 1. If you have released your app in the Play Store, in-app updates will be disabled.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> 3. If you are using HockeyApp SDK for in-app updates **do not** switch to the App Center SDK. We are working on a migration strategy.
 
 ## Add in-app updates to your app
 
@@ -40,7 +44,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '1.10.0'
+       def appCenterSdkVersion = '1.11.2'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
@@ -54,17 +58,24 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-Add `Distribute.class` to your `AppCenter.start()` method to start App Center Distribute service.
+Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 ```
+```kotlin
+AppCenter.start(application, "{Your App Secret}", Distribute::class.java)
+```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add `Distribute.class` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.distribute.Distribute;
+```
+```kotlin
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.distribute.Distribute
 ```
 
 ## Customize or localize the in-app update dialog
@@ -80,6 +91,10 @@ You can customize the default update dialog's appearance by implementing the `Di
 ```java
 Distribute.setListener(new MyDistributeListener());
 AppCenter.start(...);
+```
+```kotlin
+Distribute.setListener(MyDistributeListener())
+AppCenter.start(...)
 ```
 
 Here is an example of the listener implementation that replaces the SDK dialog with a custom one:
@@ -142,6 +157,54 @@ public class MyDistributeListener implements DistributeListener {
     }
 }
 ```
+```kotlin
+import android.app.Activity
+import android.app.AlertDialog
+import com.microsoft.appcenter.distribute.Distribute
+import com.microsoft.appcenter.distribute.DistributeListener
+import com.microsoft.appcenter.distribute.ReleaseDetails
+import com.microsoft.appcenter.distribute.UpdateAction
+
+class MyDistributeListener : DistributeListener {
+
+    override fun onReleaseAvailable(activity: Activity, releaseDetails: ReleaseDetails): Boolean {
+
+        // Look at releaseDetails public methods to get version information, release notes text or release notes URL
+        val versionName = releaseDetails.shortVersion
+        val versionCode = releaseDetails.version
+        val releaseNotes = releaseDetails.releaseNotes
+        val releaseNotesUrl = releaseDetails.releaseNotesUrl
+
+        // Build our own dialog title and message
+        val dialogBuilder = AlertDialog.Builder(activity)
+        dialogBuilder.setTitle("Version $versionName available!") // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setMessage(releaseNotes)
+
+        // Mimic default SDK buttons
+        dialogBuilder.setPositiveButton(
+            com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_download
+        ) { dialog, which ->
+            // This method is used to tell the SDK what button was clicked
+            Distribute.notifyUpdateAction(UpdateAction.UPDATE)
+        }
+
+        // We can postpone the release only if the update is not mandatory
+        if (!releaseDetails.isMandatoryUpdate) {
+            dialogBuilder.setNegativeButton(
+                com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone
+            ) { dialog, which ->
+                // This method is used to tell the SDK what button was clicked
+                Distribute.notifyUpdateAction(UpdateAction.POSTPONE)
+            }
+        }
+        dialogBuilder.setCancelable(false) // if it's cancelable you should map cancel to postpone, but only for optional updates
+        dialogBuilder.create().show()
+
+        // Return true if you are using your own dialog, false otherwise
+        return true
+    }
+}
+```
 
 As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
 
@@ -163,10 +226,17 @@ You can enable and disable App Center Distribute at runtime. If you disable it, 
 ```java
 Distribute.setEnabled(false);
 ```
+```kotlin
+Distribute.setEnabled(false)
+```
+
 To enable App Center Distribute again, use the same API but pass `true` as a parameter.
 
 ```java
 Distribute.setEnabled(true);
+```
+```kotlin
+Distribute.setEnabled(true)
 ```
 
 [!include[](../android-see-async.md)]
@@ -177,6 +247,9 @@ You can also check if App Center Distribute is enabled or not:
 
 ```java
 Distribute.isEnabled();
+```
+```kotlin
+Distribute.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]

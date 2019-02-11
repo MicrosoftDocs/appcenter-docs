@@ -215,6 +215,50 @@
         {
             "source_path": "docs/push/audiences.md",
             "redirect_url": "/appcenter/push/send-notification.md"
+        },
+        {
+            "source_path": "docs/azure/index.md",
+            "redirect_url": "/appcenter/"
+        },
+        {
+	        "source_path": "docs/distribution/stores/app-protection.md",
+	        "redirect_url": "docs/distribution/stores/intune.md"
+        },
+        {
+            "source_path": "docs/diagnostics/symbolication.md",
+            "redirect_url": "/appcenter/diagnostics/iOS-symbolication"
+        },
+        {
+            "source_path": "docs/diagnostics/proguard.md",
+            "redirect_url": "/appcenter/diagnostics/android-proguard"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/index.md",
+            "redirect_url": "/appcenter/transition/index"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/side-by-side.md",
+            "redirect_url": "/appcenter/transition/side-by-side"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/distribution-groups.md",
+            "redirect_url": "/appcenter/transition/distribution-groups"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/distribution.md",
+            "redirect_url": "/appcenter/transition/distribution"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/crashes.md",
+            "redirect_url": "/appcenter/transition/crashes"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/analytics.md",
+            "redirect_url": "/appcenter/transition/analytics"
+        },
+        {
+            "source_path": "docs/migration/hockeyapp/faq.md",
+            "redirect_url": "/appcenter/transition/faq"
         }
     ]
 }

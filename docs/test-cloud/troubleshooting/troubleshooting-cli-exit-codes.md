@@ -1,21 +1,21 @@
 ---
 # required metadata
-title: Troubleshooting | App Center Test
+title: CLI exit codes
 description: Troubleshooting App Center Test
 keywords: test, troubleshooting
 author: glennwester
 ms.author: glwest
-ms.date: 08/12/2018
+ms.date: 02/07/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 6a1da1b3-66d8-4088-9544-76877a8b4410
 ---
 
-# Troubleshooting App Center Test
+# CLI exit codes
 
 ## Exit codes
 
-The CLI tool returns an exit code which reflects whether Test received the necessary information or errors. In the table below, exit codes are listed and paired with an explanation.
+The App Center CLI tool returns an exit code which reflects whether App Center Test received the necessary information and if it encountered an error. In the table below, we list the exit codes with the corresponding explanation.
 
 | Exit code | Explanation |
 | --------- | ----------- |

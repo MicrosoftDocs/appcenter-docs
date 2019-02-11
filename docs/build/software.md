@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 12/10/2018
+ms.date: 02/06/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.13.6 (17G3025) **High Sierra**
+- OS X 10.13.6 (17G5019) **High Sierra**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -28,74 +28,68 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Language and Runtime
 
 - Java 1.7.0_80
-- Java 1.8.0_192
+- Java 1.8.0_202
 - Java 9.0.4
 - Java 10.0.2
-- Java 11.0.1
-- Node.js 6.14.4
+- Java 11.0.2
+- Node.js 6.16.0
 - Node.js v8.11.3
-- PowerShell 6.1.1
+- PowerShell 6.1.2
 - Python 2.7.10
-- Python 3.7.0
-- Ruby 2.3.7p456
-- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402
-- Go 1.11.2
+- Python 3.7.2
+- Ruby 2.6.0p0
+- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.2.100 2.2.101 2.2.102 2.2.103
+- Go 1.11.5
 - Miniconda 4.5.11
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
 
 ### Package Management
 
-- Bundler 1.17.1
+- Bundler 2.0.1
 - Carthage 0.31.2
 - CocoaPods 1.5.3
-- Homebrew 1.8.4
+- Homebrew 1.9.3
 - NPM 3.10.10
-- Yarn 1.12.1
+- Yarn 1.13.0
 - NuGet 4.7.0.5148
-- pip 18.0
+- pip 18.1
 
 ### Project Management
 
 - Apache Maven 3.6.0
-- Gradle 4.10.2
+- Gradle 5.1.1
 
 ### Utilities
 
-- curl 7.54.0 (libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0)
-- Git 2.19.2
+- curl 7.63.0 (libcurl/7.63.0 SecureTransport zlib/1.2.11)
+- Git 2.20.1
 - Git LFS 2.6.1
-- GNU Wget 1.20
-- Subversion (SVN) 1.10.2
+- GNU Wget 1.20.1
+- Subversion (SVN) 1.11.1
 
 ### Tools
 
-- fastlane 2.109.0
-- App Center CLI 1.1.9
-- Azure-CLI 2.0.51
+- fastlane 2.115.0
+- App Center CLI 1.1.11
+- Azure-CLI 2.0.56
 
 ## Xcode
 
 - Xcode 10.1 (10B61)
-- Xcode 10
-- Xcode 9.4.1
-- Xcode 9.4
-- Xcode 9.3.1
-- Xcode 9.3
-- Xcode 9.2
-- Xcode 9.1
-- Xcode 9.0.1
-- Xcode 9.0
-- Xcode 8.3.3
-- Xcode 8.3.2
-- Xcode 8.3.1
-- Xcode 8.2.1
-- Xcode 8.2
-- Xcode 8.1
-- Xcode 8.0
+- Xcode 10 (10A255)
+- Xcode 9.4.1 (9F2000)
+- Xcode 9.4 (9F1027a)
+- Xcode 9.3.1 (9E501)
+- Xcode 9.3 (9E145)
+- Xcode 9.2 (9C40b)
+- Xcode 9.1 (9B55)
+- Xcode 9.0.1 (9A1004)
+- Xcode 9.0 (9A235)
+- Xcode 8.3.3 (8E3004b)
 
 ### Xcode Support Tools
 
-- Nomad CLI 2.7.7
+- Nomad CLI 3.0.1
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.5
@@ -107,9 +101,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | macOS 10.12               | macosx10.12 |
 | macOS 10.13               | macosx10.13 |
 | macOS 10.14               | macosx10.14 |
-| iOS 10.0                  | iphoneos10.0 |
-| iOS 10.1                  | iphoneos10.1 |
-| iOS 10.2                  | iphoneos10.2 |
 | iOS 10.3                  | iphoneos10.3 |
 | iOS 11.0                  | iphoneos11.0 |
 | iOS 11.1                  | iphoneos11.1 |
@@ -118,9 +109,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.4                  | iphoneos11.4 |
 | iOS 12.0                  | iphoneos12.0 |
 | iOS 12.1                  | iphoneos12.1 |
-| iOS Simulator 10.0        | iphonesimulator10.0 |
-| iOS Simulator 10.1        | iphonesimulator10.1 |
-| iOS Simulator 10.2        | iphonesimulator10.2 |
 | iOS Simulator 10.3        | iphonesimulator10.3 |
 | iOS Simulator 11.0        | iphonesimulator11.0 |
 | iOS Simulator 11.1        | iphonesimulator11.1 |
@@ -129,8 +117,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS Simulator 11.4        | iphonesimulator11.4 |
 | iOS Simulator 12.0        | iphonesimulator12.0 |
 | iOS Simulator 12.1        | iphonesimulator12.1 |
-| tvOS 10.0                 | appletvos10.0 |
-| tvOS 10.1                 | appletvos10.1 |
 | tvOS 10.2                 | appletvos10.2 |
 | tvOS 11.0                 | appletvos11.0 |
 | tvOS 11.1                 | appletvos11.1 |
@@ -139,8 +125,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS 11.4                 | appletvos11.4 |
 | tvOS 12.0                 | appletvos12.0 |
 | tvOS 12.1                 | appletvos12.1 |
-| tvOS Simulator 10.0       | appletvsimulator10.0 |
-| tvOS Simulator 10.1       | appletvsimulator10.1 |
 | tvOS Simulator 10.2       | appletvsimulator10.2 |
 | tvOS Simulator 11.0       | appletvsimulator11.0 |
 | tvOS Simulator 11.1       | appletvsimulator11.1 |
@@ -149,8 +133,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS Simulator 11.4       | appletvsimulator11.4 |
 | tvOS Simulator 12.0       | appletvsimulator12.0 |
 | tvOS Simulator 12.1       | appletvsimulator12.1 |
-| watchOS 3.0               | watchos3.0 |
-| watchOS 3.1               | watchos3.1 |
 | watchOS 3.2               | watchos3.2 |
 | watchOS 4.0               | watchos4.0 |
 | watchOS 4.1               | watchos4.1 |
@@ -158,8 +140,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS 4.3               | watchos4.3 |
 | watchOS 5.0               | watchos5.0 |
 | watchOS 5.1               | watchos5.1 |
-| watchOS Simulator 3.0     | watchsimulator3.0 |
-| watchOS Simulator 3.1     | watchsimulator3.1 |
 | watchOS Simulator 3.2     | watchsimulator3.2 |
 | watchOS Simulator 4.0     | watchsimulator4.0 |
 | watchOS Simulator 4.1     | watchsimulator4.1 |
@@ -185,17 +165,21 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPhone 8 Plus
 - iPhone SE
 - iPhone X
+- iPhone XR
+- iPhone XS
+- iPhone XS Max
 - iPad 2
 - iPad Retina
 - iPad Air
 - iPad Air 2
 - iPad (5th generation)
 - iPad Pro (9.7-inch)
+- iPad Pro (10.5-inch)
+- iPad Pro (11-inch)
 - iPad Pro (12.9-inch)
 - iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
 - iPad (6th generation)
-- Apple TV
+- Apple TV 1080p
 - Apple TV 4K
 - Apple TV 4K (at 1080p)
 - Apple Watch - 38mm
@@ -204,6 +188,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 2 - 42mm
 - Apple Watch Series 3 - 38mm
 - Apple Watch Series 3 - 42mm
+- Apple Watch Series 4 - 40mm
+- Apple Watch Series 4 - 44mm
 
 #### Runtimes
 
@@ -223,22 +209,21 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.3    | 15E217   |
 | iOS 11.4    | 15F79    |
 | iOS 12.0    | 16A5288q |
-| tvOS 10.0   | 14T328   |
-| tvOS 10.1   | 14U591   |
+| iOS 12.1    | 16B91    |
 | tvOS 10.2   | 14W260   |
 | tvOS 11.1   | 15J580   |
 | tvOS 11.2   | 15K104   |
 | tvOS 11.3   | 15L211   |
 | tvOS 11.4   | 15L576   |
 | tvOS 12.0   | 16J5283n |
-| watchOS 3.0 | 14S326   |
-| watchOS 3.1 | 14S471a  |
+| tvOS 12.1   | 16J602   |
 | watchOS 3.2 | 14V243   |
 | watchOS 4.0 | 15R372   |
 | watchOS 4.1 | 15R844   |
 | watchOS 4.2 | 15S100   |
 | watchOS 4.3 | 15T212   |
 | watchOS 5.0 | 16R5283q |
+| watchOS 5.1 | 16R591   |
 
 #### Devices
 
@@ -248,12 +233,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPhone 5
 - iPhone 5s
 - iPhone 6
-- iPhone 6
+- iPhone 6 Plus
 - iPad 2
 - iPad Retina
 - iPad Air
 
-#### iOS 9.0, 9.1, 9.2, 9.3
+#### iOS 9.0
 
 - iPhone 4s
 - iPhone 5
@@ -267,7 +252,36 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Air
 - iPad Air 2
 
-#### iOS 10.0, 10.1, 10.2, 10.3
+#### iOS 9.1, 9.2, 9.3
+
+- iPhone 4s
+- iPhone 5
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPad 2
+- iPad Retina
+- iPad Air
+- iPad Air 2
+- iPad Pro
+
+#### iOS 10.0
+
+- iPhone 5
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPhone SE
+- iPad Air
+- iPad Air 2
+- iPad Pro (9.7 inch)
+- iPad Pro (12.9 inch)
+
+#### iOS 10.1, 10.2, 10.3
 
 - iPhone 5
 - iPhone 5s
@@ -283,7 +297,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (9.7 inch)
 - iPad Pro (12.9 inch)
 
-#### iOS 11, 11.1, 11.2, 11.3, 11.4
+#### iOS 11.0, 11.1, 11.2, 11.3, 11.4
 
 - iPhone 5s
 - iPhone 6
@@ -317,6 +331,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPhone 8
 - iPhone 8 Plus
 - iPhone X
+- iPhone XR
+- iPhone XS
+- iPhone XS Max
 - iPad Air
 - iPad Air 2
 - iPad (5th generation)
@@ -326,24 +343,52 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (10.5-inch)
 - iPad (6th generation)
 
-#### tvOS 10, 10.1, 10.2
+#### iOS 12.1
+
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPhone 7
+- iPhone 7 Plus
+- iPhone SE
+- iPhone 8
+- iPhone 8 Plus
+- iPhone X
+- iPhone X
+- iPhone XS
+- iPhone XS Max
+- iPhone XR
+- iPad Air
+- iPad Air 2
+- iPad (5th generation)
+- iPad Pro (9.7-inch)
+- iPad Pro (12.9-inch)
+- iPad Pro (12.9-inch) (2nd generation)
+- iPad Pro (10.5-inch)
+- iPad (6th generation)
+- iPad Pro (11-inch)
+- iPad Pro (12.9-inch) (3rd generation)
+
+#### tvOS 10.2
 
 - Apple TV 1080p
 
-#### tvOS 11, 11.1, 11.2, 11.3, 11.4, 12.0
+#### tvOS 11.0, 11.1, 11.2, 11.3, 11.4, 12.0, 12.1
 
 - Apple TV
 - Apple TV 4K
 - Apple TV 4K (at 1080p)
 
-#### watchOS 3.0, 3.1, 3.2
+#### watchOS 3.2
 
 - Apple Watch - 38mm
 - Apple Watch - 42mm
 - Apple Watch Series 2 - 38mm
 - Apple Watch Series 2 - 42mm
 
-#### watchOS 4.0, 4.1, 4.2, 4.3, 5.0
+#### watchOS 4.0, 4.1, 4.2, 4.3
 
 - Apple Watch - 38mm
 - Apple Watch - 42mm
@@ -351,6 +396,15 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 2 - 42mm
 - Apple Watch Series 3 - 38mm
 - Apple Watch Series 3 - 42mm
+
+#### watchOS 5.0, 5.1
+
+- Apple Watch Series 2 - 38mm
+- Apple Watch Series 2 - 42mm
+- Apple Watch Series 3 - 38mm
+- Apple Watch Series 3 - 42mm
+- Apple Watch Series 4 - 40mm
+- Apple Watch Series 4 - 44mm
 
 ### Device Pairs
 
@@ -363,6 +417,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | Apple Watch Series 2 - 42mm | iPhone 7 Plus  |
 | Apple Watch Series 3 - 38mm | iPhone 8       |
 | Apple Watch Series 3 - 42mm | iPhone 8 Plus  |
+| Apple Watch Series 4 - 40mm | iPhone XS      |
+| Apple Watch Series 4 - 44mm | iPhone XS Max  |
 
 ## Android
 
@@ -398,7 +454,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-25            | Android SDK Platform 25, Revision 3       |
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
-| android-28            | Android SDK Platform 28, Revision 1       |
+| android-28            | Android SDK Platform 28, Revision 6       |
 
 ### Android SDK Build-tools
 
@@ -423,6 +479,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-26.0.0    | Android SDK Build-tools, Revision 26.0.0  |
 | build-tools-26.0.1    | Android SDK Build-tools, Revision 26.0.1  |
 | build-tools-26.0.2    | Android SDK Build-tools, Revision 26.0.2  |
+| build-tools-26.0.3    | Android SDK Build-tools, Revision 26.0.3  |
 | build-tools-27.0.0    | Android SDK Build-tools, Revision 27.0.0  |
 | build-tools-27.0.1    | Android SDK Build-tools, Revision 27.0.1  |
 | build-tools-27.0.2    | Android SDK Build-tools, Revision 27.0.2  |
@@ -439,9 +496,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 |-----------------------|-------------------------------------------|
 | cmake                 | 3.6.4111459                               |
 | lldb                  | 2.3.3614996                               |
-| ndk-bundle            | 18.1.5063045                              |
+| ndk-bundle            | 19.0.5232133                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 27.2.9                                    |
+| Android Emulator      | 28.0.23                                   |
 
 ### Google APIs
 
@@ -461,17 +518,18 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-android-m2repository             | Android Support Repository, revision 47  |
 | extra-google-google_play_services      | Google Play services, revision 49        |
 | extra-google-m2repository              | Google Repository, revision 58           |
-| extras;google;instantapps              | Google Play Instant Development SDK 1.5.0|
+| extras;google;instantapps              | Google Play Instant Development SDK 1.6.0|
 | Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.2     |
 
 ## Xamarin
 
 ### Visual Studio for Mac
 
-- 7.6.6.17
+- 7.7.3.43
 
 ### Mono
 
+- 5.16.0
 - 5.12.0
 - 5.10.1
 - 5.8.1
@@ -484,9 +542,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.2.1.13
 - 12.2.1.11
 - 12.0.0.15
-- 11.99.3.538
 - 11.14.0.13
 - 11.12.0.4
 - 11.9.1.24
@@ -499,6 +557,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 9.1.5-1
 - 9.0.0-20
 - 9.0.0-18
 - 8.3.3-2
@@ -512,7 +571,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
-- 4.99.3.658
+- 5.3.1.28
+- 5.2.1.13
+- 5.2.1.9
 - 4.6.0.13
 - 4.4.1.193
 - 4.2.1.28

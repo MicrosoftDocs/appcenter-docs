@@ -23,6 +23,7 @@ dev_langs:
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
+> * [Cordova](cordova.md)
 
 ## Issues during setup
 

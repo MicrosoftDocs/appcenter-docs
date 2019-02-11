@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 11/28/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -28,6 +28,12 @@ ms.tgt_pltfrm: xamarin.ios
 > * [macOS](macos.md)
 > * [Cordova Android](cordova-android.md)
 > * [Cordova iOS](cordova-ios.md)
+> * [Unity Android](unity-android.md)
+> * [Unity iOS](unity-ios.md)
+> * [Unity Windows](unity-windows.md)
+
+> [!NOTE]
+> Starting with version 1.11.0, calling `Push.DidReceiveRemoteNotification(...)` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `Push.DidReceiveRemoteNotification(...)` callback, please refer to [the App Center SDK migration guide](migration/xamarin-ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -57,7 +63,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 [!include[](add-nuget.md)]
 
-### 2. Start App Center Push service
+### 2. Start App Center Push
 
 [!include[](start-push.md)]
 
@@ -108,7 +114,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
     ```
 
    > [!NOTE]
-   > You may have already imlemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the App Center lines of code above alongside existing code in your implementation of these methods.
+   > You may have already implemented these methods while following Xamarin's documentation on enabling APNS. It is okay to replace the implementation from their example with the code provided above. You may also add the App Center lines of code above alongside existing code in your implementation of these methods.
 
 4. Implement the callback to enable push event
 
@@ -134,21 +140,21 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 ### User Notification Center Delegate
 
 1. Open your project's `Info.plist` file.
-2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push service.
-3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push service.
+2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
+3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push.
 
     ```csharp
-    - public override void WillPresentNotification (UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler) {
-      
+    public override void WillPresentNotification (UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler) {
+
       //...
-      
+
       // Pass the notification payload to MSPush.
       Push.DidReceiveRemoteNotification(notification.Request.Content.UserInfo);
 
       // Complete handling the notification.
       completionHandler(UNNotificationPresentationOptions.None);
     }
-    
+
    public override void DidReceiveNotificationResponse (UNUserNotificationCenter center, UNNotificationResponse response, Action completionHandler) {
 
       //...

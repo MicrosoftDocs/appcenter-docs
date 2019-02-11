@@ -21,6 +21,7 @@ ms.tgt_pltfrm: react-native
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
+> * [Cordova](cordova.md)
 
 ## React Native link command unrecognized
 

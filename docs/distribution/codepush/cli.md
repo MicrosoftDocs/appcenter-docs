@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 10/11/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -72,7 +72,7 @@ appcenter tokens delete <machineName>
 To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (e.g. in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it is for):
 
 ```shell
-appcenter tokens create -d "VSTS Integration"
+appcenter tokens create -d "Azure DevOps Integration"
 ```
 
 The key will only display once, so remember to save it somewhere if needed! After creating the new key, you can specify its value using the `--token` flag of the `login` command, which allows you to perform "headless" authentication, as opposed to launching a browser.
@@ -117,7 +117,7 @@ If you decide that you don't like the name you gave to an app, you can rename it
 
 ```shell
 appcenter apps update -n <newName> -a <ownerName>/<appName>
-``` 
+```
 
 The app's name is only meant to be recognizable from the management side, so feel free to rename it as necessary. It won't actually impact the running app, since update queries are made via deployment keys.
 
@@ -131,7 +131,7 @@ Use caution when doing this as any apps that have been configured to use it will
 
 Finally, if you want to list all apps that you've registered with the App Center server, run the following command:
 
-```Nshell
+```shell
 appcenter apps list
 ```
 
@@ -167,11 +167,11 @@ Collaborators cannot do any of the following:
 
 Over time, if someone is no longer working on an app with you, you can also remove them as a collaborator using this collaborator menu in the portal.
 
-In addition to this, if at any time you want to list all collaborators that have been added to an app, you can simply visit the collaborater menu in the portal.
+In addition to this, if at any time you want to list all collaborators that have been added to an app, you can simply visit the collaborator menu in the portal.
 
 ### Deployment Management
 
-From the CodePush perspective, an app is simply a named grouping for one or more "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (e.g. the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end-users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a dev's personal environment to a testing/QA/staging environment, before finally making their way into production.
+From the CodePush perspective, an app is simply a named grouping for one or more "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (e.g. the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end-users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a developer's personal environment to a testing/QA/staging environment, before finally making their way into production.
 
 > [!NOTE]
 > As you'll see below, the `release`, `promote` and `rollback` commands require both an app name and a deployment name in order to work, because it is the combination of the two that uniquely identifies a point of distribution (e.g. I want to release an update of my iOS app to my beta testers).
@@ -230,19 +230,19 @@ Which of these commands you should use is mostly a matter of requirements and/or
 
 ### Releasing Updates (General)
 
-```NA
+```text
 appcenter codepush release -a <ownerName>/<appName> -c <updateContentsPath> -t <targetBinaryVersion> -d <deploymentName>
 
-[-t|--target-binary-version <version>] 
-[-с|--update-contents-path <updateContentsPath>] 
-[-r|--rollout <rolloutPercentage>] 
+[-t|--target-binary-version <version>]
+[-с|--update-contents-path <updateContentsPath>]
+[-r|--rollout <rolloutPercentage>]
 [--disable-duplicate-release-error]
-[-k|--private-key-path <privateKeyPath>] 
-[-m|--mandatory] 
-[-x|--disabled] 
-[--description <description>] 
-[-d|--deployment-name <deploymentName>] 
-[-a|--app <ownerName>/<appName>] 
+[-k|--private-key-path <privateKeyPath>]
+[-m|--mandatory]
+[-x|--disabled]
+[--description <description>]
+[-d|--deployment-name <deploymentName>]
+[-a|--app <ownerName>/<appName>]
 [--disable-telemetry]
 [-v|--version]
 ```
@@ -257,14 +257,13 @@ This specifies the location of the updated app code and assets you want to relea
 
 It's important that the path you specify refers to the platform-specific, prepared/bundled version of your app. The following table outlines which command you should run before releasing, as well as the location you can subsequently refer to using the `updateContentsPath` parameter:
 
-
-| Platform                         | Prepare command                                                                                                                                            | Package path (relative to project root)                                                                     |
-|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Cordova (Android)                | `cordova prepare android`                                                                                                                                  | `./platforms/android/assets/www` directory                                                                 |
-| Cordova (iOS)                    | `cordova prepare ios`                                                                                                                                      | `./platforms/ios/www ` directory                                                                      |
-| React Native wo/assets (Android) | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`                                               | Value of the `--bundle-output` option                                                                      |
+| Platform                         | Prepare command  | Package path (relative to project root)                                    |
+| -------------------------------- | ---------------- |--------------------------------------------------------------------------- |
+| Cordova (Android)                | `cordova prepare android`    | `./platforms/android/assets/www` directory                     |
+| Cordova (iOS)                    | `cordova prepare ios`        | `./platforms/ios/www ` directory                               |
+| React Native wo/assets (Android) | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`  | Value of the `--bundle-output` option. |
 | React Native w/assets (Android)  | `react-native bundle --platform android --entry-file <entryFile> --bundle-output <releaseFolder>/<bundleOutput> --assets-dest <releaseFolder> --dev false` | Value of the `--assets-dest` option, which should represent a newly created directory that includes your assets and JS bundle |
-| React Native wo/assets (iOS)     | `react-native bundle --platform ios --entry-file <entryFile> --bundle-output <bundleOutput> --dev false`                                                   | Value of the `--bundle-output` option                                                                 |
+| React Native wo/assets (iOS)     | `react-native bundle --platform ios --entry-file <entryFile> --bundle-output <bundleOutput> --dev false` | Value of the `--bundle-output` option |
 | React Native w/assets (iOS)      | `react-native bundle --platform ios --entry-file <entryFile> --bundle-output <releaseFolder>/<bundleOutput> --assets-dest <releaseFolder> --dev false` | Value of the `--assets-dest` option, which should represent a newly created directory that includes your assets and JS bundle |
 
 #### Target binary version parameter
@@ -277,7 +276,6 @@ This specifies the store/binary version of the application you are releasing the
 
 If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a [semver range expression](https://github.com/npm/node-semver#advanced-range-syntax). That way, any client device running a version of the binary that satisfies the range expression (i.e. `semver.satisfies(version, range)` returns `true`) will get the update. Examples of valid semver range expressions are as follows:
 
-
 | Range Expression | Who gets the update                                                                    |
 |------------------|----------------------------------------------------------------------------------------|
 | `1.2.3`          | Only devices running the specific binary app store version `1.2.3` of your app         |
@@ -285,6 +283,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 | `1.2.x`          | Devices running major version 1, minor version 2 and any patch version of your app     |
 | `1.2.3 - 1.2.7`  | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (inclusive) |
 | `>=1.2.3 <1.2.7` | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (exclusive) |
+| `1.2`            | Equivalent to `>=1.2.0 <1.3.0`                                                         |
 | `~1.2.3`         | Equivalent to `>=1.2.3 <1.3.0`                                                         |
 | `^1.2.3`         | Equivalent to `>=1.2.3 <2.0.0`                                                         |
 
@@ -293,7 +292,6 @@ If you ever want an update to target multiple versions of the app store binary, 
 > *, the command may not execute correctly if you do not wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it is best to wrap your `targetBinaryVersion` parameter in double quotes when calling the `release` command, e.g. `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
 
 The following table outlines the version value that CodePush expects your update's semver range to satisfy for each respective app type:
-
 
 | Platform               | Source of app store version                                                  |
 |------------------------|------------------------------------------------------------------------------|
@@ -321,7 +319,7 @@ This provides an optional "change log" for the deployment. The value is simply r
 
 #### Disabled parameter
 
-This specifies whether an update should be downloadable by end users or not. If left unspecified, the update will not be disabled (i.e. users will download it the moment your app calls `sync`). This parameter can be valuable if you want to release an update that isn't immediately available, until you expicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (e.g. an announcement blog post went live).
+This specifies whether an update should be downloadable by end users or not. If left unspecified, the update will not be disabled (i.e. users will download it the moment your app calls `sync`). This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (e.g. an announcement blog post went live).
 
 > [!TIP]
 > This parameter can be set using either `--disabled` or `-x`*
@@ -334,7 +332,6 @@ This specifies whether the update should be considered mandatory or not (e.g. it
 > This parameter is simply a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (e.g. `--mandatory true`), however, simply specifying `--mandatory` is sufficient for marking a release as mandatory.*
 
 The mandatory attribute is unique because the server will dynamically modify it as necessary in order to ensure that the semantics of your releases are maintained for your end-users. For example, imagine that you released the following three updates to your app:
-
 
 | Release | Mandatory? |
 |---------|------------|
@@ -376,25 +373,25 @@ This specifies the percentage of users (as an integer between `1` and `100`) tha
 ### Releasing Updates (React Native)
 
 ```NA
-appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion> 
-[-t|--target-binary-version <targetBinaryVersion>] 
-[-o|--output-dir] 
+appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion>
+[-t|--target-binary-version <targetBinaryVersion>]
+[-o|--output-dir]
 [-s|--sourcemap-output]
-[--plist-file-prefix] 
-[-p|--plist-file] 
-[-g|--gradle-file] 
-[-e|--entry-file] 
-[--development] 
+[--plist-file-prefix]
+[-p|--plist-file]
+[-g|--gradle-file]
+[-e|--entry-file]
+[--development]
 [-b|--bundle-name <bundleName>]
-[-r|--rollout <rolloutPercentage>] 
-[--disable-duplicate-release-error] 
-[-k|--private-key-path <privateKeyPath>] 
-[-m|--mandatory] 
+[-r|--rollout <rolloutPercentage>]
+[--disable-duplicate-release-error]
+[-k|--private-key-path <privateKeyPath>]
+[-m|--mandatory]
 [-x|--disabled]
-[--description <description>] 
-[-d|--deployment-name <deploymentName>] 
-[-a|--app <ownerName>/<appName>] 
-[--disable-telemetry] 
+[--description <description>]
+[-d|--deployment-name <deploymentName>]
+[-a|--app <ownerName>/<appName>]
+[--disable-telemetry]
 [-v|--version]
 ```
 
@@ -421,7 +418,7 @@ appcenter codepush release -a <ownerName>/MyApp-iOS -c ./CodePush -t 1.0.0
 Achieving the equivalent behavior with the `release-react` command would simply require the following command, which is generally less error-prone:
 
 ```shell
-appcenter codepush release-react -a <ownerName>/MyApp-iOS 
+appcenter codepush release-react -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]
@@ -501,7 +498,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/bui
 This specifies the relative path to the `Info.plist` file that the CLI should use when attempting to auto-detect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find your `Info.plist` file in "standard" React Native projects, and you can use the `--plistFilePrefix` parameter in order to support per-environment plist files (e.g. `STAGING-Info.plist`). However, if your plist is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter.
 
 ```shell
-appcenter codepush release-react -a <ownerName>/MyApp-iOS ios -p "./foo/bar/MyFile.plist"
+appcenter codepush release-react -a <ownerName>/MyApp-iOS -p "./foo/bar/MyFile.plist"
 ```
 
 > [!TIP]
@@ -509,7 +506,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS ios -p "./foo/bar/MyFi
 
 #### Plist file prefix parameter (iOS only)
 
-This specifies the file name prefix of the `Info.plist` file that that CLI should use when attempting to auto-detect the target binary version for the release. This can be useful if you've created per-environment plist files (e.g. `DEV-Info.plist`, `STAGING-Info.plist`), and you want to be able to release CodePush updates without needing to explicity set the `--target-binary-version` parameter. By specifying a `--plist-file-prefix`, the CLI will look for a file named `<prefix>-Info.plist`, instead of simply `Info.plist` (which is the default behavior), in the following locations: `./ios` and `./ios/<appName>`. If your plist file isn't located in either of those directories (e.g. your app is a native iOS app with embedded RN views), or uses an entirely different file naming convention, then consider using the `--plist-file ` parameter.
+This specifies the file name prefix of the `Info.plist` file that that CLI should use when attempting to auto-detect the target binary version for the release. This can be useful if you've created per-environment plist files (e.g. `DEV-Info.plist`, `STAGING-Info.plist`), and you want to be able to release CodePush updates without needing to explicitly set the `--target-binary-version` parameter. By specifying a `--plist-file-prefix`, the CLI will look for a file named `<prefix>-Info.plist`, instead of simply `Info.plist` (which is the default behavior), in the following locations: `./ios` and `./ios/<appName>`. If your plist file isn't located in either of those directories (e.g. your app is a native iOS app with embedded RN views), or uses an entirely different file naming convention, then consider using the `--plist-file ` parameter.
 
 ```shell
 # Auto-detect the target binary version of this release by looking up the
@@ -531,20 +528,20 @@ This specifies the relative path to where the generated JS bundle's sourcemap fi
 ### Releasing Updates (Cordova)
 
 ```NA
-appcenter codepush release-cordova -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion> 
-[-t|--target-binary-version <targetBinaryVersion>] 
-[--is-release-build-type] 
-[-b|--build] 
+appcenter codepush release-cordova -a <ownerName>/<appName> -d <deploymentName> -t <targetBinaryVersion>
+[-t|--target-binary-version <targetBinaryVersion>]
+[--is-release-build-type]
+[-b|--build]
 [-r|--rollout <rolloutPercentage>]
-[--disable-duplicate-release-error] 
-[-k|--private-key-path <privateKeyPath>] 
-[-m|--mandatory] 
-[-x|--disabled] 
-[--description <description>] 
+[--disable-duplicate-release-error]
+[-k|--private-key-path <privateKeyPath>]
+[-m|--mandatory]
+[-x|--disabled]
+[--description <description>]
 [-d|--deployment-name <deploymentName>]
-[-a|--app <ownerName>/<appName>] 
-[--disable-telemetry] 
-[-v|--version] 
+[-a|--app <ownerName>/<appName>]
+[--disable-telemetry]
+[-v|--version]
 ```
 
 The `release-cordova` command is a Cordova-specific version of the "vanilla" [`release`](#releasing-app-updates) command, which supports all of the same parameters (e.g. `--mandatory`, `--description`), yet simplifies the process of releasing updates by performing the following additional behavior:
@@ -563,11 +560,11 @@ appcenter codepush release -a <ownerName>/MyApp-iOS -c ./platforms/ios/www -t 1.
 Achieving the equivalent behavior with the `release-cordova` command would simply require the following command, which is generally less error-prone:
 
 ```shell
-appcenter codepush release-cordova -a <ownerName>/MyApp-iOS ios
+appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]
->  We believe that the `release-cordova` command should be valuable for most Cordova developers, so if you're finding that it isn't flexible enough or missing a key feature, please don't hesistate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.*
+>  We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, please don't hesistate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.*
 
 #### App name parameter
 
@@ -618,16 +615,16 @@ After releasing an update, there may be scenarios where you need to modify one o
 
 ```NA
 appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-release-label>
-[-r|--rollout <rolloutPercentage>] 
-[-d|--description <description>] 
-[-t|--target-binary-version <targetBinaryVersion>] 
-[-a|--app <ownerName>/<appName>] 
-[--disable-telemetry] 
+[-r|--rollout <rolloutPercentage>]
+[-d|--description <description>]
+[-t|--target-binary-version <targetBinaryVersion>]
+[-a|--app <ownerName>/<appName>]
+[--disable-telemetry]
 [-v|--version]
 ```
 
 > [!NOTE]
-> This command doesn't allow modifying the actual update contents of a release (e.g. `www` folder of a Cordova app). If you need to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the approrpriate fix when it is available.*
+> This command doesn't allow modifying the actual update contents of a release (e.g. `www` folder of a Cordova app). If you need to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it is available.*
 
 Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update just a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
 
@@ -641,24 +638,23 @@ appcenter codepush patch -a <ownerName>/MyApp-iOS Production v23 -rollout 50%
 
 ### Label parameter
 
-Indicates which release (e.g. `v23`) you want to update within the specified deployment. If ommitted, the requested changes will be applied to the latest release in the specified deployment. In order to look up the label for the release you want to update, you can run the `appcenter codepush deployment history` command and refer to the `Label` column.
-
+Indicates which release (e.g. `v23`) you want to update within the specified deployment. If omitted, the requested changes will be applied to the latest release in the specified deployment. In order to look up the label for the release you want to update, you can run the `appcenter codepush deployment history` command and refer to the `Label` column.
 
 ### Mandatory parameter
 
-This is the same parameter as the one described in the [above section](#mandatory-parameter), and simply allows you to update whether the release should be considered mandatory or not. Note that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag is not equivalent to `--mandatory false`. Therefore, if the parameter is ommitted, no change will be made to the value of the target release's mandatory property. You need to set this to `--mandatory false` to explicitly make a release optional.
+This is the same parameter as the one described in the [above section](#mandatory-parameter), and simply allows you to update whether the release should be considered mandatory or not. Note that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag is not equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You need to set this to `--mandatory false` to explicitly make a release optional.
 
 ### Description parameter
 
-This is the same parameter as the one described in the [above section](#description-parameter), and simply allows you to update the description associated with the release (e.g. you made a typo when releasing, or you forgot to add a description at all). If this parameter is ommitted, no change will be made to the value of the target release's description property.
+This is the same parameter as the one described in the [above section](#description-parameter), and simply allows you to update the description associated with the release (e.g. you made a typo when releasing, or you forgot to add a description at all). If this parameter is omitted, no change will be made to the value of the target release's description property.
 
 ### Disabled parameter
 
-This is the same parameter as the one described in the [above section](#disabled-parameter), and simply allows you to update whether the release should be disabled or not. Note that `--disabled` and `--disabled true` are equivalent, but the absence of this flag is not equivalent to `--disabled false`. Therefore, if the paremeter is ommitted, no change will be made to the value of the target release's disabled property. You need to set this to `--disabled false` to explicity make a release acquirable if it was previously disabled.
+This is the same parameter as the one described in the [above section](#disabled-parameter), and simply allows you to update whether the release should be disabled or not. Note that `--disabled` and `--disabled true` are equivalent, but the absence of this flag is not equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You need to set this to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
 
 ### Rollout parameter
 
-This is the same parameter as the one described in the [above section](#rollout-parameter), and simply allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can simply set this parameter to `--rollout 100`. If this parameter is ommitted, no change will be made to the value of the target release's rollout parameter.
+This is the same parameter as the one described in the [above section](#rollout-parameter), and simply allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can simply set this parameter to `--rollout 100`. If this parameter is omitted, no change will be made to the value of the target release's rollout parameter.
 
 Additionally, as mentioned above, when you release an update without a rollout value, it is treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you cannot change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
 
@@ -737,7 +733,6 @@ appcenter codepush rollback -a <ownerName>/MyApp-iOS Production
 
 This has the effect of creating a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. For example, imagine that you released the following updates to your app:
 
-
 | Release | Description       | Mandatory |
 |---------|-------------------|-----------|
 | v1      | Initial release!  | Yes       |
@@ -745,7 +740,6 @@ This has the effect of creating a new release for the deployment that includes t
 | v3      | Bug fixes         | Yes       |
 
 If you ran the `rollback` command on that deployment, a new release (`v4`) would be created that included the contents of the `v2` release.
-
 
 | Release                     | Description       | Mandatory |
 |-----------------------------|-------------------|-----------|

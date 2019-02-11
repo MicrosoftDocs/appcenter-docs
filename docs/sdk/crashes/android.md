@@ -4,12 +4,15 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
+dev_langs:
+ - java
+ - kotlin
 ---
 
 # App Center Crashes
@@ -35,6 +38,9 @@ App Center Crashes provides you with an API to generate a test crash for easy te
 ```java
 Crashes.generateTestCrash();
 ```
+```kotlin
+Crashes.generateTestCrash()
+```
 
 ## Get more information about a previous crash
 
@@ -47,6 +53,9 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 ```java
 Crashes.hasCrashedInLastSession();
 ```
+```kotlin
+Crashes.hasCrashedInLastSession()
+```
 
 [!include[](../android-see-async.md)]
 
@@ -58,6 +67,9 @@ If your app crashed previously, you can get details about the last crash.
 
 ```java
 Crashes.getLastSessionCrashReport();
+```
+```kotlin
+Crashes.getLastSessionCrashReport()
 ```
 
 [!include[](../android-see-async.md)]
@@ -80,6 +92,12 @@ CrashesListener customListener = new CrashesListener() {
 };
 Crashes.setListener(customListener);
 ```
+```kotlin
+val customListener = object : CrashesListener {
+	// Implement all callbacks here.
+}
+Crashes.setListener(customListener)
+```
 
 In case you are only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead:
 
@@ -89,6 +107,15 @@ AbstractCrashesListener customListener = new AbstractCrashesListener() {
 };
 Crashes.setListener(customListener);
 ```
+```kotlin
+val customListener = object : AbstractCrashesListener() {
+	// Implement any callback here as required.
+}
+Crashes.setListener(customListener)
+```
+
+> [!NOTE]
+> You must set the listener *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
@@ -97,7 +124,12 @@ Implement this callback if you'd like to decide if a particular crash needs to b
 ```java
 @Override
 public boolean shouldProcess(ErrorReport report) {
-     return true; // return true if the crash report should be processed, otherwise false.
+	return true; // return true if the crash report should be processed, otherwise false.
+}
+```
+```kotlin
+override fun shouldProcess(report: ErrorReport?): Boolean {
+	return true
 }
 ```
 
@@ -122,6 +154,11 @@ public boolean shouldAwaitUserConfirmation() {
 	return true;
 }
 ```
+```kotlin
+override fun shouldAwaitUserConfirmation(): Boolean {
+	return true
+}
+```
 
 If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
 
@@ -130,6 +167,11 @@ If you return `true`, your app must obtain (using your own code) the user's perm
 Crashes.notifyUserConfirmation(Crashes.DONT_SEND);
 Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
+```
+```kotlin
+Crashes.notifyUserConfirmation(Crashes.DONT_SEND)
+Crashes.notifyUserConfirmation(Crashes.SEND)
+Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND)
 ```
 
 As an example you can refer to [our custom dialog example](https://aka.ms/custom-dialog-android).
@@ -146,6 +188,11 @@ public void onBeforeSending(ErrorReport errorReport) {
 	// Your code, e.g. to present a custom UI.
 }
 ```
+```kotlin
+override fun onBeforeSending(report: ErrorReport?) {
+	// Your code, e.g. to present a custom UI.
+}
+```
 
 #### The following callback will be invoked after the SDK sent a crash log successfully.
 
@@ -155,12 +202,22 @@ public void onSendingSucceeded(ErrorReport report) {
 	// Your code, e.g. to hide the custom UI.
 }
 ```
+```kotlin
+override fun onSendingSucceeded(report: ErrorReport?) {
+	// Your code, e.g. to hide the custom UI.
+}
+```
 
 #### The following callback will be invoked if the SDK failed to send a crash log
 
 ```java
 @Override
 public void onSendingFailed(ErrorReport report, Exception e) {
+	// Your code goes here.
+}
+```
+```kotlin
+override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 	// Your code goes here.
 }
 ```
@@ -180,11 +237,28 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
 	ByteArrayOutputStream stream = new ByteArrayOutputStream();
 	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-	byte[] bitMapData = stream.toByteArray();
-	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitMapData, "ic_launcher.jpeg", "image/jpeg");
+	byte[] bitmapData = stream.toByteArray();
+	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
 
 	/* Return attachments as list. */
 	return Arrays.asList(textLog, binaryLog);
+}
+```
+```kotlin
+override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
+	
+	/* Attach some text. */
+	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+	/* Attach app icon. */
+	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
+	val stream = ByteArrayOutputStream()
+	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+	val bitmapData = stream.toByteArray()
+	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
+	
+	/* Return attachments as list. */
+	return Arrays.asList(textLog, binaryLog)
 }
 ```
 
@@ -198,12 +272,20 @@ You can enable and disable App Center Crashes at runtime. If you disable it, the
 ```java
 Crashes.setEnabled(false);
 ```
+```kotlin
+Crashes.setEnabled(false)
+```
+
 
 To enable App Center Crashes again, use the same API but pass `true` as a parameter.
 
 ```java
 Crashes.setEnabled(true);
 ```
+```kotlin
+Crashes.setEnabled(true)
+```
+
 
 [!include[](../android-see-async.md)]
 
@@ -213,6 +295,9 @@ You can also check if App Center Crashes is enabled or not:
 
 ```java
 Crashes.isEnabled();
+```
+```kotlin
+Crashes.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]

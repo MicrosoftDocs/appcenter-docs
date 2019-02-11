@@ -28,7 +28,8 @@ App Center follows the philosophy of API-first. You can expect API support for e
 
 ## Push API
 
-Sending Push Notifications via API will allow you to automate the process of engaging with your users. Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs.
+Sending Push Notifications via API will allow you to automate the process of engaging with your users.
+Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs.
 
 ![Push Swagger](~/push/images/push-swagger.png)
 
@@ -37,7 +38,7 @@ Sending Push Notifications via API will allow you to automate the process of eng
 
 ## Send notifications via API
 
-In this documentation we will assume that you already have an app which is ready to receive push notifications. Follow our Push SDK documentation for the different supported platforms: [Android](~/sdk/push/android.md), [iOS](~/sdk/push/ios.md), [React Native Android](~/sdk/push/react-native-android.md), [React Native iOS](~/sdk/push/react-native-ios.md), [UWP](~/sdk/push/uwp.md), [Xamarin Android](~/sdk/push/xamarin-android.md), [Xamarin iOS](~/sdk/push/xamarin-ios.md), [Xamarin Forms](~/sdk/push/xamarin-forms.md)  and [macOS](~/sdk/push/macOS.md).
+In this documentation we will assume that you already have an app which is ready to receive push notifications. Follow our Push SDK documentation for the different supported platforms: [Android Push SDK](~/sdk/push/android.md), [iOS Push SDK](~/sdk/push/ios.md), [React Native Android Push SDK](~/sdk/push/react-native-android.md), [React Native iOS Push SDK](~/sdk/push/react-native-ios.md), [UWP Push SDK](~/sdk/push/uwp.md), [Unity Android Push SDK](~/sdk/push/unity-android.md), [Unity iOS Push SDK](~/sdk/push/unity-ios.md), [Unity UWP Push SDK](~/sdk/push/unity-windows.md), [Xamarin Android Push SDK](~/sdk/push/xamarin-android.md), [Xamarin iOS Push SDK](~/sdk/push/xamarin-ios.md), [Xamarin Forms Push SDK](~/sdk/push/xamarin-forms.md)  and [macOS Push SDK](~/sdk/push/macOS.md).
 
 ### API Tokens
 
@@ -110,15 +111,15 @@ Here is an example for an audiences based 2 custom properties (boolean and strin
 
 ```JSON
 {
-  "definition": "myBooleanProperty eq true and myStringPropety eq 'myStringValue'",
+  "definition": "myBooleanProperty eq true and myStringProperty eq 'myStringValue'",
   "custom_properties": {
     "myBooleanProperty": "boolean",
-    "myStringPropety": "string"
+    "myStringProperty": "string"
   }
 }
 ```
 
-You will need to add this custom properties using our SDK for each platform: [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/ios.md), [React Native](~/sdk/other-apis/react-native.md), [UWP](~/sdk/other-apis/uwp.md), [Xamarin](~/sdk/other-apis/xamarin.md) and [macOS](~/sdk/other-apis/macOS.md).
+You will need to add this custom properties using our SDK for each platform: [Android API custom properties](~/sdk/other-apis/android.md#use-custom-properties), [iOS API custom properties](~/sdk/other-apis/ios.md), [React Native API custom properties](~/sdk/other-apis/react-native.md#use-custom-properties), [UWP API custom properties](~/sdk/other-apis/uwp.md#use-custom-properties), [Unity API custom properties](~/sdk/other-apis/unity.md#use-custom-properties), [Xamarin API custom properties](~/sdk/other-apis/xamarin.md#use-custom-properties) and [macOS API custom properties](~/sdk/other-apis/macOS.md#use-custom-properties).
 
 ### Send push notification to an audience
 
@@ -139,9 +140,9 @@ You will need to add this custom properties using our SDK for each platform: [An
 
 ## Send notifications to Device IDs
 
-This is an example of sending a Push Notifications to a set of Device IDs. To get the install ID, you can use our APIs: [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/ios.md), [React Native](~/sdk/other-apis/react-native.md), [UWP](~/sdk/other-apis/uwp.md), [Xamarin](~/sdk/other-apis/xamarin.md) and [macOS](~/sdk/other-apis/macOS.md).
+This is an example of sending a Push Notifications to a set of Device IDs. To get the install ID, you can use our APIs: [Android APIs](~/sdk/other-apis/android.md), [iOS APIs](~/sdk/other-apis/ios.md), [React Native APIs](~/sdk/other-apis/react-native.md), [UWP APIs](~/sdk/other-apis/uwp.md), [Unity APIs](~/sdk/other-apis/unity.md), [Xamarin APIs](~/sdk/other-apis/xamarin.md) and [macOS APIs](~/sdk/other-apis/macOS.md).
 
-Below, you will find an example where we target the follwing devices IDs: `00000000-0000-0000-0000-000000000001`,`00000000-0000-0000-0000-000000000002`, `00000000-0000-0000-0000-000000000003`.
+Below, you will find an example where we target the following devices IDs: `00000000-0000-0000-0000-000000000001`,`00000000-0000-0000-0000-000000000002`, `00000000-0000-0000-0000-000000000003`.
 
 ```JSON
 {

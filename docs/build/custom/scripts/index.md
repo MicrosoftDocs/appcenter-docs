@@ -13,12 +13,12 @@ ms.custom: build
 
 # Build scripts
 
-You can add up to three custom build steps that run at pre-defined stages during build time. Place the scripts with the respective format next to the project-level (**.xcodeproj**, **build.gradle**, **.csproj**, **.sln** or **package.json**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+You can add up to three custom build steps that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln** or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
 You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter-build-scripts-examples). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
 
 > [!NOTE]
-> Once your build scripts have been detected for the first time or you moved them to a different location, make sure to save the branch configuration to apply the changes!
+> Once your build scripts have been detected for the first time or you made changes to the location of scripts or where you store CocoaPods for iOS projects, make sure to save the branch configuration to apply the changes! This will perform analysis to index your repository tree and save the new build definition. 
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 

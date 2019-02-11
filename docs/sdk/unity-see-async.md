@@ -1,1 +1,1 @@
-This API is asynchronous, you can read more about that in our [App Center Asynchronous APIs](unity-async.md) guide.
+This API is asynchronous, you can read more about in our [App Center Asynchronous APIs](unity-async.md) guide.

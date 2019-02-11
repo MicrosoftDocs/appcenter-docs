@@ -3,7 +3,7 @@ title: Help and Feedback
 description: What to do when you can't find what you need in the docs
 author: jwargo
 ms.author: jowargo
-ms.date: 06/22/2018
+ms.date: 01/18/2019
 ms.topic: article
 ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a
 ms.service: vs-appcenter
@@ -17,7 +17,7 @@ There's a dedicated support team ready to answer your product questions; look in
 
 App Center, and its product documentation, are both a work in progress, we're making regular updates to both. If you have a suggestion for how to make the product better or how to make the documentation better, we want to hear from you. Look in the **Providing feedback** section of this document for information on how to give us your feedback.
 
-## Accessing App Center Support
+## Accessing App Center Free Support
 
 Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just click the blue chat button in the lower-right corner of any App Center page and the dedicated App Center support team will respond. Use the **New Conversation** button shown in the following figure to start a conversation with our support team. You'll even find the App Center Program Management team hopping in to join the conversation as needed.
 
@@ -26,6 +26,10 @@ Get support for App Center directly from within the App Center portal (not here 
 Use the **Search for answers...** input field to search help and troubleshooting documents that haven't made it into the formal docs yet.
 
 For additional information, or to browse a list of articles available through support, see the [App Center Help Center](https://intercom.help/appcenter).
+
+## Microsoft Premier Support
+
+Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/en-us/premier).  If you are new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/en-us/enterprise/services/support).
 
 ## Providing feedback
 
