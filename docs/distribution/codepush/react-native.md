@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 10/11/2018
+ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -196,7 +196,7 @@ Once your Xcode project has been setup to build/link the CodePush plugin, you ne
 2. Find the following line of code, which loads your JS Bundle from the app binary for production releases:
 
     ```objective-c
-    jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
     ```
 
 3. Replace it with this line:
@@ -216,7 +216,7 @@ Typically, you're only going to want to use CodePush to resolve your JS bundle l
 NSURL *jsCodeLocation;
 
 #ifdef DEBUG
-    jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #else
     jsCodeLocation = [CodePush bundleURL];
 #endif
