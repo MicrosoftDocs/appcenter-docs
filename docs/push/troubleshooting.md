@@ -22,7 +22,7 @@ To get a better understanding what's happening under the covers, [increase log o
 
 Check for one of the following reasons:
 
-- The device registration expired - this happens when an app is uninstalled, or the registration App Center has for the device is obsolete.
+- The device registration expired - this occurs when an app is uninstalled, or the registration App Center has for the device is obsolete.
 - You are not using a valid certificate - it's possible that you have re-signed the app with a different certificate.
 - You may be sending an incorrect device ID through the API.
 - The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
@@ -32,16 +32,16 @@ Check for one of the following reasons:
 Check for one of the following:
 
 - The token registered with App Center Push is no longer valid.
-- Production mode/sandbox mode doesn't match the certificate. If the Provisioning profile is *Development*, then you must use *Sandbox* endpoint type. If the Provisioning profile is either *Adhoc* or *Production*, you must use *Production* endpoint type.
+- Production mode/sandbox mode doesn't match the certificate. If the Provisioning profile is *Development*, then you must use *Sandbox* endpoint type. If the Provisioning profile is either *Ad hoc* or *Production*, you must use *Production* endpoint type.
 
-For Android apps, this generally means the push token has an incorrect format. This should not happen if you have configured the AppCenter Push SDK correctly.
+For Android apps, this usually means the push token has an incorrect format. This should not happen if you have configured the AppCenter Push SDK correctly.
 
-For iOS apps, this generally means the push token has an incorrect format. This should not happen if you have configured the AppCenter Push SDK correctly. This *could* also be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNs credentials.
+For iOS apps, this usually means the push token has an incorrect format. This should not happen if you have configured the AppCenter Push SDK correctly. This *could* also be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNs credentials.
 
 ### "Wrong Token"
 
 This is an error returned by Notification Hubs, indicating the push token is not correct for the given credentials.
 
-For Android apps, this generally means the Google API token does not have permission to send notifications to the specific app. You should double check the **Sender ID** or **Google API Key** and ensure the values are valid for the app.
+For Android apps, this usually means the Google API token does not have permission to send notifications to the specific app. You should double check the **Sender ID** or **Google API Key** and ensure the values are valid for the app.
 
-For iOS apps, this generally means that the APNs credentials do not have permission to send notifications to the specific app. This *could* be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNS credentials.
+For iOS apps, this usually means that the APNs credentials do not have permission to send notifications to the specific app. This *could* be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNS credentials.

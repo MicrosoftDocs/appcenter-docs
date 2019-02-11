@@ -22,9 +22,9 @@ When sending notifications through App Center, you can target destination device
 
 + **All registered devices**: Sends notifications to all registered devices.
 + **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
-+ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
++ **Audiences**: Sends notifications to a segment of your app's registered device audience. You'll build audiences based on a set of device and custom properties.
 
-App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
+App Center follows the philosophy of API-first; you can expect to find API support for every capability exposed through the App Center portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
 
 ## Push API
 
@@ -38,7 +38,7 @@ Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported
 
 ## Send notifications via API
 
-In this documentation we will assume that you already have an app which is ready to receive push notifications. Follow our Push SDK documentation for the different supported platforms: [Android Push SDK](~/sdk/push/android.md), [iOS Push SDK](~/sdk/push/ios.md), [React Native Android Push SDK](~/sdk/push/react-native-android.md), [React Native iOS Push SDK](~/sdk/push/react-native-ios.md), [UWP Push SDK](~/sdk/push/uwp.md), [Unity Android Push SDK](~/sdk/push/unity-android.md), [Unity iOS Push SDK](~/sdk/push/unity-ios.md), [Unity UWP Push SDK](~/sdk/push/unity-windows.md), [Xamarin Android Push SDK](~/sdk/push/xamarin-android.md), [Xamarin iOS Push SDK](~/sdk/push/xamarin-ios.md), [Xamarin Forms Push SDK](~/sdk/push/xamarin-forms.md)  and [macOS Push SDK](~/sdk/push/macOS.md).
+In this documentation, we will assume that you already have an app ready to receive push notifications. Follow our Push SDK documentation for the different supported platforms: [Android Push SDK](~/sdk/push/android.md), [iOS Push SDK](~/sdk/push/ios.md), [React Native Android Push SDK](~/sdk/push/react-native-android.md), [React Native iOS Push SDK](~/sdk/push/react-native-ios.md), [UWP Push SDK](~/sdk/push/uwp.md), [Unity Android Push SDK](~/sdk/push/unity-android.md), [Unity iOS Push SDK](~/sdk/push/unity-ios.md), [Unity UWP Push SDK](~/sdk/push/unity-windows.md), [Xamarin Android Push SDK](~/sdk/push/xamarin-android.md), [Xamarin iOS Push SDK](~/sdk/push/xamarin-ios.md), [Xamarin Forms Push SDK](~/sdk/push/xamarin-forms.md), and [macOS Push SDK](~/sdk/push/macOS.md).
 
 ### API Tokens
 
@@ -77,7 +77,7 @@ Campaign Name should be 64 characters or less, and title should be 128 character
 
 ## Send notifications to Audiences using API
 
-[Audiences](~/push/send-notification.md#audiences) allow you to segment your user base based on device and custom properties.
+[Audiences](~/push/send-notification.md#audiences) allow you to segment your user base, built using device, and custom properties.
 
 ### Define an audience
 
@@ -94,9 +94,9 @@ In order to define an audience using properties, you use the following symbols:
 
 ### Audiences based on device properties
 
-You can send push to a group of users that match certain criteria (e.g. all users in United States). You can create groups (audiences) based on the device properties and custom properties. In order to create an audience you can use [this PUT API](https://openapi.appcenter.ms/#/analytics/Analytics_CreateOrUpdateAudience).
+Send notifications to a group of users that match specific criteria (for example, all users in United States). You can create groups (audiences) based on the device properties and custom properties. To an audience, use [this App Center PUT API](https://openapi.appcenter.ms/#/analytics/Analytics_CreateOrUpdateAudience).
 
-Here is an example for an audiences based on a device property where country is `United States`:
+Here is an example for an audience based on a device property where country is `United States`:
 
 ```JSON
 {
@@ -107,7 +107,7 @@ Here is an example for an audiences based on a device property where country is 
 
 ### Audiences based on custom properties
 
-Here is an example for an audiences based 2 custom properties (boolean and string properties):
+Here is an example for an audiences based two custom properties (boolean and string properties):
 
 ```JSON
 {
