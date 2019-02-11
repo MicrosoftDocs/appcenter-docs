@@ -226,31 +226,31 @@
         },
         {
             "source_path": "docs/migration/hockeyapp/index.md",
-            "redirect_url": "/appcenter/transition/index.md"
+            "redirect_url": "/appcenter/transition/index"
         },
         {
             "source_path": "docs/migration/hockeyapp/side-by-side.md",
-            "redirect_url": "/appcenter/transition/side-by-side.md"
+            "redirect_url": "/appcenter/transition/side-by-side"
         },
         {
             "source_path": "docs/migration/hockeyapp/distribution-groups.md",
-            "redirect_url": "/appcenter/transition/distribution-groups.md"
+            "redirect_url": "/appcenter/transition/distribution-groups"
         },
         {
             "source_path": "docs/migration/hockeyapp/distribution.md",
-            "redirect_url": "/appcenter/transition/distribution.md"
+            "redirect_url": "/appcenter/transition/distribution"
         },
         {
             "source_path": "docs/migration/hockeyapp/crashes.md",
-            "redirect_url": "/appcenter/transition/crashes.md"
+            "redirect_url": "/appcenter/transition/crashes"
         },
         {
             "source_path": "docs/migration/hockeyapp/analytics.md",
-            "redirect_url": "/appcenter/transition/analytics.md"
+            "redirect_url": "/appcenter/transition/analytics"
         },
         {
             "source_path": "docs/migration/hockeyapp/faq.md",
-            "redirect_url": "/appcenter/transition/faq.md"
+            "redirect_url": "/appcenter/transition/faq"
         }
     ]
 }
