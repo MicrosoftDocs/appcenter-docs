@@ -1,17 +1,28 @@
 ---
-title: App Center Push API
-description: API usage on Push
+title: Using the Push API
+description: Instructions on how to send push notifications using the App Center REST API.
 keywords: app center, push, audiences, API
-author: dimazaid
-ms.author: dimazaid
-ms.date: 01/07/2019
+author: jwargo
+ms.author: jowargo
+ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# API for Push Notifications
+# Using the Push API
+
+The Visual Studio App Center Push (ACP) service offers two ways to send notifications to registered devices:
+
++ Using the [App Center Portal](~/push/send-notification.md)
++ Using the App Center Push API (described in this document)
+
+When sending notifications through App Center, you can target destination devices (notification recipients) in the following ways:
+
++ **All registered devices**: Sends notifications to all registered devices.
++ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
++ **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
 
 App Center follows the philosophy of API-first. You can expect API support for everything you see in the portal. We have a [swagger](https://openapi.appcenter.ms) as well as documentation on [how to get started with our APIs](~/api-docs/index.md).
 
@@ -66,7 +77,7 @@ Campaign Name should be 64 characters or less, and title should be 128 character
 
 ## Send notifications to Audiences using API
 
-[Audiences](~/push/audiences.md) allow you to segment your user base based on device and custom properties.
+[Audiences](~/push/send-notification.md#audiences) allow you to segment your user base based on device and custom properties.
 
 ### Define an audience
 

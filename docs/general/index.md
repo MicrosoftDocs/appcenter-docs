@@ -13,10 +13,13 @@ ms.service: vs-appcenter
 # General
 
 ## Changelog
+
 Check out our [changelog](changelog.md) to find out which features we have delivered recently to App Center.
 
 ## Product roadmap
+
 Interested in knowing what our team is working on? View the [product roadmap](roadmap.md) and let us know what you think.
 
 ## Pricing
+
 App Center has both a free and paid tier. Read about our [pricing plans](pricing.md) for more details.

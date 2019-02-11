@@ -148,10 +148,24 @@
 
 # [Push](push/index.md)
 
-## [Audiences](push/audiences.md)
-## [API](push/pushapi.md)
-## [FAQ](push/faq.md)
+## [Configure the Push Service](push/service-config.md)
+## [App Configuration](push/app-config.md)
+### [Android](sdk/push/android.md)
+### [Cordova Android](sdk/push/cordova-android.md)
+### [Cordova iOS](sdk/push/cordova-ios.md)
+### [iOS](sdk/push/ios.md)
+### [macOS](sdk/push/macos.md)
+### [UWP](sdk/push/uwp.md)
+### [React Native Android](sdk/push/react-native-android.md)
+### [React Native iOS](sdk/push/react-native-ios.md)
+### [Xamarin.iOS](sdk/push/xamarin-ios.md)
+### [Xamarin.Android](sdk/push/xamarin-android.md)
+### [Xamarin.Forms](sdk/push/xamarin-forms.md)
+## [Sending Push Notifications](push/send-notification.md)
+## [Using the REST API](push/rest-api.md)
+## [Tips and Tricks](push/tips.md)
 ## [Troubleshooting](push/troubleshooting.md)
+## [FAQ](push/faq.md)
 
 # [SDK](sdk/index.md)
 
