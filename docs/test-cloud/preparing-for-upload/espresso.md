@@ -4,7 +4,7 @@ description: How to upload Espresso tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 12/31/2018
+ms.date: 02/12/2019
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
 ms.service: vs-appcenter
@@ -30,12 +30,12 @@ allprojects {
 Add the following dependency in your app module's `build.gradle` file:
 
 ```gradle
-androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.3')
+androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
 ```
 
-Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation), you should use `androidTestImplementation` instead.
+This adds the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature. 
 
-This adds the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature.
+If you are using a version of Gradle lower that 3.0, then you might need to replace `androidTestImplementation` with `androidTestCompile` as explained in the [gradle docs](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
 
 ## 2. Changes to the tests
 
@@ -44,7 +44,8 @@ This adds the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppC
 Import these packages into your test classes:
 
 ```java
-import android.support.test.runner.AndroidJUnit4;
+import org.junit.Rule;
+import org.junit.After;
 import com.microsoft.appcenter.espresso.Factory;
 import com.microsoft.appcenter.espresso.ReportHelper;
 ```
