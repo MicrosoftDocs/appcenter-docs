@@ -75,6 +75,7 @@
 ## [Troubleshooting](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
 ### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
+### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
 ## [Xamarin.UITest](test-cloud/uitest/index.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
