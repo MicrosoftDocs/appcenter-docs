@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 02/06/2019
+ms.date: 02/13/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -37,7 +37,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - PowerShell 6.1.2
 - Python 2.7.10
 - Python 3.7.2
-- Ruby 2.6.0p0
+- Ruby 2.6.1p33
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.2.100 2.2.101 2.2.102 2.2.103
 - Go 1.11.5
 - Miniconda 4.5.11
@@ -46,9 +46,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Package Management
 
 - Bundler 2.0.1
-- Carthage 0.31.2
+- Carthage 0.32.0
 - CocoaPods 1.5.3
-- Homebrew 1.9.3
+- Homebrew 2.0.0
 - NPM 3.10.10
 - Yarn 1.13.0
 - NuGet 4.7.0.5148
@@ -57,7 +57,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.6.0
-- Gradle 5.1.1
+- Gradle 5.2
 
 ### Utilities
 
@@ -71,7 +71,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - fastlane 2.115.0
 - App Center CLI 1.1.11
-- Azure-CLI 2.0.56
+- Azure-CLI 2.0.57
 
 ## Xcode
 
@@ -89,7 +89,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xcode Support Tools
 
-- Nomad CLI 3.0.1
+- Nomad CLI 3.0.2
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.5
