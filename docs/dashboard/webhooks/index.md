@@ -69,6 +69,19 @@ When these events happen, App Center notifications are posted into your integrat
 An example of a webhook payload in JSON is:
 
 ```JSON
-{"app_name":"myFirstApp","branch":"master","build_status":"Succeeded","build_id":"33","build_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33","build_reason":"manual","finish_time":"2018-06-14T23:59:05.2542221Z","icon_link":"https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9130028703e417a6a0df02c6b587f0.png","notification_settings_link":"https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications","os":"iOS","start_time":"2018-06-14T23:57:03.4379381Z","source_version":"55820a357ba26831f2eeb3be9973a4ef20618b73","sent_at":"2018-06-14T23:59:08.4897604Z"}
-
+{
+  "app_name": "myFirstApp",
+  "branch": "master",
+  "build_status": "Succeeded",
+  "build_id": "33",
+  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33",
+  "build_reason": "manual",
+  "finish_time": "2018-06-14T23:59:05.2542221Z",
+  "icon_link": "https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9130028703e417a6a0df02c6b587f0.png",
+  "notification_settings_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications",
+  "os": "iOS",
+  "start_time": "2018-06-14T23:57:03.4379381Z",
+  "source_version": "55820a357ba26831f2eeb3be9973a4ef20618b73",
+  "sent_at": "2018-06-14T23:59:08.4897604Z"
+}
 ```
