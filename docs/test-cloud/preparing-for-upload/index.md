@@ -21,7 +21,7 @@ instructions for each of the supported test frameworks.
 
 [Preparing Espresso tests for upload](espresso.md)
 
-[Preparing Calabash tests for upload](calabash.md)
+[Preparing Calabash tests for upload (deprecated)](calabash.md)
 
 [Preparing Xamarin.UITest tests for upload](uitest.md)
 
