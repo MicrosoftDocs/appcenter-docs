@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 01/07/2019
+ms.date: 02/13/2019
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -53,7 +53,11 @@ For more information, refer to the [Xamarin documentation](https://docs.microsof
 #### [Optional] Enable silent notifications
 
 Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#background-fetch-ios-7-and-greater)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+
 ![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
+
+> [!NOTE]
+> If there are no user-visible updates that go along with the background update, you can leave the title and message fields empty to prevent showing any visible notifications.
 
 ## Add App Center Push to your app
 

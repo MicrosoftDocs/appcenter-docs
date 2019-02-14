@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 05/17/2018
+ms.date: 02/13/2019
 ms.topic: get-started-article
 ms.assetid: 0953B40C-ED43-430A-9609-43ED212A1884
 ms.service: vs-appcenter
@@ -91,9 +91,7 @@ For more information, refer to the [Apple documentation](http://help.apple.com/x
 
 #### [Optional] Enable silent notifications
 
-Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8)). To enable silent notifications, open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
-
-![enable-silent-notifications](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/ios-enable-silent-notifications.png)
+[!include[](ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
 
