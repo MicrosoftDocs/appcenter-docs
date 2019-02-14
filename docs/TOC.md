@@ -271,6 +271,14 @@
 
 # [HockeyApp Transition](transition/index.md)
 
+## [SDK Migration](transition/sdk-migration.md)
+### [iOS](transition/ios-sdk-migration.md)
+### [macOS](transition/macos-sdk-migration.md)
+### [tvOS](transition/tvos-sdk-migration.md)
+### [Android](transition/android-sdk-migration.md)
+### [UWP](transition/uwp-sdk-migration.md)
+### [Xamarin](transition/xamarin-sdk-migration.md)
+### [Cordova](transition/cordova-sdk-migration.md)
 ## [Shared Data](transition/side-by-side.md)
 ### [Distribution Groups](transition/distribution-groups.md)
 ### [Distributing Releases](transition/distribution.md)
