@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: glennwester
 ms.author: glwest
-ms.date: 01/07/2019
+ms.date: 02/13/2019
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -76,7 +76,7 @@ Then add a dependency for the Appium test extensions:
 <dependency>
     <groupId>com.microsoft.appcenter</groupId>
     <artifactId>appium-test-extension</artifactId>
-    <version>1.3</version>
+    <version>1.5</version>
 </dependency>
 ```
 
