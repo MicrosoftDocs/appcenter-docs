@@ -43,8 +43,6 @@ The first step in the process is to define the internal name for the campaign, a
 
 ![App Center Push Campaign Compose page](~/push/images/campaign-compose.png)
 
-//TODO: update the content to describe how the title's used.
-
 1. Populate the **Campaign Name** field with a descriptive name for the campaign. The value you provide will display in the App Center campaign list page.
 2. (optional) Populate the **Title** field with an optional title for the notification sent to target devices. The value you provide here will be #####
 3. Populate the **Message** field with the content for the notification message. Message content is limited to 4,000 characters.
