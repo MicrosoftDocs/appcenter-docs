@@ -39,45 +39,12 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 
 10. Setting up this connection is a one time process for an app in App Center.
 
-## Publish an iOS package to the App Store (Production)
+**Select destination in dropdown menu for upload instructions**
 
-> [!TIP]
-> Always increment `CFBundleShortVersionString` or `CFBundleVersion` in builds before publishing it to App Store Connect. 
->
-> I.e., the latest release was build with `CFBundleShortVersionString` = `0.1.0` and `CFBundleVersion` = `1` in the `info.plist`.
->
-> The next release with the same version is build with `CFBundleShortVersionString` = `0.1.0` and `CFBundleVersion` = `2`.
->
-> Or the next version upgrade have `CFBundleShortVersionString` = `0.2.0` and `CFBundleVersion` = `1`.
-
-1. From the Stores home page select the “Production” store created above.
-2. Click on **Publish to Store** in the upper-right corner.
-3. Upload the iOS app package following [Apples guidelines](https://developer.apple.com/app-store/submissions/)
-4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
-5. Click on **Publish**. The status for this release on the store details page will show as **Submitted**.
-6. Once App Center has completed the hand-over of the app to iTunes, the status of the app will change to **Published**.
-7. In case of a failure while publishing by Apple, the status on the store details page will change to **Failed** with the appropriate error message. 
-   Review Apple's [app review](https://developer.apple.com/support/app-review/) process.
-
-## Publish an iOS package to TestFlight (Internal Testers)
-
-1. From the Stores home page select “iTunes Connect users”.
-2. Click on **Publish to Store** in the upper-right corner.
-3. Upload the iOS app package following [Apple's guidelines for store submission](https://developer.apple.com/app-store/submissions/).
-4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
-5. Click on **Publish** to push the app to the **iTunes Connect users** group in TestFlight. The status for this release on the store details page will show as **Submitted**.
-6. Once App Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
-7. In case of a failure while publishing by Apple, the status will change to **Failed** with the appropriate error message.
-
-## Publish an iOS package to TestFlight (External Testers)
-
-1. From the Stores home page select the external group to distribute to.
-2. Click on **Publish to Store** in the upper-right corner.
-3. Upload the iOS app package.
-4. When the package has been uploaded, you should be able to see some details of the application. Click **Next**.
-5. Click on **Publish** to push the app to the external group store. The status for this release on the store details page will show as **Submitted**.
-6. Once App Center has completed the hand-over of the app to TestFlight, the status of the app will change to **Published**.
-7. In case of a failure with publishing by Apple, the status will change to **Failed** with the appropriate error message.
+> [!div  class="op_single_selector"]
+> * [App Store](apple/app_store.md)
+> * [TestFlight Internal Testers](apple/testflight_internal.md)
+> * [TestFlight External Testers](apple/testflight_external.md)
 
 > [!NOTE]
 > When submitting the deliver file to iTunes Connect, App Center detaults to:
