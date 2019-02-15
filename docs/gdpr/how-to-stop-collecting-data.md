@@ -30,7 +30,7 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 To stop collection for a specific device, include the installation identifier in your call.
 
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
+PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
 ```
 
 ## Stop collecting SDK data for a specific service from the client
