@@ -58,8 +58,9 @@
 # [Test](test-cloud/index.md)
 
 ## [Getting Started](test-cloud/getting-started.md)
-## [Devices Available](test-cloud/devices.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
+## [Devices Available](test-cloud/devices.md)
+## [Environment Variables](test-cloud/environment-variables.md)
 ## [Preparing Test for Upload](test-cloud/preparing-for-upload/index.md)
 ### [Appium](test-cloud/preparing-for-upload/appium.md)
 ### [Espresso](test-cloud/preparing-for-upload/espresso.md)
