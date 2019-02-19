@@ -4,7 +4,7 @@ description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
 author: ruslan-bikkinin
 ms.author: v-rubikk
-ms.date: 11/20/2018
+ms.date: 02/15/2019
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.service: vs-appcenter
@@ -128,7 +128,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example on how to attach a text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending stored crash from previous application launches, but not at the crash time. Here is an example of how to attach a text and an image to a crash:
 
 ```js
 var errorCallback = function(error) {

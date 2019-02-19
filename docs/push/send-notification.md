@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications using the App Center
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 02/11/2019
+ms.date: 02/15/2019
 ms.topic: article
 ms.assetid: 4db077ee-b9bf-4dc7-ac21-e8ecc8ee840e
 ms.service: vs-appcenter
@@ -105,8 +105,8 @@ Some examples of possible custom properties are:
 | Key              | Value      |
 | ---------------- | ---------- |
 | Type             | premium    |
-| Favorite Sport   | soccer     |
-| Music Preference | electronic |
+| FavoriteSport    | soccer     |
+| MusicPreference  | electronic |
 
 Developers set these custom properties in an app using the SDK methods for each target platform:
 

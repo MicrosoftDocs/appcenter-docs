@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/28/2019
+ms.date: 02/15/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -149,7 +149,7 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK sends the attachment(s) along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report:
+You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>

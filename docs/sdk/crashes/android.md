@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 01/28/2019
+ms.date: 02/15/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -224,7 +224,7 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```java
 @Override
