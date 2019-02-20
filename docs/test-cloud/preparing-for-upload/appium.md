@@ -19,15 +19,15 @@ Note the following limitations for Appium support:
 
 * No support for TestNG.
 * No support for Android 4.2 or prior.
+* No support for automating browsers or WebView context.
 * Maven version must be at least 3.3.9.
-* Support for Appium version 1.7.1 only.
+* Support for Appium version 1.11.0 only. This appium version requires the appium java client to be at least 6.0.0  
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
-* Automating browsers or WebView context is not supported.
-* Tests that launch multiple apps or no apps are not currently supported. The test must launch precisely one app.
+* Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
 
 ## Prerequisites
 
-Tests will be run using Maven Surefire. This requires tests to follow [certain naming conventions](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
+Tests will be run using Maven Surefire, which requires tests to follow [certain naming conventions](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
 
 ```text
 "**/Test*.java" - includes all of its subdirectories and all Java filenames that start with "Test".
@@ -36,7 +36,7 @@ Tests will be run using Maven Surefire. This requires tests to follow [certain n
 "**/*TestCase.java" - includes all of its subdirectories and all Java filenames that end with "TestCase".
 ```
 
-Before attempting to upload to App Center Test, please make sure that running tests locally on your machine using Maven works:
+Before attempting to upload to App Center Test, make sure that running tests locally on your machine using Maven works:
 
 ```text
 ➜  AppiumTest git:(master) ✗ mvn verify
@@ -53,9 +53,7 @@ SimpleTest(MainTest)  Time elapsed: 0.594 sec  <<< ERROR!
 
 If you're unable to run the tests using command line locally, tests will also not work in App Center Test.
 
-## 1a. Changes to the build system for Maven users
-
-See the section below for instructions if you use Gradle for your project, such as Android Studio builds.
+## 1. Changes to the build system
 
 ### Step 1 - Add repository and dependency
 
@@ -80,60 +78,12 @@ Then add a dependency for the Appium test extensions:
 </dependency>
 ```
 
-This will ensure the enhanced Android and iOS drivers are available at compile time. The enhanced drivers are provided primarily to enable the `label` feature. See Step 4 for more detail on the `label` feature.
+This code will ensure the enhanced Android and iOS drivers are available at compile time. The enhanced drivers are provided primarily to enable the `label` feature. See Step 4 for more detail on the `label` feature.
 
 ### Step 2 - Add upload profile
 
 Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
 The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
-
-## 1b. Changes to the build system for Gradle users
-
-### Step 1 - Add repository and dependency
-
-Ensure you have the JCenter repository enabled in the `build.gradle` in your project's root folder:
-
-```gradle
-allprojects {
-    repositories {
-        jcenter()
-    }
-}
-```
-
-Then add the following snippet to the `build.gradle` in the `app` folder:
-
-```gradle
-androidTestCompile('com.microsoft.appcenter:appium-test-extension:1.0')
-```
-
-Starting with Gradle 3.0, `androidTestCompile` is [deprecated](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation) and you should use `androidTestImplementation` instead.
-
-### Step 2 - Automate pom file generation
-
-The uploader requires a `pom.xml` file to work. Add the following snippet to the `build.gradle` in the `app` folder to automatically build the pom file:
-
-```gradle
-apply plugin: 'maven'
-
-task createPom {
-    pom {
-        withXml {
-            def dependenciesNode = asNode().appendNode('dependencies')
-
-            //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
-            configurations.testCompile.allDependencies.each {
-                def dependencyNode = dependenciesNode.appendNode('dependency')
-                dependencyNode.appendNode('groupId', it.group)
-                dependencyNode.appendNode('artifactId', it.name)
-                dependencyNode.appendNode('version', it.version)
-            }
-
-            def profilesNode = asNode().appendNode('profiles')
-            profilesNode.append(new XmlParser().parse('https://raw.githubusercontent.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/master/gradleuploadprofilesnippet.xml'))
-        }
-    }.writeTo("pom.xml")
-```
 
 ## 2. Changes to the tests
 
@@ -181,7 +131,7 @@ Replace the way you *instantiate* your driver, such that lines in the form of:
 
 Using these drivers will still allow you to run your tests locally without additional modifications, but enables you to "label" test steps in your test execution using `driver.label("text")`. The text and a screenshot from the device will be visible in test report in  Test Cloud.
 
-A recommended practice is to have a call to label in the `@After` method, this will include a screenshot of the app final state in the test report. The screenshot will be taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
+A recommended practice is to have a call to label in the `@After` method, which will include a screenshot of the app final state in the test report. A screenshot will be taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this code:
 
 ```java
     @After
@@ -210,18 +160,18 @@ Steps to upload a test:
 
 ## 4. Performance Troubleshooting
 
-Tests run on devices in the AppCenter may execute slightly slower than on a local device under certain circumstances. Normally, this is outweighed by the fact that you have many more devices available and therefore potentially able to parallelize test runs.
+Tests on devices in the AppCenter may execute slightly slower than on a local device under certain circumstances. Normally, this slower execution is outweighed by the fact that you have many more devices available and the ability to parallelize test runs.
 
-There are two main sources of potential slow test runs: re-signing and re-installation.
+There are two main sources of slower test runs: re-signing and reinstallation.
 
 ### Re-signing (on iOS)
 
-Before being installed on the iOS device, your app goes through a process called re-signing. This is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. This does rarely cause performance degrades because re-signed apps are cached. The time consuming process will only run once per binary.
+Before being installed on the iOS device, your app goes through a process called re-signing. This process is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. Rarely, re-signing also causes performance degradation because re-signed apps are cached. The time consuming process will only run once per binary.
 
-If you have a very automated Continuous Delivery setup where the IPA is having it’s version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
+If you have an automated Continuous Delivery setup where the IPA is having its version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
 
-### Re-installation
+### Reinstallation
 
-On a shared device cloud, it is very important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.
-Running tests locally does not inflict any penalty because the app mostly stays installed through all tests. In App Center Test, the app is automatically uninstalled after each test. The next test will then have to re-install the app before running the test. This can slow down your tests in the cloud.
-Luckily, there’s a solution. Instead of having the appium driver create a new session for each test case, just have one session and re-use it for all tests. To control the app state, make a call to `driver.resetApp()` before each test. This will only incur a 5-second delay between test cases. You can implement this by moving the driver initialization code from the `setUp` method to the `setUpClass` method.
+On a shared device cloud, it is important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.  In App Center Test, the app is automatically uninstalled after the completion of your test run. 
+
+It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [here](http://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details. 
