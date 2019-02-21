@@ -298,6 +298,7 @@
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
+# [Resources](general/resources.md)
 # [Quickstarts](quickstarts/index.md)
 
 ## [Start Here](quickstarts/index.md)
