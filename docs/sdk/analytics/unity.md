@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.service: vs-appcenter
@@ -74,6 +74,8 @@ To enable App Center Analytics again, use the same API but pass `true` as a para
 ```csharp
 Analytics.SetEnabledAsync(true);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 [!include[](../unity-see-async.md)]
 

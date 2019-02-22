@@ -3,8 +3,8 @@ title: App Center Analytics for React Native
 description: App Center Analytics for React Native
 keywords: analytics
 author: elamalani
-ms.author: elamalani
-ms.date: 11/20/2018
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: vs-appcenter
@@ -68,6 +68,8 @@ To enable App Center Analytics again, use the same API but pass `true` as a para
 ```javascript
 await Analytics.setEnabled(true);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Analytics is enabled
 

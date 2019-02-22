@@ -2,9 +2,9 @@
 title: App Center Distribute for Xamarin
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
-author: troublemakerben
-ms.author: bereimol
-ms.date: 11/20/2018
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -225,6 +225,8 @@ Distribute.SetEnabledAsync(true);
 ```
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Distribute is enabled
 

@@ -69,6 +69,8 @@ To enable all services at once again, use the same API but pass `YES`/`true` as 
 MSAppCenter.setEnabled(true)
 ```
 
+The state is persisted in the device's storage across application launches.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.

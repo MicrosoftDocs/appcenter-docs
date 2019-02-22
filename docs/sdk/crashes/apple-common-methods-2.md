@@ -99,6 +99,8 @@ To enable App Center Crashes again, use the same API but pass `YES`/`true` as a 
 MSCrashes.setEnabled(true)
 ```
 
+The state is persisted in the device's storage across application launches.
+
 ## Check if App Center Crashes is enabled
 
 You can also check if App Center Crashes is enabled or not:

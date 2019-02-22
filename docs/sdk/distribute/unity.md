@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.service: vs-appcenter
@@ -121,6 +121,8 @@ Distribute.SetEnabledAsync(true);
 [!include[](../unity-see-async.md)]
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Distribute is enabled
 

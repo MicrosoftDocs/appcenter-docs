@@ -2,9 +2,9 @@
 title: App Center Analytics for Xamarin
 description: App Center Analytics for Xamarin
 keywords: analytics
-author: troublemakerben
-ms.author: bereimol
-ms.date: 11/20/2018
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.service: vs-appcenter
@@ -66,6 +66,8 @@ Analytics.SetEnabledAsync(true);
 ```
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Analytics is enabled
 

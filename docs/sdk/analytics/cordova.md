@@ -2,9 +2,9 @@
 title: App Center Analytics for Apache Cordova
 description: App Center Analytics for Apache Cordova
 keywords: sdk, analytics
-author: ruslan-bikkinin
-ms.author: v-rubikk
-ms.date: 11/20/2018
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 8900A8A7-92E0-4904-890F-97E4831118F8
 ms.service: vs-appcenter
@@ -94,6 +94,8 @@ var error = function(error) {
 
 AppCenter.Analytics.setEnabled(true, success, error);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Analytics is enabled
 

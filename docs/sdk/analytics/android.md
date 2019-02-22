@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 01/17/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter
@@ -123,6 +123,8 @@ Analytics.setEnabled(true);
 ```kotlin
 Analytics.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/03/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.service: vs-appcenter
@@ -58,6 +58,8 @@ AppCenter.SetEnabledAsync(true);
 ```
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center is enabled
 

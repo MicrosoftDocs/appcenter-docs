@@ -12,6 +12,8 @@ To enable App Center Push again, use the same API but pass `true` as a parameter
 Push.SetEnabledAsync(true);
 ```
 
+The state is persisted in the device's storage across application launches.
+
 [!include[](../unity-see-async.md)]
 
 ## Check if App Center Push is enabled

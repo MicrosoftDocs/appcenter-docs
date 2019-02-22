@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 136a7159-9aee-4064-b2b1-dbc513110b12
 ms.service: vs-appcenter

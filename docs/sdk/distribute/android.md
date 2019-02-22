@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -238,6 +238,8 @@ Distribute.setEnabled(true);
 ```kotlin
 Distribute.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 

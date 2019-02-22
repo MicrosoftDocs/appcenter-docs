@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/23/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -85,6 +85,8 @@ To enable all services at once again, use the same API but pass `true` as a para
 ```javascript
 await AppCenter.setEnabled(true);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center is enabled
 

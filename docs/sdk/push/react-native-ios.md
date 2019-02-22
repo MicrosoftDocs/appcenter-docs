@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/13/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -125,6 +125,8 @@ You can enable and disable App Center Push at runtime. If you disable it, the SD
   await Push.setEnabled(false);      // Disable push
   await Push.setEnabled(true);       // Re-enable it
   ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Push is enabled
 

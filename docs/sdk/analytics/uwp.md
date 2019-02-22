@@ -2,9 +2,9 @@
 title: App Center Analytics for UWP
 description: App Center Analytics for UWP
 keywords: analytics
-author: dhei
-ms.author: dihei
-ms.date: 01/25/2019
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
@@ -117,6 +117,8 @@ Analytics.SetEnabledAsync(true);
 ```
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Analytics is enabled
 

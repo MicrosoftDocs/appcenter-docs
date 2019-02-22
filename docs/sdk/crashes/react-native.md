@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/15/2018
+ms.date: 02/19/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -248,6 +248,8 @@ To enable App Center Crashes again, use the same API but pass `true` as a parame
 ```javascript
 await Crashes.setEnabled(true);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Crashes is enabled
 

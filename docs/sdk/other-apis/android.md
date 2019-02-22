@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 01/03/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
@@ -89,6 +89,8 @@ AppCenter.setEnabled(true);
 ```kotlin
 AppCenter.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 

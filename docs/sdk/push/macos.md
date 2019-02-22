@@ -2,9 +2,9 @@
 title: App Center Push for macOS
 description: Using Push in App Center
 keywords: sdk, push
-author: jaelim-ms
-ms.author: jaelim
-ms.date: 01/07/2019
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.service: vs-appcenter
@@ -146,6 +146,8 @@ To enable App Center Push again, use the same API but pass `YES`/`true` as a par
 ```swift
 MSPush.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Push is enabled
 

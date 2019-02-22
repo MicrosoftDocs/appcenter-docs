@@ -2,9 +2,9 @@
 title: App Center Crashes for Apache Cordova
 description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
-author: ruslan-bikkinin
-ms.author: v-rubikk
-ms.date: 02/15/2019
+author: elamalani
+ms.author: emalani
+ms.date: 02/19/2019
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.service: vs-appcenter
@@ -182,6 +182,8 @@ var error = function(error) {
 
 AppCenter.Crashes.setEnabled(true, success, error);
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Crashes is enabled
 

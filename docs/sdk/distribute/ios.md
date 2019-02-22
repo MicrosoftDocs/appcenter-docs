@@ -2,9 +2,9 @@
 title: App Center Distribute for iOS
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
-author: troublemakerben
-ms.author: bereimol
-ms.date: 11/20/2018
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -208,6 +208,8 @@ To enable App Center Distribute again, use the same API but pass `YES`/`true` as
 ```swift
 MSDistribute.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Distribute is enabled
 

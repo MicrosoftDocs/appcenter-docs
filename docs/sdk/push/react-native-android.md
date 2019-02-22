@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 01/07/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -138,6 +138,8 @@ import Push from 'appcenter-push';
 await Push.setEnabled(false);      // Disable push
 await Push.setEnabled(true);       // Re-enable it
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Push is enabled
 

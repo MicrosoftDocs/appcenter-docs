@@ -85,6 +85,8 @@ To enable App Center Analytics again, use the same API but pass `YES`/`true` as 
 MSAnalytics.setEnabled(true)
 ```
 
+The state is persisted in the device's storage across application launches.
+
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.

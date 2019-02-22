@@ -2,9 +2,9 @@
 title: App Center Push for Cordova iOS
 description: Using Push in App Center
 keywords: sdk, push
-author: ruslan-bikkinin
-ms.author: v-rubikk
-ms.date: 02/13/2019
+author: elamalani
+ms.author: emalani
+ms.date: 02/14/2019
 ms.topic: get-started-article
 ms.assetid: 0953B40C-ED43-430A-9609-43ED212A1884
 ms.service: vs-appcenter
@@ -173,6 +173,8 @@ var error = function(error) {
 AppCenter.Push.setEnabled(false, disableSuccess, error); // Disable push
 AppCenter.Push.setEnabled(true, enableSuccess, error); // Re-enable it
 ```
+
+The state is persisted in the device's storage across application launches.
 
 ## Check if App Center Push is enabled
 

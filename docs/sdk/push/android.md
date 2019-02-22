@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -274,6 +274,8 @@ Push.setEnabled(true);
 ```kotlin
 Push.setEnabled(true)
 ```
+
+The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
