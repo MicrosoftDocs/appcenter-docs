@@ -57,7 +57,7 @@ You also must have [CocoaPods](https://cocoapods.org) installed. For this, run
 
 In order for the App Center SDK to connect with your application project in App Center, the SDK needs your App Center project's **App Secret**. You'll learn later how to configure the App Center Apache Cordova SDK with this value, but for now, lets see where to find it. 
 
-If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You'll find the app secret on the app's **Getting Started** page. You can also find the app secret on the application project's **Settings** page - access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
+If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You can also the app secret on the application project's **Settings** page. Access the menu in the page's upper right corner, then select **Copy app secret** to copy the app secret to the clipboard.
 
 If you do not have an application created in the App Center Dashboard, complete the following steps.
 
@@ -66,7 +66,7 @@ If you do not have an application created in the App Center Dashboard, complete 
 3. Enter a name for your application project, adding an optional description as needed.
 4. Select the appropriate OS for your application project (Android or iOS only), then select the **Cordova** platform option.
 5. Click the **Add new app** button on the bottom-right corner of the page.
-6. Locate the project's app secret on the new app's Getting Started page. You can also find the app secret on the application project's **Settings** page - access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
+6. Locate the app secret on the application project's **Settings** page. Access the menu in the page's upper right corner, then select the **Copy app secret** item to copy the app secret to the clipboard.
 
 ## 3. Add the App Center SDK to the project
 

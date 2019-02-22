@@ -12,6 +12,10 @@ ms.service: vs-appcenter
 
 # Dashboard Frequently Asked Questions
 
+**Where can I find my app secret?**
+
+To get your App Secret, go to your app's settings. At the top right hand corner, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+
 **Can I transfer apps in between users & organizations?**
 
 To transfer an app to an organization, you must be the current owner of the app, as well as an admin in the organization you're trying to transfer the app to. To transfer an app into a different organization, see [Managing apps in the Dashboard](~/dashboard/creating-and-managing-apps.md#transferring-an-app).

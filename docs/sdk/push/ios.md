@@ -185,7 +185,7 @@ var enabled = MSPush.isEnabled()
 
 ## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the application delegate itself. You may want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 ### Application Delegate
 

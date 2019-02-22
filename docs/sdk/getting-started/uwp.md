@@ -43,16 +43,12 @@ Before you begin, please make sure that the following prerequisites are met:
 If you have already created your app in the App Center portal, you can skip this step.
 
 1. To learn how to get started with Push, read the [appcenter.ms](https://appcenter.ms) documentation.
-
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-
 3. Enter a name and an optional description for your app.
-
 4. Select the appropriate OS and platform depending on your project as described above.
-
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Getting Started** page or **Settings** page on the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
@@ -61,7 +57,6 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 ### Visual Studio
 
 1. Navigate to the **Project > Manage NuGet Packages...**
-
 2. Search for **App Center**, and install **Microsoft.AppCenter.Analytics**.
 
 ### Package Manager Console

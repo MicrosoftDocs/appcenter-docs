@@ -54,7 +54,7 @@ If you've already created your app in the App Center portal, you can skip this s
 5. Select the appropriate OS and platform depending on your project as described above.
 6. Click the **Add new app** button in the bottom-right of the page.
 
-Once you've created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the App Center Portal.
+Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK to your project
 
