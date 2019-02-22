@@ -18,7 +18,7 @@ The objective of the Overview page is to provide you with the key metrics about 
 - What are the main devices being used?
 - Can I remove support for an old OS version?
 - Should I translate my app into a new language?
-- Are my users adapting my latest version?
+- Are my users adopting my latest version?
 
 All the data in the Overview page can be filtered by **time range** and **app version**, so you can further drill down into your charts. Note that the app version needs to follow the [Semver 2.0](http://semver.org/spec/v2.0.0.html) format.
 
