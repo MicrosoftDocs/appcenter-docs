@@ -52,7 +52,7 @@ For more information, refer to the [Xamarin documentation](https://docs.microsof
 
 #### [Optional] Enable silent notifications
 
-Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#background-fetch-ios-7-and-greater)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#silent-remote-notifications)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
 
 ![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
 
