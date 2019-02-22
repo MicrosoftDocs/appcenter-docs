@@ -8,6 +8,7 @@ ms.date: 02/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-88
+---
 
 # App Center bug tracker integration
 
