@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 01/14/2018
+ms.date: 02/21/2019
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -228,3 +228,16 @@ In order to set up Export, you will need to create an Azure subscription. Export
 [Application Insights pricing](https://azure.microsoft.com/pricing/details/application-insights/)
 
 [Blob Storage pricing](https://azure.microsoft.com/pricing/)
+
+## Known Limitations
+
+App Center does not preserve case on Properties keys (in event and custom properties logs). This apply to both Azure Blob Storage and Application Insights export configurations.
+
+Examples:
+
+```
+Test -> test
+TEST -> tEST
+```
+
+The issue is tracked on [GitHub](https://github.com/Microsoft/appcenter/issues/94).
