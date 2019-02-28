@@ -49,7 +49,7 @@ The first method uses an API token; to acquire your account's API token:
 
     ![Screen showing a generated API token](images/vsts-api-token.png)
 
-* Click **Add new API token** button. A pop-up appears displaying the new API token; this is the **only time** App Center will display this token. Click the clipboard button to copy the API Token to the browser's clipboard. Save the API token somewhere ([Azure Key Vault]()https://azure.microsoft.com/en-us/services/key-vault/, for example) where you can securely reference it again later if needed.
+* Click **Add new API token** button. A pop-up appears displaying the new API token; this is the **only time** App Center will display this token. Click the clipboard button to copy the API Token to the browser's clipboard. Save the API token somewhere ([Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), for example) where you can securely reference it again later if needed.
 
 With the API Token on the clipboard:
 
