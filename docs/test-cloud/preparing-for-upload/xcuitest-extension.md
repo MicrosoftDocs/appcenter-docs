@@ -86,7 +86,7 @@ github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 
 Follow the [Carthage Instructions for adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework). This will use the `Cartfile` you created to configure your Xcode project to link with the `AppCenterXUITestExtensions.framework`. For an example, you can review this [example code for setting up App Center XCUITest with Carthage](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido) which includes a sample `Cartfile`.
 
-For more information on using Carthage, see the [Carthage GitHub repoository](https://github.com/Carthage/Carthage).
+For more information on using Carthage, see the [Carthage GitHub repository](https://github.com/Carthage/Carthage).
 
 Remember that the `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
 
