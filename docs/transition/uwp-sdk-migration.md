@@ -17,7 +17,7 @@ ms.tgt_pltfrm: uwp
 ## 1. Update the libraries
 
 > [!NOTE] 
-> Platforms like WNrT, Windows Phone 8.0 and 8.1, WPF and PCL are not supported in App Center SDK. Please continue to use the HockeySDK with them.
+> Platforms like WinRT, Windows Phone 8.0 and 8.1, WPF and PCL are not supported in App Center SDK. Please continue to use the HockeySDK with them.
 
 Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in your solution.
 
