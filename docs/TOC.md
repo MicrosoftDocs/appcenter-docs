@@ -79,6 +79,7 @@
 ### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
 ### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
 ## [Xamarin.UITest](test-cloud/uitest/index.md)
+### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
 ### [Working With](test-cloud/uitest/working-with.md)
