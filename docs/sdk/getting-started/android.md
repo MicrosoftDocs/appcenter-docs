@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 03/11/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -48,7 +48,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **Android** as the OS and **Java** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you have created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
