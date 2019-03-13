@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/11/2019
+ms.date: 03/13/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -43,10 +43,10 @@ Before you begin, please make sure that the following prerequisites are met:
 If you have already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
-2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+2. Sign up or log in and click the **Add new** button in the upper-right corner of the page, and select **Add new app** from the dropdown menu.
 3. Enter a name and an optional description for your app.
 4. Select **Android** as the OS and **Java** as a platform.
-5. Hit the button at the bottom right that says **Add new app**.
+5. Click the **Add new app** button.
 
 Once you have created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
 
@@ -56,7 +56,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '1.11.3'
+      def appCenterSdkVersion = '1.11.4'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }
@@ -103,7 +103,6 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-
 Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
 ```java
@@ -117,7 +116,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 ```
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md) and [App Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
