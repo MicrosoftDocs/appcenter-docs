@@ -2,10 +2,10 @@
 title: Working with backdoors
 description: Backdoors are methods that can be invoked during a test run to perform some special action to configure or set up testing state on a device.
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
+author: oddj0b
+ms.author: vigimm
 ms.reviewer: crdun
-ms.date: 10/24/2018
+ms.date: 03/06/2019
 ms.topic: article
 ms.assetid: BFFC9137-6E6B-4190-AF79-E96B574E3B4B
 ms.service: vs-appcenter
@@ -81,7 +81,7 @@ On iOS, `IApp.Invoke` can call a C# method on the **AppDelegate** according to t
 * The method must be `public`.
 * The method must be adorned with the  [`ExportAttribute`](http://developer.xamarin.com/api/type/Foundation.ExportAttribute/) and the name of the exposed C# method identified. The exposed name must append a *:* (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
 * The method must take a parameter of `NSString`.
-* The method must return `NSString`.
+* The method must return `NSString` or void.
 
 The following code is a snippet showing how declare a backdoor method in iOS:
 
