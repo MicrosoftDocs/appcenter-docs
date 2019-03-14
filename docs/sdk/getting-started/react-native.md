@@ -104,40 +104,6 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     And then retry running `react-native link`.
 
-2. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
-
-    ```NA
-    What secret does your Android app use? [None]
-
-    What secret does your iOS app use? [None]
-    ```
-
-    If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
-
-    The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md#wait-for-js-to-enable-app-center-analytics)
-
-    ```NA
-    For the Android app, should user tracking be enabled automatically? (Use arrow keys)
-        ❯ Enable Automatically
-          Enable in JavaScript
-
-    For the iOS app, should user tracking be enabled automatically? (Use arrow keys)
-        ❯ Enable Automatically
-          Enable in JavaScript
-    ```
-
-    Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md#customize-your-usage-of-app-center-crashes).
-
-    ```NA
-    For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
-        ❯ Automatically
-          Processed in JavaScript by user
-
-    For the iOS app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
-        ❯ Automatically
-          Processed in JavaScript by user
-    ```
-
     > [!NOTE]
     > App Center SDK does not set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
     > ```JSON
@@ -152,8 +118,9 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     > [!NOTE]
     > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
 
-    > [!TIP]
-    > If you want to change your answers from the Analytics or Crash prompts later, just run `react-native link` again. The **secret** is prompted only once. If you need to update the secret value after the initial prompt, you must edit **android/app/src/main/assets/appcenter-config.json** in Android or **ios/{YourAppName}/AppCenter-Config.plist** on iOS.
+2. Edit **android/app/src/main/assets/appcenter-config.json** and replace `app-secret` placeholder value with your application secret.
+
+3. Edit **ios/{YourAppName}/AppCenter-Config.plist** and replace `AppSecret` placeholder value with your application secret.
 
 ### 3.2 [iOS only] Integrate the iOS SDK manually
 
