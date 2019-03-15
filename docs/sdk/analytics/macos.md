@@ -27,7 +27,10 @@ dev_langs:
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
-App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data. **Carrier country and carrier name are not available on App Center Analytics for macOS**.
+App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
+
+> [!NOTE]
+> Carrier country and carrier name are not available on App Center Analytics for macOS, but you can set carrier country with your device location.
 
 Please follow the [Get started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 

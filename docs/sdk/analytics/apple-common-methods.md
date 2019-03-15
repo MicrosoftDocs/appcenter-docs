@@ -2,6 +2,91 @@
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.
 
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking your users location and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
+
+* Make sure that you [enable Location Services](https://support.apple.com/en-us/HT204690) on the device.
+* Get the device's current location using `CLLocationManager`.
+* Convert the location into an ISO country code using `CLGeocoder`.
+* Override the carrier country code using the SDK's `setCountryCode` method.
+
+Use the following code to get the device's location and override the carrier country code in the app:
+
+Add the CLLocationManagerDelegate protocol to the AppDelegate and add the locationManager property:
+
+```objc
+@interface AppDelegate () <CLLocationManagerDelegate>
+@property(nonatomic) CLLocationManager *locationManager;
+@end
+```
+```swift
+class AppDelegate: CLLocationManagerDelegate {
+  private var locationManager: CLLocationManager = CLLocationManager()
+}
+```
+
+In the didFinishLaunchingWithOptions: method set up the location manager:
+
+```objc
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.delegate = self;
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+  [self.locationManager requestWhenInUseAuthorization];
+```
+```swift
+  self.locationManager.delegate = self
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+  self.locationManager.requestWhenInUseAuthorization()
+```
+
+> [!NOTE]
+> The `requestWhenInUseAuthorization` method is unavailable for macOS. Remove calls to that method when developing for macOS.
+
+Add the delegate methods:
+
+```objc
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+  if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+    [manager requestLocation];
+  }
+}
+
+- (void)locationManger:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+  CLLocation *location = [locations lastObject];
+  CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+  [geocoder reverseGeocodeLocation:location
+                 completionHandler:^(NSArray *placemarks, NSError *error) {
+                   if (placemarks.count == 0 || error)
+                     return;
+                   CLPlacemark *pm = [placemarks firstObject];
+                   [MSAppCenter setCountryCode:pm.ISOcountryCode];
+                 }]
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+  NSLog(@"Failed to find user's location: \(error.localizedDescription)");
+}
+```
+```swift
+func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+  if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+    manager.requestLocation()
+  }
+}
+
+func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+  let userLocation:CLLocation = locations[0] as CLLocation
+  CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
+    if error == nil {
+      MSAppCenter.setCountryCode(placemarks?.first?.isoCountryCode)
+    }
+  }
+}
+  
+func locationManager(_ Manager: CLLocationManager, didFailWithError error: Error) {
+  print("Failed to find user's location: \(error.localizedDescription)")
+}
+```
+
 ## Custom events
 
 You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
@@ -44,7 +129,6 @@ NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.av
 
 // If you are using name only, you can pass nil as properties.
 ```
-
 ```swift
 let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
 MSAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
