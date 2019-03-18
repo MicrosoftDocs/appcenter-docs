@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 03/15/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.service: vs-appcenter
@@ -108,6 +108,18 @@ You can set up a listener to be notified whenever a push notification is receive
 > **Title** and **message** are only available in **foreground** pushes.
 
 [!include[](react-native-listener.md)]
+
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must override the `onNewIntent` method. Inside the Java code for your launcher activity (typically the `MainActivity.java` file), add the following:
+
+```java
+import com.microsoft.appcenter.push.Push;
+
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    Push.checkLaunchedFromNotification(this, intent);
+}
+```
 
 ## Custom data in your notifications
 
