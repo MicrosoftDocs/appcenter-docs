@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 02/20/2019
+ms.date: 03/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
@@ -31,7 +31,7 @@ App Center's webhooks empower users to send automatic notifications to connected
 - Crashes: when a crash group is created
 - Distribute: when a new version is released
 
-App Center sends an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have have manager or developer permissions in the app to be able to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
+App Center sends an HTTP `POST` payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to be able to create and configure the webhooks. We currently support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). 
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ App Center sends an HTTP POST payload to the webhook's specified URL. Webhooks a
 
     ![How to edit the webhook's settings](media/editWebhook.png)
 
-4. <a name="step3"></a>In the top right hand corner, click the blue **New Webhook** button and enter: 
+4. <a name="step4"></a>In the top right hand corner, click the blue **New Webhook** button and enter: 
 
    - Webhook name
    - Webhook URL
@@ -54,7 +54,7 @@ App Center sends an HTTP POST payload to the webhook's specified URL. Webhooks a
 
      ![How to create a new webhook](media/createNewWebhook.gif)
 
-5. Done! Your webhook is now created and enabled. You may create multiple webhooks by repeating [step 3](#step3).
+5. Done! Your webhook is now created and enabled. You may create multiple webhooks by repeating [step 4](#step4).
 
 6. Toggle to the extreme right hand of the webhook to **test, disable or delete** the webhook.  
 
@@ -66,7 +66,7 @@ When these events happen, App Center notifications are posted into your integrat
 
    ![Build success notification on Slack](media/buildSuccessNotificationOnSlack.png)
 
-An example of a webhook payload in JSON is:
+An example of a <a name="webhookPayload"></a>webhook payload in JSON is:
 
 ```JSON
 {
@@ -85,3 +85,7 @@ An example of a webhook payload in JSON is:
   "sent_at": "2018-06-14T23:59:08.4897604Z"
 }
 ```
+
+## Custom webhook support
+
+To post to other platforms, you can write an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api) that translates the way we `POST` to fit the requirements of the platform. To do that, create an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api), paste the URL under the **Webhook URL** field in [step 4](#step4), and App Center will post the [webhook payload](#webhookPayload) to that endpoint. You may then modify the payload to the platform's requirements.
