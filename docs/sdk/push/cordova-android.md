@@ -90,7 +90,7 @@ You can set up a listener to be notified whenever a push notification is receive
 > [!NOTE]
 > The background notification click callback does **NOT** expose **title** and **message**. **Title** and **message** are only available in **foreground** pushes.
 
-You need to register the listener when your app starts. A convenient place to do that is at `app.onDeviceReady` method of your `js/index.js:
+You need to register the listener when your app starts. A convenient place to do that is at `app.onDeviceReady` method of your project's `js/index.js` file:
 
 ```js
 var app = {
