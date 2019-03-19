@@ -3,7 +3,7 @@ title: HockeySDK for iOS Migration
 description: Migrate from the HockeySDK to App Center SDK for iOS
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 03/15/2019
 ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter
@@ -239,6 +239,10 @@ Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled =
 ::: zone-end
 
 ### Distribute
+
+> [!NOTE]
+> Unlike in HockeyApp, App Center in-app updates feature will ONLY work with builds that are distributed using the App Center Distribute service. Distribute won't work when the debugger is attached.  
+Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a one-time step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#how-do-in-app-updates-work) for more details.
 
 The HockeySDK does not enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `MSDistribute` class to the `start:` method. This module is enabled by default, unlike in the HockeySDK.

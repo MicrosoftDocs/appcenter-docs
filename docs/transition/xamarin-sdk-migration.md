@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 03/15/2019
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -163,6 +163,10 @@ Info about a previous crash | `CrashManager.GetLastCrashDetails` (Android) or `C
 Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only) | [Crashes.SetEnabledAsync](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#enable-or-disable-app-center-crashes-at-runtime)
 
 ### Distribute
+
+> [!NOTE]
+> Unlike in HockeyApp, App Center in-app updates feature will ONLY work with **RELEASE** builds that are distributed using the **App Center Distribute** service.  
+Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/xamarin#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
