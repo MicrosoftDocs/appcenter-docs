@@ -1,6 +1,7 @@
 App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.
+Note that only devices having the [Google Play](https://play.google.com) store application or emulators with **Google APIs** images can receive the notifications.  
+Otherwise, you can receive a `Java.Lang.SecurityException`.
 
 > [!NOTE]
 > A notification appears in the system notification center only if the application is in the background at the moment the Push is received.
