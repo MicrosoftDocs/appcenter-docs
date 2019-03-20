@@ -14,7 +14,7 @@ ms.custom: diagnostics
 # PlayFab Integration
 
  > [!NOTE]
- > PlayFab integration with App Center is currently offered as a preview, and still under active development.
+ > PlayFab integration with App Center is currently offered as a preview, and still under active development. If you would like access to the preview, email [helloplayfab@microsoft.com](mailto:helloplayfab@microsoft.com).
 
 PlayFab users can link their PlayFab titles directly to apps within App Center. Connecting these services brings a complete diagnostics pipeline into PlayFab, exposing App Center crash data. Soon PlayFab player IDs will be attached to crash information, linking crashes to specific players. For example, when a tester reports an issue, developers can look up the crash details in the tester's player profile in the PlayFab portal.
 
