@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 03/04/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -14,6 +14,12 @@ ms.custom: build
 # Cloud Build Machines
 
 Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on App Center servers.
+
+## Upcoming Image Changes
+
+**We will switch to using CocoaPods 1.6.1 on the next Image Update.**
+
+You may face an issue with pod install due to old dependencies in your pod file. In that case, you need to update your pod file with newer dependencies or rollback to CocoaPods 1.5.3 using this [post-clone script](https://github.com/Microsoft/appcenter-build-scripts-examples/tree/master/general/cocoapods-rollback)
 
 ## Operating System
 
@@ -32,13 +38,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 9.0.4
 - Java 10.0.2
 - Java 11.0.2
-- Node.js 6.16.0
+- Node.js 6.17.0
 - Node.js v8.11.3
 - PowerShell 6.1.3
-- Python 2.7.15
+- Python 2.7.16
 - Python 3.7.2
 - Ruby 2.6.1p33
-- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104
+- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12
 - Miniconda 4.5.11
 - MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.5 3.7.0
@@ -48,11 +54,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 2.0.1
 - Carthage 0.32.0
 - CocoaPods 1.5.3
-- Homebrew 2.0.2
+- Homebrew 2.0.4
 - NPM 3.10.10
 - Yarn 1.13.0
 - NuGet 4.7.0.5148
-- Pip 19.0.2
+- Pip 19.0.2 (python 3.7)
+- Pip 19.0.3 (python 2.7)
 
 ### Project Management
 
@@ -63,15 +70,15 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Curl 7.64.0 (libcurl/7.64.0 SecureTransport zlib/1.2.11)
 - Git 2.21.0
-- Git LFS 2.7.0
+- Git LFS 2.7.1
 - GNU Wget 1.20.1
 - Subversion (SVN) 1.11.1
 
 ### Tools
 
-- Fastlane 2.116.1
-- App Center CLI 1.1.12
-- Azure-CLI 2.0.58
+- Fastlane 2.117.1
+- App Center CLI 1.1.13
+- Azure-CLI 2.0.60
 
 ## Xcode
 
@@ -434,7 +441,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 28.0.1 |
+| platform-tools        | Android SDK Platform-tools, revision 28.0.2 |
 
 ### Android SDK Platforms
 
