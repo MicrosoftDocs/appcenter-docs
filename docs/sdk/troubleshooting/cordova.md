@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Cordova
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 01/29/2019
+ms.date: 03/22/2019
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -42,11 +42,13 @@ Installing "cordova-plugin-appcenter-shared" for ios
 Failed to install 'cordova-plugin-appcenter-shared': Error: pod: Command failed with exit code 1
 ```
 
-To resolve this, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`.
+In `0.3.0` we dropped iOS 8 support. The issue with this is that the `4.5.5` version of `cordova-ios` by default targeted ios `9.0`, but used ios `8.0` in the podfile. This has been fixed with `cordova-ios 5.0.0`.
 
-Then run `pod install`.
+There are two ways to resolve this:
 
-In `0.3.0` we dropped iOS 8 support. The issue with this is that the latest version of `cordova-ios` by default targets ios `9.0`, but addresses ios `8.0` in the podfile. This has been fixed in their repo but not released yet.
+1. `cordova platform add ios@5.0.0`
+
+1. If for some reason you want to stay on older cordova version, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`. Then run `pod install`.
 
 ## Failed to install 'cordova-plugin-appcenter-shared': undefined
 
