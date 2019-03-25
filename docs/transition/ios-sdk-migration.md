@@ -8,7 +8,6 @@ ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter
 ms.tgt_pltfrm: ios
-zone_pivot_groups: language-ios
 dev_langs:  
  - swift
  - objc
@@ -160,7 +159,7 @@ After (App Center):
 
 ### Core
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -168,9 +167,7 @@ Adjust log level | [[BITHockeyManager sharedHockeyManager].logLevel = BITLogLeve
 Identify installations | `[BITHockeyManager sharedHockeyManager].installString` | [[MSAppCenter installId]](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#identify-installations)
 Identify users | `[BITHockeyManager sharedHockeyManager].userID` | [[MSAppCenter setUserId:@"your-user-id"]](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#identify-users)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -178,14 +175,14 @@ Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](ht
 Identify installations | `BITHockeyManager.shared().installString` | [MSAppCenter.installId()](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#identify-installations)
 Identify users | `BITHockeyManager.shared().userID` | [MSAppCenter.setUserId("your-user-id")](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#identify-users)
 
-::: zone-end
+* * *
 
 ### Analytics
 
 The HockeySDK enables metrics collecting per default.
 App Center SDK registers Analytics service only if you pass `MSAnalytics` class to the `start:` method.
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -193,9 +190,7 @@ Automatically track sessions | [Documentation (can't be disabled)](https://suppo
 Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-7-2-attaching-custom-properties-and-measurements-to-a-custom-event) | [[MSAnalytics trackEvent:withProperties:]](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#custom-events)
 Disable service at runtime | [[BITHockeyManager sharedHockeyManager].disableMetricsManager = YES](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-7-user-metrics) | [[MSAnalytics setEnabled:NO]](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -203,14 +198,14 @@ Automatically track sessions | [Documentation (enabled by default)](https://supp
 Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-7-2-attaching-custom-properties-and-measurements-to-a-custom-event) | [MSAnalytics.trackEvent(eventName, withProperties: properties)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#custom-events)
 Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-7-user-metrics) | [MSAnalytics.setEnabled(false)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
 
-::: zone-end
+* * *
 
 ### Crashes
 
 The HockeySDK enables crash reporting per default. Crashes will be immediately sent to the server the next time the app is launched.
 App Center SDK registers Crashes service only if you pass `MSCrashes` class to the `start:` method.
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -222,9 +217,7 @@ Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/c
 Customize user dialog | [setAlertViewHandler](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITCrashManager.h#L341-L361setCrashReportUIHandler) | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/ios#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableCrashManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-6-1-disable-crash-reporting) | [[MSCrashes setEnabled:NO]](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/ios#enable-or-disable-app-center-crashes-at-runtime)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -236,7 +229,7 @@ Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/c
 Customize user dialog | [setAlertViewHandler](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITCrashManager.h#L341-L361setCrashReportUIHandler) | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/ios#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-6-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/ios#enable-or-disable-app-center-crashes-at-runtime)
 
-::: zone-end
+* * *
 
 ### Distribute
 
@@ -247,7 +240,7 @@ Also, once the app is installed and opened for the first time after the App Cent
 The HockeySDK does not enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `MSDistribute` class to the `start:` method. This module is enabled by default, unlike in the HockeySDK.
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
@@ -255,9 +248,7 @@ Restricted in-app updates | [[[BITHockeyManager sharedHockeyManager].authenticat
 Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableUpdateManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [[MSDistribute setEnabled:NO]](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#2-customize-the-update-dialog)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
@@ -265,7 +256,7 @@ Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticat
 Disable service at runtime | [BITHockeyManager.shared().isUpdateManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [MSDistribute.setEnabled(false)](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#2-customize-the-update-dialog)
 
-::: zone-end
+* * *
 
 ### Feedback
 

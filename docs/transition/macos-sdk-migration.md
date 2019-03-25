@@ -8,7 +8,6 @@ ms.topic: article
 ms.assetid: b2edce7d-f0d6-4716-9a34-32da1ff2bc2d
 ms.service: vs-appcenter
 ms.tgt_pltfrm: ios
-zone_pivot_groups: language-ios
 dev_langs:  
  - swift
  - objc
@@ -136,28 +135,26 @@ After (App Center):
 
 ### Core
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
 Adjust log level | [[BITHockeyManager sharedHockeyManager].logLevel = BITLogLevelVerbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-7-debug-information) | [[MSAppCenter setLogLevel:MSLogLevelVerbose]](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/macos#adjust-the-log-level)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
 Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-7-debug-information) | [MSAppCenter.setLogLevel(MSLogLevel.Verbose)](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/macos#adjust-the-log-level)
 
-::: zone-end
+* * *
 
 ### Analytics
 
 The HockeySDK collects metrics per default.
 The App Center SDK does not collect any (analytics) metrics per default. To collect metrics using the App Center SDK, pass `MSAnalytics` to the `start:` method.
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -165,9 +162,7 @@ Automatically track sessions | [Documentation (enabled by default)](https://supp
 Custom events with properties| [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-5-1-custom-events) | [[MSAnalytics trackEvent:withProperties:]](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#custom-events)
 Disable service at runtime | [[BITHockeyManager sharedHockeyManager].disableMetricsManager = YES](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-5-user-metrics) | [[MSAnalytics setEnabled:NO]](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#enable-or-disable-app-center-analytics-at-runtime)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -175,14 +170,14 @@ Automatically track sessions | [Documentation (enabled by default)](https://supp
 Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-5-1-custom-events) | [MSAnalytics.trackEvent(eventName, withProperties: properties)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#custom-events)
 Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-5-user-metrics) | [MSAnalytics.setEnabled(false)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#enable-or-disable-app-center-analytics-at-runtime)
 
-::: zone-end
+* * *
 
 ### Crashes
 
 The HockeySDK reports crashes per default. Crashes will be immediately sent to the server the next time the app is launched.
 The App Center SDK does not report any crashes per default. To collect crashes using the App Center SDK, pass `MSCrashes` to the `start:` method.
 
-::: zone pivot="objective-c"
+#### [Objective C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -194,9 +189,7 @@ Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/c
 Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-Mac/blob/5.1.1/Classes/CrashReporting/BITCrashManager.h#L218-L236) | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/macos#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableCrashManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-3-1-disable-crash-reporting) | [[MSCrashes setEnabled:NO]](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/macos#enable-or-disable-app-center-crashes-at-runtime)
 
-::: zone-end
-
-::: zone pivot="swift"
+#### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -208,7 +201,7 @@ Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/c
 Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-Mac/blob/5.1.1/Classes/CrashReporting/BITCrashManager.h#L218-L236) | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/macos#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-3-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/macos#enable-or-disable-app-center-crashes-at-runtime)
 
-::: zone-end
+* * *
 
 ### Feedback
 
