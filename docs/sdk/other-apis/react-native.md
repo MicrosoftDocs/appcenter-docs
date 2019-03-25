@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -58,7 +58,7 @@ const installId = await AppCenter.getInstallId();   // Returned as a string
 
 ## Identify users
 
-The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK as described in the [App Center SDK Getting started guide](~/sdk/getting-started/react-native.md).
 2. Set a `userID` in the SDK using the following code:
@@ -66,6 +66,8 @@ The App Center SDK supports setting a **user id** that is used to augment crash 
 ```javascript
 AppCenter.setUserId("your-user-id");
 ```
+
+After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
 > Note that the value for the user id is limited to 256 characters.

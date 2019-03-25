@@ -34,7 +34,7 @@ var installId = MSAppCenter.installId()
 
 ## Identify users
 
-The App Center SDK supports setting a **user id** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `:start:withServices:` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/ios.md). 
 2. Set a `userID` in the SDK using the following code:
@@ -45,6 +45,7 @@ The App Center SDK supports setting a **user id** that is used to augment crash 
 ```swift
 MSAppCenter.setUserId("your-user-id");
 ```
+After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
 > Note that the value for the user id is limited to 256 characters.
