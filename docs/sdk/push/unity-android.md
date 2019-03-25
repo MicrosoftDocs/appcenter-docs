@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: jwhitedev
 ms.author: jawh
-ms.date: 02/14/2019
+ms.date: 03/22/2019
 ms.topic: article
 ms.assetid: 136a7159-9aee-4064-b2b1-dbc513110b12
 ms.service: vs-appcenter
@@ -30,28 +30,7 @@ ms.tgt_pltfrm: unity
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
 
-App Center Push enables you to send push notifications to users of your app from the App Center portal. The App Center portal and the Push SDK are integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
-
-You can only send notifications to devices with the [Google Play](https://play.google.com) store application installed or with emulators built with **Google APIs**.
-
-> [!NOTE]
-> A notification appears in the system notification center only if the application is in the background at the moment the Push is received.
-
-## Prerequisites
-
-### 1. Set up Firebase Cloud Messaging
-
-1. Create a project on the [Firebase Console](https://console.firebase.google.com).
-2. Click the Android logo on the page to create an application matching your package name.
-3. Go to **Project Settings** and select **Add Firebase to your Android App**
-4. Enter your Android package name, select *Register app*, and download the project's `google-services.json` file.
-5. Copy this file into the **Assets** folder inside your Unity project.
-
-### 2. Obtain your Android API Key
-
-1. In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. 
-2. Navigate to the **Cloud Messaging** tab. 
-3. Copy the **Server Key**. This key is the Android API Key you need to set in the App Center Push portal.
+[!include[](introduction-android.md)]
 
 ## Add App Center Push to your app
 

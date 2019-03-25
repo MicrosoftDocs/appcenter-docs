@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 03/22/2019
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311
 ms.service: vs-appcenter
@@ -32,27 +32,7 @@ ms.tgt_pltfrm: cordova
 > [!NOTE]
 > For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow [the SDK migration guide](migration/cordova-android.md).
 
-App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
-
-Note that only devices having the [Google Play](https://play.google.com/) store application or emulators with Google APIs images can receive the notifications.
-
-> [!NOTE]
-> A notification appears in the system notification center only if the application is in the background at the moment the Push is received.
-
-## Prerequisites
-
-### 1. Set up Firebase Cloud Messaging
-
-1. Create a project on the [Firebase Console](https://console.firebase.google.com).
-2. Click on the Android logo to create an application matching your package name.
-3. Go to **Project Settings** and download the **google-services.json** file.
-4. Copy this file to the root of your project.
-
-### 2. Obtain your Android API Key
-
-1. In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. 
-2. Navigate to the **Cloud Messaging** tab. 
-3. Copy the **Server Key**. This will be the Android API Key that you will need to set in the App Center Push portal.
+[!include[](introduction-android.md)]
 
 ## Add App Center Push to your app
 
