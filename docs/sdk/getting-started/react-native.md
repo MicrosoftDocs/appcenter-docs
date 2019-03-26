@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 11/20/2018
+ms.date: 03/22/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -71,6 +71,9 @@ yarn add appcenter appcenter-analytics appcenter-crashes --exact
 The App Center SDK uses a modular approach, where you just add the modules for App Center services that you want to use. **appcenter-analytics** and **appcenter-crashes** make sense to add to almost every app, as they provide value with no additional setup required. **appcenter** provides general purpose App Center [APIs](../other-apis/react-native.md), useful for multiple services.
 
 ### 3.1 Integrate the SDK automatically
+
+> [!NOTE]
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#32-ios-only-integrate-the-ios-sdk-without-react-native-link)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
@@ -155,13 +158,62 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     > [!TIP]
     > If you want to change your answers from the Analytics or Crash prompts later, just run `react-native link` again. The **secret** is prompted only once. If you need to update the secret value after the initial prompt, you must edit **android/app/src/main/assets/appcenter-config.json** in Android or **ios/{YourAppName}/AppCenter-Config.plist** on iOS.
 
-### 3.2 [iOS only] Integrate the iOS SDK manually
+### 3.2 [iOS only] Integrate the iOS SDK without react-native link
 
+Do this integration, if you link React modules using relative path inside your Podfile, rather than referenced in the project.
+
+1. Inside your Podfile, insert the following lines:
+
+    ```ruby
+    pod 'appcenter', path: '../node_modules/appcenter/ios'
+    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
+    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
+    pod 'appcenter-push', path: '../node_modules/appcenter-push/ios'
+    ```
+
+2. Run `pod install` from your `iOS` folder.
+
+3. Modify your app's `AppDelegate.m` file to include code for starting SDK:
+
+    * Add these lines to import section
+
+    ```objective-c
+    #import <AppCenterReactNative/AppCenterReactNative.h>
+    #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
+    #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
+    #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
+    ```
+
+    * Add these lines to the `didFinishLaunchingWithOptions` method
+
+    ```objective-c
+    [AppCenterReactNative register];
+    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+    [AppCenterReactNativePush register];
+    ```
+
+4. Add to your project a new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+        <dict>
+        <key>AppSecret</key>
+        <string>{APP_SECRET_VALUE}</string>
+        </dict>
+    </plist>
+    ```
+
+### 3.3 [iOS only] Integrate the iOS SDK manually without react-native link or CocoaPods
+
+Do this integration, if you don't want to use **CocoaPods**.
 We **strongly** recommend integrating the SDK via CocoaPods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
 
 > [!NOTE]
 > The latest App Center React Native SDK doesn't necessarily depend on the latest App Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
-> 
+>
 > The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
 1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file.
@@ -202,7 +254,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 9. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
-   
+
    * $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
    * $(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics
    * $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
@@ -217,6 +269,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
     #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
     ```
+
     * Add these lines to the `didFinishLaunchingWithOptions` method
 
     ```objective-c
@@ -225,6 +278,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     [AppCenterReactNativePush register];
     ```
+
 11. Create new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
     ```xml
@@ -236,7 +290,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
         <string>{APP_SECRET_VALUE}</string>
         </dict>
     </plist>
-    ``` 
+    ```
 
 ## 4. Start the SDK
 

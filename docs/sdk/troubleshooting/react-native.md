@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 10/19/2018
+ms.date: 03/22/2019
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -22,6 +22,56 @@ ms.tgt_pltfrm: react-native
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+
+## 'React/RCTDefines.h' file not found
+
+This error appears when RN core libraries are not referenced correctly, which can be caused by a variety of integrating/linking issues. 
+It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
+Our linking script supports only the standard way of linking pods, so in order to resolve this, do the following:
+
+1. Replace the dependencies in your `Podfile` with relative linking paths:
+
+    Before:
+
+    ```ruby
+    pod 'AppCenter/Analytics', '~> 1.14.0'
+    pod 'AppCenter/Crashes', '~> 1.14.0'
+    pod 'AppCenter/Push', '~> 1.14.0'
+    pod 'AppCenterReactNativeShared', '~> 1.13.0'
+    ```
+
+    After:
+
+    ```ruby
+    pod 'appcenter', path: '../node_modules/appcenter/ios'
+    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
+    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
+    pod 'appcenter-push', path: '../node_modules/appcenter-push/ios'
+    ```
+
+1. Run `pod install` from `iOS` folder.
+
+1. Inside `AppDelegate.m`, replace imports:
+
+    Before:
+
+    ```objective-c
+    #import <AppCenterReactNative/AppCenterReactNative.h>
+    #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
+    #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
+    #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
+    ```
+
+    After:
+
+    ```objective-c
+    #import "AppCenterReactNative.h"
+    #import "AppCenterReactNativeAnalytics.h"
+    #import "AppCenterReactNativeCrashes.h"
+    #import "AppCenterReactNativePush.h"
+    ```
+
+1. Remove AppCenter dependencies from the project (right-click the dependency > Remove dependency).
 
 ## React Native link command unrecognized
 
