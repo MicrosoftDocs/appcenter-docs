@@ -92,7 +92,7 @@ The App Center CLI requires Node.js version 8 or higher.
 2. Execute the following command:
 
     ```shell
-    npm install -g appcenter-cli`
+    npm install -g appcenter-cli
     ```
 3. After completing the CLI installation, execute the following command:
 
