@@ -28,8 +28,7 @@ App Center follows the philosophy of API-first; you can expect to find API suppo
 
 ## Push API
 
-Sending Push Notifications via API will allow you to automate the process of engaging with your users.
-Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs.
+Sending Push Notifications via API will allow you to automate the process of engaging with your users. Go to the [Push Swagger](https://openapi.appcenter.ms#push) to see the supported APIs.
 
 ![Push Swagger](~/push/images/push-swagger.png)
 
@@ -45,6 +44,10 @@ In this documentation, we will assume that you already have an app ready to rece
 The first thing you will need to do is to create an API Token from your [user settings](https://appcenter.ms/settings/apitokens), as shown in the image below.
 
 ![Push API Token](~/push/images/API-tokens.png)
+
+### Using an API Token in an API request
+
+When sending API requests to App Center from an application, you must include the API token in the header of every request sent to App Center. Pass the API token in the request's `X-API-Token` header property.
 
 ### User and Application
 
