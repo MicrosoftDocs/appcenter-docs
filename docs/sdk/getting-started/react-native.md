@@ -82,7 +82,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     ```
 
    > [!NOTE]
-   > On React Native **0.47.0**, there is a [bug](https://github.com/facebook/react-native/pull/15321) when using link without parameters.
+   > On React Native **0.47.0**, there is a [bug when using link without parameters](https://github.com/facebook/react-native/pull/15321).
    > 
    > If you are using that version, please link all modules separately:
    
@@ -216,25 +216,27 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 >
 > The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
 
-1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file.
+1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file and unzip it.
 
-2. Download the corresponding [App Center SDK for iOS](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
+2. You will see a folder named **AppCenterReactNativeShared** which contains a single framework for the required React Native iOS bridge.
 
-3. Unzip both archives and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules. You will also see a folder named **AppCenterReactNativeShared** which contains a single framework for the React Native bridge for iOS which is also required.
+3. Download the corresponding [App Center SDK for iOS](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file and unzip it.
 
-4. [Optional] Create a subdirectory for 3rd-party libraries.
+4. You will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
+
+5. [Optional] Create a subdirectory for 3rd-party libraries.
    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
-5. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.
+6. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.
 
-6. Add the SDK frameworks to the project in Xcode:
+7. Add the SDK frameworks to the project in Xcode:
 
    * Make sure the Project Navigator is visible (⌘+1).
    * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
-7. Link AppCenter React Native plugins projects to your app's project:.
+8. Link AppCenter React Native plugins projects to your app's project:
 
    * Make sure the Project Navigator is visible (⌘+1).
    * For each AppCenter React Native plugin navigate to the folder containing source code. Paths respectively will be
@@ -245,14 +247,14 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
    * Drag and drop `.xcodeproj` files from the Finder into Xcode's Project Navigator. Typically under **Libraries** group.
 
-8. Link libraries for AppCenter React Native plugins.
+9. Link libraries for AppCenter React Native plugins.
    Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section add new items referencing target libraries added on the previuos step: 
    * libAppCenterReactNative.a
    * libAppCenterReactNativeAnalytics.a
    * libAppCenterReactNativeCrashes.a
    * libAppCenterReactNativePush.a
 
-9. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
+10. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
 
    * $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
@@ -260,7 +262,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
    * $(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush
 
-10. Modify your app's AppDelegate.m file to include code for starting SDK:
+11. Modify your app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
 
     ```objective-c
@@ -279,7 +281,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNativePush register];
     ```
 
-11. Create new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+11. Create new file with name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
