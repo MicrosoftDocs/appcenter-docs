@@ -59,7 +59,7 @@ With the Push service configured, and devices running your application registere
 App Center supports the following notification targets:
 
 + **All registered devices**: Sends notifications to all registered devices.
-+ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
 + **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties.
++ **Custom device list**: Sends notifications to up to 20 devices (using the install IDs for the target devices).
 
 For additional information, refer to [Sending Push Notifications](~/push/send-notification.md).
