@@ -14,7 +14,7 @@ ms.tgt_pltfrm: windows
 
 # Building UWP C# apps for Windows
 
-To start building your first UWP app, you will need to the following:
+To start building your first UWP app, you will need to do the following:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
