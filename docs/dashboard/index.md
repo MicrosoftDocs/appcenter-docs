@@ -11,6 +11,10 @@ ms.service: vs-appcenter
 
 # Overview
 
+[Visual Studio App Center](https://appcenter.ms/) brings together multiple services commonly used by mobile developers into a DevOps cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services, and engage with users using the Push service. The following figure highlights the App Center services and how each fits on either side of the DevOps story.
+
+![App Center DevOps Diagram](~/images/app-center-devops.png)
+
 This section describes the basic concepts of App Center and ways to manage your account settings.
 
 ## Set up your App Center account
