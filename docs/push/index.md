@@ -4,7 +4,7 @@ description: An introduction to the App Center Push service
 keywords: app center,push
 author: jwargo
 ms.author: jowargo
-ms.date: 02/11/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
@@ -12,7 +12,14 @@ ms.service: vs-appcenter
 
 # App Center Push
 
-The Visual Studio App Center Push (ACP) service enables app producers to engage with their users outside of the standard, in-app experience. Once a developer adds the App Center SDK [link] to an application, developers, marketers, and automated processes can send notifications to devices running the application.  
+The Visual Studio App Center Push (ACP) service is a notification aggregation service, it manages the process of sending notifications to devices using Push Notification Services (PNS) from Apple, Google, and Microsoft. You could easily build your own application that does this for you:
+
++ Managing the device registration process for each PNS
++ Tracking device registration data (so you know how to send notifications to devices later)
++ Building an application to send notifications through each PNS
++ Tracking success (or failure) for notifications
+
+App Center Push takes care of all that for you. Add the App Center SDK to an app, and on app start the SDK automatically registers the device for push notifications (with the appropriate PNS for the target device). With that in place, use the App Center Portal or its REST API to define [audiences](~/push/send-notification.md#audiences) targeting app users, create campaigns, and send notifications to devices (and eventually users).
 
 ## Configuring App Center for Push Notifications
 
