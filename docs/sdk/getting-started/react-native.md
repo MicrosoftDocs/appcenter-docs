@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 03/22/2019
+ms.date: 04/03/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -165,10 +165,10 @@ Do this integration, if you link React modules using relative path inside your P
 1. Inside your Podfile, insert the following lines:
 
     ```ruby
-    pod 'appcenter', path: '../node_modules/appcenter/ios'
-    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
-    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
-    pod 'appcenter-push', path: '../node_modules/appcenter-push/ios'
+    pod 'appcenter', path: '../node_modules/appcenter'
+    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics'
+    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes'
+    pod 'appcenter-push', path: '../node_modules/appcenter-push'
     ```
 
 2. Run `pod install` from your `iOS` folder.
