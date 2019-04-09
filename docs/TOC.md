@@ -288,6 +288,7 @@
 ### [Distributing Releases](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
+## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 
 # [Migration](migration/index.md)
