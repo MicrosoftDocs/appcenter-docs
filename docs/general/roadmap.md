@@ -4,13 +4,16 @@ description: App Center roadmap for future features/updates
 keywords: roadmap
 author: jwargo
 ms.author: jowargo
-ms.date: 02/25/2019
+ms.date: 04/10/2019
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
 ---
 
 # App Center Product Roadmap
+
+> [!NOTE]
+> Since we're updating our roadmap on an almost daily basis now, and directly involving our customers (and potential customers) in the product planning process, we **moved our product roadmap** to the [App Center GitHub Repo](https://github.com/Microsoft/appcenter). Please read below to learn more, or just jump into the repo to see what our plans are.
 
 In order to more actively engage with our customers (both existing and potential), we moved our public roadmap to the [App Center GitHub repository](https://github.com/Microsoft/appcenter). In our new roadmap, you’ll see a list of planned enhancements to the product’s current feature set, plus new services we’re planning or thinking of adding.
 
