@@ -15,6 +15,10 @@ ms.service: vs-appcenter
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
 
+### **April 11, 2019**
+- **Build support for Xcode 10.2**
+    - Added support for building your apps with Xcode 10.2. The Xcode 10.2 is available for native iOS, native macOS and RN.iOS apps
+
 ### **January 24th, 2019**
 
 - **Added SDK support for User ID in Diagnostics data:**
