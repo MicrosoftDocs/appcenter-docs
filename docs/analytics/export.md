@@ -154,6 +154,10 @@ The contents of the blob file is a JSON array of client device logs, that looks 
 
 [Learn more about Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 
+You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
+
+[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+
 ## Azure Application Insights
 
 Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you will get access to the following features:
