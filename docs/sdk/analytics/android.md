@@ -140,3 +140,26 @@ Analytics.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+## Local storage size
+
+By default, the SDK stores all the event logs up to 10MB. Developers can use an API to increase the [storage size](../other-apis/android.md#storage-size) and the SDK will keep storing logs until the storage is full.
+
+## No internet access
+
+When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds.
+
+## Batching event logs
+
+The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds. There can be a maximum of 3 batches sent in parallel.
+
+## Retry and back-off logic
+
+App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
+* 3 tries maximum per request.
+* Each request has its own retry state machine.
+* All the transmission channels are disabled (until next app process) after 1 request exhausts all its retries.
+
+Back-off logic
+* 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
+* If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.
