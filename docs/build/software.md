@@ -25,7 +25,8 @@ You may face an issue with pod install due to old dependencies in your pod file.
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.13.6 (17G6029) **High Sierra**
+- OS X 10.14.4 (18E226) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
+- OS X 10.13.6 (17G6029) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -83,6 +84,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
+- Xcode 10.2 (10E125)
 - Xcode 10.1 (10B61)
 - Xcode 10 (10A255)
 - Xcode 9.4.1 (9F2000)
@@ -218,6 +220,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.4    | 15F79    |
 | iOS 12.0    | 16A5288q |
 | iOS 12.1    | 16B91    |
+| iOS 12.2    | 16E226    |
 | tvOS 10.2   | 14W260   |
 | tvOS 11.1   | 15J580   |
 | tvOS 11.2   | 15K104   |
@@ -225,6 +228,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS 11.4   | 15L576   |
 | tvOS 12.0   | 16J5283n |
 | tvOS 12.1   | 16J602   |
+| tvOS 12.2   | 16L225   |
 | watchOS 3.2 | 14V243   |
 | watchOS 4.0 | 15R372   |
 | watchOS 4.1 | 15R844   |
@@ -232,6 +236,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS 4.3 | 15T212   |
 | watchOS 5.0 | 16R5283q |
 | watchOS 5.1 | 16R591   |
+| watchOS 5.2 | 16T224   |
 
 #### Devices
 
