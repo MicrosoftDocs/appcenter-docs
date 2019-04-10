@@ -134,6 +134,7 @@ To build your project, we use `xcodebuild`, a command-line tool that allows you 
 
 The following versions of Xcode are supported on our VMs for macOS builds.
 
+- Xcode 10.2
 - Xcode 10.1
 - Xcode 10.0
 - Xcode 9.4.1
