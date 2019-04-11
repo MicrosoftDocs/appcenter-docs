@@ -38,8 +38,8 @@ Log in to the App Center portal, select your application, click on the **Push** 
      ![apple-dev-center-confirm-auth-key](images/ios-confirm-auth-key-apple-portal.png)
 
   3. **Push Token**
-     * Open your key file with a text editor and copy the authentication token it contains.
+     * On the App Center push settings page, upload your key file using the button labelled "Auth key file:" (you can also drag and drop the file onto it):
 
-     ![auth-key-file](images/apple-auth-key-file.png)
+     ![auth-key-file](images/apple-push-settings-upload-key-button.png)
 
-     * On the App Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration.
+     * Click Done to complete this configuration.
