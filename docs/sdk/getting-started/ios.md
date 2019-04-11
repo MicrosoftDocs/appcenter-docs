@@ -39,6 +39,9 @@ The following requirements must be met to use App Center SDK:
 * You are targeting devices running on iOS 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 
+> [!NOTE]
+> App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
+
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
 If you have already created your app in the App Center portal, you can skip this step.
