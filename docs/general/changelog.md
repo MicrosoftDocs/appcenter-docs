@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 01/25/2019
+ms.date: 04/17/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -14,6 +14,14 @@ ms.service: vs-appcenter
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
+### **April 17, 2019**
+- **Updated Visual Studio for Mac:**
+    - Visual Studio for Mac 8.0.2.23
+- **Updated Xamarin SDKs: Build your Xamarin apps with Mono 5.18 and fresh versions of the Xamarin SDKs:**
+    - Mono 5.18.1, Xamarin.iOS 12.6.0.25
+    - Mono 5.18.1, Xamarin.iOS 12.8.0.0
+    - Mono 5.18.1, Xamarin.Android 9.2.0-5
+- **Xcode 10.2 is available for Xamarin.iOS 12.6 and 12.8**
 
 ### **April 11, 2019**
 - **Build support for Xcode 10.2**
