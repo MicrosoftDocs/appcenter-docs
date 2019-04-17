@@ -64,28 +64,28 @@ To run scripts pre-build, add the following file next to the project file in you
 
 ## Post-build
 
-The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory.
+The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory. Note that the post-build script will run even if the build fails.
 
 To run scripts post-build, add the following file next to the project file in your repository:
 
 - **appcenter-post-build.sh** (Bash for iOS & Android)
 
     ```shell
-    #!/usr/bin/env bash
+    if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
+        HOCKEYAPP_API_TOKEN={API_Token}
+        HOCKEYAPP_APP_ID={APP_ID}
 
-    HOCKEYAPP_API_TOKEN={API_Token}
-    HOCKEYAPP_APP_ID={APP_ID}
-
-    # Example: Upload master branch app binary to HockeyApp using the API
-    if [ "$APPCENTER_BRANCH" == "master" ];
-    then
-        curl \
-        -F "status=2" \
-        -F "ipa=@$APPCENTER_OUTPUT_DIRECTORY/MyApps.ipa" \
-        -H "X-HockeyAppToken: $HOCKEYAPP_API_TOKEN" \
-        https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
-    else
-        echo "Current branch is $APPCENTER_BRANCH"
+        # Example: Upload master branch app binary to HockeyApp using the API
+        if [ "$APPCENTER_BRANCH" == "master" ];
+         then
+            curl \
+            -F "status=2" \
+            -F "ipa=@$APPCENTER_OUTPUT_DIRECTORY/MyApps.ipa" \
+            -H "X-HockeyAppToken: $HOCKEYAPP_API_TOKEN" \
+            https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
+        else
+            echo "Current branch is $APPCENTER_BRANCH"
+        fi
     fi
     ```
 
