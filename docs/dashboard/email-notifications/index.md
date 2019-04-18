@@ -4,7 +4,7 @@ description: How to configure App Center email notifications
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group, test, test run, test run completed, test run complete
 author: amchew
 ms.author: amchew
-ms.date: 10/11/2018
+ms.date: 04/17/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
@@ -30,9 +30,13 @@ You can choose to have email notifications automatically sent for the following 
 
 - Crashes: when a crash group is created
 - Distribute: 
+  - A new version is released:
     - **Immediately**: when a new version is released
     - **Daily**: a summary of all your releases for that day will be sent at approximately 0:00 UTC
     - **Never**: you will not receive notifications when a new version is released
+  - Adding new devices to a release failed:
+    - **Checked**: when adding new devices to a release failed
+    - **Unchecked**: you will not receive notifications when adding new devices to a release fails
 - Test: when a test run completes
 
 App Center sends email notifications at two levels:  
@@ -45,7 +49,7 @@ App Center sends notifications using the alias `no-reply@mail.appcenter.ms`.
 
 ### User level email notifications
 
-1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login with your account information.
+1. Navigate to [https://appcenter.ms](https://appcenter.ms) and log in with your account information.
 
 2. On the top right corner, click your user icon and select **Account Settings**.
 
@@ -74,9 +78,10 @@ App level email notifications send information for the specific app to the user.
 The default email notification settings at the app level are:
   - **On** for receiving email notifications
   - **Never** for Build
-  - **Immediately** for Distribute
-  - **unchecked** for Crashes
-  - **checked** for Test events
+  - **Immediately** for Distribute new release
+  - **Checked** for when Distribute fails to add new devices to a release
+  - **Unchecked** for Crashes
+  - **Checked** for Test events
 
 You will receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
 
