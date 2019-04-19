@@ -4,7 +4,7 @@ description: A description of the search functionality in Diagnostics
 keywords: crashes, errors, search
 author: blparr
 ms.author: blparr
-ms.date: 01/24/2019
+ms.date: 04/17/2019
 ms.topic: article
 ms.assetid: 92ABCD39-D03A-4560-BE32-31C44DE1EAC6
 ms.service: vs-appcenter
@@ -17,7 +17,7 @@ In this section, you will learn about the ability to search Diagnostics data in 
 
 ## How to use Search
 
-App Center Diagnostics allows you to search for specific crashes. In the Diagnostics overview, click on the magnifying glass to start using Search.
+App Center Diagnostics allows you to search for specific crashes and handled errors. In the Diagnostics overview, click on the magnifying glass to start using Search.
 
 ![App Center Diagnostics search](~/diagnostics/images/search-overview.png)
 
@@ -33,9 +33,13 @@ App Center searches in the indexed fields, and can be done in two ways:
 
   ![Query builder](~/diagnostics/images/crashes-query-types.png)
 
+3. If your Xamarin or Unity app is tracking handled errors you can specify the type of issue you want to search next to the search box.
+
+  ![Search type selection](~/diagnostics/images/search-type-selection.png)
+
 ### Indexed fields
 
-For crash reports:
+For crash and error reports:
 
 - User ID
 - Method
@@ -44,7 +48,7 @@ For crash reports:
 - Model
 - OS Version
 
-For crash groups:
+For crash and error groups:
 
 - Method
 - Class
@@ -52,7 +56,6 @@ For crash groups:
 
 ## Considerations
 
-- The search functionality is available just for crashes data (errors cannot be searched today).
 - Only symbolicated crashes are searchable; you must upload the symbols to search for them.
 - The maximum number of matching reports we display is 100.
 - For now, search results show the last 30 days of data, regardless of the retention settings.
