@@ -28,7 +28,8 @@ To sign your iOS builds, upload a provisioning profile (.mobileprovision) and yo
 1. Enable the automatic signing option in Xcode. Refer to [setting up Xcode to automatically manage your provisioning profiles](https://developer.apple.com/library/content/qa/qa1814/_index.html)
    ![Xcode provisioning name](images/xcode-8-provisioning-profile-name-outlier.jpg)
 2. Push the project's changes into your repository.
-3. Upload the new provisioning profile Xcode has generated to App Center when [configuring a branch](~/build/ios/first-build.md).
+3. Get the generated provisioning profile from `~/Library/MobileDevice/Provisioning Profiles/`
+4. Upload the new provisioning profile Xcode has generated to App Center when [configuring a branch](~/build/ios/first-build.md).
 
 ## Getting a certificate from Apple Developer Center
 1. On the **Certificates, IDs & Profile** page, click on **Certificates**.
