@@ -14,7 +14,7 @@ ms.service: vs-appcenter
 We announced in 2017 that HockeyApp features and functionality would move to Visual Studio App Center. A single solution for continuously building, testing, releasing, and monitoring your apps. We’ve spent the last year bringing HockeyApp’s Distribution, Crash Reporting, and Analytics services to App Center, where they join new services exclusive to App Center: Build, Test, and Push Notifications. We continued to build additional features - such as iOS auto-provisioning and public app store integrations - that makes App Center even better than HockeyApp. Because HockeyApp’s distribution, crash reporting, and analytics services are now available in App Center, HockeyApp will be retired on November 16, 2019.
 
 > [!TIP]
-> Find a detailed roadmap about the progress and remaining feature gaps in our [pulic repository on GitHub](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp).
+> Find a detailed roadmap about the progress and remaining feature gaps in our [public repository on GitHub](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp).
 
 ## The three stages of the transition
 
