@@ -24,6 +24,7 @@ App Center allows you to continuously export all your Analytics and Diagnostics 
 - New feature set within Application Insights such as filtering and funnels
 
 For Application Insights, data is continuously exported from the moment export is configured along with 2 days of backfilled data.
+With the new updated dashboard in Application Insights, App Center users can get a unified view of both Application and Backend Analytics on one dashboard.
 
 For Blob Storage, data is continuously exported from the moment export is configured along with 28 days of backfilled data.
 
