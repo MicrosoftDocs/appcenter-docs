@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 03/22/2019
+ms.date: 04/22/2019
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.service: vs-appcenter
@@ -51,15 +51,15 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 3. Add google-services.json
 
-* Copy **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
+* Copy the `google-services.json` file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
 * Close and reopen your solution. 
 * The next step depends if you are on Mac or Windows:
-    * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.
+    * On Visual Studio for Mac, open the context menu on the `google-services.json` file then select **GoogleServicesJson** in **Build Action**.
     * On Visual Studio for Windows, select the **google-services.json** file in the Solution explorer. In **Properties > Advanced > Build Action**, select **GoogleServicesJson**.
 
 ### 4. Modify the project's AndroidManifest.xml file
 
-If you're migrating from Google Cloud Messaging to Firebase, your project's **AndroidManifest.xml** file might contain outdated GCM configuration which may cause notification duplication. Edit the file and remove the following lines in the <application> section, if present:
+If you're migrating from Google Cloud Messaging to Firebase, your project's `AndroidManifest.xml` file might contain outdated GCM configuration which may cause notification duplication. Edit the file and remove the following lines in the <application> section, if present:
 
 ```xml
 <application ...>
@@ -82,7 +82,7 @@ If you're migrating from Google Cloud Messaging to Firebase, your project's **An
 
 </application>
 ```
-If your project's **AndroidManifest.xml** already doesn't contain these lines, then there's no additional changes required to the file.
+If your project's `AndroidManifest.xml doesn't contain these lines, then there's no additional changes required to the file.
 
 ### 5. Customize ProGuard configuration
 
@@ -93,15 +93,15 @@ If you're using ProGuard, you must customize the project's configuration for Pus
 > [!NOTE]
 > If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
 
-Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to "ProguardConfiguration."
+Add an empty file to your Xamarin.Android project named *proguard.cfg*. Set the build action to **ProguardConfiguration**.
 
 ![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
 
 #### 5.2. Add customization to ProGuard configuration file
 
-In your Xamarin.Android project, add the following line to your `proguard.cfg` file:
+In your Xamarin.Android project, add the following line to the project's `proguard.cfg` file:
 
-```
+```text
 -dontwarn com.microsoft.appcenter.**
 -dontwarn com.google.android.gms.**
 -keep class com.google.firebase.provider.FirebaseInitProvider
@@ -113,7 +113,7 @@ In your Xamarin.Android project, add the following line to your `proguard.cfg` f
 
 ### Additional setup
 
-If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must add this in the activity's `onNewIntent` method:
 
 ```csharp
         protected override void OnNewIntent(Android.Content.Intent intent)
