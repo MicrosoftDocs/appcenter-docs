@@ -59,7 +59,7 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 4. Modify the project's AndroidManifest.xml file
 
-Edit the project's **AndroidManifest.xml** file, then insert the following lines **inside** the <application> section:
+If you're migrating from Google Cloud Messaging to Firebase, your project's **AndroidManifest.xml** file might contain outdated GCM configuration which may cause notification duplication. Edit the file and remove the following lines in the <application> section, if present:
 
 ```xml
 <application ...>
@@ -82,6 +82,7 @@ Edit the project's **AndroidManifest.xml** file, then insert the following lines
 
 </application>
 ```
+If your project's **AndroidManifest.xml** already doesn't contain these lines, then there's no additional changes required to the file.
 
 ### 5. Customize ProGuard configuration
 
