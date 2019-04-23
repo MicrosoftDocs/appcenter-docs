@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 04/17/2019
+ms.date: 04/23/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -34,11 +34,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Language and Runtime
 
-- Java 1.7.0_80
-- Java 1.8.0_202
-- Java 9.0.4
-- Java 10.0.2
-- Java 11.0.2
+- java 1.7 : OpenJDK Runtime Environment (Zulu 7.29.0.5-CA-macosx) (build 1.7.0_222-b08)
+- java 1.8 : OpenJDK Runtime Environment (Zulu 8.38.0.13-CA-macosx) (build 1.8.0_212-b04) (default)
+- java 11 : OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
+- java 12 : OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
 - Node.js 6.17.0
 - Node.js v8.11.3
 - PowerShell 6.2.0
@@ -46,16 +45,16 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Python 3.7.3
 - Ruby 2.6.2p47
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.12.3
+- Go 1.12.4
 - Miniconda 4.5.11
-- MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.8 3.7.2
+- MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
 
 ### Package Management
 
 - Bundler 2.0.1
 - Carthage 0.33.0
 - CocoaPods 1.6.1
-- Homebrew 2.1.0
+- Homebrew 2.1.1
 - NPM 3.10.10
 - Yarn 1.15.2
 - NuGet 4.7.0.5148
@@ -64,8 +63,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Project Management
 
-- Apache Maven 3.6.0
-- Gradle 5.3.1
+- Apache Maven 3.6.1
+- Gradle 5.4
 
 ### Utilities
 
