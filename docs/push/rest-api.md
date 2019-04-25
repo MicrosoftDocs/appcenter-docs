@@ -186,11 +186,23 @@ You can create groups (audiences) based on the device properties and custom prop
 | less than or equal to     |    `<=`   |     `le`     |
 | greater than or equal to  |    `>=`   |     `ge`     |
 
+The App Center SDK captures the following device properties:
+
++ Application Version (`appVersion`)
++ Country (`carrierCountry`)
++ Device OS version (`deviceOsVersion`) - populates with API level for Android using `osApiLevel`, and `osVersion` on iOS
++ DeviceModel (`model`)
++ Language (`locale`)
++ OEM (`oemName`)
++ Screen Size (`screenSize`)
+
+Refer to the App Center Analytics console to values collected for these properties.
+
 Here is an example of an audience based on a device property where country is `United States`:
 
 ```JSON
 {
-  "definition": "CarrierCountry eq 'US'",
+  "definition": "carrierCountry eq 'US'",
   "description": "Users in the United States"
 }
 ```
