@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications using the App Center
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 02/15/2019
+ms.date: 04/30/2019
 ms.topic: article
 ms.assetid: 4db077ee-b9bf-4dc7-ac21-e8ecc8ee840e
 ms.service: vs-appcenter
@@ -58,8 +58,9 @@ When you're done populating the form, click the **Next >** button to continue.
 When sending notifications through ACP, you can target destination devices (notification recipients) in the following ways:
 
 + **All registered devices**: Sends notifications to all registered devices. Depending on the size of your target audience, this could take a long time to complete.
-+ **Custom devices list**: Sends notifications to up to 20 devices (using the install IDs for the target devices). When you select this option, populate the input field with a list of the Install IDs for the devices you want to send the notification to, separating IDs with commas.
 + **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. See [Audiences](#audiences) below for additional information.
++ **Device list**: Sends notifications to up to 20 devices (using the install IDs for the target devices). When you select this option, populate the input field with a list of the Install IDs for the devices you want to send the notification to, separating IDs with commas.
++ **User**: 
 
 In the wizard's **Target** panel, make the selection that makes the most sense for your campaign.
 
@@ -76,7 +77,7 @@ When you're done, App Center returns to the Campaigns list; select (click on) th
 
 ## Audiences
 
-Audiences allow you define a segment of your app's user base using a set of properties (both pre-defined and custom) and send them targeted notifications. App Center allows you to create multiple audiences in your app project (5 for the Free plan, and up to 200 for the Advanced plan) and stores them so you can use them with multiple campaigns.
+Audiences allow App Center users to define a segment of an app's user base using a set of properties (both pre-defined and custom) and send them targeted notifications. App Center allows customers to create multiple audiences in an app project (up to 200 audiences per app with a maximum of 1,000 devices per audience) and stores them for easy reuse.
 
 There are two types of properties you can use to define audiences:
 
@@ -134,7 +135,7 @@ To create an Audience from the Audiences page:
 
 To create an Audience from the Campaign Wizard
 
-1. Create a Campaign using the instructions provided in [Creating a notification](#creating-a-notification).
+1. Create a Campaign using the instructions provided in [Create a notification](#create-a-notification).
 2. Navigate to the Campaign's **Target** page
 
 When defining an audience:
@@ -180,7 +181,11 @@ To delete an Audience:
 
 You can also open the Audience for editing, then in the upper-right corner of the page, click the three vertical dots and select **Delete audience** from the menu that appears.
 
-### Limitations
+## Send to user
+
+
+
+## Limitations
 
 + App Center limits Audiences to a maximum of 1,000 devices. If you create an audience targeting more than 1,000 devices, App Center Push sends notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
 + The maximum number of Audiences for any App Center app project is 200.

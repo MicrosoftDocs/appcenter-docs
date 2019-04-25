@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: amchew
 ms.author: amchew
-ms.date: 01/24/2019
+ms.date: 04/04/2019
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: api
 
 # API Documentation
 
-Explore the App Center API Service with [swagger](https://openapi.appcenter.ms).
+Explore the App Center API Service through the [App Center API Swagger](https://openapi.appcenter.ms).
 
 ## <a name="section1"/>Acquiring an App Center API token
 
@@ -94,6 +94,7 @@ The App Center CLI requires Node.js version 8 or higher.
     ```shell
     npm install -g appcenter-cli
     ```
+
 3. After completing the CLI installation, execute the following command:
 
     ```shell
