@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 04/17/2019
+ms.date: 04/26/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,10 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **April 26, 2019**
+- **Build support for Xcode 10.2.1**
+    - Added support for building your apps with Xcode 10.2.1. The Xcode 10.2.1 IDE is available for native iOS, native macOS, Xamarin.iOS and React Native iOS apps.
 
 ### **April 17, 2019**
 - **Updated Visual Studio for Mac:**
