@@ -17,9 +17,12 @@ Each build is run on a separate, clean virtual machine and no other user has acc
 
 ## Image Changes
 
-**We switched to using CocoaPods 1.6.1.**
+**We switched to using Java Azul OpenJDK**
 
-You may face an issue with pod install due to old dependencies in your pod file. In that case, you need to update your pod file with newer dependencies or rollback to CocoaPods 1.5.3 using this [post-clone script](https://github.com/Microsoft/appcenter-build-scripts-examples/tree/master/general/cocoapods-rollback)
+The following Java versions are available on the VM image: 7, 8, 11, 12.
+Java 9 and 10 were deprecated.
+
+Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overloaded by complex licensing, end-user restrictions, and lack of long-term support. In this image change, we replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems. Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
 
 ## Operating System
 
@@ -83,6 +86,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
+- Xcode 10.2.1 (10E1001)
 - Xcode 10.2 (10E125)
 - Xcode 10.1 (10B61)
 - Xcode 10 (10A255)
@@ -118,6 +122,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.4                  | iphoneos11.4 |
 | iOS 12.0                  | iphoneos12.0 |
 | iOS 12.1                  | iphoneos12.1 |
+| iOS 12.2                  | iphoneos12.2 |
 | iOS Simulator 10.3        | iphonesimulator10.3 |
 | iOS Simulator 11.0        | iphonesimulator11.0 |
 | iOS Simulator 11.1        | iphonesimulator11.1 |
@@ -126,6 +131,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS Simulator 11.4        | iphonesimulator11.4 |
 | iOS Simulator 12.0        | iphonesimulator12.0 |
 | iOS Simulator 12.1        | iphonesimulator12.1 |
+| iOS Simulator 12.2        | iphonesimulator12.2 |
 | tvOS 10.2                 | appletvos10.2 |
 | tvOS 11.0                 | appletvos11.0 |
 | tvOS 11.1                 | appletvos11.1 |
@@ -134,6 +140,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS 11.4                 | appletvos11.4 |
 | tvOS 12.0                 | appletvos12.0 |
 | tvOS 12.1                 | appletvos12.1 |
+| tvOS 12.2                 | appletvos12.2 |
 | tvOS Simulator 10.2       | appletvsimulator10.2 |
 | tvOS Simulator 11.0       | appletvsimulator11.0 |
 | tvOS Simulator 11.1       | appletvsimulator11.1 |
@@ -142,6 +149,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS Simulator 11.4       | appletvsimulator11.4 |
 | tvOS Simulator 12.0       | appletvsimulator12.0 |
 | tvOS Simulator 12.1       | appletvsimulator12.1 |
+| tvOS Simulator 12.2       | appletvsimulator12.2 |
 | watchOS 3.2               | watchos3.2 |
 | watchOS 4.0               | watchos4.0 |
 | watchOS 4.1               | watchos4.1 |
@@ -149,6 +157,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS 4.3               | watchos4.3 |
 | watchOS 5.0               | watchos5.0 |
 | watchOS 5.1               | watchos5.1 |
+| watchOS 5.2               | watchos5.2 |
 | watchOS Simulator 3.2     | watchsimulator3.2 |
 | watchOS Simulator 4.0     | watchsimulator4.0 |
 | watchOS Simulator 4.1     | watchsimulator4.1 |
@@ -156,6 +165,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS Simulator 4.3     | watchsimulator4.3 |
 | watchOS Simulator 5.0     | watchsimulator5.0 |
 | watchOS Simulator 5.1     | watchsimulator5.1 |
+| watchOS Simulator 5.2     | watchsimulator5.2 |
 
 ### Installed Simulators
 
@@ -219,7 +229,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.4    | 15F79    |
 | iOS 12.0    | 16A5288q |
 | iOS 12.1    | 16B91    |
-| iOS 12.2    | 16E226    |
+| iOS 12.2    | 16E226   |
 | tvOS 10.2   | 14W260   |
 | tvOS 11.1   | 15J580   |
 | tvOS 11.2   | 15K104   |
@@ -355,7 +365,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (10.5-inch)
 - iPad (6th generation)
 
-#### iOS 12.1
+#### iOS 12.1, 12.2
 
 - iPhone 5s
 - iPhone 6
@@ -387,7 +397,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Apple TV 1080p
 
-#### tvOS 11.0, 11.1, 11.2, 11.3, 11.4, 12.0, 12.1
+#### tvOS 11.0, 11.1, 11.2, 11.3, 11.4, 12.0, 12.1, 12.2
 
 - Apple TV
 - Apple TV 4K
@@ -409,7 +419,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Apple Watch Series 3 - 38mm
 - Apple Watch Series 3 - 42mm
 
-#### watchOS 5.0, 5.1
+#### watchOS 5.0, 5.1, 5.2
 
 - Apple Watch Series 2 - 38mm
 - Apple Watch Series 2 - 42mm
@@ -555,6 +565,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.8.0.0
 - 12.6.0.25
 - 12.2.1.16
 - 12.2.1.11
