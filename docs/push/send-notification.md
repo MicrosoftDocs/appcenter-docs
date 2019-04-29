@@ -147,8 +147,8 @@ When defining an audience:
 When defining a Rule:
 
 + Select an available property from the property list (App Center shows all device properties and any custom properties you defined in your app)
-+ Select the **is** or **is not** conditional from the list of options
-+ Select a value from the list of options that appear (for keyword properties like country) or enter a string value
++ Select the **is** or **is not** conditional from the list of options, or the mathematical operator (`>`, `<`, `>=`, `<=`, etc.)
++ Select a value from the list of options that appear (for keyword properties like country) or enter a string or numeric value (depending on the property type)
 
 As you add rules, App Center calculates the audience size for your current selection, showing percentage of your total population and an estimate for the number of devices targeted by the Audience.
 

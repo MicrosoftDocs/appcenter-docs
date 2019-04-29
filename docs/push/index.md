@@ -36,6 +36,9 @@ Configuring Push for your application project is as simple as:
 
 For additional information, refer to [Configuring the Push Service](~/push/service-config.md).
 
+> [!NOTE]
+> When Google announced deprecation of the Google Cloud Messaging service, we updated the SDK and backend to support this change. You should not have to make any changes to your app to support Google's change. To learn more, refer to this [Help Center article](https://intercom.help/appcenter/push/google-gcm-to-fcm-migration).
+
 ## Configuring Your Application for Push
 
 To configure your application to handle push notifications, you’ll add the App Center SDK to your application to manage device registration, then write the code needed to process notifications when they arrive. The instructions for doing this varies depending on the target platform. For additional information, refer to the App Center Push SDK platform documentation:
