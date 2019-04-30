@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 04/23/2019
+ms.date: 04/29/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -46,11 +46,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - PowerShell 6.2.0
 - Python 2.7.16
 - Python 3.7.3
-- Ruby 2.6.2p47
+- Ruby 2.6.3p62
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12.4
-- Miniconda 4.5.11
+- Miniconda 4.6.14
 - MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
+- MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
 
 ### Package Management
 
@@ -73,16 +74,16 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Curl 7.64.1 (libcurl/7.64.1 SecureTransport zlib/1.2.11)
 - Git 2.21.0
-- Git LFS 2.7.1
+- Git LFS 2.7.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.11.1
 - GNU parallel 20190322
 
 ### Tools
 
-- Fastlane 2.120.0
+- Fastlane 2.121.1
 - App Center CLI 1.1.15
-- Azure-CLI 2.0.62
+- Azure-CLI 2.0.63
 
 ## Xcode
 
@@ -191,12 +192,18 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Retina
 - iPad Air
 - iPad Air 2
+- iPad Air (3rd generation)
+- iPad mini 2
+- iPad mini 3
+- iPad mini 4
+- iPad mini (5th generation)
 - iPad (5th generation)
 - iPad Pro (9.7-inch)
 - iPad Pro (10.5-inch)
 - iPad Pro (11-inch)
 - iPad Pro (12.9-inch)
 - iPad Pro (12.9-inch) (2nd generation)
+- iPad Pro (12.9-inch) (3rd generation)
 - iPad (6th generation)
 - Apple TV 1080p
 - Apple TV 4K
@@ -378,12 +385,39 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPhone 8
 - iPhone 8 Plus
 - iPhone X
+- iPhone XS
+- iPhone XS Max
+- iPhone XR
+- iPad Air
+- iPad Air 2
+- iPad (5th generation)
+- iPad Pro (9.7-inch)
+- iPad Pro (12.9-inch)
+- iPad Pro (12.9-inch) (2nd generation)
+- iPad Pro (10.5-inch)
+- iPad (6th generation)
+- iPad Pro (11-inch)
+- iPad Pro (12.9-inch) (3rd generation)
+
+#### iOS 12.2
+
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPhone 7
+- iPhone 7 Plus
+- iPhone SE
+- iPhone 8
+- iPhone 8 Plus
 - iPhone X
 - iPhone XS
 - iPhone XS Max
 - iPhone XR
 - iPad Air
 - iPad Air 2
+- iPad Air (3rd generation)
 - iPad (5th generation)
 - iPad Pro (9.7-inch)
 - iPad Pro (12.9-inch)
@@ -547,7 +581,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.0.2.23
+- 8.0.4.0
 
 ### Mono
 
@@ -582,7 +616,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
-- 9.2.0-5
+- 9.2.3-0
 - 9.1.8-0
 - 9.0.0-20
 - 9.0.0-18
