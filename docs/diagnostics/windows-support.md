@@ -1,10 +1,10 @@
 ---
 title: Windows Support
-description: A overview of App Center's Windows support
+description: An overview of App Center's Windows support
 keywords: crashes, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 01/17/2019
+ms.date: 05/01/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -12,6 +12,10 @@ ms.custom: analytics
 ---
 
 # Windows Support
+
+> [!IMPORTANT]
+> Our team is looking to improve App Center's Windows support around Summer 2019. Follow our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
+
 
 ## Universal Windows Platform
 
@@ -55,20 +59,20 @@ You also might notice some features you see in other platforms are missing for y
 
 - A full symbolication experience that allows you to upload symbols in App Center. To upload symbols for your UWP crashes, you must submit your app to the Microsoft store and submit your symbols filed to Microsoft Dev Center.
 - Number of users affected per crash group.
-- Ability to add annotations and keep track of notes and other improtant information for your crash groups.
+- Ability to add annotations and keep track of notes and other important information for your crash groups.
 - Ability to mark crash groups as open, closed, or ignored.
 - Ability to attach, view and download one binary and one text attachment to your crash reports.
 - Crash report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
 - Ability to download crash reports.
 
 
-### Submiting your app to the Microsoft Store
+### Submitting your app to the Microsoft Store
 
 To submit your app through the Microsoft Store, you must create an app package file and submit the package to [Microsoft Dev Center](https://developer.microsoft.com/en-us/windows). In creating your package file, you can include symbol files to upload to Dev Center. This will allow App Center to display symbolicated stack traces. 
 
 Follow the [Windows packaging documentation](https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps#create-an-app-package-upload-file) to package your app. 
 
  
-## WinRT, WPF, and Silverlight 
+## WinForms, WinRT, WPF, and Silverlight 
 
-App Center doesn’t currently support WinRT, WPF, Silverlight or any other Windows platforms. The team is committed to supporting WPF in the future and possibly other platforms as well. If you have any feedback or requests, please reach out to us using the blue chat button in the lower-right corner of any App Center page.
+App Center doesn’t currently support WinForms, WinRT, WPF, Silverlight or any other Windows platforms. The team is committed to supporting WPF and WinForms for diagnostics, distribution and analytics in the future and possibly other platforms as well. Find more details in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please comment in the [App Center Github repo](https://github.com/Microsoft/appcenter) or reach out to us using the blue chat button in the lower-right corner of any App Center page.
