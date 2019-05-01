@@ -64,7 +64,7 @@ If you're migrating from Google Cloud Messaging to Firebase, your project's **An
 ```xml
 <application ...>
     
-    <!-- Add these lines -->
+    <!-- remove these lines -->
     <receiver
         android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
         android:exported="false" />
@@ -78,10 +78,11 @@ If you're migrating from Google Cloud Messaging to Firebase, your project's **An
             <category android:name="${applicationId}" />
         </intent-filter>
     </receiver>
-    <!-- end of section to add -->
+    <!-- end of section to remove -->
 
 </application>
 ```
+
 If your project's **AndroidManifest.xml** doesn't contain these lines, then there are no additional changes required to the file.
 
 ### 5. Customize ProGuard configuration
