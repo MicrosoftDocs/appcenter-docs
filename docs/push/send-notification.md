@@ -60,7 +60,7 @@ When sending notifications through ACP, you can target destination devices (noti
 + **All registered devices**: Sends notifications to all registered devices. Depending on the size of your target audience, this could take a long time to complete.
 + **Audiences**: Sends notifications to a segment of your app's registered device audience based on a set of device and custom properties. See [Audiences](#audiences) below for additional information.
 + **Device list**: Sends notifications to up to 20 devices (using the install IDs for the target devices). When you select this option, populate the input field with a list of the Install IDs for the devices you want to send the notification to, separating IDs with commas.
-+ **User**: 
++ **User**: Send notifications to all of the registered devices for up to 100 users. The user identity value used can be set using the App Center SDK or the App Center Auth service.
 
 In the wizard's **Target** panel, make the selection that makes the most sense for your campaign.
 
@@ -183,11 +183,12 @@ You can also open the Audience for editing, then in the upper-right corner of th
 
 ## Send to user
 
-
+To send notifications to specific users, follow the instructions in [Push to User](~/push/push-to-user.md).
 
 ## Limitations
 
 + App Center limits Audiences to a maximum of 1,000 devices. If you create an audience targeting more than 1,000 devices, App Center Push sends notifications to the first 1,000 devices that match the audience criteria, and skip all remaining devices (failing silently).
++ The Push to User feature limits notifications to 100 users.
 + The maximum number of Audiences for any App Center app project is 200.
 + You can define a maximum of 60 custom properties per app project.
 + Audiences match only devices that have a valid push registrations. For that reason, testing Audiences on an iOS simulator will fail.

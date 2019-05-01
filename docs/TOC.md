@@ -167,6 +167,7 @@
 ### [Xamarin.Android](sdk/push/xamarin-android.md)
 ### [Xamarin.Forms](sdk/push/xamarin-forms.md)
 ## [Sending Push Notifications](push/send-notification.md)
+## [Push to User](push/push-to-user.md)
 ## [Using the REST API](push/rest-api.md)
 ## [Tips and Tricks](push/tips.md)
 ## [Troubleshooting](push/troubleshooting.md)
