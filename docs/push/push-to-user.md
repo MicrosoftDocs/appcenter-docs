@@ -96,6 +96,10 @@ When all of the targeted users are in the list, click the **Next>** button to co
 > [!NOTE]
 > The Push to User feature limits notifications to 100 users and up to a maximum of 1,000 target devices.
 
+If you're using the Push to User feature and see the error message listed in the following figure, this indicates that your App Center user account doesn't have **Read** access to the Azure AD B2C tenant configured in App Center Auth. If you believe that your App Center account does have the correct access, log out of the App Center portal and log back in and try it again. For information about how to configure access, please refer to the App Center Auth documentation.
+
+![App Center Push Authorization Error](~/push/images/push-to-user-access-error.png)
+
 ### SDK set identity
 
 To send a notification to one or more users, the app must set the User ID through the SDK, and keep a copy of the identity later in order to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later. Collect up to 100 user identifiers, build them into a comma-separated list, and paste them into the input field shown in the following figure.
