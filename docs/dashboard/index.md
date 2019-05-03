@@ -1,8 +1,8 @@
 ---
 title: Using App Center
 description: Managing your App Center account and settings
-author: winnieli1208
-ms.author: yuli1
+author: blparr
+ms.author: blparr
 ms.date: 09/12/2018
 ms.topic: article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0

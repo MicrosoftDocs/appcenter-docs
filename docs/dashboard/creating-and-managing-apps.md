@@ -2,9 +2,9 @@
 title: Creating and managing apps
 description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
-author: joemellin
-ms.author: joemel
-ms.date: 12/12/2018
+author: blparr
+ms.author: blparr
+ms.date: 04/30/2019
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -19,6 +19,10 @@ To create an app:
 1. Log in to [Visual Studio App Center](https://appcenter.ms)
 2. Click the **Add new** dropdown in the upper-right corner of the page, then choose **Add new app**.
 3. Populate the panel that appears with information about the new app.
+
+## Release Type
+
+Select one of the suggested release types: Alpha, Beta, Enterprise, Production or Store. You can also use a custom release type by selecting the 'Custom' field. This custom release type must be a single word, alphanumeric, starting with a capital letter or number, followed by lowercase or numbers.
 
 ## Uploading an app icon
 
