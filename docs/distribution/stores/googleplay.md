@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/19/2018
+ms.date: 05/02/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -18,14 +18,14 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 
 * Google requires the first version of your Google Play application to be published to production through the Google console.
 * A Google Play Developer account. If you do not have one, you can sign-up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
-* Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google API's on your behalf.
+* Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google APIs on your behalf.
 * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
 
 For more information, review [How to use the Google Play console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
 
 ## Linking your API Project
 
-Before you can access the API, you must link your Google Play Console to an API project. In most cases, we recommend that you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
+To access the Google API, you must link your Google Play Console to a Google API project. In most cases, we recommend that you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
 
 **Creating a new API project**
 
@@ -54,35 +54,39 @@ Under **Service Accounts**, click the **Create Service Account** button.
 
   ![Google Play: Create a service account button highlighted](~/distribution/images/image2.png)
 
-Follow the instructions on the dialog to create your service account.
+In the instructions, click the link to the [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace).
 
   ![Google Play: Create Service Account instructions](~/distribution/images/image3.png)
 
-In the instructions, click the link to the [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace). On the page, the opens, click the **CREATE SERVICE ACCOUNT** button.
+Click the **CREATE SERVICE ACCOUNT** button, on the newly opened page.
 
   ![Google Play: Service Accounts](~/distribution/images/image4.png)
 
-The **Create service account** dialog opens.
+The **Create service account** page opens.
 
   ![Google Play: Create Service Account Dialog](~/distribution/images/image5.png)
 
-Choose a name for the new Service Account, and click the **Select a role** drop-down menu. Select **Project**, then **Owner** (full access to the integration).
+Choose a name for the new Service Account, and click **Create**.
 
-  ![Google Play: Service Account Role Selection](~/distribution/images/image6.png)
+![Google Play: Choose Project -> Owner as role](~/distribution/images/image6.png)
 
-Select (check) **Furnish a new private key**, then select the **JSON Key Type** option.
+Click the **Select a role** in the drop-down menu. Select **Project**, then **Owner**. Navigate to the next step by clicking **Continue**.
 
-  ![Google Play: Furnish Private Key](~/distribution/images/image7.png)
+On the new page click **+ Create Key (optional)** and a modal appears.
 
-Click the **Create** button to complete the service account creation. Since you have chosen a JSON Key Type, a file with a `.json` extension downloaded on your system; this file is required to publish your application.
+![Google Play: Click + Create Key to generate a JSON file](~/distribution/images/image7.png)
+
+Select **JSON** and click **CREATE** and a file with the `.json` extension will download to your system; this file will be used in App Center to establish the connection to Google Play.
+
+![Google Play: Set key type as JSON](~/distribution/images/image8.png)
 
 Once you've created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
 
-  ![Google Play: Service Account Created](~/distribution/images/image8.png)
+![Google Play: Service Account Created](~/distribution/images/image9.png)
 
-Click **Grant Access** to provide the service account the necessary rights to perform actions. You should now be able to access the API through the service account. For more information on OAuth 2.0, review [Using OAuth 2.0 for Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).
+Close the window and the new service account shows on the original page. In the next section, you will learn how to connect App Center with Google Play.
 
-The following steps explain how to set up the connection between App Center and Google Play.
+![Google Play: Original screen with new service account](~/distribution/images/image10.png)
 
 ## Step 1: Create a Google Play connection in App Center
 
@@ -90,22 +94,22 @@ The following steps explain how to set up the connection between App Center and 
 2. In the middle of the page, click on the **Connect to Store** button.
 3. Select **Google Play** store.
 4. Click on **Next**.
-5. Upload the **private key JSON** file which you downloaded while creating the service account. If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google Play Developer console as per the [prerequisite section above](#prerequisites).
+5. Upload the **private key JSON** file, which you downloaded while creating the service account. If the JSON fields are edited to incorrect values, the store creation might fail. Make sure you have the service account linked to your Google Play Developer console as per the [prerequisite section above](#prerequisites).
 6. Once the file is uploaded, click **Connect**.
 7. A Google Play connection should now be visible with the three tracks, Production, Alpha, and Beta in the **Stores** home page. Setting up this connection is a one time process for an app in App Center.
 
 ## Step 2: Publish your APK to the Google Play Store
 
-1. From the **Stores** home page select any of the tracks created above.
+1. From the **Stores** home page, select any of the tracks created above.
 2. Click on **Publish to Store** on the button in the upper-right corner.
 3. Upload the app package. A few points to note:
    * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
-   * Google Play Store supports application packages up to a maximum of 100 MB. If the application exceeds 100 MB, use the Expansion files to support the application package by uploading those directly in the google play developer console as we currently don't support Expansion files in App Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
+   * Google Play Store supports application packages up to a maximum of 100 MB. If the application exceeds 100 MB, use the Expansion files to support the application package by uploading those directly in the Google Play Developer Console as we currently don't support Expansion files in App Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
    * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
    * The version of the .apk must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
    * Google API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
-4. After uploading your package, you should be able to see some details of the application. Click **Next**.
+4. After uploading your package, you can see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the store details page will show as **Submitted.**
-6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Note that Google could take up to 24 hours to show up the app on the Play store.
+6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Google could take up to 24 hours to show up the app on the Play store.
 7. In case of a failure with publishing by Google, app owner will receive a notification to the registered google mail.
