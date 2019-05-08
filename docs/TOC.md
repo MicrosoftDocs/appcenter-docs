@@ -158,6 +158,14 @@
 ### [Xamarin](sdk/auth/xamarin.md)
 ## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
 
+# [Data](data/index.md)
+
+## [Getting Started](data/getting-started.md)
+### [Android](sdk/data/android.md)
+### [iOS](sdk/data/ios.md)
+### [Xamarin](sdk/data/xamarin.md)
+## [Understanding Cosmos DB](data/understanding-cosmosdb.md)
+
 # [Push](push/index.md)
 
 ## [Configure the Push Service](push/service-config.md)
@@ -213,6 +221,10 @@
 ### [Unity](sdk/crashes/unity.md)
 ### [UWP](sdk/crashes/uwp.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
+## Data
+### [Android](sdk/data/android.md)
+### [iOS](sdk/data/ios.md)
+### [Xamarin](sdk/data/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
