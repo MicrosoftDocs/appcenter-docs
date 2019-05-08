@@ -1,18 +1,21 @@
 ---
-title: App Center Distribute for iOS
-description: Using in-app updates in App Center Distribute
-keywords: sdk, distribute
-author: elamalani
-ms.author: emalani
-ms.date: 06/08/2017
+title: App Center Auth for iOS
+description: Using Auth in App Center
+keywords: sdk, auth
+author: amchew
+ms.author: achew
+ms.date: 02/20/2019
 ms.topic: article
-ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57566
+ms.assetid: ee09ce87-2661-4503-bc09-7c6b8c2018fe
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
+dev_langs:
+ - swift
+ - objc
 ---
 
-# App Center Distribute – In-app updates
+# App Center Auth manual integration
 
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
@@ -28,5 +31,5 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 5. Add the SDK framework to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework**, **AppCenterDistribute.framework** and **AppCenterDistributeResources.bundle** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
+   * Now drag and drop **AppCenter.framework** and **AppCenterAuth.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.

@@ -54,7 +54,7 @@ If you wish to manually integrate the module, follow this [documentation link](~
 
 ### 2. Start App Center Distribute
 
-In order to use App Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+App Center only uses the specific modules you invoke in your application. You must explicitly call each of them when starting the SDK.
 
 #### 2.1 Add the import for App Center Distribute
 
@@ -86,6 +86,9 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 #### 2.3 Modify your **Info.plist**
 
+> [!NOTE]
+> If you've previously configured App Center Auth, the `URL types` key may already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.
+
 1. In the project's **Info.plist** file, add a new key for `URL types` by clicking the '+' button next to "Information Property List" at the top. If Xcode displays your **Info.plist** as source code, refer to the tip below.
 2. Change the key type to Array.
 3. Add a new entry to the array (`Item 0`) and change the type to Dictionary.
@@ -94,18 +97,18 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 6. Under `URL Schemes` > `Item 0`, change the value to `appcenter-{APP_SECRET}` and replace `{APP_SECRET}` with the App Secret of your app.
 
 > [!TIP]
-> If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `${APP_SECRET}`:
+> If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of `{APP_SECRET}`:
 > ```xml
 > <key>CFBundleURLTypes</key>
->	<array>
->		<dict>
->			<key>CFBundleURLSchemes</key>
->			<array>
->				<string>appcenter-${APP_SECRET}</string>
->			</array>
->		</dict>
->	</array>
->	```
+> <array>
+> 	<dict>
+> 		<key>CFBundleURLSchemes</key>
+> 		<array>
+> 			<string>appcenter-{APP_SECRET}</string>
+> 		</array>
+> 	</dict>
+> </array>
+> ```
 
 ## Customize or localize the in-app update dialog
 
@@ -287,9 +290,9 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the application delegate itself. You may want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist file**.
+1. Open the project's **Info.plist file**.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
-3. Add `openURL` callback in your `AppDelegate` file.
+3. Add the `openURL` callback in the project's `AppDelegate` file.
 
 ```objc
 - (BOOL)application:(UIApplication *)application

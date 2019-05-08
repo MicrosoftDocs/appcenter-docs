@@ -151,6 +151,13 @@
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
+# [Auth](auth/index.md)
+## [Getting Started](auth/getting-started.md)
+### [Android](sdk/auth/android.md)
+### [iOS](sdk/auth/ios.md)
+### [Xamarin](sdk/auth/xamarin.md)
+## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
+
 # [Push](push/index.md)
 
 ## [Configure the Push Service](push/service-config.md)
@@ -193,6 +200,10 @@
 ### [Unity](sdk/analytics/unity.md)
 ### [UWP](sdk/analytics/uwp.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
+## Auth
+### [Android](sdk/auth/android.md)
+### [iOS](sdk/auth/ios.md)
+### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [Cordova](sdk/crashes/cordova.md)
