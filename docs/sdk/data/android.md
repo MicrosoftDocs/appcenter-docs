@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 05/07/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -82,11 +82,13 @@ Android Studio automatically suggests the required import statement once you add
 ```java
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.data.Data;
+import com.microsoft.appcenter.utils.async.AppCenterConsumer;
 ```
 
 ```kotlin
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.data.Data
+import com.microsoft.appcenter.utils.async.AppCenterConsumer
 ```
 
 ## Defining a Model
@@ -185,26 +187,66 @@ Next, we're going to read a document using the `read` method. This method takes 
 Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
 
 ```java
-User fetchedUser = Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS).get().getDeserializedValue();
+Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS).thenAccept(new AppCenterConsumer<DocumentWrapper<User>>() {
+
+    @Override
+    public void accept(DocumentWrapper<User> userDocumentWrapper) {
+        if (userDocumentWrapper.getError() == null) {
+            User fetchedUser = userDocumentWrapper.getDeserializedValue();
+        } else {
+
+            /* Display or handle the error. */
+        }
+    }
+});
 ```
 
 ```kotlin
-val fetchedUser = Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS).get().getDeserializedValue()
+Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccept(AppCenterConsumer<DocumentWrapper<User>> { userDocumentWrapper ->
+    if (userDocumentWrapper.error == null) {
+        val fetchedUser = userDocumentWrapper.deserializedValue
+    } else {
+
+        /* Display or handle the error. */
+    }
+})
 ```
 
 The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
 
 ```java
-User fetchedUser = Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS, 
-    ReadOptions.createInfiniteCacheOptions()).get().getDeserializedValue();
+Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS, ReadOptions.createInfiniteCacheOptions()).thenAccept(new AppCenterConsumer<DocumentWrapper<User>>() {
+
+    @Override
+    public void accept(DocumentWrapper<User> userDocumentWrapper) {
+        if (userDocumentWrapper.getError() == null) {
+            User fetchedUser = userDocumentWrapper.getDeserializedValue();
+        } else {
+
+            /* Display or handle the error. */
+        }
+    }
+});
 ```
 
 ```kotlin
-val fetchedUser = Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, 
-    ReadOptions.createInfiniteCacheOptions()).get().getDeserializedValue()
+Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptions.createInfiniteCacheOptions()).thenAccept { userDocumentWrapper ->
+    if (userDocumentWrapper.error == null) {
+        val fetchedUser = userDocumentWrapper.deserializedValue
+    } else {
+
+        /* Display or handle the error. */
+    }
+}
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
+
+[!include[](../android-see-async.md)]
+
+> [!NOTE]
+> Calling `get()` on any `AppCenterFuture` object returned by any `Data` API on the UI thread will cause a deadlock.
+> Always use `thenAccept` to make sure the code runs in background. Calling `get()` is safe only if you are already in a worker thread.
 
 ## Replace a Document
 
@@ -313,7 +355,7 @@ Data.list(User.class, DefaultPartitions.USER_DOCUMENTS).thenAccept( new AppCente
      @Override
      public void accept(PaginatedDocuments<DocumentObject> documentWrappers) {
         // Do something here
-    }
+     }
 });
 ```
 
@@ -322,6 +364,6 @@ Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccept( new Ap
      @Override
      public void accept(PaginatedDocuments<DocumentObject> documentWrappers) {
         // Do something here
-    }
+     }
 });
 ```

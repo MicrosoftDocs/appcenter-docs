@@ -4,7 +4,7 @@ description: How to configure App Center data for Xamarin
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 05/07/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
 ms.service: vs-appcenter
@@ -122,7 +122,7 @@ public class User {
     public String Name { get; set; }
     public String Email { get; set; }
     public String PhoneNumber { get; set; }
-    public String Id = Guid.NewGuid().ToString(); //generates random id
+    public Guid Id { get; set; } = Guid.NewGuid(); //generates random id
 }
 ```
 
@@ -150,7 +150,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 - **T document:** This is the object itself. This will be the object inserted into your database. For `User`, it would be an instance of the `User` class.
 
-- **String partition:** The partition that the document will live in. You will most likely be using the `Data.DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document will live in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 > [!NOTE]
 > Public documents are read-only.
@@ -159,7 +159,7 @@ Now, let's create our first document:
 
 ```csharp
 User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, Data.DefaultPartitions.UserDocuments)
+await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments)
 ```
 
 This code snippet creates a document and inserts the details of the `user` object within it.
@@ -168,10 +168,10 @@ Now, let's take a step further. Say there's the chance of no connectivity when t
 
 ```csharp
 User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, Data.DefaultPartitions.UserDocuments, Data.WriteOptions.createInfiniteCacheOptions());
+await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
-This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `createInfiniteCacheOptions()` will cause this object to be cached indefinitely rather than the default one day.
+This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `new WriteOptions(TimeToLive.Infinite)` will cause this object to be cached indefinitely rather than the default one day.
 
 You can also specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
 
@@ -181,18 +181,18 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `Data.DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.id, Data.DefaultPartitions.UserDocuments);
+var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments);
 ```
 
 The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
 
 ```csharp
-var fetchedUser =Data.ReadAsync<User>(user.id, Data.DefaultPartitions.UserDocuments, Data.ReadOptions.createInfiniteCacheOptions());
+var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
@@ -207,18 +207,18 @@ Let's say Jim wanted to change his email. This action could be possible through 
 
 - **Class\<T\> documentType:** This is a reference to the class type of the object you're storing in the document. For `User`, it would be `User.Class`.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `Data.DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
 user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.id, user, Data.DefaultPartitions.UserDocuments);
+await Data.ReplaceAsync(user.id, user, DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the replacement document for offline persistence:
 
 ```csharp
 user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.Id, user, Data.DefaultPartitions.UserDocuments, Data.WriteOptions.createInfiniteCacheOptions());
+await Data.ReplaceAsync(user.Id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -229,17 +229,17 @@ In order to delete a document, you need to specify the partition type and the do
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `Data.DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
-await Data.DeleteAsync<User>(user.Id, Data.DefaultPartitions.UserDocuments);
+await Data.DeleteAsync<User>(user.Id, DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the deleted document for offline persistence:
 
 ```csharp
 ...
-await Data.DeleteAsync<User>(user.id, Data.DefaultPartitions.UserDocuments, Data.WriteOptions.createInfiniteCacheOptions());
+await Data.DeleteAsync<User>(user.id, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -250,11 +250,11 @@ Lastly, there is our list functionality. This is used to fetch a list of documen
 
 - **Class\<T\> documentType:** This is a reference to the class type of the of object you're storing in the document. For `User`, it would be `User.Class`.
 
-- **String partition:** The partition that the document(s) live in. You will most likely be using the `Data.DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document(s) live in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
 ...
-var result = await Data.ListAsync<User>(Data.DefaultPartitions.UserDocuments);
+var result = await Data.ListAsync<User>(DefaultPartitions.UserDocuments);
 ```
 
 This will return a page of the documents that exist within a given user partition that align with the `User` class model.
@@ -279,7 +279,7 @@ The following code snippet displays how to use pagination:
 
 ```csharp
 var page = new List<User>();
-var result = await Data.ListAsync<User>(Data.DefaultPartitions.UserDocuments);
+var result = await Data.ListAsync<User>(DefaultPartitions.UserDocuments);
 page.AddRange(result.CurrentPage.Items.Select(a => a.DeserializedValue));
 ```
 
