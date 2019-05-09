@@ -43,7 +43,7 @@ The App Center SDK supports setting a **user ID** that is used to augment crash 
 [MSAppCenter setUserId:@"your-user-id"];
 ```
 ```swift
-MSAppCenter.setUserId("your-user-id");
+MSAppCenter.setUserId("your-user-id")
 ```
 After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
