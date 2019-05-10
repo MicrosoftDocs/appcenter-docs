@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/01/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -161,7 +161,7 @@ To present the sign-in UI to the user, call the `SignInAsync` method:
 ```csharp
 using Microsoft.AppCenter.Auth;
 
-async void SignIn()
+async Task SignInAsync()
 {
     try
     {
