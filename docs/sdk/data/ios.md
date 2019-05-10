@@ -48,7 +48,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 - Add the data service to your Podfile and run `pod install`
 
 ```ruby
-pod 'AppCenter/MSData'
+pod 'AppCenter/Data'
 ```
 
 ### 2. Start App Center Data
