@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -82,11 +82,12 @@ App Center Crashes provides callbacks for developers to perform additional actio
 
 ### <a name="process"></a> Processing crashes in JavaScript
 
-During `react-native link`, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. You need to answer
-to process in Javascript for any of the `Crashes.setListener` methods to work as expected.
+In order for your `Crash.setListener` methods to work as expected you need to check if your application configured properly.
 
-All the different callbacks of the event listener are discussed one by one
-in this document, but you need to set one event listener that define all callbacks at once.
+1. Open the project's `ios/YourAppName/AppDelegate.m` file and verify that you have `[AppCenterReactNativeCrashes register];` instead of `[AppCenterReactNativeCrashes registerWithAutomaticProcessing];`.
+2. Open the project's `android/app/src/main/res/values/strings.xml` file and verify that `appCenterAnalytics_whenToSendCrashes` is set to `ASK_JAVASCRIPT`.
+
+All the different callbacks of the event listener are discussed one by one in this document, but you need to set one event listener that define all callbacks at once.
 
 ### Should the crash be processed?
 
@@ -105,13 +106,13 @@ Crashes.setListener({
 ```
 
 > [!NOTE]
-> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+> To use that feature you need to configure your application properly for the Crash service.
 > 
-> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+> This feature depends on [Processing crashes in JavaScript](#process).
 
 ### Ask for the users' consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you should get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
 
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
@@ -136,7 +137,7 @@ Crashes.setListener({
 });
 ```
 
-If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
+If you return `true`, your app must obtain (using your own code) the user's permission and update the SDK with the result using the following API:
 
 ```javascript
 import Crashes, { UserConfirmation } from 'appcenter-crashes';
@@ -148,15 +149,15 @@ Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND);
 ```
 
 > [!NOTE]
-> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+> To use that feature you must configure your application properly for the Crash service.
 > 
-> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+> This feature depends on [Processing crashes in JavaScript](#process).
 
 ### Get information about the sending status for a crash log
 
 At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
 
-To do that you have to define an event listener in your code as in the following example:
+To do this, you must define an event listener in your code as shown in the following example:
 
 ```javascript
 Crashes.setListener({
@@ -178,16 +179,16 @@ Crashes.setListener({
 All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only `onBeforeSending`.
 
 > [!NOTE]
-> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+> To use that feature you need to configure your application properly for the Crash service.
 > 
-> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+> This feature depends on [Processing crashes in JavaScript](#process).
 
 > [!NOTE]
-> If `Crashes.setListener` is called more than once, the last one wins--it overrides listeners previously set by `Crashes.setListener`.
+> If `Crashes.setListener` is called more than once, the last one wins; it overrides listeners previously set by `Crashes.setListener`.
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
@@ -206,7 +207,7 @@ Crashes.setListener({
 
 The `fileName` parameter is optional (can be `null`) and is used only in the App Center portal. From a specific crash occurrence in the portal, you can see attachments and download them. If you specified a file name, that will be the file name to download, otherwise the file name is generated for you.
 
-In case you want to setup the `getErrorAttachments` callback to work with ES2017 async/await functions, you can return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an async fashion:
+To setup the `getErrorAttachments` callback to work with ES2017 async/await functions, return a fulfilled Promise instead. The following example attaches a text and an image to a crash in an asynchronous fashion:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
@@ -228,9 +229,9 @@ Crashes.setListener({
 ```
 
 > [!NOTE]
-> To use that feature you need to have answered **Processed in JavaScript by user** when executing `react-native link` for the Crash service configuration.
+> To use that feature you need to configure your application properly for the Crash service.
 > 
-> This feature is thus dependent on [Processing crashes in JavaScript](#process).
+> This feature depends on [Processing crashes in JavaScript](#process).
 > 
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.

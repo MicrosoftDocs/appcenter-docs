@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 04/03/2019
+ms.date: 05/08/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -107,42 +107,9 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     And then retry running `react-native link`.
 
-2. A set of prompts will appear asking for additional information. The first will ask for the App Secret, which enables App Center to map this app to the right user account. You can always skip the prompts and come back to this later. 
-
-    ```NA
-    What secret does your Android app use? [None]
-
-    What secret does your iOS app use? [None]
-    ```
-
-    If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
-
-    The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually.](~/sdk/analytics/react-native.md#wait-for-js-to-enable-app-center-analytics)
-
-    ```NA
-    For the Android app, should user tracking be enabled automatically? (Use arrow keys)
-        ❯ Enable Automatically
-          Enable in JavaScript
-
-    For the iOS app, should user tracking be enabled automatically? (Use arrow keys)
-        ❯ Enable Automatically
-          Enable in JavaScript
-    ```
-
-    Finally it will ask whether or not to send crash reports automatically. [Learn more about processing on crash reports in JS](~/sdk/crashes/react-native.md#customize-your-usage-of-app-center-crashes).
-
-    ```NA
-    For the Android app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
-        ❯ Automatically
-          Processed in JavaScript by user
-
-    For the iOS app, should crashes be sent automatically or processed in JavaScript before being sent? (Use arrow keys)
-        ❯ Automatically
-          Processed in JavaScript by user
-    ```
-
     > [!NOTE]
     > App Center SDK does not set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    
     > ```JSON
     > "setupFiles": [
     >    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
@@ -155,8 +122,9 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     > [!NOTE]
     > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
 
-    > [!TIP]
-    > If you want to change your answers from the Analytics or Crash prompts later, just run `react-native link` again. The **secret** is prompted only once. If you need to update the secret value after the initial prompt, you must edit **android/app/src/main/assets/appcenter-config.json** in Android or **ios/{YourAppName}/AppCenter-Config.plist** on iOS.
+2. Edit the project's `android/app/src/main/assets/appcenter-config.json` and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
+
+3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
 
 ### 3.2 [iOS only] Integrate the iOS SDK without react-native link
 
@@ -233,34 +201,42 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 7. Add the SDK frameworks to the project in Xcode:
 
    * Make sure the Project Navigator is visible (⌘+1).
-   * Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that **AppCenter.framework** and **AppCenterReactNativeShared.framework** are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+   * Drag and drop the **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** files from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that the **AppCenter.framework** and **AppCenterReactNativeShared.framework** files are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
 8. Link AppCenter React Native plugins projects to your app's project:
 
    * Make sure the Project Navigator is visible (⌘+1).
    * For each AppCenter React Native plugin navigate to the folder containing source code. Paths respectively will be
-     * /node_modules/appcenter/ios
-     * /node_modules/appcenter-analytics/ios
-     * /node_modules/appcenter-crashes/ios
-     * /node_modules/appcenter-push/ios
+     * `/node_modules/appcenter/ios`
+     * `/node_modules/appcenter-analytics/ios`
+     * `/node_modules/appcenter-crashes/ios`
+     * `/node_modules/appcenter-push/ios`
 
    * Drag and drop `.xcodeproj` files from the Finder into Xcode's Project Navigator. Typically under **Libraries** group.
 
 9. Link libraries for AppCenter React Native plugins.
    Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section add new items referencing target libraries added on the previuos step: 
-   * libAppCenterReactNative.a
-   * libAppCenterReactNativeAnalytics.a
-   * libAppCenterReactNativeCrashes.a
-   * libAppCenterReactNativePush.a
+   * `libAppCenterReactNative.a`
+   * `libAppCenterReactNativeAnalytics.a`
+   * `libAppCenterReactNativeCrashes.a`
+   * `libAppCenterReactNativePush.a`
 
 10. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
+<<<<<<< HEAD
+   
+   * `$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative`
+   * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
+   * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
+   * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
+=======
 
    * $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
    * $(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics
    * $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
    * $(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush
+>>>>>>> origin/master
 
 11. Modify your app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
@@ -309,7 +285,6 @@ react-native run-ios
 > [!TIP]
 > You can launch it on an **iOS simulator** or **iOS device** by specifying the iOS device name in `react-native run-ios --device "myDeviceName"`.
 
-
 You may build and launch your Android application by the following command:
 
 ```shell
@@ -317,15 +292,15 @@ react-native run-android
 ```
 
 > [!TIP]
-> You can launch it on an **android emulator** or **android device** by specifying the device id in `react-native run-android --deviceId "myDeviceId"` (`deviceId` from `adb devices` command).
+> You can launch it on an android emulator or android device by specifying the device id in `react-native run-android --deviceId "myDeviceId"` (`deviceId` from `adb devices` command).
 
 ### 4.2 Build and run your application from Xcode or Android Studio
 
-For iOS, open your **ios/{appname}.xcworkspace** or **ios/{appname}.xcodeproj** in Xcode and build from there.
+For iOS, open your project's `ios/{appname}.xcworkspace` or `ios/{appname}.xcodeproj` file in Xcode and build from there.
 
 > [!NOTE]
-> If you linked App Center automatically via `react-native link` (as in step 3.1), you should open **ios/{appname}.xcworkspace** in Xcode. Because App Center CocoaPods dependencies only works with `xcworkspace` not `xcodeproj`, and **ios/{appname}.xcodeproj** won't have App Center CocoaPods dependencies linked.
+> If you linked App Center automatically via `react-native link` (as in step 3.1), you should open the project's `ios/{appname}.xcworkspace` file in Xcode. Because App Center CocoaPods dependencies only works with `xcworkspace` not `xcodeproj`, and the `ios/{appname}.xcodeproj` file won't have App Center CocoaPods dependencies linked.
 
 For Android, import your **android** project in Android Studio and build from there.
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.
+You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.
