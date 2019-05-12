@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   ms.service: vs-appcenter
 abstract:
-  description: <a href="https://appcenter.ms/">Visual Studio App Center</a> brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services, and engage with users using the Push service.
+  description: <a href="https://appcenter.ms/">Visual Studio App Center</a> brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App the Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services and engage with users using the Push service.
   menu:
     items:
     - href: https://status.appcenter.ms
