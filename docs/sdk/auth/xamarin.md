@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/08/2019
+ms.date: 05/11/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -126,6 +126,27 @@ To use the sign-in, you must add the following element to the project's **Androi
 ```
 
 Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) (and remove the curly braces), e.g. `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
+
+#### Proguard
+
+If you're using ProGuard, you must customize the project's configuration for Auth.
+
+##### Create a ProGuard configuration file
+
+> [!NOTE]
+> If you don't use ProGuard or if you already have a ProGuard configuration file in your project, you may skip this section.
+
+Add an empty file to your Xamarin.Android project named **proguard.cfg**. Set the build action to "ProguardConfiguration".
+
+![proguard-configuration-build-action](../push/images/proguard-configuration-build-action.png)
+
+##### Add customization to ProGuard configuration file
+
+In your Xamarin.Android project, add the following line to the project's **proguard.cfg** file:
+
+```text
+-dontwarn com.nimbusds.jose.**
+```
 
 ### 4. iOS additional steps
 
