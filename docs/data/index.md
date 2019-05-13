@@ -17,7 +17,7 @@ App Center Data (currently in preview) enables developers to solve some of the b
 
 The Data client SDK enables you to manage both shared data and data that is private for each authenticated user. Apps should work seamlessly regardless of connectivity.  App Center Data supports offline data scenarios. Developers can easily configure their app to perform both offline reads and writes with our SDK.
 
-Cosmos DB is Microsoft's globally distributed multi-model database service. App Center Data is built on top of Cosmos DB, which scales as your user base and number of apps grow. This ensures low latency, high availability, and high scalability for all of your data. If you would like to learn more about how Cosmos DB works within Data, please refer to the [Understanding Cosmos DB docs](/understanding-cosmosdb.md).
+Cosmos DB is Microsoft's globally distributed multi-model database service. App Center Data is built on top of Cosmos DB, which scales as your user base and number of apps grow. This ensures low latency, high availability, and high scalability for all of your data. If you would like to learn more about how Cosmos DB works within Data, please refer to the [Understanding Cosmos DB docs](./understanding-cosmosdb.md).
 
 ![How Data Works](./images/data-architecture.png)
 
