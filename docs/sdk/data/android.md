@@ -47,12 +47,12 @@ The App Center SDK is designed with a modular approach – a developer only need
 
    1. Modify the project app level build.gradle file:
 
-    ```java
-    dependencies {
-      def appCenterSdkVersion = '2.0.0'
-      implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
-    }
-    ```
+        ```groovy
+        dependencies {
+          def appCenterSdkVersion = '2.0.0'
+          implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
+        }
+        ```
 
    2. Make sure to trigger a Gradle sync in Android Studio.
 
