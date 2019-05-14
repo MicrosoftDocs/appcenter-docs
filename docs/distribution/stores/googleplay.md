@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 05/02/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -50,9 +50,9 @@ Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAcce
 
   ![Google Play: configuring API access](~/distribution/images/image1.png)
 
-Under **Service Accounts**, click the **Create Service Account** button.
+Under **Service Accounts**, click the **Create Service Account** button to begin the process.
 
-  ![Google Play: Create a service account button highlighted](~/distribution/images/image2.png)
+  ![Google Play: Create a service account button highlighted](~/distribution/images/create-service-account.jpg)
 
 In the instructions, click the link to the [Google API Console](https://play.google.com/apps/publish/#ApiAccessPlace).
 
@@ -84,7 +84,7 @@ Once you've created the service account on the Google Developers Console, click 
 
 ![Google Play: Service Account Created](~/distribution/images/image9.png)
 
-Close the window and the new service account shows on the original page. In the next section, you will learn how to connect App Center with Google Play.
+Close the window and the new service account shows on the original page. Click the **Grant Access** button to complete the process. In the next section, you will learn how to connect App Center with Google Play.
 
 ![Google Play: Original screen with new service account](~/distribution/images/image10.png)
 
