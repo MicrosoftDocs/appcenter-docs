@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: jwhitedev
 ms.author: jawh
-ms.date: 03/29/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.service: vs-appcenter
@@ -137,7 +137,7 @@ Distribute.IsEnabledAsync();
 
 The in-app updates feature works as follows:
 
-1. This feature will ONLY work with RELEASE builds that are distributed using the **App Center Distribute** service.
+1. This feature will ONLY work with RELEASE builds that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading.
 4. Once the app is installed, and opened for the first time after adding the App Center Distribute SDK, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur on future releases of your app.
