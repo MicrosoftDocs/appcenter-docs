@@ -15,6 +15,9 @@ ms.custom: distribute
 
 CodePush is an App Center cloud service that enables Apache Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using the provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores. All React Native apps created on App Center are CodePush enabled by default, to start using CodePush you simply need to follow the following steps.
 
+> [!NOTE]
+> For Android devices, CodePush will only work on TLS 1.2 compatible devices
+
 ## 1. Install the App Center CLI
 
 You manage most of CodePush's functionality using the App Center CLI. To install the CLI, open a terminal window or command prompt and execute the following command:
