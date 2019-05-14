@@ -39,7 +39,7 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`.
+1. Open the project's app level **build.gradle** file (`app/build.gradle`) and add the following lines after `apply plugin`.
 
     ```groovy
     dependencies {
@@ -51,7 +51,7 @@ The App Center SDK is designed with a modular approach – a developer only need
    > [!NOTE]
    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
-2. Save your `build.gradle` file and make sure to trigger a Gradle sync in Android Studio.
+2. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
 
 ### 2. Start App Center Distribute
 

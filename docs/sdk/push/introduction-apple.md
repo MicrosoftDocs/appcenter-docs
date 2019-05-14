@@ -22,7 +22,7 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 
 #### 2.1 Add the import for App Center Push
 
-Open your **AppDelegate.m** file  in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
+Open the project's **AppDelegate.m** file  in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
 
 ```objc
 @import AppCenter;

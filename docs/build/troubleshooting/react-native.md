@@ -86,7 +86,7 @@ chmod u+x npmpreinstall.sh
 
 The issue can be resolved by allocating more memory with the `--max-old-space-size` flag.
 
-On Android, add the following to your **build.gradle** file:
+On Android, add the following to the project's **build.gradle** file:
 
 ```
 project.ext.react = [

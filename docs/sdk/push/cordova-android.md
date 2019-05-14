@@ -48,7 +48,7 @@ Please check out the [Get started](~/sdk/getting-started/cordova.md) section if 
 
 ## Edit config.xml
 
-Open the Apache Cordova project's `config.xml` file, and add **google-services.json** as resource-file inside platform android:
+Open the Apache Cordova project's **config.xml** file, and add **google-services.json** as resource-file inside platform android:
 
 ```xml
 <platform name="android">

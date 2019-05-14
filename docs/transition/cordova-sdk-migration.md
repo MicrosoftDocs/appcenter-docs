@@ -59,7 +59,7 @@ After (App Center):
 
 1. Configure the App Center SDK
 
-    Open the Apache Cordova project's `config.xml` file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
+    Open the Apache Cordova project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
 
     ```xml
     <preference name="APP_SECRET" value="{App Secret from the previous step}" />

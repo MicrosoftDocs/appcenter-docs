@@ -58,7 +58,7 @@ App Center only uses the specific modules you invoke in your application. You mu
 
 #### 2.1 Add the import for App Center Distribute
 
-Open your **AppDelegate.m** file in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
+Open the project's **AppDelegate.m** file in Objective-C or **AppDelegate.swift** file in Swift and add the following import statements:
 
 ```objc
 @import AppCenter;
@@ -73,7 +73,7 @@ import AppCenterDistribute
 
 Add `MSDistribute` to your `start:withServices:` method to start App Center Distribute service.
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in the project's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
@@ -290,7 +290,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the application delegate itself. You may want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
-1. Open the project's **Info.plist file**.
+1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Add the `openURL` callback in the project's `AppDelegate` file.
 

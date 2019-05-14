@@ -17,7 +17,7 @@ ms.tgt_pltfrm: android
 ## 1. Integrate Firebase in application
 
 - In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**.
-- Download the **google-services.json** file to your Android project's app module (for most projects, it will be the project's **android/app** folder).
+- Download the **google-services.json** file to your Android project's app module (for most projects, it will be the project's `android/app` folder).
 - Modify the **android/build.gradle** file:
 
     ```groovy
@@ -55,4 +55,4 @@ ms.tgt_pltfrm: android
 
 ## 2. Remove Sender ID
 
-Remove the `Push.setSenderId("{Your Sender ID}")` method call from **MainApplication.java**.
+Remove the `Push.setSenderId("{Your Sender ID}")` method call from `MainApplication.java`.

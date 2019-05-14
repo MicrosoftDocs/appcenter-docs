@@ -58,7 +58,7 @@ For an iOS project in Visual Studio for Windows, right click on project and sele
 
 ### Initialize the Xamarin Test Cloud Agent
 
-After adding the Xamarin Test Cloud Agent to the iOS project, you must initialize the Xamarin Test Cloud Agent when the iOS app starts. Edit the `AppDelegate` class and add the following snippet to the `FinishedLaunching` method:
+After adding the Xamarin Test Cloud Agent to the iOS project, you must initialize the Xamarin Test Cloud Agent when the iOS app starts. Edit the **AppDelegate** class and add the following snippet to the `FinishedLaunching` method:
 
 ```csharp
 #if ENABLE_TEST_CLOUD

@@ -88,7 +88,7 @@ After (App Center):
 
 ### 2.2 Replace SDK initialization in the application code
 
-1. Replace the following imports in your `AppDelegate` class.
+1. Replace the following imports in your **AppDelegate** class.
 
    Before:
 
@@ -143,7 +143,7 @@ After (App Center):
    > [!NOTE]
    > App Center SDK does not have equivalents for `[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:liveIdentifier:delegate]`.
 
-1. [Optional] Modify your **Info.plist**  
+1. [Optional] Modify the project's **Info.plist**  
 
     If you intend to use **Distribute**, follow the steps above:
 

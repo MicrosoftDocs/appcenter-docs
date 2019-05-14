@@ -51,7 +51,7 @@ Our linking script supports only the standard way of linking pods, so in order t
 
 1. Run `pod install` from `iOS` folder.
 
-1. Inside `AppDelegate.m`, replace imports:
+1. Inside **AppDelegate.m**, replace imports:
 
     Before:
 

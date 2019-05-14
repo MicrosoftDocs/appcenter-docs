@@ -67,8 +67,8 @@ In order to use App Center, you need to opt in to the module(s) that you want to
 Add the appropriate namespaces before you get started with using our APIs.
 
 * **Xamarin.iOS** - Open your `AppDelegate.cs` and add the lines below the existing using statements
-* **Xamarin.Android** - Open your `MainActivity.cs` and add the lines below the existing using statements
-* **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following using statements
+* **Xamarin.Android** - Open your **MainActivity.cs** and add the lines below the existing using statements
+* **Xamarin.Forms** - Open your **App.xaml.cs** in your shared project and add the following using statements
 
 ```csharp
 using Microsoft.AppCenter;
@@ -90,7 +90,7 @@ AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 
 ##### Xamarin.Android
 
-Open `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
+Open **MainActivity.cs** and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
 AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
@@ -98,7 +98,7 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 
 ##### Xamarin.Forms
 
-For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your **App.xaml.cs** (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
 
 ```csharp
 AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute));

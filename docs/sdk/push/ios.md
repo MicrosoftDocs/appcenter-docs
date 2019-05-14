@@ -62,7 +62,7 @@ For more information, refer to the [Apple documentation](http://help.apple.com/x
 
 Add `MSPush` to your `start:withServices:` method to start App Center Push together with the other services that you want to use in your app.
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in the project's **AppDelegate.m** class in Objective-C or **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
@@ -189,11 +189,11 @@ App Center uses swizzling to automatically forward your application delegate's m
 
 ### Application Delegate
 
-1. Open your project's `Info.plist` file.
+1. Open the project's **Info.plist** file.
 2. Add the `AppCenterAppDelegateForwarderEnabled` key, and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your **AppDelegate** to register for Push notifications.
 
     ```objc
     - (void)application:(UIApplication *)application
@@ -254,7 +254,7 @@ App Center uses swizzling to automatically forward your application delegate's m
 
 ### User Notification Center Delegate
 
-1. Open your project's `Info.plist` file.
+1. Open the project's **Info.plist** file.
 2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
 3. Implement `UNUserNotificationCenterDelegate` callbacks and pass the notification's payload to App Center Push.
 
@@ -319,7 +319,7 @@ To distinguish between notifications received in the foreground and notification
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. In your `AppDelegate` and add import in the top of file:
+1. In your **AppDelegate** and add import in the top of file:
 
     ```objc
     #import <UserNotifications/UserNotifications.h>
@@ -416,7 +416,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. In your `AppDelegate` and add import in the top of file:
+1. In your **AppDelegate** and add import in the top of file:
 
     ```objc
     #import <UserNotifications/UserNotifications.h>

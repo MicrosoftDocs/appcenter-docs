@@ -55,7 +55,7 @@ For more information, refer to the [Apple documentation](http://help.apple.com/x
 
 Add `MSPush` to your `start:withServices:` method to start App Center Push together with the other services that you want to use in your app.
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in Objective-C or  **AppDelegate.swift** class in Swift in the `applicationDidFinishLaunching` method.
+Insert the following line to start the SDK in the project's **AppDelegate.m** class in Objective-C or **AppDelegate.swift** class in Swift in the `applicationDidFinishLaunching` method.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
@@ -164,11 +164,11 @@ var enabled = MSPush.isEnabled()
 
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist file**.
+1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your `AppDelegate` to register for Push notifications.
+    Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your **AppDelegate** to register for Push notifications.
 
     ```objc
     - (void)application:(NSApplication *)application

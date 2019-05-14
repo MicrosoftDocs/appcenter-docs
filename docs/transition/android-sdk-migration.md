@@ -16,7 +16,7 @@ ms.tgt_pltfrm: android
 
 ## 1. Update the libraries
 
-Open your app level **build.gradle** file (**app/build.gradle**) and replace the following line in your `dependencies { ... }` configuration.
+Open the project's app level **build.gradle** file (`app/build.gradle`) and replace the following line in the `dependencies { ... }` configuration.
 
 Before:
 

@@ -94,7 +94,7 @@ App Center Push is started by this call:
   [AppCenterReactNativePush register];
   ```
 
-That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
+That call is added automatically to the project's **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
 Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications.
 
@@ -157,11 +157,11 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
 ### Application Delegate
 
-1. Open your project's `Info.plist` file.
+1. Open the project's **Info.plist** file.
 2. Add the `AppCenterAppDelegateForwarderEnabled` key, and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    You must then add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` and `application:didFailToRegisterForRemoteNotificationsWithError:` callbacks in your `AppDelegate` to register for Push notifications.
+    You must then add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` and `application:didFailToRegisterForRemoteNotificationsWithError:` callbacks in your **AppDelegate** to register for Push notifications.
 
     ```objc
     @import AppCenterPush;
@@ -206,7 +206,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
 ### User Notification Center Delegate
 
-1. Open your project's `Info.plist` file.
+1. Open the project's **Info.plist** file.
 2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
 3. Implement `UNUserNotificationCenterDelegate` callbacks and pass the notification payload to App Center Push.
 
@@ -241,14 +241,14 @@ App Center uses swizzling to automatically forward various delegate methods to A
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
 
 > [!NOTE]
-> To detect if a push notification was received while the app is in foreground, you need to modify your native **AppDelegate** as there is currently no official way in React-Native that supports foreground detection for iOS.
+> To detect if a push notification was received while the app is in foreground, you need to modify the project's native **AppDelegate** as there is currently no official way in React-Native that supports foreground detection for iOS.
 
 To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. In your `AppDelegate` and add import in the top of file:
+1. In your **AppDelegate** and add import in the top of file:
 
     ```objc
     #import <UserNotifications/UserNotifications.h>
@@ -307,7 +307,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
 > [!NOTE]
 > The solution below requires iOS 10 or later.
 
-1. In your `AppDelegate` and add import in the top of file:
+1. In your **AppDelegate** and add import in the top of file:
 
     ```objc
     #import <UserNotifications/UserNotifications.h>

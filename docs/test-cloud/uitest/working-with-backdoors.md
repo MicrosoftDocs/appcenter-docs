@@ -76,7 +76,7 @@ public class InvokeExampleTestFixture()
 
 ### IApp.Invoke on iOS
 
-On iOS, `IApp.Invoke` can call a C# method on the **AppDelegate** according to the following rules:
+On iOS, `IApp.Invoke` can call a C# method on the project's **AppDelegate** according to the following rules:
 
 * The method must be `public`.
 * The method must be adorned with the  [`ExportAttribute`](http://developer.xamarin.com/api/type/Foundation.ExportAttribute/) and the name of the exposed C# method identified. The exposed name must append a *:* (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.

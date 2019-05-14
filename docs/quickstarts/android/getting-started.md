@@ -17,20 +17,23 @@ ms.date: 07/26/2017
 In this tutorial, you will learn how to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
+
 - Create [GitHub account](https://github.com/join).
 - [Download Android Studio](https://developer.android.com/studio/index.html) and [install it on your local machine](https://developer.android.com/studio/install.html).
 
-## Login to GitHub and fork the repository
-1. Login to your [GitHub account](https://github.com/join).
-2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-android).
-3. Click **Fork** at the top right hand corner of the page.
+## Sign in to GitHub and fork the repository
 
+1. Sign in to your [GitHub account](https://github.com/join).
+2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-android).
+3. Click **Fork** at the top-right hand corner of the page.
 
 ## Sign in to App Center
+
 1. Open the [App Center portal](https://appcenter.ms).
-2. Click **Connect with GitHub** and log in, or use another provider.
+2. Click **Connect with GitHub** and sign in, or use another provider.
 
 ## Create a new app in App Center
+
 1. Click **Add new app**.
 
 2. Name the app **Sample Android App**.
@@ -49,7 +52,7 @@ In order for the sample app to send information to App Center, the app secret mu
 
 3. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**
 
-4. In **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the App Center portal.*
+4. In the project's **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the App Center portal.*
 
 ```java
 @Override

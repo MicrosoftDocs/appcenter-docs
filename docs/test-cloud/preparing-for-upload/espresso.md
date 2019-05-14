@@ -17,7 +17,7 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 
 ## 1. Changes to the build system
 
-Add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the `build.gradle` in your project root directory:
+Add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the **build.gradle** in your project root directory:
 
 ```gradle
 allprojects {
@@ -27,7 +27,7 @@ allprojects {
 }
 ```
 
-Add the following dependency in your app module's `build.gradle` file:
+Add the following dependency in your app module's **build.gradle** file:
 
 ```gradle
 androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')

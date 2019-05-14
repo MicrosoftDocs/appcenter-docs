@@ -36,7 +36,7 @@ $ xcrun xcodebuild build-for-testing \
 
 This will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
-`YOUR_WORKSPACE` should point to a `.xcworkspace` file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application. To see the list of schemes defined in your Xcode project, run:
+`YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application. To see the list of schemes defined in your Xcode project, run:
 
 ```shell
 $ xcrun xcodebuild -list

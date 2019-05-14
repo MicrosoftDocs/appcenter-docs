@@ -66,7 +66,7 @@ To run scripts pre-build, add the following file next to the project file in you
 
 The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory. Note that the post-build script will run even if the build fails.
 
-To run scripts post-build, add the following file next to the project file in your repository:
+To run scripts post-build, add the following file next to the project file in the repository:
 
 - **appcenter-post-build.sh** (Bash for iOS & Android)
 

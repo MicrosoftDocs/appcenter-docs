@@ -81,7 +81,7 @@ After (App Center):
 
 ### 2.2 Replace SDK initialization in the application code
 
-1. Replace the following imports in your `AppDelegate` class.
+1. Replace the following imports in your **AppDelegate** class.
 
    Before:
 

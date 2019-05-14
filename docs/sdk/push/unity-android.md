@@ -52,7 +52,7 @@ If you haven't set up the SDK in your application yet, see the instructions in t
 
 You can specify custom defaults for the icon and color that are applied if not already set in the push payload.
 
-Export your Unity project and add the following lines to `application` tag inside the project's `AndroidManifest.xml` file:
+Export your Unity project and add the following lines to `application` tag inside the project's **AndroidManifest.xml** file:
 
 ```xml
 <!-- Set default notification icon and color. -->

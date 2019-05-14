@@ -111,7 +111,7 @@ Xamarin.Forms solutions should follow the instructions described in the guide [A
 <a name="initializing_tests_on_ios"></a>
 ### Initializing Xamarin.UITest on iOS
 
-Add the following snippet to the `FinishedLaunching` method of the `AppDelegate` class:
+Add the following snippet to the `FinishedLaunching` method of the **AppDelegate** class:
 
 ```csharp
 #region Code for starting up the Xamarin Test Cloud Agent

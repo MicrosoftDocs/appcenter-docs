@@ -83,7 +83,7 @@ App Center Crashes provides abilities for developers to perform additional actio
 
 ### Processing crashes in JavaScript
 
-You can configure SDK to send crash reports automatically or process crashes in JavaScript by changing preference `APPCENTER_CRASHES_ALWAYS_SEND` value in `config.xml`. To process crashes in JavaScript set it to `false`.
+You can configure SDK to send crash reports automatically or process crashes in JavaScript by changing preference `APPCENTER_CRASHES_ALWAYS_SEND` value in **config.xml**. To process crashes in JavaScript set it to `false`.
 
 ```xml
 <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
@@ -122,7 +122,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 ```
 
 > [!NOTE]
-> To use this feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in `config.xml` to `false`.
+> To use this feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in **config.xml** to `false`.
 > 
 > This feature is thus dependent on [Processing Crashes](#processing-crashes-in-javascript) in JavaScript.
 
@@ -146,7 +146,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 ```
 
 > [!NOTE]
-> To use that feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in `config.xml` to `false`.
+> To use that feature you need to set `APPCENTER_CRASHES_ALWAYS_SEND` preference value in **config.xml** to `false`.
 > 
 > This feature is thus dependent on [Processing Crashes](#processing-crashes-in-javascript) in JavaScript.
 > 

@@ -105,9 +105,9 @@ In order to use App Center, you need to opt in to the module(s) that you want to
 
 Add the appropriate namespaces before you get started with using our APIs.
 
-* **Xamarin.Android** - Open your `MainActivity.cs` and add the following lines below the existing `using` statements.
+* **Xamarin.Android** - Open your **MainActivity.cs** and add the following lines below the existing `using` statements.
 * **Xamarin.iOS** - Open you `AppDelegate.cs` and add the following lines below the existing `using` statements.
-* **Xamarin.Forms** - Open your `App.xaml.cs` in your shared project and add the following lines below the existing `using` statements:
+* **Xamarin.Forms** - Open your **App.xaml.cs** in your shared project and add the following lines below the existing `using` statements:
 
 ```csharp
 using Microsoft.AppCenter;
@@ -122,7 +122,7 @@ using Microsoft.AppCenter.Crashes;
 > [!NOTE]
 > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK.
 
-Open the project's `MainActivity.cs` file and add the `Start()` call inside the `OnCreate()` method
+Open the project's **MainActivity.cs** file and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));

@@ -24,7 +24,7 @@ The CodePush plugin helps get product improvements in front of your end users in
 In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically rollback. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to [roll back](./cli.md#rolling-back-updates) on the server.
 
 > [!NOTE]
-> Any product changes which touch native code (e.g. modifying your `AppDelegate.m`/`MainActivity.java` file, adding a new plugin) cannot be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
+> Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) cannot be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
 
 ## Supported React Native platforms
 
@@ -191,7 +191,7 @@ And that's it! Isn't RNPM awesome? :)
 
 Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it is responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
 
-1. Open up the `AppDelegate.m` file, and add an import statement for the CodePush headers:
+1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 
     ```objective-c
     #import <CodePush/CodePush.h>
@@ -257,7 +257,7 @@ NSURL *jsCodeLocation;
 #endif
 ```
 
-To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` in the CodePush CLI  and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like `Staging`) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+To let the CodePush runtime know which deployment it should query for updates against, open the project's **Info.plist** file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` in the CodePush CLI  and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like `Staging`) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
 
 ![Deployment list](./images/rn-key-4.png)
 
@@ -271,7 +271,7 @@ CodePush plugin makes HTTPS requests to the following domains:
 - codepush.blob.core.windows.net
 - codepushupdates.azureedge.net
 
-If you want to change the default HTTP security configuration for any of these domains, you have to define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside your **Info.plist** file:
+If you want to change the default HTTP security configuration for any of these domains, you have to define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside the project's **Info.plist** file:
 
 ```xml
 <plist version="1.0">
@@ -440,7 +440,7 @@ public class MyReactActivity extends Activity {
 
 **For React Native v0.19 - v0.28**
 
-Update the `MainActivity.java` file to use CodePush via the following changes:
+Update the **MainActivity.java** file to use CodePush via the following changes:
 
 ```java
 ...
@@ -755,7 +755,7 @@ The [Android Gradle plugin](http://google.github.io/android-gradle-dsl/current/i
 
 To set this up, perform the following steps:
 
-1. Open your app's `build.gradle` file (for example `android/app/build.gradle` in standard React Native projects)
+1. Open the project's app level **build.gradle** file (for example `android/app/build.gradle` in standard React Native projects)
 
 2. Find the `android { buildTypes {} }` section and define `buildConfigField` entries for both your `debug` and `release` build types, which reference your `Staging` and `Production` deployment keys respectively. If you prefer, you can define the key literals in your `gradle.properties` file, and then reference them here. Either way will work, and it's just a matter of personal preference.
 
@@ -815,7 +815,7 @@ protected List<ReactPackage> getPackages() {
 
 **For React Native v0.19 - v0.28**
 
-Open up your `MainActivity.java` file and make the following changes:
+Open up your **MainActivity.java** file and make the following changes:
 
  ```java
  @Override
@@ -838,7 +838,7 @@ And that's it! Now when you run or build your app, your debug builds will automa
 
 If you want to be able to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS nor you will be able to differentiate between the two. You can achieve this by performing the following steps:
 
-1. In your `build.gradle` file, specify the [`applicationIdSuffix`](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
+1. In your **build.gradle** file, specify the [`applicationIdSuffix`](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
 
     ```groovy
     buildTypes {
@@ -860,7 +860,7 @@ And that's it! Refer to [resource merging](http://tools.android.com/tech-docs/ne
 
 ### iOS
 
-Xcode allows you to define custom build settings for each "configuration" (like debug, release), which can then be referenced as the value of keys within the `Info.plist` file (like the `CodePushDeploymentKey` setting). This mechanism allows you to easily configure your builds to produce binaries, which are configured to synchronize with different CodePush deployments.
+Xcode allows you to define custom build settings for each "configuration" (like debug, release), which can then be referenced as the value of keys within the **Info.plist** file (like the `CodePushDeploymentKey` setting). This mechanism allows you to easily configure your builds to produce binaries, which are configured to synchronize with different CodePush deployments.
 
 To set this up, perform the following steps:
 
@@ -878,7 +878,7 @@ To set this up, perform the following steps:
 
 6. Select the **Build Settings** tab
 
-7. Go to **Build Location -> Per-configuration Build Products Path -> Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
+7. Go to **Build Location > Per-configuration Build Products Path > Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
 
    ![BuildFilesPath](./images/rn-ios-9.png)
 
@@ -895,7 +895,7 @@ To set this up, perform the following steps:
 
     *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
 
-10. Open your project's `Info.plist` file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
+10. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
     ![Infoplist](./images/rn-ios-12.png)
 
@@ -910,7 +910,7 @@ Additionally, if you want to give them separate names and/or icons, you can modi
 
 The above section illustrated how you can leverage multiple CodePush deployments in order to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and therefore, only they need a build that knows how to sync with staging. However, if you want to be able to perform A/B tests, or provide early access of your app to certain users, it can prove very useful to be able to dynamically place specific users (or audiences) into specific deployments at runtime.
 
-In order to achieve this kind of workflow, all you need to do is specify the deployment key you want the current user to syncronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's `Info.plist` (iOS) or `MainActivity.java` (Android) files. This allows you to produce a build for staging or production, that is also capable of being dynamically "redirected" as needed.
+In order to achieve this kind of workflow, all you need to do is specify the deployment key you want the current user to syncronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's **Info.plist** (iOS) or **MainActivity.java** (Android) files. This allows you to produce a build for staging or production, that is also capable of being dynamically "redirected" as needed.
 
 ```javascript
 // Imagine that "userProfile" is a prop that this component received
@@ -1056,7 +1056,7 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
 - **checkFrequency** *(codePush.CheckFrequency)* - Specifies when you would like to check for updates. Defaults to `codePush.CheckFrequency.ON_APP_START`. Refer to the [`CheckFrequency`](#checkfrequency) enum reference for a description of the available options and what they do.
 
-- **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the `Info.plist` file (iOS) and `MainActivity.java` file (Android), but this option allows you to override it from the script-side if you need to dynamically use a different deployment.
+- **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the **Info.plist** file (iOS) and **MainActivity.java** file (Android), but this option allows you to override it from the script-side if you need to dynamically use a different deployment.
 
 - **installMode** *(codePush.InstallMode)* - Specifies when you would like to install optional updates (i.e. those that aren't marked as mandatory). Defaults to `codePush.InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 
@@ -1126,7 +1126,7 @@ See [disallowRestart](#codepushdisallowrestart) for an example of how this metho
 codePush.checkForUpdate(deploymentKey: String = null, handleBinaryVersionMismatchCallback: (update: RemotePackage) => void): Promise<RemotePackage>;
 ```
 
-Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that is configured in your `Info.plist` file (iOS), or `MainActivity.java` file (Android), but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "early access" via an easter egg or a user setting switch.
+Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that is configured in your **Info.plist** file (iOS), or **MainActivity.java** file (Android), but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "early access" via an easter egg or a user setting switch.
 
 Second optional parameter `handleBinaryVersionMismatchCallback` is an optional callback function that can be used to notify user if there are any binary update.
 For example consider a use-case where currently installed binary version is 1.0.1 with label(codepush label) v1. Later native code was changed in the dev cycle and binary version was updated to 1.0.2. When code-push update check is triggered we ignore updates having binary version mismatch (because the update is not targeting to the binary version of currently installed app). In this case installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
@@ -1525,11 +1525,11 @@ This enum specifies the state that an update is currently in, and can be specifi
 
 ### Objective-C API Reference (iOS)
 
-The Objective-C API is made available by importing the `CodePush.h` header into your `AppDelegate.m` file, and consists of a single public class named `CodePush`.
+The Objective-C API is made available by importing the `CodePush.h` header into your **AppDelegate.m** file, and consists of a single public class named `CodePush`.
 
 #### CodePush
 
-Contains static methods for retreiving the `NSURL` that represents the most recent JavaScript bundle file, and can be passed to the `RCTRootView`'s `initWithBundleURL` method when bootstrapping your app in the `AppDelegate.m` file.
+Contains static methods for retreiving the `NSURL` that represents the most recent JavaScript bundle file, and can be passed to the `RCTRootView`'s `initWithBundleURL` method when bootstrapping your app in the **AppDelegate.m** file.
 
 The `CodePush` class' methods can be thought of as composite resolvers which always load the appropriate bundle, in order to accommodate the following scenarios:
 
@@ -1551,13 +1551,13 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 - **(NSURL \*)bundleURLForResource:(NSString \*)resourceName withExtension:(NSString \*)resourceExtension**: Equivalent to the `bundleURLForResource:` method, but also allows customizing the extension used by the JS bundle that is looked for within the app binary. This is useful if you aren't naming this file `*.jsbundle` (which is the default convention).
 
-- **(void)overrideAppVersion:(NSString \*)appVersionOverride** - Sets the version of the application's binary interface, which would otherwise default to the App Store version specified as the `CFBundleShortVersionString` in the `Info.plist`. This should be called a single time, before the bundle URL is loaded.
+- **(void)overrideAppVersion:(NSString \*)appVersionOverride** - Sets the version of the application's binary interface, which would otherwise default to the App Store version specified as the `CFBundleShortVersionString` in the **Info.plist**. This should be called a single time, before the bundle URL is loaded.
 
-- **(void)setDeploymentKey:(NSString \*)deploymentKey** - Sets the deployment key that the app should use when querying for updates. This is a dynamic alternative to setting the deployment key in your `Info.plist` and/or specifying a deployment key in JS when calling `checkForUpdate` or `sync`.
+- **(void)setDeploymentKey:(NSString \*)deploymentKey** - Sets the deployment key that the app should use when querying for updates. This is a dynamic alternative to setting the deployment key in your **Info.plist** and/or specifying a deployment key in JS when calling `checkForUpdate` or `sync`.
 
 ### Java API Reference (Android)
 
-The Java API is made available by importing the `com.microsoft.codepush.react.CodePush` class into your `MainActivity.java` file, and consists of a single public class named `CodePush`.
+The Java API is made available by importing the `com.microsoft.codepush.react.CodePush` class into your **MainActivity.java** file, and consists of a single public class named `CodePush`.
 
 #### CodePush
 
@@ -1579,7 +1579,7 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
 
 - **getBundleUrl(String bundleName)** - Returns the path to the most recent version of your app's JS bundle file, using the specified resource name (like `index.android.bundle`). This method has the same resolution behavior as the Objective-C equivalent described above.
 
-- **overrideAppVersion(String appVersionOverride)** - Sets the version of the application's binary interface, which would otherwise default to the Play Store version specified as the `versionName` in the `build.gradle`. This should be called a single time, before the CodePush instance is constructed.
+- **overrideAppVersion(String appVersionOverride)** - Sets the version of the application's binary interface, which would otherwise default to the Play Store version specified as the `versionName` in the **build.gradle**. This should be called a single time, before the CodePush instance is constructed.
 
 ## Example Apps / Starters
 
@@ -1604,7 +1604,7 @@ The `sync` method includes a lot of diagnostic logging out-of-the-box, so if you
 
 Additionally, you can also use any of the platform-specific tools to view the CodePush logs. Simply start up the Chrome DevTools Console, the Xcode Console (iOS), the [macOS Console](https://en.wikipedia.org/wiki/Console_%28OS_X%29#.7E.2FLibrary.2FLogs) (iOS) and/or ADB logcat (Android), and look for messages which are prefixed with `[CodePush]`.
 
-Note that by default, React Native logs are disabled on iOS in release builds, so if you want to view them in a release build, you need to make the following changes to your `AppDelegate.m` file:
+Note that by default, React Native logs are disabled on iOS in release builds, so if you want to view them in a release build, you need to make the following changes to your **AppDelegate.m** file:
 
 1. Add an `#import <React/RCTLog.h>` statement. For RN < v0.40 use: `#import "RCTLog.h"`
 
@@ -1620,7 +1620,7 @@ Now you'll be able to see CodePush logs in release mode, on both iOS or Android.
 |-----------------|-------------------|
 | Compilation Error | Double-check that your version of React Native is [compatible](#supported-react-native-platforms) with the CodePush version you are using. |
 | Network timeout / hang when calling `sync` or `checkForUpdate` in the iOS Simulator | Try resetting the simulator by selecting the `Simulator -> Reset Content and Settings..` menu item, and then re-running your app. |
-| Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your `Info.plist` (iOS), `build.gradle` (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName> --displayKeys` to view the correct keys for your app deployments. |
+| Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your **Info.plist** (iOS), **build.gradle** (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName> --displayKeys` to view the correct keys for your app deployments. |
 | Update not being discovered | Double-check that the version of your running app (like `1.0.0`) matches the version you specified when releasing the update to CodePush. Additionally, make sure that you are releasing to the same deployment that your app is configured to sync with. |
 | Update not being displayed after restart | If you're not calling `sync` on app start (like within `componentDidMount` of your root component), then you need to explicitly call `notifyApplicationReady` on app start, otherwise, the plugin will think your update failed and roll it back. |
 | I've released an update for iOS but my Android app also shows an update and it breaks it | Be sure you have different deployment keys for each platform in order to receive updates correctly |

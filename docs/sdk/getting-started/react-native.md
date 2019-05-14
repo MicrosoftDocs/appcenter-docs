@@ -141,7 +141,7 @@ Do this integration, if you link React modules using relative path inside your P
 
 2. Run `pod install` from your `iOS` folder.
 
-3. Modify your app's `AppDelegate.m` file to include code for starting SDK:
+3. Modify your app's **AppDelegate.m** file to include code for starting SDK:
 
     * Add these lines to import section
 

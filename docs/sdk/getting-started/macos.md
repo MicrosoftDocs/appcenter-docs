@@ -68,7 +68,7 @@ The App Center SDK for macOS can be integrated into your app via [Cocoapods](htt
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
+2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -100,7 +100,7 @@ In order to use App Center, you need to opt in to the service(s) that you want t
 
 **Objective-C**
 
-Open your **AppDelegate.m** file and add the following import statements:
+Open the project's **AppDelegate.m** file and add the following import statements:
 
 ```obj-c
 @import AppCenter;
@@ -110,7 +110,7 @@ Open your **AppDelegate.m** file and add the following import statements:
 
 **Swift**
 
-Open your **AppDelegate.swift** file and add the following import statements:
+Open the project's **AppDelegate.swift** file and add the following import statements:
 
 ```swift
 import AppCenter
@@ -122,7 +122,7 @@ import AppCenterCrashes
 
 **Objective-C**
 
-Insert the following line to start the SDK in your app's **AppDelegate.m** class in the `applicationDidFinishLaunching` method.
+Insert the following line to start the SDK in the project's **AppDelegate.m** class in the `applicationDidFinishLaunching` method.
 
 ```obj-c
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
@@ -130,7 +130,7 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 
 **Swift**
 
-Insert the following line to start the SDK in your app's **AppDelegate.swift** class in the `applicationDidFinishLaunching` method.
+Insert the following line to start the SDK in the project's **AppDelegate.swift** class in the `applicationDidFinishLaunching` method.
 
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])

@@ -70,7 +70,7 @@ App Center Push makes it possible to intercept push notifications but there is s
 > [!NOTE]
 > You only need this step if you disabled method swizzling while setting up [Xamarin.iOS](xamarin-ios.md).
 
-To enable the push event feature, implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+To enable the push event feature, implement `DidReceiveRemoteNotification` in your **AppDelegate** class as follows:
 
 ```csharp
 public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)

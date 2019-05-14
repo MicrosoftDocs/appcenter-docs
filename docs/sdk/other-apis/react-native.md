@@ -42,9 +42,9 @@ await AppCenter.setLogLevel(AppCenter.LogLevel.VERBOSE);
 > 
 > If you wish to increase logging for app startup, use the native App Center setLogLevel APIs.
 > 
-> In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[AppCenterReactNative register];` (or `AppCenterReactNativeAnalytics` or `AppCenterReactNativeCrashes` or `AppCenterReactNativePush`) in **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
+> In iOS, call `[MSAppCenter setLogLevel: MSLogLevelVerbose];` before any call to `[AppCenterReactNative register];` (or `AppCenterReactNativeAnalytics` or `AppCenterReactNativeCrashes` or `AppCenterReactNativePush`) in the project's **AppDelegate.m**. You have to add `@import AppCenter;` if missing in that file.
 > 
-> In Android, call `AppCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in **MainApplication.java**.
+> In Android, call `AppCenter.setLogLevel(android.util.Log.VERBOSE);` before `SoLoader.init` in `onCreate` callback in `MainApplication.java`.
 
 ## Identify installations
 

@@ -71,7 +71,7 @@ The App Center SDK for iOS can be integrated into your app via [Cocoapods](https
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open your `.xcworkspace`.
+2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
 
 > [!NOTE]
 > If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
@@ -101,11 +101,11 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 ## 4. Start the SDK
 
-In order to use App Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 
-Open your **AppDelegate** file and add the following import statements:
+Open the project's **AppDelegate** file and add the following import statements:
 
 ```objc
 @import AppCenter;
@@ -120,7 +120,7 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line to start the SDK in your app's **AppDelegate** class in the `didFinishLaunchingWithOptions` method.
+Insert the following line to start the SDK in the project's **AppDelegate** class in the `didFinishLaunchingWithOptions` method.
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```

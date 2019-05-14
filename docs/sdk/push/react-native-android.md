@@ -52,7 +52,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
     react-native link appcenter-push
     ```
 
-    Those steps modify your project's **MainApplication.java** file, adding `AppCenterReactNativePushPackage` there.
+    Those steps modify the project's `MainApplication.java` file, adding `AppCenterReactNativePushPackage` there.
 
 ## Integrate Firebase in your application
 
@@ -109,7 +109,7 @@ You can set up a listener to be notified whenever a push notification is receive
 
 [!include[](react-native-listener.md)]
 
-If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must override the `onNewIntent` method. Inside the Java code for your launcher activity (typically the `MainActivity.java` file), add the following:
+If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must override the `onNewIntent` method. Inside the Java code for your launcher activity (typically the **MainActivity.java** file), add the following:
 
 ```java
 import com.microsoft.appcenter.push.Push;
@@ -131,7 +131,7 @@ protected void onNewIntent(Intent intent) {
 
 ## Existing Firebase Analytics users
 
-The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the **MainApplication.java** file and add the following before `SoLoader.init`:
+The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

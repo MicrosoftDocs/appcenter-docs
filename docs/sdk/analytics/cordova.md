@@ -117,7 +117,7 @@ This function uses first parameter as success callback which returns a `boolean`
 
 ## Wait for JS to enable App Center Analytics
 
-In some cases, an application may want to ask users whether they want to share analytics information. In that case, you should change preference `APPCENTER_ANALYTICS_ENABLE_IN_JS` to `true` in your `config.xml`
+In some cases, an application may want to ask users whether they want to share analytics information. In that case, you should change preference `APPCENTER_ANALYTICS_ENABLE_IN_JS` to `true` in your **config.xml**
 
 ```xml
 <preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />

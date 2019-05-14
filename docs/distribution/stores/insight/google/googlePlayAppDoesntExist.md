@@ -19,7 +19,7 @@ Log into your Google Play Console account and [make sure your app is published.]
 **How can I fix it?**
 
 * You can publish your app on any track (alpha, beta, or production). Once your app is published in at least one track, App Center will be able to release and upgrade your app for any track.
-* If you don’t know what is you package name, you can find it inside your manifest.json file.
+* If you don’t know what is you package name, you can find it inside the **manifest.json** file.
 
     Example:\
     `package="com.example.myapplication"`

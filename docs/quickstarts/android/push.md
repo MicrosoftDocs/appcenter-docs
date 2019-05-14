@@ -76,11 +76,11 @@ You need a Google Account and use the Firebase console.
   ```
 
   > [!NOTE]
-  > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+  > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word `implementation` by `compile`.
 
 4. Make sure to trigger a Gradle sync in Android Studio.
 
-5. Locate the App Center import statement in **MainActivity.java** and add the push import statement below it:
+5. Locate the App Center import statement in the project's **MainActivity.java** and add the push import statement below it:
 
    ```java
    import com.microsoft.appcenter.AppCenter;

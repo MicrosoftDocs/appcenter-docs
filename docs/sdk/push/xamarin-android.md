@@ -51,7 +51,7 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 3. Add google-services.json
 
-* Copy the `google-services.json` file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
+* Copy the **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
 * Close and reopen your solution. 
 * The next step depends if you are on Mac or Windows:
     * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.

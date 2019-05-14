@@ -101,7 +101,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement two methods to register push notifications
 
-    Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your `AppDelegate` class as follows:
+    Implement the methods `RegisteredForRemoteNotifications` and `FailedToRegisterForRemoteNotifications` in your **AppDelegate** class as follows:
 
     ```csharp
     public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
@@ -122,7 +122,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
 4. Implement the callback to enable push event
 
-    Implement `DidReceiveRemoteNotification` in your `AppDelegate` class as follows:
+    Implement `DidReceiveRemoteNotification` in your **AppDelegate** class as follows:
 
     ```csharp
     public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
@@ -143,7 +143,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 ### User Notification Center Delegate
 
-1. Open your project's `Info.plist` file.
+1. Open your project's **Info.plist** file.
 2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
 3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push.
 
@@ -209,7 +209,7 @@ To distinguish between notifications received in the foreground and notification
     > [!NOTE]
     > If you pass `UNNotificationPresentationOptions.Alert` to the `completionHandler`, the default callback will also be called when the user clicked the notification. In this case, you don't need to call `Push.DidReceiveRemoteNotification` explicitly here to avoid duplication.
 
-2. In your `AppDelegate`, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationCenterDelegate`:
+2. In your **AppDelegate**, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationCenterDelegate`:
 
     ```csharp
     private YourOwnUNUserNotificationCenterDelegate myOwnNotificationDelegate = null;
@@ -277,7 +277,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
     }
     ```
 
-2. In your `AppDelegate`, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationCenterDelegate`:
+2. In your **AppDelegate**, add the following to the `FinishedLaunching(...)` to register your newly created custom `UNUserNotificationCenterDelegate`:
 
     ```csharp
     private YourOwnUNUserNotificationCenterDelegate myOwnNotificationDelegate = null;

@@ -52,7 +52,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
 ## 3. Add the App Center SDK modules
 
-1. Open your app level `build.gradle` file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
+1. Open the project's app level **build.gradle** file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
 
   ```groovy
   dependencies {

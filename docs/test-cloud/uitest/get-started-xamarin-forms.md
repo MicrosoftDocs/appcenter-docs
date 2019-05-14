@@ -175,7 +175,7 @@ There are some additional changes that need to be performed to the iOS applicati
 
     ![Add NuGet Packages](images/get-started-xamarin-forms-07-add-test-cloud-agent-xs.png "Add NuGet Packages")
 
-1. Edit the `FinishedLaunching` method of the **AppDelegate** class to initialize the Xamarin Test Cloud Agent when the iOS application starts, and to set the `AutomationId` property of the views. The `FinishedLaunching` method should resemble the following code example:
+1. Edit the `FinishedLaunching` method of the project's **AppDelegate** class to initialize the Xamarin Test Cloud Agent when the iOS application starts, and to set the `AutomationId` property of the views. The `FinishedLaunching` method should resemble the following code example:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)

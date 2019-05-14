@@ -40,14 +40,14 @@ Before your first build, you must configure the React Native project.
 
 ### 3.1. Project
 
-Select your project’s `package.json`. App Center will automatically extract information from its associated `build.gradle` file, including dependencies, build tools version, build types, and product flavors.
+Select your project’s `package.json`. App Center will automatically extract information from its associated **build.gradle** file, including dependencies, build tools version, build types, and product flavors.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository.
 
 ### 3.2. Build variant
 
-The available build variants will populate from the Build Types and Product Flavors specified in the project's `build.gradle` file. Select which build variant should be built.
+The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle** file. Select which build variant should be built.
 
 ### 3.3. Build triggers
 
@@ -55,7 +55,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.4. Increment version number
 
-When enabled, the version code in the `AndroidManifest.xml` of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
+When enabled, the version code in the **AndroidManifest.xml** of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
 ### 3.5. Launch your successful build on a real device
 
