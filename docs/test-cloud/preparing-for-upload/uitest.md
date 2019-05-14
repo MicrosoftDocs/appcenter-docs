@@ -17,9 +17,6 @@ ms.custom: test
 The steps necessary to prepare an app and its corresponding test suite for upload
 to App Center vary depending on the test framework. The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test.
 
-> [!NOTE]
-> Xamarin.UITest requires NUnit 2.6.3 or 2.6.4 to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
-
 ## Preparing Xamarin.Android Apps
 
 > [!IMPORTANT]
