@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 02/19/2019
+ms.date: 05/01/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -232,3 +232,6 @@ After calling this API, App Center logs  all unhandled exceptions as Issues in t
 ```csharp
 Crashes.ReportUnhandledExceptions(false);
 ```
+
+> [!NOTE]
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
