@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 03/18/2019
+ms.date: 05/09/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
@@ -31,7 +31,7 @@ App Center's webhooks empower users to send automatic notifications to connected
 - Crashes: when a crash group is created
 - Distribute: when a new version is released
 
-App Center sends an HTTP `POST` payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to be able to create and configure the webhooks. We currently support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). 
+App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have have manager or developer permissions in the app to be able to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
 
 ## Getting Started
 

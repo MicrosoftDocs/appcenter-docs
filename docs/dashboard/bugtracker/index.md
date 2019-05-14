@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Jira, Visual Stu
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 02/20/2019
+ms.date: 05/09/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-88
@@ -14,7 +14,7 @@ ms.assetid: 97b6f745-736f-4abc-a85b-88
 
 ## Overview
 
-App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira, Azure DevOps (formerly Visual Studio Team Services (VSTS)), and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
+App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira Cloud, Azure DevOps (formerly Visual Studio Team Services (VSTS)), and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
 
 ## Getting Started
 
@@ -27,9 +27,9 @@ App Center has bug tracker integration for the crashes service. Users can be qui
    1. For Jira:
 
       1. Login with your Jira credentials (username, password and base URL) and click **Add**. Please see here on [how to find your base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html).
-      > Note: If you are using Jira with [Two-Step Verification](https://confluence.atlassian.com/cloud/secure-your-account-with-two-step-verification-939505063.html), create an [API token in Jira](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) and use that as your password.
-      2. Select which Jira projects to integrate the bug tracker with and click **Next**.
-      3. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
+      > Note: Jira has [deprecated basic authentication](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-basic-auth-and-cookie-based-auth/). Instead of typing in your password, you must create an [API token in Jira](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) and use that as your password.
+      1. Select which Jira projects to integrate the bug tracker with and click **Next**.
+      2. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
          - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Jira.
 
              ![How to add a bug tracker for Jira](media/addBugTrackerJira.gif)
