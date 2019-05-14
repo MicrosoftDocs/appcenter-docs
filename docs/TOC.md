@@ -164,7 +164,7 @@
 ### [Android](sdk/data/android.md)
 ### [iOS](sdk/data/ios.md)
 ### [Xamarin](sdk/data/xamarin.md)
-## [Understanding Cosmos DB](data/understanding-cosmosdb.md)
+## [Understanding Cosmos DB](data/understanding-cosmos-db.md)
 
 # [Push](push/index.md)
 

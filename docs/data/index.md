@@ -4,7 +4,7 @@ description: Introduction to the App Center Data Service
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 05/13/2019
 ms.topic: article
 ms.assetid: 82a2eef5-497f-45c3-849d-6b005bfcbb48
 ms.service: vs-appcenter
@@ -13,13 +13,13 @@ ms.custom: MBaaS
 
 # App Center Data
 
-App Center Data (currently in preview) enables developers to solve some of the big problems associated with data. Many apps require data persistence in the cloud, which is the core of what App Center Data offers. App Center Data is a data management service that enables apps to manage, persist, and sync application data in the cloud across different devices and platforms in both online and offline scenarios. 
+App Center Data (currently in preview) enables developers to solve some of the big problems associated with data. Many apps require data persistence in the cloud, which is the core of what App Center Data offers. App Center Data is a data management service that enables apps to manage, persist, and sync application data in the cloud across different devices and platforms in both online and offline scenarios.
 
-The Data client SDK enables you to manage both shared data and data that is private for each authenticated user. Apps should work seamlessly regardless of connectivity.  App Center Data supports offline data scenarios. Developers can easily configure their app to perform both offline reads and writes with our SDK.
+The Data client SDK enables developers to manage both shared data and data that is private for each authenticated user. Apps should work seamlessly regardless of connectivity.  App Center Data supports offline data scenarios. Developers can easily configure their app to perform both offline reads and writes with our SDK.
 
-Cosmos DB is Microsoft's globally distributed multi-model database service. App Center Data is built on top of Cosmos DB, which scales as your user base and number of apps grow. This ensures low latency, high availability, and high scalability for all of your data. If you would like to learn more about how Cosmos DB works within Data, please refer to the [Understanding Cosmos DB docs](./understanding-cosmosdb.md).
+[Cosmos DB](https://azure.microsoft.com/free/cosmos-db) is Microsoft's globally distributed multi-model database service. App Center Data is built on top of Cosmos DB, which scales as your user base and number of apps grow. This ensures low latency, high availability, and high scalability for all of your data. If you would like to learn more about how Cosmos DB works within Data, please refer to the [Understanding Cosmos DB docs](~/data/understanding-cosmos-db.md).
 
-![How Data Works](./images/data-architecture.png)
+![How Data Works](~/data/images/data-architecture.png)
 
 ## How It Works
 
@@ -31,10 +31,10 @@ These collections are made of documents with no schema. Documents are grouped to
 
 The service supports two kinds of documents:
 
-- **Private:** Documents that give read/write access to an authenticated user via AAD B2C
-- **Public:** Documents with read access available to all users (e.g. global settings)
+* **Private:** Documents that give read/write access to an authenticated user via AAD B2C
+* **Public:** Documents with read access available to all users (e.g. global settings)
 
-![How Partitions Work](./images/data-partitions.png)
+![How Partitions Work](~/data/images/data-partitions.png)
 
 Private documents consist of user data. These documents are tied to a user's identity via Azure AD B2C and the user has read and write permissions for those documents.
 
@@ -52,12 +52,12 @@ App Center Data supports offline reads and writes. For reads, all documents are 
 
 ## Key Capabilities  
 
-| Key Features | |
-| ------------ | --- |
-| Provision a new Cosmos DB database | App Center enables you to easily provision a new Cosmos DB database with required prerequisites directly in the Portal |
+| Key Features                           | Description |
+| -------------------------------------- | ----------- |
+| Provision a new Cosmos DB database     | App Center enables you to easily provision a new Cosmos DB database with required prerequisites directly in the Portal |
 | Connect an existing Cosmos DB database | Connect existing CosmosDB databases and associated collections  |
-| Client SDKs | Native Android, iOS, Xamarin (Android and iOS) SDKs that allow you to easily manage both private and public app data |
-| Offline Reads & Writes | Perform Offline Read and Writes in your app, making your app usable in any scenario |
+| Client SDKs                            | Native Android, iOS, Xamarin (Android and iOS) SDKs that allow you to easily manage both private and public app data |
+| Offline Reads & Writes                 | Perform Offline Read and Writes in your app, making your app usable in any scenario |
 
 ## Limitations
 
@@ -80,4 +80,4 @@ Getting started is easy:
 3. Configure the SDK
 4. Add your first document
 
-These steps are discussed in further detail in the [Getting Started](./getting-started.md) documentation.
+These steps are discussed in further detail in the [Getting Started](~/data/getting-started.md) documentation.
