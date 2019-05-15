@@ -76,4 +76,4 @@ There are two types of policies:
 
 App Center Auth preview supports the **Sign up and sign in** [user flow](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#user-flow-versions) or [custom policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom) that contains the sign-in identity task.
 
-Learn more about [user flows](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies) and [custom policies](https://docs.microsoft.com/zure/active-directory-b2c/active-directory-b2c-overview#user-journeys).
+Learn more about [user flows](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies) and [custom policies](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom).
