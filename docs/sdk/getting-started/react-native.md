@@ -224,19 +224,11 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 10. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
-<<<<<<< HEAD
    
    * `$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative`
    * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
    * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
    * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
-=======
-
-   * $(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative
-   * $(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics
-   * $(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes
-   * $(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush
->>>>>>> origin/master
 
 11. Modify your app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
@@ -257,7 +249,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNativePush register];
     ```
 
-11. Create new file with name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+12. Create new file with name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
