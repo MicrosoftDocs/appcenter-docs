@@ -72,7 +72,7 @@ The framework should *not* be linked with the project's iOS application.
 
 ### <a name="carthage" /> Carthage
 
-Install Carthage using the [homebrew dependency manager](http://brew.sh/).
+Install Carthage using the [homebrew dependency manager](https://brew.sh/).
 
 ```shell
 $ brew install carthage

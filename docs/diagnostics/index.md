@@ -14,7 +14,7 @@ ms.custom: diagnostics
 # Diagnostics
 
 > [!IMPORTANT]
-> The Diagnostics service is now Generally Available for all your production apps. For more information, read the [Diagnostics Launch blog post](http://aka.ms/Diagnostics-to-GA).
+> The Diagnostics service is now Generally Available for all your production apps. For more information, read the [Diagnostics Launch blog post](https://aka.ms/Diagnostics-to-GA).
 
 ## Overview
 

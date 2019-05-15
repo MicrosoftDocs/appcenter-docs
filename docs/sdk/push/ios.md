@@ -50,7 +50,7 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 [!include[](ios-apns-setup.md)]
 
-For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 #### [Optional] Enable silent notifications
 

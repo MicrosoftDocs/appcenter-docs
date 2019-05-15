@@ -118,9 +118,9 @@ For mandatory releases, you will see a red dot next to the release icon in your 
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
 [api-token-docs]: ~/api-docs/index.md
 [appcenter-cli]: https://github.com/Microsoft/appcenter-cli
-[POST_releaseUpload]: http://openapi.appcenter.ms/#/distribute/releaseUploads_create
-[PATCH_updateReleaseUpload]: http://openapi.appcenter.ms/#/distribute/releaseUploads_complete
-[PATCH_updateRelease]: http://openapi.appcenter.ms/#/distribute/releases_update
+[POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_create
+[PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_complete
+[PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/en-us/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
 [groups]: https://docs.microsoft.com/en-us/appcenter/distribution/groups

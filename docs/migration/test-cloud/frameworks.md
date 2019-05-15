@@ -135,7 +135,7 @@ We recommend asking yourself the questions:
 
 #### When to migrate to Appium
 
-[Appium](http://appium.io/), is a strong open-source player which is quite mature. Being based on the Selenium/WebDriver APIs and architecture and supporting the same programming languages, it attaches to the large set of Selenium QA engineers and the Selenium ecosystem. Appium is unopinionated about programming language and test runner. However, on-boarding is hard, particularly if you're not already familiar with Selenium. Recently Appium has transitioned away from SauceLabs and onto the jQuery foundation.
+[Appium](https://appium.io/), is a strong open-source player which is quite mature. Being based on the Selenium/WebDriver APIs and architecture and supporting the same programming languages, it attaches to the large set of Selenium QA engineers and the Selenium ecosystem. Appium is unopinionated about programming language and test runner. However, on-boarding is hard, particularly if you're not already familiar with Selenium. Recently Appium has transitioned away from SauceLabs and onto the jQuery foundation.
 
 * **Dev vs QA:** Best suited for QA teams as mobile app developers, unless already familiar and comfortable with the Selenium API tend to feel that it's unproductive and hard to learn (anecdotally).
 * **Cross-Platform:** Supported.

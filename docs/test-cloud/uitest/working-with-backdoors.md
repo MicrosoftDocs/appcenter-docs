@@ -27,7 +27,7 @@ different between iOS and Android.
 On Android, `IApp.Invoke` can be used to invoke a method in the Xamarin.Android application according to the following rules:
 
 * The method must be `public`.
-* The backdoor method must be adorned with the [`Java.Interop.Export`](http://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/) attribute that exposes the name of the backdoor method.
+* The backdoor method must be adorned with the [`Java.Interop.Export`](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/) attribute that exposes the name of the backdoor method.
 * The method may return one of `string`, `Java.Lang.String`, or `void`.
 * The method may accept a parameter which may be a `string`, `int`, or `bool`. 
 * If the method does accept a parameter, it must be provided to `IApp.Invoke`.    
@@ -79,7 +79,7 @@ public class InvokeExampleTestFixture()
 On iOS, `IApp.Invoke` can call a C# method on the project's **AppDelegate** according to the following rules:
 
 * The method must be `public`.
-* The method must be adorned with the  [`ExportAttribute`](http://developer.xamarin.com/api/type/Foundation.ExportAttribute/) and the name of the exposed C# method identified. The exposed name must append a *:* (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
+* The method must be adorned with the  [`ExportAttribute`](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) and the name of the exposed C# method identified. The exposed name must append a *:* (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
 * The method must take a parameter of `NSString`.
 * The method must return `NSString` or void.
 

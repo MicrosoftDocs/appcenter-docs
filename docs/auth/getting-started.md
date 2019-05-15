@@ -97,7 +97,7 @@ Follow the documentation on how to do so for:
    - Make sure that you have completed steps 9-13 of the [previous section](#register-the-application-and-grant-the-application-permissions-on-azure-ad-b2c).
 9. Choose the sign-in policy you'd like to use for this application. You can either choose from the list of **custom policies** or enter the name of the sign-in **user flow** in the text box.
    - <a name="copy-user-flow"/> To get the name of a user flow:
-     - In a separate window, sign in to the [Azure portal](http://portal.azure.com).
+     - In a separate window, sign in to the [Azure portal](https://portal.azure.com).
         - Make sure that you are using the directory that contains your Azure AD B2C tenant by clicking the **Directory + subscription filter** (Book binder icon) in top row and choosing the directory.  
       ![How to switch Azure directories](./images/switch-azure-directory.png)
      - In the top row, type **B2C** in the search bar and select **Azure AD B2C** under Services.      

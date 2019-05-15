@@ -87,7 +87,7 @@ Log in to the App Center portal, select your application, click on the **Push** 
 
      * Click Done to complete this configuration.
 
-For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 #### [Optional] Enable silent notifications
 
