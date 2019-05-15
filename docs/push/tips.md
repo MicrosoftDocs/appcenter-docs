@@ -4,7 +4,7 @@ description: Tips and Tricks for using the App Center Push Service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 02/11/2019
+ms.date: 05/15/2019
 ms.topic: article
 ms.assetid: f0e3bd85-817a-423f-a1ca-b89c487d0180
 ms.service: vs-appcenter
@@ -17,16 +17,102 @@ This document contains tips and tricks for the App Center Push service.
 
 ## Delay showing Push Notifications permission pop-up until the user clicks a button or a certain screen
 
-Execute `AppCenter.Start("{APP-SECRET}", services)` without specifying the Push service. Then, once the user has opted in to receive push notifications, execute `AppCenter.Start(typeof(Push))` to start the Push service.
+Execute `AppCenter.Start("{APP-SECRET}", services)` without specifying the Push service until the user has opted in to receive push notification, opt-in can be checked using iOS APIs.
 
-Note the application doesn't need to send the app secret in the second call to `Start()`
+Then, once the user has opted in to receive push notifications, execute `AppCenter.Start(typeof(Push))` to start the Push service.
+
+Note the application **must not** specify the app secret in the second call to `Start()`.
+
+### Xamarin solution
+
+First, add an opt-in menu or button, once user opt-in, call:
 
 ```csharp
-// call start with app secret WITHOUT Push
-AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));
-
-// then on button click do:
 AppCenter.Start(typeof(Push));
+```
+
+For further launches, the Push service must be started as soon as possible to be able to use the event handler.
+Follow the instructions in the section corresponding to your framework (with or without Xamarin.Forms).
+
+#### With Xamarin.Forms
+
+Modify the project's **App.xaml.cs** file:
+
+```csharp
+// Add this property
+public bool StartPush { get; set; } = true;
+
+protected override void OnStart()
+{
+    AppCenter.Start($"uwp={UwpKey};android={AndroidKey};ios={IosKey}", typeof(Analytics), typeof(Crashes));
+    if (StartPush)
+    {
+        AppCenter.Start(typeof(Push));
+    }
+}
+```
+
+Modify the project's **AppDelegate.cs** file:
+
+```csharp
+// Add this using
+using UserNotifications;
+
+public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
+{
+    Xamarin.Forms.Forms.Init();
+
+    // App is extracted as local variable, your app code probably has it inlined.
+    var app = new App()
+    {
+        StartPush = false
+    };
+    LoadApplication(app);
+    if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+    {
+        var settings = UNUserNotificationCenter.Current.GetNotificationSettingsAsync().ContinueWith(task =>
+        {
+            if (task.Result.AuthorizationStatus == UNAuthorizationStatus.Authorized)
+            {
+                app.StartPush = true;
+            }
+        });
+    }
+    else if (UIApplication.SharedApplication.IsRegisteredForRemoteNotifications)
+    {
+        app.StartPush = true;
+    }
+    return base.FinishedLaunching(uiApplication, launchOptions);
+}
+```
+
+### Without Xamarin.Forms
+
+Modify the project's **AppDelegate.cs** file:
+
+```csharp
+// Add this using
+using UserNotifications;
+
+public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
+{
+    // your existing code before, then add the following block:
+    if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+    {
+        var settings = UNUserNotificationCenter.Current.GetNotificationSettingsAsync().ContinueWith(task =>
+        {
+            if (task.Result.AuthorizationStatus == UNAuthorizationStatus.Authorized)
+            {
+                AppCenter.Start(typeof(Push));
+            }
+        });
+    }
+    else if (UIApplication.SharedApplication.IsRegisteredForRemoteNotifications)
+    {
+        AppCenter.Start(typeof(Push));
+    }
+    return base.FinishedLaunching(uiApplication, launchOptions);
+}
 ```
 
 ## Custom Data in your notifications
