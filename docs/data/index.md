@@ -64,8 +64,8 @@ App Center Data supports offline reads and writes. For reads, all documents are 
 Using App Center Data has a few limitations that you must consider when getting started:
 
 * Existing Cosmos DB databases being connected with App Center Data must use the Cosmos DB Core SQL API.
-* Existing Cosmos DB collections must use `PartitionKey` as the Partition Key. This enables us to handle the logical partitioning for you.
-* Documents must include `document`, `id`, and `PartitionKey` fields for use with App Center Data.
+* Existing Cosmos DB collections **must** use `PartitionKey` as the value of your collections Partition Key. This enables us to handle the partitioning for you. If `PartitionKey` isn't used, linking your database will fail.
+* Documents **must** include `document` and `PartitionKey` fields for use with App Center Data.
 
 ## Pricing
 
@@ -75,9 +75,9 @@ You pay for your throughput and storage used in Cosmos DB. Pricing in Cosmos DB 
 
 Getting started is easy:
 
-1. Connect your Azure subscription
-2. Provision a new CosmosDB account or connect an existing one
-3. Configure the SDK
-4. Add your first document
+1. Connect your Azure subscription.
+2. Provision a new CosmosDB account or connect an existing one.
+3. Configure the SDK.
+4. Add your first document.
 
 These steps are discussed in further detail in the [Getting Started](~/data/getting-started.md) documentation.

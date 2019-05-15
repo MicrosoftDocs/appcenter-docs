@@ -25,7 +25,7 @@ App Center Data is a data management service that lets you manage, persist, and 
     2. Select the **Data** option in the left project navigation pane
     3. Select the **New Database** button and provision a new Cosmos DB database
 
-- (Optional, but recommended) [Set up App Center Auth](TODO - link-to-docs)
+- (Optional, but recommended) [Set up App Center Auth](../../auth/index.md)
     1. Create your Azure AD B2C tenant
     2. Create an application within the Azure AD B2C service
     3. Configure your scope and policy
@@ -199,18 +199,16 @@ Next, we're going to read a document using the `read` method. This method takes 
 Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
 
 ```objc
-User fetchedUser = [[User alloc] init];
-
 [MSData readDocumentWithID:user.identifier
               documentType:[User class]
                  partition:kMSDataUserDocumentsPartition
          completionHandler:^(MSDocumentWrapper *_Nonnull document) {
-               fetchedUser = document.deserializedValue;
+                User fetchedUser = [[User alloc] init];
+                fetchedUser = document.deserializedValue;
          }];
 ```
 
 ```swift
-// TODO should deserialize and assign to variable like android
 var fetchedUser = User()
 MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
   fetchedUser = document.deserializedValue;
