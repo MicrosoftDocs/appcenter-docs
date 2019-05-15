@@ -1,8 +1,8 @@
 ---
-title: "Feedback"
-author: joemel
-ms.author: joemel
-ms.date: 4/9/2019
+title: HockeyApp Feedback
+author: derpixeldan
+ms.author: daadam
+ms.date: 04/09/2019
 ms.topic: article
 ms.assetid: dcaba8de-35a3-431a-9720-ee54f8ff2e42
 ms.service: vs-appcenter
@@ -14,7 +14,7 @@ App Center does not support the [HockeyApp Feedback](https://hockeyapp.net/featu
 
 ## Microsoft Flow & Azure Boards
 
-With Flow + Azure Boards, users can fill out an online form to submit their feedback.  Flow then takes the form submission and autocreates a work item in Azure Boards.  Flow will also autopost the feedback into [Microsoft Teams](https://products.office.com/en-us/microsoft-teams/group-chat-software).
+With Flow + Azure Boards, users can fill out an online form to submit their feedback.  Flow then takes the form submission and auto creates a work item in Azure Boards.  Flow will also autopost the feedback into [Microsoft Teams](https://products.office.com/en-us/microsoft-teams/group-chat-software).
 
 **To start:**
 
