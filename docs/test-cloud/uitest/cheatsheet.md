@@ -103,7 +103,7 @@ namespace MyApp.MyCrossPlatformUITests
 }
 ```
 
-Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](/xamarin/xamarin-forms/deploy-test/uitest-and-test-cloud).
+Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/uitest/get-started-xamarin-forms.md).
 
 > [!NOTE]
 > Xamarin.UITest requires NUnit 2.6.3 or 2.6.4 to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
