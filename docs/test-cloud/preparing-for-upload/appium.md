@@ -13,7 +13,7 @@ ms.custom: test
 
 # Preparing Appium Tests for Upload
 
-The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](http://appium.io/docs/en/about-appium/intro/).
+The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/about-appium/intro/).
 
 Note the following limitations for Appium support:
 
@@ -27,7 +27,7 @@ Note the following limitations for Appium support:
 
 ## Prerequisites
 
-Tests will be run using Maven Surefire, which requires tests to follow [certain naming conventions](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
+Tests will be run using Maven Surefire, which requires tests to follow [certain naming conventions](https://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
 
 ```text
 "**/Test*.java" - includes all of its subdirectories and all Java filenames that start with "Test".
@@ -174,4 +174,4 @@ If you have an automated Continuous Delivery setup where the IPA is having its v
 
 On a shared device cloud, it is important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.  In App Center Test, the app is automatically uninstalled after the completion of your test run. 
 
-It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [here](http://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details. 
+It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.

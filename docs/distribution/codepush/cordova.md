@@ -734,7 +734,7 @@ This plugin is compatible with [PhoneGap Build](https://build.phonegap.com), and
 
 The Cordova community has graciously created some awesome open source apps that can serve as examples for developers that are getting started. The following is a list of OSS Cordova apps that are also using CodePush, and can therefore be used to see how others are using the service:
 
-* [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](http://rangle.io) used for [PhoneGap Day Europe 2016](http://pgday.phonegap.com/eu2016/).
+* [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](https://rangle.io) used for [PhoneGap Day Europe 2016](https://pgday.phonegap.com/eu2016/).
 
 > [!NOTE]
 > If you've developed a Cordova app using CodePush, that is open-source, please let us know. We would love to add it to this list!*

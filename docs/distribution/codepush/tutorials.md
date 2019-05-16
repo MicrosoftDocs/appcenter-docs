@@ -416,7 +416,7 @@ If you had both `Staging` and `Production` users, you could test the full releas
 
 To test the automated workflow, you'll need deploy a "release" version of the test app and push a change to the master branch in order to kick off a build and eventually a release.
 
-You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](http://facebook.github.io/react-native/docs/signed-apk-android.html#content).
+You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content).
 
 Deploy the app per the instructions linked above, do a small code change and commit the change to master.
 

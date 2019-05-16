@@ -36,7 +36,7 @@ ms.service: vs-appcenter
 
 SDKs (open sourced on GitHub)
 
-- [Android SDK](http://github.com/microsoft/appcenter-sdk-android)
+- [Android SDK](https://github.com/microsoft/appcenter-sdk-android)
 
 - [Apple SDK](https://github.com/microsoft/appcenter-sdk-apple)
 
