@@ -3,7 +3,7 @@ title: HockeySDK for UWP Migration
 description: Migrate from the HockeySDK to App Center SDK for UWP
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
 ms.service: vs-appcenter
@@ -21,20 +21,24 @@ ms.tgt_pltfrm: uwp
 
 Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in your solution.
 
-### Visual Studio on Windows
+### Visual Studio for Windows
 
-* Navigate to **Project > Manage NuGet Packages...**
+* Open Visual Studio for Windows.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Remove the **HockeySDK.UWP** package.
-* Search for **App Center**, then install **Microsoft.AppCenter.Analytics**, and **Microsoft.AppCenter.Crashes** packages.
+* Search for **App Center**, and install **Microsoft.AppCenter.Analytics**, and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
-Execute following commands:
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* Type the following command in the console:
 
-```Text
-PM> Uninstall-Package HockeySDK.UWP
-PM> Install-Package Microsoft.AppCenter.Analytics
-PM> Install-Package Microsoft.AppCenter.Crashes
+```shell
+Uninstall-Package HockeySDK.UWP
+Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
 ```
 
 The App Center SDK uses a modular approach – you can integrate only those services that you're interested in. You must add each SDK module as a separate dependency in this section.

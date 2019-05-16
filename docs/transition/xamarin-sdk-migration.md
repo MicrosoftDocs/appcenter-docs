@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: elamalani
 ms.author: emalani
-ms.date: 03/15/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -20,26 +20,32 @@ Replace **HockeySDK.Xamarin** NuGet package with App Center ones in all projects
 
 ### Visual Studio for Mac
 
-* Under your project, select **Packages**, open context menu on **HockeySDK.Xamarin** package and click the **Remove** option.
-* Open context menu on **Packages** and click the **Add packages** option.
-* Search for **App Center** and select **App Center Analytics**, **App Center Crashes**, and **App Center Distribute**.
+* Open Visual Studio for Mac.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* Remove the **HockeySDK.Xamarin** package.
+* Search for **App Center**, and select **App Center Analytics**, **App Center Crashes**, and **App Center Distribute**.
 * Click **Add Packages**.
 
-### Visual Studio on Windows
+### Visual Studio for Windows
 
-* Navigate to the **Project > Manage NuGet Packages...**
-* Remove the installed **HockeySDK.Xamarin** package.
-* Search for **App Center**, then install **Microsoft.AppCenter.Analytics**, **Microsoft.AppCenter.Crashes**, and **Microsoft.AppCenter.Distribute** packages.
+* Open Visual Studio for Windows.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
+* Remove the **HockeySDK.Xamarin** package.
+* Search for **App Center**, and install **Microsoft.AppCenter.Analytics**, **Microsoft.AppCenter.Crashes**, and **Microsoft.AppCenter.Distribute** packages.
 
 ### Package Manager Console
 
-Type the following commands:
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* Type the following command in the console:
 
-```Text
-PM> Uninstall-Package HockeySDK.Xamarin
-PM> Install-Package Microsoft.AppCenter.Analytics
-PM> Install-Package Microsoft.AppCenter.Crashes
-PM> Install-Package Microsoft.AppCenter.Distribute
+```shell
+Uninstall-Package HockeySDK.Xamarin
+Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
+Install-Package Microsoft.AppCenter.Distribute
 ```
 
 Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
@@ -66,7 +72,7 @@ After (App Center):
 
 1. Remove old HockeyApp registration code.
 
-    * **Xamarin.Android** - Open your **MainActivity.cs** and remove the lines below:
+    * **Xamarin.Android** - Open the project's **MainActivity.cs** and remove the lines below:
 
         ```csharp
         using HockeyApp.Android;
@@ -84,7 +90,7 @@ After (App Center):
         [assembly: MetaData ("net.hockeyapp.android.appIdentifier", Value="APP_IDENTIFIER")]
         ```
 
-    * **Xamarin.iOS** - Open your **AppDelegate.cs** and remove the lines below:
+    * **Xamarin.iOS** - Open the project's **AppDelegate.cs** and remove the lines below:
 
         ```csharp
         using HockeyApp.iOS;
@@ -99,9 +105,9 @@ After (App Center):
 
 1. Start the App Center SDK
 
-    * **Xamarin.iOS** - Open your project's **AppDelegate.cs** file and add the lines below the existing `using` statements
-    * **Xamarin.Android** - Open your project's **MainActivity.cs** file and add the lines below the existing `using` statements
-    * **Xamarin.Forms** - You can initialize the App Center SDK only in one place. Open the **App.xaml.cs** file in your shared project and add the following `using` statements:
+    * **Xamarin.iOS** - Open the project's **AppDelegate.cs** and add the following lines below the existing `using` statements
+    * **Xamarin.Android** - Open the project's **MainActivity.cs** and add the following lines below the existing `using` statements
+    * **Xamarin.Forms** - You can initialize the App Center SDK only in one place. Open the project's **App.xaml.cs** file in your shared project and add the following `using` statements:
 
     ```csharp
     using Microsoft.AppCenter;

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 05/14/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -56,20 +56,25 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 
 ### Visual Studio
 
-1. Navigate to the **Project > Manage NuGet Packages...**
-2. Search for **App Center**, and install **Microsoft.AppCenter.Analytics**.
+* Open Visual Studio.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
+* Search for **App Center**, and install **Microsoft.AppCenter.Analytics**.
 
 ### Package Manager Console
 
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following commands:
 
-   `PM> Install-Package Microsoft.AppCenter.Analytics`
+```shell
+Install-Package Microsoft.AppCenter.Analytics
+```
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable and UWP ones.
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
 
 ## 4. Add the `Internet (Client)` capability
 
@@ -77,7 +82,7 @@ In Visual Studio solution explorer, double-click the **Package.appxmanifest** fi
 
 ## 5. Start the SDK
 
-In order to use App Center, you need to opt in to the services that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 5.1 Add the using statements
 

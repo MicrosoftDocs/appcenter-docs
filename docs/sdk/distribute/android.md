@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -55,7 +55,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 

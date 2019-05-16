@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
 ms.service: vs-appcenter
@@ -97,7 +97,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist file**.
+1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Implement two methods to register push notifications
 
@@ -143,7 +143,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 ### User Notification Center Delegate
 
-1. Open your project's **Info.plist** file.
+1. Open the project's **Info.plist** file.
 2. Add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` key, and set the value to `0`. This disables `UNUserNotificationCenter` delegate forwarding for App Center Push.
 3. Implement `UNUserNotificationCenterDelegate` callbacks and pass notification payload to App Center Push.
 

@@ -39,36 +39,43 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 #### Visual Studio for Mac
 
-* Under your project, select **Packages**, open context menu and click **Add packages**.
-* Search for **App Center**, and select **App Center Distribute**.
+* Open Visual Studio for Mac.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* Search for **App Center**, and install **App Center Distribute**.
 * Click **Add Packages**.
 
-#### Visual Studio on Windows
+#### Visual Studio for Windows
 
-* Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.AppCenter.Distribute**.
+* Open Visual Studio for Windows.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
+* Search for **App Center**, and install **Microsoft.AppCenter.Distribute**.
 
 #### Package Manager Console
 
-* Make sure the Package Manager Console is opened in either Visual Studio 2017 or Visual Studio for Mac (you will have to install an add-in for Visual Studio for Mac). Type the following command:
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have the **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* Type the following command in the console:
 
-  `PM> Install-Package Microsoft.AppCenter.Distribute`
+```shell
+Install-Package Microsoft.AppCenter.Distribute
+```
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable, Android, and iOS ones.
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 ### 2. Start App Center Distribute
 
-In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-#### 2.1 Add the using statement for App Center Distribute
+#### 2.1 Add App Center Distribute imports
 
-Add the appropriate namespaces before you get started with using our APIs.
+Add the App Center Distribute imports before you get started with using Distribute module:
 
-* **Xamarin.iOS** - Open your `AppDelegate.cs` and add the lines below the existing using statements
-* **Xamarin.Android** - Open your **MainActivity.cs** and add the lines below the existing using statements
-* **Xamarin.Forms** - Open your **App.xaml.cs** in your shared project and add the following using statements
+* **Xamarin.iOS** - Open the project's `AppDelegate.cs` file and add the following lines below the existing `using` statements
+* **Xamarin.Android** - Open the project's `MainActivity.cs` file and add the following lines below the existing `using` statements
+* **Xamarin.Forms** - Open the project's `App.xaml.cs` file and add the following lines below the existing `using` statements
 
 ```csharp
 using Microsoft.AppCenter;
@@ -81,7 +88,7 @@ Add `Distribute` to your `Start()` method to start App Center Distribute service
 
 ##### Xamarin.iOS
 
-Open your `AppDelegate.cs` and add the `Start()` call inside the `FinishedLaunching()` method
+Open the project's `AppDelegate.cs` file and add the `Start()` call inside the `FinishedLaunching()` method
 
 ```csharp
 Distribute.DontCheckForUpdatesInDebug();
@@ -90,7 +97,7 @@ AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 
 ##### Xamarin.Android
 
-Open **MainActivity.cs** and add the `Start()` call inside the `OnCreate()` method
+Open the project's `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method
 
 ```csharp
 AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
@@ -98,7 +105,7 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 
 ##### Xamarin.Forms
 
-For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your **App.xaml.cs** (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` override method.
+To create a Xamarin.Forms app targeting both Android and iOS platforms, you must create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
 
 ```csharp
 AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute));
@@ -112,7 +119,7 @@ Distribute.DontCheckForUpdatesInDebug();
 
 This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
-#### 2.3 [For iOS only] Modify your **Info.plist**
+#### 2.3 [For iOS only] Modify the project's **Info.plist**
 
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
@@ -284,7 +291,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
-1. Open your **Info.plist** file.
+1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
 3. Add `OpenUrl` callback in your `AppDelegate.cs` file.
 

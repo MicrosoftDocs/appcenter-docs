@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -94,7 +94,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Push
 
-In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 Add the `Push` class to your `AppCenter.start()` method to start App Center Push.
 

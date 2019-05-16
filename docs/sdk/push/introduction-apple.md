@@ -18,7 +18,7 @@ If you wish to manually integrate the module, follow this [documentation link](a
 
 ### 2. Start App Center Push
 
-In order to use App Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 #### 2.1 Add the import for App Center Push
 

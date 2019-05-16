@@ -84,7 +84,7 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
-#### 2.3 Modify your **Info.plist**
+#### 2.3 Modify the project's **Info.plist**
 
 > [!NOTE]
 > If you've previously configured App Center Auth, the `URL types` key may already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.

@@ -45,9 +45,13 @@ App Center Crashes for UWP will utilize the built in Windows crash reporting ser
 
 ### Package Manager Console
 
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have the **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following commands:
 
-   `PM> Install-Package Microsoft.AppCenter.Crashes`
+```shell
+Install-Package Microsoft.AppCenter.Crashes
+```
 
 ### Add the using statements
 

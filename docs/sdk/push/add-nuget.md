@@ -1,23 +1,30 @@
 #### Visual Studio for Mac
 
-* Under your project, select **Packages**, open context menu and click **Add packages**.
-* Search for **App Center**, and select **App Center Push**.
+* Open Visual Studio for Mac.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* Search for **App Center**, and install **App Center Push**.
 * Click **Add Packages**.
 
-#### Visual Studio on Windows
+#### Visual Studio for Windows
 
-* Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.AppCenter.Push**.
+* Open Visual Studio for Windows.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
+* Search for **App Center**, and install **Microsoft.AppCenter.Push**.
 
 #### Package Manager Console
 
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following command in Package Manager Console:
 
-    `PM> Install-Package Microsoft.AppCenter.Push`
+```shell
+Install-Package Microsoft.AppCenter.Push
+```
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages
-> in each of the projects: the portable, Android, iOS and UWP ones.
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 > [!NOTE]
 > If your Android project does not target the Mono framework version 8.1 or higher, you will not be able to install the package.

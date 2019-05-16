@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2019
+ms.date: 05/14/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -73,7 +73,8 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ### 4.1 Add the start() method
 
-In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' `onCreate`-callback to use **App Center Analytics** and **App Center Crashes**:
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.  
+Insert the following line inside your app's main activity class' `onCreate`-callback to use **App Center Analytics** and **App Center Crashes**:
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);

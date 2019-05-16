@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 02/06/2019
+ms.date: 05/14/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -70,44 +70,50 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 ## 3. Add the App Center SDK to your solution
 
-The App Center SDK can be integrated using Visual Studio 2017, Visual Studio for Mac, or the Package Manager Console.
+The App Center SDK can be integrated using Visual Studio or the Package Manager Console.
 
 ### Visual Studio for Mac
 
-* Under your project, select **Packages**, open context menu and click **Add packages**.
+* Open Visual Studio for Mac.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
 * Search for **App Center**, and select **App Center Analytics** and **App Center Crashes**.
 * Click **Add Packages**.
 
-### Visual Studio on Windows
+### Visual Studio for Windows
 
-* Navigate to the **Project > Manage NuGet Packages...**
-* Search for **App Center**, then install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
+* Open Visual Studio for Windows.
+* Click **File** > **Open** and choose your solution.
+* In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
+* Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
-* Make sure the Package Manager Console is opened in either Visual Studio 2017 or Visual Studio for Mac (you will have to install an add-in for Visual Studio for Mac).
-* Type the following commands:
+* Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
+* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* Type the following command in the console:
 
-   `PM> Install-Package Microsoft.AppCenter.Analytics`
-   `PM> Install-Package Microsoft.AppCenter.Crashes`
+```shell
+Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
+```
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you need to install the packages
-> in each of the projects: the portable, Android and iOS ones (and UWP if you have one).
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 ## 4. Start the SDK
 
-In order to use App Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the using statements
 
 Add the appropriate namespaces before you get started with using our APIs.
 
-* **Xamarin.Android** - Open your **MainActivity.cs** and add the following lines below the existing `using` statements.
-* **Xamarin.iOS** - Open you `AppDelegate.cs` and add the following lines below the existing `using` statements.
-* **Xamarin.Forms** - Open your **App.xaml.cs** in your shared project and add the following lines below the existing `using` statements:
+* **Xamarin.iOS** - Open the project's `AppDelegate.cs` and add the following lines below the existing `using` statements
+* **Xamarin.Android** - Open the project's `MainActivity.cs` and add the following lines below the existing `using` statements
+* **Xamarin.Forms** - Open the project's `App.xaml.cs` and add the following lines below the existing `using` statements
 
 ```csharp
 using Microsoft.AppCenter;
@@ -150,7 +156,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 ##### 4.2.3 Xamarin.Forms
 
-To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
+To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open the project's **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
 
 ```csharp
 AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));

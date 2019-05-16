@@ -4,7 +4,7 @@ description: "Setting up and using the CodePush Azure DevOps extension"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 01/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 ms.assetid: F0FB00A7-C0E3-4753-81DF-64D5F8100DDA
 ms.service: vs-appcenter
