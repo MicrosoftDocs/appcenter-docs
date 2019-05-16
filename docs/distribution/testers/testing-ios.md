@@ -34,7 +34,7 @@ Adding your device consists of the following steps:
 
     ![Config Profile](images/i-profile.png)
 
-3. Select the **Allow** button to view this profile. This profile is a necessary part of adding your device.
+3. In the phone's **Settings**, select **General**, **Profile & Device Management**, then **Install profile**, and enable **Allow**. This profile is a necessary part of adding your device.
 
     ![Config Profile View](images/i-configview.png)
 
