@@ -66,13 +66,13 @@ Analytics.trackEvent("Video clicked")
 
 You can track business critical events that have higher importance than other events.
 
-* Developers can set persistence of events as **Normal** (`Flags.NORMAL` in the API) or **Critical** (`Flags.CRITICAL` in the API).
+* Developers can set priority of events as **Normal** (`Flags.NORMAL` in the API) or **Critical** (`Flags.CRITICAL` in the API).
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events needs to be stored, the oldest events that have the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
 **Normal** priority will fail as the SDK cannot make room in that case.
 * If you also use the **Crashes** service, please note that crash logs are set as **Critical** and share the same storage as events.
-* The **Critical** event will be sent after 3 seconds regardless of the set transmission interval.
+* The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
 You can use the following API to track an event as **Critical**:
 
@@ -156,7 +156,7 @@ The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 
 The transmission interval can be changed:
 
 ```java
- // Change transmission interval to 10 minutes.
+// Change transmission interval to 10 minutes.
 Analytics.setTransmissionInterval(600);
 ```
 ```kotlin
