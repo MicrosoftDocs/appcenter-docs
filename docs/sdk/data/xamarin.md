@@ -186,13 +186,13 @@ Next, we're going to read a document using the `read` method. This method takes 
 Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
 The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
