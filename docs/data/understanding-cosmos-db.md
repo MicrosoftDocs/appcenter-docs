@@ -44,7 +44,7 @@ Collections are the unit of scalability for both provisioned throughput and stor
 
 ### Partitions
 
-A partition consists of a set up **documents** sharing the same partition key (value of the `PartitionKey` field). Partitions are formed based on the value of a partition key that is associated with each item in a collection.
+A partition consists of a set of **documents** sharing the same partition key (value of the `PartitionKey` field). Partitions are formed based on the value of a partition key that is associated with each item in a collection.
 
 
 For example, let's say we have a to-do list app where users can login and create, read, update, and delete tasks.
