@@ -61,6 +61,7 @@ Open the **AppDelegate.m** file and add the following lines below your own impor
 @import AppCenter;
 @import AppCenterData;
 ```
+
 ```swift
 import AppCenter
 import AppCenterData
@@ -71,6 +72,7 @@ In the same file, add the following in your `didFinishLaunchingWithOptions:` del
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSData class]]];
 ```
+
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSData.self])
 ```
@@ -137,7 +139,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 Now, let's create our first document:
 
-```objectivec
+```objc
 User *user = [[User alloc] initWithName:@"Jim"
                                   email:@"Jim@appcenter.ms"
                             phoneNumber:@"+1-(855)-555-5555"];
@@ -207,7 +209,6 @@ Jim, the user who created the `user` object, wants to view all of his personal d
                 fetchedUser = document.deserializedValue;
          }];
 ```
-
 ```swift
 var fetchedUser = User()
 MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
@@ -230,7 +231,6 @@ User fetchedUser = [[User alloc] init];
                 fetchedUser = document.deserializedValue;
           }];
 ```
-
 ```swift
 var fetchedUser = User()
 
@@ -265,7 +265,6 @@ User *user = [[User alloc] initWithName:@"Jim"
               // Do something with the document
             }];
 ```
-
 ```swift
 let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
 MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
@@ -290,7 +289,6 @@ User *user = [[User alloc] initWithName:@"Jim"
               // Do something with the document
             }];
 ```
-
 ```swift
 let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
 MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
@@ -317,7 +315,6 @@ The following code will delete a document:
                 //document coming from Cosmos DB
            }];
 ```
-
 ```swift
 MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition,completionHandler: { (document) in
   // Do something after the document
@@ -334,7 +331,6 @@ The following code will delete a document with offline persistence:
              // Do something
            }];
 ```
-
 ```swift
 MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition, writeOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
   // Do something
@@ -360,7 +356,6 @@ Here's how to fetch a list of documents:
              // Do something here
            }];
 ```
-
 ```swift
 MSData.list(withType: User.self, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
   // Do something here
@@ -378,9 +373,9 @@ With the list method, we also support pagination through the `MSPaginatedDocumen
 
 The `MSPaginatedDocuments` class has 3 methods which can be used to manage paging:
 
-* boolean `hasNextPage` : Boolean indicating if an extra page is available
-* (MSPage *) `currentPage` : Returns the current page
-* (void) `nextPageWithCompletionHandle` : Asynchronously fetches the next page. Parameter: Takes a completionHandler callback to accept the next page of documents
+- boolean `hasNextPage` : Boolean indicating if an extra page is available
+- (MSPage *) `currentPage` : Returns the current page
+- (void) `nextPageWithCompletionHandle` : Asynchronously fetches the next page. Parameter: Takes a completionHandler callback to accept the next page of documents
 
 The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `items`, which represents the documents in the page.
 
@@ -393,7 +388,6 @@ Using the `listWithPartition` call you can fetch paginated data from Cosmos DB. 
              // Do something here
            }];
 ```
-
 ```swift
 MSData.list(withType: User.self, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
   // Do something here
