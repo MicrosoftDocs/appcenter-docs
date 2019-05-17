@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 05/16/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -255,11 +255,24 @@ Distribute.isEnabled()
 
 [!include[](../android-see-async.md)]
 
+## Enable in-app updates for debug builds
+
+By default in-app updates are enabled only for release builds.
+
+To enable in-app update builds, call the following method before `AppCenter.start`:
+
+```java
+Distribute.setEnabledInDebbugableBuild(true);
+```
+```kotlin
+Distribute.setEnabledInDebbugableBuild(true)
+```
+
 ## How do in-app updates work?
 
 The in-app updates feature works as follows:
 
-1. This feature will ONLY work with **RELEASE** builds that are distributed using **App Center Distribute** service.
+1. This feature will ONLY work with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
