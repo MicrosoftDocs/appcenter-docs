@@ -159,7 +159,7 @@ Now, let's create our first document:
 
 ```csharp
 User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments)
+await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments)
 ```
 
 This code snippet creates a document and inserts the details of the `user` object within it.
@@ -168,7 +168,7 @@ Now, let's take a step further. Say there's the chance of no connectivity when t
 
 ```csharp
 User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `new WriteOptions(TimeToLive.Infinite)` will cause this object to be cached indefinitely rather than the default one day.
@@ -186,13 +186,13 @@ Next, we're going to read a document using the `read` method. This method takes 
 Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments);
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
 The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
@@ -211,14 +211,14 @@ Let's say Jim wanted to change his email. This action could be possible through 
 
 ```csharp
 user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.id, user, DefaultPartitions.UserDocuments);
+await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the replacement document for offline persistence:
 
 ```csharp
 user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.Id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -232,14 +232,14 @@ In order to delete a document, you need to specify the partition type and the do
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
-await Data.DeleteAsync<User>(user.Id, DefaultPartitions.UserDocuments);
+await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the deleted document for offline persistence:
 
 ```csharp
 ...
-await Data.DeleteAsync<User>(user.id, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
