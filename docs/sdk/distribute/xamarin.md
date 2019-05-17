@@ -128,7 +128,7 @@ This step is not necessary on Android where the debug configuration is detected 
 If you want to enable in-app updates for debug builds on Android, call the following method in the project's **MainActivity.cs** file, in the `OnCreate` method and before `LoadApplication`.
 
 ```csharp
-Distribute.SetEnabledInDebbugableBuild(true);
+Distribute.SetEnabledForDebuggableBuild(true);
 ```
 
 #### 2.3 [For iOS only] Modify the project's **Info.plist**

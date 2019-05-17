@@ -262,10 +262,10 @@ By default in-app updates are enabled only for release builds.
 To enable in-app update builds, call the following method before `AppCenter.start`:
 
 ```java
-Distribute.setEnabledInDebbugableBuild(true);
+Distribute.setEnabledForDebuggableBuild(true);
 ```
 ```kotlin
-Distribute.setEnabledInDebbugableBuild(true)
+Distribute.setEnabledForDebuggableBuild(true)
 ```
 
 ## How do in-app updates work?
