@@ -31,7 +31,7 @@ App Center Data is a data management service that lets you manage, persist, and 
     4. Configure App Center Auth SDK
 
 > [!NOTE]
-> You can also connect existing databases in the App Center portal. There are some [additional requirements]../../data/index.md#Limitations) associated with this.
+> You can also connect existing databases in the App Center portal. There are some [additional requirements](../../data/index.md#Limitations) associated with this.
 
 > [!IMPORTANT]
 > An Azure subscription is required to use App Center Auth and Data.
