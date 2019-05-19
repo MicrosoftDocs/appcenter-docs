@@ -4,7 +4,7 @@ description: How to configure App Center data for Xamarin
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/07/2019
+ms.date: 05/18/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ App Center Data is a data management service that lets you manage, persist, and 
     4. Configure App Center Auth SDK
 
 > [!NOTE]
-> You can also connect existing databases in the App Center portal. There are some [additional requirements]../../data/index.md#Limitations) associated with this.
+> You can also connect existing databases in the App Center portal. There are some [additional requirements](~/data/index.md#Limitations) associated with this.
 
 > [!IMPORTANT]
 > An Azure subscription is required to use App Center Auth and Data.
