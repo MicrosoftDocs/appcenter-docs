@@ -118,10 +118,11 @@ To get your app secrets, you can follow the documentation in the [FAQ](https://d
 One advantage of NoSQL databases is the ability to use both unstructured and structured data. App Center Data utilizes documents, in which you can store JSON objects. The easiest way to get started is by defining a class that aligns with the type of data you would like to manage. For example, if you wanted to store documents that held relevant information associated with users on my app when they signed up, you may use something like this:
 
 ```csharp
-public class User {
-    public String Name { get; set; }
-    public String Email { get; set; }
-    public String PhoneNumber { get; set; }
+public class User 
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string PhoneNumber { get; set; }
     public Guid Id { get; set; } = Guid.NewGuid(); //generates random id
 }
 ```
