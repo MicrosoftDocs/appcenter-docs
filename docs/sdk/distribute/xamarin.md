@@ -97,13 +97,13 @@ AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 
 ##### Xamarin.Android
 
-Open the project's `MainActivity.cs` and add the `Start()` call inside the `OnCreate()` method:
+Open the project's `MainActivity.cs` file and add the `Start()` method call inside the `OnCreate()` method:
 
 ```csharp
 AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 ```
 
-If you want to enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
+To enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
 
 ```csharp
 Distribute.SetEnabledInDebbugableBuild(true);
@@ -125,7 +125,7 @@ Distribute.DontCheckForUpdatesInDebug();
 
 This step is not necessary on Android where the debug configuration is detected automatically at runtime.
 
-If you want to enable in-app updates for debug builds on Android, call the following method in the project's **MainActivity.cs** file, in the `OnCreate` method and before `LoadApplication`.
+To enable in-app updates for debug builds on Android, call the following method in the project's `MainActivity.cs` file, in the `OnCreate` method and before `LoadApplication`.
 
 ```csharp
 Distribute.SetEnabledForDebuggableBuild(true);
@@ -258,7 +258,7 @@ bool enabled = await Distribute.IsEnabledAsync();
 
 The in-app updates feature works as follows:
 
-1. This feature will ONLY work with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
+1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email. 
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
