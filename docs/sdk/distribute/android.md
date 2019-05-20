@@ -259,7 +259,7 @@ Distribute.isEnabled()
 
 By default in-app updates are enabled only for release builds.
 
-To enable in-app update builds, call the following method before `AppCenter.start`:
+To enable in-app updates in debug builds, call the following method before `AppCenter.start`:
 
 ```java
 Distribute.setEnabledForDebuggableBuild(true);
