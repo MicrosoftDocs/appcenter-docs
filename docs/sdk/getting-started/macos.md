@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jaelim-ms
 ms.author: jaelim
-ms.date: 05/17/2019
+ms.date: 05/20/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -91,7 +91,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 > [!NOTE]
-The SDK binary is not packaged following the macOS framework convention. The reason is that the App Center SDK for Mac is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
+> The SDK binary is not packaged following the macOS framework convention. The reason is that the App Center SDK for Mac is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
