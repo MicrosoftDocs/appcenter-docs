@@ -8,13 +8,13 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 07/26/2017
+ms.date: 05/20/2019
 ---
 
 
 # Getting Started by Creating App and Codesigning
 
-In this tutorial, you will learn how to set up a sample Android app with App Center.
+In this tutorial, you will learn to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
 
@@ -24,7 +24,7 @@ In this tutorial, you will learn how to set up a sample Android app with App Cen
 ## Sign in to GitHub and fork the repository
 
 1. Sign in to your [GitHub account](https://github.com/join).
-2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-android).
+2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter/tree/master/sample-apps/android/getting-started).
 3. Click **Fork** at the top-right hand corner of the page.
 
 ## Sign in to App Center
@@ -62,7 +62,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 
 5. Replace  `<APP SECRET HERE>` with your unique app secret.
-6. **Add, commit, and push changes to your forked repository.** This can be done from the terminal, or a tool of your choice.
+6. **Add, commit, and push changes to your forked repository.** This action can be done from the terminal, or a tool of your choice.
 
 ## Sign the Android Package Kit (APK)
 
@@ -96,4 +96,4 @@ In order to run tests, distribute the app to users, and send push notifications,
 
 
   ## Optional: Run app in Android Studio and read descriptions
-  The crashes and analytics services have to be linked to the app, see [crashes](crashes.md) and [analytics](analytics.md) tutorials, in order for the crashes and analytics buttons to send trackable data to App Center.
+  The crashes and analytics services must be linked to the app in order for the associated buttons to send trackable data to App Center. Go to the [crash quickstart](crashes.md) and [analytics quickstart](analytics.md) for further details.

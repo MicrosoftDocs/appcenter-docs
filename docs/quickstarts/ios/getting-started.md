@@ -6,7 +6,7 @@ description: Tutorial to onboard an iOS application in App Center
 keywords: app center
 authors: sabrinaj206
 ms.author: t-sajia
-ms.date: 06/26/2017
+ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom:
@@ -23,7 +23,7 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # Getting Started - Sample Swift App and Tutorials
 
-In this tutorial, you will learn how to set up a sample Swift app with App Center for iOS. Both Objective-C and Swift are supported.
+In this tutorial, you'll learn how to set up a sample Swift app with App Center for iOS. Both Objective-C and Swift are supported.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ In this tutorial, you will learn how to set up a sample Swift app with App Cente
 
 1. sign in to your [GitHub account](https://github.com/join).
 
-2. Access the [sample app's GitHub repository](https://github.com/VSAppCenter/sampleapp-ios-swift).
+2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter/tree/master/sample-apps/ios/getting-started).
 
 3. Click **Fork** at the top-right hand corner of the page, and clone the repository.
 
@@ -87,11 +87,11 @@ In order for the sample app to send information to App Center, the app secret mu
 
 5. **Add, commit, and push changes to your forked repository.** It can be done from the terminal, or a tool of your choice.
 
-## Codesign the project
+## Code sign the project
 
-*Codesigning is optional, but recommended.*
+*Code signing is optional, but recommended.*
 
-Codesigning assures users that the app is from a trustworthy developer, and has not been altered by someone else. In App Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+Code signing assures users that the app is from a trustworthy developer, and has not been altered by someone else. In App Center, it's needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
 When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
 

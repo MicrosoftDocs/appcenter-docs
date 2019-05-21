@@ -327,8 +327,8 @@
 ## [Command Line Interface](cli/index.md)
 
 # [Resources](general/resources.md)
-# [Quickstarts](quickstarts/index.md)
 
+# [Quickstarts]
 ## [Start Here](quickstarts/index.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
