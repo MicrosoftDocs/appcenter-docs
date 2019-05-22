@@ -24,14 +24,14 @@ App Center Data is a data management service that lets you manage, persist, and 
     2. Select the **Data** option in the left project navigation pane
     3. Select the **New Database** button and provision a new Cosmos DB database
 
-- (Optional, but recommended) [Set up App Center Auth](TODO - link-to-docs)
+- (Optional, but recommended) [Set up App Center Auth](../../auth/index.md)
     1. Create your Azure AD B2C tenant
     2. Create an application within the Azure AD B2C service
     3. Configure your scope and policy
     4. Configure App Center Auth SDK
 
 > [!NOTE]
-> You can also connect existing databases in the App Center portal. There are some [additional requirements](~/data/index.md#Limitations) associated with this.
+> You can also connect existing databases in the App Center portal. There are some [additional requirements](~/data/index.md#limitations) associated with this.
 
 > [!IMPORTANT]
 > An Azure subscription is required to use App Center Auth and Data.
