@@ -97,7 +97,7 @@ AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 
 ##### Xamarin.Android
 
-Open the project's `MainActivity.cs` file and add the `Start()` method call inside the `OnCreate()` method:
+Open the project's **MainActivity.cs** file and add the `Start()` method call inside the `OnCreate()` method:
 
 ```csharp
 AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
