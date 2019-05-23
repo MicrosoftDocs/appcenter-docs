@@ -103,16 +103,6 @@ sections:
           alt: distribution-icon
           href: ~/distribution/
         title: Distribute
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/diagnostics/
-        html: Collect crash data from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
-          alt: diagnostics-icon
-        title: Diagnostics (Formerly Crashes)
       - href: ~/analytics/
         html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
         image:
@@ -120,13 +110,38 @@ sections:
           alt: analytics-icon
           href: ~/analytics/
         title: Analytics
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/auth/
+        html: Authenticate your users and leverage user identities to view user data and send push notifications to users instead of individual devices. 
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/auth.svg
+          alt: auth-icon
+          href: ~/auth/
+        title: Auth
+      - href: ~/data/
+        html: Persist, manage, and sync app data in the cloud across multiple platforms in both online and offline scenarios. 
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/data.svg
+          alt: data-icon
+          href: ~/data/
+        title: Data
       - href: ~/push/
         html: Engage your users by sending them targeted messages to specific sets of users at exactly the right time. Create segments of users based on device and custom properties.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
           alt: push-icon
           href: ~/push/
-        title: Push Notifications
+        title: Push
+      - href: ~/diagnostics/
+        html: Collect crash data from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
+        image:
+          src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
+          alt: diagnostics-icon
+        title: Diagnostics (Formerly Crashes)
+      
 - title: Reference
   items:
   - type: list
