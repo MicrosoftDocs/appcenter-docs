@@ -262,15 +262,15 @@
         },
 	{
             "source_path": "docs/gdpr/crashes-forget-me.md",
-            "redirect_url": "/docs/gdpr/diagnostics-delete"
+            "redirect_url": "/appcenter/gdpr/diagnostics-delete"
         },
 	{
             "source_path": "docs/gdpr/crashes-export.md",
-            "redirect_url": "/docs/gdpr/diagnostics-export"
+            "redirect_url": "/appcenter/gdpr/diagnostics-export"
         },   
 	{
             "source_path": "docs/gdpr/crashes-consent.md",
-            "redirect_url": "/docs/gdpr/diagnostics-consent"
+            "redirect_url": "/appcenter/gdpr/diagnostics-consent"
         }    	
     ]
 }
