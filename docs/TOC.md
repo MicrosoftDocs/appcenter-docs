@@ -328,7 +328,7 @@
 
 # [Resources](general/resources.md)
 
-# [Quickstarts]
+# Quickstarts
 ## [Start Here](quickstarts/index.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
