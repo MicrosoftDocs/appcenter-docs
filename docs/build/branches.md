@@ -2,7 +2,7 @@
 title: Branches and Build configurations
 description: How to configure your branch
 keywords: build, branches, build configuration, build definition
-author: matwen
+author: ranterle
 ms.author: matwen
 ms.date: 05/28/2019
 ms.topic: article
@@ -16,7 +16,7 @@ ms.assetid: 392b1718-cdb2-4831-a20a-d7d6eccc0e96
 After you [connect your repository](./connect.md), you will be able to configure continuous integration for any of your repository's branches.
 In App Center Build, your branches are the origin of setting up a build. For every branch you can configure whether you want to build on every push, or only when you manually queue a build.
 
-You can see the respective instructions to configure your build for [iOS](./ios/index.md), [Android](./android/index.md), [Windows](./windows/index.md), [macOS](./macosindex.md/), [Xamarin](./xamarin/index.md), and [React Native](./react-native/index.md).
+You can see the respective instructions to configure your build for [iOS](./ios/index.md), [Android](./android/index.md), [Windows](./windows/index.md), [macOS](./macos/index.md), [Xamarin](./xamarin/index.md), and [React Native](./react-native/index.md).
 
 ## Cloning build configurations
 
