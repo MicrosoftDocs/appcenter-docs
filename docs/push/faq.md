@@ -37,3 +37,15 @@ AppCenter.Start(appCenterAPIKey, typeof(Crashes), typeof(Analytics));
 // then on button click do:
 AppCenter.Start(typeof(Push));
 ```
+
+**Can I set a priority for notifications sent through App Center Push?**
+
+No, you cannot. App Center Push does not set notification priority, so the target PNS will deliver notifications with default priority. For Android, that means **Normal** and iOS it's `apns-priority = 10`
+
+**How should I handle sensitive payload in push notifications?**
+
+All notifications are delivered to target devices by the platform's PNS. When a notification is sent to App Center Push, it is processed and passed to the respective PNS.
+
+All connections, from the sender to the App Center Push to the PNS, use HTTPS.
+
+You should not send personal or confidential information in a notification.To send sensitive payloads, we recommend using a Secure Push pattern. The sender delivers a ping notification with a message identifier to the device without the sensitive payload. When the app on the device receives the notification, the app calls a secure API directly to fetch the message details.
