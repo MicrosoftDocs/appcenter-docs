@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 05/20/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -29,7 +29,7 @@ Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overl
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
 - OS X 10.14.5 (18F132) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
-- OS X 10.13.6 (17G6029) **High Sierra** for builds running Xcode 9.4 and lower
+- OS X 10.13.6 (17G7024) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
