@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 05/09/2019
+ms.date: 05/21/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
@@ -66,7 +66,11 @@ When these events happen, App Center notifications are posted into your integrat
 
    ![Build success notification on Slack](media/buildSuccessNotificationOnSlack.png)
 
-An example of a <a name="webhookPayload"></a>webhook payload in JSON is:
+## Example webhook payload
+
+Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
+
+1. Build
 
 ```JSON
 {
@@ -77,7 +81,7 @@ An example of a <a name="webhookPayload"></a>webhook payload in JSON is:
   "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33",
   "build_reason": "manual",
   "finish_time": "2018-06-14T23:59:05.2542221Z",
-  "icon_link": "https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9130028703e417a6a0df02c6b587f0.png",
+  "icon_link": "https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9184328703e417a6a0df02c6b587f0.png",
   "notification_settings_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications",
   "os": "iOS",
   "start_time": "2018-06-14T23:57:03.4379381Z",
@@ -85,7 +89,52 @@ An example of a <a name="webhookPayload"></a>webhook payload in JSON is:
   "sent_at": "2018-06-14T23:59:08.4897604Z"
 }
 ```
+2. Crash
+
+```JSON
+{
+  "id":"3698593379u",
+  "name":"Activity.java line 6314",
+  "reason":"android.util.SuperNotCalledException","url":"https://portal-server-core-integration.dev.avalanch.es/orgs/{org-id}/apps/{app-name}/crashes/errors/3698273379u",
+  "app_display_name":"{app-name}",
+  "app_platform":"Java",
+  "app_version":"2.0.1(42)",
+  "stack_trace":[],
+  "affected_users":0,
+  "crash_count":0,
+  "sent_at":"2019-05-16T23:47:31.4881512Z",
+  "app_id":"48573473-f069-4715-8bab-9ae42cec48b2"
+}
+```
+
+3. Distribute
+
+```JSON
+{
+  "app_name":"{app-name}",
+  "app_display_name":"{app-display-name}",
+  "release_id":"123",
+  "platform":"Android",
+  "uploaded_at":"2018-07-17T20:46:14Z",
+  "fingerprint":"0abed1269e4ae3bf524e4cc7165f4f34",
+  "release_notes":"Merge pull request #756 from Microsoft/fix/fix-transmission-target-selection\n\nFix regression in EventActivityUtil",
+  "version":"74",
+  "short_version":"1.7.0",
+  "min_os":"4.0.3",
+  "mandatory_update":true,
+  "size":2634279,
+  "provisioning_profile_name":null,
+  "provisioning_profile_type":null,
+  "bundle_identifier":"com.microsoft.appcenter.test.jcenter","install_link":"https://install.appcenter.ms/orgs/{org-name}/apps/{app-name}/releases/123?source=email",
+  "icon_link":"https://rink.hockeyapp.net/api/2/apps/45d1d9f624924e4686447190345325f3?format=png","distribution_group_id":"1a5a0605-4b9c-4de2-9a35-t569456df0cc",
+  "installable":true,
+  "sent_at":"2019-05-16T23:20:08.7799314Z",
+  "app_id":"f37c6194-9ac9-4504-be61-55re334r5649"
+}
+```
+
+You can also inspect the payload by using [RequestBin](https://requestbin.fullcontact.com/). To do that, navigate to [RequestBin](https://requestbin.fullcontact.com/), click **Create a RequestBin**, and then copy the generated URL under **Bin URL** and paste the URL as a webhook in App Center. 
 
 ## Custom webhook support
 
-To post to other platforms, you can write an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api) that translates the way we `POST` to fit the requirements of the platform. To do that, create an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api), paste the URL under the **Webhook URL** field in [step 4](#step4), and App Center will post the [webhook payload](#webhookPayload) to that endpoint. You may then modify the payload to the platform's requirements.
+To post to other platforms, you can write an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api) that translates the way we `POST` to fit the requirements of the platform. To do that, create an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api), paste the URL under the **Webhook URL** field in [step 4](#step4), and App Center will post the [webhook payload](#example-webhook-payload) to that endpoint. You may then modify the payload to the platform's requirements.

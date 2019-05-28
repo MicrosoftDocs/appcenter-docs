@@ -1,10 +1,10 @@
 ---
 title: Getting started with the App Center Auth Service
 description: How to get started with the App Center Auth Service
-keywords: MBaaS, Auth, Identity
+keywords: MBaaS, Auth, Identity, App Center Auth
 author: amchew
 ms.author: amchew
-ms.date: 05/07/2019
+ms.date: 05/22/2019
 ms.topic: article
 ms.assetid: 1222525f-e769-49d8-8625-738db5bc8880
 ms.service: vs-appcenter
@@ -49,7 +49,9 @@ Learn more about Azure AD B2C [role definitions](https://docs.microsoft.com/azur
 6. Under **Web App / Web API**, toggle **Yes**. For:
    - **Allow implicit flow**: toggle **Yes**.
    - **Reply URL**: choose an endpoint where Azure AD B2C should return any tokens that your application requests. For example, you can configure it to listen locally at `https://localhost:500`. If you do not know the port number, you can also enter a placeholder value and change it later. For now, set it to `https://jwt.ms`, which displays the token contents for inspection.
-   - **App ID URI**: enter a resource identifier to identify your web API. We will need this App ID URI to configure scopes. `https://appcenterAuth.onmicrosoft.com/api` is an example.
+   - **App ID URI**: enter a resource identifier to identify your web API. `https://appcenterAuth.onmicrosoft.com/api` is an example.
+   > [!NOTE]
+   > Please make sure you set up your **App ID URI**. We will need this App ID URI to configure scopes.
 7. Under **Native client**, toggle **Yes**. 
    - For **Custom Redirect URI**, enter `msal{appSecret}://auth`. For example, `msalf4333101-2a0e-4b30-9dca-225d6e374809://auth`, where `f4333101-2a0e-4b30-9dca-225d6e374809` is the App Center app secret of the app you'd like to connect with Auth. Follow the documentation on [how to find the App Center app secret](https://docs.microsoft.com/appcenter/dashboard/faq).
 8. Click **Create**. Excellent! You've registered your mobile application with Azure AD B2C.
@@ -112,11 +114,11 @@ Nicely done! You have successfully set up App Center Auth in the portal. You now
 
 ## Configure your application for Auth
 
-After [configuring App Center Auth in the portal](#configure-the-app-center-auth-service), the next step is to add the App Center Auth SDK to your application. The exact procedure depends on your target platform. For additional information, see the App Center Auth SDK platform documentation:
+After [configuring App Center Auth in the portal](#configure-the-app-center-auth-service), the next step is to add the App Center Auth SDK to your application. The exact procedure depends on your target platform. For additional information, refer to the App Center Auth SDK platform documentation:
 
-  - [Android](~/sdk/auth/android.md)
-  - [iOS](~/sdk/auth/ios.md)
-  - [Xamarin](~/sdk/auth/xamarin.md)
+  - [Android Auth SDK documentation](~/sdk/auth/android.md)
+  - [iOS Auth SDK documentation](~/sdk/auth/ios.md)
+  - [Xamarin Auth SDK documentation](~/sdk/auth/xamarin.md)
 
 Once you have integrated the SDK, refresh the **Getting Started** page on the Auth service and you will see the [**Auth Overview**](#auth-overview-page) page.
 
