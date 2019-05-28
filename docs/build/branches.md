@@ -16,11 +16,11 @@ ms.assetid: 392b1718-cdb2-4831-a20a-d7d6eccc0e96
 After you [connect your repository](./connect.md), you will be able to configure continuous integration for any of your repository's branches.
 In App Center Build, your branches are the origin of setting up a build. For every branch you can configure whether you want to build on every push, or only when you manually queue a build.
 
-You can see the respective instructions to configure your build for [iOS](./ios/), [Android](./android/), [Windows](./windows/), [macOS](./macos/), [Xamarin](./xamarin/) and [React Native](./react-native/).
+You can see the respective instructions to configure your build for [iOS](./ios/), [Android](./android/), [Windows](./windows/), [macOS](./macos/), [Xamarin](./xamarin/), and [React Native](./react-native/).
 
 ## Cloning build configurations
 
-If you already have a branch configured in your repository and you have a similar branch that you want to apply the same configuration for, you can clone the existing configuration. To do this, you can either click on the "more" dropdown when hovering over an un-configured branch in the list and select "Clone build configuration", or select the branch and on the overview select "Clone build configuration" on the "Configure" menu.
+You may face a situation where you already have a branch configured in your repository and you have a similar branch that you want to apply the same configuration for. In this case, you can clone the existing configuration: You can either click on the "more" dropdown when hovering over an unconfigured branch in the list and select "Clone build configuration", or select the branch and on the overview select "Clone build configuration" on the "Configure" menu.
 
 From there, you can select which configured branch to clone the definition from.
 
