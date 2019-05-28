@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 05/08/2019
+ms.date: 05/28/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -161,7 +161,7 @@ Do this integration, if you link React modules using relative path inside your P
     [AppCenterReactNativePush register];
     ```
 
-4. Add to your project a new file with name "AppCenter-Config.plist" with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+4. Create new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the XCode project (right-click the app in XCode and click **Add files to <App Name>...**).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -230,7 +230,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
    * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
-11. Modify your app's AppDelegate.m file to include code for starting SDK:
+11. Modify the app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
 
     ```objective-c
@@ -249,7 +249,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNativePush register];
     ```
 
-12. Create new file with name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+12. Create new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the XCode project (right-click the app in XCode and click **Add files to <App Name>...**).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
