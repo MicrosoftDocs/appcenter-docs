@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 05/24/2019
+ms.date: 05/28/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - java 11 : OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
 - java 12 : OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
 - Node.js 6.17.0
-- PowerShell 6.2.0
+- PowerShell 6.2.1
 - Python 2.7.16
 - Python 3.7.3
 - Ruby 2.6.3p62
@@ -56,8 +56,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Bundler 2.0.1
 - Carthage 0.33.0
-- CocoaPods 1.6.1
-- Homebrew 2.1.2
+- CocoaPods 1.7.0
+- Homebrew 2.1.3
 - NPM 3.10.10
 - Yarn 1.16.0
 - NuGet 4.7.0.5148
@@ -71,7 +71,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Utilities
 
-- Curl 7.64.1 (libcurl/7.64.1 SecureTransport zlib/1.2.11)
+- Curl 7.65.0 (libcurl/7.65.0 SecureTransport zlib/1.2.11)
 - Git 2.21.0
 - Git LFS 2.7.2
 - GNU Wget 1.20.3
@@ -81,7 +81,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Tools
 
 - Fastlane 2.123.0
-- App Center CLI 1.1.16
+- App Center CLI 1.1.18
 - Azure-CLI 2.0.64
 
 ## Xcode
@@ -580,7 +580,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.0.5.9
+- 8.0.7.3
 
 ### Mono
 
