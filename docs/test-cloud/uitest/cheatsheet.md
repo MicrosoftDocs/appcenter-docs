@@ -2,10 +2,10 @@
 title: Xamarin.UITest cheat sheet
 description: This document is a cheat sheet that condenses some  UITest information for quick reference.
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
+author: oddj0b
+ms.author: vigimm
 ms.reviewer: crdun
-ms.date: 10/26/2018
+ms.date: 05/24/2019
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04
 ms.service: vs-appcenter
@@ -105,9 +105,6 @@ namespace MyApp.MyCrossPlatformUITests
 
 Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/uitest/get-started-xamarin-forms.md).
 
-> [!NOTE]
-> Xamarin.UITest requires NUnit 2.6.3 or 2.6.4 to run tests. Xamarin.UITest is not compatible with NUnit 3.x.
-
 <a name="initializing_tests_on_ios"></a>
 ### Initializing Xamarin.UITest on iOS
 
@@ -125,7 +122,7 @@ Xamarin.Calabash.Start();
 #endregion
 ```
 
-The Xamarin Test Cloud Agent makes uses of non public Apple API's which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
+The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
 <a name="get_device_id_for_ios_simulator"></a>
 ### Determine the Device ID for an iOS Simulator
@@ -203,16 +200,15 @@ app = ConfigureApp.Android
     .EnableLocalScreenshots()
     .StartApp();
 ```
-This will put the screenshots in the directory where the test assembly resides. The image will be named `screenshot-X-png`.
-
+The above code example puts screenshots in the directory where the test assembly resides, naming the image `screenshot-X-png`.
 
 <a name="invoke_method_on_an_appResult_or_UIElement"></a>
 ### Invoke a Method on an AppResult or UI Element
 
-It is possible to execute native methods on underlying views with the `AppQuery.Invoke` method. The method being invoked must mach the native method name, not the C# method name. For example, to invoke the [`setGravity`](https://developer.android.com/reference/android/widget/TextView.html#setGravity(int)) method on an Android `TextView`:
+It is possible to execute native methods on underlying views with the `AppQuery.Invoke` method. The method invoked must match the native method name, not the C# method name. For example, to invoke the [`setGravity`](https://developer.android.com/reference/android/widget/TextView.html#setGravity(int)) method on an Android `TextView`:
 
 ```csharp
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
 
-Notice that the `Invoke` uses Java **TextView.setGravity** method and not the C# **TextView.[Gravity](https://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)** property.
+Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# `TextView.[Gravity](https://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)` property.
