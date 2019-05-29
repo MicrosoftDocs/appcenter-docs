@@ -17,4 +17,4 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 
 > [!div class="op_single_selector"]
 > * [Android](./uitest/android-uitest.md)
-> * [iOS](../uitest/ios-uitest.md)
+> * [iOS](./uitest/ios-uitest.md)
