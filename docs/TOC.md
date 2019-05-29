@@ -57,7 +57,7 @@
 ## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
 
 ## Troubleshooting
-## [Introduction](build/troubleshooting/index.md)
+### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [iOS](build/troubleshooting/ios.md)
