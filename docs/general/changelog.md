@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 04/26/2019
+ms.date: 05/20/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,10 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **May 20, 2019**
+- **Build support for Xcode 10.2.1**
+    - React native developers can now select legacy or modern Xcode build system for their iOS branch configuration.
 
 ### **April 26, 2019**
 - **Build support for Xcode 10.2.1**
@@ -147,7 +151,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   - The build process uses the Xcode legacy build system as described in this [github issue](https://github.com/facebook/react-native/issues/19573). Currently React Native doesn't have full support of new build system that was added in Xcode 10.0
 
 - **Two-factor authentication for Apple App Store**
-  Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store conncetion. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the 6-digit code.
+  Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store connection. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the six-digit code.
 
 ### **October 3, 2018**
 
