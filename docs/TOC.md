@@ -17,7 +17,7 @@
 # Build
 ## [Introduction](build/index.md)
 ## Android
-## [Introduction](build/android/index.md)
+### [Introduction](build/android/index.md)
 ### [Configure a build](build/android/first-build.md)
 ### [Code Signing](build/android/code-signing.md)
 ## iOS
