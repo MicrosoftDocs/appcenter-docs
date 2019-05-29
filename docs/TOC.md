@@ -47,6 +47,7 @@
 #### [Introduction](build/xamarin/ios/index.md)
 #### [Solution configuration mappings](build/xamarin/ios/solution-configuration-mappings.md)
 ## [Source Control System](build/connect.md)
+## [Branches and Build configurations](build/branches.md)
 ## [Build scripts](build/custom/scripts/index.md)
 ## [Environment variables](build/custom/variables/index.md)
 ## [Cloud build machines](build/software.md)
