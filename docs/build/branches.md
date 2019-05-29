@@ -13,10 +13,10 @@ ms.assetid: 392b1718-cdb2-4831-a20a-d7d6eccc0e96
 
 # Branches and build configurations
 
-After you [connect your repository](./connect.md), you will be able to configure continuous integration for any of your repository's branches.
+After you [connect your repository](~/build/connect.md), you will be able to configure continuous integration for any of your repository's branches.
 In App Center Build, your branches are the origin of setting up a build. For every branch you can configure whether you want to build on every push, or only when you manually queue a build.
 
-You can see the respective instructions to configure your build for [iOS](./ios/index.md), [Android](./android/index.md), [Windows](./windows/index.md), [macOS](./macos/index.md), [Xamarin](./xamarin/index.md), and [React Native](./react-native/index.md).
+You can see the respective instructions to configure your build for [iOS](~/build/ios/index.md), [Android](~/build/android/index.md), [Windows](~/build/windows/index.md), [macOS](~/build/macos/index.md), [Xamarin](~/build/xamarin/index.md), and [React Native](~/build/react-native/index.md).
 
 ## Cloning build configurations
 
@@ -27,12 +27,9 @@ From there, you can select which configured branch to clone the definition from.
 A clone will copy:
 - the configuration from your origin branch to your target branch, such as the selected project and configuration, the trigger to build (automatic or manual)
 - all signing configurations and credentials
-- all [environment variables](./custom/variables/index.md) and [build scripts](./custom/scripts/index.md)
+- all [environment variables](~/build/custom/variables/index.md) and [build scripts](~/build/custom/scripts/index.md)
 
 If you want to use your source branch only as a template and edit individual settings, you can always edit the cloned build configuration after creating it.
 
 > [!NOTE]
 > When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that is distinct from the originating configuration. Any changes in the cloned and original build configurations are not mirrored.
-
-
-<!-- Optional: Add screenshot of the UI here - pending on final UI -->
