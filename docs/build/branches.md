@@ -20,16 +20,16 @@ You can see the respective instructions to configure your build for [iOS](~/buil
 
 ## Cloning build configurations
 
-You may face a situation where you already have a branch configured in your repository and you have a similar branch that you want to apply the same configuration for. In this case, you can clone the existing configuration: You can either click on the "more" dropdown when hovering over an unconfigured branch in the list and select "Clone build configuration", or select the branch and on the overview select "Clone build configuration" on the "Configure" menu.
+You may face a situation where you already have a branch configured in your repository and you have a similar branch for which you want to apply the same configuration. In this case, you can clone the existing configuration: You can either click on the **more** dropdown when hovering over an unconfigured branch in the list and select "Clone build configuration", or select the branch and on the overview select "Clone build configuration" on the **Configure** menu.
 
-From there, you can select which configured branch to clone the definition from.
+From there, you can select the configured branch from which to clone the definition.
 
-A clone will copy:
-- the configuration from your origin branch to your target branch, such as the selected project and configuration, the trigger to build (automatic or manual)
-- all signing configurations and credentials
-- all [environment variables](~/build/custom/variables/index.md) and [build scripts](~/build/custom/scripts/index.md)
+A clone copies:
+- The configuration from your origin branch to your target branch, such as the selected project and configuration, the trigger to build (automatic or manual)
+- All signing configurations and credentials
+- All [environment variables](~/build/custom/variables/index.md) and [build scripts](~/build/custom/scripts/index.md)
 
 If you want to use your source branch only as a template and edit individual settings, you can always edit the cloned build configuration after creating it.
 
 > [!NOTE]
-> When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that is distinct from the originating configuration. Any changes in the cloned and original build configurations are not mirrored.
+> App Center does not mirror changes between the original and cloned build configurations. When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that is independent from the original. 
