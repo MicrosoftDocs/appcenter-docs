@@ -1,5 +1,5 @@
 ---
-title: Preapring Xamarin.Android app for testing
+title: Preparing Xamarin.Android app for testing
 description: A step-by-step guide to set up Xamarin.UITest for Xamarin.Android apps
 author: oddj0b
 ms.author: vigimm

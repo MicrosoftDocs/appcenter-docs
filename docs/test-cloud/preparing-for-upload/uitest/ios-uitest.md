@@ -1,9 +1,9 @@
 ---
-title: Preapring Xamarin.iOS app for testing
+title: Preparing Xamarin.iOS app for testing
 description: A step-by-step guide to set up Xamarin.UITest for Xamarin.iOS apps
 author: oddj0b
 ms.author: vigimm
-ms.date: 05/29/2019
+ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: D938098B-EA2F-4EC8-BCB2-A79D25B2F964
 ms.service: vs-appcenter 
@@ -45,6 +45,6 @@ Xamarin.Calabash.Start();
 > [!WARNING]
 > Apple will reject your app if you submit an app that includes the Xamarin Test Cloud Agent. The Xamarin Test Cloud Agent is only supported for apps signed with Development Provisioning Profiles. When submitted to App Center Test, IPAs are automatically re-signed with one of our Development Provisioning Profiles if possible.
 
-When you surround the initialization code in the **ENABLE_TEST_CLOUD** conditional compile statement, the Xamarin linker will leave the Xamarin Test Cloud Agent in builds that use the **ENABLE_TEST_CLOUD** flag; conventionally **Debug** builds but not **Release** builds. New Xamarin.iOS apps created in Visual Studio use this approach.
+When you surround the initialization code in the **ENABLE_TEST_CLOUD** conditional compile statement, the Xamarin linker will leave the Xamarin Test Cloud Agent in builds that use the **ENABLE_TEST_CLOUD** flag. Normally **Debug** builds but not **Release** builds. New Xamarin.iOS apps created in Visual Studio use this approach.
 
 Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
