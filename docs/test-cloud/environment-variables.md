@@ -4,7 +4,7 @@ description: Environment variables in App Center Test
 keywords: test cloud
 author: glennwilson
 ms.author: v-glenw
-ms.date: 02/15/2019
+ms.date: 04/29/2019
 ms.topic: article
 ms.assetid: 51964205-c1d7-4fd7-8259-83485590c6e1
 ms.service: vs-appcenter
@@ -13,21 +13,18 @@ ms.custom: test
 
 # Environment variables
 
-When your tests run in App Center Test, there are environment variables you can use on the test device or in your test script.
+When App Center runs tests for an application, there are useful environment variables available.  You can set additional environment variables for your application and tests via the App Center CLI.
 
-## Device environment variables
+## Environment variables: available in your application
 
-On an iOS device, the environment variable `RUNNING_IN_APP_CENTER` is set when the device is running in App Center Test. There is no equivalent on Android devices.
+| Environment Variable    | Description |
+| ----------------------- | ----------- |
+| `RUNNING_IN_APP_CENTER` | Set to `1` when the device is running in App Center Test
 
-| Environment Variable | Description |
-| -------------------- | ----------- |
-| `RUNNING_IN_APP_CENTER` | Set to `1` when the device is running in App Center Test. (iOS Only). |
+## Environment variables: available in your tests
 
-## Test script environment variables
-
-Calabash, Appium, and Xamarin.UITest use a client/server approach. The test script is the *client* and sends HTTP requests to a *server* running on the device with the app being tested. These environment variables are only available for Calabash, Appium, and Xamarin.UITest and only to the test script code. They aren't available on the device or to the application under test. They're set in App Center Test but not when you run locally.
-
-Espresso and XCUITest use a model where the test and the app both run on the mobile device so these environment variables are not available in those test frameworks.
+These variables are only available to your tests when running in App
+Center Test.
 
 | Environment Variable | Description |
 | -------------------- | ----------- |
@@ -70,7 +67,7 @@ var xtcplatform = Environment.GetEnvironmentVariable("XTC_PLATFORM");
 Console.WriteLine($"XTC_PLATFORM={xtcplatform}");
 ```
 
-## Example test log output in App Center Test
+### Example test log output in App Center Test
 
 The code snippet in the previous section produces output in the Test Log similar to the following when run in App Center Test.
 
@@ -84,6 +81,60 @@ XTC_DEVICE_OS=8.1.0
 XTC_LANG=en
 XTC_PLATFORM=android
 ```
+
+## Sample XCUITest and native iOS application code
+
+XCUITest and native iOS applications access environment variables through the NSProcessInfo API.
+
+```Objective-C
+[[NSProcessInfo processInfo] environment]["XAMARIN_TEST_CLOUD"]
+```
+
+```swift
+ProcessInfo.processInfo.environment["XAMARIN_TEST_CLOUD"]
+```
+
+## Calabash Cucumber
+
+Calabash Android and iOS use Cucumber Ruby as the test runner.  You can access the test environment variables with `ENV`.  Access your application's environment using the native APIs (NSProcessInfo for Objc/Swift, Properties for Android Java, and Environment for Xamarin).
+
+```ruby
+if ENV["XAMARIN_TEST_CLOUD"]
+  puts "running in Test Cloud!"
+else
+  puts "running locally!"
+  end
+```
+
+## Setting additional environment variables
+
+When you upload your tests to AppCenter with the appcenter CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner (XCUITest, Espresso, Xamarin.UITest, etc.) and for your application (the application under test or AUT).
+
+These variables will be available at runtime in the test runner or application under test. This feature is available for all test frameworks.
+
+### Environment variables for your tests
+
+```shell
+$ appcenter test run < > \
+  < args > \
+  --test-parameter "test_env=USERNAME=clever_user@example.com" \
+  --test-parameter "test_env=PASSWORD=pa$$w0rd" \
+  --test-parameter "test_env=TWO_FACTOR_URL=https://staging.example.com/test-2FA" \
+  --test-parameter "test_env=UPGRADE_PURCHASED=0"
+```
+
+### Environment variables for your application
+
+```shell
+$ appcenter test run < > \
+  < args > \
+  --test-parameter "app_env=VERBOSE_LOGGING=1" \
+  --test-parameter "app_env=CONTENT_SERVER=staging.example.com \
+  --test-parameter "app_env=API_LEVEL=3.2" \
+  --test-parameter "app_env=UPGRADE_PURCHASED=0"
+```
+
+Your application is automatically launched with `RUNNING_IN_APP_CENTER=1`.
 
 ## Getting help
 
