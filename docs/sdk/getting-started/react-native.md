@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 05/28/2019
+ms.date: 05/29/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -124,7 +124,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 2. Edit the project's `android/app/src/main/assets/appcenter-config.json` and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
 
-3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
+3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret. If **AppCenter-Config.plist** already exists but not part of your Xcode project, you must add it to the Xcode project manually (right-click the app in XCode and click **Add files to <App Name>...**).
 
 ### 3.2 [iOS only] Integrate the iOS SDK without react-native link
 
