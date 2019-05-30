@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 02/21/2019
+ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -160,69 +160,73 @@ More information about Application Insights and App Center:
 
 ## Prerequisities
 
-In order to get started on export , you will need an Azure subscription. If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/en-us/free/) account before you begin.
+You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/en-us/free/) account before you begin.
 
 
 ## Azure Subscription Linking
 
 > [!NOTE]
-> This step is only needed for *Standard Export*. For *Custom Export*, you don't need to attach the Azure subscription to App Center.
+> This step is only needed for Standard Export; Custom Export doesn't require an Azure subscription.
 
-Exporting an app's data to Azure, using our standard export, requires an Azure subscription linked to the app. Adding an Azure subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization's admin.
+App Center's standard export of app data to Azure requires an Azure subscription linked to the App Center app. Adding the subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization's admin.
 
 ### Adding an Azure Subscription
 
-- **App belonging to an organization:** If you are the organization admin, go to the "Manage" section under the organization where the app belongs to.
-- **App belonging to a user:** If you are the app owner, go to user settings.
-- Under Azure, click **Add subscription**. Then, you will need to add your Azure credentials and it will let you choose your preferred option from all the Azure subscriptions you have access to.
+- **App belonging to an organization:** If you are the organization admin, go to the **Manage** section under the organization where the app belongs to.
+- **App belonging to a user:** If you are the app owner, follow these steps.
+1. Login to Appcenter portal
+2. Go to user settings.
+3. Under Azure, click **Add subscription**
+4. Select an existing Azure subscription or create a new one.
 
 ### Linking an app to an Azure Subscription
 
-Once you have added an Azure Subscription into your user/organization settings, you need to provide apps with access so that the subscription can be used within that app. By doing this, you are allowing any manager/developer in that app to use the subscription for exporting purposes. Note that this will have an associated cost that will be charge into your Azure Subscription.
+Once you've added your Azure subscription to the user or org account, you need to provide apps with access so that the subscription can be used within that app. By doing this, you are allowing any manager/developer in that app to use the subscription for exporting purposes. Note that this will have an associated cost that will be charged iagainst your Azure Subscription.
 
 ## Set up Export
 
-1. Go to the **App Settings**.
-2. Click on Export and select the **New Export** option.
-3. Choose your preferred destination (Blob Storage or Application Insights).
-4. Select the type of configuration you want (standard vs custom).
+1. On the Appcenter Portal, choose the App.
+2. Go to the **App Settings**.
+3. Click on **Export** and select the **New Export** option.
+4. Select blog storage or Application Insights based on your app needs.
+5. Select the type of configuration you want (standard vs custom).
 
 App Center offers two ways to export your data: *standard export* and *custom export*. Standard export allows you to export the data with a one-click experience, using the Azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
 
 ### Standard Export
 
-This provides a one-click experience. When selecting this option, all the resources will be created for you in Azure and the Azure Subscription attached to that app will be used. As mentioned above, this requires having an Azure Subscription linked to your app.
+Standard Export provides a one-click experience for exporting your data. With this option, all required resources are automatically created in Azure.
 
 ### Custom Export
 
-This option allows you to customize your export configurations in [Azure](https://portal.azure.com).
+Custom Export enables users to customize their export configuration in [Azure](https://portal.azure.com).
 
 **For Blob Storage:**
 
-- Once in the [Azure Portal ](https://portal.azure.com), Click on "Create a new resource"
-- Search for "Storage account" in Search the Marketplace.
-- Click on "Create", This will open the Create storage account page.
-- Select an Azure Subscription.
-- Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
-- For Account kinds, you will see the following drop-down. There are three options supported. Choose what is right for you. .
+- Once in the [Azure Portal ](https://portal.azure.com)
+1. Click on **Create a new resource**
+2. Search for **Storage account** in Search the Marketplace.
+3. Click on **Create**, This will open the Create storage account page.
+4. Select an Azure Subscription.
+5. Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
+6. For Account kinds, you will see the following drop-down. There are three options supported. Choose what is right for you.
 ![Supported Blob Storage accounts](~/analytics/images/Export-Storage.png)
-- Click on "Review + create"
-- Once Validation has passed
-- Click "create"
-- Once deployment has succeeded go to the resource
-- Locate Access Keys in the Settings tab
-
-- Copy the *connection string* and add it into your App Center custom configurations. 
+7. Click on **Review + create**
+8. Once Validation has passed
+9. Click **create**
+10. Once deployment has succeeded go to the resource
+11. Locate **Access Keys** in the Settings tab
+12. Copy the **connection string** and add it into your App Center custom configurations. 
 
 ![Add the connection string in App Center](~/analytics/images/connectionstring.png)
 
 **For Application Insights:**
 
-- Sign in to the [Azure Portal ](https://portal.azure.com).
-- Select Create a resource > Management Tools > Application Insights.
-- A configuration box will appear
-- Select the Application Type to be *App Center application* type.
-- Copy the *instrumentation key* from the Azure portal and add it into your App Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
+1. Sign in to the [Azure Portal ](https://portal.azure.com).
+2. Select **Create a resource** > Management Tools > Application Insights.
+3. A configuration box will appear
+4. Select the **Application Type**to be *App Center application* type.
+5. Copy the **instrumentation key** from the Azure portal and add it into your App Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
