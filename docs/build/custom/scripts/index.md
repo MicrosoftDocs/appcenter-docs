@@ -17,8 +17,10 @@ You can add up to three custom build steps that run at pre-defined stages during
 
 You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
 
-> [!NOTE]
-> Once your build scripts have been detected for the first time or you made changes to the location of scripts or where you store CocoaPods for iOS projects, make sure to save the branch configuration to apply the changes! This will perform analysis to index your repository tree and save the new build definition. 
+When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
+
+> [!WARNING]
+> Every time you modify the project's build scripts, you must click the **Save** or **Save & Build** button to save the branch configuration to apply the changes.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 
