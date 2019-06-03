@@ -31,6 +31,7 @@ For Blob Storage, data is continuously exported from the moment export is config
 You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
 
 [Learn more about General Purpose v2 Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+[Learn more about Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
 
 
 ## Azure Blob Storage
@@ -47,47 +48,44 @@ The contents of the blob file is a JSON array of client device logs, that looks 
 
 ```JSON
 [
-{
-"AppId": "046d56b8-ea26-4653-97ba-12b8f99c3ef5",
-"Timestamp": "2017-12-09T04:02:53.618Z",
-"InstallId": "e589a371-ea0c-4479-9a7b-9f834adec040",
-"MessageType": "EventLog",
-"IngressTimestamp": "2017-12-09T04:02:57.987Z",
-"MessageId": "980e21a0-0cbb-48ac-8820-28acf4beb00d",
-"EventId": "ad980536-e743-48a9-ab7e-cb043602d2c9",
-"EventName": "log_out",
-"CorrelationId": "83a2daa9-e5b4-4082-ba4a-ce34b95ab859",
-"IsTestMessage": "False",
-"SdkVersion": "1.0",
-"Model": "PC",
-"OemName": "Samsung",
-"OsName": "Android",
-"OsVersion": "8.1.0",
-"OsApiLevel": "2",
-"Locale": "EN",
-"TimeZoneOffset": "PT2M",
-"ScreenSize": "320x240",
-"AppVersion": "1.1.0",
-"AppBuild": "1",
-"AppNamespace": "com.microsoft.test",
-"CarrierName": "AT&T",
-"CarrierCountry": "US",
-"CountryCode": "US",
-"WrapperSdkVersion": "1.0",
-"WrapperSdkName": "mobilecenter.xamarin",
-"Properties": "{\"extra_00\":\"5bcacf3598ca44ebbbc99e4488cfc854\",\"extra_01\":\"2673e48867c74d51af8dc24c762a8b28\",\"extra_02\":\"5b76c801e5074cd3a13ea37253b94484\",\"extra_03\":\"c1e76aa252c947d4b4bcd4d1d96a7be6\",\"extra_04\":\"caea50034c4f441a963700fa3cf70d03\"}",
-"SessionId": "10df497a-4261-4995-b466-3fd77ac47395",
-"SdkName": "mobilecenter.android",
-"OsBuild": "2",
-"WrapperRuntimeVersion": "None",
-"LiveUpdateDeploymentKey": "stage",
-"LiveUpdatePackageHash": "dsadsdasd3211321233",
-"LiveUpdateReleaseLabel": "2.0"
-}
+    {
+        "AppId": "046d56b8-ea26-4653-97ba-12b8f99c3ef5",
+        "Timestamp": "2017-12-09T04:02:53.618Z",
+        "InstallId": "e589a371-ea0c-4479-9a7b-9f834adec040",
+        "MessageType": "EventLog",
+        "IngressTimestamp": "2017-12-09T04:02:57.987Z",
+        "MessageId": "980e21a0-0cbb-48ac-8820-28acf4beb00d",
+        "EventId": "ad980536-e743-48a9-ab7e-cb043602d2c9",
+        "EventName": "log_out",
+        "CorrelationId": "83a2daa9-e5b4-4082-ba4a-ce34b95ab859",
+        "IsTestMessage": "False",
+        "SdkVersion": "1.0",
+        "Model": "PC",
+        "OemName": "Samsung",
+        "OsName": "Android",
+        "OsVersion": "8.1.0",
+        "OsApiLevel": "2",
+        "Locale": "EN",
+        "TimeZoneOffset": "PT2M",
+        "ScreenSize": "320x240",
+        "AppVersion": "1.1.0",
+        "AppBuild": "1",
+        "AppNamespace": "com.microsoft.test",
+        "CarrierName": "AT&T",
+        "CarrierCountry": "US",
+        "CountryCode": "US",
+        "WrapperSdkVersion": "1.0",
+        "WrapperSdkName": "mobilecenter.xamarin","Properties": "{\"extra_00\":\"5bcacf3598ca44ebbbc99e4488cfc854\",\"extra_01\":\"2673e48867c74d51af8dc24c762a8b28\",\"extra_02\":\"5b76c801e5074cd3a13ea37253b94484\",\"extra_03\":\"c1e76aa252c947d4b4bcd4d1d96a7be6\",\"extra_04\":\"caea50034c4f441a963700fa3cf70d03\"}",
+        "SessionId": "10df497a-4261-4995-b466-3fd77ac47395",
+        "SdkName": "mobilecenter.android",
+        "OsBuild": "2",
+        "WrapperRuntimeVersion": "None",
+        "LiveUpdateDeploymentKey": "stage",
+        "LiveUpdatePackageHash": "dsadsdasd3211321233",
+        "LiveUpdateReleaseLabel": "2.0"
+    }
 ]
 ```
-
-
 ## Azure Application Insights
 
 Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you will get access to the following features:
@@ -144,9 +142,9 @@ A sample AI query to retrieve custom events:
 
 ```text
 customEvents
-| where name == "YourEventName"
-| extend Properties = todynamic(tostring(customDimensions.Properties))
-| extend YourPropertyName = Properties.YourPropertyName
+    | where name == "YourEventName"
+    | extend Properties = todynamic(tostring(customDimensions.Properties))
+    | extend YourPropertyName = Properties.YourPropertyName
 ```
 
 More information about Application Insights and App Center:
