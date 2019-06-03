@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/01/2019
+ms.date: 05/31/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter
@@ -24,9 +24,9 @@ dev_langs:
 
 ## Add the SDK to your app
 
-App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage the user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
+App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
 
-Please follow the [Getting Started](~/sdk/getting-started/ios.md) section before configuring Auth if you haven't set up and started the SDK in your app.
+Please follow the [Getting Started](~/sdk/getting-started/ios.md) section before configuring Auth if you haven't set up the SDK in your app.
 
 ### 1. Add the App Center Auth module
 
@@ -57,7 +57,14 @@ Add the Auth class to project's `[MSAppCenter start]` or `MSAppCenter.start` met
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSAuth.self])
 ```
 
-Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) (e.g., `msal65dc3680-7325-4000-a0e7-dbd2276eafd1` where `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your app secret).
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
+
+```objc
+[MSAppCenter start:@"65dc3680-7325-4000-a0e7-dbd2276eafd1" withServices:@[[MSAnalytics class], [MSCrashes class], [MSAuth class]]];
+```
+```swift
+MSAppCenter.start("65dc3680-7325-4000-a0e7-dbd2276eafd1", withServices: [MSAnalytics.self, MSCrashes.self, MSAuth.self])
+```
 
 Add the following lines to the import statements in the project's App Delegate class:
 
@@ -81,10 +88,10 @@ import AppCenterAuth
 4. Under **Item 0**, add a **Document Role** key and change the value to **Editor**.
 5. Under **Item 0**, add a **URL Schemes** key and change the type to Array.
 6. Under **URL Schemes** key, add a new entry (**Item 0**).
-7. Under **URL Schemes** > **Item 0**, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) (e.g., `msal65dc3680-7325-4000-a0e7-dbd2276eafd1` where `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your app secret).
+7. Under **URL Schemes** > **Item 0**, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
 
 > [!TIP]
-> If you want to verify that you modified the `Info.plist` correctly, right-click on the file and select **Open as...** > **Source code**. It should contain the following entry with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) instead of `{APP_SECRET}` (e.g., `msal65dc3680-7325-4000-a0e7-dbd2276eafd1` where `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your app secret).
+> If you want to verify that you modified the `Info.plist` correctly, right-click on the file and select **Open as...** > **Source code**. It should contain the following entry with [your actual App Secret](~/dashboard/faq.md) instead of `{APP_SECRET}`: `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
 > ```xml
 > <key>CFBundleURLTypes</key>
 > <array>
@@ -202,7 +209,7 @@ MSAuth.isEnabled()
 
 ## Disable automatic forwarding of the app delegate's methods to App Center services
 
-App Center uses swizzling to automatically forward the app delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the app delegate itself. You may want to disable the App Center app delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward the app delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change the implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the app delegate itself. You may want to disable App Center app delegate forwarding for all App Center services by following the steps below:
 
 1. Open the the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables app delegate forwarding for all App Center services.
