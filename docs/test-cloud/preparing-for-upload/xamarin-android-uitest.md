@@ -11,6 +11,8 @@ ms.service: vs-appcenter
 
 # Preparing Xamarin.Android Apps
 
+The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
+
 > [!IMPORTANT]
 > Running Xamarin.UITest on Windows requires [setting the ANDROID_HOME environment variable with the path to the Android SDK](https://www.360logica.com/blog/how-to-set-path-environmental-variable-for-sdk-in-windows/)
 

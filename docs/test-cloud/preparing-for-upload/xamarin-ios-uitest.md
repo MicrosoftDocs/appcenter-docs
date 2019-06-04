@@ -9,8 +9,9 @@ ms.assetid: D938098B-EA2F-4EC8-BCB2-A79D25B2F964
 ms.service: vs-appcenter 
 ---
 
-
 # Preparing Xamarin.iOS Apps
+
+The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
 
 Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .ipa file. The Xamarin Test Cloud Agent is a special, embedded HTTP server that allows Xamarin.UITests to interact with the iOS user interface. The Test Cloud Agent is added to the iOS project via NuGet.
 
