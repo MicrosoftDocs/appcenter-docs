@@ -17,15 +17,15 @@ ms.custom: analytics
 App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 By exporting the data, you benefit from:
 
-- Unlimited retention of data
+- Unlimited data retention
 - Detailed Usage Analysis
 - Unified dashboard
 - Additional rich features from Application Insights such as funnels, retention
 
-For Application Insights, data is continuously exported from the moment export is configured along with 2 days of backfilled data.
+App Center continuously exports Analytics data to Application Insights from the moment you configure export along with 2 days of backfilled data.
 With the new updated dashboard in Application Insights, App Center users can get a unified view of both Application and Backend Analytics on one dashboard.
 
-For Blob Storage, data is continuously exported from the moment export is configured along with 28 days of backfilled data.
+App Center continuously exports Analytics data to Blob Storage from the moment you configure export along with 28 days of backfilled data.
 [Learn more about Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 
 You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
@@ -201,7 +201,8 @@ Custom Export enables users to customize their export configuration in [Azure](h
 
 **For Blob Storage:**
 
-- Once in the [Azure Portal ](https://portal.azure.com)
+- Once in the [Azure Portal ](https://portal.azure.com),
+
 1. Click on **Create a new resource**
 2. Search for **Storage account** in Search the Marketplace.
 3. Click on **Create**, This will open the Create storage account page.
