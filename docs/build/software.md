@@ -11,18 +11,19 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Cloud Build Machines
+# App Center Cloud Build Machines
 
-Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on App Center servers.
+Each build runs on a separate, clean virtual machine (VM), and no other user has access to the VM. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
 
 ## Image Changes
 
-**We switched to using Java Azul OpenJDK**
+**App Center now uses the Java Azul OpenJDK**
 
-The following Java versions are available on the VM image: 7, 8, 11, 12.
-Java 9 and 10 were deprecated.
+The following Java versions are available on the VM image: 7, 8, 11, 12. Java versions 9 and 10 were deprecated.
 
-Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overloaded by complex licensing, end-user restrictions, and lack of long-term support. In this image change, we replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems. Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
+Previously, Microsoft hosted Mac machines ran with pre-installed JDKs overloaded with complex licensing, end-user restrictions, and lack of long-term support. With recent image changes, App Center replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems.
+
+Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
 
 ## Operating System
 
@@ -37,11 +38,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Language and Runtime
 
-- java 1.7 : OpenJDK Runtime Environment (Zulu 7.29.0.5-CA-macosx) (build 1.7.0_222-b08)
-- java 1.8 : OpenJDK Runtime Environment (Zulu 8.38.0.13-CA-macosx) (build 1.8.0_212-b04) (default)
-- java 11 : OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
-- java 12 : OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
-- Node.js 6.17.0
+- java 1.7: OpenJDK Runtime Environment (Zulu 7.29.0.5-CA-macosx) (build 1.7.0_222-b08)
+- java 1.8: OpenJDK Runtime Environment (Zulu 8.38.0.13-CA-macosx) (build 1.8.0_212-b04) (default)
+- java 11: OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
+- java 12: OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
 - PowerShell 6.2.1
 - Python 2.7.16
 - Python 3.7.3
@@ -51,6 +51,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Miniconda 4.6.14
 - MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
+
+### Node.js versions
+- v6.17.1
+- v8.16.0
+- v10.15.3
+- v12.1.0
 
 ### Package Management
 

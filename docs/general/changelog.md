@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 05/20/2019
+ms.date: 06/04/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,12 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **June 4, 2019**
+- **Node.js switching support**
+    - Node.js version can be specified in the app's branch configuration.  
+The following versions are available for use in App Center Build: 6, 8, 10, 12.  
+Also there is way to [specify](~/build/react-native/nodejs.md) custom version of Node.js.
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**

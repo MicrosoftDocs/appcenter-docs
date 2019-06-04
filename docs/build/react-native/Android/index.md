@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: siminapasat
 ms.author: siminap
-ms.date: 09/12/2018
+ms.date: 05/15/2019
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202
 ms.service: vs-appcenter
@@ -49,23 +49,28 @@ Select your project’s `package.json`. App Center will automatically extract in
 
 The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle** file. Select which build variant should be built.
 
-### 3.3. Build triggers
+### 3.3. Node.js version
+
+Select the Node.js version to use for the build 
+Read more about [how to select Node.js version](~/build/react-native/nodejs.md)
+
+### 3.4. Build triggers
 
 By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
-### 3.4. Increment version number
+### 3.5. Increment version number
 
 When enabled, the version code in the **AndroidManifest.xml** of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
-### 3.5. Launch your successful build on a real device
+### 3.6. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
+Use the newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
-### 3.6. Code signing
+### 3.7. Code signing
 
 A successful build will produce an `.apk` file. To release the build to the Play Store, it must be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about Android code signing [App Center's Android code signing documentation](~/build/android/code-signing.md).
 
-### 3.7. Distribute to a distribution group
+### 3.8. Distribute to a distribution group
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
