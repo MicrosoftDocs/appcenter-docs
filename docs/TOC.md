@@ -34,6 +34,7 @@
 ### [Introduction](build/react-native/index.md)
 ### [Android](build/react-native/android/index.md)
 ### [iOS](build/react-native/ios/index.md)
+### [Node.js selection](build/react-native/nodejs.md)
 ## Windows
 ### [Introduction](build/windows/index.md)
 ### [Configure a build](build/windows/uwp/first-build.md)
