@@ -211,9 +211,17 @@ The SDK does not have APIs to directly expose user profile information such as t
 
 Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only meta-data included in the token and no user profile information.
 
-To configure the list of fields being available in the tokens, the application developer must visit the tenant configuration on the Azure portal, and then select the user flow or custom policy that is linked to the App Center portal. On the user flow / custom policy configuration, go to **Application claims** and select the user fields that need to be decoded, then click **Save**.
+To configure the list of fields being available in the tokens, the application developer must visit the tenant configuration on the Azure portal, and then select the user flow or custom policy that is linked to the App Center portal. On the user flow / custom policy settings, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
-Even when including the fields in the tokens, the fields need to also be collected during the sign-up of the user, so the same fields must also be selected in **User attributes** settings in the user flow or custom policy and the **Save** button must be clicked after the selection. Please note that adding new user attributes will not update users that signed up before updating the settings. For existing users, the new selected fields will thus be missing from the tokens.
+![Application Claims Settings](images/application-claims.png)
+
+The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow / custom policy settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
 
 Once the tenant is configured and the application has retrieved the ID token or the access token, it can be decoded like this:
 
