@@ -43,9 +43,9 @@ Select your project’s `package.json`. App Center will automatically detect the
 
 ### <a name="xcode-version"/>3.2. Xcode version
 
-Select the Xcode version to run the build on.
-If toggle is in `Off` state then will use [modern build system](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes/build_system_release_notes_for_xcode_10).
-If toggle is in `On` state then will use legacy build system unless the different one is configured in the project settings or branch configuration.
+Select the Xcode version to run the build on from the dropdown list.
+If the toggle is in `On` state then the legacy build system will be used despite of  the project or workspace settings.
+If the toggle is in `Off` state then build system configuration from the project or workspace settings will be used.
 
 ### 3.3. Node.js version
 
