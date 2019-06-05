@@ -159,7 +159,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 Now, let's create our first document:
 
 ```csharp
-User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
+User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
 await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments)
 ```
 
@@ -168,7 +168,7 @@ This code snippet creates a document and inserts the details of the `user` objec
 Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
 
 ```csharp
-User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
+User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
 await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
@@ -184,7 +184,7 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
-Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
+If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables the user to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
 ```csharp
 var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
@@ -200,7 +200,7 @@ You can also specify the time-to-live (TTL) on a document by using `new ReadOpti
 
 ## Replace a Document
 
-Let's say Jim wanted to change his email. This action could be possible through a simple `Replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Replace` call. The parameters for replacing a document are the following:
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
@@ -211,14 +211,14 @@ Let's say Jim wanted to change his email. This action could be possible through 
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
-user.Email = "Jim@microsoft.com";
+user.Email = "alex@microsoft.com";
 await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the replacement document for offline persistence:
 
 ```csharp
-user.Email = "Jim@microsoft.com";
+user.Email = "alex@microsoft.com";
 await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
