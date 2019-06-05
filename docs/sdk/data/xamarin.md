@@ -4,7 +4,7 @@ description: How to configure App Center data for Xamarin
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/18/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
 ms.service: vs-appcenter
@@ -267,14 +267,14 @@ This will return a page of the documents that exist within a given user partitio
 
 With the list method, we also support pagination through the `PaginatedDocuments` and `Page` classes. Using the `List` call you can fetch a paginated list of documents from Cosmos DB.
 
-The `PaginatedDocuments` class has four methods, which can be used to manage paging:
+The `PaginatedDocuments` class has methods and properties which can be used to manage paging:
 
-* boolean `HasNextPage()` : Boolean indicating if an extra page is available
-* Page<T> `CurrentPage()` : Returns the current page
-* Page<T> `GetNextPageAsync()` : Asynchronously fetches the next page
-* IEnumerator<DocumentWrapper<T>> `GetEnumerator` : This is an enumerator for the paginated docs, which can traverse them
+* `HasNextPage` : Boolean property indicating wheter an extra page is available or not.
+* `CurrentPage` : Property that returns the current page with type being `Page<T>`.
+* `GetNextPageAsync()` : Method that asynchronously fetches the next page (the method returns an object of type `Task<Page<T>>`).
+* IEnumerator<DocumentWrapper<T>> `GetEnumerator()` : This is an enumerator for the paginated docs, which can traverse them
 
-The `Page` class has one field of type `IList<DocumentWrapper<T>>` called `Items`, which represents the documents in the page.
+The `Page` class has one property of type `IList<DocumentWrapper<T>>` called `Items`, which represents the documents in the page.
 
 The following code snippet displays how to use pagination:
 
