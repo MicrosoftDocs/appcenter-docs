@@ -294,7 +294,7 @@ try
 
     // Get first email address.
     var firstEmail = jwToken.Claims.FirstOrDefault(t => t.Type == "emails")?.Value;
-    if (displayName != null)
+    if (firstEmail != null)
     {
         // Do something with email.
     }
