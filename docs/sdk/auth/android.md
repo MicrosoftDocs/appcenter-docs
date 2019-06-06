@@ -207,11 +207,11 @@ Auth.signIn().thenAccept { signInResult ->
 
 ### Decoding tokens
 
-The SDK does not have APIs to directly expose user profile information such as the display name or the email address. This information can, however, be decoded from the ID token or the access token.
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information and we will show you how to decode the token in this section. 
 
 Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
 
-To configure the list of fields being available in the tokens, the application developer must visit the tenant configuration on the Azure portal, and then select the user flow or custom policy that is linked to the App Center portal. On the user flow / custom policy settings, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal, and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
 ![Application Claims Settings](images/application-claims.png)
 
@@ -264,7 +264,7 @@ try {
 }
 ```
 
-The third-party classes used in the sample code are already dependencies of the AppCenter Auth SDK, so those classes are available for your application to use without any extra installation steps.
+The third-party classes (e.g. `import com.nimbusds.jwt.JWT`) used in the sample code are already dependencies of the App Center Auth SDK, and are available to use without any extra installation steps.
 
 ## Sign out
 
