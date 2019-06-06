@@ -216,7 +216,7 @@ To configure the list of user profile fields in the tokens, visit the tenant con
 
 ![Application Claims Settings](images/application-claims.png)
 
-The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
 
 ![User Attributes Settings](images/user-attributes.png)
 
