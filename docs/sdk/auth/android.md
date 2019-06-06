@@ -264,7 +264,7 @@ try {
 }
 ```
 
-The third-party classes (e.g. `import com.nimbusds.jwt.JWT`) used in the sample code are already dependencies of the App Center Auth SDK, and are available to use without any extra installation steps.
+The third-party classes used in the sample code are already dependencies of the App Center Auth SDK, and are available to use without any extra installation steps.
 
 ## Sign out
 
