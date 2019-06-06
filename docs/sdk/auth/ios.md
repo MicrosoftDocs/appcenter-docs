@@ -226,7 +226,7 @@ If you are using a custom policy instead of a user flow, you can configure the c
 > Adding new user attributes will not update users that signed up before updating the settings.
 > For existing users, the new selected fields will thus be missing from the tokens.
 
-Once the tenant is configured and the application has retrieved the ID token or the access token, it can be decoded like this:
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
 
 ```objc
 NSString *idToken = userInformation.idToken;
@@ -240,16 +240,20 @@ if ([tokenSplit count] > 1) {
     NSError *error;
     NSDictionary *claims = [NSJSONSerialization JSONObjectWithData:claimsData options:0 error:&error];
     if (!error) {
+
+      // Get display name.
       id displayName = claims[@"name"];
       if ([displayName isKindOfClass:[NSString class]]) {
 
         // Do something with display name.
       }
+
+      // Get email addresses.
       id emails = claims[@"emails"];
       if ([emails isKindOfClass:[NSArray class]] && [emails count] > 0) {
         NSString *firstEmail = emails[0];
 
-        // Do something with email.
+        // Do something with the first email address.
       }
     }
   }
@@ -267,16 +271,20 @@ if tokenSplit != nil && tokenSplit!.count > 1 {
     if claimsData != nil {
       let claims = try JSONSerialization.jsonObject(with: claimsData!, options: []) as? [AnyHashable: Any]
       if claims != nil {
+
+        // Get display name.
         let displayName = claims!["name"]
         if displayName is String {
           
           // Do something with display name.
         }
+
+        // Get email addresses.
         let emails = claims!["emails"] as? [Any]
         if emails != nil && emails!.count > 0 {
           let firstEmail = emails![0] as? String
-          
-          // Do something with email.
+
+          // Do something with the first email address.
         }
       }
     }
