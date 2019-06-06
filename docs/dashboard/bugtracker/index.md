@@ -20,7 +20,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app you would like for bug tracker integration.
 
-2. In your app, select **Settings**, **Services**, and click the **edit** button.
+2. In your app, select **Settings**, **Services**, and click the **Add account or service** button.
 
 3. <a name="step3"/>Select which bug tracker (Jira, VSTS, Azure DevOps, or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it.
 
