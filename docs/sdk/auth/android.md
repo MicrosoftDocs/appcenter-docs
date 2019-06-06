@@ -207,7 +207,7 @@ Auth.signIn().thenAccept { signInResult ->
 
 ### Decoding tokens
 
-The SDK does not have APIs to directly expose user profile information such as the display name or the email address. This information can however be decoded from the ID token or the access token.
+The SDK does not have APIs to directly expose user profile information such as the display name or the email address. This information can, however, be decoded from the ID token or the access token.
 
 Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
 
