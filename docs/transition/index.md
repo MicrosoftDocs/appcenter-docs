@@ -29,7 +29,7 @@ All your HockeyApp data is synchronized to App Center. That allows you to work i
 
 ### Stage 2: Move your apps to App Center
 
-While we synchronize your apps from HockeyApp to App Center, your data is still tied to HockeyApp together with the user management and all the settings. Starting in early 2019, we will enable you to move apps fully to App Center. Moving your app will also remove the synchronization with HockeyApp, and give you full control of your apps in App Center. This will also be the moment when you can update your apps to use the new App Center SDK. The App Center SDK is built to be faster and more modular than the HockeySDK. Ship the App Center SDK in a future release of the app, and still receive data from the HockeyApp SDK in App Center from past releases. [Follow our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp) for the latest updates.
+While we synchronize your apps from HockeyApp to App Center, your data is still tied to HockeyApp together with the user management and all the settings. Starting in mid 2019, we will enable you to move apps fully to App Center. Moving your app will also remove the synchronization with HockeyApp, and give you full control of your apps in App Center. This will also be the moment when you can update your apps to use the new App Center SDK. The App Center SDK is built to be faster and more modular than the HockeySDK. Ship the App Center SDK in a future release of the app, and still receive data from the HockeyApp SDK in App Center from past releases. [Follow our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp) for the latest updates.
 
 > [!NOTE]
 > Moving apps to App Center will be available in early 2019.
