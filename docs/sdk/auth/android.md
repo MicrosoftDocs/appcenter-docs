@@ -225,7 +225,7 @@ If you are using a custom policy instead of a user flow, you can configure the c
 > Adding new user attributes will not update users that signed up before updating the settings.
 > For existing users, the new selected fields will thus be missing from the tokens.
 
-Once the tenant is configured and the application has retrieved the ID token or the access token, it can be decoded like this:
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
 
 ```java
 import com.nimbusds.jwt.JWT;
