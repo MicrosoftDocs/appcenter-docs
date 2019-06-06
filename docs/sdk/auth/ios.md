@@ -179,10 +179,14 @@ To access the tokens from the sign-in result:
 [MSAuth signInWithCompletionHandler:^(MSUserInformation *_Nullable userInformation, NSError *_Nullable error) {
 
 	if (!error) {
-		
-		// Sign-in succeeded.
+
+		// Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
 		NSString *idToken = userInformation.idToken;
 		NSString *accessToken = userInformation.accessToken;
+
+    // Do work with either token.    
 	}
 	else {
 		
@@ -195,9 +199,13 @@ MSAuth.signIn { userInformation, error in
 
 	if error == nil {
 
-		// Sign-in succeeded.
+		// Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
 		var idToken = userInformation!.idToken;
 		var accessToken = userInformation!.accessToken;
+
+    // Do work with either token.
 	}
 	else {
 

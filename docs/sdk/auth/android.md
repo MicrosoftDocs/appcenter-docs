@@ -177,9 +177,13 @@ Auth.signIn().thenAccept(new AppCenterConsumer<SignInResult>() {
 
         if (signInResult.getException() == null) {
 
-            // Sign-in succeeded.
+            // Sign-in succeeded if exception is null.
+            // SignInResult is never null, getUserInformation() returns not null when there is no exception.
+            // Both getIdToken() / getAccessToken() return non null values.
             String idToken = signInResult.getUserInformation().getIdToken();
             String accessToken = signInResult.getUserInformation().getAccessToken();
+
+            // Do work with either token.
         } else {
 
             // Do something with sign in failure.
@@ -194,9 +198,13 @@ import com.microsoft.appcenter.auth.Auth
 Auth.signIn().thenAccept { signInResult ->
     if (signInResult.exception == null) {
 
-        // Sign-in succeeded.
+        // Sign-in succeeded if exception is null.
+        // SignInResult is never null, getUserInformation() returns not null when there is no exception.
+        // Both getIdToken() / getAccessToken() return non null values.
         val idToken = signInResult.userInformation.idToken
         val accessToken = signInResult.userInformation.accessToken
+
+        // Do work with either token.
     } else {
 
         // Do something with sign in failure.

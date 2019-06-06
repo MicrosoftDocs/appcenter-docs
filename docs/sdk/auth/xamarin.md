@@ -241,10 +241,14 @@ async Task SignInAsync()
 {
     try
     {
-        // Sign-in succeeded.
+        // Sign-in succeeded, UserInformation is not null.
         UserInformation userInfo = await Auth.SignInAsync();
+        
+        // Get tokens. They are not null.
         string idToken = userInfo.IdToken;
         string accessToken = userInfo.AccessToken;
+
+        // Do work with either token.
     }
     catch (Exception e)
     {
