@@ -216,9 +216,11 @@ To configure the list of user profile fields in the tokens, visit the tenant con
 
 ![Application Claims Settings](images/application-claims.png)
 
-The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow / custom policy settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
 ![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.

@@ -211,13 +211,15 @@ You can decode user profile information such as the display name or the email ad
 
 Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
 
-To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal, and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
 ![Application Claims Settings](images/application-claims.png)
 
-The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow / custom policy settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
 ![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.
@@ -234,7 +236,11 @@ try {
     String idToken = signInResult.getUserInformation().getIdToken();
     JWT parsedToken = JWTParser.parse(idToken);
     Map<String, Object> claims = parsedToken.getJWTClaimsSet().getClaims();
+
+    // Get display name.
     String displayName = (String) claims.get("name");
+
+    // Get first email.
     net.minidev.json.JSONArray emails = (net.minidev.json.JSONArray) claims.get("emails");
     if (emails != null && !emails.isEmpty()) {
         String firstEmail = emails.get(0).toString();
@@ -253,7 +259,11 @@ try {
     val idToken = signInResult.getUserInformation().getIdToken()
     val parsedToken = JWTParser.parse(idToken)
     val claims = parsedToken.jwtClaimsSet.claims
+
+    // Get display name.
     val displayName = claims["name"] as String?
+
+    // Get first email.
     val emails = claims["emails"] as net.minidev.json.JSONArray?
     if (emails != null && !emails.isEmpty()) {
         val firstEmail = emails[0].toString()
