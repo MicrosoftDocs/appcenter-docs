@@ -259,9 +259,9 @@ async Task SignInAsync()
 
 ### Decoding tokens
 
-You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information and we will show you how to decode the token in this section. 
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
 
-Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
 
 To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
@@ -309,7 +309,7 @@ catch (ArgumentException)
 }
 ```
 
-The code sample requires to install the [JWT nuget package](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/). If your application uses Xamarin.Forms, the package needs to be installed in the .NET standard portable project and also the Android and iOS platform projects.
+The code sample requires the [JWT nuget package](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/). If your application uses Xamarin.Forms, the package needs to be installed in the .NET standard portable project and also the Android and iOS platform projects.
 
 ## Sign out
 
