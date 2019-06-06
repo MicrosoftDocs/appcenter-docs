@@ -201,6 +201,7 @@ async Task SignInAsync()
     {
         // Sign-in succeeded.
         UserInformation userInfo = await Auth.SignInAsync();
+        string accountId = userInfo.AccountId;
     }
     catch (Exception e)
     {
@@ -233,40 +234,21 @@ The access token contains the same information as the ID token but also contains
 
 To access the tokens from the sign-in result:
 
-```java
-import com.microsoft.appcenter.auth.Auth;
+```csharp
+using Microsoft.AppCenter.Auth;
 
-Auth.signIn().thenAccept(new AppCenterConsumer<SignInResult>() {
-
-    @Override
-    public void accept(SignInResult signInResult) {
-
-        if (signInResult.getException() == null) {
-
-            // Sign-in succeeded.
-            String idToken = signInResult.getUserInformation().getIdToken();
-            String accessToken = signInResult.getUserInformation().getAccessToken();
-        } else {
-
-            // Do something with sign in failure.
-            Exception signInFailureException = signInResult.getException();
-        }
-    }
-});
-```
-```kotlin
-import com.microsoft.appcenter.auth.Auth
-
-Auth.signIn().thenAccept { signInResult ->
-    if (signInResult.exception == null) {
-
+async Task SignInAsync()
+{
+    try
+    {
         // Sign-in succeeded.
-        val idToken = signInResult.userInformation.idToken
-        val accessToken = signInResult.userInformation.accessToken
-    } else {
-
-        // Do something with sign in failure.
-        val signInFailureException = signInResult.exception
+        UserInformation userInfo = await Auth.SignInAsync();
+        string idToken = userInfo.IdToken;
+        string accessToken = userInfo.AccessToken;
+    }
+    catch (Exception e)
+    {
+        // Do something with sign-in failure.
     }
 }
 ```
