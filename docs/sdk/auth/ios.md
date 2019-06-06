@@ -178,39 +178,39 @@ To access the tokens from the sign-in result:
 ```objc
 [MSAuth signInWithCompletionHandler:^(MSUserInformation *_Nullable userInformation, NSError *_Nullable error) {
 
-	if (!error) {
+  if (!error) {
 
-		// Sign-in succeeded if error is nil.
+    // Sign-in succeeded if error is nil.
     // userInformation is not nil if error is nil.
     // and both idToken and accessToken are not nil when userInformation is not nil.
-		NSString *idToken = userInformation.idToken;
-		NSString *accessToken = userInformation.accessToken;
+    NSString *idToken = userInformation.idToken;
+    NSString *accessToken = userInformation.accessToken;
 
-    // Do work with either token.    
-	}
-	else {
-		
-		// Do something with sign in failure.
-	}
+    // Do work with either token.
+  }
+  else {
+
+    // Do something with sign in failure.
+  }
 }];
 ```
 ```swift
 MSAuth.signIn { userInformation, error in
 
-	if error == nil {
+  if error == nil {
 
-		// Sign-in succeeded if error is nil.
+    // Sign-in succeeded if error is nil.
     // userInformation is not nil if error is nil.
     // and both idToken and accessToken are not nil when userInformation is not nil.
-		var idToken = userInformation!.idToken;
-		var accessToken = userInformation!.accessToken;
+    var idToken = userInformation!.idToken;
+    var accessToken = userInformation!.accessToken;
 
     // Do work with either token.
 	}
-	else {
+  else {
 
-		// Do something with sign in failure.
-	}
+    // Do something with sign in failure.
+  }
 }
 ```
 
