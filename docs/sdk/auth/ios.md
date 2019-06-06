@@ -163,6 +163,128 @@ Please note the following:
 * The SDK automatically saves the signed-in users' information so they do not have to sign in to your app again.
 * If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information has expired or has been revoked by the authentication server.
 
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```objc
+[MSAuth signInWithCompletionHandler:^(MSUserInformation *_Nullable userInformation, NSError *_Nullable error) {
+
+	if (!error) {
+		
+		// Sign-in succeeded.
+		NSString *idToken = userInformation.idToken;
+		NSString *accessToken = userInformation.accessToken;
+	}
+	else {
+		
+		// Do something with sign in failure.
+	}
+}];
+```
+```swift
+MSAuth.signIn { userInformation, error in
+
+	if error == nil {
+
+		// Sign-in succeeded.
+		var idToken = userInformation!.idToken;
+		var accessToken = userInformation!.accessToken;
+	}
+	else {
+
+		// Do something with sign in failure.
+	}
+}
+```
+
+### Decoding tokens
+
+The SDK does not have APIs to directly expose user profile information such as the display name or the email address. This information can however be decoded from the ID token or the access token.
+
+Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
+
+To configure the list of fields being available in the tokens, the application developer must visit the tenant configuration on the Azure portal, and then select the user flow or custom policy that is linked to the App Center portal. On the user flow / custom policy settings, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+The fields need to also be collected during the sign-up of the user so that they can be available in tokens. On the user flow / custom policy settings, go to **User attributes** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once the tenant is configured and the application has retrieved the ID token or the access token, it can be decoded like this:
+
+```objc
+NSString *idToken = userInformation.idToken;
+NSArray *tokenSplit = [idToken componentsSeparatedByString:@"."];
+if ([tokenSplit count] > 1) {
+  NSString *rawClaims = tokenSplit[1];
+  size_t paddedLength = rawClaims.length + (4 - rawClaims.length % 4) % 4;
+  rawClaims = [rawClaims stringByPaddingToLength:paddedLength withString:@"=" startingAtIndex:0];
+  NSData *claimsData = [[NSData alloc] initWithBase64EncodedString:rawClaims options:NSDataBase64DecodingIgnoreUnknownCharacters];
+  if (claimsData) {
+    NSError *error;
+    NSDictionary *claims = [NSJSONSerialization JSONObjectWithData:claimsData options:0 error:&error];
+    if (!error) {
+      id displayName = claims[@"name"];
+      if ([displayName isKindOfClass:[NSString class]]) {
+
+        // Do something with display name.
+      }
+      id emails = claims[@"emails"];
+      if ([emails isKindOfClass:[NSArray class]] && [emails count] > 0) {
+        NSString *firstEmail = emails[0];
+
+        // Do something with email.
+      }
+    }
+  }
+}
+```
+```swift
+let idToken = userInformation?.idToken
+let tokenSplit = idToken?.components(separatedBy: ".")
+if tokenSplit != nil && tokenSplit!.count > 1 {
+  var rawClaims = tokenSplit![1]
+  let paddedLength = rawClaims.count + (4 - rawClaims.count % 4) % 4
+  rawClaims = rawClaims.padding(toLength: paddedLength, withPad: "=", startingAt: 0)
+  let claimsData = Data(base64Encoded: rawClaims, options: .ignoreUnknownCharacters)
+  do {
+    if claimsData != nil {
+      let claims = try JSONSerialization.jsonObject(with: claimsData!, options: []) as? [AnyHashable: Any]
+      if claims != nil {
+        let displayName = claims!["name"]
+        if displayName is String {
+          
+          // Do something with display name.
+        }
+        let emails = claims!["emails"] as? [Any]
+        if emails != nil && emails!.count > 0 {
+          let firstEmail = emails![0] as? String
+          
+          // Do something with email.
+        }
+      }
+    }
+  } catch {
+    
+    // Handle error.
+  }
+}
+```
+
 ## Sign out
 
 To sign out the user and clear all associated authentication tokens, call the `signOut` method:

@@ -161,7 +161,7 @@ When a user signs in to the application, the SDK exposes an ID token and an acce
 
 The tokens use the [JWT](https://jwt.io/) format.
 
-An ID token represents the user information itself without any permission to call any other services' REST API.
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
 
 The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
 
@@ -209,7 +209,7 @@ Auth.signIn().thenAccept { signInResult ->
 
 The SDK does not have APIs to directly expose user profile information such as the display name or the email address. This information can however be decoded from the ID token or the access token.
 
-Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only meta-data included in the token and no user profile information.
+Prior to decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default there is only metadata included in the token and no user profile information.
 
 To configure the list of fields being available in the tokens, the application developer must visit the tenant configuration on the Azure portal, and then select the user flow or custom policy that is linked to the App Center portal. On the user flow / custom policy settings, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
 
