@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 03/22/2019
+ms.date: 06/07/2019
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -72,6 +72,10 @@ Our linking script supports only the standard way of linking pods, so in order t
     ```
 
 1. Remove AppCenter dependencies from the project (right-click the dependency > Remove dependency).
+    Select **<YOUR_APP>** -> **Libraries** and remove the next files:
+    - AppCenterReactNative.xcodeproj
+    - AppCenterReactNativeAnalytics.xcodeproj
+    - AppCenterReactNativeCrashes.xcodeproj
 
 ## React Native link command unrecognized
 
