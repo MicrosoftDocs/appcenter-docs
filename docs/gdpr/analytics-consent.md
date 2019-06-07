@@ -19,9 +19,9 @@ If you want to get your users' confirmation before sending any Analytics data to
 Follow the steps below:
 1. In your application code, build your own UI to ask for user consent.
 
-2. You can display a message along with two buttons in the UI consent dialog box. An Example for this message can be - "This application has integrated App Center SDK to send data. Do you wish to send the App usage data to Appcenter when using this application? Choose "Yes" to continue". The two Buttons can be used to get consent from users - "Yes" or "No". 
+2. You can display a message along with two buttons in the UI consent dialog box. An example for this message can be - "This application has integrated App Center SDK to send data. Do you wish to send the App usage data to App Center when using this application? Choose "Yes" to continue". The two buttons can be used to get consent from users - "**Yes**" or "**No**". 
 
-3. If the user chooses 'Yes', in your application code, you can call this App Center SDK API which enables sending of data to App Center backend. Make sure to pass the parameter as 'true' in the API.
+3. If the user chooses '**Yes**', in your application code, you can call this App Center SDK API which enables sending of data to App Center backend. Make sure to pass the parameter as '**true**' in the API.
 
 You can read more about how to ask for the users' consent to send Analytics data per platform:
   
@@ -29,10 +29,16 @@ You can read more about how to ask for the users' consent to send Analytics data
 - [iOS](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
 
 - [Xamarin](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
-     
-    
-4. If the user chooses 'No', in your application code, you can call this App Center SDK API which disables sending of data to App Center backend. Make sure to pass the parameter as 'false' in the API.
 
-appcenter.setenabled(false);
+- [React Native](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/react-native#enable-or-disable-app-center-analytics-at-runtime)
+
+- [UWP](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/uwp#enable-or-disable-app-center-analytics-at-runtime)
+
+- [Unity](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/unity#enable-or-disable-app-center-analytics-at-runtime)
+
+- [macOS](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#enable-or-disable-app-center-analytics-at-runtime)
+    
+4. If the user chooses '**No**', in your application code, you can call this App Center SDK API which disables sending of data to App Center backend. Make sure to pass the parameter as '**false**' in the API.
+
 
 You are done. Your app users should see this consent dialog box when they interact with the app. 
