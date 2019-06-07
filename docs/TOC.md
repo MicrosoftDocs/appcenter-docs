@@ -309,6 +309,7 @@
 ### Analytics
 #### [Delete](gdpr/analytics-forget-me.md)
 #### [Export](gdpr/analytics-export.md)
+#### [Consent](gdpr/analytics-consent.md)
 ### Diagnostics
 #### [Delete](gdpr/diagnostics-delete.md)
 #### [Export](gdpr/diagnostics-export.md)
