@@ -32,6 +32,10 @@ App Center Auth is a cloud-based identity management service that enables develo
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash log will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store or Google Play. Crash logs contain valuable information for you to help fix the crash.
 
+### App Center Data
+
+App Center Data is a data synchronization and storage solution that enables you to persist, manage, and sync application data across multiple devices and platforms, all in the cloud. Using the client SDKs, you can create a seamless experience around your data, tying it to users by identity via App Center Auth and even create experiences pertaining to both online and offline scenarios in your app.  App Center Data is powered by [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) ensuring low latency, high availability, and global availability of your data.
+
 ### App Center Distribute
 
 The App Center SDK will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
