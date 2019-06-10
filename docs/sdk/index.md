@@ -68,6 +68,7 @@ Android Studio 2.2 or later.
  Analytics        | 4.1 and later      | 16 and later
  Auth             | 4.1 and later      | 16 and later
  Crashes          | 4.1 and later      | 16 and later
+ Data             | 4.1 and later      | 16 and later
  Distribute       | 4.1 and later      | 16 and later
  Push             | 4.1 and later      | 16 and later
 
@@ -78,6 +79,7 @@ Android Studio 2.2 or later.
  Analytics        | 9.0 or later    | 8.2 and later
  Auth             | 9.0 or later    | 8.2 and later
  Crashes          | 9.0 or later    | 8.2 and later
+ Data             | 9.0 or later    | 8.2 and later
  Distribute       | 9.0 or later    | 8.2 and later
  Push             | 9.0 or later    | 8.2 and later
 
