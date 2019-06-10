@@ -47,8 +47,8 @@ Select the Xcode version to run the build on from the dropdown list.
 If the toggle "Use legacy build system" is in `On` state then the legacy build system will be used despite of  the project or workspace settings.
 If the toggle "Use legacy build system" is in `Off` state then build system configuration from the project or workspace settings will be used.
 *Note that:*
-   - workspace setting should be committed to the repository
-   - if workspace setting is not committed then the modern build system will be used
+   - Workspace setting should be committed to the repository
+   - If workspace setting is not committed then the modern build system will be used
 
 ### 3.3. Node.js version
 
