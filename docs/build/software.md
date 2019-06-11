@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 06/04/2019
+ms.date: 06/11/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -49,20 +49,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12.5
 - Miniconda 4.6.14
-- MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
+- MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.8 3.7.2
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
 
 ### Node.js versions
 - v6.17.1
 - v8.16.0
-- v10.15.3
-- v12.1.0
+- v10.16.0
+- v12.4.0
 
 ### Package Management
 
 - Bundler 2.0.1
 - Carthage 0.33.0
-- CocoaPods 1.7.0
+- CocoaPods 1.7.1
 - Homebrew 2.1.4
 - NPM 3.10.10
 - Yarn 1.16.0
@@ -77,7 +77,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Utilities
 
-- Curl 7.65.0 (libcurl/7.65.0 SecureTransport zlib/1.2.11)
+- Curl 7.65.1 (libcurl/7.65.1 SecureTransport zlib/1.2.11)
 - Git 2.21.0
 - Git LFS 2.7.2
 - GNU Wget 1.20.3
@@ -86,9 +86,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- Fastlane 2.123.0
+- Fastlane 2.125.2
 - App Center CLI 1.1.18
-- Azure-CLI 2.0.64
+- Azure-CLI 2.0.66
 
 ## Xcode
 
@@ -495,7 +495,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 28.0.3 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.0 |
 
 ### Android SDK Platforms
 
@@ -586,7 +586,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.0.8.2
+- 8.0.9.5
 
 ### Mono
 
