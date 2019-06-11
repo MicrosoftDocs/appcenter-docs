@@ -2,9 +2,9 @@
 title: Configure a Java Android build in App Center
 description: How to set up a build system for Android apps
 keywords: android
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 06/11/2019
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
 ms.service: vs-appcenter
@@ -103,7 +103,7 @@ If your app configuration is set up to build multiple APKs, e.g. different ones 
 
 The `mapping.txt` file contains information on how to map obfuscated stack traces for the app back to the original class and method names.
 
-* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled and use either Proguard or R8 to minify and obfuscate the app binary, the crash reporting service requires this `mapping.txt` file for a build in order to display human readable (deobfuscated) crash reports.
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled and use either Proguard or R8 to minify and obfuscate the app binary, the crash reporting service requires this `mapping.txt` file for a build in order to display [human readable (deobfuscated) crash reports](~/diagnostics/Android-ProGuard.md).
 * If you have previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the `mapping.txt` file in order to display human readable crash reports.
 
 ## 5. Supported versions and requirements
