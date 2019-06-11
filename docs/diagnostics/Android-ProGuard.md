@@ -19,6 +19,7 @@ With ProGuard enabled in your Android app, your stack traces must be deobfuscate
 
 ## Deobfuscating stack traces
 
+### Uploading the mapping.txt file
 1. Download the `proguard/mapping.txt` file from your app module's build directory
 2. Log into App Center and select your app
 3. In the left menu, navigate to the **Diagnostics** section
@@ -30,3 +31,7 @@ With ProGuard enabled in your Android app, your stack traces must be deobfuscate
 
 > [!NOTE]
 > App Center cannot check if you have uploaded the right `mapping.txt` file. We therefore recommend to upload the file directly after you create the .apk file or push it to your code repository if you want to upload it later.
+
+### Forwarding the mapping from a build in App Center
+
+If a build is configured to produce a `mapping.txt` file, App Center builds produce the file as an availalbe download. Automatically distributing the build or manually distributing it later will forward the `mapping.txt` file onto Diagnostics to deobfuscate incoming crash reports. There is no need to manually upload the `mapping.txt` file after distributing a build.
