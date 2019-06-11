@@ -99,6 +99,13 @@ The APK is an Android application packaged file which contains the Android app a
 
 If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
 
+### 4.4. The Proguard mapping file (mapping.txt)
+
+The `mapping.txt` files contain the obfuscated data for the app.
+
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this `mapping.txt` file for a build in order to display human readable (deobfuscated) crash reports.
+* If you have previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the `mapping.txt` file in order to display human readable crash reports.
+
 ## 5. Supported versions and requirements
 
 The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
