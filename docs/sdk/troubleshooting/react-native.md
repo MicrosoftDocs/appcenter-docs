@@ -72,7 +72,7 @@ Our linking script supports only the standard way of linking pods, so in order t
     ```
 
 1. Remove AppCenter dependencies from the project (right-click the dependency > Remove dependency).
-    * Select **<YOUR_APP>** -> **Libraries** and remove the next files:
+    * Select **<YOUR_APP>** -> **Libraries** and remove next files:
         * `AppCenterReactNative.xcodeproj`
         * `AppCenterReactNativeAnalytics.xcodeproj`
         * `AppCenterReactNativeCrashes.xcodeproj`
