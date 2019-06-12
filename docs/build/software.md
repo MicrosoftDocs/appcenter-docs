@@ -2,8 +2,8 @@
 title: App Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
-author: siminapasat
-ms.author: siminap
+author: nrajpurkar
+ms.author: niloferr
 ms.date: 06/11/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
