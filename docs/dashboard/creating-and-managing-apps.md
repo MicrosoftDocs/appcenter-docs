@@ -52,7 +52,7 @@ For every app you create, whether owned by you or your organization, you are aut
 
 ## Changing app roles
 
-To change the permission of a collaborator or admin:
+To change the permission of a collaborator:
 
 1. Select an app from the dashboard
 2. In the left side navigation, select **Settings**
