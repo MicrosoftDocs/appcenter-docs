@@ -2,9 +2,9 @@
 title: Get Started with macOS
 description: Get started
 keywords: sdk
-author: jaelim-ms
-ms.author: jaelim
-ms.date: 05/20/2019
+author: elamalani
+ms.author: emalani
+ms.date: 06/14/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
