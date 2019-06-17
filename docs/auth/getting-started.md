@@ -4,7 +4,7 @@ description: How to get started with the App Center Auth Service
 keywords: MBaaS, Auth, Identity, App Center Auth
 author: amchew
 ms.author: amchew
-ms.date: 06/17/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.assetid: 1222525f-e769-49d8-8625-738db5bc8880
 ms.service: vs-appcenter
