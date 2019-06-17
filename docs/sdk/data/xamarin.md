@@ -4,7 +4,7 @@ description: How to configure App Center data for Xamarin
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/07/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
 ms.service: vs-appcenter
@@ -24,14 +24,14 @@ App Center Data is a data management service that lets you manage, persist, and 
     2. Select the **Data** option in the left project navigation pane
     3. Select the **New Database** button and provision a new Cosmos DB database
 
-- (Optional, but recommended) [Set up App Center Auth](TODO - link-to-docs)
+- (Optional, but recommended) [Set up App Center Auth](../../auth/index.md)
     1. Create your Azure AD B2C tenant
     2. Create an application within the Azure AD B2C service
     3. Configure your scope and policy
     4. Configure App Center Auth SDK
 
 > [!NOTE]
-> You can also connect existing databases in the App Center portal. There are some [additional requirements]../../data/index.md#Limitations) associated with this.
+> You can also connect existing databases in the App Center portal. There are some [additional requirements](~/data/index.md#limitations) associated with this.
 
 > [!IMPORTANT]
 > An Azure subscription is required to use App Center Auth and Data.
@@ -118,10 +118,11 @@ To get your app secrets, you can follow the documentation in the [FAQ](https://d
 One advantage of NoSQL databases is the ability to use both unstructured and structured data. App Center Data utilizes documents, in which you can store JSON objects. The easiest way to get started is by defining a class that aligns with the type of data you would like to manage. For example, if you wanted to store documents that held relevant information associated with users on my app when they signed up, you may use something like this:
 
 ```csharp
-public class User {
-    public String Name { get; set; }
-    public String Email { get; set; }
-    public String PhoneNumber { get; set; }
+public class User 
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string PhoneNumber { get; set; }
     public Guid Id { get; set; } = Guid.NewGuid(); //generates random id
 }
 ```
@@ -158,8 +159,8 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 Now, let's create our first document:
 
 ```csharp
-User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments)
+User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
+await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments)
 ```
 
 This code snippet creates a document and inserts the details of the `user` object within it.
@@ -167,8 +168,8 @@ This code snippet creates a document and inserts the details of the `user` objec
 Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
 
 ```csharp
-User user = new User("Jim", "Jim@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
+await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `new WriteOptions(TimeToLive.Infinite)` will cause this object to be cached indefinitely rather than the default one day.
@@ -183,23 +184,23 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
-Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
+If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables the user to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments);
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
 The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
 
 ```csharp
-var fetchedUser = Data.ReadAsync<User>(user.id, DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
 
 ## Replace a Document
 
-Let's say Jim wanted to change his email. This action could be possible through a simple `Replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Replace` call. The parameters for replacing a document are the following:
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
@@ -210,15 +211,15 @@ Let's say Jim wanted to change his email. This action could be possible through 
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
-user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.id, user, DefaultPartitions.UserDocuments);
+user.Email = "alex@microsoft.com";
+await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the replacement document for offline persistence:
 
 ```csharp
-user.Email = "Jim@microsoft.com";
-await Data.ReplaceAsync(user.Id, user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+user.Email = "alex@microsoft.com";
+await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -232,14 +233,14 @@ In order to delete a document, you need to specify the partition type and the do
 - **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
 
 ```csharp
-await Data.DeleteAsync<User>(user.Id, DefaultPartitions.UserDocuments);
+await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
 You can also configure the deleted document for offline persistence:
 
 ```csharp
 ...
-await Data.DeleteAsync<User>(user.id, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -266,14 +267,14 @@ This will return a page of the documents that exist within a given user partitio
 
 With the list method, we also support pagination through the `PaginatedDocuments` and `Page` classes. Using the `List` call you can fetch a paginated list of documents from Cosmos DB.
 
-The `PaginatedDocuments` class has four methods, which can be used to manage paging:
+The `PaginatedDocuments` class has methods and properties which can be used to manage paging:
 
-* boolean `HasNextPage()` : Boolean indicating if an extra page is available
-* Page<T> `CurrentPage()` : Returns the current page
-* Page<T> `GetNextPageAsync()` : Asynchronously fetches the next page
-* IEnumerator<DocumentWrapper<T>> `GetEnumerator` : This is an enumerator for the paginated docs, which can traverse them
+* `HasNextPage` : Boolean property indicating wheter an extra page is available or not.
+* `CurrentPage` : Property that returns the current page with type being `Page<T>`.
+* `GetNextPageAsync()` : Method that asynchronously fetches the next page (the method returns an object of type `Task<Page<T>>`).
+* IEnumerator<DocumentWrapper<T>> `GetEnumerator()` : This is an enumerator for the paginated docs, which can traverse them
 
-The `Page` class has one field of type `IList<DocumentWrapper<T>>` called `Items`, which represents the documents in the page.
+The `Page` class has one property of type `IList<DocumentWrapper<T>>` called `Items`, which represents the documents in the page.
 
 The following code snippet displays how to use pagination:
 

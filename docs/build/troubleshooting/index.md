@@ -94,8 +94,6 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 
 ## [React Native](~/build/troubleshooting/react-native.md)
 
-* [My React Native Builds fail with, "The engine "node" is incompatible with this module. Expected version ">=x.x.x" ; error Found incompatible module](~/build/troubleshooting/react-native.md#engine-node)
-
 * [My React Native build fails with: 'FBSDKCoreKit/FBSDKCoreKit.h' file not found](~/build/troubleshooting/react-native.md#FBSDKCoreKit)
 
 * [My React Native build fails with "FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory](~/build/troubleshooting/react-native.md#heap-out)

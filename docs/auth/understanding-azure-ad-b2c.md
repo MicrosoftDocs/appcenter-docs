@@ -19,7 +19,7 @@ Learn more about [Azure AD B2C](https://docs.microsoft.com/azure/active-director
 
 ## How Azure AD B2C works with the App Center Auth Service
 
-App Center Auth preview enables you to connect an existing Azure AD B2C tenant and leverage the user identities with other App Center services such as [Data](~/data/index.md) and [Push](https://docs.microsoft.com/appcenter/push/push-to-user#app-center-auth-set-identity). 
+App Center Auth preview enables you to connect an existing Azure AD B2C tenant and leverage user identities with other App Center services such as [Data](~/data/index.md) and [Push](~/push/push-to-user.md#app-center-auth-set-identity). 
 
 To configure App Center Auth, you will need an existing Azure AD B2C:
   - Tenant

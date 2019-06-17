@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/01/2019
+ms.date: 05/31/2019
 ms.topic: article
 ms.assetid: b19b58c4-f662-41bd-8ca3-049ae1e0b90d
 ms.service: vs-appcenter
@@ -24,9 +24,9 @@ dev_langs:
 
 ## Add the SDK to your app
 
-App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage the user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
+App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
 
-Please follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your app.
+Please follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your app.
 
 ### 1. Add the App Center Auth module
 
@@ -59,9 +59,16 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java, Auth::class.java)
 ```
 
-Make sure you replace `{Your App Secret}` in the code sample above with your App Secret (and remove the curly braces).
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
 
-Android Studio automatically suggests the required import statement when adding a reference to the `Auth` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in the project's activity class:
+```java
+AppCenter.start(getApplication(), "65dc3680-7325-4000-a0e7-dbd2276eafd1", Analytics.class, Crashes.class, Auth.class);
+```
+```kotlin
+AppCenter.start(application, "65dc3680-7325-4000-a0e7-dbd2276eafd1", Analytics::class.java, Crashes::class.java, Auth::class.java)
+```
+
+Android Studio automatically suggests the required `import` statement when adding a reference to the `Auth` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in the project's activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
@@ -74,7 +81,7 @@ import com.microsoft.appcenter.auth.Auth
 
 ## AndroidManifest.xml
 
-To use the sign-in UI, the app must have the following element to the project's **AndroidManifest.xml** file's `application` tag:
+To use the sign-in UI, add the following element to the project's **AndroidManifest.xml** file's `application` tag:
 
 ```xml
 <activity android:name="com.microsoft.identity.client.BrowserTabActivity">
@@ -91,7 +98,8 @@ To use the sign-in UI, the app must have the following element to the project's 
 </activity>
 ```
 
-Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) (e.g., `msal65dc3680-7325-4000-a0e7-dbd2276eafd1` where `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your app secret).
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
+`android:scheme="msal65dc3680-7325-4000-a0e7-dbd2276eafd1"`.
 
 ## Sign users into the app
 

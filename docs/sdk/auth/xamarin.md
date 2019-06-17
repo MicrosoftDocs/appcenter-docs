@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/11/2019
+ms.date: 05/31/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -21,9 +21,9 @@ ms.tgt_pltfrm: xamarin
 
 ## Add the SDK to your app
 
-App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage the user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
+App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
 
-Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your app.
+Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your app.
 
 ### 1. Add the App Center Auth module
 
@@ -86,12 +86,22 @@ Open the project's **AppDelegate.cs** and add the `Start()` call inside the `Fin
 AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Auth));
 ```
 
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
+```csharp
+AppCenter.Start("65dc3680-7325-4000-a0e7-dbd2276eafd1", typeof(Auth));
+```
+
 ##### Xamarin.Android
 
 Open the project's **MainActivity.cs** and add the `Start()` call inside the `OnCreate()` method:
 
 ```csharp
 AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Auth));
+```
+
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
+```csharp
+AppCenter.Start("7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
 ```
 
 ##### Xamarin.Forms
@@ -102,7 +112,10 @@ To create a Xamarin.Forms app targeting both Android and iOS platforms, you must
 AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Auth));
 ```
 
-To get your app secrets, you can follow the documentation in the [FAQ](https://docs.microsoft.com/en-us/appcenter/dashboard/faq).
+Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
+```csharp
+AppCenter.Start("ios=65dc3680-7325-4000-a0e7-dbd2276eafd1;android=7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
+```
 
 ### 3. Android additional steps
 
@@ -125,7 +138,7 @@ To use the sign-in, you must add the following element to the project's **Androi
 </activity>
 ```
 
-Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq) (and remove the curly braces), e.g. `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
+Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md) (and remove the curly braces): `android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df"`.
 
 #### Proguard
 
@@ -155,7 +168,7 @@ In your Xamarin.Android project, add the following line to the project's **progu
 1. Double-click the project's **Info.plist** file and go to the **Advanced** tab at the bottom.
 2. Click **Add URL Type** button and type in your Bundle Identifier in the **Identifier** field.
 ![Xamarin Add URL Type](images/xamarin-info-plist.png).
-3. For **URL Schemes** field, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your App Secret](https://docs.microsoft.com/en-us/appcenter/dashboard/faq), e.g. `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
+3. For **URL Schemes** field, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
 4. Open **Role** selector and choose **Editor**.
 
 #### Add keychain sharing capability

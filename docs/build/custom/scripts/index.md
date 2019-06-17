@@ -15,10 +15,12 @@ ms.custom: build
 
 You can add up to three custom build steps that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln** or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
 
-You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter-build-scripts-examples). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
+You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
 
-> [!NOTE]
-> Once your build scripts have been detected for the first time or you made changes to the location of scripts or where you store CocoaPods for iOS projects, make sure to save the branch configuration to apply the changes! This will perform analysis to index your repository tree and save the new build definition. 
+When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
+
+> [!WARNING]
+> Every time you modify the project's build scripts, you must click the **Save** or **Save & Build** button to save the branch configuration to apply the changes.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 

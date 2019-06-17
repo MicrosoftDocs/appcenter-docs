@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/20/2018
+ms.date: 06/05/2019
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: vs-appcenter
@@ -35,12 +35,9 @@ Let's get started with setting up App Center iOS SDK in your app to use App Cent
 
 The following requirements must be met to use App Center SDK:
 
-* Your iOS project is set up in Xcode 8.3.3 or later on macOS version 10.12 or later.
+* Your iOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
 * You are targeting devices running on iOS 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality.
-
-> [!NOTE]
-> App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
+* You are not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

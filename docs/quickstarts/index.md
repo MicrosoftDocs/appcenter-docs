@@ -4,7 +4,7 @@ description: A quick introduction to working with Visual Studio App Center
 keywords: App Center, Build, Test, Distribute, Crashes, Analytics, Diagnostics, Push, CodePush
 author: jwargo
 ms.author: jowargo
-ms.date: 12/03/2018
+ms.date: 05/23/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -89,7 +89,9 @@ App Center offers developers a variety of services they can use to build, test a
 **Client-side Capabilities**
 
 + **Analytics** - The [Analytics service](~/analytics/index.md) tracks user activity and actions within an application, capture specific events and other data from the application. Data from each device running your application is aggregated in the cloud in a simple to use interface for your analysis and export.
++ **Auth** - Authenticate your users and leverage user identities to view user data and send push notifications to users instead of individual devices. 
 + **CodePush** - The [CodePush service](~/distribution/codepush/index.md) enables developers to deploy application updates directly to devices running Apache Cordova and React Native applications.
++ **Data** - Persist, manage, and sync app data in the cloud across multiple platforms in both online and offline scenarios.
 + **Diagnostics** - The [Diagnostics service](~/diagnostics/index.md) enables developers to capture data about application crashes. Data from each device running your application is aggregated in the cloud in a simple to use interface for your analysis and export.
 + **Push** - The [Push service](~/push/index.md) enables developers to send notifications to mobile devices.
 

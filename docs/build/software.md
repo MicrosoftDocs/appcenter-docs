@@ -2,34 +2,35 @@
 title: App Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
-author: siminapasat
-ms.author: siminap
-ms.date: 05/13/2019
+author: nrajpurkar
+ms.author: niloferr
+ms.date: 06/11/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Cloud Build Machines
+# App Center Cloud Build Machines
 
-Each build is run on a separate, clean virtual machine and no other user has access to this virtual machine. Once the build is completed, the virtual machine is discarded and all files removed. The files resulting from the build (log files, application files, symbol files) are stored on App Center servers.
+Each build runs on a separate, clean virtual machine (VM), and no other user has access to the VM. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
 
 ## Image Changes
 
-**We switched to using Java Azul OpenJDK**
+**App Center now uses the Java Azul OpenJDK**
 
-The following Java versions are available on the VM image: 7, 8, 11, 12.
-Java 9 and 10 were deprecated.
+The following Java versions are available on the VM image: 7, 8, 11, 12. Java versions 9 and 10 were deprecated.
 
-Previously, Microsoft hosted Mac machines had JDKs pre-installed that were overloaded by complex licensing, end-user restrictions, and lack of long-term support. In this image change, we replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems. Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
+Previously, Microsoft hosted Mac machines ran with pre-installed JDKs overloaded with complex licensing, end-user restrictions, and lack of long-term support. With recent image changes, App Center replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems.
+
+Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
 
 ## Operating System
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.4 (18E226) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
-- OS X 10.13.6 (17G6029) **High Sierra** for builds running Xcode 9.4 and lower
+- OS X 10.14.5 (18F132) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
+- OS X 10.13.6 (17G7024) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
@@ -37,29 +38,34 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Language and Runtime
 
-- java 1.7 : OpenJDK Runtime Environment (Zulu 7.29.0.5-CA-macosx) (build 1.7.0_222-b08)
-- java 1.8 : OpenJDK Runtime Environment (Zulu 8.38.0.13-CA-macosx) (build 1.8.0_212-b04) (default)
-- java 11 : OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
-- java 12 : OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
-- Node.js 6.17.0
-- PowerShell 6.2.0
+- java 1.7: OpenJDK Runtime Environment (Zulu 7.29.0.5-CA-macosx) (build 1.7.0_222-b08)
+- java 1.8: OpenJDK Runtime Environment (Zulu 8.38.0.13-CA-macosx) (build 1.8.0_212-b04) (default)
+- java 11: OpenJDK Runtime Environment Zulu11.31+11-CA (build 11.0.3+7-LTS)
+- java 12: OpenJDK Runtime Environment Zulu12.2+3-CA (build 12.0.1+12)
+- PowerShell 6.2.1
 - Python 2.7.16
 - Python 3.7.3
 - Ruby 2.6.3p62
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12.5
 - Miniconda 4.6.14
-- MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
+- MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.8 3.7.2
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
+
+### Node.js versions
+- v6.17.1
+- v8.16.0
+- v10.16.0
+- v12.4.0
 
 ### Package Management
 
 - Bundler 2.0.1
 - Carthage 0.33.0
-- CocoaPods 1.6.1
-- Homebrew 2.1.2
+- CocoaPods 1.7.1
+- Homebrew 2.1.4
 - NPM 3.10.10
-- Yarn 1.15.2
+- Yarn 1.16.0
 - NuGet 4.7.0.5148
 - Pip 19.0.3 (python 3.7)
 - Pip 19.0.3 (python 2.7)
@@ -71,18 +77,18 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Utilities
 
-- Curl 7.64.1 (libcurl/7.64.1 SecureTransport zlib/1.2.11)
+- Curl 7.65.1 (libcurl/7.65.1 SecureTransport zlib/1.2.11)
 - Git 2.21.0
 - Git LFS 2.7.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.0
-- GNU parallel 20190422
+- GNU parallel 20190522
 
 ### Tools
 
-- Fastlane 2.122.0
-- App Center CLI 1.1.15
-- Azure-CLI 2.0.64
+- Fastlane 2.125.2
+- App Center CLI 1.1.18
+- Azure-CLI 2.0.66
 
 ## Xcode
 
@@ -105,7 +111,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Nomad CLI 3.0.3
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
-- xctool 0.3.5
+- xctool 0.3.6
 
 ### Installed SDKs
 
@@ -489,7 +495,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 28.0.3 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.0 |
 
 ### Android SDK Platforms
 
@@ -553,7 +559,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 2.3.3614996                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.0.9                                    |
+| Android Emulator      | 29.0.11                                    |
 
 ### Google APIs
 
@@ -580,7 +586,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.0.5.9
+- 8.0.9.5
 
 ### Mono
 

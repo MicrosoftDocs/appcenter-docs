@@ -61,6 +61,7 @@ Open the **AppDelegate.m** file and add the following lines below your own impor
 @import AppCenter;
 @import AppCenterData;
 ```
+
 ```swift
 import AppCenter
 import AppCenterData
@@ -71,6 +72,7 @@ In the same file, add the following in your `didFinishLaunchingWithOptions:` del
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSData class]]];
 ```
+
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSData.self])
 ```
@@ -94,17 +96,46 @@ One advantage of NoSQL databases is the ability to use both unstructured and str
 @end
 ```
 ```swift
-protocol User {
+class User {
     var name: String
     var email: String
     var phoneNumber: String
-    var identifier: String {
-        return NSUUID().uuidString
+    var identifier: String
+    
+    init(name: String, email: String, phoneNumber: String) {
+        self.name = name
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.identifier = NSUUID().uuidString
+    }
+    init() {
+        self.name = ""
+        self.email = ""
+        self.phoneNumber = ""
+        self.identifier = ""
     }
 }
 ```
 
 By defining this class, you can now easily use instances of it and store them within your documents. Methods like `create` and `replace` enable you to input any type of JSON serializable object, you just have to specify the class within the method. Next, we'll cover exactly how to do this in your code.
+
+For Swift, you will need to also implement the `required init(from dictionary: [AnyHashable : Any])` and `serializeToDictionary() -> [AnyHashable : Any]` methods in your model class. This is so your model can be serialized and deserialized as needed.
+
+```swift
+ required init(from dictionary: [AnyHashable : Any]) {
+        //sdk turns dictionary to payload
+        self.name = dictionary["name"] as! String
+        self.email = dictionary["email"] as! String
+        self.phoneNumber = dictionary["phoneNumber"] as! String
+        self.identifier = dictionary["identifier"] as! String
+
+    func serializeToDictionary() -> [AnyHashable : Any] {
+        //creating dictionary out of object
+        return ["name": self.name,
+                "email": self.email,
+            "phoneNumber": self.phoneNumber,
+            "identifier": self.identifier]
+```
 
 One important thing to note regarding models is how they're structured within CosmosDB documents for use with App Center Data. Your data and model itself can have virtually any structure, but the document must include a few things in order to properly work with the data service. These required fields are `document`, `id`, and `PartitionKey`. Your document should look like this:
 
@@ -128,7 +159,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 - **document:** This is the object itself. This will be the object replaced in your database. For `User`, it would be an instance of the `User` class.
 
-- **partition:** The partition that the document will live in. You will most likely be using `kMSDataUserDocumentsPartition` to store the document within a specific user's partition.
+- **partition:** The partition that the document will live in.  You will most likely be using `kMSDataUserDocumentsPartition` to create documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been created.
 
@@ -137,9 +168,9 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 Now, let's create our first document:
 
-```objectivec
-User *user = [[User alloc] initWithName:@"Jim"
-                                  email:@"Jim@appcenter.ms"
+```objc
+User *user = [[User alloc] initWithName:@"Alex"
+                                  email:@"alex@appcenter.ms"
                             phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData createDocumentWithID:user.identifier
@@ -150,10 +181,10 @@ User *user = [[User alloc] initWithName:@"Jim"
            }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
-MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
+let user = User(name: "Alex", email: "alex@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
+MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition) { (document) in
   // Do something with the document
-})
+}
 ```
 
 This code snippet creates a document and inserts the details of the `user` object within it. It also includes a completion handler that returns the wrapped document with all of the metadata.
@@ -161,8 +192,8 @@ This code snippet creates a document and inserts the details of the `user` objec
 Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                  email:@"Jim@appcenter.ms"
+User *user = [[User alloc] initWithName:@"Alex"
+                                  email:@"alex@appcenter.ms"
                             phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData createDocumentWithID:user.identifier
@@ -174,10 +205,10 @@ User *user = [[User alloc] initWithName:@"Jim"
            }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
-MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
+let user = User(name: "Alex", email: "alex@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
+MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
     // Do something with the document
-})
+}
 ```
 
 This does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `createInfiniteCacheOptions` will cause this object to be cached indefinitely rather than the default one day.
@@ -192,11 +223,11 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **documentType:** This is a reference to the class type of the of object you're storing in the document. For `User`, it would be `[User class]` (obj-c) or `User.self` (swift).
 
-- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to store the document within a specific user's partition.
+- **partition:** The partition that the document lives in. This can be `kMSDataAppDocumentsPartition` or `kMSDataUserDocumentsPartition`. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been read.
 
-Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
+If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables the user to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
 ```objc
 [MSData readDocumentWithID:user.identifier
@@ -207,12 +238,12 @@ Jim, the user who created the `user` object, wants to view all of his personal d
                 fetchedUser = document.deserializedValue;
          }];
 ```
-
 ```swift
 var fetchedUser = User()
-MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
-  fetchedUser = document.deserializedValue;
-})
+MSData.read(withDocumentId: user.identifier, documentType: User.self, partition: kMSDataAppDocumentsPartition) { (document) in
+  // do something with fetched data
+  fetchedUser = document.deserializedValue as! User
+}
 ```
 
 The code above fetches the user document from the database and stores it into a new user object. It includes a completion handler that returns the wrapped document with all of the metadata.
@@ -230,32 +261,32 @@ User fetchedUser = [[User alloc] init];
                 fetchedUser = document.deserializedValue;
           }];
 ```
-
 ```swift
 var fetchedUser = User()
 
-MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
-  fetchedUser = document.deserializedValue;
-})
+MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.createInfiniteCache()) { (document) in
+  // do something with fetched data
+  fetchedUser = document.deserializedValue as! User
+}
 ```
 
 You can also specify the time-to-live (TTL) on a document by using `[[MSReadOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSReadOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
 
-## Replace a Document
+## Replacing a Document
 
-Let's say Jim wanted to change his email. This action could be possible through a simple `Data.replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Data.replace` call. The parameters for replacing a document are the following:
 
 - **ID:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
 - **document:** This is the object itself. This will be the object replaced in your database. For `User`, it would be an instance of the `User` class.
 
-- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to store the document within a specific user's partition.
+- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to replace documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been replaced.
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                   email:@"Jim@microsoft.com"
+User *user = [[User alloc] initWithName:@"Alex"
+                                   email:@"alex@microsoft.com"
                              phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData replaceDocumentWithID:user.identifier
@@ -265,12 +296,11 @@ User *user = [[User alloc] initWithName:@"Jim"
               // Do something with the document
             }];
 ```
-
 ```swift
-let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
-MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, completionHandler: { (document) in
+let user = User(name: "Alex", email: "alex@microsoft.com", phoneNumber: "+1-(855)-555-5555")
+MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition) { (document) in
   // Do something with the document
-})
+}
 ```
 
 The code above will replace or update an existing document in your database. It also includes a completion handler that returns the wrapped document with all of the metadata.
@@ -278,8 +308,8 @@ The code above will replace or update an existing document in your database. It 
 You can also configure the replacement document for offline persistence:
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                   email:@"Jim@microsoft.com"
+User *user = [[User alloc] initWithName:@"Alex"
+                                   email:@"alex@microsoft.com"
                              phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData replaceDocumentWithID:user.identifier
@@ -290,21 +320,20 @@ User *user = [[User alloc] initWithName:@"Jim"
               // Do something with the document
             }];
 ```
-
 ```swift
-let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
-MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
+let user = User(name: "Alex", email: "alex@microsoft.com", phoneNumber: "+1-(855)-555-5555")
+MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
   // Do something with the document
 })
 ```
 
-## Delete a document
+## Deleting a document
 
 In order to delete a document you need to specify the partition type and the document ID.
 
 - **ID:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to store the document within a specific user's partition.
+- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to delete documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been deleted.
 
@@ -317,10 +346,9 @@ The following code will delete a document:
                 //document coming from Cosmos DB
            }];
 ```
-
 ```swift
-MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition,completionHandler: { (document) in
-  // Do something after the document
+MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition) { (document) in
+  // Do something
 })
 ```
 
@@ -334,9 +362,8 @@ The following code will delete a document with offline persistence:
              // Do something
            }];
 ```
-
 ```swift
-MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition, writeOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
+MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
   // Do something
 })
 ```
@@ -347,7 +374,7 @@ Lastly, there is the list functionality. This is used to fetch a list of documen
 
 - **documentType:** This is a reference to the class type of the object you're storing in the document. For `User`, it would be `[User class]` (obj-c) or `User.self` (swift).
 
-- **partition:** The partition that the document(s) live in. You will most likely be using `kMSDataUserDocumentsPartition` to store the document within a specific user's partition.
+- **partition:** The partition that the document(s) live in. This can be `kMSDataAppDocumentsPartition` or `kMSDataUserDocumentsPartition`. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the documents have been read.
 
@@ -360,14 +387,18 @@ Here's how to fetch a list of documents:
              // Do something here
            }];
 ```
-
 ```swift
-MSData.list(withType: User.self, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
-  // Do something here
-})
+MSData.listDocuments(withType: User.self, partition: kMSDataUserDocumentsPartition) { (documents) in
+  //Loop over items in the current page
+  let currentPageItems = documents.currentPage().items
+  for docs in currentPageItems! {
+                var tempUser = docs.deserializedValue as! User
+                print(tempUser.name)
+  }
+}
 ```
 
-This will return a page of the documents that exist within a given user partition that align with the `User` class model.
+This will return a page of the documents that exist within a given user partition.
 
 > [!NOTE]
 > We don't currently support offline persistance when listing documents.
@@ -378,24 +409,10 @@ With the list method, we also support pagination through the `MSPaginatedDocumen
 
 The `MSPaginatedDocuments` class has 3 methods which can be used to manage paging:
 
-* boolean `hasNextPage` : Boolean indicating if an extra page is available
-* (MSPage *) `currentPage` : Returns the current page
-* (void) `nextPageWithCompletionHandle` : Asynchronously fetches the next page. Parameter: Takes a completionHandler callback to accept the next page of documents
+- boolean `hasNextPage` : Boolean indicating if an extra page is available
+- (MSPage *) `currentPage` : Returns the current page
+- (void) `nextPageWithCompletionHandler` : Asynchronously fetches the next page. Parameter: Takes a completionHandler callback to accept the next page of documents
 
 The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `items`, which represents the documents in the page.
 
-Using the `listWithPartition` call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
-
-```objc
-[MSData listDocumentWithType:[User class]
-                   partition:kMSDataUserDocumentsPartition
-           completionHandler:^(MSPaginatedDocuments *_Nonnull documents) {
-             // Do something here
-           }];
-```
-
-```swift
-MSData.list(withType: User.self, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.init(deviceTimeToLive: createInfiniteCacheOptions), completionHandler: { (document) in
-  // Do something here
-})
-```
+Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.

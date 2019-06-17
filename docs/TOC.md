@@ -2,8 +2,8 @@
 
 # [Help & Feedback](help.md)
 
-# [Dashboard](dashboard/index.md)
-
+# Dashboard
+## [Overview](dashboard/index.md)
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
 ## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
 ## [Creating and managing teams](dashboard/creating-and-managing-teams.md)
@@ -14,31 +14,41 @@
 ## [Slack App](dashboard/slack/index.md)
 ## [FAQ](dashboard/faq.md)
 
-# [Build](build/index.md)
-
-## [Android](build/android/index.md)
+# Build
+## [Introduction](build/index.md)
+## Android
+### [Introduction](build/android/index.md)
 ### [Configure a build](build/android/first-build.md)
 ### [Code Signing](build/android/code-signing.md)
-## [iOS](build/ios/index.md)
+## iOS
+### [Introduction](build/ios/index.md)
 ### [Configure a build](build/ios/first-build.md)
 ### [Code Signing](build/ios/code-signing.md)
 ### [Upload signing files](build/ios/uploading-signing-files.md)
-## [macOS](build/macos/index.md)
+## macOS
+### [Introduction](build/macos/index.md)
 ### [Configure a build](build/macos/first-build.md)
 ### [Code Signing](build/macos/code-signing.md)
 ### [Upload signing files](build/macos/uploading-signing-files.md)
-## [React Native](build/react-native/index.md)
+## React Native
+### [Introduction](build/react-native/index.md)
 ### [Android](build/react-native/android/index.md)
 ### [iOS](build/react-native/ios/index.md)
-## [Windows](build/windows/index.md)
+### [Node.js selection](build/react-native/nodejs.md)
+## Windows
+### [Introduction](build/windows/index.md)
 ### [Configure a build](build/windows/uwp/first-build.md)
 ### [Build results](build/windows/uwp/results.md)
-## [Xamarin](build/xamarin/index.md)
-### [Android](build/xamarin/android/index.md)
+## Xamarin
+### [Introduction](build/xamarin/index.md)
+### Android
+### [Introduction](build/xamarin/android/index.md)
 #### [Code Signing](build/xamarin/android/code-signing.md)
-### [iOS](build/xamarin/ios/index.md)
+### iOS
+#### [Introduction](build/xamarin/ios/index.md)
 #### [Solution configuration mappings](build/xamarin/ios/solution-configuration-mappings.md)
 ## [Source Control System](build/connect.md)
+## [Branches and Build configurations](build/branches.md)
 ## [Build scripts](build/custom/scripts/index.md)
 ## [Environment variables](build/custom/variables/index.md)
 ## [Cloud build machines](build/software.md)
@@ -47,21 +57,22 @@
 ## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
 
-## [Troubleshooting](build/troubleshooting/index.md)
-
+## Troubleshooting
+### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)
 ### [React Native](build/troubleshooting/react-native.md)
 
-# [Test](test-cloud/index.md)
-
+# Test
+## [Introduction](test-cloud/index.md)
 ## [Getting Started](test-cloud/getting-started.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Devices Available](test-cloud/devices.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
-## [Preparing Test for Upload](test-cloud/preparing-for-upload/index.md)
+## Preparing Test for Upload
+### [Introduction](test-cloud/preparing-for-upload/index.md)
 ### [Appium](test-cloud/preparing-for-upload/appium.md)
 ### [Espresso](test-cloud/preparing-for-upload/espresso.md)
 ### [Calabash [deprecated]](test-cloud/preparing-for-upload/calabash.md)
@@ -73,16 +84,19 @@
 ## [Security](test-cloud/security.md)
 ## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
-## [Troubleshooting](test-cloud/troubleshooting/index.md)
+## Troubleshooting
+### [Introduction](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
 ### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
 ### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
 ### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
-## [Xamarin.UITest](test-cloud/uitest/index.md)
+## Xamarin.UITest
+### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
-### [Working With](test-cloud/uitest/working-with.md)
+### Working With
+#### [Introduction](test-cloud/uitest/working-with.md)
 #### [Android signing](test-cloud/uitest/working-with-android-signing.md)
 #### [Backdoors](test-cloud/uitest/working-with-backdoors.md)
 #### [Categorizing Tests](test-cloud/uitest/working-with-categorized-tests.md)
@@ -94,19 +108,21 @@
 #### [Timeouts](test-cloud/uitest/working-with-timeouts.md)
 #### [Webviews](test-cloud/uitest/working-with-webviews.md)
 
-# [Distribute](distribution/index.md)
-
+# Distribute
+## [Introduction](distribution/index.md)
 ## [Release a build](distribution/uploading.md)
 ## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
-## [Stores](distribution/stores/index.md)
+## Stores
+### [Introduction](distribution/stores/index.md)
 ### [Apple App Store](distribution/stores/apple.md)
 ### [Google Play Store](distribution/stores/googleplay.md)
 ### [Microsoft Intune](distribution/stores/intune.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
 ## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
-## [CodePush](distribution/codepush/index.md)
+## CodePush
+### [Introduction](distribution/codepush/index.md)
 ### [Using the CodePush UI](distribution/codepush/using-ui.md)
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
@@ -115,14 +131,16 @@
 ### [Tutorials](distribution/codepush/Tutorials.md)
 ### [Azure DevOps (formerly VSTS) Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
-## [Testers Guide](distribution/testers/index.md)
+## Testers Guide
+### [Introduction](distribution/testers/index.md)
 ### [Testing Android Apps](distribution/testers/testing-android.md)
 ### [Testing iOS Apps](distribution/testers/testing-ios.md)
 ### [Testing macOS Apps](distribution/testers/testing-macos.md)
 
-# [Diagnostics](diagnostics/index.md)
-
-## [Enabling Diagnostics](diagnostics/enabling-diagnostics.md)
+# Diagnostics
+## [Introduction](diagnostics/index.md)
+## Enabling Diagnostics
+### [Introduction](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
 ### [Apache Cordova](sdk/crashes/cordova.md)
 ### [iOS](sdk/crashes/ios.md)
@@ -143,33 +161,37 @@
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 
-# [Analytics](analytics/index.md)
-
+# Analytics
+## [Introduction](analytics/index.md)
 ## [Overview](analytics/overview.md)
 ## [Events Metrics](analytics/event-metrics.md)
 ## [Log Flow](analytics/log-flow.md)
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
-# [Auth](auth/index.md)
-## [Getting Started](auth/getting-started.md)
+# Auth
+## [Introduction](auth/index.md)
+## Getting Started
+### [Introduction](auth/getting-started.md)
 ### [Android](sdk/auth/android.md)
 ### [iOS](sdk/auth/ios.md)
 ### [Xamarin](sdk/auth/xamarin.md)
 ## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
 
-# [Data](data/index.md)
-
-## [Getting Started](data/getting-started.md)
+# Data
+## [Introduction](data/index.md)
+## Getting Started
+### [Introducton](data/getting-started.md)
 ### [Android](sdk/data/android.md)
 ### [iOS](sdk/data/ios.md)
 ### [Xamarin](sdk/data/xamarin.md)
 ## [Understanding Cosmos DB](data/understanding-cosmos-db.md)
 
-# [Push](push/index.md)
-
+# Push
+## [Introduction](push/index.md)
 ## [Configure the Push Service](push/service-config.md)
-## [App Configuration](push/app-config.md)
+## App Configuration
+### [Introduction](push/app-config.md)
 ### [Android](sdk/push/android.md)
 ### [Cordova Android](sdk/push/cordova-android.md)
 ### [Cordova iOS](sdk/push/cordova-ios.md)
@@ -188,8 +210,8 @@
 ## [Troubleshooting](push/troubleshooting.md)
 ## [FAQ](push/faq.md)
 
-# [SDK](sdk/index.md)
-
+# SDK
+## [Introduction](sdk/index.md)
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
 ### [Cordova](sdk/getting-started/cordova.md)
@@ -265,8 +287,8 @@
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
-# [General](general/index.md)
-
+# General
+## [Introduction](general/index.md)
 ## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
@@ -276,16 +298,18 @@
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Support Center](general/support-center.md)
 
-# [GDPR](gdpr/index.md)
-
+# GDPR
+## [Introduction](gdpr/index.md)
 ## [Your Data](gdpr/your-data.md)
-## [Your End-User's Data](gdpr/data-from-your-end-users.md)
+## Your End-User's Data
+### [Overview](gdpr/data-from-your-end-users.md)
 ### [Does it apply to me?](gdpr/does-it-apply-to-me.md)
 ### [Stop Collection](gdpr/how-to-stop-collecting-data.md)
 ### [Install ID](gdpr/install-id.md)
 ### Analytics
 #### [Delete](gdpr/analytics-forget-me.md)
 #### [Export](gdpr/analytics-export.md)
+#### [Consent](gdpr/analytics-consent.md)
 ### Diagnostics
 #### [Delete](gdpr/diagnostics-delete.md)
 #### [Export](gdpr/diagnostics-export.md)
@@ -297,9 +321,10 @@
 #### [Delete](gdpr/test-forget-me.md)
 #### [Export](gdpr/test-export.md)
 
-# [HockeyApp Transition](transition/index.md)
-
-## [SDK Migration](transition/sdk-migration.md)
+# HockeyApp Transition
+## [Introduction](transition/index.md)
+## SDK Migration
+### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
 ### [macOS](transition/macos-sdk-migration.md)
 ### [tvOS](transition/tvos-sdk-migration.md)
@@ -307,7 +332,8 @@
 ### [UWP](transition/uwp-sdk-migration.md)
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
-## [Shared Data](transition/side-by-side.md)
+## Shared Data
+### [Introduction](transition/side-by-side.md)
 ### [Distribution Groups](transition/distribution-groups.md)
 ### [Distributing Releases](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
@@ -315,20 +341,20 @@
 ## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 
-# [Migration](migration/index.md)
-
-## [TestCloud](migration/test-cloud/index.md)
+# Migration
+## [Introduction](migration/index.md)
+## TestCloud
+### [Upgrading Subscribers](migration/test-cloud/index.md)
 ### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Reference
-
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
 # [Resources](general/resources.md)
-# [Quickstarts](quickstarts/index.md)
 
+# Quickstarts
 ## [Start Here](quickstarts/index.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)

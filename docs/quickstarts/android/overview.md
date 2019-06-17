@@ -6,7 +6,7 @@ description: Landing page to navigate through Android tutorials.
 keywords: app center
 author: sshibu
 ms.author: t-shshib
-ms.date: 07/26/2017
+ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: samples
@@ -23,7 +23,7 @@ ms.assetid: d99d49f4-a1a7-4764-9b83-ef88ae5c2eef
 
 # Android Sample Overview
 
-This tutorial series, in conjunction with this [sample Android app written in Java](https://github.com/VSAppCenter/sampleapp-android), will help you get started with App Center for Android.
+This tutorial series, in conjunction with this [sample Android app written in Java](https://github.com/microsoft/appcenter/tree/master/sample-apps/android/getting-started), will help you get started with App Center for Android.
 
 Begin with the [Getting Started](getting-started.md) tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 

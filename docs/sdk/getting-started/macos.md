@@ -2,9 +2,9 @@
 title: Get Started with macOS
 description: Get started
 keywords: sdk
-author: jaelim-ms
-ms.author: jaelim
-ms.date: 05/14/2019
+author: elamalani
+ms.author: emalani
+ms.date: 06/14/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ Let's get started with setting up App Center macOS SDK in your app to use App Ce
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 8 or later on macOS version 10.12 or later.
+* Your macOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
 * You are targeting devices running on macOS 10.9 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 
@@ -89,6 +89,9 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * Make sure the Project Navigator is visible (⌘+1).
    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
+
+> [!NOTE]
+> The SDK binary is not packaged following the macOS framework convention. The reason is that the App Center SDK for Mac is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
