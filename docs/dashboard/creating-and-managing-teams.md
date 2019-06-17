@@ -4,7 +4,7 @@ description: Using the dashboard to create and access teams in App Center.
 keywords: dashboard teams
 author: blparr
 ms.author: blparr
-ms.date: 01/22/2018
+ms.date: 06/13/2019
 ms.topic: article
 ms.assetid: 041D1B07-64DA-4B90-A2A9-430023632AD6
 ms.service: vs-appcenter
@@ -44,7 +44,7 @@ There are two ways to add a team to an app:
 2. Select **People**
 3. Select **Teams** 
 4. Select the team you wish to add to an app
-5. In the top navigation, select **APPS** 
+5. In the top navigation, select **Apps** 
 6. In the search box, type the app name you wish to add
 
 ### In app setting  

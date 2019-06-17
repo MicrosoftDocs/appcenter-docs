@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: blparr
 ms.author: blparr
-ms.date: 04/30/2019
+ms.date: 06/13/2019
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -44,14 +44,15 @@ On each app there are three roles:
 * **Developers** can manage app services (e.g. create builds, run tests)
 * **Viewers** can view and download all data but cannot make changes
 
-For every app you create, whether owned by you or your organization, you are automatically assigned as manager for the app. Additionally, all organization admins are assigned as managers for all apps within the organization. Collaborators can be assigned any of the three roles listed above for each app. Learn more about [managing collaborators and admins.](~/dashboard/creating-and-managing-organizations.md)
+For every app you create, whether owned by you or your organization, you are automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
 
 > [!NOTE]
-> Every app that you create, whether it be owned by you or an organization, you automatically become a 'Manager'.
+> When someone gets added to an app owned by an organization, they get invited as **Members** to that organization.
+
 
 ## Changing app roles
 
-To change the permission of a collaborator or admin:
+To change the permission of a collaborator:
 
 1. Select an app from the dashboard
 2. In the left side navigation, select **Settings**
