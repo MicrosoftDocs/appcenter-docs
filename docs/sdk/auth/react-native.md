@@ -2,8 +2,8 @@
 title: App Center Auth for React Native
 description: Using Auth in App Center
 keywords: sdk, auth
-author: jackycodes
-ms.author: t-jalu
+author: amchew
+ms.author: achew
 ms.date: 06/18/2019
 ms.topic: article
 ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
@@ -52,7 +52,7 @@ Edit the project's `android/app/src/main/java/com/{YourAppName}/MainApplication.
 @Override
 protected List<ReactPackage> getPackages() {
     return Arrays.asList(
-            new AppCenterReactNativeAuthPackage(MainApplication.this), // <-- Load this before other AppCenterReactNative packages
+        new AppCenterReactNativeAuthPackage(MainApplication.this), // <-- Load this before other AppCenterReactNative packages
     );
 }
 ```
@@ -84,7 +84,7 @@ Edit the project's `ios/{YourAppName}/AppDelegate.m`, so that `AppCenterReactNat
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-[AppCenterReactNativeAuth register];  // <-- Load this before other AppCenterReactNative packages
+  [AppCenterReactNativeAuth register];  // <-- Load this before other AppCenterReactNative packages
 }
 ```
 
@@ -137,7 +137,6 @@ async signIn() {
         const signInResult = await Auth.signIn();
         // Sign-in succeeded
         const { accessToken, accountId, idToken } = signInResult;
-
     } catch (e) {
         // Do something with sign in failure.
     }
