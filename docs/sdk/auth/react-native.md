@@ -19,6 +19,7 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
