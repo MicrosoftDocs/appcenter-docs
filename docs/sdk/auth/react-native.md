@@ -136,7 +136,7 @@ async signIn() {
     try {
         const signInResult = await Auth.signIn();
         // Sign-in succeeded
-        const { accessToken, accountId, idToken } = signInResult;
+        const { accountId } = signInResult;
     } catch (e) {
         // Do something with sign in failure.
     }
@@ -154,6 +154,36 @@ Please note the following:
 * Signing in on a device is not retroactive: the user does not receive push notifications that were sent prior to signing in on that device, and past error or crash reports are not updated with the new user information.
 * The SDK automatically saves the signed-in users' information so they do not have to sign in to app again.
 * If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information expired or was revoked by the authentication server.
+
+## Get access token and ID token
+
+ When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+ The tokens use the [JWT](https://jwt.io/) format.
+
+ An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+ The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+ To access the tokens from the sign-in result: 
+
+```javascript
+import Auth from 'appcenter-auth';
+
+async signIn() {
+    try {
+        const signInResult = await Auth.signIn();
+        // Sign-in succeeded
+        // Both idToken, and accessToken are non null / undefined values.
+        const { accessToken, idToken } = signInResult;
+        // Do work with either token.
+    } catch (e) {
+        // Do something with sign in failure.
+    }
+}
+
+signIn();
+```
 
 ## Sign out
 
