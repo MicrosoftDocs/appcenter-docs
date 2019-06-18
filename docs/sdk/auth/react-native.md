@@ -6,7 +6,7 @@ author: jackycodes
 ms.author: t-jalu
 ms.date: 06/18/2019
 ms.topic: article
-ms.assetid: ???????????????????????
+ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: react-native
