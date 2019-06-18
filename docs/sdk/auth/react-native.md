@@ -171,6 +171,8 @@ As with every other App Center service, the app can disable the Auth service wit
 await Auth.setEnabled(false);
 ```
 
+This function returns a promise that resolves to void.
+
 To re-enable Auth, use the same API but pass `true` as a parameter.
  
 ```javascript
