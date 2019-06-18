@@ -168,13 +168,13 @@ Auth.signOut();
 As with every other App Center service, the app can disable the Auth service within the app. When disabled, the SDK signs the user out and ignores all other Auth method calls. In particular, `signIn` will not do anything and no UI will be shown while Auth is disabled.
 
 ```javascript
-Auth.setEnabled(false);
+await Auth.setEnabled(false);
 ```
 
 To re-enable Auth, use the same API but pass `true` as a parameter.
  
 ```javascript
-Auth.setEnabled(true);
+await Auth.setEnabled(true);
 ```
 
 The enabled/disabled state is stored by the SDK and does not change when the app restarts.
@@ -184,5 +184,5 @@ The enabled/disabled state is stored by the SDK and does not change when the app
 Check to see if App Center Auth is enabled using the following:
 
 ```javascript
-Auth.isEnabled();
+const enabled = await Auth.isEnabled();
 ```
