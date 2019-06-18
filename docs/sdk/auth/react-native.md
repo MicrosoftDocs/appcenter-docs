@@ -10,8 +10,6 @@ ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: react-native
-dev_langs:
- - javascript
 ---
 
 # App Center Auth
