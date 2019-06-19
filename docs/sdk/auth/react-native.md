@@ -208,7 +208,9 @@ Once you have configured the tenant and the application has retrieved the ID tok
 let idToken = userInformation.idToken;
 let parsedToken = idToken.split(".");
 
-if(parsedToken.length != 3) return;
+if(parsedToken.length != 3) {
+    return;
+}
 
 let rawPayload = parsedToken[1];
 let decodedPayload = atob(rawClaims);
