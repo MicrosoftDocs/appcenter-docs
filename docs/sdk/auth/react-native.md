@@ -132,9 +132,9 @@ import Auth from 'appcenter-auth';
 
 async signIn() {
     try {
-        const signInResult = await Auth.signIn();
+        const userInformation = await Auth.signIn();
         // Sign-in succeeded
-        const { accountId } = signInResult;
+        const accountId = signInResult.accountId;
     } catch (e) {
         // Do something with sign in failure.
     }
@@ -181,6 +181,40 @@ async signIn() {
 }
 
 signIn();
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```javascript
+let idToken = userInformation.idToken;
+let parsedToken = idToken.split(".");
+
+if(parsedToken.length != 3) return;
+
+let rawPayload = parsedToken[1];
+let decodedPayload = atob(rawClaims);
+let claimsObject = JSON.parse(decodedPayload);
+
+let { name, emails } = claims;
 ```
 
 ## Sign out
