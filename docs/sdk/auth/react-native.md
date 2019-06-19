@@ -44,7 +44,7 @@ react-native link appcenter-auth
 
 ### 3. Android Specific
 
-Edit the project's `android/app/src/main/java/com/{YourAppName}/MainApplication.java`, so that `AppCenterReactNativeAuthPackage` is the first App Center native package to be instantiated in the `getPackages` method. 
+Go to the root folder of your React Native Project. Navigate to **android/app/src/main/java/com/{YourAppName}/** and open the **MainApplication.java** file. Edit the `getPackages` method so that `AppCenterReactNativeAuthPackage` is the first App Center native package to be instantiated:
 
 ```java
 @Override
@@ -77,7 +77,7 @@ Be sure to replace `{Your App Secret}` in the code sample above with [your App S
 
 ### 4. iOS Specific
 
-Edit the project's `ios/{YourAppName}/AppDelegate.m`, so that `AppCenterReactNativeAuth` is the first App Center native package to be instantiated in the `didFinishLaunchingWithOptions` method. 
+Go to the root folder of your React Native Project. Navigate to **ios/{YourAppName}/** and open the **AppDelegate.m** file. Edit the `didFinishLaunchingWithOptions` method so that `AppCenterReactNativeAuth` is the first App Center native package to be instantiated:
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
