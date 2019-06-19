@@ -25,7 +25,7 @@ ms.tgt_pltfrm: xamarin
 
 ## Collecting verbose logs
 
-To get instructions how to adjust the log level to `VERBOSE`, refer to [Xamarin Other APIs](../other-apis/xamarin.md#adjust-the-log-level) section.
+To get instructions on how to adjust the log level to `VERBOSE`, refer to [Xamarin Other APIs](../other-apis/xamarin.md#adjust-the-log-level) section.
 You can find the verbose logs in the **Debug** > **Windows** > **Output** window.
 
 ## Issues during setup
