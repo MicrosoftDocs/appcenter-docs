@@ -14,7 +14,7 @@ ms.custom: analytics
 # Windows Support
 
 > [!IMPORTANT]
-> Our team is looking to improve App Center's Windows support around Summer 2019. Follow our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
+> Our team is looking to improve App Center's Windows support around Summer 2019. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
 
 
 ## Universal Windows Platform
