@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 04/18/2019
+ms.date: 06/19/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -29,6 +29,9 @@ App Center Crashes will automatically generate a crash log every time your app c
 Please follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you haven't set up the SDK in your application yet.
 
 Also note that crash logs on iOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
+
+> [!NOTE]
+> On Xamarin.iOS, the SDK will not save any crash log if you attached a debugger. Make sure the debugger is not attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
 
 ## Generate a test crash
 

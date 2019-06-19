@@ -4,7 +4,7 @@ description: App Center Crashes for iOS
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 04/18/2019
+ms.date: 06/19/2019
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: vs-appcenter
@@ -32,6 +32,9 @@ App Center Crashes will automatically generate a crash log every time your app c
 Follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
 Also note that crash logs on iOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
+
+> [!NOTE]
+> The SDK will not forward any crash log if you are attached to the debugger. Make sure the debugger is not attached when you crash the app.
 
 > [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
