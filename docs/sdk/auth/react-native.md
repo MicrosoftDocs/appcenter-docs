@@ -206,7 +206,7 @@ Once you have configured the tenant and the application has retrieved the ID tok
 
 ```javascript
 const idToken = userInformation.idToken;
-const parsedToken = idToken.split(".");
+const parsedToken = idToken.split('.');
 
 if (parsedToken.length != 3) {
     return;
