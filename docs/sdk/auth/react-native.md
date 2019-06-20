@@ -205,18 +205,18 @@ If you are using a custom policy instead of a user flow, you can configure the c
 Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
 
 ```javascript
-let idToken = userInformation.idToken;
-let parsedToken = idToken.split(".");
+const idToken = userInformation.idToken;
+const parsedToken = idToken.split(".");
 
-if(parsedToken.length != 3) {
+if (parsedToken.length != 3) {
     return;
 }
 
-let rawPayload = parsedToken[1];
-let decodedPayload = atob(rawClaims);
-let claimsObject = JSON.parse(decodedPayload);
+const rawPayload = parsedToken[1];
+const decodedPayload = atob(rawClaims);
+const claimsObject = JSON.parse(decodedPayload);
 
-let { name, emails } = claims;
+const { name, emails } = claims;
 ```
 
 ## Sign out
