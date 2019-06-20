@@ -133,10 +133,10 @@ Do this integration, if you link React modules using relative path inside your P
 1. Inside your Podfile, insert the following lines:
 
     ```ruby
-    pod 'appcenter', path: '../node_modules/appcenter'
-    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics'
-    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes'
-    pod 'appcenter-push', path: '../node_modules/appcenter-push'
+    pod 'appcenter', path: '../node_modules/appcenter/ios'
+    pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
+    pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
+    pod 'appcenter-push', path: '../node_modules/appcenter-push/ios'
     ```
 
 2. Run `pod install` from your `iOS` folder.
@@ -146,10 +146,10 @@ Do this integration, if you link React modules using relative path inside your P
     * Add these lines to import section
 
     ```objective-c
-    #import <AppCenterReactNative/AppCenterReactNative.h>
-    #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
-    #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
-    #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
+    #import <AppCenterReactNative.h>
+    #import <AppCenterReactNativeAnalytics.h>
+    #import <AppCenterReactNativeCrashes.h>
+    #import <AppCenterReactNativePush.h>
     ```
 
     * Add these lines to the `didFinishLaunchingWithOptions` method
