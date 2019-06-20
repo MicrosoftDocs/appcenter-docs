@@ -213,7 +213,7 @@ if (parsedToken.length != 3) {
 }
 
 const rawPayload = parsedToken[1];
-const decodedPayload = atob(rawClaims);
+const decodedPayload = atob(rawPayload);
 const claimsObject = JSON.parse(decodedPayload);
 
 const { name, emails } = claims;
