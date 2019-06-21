@@ -123,9 +123,9 @@ To do that, click on the app's target settings, then **Capabilities**, then togg
 
 ## Sign users into the app
 
-App Center provides a `signIn` method that triggers the sign-in policy defined in your Azure AD B2C tenant.
+App Center provides a `signIn` method that triggers the sign in policy defined in your Azure AD B2C tenant.
 
-To present the sign-in UI to the user, call the `signIn` method:
+To present the sign in UI to the user, call the `signIn` method:
 
 ```javascript
 import Auth from 'appcenter-auth';
@@ -133,7 +133,7 @@ import Auth from 'appcenter-auth';
 async signIn() {
     try {
         const userInformation = await Auth.signIn();
-        // Sign-in succeeded
+        // Sign in succeeded
         const accountId = signInResult.accountId;
     } catch (e) {
         // Do something with sign in failure.
@@ -146,12 +146,12 @@ signIn();
 Please note the following:
 
 * The app must be in the foreground before calling `signIn`.
-* App Center associates crash reports and handled errors with the signed-in user after sign-in completes successfully.
-* If sign-in fails, the crash reports and handled errors are not associated with any user.
-* New push notifications targeting the signed-in user are received on the device that the user has signed into.
+* App Center associates crash reports and handled errors with the signed in user after sign in completes successfully.
+* If sign in fails, the crash reports and handled errors are not associated with any user.
+* New push notifications targeting the signed in user are received on the device that the user has signed into.
 * Signing in on a device is not retroactive: the user does not receive push notifications that were sent prior to signing in on that device, and past error or crash reports are not updated with the new user information.
-* The SDK automatically saves the signed-in users' information so they do not have to sign in to app again.
-* If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information expired or was revoked by the authentication server.
+* The SDK automatically saves the signed in users' information so they do not have to sign in to app again.
+* If the app calls `signIn` again, the SDK shows the sign in UI again only if the saved sign in information expired or was revoked by the authentication server.
 
 ## Get access token and ID token
 
@@ -163,7 +163,7 @@ Please note the following:
 
  The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
 
- To access the tokens from the sign-in result: 
+ To access the tokens from the sign in result: 
 
 ```javascript
 import Auth from 'appcenter-auth';
@@ -171,7 +171,7 @@ import Auth from 'appcenter-auth';
 async signIn() {
     try {
         const signInResult = await Auth.signIn();
-        // Sign-in succeeded
+        // Sign in succeeded
         // Both idToken, and accessToken are non null / undefined values.
         const { accessToken, idToken } = signInResult;
         // Do work with either token.
