@@ -3,7 +3,7 @@ title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2019
+ms.date: 06/17/2019
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
 ms.service: vs-appcenter
@@ -27,7 +27,7 @@ implementation 'net.hockeyapp.android:HockeySDK:...'
 After:
 
 ```groovy
-def appCenterSdkVersion = '2.0.0'
+def appCenterSdkVersion = '2.1.0'
 implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
 implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"

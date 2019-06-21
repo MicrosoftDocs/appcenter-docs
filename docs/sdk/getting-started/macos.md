@@ -2,9 +2,9 @@
 title: Get Started with macOS
 description: Get started
 keywords: sdk
-author: jaelim-ms
-ms.author: jaelim
-ms.date: 05/20/2019
+author: elamalani
+ms.author: emalani
+ms.date: 06/14/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ Let's get started with setting up App Center macOS SDK in your app to use App Ce
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 8 or later on macOS version 10.12 or later.
+* Your macOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
 * You are targeting devices running on macOS 10.9 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 

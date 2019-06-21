@@ -4,7 +4,7 @@ description: Help using the Overview Page on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 01/20/2017
+ms.date: 05/29/2019
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5
 ms.service: vs-appcenter

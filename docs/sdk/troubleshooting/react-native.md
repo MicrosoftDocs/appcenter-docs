@@ -3,8 +3,8 @@ title: React Native SDK Troubleshooting
 description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
-ms.author: elamalani
-ms.date: 03/22/2019
+ms.author: emalani
+ms.date: 06/12/2019
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -72,6 +72,21 @@ Our linking script supports only the standard way of linking pods, so in order t
     ```
 
 1. Remove AppCenter dependencies from the project (right-click the dependency > Remove dependency).
+    * Select **<YOUR_APP>** -> **Libraries** and remove next files:
+        * `AppCenterReactNative.xcodeproj`
+        * `AppCenterReactNativeAnalytics.xcodeproj`
+        * `AppCenterReactNativeCrashes.xcodeproj`
+        * `AppCenterReactNativePush.xcodeproj`
+    * Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section remove new items referencing target libraries removed on the previous step:
+        * `libAppCenterReactNative.a`
+        * `libAppCenterReactNativeAnalytics.a`
+        * `libAppCenterReactNativeCrashes.a`
+        * `libAppCenterReactNativePush.a`
+    * Modify **Header Search Paths** to remove headers from the AppCenter React Native plugins projects. Open your project settings and under **Build Settings** tab in the **Header Search Paths** section remove the following locations for header files:
+        * `$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative`
+        * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
+        * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
+        * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
 ## React Native link command unrecognized
 

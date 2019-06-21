@@ -169,8 +169,8 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 Now, let's create our first document:
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                  email:@"Jim@appcenter.ms"
+User *user = [[User alloc] initWithName:@"Alex"
+                                  email:@"alex@appcenter.ms"
                             phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData createDocumentWithID:user.identifier
@@ -181,7 +181,7 @@ User *user = [[User alloc] initWithName:@"Jim"
            }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
+let user = User(name: "Alex", email: "alex@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
 MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition) { (document) in
   // Do something with the document
 }
@@ -192,8 +192,8 @@ This code snippet creates a document and inserts the details of the `user` objec
 Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                  email:@"Jim@appcenter.ms"
+User *user = [[User alloc] initWithName:@"Alex"
+                                  email:@"alex@appcenter.ms"
                             phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData createDocumentWithID:user.identifier
@@ -205,7 +205,7 @@ User *user = [[User alloc] initWithName:@"Jim"
            }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
+let user = User(name: "Alex", email: "alex@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
 MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
     // Do something with the document
 }
@@ -227,7 +227,7 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been read.
 
-Jim, the user who created the `user` object, wants to view all of his personal data. Say we've created some code in our app that enables Jim to fetch his personal data that's stored in the database. Fetching the data would look like this:
+If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables the user to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
 ```objc
 [MSData readDocumentWithID:user.identifier
@@ -274,7 +274,7 @@ You can also specify the time-to-live (TTL) on a document by using `[[MSReadOpti
 
 ## Replacing a Document
 
-Let's say Jim wanted to change his email. This action could be possible through a simple `Data.replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Data.replace` call. The parameters for replacing a document are the following:
 
 - **ID:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
@@ -285,8 +285,8 @@ Let's say Jim wanted to change his email. This action could be possible through 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been replaced.
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                   email:@"Jim@microsoft.com"
+User *user = [[User alloc] initWithName:@"Alex"
+                                   email:@"alex@microsoft.com"
                              phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData replaceDocumentWithID:user.identifier
@@ -297,7 +297,7 @@ User *user = [[User alloc] initWithName:@"Jim"
             }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
+let user = User(name: "Alex", email: "alex@microsoft.com", phoneNumber: "+1-(855)-555-5555")
 MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition) { (document) in
   // Do something with the document
 }
@@ -308,8 +308,8 @@ The code above will replace or update an existing document in your database. It 
 You can also configure the replacement document for offline persistence:
 
 ```objc
-User *user = [[User alloc] initWithName:@"Jim"
-                                   email:@"Jim@microsoft.com"
+User *user = [[User alloc] initWithName:@"Alex"
+                                   email:@"alex@microsoft.com"
                              phoneNumber:@"+1-(855)-555-5555"];
 
 [MSData replaceDocumentWithID:user.identifier
@@ -321,7 +321,7 @@ User *user = [[User alloc] initWithName:@"Jim"
             }];
 ```
 ```swift
-let user = User(name: "Jim", email: "Jim@microsoft.com", phoneNumber: "+1-(855)-555-5555")
+let user = User(name: "Alex", email: "alex@microsoft.com", phoneNumber: "+1-(855)-555-5555")
 MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
   // Do something with the document
 })

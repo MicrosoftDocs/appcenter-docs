@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 05/29/2019
+ms.date: 06/12/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -216,7 +216,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * Drag and drop `.xcodeproj` files from the Finder into Xcode's Project Navigator. Typically under **Libraries** group.
 
 9. Link libraries for AppCenter React Native plugins.
-   Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section add new items referencing target libraries added on the previuos step: 
+   Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section add new items referencing target libraries added on the previous step: 
    * `libAppCenterReactNative.a`
    * `libAppCenterReactNativeAnalytics.a`
    * `libAppCenterReactNativeCrashes.a`
