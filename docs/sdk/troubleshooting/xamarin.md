@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/03/2018
+ms.date: 06/19/2019
 ms.topic: troubleshooting-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -22,6 +22,11 @@ ms.tgt_pltfrm: xamarin
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+
+## Collecting verbose logs
+
+To get instructions on how to adjust the log level to `VERBOSE`, refer to [Xamarin Other APIs](../other-apis/xamarin.md#adjust-the-log-level) section.  
+You can find the verbose logs in the **Debug** > **Windows** > **Output** window.
 
 ## Issues during setup
 

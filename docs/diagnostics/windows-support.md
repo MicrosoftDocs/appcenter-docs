@@ -14,7 +14,7 @@ ms.custom: analytics
 # Windows Support
 
 > [!IMPORTANT]
-> Our team is looking to improve App Center's Windows support around Summer 2019. Follow our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
+> Our team is looking to improve App Center's Windows support around Summer 2019. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
 
 
 ## Universal Windows Platform
@@ -68,9 +68,9 @@ You also might notice some features you see in other platforms are missing for y
 
 ### Submitting your app to the Microsoft Store
 
-To submit your app through the Microsoft Store, you must create an app package file and submit the package to [Microsoft Dev Center](https://developer.microsoft.com/en-us/windows). In creating your package file, you can include symbol files to upload to Dev Center. This will allow App Center to display symbolicated stack traces. 
+To distribute your app through the Microsoft Store, you must create an app package file and [submit the package](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages) to [Partner Center](https://partner.microsoft.com/dashboard). In creating your package file, you can include symbol files to upload to Partner Center. This will allow App Center to display symbolicated stack traces. 
 
-Follow the [Windows packaging documentation](https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps#create-an-app-package-upload-file) to package your app. 
+Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/uwp/packaging/index) to package your app.
 
  
 ## WinForms, WinRT, WPF, and Silverlight 

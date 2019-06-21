@@ -23,14 +23,14 @@ To get started, you must have an existing:
   - [Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant)
   - [App Center account](https://appcenter.ms) and [application](https://docs.microsoft.com/appcenter/dashboard/creating-and-managing-apps#creating-an-app)
 
-You must be granted the following Azure AD B2C roles in order to connect an Azure AD B2C tenant in App Center:
+### Required roles
+In order to connect an Azure AD B2C directory in App Center, you must be either a Global Administrator or granted one or more of the following Azure AD roles depending upon which resource you want to access.  
   - Application Administrator
   - B2C IEF Keyset Administrator
   - B2C IEF Policy Administrator
   - B2C User Flow Administrator
   - B2C User Flow Attribute Administrator
-  - External Identity Provider Administrator
-  - Global Administrator
+  - External Identity Provider Administrator  
   - Global Reader
   - User Administrator
 
