@@ -202,6 +202,7 @@ async Task SignInAsync()
     {
         // Sign-in succeeded.
         UserInformation userInfo = await Auth.SignInAsync();
+        string accountId = userInfo.AccountId;
     }
     catch (Exception e)
     {
@@ -221,6 +222,95 @@ Please note the following:
 * Signing in on a device is not retroactive: the user does not receive push notifications that were sent to him prior to signing in on that device, and past error or crash reports are not updated with the new user information.
 * The SDK automatically saves the signed in users' information so they do not have to sign in to your app again.
 * If the app calls `SignInAsync` again, the SDK shows the sign-in UI again only if the saved sign-in information has expired or has been revoked by the authentication server.
+
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```csharp
+using Microsoft.AppCenter.Auth;
+
+async Task SignInAsync()
+{
+    try
+    {
+        // Sign-in succeeded, UserInformation is not null.
+        UserInformation userInfo = await Auth.SignInAsync();
+        
+        // Get tokens. They are not null.
+        string idToken = userInfo.IdToken;
+        string accessToken = userInfo.AccessToken;
+
+        // Do work with either token.
+    }
+    catch (Exception e)
+    {
+        // Do something with sign-in failure.
+    }
+}
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```csharp
+using System.Linq;
+using System.IdentityModel.Tokens.Jwt;
+
+// Decode the raw token string to read the claims.
+var tokenHandler = new JwtSecurityTokenHandler();
+try
+{
+    var jwToken = tokenHandler.ReadJwtToken(userInfo.IdToken);
+
+    // Get display name.
+    var displayName = jwToken.Claims.FirstOrDefault(t => t.Type == "name")?.Value;
+    if (displayName != null)
+    {
+        // Do something with display name.
+    }
+
+    // Get first email address.
+    var firstEmail = jwToken.Claims.FirstOrDefault(t => t.Type == "emails")?.Value;
+    if (firstEmail != null)
+    {
+        // Do something with email.
+    }
+}
+catch (ArgumentException)
+{
+    // Handle error.
+}
+```
+
+The code sample requires the [JWT nuget package](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/). If your application uses Xamarin.Forms, the package needs to be installed in the .NET standard portable project and also the Android and iOS platform projects.
 
 ## Sign out
 

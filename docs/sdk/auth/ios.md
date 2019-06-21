@@ -164,6 +164,146 @@ Please note the following:
 * The SDK automatically saves the signed-in users' information so they do not have to sign in to your app again.
 * If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information has expired or has been revoked by the authentication server.
 
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```objc
+[MSAuth signInWithCompletionHandler:^(MSUserInformation *_Nullable userInformation, NSError *_Nullable error) {
+
+  if (!error) {
+
+    // Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
+    NSString *idToken = userInformation.idToken;
+    NSString *accessToken = userInformation.accessToken;
+
+    // Do work with either token.
+  }
+  else {
+
+    // Do something with sign in failure.
+  }
+}];
+```
+```swift
+MSAuth.signIn { userInformation, error in
+
+  if error == nil {
+
+    // Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
+    var idToken = userInformation!.idToken;
+    var accessToken = userInformation!.accessToken;
+
+    // Do work with either token.
+	}
+  else {
+
+    // Do something with sign in failure.
+  }
+}
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```objc
+NSString *idToken = userInformation.idToken;
+NSArray *tokenSplit = [idToken componentsSeparatedByString:@"."];
+if ([tokenSplit count] > 1) {
+  NSString *rawClaims = tokenSplit[1];
+  size_t paddedLength = rawClaims.length + (4 - rawClaims.length % 4) % 4;
+  rawClaims = [rawClaims stringByPaddingToLength:paddedLength withString:@"=" startingAtIndex:0];
+  NSData *claimsData = [[NSData alloc] initWithBase64EncodedString:rawClaims options:NSDataBase64DecodingIgnoreUnknownCharacters];
+  if (claimsData) {
+    NSError *error;
+    NSDictionary *claims = [NSJSONSerialization JSONObjectWithData:claimsData options:0 error:&error];
+    if (!error) {
+
+      // Get display name.
+      id displayName = claims[@"name"];
+      if ([displayName isKindOfClass:[NSString class]]) {
+
+        // Do something with display name.
+      }
+
+      // Get email addresses.
+      id emails = claims[@"emails"];
+      if ([emails isKindOfClass:[NSArray class]] && [emails count] > 0) {
+        NSString *firstEmail = emails[0];
+
+        // Do something with the first email address.
+      }
+    }
+  }
+}
+```
+```swift
+let idToken = userInformation?.idToken
+let tokenSplit = idToken?.components(separatedBy: ".")
+if tokenSplit != nil && tokenSplit!.count > 1 {
+  var rawClaims = tokenSplit![1]
+  let paddedLength = rawClaims.count + (4 - rawClaims.count % 4) % 4
+  rawClaims = rawClaims.padding(toLength: paddedLength, withPad: "=", startingAt: 0)
+  let claimsData = Data(base64Encoded: rawClaims, options: .ignoreUnknownCharacters)
+  do {
+    if claimsData != nil {
+      let claims = try JSONSerialization.jsonObject(with: claimsData!, options: []) as? [AnyHashable: Any]
+      if claims != nil {
+
+        // Get display name.
+        let displayName = claims!["name"]
+        if displayName is String {
+          
+          // Do something with display name.
+        }
+
+        // Get email addresses.
+        let emails = claims!["emails"] as? [Any]
+        if emails != nil && emails!.count > 0 {
+          let firstEmail = emails![0] as? String
+
+          // Do something with the first email address.
+        }
+      }
+    }
+  } catch {
+    
+    // Handle error.
+  }
+}
+```
+
 ## Sign out
 
 To sign out the user and clear all associated authentication tokens, call the `signOut` method:

@@ -13,9 +13,6 @@ ms.custom: diagnostics
 
 # Diagnostics
 
-> [!IMPORTANT]
-> The Diagnostics service is now Generally Available for all your production apps. For more information, read the [Diagnostics Launch blog post](https://aka.ms/Diagnostics-to-GA).
-
 ## Overview
 
 App Center Diagnostics is a cloud service that helps developers monitor the health of an application, delivering the data needed to understand what happens when an app fails during testing or in the wild. The App Center Diagnostics SDK collects information about crashes and errors in your apps and uploads them to the App Center portal for analysis by the development team - eliminating the guesswork about what really happened in the app when it failed.
