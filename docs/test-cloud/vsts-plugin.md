@@ -107,7 +107,7 @@ appcenter test run appium --app "username/appname" --devices 209ed689
 * **Test series** is a free text field - it can be anything. It's the `--test-series` parameter.
 * **System Language** is a drop-down menu. If **Other** is selected, an **Other Locale** field appears where you can enter language and country code like this format: `en_US`.
 
-Save the configuration and you're all set to start the build and App Center Test run.
+Save the configuration and you are all set to start the build and App Center Test run.
 
 ## Espresso
 

@@ -21,7 +21,6 @@ To prepare a Xamarin.Android app and Xamarin.UITests for submission to App Cente
 1. Ensure that the app requests the `INTERNET` permission by inserting this snippet `<uses-permission android:name="android.permission.INTERNET" />` into the AndroidManifest.xml, outside the `<application>` tag.
 2. Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamarin.UITests from running in App Center for Test.
 
-//TODO Insert switcher for the two options.
 
 ## Visual studio for Mac
 Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamarin.UITests from running in App Center for Test.
