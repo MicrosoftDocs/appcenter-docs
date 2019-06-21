@@ -5,7 +5,7 @@ description: How to get started with UI Testing in Azure DevOps (VSTS)
 keywords: test, VSTS, Azure DevOps, Azure Pipelines, espresso, appium, xamarin.uitest, xcuitest
 author: Oddj0b
 ms.author: vigimm
-ms.date: 03/27/2019
+ms.date: 06/04/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9
@@ -107,7 +107,7 @@ appcenter test run appium --app "username/appname" --devices 209ed689
 * **Test series** is a free text field - it can be anything. It's the `--test-series` parameter.
 * **System Language** is a drop-down menu. If **Other** is selected, an **Other Locale** field appears where you can enter language and country code like this format: `en_US`.
 
-Save the configuration and you're all set to start the build and App Center Test run.
+Save the configuration and you are all set to start the build and App Center Test run.
 
 ## Espresso
 
@@ -142,7 +142,8 @@ Save the configuration and you're all set to start the build and App Center Test
 ## Xamarin.UITest
 
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your repository for App Center Test, Xamarin.UITest testing](preparing-for-upload/uitest.md).
+* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](preparing-for-upload/xamarin-android-uitest.md).
+* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](preparing-for-upload/xamarin-ios-uitest.md).
 
 ### Azure Pipelines configuration for Xamarin.UITest
 
