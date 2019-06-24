@@ -155,6 +155,135 @@ Please note the following:
 * The SDK automatically saves the signed-in users' information so they do not have to sign in to app again.
 * If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information expired or was revoked by the authentication server.
 
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```java
+import com.microsoft.appcenter.auth.Auth;
+
+Auth.signIn().thenAccept(new AppCenterConsumer<SignInResult>() {
+
+    @Override
+    public void accept(SignInResult signInResult) {
+
+        if (signInResult.getException() == null) {
+
+            // Sign-in succeeded if exception is null.
+            // SignInResult is never null, getUserInformation() returns not null when there is no exception.
+            // Both getIdToken() / getAccessToken() return non null values.
+            String idToken = signInResult.getUserInformation().getIdToken();
+            String accessToken = signInResult.getUserInformation().getAccessToken();
+
+            // Do work with either token.
+        } else {
+
+            // Do something with sign in failure.
+            Exception signInFailureException = signInResult.getException();
+        }
+    }
+});
+```
+```kotlin
+import com.microsoft.appcenter.auth.Auth
+
+Auth.signIn().thenAccept { signInResult ->
+    if (signInResult.exception == null) {
+
+        // Sign-in succeeded if exception is null.
+        // SignInResult is never null, getUserInformation() returns not null when there is no exception.
+        // Both getIdToken() / getAccessToken() return non null values.
+        val idToken = signInResult.userInformation.idToken
+        val accessToken = signInResult.userInformation.accessToken
+
+        // Do work with either token.
+    } else {
+
+        // Do something with sign in failure.
+        val signInFailureException = signInResult.exception
+    }
+}
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```java
+import com.nimbusds.jwt.JWT;
+import com.nimbusds.jwt.JWTParser;
+import java.text.ParseException;
+
+try {
+    String idToken = signInResult.getUserInformation().getIdToken();
+    JWT parsedToken = JWTParser.parse(idToken);
+    Map<String, Object> claims = parsedToken.getJWTClaimsSet().getClaims();
+
+    // Get display name.
+    String displayName = (String) claims.get("name");
+
+    // Get first email.
+    net.minidev.json.JSONArray emails = (net.minidev.json.JSONArray) claims.get("emails");
+    if (emails != null && !emails.isEmpty()) {
+        String firstEmail = emails.get(0).toString();
+    }
+} catch (ParseException e) {
+
+    /* Handle invalid token here. */
+}
+```
+```kotlin
+import com.nimbusds.jwt.JWT
+import com.nimbusds.jwt.JWTParser
+import java.text.ParseException
+
+try {
+    val idToken = signInResult.getUserInformation().getIdToken()
+    val parsedToken = JWTParser.parse(idToken)
+    val claims = parsedToken.jwtClaimsSet.claims
+
+    // Get display name.
+    val displayName = claims["name"] as String?
+
+    // Get first email.
+    val emails = claims["emails"] as net.minidev.json.JSONArray?
+    if (emails != null && !emails.isEmpty()) {
+        val firstEmail = emails[0].toString()
+    }
+} catch (e: ParseException) {
+
+    /* Handle invalid token here. */
+}
+```
+
+The third-party classes used in the sample code are already dependencies of the App Center Auth SDK, and are available to use without any extra installation steps.
+
 ## Sign out
 
 To sign out the user and clear all associated authentication tokens, call the `signOut` method:
