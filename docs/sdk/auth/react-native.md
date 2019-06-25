@@ -73,7 +73,7 @@ Open your **AndroidManifest.xml** file and add the following element to your fil
 ```
 
 Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
-`android:scheme="msal65dc3680-7325-4000-a0e7-dbd2276eafd1"`.
+`android:scheme="msal65dc3680-7325-4000-a0e7-dbd2276eafd1"`, given that `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your App Secret.
 
 ### 4. iOS Specific
 
