@@ -176,6 +176,7 @@
 ### [Introduction](auth/getting-started.md)
 ### [Android](sdk/auth/android.md)
 ### [iOS](sdk/auth/ios.md)
+### [React Native](sdk/auth/react-native.md)
 ### [Xamarin](sdk/auth/xamarin.md)
 ## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
 
@@ -234,6 +235,7 @@
 ## Auth
 ### [Android](sdk/auth/android.md)
 ### [iOS](sdk/auth/ios.md)
+### [React Native](sdk/auth/react-native.md)
 ### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
