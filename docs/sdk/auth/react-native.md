@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/18/2019
+ms.date: 06/25/2019
 ms.topic: article
 ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ Link the plugins to the React Native app using the react-native link command:
 react-native link appcenter-auth
 ```
 
-### 3. Android Specific
+### 3. Android 
 
 Go to the root folder of your React Native Project. Navigate to **android/app/src/main/java/com/{YourAppName}/** and open the **MainApplication.java** file. Edit the `getPackages` method so that `AppCenterReactNativeAuthPackage` is the first App Center native package to be instantiated:
 
@@ -75,7 +75,7 @@ Open your **AndroidManifest.xml** file and add the following element to your fil
 Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
 `android:scheme="msal65dc3680-7325-4000-a0e7-dbd2276eafd1"`, given that `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your App Secret.
 
-### 4. iOS Specific
+### 4. iOS 
 
 Go to the root folder of your React Native Project. Navigate to **ios/{YourAppName}/** and open the **AppDelegate.m** file. Edit the `didFinishLaunchingWithOptions` method so that `AppCenterReactNativeAuth` is the first App Center native package to be instantiated:
 
