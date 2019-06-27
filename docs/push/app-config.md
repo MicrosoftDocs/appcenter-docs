@@ -1,17 +1,17 @@
 ---
-title: App Configuration
+title: Configuring an App for Push
 description: Configuring your app to use the App Center Push service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 02/11/2019
+ms.date: 06/27/2019
 ms.topic: article
 ms.assetid: 4f4f4478-6367-4a1e-8fe7-99b51da018c1
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# App Configuration
+# Configuring an App for Push
 
 This section contains instructions for how to use the App Center Push SDK in your applications; the links below contain instructions for each supported target platform for your application.
 
