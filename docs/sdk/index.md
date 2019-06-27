@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/17/2019
+ms.date: 06/26/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -76,30 +76,30 @@ Android Studio 2.2 or later.
 
  Service          | iOS Version     | Xcode
  -----------------|-----------------|--------------
- Analytics        | 9.0 or later    | 8.2 and later
- Auth             | 9.0 or later    | 8.2 and later
- Crashes          | 9.0 or later    | 8.2 and later
- Data             | 9.0 or later    | 8.2 and later
- Distribute       | 9.0 or later    | 8.2 and later
- Push             | 9.0 or later    | 8.2 and later
+ Analytics        | 9.0 or later    | 10 and later
+ Auth             | 9.0 or later    | 10 and later
+ Crashes          | 9.0 or later    | 10 and later
+ Data             | 9.0 or later    | 10 and later
+ Distribute       | 9.0 or later    | 10 and later
+ Push             | 9.0 or later    | 10 and later
 
 ### Unity
 
-Service    |  Unity version  | iOS Version  | Android Version            | UWP Version
+Service    |  Unity version  | iOS Version  | Android Version            | UWP Windows Version
  ----------|-----------------|--------------|----------------------------|---------------------
-Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
-Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
-Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
-Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| Build 10240 or later
+Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
+Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.15063 or later
+Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| not available
+Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
 
 ### Windows UWP
 
- Service          | Windows Version    | Visual Studio
- -----------------|--------------------|----------------------------
- Analytics        | 10 build 10240     | Visual Studio 2015 or later
- Crashes          | not available      | not available
- Distribute       | not available      | not available
- Push             | 10 build 10240     | Visual Studio 2015 or later
+Service          | Windows Version     | Visual Studio
+-----------------|---------------------|----------------------------
+Analytics        | 10.0.10240 or later | Visual Studio 2015 or later
+Crashes          | 10.0.15063 or later | Visual Studio 2015 or later
+Distribute       | not available       | not available
+Push             | 10.0.10240 or later | Visual Studio 2015 or later
 
 ### React Native
 
