@@ -20,8 +20,8 @@ The table below lists all the Operating System and Platforms and their supported
 | `Android`                | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `iOS`                    | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `macOS`                  | Yes   | No   | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
+| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | No   | Yes  |
+| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | No   | Yes  |
 | `Windows - UWP`          | Yes   | No   | Yes        | Yes*    | Yes       | No   | No   | Yes  |
 | `Xamarin - iOS`          | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `Xamarin - Android`      | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
