@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -77,7 +77,7 @@ Android Studio 2.2 or later.
  Service          | iOS Version     | Xcode
  -----------------|-----------------|--------------
  Analytics        | 9.0 or later    | 10 and later
- Auth             | 9.0 or later    | 10 and later
+ Auth             | 10.0 or later   | 10 and later
  Crashes          | 9.0 or later    | 10 and later
  Data             | 9.0 or later    | 10 and later
  Distribute       | 9.0 or later    | 10 and later
