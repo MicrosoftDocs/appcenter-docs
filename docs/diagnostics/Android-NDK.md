@@ -30,7 +30,7 @@ Once you have Google Breakpad included, attach the NDK Crash Handler after `AppC
 
 ```java
 /* Attach NDK Crash Handler after SDK is initialized. */
-Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {.
+Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
     @Override
     public void accept(String path) {
 
