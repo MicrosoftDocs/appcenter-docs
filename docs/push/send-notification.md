@@ -192,3 +192,4 @@ To send notifications to specific users, follow the instructions in [Push to Use
 + The maximum number of Audiences for any App Center app project is 200.
 + You can define a maximum of 60 custom properties per app project.
 + Audiences match only devices that have a valid push registrations. For that reason, testing Audiences on an iOS simulator will fail.
++ The maximum number of characters per custom data value is 100.
