@@ -262,6 +262,71 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     </plist>
     ```
 
+### 3.4 [Android only] Integrate the Android SDK manually without react-native link
+
+Do this integration, if you don't want to use `react-native link` command.
+
+1. Open **android/settings.gradle** file and insert the following lines. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
+
+    ```groovy
+      include ':appcenter-crashes'
+      project(':appcenter-crashes').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter-crashes/android')
+      include ':appcenter-analytics'
+      project(':appcenter-analytics').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter-analytics/android')
+      include ':appcenter'
+      project(':appcenter').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter/android')
+      ```
+
+2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and add the following lines into `dependencies` section:
+
+    ```groovy
+    dependencies {
+        implementation project(':appcenter-crashes')
+        implementation project(':appcenter-analytics')
+        implementation project(':appcenter')
+        ...
+    }
+    ```
+
+3. Modify your app's **MainApplication.java** file to include code for starting SDK:
+
+    * Add these lines to import section
+
+    ```java
+    import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
+    import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
+    import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
+    ```
+
+    * Add AppCenter packages to the `List<ReactPackage> getPackages()` method
+
+    ```java
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+            new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+            new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+            new AppCenterReactNativePackage(MainApplication.this)
+      );
+    }
+    ```
+
+4. Open **strings.xml** file (`android/app/src/main/res/values`) and add the following lines inside `<resources></resources>` tags:
+
+    ```xml
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    ```
+
+5. Create new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `APP_SECRET_VALUE` with your app secret value.
+
+    ```json
+    {
+        "app_secret": "APP_SECRET_VALUE"
+    }
+    ```
+
 ## 4. Start the SDK
 
 Now you can build and launch your application either from command line or Xcode/Android Studio.
