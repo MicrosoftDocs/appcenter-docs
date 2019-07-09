@@ -4,7 +4,7 @@ description: Azure AD B2C and how it relates to the App Center Auth Service
 keywords: MBaaS, Auth, Azure AD B2C, Identity, Azure Active Directory B2C
 author: amchew
 ms.author: amchew
-ms.date: 05/07/2019
+ms.date: 07/08/2019
 ms.topic: article
 ms.assetid: f24d7db6e-9eab-4272-be10-938fc4ae296b
 ms.service: vs-appcenter
@@ -77,3 +77,7 @@ There are two types of policies:
 App Center Auth preview supports the **Sign up and sign in** [user flow](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#user-flow-versions) or [custom policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom) that contains the sign-in identity task.
 
 Learn more about [user flows](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies) and [custom policies](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom).
+
+## Additional resources
+
+For advanced identity developers, learn more about [Azure AD B2C solution and training](https://docs.microsoft.com/azure/active-directory-b2c/solution-articles) articles.
