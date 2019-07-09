@@ -301,7 +301,7 @@ Send the body of the request in JSON format (using the `application/json` conten
 
 In this example:
 
-+ `name`: Defines the name for the notification message.ß
++ `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
 + `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
