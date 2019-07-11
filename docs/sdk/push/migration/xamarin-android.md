@@ -4,7 +4,7 @@ description: Contains instructions for how to configure your project to use Fire
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 04/24/2019
+ms.date: 07/11/2019
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498
 ms.service: vs-appcenter
@@ -24,31 +24,25 @@ If you are using App Center Build, you must make sure Mono version is 5.8 or hig
 
 ## 2. AndroidManifest.xml
 
-Edit the project's **AndroidManifest.xml** file and remove the following lines **inside** the `<application>` section, if present:
+Edit the project's **AndroidManifest.xml** file and remove the following lines **inside** the file's `<application>` section, if present:
 
 ```xml
-<application ...>
-    
-    <!-- Add these lines -->
-    <receiver
-        android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
-        android:exported="false" />
-    <receiver
-        android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-        android:exported="true"
-        android:permission="com.google.android.c2dm.permission.SEND">
-        <intent-filter>
-            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-            <category android:name="${applicationId}" />
-        </intent-filter>
-    </receiver>
-    <!-- end of section to add -->
-
-</application>
+<receiver
+    android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+    android:exported="false" />
+<receiver
+    android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+    android:exported="true"
+    android:permission="com.google.android.c2dm.permission.SEND">
+    <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="${applicationId}" />
+    </intent-filter>
+</receiver>
 ```
 
-Remove the following lines from the project's **AndroidManifest.xml** file:
+Also, remove the following lines from the file:
 
 ```xml
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
