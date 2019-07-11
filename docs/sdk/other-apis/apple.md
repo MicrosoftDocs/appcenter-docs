@@ -72,6 +72,20 @@ MSAppCenter.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+## Change state of service in runtime
+
+Enable or disable desired services at the runtime with following code:
+
+```objc
+[MSAnalytics setEnabled:NO];
+```
+```swift
+MSAnalytics.setEnabled(false)
+```
+
+> [!NOTE]
+> This method should only be used after AppCenter is started.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.

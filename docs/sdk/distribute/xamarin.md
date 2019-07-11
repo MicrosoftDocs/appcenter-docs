@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 05/16/2019
+ms.date: 07/11/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -130,6 +130,9 @@ To enable in-app updates for debug builds on Android, call the following method 
 ```csharp
 Distribute.SetEnabledForDebuggableBuild(true);
 ```
+
+> [!NOTE]
+> This method only affects debug builds, and has no impact on release builds.
 
 #### 2.3 [For iOS only] Modify the project's **Info.plist**
 

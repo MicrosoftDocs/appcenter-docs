@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 06/17/2019
+ms.date: 07/11/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -267,6 +267,9 @@ Distribute.setEnabledForDebuggableBuild(true);
 ```kotlin
 Distribute.setEnabledForDebuggableBuild(true)
 ```
+
+> [!NOTE]
+> This method only affects debug builds, and has no impact on release builds.
 
 ## How do in-app updates work?
 
