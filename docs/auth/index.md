@@ -4,7 +4,7 @@ description: Introduction to the App Center Auth Service
 keywords: MBaaS, Auth, Identity
 author: amchew
 ms.author: amchew
-ms.date: 06/28/2019
+ms.date: 07/11/2019
 ms.topic: article
 ms.assetid: 012e4140-924c-4434-b191-c2411adc513d
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ App Center Auth also integrates with other parts of App Center, enabling develop
 
 Auth is currently in preview, but is fully supported. Our preview supports native iOS, Android, Xamarin and React Native. Setting up the Auth preview requires an existing Azure subscription and [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) tenant. 
 
-App Center Auth brings the magic of a seamless and easy portal and SDK set up experience. It only takes 5 steps to connect your existing Azure AD B2C tenant and a few lines of code to integrate the App Center Auth SDK. It is also currently the only way to use the signed-in user's identity with other App Center services like Data and Push. 
+App Center Auth brings the magic of a seamless and easy portal and SDK set up experience. It only takes 5 steps to connect your existing Azure AD B2C tenant and a few lines of code to integrate the App Center Auth SDK. It is also currently one of the two ways to use the signed-in user's identity with other App Center services like Data and Push, the other being setting the signed-in user's identity via the SDK.
 
 ## How Auth works
 
