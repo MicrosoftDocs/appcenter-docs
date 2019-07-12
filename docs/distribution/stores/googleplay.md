@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 07/11/2019
+ms.date: 07/12/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -20,7 +20,7 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 * A Google Play Developer account. If you do not have one, you can sign up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
 * Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google APIs on your behalf.
 * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
-* Set up App signing by Google to publish AAB files.
+* Set up App signing by Google to publish Android App bundles (AAB) files.
 
 For more information, review [How to use the Google Play console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
 
@@ -113,6 +113,21 @@ Close the window and the new service account shows on the original page. Click t
 6. Once the file is uploaded, click **Connect**.
 7. A Google Play connection should now be visible with the three tracks, Production, Alpha, and Beta in the **Stores** home page. Setting up this connection is a one time process for an app in App Center.
 
+## Publish your AAB to the Google Play Store
+
+1. From the **Stores** home page, select any of the tracks created above.
+2. Click on **Publish to Store** on the button in the upper-right corner.
+3. Upload the app package. A few points to note:
+   * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
+   * Google Play Store supports android app bundles up to a maximum of 2 GB. Apks generated from the aab cannot exceed 150 MB. You can read more about [your options at Google's docs for AAB](https://developer.android.com/guide/app-bundle/).
+   * The version of the .aab must be strictly greater than the current version in production.
+   * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in Alpha and Beta track versions.
+   * Google's API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
+4. After uploading your package, you can see some details of the application. Click **Next**.
+5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribute Store Details page will show as **Submitted.**
+6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
+7. In case publishing by Google fails, the app owner receives a notification to the registered Google mail.
+
 ## Publish your APK to the Google Play Store
 
 1. From the **Stores** home page, select any of the tracks created above.
@@ -123,23 +138,8 @@ Close the window and the new service account shows on the original page. Click t
    * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
    * The version of the .apk must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
-   * Google API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
+   * Google's API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
 4. After uploading your package, you can see some details of the application. Click **Next**.
-5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the store details page will show as **Submitted.**
-6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Google could take up to 24 hours to show up the app on the Play store.
-7. If there is a failure with publishing by Google, app owner will receive a notification to the registered google mail.
-
-## Publish your AAB to the Google Play Store
-
-1. From the **Stores** home page, select any of the tracks created above.
-2. Click on **Publish to Store** on the button in the upper-right corner.
-3. Upload the app package. A few points to note:
-   * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
-   * Google Play Store supports android app bundles up to a maximum of 2 GB. Apks generated from the aab cannot exceed 150 MB. You can read more about [your options for at Google's docs for AAB](https://developer.android.com/guide/app-bundle/).
-   * The version of the .aab must be strictly greater than the current version in production.
-   * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in Alpha and Beta track versions.
-   * Google API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
-4. After uploading your package, you can see some details of the application. Click **Next**.
-5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the store details page will show as **Submitted.**
-6. Once App Center has completed the hand-over of the app to Google, the status of the app will change to **Published.** Google could take up to 24 hours to show up the app on the Play store.
-7. In case of a failure with publishing by Google, app owner will receive a notification to the registered google mail.
+5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribution Store Details page will show as **Submitted.**
+6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
+7. In case publishing by Google fails, the app owner receives a notification to the registered Google mail.
