@@ -266,7 +266,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 Integration steps without the `react-native link` command.
 
-1. Open **android/settings.gradle** file and insert the following lines. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
+1. Open **android/settings.gradle** file and insert the following lines. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you want to use App Center Analytics and Crashes, add the following lines:
 
     ```groovy
       include ':appcenter-crashes'
@@ -288,9 +288,9 @@ Integration steps without the `react-native link` command.
     }
     ```
 
-3. Modify your app's **MainApplication.java** file to include code for starting SDK:
+3. Modify the app's **MainApplication.java** file to include code for starting SDK:
 
-    * Add these lines to import section
+    * Add these lines to the import section
 
     ```java
     import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
@@ -319,7 +319,7 @@ Integration steps without the `react-native link` command.
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
     ```
 
-5. Create new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `APP_SECRET_VALUE` with your app secret value.
+5. Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `APP_SECRET_VALUE` with your app secret value.
 
     ```json
     {
