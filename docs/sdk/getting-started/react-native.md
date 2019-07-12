@@ -264,7 +264,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 ### 3.4 [Android only] Integrate the Android SDK manually without react-native link
 
-Do this integration, if you don't want to use `react-native link` command.
+Integration steps without the `react-native link` command.
 
 1. Open **android/settings.gradle** file and insert the following lines. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
 
