@@ -302,3 +302,79 @@ Crashes.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+## Reporting NDK crashes
+
+### Reporting crashes
+
+To receive proper crash reports in App Center, first make sure you have the App Center crashes SDK set up by following the instructions listed above.
+
+#### Building the breakpad library
+
+Next you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID).
+
+> [!NOTE]
+> The App Center SDK does not bundle Google Breakpad by default.
+
+#### Attaching the exception handler
+
+Once you have Google Breakpad included, attach the NDK Crash Handler after `AppCenter.start`:
+
+```java
+/* Attach NDK Crash Handler after SDK is initialized. */
+Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
+    @Override
+    public void accept(String path) {
+
+        /* Path is null when Crashes is disabled. */
+        if (path != null) {
+            setupNativeCrashesListener(path);
+        }
+    }
+});
+```
+
+The method `setupNativeCrashesListener` is a native method that you must implement in C/C++:
+
+```cpp
+#include "google-breakpad/src/client/linux/handler/exception_handler.h"
+#include "google-breakpad/src/client/linux/handler/minidump_descriptor.h"
+
+void Java_com_microsoft_your_package_YourActivity_setupNativeCrashesListener(
+        JNIEnv *env, jobject, jstring path) {
+    const char *dumpPath = (char *) env->GetStringUTFChars(path, NULL);
+    google_breakpad::MinidumpDescriptor descriptor(dumpPath);
+    new google_breakpad::ExceptionHandler(descriptor, NULL, dumpCallback, NULL, true, -1);
+    env->ReleaseStringUTFChars(path, dumpPath);
+}
+```
+
+Where `dumpCallback` is used for troubleshooting:
+
+```cpp
+/*
+ * Triggered automatically after an attempt to write a minidump file to the breakpad folder.
+ */
+bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
+                  void *context,
+                  bool succeeded) {
+
+    /* Allow system to log the native stack trace. */
+    __android_log_print(ANDROID_LOG_INFO, "YourLogTag",
+                        "Wrote breakpad minidump at %s succeeded=%d\n", descriptor.path(),
+                        succeeded);
+    return false;
+}
+```
+
+Once these methods are properly set up, the minidump will be sent to App Center automatically upon restart. To troubleshoot, you can use verbose logging (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`), to check if minidumps are found and sent after the app is restarted.
+
+> [!NOTE]
+> The minidump file is sent as a binary attachment. Since App Center allows only one binary attachment, you can use only text attachment with the native crash report.
+
+> [!NOTE]
+> There are known cases where breakpad is unable to capture anything on x86 emulator.
+
+### Symbolication
+
+[!include[](./ndk-symbolication.md)]
