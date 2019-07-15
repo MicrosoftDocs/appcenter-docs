@@ -4,7 +4,7 @@ description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 05/08/2019
+ms.date: 06/15/2019
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
