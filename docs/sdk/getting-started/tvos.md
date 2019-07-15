@@ -1,18 +1,18 @@
 ---
-title: Get Started with macOS
+title: Get Started with tvOS
 description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/14/2019
+ms.date: 06/11/2019
 ms.topic: get-started-article
-ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
+ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: macos
+ms.tgt_pltfrm: tvOS
 ---
 
-# Get Started with macOS
+# Get Started with tvOS
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -27,18 +27,14 @@ ms.tgt_pltfrm: macos
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center macOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Push to you app, please have a look at the [documentation for App Center Push](~/sdk/push/macos.md).
+Let's get started with setting up App Center tvOS SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
-* You are targeting devices running on macOS 10.9 or later.
+* Your tvOS is set up in Xcode 10 or later on tvOS version 11 or later.
 * You are not using any other library that provides Crash Reporting functionality.
-
-> [!NOTE]
-> App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -47,14 +43,14 @@ If you have already created your app in the App Center portal, you can skip this
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
 3. Enter a name and an optional description for your app.
-4. Select **macOS** as the OS and **Objective-C/Swift** as a platform.
+4. Select **tvOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
-The App Center SDK for macOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
+The App Center SDK for tvOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
 ### 3.1  Integration via Cocoapods
 
@@ -74,7 +70,7 @@ The App Center SDK for macOS can be integrated into your app via [Cocoapods](htt
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ### 3.2 Integration by copying the binaries into your project
-Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your macOS app.
+Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your tvOS app.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
@@ -92,7 +88,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 > [!NOTE]
-> The SDK binary is not packaged following the macOS framework convention. The reason is that the App Center SDK for Mac is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
+> The SDK binary is not packaged following the tvOS framework convention. The reason is that the App Center SDK for tvOS is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -166,20 +162,8 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 
-### 4.4 Add internet capabilities for sandboxed apps
-
-If your app is using the App Sandbox, you have to set the capability to allow outgoing (Client) connections to allow the app to have access to the internet.
-Xcode 9 enables the App Sandbox by default but the capabilities for outgoing connections need to be set explicitly.
-
-Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable outgoing connections.
-
-> [!NOTE]
-> If your app has App Center Push enabled, incoming (Server) connections has to be set as well.
-
 ---
 
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/macos.md) and [App Center Crashes](~/sdk/crashes/macos.md) to learn how to customize and use more advanced functionalities of both services.
-
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/macos.md).
+Look at the documentation for [App Center Analytics](~/sdk/analytics/tvos.md) and [App Center Crashes](~/sdk/crashes/tvos.md) to learn how to customize and use more advanced functionalities of both services.

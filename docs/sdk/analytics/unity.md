@@ -22,6 +22,7 @@ ms.tgt_pltfrm: unity
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [MacOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](Cordova.md)
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
