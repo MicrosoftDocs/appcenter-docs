@@ -151,7 +151,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 - **T document:** This is the object itself. This will be the object inserted into your database. For `User`, it would be an instance of the `User` class.
 
-- **String partition:** The partition that the document will live in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document will live in. Use the `DefaultPartitions.UserDocuments` option to create this within a specific user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 > [!NOTE]
 > Public documents are read-only.
@@ -165,16 +165,14 @@ await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments
 
 This code snippet creates a document and inserts the details of the `user` object within it.
 
-Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
+Now, let's take a step further. Say there's the chance of no connectivity when this document is created. By default, offline persistence is enabled with an infinite time-to-live (TTL), meaning offline write is supported and your documents are cached with no expiration time. But, App Center Data also enables you to give these locally cached documents a TTL of your choosing using `WriteOptions`, meaning they expire in a time span of your choice.
 
 ```csharp
 User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
-await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(deviceTimeToLive));
 ```
 
-This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `new WriteOptions(TimeToLive.Infinite)` will cause this object to be cached indefinitely rather than the default one day.
-
-You can also specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
+You specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
 
 ## Reading a Document
 
@@ -182,7 +180,7 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document will live in. Use the `DefaultPartitions.UserDocuments` option to read a document within an authenticated user's partition or `DefaultPartitions.AppDocuments` to read a document in the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables the user to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
@@ -190,17 +188,21 @@ If the user who created the `user` object wants to view all of their personal da
 var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
-The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
+The code above fetches the user document from the database and stores it in a new `User` object.
+
+Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `ReadOptions` parameter and specifying a TTL in seconds you can also configure offline read persistence with a specific TTL for the locally cached document, enabling the data to be visible to users even when they're offline once it's cached. You can also declare the lifetime of the data being cached locally with a time span of your choice. Here's an example of this:
 
 ```csharp
-var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(TimeToLive.Infinite));
+var fetchedUser = await Data.ReadAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new ReadOptions(deviceTimeToLive));
 ```
 
-You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
+You specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter.
 
-## Replace a Document
+## Replace (Upsert) a Document
 
-If the user wanted to change their email. This action could be possible through a simple `Replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Replace` call. The Replace call also doubles as an Upsert, so if you attempt to replace a document with a documentId that doesn't exist, it will create a new document.
+
+ The parameters for replacing a document are the following:
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
@@ -208,21 +210,21 @@ If the user wanted to change their email. This action could be possible through 
 
 - **Class\<T\> documentType:** This is a reference to the class type of the object you're storing in the document. For `User`, it would be `User.Class`.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.UserDocuments` option to store this within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```csharp
 user.Email = "alex@microsoft.com";
 await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments);
 ```
 
-You can also configure the replacement document for offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```csharp
 user.Email = "alex@microsoft.com";
-await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.ReplaceAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(deviceTimeToLive));
 ```
 
-You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
+You specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
 
 ## Delete a document
 
@@ -230,20 +232,20 @@ In order to delete a document, you need to specify the partition type and the do
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.UserDocuments` option to store this within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```csharp
 await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments);
 ```
 
-You can also configure the deleted document for offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```csharp
 ...
-await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new WriteOptions(TimeToLive.Infinite));
+await Data.DeleteAsync<User>(user.Id.ToString(), DefaultPartitions.UserDocuments, new WriteOptions(deviceTimeToLive));
 ```
 
-You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
+You specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter.
 
 ## Fetching a list of Documents
 
@@ -251,7 +253,7 @@ Lastly, there is our list functionality. This is used to fetch a list of documen
 
 - **Class\<T\> documentType:** This is a reference to the class type of the of object you're storing in the document. For `User`, it would be `User.Class`.
 
-- **String partition:** The partition that the document(s) live in. You will most likely be using the `DefaultPartitions.UserDocuments` option to store this within a specific user's partition.
+- **String partition:** The partition that the document will live in. Use the `DefaultPartitions.UserDocuments` option to read a list of documents within an authenticated user's partition or `DefaultPartitions.AppDocuments` to read a list of documents in the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```csharp
 ...
@@ -260,8 +262,12 @@ var result = await Data.ListAsync<User>(DefaultPartitions.UserDocuments);
 
 This will return a page of the documents that exist within a given user partition that align with the `User` class model.
 
-> [!NOTE]
-> We don't currently support offline persistance when listing documents.
+Offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `ReadOptions` parameter and specifying a TTL in seconds you can also configure a list for offline reads with a specific TTL, enabling the data to be visible to users even when they're offline once it's cached and and expiring the locally cached data in a time span of your choice. Here's an example of this:
+
+```csharp
+...
+var result = await Data.ListAsync<User>(DefaultPartitions.UserDocuments, new ReadOptions(deviceTimeToLive);
+```
 
 ### Pagination
 
@@ -269,7 +275,7 @@ With the list method, we also support pagination through the `PaginatedDocuments
 
 The `PaginatedDocuments` class has methods and properties which can be used to manage paging:
 
-* `HasNextPage` : Boolean property indicating wheter an extra page is available or not.
+* `HasNextPage` : Boolean property indicating whether an extra page is available or not.
 * `CurrentPage` : Property that returns the current page with type being `Page<T>`.
 * `GetNextPageAsync()` : Method that asynchronously fetches the next page (the method returns an object of type `Task<Page<T>>`).
 * IEnumerator<DocumentWrapper<T>> `GetEnumerator()` : This is an enumerator for the paginated docs, which can traverse them
