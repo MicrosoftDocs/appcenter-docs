@@ -33,7 +33,7 @@ While we synchronize your apps from HockeyApp to App Center, your data is still 
 
 ### Stage 3: Move the user and account management to App Center
 
-The last stage of the transition movesuser and accounts management from HockeyApp to App Center. We don't require you to do anything, we're rolling out the different parts incrementally once they're done.
+The last stage of the transition moves user and accounts management from HockeyApp to App Center. We don't require you to do anything, we're rolling out the different parts incrementally once they're done.
 
 ## November 16, 2019: Farewell, HockeyApp!
 
