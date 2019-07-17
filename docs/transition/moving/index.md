@@ -4,7 +4,7 @@ description:
 keywords: transition
 author: derpixeldan
 ms.author: daadam
-ms.date: 02/18/2019
+ms.date: 07/16/2019
 ms.topic: article
 ms.assetid: e63546cb-7b00-42a4-9931-4b4826151148
 ms.service: vs-appcenter

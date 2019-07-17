@@ -330,7 +330,15 @@
 #### [Export](gdpr/test-export.md)
 
 # HockeyApp Transition
-## [Introduction](transition/index.md)
+## [Timeline](transition/index.md)
+## [Stage 1 - Synchronization](transition/side-by-side.md)
+### [Distribution Groups](transition/distribution-groups.md)
+### [Distributing Releases](transition/distribution.md)
+### [Diagnostics](transition/crashes.md)
+### [Analytics](transition/analytics.md)
+## [Stage 2 - Moving apps](transition/moving/index.md)
+### [Incompatibilities](transition/moving/incompatibilities.md)
+### [App Data](transition/moving/data.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
@@ -340,12 +348,6 @@
 ### [UWP](transition/uwp-sdk-migration.md)
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
-## Shared Data
-### [Introduction](transition/side-by-side.md)
-### [Distribution Groups](transition/distribution-groups.md)
-### [Distributing Releases](transition/distribution.md)
-### [Diagnostics](transition/crashes.md)
-### [Analytics](transition/analytics.md)
 ## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 
