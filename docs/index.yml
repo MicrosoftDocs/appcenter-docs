@@ -102,7 +102,7 @@ sections:
           href: ~/test-cloud/
         title: Test
       - href: ~/distribution/
-        html: Users can install the app via email distribution lists for testing, much as they'd download an app from the app store.
+        html: Whether used for beta app distribution or as an alternative to public app stores, Distribute is a tool for developers to quickly release Android, iOS, macOS, and UWP builds to end user devices.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
           alt: distribution-icon
