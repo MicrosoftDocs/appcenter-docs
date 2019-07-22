@@ -14,15 +14,18 @@ ms.service: vs-appcenter
 
 Visual Studio App Center offers both a generous free tier, and paid tier options billed through an Azure subscription. You can see the full breakdown of the pricing on the official [App Center Pricing](https://www.visualstudio.com/app-center/pricing) page.
 
+## Free services
+
+- General: Unlimited apps, unlimited organizations, and unlimited teams
+- Analytics & Diagnostics: All Crashes and Analytics features
+- Distribution: Unlimited distribution to users, and stores
+- Distribution: Unlimited use of CodePush
+- Test: Unlimited launch tests
+
 ## The free tier
 
-- Unlimited apps, unlimited organizations, and unlimited teams
-- All Crashes and Analytics features
-- 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
-- Unlimited distribution to users, and stores
-- Unlimited use of CodePush
-- Unlimited launch tests
-- A 30-day free trial for one device with unlimited device hours
+- Build: 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
+- Test: A 30-day free trial for one device with unlimited device hours
 
 ## Build paid tier
 
@@ -33,6 +36,11 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
   
 - Basic tier: pay per concurrent device up to 30 hours per device per month
 - Enterprise tier: pay per concurrent device with unlimited hours per device per month
+
+## Azure Subscription Services
+
+- Auth: Using this feature will require an Azure connection with Azure B2C whose pricing is found here: [Azure B2C](https://azure.microsoft.com/en-us/pricing/details/active-directory-b2c/).
+- Data: Using this feature will require an Azure connection with Azure CosmosDB whose pricing is found here: [Azure CosmosDB](https://azure.microsoft.com/en-us/pricing/details/cosmos-db/).
 
 ## Configuring your billing plan
 
