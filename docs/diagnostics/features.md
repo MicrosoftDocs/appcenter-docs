@@ -1,10 +1,10 @@
 ---
 title: Diagnostics Features
 description: An introduction to the App Center Diagnostics feature set
-keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
+keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 03/20/2018
+ms.date: 06/17/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -33,9 +33,12 @@ App Center Diagnostics groups crashes and errors by similarities, such as reason
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [React Native](~/sdk/other-apis/react-native.md), [Xamarin](~/sdk/other-apis/xamarin.md), [Apache Cordova](~/sdk/other-apis/cordova.md) and [Unity](~/sdk/other-apis/unity.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [tvOS](~/sdk/other-apis/tvos.md), [React Native](~/sdk/other-apis/react-native.md), [Xamarin](~/sdk/other-apis/xamarin.md), [Apache Cordova](~/sdk/other-apis/cordova.md) and [Unity](~/sdk/other-apis/unity.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
+
+> ![NOTE]
+> User ID is not yet supported for WPF, WinForms, and UWP applications. Visit our [diagnostics limitations page](~/diagnostics/limitations.md) and our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details.
 
 ### Attachments
 
@@ -46,6 +49,7 @@ You can learn how to add attachments to your crash reports by reading the SDK Cr
 To view and download the attachments, select a crash group, a specific device report and then click on the attachments tab.
 
 ![App Center allows you to add attachments to your crash and error reports](~/diagnostics/images/new-attachments.png)
+
 
 ### Events Before A Crash
 
@@ -106,6 +110,9 @@ Learn more about the benefits of, and how to export your data in the [export doc
 In a crash report, you can see the current threads that were active when the app crashed. The thread that crashed is highlighted in red for you to better understand the state of the app.  
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
+
+> [!NOTE]
+> Only the main thread at the time of the error will be available for WPF and WinForms reports
 
 ## Configure Alerts
 
