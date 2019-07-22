@@ -1,3 +1,20 @@
+---
+title: Shared docs for Apple Crashes SDK
+description:  Shared docs for Apple Crashes SDK
+keywords: sdk, crash
+author: elamalani
+ms.author: emalani
+ms.date: 07/22/2019
+ms.topic: article
+ms.assetid: 1c1391e4-0c39-4141-893e-766ad22266d7
+ms.service: vs-appcenter
+ms.custom: sdk
+ms.tgt_pltfrm: apple
+dev_langs:  
+ - swift
+ - objc
+---
+
 ### Get information about the sending status for a crash log
 
 At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `MSCrashesDelegate`-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
@@ -43,7 +60,7 @@ func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, 
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```objc
 - (NSArray<MSErrorAttachmentLog *> *)attachmentsWithCrashes:(MSCrashes *)crashes

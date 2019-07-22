@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 06/18/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -18,8 +18,9 @@ ms.tgt_pltfrm: uwp
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
@@ -33,7 +34,7 @@ Let's get started with setting up App Center UWP SDK in your app to use App Cent
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is set up in Visual Studio 2015 Update 3 or Visual Studio 2017.
+* Your project is set up in Visual Studio 2015 Update 3 or later.
 * Your project references Universal Windows Platform [5.2.2](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/5.2.2) or later
 
 > [!NOTE]
@@ -114,5 +115,5 @@ Note that, unless you explicitly specify each service as parameters in the start
 
 Great, you are all set to visualize Analytics on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/uwp.md) to learn how to customize and use more advanced functionalities.
+Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) to learn how to customize and use more advanced functionalities.
 

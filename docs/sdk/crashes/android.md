@@ -21,8 +21,9 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
@@ -60,7 +61,7 @@ Crashes.hasCrashedInLastSession()
 
 [!include[](../android-see-async.md)]
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
 ### Details about the last crash
 
@@ -134,11 +135,11 @@ override fun shouldProcess(report: ErrorReport?): Boolean {
 }
 ```
 
-### Ask for the users' consent to send a crash log
+### Ask for the user's consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
@@ -195,7 +196,7 @@ override fun onBeforeSending(report: ErrorReport?) {
 }
 ```
 
-#### The following callback will be invoked after the SDK sent a crash log successfully.
+#### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```java
 @Override
@@ -225,7 +226,7 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```java
 @Override

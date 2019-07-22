@@ -1,13 +1,31 @@
+---
+title: Shared docs for Apple SDK
+description:  Shared docs for Apple SDK
+keywords: sdk
+author: elamalani
+ms.author: emalani
+ms.date: 07/22/2019
+ms.topic: article
+ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
+ms.service: vs-appcenter
+ms.custom: sdk
+ms.tgt_pltfrm: apple
+dev_langs:  
+ - swift
+ - objc
+---
+
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
-> * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
-> * [Apache Cordova](cordova.md)
+> * [Unity](unity.md)
+> * [Cordova](cordova.md)
 
 ## Adjust the log level
 

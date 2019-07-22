@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -16,16 +16,16 @@ dev_langs:
 ---
 
 # App Center Crashes
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
@@ -36,11 +36,11 @@ Also note that crash logs on macOS require Symbolication, please check out the [
 
 [!include[](apple-common-methods-1.md)]
 
-### Ask for the users' consent to send a crash log
+### Ask for the user's consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.

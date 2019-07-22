@@ -18,13 +18,13 @@ ms.tgt_pltfrm: react-native
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
-
 
 ## Adjust the log level
 

@@ -4,7 +4,7 @@ description: App Center Analytics for tvOS
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 06/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: aec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
+> * [Windows](windows.md)
 > * [Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)

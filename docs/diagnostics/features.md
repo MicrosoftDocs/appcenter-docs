@@ -51,7 +51,7 @@ To view and download the attachments, select a crash group, a specific device re
 
 Track events leading up to a crash to capture useful information about the state of your app.
 
-To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md) and [macOS](~/sdk/analytics/macos.md).
+To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md) and [macOS](~/sdk/analytics/macos.md).
 
 To view events before a crash, select a crash group, a specific device report, and then click on the events tab.
 
