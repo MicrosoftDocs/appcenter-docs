@@ -95,7 +95,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     * Add these lines to import section
 
-    ```objective-c
+    ```objc
     #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
     #import <AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics.h>
@@ -104,7 +104,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
     * Add these lines to the `didFinishLaunchingWithOptions` method
 
-    ```objective-c
+    ```objc
     [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
@@ -233,7 +233,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 11. Modify the app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section
 
-    ```objective-c
+    ```objc
     #import <AppCenterReactNative/AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
@@ -242,7 +242,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
     * Add these lines to the `didFinishLaunchingWithOptions` method
 
-    ```objective-c
+    ```objc
     [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
