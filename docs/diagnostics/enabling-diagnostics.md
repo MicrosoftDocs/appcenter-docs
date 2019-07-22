@@ -17,7 +17,7 @@ ms.custom: analytics
 
 To enable App Center’s diagnostics for your app, make sure you have the App Center SDK integrated for your app. Learn more about App Center’s SDKs and how to add it to your app projects in the [SDK documentation](~/sdk/index.md).
 
-App Center Diagnostics automatically generates a crash log every time your app crashes on a real device or in a device simulator. Learn how to generate a test crash, get more information about a previous crash, and customize your usage of App Center diagnostics for your [Android](~/sdk/crashes/android.md), [Apache Cordova](~/sdk/crashes/cordova.md), [iOS](~/sdk/crashes/ios.md), [macOS](~/sdk/crashes/macos.md), [React Native](~/sdk/crashes/react-native.md), [Unity](~/sdk/crashes/unity.md), [UWP](~/sdk/crashes/uwp.md), [WPF/WinForms](~sdk/crashes/wpf-winforms.md), and [Xamarin](~/sdk/crashes/xamarin.md) apps.  
+App Center Diagnostics automatically generates a crash log every time your app crashes on a real device or in a device simulator. Learn how to generate a test crash, get more information about a previous crash, and customize your usage of App Center diagnostics for your [Android](~/sdk/crashes/android.md), [Apache Cordova](~/sdk/crashes/cordova.md), [iOS](~/sdk/crashes/ios.md), [macOS](~/sdk/crashes/macos.md), [React Native](~/sdk/crashes/react-native.md), [Unity](~/sdk/crashes/unity.md), [UWP](~/sdk/crashes/uwp.md), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md), and [Xamarin](~/sdk/crashes/xamarin.md) apps.  
 
 ## Next steps
 
