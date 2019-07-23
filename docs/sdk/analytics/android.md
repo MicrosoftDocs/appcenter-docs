@@ -131,7 +131,7 @@ The state is persisted in the device's storage across application launches.
 [!include[](../android-see-async.md)]
 
 > [!NOTE]
-> This method must only be used after `Auth` has been started.
+> This method must only be used after `Analytics` has been started.
 
 ## Check if App Center Analytics is enabled
 
