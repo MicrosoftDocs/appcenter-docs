@@ -58,7 +58,7 @@ var crashReport = MSCrashes.lastSessionCrashReport()
 ```
 
 > [!NOTE]
-> This method must only be used after `Crashes` has been started, it will always return `nil` before start.
+> This method must only be used after `MSCrashes` has been started, it will always return `nil` before start.
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#customize-your-usage-of-app-center-crashes).
 
