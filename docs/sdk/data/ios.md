@@ -159,7 +159,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 - **document:** This is the object itself. This will be the object replaced in your database. For `User`, it would be an instance of the `User` class.
 
-- **partition:** The partition that the document will live in.  You will most likely be using `kMSDataUserDocumentsPartition` to create documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **partition:** The partition that the document will live in.  Use `kMSDataUserDocumentsPartition` to create documents in the authenticated user partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been created.
 
@@ -189,7 +189,7 @@ MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDat
 
 This code snippet creates a document and inserts the details of the `user` object within it. It also includes a completion handler that returns the wrapped document with all of the metadata.
 
-Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
+Now, let's take a step further. Say there's the chance of no connectivity when this document is created. By default, offline persistence is enabled with an infinite time-to-live (TTL), meaning offline write is supported and your documents are cached with no expiration time. But, App Center Data also enables you to give these locally cached documents a TTL of your choosing using `writeOptions`, meaning they expire in a time span of your choice.
 
 ```objc
 User *user = [[User alloc] initWithName:@"Alex"
@@ -199,21 +199,19 @@ User *user = [[User alloc] initWithName:@"Alex"
 [MSData createDocumentWithID:user.identifier
                     document:user
                    partition:kMSDataUserDocumentsPartition
-                writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive:createInfiniteCacheOptions]
+                writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive:self.deviceTimeToLive]
            completionHandler:^(MSDocumentWrapper *_Nonnull document) {
              // Do something with the document
            }];
 ```
 ```swift
 let user = User(name: "Alex", email: "alex@appcenter.ms", phoneNumber: "+1-(855)-555-5555")
-MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
+MSData.create(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, writeOptions: self.deviceTimeToLive) { (document) in
     // Do something with the document
 }
 ```
 
-This does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `createInfiniteCacheOptions` will cause this object to be cached indefinitely rather than the default one day.
-
-You can also specify the time-to-live (TTL) on a document by using `[[MSWriteOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSWriteOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
+You specify the time-to-live (TTL) on a document by using `[[MSWriteOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSWriteOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
 
 ## Reading a Document
 
@@ -248,7 +246,7 @@ MSData.read(withDocumentId: user.identifier, documentType: User.self, partition:
 
 The code above fetches the user document from the database and stores it into a new user object. It includes a completion handler that returns the wrapped document with all of the metadata.
 
-By utilizing the `readOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline once it's cached. Here's an example of this:
+Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `readOptions` parameter and specifying a TTL in seconds you can also configure offline read persistence with a specific TTL for the locally cached document, enabling the data to be visible to users even when they're offline once it's cached. You can also declare the lifetime of the data being cached locally with a time span of your choice. Here's an example of this:
 
 ```objc
 User fetchedUser = [[User alloc] init];
@@ -256,7 +254,7 @@ User fetchedUser = [[User alloc] init];
 [MSData readDocumentWithID:user.identifier
               documentType:[User class]
                  partition:kMSDataUserDocumentsPartition
-               readOptions:[[MSReadOptions alloc] initWithDeviceTimeToLive:createInfiniteCacheOptions]
+               readOptions:[[MSReadOptions alloc] initWithDeviceTimeToLive:self.deviceTimeToLive]
           completionHandler:^(MSDocumentWrapper *_Nonnull document) {
                 fetchedUser = document.deserializedValue;
           }];
@@ -264,23 +262,25 @@ User fetchedUser = [[User alloc] init];
 ```swift
 var fetchedUser = User()
 
-MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, readOptions: MSReadOptions.createInfiniteCache()) { (document) in
+MSData.read(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition, readOptions: self.deviceTimeToLive) { (document) in
   // do something with fetched data
   fetchedUser = document.deserializedValue as! User
 }
 ```
 
-You can also specify the time-to-live (TTL) on a document by using `[[MSReadOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSReadOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
+You specify the time-to-live (TTL) on a document by using `[[MSReadOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSReadOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
 
-## Replacing a Document
+## Replacing (Upsert) a Document
 
-If the user wanted to change their email. This action could be possible through a simple `Data.replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `Data.replace` call. The Replace call also doubles as an Upsert, so if you attempt to replace a document with a documentId that doesn't exist, it will create a new document.
+
+ The parameters for replacing a document are the following:
 
 - **ID:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
 - **document:** This is the object itself. This will be the object replaced in your database. For `User`, it would be an instance of the `User` class.
 
-- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to replace documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **partition:** The partition that the document lives in. Use `kMSDataUserDocumentsPartition` to replace documents in the authenticated user partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been replaced.
 
@@ -303,9 +303,9 @@ MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDa
 }
 ```
 
-The code above will replace or update an existing document in your database. It also includes a completion handler that returns the wrapped document with all of the metadata.
+The code above will replace or update an existing document in your database. It also includes a completion handler that returns the wrapped document with all of the metadata. 
 
-You can also configure the replacement document for offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `writeOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```objc
 User *user = [[User alloc] initWithName:@"Alex"
@@ -315,17 +315,19 @@ User *user = [[User alloc] initWithName:@"Alex"
 [MSData replaceDocumentWithID:user.identifier
                      document:user
                     partition:kMSDataUserDocumentsPartition
-                 writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive:createInfiniteCacheOptions]
+                 writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive:self.deviceTimeToLive]
             completionHandler:^(MSDocumentWrapper *_Nonnull document) {
               // Do something with the document
             }];
 ```
 ```swift
 let user = User(name: "Alex", email: "alex@microsoft.com", phoneNumber: "+1-(855)-555-5555")
-MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
+MSData.replace(withDocumentId: user.identifier, document: user, partition: kMSDataUserDocumentsPartition,  writeOptions: self.deviceTimeToLive) { (document) in
   // Do something with the document
 })
 ```
+
+You specify the time-to-live (TTL) on a document by using `[[MSWriteOptions alloc] initWithDeviceTimeToLive:timeToLiveInSeconds]` (obj-c) or `MSWriteOptions.init(deviceTimeToLive: timeToLiveInSeconds)` (swift) as the last parameter.
 
 ## Deleting a document
 
@@ -333,7 +335,7 @@ In order to delete a document you need to specify the partition type and the doc
 
 - **ID:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **partition:** The partition that the document lives in. You will most likely be using `kMSDataUserDocumentsPartition` to delete documents as the public document partition is read-only in the client SDK. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **partition:** The partition that the document lives in. Use `kMSDataUserDocumentsPartition` to delete documents in the authenticated user partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 - **completionHandler:** The completion handler with code to be executed asynchronously after the document has been deleted.
 
@@ -352,18 +354,18 @@ MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPa
 })
 ```
 
-The following code will delete a document with offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```objc
 [MSData deleteDocumentWithID:user.identifier
                    partition:kMSDataUserDocumentsPartition
-                writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive: createInfiniteCacheOptions]
+                writeOptions:[[MSWriteOptions alloc] initWithDeviceTimeToLive: self.deviceTimeToLive]
            completionHandler:^(MSDocumentWrapper *_Nonnull document) {
              // Do something
            }];
 ```
 ```swift
-MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition, writeOptions: MSWriteOptions.createInfiniteCache()) { (document) in
+MSData.delete(withDocumentId: user.identifier, partition: kMSDataUserDocumentsPartition, writeOptions: self.deviceTimeToLive) { (document) in
   // Do something
 })
 ```
@@ -400,8 +402,27 @@ MSData.listDocuments(withType: User.self, partition: kMSDataUserDocumentsPartiti
 
 This will return a page of the documents that exist within a given user partition.
 
-> [!NOTE]
-> We don't currently support offline persistance when listing documents.
+Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `readOptions` parameter and specifying a TTL in seconds you can also configure a list for offline reads with a specific TTL, enabling the data to be visible to users even when they're offline once it's cached and expiring the locally cached data in a time span of your choice. Here's an example of this:
+
+```objc
+[MSData listDocumentWithType:[User class]
+                   partition:kMSDataUserDocumentsPartition
+                   readOptions:[[MSReadOptions alloc]
+                   initWithDeviceTimeToLive:self.deviceTimeToLive]
+           completionHandler:^(MSPaginatedDocuments *_Nonnull documents) {
+             // Do something here
+           }];
+```
+```swift
+MSData.listDocuments(withType: User.self, partition: kMSDataUserDocumentsPartition, readOptions: self.deviceTimeToLive) { (documents) in
+  //Loop over items in the current page
+  let currentPageItems = documents.currentPage().items
+  for docs in currentPageItems! {
+                var tempUser = docs.deserializedValue as! User
+                print(tempUser.name)
+  }
+}
+```
 
 ### Pagination
 

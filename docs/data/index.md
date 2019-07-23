@@ -48,7 +48,7 @@ Managing documents and the data within them can be done in both the App Center D
 
 ### Offline
 
-App Center Data supports offline reads and writes. For reads, all documents are cached for one day by default. Developers may also choose a custom time-to-live (TTL). If connectivity is lost, users will still have the ability to read these cached documents. Data enables write support with no connectivity via "store-and-forward". If a user attempts a write with no connectivity, it will be stored in the local cache in accordance with their TTL, and persisted once connectivity is regained. Conflicts that occur during writes will be resolved using "last write wins".
+App Center Data supports offline reads and writes. For both reads and writes, all documents are cached locally with an infinite time-to-live (TTL) by default. Developers may also choose a custom time-to-live (TTL). If connectivity is lost, users will still have the ability to read these cached documents. If a user attempts a write with no connectivity, it will be cached locally in accordance with their TTL, and uploaded to the back-end once connectivity is regained. Conflicts that occur during writes will be resolved using "last write wins".
 
 ## Key Capabilities  
 

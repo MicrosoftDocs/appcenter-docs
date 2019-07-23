@@ -22,6 +22,7 @@ ms.tgt_pltfrm: cordova
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Disable all services at runtime

@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
-ms.date: 05/08/2019
+ms.date: 07/15/2019
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -20,8 +20,9 @@ The table below lists all the Operating System and Platforms and their supported
 | `Android`                | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `iOS`                    | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `macOS`                  | Yes   | No   | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | No   | Yes  |
-| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | No   | Yes  |
+| `tvOS`                   | No    | No   | No         | Yes     | Yes       | No   | No   | No   |
+| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
+| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
 | `Windows - UWP`          | Yes   | No   | Yes        | Yes*    | Yes       | No   | No   | Yes  |
 | `Xamarin - iOS`          | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
 | `Xamarin - Android`      | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |

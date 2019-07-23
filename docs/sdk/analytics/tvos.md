@@ -1,15 +1,15 @@
 ---
-title: App Center Analytics for iOS
-description: App Center Analytics for iOS
+title: App Center Analytics for tvOS
+description: App Center Analytics for tvOS
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 06/11/2019
 ms.topic: article
-ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
+ms.assetid: aec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: ios
+ms.tgt_pltfrm: tvOS
 dev_langs:  
  - swift
  - objc
@@ -31,8 +31,8 @@ dev_langs:
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
 > [!NOTE]
-> iOS devices without a SIM card will not send the report with carrier country code to the App Center portal. If you want to provide a country value, use the `setCountryCode` method to override the country code from your device location.
+> Carrier country and carrier name are not available on App Center Analytics for tvOS, but you can set carrier country with your device location.
 
-Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting started](~/sdk/getting-started/tvos.md) section if you haven't set up the SDK in your application yet.
 
 [!include[](apple-common-methods.md)]

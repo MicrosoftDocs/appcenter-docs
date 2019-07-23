@@ -6,6 +6,7 @@
 > * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Apache Cordova](cordova.md)
 
 ## Adjust the log level

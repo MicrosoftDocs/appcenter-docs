@@ -22,6 +22,7 @@ ms.tgt_pltfrm: react-native
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 
