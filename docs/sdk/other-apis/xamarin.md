@@ -44,6 +44,9 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
 
+> [!NOTE]
+> On Android, this method must only be used after `AppCenter` has been started, it will always return `null` before start.
+
 ## Identify users
 
 The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
