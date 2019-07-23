@@ -4,7 +4,7 @@ description: Information about Visual Studio App Center pricing plans
 keywords: pricing
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 07/23/2019
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
 ms.service: vs-appcenter
