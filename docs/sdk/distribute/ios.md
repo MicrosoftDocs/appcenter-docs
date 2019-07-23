@@ -231,7 +231,7 @@ var enabled = MSDistribute.isEnabled()
 ```
 
 > [!NOTE]
-> This method must only be used after `MSDistribute` has been started, it will always return `false` before start.
+> This method must only be used after `MSDistribute` has been started, it will always return `NO` or `false` before start.
 
 ## Don't initialize App Center Distribute during development
 

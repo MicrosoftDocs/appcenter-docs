@@ -187,7 +187,7 @@ var enabled = MSPush.isEnabled()
 ```
 
 > [!NOTE]
-> This method must only be used after `MSPush` has been started, it will always return `false` before start.
+> This method must only be used after `MSPush` has been started, it will always return `NO` or `false` before start.
 
 ## Disable automatic method forwarding to App Center services
 

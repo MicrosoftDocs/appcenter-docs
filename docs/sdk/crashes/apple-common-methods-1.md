@@ -44,7 +44,7 @@ MSCrashes.hasCrashedInLastSession()
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
 
 > [!NOTE]
-> This method must only be used after `MSCrashes` has been started, it will always return `false` before start.
+> This method must only be used after `MSCrashes` has been started, it will always return `NO` or `false` before start.
 
 ### Details about the last crash
 

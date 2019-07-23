@@ -187,7 +187,7 @@ MSAnalytics.isEnabled()
 ```
 
 > [!NOTE]
-> This method must only be used after `MSAnalytics` has been started, it will always return `false` before start.
+> This method must only be used after `MSAnalytics` has been started, it will always return `NO` or `false` before start.
 
 ## Local storage size
 
