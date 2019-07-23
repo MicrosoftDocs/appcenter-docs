@@ -174,7 +174,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret. If **AppCenter-Config.plist** already exists but not part of your Xcode project, you must add it to the Xcode project manually (right-click the app in XCode and click **Add files to <App Name>...**).
 
-### 3.3 [iOS only] Integrate the iOS SDK manually without react-native link or CocoaPods
+### 3.3 [iOS only] Integrate the SDK manually for React Native lower than 0.60 without react-native link or CocoaPods
 
 Do this integration, if you don't want to use **CocoaPods**.
 We **strongly** recommend integrating the SDK via CocoaPods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
