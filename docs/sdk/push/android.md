@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -277,6 +277,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Push` has been started.
+
 ## Check if App Center Push is enabled
 
 You can also check if App Center Push is enabled or not:
@@ -289,3 +292,6 @@ Push.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Push` has been started, it will always return `false` before start.

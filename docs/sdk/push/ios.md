@@ -172,6 +172,9 @@ MSPush.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `MSPush` has been started.
+
 ## Check if App Center Push is enabled
 
 You can also check if App Center Push is enabled or not:
@@ -182,6 +185,9 @@ BOOL enabled = [MSPush isEnabled];
 ```swift
 var enabled = MSPush.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSPush` has been started, it will always return `false` before start.
 
 ## Disable automatic method forwarding to App Center services
 

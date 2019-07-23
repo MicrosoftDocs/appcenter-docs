@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 07/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter

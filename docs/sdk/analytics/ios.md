@@ -4,7 +4,7 @@ description: App Center Analytics for iOS
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
 ms.service: vs-appcenter

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -98,9 +98,6 @@ You can enable or disable desired service at the runtime with following code:
 ```javascript
 await AppCenter.Analytics.setEnabled(false);
 ```
-
-> [!NOTE]
-> This method should only be used after AppCenter is started.
 
 ## Check if App Center is enabled
 

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
@@ -98,6 +98,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started.
+
 ## Change state of service in runtime
 
 Enable or disable desired services at the runtime with following code:
@@ -110,7 +113,7 @@ Analytics.setEnabled(false)
 ```
 
 > [!NOTE]
-> This method should only be used after AppCenter is started.
+> This method must only be used after `Analytics` has been started.
 
 ## Check if App Center is enabled
 
@@ -124,6 +127,9 @@ AppCenter.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started, it will always return `false` before start.
 
 ## Check App Center SDK version at runtime
 
