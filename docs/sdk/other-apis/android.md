@@ -55,6 +55,9 @@ AppCenter.getInstallId()
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started, it will always return `null` before start.
+
 ## Identify users
 
 The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
