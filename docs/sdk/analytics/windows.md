@@ -90,9 +90,9 @@ private static async Task SetCountryCode()
 }
 ```
 
-#### WinForms/WPF
+#### WPF/WinForms
 
-As WinForms/WPF platforms don't have a Geolocation API, you can use a system country code.
+As WPF/WinForms platforms don't have a Geolocation API, you can use a system country code.
 
 ```csharp
 using System.Globalization;

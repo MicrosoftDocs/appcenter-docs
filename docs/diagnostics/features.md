@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/17/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -33,18 +33,18 @@ App Center Diagnostics groups crashes and errors by similarities, such as reason
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [tvOS](~/sdk/other-apis/tvos.md), [React Native](~/sdk/other-apis/react-native.md), [Xamarin](~/sdk/other-apis/xamarin.md), [Apache Cordova](~/sdk/other-apis/cordova.md) and [Unity](~/sdk/other-apis/unity.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [Apache Cordova](~/sdk/other-apis/cordova.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [React Native](~/sdk/other-apis/react-native.md), [tvOS](~/sdk/other-apis/tvos.md), [Unity](~/sdk/other-apis/unity.md) and [Xamarin](~/sdk/other-apis/xamarin.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
-> ![NOTE]
+> [!NOTE]
 > User ID is not yet supported for WPF, WinForms, and UWP applications. Visit our [diagnostics limitations page](~/diagnostics/limitations.md) and our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details.
 
 ### Attachments
 
 In the App Center Diagnostics UI, you can attach, view and download one binary and one text attachment to your crash reports.
 
-You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report), and [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report) apps.
+You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report) and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
 
 To view and download the attachments, select a crash group, a specific device report and then click on the attachments tab.
 
@@ -55,7 +55,7 @@ To view and download the attachments, select a crash group, a specific device re
 
 Track events leading up to a crash to capture useful information about the state of your app.
 
-To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md) and [macOS](~/sdk/analytics/macos.md).
+To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [macOS](~/sdk/analytics/macos.md), [React Native](~/sdk/analytics/react-native.md), [Windows](~/sdk/analytics/windows.md) and [Xamarin](~/sdk/analytics/xamarin.md).
 
 To view events before a crash, select a crash group, a specific device report, and then click on the events tab.
 

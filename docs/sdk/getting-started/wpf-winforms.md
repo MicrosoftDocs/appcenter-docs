@@ -25,6 +25,9 @@ ms.tgt_pltfrm: wpf-winforms
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
+> [!NOTE]
+> The WPF and WinForms UI hasn't been released yet. If you would like to try out the analytics and diagnostics SDK, please reach out to our support team and we can enable this experience for you. 
+
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
 Let's get started with setting up App Center SDK in your app to use App Center Crashes.
@@ -33,7 +36,7 @@ Let's get started with setting up App Center SDK in your app to use App Center C
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting .NET framework 4.5 or later (.NET core is not supported).
+* Your project is targeting .NET Framework 4.5 or later (.NET Core is not supported yet).
 * If you use the SDK from a portable library, it must target .NET standard 1.0 or later (PCL is not supported).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
