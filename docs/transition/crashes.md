@@ -2,7 +2,7 @@
 title: "Crashes"
 author: derpixeldan
 ms.author: daadam
-ms.date: 02/08/2019
+ms.date: 07/16/2019
 ms.topic: article
 ms.assetid: D340D325-FB0A-4766-BCB3-5D702023D60C
 ms.service: vs-appcenter
@@ -22,6 +22,7 @@ Crash reports collected by the HockeySDK are also send to App Center. Also after
 * macOS
 * React Native
 * tvOS
+* Xamarin
 
 > [!NOTE]
 > The actions you take in App Center, such as adding annotations or changing the status of a crash group, will not be reflected in HockeyApp.

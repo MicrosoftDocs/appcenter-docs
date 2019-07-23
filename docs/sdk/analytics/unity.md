@@ -18,7 +18,7 @@ ms.tgt_pltfrm: unity
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
+> * [Windows](windows.md)
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [MacOS](macos.md)

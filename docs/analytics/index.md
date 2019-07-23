@@ -4,7 +4,7 @@ description: Help using the Analytics feature on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 10/24/2017
+ms.date: 7/22/2019
 ms.topic: article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
 ms.service: vs-appcenter
@@ -36,7 +36,7 @@ Check out our [Frequently Asked Questions](~/analytics/faq.md) for general quest
 
 ## Custom Events
 
-Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [UWP](~/sdk/analytics/uwp.md), [macOS](~/sdk/analytics/macos.md), and [tvOS](~/sdk/analytics/tvos.md).
+Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [tvOS](~/sdk/analytics/tvos.md).
 
 ## Export
 

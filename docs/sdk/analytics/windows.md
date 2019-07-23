@@ -1,15 +1,15 @@
 ---
-title: App Center Analytics for UWP
-description: App Center Analytics for UWP
+title: App Center Analytics for Windows
+description: App Center Analytics for Windows
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 06/20/2019
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: uwp
+ms.tgt_pltfrm: windows
 ---
 
 # App Center Analytics
@@ -18,7 +18,7 @@ ms.tgt_pltfrm: uwp
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
+> * [Windows](windows.md)
 > * [Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
@@ -27,13 +27,19 @@ ms.tgt_pltfrm: uwp
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
-Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
+Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) or [UWP Getting Started](~/sdk/getting-started/uwp.md) section (based on your platform) if you haven't set up the SDK in your application yet.
+
+The instructions in this page work for UWP (including Xamarin.Forms), WPF, and WinForms.
 
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc.
 
-Country code is not automatically reported by the UWP SDK. If you want to report it manually, you can follow these steps:
+### Country Code
+
+Country code is not automatically reported by the SDK. If you want to report it manually, you can follow the instructions for your platform below.
+
+#### UWP
 
 1. Make sure that you [enable Location Capability](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location#enable-the-location-capability) for your app.
 2. [Obtain a Bing Maps Authentication Key](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/authentication-key#get-a-key).
@@ -68,7 +74,7 @@ private static async Task SetCountryCode()
             {
                 break;
             }
-    
+
             // The returned country code is in 3-letter format (ISO 3166-1 alpha-3).
             // Below we convert it to ISO 3166-1 alpha-2 (two letter).
             var country = result.Locations[0].Address.CountryCode;
@@ -84,6 +90,22 @@ private static async Task SetCountryCode()
 }
 ```
 
+#### WPF/WinForms
+
+As WPF/WinForms platforms don't have a Geolocation API, you can use a system country code.
+
+```csharp
+using System.Globalization;
+
+private static void SetCountryCode()
+{
+    // This fallback country code does not reflect the physical device location, but rather the
+    // country that corresponds to the culture it uses.
+    var countryCode = RegionInfo.CurrentRegion.TwoLetterISORegionName;
+    AppCenter.SetCountryCode(countryCode);
+}
+```
+
 ## Custom events
 
 You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
@@ -92,8 +114,8 @@ Once you have started the SDK, use the `TrackEvent()` method to track your event
 
 ```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {
-	{ "Category", "Music" },
-	{ "FileName", "favorite.avi"}
+    { "Category", "Music" },
+    { "FileName", "favorite.avi"}
 });
 ```
 
@@ -144,10 +166,12 @@ The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 
 ## Retry and back-off logic
 
 App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
+
 * 3 tries maximum per request.
 * Each request has its own retry state machine.
 * All the transmission channels are disabled (until next app process) after 1 request exhausts all its retries.
 
 Back-off logic
+
 * 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.

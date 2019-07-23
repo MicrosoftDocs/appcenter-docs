@@ -150,6 +150,7 @@
 ### [React Native](sdk/crashes/react-native.md)
 ### [Unity](sdk/crashes/unity.md)
 ### [UWP](sdk/crashes/uwp.md)
+### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
 ## [Features](diagnostics/features.md)
 ## [Search](diagnostics/search.md)
@@ -224,6 +225,7 @@
 ### [React Native](sdk/getting-started/react-native.md)
 ### [Unity](sdk/getting-started/unity.md)
 ### [UWP](sdk/getting-started/uwp.md)
+### [WPF/WinForms](sdk/getting-started/wpf-winforms.md)
 ### [Xamarin](sdk/getting-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
@@ -233,7 +235,7 @@
 ### [tvOS](sdk/analytics/tvos.md)
 ### [React Native](sdk/analytics/react-native.md)
 ### [Unity](sdk/analytics/unity.md)
-### [UWP](sdk/analytics/uwp.md)
+### [Windows](sdk/analytics/windows.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
 ## Auth
 ### [Android](sdk/auth/android.md)
@@ -249,6 +251,7 @@
 ### [React Native](sdk/crashes/react-native.md)
 ### [Unity](sdk/crashes/unity.md)
 ### [UWP](sdk/crashes/uwp.md)
+### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
 ## Data
 ### [Android](sdk/data/android.md)
@@ -284,6 +287,7 @@
 ### [Unity](sdk/other-apis/unity.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
 ### [Cordova](sdk/other-apis/cordova.md)
+### [WPF/WinForms](sdk/other-apis/wpf-winforms.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
@@ -330,7 +334,15 @@
 #### [Export](gdpr/test-export.md)
 
 # HockeyApp Transition
-## [Introduction](transition/index.md)
+## [Timeline](transition/index.md)
+## [Stage 1 - Synchronization](transition/side-by-side.md)
+### [Distribution Groups](transition/distribution-groups.md)
+### [Distributing Releases](transition/distribution.md)
+### [Diagnostics](transition/crashes.md)
+### [Analytics](transition/analytics.md)
+## [Stage 2 - Moving apps](transition/moving/index.md)
+### [Incompatibilities](transition/moving/incompatibilities.md)
+### [App Data](transition/moving/data.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
@@ -340,12 +352,6 @@
 ### [UWP](transition/uwp-sdk-migration.md)
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
-## Shared Data
-### [Introduction](transition/side-by-side.md)
-### [Distribution Groups](transition/distribution-groups.md)
-### [Distributing Releases](transition/distribution.md)
-### [Diagnostics](transition/crashes.md)
-### [Analytics](transition/analytics.md)
 ## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 

@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 05/28/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -17,12 +17,13 @@ ms.tgt_pltfrm: UWP
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is sent to App Center through the Windows crash reporting service built into Windows devices. Crash logs contain valuable information for you to help fix the crash. The crash will be reported to App Center even if the app is not restarted.
@@ -47,12 +48,14 @@ App Center Crashes for UWP will utilize the built in Windows crash reporting ser
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have the **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following commands:
 
 ```shell
 Install-Package Microsoft.AppCenter.Crashes
 ```
+
+> [!IMPORTANT]
+> * The Crash SDK is compatible only with official releases of the NuGet package. Do not install `-preview` releases that are not yet ready for UWP (it would stop showing crashes for UWP on App Center portal).
 
 ### Add the using statements
 

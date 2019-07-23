@@ -4,7 +4,7 @@ description: App Center Crashes for tvOS
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 06/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 2f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -20,12 +20,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.

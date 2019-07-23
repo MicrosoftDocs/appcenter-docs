@@ -12,11 +12,11 @@ ms.service: vs-appcenter
 
 # Handling User Consent
 
-## Ask for the Users' Consent To Send Diagnostics logs
+## Ask for the User's Consent To Send Diagnostics logs
 
 If you want to get your users' confirmation before sending a crash/error report to App Center, the App Center SDK exposes a callback that instructs App Center Diagnostics to await confirmation from each user before sending any crash/error data to App Center.
 
-You can read more about how to ask for the users' consent to send a crash/error log per platform:
+You can read more about how to ask for the user's consent to send a crash/error log per platform:
 
 - [Android Consent](~/sdk/crashes/android.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [iOS Consent](~/sdk/crashes/ios.md#ask-for-the-users-consent-to-send-a-crash-log)

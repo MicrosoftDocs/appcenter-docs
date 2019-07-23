@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 07/15/2019
+ms.date: 07/23/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -17,12 +17,13 @@ ms.tgt_pltfrm: unity
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes automatically generates a crash log every time your app crashes, with a log to device storage. When a user starts the app again, the SDK sends the crash report to App Center. Collecting crashes works for both beta and live apps, that is, crashes submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
@@ -85,9 +86,9 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 };
 ```
 
-### Ask for the users' consent to send a crash log
+### Ask for the user's consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
 If your code uses this callback, you are responsible for obtaining the user's confirmation. One option is through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
@@ -150,7 +151,7 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>

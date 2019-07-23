@@ -1,3 +1,20 @@
+---
+title: Shared docs for Apple Crashes SDK
+description:  Shared docs for Apple Crashes SDK
+keywords: sdk, crash
+author: elamalani
+ms.author: emalani
+ms.date: 07/22/2019
+ms.topic: article
+ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
+ms.service: vs-appcenter
+ms.custom: sdk
+ms.tgt_pltfrm: apple
+dev_langs:  
+ - swift
+ - objc
+---
+
 ## Generate a test crash
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
@@ -24,7 +41,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 MSCrashes.hasCrashedInLastSession()
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
 
 ### Details about the last crash
 

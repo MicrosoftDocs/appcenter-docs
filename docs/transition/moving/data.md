@@ -4,7 +4,7 @@ description: The data that is being moved when moving an app from HockeyApp to A
 keywords: transition
 author: derpixeldan
 ms.author: daadam
-ms.date: 02/18/2019
+ms.date: 07/16/2019
 ms.topic: article
 ms.assetid: 322c74b9-0666-4059-a1dd-f529530a66df
 ms.service: vs-appcenter
