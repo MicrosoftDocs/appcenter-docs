@@ -78,7 +78,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 #### Integrate the iOS SDK manually
 
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-ios-sdk-manually-without-react-native-link-or-cocoapods)
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-sdk-manually-for-react-native-lower-than-060-without-react-native-link-or-cocoapods)
 
 ### 2.Start App Center Push
 
