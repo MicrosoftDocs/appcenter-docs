@@ -4,9 +4,9 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/25/2019
+ms.date: 07/24/2019
 ms.topic: article
-ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
+ms.assetid: 7357e49e-675d-4bfc-98da-6bf8bd3fe8fd
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: react-native
