@@ -134,7 +134,7 @@ async signIn() {
     try {
         const userInformation = await Auth.signIn();
         // Sign-in succeeded
-        const accountId = signInResult.accountId;
+        const accountId = userInformation.accountId;
     } catch (e) {
         // Do something with sign in failure.
     }
@@ -170,10 +170,10 @@ import Auth from 'appcenter-auth';
 
 async signIn() {
     try {
-        const signInResult = await Auth.signIn();
+        const userInformation = await Auth.signIn();
         // Sign-in succeeded
         // Both idToken, and accessToken are non null / undefined values.
-        const { accessToken, idToken } = signInResult;
+        const { accessToken, idToken } = userInformation;
         // Do work with either token.
     } catch (e) {
         // Do something with sign in failure.
@@ -214,7 +214,7 @@ if (parsedToken.length != 3) {
 
 const rawPayload = parsedToken[1];
 const decodedPayload = atob(rawPayload);
-const claimsObject = JSON.parse(decodedPayload);
+const claims = JSON.parse(decodedPayload);
 
 const { name, emails } = claims;
 ```
