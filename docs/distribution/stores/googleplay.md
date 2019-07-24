@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 07/12/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -122,7 +122,7 @@ Close the window and the new service account shows on the original page. Click t
    * Google Play Store supports android app bundles up to a maximum of 2 GB. Apks generated from the aab cannot exceed 150 MB. You can read more about [your options at Google's docs for AAB](https://developer.android.com/guide/app-bundle/).
    * The version of the .aab must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in Alpha and Beta track versions.
-   * Google's API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
+   * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
 4. After uploading your package, you can see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribute Store Details page will show as **Submitted.**
 6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
@@ -138,7 +138,7 @@ Close the window and the new service account shows on the original page. Click t
    * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
    * The version of the .apk must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
-   * Google's API currently does not support promoting an app from one track to another. Hence App Center does not support promoting a version from alpha to beta or beta to production.
+   * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
 4. After uploading your package, you can see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribution Store Details page will show as **Submitted.**
 6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
