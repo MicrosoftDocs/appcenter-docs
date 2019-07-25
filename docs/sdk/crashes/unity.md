@@ -242,7 +242,7 @@ Crashes.ReportUnhandledExceptions(false);
 
 ### Reporting crashes
 
-To receive proper crash reports in App Center, first make sure you have the App Center crashes SDK set up by following the instructions listed above.
+To receive proper crash reports in App Center, first make sure you have the App Center Crashes SDK set up by following the instructions listed above.
 
 #### Building the breakpad library
 
