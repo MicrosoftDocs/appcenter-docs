@@ -255,7 +255,7 @@ Next you must include and compile Google Breakpad by following the instructions 
 
 Once you have Google Breakpad included, attach the NDK Crash Handler:
 
-```java
+```csharp
 /* Attach NDK Crash Handler. */
 var minidumpDir = Crashes.GetMinidumpDirectoryAsync();
 setupNativeCrashesListener(minidumpDir.Result);
