@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -216,6 +216,9 @@ MSDistribute.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `MSDistribute` has been started.
+
 ## Check if App Center Distribute is enabled
 
 You can also check if App Center Distribute is enabled or not:
@@ -226,6 +229,9 @@ BOOL enabled = [MSDistribute isEnabled];
 ```swift
 var enabled = MSDistribute.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSDistribute` has been started, it will always return `NO` or `false` before start.
 
 ## Don't initialize App Center Distribute during development
 

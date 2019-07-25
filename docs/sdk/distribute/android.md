@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -242,6 +242,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Distribute` has been started.
+
 ## Check if App Center Distribute is enabled
 
 You can also check if App Center Distribute is enabled or not:
@@ -254,6 +257,9 @@ Distribute.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Distribute` has been started, it will always return `false` before start.
 
 ## Enable in-app updates for debug builds
 

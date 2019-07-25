@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -63,6 +63,9 @@ Crashes.hasCrashedInLastSession()
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
 ### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
@@ -77,6 +80,9 @@ Crashes.getLastSessionCrashReport()
 [!include[](../android-see-async.md)]
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-app-center-crashes).
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `null` before start.
 
 ## Customize your usage of App Center Crashes
 
@@ -292,6 +298,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started.
+
 ## Check if App Center Crashes is enabled
 
 You can also check if App Center Crashes is enabled or not:
@@ -304,3 +313,6 @@ Crashes.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.

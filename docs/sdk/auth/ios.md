@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 07/08/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter
@@ -386,6 +386,9 @@ MSAuth.setEnabled(true)
 
 The enabled/disabled state is stored by the SDK and does not change when the app restarts.
 
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started.
+
 ## Check if App Center Auth is enabled
 
 Check to see if App Center Auth is enabled using the following:
@@ -396,6 +399,9 @@ Check to see if App Center Auth is enabled using the following:
 ```swift
 MSAuth.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started, it will always return `NO` or `false` before start.
 
 ## Disable automatic forwarding of the app delegate's methods to App Center services
 

@@ -118,6 +118,9 @@ MSCrashes.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started.
+
 ## Check if App Center Crashes is enabled
 
 You can also check if App Center Crashes is enabled or not:
@@ -128,3 +131,6 @@ BOOL enabled = [MSCrashes isEnabled];
 ```swift
 var enabled = MSCrashes.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
