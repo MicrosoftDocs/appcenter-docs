@@ -92,7 +92,7 @@ While your apps with the Xamarin Insights SDK will continue to work for some tim
 Absolutely! We encourage you to move to App Center as soon as possible to have the maximum time to do the upgrade. This upgrade includes upgrading the SDKs and APIs, as well as getting familiar with the App Center offering.
 <br><br>
 
-**Do I have to pay in App Center to get the equivalent services I used to get in Xamarin Insights?**Hi 
+**Do I have to pay in App Center to get the equivalent services I used to get in Xamarin Insights?**
 
 No. App Center Analytics and Diagnostics are completely free services.
 
