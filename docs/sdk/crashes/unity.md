@@ -246,7 +246,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 
 #### Building the breakpad library
 
-Next you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). In order to use it in Unity, just include the binary into your app.
+Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). In order to use it in Unity, just include the binary with your app.
 
 > [!NOTE]
 > The App Center SDK does not bundle Google Breakpad by default.
