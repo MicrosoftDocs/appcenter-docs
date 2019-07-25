@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 6/17/2019
+ms.date: 7/25/2019
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -19,7 +19,6 @@ Acer Iconia A1-830 | 4.2.2 |  
 Acer Iconia Tab A1 | 4.2.2 |  
 Acer Liquid E2 | 4.2.2 |  
 Alcatel Onetouch Idol 2 | 4.2.2 |  
-Amazon Fire Phone | 4.2.2 |  
 Amazon Fire Phone | 4.4.4 |  
 Amazon Kindle Fire (2nd Gen) | 4.0.3 |  
 Amazon Kindle Fire HD 8.9 (2nd Gen) | 4.0.4 |  
@@ -37,6 +36,7 @@ Apple iPad 9.7" (2018) | 12.1.4 |  
 Apple iPad 9.7" (2018) | 12.2 |  
 Apple iPad Air (2019) | 12.2 |  
 Apple iPad Air (2019) | 12.3.1 |  
+Apple iPad Air (2019) | 12.4 | 
 Apple iPad Air | 9.0.2 |  
 Apple iPad Air | 9.1 |  
 Apple iPad Air | 9.2 |  
@@ -51,6 +51,7 @@ Apple iPad Air 2 | 9.2 |  
 Apple iPad Air 2 | 9.3.5 |  
 Apple iPad Mini (2019) | 12.2 |  
 Apple iPad Mini (2019) | 12.3.1 |  
+Apple iPad Mini (2019) | 12.4 |
 Apple iPad Mini | 9.0.2 |  
 Apple iPad Mini 2 (Retina) | 10.0.2 |  
 Apple iPad Mini 2 (Retina) | 10.1.1 |  
@@ -97,6 +98,7 @@ Apple iPad Pro 10.5" | 12.2 |  
 Apple iPad Pro 11" | 12.1.4 |  
 Apple iPad Pro 11" | 12.2 |  
 Apple iPad Pro 11" | 12.3.1 |  
+Apple iPad Pro 11" | 12.4 |
 Apple iPad Pro 12.9" | 11.0.3 |  
 Apple iPad Pro 12.9" | 11.1.2 |  
 Apple iPad Pro 12.9" | 11.2.6 |  
@@ -107,17 +109,19 @@ Apple iPad Pro 12.9" | 12.2 |  
 Apple iPad Pro 12.9" (2018) | 12.1.4 |  
 Apple iPad Pro 12.9" (2018) | 12.2 |  
 Apple iPad Pro 12.9" (2018) | 12.3.1 |  
+Apple iPad Pro 12.9" (2018) | 12.4 | 
 Apple iPad Pro 9.7" | 10.0.2 |  
 Apple iPad Pro 9.7" | 10.1.1 |  
 Apple iPad Pro 9.7" | 10.2.1 |  
 Apple iPad Pro 9.7" | 10.3.3 |  
 Apple iPad Pro 9.7" | 11.0.3 |  
 Apple iPad Pro 9.7" | 9.3.5 |  
-Apple iPad mini 3 | 9.0.2 |  
+Apple iPad Mini 3 | 12.3.1 |
+Apple iPad Mini 3 | 9.0.2 |  
 Apple iPhone 4S | 9.0.2 |  
 Apple iPhone 4S | 9.1 |  
 Apple iPhone 4S | 9.2 |  
-Apple iPhone 4S | 9.3.5 |  
+Apple iPhone 4S | 9.3.6 |  
 Apple iPhone 5 | 9.0.2 |  
 Apple iPhone 5 | 9.1 |  
 Apple iPhone 5 | 9.2 |  
@@ -126,8 +130,7 @@ Apple iPhone 5C | 9.0.2 |  
 Apple iPhone 5S | 12.0.1 |  
 Apple iPhone 5S | 9.0.2 |  
 Apple iPhone 5S | 9.1 |  
-Apple iPhone 5S | 9.2 |  
-Apple iPhone 5S | 9.3.5 |  
+Apple iPhone 5S | 9.2 |   
 Apple iPhone 6 | 10.0.2 |  
 Apple iPhone 6 | 9.0.2 |  
 Apple iPhone 6 | 9.1 |  
@@ -179,6 +182,7 @@ Apple iPhone 7 | 12.0.1 |  
 Apple iPhone 7 | 12.1.4 |  
 Apple iPhone 7 | 12.2 |  
 Apple iPhone 7 | 12.3.1 |  
+Apple iPhone 7 | 12.4 |
 Apple iPhone 7 Plus | 10.0.3 |  
 Apple iPhone 7 Plus | 10.1.1 |  
 Apple iPhone 7 Plus | 10.2.1 |  
@@ -192,6 +196,7 @@ Apple iPhone 7 Plus | 12.0.1 |  
 Apple iPhone 7 Plus | 12.1.4 |  
 Apple iPhone 7 Plus | 12.2 |  
 Apple iPhone 7 Plus | 12.3.1 |  
+Apple iPhone 7 Plus | 12.4 |
 Apple iPhone 8 | 11.0.3 |  
 Apple iPhone 8 | 11.1.2 |  
 Apple iPhone 8 | 11.2.6 |  
@@ -201,6 +206,7 @@ Apple iPhone 8 | 12.0.1 |  
 Apple iPhone 8 | 12.1.4 |  
 Apple iPhone 8 | 12.2 |  
 Apple iPhone 8 | 12.3.1 |  
+Apple iPhone 8 | 12.4 | 
 Apple iPhone 8 Plus | 11.0.3 |  
 Apple iPhone 8 Plus | 11.1.2 |  
 Apple iPhone 8 Plus | 11.2.6 |  
@@ -210,6 +216,7 @@ Apple iPhone 8 Plus | 12.0.1 |  
 Apple iPhone 8 Plus | 12.1.4 |  
 Apple iPhone 8 Plus | 12.2 |  
 Apple iPhone 8 Plus | 12.3.2 |  
+Apple iPhone 8 Plus | 12.4 | 
 Apple iPhone SE | 10.0.2 |  
 Apple iPhone SE | 10.1.1 |  
 Apple iPhone SE | 10.2.1 |  
@@ -223,22 +230,26 @@ Apple iPhone SE | 12.0.1 |  
 Apple iPhone SE | 12.1.4 |  
 Apple iPhone SE | 12.2 |  
 Apple iPhone SE | 12.3.1 |  
+Apple iPhone SE | 12.4 | 
 Apple iPhone SE | 9.3.5 |  
 Apple iPhone X | 11.1.2 |  
 Apple iPhone X | 11.2.6 |  
 Apple iPhone X | 11.3.1 |  
 Apple iPhone X | 11.4.1 |  
 Apple iPhone X | 12.0.1 |  
-Apple iPhone X | 12.1.4 |  
+Apple iPhone X | 12.1.4 | 
+Apple iPhone X | 12.4 |
 Apple iPhone XR | 12.1.4 |  
 Apple iPhone XR | 12.2 |  
 Apple iPhone XR | 12.3.1 |  
+Apple iPhone XR | 12.4 | 
 Apple iPhone XS | 12.1.4 |  
 Apple iPhone XS | 12.2 |  
 Apple iPhone XS | 12.3.1 |  
 Apple iPhone XS Max | 12.1.4 |  
 Apple iPhone XS Max | 12.2 |  
-Apple iPhone XS Max | 12.3.1 |  
+Apple iPhone XS Max | 12.3.1 | 
+Apple iPhone XS Max | 12.4 | 
 Apple iPod touch 5th Gen | 9.0.2 |  
 Apple iPod touch 5th Gen | 9.3.5 |  
 Apple iPod touch 6th Gen | 10.0.2 |  
@@ -254,14 +265,16 @@ Apple iPod touch 6th Gen | 12.0.1 |  
 Apple iPod touch 6th Gen | 12.1.4 |  
 Apple iPod touch 6th Gen | 12.2 |  
 Apple iPod touch 6th Gen | 12.3.1 |  
+Apple iPod touch 6th Gen | 12.4 | 
 Apple iPod touch 6th Gen | 9.0.2 |  
 Apple iPod touch 6th Gen | 9.1 |  
 Apple iPod touch 6th Gen | 9.2 |  
 Apple iPod touch 6th Gen | 9.3.5 |  
+Apple iPod touch 7th Gen | 12.3.1 |
+Apple iPod touch 7th Gen | 12.4 |
 Asus Google Nexus 7 (2013) | 4.4.4 |  
 Asus Google Nexus 7 (2013) | 5.1.1 |  
-Asus Transformer Pad TF300T | 4.1.1 |  
-Asus Zenfone 5Z | 9 |  
+Asus Transformer Pad TF300T | 4.1.1 |   
 Essential PH-1 | 9 |  
 Google Pixel | 7.1.2 |  
 Google Pixel | 8.0.0 |  
@@ -273,7 +286,9 @@ Google Pixel 2 XL | 9 |  
 Google Pixel 3 | 9 |  
 Google Pixel 3 XL | 9 |  
 Google Pixel 3a | 9 |  
+Google Pixel 3a | 10 Beta |  
 Google Pixel 3a XL | 9 |  
+Google Pixel 3a XL | 10 Beta |  
 Google Pixel C | 8.1.0 |  
 Google Pixel XL | 7.1.2 |  
 Google Pixel XL | 8.0.0 |  
@@ -340,8 +355,7 @@ LG Nexus 5X | 7.1.2 |  
 LG Nexus 5X | 8.0.0 |  
 LG Nexus 5X | 8.1.0 |  
 LG Optimus G Pro | 4.1.2 |  
-LG Optimus GJ | 4.1.2 |  
-LG Optimus L9 P760 | 4.1.2 |  
+LG Optimus GJ | 4.1.2 |   
 LG V30 | 7.1.2 |  
 Lava Iris X1 | 4.4.2 |  
 Meizu MX3 | 4.4.4 |  
@@ -391,7 +405,6 @@ Samsung Galaxy A6+ | 8.0.0 |  
 Samsung Galaxy A7 (2018) | 8.0.0 |  
 Samsung Galaxy A7 | 5.0.2 |  
 Samsung Galaxy A7 | 6.0.1 |
-Samsung Galaxy A70 | 9 |    
 Samsung Galaxy A8 | 7.1.1 |  
 Samsung Galaxy A9 (2018) | 8.0.0 |  
 Samsung Galaxy Ace 2 | 2.3.6 |  
@@ -440,8 +453,7 @@ Samsung Galaxy S III | 4.1.2 |  
 Samsung Galaxy S III | 4.3 |  
 Samsung Galaxy S III (4G LTE) | 4.3 |  
 Samsung Galaxy S III (US Carrier) | 4.3 |  
-Samsung Galaxy S III (US Carrier) | 4.4.2 |  
-Samsung Galaxy S III LTE | 4.1.2 |  
+Samsung Galaxy S III (US Carrier) | 4.4.2 |   
 Samsung Galaxy S III Mini | 4.1.2 |  
 Samsung Galaxy S III Mini (NFC) | 4.1.2 |  
 Samsung Galaxy S III mini VE | 4.2.2 |  
@@ -498,6 +510,7 @@ Samsung Galaxy Tab 4 8.0 | 4.4.2 |  
 Samsung Galaxy Tab A (2019) | 9 |  
 Samsung Galaxy Tab A | 7.0 |  
 Samsung Galaxy Tab A | 8.1.0 |  
+Samsung Galaxy Tab Active 2 | 8.1.0 | 
 Samsung Galaxy Tab Pro 10.1 | 4.4.2 |  
 Samsung Galaxy Tab Pro 8.4 | 4.4.2 |  
 Samsung Galaxy Tab S 10.5 | 4.4.2 |  
@@ -506,8 +519,7 @@ Samsung Galaxy Tab S2 8.0 | 7.0 |  
 Samsung Galaxy Tab S3 | 7.0 |  
 Samsung Galaxy Tab S4 | 8.1.0 |  
 Samsung Galaxy Trend Plus | 4.2.2 |  
-Samsung Galaxy Xcover 3 | 4.4.4 |  
-Samsung Galaxy Xcover 3 (VE) | 6.0.1 |  
+Samsung Galaxy Xcover 3 | 4.4.4 |    
 Samsung Galaxy Xcover 4 | 7.0 |  
 Samsung Galaxy Young | 4.1.2 |  
 Samsung Galaxy Young 2 | 4.4.2 |  
@@ -515,8 +527,7 @@ Samsung Google Nexus 10 | 4.2.2 |  
 Samsung Google Nexus 10 | 4.3 |  
 Samsung Google Nexus S | 2.3.3 |  
 Sharp Aquos Phone Zeta | 4.4.2 |  
-Sony Ericsson Xperia Mini | 2.3.4 |  
-Sony Ericsson Xperia S | 2.3.7 |  
+Sony Ericsson Xperia Mini | 2.3.4 |   
 Sony Ericsson Xperia S | 4.1.2 |  
 Sony Tablet S | 4.0.3 |  
 Sony Tablet S | 4.1.1 |  
@@ -554,14 +565,12 @@ Sony Xperia Z3 Compact | 4.4.4 |  
 Sony Xperia Z3 Compact | 5.0.2 |  
 Sony Xperia Z3+ | 5.0.2 |  
 Sony Xperia Z5 | 5.1.1 |  
-Sony Xperia Z5 Compact | 5.1.1 |  
-Sony Xperia ZL | 4.1.2 |  
+Sony Xperia Z5 Compact | 5.1.1 |    
 Sony Xperia ZR | 4.1.2 |  
 Sony Xperia ZR | 4.2.2 |  
 Xiaomi Hongmi 1S | 4.3 |  
 Xiaomi MI 2 | 4.1.1 |  
-Xiaomi MI 3 | 4.4.4 |  
-Xiaomi MI 4 | 4.4.4 |  
+Xiaomi MI 3 | 4.4.4 |   
 Xiaomi MI NOTE LTE | 4.4.4 |  
 Xiaomi Mi A1 | 9 |  
 Xiaomi Mi A2 | 9 |  
