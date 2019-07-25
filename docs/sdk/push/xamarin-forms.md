@@ -6,7 +6,7 @@ description: Integrating App Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74
 ms.service: vs-appcenter

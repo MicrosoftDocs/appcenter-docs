@@ -13,6 +13,9 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Push` has been started.
+
 ## Check if App Center Push is enabled
 
 You can also check if App Center Push is enabled or not:
@@ -20,3 +23,6 @@ You can also check if App Center Push is enabled or not:
 ```csharp
 bool isEnabled = await Push.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Push` has been started, it will always return `false` before start.

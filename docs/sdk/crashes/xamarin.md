@@ -56,6 +56,9 @@ bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
 ### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
@@ -63,6 +66,9 @@ If your app crashed previously, you can get details about the last crash.
 ```csharp
 ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `null` before start.
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#customize-your-usage-of-app-center-crashes).
 
@@ -188,6 +194,9 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started.
+
 ## Check if App Center Crashes is enabled
 
 You can also check if App Center Crashes is enabled or not:
@@ -195,6 +204,9 @@ You can also check if App Center Crashes is enabled or not:
 ```csharp
 bool isEnabled = await Crashes.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
 
 ## Handled Errors
 
