@@ -4,9 +4,9 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/25/2019
+ms.date: 07/24/2019
 ms.topic: article
-ms.assetid: 3e447b72-b135-409b-b271-951333d5c97c
+ms.assetid: 7357e49e-675d-4bfc-98da-6bf8bd3fe8fd
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: react-native
@@ -134,7 +134,7 @@ async signIn() {
     try {
         const userInformation = await Auth.signIn();
         // Sign-in succeeded
-        const accountId = signInResult.accountId;
+        const accountId = userInformation.accountId;
     } catch (e) {
         // Do something with sign in failure.
     }
@@ -170,10 +170,10 @@ import Auth from 'appcenter-auth';
 
 async signIn() {
     try {
-        const signInResult = await Auth.signIn();
+        const userInformation = await Auth.signIn();
         // Sign-in succeeded
         // Both idToken, and accessToken are non null / undefined values.
-        const { accessToken, idToken } = signInResult;
+        const { accessToken, idToken } = userInformation;
         // Do work with either token.
     } catch (e) {
         // Do something with sign in failure.
@@ -214,7 +214,7 @@ if (parsedToken.length != 3) {
 
 const rawPayload = parsedToken[1];
 const decodedPayload = atob(rawPayload);
-const claimsObject = JSON.parse(decodedPayload);
+const claims = JSON.parse(decodedPayload);
 
 const { name, emails } = claims;
 ```
