@@ -1,7 +1,7 @@
 #### Obtaining symbol files
 
 1. Dump the symbols using the Breakpad toolchain as described in the [Breakpad documentation](https://chromium.googlesource.com/breakpad/breakpad/+/master/README.ANDROID#93).
-2. Create a symbols.zip file with the following structure:
+2. Create a **symbols.zip** file with the following structure:
 
 ```text
 $ unzip -l symbols.zip 

@@ -70,6 +70,9 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.
@@ -77,6 +80,9 @@ You can also check if App Center Analytics is enabled or not.
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started, it will always return `false` before start.
 
 ## Local storage size
 

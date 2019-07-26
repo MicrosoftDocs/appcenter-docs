@@ -53,6 +53,9 @@ Crashes.hasCrashedInLastSession();
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
 ### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
@@ -60,6 +63,9 @@ If your app crashed previously, you can get details about the last crash.
 ```csharp
 var crashReport = Crashes.getLastSessionCrashReport();
 ```
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `null` before start.
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes callbacks](#customize-your-usage-of-app-center-crashes).
 

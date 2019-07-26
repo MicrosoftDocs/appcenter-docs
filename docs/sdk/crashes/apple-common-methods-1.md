@@ -43,6 +43,9 @@ MSCrashes.hasCrashedInLastSession()
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
 
+> [!NOTE]
+> This method must only be used after `MSCrashes` has been started, it will always return `NO` or `false` before start.
+
 ### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
@@ -53,6 +56,9 @@ MSErrorReport *crashReport = [MSCrashes lastSessionCrashReport];
 ```swift
 var crashReport = MSCrashes.lastSessionCrashReport()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSCrashes` has been started, it will always return `nil` before start.
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](#customize-your-usage-of-app-center-crashes).
 

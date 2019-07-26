@@ -63,6 +63,9 @@ Crashes.hasCrashedInLastSession()
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
 ### Details about the last crash
 
 If your app crashed previously, you can get details about the last crash.
@@ -77,6 +80,9 @@ Crashes.getLastSessionCrashReport()
 [!include[](../android-see-async.md)]
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-app-center-crashes).
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `null` before start.
 
 ## Customize your usage of App Center Crashes
 
@@ -292,6 +298,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started.
+
 ## Check if App Center Crashes is enabled
 
 You can also check if App Center Crashes is enabled or not:
@@ -305,11 +314,14 @@ Crashes.isEnabled()
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
 ## Reporting NDK crashes
 
 ### Reporting crashes
 
-To receive proper crash reports in App Center, first make sure you have the App Center crashes SDK set up by following the instructions listed above.
+To receive proper crash reports in App Center, first make sure you have the App Center Crashes SDK set up by following the instructions listed above.
 
 #### Building the breakpad library
 
@@ -370,13 +382,13 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 ```
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart.
-To troubleshoot, you can use verbose logging (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to help troubleshoot and check if minidumps are found and sent after the app is restarted.
+To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can use only text attachment with the native crash report.
+> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
 > [!NOTE]
-> There is a known bug in breakpad where it is unable to capture anything on x86 emulator.
+> There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 

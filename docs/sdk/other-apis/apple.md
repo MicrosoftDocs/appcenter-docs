@@ -91,6 +91,9 @@ MSAppCenter.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `MSAppCenter` has been started.
+
 ## Change state of service in runtime
 
 Enable or disable desired services at the runtime with following code:
@@ -103,7 +106,7 @@ MSAnalytics.setEnabled(false)
 ```
 
 > [!NOTE]
-> This method should only be used after AppCenter is started.
+> This method must only be used after `MSAnalytics` has been started.
 
 ## Check if App Center is enabled
 
@@ -115,6 +118,9 @@ You can also check if App Center is enabled or not.
 ```swift
 MSAppCenter.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAppCenter` has been started, it will always return `NO` or `false` before start.
 
 ## Check App Center SDK version at runtime
 

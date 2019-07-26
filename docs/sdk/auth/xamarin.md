@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 07/08/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -445,6 +445,9 @@ You don't have to await this call to make other API calls (such as `IsEnabledAsy
 
 The module state is persisted across app launches.
 
+> [!NOTE]
+> This method must only be used after `Auth` has been started.
+
 ## Check if App Center Auth is enabled
 
 You can also check whether App Center Auth is enabled or not:
@@ -452,3 +455,6 @@ You can also check whether App Center Auth is enabled or not:
 ```csharp
 bool enabled = await Auth.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Auth` has been started, it will always return `false` before start.
