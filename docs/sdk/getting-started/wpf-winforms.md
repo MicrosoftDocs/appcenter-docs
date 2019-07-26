@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/26/2019
+ms.date: 07/25/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.service: vs-appcenter
@@ -36,8 +36,8 @@ Let's get started with setting up App Center SDK in your app to use App Center C
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting .NET Framework 4.5 or later (.NET Core is not supported yet).
-* If you use the SDK from a portable library, it must target .NET standard 1.0 or later (PCL is not supported).
+* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
