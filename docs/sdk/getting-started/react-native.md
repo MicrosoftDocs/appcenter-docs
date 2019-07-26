@@ -262,7 +262,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     </plist>
     ```
 
-### 3.4 [Android only] Integrate the Android SDK manually without react-native link
+### 3.4 [Android only] Integrate the SDK manually for React Native lower than 0.60 without react-native link
 
 Integration steps without the `react-native link` command.
 
