@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.service: vs-appcenter
@@ -18,10 +18,12 @@ ms.tgt_pltfrm: xamarin
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Adjust the log level
@@ -41,6 +43,9 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 ```csharp
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
+
+> [!NOTE]
+> On Android, this method must only be used after `AppCenter` has been started, it will always return `null` before start.
 
 ## Identify users
 
@@ -76,6 +81,20 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started.
+
+## Change state of service in runtime
+
+You can enable or disable desired service at the runtime with following code:
+
+```csharp
+Analytics.SetEnabledAsync(true);
+```
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
@@ -83,6 +102,9 @@ You can also check if App Center is enabled or not.
 ```csharp
 bool enabled = await AppCenter.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started, it will always return `false` before start.
 
 ## Check App Center SDK version at runtime
 

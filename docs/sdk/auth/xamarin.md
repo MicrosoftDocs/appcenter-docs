@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -92,6 +92,12 @@ Be sure to replace `{Your App Secret}` in the code sample above with [your App S
 AppCenter.Start("65dc3680-7325-4000-a0e7-dbd2276eafd1", typeof(Auth));
 ```
 
+If you have already integrated other App Center modules, for example Data, it should look like the following code snippet:
+
+```csharp
+AppCenter.Start("65dc3680-7325-4000-a0e7-dbd2276eafd1", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
+```
+
 ##### Xamarin.Android
 
 Open the project's **MainActivity.cs** and add the `Start()` call inside the `OnCreate()` method:
@@ -105,6 +111,13 @@ Be sure to replace `{Your App Secret}` in the code sample above with [your App S
 AppCenter.Start("7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
 ```
 
+If you have already integrated other App Center modules, your call to start should look similar to the following code snippet.  This example integrates Analytics, Crashes, Auth, and Data:
+
+
+```csharp
+AppCenter.Start("7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
+```
+
 ##### Xamarin.Forms
 
 To create a Xamarin.Forms app targeting both Android and iOS platforms, you must create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's **App.xaml.cs** (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
@@ -116,6 +129,12 @@ AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android
 Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
 ```csharp
 AppCenter.Start("ios=65dc3680-7325-4000-a0e7-dbd2276eafd1;android=7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
+```
+
+If you have already integrated other App Center modules, for example Data, it should look like the following code snippet:
+
+```csharp
+AppCenter.Start("ios=65dc3680-7325-4000-a0e7-dbd2276eafd1;android=7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
 ```
 
 ### 3. Android additional steps
@@ -139,7 +158,22 @@ To use the sign-in, you must add the following element to the project's **Androi
 </activity>
 ```
 
-Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md) (and remove the curly braces): `android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df"`.
+Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md) (and remove the curly braces): `android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df"`. The code snippet above would look like this: 
+
+```xml
+<activity android:name="com.microsoft.identity.client.BrowserTabActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+            android:host="auth"
+            android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df" />
+    </intent-filter>
+</activity>
+```
 
 #### Proguard
 
@@ -166,11 +200,82 @@ In your Xamarin.Android project, add the following line to the project's **progu
 
 #### Modify the project's **Info.plist**
 
-1. Double-click the project's **Info.plist** file and go to the **Advanced** tab at the bottom.
-2. Click **Add URL Type** button and type in your Bundle Identifier in the **Identifier** field.
-![Xamarin Add URL Type](images/xamarin-info-plist.png).
-3. For **URL Schemes** field, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
-4. Open **Role** selector and choose **Editor**.
+1. In the project's **Info.plist** file, right-click on the file and select **Open as...** > **Source code**.
+
+> [!NOTE]
+> If you are using the [VS for Mac IDE](https://visualstudio.microsoft.com/vs/mac/), right-clicking on the file and selecting **Open With...** does not show the option for **Source code**. In this case, you would have to open your **Info.plist** file in another text editor, for example, [Visual Studio Code](https://code.visualstudio.com/).
+
+2. Copy and paste the following code:
+ 
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal{APP_SECRET}</string>
+        </array>
+    </dict>
+</array>
+```
+
+Replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md). For example, if your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then it should look like `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
+
+Here's an example of the code snippet given that the app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+        </array>
+    </dict>
+</array>
+```
+
+> [!NOTE]
+> If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
+> 
+> If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
 
 #### Add keychain sharing capability
 
@@ -340,6 +445,9 @@ You don't have to await this call to make other API calls (such as `IsEnabledAsy
 
 The module state is persisted across app launches.
 
+> [!NOTE]
+> This method must only be used after `Auth` has been started.
+
 ## Check if App Center Auth is enabled
 
 You can also check whether App Center Auth is enabled or not:
@@ -347,3 +455,6 @@ You can also check whether App Center Auth is enabled or not:
 ```csharp
 bool enabled = await Auth.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Auth` has been started, it will always return `false` before start.

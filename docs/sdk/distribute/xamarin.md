@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 05/16/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -131,6 +131,9 @@ To enable in-app updates for debug builds on Android, call the following method 
 Distribute.SetEnabledForDebuggableBuild(true);
 ```
 
+> [!NOTE]
+> This method only affects debug builds, and has no impact on release builds.
+
 #### 2.3 [For iOS only] Modify the project's **Info.plist**
 
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
@@ -246,6 +249,9 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Distribute` has been started.
+
 ## Check if App Center Distribute is enabled
 
 You can also check if App Center Distribute is enabled or not:
@@ -253,6 +259,9 @@ You can also check if App Center Distribute is enabled or not:
 ```csharp
 bool enabled = await Distribute.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Distribute` has been started, it will always return `false` before start.
 
 ## How do in-app updates work?
 

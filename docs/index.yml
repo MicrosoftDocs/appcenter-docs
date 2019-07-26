@@ -5,7 +5,7 @@ metadata:
   description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
   author: conceptdev
   ms.author: apexprodleads
-  ms.date: 08/08/2018
+  ms.date: 07/15/2019
   ms.topic: landing-page
   ms.service: vs-appcenter
 abstract:
@@ -71,7 +71,12 @@ sections:
         src: ~/media/logo_unity.svg
         alt: logo-Unity
       text: Unity
-      href: ~/sdk/getting-started/unity/      
+      href: ~/sdk/getting-started/unity/
+    - image:
+        src: ~/media/logo_tvos.svg
+        alt: logo-tvOS
+      text: tvOS
+      href: ~/sdk/getting-started/tvos/      
 - title: Services
   items:
   - type: grid
@@ -97,7 +102,7 @@ sections:
           href: ~/test-cloud/
         title: Test
       - href: ~/distribution/
-        html: Users can install the app via email distribution lists for testing, much as they'd download an app from the app store.
+        html: Whether used for beta app distribution or as an alternative to public app stores, Distribute is a tool for developers to quickly release Android, iOS, macOS, and UWP builds to end user devices.
         image:
           src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
           alt: distribution-icon

@@ -4,7 +4,7 @@ description: Introduction to the App Center Auth Service
 keywords: MBaaS, Auth, Identity
 author: amchew
 ms.author: amchew
-ms.date: 06/03/2019
+ms.date: 07/11/2019
 ms.topic: article
 ms.assetid: 012e4140-924c-4434-b191-c2411adc513d
 ms.service: vs-appcenter
@@ -17,7 +17,9 @@ App Center Auth is a cloud-based identity management service that enables develo
 
 App Center Auth also integrates with other parts of App Center, enabling developers to leverage user identity to [view user data](~/data/index.md) in other services and even [send push notifications to users](~/push/push-to-user.md#app-center-auth-set-identity) instead of individual devices. Whether you are an app developer building a collaboration app for users inside your organization or the next social networking platform, you will need a way to authenticate users and manage user identities.
 
-Auth is currently in preview, but is fully supported. Our preview supports native iOS, Android and Xamarin. Setting up the Auth preview requires an existing Azure subscription and [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) tenant.  
+Auth is currently in preview, but is fully supported. Our preview supports native iOS, Android, Xamarin and React Native. Setting up the Auth preview requires an existing Azure subscription and [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) tenant. 
+
+App Center Auth brings the magic of a seamless and easy portal and SDK set up experience. It only takes 5 steps to connect your existing Azure AD B2C tenant and a few lines of code to integrate the App Center Auth SDK. It is also currently one of the two ways to use the signed-in user's identity with other App Center services like Data and Push, the other being setting the signed-in user's identity via the SDK.
 
 ## How Auth works
 
@@ -39,6 +41,13 @@ These claims include properties such as:
   - The `account_id` App Center uses to identify the signed-in user across App Center.  
 - [Scopes](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#scopes-and-permissions) or permissions granted to the resource for the JWT
   - Scopes, such as `read`, `write`, and `delete`, are a way to manage permissions to protected resources.
+
+The `signIn()` method returns an `AccountId` that you can use to identify the signed-in user to use with the Data and Push services. You can also get the JWTs: `AccessToken` and `IdToken` to view user profile information such as the display name or the email address that the user used when signing in. For additional information, refer to the App Center Auth SDK platform documentation:
+
+  - [Android Auth SDK documentation](~/sdk/auth/android.md)
+  - [iOS Auth SDK documentation](~/sdk/auth/ios.md)
+  - [React Native Auth SDK documentation](~/sdk/auth/react-native.md)
+  - [Xamarin Auth SDK documentation](~/sdk/auth/xamarin.md)
 
 ### Sign Out
 

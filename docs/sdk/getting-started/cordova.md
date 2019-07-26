@@ -18,10 +18,12 @@ ms.tgt_pltfrm: cordova
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can easily use one, several, or all of the App Center services in your Apache Cordova application.

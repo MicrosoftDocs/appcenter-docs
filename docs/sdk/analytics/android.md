@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter
@@ -21,10 +21,11 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
+> * [Windows](windows.md)
 > * [Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
@@ -129,6 +130,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.
@@ -141,6 +145,9 @@ Analytics.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started, it will always return `false` before start.
 
 ## Local storage size
 

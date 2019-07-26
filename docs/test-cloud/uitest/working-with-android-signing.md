@@ -2,9 +2,9 @@
 title: Working with Android signing
 description: How to sign Android apks with your Android keystore in App Center Test
 keywords: test cloud
-author: glennwilson
-ms.author: v-glenw
-ms.date: 01/31/2019
+author: oddj0b
+ms.author: vigimm
+ms.date: 07/04/2019
 ms.topic: article
 ms.assetid: 819e647d-be5c-43ce-afbf-c58e51d52e03
 ms.service: vs-appcenter
@@ -51,9 +51,9 @@ ConfigureApp.Android.KeyStore(...).InstalledApp(...).StartApp();
 ## App Center Test and Android keystore
 
 *Question from a user:*
-"Hello, I ran Android Xamarin.UITest on App Center Test Cloud. For some reason the device is not loading Google Maps. Can you tell me why the map is not loading?"
+"Hello, I ran Android Xamarin.UITest on App Center Test Cloud. For some reason, the device is not loading Google Maps. Can you tell me why the map is not loading?"
 
-The problem in this case was that the APK was getting re-signed in App Center Test Cloud with a different Android keystore. To use the correct keystore specify it in the command when submitting your tests.
+The problem in this case was that the APK was getting re-signed in App Center Test Cloud with a different Android keystore. To use the correct keystore, specify it in the command when submitting your tests.
 
 Example addition to your `appcenter test run uitest ...` command:
 
@@ -73,7 +73,7 @@ Required arguments:
 
 ## Signing information file
 
-The other approach is to create and specify a signing information file. This results in the same signing but does not use your keystore and passwords in the command line. This does require creating the signing information file.
+The other approach is to create and specify a signing information file, and will result in the same signing but does not use your keystore and passwords in the command line. This does require creating the signing information file.
 
 First, find the `test-cloud.exe` in your NuGet packages folder for the version of Xamarin.UITest that you are using. It is in the tools folder under a Xamarin.UITest folder. Then, use it to generate the signing information file. If you change the version of Xamarin.UITest you are using, you will need to generate a new signing information file.
 
@@ -84,6 +84,8 @@ First, find the `test-cloud.exe` in your NuGet packages folder for the version o
 ```shell
 test-cloud.exe gen-sign-info <apk-signed> <keystorefile> <keystorepass> <keyalias> <keypass> [--dir <directory>]
 ```
+> [!NOTE]
+> Beginning with UITest version 3.0.0, generating the signing information file using test-cloud.exe is not supported (it is only available up through UITest version 2.2.7).
 
 #### [Visual Studio for Mac](#tab/vsmac/)
 

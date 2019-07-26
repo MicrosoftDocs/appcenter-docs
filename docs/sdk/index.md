@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/28/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -52,7 +52,9 @@ App Center Push enables you to send push notifications to users of your app from
 * [App Center SDK for Xamarin](getting-started/xamarin.md)
 * [App Center SDK for Unity](getting-started/unity.md)
 * [App Center SDK for UWP](getting-started/uwp.md)
+* [App Center SDK for WPF/WinForms](getting-started/wpf-winforms.md)
 * [App Center SDK for macOS](getting-started/macos.md)
+* [App Center SDK for tvOS](getting-started/tvos.md)
 * [App Center SDK for Apache Cordova](getting-started/cordova.md)
 
 ## Requirements
@@ -63,30 +65,30 @@ The tables below show the required minimum supported versions of the different A
 
 Android Studio 2.2 or later.
 
- Service          | Android OS Version | API Level
- -----------------|--------------------|-------------
- Analytics        | 4.1 and later      | 16 and later
- Auth             | 4.1 and later      | 16 and later
- Crashes          | 4.1 and later      | 16 and later
- Data             | 4.1 and later      | 16 and later
- Distribute       | 4.1 and later      | 16 and later
- Push             | 4.1 and later      | 16 and later
+Service          | Android OS Version | API Level
+-----------------|--------------------|-------------
+Analytics        | 4.1 and later      | 16 and later
+Auth             | 4.1 and later      | 16 and later
+Crashes          | 4.1 and later      | 16 and later
+Data             | 4.1 and later      | 16 and later
+Distribute       | 4.1 and later      | 16 and later
+Push             | 4.1 and later      | 16 and later
 
 ### iOS
 
- Service          | iOS Version     | Xcode
- -----------------|-----------------|--------------
- Analytics        | 9.0 or later    | 10 and later
- Auth             | 10.0 or later   | 10 and later
- Crashes          | 9.0 or later    | 10 and later
- Data             | 9.0 or later    | 10 and later
- Distribute       | 9.0 or later    | 10 and later
- Push             | 9.0 or later    | 10 and later
+Service          | iOS Version     | Xcode
+-----------------|-----------------|--------------
+Analytics        | 9.0 or later    | 10 and later
+Auth             | 10.0 or later   | 10 and later
+Crashes          | 9.0 or later    | 10 and later
+Data             | 9.0 or later    | 10 and later
+Distribute       | 9.0 or later    | 10 and later
+Push             | 9.0 or later    | 10 and later
 
 ### Unity
 
 Service    |  Unity version  | iOS Version  | Android Version            | UWP Windows Version
- ----------|-----------------|--------------|----------------------------|---------------------
+-----------|-----------------|--------------|----------------------------|---------------------
 Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
 Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.15063 or later
 Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| not available
@@ -94,17 +96,28 @@ Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.
 
 ### Windows UWP
 
-Service          | Windows Version     | Visual Studio
------------------|---------------------|----------------------------
-Analytics        | 10.0.10240 or later | Visual Studio 2015 or later
-Crashes          | 10.0.15063 or later | Visual Studio 2015 or later
-Distribute       | not available       | not available
-Push             | 10.0.10240 or later | Visual Studio 2015 or later
+Service          | Windows Version    | Visual Studio
+-----------------|--------------------|----------------------------
+Analytics        | 10 build 10240     | Visual Studio 2015 or later
+Crashes          | not available      | not available
+Distribute       | not available      | not available
+Push             | 10 build 10240     | Visual Studio 2015 or later
+
+### WPF and WinForms
+
+Service          | .NET Framework | Windows Version | Visual Studio
+-----------------|----------------|-----------------|----------------------------
+Analytics        | 4.5 or later   | 10 build 10240  | Visual Studio 2015 or later
+Crashes          | 4.5 or later   | 10 build 10240  | Visual Studio 2015 or later
+Distribute       | not available  | not available   | not available
+Push             | not available  | not available   | not available
+
+.NET core is not supported.
 
 ### React Native
 
 Service    |  RN version   | iOS Version              | Android Version
- ----------|---------------|--------------------------|----------------------------
+-----------|---------------|--------------------------|----------------------------
 Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
 Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
 Distribute | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
@@ -112,13 +125,20 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or la
 
 ### macOS
 
- Service          | macOS Version   | Xcode
- -----------------|-----------------|--------------
- Analytics        | 10.9 or later   | 8.2 and later
- Crashes          | 10.9 or later   | 8.2 and later
- Push             | 10.9 or later   | 8.2 and later
+Service          | macOS Version   | Xcode
+-----------------|-----------------|--------------
+Analytics        | 10.9 or later   | 8.2 and later
+Crashes          | 10.9 or later   | 8.2 and later
+Push             | 10.9 or later   | 8.2 and later
 
- ### Apache Cordova 
+### tvOS
+
+Service          | tvOS Version    | Xcode
+-----------------|-----------------|--------------
+Analytics        | 11.0 or later   | 10 and later
+Crashes          | 11.0 or later   | 10 and later
+
+### Apache Cordova 
 
 Service    |  AC CLI version      | iOS Version     | Android Version
 -----------|----------------------|-----------------|----------------
@@ -134,5 +154,5 @@ The App Center SDKs are open-source and available publicly on GitHub:
 * [App Center SDK for Android code](https://github.com/Microsoft/AppCenter-SDK-Android) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Android/releases)
 * [App Center SDK for iOS and macOS code](https://github.com/Microsoft/AppCenter-SDK-Apple) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Apple/releases)
 * [App Center SDK for React Native code](https://github.com/Microsoft/AppCenter-SDK-React-Native) and [release notes](https://github.com/Microsoft/AppCenter-SDK-React-Native/releases)
-* [App Center SDK for UWP and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
+* [App Center SDK for Windows and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
 * [App Center SDK for Apache Cordova code](https://github.com/Microsoft/appcenter-sdk-cordova) and [release notes](https://github.com/Microsoft/appcenter-sdk-cordova/releases)

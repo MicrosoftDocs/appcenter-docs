@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter
@@ -80,31 +80,80 @@ import AppCenterAuth
 
 ## Modify the project's Info.plist
 
+1. In the project's **Info.plist** file, right-click on the file and select **Open as...** > **Source code**. 
 > [!NOTE]
-> If the App Center Distribute SDK has previously been configured, the `URL types` key will already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.
+> If you are using the [VS for Mac IDE](https://visualstudio.microsoft.com/vs/mac/), right-clicking on the file and selecting **Open With...** does not show the option for **Source code**. In this case, you would have to open your **Info.plist** file in another text editor, for example, [Visual Studio Code](https://code.visualstudio.com/).
+> 
+2. Copy and paste the following code:
+ 
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal{APP_SECRET}</string>
+        </array>
+    </dict>
+</array>
+```
 
-1. In the project's **Info.plist** file, add a new key for **URL types** by clicking the **+** button next to **Information Property List** at the top. If Xcode displays the project's **Info.plist** as source code, refer to the tip below.
-2. Change the key type to Array.
-3. Add a new entry to the array (`Item 0`) and change the type to Dictionary.
-4. Under **Item 0**, add a **Document Role** key and change the value to **Editor**.
-5. Under **Item 0**, add a **URL Schemes** key and change the type to Array.
-6. Under **URL Schemes** key, add a new entry (**Item 0**).
-7. Under **URL Schemes** > **Item 0**, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
+Replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md). For example, if your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then it should look like `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
 
-> [!TIP]
-> If you want to verify that you modified the `Info.plist` correctly, right-click on the file and select **Open as...** > **Source code**. It should contain the following entry with [your actual App Secret](~/dashboard/faq.md) instead of `{APP_SECRET}`: `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
-> ```xml
-> <key>CFBundleURLTypes</key>
+Here's an example of the code snippet given that the app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+        </array>
+    </dict>
+</array>
+```
+
+> [!NOTE]
+> If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
+> ``` 
 > <array>
-> 	<dict>
-> 		<key>CFBundleTypeRole</key>
-> 		<string>Editor</string>
-> 		<key>CFBundleURLSchemes</key>
-> 		<array>
-> 			<string>msal{APP_SECRET}</string>
-> 		</array>
-> 	</dict>
-> </array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
+> 
+> If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
 > ```
 
 ## Add keychain sharing capability
@@ -337,6 +386,9 @@ MSAuth.setEnabled(true)
 
 The enabled/disabled state is stored by the SDK and does not change when the app restarts.
 
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started.
+
 ## Check if App Center Auth is enabled
 
 Check to see if App Center Auth is enabled using the following:
@@ -347,6 +399,9 @@ Check to see if App Center Auth is enabled using the following:
 ```swift
 MSAuth.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started, it will always return `NO` or `false` before start.
 
 ## Disable automatic forwarding of the app delegate's methods to App Center services
 

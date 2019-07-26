@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 05/08/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -17,11 +17,13 @@ ms.tgt_pltfrm: react-native
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
-> * [macOS](macos.md)
-> * [Unity](unity.md)
 > * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
+> * [macOS](macos.md)
+> * [tvOS](tvos.md)
+> * [Unity](unity.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
@@ -110,11 +112,11 @@ Crashes.setListener({
 > 
 > This feature depends on [Processing crashes in JavaScript](#process).
 
-### Ask for the users' consent to send a crash log
+### Ask for the user's consent to send a crash log
 
-If user privacy is important to you, you should get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you should get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
@@ -188,7 +190,7 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches, but not when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';

@@ -172,6 +172,9 @@ MSAnalytics.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `MSAnalytics` has been started.
+
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.
@@ -182,6 +185,9 @@ You can also check if App Center Analytics is enabled or not.
 ```swift
 MSAnalytics.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAnalytics` has been started, it will always return `NO` or `false` before start.
 
 ## Local storage size
 

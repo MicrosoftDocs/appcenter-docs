@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/17/2019
+ms.date: 07/11/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -21,10 +21,12 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
@@ -56,7 +58,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '2.1.0'
+      def appCenterSdkVersion = '2.2.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }

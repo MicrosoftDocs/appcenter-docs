@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 06/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: b19b58c4-f662-41bd-8ca3-049ae1e0b90d
 ms.service: vs-appcenter
@@ -37,7 +37,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '2.1.0'
+       def appCenterSdkVersion = '2.2.0'
        implementation "com.microsoft.appcenter:appcenter-auth:${appCenterSdkVersion}"
     }
     ```
@@ -322,6 +322,9 @@ Auth.setEnabled(true)
 
 The enabled/disabled state is stored by the SDK and does not change when the app restarts.
 
+> [!NOTE]
+> This method must only be used after `Auth` has been started.
+
 ## Check if App Center Auth is enabled
 
 Check to see if App Center Auth is enabled using the following:
@@ -334,3 +337,6 @@ Auth.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Auth` has been started, it will always return `false` before start.

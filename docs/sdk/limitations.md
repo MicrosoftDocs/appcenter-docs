@@ -4,7 +4,7 @@ description: Limitations and known issues with the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/13/2018
+ms.date: 06/18/2019
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: vs-appcenter
@@ -22,3 +22,8 @@ ms.custom: sdk
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the Xamarin runtime.
 2. You can't use most AppCenter SDK APIs in a Xamarin Forms application constructor if you want to use the previewer. The Xamarin previewer does not support native code.
 3. You cannot deploy an application using the AppCenter SDK to the Xamarin Live Player as the SDK contains native code.
+
+## WPF/WinForms
+
+1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the .NET runtime.
+2. Only crashes caused by .NET exceptions are reported, not C/C++ crashes.
