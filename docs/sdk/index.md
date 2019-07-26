@@ -112,6 +112,8 @@ Crashes          | 4.5 or later   | 3.0 or later  | 10 build 10240  | Visual Stu
 Distribute       | not available  | not available | not available   | not available
 Push             | not available  | not available | not available   | not available
 
+.NET Core is supported only when the WPF/WinForms application runs on Windows.
+
 ### React Native
 
 Service    |  RN version   | iOS Version              | Android Version
