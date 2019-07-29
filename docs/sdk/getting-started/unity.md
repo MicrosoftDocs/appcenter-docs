@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 07/29/2019
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -32,16 +32,13 @@ Let's get started and set up the App Center Unity SDK to use App Center Analytic
 
 ## 1. Prerequisites
 
-Before you begin, make sure that your project is set up in Unity 5.6 or later.
+Before you begin, make sure that your project is set up in Unity 2017.4 or later.
 
 The App Center SDK for Unity supports the following platforms:
 
 * iOS (9.0 or later)
-* Android (4.1/API 16 or later)
+* Android (5.0/API 21 or later)
 * UWP (Build 10240 or later)
-
-> [!NOTE]
-> For older versions of Unity with UWP, only a .NET scripting backend is supported. IL2CPP as a backend is not supported.
 
 Also note that the App Center SDK for Unity is only available in C#.
 
