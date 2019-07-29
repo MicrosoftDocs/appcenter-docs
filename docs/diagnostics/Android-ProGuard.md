@@ -30,3 +30,10 @@ With ProGuard enabled in your Android app, your stack traces must be deobfuscate
 
 > [!NOTE]
 > App Center cannot check if you have uploaded the right `mapping.txt` file. We therefore recommend to upload the file directly after you create the .apk file or push it to your code repository if you want to upload it later.
+
+
+### Deleting a mappings file
+
+1. Make a `GET` request to the [symbols_list API](https://openapi.appcenter.ms/#/crash/symbols_list). This will retrieve the IDs for the mapping files you uploaded.
+2. Make a `DELETE` request to the [symbols_upload API](https://openapi.appcenter.ms/#/crash/symbolUploads_delete) with the mapping file ID. This will delete the specified mapping file.
+
