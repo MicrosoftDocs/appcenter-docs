@@ -4,7 +4,7 @@ description: App Center Analytics for Windows
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 06/20/2019
+ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.service: vs-appcenter
@@ -90,6 +90,10 @@ private static async Task SetCountryCode()
 }
 ```
 
+> [!NOTE]
+> For country code to be displayed on Analytics sessions, the `AppCenter.SetCountryCode` must be called prior to calling
+> `AppCenter.Start`.
+
 #### WPF/WinForms
 
 As WPF/WinForms platforms don't have a Geolocation API, you can use a system country code.
@@ -105,6 +109,10 @@ private static void SetCountryCode()
     AppCenter.SetCountryCode(countryCode);
 }
 ```
+
+> [!NOTE]
+> For country code to be displayed on Analytics sessions, the `AppCenter.SetCountryCode` must be called prior to calling
+> `AppCenter.Start`.
 
 ## Custom events
 
