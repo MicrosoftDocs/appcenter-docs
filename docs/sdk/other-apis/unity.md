@@ -132,4 +132,4 @@ AppCenter.SetCustomProperties(properties);
 ## Delay the start of App Center
 
 There may be cases where you want to delay the start of App Center until after **AppCenterBehavior** starts. For example, if you want to request user consent before starting any App Center services.  
-To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.
+To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK the in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.
