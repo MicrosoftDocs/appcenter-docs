@@ -87,10 +87,9 @@ In order to use App Center, you must opt in to the module(s) that you want to us
 
 ### 5.1 Add the `Start()` method
 
-* On WPF, modify the `App.xaml.cs`.
-* On WinForms, modify the `Program.cs` file.
+#### WPF 
 
-Add the following using statements:
+For your WPF application, modify the `App.xaml.cs` and add the following using statements:
 
 ```csharp
 using Microsoft.AppCenter;
@@ -98,14 +97,43 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 ```
 
-Then in the same file:
+Then in the same file, add the following code in the `OnStartup` method:
 
-* On WPF, add the following code in the `OnStartup` method.
-* On WinForms, add the following code in the `Main` method, before the `Application.Run` statement.
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+If the `App.xaml.cs` file doesn't have the `OnStartup` method, you can add the `Application.OnStartup(StartupEventArgs)` method. Your `App.xaml.cs` file should look something like:
+
+```csharp
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs e)
+    {
+      base.OnStartup(e);
+      AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+    }
+  }
+}
+```
+
+#### WinForms
+
+For your WinForms application, modify the `Program.cs` file and add the following using statements:
+
+```csharp
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+```
+
+Then in the same file, add the following code in the `Main` method, before the `Application.Run` statement.
+
+```csharp
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+```
+
 
 ### 5.2 Replace the placeholder with your App Secret
 
