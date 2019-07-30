@@ -3,7 +3,7 @@ title: "HockeyApp Transition"
 description: Transition from HockeyApp to App Center
 author: derpixeldan
 ms.author: daadam
-ms.date: 07/16/2019
+ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
@@ -18,7 +18,7 @@ We announced in 2017 that HockeyApp features and functionality would move to Vis
 
 ## The three stages of the transition
 
-Stage 1 & 2 are done and we're currently working on stage 3.
+Stage 1 & 2 are done and we're currently working on Stage 3.
 
 ### Stage 1: Your HockeyApp data in App Center
 
@@ -29,11 +29,11 @@ All your HockeyApp data is synchronized to App Center. That allows you to work i
 
 ### Stage 2: Move your apps to App Center
 
-While we synchronize your apps from HockeyApp to App Center, your data is still tied to HockeyApp together with the user management and all the settings. Starting in mid 2019, we will enable you to move apps fully to App Center. Moving your app will also remove the synchronization with HockeyApp, and give you full control of your apps in App Center. This will also be the moment when you can update your apps to use the new App Center SDK. The App Center SDK is built to be faster and more modular than the HockeySDK. Ship the App Center SDK in a future release of the app, and still receive data from the HockeyApp SDK in App Center from past releases. [Follow our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp) for the latest updates.
+While we synchronize your apps from HockeyApp to App Center, your data is still tied to HockeyApp together with the user management and all the settings. In mid 2019, we enabled the option to move apps fully to App Center. Moving your app will also remove the synchronization with HockeyApp, and give you full control of your apps in App Center. This is also the moment when you can update your apps to use the new App Center SDK. The App Center SDK is built to be faster and more modular than the HockeySDK. Ship the App Center SDK in a future release of the app, and still receive data from the HockeySDK in App Center from past releases.
 
 ### Stage 3: Move the user and account management to App Center
 
-The last stage of the transition moves user and accounts management from HockeyApp to App Center. We don't require you to do anything, we're rolling out the different parts incrementally once they're done.
+The last stage of the transition moves the user and accounts management from HockeyApp to App Center. We don't require you to do anything, we're rolling out the different parts incrementally once they're done.
 
 ## November 16, 2019: Farewell, HockeyApp!
 

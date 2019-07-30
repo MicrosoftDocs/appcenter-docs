@@ -341,10 +341,10 @@
 ### [Distributing Releases](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
-## Stage 2 - Moving apps
+## Stage 2 - Moving Apps
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
-### [App Data](transition/moving/data.md)
+### [Migrated Data](transition/moving/data.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
