@@ -4,7 +4,7 @@ description: How to export personal information from crashes and errors to your 
 keywords: GDPR, DSR, privacy, EU
 author: blparr
 ms.author: blparr
-ms.date: 01/29/2019
+ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: 2B51F9FA-75B1-4B73-8587-992F22CB0631
 ms.service: vs-appcenter
@@ -35,7 +35,7 @@ Payload for Standard Export :
 {
   "type" : "blob_storage_linked_subscription",
   "subscription_id": "<Your-Azure-Subscription-ID",
-  "exportEntities": [ "crashes" ]
+  "export_entities": [ "crashes" ]
 }
 ```
 
@@ -45,7 +45,7 @@ Payload for Custom Export :
 {
   "type" : "blob_storage_connection_string",
   "connection_string": "<Your-blob-storage-connection-string",
-  "exportEntities": [ "crashes" ]
+  "export_entities": [ "crashes" ]
 }
 ```
 
