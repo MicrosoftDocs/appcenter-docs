@@ -2,9 +2,9 @@
 title: Building Xamarin apps for Android
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 07/29/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -97,6 +97,8 @@ You can configure each successful build from a branch to be distributed to a pre
 
 Once you save the configuration, a new build will kick off automatically.
 
+> [!NOTE]
+> Building an `.aab` is currently not supported for Xamarin.Android apps.
 ## 4. Build results
 
 After a build triggers, the build will be in one of the following states:
