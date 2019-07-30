@@ -24,7 +24,7 @@ If you are using App Center Build, you must make sure Mono version is 5.8 or hig
 
 ## 2. AndroidManifest.xml
 
-Edit the project's **AndroidManifest.xml** file and remove the following lines **inside** the file's `<application>` section, if present:
+Edit the project's **AndroidManifest.xml** file and **remove** the following lines **inside** the file's `<application>` section, if present:
 
 ```xml
 <receiver
