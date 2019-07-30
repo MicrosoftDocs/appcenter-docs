@@ -98,7 +98,7 @@ You can configure each successful build from a branch to be distributed to a pre
 Once you save the configuration, a new build will kick off automatically.
 
 > [!NOTE]
-> Building an `.aab` is not currently supported for Xamarin.Android apps.
+> Building an `.aab` is currently not supported for Xamarin.Android apps.
 ## 4. Build results
 
 After a build triggers, the build will be in one of the following states:

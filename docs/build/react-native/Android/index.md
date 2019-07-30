@@ -60,6 +60,8 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.5. Build Android App Bundle (.aab)
 
+The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the official [documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
+
 Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` file contains the `android.bundle` block, this option will automatically be toggled on.
 
 ### 3.6. Increment version number
