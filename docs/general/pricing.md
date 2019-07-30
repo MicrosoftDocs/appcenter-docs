@@ -21,7 +21,7 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
 - Distribution: Unlimited distribution to users, and stores
 - Distribution: Unlimited use of CodePush
 - Test: Unlimited launch tests
-- Push: Unlimited Push Notifications
+- Push: Unlimited push Notifications
 
 ## The free tier
 
