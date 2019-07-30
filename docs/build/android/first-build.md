@@ -46,7 +46,7 @@ The available build variants will populate from the Build Types and Product Flav
 
 ### 3.3. Build Android App Bundle (.aab)
 
-The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the official [documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
+The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
 
 Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` file contains the `android.bundle` block, this option will automatically be toggled on.
 
@@ -62,7 +62,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
-### 3.7. build.gradle File
+### 3.7. Configure from the build.gradle File
 
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
