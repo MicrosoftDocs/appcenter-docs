@@ -15,21 +15,21 @@ ms.custom: distribute
 
 ## Manage Distribution Groups
 
-Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers or can represent stages or rings of releases, such as Staging.
+Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers, or can represent stages or rings of releases, such as Staging.
 
 ## Creating a Distribution Group
 
-To create a new Distribution Group log into the App Center portal, select your desired app, click  Distribute in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
+To create a new Distribution Group, log into the App Center portal, select your desired app, click Distribute in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
 
 ## Managing Users in a Distribution Group
 
-Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Or select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
+Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
 
 ## Types of Distribution Groups
 
 ### Private Distribution Groups
 
-In App Center, distribution groups are private by default. This means only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to login to their App Center account in order to access and download releases.  
+In App Center, distribution groups are private by default. This means only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to login to their App Center account in order to access and download releases.
 
 ### Public Distribution Groups
 
