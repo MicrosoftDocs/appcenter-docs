@@ -91,7 +91,7 @@ private static async Task SetCountryCode()
 ```
 
 > [!NOTE]
-> For country code to be displayed on Analytics sessions, the `AppCenter.SetCountryCode` must be called prior to calling
+> For country code to be displayed on Analytics sessions, `AppCenter.SetCountryCode` must be called prior to calling
 > `AppCenter.Start`.
 
 #### WPF/WinForms
@@ -111,7 +111,7 @@ private static void SetCountryCode()
 ```
 
 > [!NOTE]
-> For country code to be displayed on Analytics sessions, the `AppCenter.SetCountryCode` must be called prior to calling
+> For country code to be displayed on Analytics sessions, `AppCenter.SetCountryCode` must be called prior to calling
 > `AppCenter.Start`.
 
 ## Custom events
