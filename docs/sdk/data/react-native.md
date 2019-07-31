@@ -92,7 +92,7 @@ Going forward with the `user` object we defined earlier, let's go over how to cr
 
 - **document:** This is the object itself. This will be the object inserted into your database. This would be the user object defined previously. 
 
-- **String partition:** The partition that the document will live in. Use the `DefaultPartitions.USER_DOCUMENTS` option to create a document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **String partition:** The partition that the document will live in. Use the `Data.DefaultPartitions.USER_DOCUMENTS` option to create a document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 > [!NOTE]
 > Public documents are read-only.
@@ -143,7 +143,7 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You can either use `DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **String partition:** The partition that the document lives in. You can either use `Data.DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `Data.DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables them to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
@@ -194,7 +194,7 @@ The parameters for replacing a document are the following:
 
 - **document:** This is the object itself. This will be the object inserted into your database. This would be the user object defined previously. 
 
-- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.USER_DOCUMENTS` option to replace the document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **String partition:** The partition that the document lives in. Use the `Data.DefaultPartitions.USER_DOCUMENTS` option to replace the document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```javascript
 user.email = 'alex@microsoft.com';
@@ -204,6 +204,8 @@ Data.replace(user.id, user, Data.DefaultPartitions.USER_DOCUMENTS);
 By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```javascript
+const deviceTimeToLive = 60 * 60;
+
 user.email = 'alex@microsoft.com';
 Data.replace(user.id, user, Data.DefaultPartitions.USER_DOCUMENTS, new Data.WriteOptions(deviceTimeToLive));
 ```
@@ -216,16 +218,18 @@ In order to delete a document, you need to specify the partition type and the do
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.USER_DOCUMENTS` option to delete the document from an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **String partition:** The partition that the document lives in. Use the `Data.DefaultPartitions.USER_DOCUMENTS` option to delete the document from an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```javascript
-Data.remove(user.id, DefaultPartitions.USER_DOCUMENTS);
+Data.remove(user.id, Data.DefaultPartitions.USER_DOCUMENTS);
 ```
 
 By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```javascript
-Data.remove(user.id, DefaultPartitions.USER_DOCUMENTS, new Data.WriteOptions(deviceTimeToLive));
+const deviceTimeToLive = 60 * 60;
+
+Data.remove(user.id, Data.DefaultPartitions.USER_DOCUMENTS, new Data.WriteOptions(deviceTimeToLive));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new Data.WriteOptions(timeToLiveInSeconds)` as the last parameter.
@@ -234,10 +238,10 @@ You can specify the time-to-live (TTL) on a document by using `new Data.WriteOpt
 
 Lastly, there is the list functionality. List is used to fetch a list of documents from your database. In order to call list on your database, you need the partition.
 
-- **String partition:** The partition that the document(s) live in. The partition that the document lives in. You can either use `DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
+- **String partition:** The partition that the document(s) live in. The partition that the document lives in. You can either use `Data.DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `Data.DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```javascript
-const paginatedDocuments = await Data.list(DefaultPartitions.USER_DOCUMENTS);
+const paginatedDocuments = await Data.list(Data.DefaultPartitions.USER_DOCUMENTS);
 ```
 
 This will asynchronously fetch a page of the documents that exist within a given user partition. 
@@ -245,7 +249,9 @@ This will asynchronously fetch a page of the documents that exist within a given
 Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `ReadOptions` parameter and specifying a TTL in seconds you can also configure a list for offline reads with a specific TTL, enabling the data to be visible to users even when they're offline once it's cached and expiring the locally cached data in a time span of your choice. Here's an example of this:
 
 ```javascript
-const paginatedDocuments = await Data.list(DefaultPartitions.USER_DOCUMENTS, new Data.ReadOptions(deviceTimeToLive));
+const deviceTimeToLive = 60 * 60;
+
+const paginatedDocuments = await Data.list(Data.DefaultPartitions.USER_DOCUMENTS, new Data.ReadOptions(deviceTimeToLive));
 ```
 
 ### Pagination 
@@ -267,7 +273,7 @@ After you are finished with the paginatedDocuments, be sure to call the `close()
 To fetch additional pages, call the `getNextPage()` method from the `paginatedDocuments` object. An example of the usage would be the following code snippet. 
 
 ```javascript
-const paginatedDocuments = await Data.list(DefaultPartitions.USER_DOCUMENTS);
+const paginatedDocuments = await Data.list(Data.DefaultPartitions.USER_DOCUMENTS);
 // Do something with paginatedDocuments.currentPage.items
 while(await paginatedDocuments.hasNextPage()) {
     const nextPage = await paginatedDocuments.getNextPage();
