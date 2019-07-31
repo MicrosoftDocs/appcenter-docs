@@ -4,7 +4,7 @@ description: History of updates to the product
 keywords: update,history
 author: jwargo
 ms.author: jowargo
-ms.date: 07/10/2019
+ms.date: 07/31/2019
 ms.topic: article
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
@@ -13,6 +13,16 @@ ms.service: vs-appcenter
 # App Center Changelog
 
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+
+### **July 31, 2019**
+- **Build support for Xcode 10.3**
+    - Added support for building your apps with Xcode 10.3 (10G8). The Xcode 10.3 is available for native iOS, native macOS, Xamarin.iOS and React Native iOS apps.
+- **Build support for Xcode 11.0 beta 4**
+    - Added support for building your apps with Xcode 11 beta 4 (11M374r). The Xcode 11 beta 4 is available for native iOS, native macOS and React Native iOS apps.
+- **Updated Xamarin SDKs:**  
+    The following Xamarin SDK bundles were added to the App Center:
+    - Mono 5.18.1, Xamarin.iOS 12.10.0.157
+    - Mono 5.18.1, Xamarin.Android 9.3.0-23
 
 ### **July 10, 2019**
 - **Build support for Xcode 11 beta 2**
