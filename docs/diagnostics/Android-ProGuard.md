@@ -34,4 +34,4 @@ With ProGuard enabled in your Android app, your stack traces must be deobfuscate
 
 ### Forwarding the mapping from a build in App Center
 
-If a build is [configured to produce a `mapping.txt` file](https://developer.android.com/studio/build/shrink-code), App Center builds produce the file as an availalbe download. Automatically distributing the build or manually distributing it later will forward the `mapping.txt` file onto Diagnostics to deobfuscate incoming crash reports. There is no need to manually upload the `mapping.txt` file after distributing a build.
+If a build is [configured to produce a `mapping.txt` file](https://developer.android.com/studio/build/shrink-code), App Center builds produce the file as an available download. Automatically distributing the build or manually distributing it later will forward the `mapping.txt` file onto Diagnostics to deobfuscate incoming crash reports. There is no need to manually upload the `mapping.txt` file after distributing a build.
