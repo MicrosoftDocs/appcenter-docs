@@ -4,7 +4,7 @@ description: Information about Visual Studio App Center pricing plans
 keywords: pricing
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 07/23/2019
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178
 ms.service: vs-appcenter
@@ -14,15 +14,19 @@ ms.service: vs-appcenter
 
 Visual Studio App Center offers both a generous free tier, and paid tier options billed through an Azure subscription. You can see the full breakdown of the pricing on the official [App Center Pricing](https://www.visualstudio.com/app-center/pricing) page.
 
+## Free services
+
+- General: Unlimited apps, unlimited organizations, and unlimited teams
+- Analytics & Diagnostics: All Crashes and Analytics features
+- Distribution: Unlimited distribution to users, and stores
+- Distribution: Unlimited use of CodePush
+- Test: Unlimited launch tests
+- Push: Unlimited push Notifications
+
 ## The free tier
 
-- Unlimited apps, unlimited organizations, and unlimited teams
-- All Crashes and Analytics features
-- 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
-- Unlimited distribution to users, and stores
-- Unlimited use of CodePush
-- Unlimited launch tests
-- A 30-day free trial for one device with unlimited device hours
+- Build: 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
+- Test: A 30-day free trial for one device with unlimited device hours
 
 ## Build paid tier
 
@@ -33,6 +37,15 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
   
 - Basic tier: pay per concurrent device up to 30 hours per device per month
 - Enterprise tier: pay per concurrent device with unlimited hours per device per month
+
+## Azure Subscription Services
+
+- Auth: Using this feature will require an Azure connection with Azure B2C whose pricing is found here: [Azure B2C](https://azure.microsoft.com/en-us/pricing/details/active-directory-b2c/).
+- Data: Using this feature will require an Azure connection with Azure CosmosDB whose pricing is found here: [Azure CosmosDB](https://azure.microsoft.com/en-us/pricing/details/cosmos-db/).
+
+## OneSignal Integration
+
+- Push: App Center has an official partnership with OneSignal to enable users to integrate Push notifications into their applications with advanced targeting and segmentation. Pricing for this service is handled by OneSignal and is available on OneSignal's pricing page; [OneSignal](https://onesignal.com/pricing).
 
 ## Configuring your billing plan
 
