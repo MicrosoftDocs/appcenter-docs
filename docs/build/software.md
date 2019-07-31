@@ -336,7 +336,23 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (9.7 inch)
 - iPad Pro (12.9 inch)
 
-#### iOS 10.1, 10.2, 10.3
+#### iOS 10.1, 10.2
+
+- iPhone 5
+- iPhone 5s
+- iPhone 6
+- iPhone 6 Plus
+- iPhone 6s
+- iPhone 6s Plus
+- iPhone 7
+- iPhone 7 Plus
+- iPhone SE
+- iPad Air
+- iPad Air 2
+- iPad Pro (9.7 inch)
+- iPad Pro (12.9 inch)
+
+#### iOS 10.3
 
 - iPhone 5
 - iPhone 5s
