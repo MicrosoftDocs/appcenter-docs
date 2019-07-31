@@ -24,6 +24,6 @@ ms.custom: analytics
 
 ## Handled Errors
 
-- Errors are only available in the Xamarin, WPF and WinForms platform.
+- Errors are only available in the Xamarin, Unity, WPF and WinForms platform.
 - You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
 - The maximum number of characters per error property key and error property value is 125 characters.
