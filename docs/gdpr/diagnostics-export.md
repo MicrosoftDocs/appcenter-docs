@@ -4,7 +4,7 @@ description: How to export personal information from crashes and errors to your 
 keywords: GDPR, DSR, privacy, EU
 author: blparr
 ms.author: blparr
-ms.date: 01/29/2019
+ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: 2B51F9FA-75B1-4B73-8587-992F22CB0631
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ Export all your errors and symbolicated crashes, including stack traces and atta
 To export Diagnostics data to Blob Storage, call the following App Center API:
 
 ```text
-POST https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
+POST https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
 Use one of the following payloads to export your crashes to Azure Blob Storage:
@@ -35,7 +35,7 @@ Payload for Standard Export :
 {
   "type" : "blob_storage_linked_subscription",
   "subscription_id": "<Your-Azure-Subscription-ID",
-  "exportEntities": [ "crashes" ]
+  "export_entities": [ "crashes" ]
 }
 ```
 
@@ -45,14 +45,14 @@ Payload for Custom Export :
 {
   "type" : "blob_storage_connection_string",
   "connection_string": "<Your-blob-storage-connection-string",
-  "exportEntities": [ "crashes" ]
+  "export_entities": [ "crashes" ]
 }
 ```
 
 To find the location in blob storage, call the following App Center API:
 
 ```text
-GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
+GET https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
 ## Call our APIs for specific crash/error information
@@ -62,37 +62,37 @@ These are the different APIs you must call to export the associated Diagnostics 
 <span>1. GET the crash/error log metadata for every crash/error in a crash/error group by calling:</span>
 
 ```text
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors
 ```
 
 <span>2. GET the stacktrace by calling:</span>
 
 ```text
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace
 ```
 
 <span>3. GET any recorded events by calling:</span>
 
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/session_logs
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/session_logs
 ```
 
 <span>4. GET any attachments IDs by calling:</span>
 
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments
 ```
 
 1. If this is a text attachment, you can GET the text by calling:
 
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text
 ```
 
 2. If this is a binary attachment, you can GET URI location by calling:
 
 ```
-https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentIdd}/location
+https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentIdd}/location
 ```
 
 ## How to provide a copy of this data to my users
