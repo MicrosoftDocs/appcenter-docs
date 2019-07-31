@@ -335,14 +335,16 @@
 
 # HockeyApp Transition
 ## [Timeline](transition/index.md)
-## [Stage 1 - Synchronization](transition/side-by-side.md)
+## Stage 1 - Synchronization
+### [Introduction](transition/side-by-side.md)
 ### [Distribution Groups](transition/distribution-groups.md)
 ### [Distributing Releases](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
-## [Stage 2 - Moving apps](transition/moving/index.md)
+## Stage 2 - Moving Apps
+### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
-### [App Data](transition/moving/data.md)
+### [Migrated Data](transition/moving/data.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
