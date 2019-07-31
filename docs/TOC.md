@@ -42,7 +42,7 @@
 ## Xamarin
 ### [Introduction](build/xamarin/index.md)
 ### Android
-### [Introduction](build/xamarin/android/index.md)
+#### [Introduction](build/xamarin/android/index.md)
 #### [Code Signing](build/xamarin/android/code-signing.md)
 ### iOS
 #### [Introduction](build/xamarin/ios/index.md)
