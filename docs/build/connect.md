@@ -23,18 +23,18 @@ To build an app, connect to your code repository service account by selecting th
 
 Available repositories will populate in App Center after a successful connection. Select a repository and a branch where your app lives and set up your first build.
 
-## Removing connections and re-connecting
+## Removing connections and reconnecting
 
 With so many identities, apps (work or personal apps) and authentication methods, you might end up with your App Center account connected to a different code repository service than where your app(s) are living.
 
-If you have connected to a source repository service with the wrong account, you will have to go to your User settings in the source hosting service (Azure DevOps, GitHub or Bitbucket) and revoke the Oauth token manually. Then you will be able to re-connect to another account in App Center.
+If you have connected to a source repository service with the wrong account, you will have to go to your User settings in the source hosting service (Azure DevOps, GitHub or Bitbucket) and revoke the Oauth token manually. Then you can re-connect to another account in App Center.
 
 > [!IMPORTANT]
 > Keep in mind that if you connect to a new account, you will lose all the build configuration and previous builds for ALL the apps configured with the previous account.
 
 ### Bitbucket
 
-To connect to another Bitbucket account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in that browser from Bitbucket first.
+To connect to another Bitbucket account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you redo the Oauth flow in App Center, you sign out in that browser from Bitbucket first.
 
 ![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-oauth-token.jpg "Remove Bitbucket token")
 
@@ -42,13 +42,13 @@ To connect to another Bitbucket account, first revoke the Oauth token. Go to [ht
 
 If you logged in into App Center with a GitHub account, you can only build apps from repositories under that GitHub account.
 
-To connect to another GitHub account, first revoke the OAuth token. Go to [the GitHub profile web page](https://github.com/settings/profile) > Applications > Authorized OAuth Apps > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and repeat the Oauth flow. Make sure that before you re-do the Oauth flow in App Center, you logout in that browser from GitHub first.
+To connect to another GitHub account, first revoke the OAuth token. Go to [the GitHub profile web page](https://github.com/settings/profile) > Applications > Authorized OAuth Apps > Revoke App Center token. In App Center's **Build** tab, reconnect to GitHub and repeat the Oauth flow. Sign out from GitHub before reconnecting via the OAuth flow to App Center.
 
 ![Remove GitHub Oauth Token](~/build/images/remove-github-oauth-token.jpg "Remove GitHub token")
 
 ### <a name="vsts"/>Azure DevOps (formerly Visual Studio Team Services)
 
-To connect to another Azure DevOps account, first revoke the Oauth token. Go to the [Azure DevOps Me Page](https://app.vsaex.visualstudio.com/me) > Manage Authorizations (See screenshot below) > Revoke App Center token. In App Center's **Build** tab, reconnect to Azure DevOps and go through the Oauth flow again. Make sure that before you re-do the Oauth flow in App Center, you log out in the browser from the identity that you used to connect to the previous Azure DevOps account.
+To connect to another Azure DevOps account, first revoke the Oauth token. Go to the [Azure DevOps Me Page](https://app.vsaex.visualstudio.com/me) > Manage Authorizations (See screenshot below) > Revoke App Center token. In App Center's **Build** tab, reconnect to Azure DevOps and go through the Oauth flow again. Make sure that before you redo the Oauth flow in App Center, you sign out in the browser from the identity that you used to connect to the previous Azure DevOps account.
 
 > [!NOTE]
 > It can take up to 60 minutes for the Azure DevOps token to lose access. After access expires, you can connect App Center to another Azure DevOps account.
