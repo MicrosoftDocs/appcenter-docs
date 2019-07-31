@@ -2,9 +2,9 @@
 title: Managing source repository connections
 description: How to connect/reconnect to a repository to start building your app
 keywords: android
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirjapur
+ms.date: 07/30/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -13,8 +13,10 @@ ms.assetid: 1EFB8DFD-76D5-4F8C-B73A-2CFBE3E3BD97
 
 # Managing source repository connections
 
-App Center supports connections to the following code repository services: [Bitbucket](https://bitbucket.org/), [GitHub](https://github.com/), and [Azure DevOps (formerly VSTS)](https://visualstudio.microsoft.com/team-services/). Build apps in App Center by connecting to one of these providers.
+App Center supports connections to the following code repository services: [Bitbucket](https://bitbucket.org/), [GitHub](https://github.com/), [Gitlab.com](https://gitlab.com), and [Azure DevOps (formerly VSTS)](https://visualstudio.microsoft.com/team-services/). Build apps in App Center by connecting to one of these providers.
 
+> [!NOTE]
+> App Center does not support connections to self-hosted or on-prem versions of the above repository services.
 ## Connecting to a source repository
 
 To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign-in using the code repository service account credentials if you are not already signed in. Authorizing App Center is required to complete the connection.
