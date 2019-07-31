@@ -122,6 +122,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | macOS 10.12               | macosx10.12 |
 | macOS 10.13               | macosx10.13 |
 | macOS 10.14               | macosx10.14 |
+| macOS 10.15               | macosx10.15 |
 | iOS 10.3                  | iphoneos10.3 |
 | iOS 11.0                  | iphoneos11.0 |
 | iOS 11.1                  | iphoneos11.1 |
