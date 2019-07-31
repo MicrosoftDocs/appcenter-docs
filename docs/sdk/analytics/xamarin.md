@@ -18,10 +18,11 @@ ms.tgt_pltfrm: xamarin
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
+> * [Windows](windows.md)
 > * [Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
@@ -69,6 +70,9 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.
@@ -76,6 +80,9 @@ You can also check if App Center Analytics is enabled or not.
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started, it will always return `false` before start.
 
 ## Local storage size
 

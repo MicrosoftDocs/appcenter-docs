@@ -2,9 +2,9 @@
 title: Configure a Java Android build in App Center
 description: How to set up a build system for Android apps
 keywords: android
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 07/29/2019
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
 ms.service: vs-appcenter
@@ -44,23 +44,29 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
-### 3.3. Increment version number
+### 3.3. Build Android App Bundle (.aab)
+
+The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
+
+Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` file contains the `android.bundle` block, this option will automatically be toggled on.
+
+### 3.4. Increment version number
 
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
-### 3.4. Code signing
+### 3.5. Code signing
 
-A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing in [App Center's Android code signing documentation](~/build/android/code-signing.md).
+A successful build will produce an `.apk` file and an additional `.aab` file if enabled. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing in [App Center's Android code signing documentation](~/build/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
-### 3.5. Launch your successful build on a real device
+### 3.6. Launch your successful build on a real device
 
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
-### 3.6. build.gradle File
+### 3.7. Configure from the build.gradle File
 
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
-### 3.7. Distribute to a distribution group
+### 3.8. Distribute to a distribution group
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
@@ -98,6 +104,13 @@ The APK is an Android application packaged file which contains the Android app a
 ### 4.3. Building multiple APKs
 
 If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
+
+### 4.4. The deobfuscation mapping file (mapping.txt)
+
+The `mapping.txt` file contains information on how to map obfuscated stack traces for the app back to the original class and method names.
+
+* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled and use either Proguard or R8 to minify and obfuscate the app binary, the crash reporting service requires this `mapping.txt` file for a build in order to display [human readable (deobfuscated) crash reports](~/diagnostics/Android-ProGuard.md).
+* If you have previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the `mapping.txt` file in order to display human readable crash reports.
 
 ## 5. Supported versions and requirements
 

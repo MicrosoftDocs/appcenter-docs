@@ -134,7 +134,7 @@ In this example:
 + `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (formatted as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (formatted as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 
 ### Send a notification to all registered devices (broadcast)
 
@@ -165,7 +165,7 @@ In this example:
 + `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 
 ### Send a notification to an Audience
 
@@ -259,7 +259,7 @@ In this example:
 + `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 + `audiences` references the list of audience names to which notifications are sent.
 
 ### Send a notification to specific devices
@@ -301,10 +301,10 @@ Send the body of the request in JSON format (using the `application/json` conten
 
 In this example:
 
-+ `name`: Defines the name for the notification message.ß
++ `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 + `devices` references the list of Install IDs to which notifications are sent.
 
 ### Send notifications to users
@@ -360,7 +360,7 @@ In this example:
 + `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 + `user_ids` Defines the list of user identities (User ID) to which notifications are sent.
 
 > [!NOTE]
@@ -398,7 +398,7 @@ In this example:
 + `name`: Defines the name for the notification message.
 + `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
 + `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way.
++ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 + `account_ids` Defines the list of user identities (Account ID) to which notifications are sent.
 
 > [!NOTE]

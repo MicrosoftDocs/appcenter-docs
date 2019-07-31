@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
-ms.date: 03/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
 ms.service: vs-appcenter
@@ -18,10 +18,12 @@ ms.tgt_pltfrm: cordova
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Disable all services at runtime
@@ -36,6 +38,14 @@ To enable all services at once again, use the same API but pass `true` as a para
 
 ```javascript
 await AppCenter.setEnabled(true);
+```
+
+## Change state of service in runtime
+
+You can enable or disable desired service at the runtime with following code:
+
+```javascript
+await AppCenter.Analytics.setEnabled(false);
 ```
 
 ## Check if App Center is enabled

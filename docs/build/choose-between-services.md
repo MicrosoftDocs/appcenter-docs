@@ -39,7 +39,7 @@ All we need to know is the app you want us to build, from the repositories hoste
 > [!TIP]
 > We still offer you a way to do some customizations during build, using [Build Scripts!](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/) 
 
-**3. Do you want to have a true/continuous Build,Test and Distribute flow from a Single Service?**
+**3. Do you want to have a true/continuous Build, Test, and Distribute flow from a Single Service?**
  
 App Center lets you not only build the app, but can also execute [launch tests](https://docs.microsoft.com/en-us/appcenter/build/build-test-integration) and distribute to Alpha/Beta Testers and [App Stores](https://docs.microsoft.com/en-us/appcenter/build/build-to-store) as part of the build. 
  
@@ -79,5 +79,3 @@ Your team might also be used to Azure DevOps Pipelines, and would like to contin
 
 > [!TIP]
 > If you still want to use App Center Features as part of Build, you can use [Distribute](https://docs.microsoft.com/en-us/appcenter/distribution/vsts-deploy) and [Test](https://docs.microsoft.com/en-us/appcenter/test-cloud/vsts-plugin) tasks created for Azure DevOps Pipelines! 
-
-

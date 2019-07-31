@@ -28,7 +28,7 @@ A JavaScript library for programmatically managing your App Center account (e.g.
 2. Install the management SDK by executing:
     
     ```shell
-    npm install code-push --save`
+    npm install code-push --save
     ```
 
 3. Import it using the following statement (using ES6 syntax as applicable):

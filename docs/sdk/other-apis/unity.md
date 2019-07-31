@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.service: vs-appcenter
@@ -18,10 +18,12 @@ ms.tgt_pltfrm: unity
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Adjust the log level
@@ -76,6 +78,14 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+## Change state of service in runtime
+
+You can enable or disable desired service at the runtime with following code:
+
+```csharp
+Analytics.SetEnabledAsync(true);
+```
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
@@ -118,3 +128,8 @@ CustomProperties properties = new CustomProperties();
 properties.Clear("score");
 AppCenter.SetCustomProperties(properties);
 ```
+
+## Delay the start of App Center
+
+There may be cases where you want to delay the start of App Center until after **AppCenterBehavior** starts. For example, if you want to request user consent before starting any App Center services.  
+To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK the in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.

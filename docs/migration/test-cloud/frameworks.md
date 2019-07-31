@@ -2,9 +2,9 @@
 title: Mobile App Testing Frameworks Overview
 description: "Mobile App Testing Frameworks Overview"
 keywords: testcloud
-author: glennwester
-ms.author: glwest
-ms.date: 12/10/2018
+author: oddj0b
+ms.author: vigimm
+ms.date: 06/27/2019
 ms.topic: article
 ms.assetid: 9cdf95db-1ad5-4541-a21c-c20492d4607f
 ms.service: vs-appcenter
@@ -20,7 +20,7 @@ As part of our transition on the development of Calabash, we've provided an over
 
 ## The Future of Calabash
 
-Microsoft is committed to ensuring that Calabash works up until and including the next minor releases of the iOS and Android OS versions, that is, iOS 11.x and Android O / Android 8.x. After securing those releases, we will discontinue dedicated engineering contributions. Given the open source nature of Calabash, we hope the community will step up and continue to maintain and develop the tool. If you're interested in staying with Calabash, you'll want to take note to see if an individual or group steps up to take over maintenance. You may also see this as an opportunity to take matters into your own hands and devote engineering resources to maintain Calabash. If you're interested in taking over Calabash stewardship, please contact [appcentertest@microsoft.com](mailto:appcentertest@microsoft.com).
+Microsoft is committed to ensuring that Calabash works up until and including the next minor releases of the iOS and Android OS versions, that is, iOS 11.x and Android O / Android 8.x. After securing those releases, we will discontinue dedicated engineering contributions. Given the open source nature of Calabash, we hope the community will step up and continue to maintain and develop the tool. If you're interested in staying with Calabash, you'll want to take note to see if an individual or group steps up to take over maintenance. You may also see this as an opportunity to take matters into your own hands and devote engineering resources to maintain Calabash. If you're interested in taking over Calabash stewardship, please contact [App Center support](mailto:support@appcenter.ms).
 
 Calabash will continue to be supported in Visual Studio App Center up until and including iOS 11.x and Android 8.x. At this time, the tool will become a 3rd party testing framework supported in App Center Test.
 

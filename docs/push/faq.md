@@ -2,20 +2,20 @@
 title: App Center Push Frequently Asked Questions
 description: Help using the Push features of App Center
 keywords: app center, push, faq
-author: dimazaid
-ms.author: dimazaid
-ms.date: 02/11/2019
+author: jwargo
+ms.author: jowargo
+ms.date: 06/26/2019
 ms.topic: article
 ms.assetid: 0d663191-1b13-44f0-9df0-51185656d541
 ms.service: vs-appcenter
 ms.custom: push
 ---
 
-# Push FAQ
+# App Center Push Frequently Asked Questions
 
 **When sending a Push to device IDs, how many devices can I send to each request?**
 
-You can send up to 20 devices in single send request.
+You can send up to 100 devices in single send request. To send notifications to more than 100 devices, simply break your request into batches and send multiple requests (one per batch).
 
 **I'm seeing an Expired Channel error on iOS after I attempted to send a Push, how can I resolve it?**
 
@@ -48,4 +48,4 @@ All notifications are delivered to target devices by the platform's PNS. When a 
 
 All connections, from the sender to the App Center Push to the PNS, use HTTPS.
 
-You should not send personal or confidential information in a notification.To send sensitive payloads, we recommend using a Secure Push pattern. The sender delivers a ping notification with a message identifier to the device without the sensitive payload. When the app on the device receives the notification, the app calls a secure API directly to fetch the message details.
+Do not send personal or confidential information in a notification. To send sensitive payloads, we recommend using a Secure Push pattern. With this pattern, the sender sends a ping notification with a message identifier to the device without the sensitive payload. When the app on the device receives the notification, the app calls a secure API directly to fetch the message details.

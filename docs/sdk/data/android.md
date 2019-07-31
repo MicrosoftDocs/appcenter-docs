@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/07/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
         ```groovy
         dependencies {
-          def appCenterSdkVersion = '2.0.0'
+          def appCenterSdkVersion = '2.2.0'
           implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
         }
         ```
@@ -139,7 +139,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 
 - **Class\<T\> documentType:** This is a reference to the class type of the object you're storing in the document. For `User`, it would be `User.class` (java) or `User::class.java` (kotlin).
 
-- **String partition:** The partition that the document will live in. You will most likely be using the `DefaultPartitions.USER_DOCUMENTS` option to store the document within a specific user's partition.
+- **String partition:** The partition that the document will live in. Use the `DefaultPartitions.USER_DOCUMENTS` option to create a document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 > [!NOTE]
 > Public documents are read-only.
@@ -158,21 +158,19 @@ Data.create(user.id, user, User::class.java, DefaultPartitions.USER_DOCUMENTS)
 
 This code snippet creates a document and inserts the details of the `user` object within it.
 
-Now, let's take a step further. Say there's the chance of no connectivity when this document is created. App Center Data enables you to persist this document creation when service is regained, so users can still seamlessly use your app offline.
+Now, let's take a step further. Say there's the chance of no connectivity when this document is created. By default, offline persistence is enabled with an infinite time-to-live (TTL), meaning offline write is supported and your documents are cached with no expiration time. But, App Center Data also enables you to give these locally cached documents a TTL of your choosing using `WriteOptions`, meaning they expire in a time span of your choice.
 
 ```java
 User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
-Data.create(user.id, user, User.class, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions());
+Data.create(user.id, user, User.class, DefaultPartitions.USER_DOCUMENTS, new WriteOptions(deviceTimeToLive));
 ```
 
 ```kotlin
 val user = User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555")
-Data.create(user.id, user, User::class.java, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions())
+Data.create(user.id, user, User::class.java, DefaultPartitions.USER_DOCUMENTS, WriteOptions(deviceTimeToLive));
 ```
 
-This code snippet does the same thing as the first create snippet in this section, but has one distinct difference. This document will be cached locally if the user is offline, then will be persisted to the cloud as soon as they regain connectivity. `createInfiniteCacheOptions()` will cause this object to be cached indefinitely rather than the default one day.
-
-You can also specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
+You specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
 
 ## Reading a Document
 
@@ -182,7 +180,7 @@ Next, we're going to read a document using the `read` method. This method takes 
 
 - **Class\<T\> documentType:** This is a reference to the class type of the of object you're storing in the document. For `User`, it would be `User.class` (java) or `User::class.java` (kotlin).
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.USER_DOCUMENTS` option to read the document from a specific user's partition.
+- **String partition:** The partition that the document lives in. You can either use `DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 If the user who created the `user` object wants to view all of their personal data, they could perform a read. Imagine we've created some code in our app that enables them to fetch their personal data that's stored in the database. Fetching the data would look like this:
 
@@ -212,10 +210,12 @@ Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccep
 })
 ```
 
-The code above fetches the user document from the database and stores it in a new `User` object. By utilizing the `ReadOptions` parameter you can also configure this document for offline reads, enabling the data to be visible to users even when they're offline. Here's an example of this:
+The code above fetches the user document from the database and stores it in a new `User` object.
+
+Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `ReadOptions` parameter and specifying a TTL in seconds you can also configure offline read persistence with a specific TTL for the locally cached document, enabling the data to be visible to users even when they're offline once it's cached. You can also declare the lifetime of the data being cached locally with a time span of your choice. Here's an example of this:
 
 ```java
-Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS, ReadOptions.createInfiniteCacheOptions()).thenAccept(new AppCenterConsumer<DocumentWrapper<User>>() {
+Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS, new ReadOptions(deviceTimeToLive)).thenAccept(new AppCenterConsumer<DocumentWrapper<User>>() {
 
     @Override
     public void accept(DocumentWrapper<User> userDocumentWrapper) {
@@ -230,7 +230,7 @@ Data.read(user.id, User.class, DefaultPartitions.USER_DOCUMENTS, ReadOptions.cre
 ```
 
 ```kotlin
-Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptions.createInfiniteCacheOptions()).thenAccept { userDocumentWrapper ->
+Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptions(deviceTimeToLive)).thenAccept { userDocumentWrapper ->
     if (userDocumentWrapper.error == null) {
         val fetchedUser = userDocumentWrapper.deserializedValue
     } else {
@@ -240,7 +240,7 @@ Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptio
 }
 ```
 
-You can also specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
+You specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
 
 [!include[](../android-see-async.md)]
 
@@ -248,9 +248,11 @@ You can also specify the time-to-live (TTL) on a document by using `new ReadOpti
 > Calling `get()` on any `AppCenterFuture` object returned by any `Data` API on the UI thread will cause a deadlock.
 > Always use `thenAccept` to make sure the code runs in background. Calling `get()` is safe only if you are already in a worker thread.
 
-## Replace a Document
+## Replace (Upsert) a Document
 
-If the user wanted to change their email. This action could be possible through a simple `replace` call. The parameters for replacing a document are the following:
+If the user wanted to change their email. This action could be possible through a simple `replace` call. The Replace call also doubles as an Upsert, so if you attempt to replace a document with a documentId that doesn't exist, it will create a new document.
+
+The parameters for replacing a document are the following:
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
@@ -258,7 +260,7 @@ If the user wanted to change their email. This action could be possible through 
 
 - **Class\<T\> documentType:** This is a reference to the class type of the object you're storing in the document. For `User`, it would be `User.class` (java) or `User::class.java` (kotlin).
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.USER_DOCUMENTS` option to replace the document within a specific user's partition.
+- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.USER_DOCUMENTS` option to replace the document within an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```java
 user.setEmail("alex@microsoft.com");
@@ -270,16 +272,16 @@ user.setEmail("alex@microsoft.com")
 Data.replace(user.id, user, User::class.java, DefaultPartitions.USER_Document)
 ```
 
-You can also configure the replacement document for offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```java
 user.setEmail("alex@microsoft.com");
-Data.replace( user.id, user, User.class, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions());
+Data.replace( user.id, user, User.class, DefaultPartitions.USER_DOCUMENTS, new WriteOptions(deviceTimeToLive));
 ```
 
 ```kotlin
 user.setEmail("alex@microsoft.com")
-Data.replace(user.id, user, User::class.java, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions())
+Data.replace(user.id, user, User::class.java, DefaultPartitions.USER_DOCUMENTS, WriteOptions(deviceTimeToLive))
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
@@ -290,7 +292,7 @@ In order to delete a document, you need to specify the partition type and the do
 
 - **String documentId:** This is the unique identifier of the document. The characters `#?/\` are not allowed, nor is whitespace.
 
-- **String partition:** The partition that the document lives in. You will most likely be using the `DefaultPartitions.USER_DOCUMENTS` option to delete the document from a specific user's partition.
+- **String partition:** The partition that the document lives in. Use the `DefaultPartitions.USER_DOCUMENTS` option to delete the document from an authenticated user's partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```java
 Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS);
@@ -300,14 +302,14 @@ Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS);
 Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS)
 ```
 
-You can also configure the deleted document for offline persistence:
+By default, offline persistence is enabled by default with a time-to-live (TTL) as infinite. But, by utilizing the `WriteOptions` parameter and specifying a TTL in seconds you can also configure how long the documents are cached locally for offline writes.
 
 ```java
-Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions());
+Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS,  new WriteOptions(deviceTimeToLive));
 ```
 
 ```kotlin
-Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS, WriteOptions.createInfiniteCacheOptions())
+Data.delete(user.id, DefaultPartitions.USER_DOCUMENTS,  new WriteOptions(deviceTimeToLive));
 ```
 
 You can specify the time-to-live (TTL) on a document by using `new WriteOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
@@ -318,7 +320,7 @@ Lastly, there is the list functionality. List is used to fetch a list of documen
 
 - **Class\<T\> documentType:** This is a reference to the class type of the of object you're storing in the document. For `User`, it would be `User.class` (java) or `User::class.java` (kotlin).
 
-- **String partition:** The partition that the document(s) live in. You will most likely be using the `DefaultPartitions.USER_DOCUMENTS` option to list documents from a specific user's partition.
+- **String partition:** The partition that the document(s) live in. The partition that the document lives in. You can either use `DefaultPartitions.USER_DOCUMENTS` option to read a document that lives in an authenticated user's partition or `DefaultPartitions.APP_DOCUMENTS` to read a document from the read-only public partition. To use the private document partitions, you **must** be authenticated via [App Center Auth](../../auth/index.md).
 
 ```java
 Data.list(User.class, DefaultPartitions.USER_DOCUMENTS);
@@ -330,8 +332,25 @@ Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS)
 
 This will return a page of the documents that exist within a given user partition that align with the `User` class model.
 
-> [!NOTE]
-> We don't currently support offline persistance when listing documents.
+Offline persistence is enabled by default with an infinite time-to-live (TTL). But, by utilizing the `ReadOptions` parameter and specifying a TTL in seconds you can also configure a list for offline reads with a specific TTL, enabling the data to be visible to users even when they're offline once it's cached and expiring the locally cached data in a time span of your choice. Here's an example of this:
+
+```java
+Data.list(User.class, DefaultPartitions.USER_DOCUMENTS, new ReadOptions(deviceTimeToLive)).thenAccept( new AppCenterConsumer<PaginatedDocuments<DocumentObject>>() {
+     @Override
+     public void accept(PaginatedDocuments<DocumentObject> documentWrappers) {
+        // Do something here
+     }
+});
+```
+
+```kotlin
+Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptions(deviceTimeToLive)).thenAccept( new AppCenterConsumer<PaginatedDocuments<DocumentObject>>() {
+     @Override
+     public void accept(PaginatedDocuments<DocumentObject> documentWrappers) {
+        // Do something here
+     }
+});
+```
 
 ### Pagination
 

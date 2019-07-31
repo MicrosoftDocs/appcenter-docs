@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -32,9 +32,9 @@ dev_langs:
 > * [Unity Android](unity-android.md)
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
->
+
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, it is scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow [the SDK migration guide](migration/android.md).
+> Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, please refer to [the SDK migration guide](migration/android.md).
 
 [!include[](introduction-android.md)]
 
@@ -46,7 +46,7 @@ Please follow the [Get started](~/sdk/getting-started/android.md) section if you
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-1. Modify the **project root** level **build.gradle** file:
+1. Modify the Android project level **build.gradle** file:
 
     ```groovy
     buildscript {
@@ -79,7 +79,7 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     dependencies {
         // Add App Center Push module dependency
-        def appCenterSdkVersion = '2.0.0'
+        def appCenterSdkVersion = '2.2.0'
         implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
 
@@ -94,9 +94,9 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Push
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center capabilities in your application, the app must opt-in to the module(s) it wants to use. By default no modules are started and the app must explicitly call each of them when starting the SDK.
 
-Add the `Push` class to your `AppCenter.start()` method to start App Center Push.
+Add the `Push` class to the app's call to the `AppCenter.start()` method to start App Center Push.
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
@@ -105,7 +105,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Push.class);
 AppCenter.start(application, "{Your App Secret}", Push::class.java)
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please check out the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
+Replace `{Your App Secret}` in the sample with the App Secret for the App Center project associated with this application. Refer to the [Get started](~/sdk/getting-started/android.md) section if the SDK isn't configured in the application yet.
 
 Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
 
@@ -120,20 +120,18 @@ import com.microsoft.appcenter.push.Push
 
 ## Intercept push notifications
 
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+Set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> A notification is not generated when your application receives a push in the foreground.
->
-> [!NOTE]
-> If the push is received in background, the event is **NOT** triggered at receive time.
-> The event is triggered when you click on the notification.
->
-> [!NOTE]
-> The background notification click callback does **NOT** expose **title** and **message**.
-> **Title** and **message** are only available in **foreground** pushes.
+> The device does not generate a notification when an application receives a push notification when the app is in the foreground.
 
-You need to register the listener before calling `AppCenter.start` as shown in the following example:
+> [!NOTE]
+> If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.
+
+> [!NOTE]
+> The background notification click callback does **NOT** expose **title** and **message**. **Title** and **message** are only available in **foreground** pushes.
+
+The app must register the listener before calling `AppCenter.start` as shown in the following example:
 
 ```java
 Push.setListener(new MyPushListener());
@@ -144,7 +142,7 @@ Push.setListener(MyPushListener())
 AppCenter.start(...)
 ```
 
-If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you need to add this in the activity `onNewIntent` method:
+If the app's launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, add the following code in the activity `onNewIntent` method:
 
 ```java
 @Override
@@ -279,6 +277,9 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `Push` has been started.
+
 ## Check if App Center Push is enabled
 
 You can also check if App Center Push is enabled or not:
@@ -291,3 +292,6 @@ Push.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Push` has been started, it will always return `false` before start.

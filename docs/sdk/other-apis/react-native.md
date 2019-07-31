@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -18,12 +18,13 @@ ms.tgt_pltfrm: react-native
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
-
 
 ## Adjust the log level
 
@@ -89,6 +90,14 @@ await AppCenter.setEnabled(true);
 ```
 
 The state is persisted in the device's storage across application launches.
+
+## Change state of service in runtime
+
+You can enable or disable desired service at the runtime with following code:
+
+```javascript
+await AppCenter.Analytics.setEnabled(false);
+```
 
 ## Check if App Center is enabled
 

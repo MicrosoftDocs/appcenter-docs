@@ -4,7 +4,7 @@ description: How to delete personal information from Diagnostics to your users
 keywords: GDPR, DSR, privacy, EU
 author: blparr
 ms.author: blparr
-ms.date: 01/29/2019
+ms.date: 07/30/2019
 ms.topic: article 
 ms.assetid: 65D9D23C-440E-467D-B183-15A29FA08830
 ms.service: vs-appcenter
@@ -32,7 +32,7 @@ If you did not keep a mapping between your user IDs and install IDS, you must fo
 To export your Diagnostics data to [Azure Blob Storage](~/analytics/export.md), call the following App Center API:
 
 ```text
-POST https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
+POST https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
 Additional details are available in the [Export API documentation](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create).
@@ -43,14 +43,14 @@ Use the following payload to export your crashes to Azure Blob Storage:
 {
   "type" : "blob_storage_linked_subscription",
   "subscription_id": "<Your-Azure-Subscription-ID",
-  "exportEntities": [ "crashes" ]
+  "export_entities": [ "crashes" ]
 }
 ```
 
 To find the location in blob storage, you can call the following App Center API:
 
 ```text
-GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
+GET https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
 Additional details are available in the [Export Configurations List API documentation](https://openapi.appcenter.ms/#/export/ExportConfigurations_List).
@@ -74,7 +74,7 @@ If you are keeping a mapping between your user IDs and their App Center Install 
 Stop processing incoming Diagnostics data for a given install ID, call the following App Center API for each install ID:
 
 ```text
-PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
+PUT https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
 ```
 
 Additional details are available in the [Analytics API section](https://openapi.appcenter.ms/#/analytics/Devices_BlockLogs). You must call this API for every device (Install ID) your user has installed your app.
@@ -84,7 +84,7 @@ Additional details are available in the [Analytics API section](https://openapi.
 To delete the Diagnostics data associated with an Install ID, call the following App Center API:
 
 ```text
-DELETE https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}
+DELETE https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}
 ```
 
 For this API call, you must specify the crash/error ID, the crash/error group ID, the owner name, and the name of the app.

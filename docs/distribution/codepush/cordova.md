@@ -148,7 +148,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-Android
 > By using the App Center CLI `set-current` function you no longer have to use the -a flag to specify which app a command is directed at.*
 > 
 > [!TIP]
-> When releasing updates to CodePush, you do not need to bump your app's version in the **config.xml** file, since you aren't modifying the app store version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.*
+> When releasing updates to CodePush, you do not need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.*
 
 The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and therefore, can generate your update and know exactly which files to upload. Additionally, in order to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).  
 

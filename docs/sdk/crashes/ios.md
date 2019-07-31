@@ -4,7 +4,7 @@ description: App Center Crashes for iOS
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 04/18/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: vs-appcenter
@@ -20,11 +20,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
-> * [macOS](macos.md)
-> * [Unity](unity.md)
 > * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
+> * [macOS](macos.md)
+> * [tvOS](tvos.md)
+> * [Unity](unity.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
@@ -34,15 +36,18 @@ Follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven'
 Also note that crash logs on iOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
+> The SDK will not forward any crash log if you are attached to the debugger. Make sure the debugger is not attached when you crash the app.
+
+> [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
 [!include[](apple-common-methods-1.md)]
 
-### Ask for the users' consent to send a crash log
+### Ask for the user's consent to send a crash log
 
-If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
+If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, for example, through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you are responsible for obtaining the user's confirmation, for example, through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.

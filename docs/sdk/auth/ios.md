@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/31/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter
@@ -20,6 +20,7 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
@@ -79,31 +80,80 @@ import AppCenterAuth
 
 ## Modify the project's Info.plist
 
+1. In the project's **Info.plist** file, right-click on the file and select **Open as...** > **Source code**. 
 > [!NOTE]
-> If the App Center Distribute SDK has previously been configured, the `URL types` key will already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.
+> If you are using the [VS for Mac IDE](https://visualstudio.microsoft.com/vs/mac/), right-clicking on the file and selecting **Open With...** does not show the option for **Source code**. In this case, you would have to open your **Info.plist** file in another text editor, for example, [Visual Studio Code](https://code.visualstudio.com/).
+> 
+2. Copy and paste the following code:
+ 
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal{APP_SECRET}</string>
+        </array>
+    </dict>
+</array>
+```
 
-1. In the project's **Info.plist** file, add a new key for **URL types** by clicking the **+** button next to **Information Property List** at the top. If Xcode displays the project's **Info.plist** as source code, refer to the tip below.
-2. Change the key type to Array.
-3. Add a new entry to the array (`Item 0`) and change the type to Dictionary.
-4. Under **Item 0**, add a **Document Role** key and change the value to **Editor**.
-5. Under **Item 0**, add a **URL Schemes** key and change the type to Array.
-6. Under **URL Schemes** key, add a new entry (**Item 0**).
-7. Under **URL Schemes** > **Item 0**, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
+Replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md). For example, if your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then it should look like `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
 
-> [!TIP]
-> If you want to verify that you modified the `Info.plist` correctly, right-click on the file and select **Open as...** > **Source code**. It should contain the following entry with [your actual App Secret](~/dashboard/faq.md) instead of `{APP_SECRET}`: `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
-> ```xml
-> <key>CFBundleURLTypes</key>
+Here's an example of the code snippet given that the app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+        </array>
+    </dict>
+</array>
+```
+
+> [!NOTE]
+> If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
+> ``` 
 > <array>
-> 	<dict>
-> 		<key>CFBundleTypeRole</key>
-> 		<string>Editor</string>
-> 		<key>CFBundleURLSchemes</key>
-> 		<array>
-> 			<string>msal{APP_SECRET}</string>
-> 		</array>
-> 	</dict>
-> </array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
+> 
+> If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
 > ```
 
 ## Add keychain sharing capability
@@ -163,6 +213,146 @@ Please note the following:
 * The SDK automatically saves the signed-in users' information so they do not have to sign in to your app again.
 * If the app calls `signIn` again, the SDK shows the sign-in UI again only if the saved sign-in information has expired or has been revoked by the authentication server.
 
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```objc
+[MSAuth signInWithCompletionHandler:^(MSUserInformation *_Nullable userInformation, NSError *_Nullable error) {
+
+  if (!error) {
+
+    // Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
+    NSString *idToken = userInformation.idToken;
+    NSString *accessToken = userInformation.accessToken;
+
+    // Do work with either token.
+  }
+  else {
+
+    // Do something with sign in failure.
+  }
+}];
+```
+```swift
+MSAuth.signIn { userInformation, error in
+
+  if error == nil {
+
+    // Sign-in succeeded if error is nil.
+    // userInformation is not nil if error is nil.
+    // and both idToken and accessToken are not nil when userInformation is not nil.
+    var idToken = userInformation!.idToken;
+    var accessToken = userInformation!.accessToken;
+
+    // Do work with either token.
+	}
+  else {
+
+    // Do something with sign in failure.
+  }
+}
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```objc
+NSString *idToken = userInformation.idToken;
+NSArray *tokenSplit = [idToken componentsSeparatedByString:@"."];
+if ([tokenSplit count] > 1) {
+  NSString *rawClaims = tokenSplit[1];
+  size_t paddedLength = rawClaims.length + (4 - rawClaims.length % 4) % 4;
+  rawClaims = [rawClaims stringByPaddingToLength:paddedLength withString:@"=" startingAtIndex:0];
+  NSData *claimsData = [[NSData alloc] initWithBase64EncodedString:rawClaims options:NSDataBase64DecodingIgnoreUnknownCharacters];
+  if (claimsData) {
+    NSError *error;
+    NSDictionary *claims = [NSJSONSerialization JSONObjectWithData:claimsData options:0 error:&error];
+    if (!error) {
+
+      // Get display name.
+      id displayName = claims[@"name"];
+      if ([displayName isKindOfClass:[NSString class]]) {
+
+        // Do something with display name.
+      }
+
+      // Get email addresses.
+      id emails = claims[@"emails"];
+      if ([emails isKindOfClass:[NSArray class]] && [emails count] > 0) {
+        NSString *firstEmail = emails[0];
+
+        // Do something with the first email address.
+      }
+    }
+  }
+}
+```
+```swift
+let idToken = userInformation?.idToken
+let tokenSplit = idToken?.components(separatedBy: ".")
+if tokenSplit != nil && tokenSplit!.count > 1 {
+  var rawClaims = tokenSplit![1]
+  let paddedLength = rawClaims.count + (4 - rawClaims.count % 4) % 4
+  rawClaims = rawClaims.padding(toLength: paddedLength, withPad: "=", startingAt: 0)
+  let claimsData = Data(base64Encoded: rawClaims, options: .ignoreUnknownCharacters)
+  do {
+    if claimsData != nil {
+      let claims = try JSONSerialization.jsonObject(with: claimsData!, options: []) as? [AnyHashable: Any]
+      if claims != nil {
+
+        // Get display name.
+        let displayName = claims!["name"]
+        if displayName is String {
+          
+          // Do something with display name.
+        }
+
+        // Get email addresses.
+        let emails = claims!["emails"] as? [Any]
+        if emails != nil && emails!.count > 0 {
+          let firstEmail = emails![0] as? String
+
+          // Do something with the first email address.
+        }
+      }
+    }
+  } catch {
+    
+    // Handle error.
+  }
+}
+```
+
 ## Sign out
 
 To sign out the user and clear all associated authentication tokens, call the `signOut` method:
@@ -196,6 +386,9 @@ MSAuth.setEnabled(true)
 
 The enabled/disabled state is stored by the SDK and does not change when the app restarts.
 
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started.
+
 ## Check if App Center Auth is enabled
 
 Check to see if App Center Auth is enabled using the following:
@@ -206,6 +399,9 @@ Check to see if App Center Auth is enabled using the following:
 ```swift
 MSAuth.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAuth` has been started, it will always return `NO` or `false` before start.
 
 ## Disable automatic forwarding of the app delegate's methods to App Center services
 

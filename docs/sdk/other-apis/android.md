@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/20/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.service: vs-appcenter
@@ -21,10 +21,12 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [UWP](uwp.md)
-> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Adjust the log level
@@ -52,6 +54,9 @@ AppCenter.getInstallId()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started, it will always return `null` before start.
 
 ## Identify users
 
@@ -96,6 +101,23 @@ The state is persisted in the device's storage across application launches.
 
 [!include[](../android-see-async.md)]
 
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started.
+
+## Change state of service in runtime
+
+Enable or disable desired services at the runtime with following code:
+
+```java
+Analytics.setEnabled(false);
+```
+```kotlin
+Analytics.setEnabled(false)
+```
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
@@ -108,6 +130,9 @@ AppCenter.isEnabled()
 ```
 
 [!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `AppCenter` has been started, it will always return `false` before start.
 
 ## Check App Center SDK version at runtime
 

@@ -1,12 +1,31 @@
+---
+title: Shared docs for Apple SDK
+description:  Shared docs for Apple SDK
+keywords: sdk
+author: elamalani
+ms.author: emalani
+ms.date: 07/22/2019
+ms.topic: article
+ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
+ms.service: vs-appcenter
+ms.custom: sdk
+ms.tgt_pltfrm: apple
+dev_langs:  
+ - swift
+ - objc
+---
+
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
-> * [Unity](unity.md)
-> * [UWP](uwp.md)
 > * [Xamarin](xamarin.md)
+> * [UWP](uwp.md)
+> * [WPF/WinForms](wpf-winforms.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
-> * [Apache Cordova](cordova.md)
+> * [tvOS](tvos.md)
+> * [Unity](unity.md)
+> * [Cordova](cordova.md)
 
 ## Adjust the log level
 
@@ -72,6 +91,23 @@ MSAppCenter.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
+> [!NOTE]
+> This method must only be used after `MSAppCenter` has been started.
+
+## Change state of service in runtime
+
+Enable or disable desired services at the runtime with following code:
+
+```objc
+[MSAnalytics setEnabled:NO];
+```
+```swift
+MSAnalytics.setEnabled(false)
+```
+
+> [!NOTE]
+> This method must only be used after `MSAnalytics` has been started.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
@@ -82,6 +118,9 @@ You can also check if App Center is enabled or not.
 ```swift
 MSAppCenter.isEnabled()
 ```
+
+> [!NOTE]
+> This method must only be used after `MSAppCenter` has been started, it will always return `NO` or `false` before start.
 
 ## Check App Center SDK version at runtime
 

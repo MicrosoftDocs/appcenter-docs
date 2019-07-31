@@ -2,9 +2,9 @@
 title: App Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
-author: siminapasat
-ms.author: siminap
-ms.date: 06/04/2019
+author: nrajpurkar
+ms.author: niloferr
+ms.date: 07/09/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -47,51 +47,52 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Python 3.7.3
 - Ruby 2.6.3p62
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.12.5
+- Go 1.12.6
 - Miniconda 4.6.14
-- MacOS toolcache Python 2.7.16 3.4.8 3.5.7 3.6.8 3.7.3
+- MacOS toolcache Python 2.7.15 3.4.8 3.5.5 3.6.8 3.7.2
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
 
 ### Node.js versions
 - v6.17.1
 - v8.16.0
-- v10.15.3
-- v12.1.0
+- v10.16.0
+- v12.4.0
 
 ### Package Management
 
-- Bundler 2.0.1
+- Bundler 2.0.2
 - Carthage 0.33.0
-- CocoaPods 1.7.0
-- Homebrew 2.1.4
+- CocoaPods 1.7.3
+- Homebrew 2.1.6
 - NPM 3.10.10
 - Yarn 1.16.0
 - NuGet 4.7.0.5148
-- Pip 19.0.3 (python 3.7)
-- Pip 19.0.3 (python 2.7)
+- Pip 19.1.1 (python 3.7)
+- Pip 19.1.1 (python 2.7)
 
 ### Project Management
 
 - Apache Maven 3.6.1
-- Gradle 5.4.1
+- Gradle 5.5
 
 ### Utilities
 
-- Curl 7.65.0 (libcurl/7.65.0 SecureTransport zlib/1.2.11)
-- Git 2.21.0
+- Curl 7.65.1 (libcurl/7.65.1 SecureTransport zlib/1.2.11)
+- Git 2.22.0
 - Git LFS 2.7.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.0
-- GNU parallel 20190522
+- GNU parallel 20190622
 
 ### Tools
 
-- Fastlane 2.123.0
-- App Center CLI 1.1.18
-- Azure-CLI 2.0.64
+- Fastlane 2.126.0
+- App Center CLI 1.1.19
+- Azure-CLI 2.0.67
 
 ## Xcode
 
+- Xcode 11 beta (11M337n)
 - Xcode 10.2.1 (10E1001)
 - Xcode 10.2 (10E125)
 - Xcode 10.1 (10B61)
@@ -495,7 +496,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 28.0.3 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.1 |
 
 ### Android SDK Platforms
 
@@ -549,6 +550,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-28.0.1    | Android SDK Build-tools, Revision 28.0.1  |
 | build-tools-28.0.2    | Android SDK Build-tools, Revision 28.0.2  |
 | build-tools-28.0.3    | Android SDK Build-tools, Revision 28.0.3  |
+| build-tools-29.0.0    | Android SDK Build-tools, Revision 29.0.0  |
 
 ### Utils
 
@@ -586,7 +588,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.0.8.2
+- 8.1.3.19
 
 ### Mono
 

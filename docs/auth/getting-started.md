@@ -4,7 +4,7 @@ description: How to get started with the App Center Auth Service
 keywords: MBaaS, Auth, Identity, App Center Auth
 author: amchew
 ms.author: amchew
-ms.date: 06/03/2019
+ms.date: 07/08/2019
 ms.topic: article
 ms.assetid: 1222525f-e769-49d8-8625-738db5bc8880
 ms.service: vs-appcenter
@@ -23,14 +23,14 @@ To get started, you must have an existing:
   - [Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant)
   - [App Center account](https://appcenter.ms) and [application](https://docs.microsoft.com/appcenter/dashboard/creating-and-managing-apps#creating-an-app)
 
-You must be granted the following Azure AD B2C roles in order to connect an Azure AD B2C tenant in App Center:
+### Required roles
+In order to connect an Azure AD B2C directory in App Center, you must be either a Global Administrator or granted one or more of the following Azure AD roles depending upon which resource you want to access.  
   - Application Administrator
   - B2C IEF Keyset Administrator
   - B2C IEF Policy Administrator
   - B2C User Flow Administrator
   - B2C User Flow Attribute Administrator
-  - External Identity Provider Administrator
-  - Global Administrator
+  - External Identity Provider Administrator  
   - Global Reader
   - User Administrator
 
@@ -41,7 +41,7 @@ Learn more about Azure AD B2C [role definitions](https://docs.microsoft.com/azur
 1. Sign in to the Azure portal at https://portal.azure.com.
 2. Make sure that you are using the directory that contains your Azure AD B2C tenant by clicking the **Directory + subscription filter** (Book binder icon) in top row and choosing the directory.  
 ![How to switch Azure directories](./images/switch-azure-directory.png)
-3. In the top row, type **B2C** in the search bar and select **Azure AD B2C** under **Services**.
+3. In the top row, type **B2C** in the search bar and select **Azure AD B2C** under **Services**.      
 ![Search for Azure AD B2C](./images/search-B2C.png)
 4. In the column second from the left, click **Applications** and **Add**.
 ![Register B2C application](./images/register-B2C-application.png)
@@ -51,7 +51,7 @@ Learn more about Azure AD B2C [role definitions](https://docs.microsoft.com/azur
    - **Reply URL**: choose an endpoint where Azure AD B2C should return any tokens that your application requests. For example, you can configure it to listen locally at `https://localhost:500`. If you do not know the port number, you can also enter a placeholder value and change it later. For now, set it to `https://jwt.ms`, which displays the token contents for inspection.
    - **App ID URI**: enter a resource identifier to identify your web API. Although it says in the UI that it is optional, please fill this in as we will need this App ID URI to configure scopes. You should see `https://{domain-name}/` and a text field to enter your resource identifier. For now, you can fill in `api`. A full example is  `https://appcenterAuth.onmicrosoft.com/api`, where `appcenterAuth.onmicrosoft.com` is my `{domain-name}`. 
 7. Under **Native client**, toggle **Yes**. 
-   - For **Custom Redirect URI**, enter `msal{appSecret}://auth`. For example, `msalf4333101-2a0e-4b30-9dca-225d6e374809://auth`, where `f4333101-2a0e-4b30-9dca-225d6e374809` is the App Center app secret of the app you'd like to connect with Auth. Follow the documentation on [how to find the App Center app secret](https://docs.microsoft.com/appcenter/dashboard/faq).
+   - For **Custom Redirect URI**, enter `msal{appSecret}://auth`. For example, `msalf4333101-2a0e-4b30-9dca-225d6e374809://auth`, where `f4333101-2a0e-4b30-9dca-225d6e374809` is the App Center app secret of the App Center app that you'd like to connect with Auth. Follow the documentation on [how to find the App Center app secret](https://docs.microsoft.com/appcenter/dashboard/faq).
 8. Click **Create**. Excellent! You've registered your mobile application with Azure AD B2C.
 9. Click on the application. For example, "authApp". 
 10. In the column second from left, select **API access**. 
@@ -116,6 +116,7 @@ After [configuring App Center Auth in the portal](#configure-the-app-center-auth
 
   - [Android Auth SDK documentation](~/sdk/auth/android.md)
   - [iOS Auth SDK documentation](~/sdk/auth/ios.md)
+  - [React Native Auth SDK documentation](~/sdk/auth/react-native.md)
   - [Xamarin Auth SDK documentation](~/sdk/auth/xamarin.md)
 
 Once you have integrated the SDK, refresh the **Getting Started** page on the Auth service and you will see the [**Auth Overview**](#auth-overview-page) page.
@@ -173,7 +174,7 @@ You can use the signed-in user's identity in App Center Auth to [send push notif
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Make sure that you are using the directory that contains your Azure AD B2C tenant by clicking the **Directory + subscription filter** (Book binder icon) in top row and choosing the directory.  
 ![How to switch Azure directories](./images/switch-azure-directory.png)
-3. In the top row, type **B2C** in the search bar and select **Azure AD B2C** under Services.
+3. In the top row, type **B2C** in the search bar and select **Azure AD B2C** under Services.      
 ![Search for Azure AD B2C](./images/search-B2C.png)
 4. In the column second from the left, select **User flows (policies)**, and click the **user flow** row.
 ![Copy the sign-in user flow from Azure](./images/copy-sign-in-user-flow.png)

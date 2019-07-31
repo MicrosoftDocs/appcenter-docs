@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: amchew
 ms.author: amchew
-ms.date: 04/04/2019
+ms.date: 06/19/2019
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -35,6 +35,9 @@ Each API request must include an API token from your App Center account; to obta
 9. Click the **Close** button.
 
 Store the token somewhere as you'll need it when working with the App Center Swagger and when sending API requests from an application to App Center.
+
+> [!NOTE]
+> Each App Center account may create up to 5000 API tokens.
 
 ## Using an API Token in an API request
 

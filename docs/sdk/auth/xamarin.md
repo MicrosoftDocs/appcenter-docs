@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 05/31/2019
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
 ms.service: vs-appcenter
@@ -17,6 +17,7 @@ ms.tgt_pltfrm: xamarin
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
@@ -91,6 +92,12 @@ Be sure to replace `{Your App Secret}` in the code sample above with [your App S
 AppCenter.Start("65dc3680-7325-4000-a0e7-dbd2276eafd1", typeof(Auth));
 ```
 
+If you have already integrated other App Center modules, for example Data, it should look like the following code snippet:
+
+```csharp
+AppCenter.Start("65dc3680-7325-4000-a0e7-dbd2276eafd1", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
+```
+
 ##### Xamarin.Android
 
 Open the project's **MainActivity.cs** and add the `Start()` call inside the `OnCreate()` method:
@@ -104,6 +111,13 @@ Be sure to replace `{Your App Secret}` in the code sample above with [your App S
 AppCenter.Start("7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
 ```
 
+If you have already integrated other App Center modules, your call to start should look similar to the following code snippet.  This example integrates Analytics, Crashes, Auth, and Data:
+
+
+```csharp
+AppCenter.Start("7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
+```
+
 ##### Xamarin.Forms
 
 To create a Xamarin.Forms app targeting both Android and iOS platforms, you must create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's **App.xaml.cs** (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
@@ -115,6 +129,12 @@ AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android
 Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
 ```csharp
 AppCenter.Start("ios=65dc3680-7325-4000-a0e7-dbd2276eafd1;android=7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Auth));
+```
+
+If you have already integrated other App Center modules, for example Data, it should look like the following code snippet:
+
+```csharp
+AppCenter.Start("ios=65dc3680-7325-4000-a0e7-dbd2276eafd1;android=7433d0a8-3a21-49e4-8fca-f5eff43458df", typeof(Analytics), typeof(Crashes), typeof(Auth), typeof(Data));
 ```
 
 ### 3. Android additional steps
@@ -138,7 +158,22 @@ To use the sign-in, you must add the following element to the project's **Androi
 </activity>
 ```
 
-Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md) (and remove the curly braces): `android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df"`.
+Make sure you replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md) (and remove the curly braces): `android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df"`. The code snippet above would look like this: 
+
+```xml
+<activity android:name="com.microsoft.identity.client.BrowserTabActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+            android:host="auth"
+            android:scheme="msal7433d0a8-3a21-49e4-8fca-f5eff43458df" />
+    </intent-filter>
+</activity>
+```
 
 #### Proguard
 
@@ -165,11 +200,82 @@ In your Xamarin.Android project, add the following line to the project's **progu
 
 #### Modify the project's **Info.plist**
 
-1. Double-click the project's **Info.plist** file and go to the **Advanced** tab at the bottom.
-2. Click **Add URL Type** button and type in your Bundle Identifier in the **Identifier** field.
-![Xamarin Add URL Type](images/xamarin-info-plist.png).
-3. For **URL Schemes** field, change the value to `msal{APP_SECRET}` and replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md): `msal65dc3680-7325-4000-a0e7-dbd2276eafd1`.
-4. Open **Role** selector and choose **Editor**.
+1. In the project's **Info.plist** file, right-click on the file and select **Open as...** > **Source code**.
+
+> [!NOTE]
+> If you are using the [VS for Mac IDE](https://visualstudio.microsoft.com/vs/mac/), right-clicking on the file and selecting **Open With...** does not show the option for **Source code**. In this case, you would have to open your **Info.plist** file in another text editor, for example, [Visual Studio Code](https://code.visualstudio.com/).
+
+2. Copy and paste the following code:
+ 
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal{APP_SECRET}</string>
+        </array>
+    </dict>
+</array>
+```
+
+Replace `{APP_SECRET}` with [your actual App Secret](~/dashboard/faq.md). For example, if your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then it should look like `<string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>`.
+
+Here's an example of the code snippet given that the app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+        </array>
+    </dict>
+</array>
+```
+
+> [!NOTE]
+> If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
+> 
+> If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
+> ``` 
+> <array>
+>   <dict>
+>       <key>CFBundleTypeRole</key>
+>       <string>Editor</string>
+>       <key>CFBundleURLName</key>
+>       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       <key>CFBundleURLSchemes</key>
+>       <array>
+>           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
+>           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
+>       </array>
+>   </dict>
+></array>
+> ```
 
 #### Add keychain sharing capability
 
@@ -201,6 +307,7 @@ async Task SignInAsync()
     {
         // Sign-in succeeded.
         UserInformation userInfo = await Auth.SignInAsync();
+        string accountId = userInfo.AccountId;
     }
     catch (Exception e)
     {
@@ -220,6 +327,95 @@ Please note the following:
 * Signing in on a device is not retroactive: the user does not receive push notifications that were sent to him prior to signing in on that device, and past error or crash reports are not updated with the new user information.
 * The SDK automatically saves the signed in users' information so they do not have to sign in to your app again.
 * If the app calls `SignInAsync` again, the SDK shows the sign-in UI again only if the saved sign-in information has expired or has been revoked by the authentication server.
+
+## Get access token and ID token
+
+When a user signs in to the application, the SDK exposes an ID token and an access token in the returned user information.
+
+The tokens use the [JWT](https://jwt.io/) format.
+
+An ID token represents the user information itself without any permission to call any other services' REST APIs.
+
+The access token contains the same information as the ID token but also contains the scopes of what other services' REST APIs can be called on behalf of the user.
+
+To access the tokens from the sign-in result:
+
+```csharp
+using Microsoft.AppCenter.Auth;
+
+async Task SignInAsync()
+{
+    try
+    {
+        // Sign-in succeeded, UserInformation is not null.
+        UserInformation userInfo = await Auth.SignInAsync();
+        
+        // Get tokens. They are not null.
+        string idToken = userInfo.IdToken;
+        string accessToken = userInfo.AccessToken;
+
+        // Do work with either token.
+    }
+    catch (Exception e)
+    {
+        // Do something with sign-in failure.
+    }
+}
+```
+
+### Decoding tokens
+
+You can decode user profile information such as the display name or the email address from the ID token or the access token. The SDK does not have APIs to directly expose user profile information, but this section will demonstrate how to decode the token.
+
+Before decoding the token to get user profile information, the Azure AD B2C tenant must be configured to include the user profile fields in the tokens. By default, there is only metadata included in the token, and no user profile information.
+
+To configure the list of user profile fields in the tokens, visit the tenant configuration on the Azure portal and select the user flow or custom policy that you've selected in the App Center Auth portal. If you are using a user flow, go to **Application claims** and select the user fields that need to be decoded, then click **Save** as illustrated in the following screenshot:
+
+![Application Claims Settings](images/application-claims.png)
+
+You also need to collect the user profile fields during the sign-up process so that they will be available in the tokens. On the user flow settings, go to **User attributes** and select the user fields, then click **Save** as illustrated in the following screenshot:
+
+![User Attributes Settings](images/user-attributes.png)
+
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+
+> [!NOTE]
+> Adding new user attributes will not update users that signed up before updating the settings.
+> For existing users, the new selected fields will thus be missing from the tokens.
+
+Once you have configured the tenant and the application has retrieved the ID token or the access token, you can decode the user profile information. Please see the example code snippets on how to decode the user profile information for **Display name** and **Email Addresses**:
+
+```csharp
+using System.Linq;
+using System.IdentityModel.Tokens.Jwt;
+
+// Decode the raw token string to read the claims.
+var tokenHandler = new JwtSecurityTokenHandler();
+try
+{
+    var jwToken = tokenHandler.ReadJwtToken(userInfo.IdToken);
+
+    // Get display name.
+    var displayName = jwToken.Claims.FirstOrDefault(t => t.Type == "name")?.Value;
+    if (displayName != null)
+    {
+        // Do something with display name.
+    }
+
+    // Get first email address.
+    var firstEmail = jwToken.Claims.FirstOrDefault(t => t.Type == "emails")?.Value;
+    if (firstEmail != null)
+    {
+        // Do something with email.
+    }
+}
+catch (ArgumentException)
+{
+    // Handle error.
+}
+```
+
+The code sample requires the [JWT nuget package](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/). If your application uses Xamarin.Forms, the package needs to be installed in the .NET standard portable project and also the Android and iOS platform projects.
 
 ## Sign out
 
@@ -249,6 +445,9 @@ You don't have to await this call to make other API calls (such as `IsEnabledAsy
 
 The module state is persisted across app launches.
 
+> [!NOTE]
+> This method must only be used after `Auth` has been started.
+
 ## Check if App Center Auth is enabled
 
 You can also check whether App Center Auth is enabled or not:
@@ -256,3 +455,6 @@ You can also check whether App Center Auth is enabled or not:
 ```csharp
 bool enabled = await Auth.IsEnabledAsync();
 ```
+
+> [!NOTE]
+> This method must only be used after `Auth` has been started, it will always return `false` before start.

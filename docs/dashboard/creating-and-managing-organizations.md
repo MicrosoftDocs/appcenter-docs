@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app organizations in App C
 keywords: dashboard organizations
 author: blparr
 ms.author: blparr
-ms.date: 10/08/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
 ms.service: vs-appcenter
@@ -16,11 +16,18 @@ We recommend creating an organization for any apps with multiple collaborators t
 
 ## Organization roles
 
-There are two roles within an organization:
+These are the three roles within an organization and the actions each can take:
 
-* **Admins** can manage organization settings (e.g. change name, change permissions). Admins additionally have a ['Manager' app permission](~/dashboard/creating-and-managing-apps.md) on all apps within the organization.
+| Roles | Create App | See all apps | Manage settings |  Add people | Manage Shared Distribution Groups and Teams |
+|--|--|--|--|--|--|
+| Admins | Yes | Yes | Yes | Yes | Yes |
+| Collaborators | Yes | Only if you belong | No | No | Yes |
+| Members | Yes | Only if you belong | No | No | No |
 
-* **Collaborators** can create apps and participate in apps they belong to within organization.
+
+* **Admins** are Managers of all the apps in the organization. Learn more about [app permissions](~/dashboard/creating-and-managing-apps.md).
+
+* When someone gets added to an app owned by an organization, they get invited as **Members** of the organization.
 
 ## Creating an organization
 
