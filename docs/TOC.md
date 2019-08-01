@@ -301,7 +301,6 @@
 
 # General
 ## [Introduction](general/index.md)
-## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
 ## [Pricing](general/pricing.md)
