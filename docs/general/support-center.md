@@ -32,8 +32,6 @@ ms.service: vs-appcenter
 
 ## Recent updates  
 
-[Product Changelog](~/general/changelog.md)
-
 SDKs (open sourced on GitHub)
 
 - [Android SDK](https://github.com/microsoft/appcenter-sdk-android)
