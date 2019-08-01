@@ -11,19 +11,20 @@ ms.service: vs-appcenter
 
 # HockeyApp data on App Center
 
-All your HockeyApp apps are automatically available in App Center. In addition, all your HockeyApp distribution groups are available in App Center. All releases that have been distributed through HockeyApp are also visible in App Center.
-In the side by side experience, uploading new releases can be done in either HockeyApp or App Center, either location will be kept in sync in both products. Legacy distribution groups will be automatically created in App Center. These legacy groups will by kept in sync with HockeyApp. Any release to a legacy distribution group will be added to HockeyApp and testers will be notified and install unchanged via the HockeyApp experience.
+All your HockeyApp apps are automatically available in App Center. All your HockeyApp distribution groups are available in App Center. All releases that have been distributed through HockeyApp are also visible in App Center.
+
+Uploading new releases can be done in either HockeyApp or App Center and is synchronized. Legacy distribution groups are automatically created in App Center. These legacy groups are synchronized with HockeyApp. Any release to a legacy distribution group is uploaded to HockeyApp and testers are notified via HockeyApp.
 
 ## Getting Started with your HockeyApp data in App Center
 
-As a HockeyApp customer, your apps and account information automatically synchronizes and are ready for you in App Center. Therefore, getting started is easy:
+As a HockeyApp customer, your apps and account information automatically synchronizes and are ready for you in App Center. Getting started is easy:
 
 1. [Sign-in to App Center](https://appcenter.ms/login?utm_medium=referral_link&utm_source=Hockey%20App) with your HockeyApp Credentials
 2. Once logged in, you'll see a list of all of your existing HockeyApp apps. HockeyApp apps are marked with a blue HockeyApp icon.
 
 ## Limitations
 
-While you can work in both services, settings for your HockeyApp apps are only editable in HockeyApp. Therefore, the following app management tasks can only be edited in HockeyApp:
+While you can work in both services, settings for your HockeyApp apps are only editable in HockeyApp. The following app management tasks can only be edited in HockeyApp:
 
 * Managing app collaborators and testers.
 * Managing organization owners.
@@ -32,5 +33,3 @@ While you can work in both services, settings for your HockeyApp apps are only e
 
 > [!TIP]
 > Move your apps to remove the synchronization and get full control in App Center.
-
-Throughout the App Center UI we provide direct links to the app in HockeyApp to edit the settings listed above. In App Center you can also quickly access the HockeyApp version of the app on the 'Getting Started' page. Just click the "Open in HockeyApp" button in the upper, right-hand corner of the page.
