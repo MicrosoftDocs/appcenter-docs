@@ -52,7 +52,7 @@ For UWP, you must produce an app package. App Center supports releasing app pack
 
 ### WPF and WinForms
 
-For WPF and WinForms, a variety of formats are supported. You can package your app the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
+For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
 
 ## Uploading the package
 
