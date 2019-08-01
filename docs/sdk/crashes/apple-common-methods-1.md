@@ -30,6 +30,20 @@ MSCrashes.generateTestCrash()
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
 
+### Did the app get out-of-memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received memory warning in the previous session:
+
+```objc
+[MSCrashes hasReceivedMemoryWarningInLastSession];
+```
+```swift
+MSCrashes.hasReceivedMemoryWarningInLastSession()
+```
+
+> [!NOTE]
+> This method must only be used after `MSCrashes` has been started, it will always return `NO` or `false` before start.
+
 ### Did the app crash in the previous session?
 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
