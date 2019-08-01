@@ -4,7 +4,7 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: blparr
 ms.author: blparr
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
