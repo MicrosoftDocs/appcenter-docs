@@ -48,11 +48,11 @@ For macOS, you must produce an app.zip file. For full details of this process, s
 
 ### UWP
 
-For UWP, you must produce an app package. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
+For UWP, you must produce an app package. App Center supports releasing app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
 
 ### WPF and WinForms
 
-For WPF and WinForms, a variety of formats are supported. If .zip or .msi are used, you must specify a build version.
+For WPF and WinForms, a variety of formats are supported. You can package your app the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
 
 ## Uploading the package
 
