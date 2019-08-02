@@ -60,12 +60,12 @@ throw new Error('This is a test javascript crash!');
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### Did the app get out-of-memory warning in the previous session?
+### Did the app get low memory warning in the previous session?
 
 At any time after starting the SDK, you can check if the app received memory warning in the previous session:
 
 ```javascript
-const didCrash = await Crashes.hasReceivedMemoryWarningInLastSession();
+const hadLowMemoryWarning = await Crashes.hasReceivedMemoryWarningInLastSession();
 ```
 
 ### Did the app crash in the previous session?

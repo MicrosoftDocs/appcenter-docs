@@ -45,13 +45,13 @@ AppCenter.Crashes.generateTestCrash();
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### Did the app get out-of-memory warning in the previous session?
+### Did the app get low memory warning in the previous session?
 
 At any time after starting the SDK, you can check if the app received memory warning in the previous session:
 
 ```js
-var success = function(didRunOOM) {
-    console.log("there was " + (didRunOOM ? "a" : "no") + " memory warning");
+var success = function(hadLowMemoryWarning) {
+    console.log("there was " + (hadLowMemoryWarning ? "a" : "no") + " memory warning");
 }
 
 var error = function(error) {
