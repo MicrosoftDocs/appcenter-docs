@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/09/2019
+ms.date: 08/02/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -48,10 +48,10 @@ App Center Crashes has two APIs that give you more information in case your app 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
 
 ```csharp
-Crashes.hasCrashedInLastSession();
+bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
@@ -61,20 +61,20 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 If your app crashed previously, you can get details about the last crash.
 
 ```csharp
-var crashReport = Crashes.getLastSessionCrashReport();
+ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `null` before start.
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes callbacks](#customize-your-usage-of-app-center-crashes).
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#customize-your-usage-of-app-center-crashes).
 
 ## Customize your usage of App Center Crashes
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 > [!NOTE]
-> You must set callbacks *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
+> You must set callbacks *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
