@@ -55,6 +55,9 @@ At any time after starting the SDK, you can check if the app received memory war
 bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().Result;
 ```
 
+> [!NOTE]
+> This method will not work in `OnAwake()`.
+
 ### Did the app crash in the previous session?
 
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
