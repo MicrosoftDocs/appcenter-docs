@@ -2,19 +2,15 @@
 title: App Center General Info
 description: General information about App Center
 keywords: roadmap, pricing
-author: joemellin
-ms.author: joemel
-ms.date: 01/20/2017
+author: blparr
+ms.author: blparr
+ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: 49b3b1d7-4651-4adf-95a6-9c9cc2232269
 ms.service: vs-appcenter
 ---
 
 # General
-
-## Changelog
-
-Check out our [changelog](changelog.md) to find out which features we have delivered recently to App Center.
 
 ## Product roadmap
 
