@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/02/2019
+ms.date: 08/05/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -54,7 +54,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers choose to show additional UI to apologize to their users, or want a way to get in touch after a crash has occurred.
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
