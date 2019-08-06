@@ -3,7 +3,7 @@ title: HockeySDK for UWP Migration
 description: Migrate from the HockeySDK to App Center SDK for UWP
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
 ms.service: vs-appcenter
@@ -95,20 +95,20 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/uwp#adjust-the-log-level)
+Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/uwp#adjust-the-log-level)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/uwp#session-and-device-information)
-Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/uwp#custom-events)
+Automatically track sessions | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Documentation](~/sdk/analytics/uwp#session-and-device-information)
+Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](~/sdk/analytics/uwp#custom-events)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/uwp)
+Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](~/sdk/crashes/uwp)
 Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | Not supported
 Track handled exceptions | `HockeyClient.Current.TrackException` | Not supported
 

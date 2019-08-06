@@ -3,7 +3,7 @@ title: HockeySDK for Unity Migration
 description: Migrate from the HockeySDK to App Center SDK for Unity
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: 4d582645-4b1b-42f8-a40a-dee5d06fb0e1
 ms.service: vs-appcenter
@@ -39,7 +39,7 @@ To install the services separately, you can select **Install SDK** in each tab.
 > [!NOTE]
 > The App Center Unity SDK is one for all three platforms: Android, iOS and UWP. You don't have to install each SDK separately.
 
-The recommended way to integrate the App Center Unity SDK is to use **App Center Editor Extension**, but we support other scenarios. For more info, refer to the [App Center Unity Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/unity#3-add-the-app-center-sdk-to-your-project).
+The recommended way to integrate the App Center Unity SDK is to use **App Center Editor Extension**, but we support other scenarios. For more info, refer to the [App Center Unity Documentation](~/sdk/getting-started/unity#3-add-the-app-center-sdk-to-your-project).
 
 ## 2. Setup the SDK
 
@@ -74,12 +74,12 @@ HockeyApp Setting | App Center Setting | Notes
 App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
 Restricted in-app updates | NA | Works out of the box
-Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/unity)
-Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/unity#ask-for-the-users-consent-to-send-a-crash-log)
-Exception Logging | [Initial Log level](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/unity#adjust-the-log-level), _Other Setup_ section | If you want more detailed logging, use `Verbose`
-User Metrics | Use Analytics | [Analytics module](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/unity)
-Version Updates (enabled by default) | Use Distribute | [Distribute module](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/unity)
-Update Alert | NA | [Documentation (has to be configured)](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/unity#2-customize-the-update-dialog)
+Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](xxcrashes/unity)
+Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)](~/sdk/crashes/unity#ask-for-the-users-consent-to-send-a-crash-log)
+Exception Logging | [Initial Log level](~/sdk/other-apis/unity#adjust-the-log-level), _Other Setup_ section | If you want more detailed logging, use `Verbose`
+User Metrics | Use Analytics | [Analytics module](~/sdk/analytics/unity)
+Version Updates (enabled by default) | Use Distribute | [Distribute module](~/sdk/distribute/unity)
+Update Alert | NA | [Documentation (has to be configured)](~/sdk/distribute/unity#2-customize-the-update-dialog)
 
 > [!NOTE]
 > If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
@@ -88,7 +88,7 @@ If your project has the HockeySDK API calls throughout the application, replace 
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Custom events with properties | [HockeyAppIOS.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L150-L158) or [HockeyAppAndroid.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L149-L156) | [Analytics.TrackEvent](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/unity#custom-events)
+Custom events with properties | [HockeyAppIOS.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L150-L158) or [HockeyAppAndroid.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L149-L156) | [Analytics.TrackEvent](~/sdk/analytics/unity#custom-events)
 Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | NA
 Display a feedback form | [HockeyAppIOS.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L178-L181) or [HockeyAppAndroid.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L238-L241) | NA (please see the section below)
 

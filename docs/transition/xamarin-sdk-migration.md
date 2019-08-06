@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: elamalani
 ms.author: emalani
-ms.date: 08/05/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -134,7 +134,7 @@ After (App Center):
     * Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
     * Enter `appcenter-${Your App Secret}` as the URL scheme and replace `${Your App Secret}` with the App Secret of your app.
 
-    For more information on this, refer to [App Center Distribute documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/ios#23-modify-your-infoplist).
+    For more information on this, refer to [App Center Distribute documentation](~/sdk/distribute/ios#23-modify-your-infoplist).
 
 1. Replace all HockeyApp API calls throughout the application. The detailed API mapping tables are given below.
 
@@ -144,41 +144,41 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [SharedHockeyManager.LogLevel (iOS) or HockeyLog.LogLevel (Android)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#3-3-control-output-to-the-console-or-logcat) | [AppCenter.LogLevel](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/xamarin#adjust-the-log-level)
-Identify installations | iOS only | [AppCenter.GetInstallIdAsync](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/xamarin#identify-installations)
-Identify users | Crash only | [AppCenter.SetUserId](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/xamarin#identify-users)
+Adjust the log level | [SharedHockeyManager.LogLevel (iOS) or HockeyLog.LogLevel (Android)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#3-3-control-output-to-the-console-or-logcat) | [AppCenter.LogLevel](~/sdk/other-apis/xamarin#adjust-the-log-level)
+Identify installations | iOS only | [AppCenter.GetInstallIdAsync](~/sdk/other-apis/xamarin#identify-installations)
+Identify users | Crash only | [AppCenter.SetUserId](~/sdk/other-apis/xamarin#identify-users)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled only on Android | [Documentation (cannot be disabled)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/xamarin#session-and-device-information)
-Custom events with properties | [HockeyApp.MetricsManager.TrackEvent](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-5-add-custom-events) | [Analytics.TrackEvent](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/xamarin#custom-events)
-Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or [SharedHockeyManager.DisableMetricsManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#for-ios_1) | [Analytics.SetEnabledAsync](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
+Automatically track sessions | Yes, can be disabled only on Android | [Documentation (cannot be disabled)](~/sdk/analytics/xamarin#session-and-device-information)
+Custom events with properties | [HockeyApp.MetricsManager.TrackEvent](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-5-add-custom-events) | [Analytics.TrackEvent](~/sdk/analytics/xamarin#custom-events)
+Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or [SharedHockeyManager.DisableMetricsManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#for-ios_1) | [Analytics.SetEnabledAsync](~/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | Disabled by default | [Documentation (enabled by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#should-the-crash-be-processed)
-Generate a test crash | `CrashManager.GenerateTestCrash` (iOS Only) | [Crashes.GenerateTestCrash](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#generate-a-test-crash)
-Attach additional meta data | Yes | [Documentation (can be attached from listener)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#add-attachments-to-a-crash-report)
-Customize user dialog | Yes | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#ask-for-the-users-consent-to-send-a-crash-log)
-Get info about the sending status | Android only | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#get-information-about-the-sending-status-for-a-crash-log)
-Info about a previous crash | `CrashManager.GetLastCrashDetails` (Android) or `CrashManager.LastSessionCrashDetails` (iOS) | [Crashes.GetLastSessionCrashReportAsync](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#details-about-the-last-crash)
-Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only) | [Crashes.SetEnabledAsync](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin#enable-or-disable-app-center-crashes-at-runtime)
+Automatically send crashes | Disabled by default | [Documentation (enabled by default)](~/sdk/crashes/xamarin#should-the-crash-be-processed)
+Generate a test crash | `CrashManager.GenerateTestCrash` (iOS Only) | [Crashes.GenerateTestCrash](~/sdk/crashes/xamarin#generate-a-test-crash)
+Attach additional meta data | Yes | [Documentation (can be attached from listener)](~/sdk/crashes/xamarin#add-attachments-to-a-crash-report)
+Customize user dialog | Yes | [Documentation (not provided by default)](~/sdk/crashes/xamarin#ask-for-the-users-consent-to-send-a-crash-log)
+Get info about the sending status | Android only | [Documentation](~/sdk/crashes/xamarin#get-information-about-the-sending-status-for-a-crash-log)
+Info about a previous crash | `CrashManager.GetLastCrashDetails` (Android) or `CrashManager.LastSessionCrashDetails` (iOS) | [Crashes.GetLastSessionCrashReportAsync](~/sdk/crashes/xamarin#details-about-the-last-crash)
+Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only) | [Crashes.SetEnabledAsync](~/sdk/crashes/xamarin#enable-or-disable-app-center-crashes-at-runtime)
 
 ### Distribute
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.  
-Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/xamarin#how-do-in-app-updates-work) for more details.
+Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator.AuthenticateInstallation (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-8-add-authentication) | [Documentation (works out of the box)](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/xamarin#how-do-in-app-updates-work)
-Disable service at runtime | [UpdateManager.Unregister (Android) or SharedHockeyManager.DisableUpdateManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-6-add-update-distribution) | [Distribute.SetEnabledAsync](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/xamarin#enable-or-disable-app-center-distribute-at-runtime)
-Customize the update dialog | Yes | [Distribute.ReleaseAvailable](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/xamarin#customize-or-localize-the-in-app-update-dialog)
+Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator.AuthenticateInstallation (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-8-add-authentication) | [Documentation (works out of the box)](~/sdk/distribute/xamarin#how-do-in-app-updates-work)
+Disable service at runtime | [UpdateManager.Unregister (Android) or SharedHockeyManager.DisableUpdateManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-6-add-update-distribution) | [Distribute.SetEnabledAsync](~/sdk/distribute/xamarin#enable-or-disable-app-center-distribute-at-runtime)
+Customize the update dialog | Yes | [Distribute.ReleaseAvailable](~/sdk/distribute/xamarin#customize-or-localize-the-in-app-update-dialog)
 
 ### Feedback
 

@@ -3,7 +3,7 @@ title: HockeySDK for Cordova Migration
 description: Migrate from the HockeySDK to App Center SDK for Cordova
 author: elamalani
 ms.author: emalani
-ms.date: 02/12/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: d2aec910-d9db-4386-9d46-1f34d2918472
 ms.service: vs-appcenter
@@ -65,7 +65,7 @@ After (App Center):
     <preference name="APP_SECRET" value="{App Secret from the previous step}" />
     ```
 
-    For more information, refer to [App Center Cordova documentation](https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/cordova#configuring-the-plugins).
+    For more information, refer to [App Center Cordova documentation](~/sdk/getting-started/cordova#configuring-the-plugins).
 
 1. Replace all HockeyApp API calls throughout the application. The detailed API mapping tables are given below.
 
@@ -75,23 +75,23 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Identify Users | [hockeyapp.setUserName](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappsetusername) or [hockeyapp.setUserEmail](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappsetuseremail) | [AppCenter.setUserId](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/cordova#identify-users)
+Identify Users | [hockeyapp.setUserName](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappsetusername) or [hockeyapp.setUserEmail](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappsetuseremail) | [AppCenter.setUserId](~/sdk/other-apis/cordova#identify-users)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | [Documentation (can't be disabled)](https://github.com/bitstadium/HockeySDK-Cordova#tracking-custom-events) | [Documentation (enabled by default)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/cordova#wait-for-js-to-enable-app-center-analytics)
-Track events | [hockeyapp.trackEvent](https://github.com/bitstadium/HockeySDK-Cordova#hockeyapptrackevent) | [Analytics.trackEvent](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/cordova#custom-events)
+Automatically track sessions | [Documentation (can't be disabled)](https://github.com/bitstadium/HockeySDK-Cordova#tracking-custom-events) | [Documentation (enabled by default)](~/sdk/analytics/cordova#wait-for-js-to-enable-app-center-analytics)
+Track events | [hockeyapp.trackEvent](https://github.com/bitstadium/HockeySDK-Cordova#hockeyapptrackevent) | [Analytics.trackEvent](~/sdk/analytics/cordova#custom-events)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [autoSend parameter (disabled by default)](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappstart) | [APPCENTER_CRASHES_ALWAYS_SEND (enabled by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/cordova#processing-crashes-in-javascript)
-Attach additional meta data | [hockeyapp.addMetaData](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappaddmetadata) | [Documentation (can be attached from listener)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/cordova#add-attachments-to-a-crash-report)
-Generate test crash | [hockeyapp.forceCrash](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappforcecrash) | [AppCenter.Crashes.generateTestCrash](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/cordova#generate-a-test-crash)
-Display a dialog on crash | [ignoreDefaultHandler (disabled by default, Android only)](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappstart) | [AppCenter.Crashes.process (callback on processing a crash)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/cordova#processing-crashes-in-javascript)
+Automatically send crashes | [autoSend parameter (disabled by default)](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappstart) | [APPCENTER_CRASHES_ALWAYS_SEND (enabled by default)](~/sdk/crashes/cordova#processing-crashes-in-javascript)
+Attach additional meta data | [hockeyapp.addMetaData](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappaddmetadata) | [Documentation (can be attached from listener)](~/sdk/crashes/cordova#add-attachments-to-a-crash-report)
+Generate test crash | [hockeyapp.forceCrash](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappforcecrash) | [AppCenter.Crashes.generateTestCrash](~/sdk/crashes/cordova#generate-a-test-crash)
+Display a dialog on crash | [ignoreDefaultHandler (disabled by default, Android only)](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappstart) | [AppCenter.Crashes.process (callback on processing a crash)](~/sdk/crashes/cordova#processing-crashes-in-javascript)
 
 ### Version updates
 
