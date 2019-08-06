@@ -39,7 +39,7 @@ To install the services separately, you can select **Install SDK** in each tab.
 > [!NOTE]
 > The App Center Unity SDK is one for all three platforms: Android, iOS and UWP. You don't have to install each SDK separately.
 
-The recommended way to integrate the App Center Unity SDK is to use **App Center Editor Extension**, but we support other scenarios. For more info, refer to the [App Center Unity Documentation]\\(~/sdk/getting-started/unity.md.md#3-add-the-app-center-sdk-to-your-project).
+The recommended way to integrate the App Center Unity SDK is to use **App Center Editor Extension**, but we support other scenarios. For more info, refer to the [App Center Unity Documentation](~/sdk/getting-started/unity.md#3-add-the-app-center-sdk-to-your-project).
 
 ## 2. Setup the SDK
 
@@ -74,8 +74,8 @@ HockeyApp Setting | App Center Setting | Notes
 App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
 Restricted in-app updates | NA | Works out of the box
-Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity)
-Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)]\\(~/sdk/crashes/unity.md.md#ask-for-the-users-consent-to-send-a-crash-log)
+Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity.md)
+Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)](~/sdk/crashes/unity.md#ask-for-the-users-consent-to-send-a-crash-log)
 Exception Logging | [Initial Log level](~/sdk/other-apis/unity.md#adjust-the-log-level), _Other Setup_ section | If you want more detailed logging, use `Verbose`
 User Metrics | Use Analytics | [Analytics module](~/sdk/analytics/unity.md)
 Version Updates (enabled by default) | Use Distribute | [Distribute module](~/sdk/distribute/unity.md)

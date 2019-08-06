@@ -151,7 +151,7 @@ After (App Center):
     - Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
     - Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
 
-    For more information on this, refer to [App Center Distribute documentation](~/sdk/distribute/ios.md#23-modify-your-infoplist).
+    For more information on this, refer to [App Center Distribute documentation](~/sdk/distribute/ios.md#23-modify-the-projects-infoplist).
 
 1. Replace HockeyApp API calls throughout the application. The detailed API mapping tables are given below.
 

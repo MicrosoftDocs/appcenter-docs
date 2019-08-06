@@ -101,8 +101,8 @@ Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-i
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Documentation](~/sdk/analytics/uwp.md#session-and-device-information)
-Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](~/sdk/analytics/uwp.md#custom-events)
+Automatically track sessions | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Documentation](~/sdk/analytics/windows.md#session-and-device-information)
+Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](~/sdk/analytics/windows.md#custom-events)
 
 ### Crashes
 
