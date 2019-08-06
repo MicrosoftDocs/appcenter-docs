@@ -273,11 +273,11 @@
             "redirect_url": "/appcenter/gdpr/diagnostics-consent"
         },
 	{
-	    "source_path": "docs/migration/test-cloud/",
+	    "source_path": "docs/migration/test-cloud.md",
 	    "redirect_url": "/appcenter/test-cloud/"
 	},
 	{
-	    "source_path": "docs/migration/test-cloud/frameworks",
+	    "source_path": "docs/migration/test-cloud/frameworks.md",
 	    "redirect_url": "/appcenter/test-cloud/preparing-for-upload/"
 	}
     ]
