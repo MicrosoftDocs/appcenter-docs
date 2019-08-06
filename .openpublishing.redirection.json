@@ -271,6 +271,14 @@
 	{
             "source_path": "docs/gdpr/crashes-consent.md",
             "redirect_url": "/appcenter/gdpr/diagnostics-consent"
-        }    	
+        },
+	{
+	    "source_path": "docs/migration/test-cloud/",
+	    "redirect_url": "/appcenter/test-cloud/"
+	},
+	{
+	    "source_path": "docs/migration/test-cloud/frameworks",
+	    "redirect_url": "/appcenter/test-cloud/preparing-for-upload/"
+	}
     ]
 }
