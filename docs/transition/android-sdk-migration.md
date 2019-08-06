@@ -3,7 +3,7 @@ title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
 ms.service: vs-appcenter
@@ -106,39 +106,39 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [HockeyLog.setLogLevel](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-8-control-output-to-logcat) | [AppCenter.setLogLevel](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#adjust-the-log-level)
-Identify installations | Internal only | [AppCenter.getInstallId](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#identify-installations)
-Identify users | [Documentation (crashes only)](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-getuserid)| [AppCenter.setUserId](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#identify-users)
+Adjust the log level | [HockeyLog.setLogLevel](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-8-control-output-to-logcat) | [AppCenter.setLogLevel](~/sdk/other-apis/android.md#adjust-the-log-level)
+Identify installations | Internal only | [AppCenter.getInstallId](~/sdk/other-apis/android.md#identify-installations)
+Identify users | [Documentation (crashes only)](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-getuserid)| [AppCenter.setUserId](~/sdk/other-apis/android.md#identify-users)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (cannot be disabled)](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/android#session-and-device-information)
-Custom events with properties | [MetricsManager.trackEvent](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-5-add-user-metrics) | [Analytics.trackEvent](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/android#custom-events)
-Disable service at runtime | `MetricsManager.disableUserMetrics` and `MetricsManager.enableUserMetrics` | [Analytics.setEnabled](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/android#enable-or-disable-app-center-analytics-at-runtime)
+Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (cannot be disabled)](~/sdk/analytics/android.md#session-and-device-information)
+Custom events with properties | [MetricsManager.trackEvent](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-5-add-user-metrics) | [Analytics.trackEvent](~/sdk/analytics/android.md#custom-events)
+Disable service at runtime | `MetricsManager.disableUserMetrics` and `MetricsManager.enableUserMetrics` | [Analytics.setEnabled](~/sdk/analytics/android.md#enable-or-disable-app-center-analytics-at-runtime)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Documentation (disabled by default)](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-1-auto-send-crash-reports) | [Documentation (enabled by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/android#should-the-crash-be-processed)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-2-attach-additional-meta-data) | [Documentation (can be attached from listener)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/android#add-attachments-to-a-crash-report)
-Customize user dialog | Yes | [Documentation (not provided by default)](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/android#ask-for-the-users-consent-to-send-a-crash-log)
-Get info about the sending status | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-oncrashessent) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/android#get-information-about-the-sending-status-for-a-crash-log)
-Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getLastSessionCrashReport](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/android#get-more-information-about-a-previous-crash)
+Automatically send crashes | [Documentation (disabled by default)](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-1-auto-send-crash-reports) | [Documentation (enabled by default)](~/sdk/crashes/android.md#should-the-crash-be-processed)
+Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-2-attach-additional-meta-data) | [Documentation (can be attached from listener)](~/sdk/crashes/android.md#add-attachments-to-a-crash-report)
+Customize user dialog | Yes | [Documentation (not provided by default)](~/sdk/crashes/android.md#ask-for-the-users-consent-to-send-a-crash-log)
+Get info about the sending status | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-oncrashessent) | [Documentation](~/sdk/crashes/android.md#get-information-about-the-sending-status-for-a-crash-log)
+Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getLastSessionCrashReport](~/sdk/crashes/android.md#get-more-information-about-a-previous-crash)
 
 ### Distribute
 
 > [!NOTE]
-> Unlike in HockeyApp, App Center in-app updates feature will ONLY work with **RELEASE** builds that are distributed using the **App Center Distribute** service.  
-Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/android#how-do-in-app-updates-work) for more details.
+> Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.  
+Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/android.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-5-authentication) | [Documentation (works out of box)](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/android#how-do-in-app-updates-work)
-Disable service at runtime | [UpdateManager.unregister](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-6-add-update-distribution) | [Distribute.setEnabled](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/android#enable-or-disable-app-center-distribute-at-runtime)
-Customize the update dialog | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-3-1-providing-your-own-user-interface-for-the-update-process) | [Documentation](https://docs.microsoft.com/en-us/appcenter/sdk/distribute/android#customize-or-localize-the-in-app-update-dialog)
+Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-5-authentication) | [Documentation (works out of box)](~/sdk/distribute/android.md#how-do-in-app-updates-work)
+Disable service at runtime | [UpdateManager.unregister](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-6-add-update-distribution) | [Distribute.setEnabled](~/sdk/distribute/android.md#enable-or-disable-app-center-distribute-at-runtime)
+Customize the update dialog | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-3-1-providing-your-own-user-interface-for-the-update-process) | [Documentation](~/sdk/distribute/android.md#customize-or-localize-the-in-app-update-dialog)
 
 ### Feedback
 
