@@ -48,7 +48,7 @@ App Center Crashes has two APIs that give you more information in case your app 
 
 ### Did the app receive out-of-memory warning in the previous session?
 
-At any time after starting the SDK, you can check if the app received memory warning in the previous session:
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
 
 ```csharp
 bool didAppCrash = await Crashes.HasReceivedMemoryWarningInLastSessionAsync();

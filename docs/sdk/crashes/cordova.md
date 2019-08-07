@@ -45,13 +45,13 @@ AppCenter.Crashes.generateTestCrash();
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
 
-### Did the app receive low memory warning in the previous session?
+### Did the app receive a low memory warning in the previous session?
 
-At any time after starting the SDK, you can check if the app received memory warning in the previous session:
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
 
 ```js
 var success = function(hadLowMemoryWarning) {
-    console.log("there was " + (hadLowMemoryWarning ? "a" : "no") + " memory warning");
+    console.log(`there was ${hadLowMemoryWarning ? "a" : "no"} memory warning`);
 }
 
 var error = function(error) {
