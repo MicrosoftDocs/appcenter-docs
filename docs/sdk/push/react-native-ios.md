@@ -70,11 +70,7 @@ The default integration of the SDK uses Cocoapods for iOS.
    npm install appcenter-push --save-exact
    ```
 
-2. Link the plugin to the React Native app by using the `react-native link command`.
-
-   ```
-   react-native link appcenter-push
-   ```
+2. Run `pod install` from iOS directory to install CocoaPods dependencies.
 
 #### Integrate the iOS SDK manually
 
