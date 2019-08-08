@@ -42,9 +42,9 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 First, open a Terminal and navigate to the root of your React Native project. Then, enter the following to add App Center Push to the app:
 
-    ```
-    npm install appcenter-push --save-exact
-    ```
+   ```
+   npm install appcenter-push --save-exact
+   ```
 
 ## Integrate Firebase in your application
 
