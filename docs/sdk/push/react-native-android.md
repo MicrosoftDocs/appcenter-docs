@@ -40,7 +40,7 @@ ms.tgt_pltfrm: react-native
 Please follow the [Get started](~/sdk/getting-started/react-native.md) section if you haven't set up and started the SDK in your application, yet.
 The App Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
-- Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
+First, open a Terminal and navigate to the root of your React Native project. Then, enter the following to add App Center Push to the app:
 
     ```
     npm install appcenter-push --save-exact
