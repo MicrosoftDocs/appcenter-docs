@@ -7,6 +7,7 @@
 > * [Xamarin](xamarin-sdk-migration.md)
 > * [Unity](unity-sdk-migration.md)
 > * [Cordova](cordova-sdk-migration.md)
+> * [WPF/Winforms](wpf-winforms-sdk-migration.md)
 
 
 Please follow this documentation if you are looking to update your application to use App Center SDK instead of HockeySDK.

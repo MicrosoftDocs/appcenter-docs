@@ -16,17 +16,14 @@ ms.tgt_pltfrm: WPF/Winforms
 
 ## 1. Update the libraries
 
-> [!NOTE] 
-> Platforms like WinRT, Windows Phone 8.0 and 8.1, WPF and PCL are not supported in App Center SDK. Please continue to use the HockeySDK with them.
-
-Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in your solution.
+Replace HockeySDK.WPF NuGet package with the App Center ones in all projects in your solution.
 
 ### Visual Studio for Windows
 
 * Open Visual Studio for Windows.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
-* Remove the **HockeySDK.UWP** package.
+* Remove the **HockeySDK.WPF** package.
 * Search for **App Center**, and install **Microsoft.AppCenter.Analytics**, and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
@@ -36,7 +33,7 @@ Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in 
 * Type the following command in the console:
 
 ```shell
-Uninstall-Package HockeySDK.UWP
+Uninstall-Package HockeySDK.WPF
 Install-Package Microsoft.AppCenter.Analytics
 Install-Package Microsoft.AppCenter.Crashes
 ```
@@ -95,7 +92,7 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/uwp.md#adjust-the-log-level)
+Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms#adjust-the-log-level)
 
 ### Analytics
 
@@ -108,9 +105,9 @@ Custom events with properties | [HockeyClient.TrackEvent](https://support.hockey
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](~/sdk/crashes/uwp.md)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | Not supported
-Track handled exceptions | `HockeyClient.Current.TrackException` | Not supported
+Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](~/sdk/crashes/wpf-winforms.md)
+Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Documentation](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
+Track handled exceptions | `HockeyClient.Current.TrackException` | [Documentation](sdk/crashes/wpf-winforms#handled-errors)
 
 ### Distribution
 
