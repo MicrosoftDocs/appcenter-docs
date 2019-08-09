@@ -92,7 +92,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
-- Xcode 11 beta (11M382q)
+- Xcode 11 beta 5 (11M382q)
 - Xcode 10.3 (10G8)
 - Xcode 10.2.1 (10E1001)
 - Xcode 10.2 (10E125)
