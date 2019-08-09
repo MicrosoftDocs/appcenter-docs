@@ -644,7 +644,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Mono
 
-- 6.0.0
 - 5.18.1
 - 5.16.1
 - 5.12.0
@@ -659,7 +658,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
-- 12.16.0.5
 - 12.10.0.157
 - 12.8.0.2
 - 12.6.0.25
@@ -678,7 +676,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
-- 9.4.0.51
 - 9.3.0-23
 - 9.2.3-0
 - 9.1.8-0
@@ -695,7 +692,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
-- 5.16.0.5
 - 5.10.0.157
 - 5.8.0.0
 - 5.6.0.25
