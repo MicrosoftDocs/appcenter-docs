@@ -107,7 +107,7 @@ Feature | HockeyApp | App Center
 ------- | --------- | ---
 Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](~/sdk/crashes/wpf-winforms.md)
 Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Documentation](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
-Track handled exceptions | `HockeyClient.Current.TrackException` | [Documentation](sdk/crashes/wpf-winforms#handled-errors)
+Track handled exceptions | `HockeyClient.Current.TrackException` | [Documentation](~/sdk/crashes/wpf-winforms#handled-errors)
 
 ### Distribution
 
