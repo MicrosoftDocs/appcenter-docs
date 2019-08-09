@@ -353,6 +353,7 @@
 ### [UWP](transition/uwp-sdk-migration.md)
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
+### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 
