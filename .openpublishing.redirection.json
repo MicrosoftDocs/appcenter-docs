@@ -274,11 +274,11 @@
         },
 	{
 	    "source_path": "docs/migration/test-cloud.md",
-	    "redirect_url": "/appcenter/test-cloud/"
+	    "redirect_url": "/appcenter/test-cloud"
 	},
 	{
 	    "source_path": "docs/migration/test-cloud/frameworks.md",
-	    "redirect_url": "/appcenter/test-cloud/preparing-for-upload/"
+	    "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
 	}
     ]
 }
