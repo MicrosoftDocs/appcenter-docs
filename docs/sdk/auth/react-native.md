@@ -34,13 +34,11 @@ Open your terminal and navigate to the root directory of your React Native proje
 npm install appcenter-auth --save-exact
 ```
 
-### 2. Link the SDK
+### 2. Integrate the SDK automatically
 
-Link the plugins to the React Native app using the react-native link command:
+Integrate React Native iOS only:
 
-```bash
-react-native link appcenter-auth
-```
+Run `pod install` from iOS directory to install CocoaPods dependencies.
 
 ### 3. Android 
 
