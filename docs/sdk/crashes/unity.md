@@ -56,7 +56,7 @@ bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().
 ```
 
 > [!NOTE]
-> This method will not work in `OnAwake()`.
+> This method will not work in `Awake()`.
 
 > [!NOTE]
 > In some cases, running a device's memory low may not trigger trackable events.
