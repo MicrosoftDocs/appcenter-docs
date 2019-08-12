@@ -4,7 +4,7 @@ description: Help using the Analytics feature on App Center
 keywords: app center, analytics
 author: blparr
 ms.author: blparr
-ms.date: 7/22/2019
+ms.date: 8/12/2019
 ms.topic: article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ App Center Analytics will help you understand more about your app users and thei
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [Unity](~/sdk/getting-started/unity.md), [UWP](~/sdk/getting-started/uwp.md), [macOS](~/sdk/getting-started/macos.md), and [tvOS](~/sdk/getting-started/tvos.md) | Simple steps to integrate the SDK, which will provide you out-of-the-box insights about your users.|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [React Native](~/sdk/getting-started/react-native.md), [Xamarin](~/sdk/getting-started/xamarin.md), [Unity](~/sdk/getting-started/unity.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), [macOS](~/sdk/getting-started/macos.md), and [tvOS](~/sdk/getting-started/tvos.md) | Simple steps to integrate the SDK, which will provide you out-of-the-box insights about your users.|
 | [Overview](~/analytics/overview.md) | Key metrics about your users and their app usage.|
 | [Custom Events](~/analytics/event-metrics.md)| Understand the actions that your users take in your app.|
 | [Log Flow](~/analytics/log-flow.md)| See incoming logs in real time to check whether your SDK is properly integrated.|
