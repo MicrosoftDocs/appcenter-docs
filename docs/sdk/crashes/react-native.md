@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -67,6 +67,9 @@ At any time after starting the SDK, you can check if the app received a memory w
 ```javascript
 const hadLowMemoryWarning = await Crashes.hasReceivedMemoryWarningInLastSession();
 ```
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 

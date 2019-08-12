@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
 ms.service: vs-appcenter
@@ -43,6 +43,9 @@ MSCrashes.hasReceivedMemoryWarningInLastSession()
 
 > [!NOTE]
 > This method must only be used after `MSCrashes` has been started, it will always return `NO` or `false` before start.
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 

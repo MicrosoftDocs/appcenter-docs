@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -63,6 +63,9 @@ Crashes.hasReceivedMemoryWarningInLastSession()
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 

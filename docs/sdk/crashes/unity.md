@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -57,6 +57,9 @@ bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().
 
 > [!NOTE]
 > This method will not work in `OnAwake()`.
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 

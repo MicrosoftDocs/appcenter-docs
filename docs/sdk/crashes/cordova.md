@@ -4,7 +4,7 @@ description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.service: vs-appcenter
@@ -60,6 +60,9 @@ var error = function(error) {
 
 AppCenter.Crashes.hasReceivedMemoryWarningInLastSession(success, error);
 ```
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 
