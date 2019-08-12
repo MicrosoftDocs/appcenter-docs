@@ -358,9 +358,6 @@
 
 # Migration
 ## [Introduction](migration/index.md)
-## TestCloud
-### [Upgrading Subscribers](migration/test-cloud/index.md)
-### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Azure Mobile Apps
