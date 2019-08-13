@@ -196,10 +196,6 @@ Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled =
 
 * * *
 
-### Feedback
-
-This service won't be supported in App Center.
-
 ## 4. Contact us
 
 In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving a comment below.
