@@ -115,7 +115,7 @@ App Center SDK doesn't support distribution for WPF/Winforms apps yet.
 
 ### Feedback
 
-This service wont be supported in App Center.
+This service won't be supported in App Center.
 
 ## 4. Contact us
 
