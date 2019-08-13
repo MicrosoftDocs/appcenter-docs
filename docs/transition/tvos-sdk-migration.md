@@ -54,7 +54,7 @@ pod 'AppCenter/Crashes'
 ```
 
 > [!NOTE]
-> The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+> The App Center SDK is designed with a modular approach – you can choose which services you want to integrate. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
