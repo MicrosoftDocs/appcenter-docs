@@ -42,7 +42,7 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
 
-Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
+Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on App Center. It will get pulled in automatically.
 
 ```ruby
 # Use the following line to use App Center Analytics and Crashes.
