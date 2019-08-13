@@ -4,7 +4,7 @@ description: List of test frameworks supported by App Center
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/09/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57
 ms.service: vs-appcenter
@@ -19,11 +19,11 @@ App Center Test is a test automation service for native and hybrid mobile applic
 
 | Test framework | Vendor      | Language | Documentation & resources                |
 | -------------- | ----------- | ---------|----------------------------------------- |
-| Appium         | Open Source | Java with JUnit | [https://appium.io](https://appium.io)   |
+| [Appium](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/appium)         | Open Source | Java with JUnit | [https://appium.io](https://appium.io)   |
 | Calabash       | Microsoft   | Ruby with Cucumber | [https://calaba.sh](https://calaba.sh)     |
-| Espresso       | Google      | Java | [https://developer.android.com/training/testing/espresso/](https://developer.android.com/training/testing/espresso/) |
-| Xamarin.UITest | Microsoft   | C# with NUnit | [UITest](~/test-cloud/uitest/index.md) |
-| XCUITest       | Apple       | Swift or Objective-C | [Testing with Xcode - User Interface Testing](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
+| [Espresso](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso)       | Google      | Java or Kotlin | [https://developer.android.com/training/testing/espresso/](https://developer.android.com/training/testing/espresso/) |
+| Xamarin.UITest ([iOS](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest) [Android](https://docs.microsoft.com/en-gb/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)) | Microsoft   | C# or F# with NUnit | [UITest](~/test-cloud/uitest/index.md) |
+| [XCUITest](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest)       | Apple       | Swift or Objective-C | [Testing with Xcode - User Interface Testing](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
 
 For teams selecting a test framework for the first time, it is recommended to use the framework that is native to the platform.
 
