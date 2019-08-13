@@ -170,7 +170,7 @@ Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled
 
 ### Crashes
 
-The HockeySDK reports crashes per default. Crashes will be immediately sent to the server the next time the app is launched.
+The HockeySDK reports crashes by default. Crashes will be immediately sent to the server the next time the app is launched.
 The App Center SDK does not report any crashes by default. To collect crashes using the App Center SDK, pass `MSCrashes` to the `start:` method.
 
 #### [Objective C](#tab/objc/)
