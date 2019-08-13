@@ -25,8 +25,6 @@ ms.tgt_pltfrm: wpf-winforms
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
-> [!NOTE]
-> The WPF and WinForms UI hasn't been released yet. If you would like to try out the analytics and diagnostics SDK, please reach out to our support team and we can enable this experience for you. 
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 

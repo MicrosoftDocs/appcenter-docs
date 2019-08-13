@@ -68,7 +68,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 ```
 
-This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers choose to show additional UI to apologize to their users, or want a way to get in touch after a crash has occurred.
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
@@ -91,7 +91,7 @@ There are numerous use cases for this API, the most common one is people who cal
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 > [!NOTE]
-> You must set the callback *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
+> You must set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 

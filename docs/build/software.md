@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 07/29/2019
+ms.date: 8/9/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -48,14 +48,14 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Ruby 2.6.3p62
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12.7
-- Miniconda 4.6.14
+- Miniconda 4.7.10
 - MacOS toolcache Python 2.7.16 3.4.10 3.5.7 3.6.9 3.7.4
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
 
 ### Node.js versions
 - v6.17.1
 - v8.16.0
-- v10.16.0
+- v10.16.1
 - v12.7.0
 
 ### Package Management
@@ -63,7 +63,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Bundler 2.0.2
 - Carthage 0.33.0
 - CocoaPods 1.7.5
-- Homebrew 2.1.8
+- Homebrew 2.1.9
 - NPM 3.10.10
 - Yarn 1.17.3
 - NuGet 4.7.0.5148
@@ -82,17 +82,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
-- GNU parallel 20190622
+- GNU parallel 20190722
 
 ### Tools
 
-- Fastlane 2.128.0
+- Fastlane 2.128.1
 - App Center CLI 1.2.2
 - Azure-CLI 2.0.69
 
 ## Xcode
 
-- Xcode 11 beta (11M374r)
+- Xcode 11 beta 5 (11M382q)
 - Xcode 10.3 (10G8)
 - Xcode 10.2.1 (10E1001)
 - Xcode 10.2 (10E125)
@@ -640,7 +640,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.1.5.9
+- 8.2.1.19
 
 ### Mono
 
