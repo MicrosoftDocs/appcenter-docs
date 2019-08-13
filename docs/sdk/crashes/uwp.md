@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/12/2019
+ms.date: 08/13/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -39,16 +39,8 @@ Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you
 > [!NOTE]
 > We plan to improve App Center's Windows support in Summer 2019 and address the limitations listed above. You can find more details in our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md).
 
-## Did the app receive a low memory warning in the previous session?
-
-At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
-
-```csharp
-bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().Result;
-```
-
 > [!NOTE]
-> In some cases, running a device's memory low may not trigger trackable events.
+> Currently we do not support detection of low memory warning on UWP platform. 
 
 ## User consent to send a crash log
 
