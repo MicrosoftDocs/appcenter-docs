@@ -20,7 +20,7 @@ Replace HockeySDK.WPF NuGet package with the App Center ones in all projects in 
 
 ### Visual Studio for Windows
 
-* Open Visual Studio for Windows.
+* Open [Visual Studio](https://visualstudio.microsoft.com/vs/) for Windows.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Remove the **HockeySDK.WPF** package.
