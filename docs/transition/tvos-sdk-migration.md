@@ -45,7 +45,7 @@ Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
 Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on App Center. It will get pulled in automatically.
 
 ```ruby
-# Use the following line to use App Center Analytics and Crashes.
+# Use the following line to pull in both App Center Analytics and Crashes.
 pod 'AppCenter'
 
 # Use the following lines if you want to specify which service you want to use.
