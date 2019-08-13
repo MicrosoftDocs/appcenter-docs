@@ -147,8 +147,7 @@ Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](ht
 
 ### Analytics
 
-The HockeySDK collects metrics by default.
-The App Center SDK does not collect any (analytics) metrics per default. To collect metrics using the App Center SDK, pass `MSAnalytics` to the `start:` method.
+The HockeySDK collects metrics by default. The App Center SDK does not collect any (analytics) metrics by default. To collect metrics using the App Center SDK, pass `MSAnalytics` to the `start:` method.
 
 #### [Objective C](#tab/objc/)
 
