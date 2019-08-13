@@ -38,7 +38,7 @@ Install-Package Microsoft.AppCenter.Analytics
 Install-Package Microsoft.AppCenter.Crashes
 ```
 
-The App Center SDK uses a modular approach – you can integrate only those services that you're interested in. You must add each SDK module as a separate dependency in this section.
+The App Center SDK uses a modular approach – you can choose which services you want to integrate. You must add each SDK module as a separate dependency in this section.
 
 ## 2. Update the SDK setup code
 
