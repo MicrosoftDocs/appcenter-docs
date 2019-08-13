@@ -119,4 +119,4 @@ This service won't be supported in App Center.
 
 ## 4. Contact us
 
-If you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue chat icon in the lower-right corner of every App Center page.
+If you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue chat icon in the lower-right corner of any App Center page.
