@@ -48,7 +48,7 @@ sections:
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
         alt: logo-Windows
-      text: UWP
+      text: Windows
       href: ~/sdk/getting-started/uwp/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
