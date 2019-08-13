@@ -18,8 +18,6 @@ abstract:
       text: Pricing
     - href: ~/general/roadmap/
       text: Roadmap
-    - href: ~/general/changelog/
-      text: Changelog
     - href: https://openapi.appcenter.ms
       text: API Swagger
     - href: ~/migration/

@@ -4,7 +4,7 @@ description: How to set up a build for a Mac app
 keywords: build, macos, mac
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 07/31/2019
+ms.date: 08/02/2019
 ms.topic: article
 ms.assetid: 7e04c8d4-8b72-46ea-906d-596fa174d126
 ms.service: vs-appcenter
@@ -131,21 +131,5 @@ Keep in mind that the .dsym files do not change upon code signing the .app. If y
 To build your project, we use `xcodebuild`, a command-line tool that allows you to perform build, query, analyze, test, and archive operations on your Xcode projects and workspaces.
 
 ## Supported versions and requirements
-
-The following versions of Xcode are supported on our VMs for macOS builds.
-
-- Xcode 10.3
-- Xcode 10.2.1
-- Xcode 10.2
-- Xcode 10.1
-- Xcode 10.0
-- Xcode 9.4.1
-- Xcode 9.4
-- Xcode 9.3.1
-- Xcode 9.3
-- Xcode 9.2
-- Xcode 9.1
-- Xcode 9.0.1
-- Xcode 9.0
 
 [Build machine version details](~/build/software.md) are updated each time a new version of macOS is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.

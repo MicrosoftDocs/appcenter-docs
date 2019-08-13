@@ -2,9 +2,9 @@
 title: Upload a Build to Distribute via App Center
 description: Distribute a completed build to users
 keywords: distribution
-author: Oddj0b
-ms.author: vigimm
-ms.date: 07/26/2019
+author: botatoes
+ms.author: bofu
+ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -13,17 +13,9 @@ ms.custom: distribute
 
 # Release a Build
 
-Upload your application binary package to App Center to release it. App Center supports package uploads for iOS, Android, UWP, and macOS.
+Upload your application binary package to App Center to release it. App Center supports package uploads for Android, iOS, macOS, UWP, WPF, and WinForms apps. 
 
 ## Generating an application binary package
-
-### iOS
-
-For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
-
-1. [Register UDIDs][auto-provisioning] for all hardware devices in your provisioning profile.
-2. In Xcode, go to **Product** > **Archive** to archive your app.
-3. Export the archive using the proper provisioning profile.
 
 ### Android
 
@@ -37,9 +29,14 @@ Android Studio places built app bundles in *project-name*/*module-name*/build/ou
 > [!NOTE]
 > You can only distribute Android app bundles to the Google Play Store, not to groups or individual testers.
 
-### UWP
+### iOS
 
-For UWP, you must produce an app package. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
+For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
+
+1. [Register UDIDs][auto-provisioning] for all hardware devices in your provisioning profile.
+2. In Xcode, go to **Product** > **Archive** to archive your app.
+3. Export the archive using the proper provisioning profile.
+
 
 ### macOS
 
@@ -48,6 +45,14 @@ For macOS, you must produce an app.zip file. For full details of this process, s
 1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
 2. In Xcode, go to **Product** > **Archive** to archive your app.
 3. Export the archive using the proper provisioning profile.
+
+### UWP
+
+For UWP, you must produce an app package. App Center supports releasing app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
+
+### WPF and WinForms
+
+For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
 
 ## Uploading the package
 

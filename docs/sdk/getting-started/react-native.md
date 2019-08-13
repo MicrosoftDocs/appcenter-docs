@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -112,7 +112,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 #### 3.1.2 Integrate React Native Android
 
-1. Create a new file with the new `appcenter-config.json` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the **assets** folder of your Android app.
+1. Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
     ```json
     {
