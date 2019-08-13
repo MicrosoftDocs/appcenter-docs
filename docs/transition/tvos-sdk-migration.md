@@ -203,4 +203,4 @@ This service wont be supported in App Center.
 
 ## 4. Contact us
 
-In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving us a note in the docs itself.
+In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving a comment below.
