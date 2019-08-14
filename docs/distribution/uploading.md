@@ -56,7 +56,7 @@ For WPF and WinForms, a variety of formats are supported. You can package your a
 
 ## Uploading the package
 
-To upload a package to App Center, go to [App Center][app-center-home], go to your app, then go to ** **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
+To upload a package to App Center, go to [App Center][app-center-home], go to your app, then go to **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
 You can include release notes as a part of your release, both in plain text or Markdown format.
