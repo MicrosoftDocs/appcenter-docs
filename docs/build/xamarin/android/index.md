@@ -53,7 +53,7 @@ App Center allows using different Mono environments bundled with the respective 
 
 When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
-#### 3.3.1. .Net Core version mapping
+#### 3.3.1. .Net Core version
 
 Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
 

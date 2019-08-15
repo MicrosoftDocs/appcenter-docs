@@ -58,7 +58,7 @@ Select the configuration you would like to build with. The configurations are au
 
 App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono you will see the Xamarin.iOS SDK version which is bundled with it. For more information about Xamarin SDK version updates, you can read posts in [Xamarin release blog](https://releases.xamarin.com/).
 
-#### 3.3.1. .Net Core version mapping
+#### 3.3.1. .Net Core version
 
 Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
 
