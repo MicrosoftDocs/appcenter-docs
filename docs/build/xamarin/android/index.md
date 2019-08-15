@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 07/29/2019
+ms.date: 08/15/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -59,17 +59,7 @@ Proper .Net Core version will be selected automatically based on Mono version us
 
 | Mono | .Net Core |
 | ---- | --------- |
-| 4.8.1 | 2.2.105 |
-| 5.0.1 | 2.2.105 |
-| 5.2 | 2.2.105 |
-| 5.4 | 2.2.105 |
-| 5.4.1 | 2.2.105 |
-| 5.8 | 2.2.105 |
-| 5.8.1 | 2.2.105 |
-| 5.10.1 | 2.2.105 |
-| 5.12 | 2.2.105 |
-| 5.16 | 2.2.105 |
-| 5.18 | 2.2.105 |
+| <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
 
 ### 3.4. Increment version number
