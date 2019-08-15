@@ -48,7 +48,7 @@ Go to the root folder of your React Native Project. Navigate to **android/app/sr
 @Override
 protected List<ReactPackage> getPackages() {
     return Arrays.asList(
-        new AppCenterReactNativeAuthPackage(MainApplication.this), // <-- Load this before other AppCenterReactNative packages
+        new AppCenterReactNativeAuthPackage(MainApplication.this),
     );
 }
 ```
@@ -80,7 +80,7 @@ Go to the root folder of your React Native Project. Navigate to **ios/{YourAppNa
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [AppCenterReactNativeAuth register];  // <-- Load this before other AppCenterReactNative packages
+  [AppCenterReactNativeAuth register];
 }
 ```
 
