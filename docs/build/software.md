@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 8/9/2019
+ms.date: 8/16/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -55,8 +55,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Node.js versions
 - v6.17.1
 - v8.16.0
-- v10.16.1
-- v12.7.0
+- v10.16.2
+- v12.8.0
 
 ### Package Management
 
@@ -88,7 +88,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Fastlane 2.128.1
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.69
+- Azure-CLI 2.0.70
 
 ## Xcode
 
@@ -114,6 +114,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.6
+- xcversion 2.6.0
 
 ### Installed SDKs
 
@@ -352,25 +353,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - iPad Pro (9.7 inch)
 - iPad Pro (12.9 inch)
 
-#### iOS 10.3
-
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPad Air
-- iPad Air 2
-- iPad Pro (9.7 inch)
-- iPad Pro (12.9 inch)
-- iPad (5th generation)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-
 #### iOS 11.0, 11.1, 11.2, 11.3, 11.4
 
 - iPhone 5s
@@ -547,7 +529,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 29.0.1 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.2 |
 
 ### Android SDK Platforms
 
@@ -640,7 +622,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.1.19
+- 8.2.2.21
 
 ### Mono
 
@@ -658,6 +640,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.14.0.114
 - 12.10.0.157
 - 12.8.0.2
 - 12.6.0.25
@@ -676,6 +659,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
 - 9.1.8-0
