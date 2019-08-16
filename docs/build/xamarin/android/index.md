@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 08/15/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -100,14 +100,13 @@ If the `NuGet.config` file is checked-in into the repository and sitting next to
 
 If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-### 3.8. Distribute to a distribution group
+### 3.8. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called **Collaborators** that includes all the users who have access to the app.
-
-Once you save the configuration, a new build will kick off automatically.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection]((~/distribution/stores/index.md)) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
-> Building an `.aab` is currently not supported for Xamarin.Android apps.
+> If an `.aab` is produced, it will be distributed to the Google Play Store. Regardless of if an `.aab` is produced, an `.apk` will be distributed to Intune.
+
 ## 4. Build results
 
 After a build triggers, the build will be in one of the following states:

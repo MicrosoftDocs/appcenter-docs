@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 07/29/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: 4c020936-12cf-4869-b534-addc9719f202
 ms.service: vs-appcenter
@@ -76,11 +76,12 @@ Use the newly produced APK file to test if your app starts on a real device. Thi
 
 A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it must be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about Android code signing [App Center's Android code signing documentation](~/build/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
-### 3.9. Distribute to a distribution group
+### 3.9. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection]((~/distribution/stores/index.md)) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
-Once you save the configuration, a new build kicks off automatically.
+> [!NOTE]
+> If an `.aab` is produced, it will be distributed to the Google Play Store. Regardless of if an `.aab` is produced, an `.apk` will be distributed to Intune.
 
 ## 4. Build results
 

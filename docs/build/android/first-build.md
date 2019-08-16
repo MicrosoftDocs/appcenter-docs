@@ -4,7 +4,7 @@ description: How to set up a build system for Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 07/29/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c
 ms.service: vs-appcenter
@@ -66,11 +66,12 @@ Use your newly produced APK file to test if your app starts on a real device. Th
 
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
-### 3.8. Distribute to a distribution group
+### 3.8. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection]((~/distribution/stores/index.md)) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
-Once you save the configuration, a new build will be kicked off automatically.
+> [!NOTE]
+> If an `.aab` is produced, it will be distributed to the Google Play Store. Regardless of if an `.aab` is produced, an `.apk` will be distributed to Intune.
 
 ## 4. Build results
 
