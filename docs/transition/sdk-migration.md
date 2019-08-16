@@ -24,3 +24,4 @@ The guides for each platform are listed below.
 * [HockeySDK Xamarin](xamarin-sdk-migration.md)
 * [HockeySDK Unity](unity-sdk-migration.md)
 * [HockeySDK Cordova](cordova-sdk-migration.md)
+* [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
