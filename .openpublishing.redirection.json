@@ -260,25 +260,29 @@
             "source_path": "docs/migration/hockeyapp/faq.md",
             "redirect_url": "/appcenter/transition/faq"
         },
-	{
+	      {
             "source_path": "docs/gdpr/crashes-forget-me.md",
             "redirect_url": "/appcenter/gdpr/diagnostics-delete"
         },
-	{
+	      {
             "source_path": "docs/gdpr/crashes-export.md",
             "redirect_url": "/appcenter/gdpr/diagnostics-export"
         },   
-	{
+	      {
             "source_path": "docs/gdpr/crashes-consent.md",
             "redirect_url": "/appcenter/gdpr/diagnostics-consent"
         },
-	{
-	    "source_path": "docs/migration/test-cloud.md",
-	    "redirect_url": "/appcenter/test-cloud"
-	},
-	{
-	    "source_path": "docs/migration/test-cloud/frameworks.md",
-	    "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
-	}
-    ]
+	      {
+	          "source_path": "docs/migration/xamarin-insights/index.md",
+	          "redirect_url": "/appcenter/analytics"
+	      },
+	      {
+	          "source_path": "docs/migration/test-cloud.md",
+	          "redirect_url": "/appcenter/test-cloud"
+	      },
+	      {
+	          "source_path": "docs/migration/test-cloud/frameworks.md",
+	          "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
+	      }
+ ]
 }
