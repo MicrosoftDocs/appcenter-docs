@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 8/9/2019
+ms.date: 8/16/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -55,8 +55,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Node.js versions
 - v6.17.1
 - v8.16.0
-- v10.16.1
-- v12.7.0
+- v10.16.2
+- v12.8.0
 
 ### Package Management
 
@@ -88,25 +88,27 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Fastlane 2.128.1
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.69
+- Azure-CLI 2.0.70
 
 ## Xcode
 
-- Xcode 11 beta 5 (11M382q)
-- Xcode 10.3 (10G8)
-- Xcode 10.2.1 (10E1001)
-- Xcode 10.2 (10E125)
-- Xcode 10.1 (10B61)
-- Xcode 10 (10A255)
-- Xcode 9.4.1 (9F2000)
-- Xcode 9.4 (9F1027a)
-- Xcode 9.3.1 (9E501)
-- Xcode 9.3 (9E145)
-- Xcode 9.2 (9C40b)
-- Xcode 9.1 (9B55)
-- Xcode 9.0.1 (9A1004)
-- Xcode 9.0 (9A235)
-- Xcode 8.3.3 (8E3004b)
+| Version                | Build   |
+|------------------------|---------|
+| 11_beta 5              | 11M382q |
+| 10.3                   | 10G8    |
+| 10.2.1                 | 10E1001 |
+| 10.2                   | 10E125  |
+| 10.1                   | 10B61   |
+| 10.0                   | 10A255  |
+| 9.4.1                  | 9F2000  |
+| 9.4                    | 9F1027a |
+| 9.3.1                  | 9E501   |
+| 9.3                    | 9E145   |
+| 9.2                    | 9C40b   |
+| 9.1                    | 9B55    |
+| 9.0.1                  | 9A1004  |
+| 9.0                    | 9A235   |
+| 8.3.3                  | 8E3004b |
 
 ### Xcode Support Tools
 
@@ -114,413 +116,74 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Nomad CLI IPA 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.6
+- xcversion 2.6.0
 
 ### Installed SDKs
 
-| SDK                       | SDK name    |
-|---------------------------|-------------|
-| macOS 10.12               | macosx10.12 |
-| macOS 10.13               | macosx10.13 |
-| macOS 10.14               | macosx10.14 |
-| macOS 10.15               | macosx10.15 |
-| iOS 10.3                  | iphoneos10.3 |
-| iOS 11.0                  | iphoneos11.0 |
-| iOS 11.1                  | iphoneos11.1 |
-| iOS 11.2                  | iphoneos11.2 |
-| iOS 11.3                  | iphoneos11.3 |
-| iOS 11.4                  | iphoneos11.4 |
-| iOS 12.0                  | iphoneos12.0 |
-| iOS 12.1                  | iphoneos12.1 |
-| iOS 12.2                  | iphoneos12.2 |
-| iOS 12.4                  | iphoneos12.4 |
-| iOS 13.0                  | iphoneos13.0 |
-| iOS Simulator 10.3        | iphonesimulator10.3 |
-| iOS Simulator 11.0        | iphonesimulator11.0 |
-| iOS Simulator 11.1        | iphonesimulator11.1 |
-| iOS Simulator 11.2        | iphonesimulator11.2 |
-| iOS Simulator 11.3        | iphonesimulator11.3 |
-| iOS Simulator 11.4        | iphonesimulator11.4 |
-| iOS Simulator 12.0        | iphonesimulator12.0 |
-| iOS Simulator 12.1        | iphonesimulator12.1 |
-| iOS Simulator 12.2        | iphonesimulator12.2 |
-| iOS Simulator 12.4        | iphonesimulator12.4 |
-| iOS Simulator 13.0        | iphonesimulator13.0 |
-| tvOS 10.2                 | appletvos10.2 |
-| tvOS 11.0                 | appletvos11.0 |
-| tvOS 11.1                 | appletvos11.1 |
-| tvOS 11.2                 | appletvos11.2 |
-| tvOS 11.3                 | appletvos11.3 |
-| tvOS 11.4                 | appletvos11.4 |
-| tvOS 12.0                 | appletvos12.0 |
-| tvOS 12.1                 | appletvos12.1 |
-| tvOS 12.2                 | appletvos12.2 |
-| tvOS 12.4                 | appletvos12.4 |
-| tvOS 13.0                 | appletvos13.0 |
-| tvOS Simulator 10.2       | appletvsimulator10.2 |
-| tvOS Simulator 11.0       | appletvsimulator11.0 |
-| tvOS Simulator 11.1       | appletvsimulator11.1 |
-| tvOS Simulator 11.2       | appletvsimulator11.2 |
-| tvOS Simulator 11.3       | appletvsimulator11.3 |
-| tvOS Simulator 11.4       | appletvsimulator11.4 |
-| tvOS Simulator 12.0       | appletvsimulator12.0 |
-| tvOS Simulator 12.1       | appletvsimulator12.1 |
-| tvOS Simulator 12.2       | appletvsimulator12.2 |
-| tvOS Simulator 12.4       | appletvsimulator12.4 |
-| tvOS Simulator 13.0       | appletvsimulator13.0 |
-| watchOS 3.2               | watchos3.2 |
-| watchOS 4.0               | watchos4.0 |
-| watchOS 4.1               | watchos4.1 |
-| watchOS 4.2               | watchos4.2 |
-| watchOS 4.3               | watchos4.3 |
-| watchOS 5.0               | watchos5.0 |
-| watchOS 5.1               | watchos5.1 |
-| watchOS 5.2               | watchos5.2 |
-| watchOS 5.3               | watchos5.3 |
-| watchOS 6.0               | watchos6.0 |
-| watchOS Simulator 3.2     | watchsimulator3.2 |
-| watchOS Simulator 4.0     | watchsimulator4.0 |
-| watchOS Simulator 4.1     | watchsimulator4.1 |
-| watchOS Simulator 4.2     | watchsimulator4.2 |
-| watchOS Simulator 4.3     | watchsimulator4.3 |
-| watchOS Simulator 5.0     | watchsimulator5.0 |
-| watchOS Simulator 5.1     | watchsimulator5.1 |
-| watchOS Simulator 5.2     | watchsimulator5.2 |
-| watchOS Simulator 5.3     | watchsimulator5.3 |
-| watchOS Simulator 6.0     | watchsimulator6.0 |
+| SDK                       | SDK name    |Xcode Version |
+|---------------------------|-------------|--------------|
+| macOS 10.13               | macosx10.13 | 9.4.1        |
+| macOS 10.14               | macosx10.14 | 10.0, 10.1, 10.2, 10.2.1, 10.3 |
+| macOS 10.15               | macosx10.15 | 11.0         |
+| iOS 11.4                  | iphoneos11.4 | 9.4.1       |
+| iOS 12.0                  | iphoneos12.0 | 10.0        |
+| iOS 12.1                  | iphoneos12.1 | 10.1        |
+| iOS 12.2                  | iphoneos12.2 | 10.2, 10.2.1|
+| iOS 12.4                  | iphoneos12.4 | 10.3        |
+| iOS 13.0                  | iphoneos13.0 | 11.0        |
+| iOS Simulator 11.4        | iphonesimulator11.4 | 9.4.1    |
+| iOS Simulator 12.0        | iphonesimulator12.0 | 10.0     |
+| iOS Simulator 12.1        | iphonesimulator12.1 | 10.1     |
+| iOS Simulator 12.2        | iphonesimulator12.2 | 10.2, 10.2.1 |
+| iOS Simulator 12.4        | iphonesimulator12.4 | 10.3     |
+| iOS Simulator 13.0        | iphonesimulator13.0 | 11.0     |
+| tvOS 11.4                 | appletvos11.4 | 9.4.1          |
+| tvOS 12.0                 | appletvos12.0 | 10.0           |
+| tvOS 12.1                 | appletvos12.1 | 10.1           |
+| tvOS 12.2                 | appletvos12.2 | 10.2, 10.2.1   |
+| tvOS 12.4                 | appletvos12.4 | 10.3           |
+| tvOS 13.0                 | appletvos13.0 | 11.0           |
+| tvOS Simulator 11.4       | appletvsimulator11.4 | 9.4.1   |
+| tvOS Simulator 12.0       | appletvsimulator12.0 | 10.0    |
+| tvOS Simulator 12.1       | appletvsimulator12.1 | 10.1    |
+| tvOS Simulator 12.2       | appletvsimulator12.2 | 10.2, 10.2.1 |
+| tvOS Simulator 12.4       | appletvsimulator12.4 | 10.3    |
+| tvOS Simulator 13.0       | appletvsimulator13.0 | 11.0    |
+| watchOS 4.3               | watchos4.3 | 9.4.1         |
+| watchOS 5.0               | watchos5.0 | 10.0          |
+| watchOS 5.1               | watchos5.1 | 10.1          |
+| watchOS 5.2               | watchos5.2 | 10.2, 10.2.1  |
+| watchOS 5.3               | watchos5.3 | 10.3          |
+| watchOS 6.0               | watchos6.0 | 11.0          |
+| watchOS Simulator 4.3     | watchsimulator4.3 | 9.4.1         |
+| watchOS Simulator 5.0     | watchsimulator5.0 | 10.0          |
+| watchOS Simulator 5.1     | watchsimulator5.1 | 10.1          |
+| watchOS Simulator 5.2     | watchsimulator5.2 | 10.2, 10.2.1  |
+| watchOS Simulator 5.3     | watchsimulator5.3 | 10.3          |
+| watchOS Simulator 6.0     | watchsimulator6.0 | 11.0          |
+| DriverKit 19.0            | driverkit.macosx19.0 | 11.0       |
 
 ### Installed Simulators
 
-#### Device Types
-
-- iPhone 4s
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone 8
-- iPhone 8 Plus
-- iPhone SE
-- iPhone X
-- iPhone XR
-- iPhone XS
-- iPhone XS Max
-- iPad 2
-- iPad Retina
-- iPad Air
-- iPad Air 2
-- iPad Air (3rd generation)
-- iPad mini 2
-- iPad mini 3
-- iPad mini 4
-- iPad mini (5th generation)
-- iPad (5th generation)
-- iPad Pro (9.7-inch)
-- iPad Pro (10.5-inch)
-- iPad Pro (11-inch)
-- iPad Pro (12.9-inch)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (12.9-inch) (3rd generation)
-- iPad (6th generation)
-- Apple TV 1080p
-- Apple TV 4K
-- Apple TV 4K (at 1080p)
-- Apple Watch - 38mm
-- Apple Watch - 42mm
-- Apple Watch Series 2 - 38mm
-- Apple Watch Series 2 - 42mm
-- Apple Watch Series 3 - 38mm
-- Apple Watch Series 3 - 42mm
-- Apple Watch Series 4 - 40mm
-- Apple Watch Series 4 - 44mm
-
 #### Runtimes
 
-| OS          | Version  |
-|-------------|----------|
-| iOS 8.4     | 12H141   |
-| iOS 9.0     | 13A344   |
-| iOS 9.1     | 13B143   |
-| iOS 9.2     | 13C75    |
-| iOS 9.3     | 13E233   |
-| iOS 10.0    | 14A345   |
-| iOS 10.1    | 14B72    |
-| iOS 10.2    | 14C89    |
-| iOS 10.3    | 14E8301  |
-| iOS 11.1    | 15B87    |
-| iOS 11.2    | 15C107   |
-| iOS 11.3    | 15E217   |
-| iOS 11.4    | 15F79    |
-| iOS 12.0    | 16A5288q |
-| iOS 12.1    | 16B91    |
-| iOS 12.2    | 16E226   |
-| iOS 12.4    | 16G73    |
-| iOS 13.0    | 17A5534d |
-| tvOS 10.2   | 14W260   |
-| tvOS 11.1   | 15J580   |
-| tvOS 11.2   | 15K104   |
-| tvOS 11.3   | 15L211   |
-| tvOS 11.4   | 15L576   |
-| tvOS 12.0   | 16J5283n |
-| tvOS 12.1   | 16J602   |
-| tvOS 12.2   | 16L225   |
-| tvOS 12.4   | 16M567   |
-| tvOS 13.0   | 17J5526d |
-| watchOS 3.2 | 14V243   |
-| watchOS 4.0 | 15R372   |
-| watchOS 4.1 | 15R844   |
-| watchOS 4.2 | 15S100   |
-| watchOS 4.3 | 15T212   |
-| watchOS 5.0 | 16R5283q |
-| watchOS 5.1 | 16R591   |
-| watchOS 5.2 | 16T224   |
-| watchOS 5.3 | 16U567   |
-| watchOS 6.0 | 17R5532d |
-
-#### Devices
-
-#### iOS 8.4
-
-- iPhone 4s
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPad 2
-- iPad Retina
-- iPad Air
-
-#### iOS 9.0
-
-- iPhone 4s
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPad 2
-- iPad Retina
-- iPad Air
-- iPad Air 2
-
-#### iOS 9.1, 9.2, 9.3
-
-- iPhone 4s
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPad 2
-- iPad Retina
-- iPad Air
-- iPad Air 2
-- iPad Pro
-
-#### iOS 10.0
-
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone SE
-- iPad Air
-- iPad Air 2
-- iPad Pro (9.7 inch)
-- iPad Pro (12.9 inch)
-
-#### iOS 10.1, 10.2
-
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPad Air
-- iPad Air 2
-- iPad Pro (9.7 inch)
-- iPad Pro (12.9 inch)
-
-#### iOS 10.3
-
-- iPhone 5
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPad Air
-- iPad Air 2
-- iPad Pro (9.7 inch)
-- iPad Pro (12.9 inch)
-- iPad (5th generation)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-
-#### iOS 11.0, 11.1, 11.2, 11.3, 11.4
-
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPhone 8
-- iPhone 8 Plus
-- iPhone X
-- iPad Air
-- iPad Air 2
-- iPad (5th generation)
-- iPad Pro (9.7-inch)
-- iPad Pro (12.9-inch)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-
-#### iOS 12.0
-
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPhone 8
-- iPhone 8 Plus
-- iPhone X
-- iPhone XR
-- iPhone XS
-- iPhone XS Max
-- iPad Air
-- iPad Air 2
-- iPad (5th generation)
-- iPad Pro (9.7-inch)
-- iPad Pro (12.9-inch)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-- iPad (6th generation)
-
-#### iOS 12.1
-
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPhone 8
-- iPhone 8 Plus
-- iPhone X
-- iPhone XS
-- iPhone XS Max
-- iPhone XR
-- iPad Air
-- iPad Air 2
-- iPad (5th generation)
-- iPad Pro (9.7-inch)
-- iPad Pro (12.9-inch)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-- iPad (6th generation)
-- iPad Pro (11-inch)
-- iPad Pro (12.9-inch) (3rd generation)
-
-#### iOS 12.2, 12.4
-
-- iPhone 5s
-- iPhone 6
-- iPhone 6 Plus
-- iPhone 6s
-- iPhone 6s Plus
-- iPhone 7
-- iPhone 7 Plus
-- iPhone SE
-- iPhone 8
-- iPhone 8 Plus
-- iPhone X
-- iPhone XS
-- iPhone XS Max
-- iPhone XR
-- iPad Air
-- iPad Air 2
-- iPad Air (3rd generation)
-- iPad (5th generation)
-- iPad Pro (9.7-inch)
-- iPad Pro (12.9-inch)
-- iPad Pro (12.9-inch) (2nd generation)
-- iPad Pro (10.5-inch)
-- iPad (6th generation)
-- iPad Pro (11-inch)
-- iPad Pro (12.9-inch) (3rd generation)
-
-#### iOS 13.0
-
-- iPhone 8
-- iPhone 8 Plus
-- iPhone Xs
-- iPhone Xs Max
-- iPhone XR
-- iPad Pro (9.7-inch)
-- iPad Pro
-- iPad Pro (12.9-inch) (3rd generation)
-- iPad Air (3rd generation)
-
-#### tvOS 10.2
-
-- Apple TV 1080p
-
-#### tvOS 11.0, 11.1, 11.2, 11.3, 11.4, 12.0, 12.1, 12.2, 12.4, 13.0
-
-- Apple TV
-- Apple TV 4K
-- Apple TV 4K (at 1080p)
-
-#### watchOS 3.2
-
-- Apple Watch - 38mm
-- Apple Watch - 42mm
-- Apple Watch Series 2 - 38mm
-- Apple Watch Series 2 - 42mm
-
-#### watchOS 4.0, 4.1, 4.2, 4.3
-
-- Apple Watch - 38mm
-- Apple Watch - 42mm
-- Apple Watch Series 2 - 38mm
-- Apple Watch Series 2 - 42mm
-- Apple Watch Series 3 - 38mm
-- Apple Watch Series 3 - 42mm
-
-#### watchOS 5.0, 5.1, 5.2, 5.3, 6.0
-
-- Apple Watch Series 2 - 38mm
-- Apple Watch Series 2 - 42mm
-- Apple Watch Series 3 - 38mm
-- Apple Watch Series 3 - 42mm
-- Apple Watch Series 4 - 40mm
-- Apple Watch Series 4 - 44mm
+| OS      | Xcode Version                   | Simulators |
+|---------|---------------------------------|------------|
+| iOS 8.4 (12H141) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPad 2<br>iPad Retina<br>iPad Air |
+| iOS 9.0 (13A344) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2 |
+| iOS 9.1 (13B143)<br>iOS 9.2 (13C75)<br>iOS 9.3 (13E233) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPad 2<br>iPad Retina<br>iPad Air<br>iPad Air 2<br>iPad Pro |
+| iOS 10.0 (14A345) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
+| iOS 10.1 (14B72)<br>iOS 10.2 (14C89) | 9.4.1, 10.0, 10.1, 10.2, 10.2.1 | iPhone 5<br>iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch) |
+| iOS 11.4 (15F79) | 9.4.1 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch) |
+| iOS 12.0 (16A5288q) | 10.0 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XR<br>iPhone XS<br>iPhone XS Max<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (10.5-inch)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad (6th generation) |
+| iOS 12.1 (16B91) | 10.1 | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation) |
+| iOS 12.2 (16E226)<br>iOS 12.4 (16G73) | 10.2, 10.2.1<br>10.3  | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Air (3rd generation)<br>iPad mini 2<br>iPad mini 3<br>iPad mini 4<br>iPad mini (5th generation)<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation) |
+| iOS 13.0 (17A5547d) | 11.0          | iPhone 8<br>iPhone 8 Plus<br>iPhone Xs<br>iPhone Xs Max<br>iPhone XR<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd<br>iPad Air (3rd generation) |
+| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J5540d) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0         | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
+| watchOS 4.3 (15T212) | 9.4.1        | Apple Watch 38mm<br>Apple Watch 42mm<br>Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm |
+| watchOS 5.0 (16R5283q)<br>watchOS 5.1 (16R591)<br>watchOS 5.2 (16T224)<br>watchOS 5.3 (16U567)<br>watchOS 6.0 (17R5546d) | 10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0       | Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm<br>Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm |
 
 ### Device Pairs
-
 
 | Watch                       | Phone          |
 |-----------------------------|----------------|
@@ -547,7 +210,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Package name          | Description                                 |
 |-----------------------|---------------------------------------------|
-| platform-tools        | Android SDK Platform-tools, revision 29.0.1 |
+| platform-tools        | Android SDK Platform-tools, revision 29.0.2 |
 
 ### Android SDK Platforms
 
@@ -640,7 +303,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.1.19
+- 8.2.2.21
 
 ### Mono
 
@@ -658,6 +321,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 12.14.0.114
 - 12.10.0.157
 - 12.8.0.2
 - 12.6.0.25
@@ -676,6 +340,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
 - 9.1.8-0
