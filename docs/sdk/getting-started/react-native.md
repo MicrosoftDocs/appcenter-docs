@@ -119,6 +119,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
         "app_secret": "{APP_SECRET_VALUE}"
     }
     ```
+Note: If the folder named assets does not exist, it should be created under "project_root/android/app/src/main/assets"
 
 2. Modify the app's **res/values/strings.xml** to include the following lines:
 
