@@ -78,7 +78,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 ### 3.9. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection]((~/distribution/stores/index.md)) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
 > If an `.aab` is produced, it will be distributed to the Google Play Store. Regardless of if an `.aab` is produced, an `.apk` will be distributed to Intune.
