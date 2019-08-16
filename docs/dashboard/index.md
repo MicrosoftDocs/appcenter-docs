@@ -53,4 +53,4 @@ Install the App Center Slack app to easily trigger builds, monitor your app, and
 
 ### Dark theme (Preview)
 
-App Center can be used with a Dark theme. Go to the User Interface section under your account settings to enable it. Currently, dark theme is only available in Preview.
+App Center can be used with a Dark theme. Under your account settings, go to the User Intercace section to enable dark theme. Currently, dark theme is only available in Preview.
