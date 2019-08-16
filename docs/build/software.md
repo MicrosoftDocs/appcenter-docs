@@ -92,21 +92,23 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Xcode
 
-- Xcode 11 beta 5 (11M382q)
-- Xcode 10.3 (10G8)
-- Xcode 10.2.1 (10E1001)
-- Xcode 10.2 (10E125)
-- Xcode 10.1 (10B61)
-- Xcode 10 (10A255)
-- Xcode 9.4.1 (9F2000)
-- Xcode 9.4 (9F1027a)
-- Xcode 9.3.1 (9E501)
-- Xcode 9.3 (9E145)
-- Xcode 9.2 (9C40b)
-- Xcode 9.1 (9B55)
-- Xcode 9.0.1 (9A1004)
-- Xcode 9.0 (9A235)
-- Xcode 8.3.3 (8E3004b)
+| Version                | Build   |
+|------------------------|---------|
+| 11_beta 5              | 11M382q |
+| 10.3                   | 10G8    |
+| 10.2.1                 | 10E1001 |
+| 10.2                   | 10E125  |
+| 10.1                   | 10B61   |
+| 10.0                   | 10A255  |
+| 9.4.1                  | 9F2000  |
+| 9.4                    | 9F1027a |
+| 9.3.1                  | 9E501   |
+| 9.3                    | 9E145   |
+| 9.2                    | 9C40b   |
+| 9.1                    | 9B55    |
+| 9.0.1                  | 9A1004  |
+| 9.0                    | 9A235   |
+| 8.3.3                  | 8E3004b |
 
 ### Xcode Support Tools
 
@@ -118,76 +120,48 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Installed SDKs
 
-| SDK                       | SDK name    |
-|---------------------------|-------------|
-| macOS 10.12               | macosx10.12 |
-| macOS 10.13               | macosx10.13 |
-| macOS 10.14               | macosx10.14 |
-| macOS 10.15               | macosx10.15 |
-| iOS 10.3                  | iphoneos10.3 |
-| iOS 11.0                  | iphoneos11.0 |
-| iOS 11.1                  | iphoneos11.1 |
-| iOS 11.2                  | iphoneos11.2 |
-| iOS 11.3                  | iphoneos11.3 |
-| iOS 11.4                  | iphoneos11.4 |
-| iOS 12.0                  | iphoneos12.0 |
-| iOS 12.1                  | iphoneos12.1 |
-| iOS 12.2                  | iphoneos12.2 |
-| iOS 12.4                  | iphoneos12.4 |
-| iOS 13.0                  | iphoneos13.0 |
-| iOS Simulator 10.3        | iphonesimulator10.3 |
-| iOS Simulator 11.0        | iphonesimulator11.0 |
-| iOS Simulator 11.1        | iphonesimulator11.1 |
-| iOS Simulator 11.2        | iphonesimulator11.2 |
-| iOS Simulator 11.3        | iphonesimulator11.3 |
-| iOS Simulator 11.4        | iphonesimulator11.4 |
-| iOS Simulator 12.0        | iphonesimulator12.0 |
-| iOS Simulator 12.1        | iphonesimulator12.1 |
-| iOS Simulator 12.2        | iphonesimulator12.2 |
-| iOS Simulator 12.4        | iphonesimulator12.4 |
-| iOS Simulator 13.0        | iphonesimulator13.0 |
-| tvOS 10.2                 | appletvos10.2 |
-| tvOS 11.0                 | appletvos11.0 |
-| tvOS 11.1                 | appletvos11.1 |
-| tvOS 11.2                 | appletvos11.2 |
-| tvOS 11.3                 | appletvos11.3 |
-| tvOS 11.4                 | appletvos11.4 |
-| tvOS 12.0                 | appletvos12.0 |
-| tvOS 12.1                 | appletvos12.1 |
-| tvOS 12.2                 | appletvos12.2 |
-| tvOS 12.4                 | appletvos12.4 |
-| tvOS 13.0                 | appletvos13.0 |
-| tvOS Simulator 10.2       | appletvsimulator10.2 |
-| tvOS Simulator 11.0       | appletvsimulator11.0 |
-| tvOS Simulator 11.1       | appletvsimulator11.1 |
-| tvOS Simulator 11.2       | appletvsimulator11.2 |
-| tvOS Simulator 11.3       | appletvsimulator11.3 |
-| tvOS Simulator 11.4       | appletvsimulator11.4 |
-| tvOS Simulator 12.0       | appletvsimulator12.0 |
-| tvOS Simulator 12.1       | appletvsimulator12.1 |
-| tvOS Simulator 12.2       | appletvsimulator12.2 |
-| tvOS Simulator 12.4       | appletvsimulator12.4 |
-| tvOS Simulator 13.0       | appletvsimulator13.0 |
-| watchOS 3.2               | watchos3.2 |
-| watchOS 4.0               | watchos4.0 |
-| watchOS 4.1               | watchos4.1 |
-| watchOS 4.2               | watchos4.2 |
-| watchOS 4.3               | watchos4.3 |
-| watchOS 5.0               | watchos5.0 |
-| watchOS 5.1               | watchos5.1 |
-| watchOS 5.2               | watchos5.2 |
-| watchOS 5.3               | watchos5.3 |
-| watchOS 6.0               | watchos6.0 |
-| watchOS Simulator 3.2     | watchsimulator3.2 |
-| watchOS Simulator 4.0     | watchsimulator4.0 |
-| watchOS Simulator 4.1     | watchsimulator4.1 |
-| watchOS Simulator 4.2     | watchsimulator4.2 |
-| watchOS Simulator 4.3     | watchsimulator4.3 |
-| watchOS Simulator 5.0     | watchsimulator5.0 |
-| watchOS Simulator 5.1     | watchsimulator5.1 |
-| watchOS Simulator 5.2     | watchsimulator5.2 |
-| watchOS Simulator 5.3     | watchsimulator5.3 |
-| watchOS Simulator 6.0     | watchsimulator6.0 |
+| SDK                       | SDK name    |Xcode Version |
+|---------------------------|-------------|--------------|
+| macOS 10.13               | macosx10.13 | 9.4.1        |
+| macOS 10.14               | macosx10.14 | 10.0, 10.1, 10.2, 10.2.1, 10.3 |
+| macOS 10.15               | macosx10.15 | 11.0         |
+| iOS 11.4                  | iphoneos11.4 | 9.4.1       |
+| iOS 12.0                  | iphoneos12.0 | 10.0        |
+| iOS 12.1                  | iphoneos12.1 | 10.1        |
+| iOS 12.2                  | iphoneos12.2 | 10.2, 10.2.1|
+| iOS 12.4                  | iphoneos12.4 | 10.3        |
+| iOS 13.0                  | iphoneos13.0 | 11.0        |
+| iOS Simulator 11.4        | iphonesimulator11.4 | 9.4.1    |
+| iOS Simulator 12.0        | iphonesimulator12.0 | 10.0     |
+| iOS Simulator 12.1        | iphonesimulator12.1 | 10.1     |
+| iOS Simulator 12.2        | iphonesimulator12.2 | 10.2, 10.2.1 |
+| iOS Simulator 12.4        | iphonesimulator12.4 | 10.3     |
+| iOS Simulator 13.0        | iphonesimulator13.0 | 11.0     |
+| tvOS 11.4                 | appletvos11.4 | 9.4.1          |
+| tvOS 12.0                 | appletvos12.0 | 10.0           |
+| tvOS 12.1                 | appletvos12.1 | 10.1           |
+| tvOS 12.2                 | appletvos12.2 | 10.2, 10.2.1   |
+| tvOS 12.4                 | appletvos12.4 | 10.3           |
+| tvOS 13.0                 | appletvos13.0 | 11.0           |
+| tvOS Simulator 11.4       | appletvsimulator11.4 | 9.4.1   |
+| tvOS Simulator 12.0       | appletvsimulator12.0 | 10.0    |
+| tvOS Simulator 12.1       | appletvsimulator12.1 | 10.1    |
+| tvOS Simulator 12.2       | appletvsimulator12.2 | 10.2, 10.2.1 |
+| tvOS Simulator 12.4       | appletvsimulator12.4 | 10.3    |
+| tvOS Simulator 13.0       | appletvsimulator13.0 | 11.0    |
+| watchOS 4.3               | watchos4.3 | 9.4.1         |
+| watchOS 5.0               | watchos5.0 | 10.0          |
+| watchOS 5.1               | watchos5.1 | 10.1          |
+| watchOS 5.2               | watchos5.2 | 10.2, 10.2.1  |
+| watchOS 5.3               | watchos5.3 | 10.3          |
+| watchOS 6.0               | watchos6.0 | 11.0          |
+| watchOS Simulator 4.3     | watchsimulator4.3 | 9.4.1         |
+| watchOS Simulator 5.0     | watchsimulator5.0 | 10.0          |
+| watchOS Simulator 5.1     | watchsimulator5.1 | 10.1          |
+| watchOS Simulator 5.2     | watchsimulator5.2 | 10.2, 10.2.1  |
+| watchOS Simulator 5.3     | watchsimulator5.3 | 10.3          |
+| watchOS Simulator 6.0     | watchsimulator6.0 | 11.0          |
+| DriverKit 19.0            | driverkit.macosx19.0 | 11.0       |
 
 ### Installed Simulators
 
