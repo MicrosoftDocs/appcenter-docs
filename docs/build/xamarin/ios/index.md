@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 12/17/2018
+ms.date: 08/15/2019
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -57,6 +57,15 @@ Select the configuration you would like to build with. The configurations are au
 ### 3.3. Mono version
 
 App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono you will see the Xamarin.iOS SDK version which is bundled with it. For more information about Xamarin SDK version updates, you can read posts in [Xamarin release blog](https://releases.xamarin.com/).
+
+#### 3.3.1. .Net Core version
+
+Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+
+| Mono | .Net Core |
+| ---- | --------- |
+| <= 5.18 | 2.2.105 |
+| 6.0 | 2.2.300 |
 
 ### 3.4. Xcode Version
 

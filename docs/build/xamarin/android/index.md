@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 07/29/2019
+ms.date: 08/15/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -52,6 +52,15 @@ The available projects in your repository will populate if they are located with
 App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. 
 
 When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
+
+#### 3.3.1. .Net Core version
+
+Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+
+| Mono | .Net Core |
+| ---- | --------- |
+| <= 5.18 | 2.2.105 |
+| 6.0 | 2.2.300 |
 
 ### 3.4. Increment version number
 
