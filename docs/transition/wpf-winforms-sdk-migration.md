@@ -70,7 +70,7 @@ After (App Center):
     HockeyClient.Current.Configure("Your_App_ID");
     ```
 
-2. Start the App Center SDK
+2. Start the App Center SDK.
 
     Add the appropriate namespaces before you use our APIs.
 
@@ -92,22 +92,22 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms#adjust-the-log-level)
+Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms#adjust-the-log-level)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Documentation](~/sdk/analytics/windows.md#session-and-device-information)
+Automatically track sessions | [User Tracking Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Session and Device Information](~/sdk/analytics/windows.md#session-and-device-information)
 Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](~/sdk/analytics/windows.md#custom-events)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Documentation](~/sdk/crashes/wpf-winforms.md)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Documentation](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
-Track handled exceptions | `HockeyClient.Current.TrackException` | [Documentation](~/sdk/crashes/wpf-winforms#handled-errors)
+Automatically send crashes | [Crash Reporting (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Crash Reporting](~/sdk/crashes/wpf-winforms.md)
+Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Adding Attachments](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
+Track handled exceptions | `HockeyClient.Current.TrackException` | [Handled Errors](~/sdk/crashes/wpf-winforms#handled-errors)
 
 ### Distribution
 
