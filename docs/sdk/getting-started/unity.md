@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 07/29/2019
+ms.date: 08/01/2019
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -45,6 +45,8 @@ The App Center SDK for Unity supports the following platforms:
 
 > [!NOTE]
 > For versions of Unity with iOS lower than 2017.4, it is required to enable Push notifications capability in XCode manually.
+
+In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asyncronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
 Also note that the App Center SDK for Unity is only available in C#.
 
