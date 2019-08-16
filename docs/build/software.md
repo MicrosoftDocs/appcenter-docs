@@ -259,7 +259,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 12.1    | 16B91    |
 | iOS 12.2    | 16E226   |
 | iOS 12.4    | 16G73    |
-| iOS 13.0    | 17A5534d |
+| iOS 13.0    | 17A5547d |
 | tvOS 10.2   | 14W260   |
 | tvOS 11.1   | 15J580   |
 | tvOS 11.2   | 15K104   |
@@ -269,7 +269,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | tvOS 12.1   | 16J602   |
 | tvOS 12.2   | 16L225   |
 | tvOS 12.4   | 16M567   |
-| tvOS 13.0   | 17J5526d |
+| tvOS 13.0   | 17J5540d |
 | watchOS 3.2 | 14V243   |
 | watchOS 4.0 | 15R372   |
 | watchOS 4.1 | 15R844   |
@@ -279,7 +279,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS 5.1 | 16R591   |
 | watchOS 5.2 | 16T224   |
 | watchOS 5.3 | 16U567   |
-| watchOS 6.0 | 17R5532d |
+| watchOS 6.0 | 17R5546d |
 
 #### Devices
 
