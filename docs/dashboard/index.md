@@ -3,7 +3,7 @@ title: Using App Center
 description: Managing your App Center account and settings
 author: blparr
 ms.author: blparr
-ms.date: 09/12/2018
+ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0
 ms.service: vs-appcenter
@@ -48,3 +48,9 @@ Create and enable webhooks to integrate with third party applications you alread
 ### Slack App
 
 Install the App Center Slack app to easily trigger builds, monitor your app, and invite new testers directly from Slack.
+
+## Manage App Center's theme
+
+### Dark theme (Preview)
+
+App Center can be used with a Dark theme. Under your account settings, go to the User Intercace section to enable dark theme. Currently, dark theme is only available in Preview.
