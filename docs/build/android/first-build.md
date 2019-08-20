@@ -71,7 +71,7 @@ Specific information about your build will be collected from your Gradle file in
 You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
-> If an `.aab` is produced, it will be distributed to the Google Play Store. Regardless of if an `.aab` is produced, an `.apk` will be distributed to Intune.
+> If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.
 
 ## 4. Build results
 
