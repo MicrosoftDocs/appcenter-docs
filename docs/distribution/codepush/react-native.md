@@ -267,7 +267,7 @@ In order to effectively make use of the `Staging` and `Production` deployments t
 
 CodePush plugin makes HTTPS requests to the following domains:
 
-- codepush.azurewebsites.net
+- codepush.appcenter.ms
 - codepush.blob.core.windows.net
 - codepushupdates.azureedge.net
 
@@ -282,7 +282,7 @@ If you want to change the default HTTP security configuration for any of these d
     <dict>
       <key>NSExceptionDomains</key>
       <dict>
-        <key>codepush.azurewebsites.net</key>
+        <key>codepush.appcenter.ms</key>
         <dict><!-- read the ATS Apple Docs for available options --></dict>
       </dict>
     </dict>
