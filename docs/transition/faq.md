@@ -11,44 +11,46 @@ ms.service: vs-appcenter
 
 # HockeyApp Transition FAQ
 
-## Transition to App Center
+In the following we've collected a list of frequently asked questions for the HockeyApp Transition to App Center. If you're missing anything please [reach out](~/general/support-center.md) to us.
 
-#### What do I need to do?
+## Frequently asked questions
 
-Your HockeyApp account data including your apps is currently already synchronized to App Center. Sign in with your HockeyApp credentials and complete the transition by [moving your apps](https://appcenter.ms/hockeyapp-transition-center) to App Center. That will give you full control and lets you take advantage of all the App Center functionality.
+### What do I need to do?
 
-#### All of my HockeyApp apps are in App Center. Does this mean my transition to App Center is complete?
+Your HockeyApp account data including your apps is currently already synchronized to App Center. Sign in with your HockeyApp credentials and complete the transition by [moving your apps](https://appcenter.ms/hockeyapp-transition-center) to App Center. Moving apps will give you full control and lets you take advantage of all the App Center functionality.
+
+### All of my HockeyApp apps are in App Center. Is my transition to App Center complete?
 
 Not until you've moved all of them to App Center and the HockeyApp icon disappeared from the app. Complete the migration and [move your apps](https://appcenter.ms/hockeyapp-transition-center) to App Center.
 
-#### Do I need to change my SDK?
+### Do I need to change my SDK?
 
 Yes, but not before you've [moved](~/transition/moving/index.md) them to App Center.
 
-#### What happens to data sent by the HockeySDK?
+### What happens to data sent by the HockeySDK?
 
 App Center currently receives data from the HockeySDK and continuous to do so after you've moved an app and the shutdown.
 
-#### Will in-app updates continue to work when I've moved my app?
+### Will in-app updates continue to work when I've moved my app?
 
 Yes.
 
-#### Why are the crash metrics on App Center different than on HockeyApp?
+### Why are the crash metrics on App Center different than on HockeyApp?
 
 HockeyApp shows and calculates crashes by the time they were received while App Center is doing it by the time they occurred. Depending on app usage it can take multiple days until crashes are sent by the SDK, hence the discrepancy.
 
-#### Does App Center have feature-parity with HockeyApp?
+### Does App Center have feature-parity with HockeyApp?
 
 App Center does not yet have all of HockeyApp's features, but we're getting close. [View our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to keep track of this progress.
 
-#### Will HockeyApp be shutdown before reaching feature-parity?
+### Will HockeyApp be shutdown before reaching feature-parity?
 
 No, we'll complete the features on our [roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) first.
 
-#### Will the services I use in HockeyApp be free in App Center?
+### Will the services I use in HockeyApp be free in App Center?
 
-Yes! The services offered by HockeyApp (distribution, crash reporting and analytics) will continue to be free in App Center.
+Yes! The services offered by HockeyApp (distribution, crash reporting, and analytics) will continue to be free in App Center.
 
-#### When will HockeyApp shutdown?
+### When will HockeyApp shutdown?
 
 On November 16, 2019.
