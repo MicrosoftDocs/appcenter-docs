@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 03/18/2019
+ms.date: 08/20/2019
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter

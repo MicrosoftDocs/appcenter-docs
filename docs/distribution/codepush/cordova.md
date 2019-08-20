@@ -4,7 +4,7 @@ description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 10/11/2018
+ms.date: 08/20/2019
 ms.topic: article
 ms.assetid: 591025F9-C7DA-400E-8CCA-DF39514B3DD0
 ms.service: vs-appcenter
