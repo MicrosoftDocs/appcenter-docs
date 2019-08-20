@@ -16,7 +16,7 @@ ms.custom: sdk
 Once you've [moved your app to App Center](~/transition/moving/) you're ready to integrate the App Center SDK. Follow this documentation to update your application to use the App Center SDK instead of the HockeySDK. The guides for each platform are listed below.
 
 > [!NOTE]
-> After you moved an app it still receives data from the HockeySDK in App Center from past releases. In-app updates also remain functional.
+> App Center will still receive data from the HockeySDK after the shutdown. In-app updates also remain functional.
 
 * [HockeySDK Android](android-sdk-migration.md)
 * [HockeySDK iOS](ios-sdk-migration.md)
