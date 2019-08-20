@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # API migration
 
-With the shutdown of HockeyApp most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access those API's. We recommend to upgrade to the App Center API as soon as you've made yourself familiar with them. The following APIs retain functional after you've moved an app to App Center.
+With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the App Center API as soon as you've made yourself familiar with them. The following APIs remain functional after you've moved an app to App Center.
 
 ## Upload API
 
@@ -20,7 +20,7 @@ Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still
 > [!NOTE]
 > Distribution Groups have to be specified with their names instead of their id's
 
-* **ipa** - Required (when no dsym specified), .ipa for iOS, .apk for Android etc.
+* **ipa** - Required (when no dsym specified), .ipa for iOS, .apk for Android and so on
 * **dsym** - Required (when no ipa specified), .dsym.zip (case-insensitive) for iOS/macOS and mapping.txt for Android
 * **notes** - Optional, release notes as Markdown
 * **notify** - Optional, notify testers:
@@ -40,4 +40,4 @@ Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still
 
 ## SDK
 
-API's used by the HockeySDK such as for uploading crash logs or retrieving versions for in-app updates remain functional. That way your legacy versions with the HockeySDK integrated will still deliver data to App Center also after the shutdown of HockeyApp.
+APIs used by the HockeySDK remain functional. That way legacy versions with the HockeySDK integrated will still deliver data to App Center. The APIs also remain functional after the shutdown of HockeyApp.
