@@ -106,11 +106,12 @@ If the `NuGet.config` file is checked-in into the repository and sitting next to
 
 If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-### 3.9. Distribute to a distribution group
+### 3.9. Distribute the build   
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called **Collaborators** that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
-Once you save the configuration, a new build will kick off automatically.
+> [!NOTE]
+> If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.
 
 ## 4. Build results
 
