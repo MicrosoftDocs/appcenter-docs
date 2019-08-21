@@ -65,7 +65,7 @@ Crashes.hasReceivedMemoryWarningInLastSession()
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
 
 > [!NOTE]
-> In some cases, running a device's memory low may not trigger trackable events.
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 
