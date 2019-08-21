@@ -30,7 +30,7 @@ Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still
 * **status** - Optional, download status:
     * 1: Don't allow users to download or install the version
     * 2: Available for download or installation
-* **teams** - Optional, a comma-separated list of distribution group names (empty string will release to the "Collaborators" group), for example:
+* **teams** - Optional, a comma-separated list of distribution group names (empty string will release to the "Collaborators" group when no users specified), for example:
     * `"Beta Testers", "Internal"`
 * **users** - Optional, a comma-separated list of user ids, for example:
     * `123, 124`
