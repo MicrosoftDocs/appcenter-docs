@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/25/2019
+ms.date: 08/19/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ ms.tgt_pltfrm: wpf-winforms
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center SDK in your app to use App Center Crashes.
+Let's get started with setting up App Center SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 
