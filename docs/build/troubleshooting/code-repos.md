@@ -43,8 +43,8 @@ It is possible when you first attempt to connect AppCenter to Azure DevOps (form
 
 ## <a name="git-sub"/>Are Git submodules supported?
 
-For repositories hosted on GitHub, only Git submodules over HTTPS are supported.
-For repositories hosted on Bitbucket or Azure DevOps (formerly VSTS), only un-authenticated Git submodules are supported for now.
+For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 
+For repositories hosted on Bitbucket, only un-authenticated Git submodules are supported for now.
 
 ## <a name="bitbucket-git"/>I'm connected to Bitbucket and my builds fail with Git error
 
