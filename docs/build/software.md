@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 8/16/2019
+ms.date: 8/22/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -29,7 +29,7 @@ Java developers can now build and run production Java applications using Azul Sy
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.6 (18G84) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
+- OS X 10.14.6 (18G87) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G7024) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
@@ -47,23 +47,23 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Python 3.7.4
 - Ruby 2.6.3p62
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.12.7
+- Go 1.12.9
 - Miniconda 4.7.10
 - MacOS toolcache Python 2.7.16 3.4.10 3.5.7 3.6.9 3.7.4
 - MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
 
 ### Node.js versions
 - v6.17.1
-- v8.16.0
-- v10.16.2
-- v12.8.0
+- v8.16.1
+- v10.16.3
+- v12.8.1
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.33.0
 - CocoaPods 1.7.5
-- Homebrew 2.1.9
+- Homebrew 2.1.10
 - NPM 3.10.10
 - Yarn 1.17.3
 - NuGet 4.7.0.5148
@@ -73,12 +73,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.6.1
-- Gradle 5.5.1
+- Gradle 5.6
 
 ### Utilities
 
 - Curl 7.65.3 (libcurl/7.65.3 SecureTransport zlib/1.2.11)
-- Git 2.22.0
+- Git 2.22.1
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
@@ -86,9 +86,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- Fastlane 2.128.1
+- Fastlane 2.129.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.70
+- Azure-CLI 2.0.71
 
 ## Xcode
 
@@ -266,6 +266,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-28.0.2    | Android SDK Build-tools, Revision 28.0.2  |
 | build-tools-28.0.3    | Android SDK Build-tools, Revision 28.0.3  |
 | build-tools-29.0.0    | Android SDK Build-tools, Revision 29.0.0  |
+| build-tools-29.0.1    | Android SDK Build-tools, Revision 29.0.1  |
+| build-tools-29.0.1    | Android SDK Build-tools, Revision 29.0.2  |
 
 ### Utils
 
@@ -273,7 +275,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | Package name          | Description                               |
 |-----------------------|-------------------------------------------|
 | cmake                 | 3.6.4111459                               |
-| lldb                  | 2.3.3614996                               |
+| lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
 | Android Emulator      | 29.0.11                                    |
@@ -297,13 +299,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | extra-google-google_play_services      | Google Play services, revision 49        |
 | extra-google-m2repository              | Google Repository, revision 58           |
 | extras;google;instantapps              | Google Play Instant Development SDK 1.6.0|
-| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.3.2     |
+| Hardware_Accelerated_Execution_Manager | Intel x86 Emulator Accelerator 7.5.1     |
 
 ## Xamarin
 
 ### Visual Studio for Mac
 
-- 8.2.2.21
+- 8.2.3.6
 
 ### Mono
 
