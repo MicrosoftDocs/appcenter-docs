@@ -11,14 +11,14 @@ ms.service: vs-appcenter
 
 # API migration
 
-With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the App Center API as soon as you've made yourself familiar with them. The following APIs remain functional after you've moved an app to App Center:
+With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the App Center API as soon as you made yourself familiar with them. The following APIs will remain functional after you moved an app to App Center:
 
 ## Upload API
 
-Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still work after you've moved your app. The following parameters will be passed to App Center:
+Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still work after you moved your app. The following parameters will be passed to App Center:
 
 > [!NOTE]
-> Distribution Groups have to be specified with their names instead of their id and tags will cease to work.
+> Distribution Groups have to be specified with their names instead of their ID. Tags will cease to work with App Center.
 
 * **ipa** - Required (when no dsym specified), .ipa for iOS, .apk for Android and so on
 * **dsym** - Required (when no ipa specified), .dsym.zip (case-insensitive) for iOS/macOS and mapping.txt for Android
@@ -32,7 +32,7 @@ Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still
     * 2: Available for download or installation
 * **teams** - Optional, a comma-separated list of distribution group names (empty string will release to the "Collaborators" group when no users specified), for example:
     * `"Beta Testers", "Internal"`
-* **users** - Optional, a comma-separated list of user ids, for example:
+* **users** - Optional, a comma-separated list of user IDs, for example:
     * `123, 124`
 * **mandatory** - Optional, set version as mandatory
     * `0` - no
@@ -40,4 +40,4 @@ Uploading a version via `POST /api/2/apps/APP_ID/app_versions/upload` will still
 
 ## SDK
 
-APIs used by the HockeySDK remain functional. That way legacy versions with the HockeySDK integrated will still deliver data to App Center. The APIs also remain functional after the shutdown of HockeyApp.
+APIs used by the HockeySDK remain functional. That way, legacy versions with the HockeySDK integrated will still deliver data to App Center. The APIs also remain functional after the shutdown of HockeyApp.
