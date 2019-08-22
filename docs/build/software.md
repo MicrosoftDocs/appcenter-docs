@@ -267,7 +267,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-28.0.3    | Android SDK Build-tools, Revision 28.0.3  |
 | build-tools-29.0.0    | Android SDK Build-tools, Revision 29.0.0  |
 | build-tools-29.0.1    | Android SDK Build-tools, Revision 29.0.1  |
-| build-tools-29.0.1    | Android SDK Build-tools, Revision 29.0.2  |
+| build-tools-29.0.2    | Android SDK Build-tools, Revision 29.0.2  |
 
 ### Utils
 
@@ -305,10 +305,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.3.6
+- 8.2.3.16
 
 ### Mono
 
+- 6.0.0
 - 5.18.1
 - 5.16.1
 - 5.12.0
@@ -359,6 +360,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 5.16.0.5
 - 5.10.0.157
 - 5.8.0.0
 - 5.6.0.25
