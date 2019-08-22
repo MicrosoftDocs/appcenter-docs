@@ -34,8 +34,9 @@ Let's get started with setting up App Center SDK in your app to use App Center A
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting .NET Framework 4.5 or later (.NET Core is not supported yet).
-* If you use the SDK from a portable library, it must target .NET Standard 1.0 or later (PCL is not supported).
+* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* .NET Core is supported only when the WPF/WinForms application runs on Windows.
+* If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -58,7 +59,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.2.1-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.3.0-preview** for both packages.
 
 ### Package Manager Console
 
@@ -66,8 +67,8 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.2.1-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.2.1-preview
+Install-Package Microsoft.AppCenter.Analytics -Version 2.3.0-preview
+Install-Package Microsoft.AppCenter.Crashes -Version 2.3.0-preview
 ```
 
 > [!NOTE]
