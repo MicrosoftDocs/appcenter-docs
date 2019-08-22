@@ -55,7 +55,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 ## 3. Add the App Center SDK modules
 
-The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
+The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) or by manually adding the binaries to your project.
 
 ### 3.1  Integration via Cocoapods
 
@@ -78,7 +78,34 @@ The App Center SDK for iOS can be integrated into your app via [Cocoapods](https
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-### 3.2 Integration by copying the binaries into your project
+### 3.2  Integration via Carthage
+
+Below are the steps on how to integrate the AppCenter SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+1. Add the following dependencies to your `Cartfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app.
+
+    ```ruby
+    # Use the following line to use App Center Analytics and Crashes.
+    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage"
+
+    # Use the following lines if you want to specify which service you want to use.
+    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterAnalytics"
+    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterCrashes"
+
+    ```
+
+    > [!NOTE]
+    > Carthage currently doesn't build with Xcode 10 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. So for a while AppCenter SDK supports Carthage in a separate from `master` branch.
+
+1. Run `carthage update`. This will fetch dependencies into a `Carthage/Checkouts` folder, and then build each framework.
+1. On your application targets’ *General* settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the `Carthage/Build/iOS/Static` folder on disk.
+
+    > [!NOTE]
+    > If you use `carthage copy-frameworks` in your `Build Phase` you should not add the AppCenter SDKs there as they are shipped as static frameworks.
+
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
+
+### 3.3 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.

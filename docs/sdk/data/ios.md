@@ -45,11 +45,24 @@ Please follow the [Get Started](../../data/getting-started.md) section if you ha
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
+#### Integration via Cocoapods
+
 - Add the data service to your Podfile and run `pod install`
 
 ```ruby
 pod 'AppCenter/Data'
 ```
+
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center Data.
+
+    ```ruby
+    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterData"
+    ```
+
+1. Run `carthage update`.
+1. On your application targets’ *General* settings tab, in the “Linked Frameworks and Libraries” section, drag and drop AppCenterData framework from the `Carthage/Build/iOS/Static` folder on disk.
 
 ### 2. Start App Center Data
 
