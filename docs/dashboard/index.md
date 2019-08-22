@@ -3,7 +3,7 @@ title: Using App Center
 description: Managing your App Center account and settings
 author: blparr
 ms.author: blparr
-ms.date: 08/16/2019
+ms.date: 08/22/2019
 ms.topic: article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0
 ms.service: vs-appcenter
@@ -32,6 +32,10 @@ Create an **Organization** to invite **Collaborators** and **Administrators** to
 Create **Teams** within your organization to better manage large organizations and permission settings.
 
 ## Manage your account preferences and settings
+
+### Account Profile Photos
+
+App Center uses [Gravatar](https://gravatar.com/) to manage user profile photos. To get started, [create a Gravatar account](https://gravatar.com/) using the same email associated with your App Center account. Once your account has been created, follow the instructions on Gravatar's website to pick your new profile image. When you return to App Center, refresh the browser to see your new profile photo. If your new profile photo does not immediately appear, hard refresh your browser to replace the previously cached image.
 
 ### Email Notifications
 
