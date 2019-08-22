@@ -69,7 +69,7 @@ const hadLowMemoryWarning = await Crashes.hasReceivedMemoryWarningInLastSession(
 ```
 
 > [!NOTE]
-> In some cases, running a device's memory low may not trigger trackable events.
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 
