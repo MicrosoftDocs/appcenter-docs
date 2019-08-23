@@ -50,7 +50,7 @@ pod 'AppCenter/Auth'
     ```
 
 1. Run `carthage update`.
-1. On your application targets’ *General* settings tab, in the “Linked Frameworks and Libraries” section, drag and drop AppCenterAuth framework from the `Carthage/Build/iOS/Static` folder on disk.
+1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop AppCenterAuth framework from the **Carthage/Build/iOS/Static** folder on disk.
 
 #### Integration by copying the binaries into your project
 
