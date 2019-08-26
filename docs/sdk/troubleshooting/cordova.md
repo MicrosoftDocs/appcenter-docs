@@ -23,16 +23,6 @@ ms.tgt_pltfrm: cordova
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
 
-## How to enable Verbose logging in Cordova
-
-For debugging and troubleshooting purposes, you may need to enable *verbose* logging; this is not implemented in Cordova yet, so you must follow these steps:
-
-1. Go to `platforms -> ios -> <AppName> -> Plugins -> cordova-plugin-appcenter-shared -> AppCenterShared.m`.
-
-1. Find `configureWithSettings` method.
-
-1. At the bottom of the method, paste `[MSAppCenter setLogLevel:MSLogLevelVerbose];`.
-
 ## Failed to install plugin - pod command failed with exit code 1
 
 After updating to the latest plugin version, chances are you will see the following error message during `cordova plugin add cordova-plugin-appcenter-<module>`:
