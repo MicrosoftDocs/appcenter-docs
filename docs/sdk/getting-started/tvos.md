@@ -69,7 +69,29 @@ The App Center SDK for tvOS can be integrated into your app via [Cocoapods](http
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-### 3.2 Integration by copying the binaries into your project
+### 3.2 Integration via Carthage
+
+Below are the steps on how to integrate the AppCenter SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+1. Add the following dependencies to your `Cartfile` to include App Center Analytics and App Center Crashes into your app. 
+
+    ```ruby
+    # Use the following line to use App Center.
+    github "microsoft/appcenter-sdk-apple" "carthage"
+    ```
+
+    > [!NOTE]
+    > Carthage currently doesn't build with Xcode 10 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. So for a while AppCenter SDK will support Carthage in a branch separate from `master`.
+
+1. Run `carthage update --platform tvOS`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
+1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop each framework you want to use from the **Carthage/Build/tvOS/Static** folder on disk.
+
+    > [!NOTE]
+    > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the AppCenter SDKs there as they are shipped as static frameworks.
+
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
+
+### 3.3 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your tvOS app.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.

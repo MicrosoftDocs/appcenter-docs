@@ -65,7 +65,7 @@ HockeyApp class  | App Center module
 `MetricsManager` | `Analytics`
 `CrashManager`   | `Crashes`
 
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [App Center Documentation](~/sdk/getting-started/macos.md#32-integration-by-copying-the-binaries-into-your-project).
+The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [App Center Documentation](~/sdk/getting-started/macos.md#33-integration-by-copying-the-binaries-into-your-project).
 
 ## 2. Update the SDK setup code
 

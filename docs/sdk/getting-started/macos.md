@@ -78,16 +78,11 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 Below are the steps on how to integrate the AppCenter SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
-1. Add the following dependencies to your `Cartfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app.
+1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
 
     ```ruby
-    # Use the following line to use App Center Analytics and Crashes.
-    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage"
-
-    # Use the following lines if you want to specify which service you want to use.
-    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterAnalytics"
-    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterCrashes"
-
+    # Use the following line to use App Center.
+    github "microsoft/appcenter-sdk-apple" "carthage"
     ```
 
     > [!NOTE]

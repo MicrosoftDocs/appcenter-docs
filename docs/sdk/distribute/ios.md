@@ -52,11 +52,11 @@ pod 'AppCenter/Distribute'
 1. Add the following dependency to your `Cartfile` to include App Center Distribute.
 
     ```ruby
-    github "https://github.com/microsoft/appcenter-sdk-apple/tree/carthage/AppCenterDistribute"
+    github "microsoft/appcenter-sdk-apple" "carthage"
     ```
 
 1. Run `carthage update`.
-1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop AppCenterDistribute framework from the **Carthage/Build/iOS/Static** folder on disk.
+1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop **AppCenterDistribute** framework from the **Carthage/Build/iOS/Static** folder on disk.
 
 #### Integration by copying the binaries into your project
 
