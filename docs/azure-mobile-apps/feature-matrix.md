@@ -19,8 +19,6 @@ This section compares services and features that exist in Azure Mobile Apps with
 | Supports native platforms – iOS, Android, Windows for Identity, Table storage and Push | Supports iOS, Android platform for [Auth](https://aka.ms/appcenterauth),[Data](https://aka.ms/appcenterdata), and [Push](https://docs.microsoft.com/en-us/appcenter/push/). Windows platform only supports Push service|
 | Cross platform support - Cordova, Xamarin  | Supports Xamarin and React Native for cross platform app development. No Cordova support |                             
 | Requires Server SDK for setting up .NET and Node backend | Provides "Out of the Box" experience and no server set up required |
-| Easy Tables for Node.js backend | App Center Data service is built on top of CosmosDB | 
-| Easy APIs for Node.js backend | Not supported but customers can use [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) to create APIs | 
 
 ##  **Cloud based Identity Management**
 
