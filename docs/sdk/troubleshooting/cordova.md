@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Cordova
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 03/22/2019
+ms.date: 08/26/2019
 ms.topic: troubleshooting-article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -22,16 +22,6 @@ ms.tgt_pltfrm: cordova
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-
-## How to enable Verbose logging in Cordova
-
-For debugging and troubleshooting purposes, you may need to enable *verbose* logging; this is not implemented in Cordova yet, so you must follow these steps:
-
-1. Go to `platforms -> ios -> <AppName> -> Plugins -> cordova-plugin-appcenter-shared -> AppCenterShared.m`.
-
-1. Find `configureWithSettings` method.
-
-1. At the bottom of the method, paste `[MSAppCenter setLogLevel:MSLogLevelVerbose];`.
 
 ## Failed to install plugin - pod command failed with exit code 1
 
