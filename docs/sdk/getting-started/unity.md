@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 01/25/2019
+ms.date: 08/01/2019
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -37,18 +37,22 @@ Before you begin, make sure that your project is set up in Unity 5.6 or later.
 The App Center SDK for Unity supports the following platforms:
 
 * iOS (9.0 or later)
-* Android (4.1/API 16 or later)
+* Android (5.0/API 21 or later)
 * UWP (Build 10240 or later)
 
 > [!NOTE]
-> For older versions of Unity with UWP, only a .NET scripting backend is supported. IL2CPP as a backend is not supported.
+> For versions of Unity with UWP lower than 2017.4, only a .NET scripting backend is supported. IL2CPP as a backend is not supported.
+
+> [!NOTE]
+> For versions of Unity with iOS lower than 2017.4, it is required to enable Push notifications capability in XCode manually.
+
+In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asyncronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
 Also note that the App Center SDK for Unity is only available in C#.
 
 ## 2. Create your app in the App Center Portal to acquire the App Secret
 
 If you've already created your app in the App Center portal, you can skip this step.
-
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or sign in to App Center.
 3. Click the blue button on the top-right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.

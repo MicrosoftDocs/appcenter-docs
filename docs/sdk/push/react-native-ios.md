@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 02/14/2019
+ms.date: 08/09/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
 ms.service: vs-appcenter
@@ -70,15 +70,11 @@ The default integration of the SDK uses Cocoapods for iOS.
    npm install appcenter-push --save-exact
    ```
 
-2. Link the plugin to the React Native app by using the `react-native link command`.
-
-   ```
-   react-native link appcenter-push
-   ```
+2. Run `pod install` from iOS directory to install CocoaPods dependencies.
 
 #### Integrate the iOS SDK manually
 
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-ios-sdk-manually-without-react-native-link-or-cocoapods)
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-sdk-manually-for-react-native-lower-than-060-without-react-native-link-or-cocoapods)
 
 ### 2.Start App Center Push
 

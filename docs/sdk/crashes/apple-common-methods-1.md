@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
 ms.service: vs-appcenter
@@ -29,6 +29,23 @@ MSCrashes.generateTestCrash()
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app receive a low memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
+
+```objc
+[MSCrashes hasReceivedMemoryWarningInLastSession];
+```
+```swift
+MSCrashes.hasReceivedMemoryWarningInLastSession()
+```
+
+> [!NOTE]
+> This method must only be used after `MSCrashes` has been started, it will always return `NO` or `false` before start.
+
+> [!NOTE]
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 

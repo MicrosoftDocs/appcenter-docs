@@ -4,7 +4,7 @@ description: help using the Diagnostics UI in App Center
 keywords: crashes, errors, annotate, status, download
 author: winnieli1208
 ms.author: yuli1
-ms.date: 05/29/2019
+ms.date: 07/31/2019
 ms.topic: article
 ms.assetid: 5c420816-0fe9-4da1-bfaf-bc2a1fb6739b
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ App Center’s Diagnostics service is designed for you easily monitor your apps 
 2. Select an application
 3. In the navigation area on the left, select **Diagnostics**
 
-For Xamarin and Unity apps, App Center displays the app's crashes and errors per day in a side by side view. By clicking into the Crashes or Errors tab, this view will get filtered.
+For Xamarin, Unity, WPF and WinForms apps, App Center displays the app's crashes and errors per day in a side by side view. By clicking into the Crashes or Errors tab, this view will get filtered.
 
 For all apps, you can filter the diagnostics data by app version, build number, time range and status. Click on a group to find more information including a list of specific reports, devices and OSs affected.
 

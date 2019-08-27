@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/22/2019
+ms.date: 08/19/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ ms.custom: analytics
 ## Universal Windows Platform
 
 > [!NOTE]
-> We expect to make some improvements in our UWP support in the following months. Follow our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
+> We expect to make some improvements in our UWP support in the following months. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md)for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
 
 App Center supports basic diagnostics features for UWP apps to help you fix your crashes. We have not yet implemented full feature parity for UWP apps so there are some known limitations and missing features compared to other supported platforms. To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md).
 

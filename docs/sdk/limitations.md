@@ -4,7 +4,7 @@ description: Limitations and known issues with the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2019
+ms.date: 07/29/2019
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: vs-appcenter
@@ -27,3 +27,4 @@ ms.custom: sdk
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the .NET runtime.
 2. Only crashes caused by .NET exceptions are reported, not C/C++ crashes.
+3. When using .NET Core, the session length is not reset after spending time into the minimized window state. Thus porting from .NET Framework to .NET Core causes session duration to increase and thus session count to decrease.

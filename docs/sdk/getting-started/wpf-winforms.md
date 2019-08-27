@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/26/2019
+ms.date: 08/19/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.service: vs-appcenter
@@ -25,19 +25,18 @@ ms.tgt_pltfrm: wpf-winforms
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
 
-> [!NOTE]
-> The WPF and WinForms UI hasn't been released yet. If you would like to try out the analytics and diagnostics SDK, please reach out to our support team and we can enable this experience for you. 
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center SDK in your app to use App Center Crashes.
+Let's get started with setting up App Center SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting .NET Framework 4.5 or later (.NET Core is not supported yet).
-* If you use the SDK from a portable library, it must target .NET standard 1.0 or later (PCL is not supported).
+* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* .NET Core is supported only when the WPF/WinForms application runs on Windows.
+* If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -60,7 +59,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.2.1-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.3.0-preview** for both packages.
 
 ### Package Manager Console
 
@@ -68,8 +67,8 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.2.1-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.2.1-preview
+Install-Package Microsoft.AppCenter.Analytics -Version 2.3.0-preview
+Install-Package Microsoft.AppCenter.Crashes -Version 2.3.0-preview
 ```
 
 > [!NOTE]
@@ -86,10 +85,9 @@ In order to use App Center, you must opt in to the module(s) that you want to us
 
 ### 5.1 Add the `Start()` method
 
-* On WPF, modify the `App.xaml.cs`.
-* On WinForms, modify the `Program.cs` file.
+#### WPF 
 
-Add the following using statements:
+For your WPF application, modify the `App.xaml.cs` and add the following using statements:
 
 ```csharp
 using Microsoft.AppCenter;
@@ -97,14 +95,43 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 ```
 
-Then in the same file:
+Then in the same file, add the following code in the `OnStartup` method:
 
-* On WPF, add the following code in the `OnStartup` method.
-* On WinForms, add the following code in the `Main` method, before the `Application.Run` statement.
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+If the `App.xaml.cs` file doesn't have the `OnStartup` method, you can add the `Application.OnStartup(StartupEventArgs)` method. Your `App.xaml.cs` file should look something like:
+
+```csharp
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs e)
+    {
+      base.OnStartup(e);
+      AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+    }
+  }
+}
+```
+
+#### WinForms
+
+For your WinForms application, modify the `Program.cs` file and add the following using statements:
+
+```csharp
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+```
+
+Then in the same file, add the following code in the `Main` method, before the `Application.Run` statement.
+
+```csharp
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+```
+
 
 ### 5.2 Replace the placeholder with your App Secret
 

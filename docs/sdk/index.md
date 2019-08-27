@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 07/25/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -105,14 +105,14 @@ Push             | 10 build 10240     | Visual Studio 2015 or later
 
 ### WPF and WinForms
 
-Service          | .NET Framework | Windows Version | Visual Studio
------------------|----------------|-----------------|----------------------------
-Analytics        | 4.5 or later   | 10 build 10240  | Visual Studio 2015 or later
-Crashes          | 4.5 or later   | 10 build 10240  | Visual Studio 2015 or later
-Distribute       | not available  | not available   | not available
-Push             | not available  | not available   | not available
+Service          | .NET Framework | .NET Core     | Windows Version | Visual Studio
+-----------------|----------------|---------------|-----------------|--------------
+Analytics        | 4.5 or later   | 3.0 or later  | 10 build 10240  | Visual Studio 2015 or later
+Crashes          | 4.5 or later   | 3.0 or later  | 10 build 10240  | Visual Studio 2015 or later
+Distribute       | not available  | not available | not available   | not available
+Push             | not available  | not available | not available   | not available
 
-.NET core is not supported.
+.NET Core is supported only when the WPF/WinForms application runs on Windows.
 
 ### React Native
 

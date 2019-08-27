@@ -4,7 +4,7 @@ description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.service: vs-appcenter
@@ -44,6 +44,25 @@ AppCenter.Crashes.generateTestCrash();
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app receive a low memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
+
+```js
+var success = function(hadLowMemoryWarning) {
+    console.log(`there was ${hadLowMemoryWarning ? "a" : "no"} memory warning`);
+}
+
+var error = function(error) {
+    console.error(error);
+}
+
+AppCenter.Crashes.hasReceivedMemoryWarningInLastSession(success, error);
+```
+
+> [!NOTE]
+> In some cases, running a device's memory low may not trigger trackable events.
 
 ### Did the app crash in the previous session?
 

@@ -4,7 +4,7 @@ description: Limitations with the Diagnostic Service in App Center
 keywords: diagnostic, crashes
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/22/2019
+ms.date: 07/31/2019
 ms.topic: article
 ms.assetid: e720dade-8d0c-44c6-8746-8b6a61da0f6f
 ms.service: vs-appcenter
@@ -22,8 +22,8 @@ ms.custom: analytics
 
 - User identification is not supported yet for WPF and WinForms applications.
 
-## Xamarin/Unity Errors
+## Handled Errors
 
-- Errors are only available in the Xamarin platform.
+- Errors are only available in the Xamarin, Unity, WPF and WinForms platform.
 - You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
 - The maximum number of characters per error property key and error property value is 125 characters.

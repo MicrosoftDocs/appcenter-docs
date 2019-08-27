@@ -2,9 +2,9 @@
 title: Upload a Build to Distribute via App Center
 description: Distribute a completed build to users
 keywords: distribution
-author: JoshuaWeber
-ms.author: JoshuaWeber
-ms.date: 03/20/2019
+author: botatoes
+ms.author: bofu
+ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -13,55 +13,61 @@ ms.custom: distribute
 
 # Release a Build
 
-Upload your application binary package to App Center to release it. App Center supports package uploads for iOS, Android, UWP, and macOS.
+Upload your application binary package to App Center to release it. App Center supports package uploads for Android, iOS, macOS, UWP, WPF, and WinForms apps. 
 
 ## Generating an application binary package
+
+### Android
+
+For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
+
+1. Ensure you have [updated the manifest][android-manifest] and have a correctly [configured Gradle build][gradle-config].
+2. In Android Studio, choose **Build > Generate Signed Bundle / APK** and follow the steps in the wizard to build the app bundle or APK.
+
+Android Studio places built app bundles in *project-name*/*module-name*/build/outputs/bundle/ and APKs in *project-name*/*module-name*/build/outputs/apk/.
+
+> [!NOTE]
+> You can only distribute Android app bundles to the Google Play Store, not to groups or individual testers.
 
 ### iOS
 
 For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
 
-1. [Register UDIDs][apple-devices] for all hardware devices in your provisioning profile
-2. Archive your application. In Xcode go to **Product > Archive**
-3. Export the archive using the proper provisioning profile
+1. [Register UDIDs][auto-provisioning] for all hardware devices in your provisioning profile.
+2. In Xcode, go to **Product** > **Archive** to archive your app.
+3. Export the archive using the proper provisioning profile.
 
-### Android
 
-For Android, you must produce a properly signed apk file. For full details of this process, see the official [Google APK documentation][google-apk].
+### macOS
 
-1. Ensure you have [updated the manifest][android-manifest] and have a properly [configured Gradle build][gradle-config]
-2. Build the APK. From Android Studio, select the build variant and then execute command **Build > Build APK**
+For macOS, you must produce an app.zip file. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
 
-> [!NOTE]
-> Android studio places built APKs in *project-name*/*module-name*/build/outputs/apk/
+1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
+2. In Xcode, go to **Product** > **Archive** to archive your app.
+3. Export the archive using the proper provisioning profile.
 
 ### UWP
 
-For UWP, you must produce an app package. For full details of this process, see the official [Microsoft UWP documentation][uwp-package]
+For UWP, you must produce an app package. App Center supports releasing app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
 
-### macOS 
+### WPF and WinForms
 
-For macOS, you must produce an app.zip file. For full details of this process, see the official [Apple MacOS documentation][apple-macos]
-
-1. Register all hardware devices in your developer account.
-2. Archive your app. In Xcode go to **Product > Archive**
-3. Export the archive using the proper provisioning profile. 
+For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
 
 ## Uploading the package
 
-To upload a package to App Center, navigate to the app, go to **Distribute -> New release -> Upload your package**. 
+To upload a package to App Center, go to [App Center][app-center-home], go to your app, then go to ** **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
-You can include optional release notes as a part of your release. Both plain text and markdown formats are supported. 
-Your release can be targeted to multiple [groups][groups] or testers. This release will only be available to the users are a part of the selected groups and testers. 
+You can include release notes as a part of your release, both in plain text or Markdown format.
+You can target your release to multiple [groups][groups] or testers. App Center then makes this release available to those testers and the users who are part of the selected groups.
 
 ![Setting release destinations](~/distribution/images/releaseDestination.jpg)
 
-If you are releasing an iOS app, you have the option to [automatically provision your tester's devices][auto-provisioning].
-Click next and review the release. If you integrated with the [distribute SDK][sdk], you can make releases mandatory. 
+When releasing an iOS app, you can [automatically provision your testers' devices][auto-provisioning].
+Select **Next** and review the release. If your app uses the [Distribute SDK][sdk], then you can configure App Center to can make the release mandatory.
 
-When releases are distributed, App Center will send an email notification of the new version to all testers set in the destinations. You can choose to not notify testers in the review tab. 
-
+When App Center distributes a release, it sends an email notification of the new version to all testers set in the destinations. You can choose not to notify testers in the review tab.
 
 ### Uploading using the App Center Command Line Interface
 
@@ -101,19 +107,18 @@ One other alternative for uploading releases is using the public App Center APIs
 
 ## Re-Release a build
 
-To release a build to another distribution group, navigate to the release details page either through the Releases tab on the distribution group page, or from the Releases page in the left sidebar menu. Click on the **Distribute** button in the upper right-hand corner of the screen to initiate the re-release process. After selecting the destinations and reviewing the release details, click the **Distribute** button to send the release to testers.  
+To release a build to another distribution group, from any place in App Center go to **Distribute** > **Releases** and then select the release you want to distribute again. The release details page opens. Select the **Distribute** button in the upper right-hand corner of the screen and select the destination to start the re-release process. Follow the steps in the wizard and finally select **Distribute** to send the release to groups/testers or the store.
 
 ## Mandatory Updates
 
-There are often cases when you want a set of users all running the same version of your app. In order to do so, you can elect to make a release mandatory. Doing so automatically installs the selected update on all tester devices.
+Make a release mandatory to force all users to run the same version of your app. When you do this, App Center will installs the selected update on all tester devices.
 
-To make a release mandatory, the app must integrate with the App Center distribute SDK. Once you've integrated with the distribute SDK, you can make a release mandatory via API or checking the mandatory checkbox in the review stage of distributing a release. 
+You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory via the API or by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
 
-For mandatory releases, you will see a red dot next to the release icon in your releases table under a selected distribution group.
+For mandatory releases, App Center displays a red dot next to the release icon in your releases table under a selected distribution group.
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
-[apple-devices]: ./auto-provisioning.md
-[google-apk]: https://developer.android.com/studio/publish/preparing.html
+[google-prepare-for-release]: https://developer.android.com/studio/publish/preparing.html
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
 [api-token-docs]: ~/api-docs/index.md
@@ -121,8 +126,11 @@ For mandatory releases, you will see a red dot next to the release icon in your 
 [POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_create
 [PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_complete
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
-[uwp-package]: https://docs.microsoft.com/en-us/windows/uwp/packaging/
+[uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
-[groups]: https://docs.microsoft.com/en-us/appcenter/distribution/groups
-[auto-provisioning]: https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning
-[sdk]: https://docs.microsoft.com/en-us/appcenter/sdk/
+[groups]: https://docs.microsoft.com/appcenter/distribution/groups
+[auto-provisioning]: ./auto-provisioning.md
+[sdk]: https://docs.microsoft.com/appcenter/sdk/
+[app-center-home]: https://appcenter.ms/apps
+[apple-register-single-device]: https://help.apple.com/developer-account/#/dev40df0d9fa
+[apple-register-multiple-devices]: https://help.apple.com/developer-account/#/devebd34abb1

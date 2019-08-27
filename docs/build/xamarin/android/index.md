@@ -2,9 +2,9 @@
 title: Building Xamarin apps for Android
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
-author: siminapasat
-ms.author: siminap
-ms.date: 09/12/2018
+author: nrajpurkar
+ms.author: nirajpur
+ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -53,19 +53,34 @@ App Center allows using different Mono environments bundled with the respective 
 
 When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
 
-### 3.4. Increment version number
+#### 3.3.1. .Net Core version
+
+Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+
+| Mono | .Net Core |
+| ---- | --------- |
+| <= 5.18 | 2.2.105 |
+| 6.0 | 2.2.300 |
+
+### 3.4. Build Android App Bundle (.aab)
+
+ The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) and the [Xamarin.Android 9.4 release notes](https://docs.microsoft.com/en-us/xamarin/android/release-notes/9/9.4#initial-support-for-android-app-bundle-publishing-format) which also help you understand whether you want to build a bundle in addition to your regular `.apk.`
+
+ Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `.csproj` file contains `aab` in the `AndroidPackageFormat` property, this option will automatically be toggled on. Building an `.aab` is supported for Xamarin.Android 9.4 and higher.
+
+### 3.5. Increment version number
 
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
-### 3.5. Code signing
+### 3.6. Code signing
 
-A successful build will produce an `.apk` file. To release the build to the Play Store, it must be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md).
+A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it must be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
-### 3.6. Launch your successful build on a real device
+### 3.7. Launch your successful build on a real device
 
 Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
 
-### 3.7. NuGet restore
+### 3.8. NuGet restore
 
 If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
 
@@ -91,11 +106,12 @@ If the `NuGet.config` file is checked-in into the repository and sitting next to
 
 If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-### 3.8. Distribute to a distribution group
+### 3.9. Distribute the build   
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called **Collaborators** that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
-Once you save the configuration, a new build will kick off automatically.
+> [!NOTE]
+> If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.
 
 ## 4. Build results
 

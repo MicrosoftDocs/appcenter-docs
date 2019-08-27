@@ -1,47 +1,44 @@
 ---
-title: HockeySDK for UWP Migration
-description: Migrate from the HockeySDK to App Center SDK for UWP
-author: elamalani
-ms.author: emalani
-ms.date: 08/06/2019
+title: HockeySDK for WPF/Winforms Migration
+description: Migrate from the HockeySDK to App Center SDK for WPF/Winforms
+author: michaelsmith
+ms.author: michaelsmitha
+ms.date: 08/09/2019
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
 ms.service: vs-appcenter
-ms.tgt_pltfrm: uwp
+ms.tgt_pltfrm: WPF/Winforms
 ---
 
-# Migrate from the HockeySDK to App Center UWP
+# Migrate from the HockeySDK to App Center WPF/Winforms
 
 [!include[](sdk-migration-dropdown.md)]
 
 ## 1. Update the libraries
 
-> [!NOTE] 
-> Platforms like WinRT, Windows Phone 8.0 and 8.1, WPF and PCL are not supported in App Center SDK. Please continue to use the HockeySDK with them.
-
-Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in your solution.
+Replace HockeySDK.WPF NuGet package with the App Center ones in all projects in your solution.
 
 ### Visual Studio for Windows
 
-* Open Visual Studio for Windows.
+* Open [Visual Studio](https://visualstudio.microsoft.com/vs/) for Windows.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
-* Remove the **HockeySDK.UWP** package.
+* Remove the **HockeySDK.WPF** package.
 * Search for **App Center**, and install **Microsoft.AppCenter.Analytics**, and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
 * If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
-* Type the following command in the console:
+* Type the following commands in the console:
 
 ```shell
-Uninstall-Package HockeySDK.UWP
+Uninstall-Package HockeySDK.WPF
 Install-Package Microsoft.AppCenter.Analytics
 Install-Package Microsoft.AppCenter.Crashes
 ```
 
-The App Center SDK uses a modular approach – you can integrate only those services that you're interested in. You must add each SDK module as a separate dependency in this section.
+The App Center SDK uses a modular approach – you can choose which services you want to integrate. You must add each SDK module as a separate dependency in this section.
 
 ## 2. Update the SDK setup code
 
@@ -82,7 +79,7 @@ After (App Center):
     using Microsoft.AppCenter.Analytics;
     using Microsoft.AppCenter.Crashes;
     ```
-
+    
     Add the following call to your application's constructor:
 
     ```csharp
@@ -95,7 +92,7 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/uwp.md#adjust-the-log-level)
+Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms#adjust-the-log-level)
 
 ### Analytics
 
@@ -108,18 +105,18 @@ Custom events with properties | [HockeyClient.TrackEvent](https://support.hockey
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Crash Reporting (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Crash Reporting](~/sdk/crashes/uwp.md)
-Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | Not supported
-Track handled exceptions | `HockeyClient.Current.TrackException` | Not supported
+Automatically send crashes | [Crash Reporting (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Crash Reporting](~/sdk/crashes/wpf-winforms.md)
+Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Adding Attachments](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
+Track handled exceptions | `HockeyClient.Current.TrackException` | [Handled Errors](~/sdk/crashes/wpf-winforms#handled-errors)
 
 ### Distribution
 
-App Center SDK doesn't support distribution for UWP apps yet.
+App Center SDK doesn't support distribution for WPF/Winforms apps yet.
 
 ### Feedback
 
-This service wont be supported in App Center.
+This service won't be supported in App Center.
 
 ## 4. Contact us
 
-If you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue chat icon in the lower-right corner of every App Center page.
+If you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue chat icon in the lower-right corner of any App Center page.

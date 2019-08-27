@@ -11,13 +11,23 @@
 > [!NOTE]
 > You must have a Windows Developer account to send push notifications to your UWP app. You can [register a Microsoft developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
 
-### 2. Get Package SID and Application secret from the Application Registration Portal
+### 2. Get the Package SID and Application secret from the Partner Center
 
-1. Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com/#/appList), sign-in with your Microsoft account. Click the Windows Store app you associated in the previous step.
+1. Navigate to the [Microsoft Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview), sign-in with the same account you used when you reserved the app name. Click the Windows Store app you associated in the previous step.
+
+1. In the **Product management** > **Product identity** page, copy the value of the **Package SID** as you will use it later.
+
+    ![uwp app registration sid](images/appcenter-uwp-sdk-push-registration-get-sid.png)
+
+1. Go to the **WNS/MPNS** section of the **Product Management** page and click on the **Live Services** link. It will display the old **Microsoft Application Registration** portal settings page.
 
     ![uwp app registration](images/appcenter-uwp-sdk-push-registration.png)
 
-2. In the registration page, make a note of the value under **Application Secrets** and the **Package SID**, which you will use to configure your App Center Push backend.
+1. At the top of this page, copy the value under **Application Secrets** as you will use it later.
+
+    ![uwp app registration](images/appcenter-uwp-sdk-push-registration-secret.png)
+
+1. Use the **Application secret** and **Package SID** values to configure your App Center Push backend.
 
 ### 3. Configure Package SID and Security Key in App Center portal
 

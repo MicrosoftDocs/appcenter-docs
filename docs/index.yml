@@ -18,8 +18,6 @@ abstract:
       text: Pricing
     - href: ~/general/roadmap/
       text: Roadmap
-    - href: ~/general/changelog/
-      text: Changelog
     - href: https://openapi.appcenter.ms
       text: API Swagger
     - href: ~/migration/
@@ -50,7 +48,7 @@ sections:
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
         alt: logo-Windows
-      text: UWP
+      text: Windows
       href: ~/sdk/getting-started/uwp/
     - image:
         src: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg

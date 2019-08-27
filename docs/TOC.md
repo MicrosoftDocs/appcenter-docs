@@ -42,7 +42,7 @@
 ## Xamarin
 ### [Introduction](build/xamarin/index.md)
 ### Android
-### [Introduction](build/xamarin/android/index.md)
+#### [Introduction](build/xamarin/android/index.md)
 #### [Code Signing](build/xamarin/android/code-signing.md)
 ### iOS
 #### [Introduction](build/xamarin/ios/index.md)
@@ -301,7 +301,6 @@
 
 # General
 ## [Introduction](general/index.md)
-## [Changelog](general/changelog.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
 ## [Pricing](general/pricing.md)
@@ -335,14 +334,16 @@
 
 # HockeyApp Transition
 ## [Timeline](transition/index.md)
-## [Stage 1 - Synchronization](transition/side-by-side.md)
+## Stage 1 - Synchronization
+### [Introduction](transition/side-by-side.md)
 ### [Distribution Groups](transition/distribution-groups.md)
 ### [Distributing Releases](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
-## [Stage 2 - Moving apps](transition/moving/index.md)
+## Stage 2 - Moving Apps
+### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
-### [App Data](transition/moving/data.md)
+### [Migrated Data](transition/moving/data.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
@@ -352,14 +353,12 @@
 ### [UWP](transition/uwp-sdk-migration.md)
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
+### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
 
 # Migration
 ## [Introduction](migration/index.md)
-## TestCloud
-### [Upgrading Subscribers](migration/test-cloud/index.md)
-### [Frameworks Overview](migration/test-cloud/frameworks.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Azure Mobile Apps
