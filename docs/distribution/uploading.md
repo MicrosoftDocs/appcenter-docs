@@ -40,11 +40,13 @@ For iOS, you must produce an IPA package for your application. For full details 
 
 ### macOS
 
-For macOS, you must produce an app.zip file. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
+For macOS, you must produce an app package. App Center supports releasing app packages of type app.zip, .pkg or .dmg file. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
 
 1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
 2. In Xcode, go to **Product** > **Archive** to archive your app.
 3. Export the archive using the proper provisioning profile.
+
+If .pkg or .dmg are used, you must specify a version and build.
 
 ### UWP
 
