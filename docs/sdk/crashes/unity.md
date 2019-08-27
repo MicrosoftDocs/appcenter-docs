@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -46,6 +46,20 @@ Crashes.GenerateTestCrash();
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app receive a low memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
+
+```csharp
+bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().Result;
+```
+
+> [!NOTE]
+> This method will not work in `Awake()`.
+
+> [!NOTE]
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 

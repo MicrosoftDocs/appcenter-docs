@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/05/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -45,6 +45,20 @@ Crashes.GenerateTestCrash();
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app receive a low memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
+
+```csharp
+bool hadMemoryWarning = await Crashes.HasReceivedMemoryWarningInLastSessionAsync();
+```
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
+> [!NOTE]
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 

@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -47,6 +47,25 @@ Crashes.generateTestCrash()
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app receive a low memory warning in the previous session?
+
+At any time after starting the SDK, you can check if the app received a memory warning in the previous session:
+
+```java
+Crashes.hasReceivedMemoryWarningInLastSession();
+```
+```kotlin
+Crashes.hasReceivedMemoryWarningInLastSession()
+```
+
+[!include[](../android-see-async.md)]
+
+> [!NOTE]
+> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
+> [!NOTE]
+> In some cases, a device with low memory may not be able to send events.
 
 ### Did the app crash in the previous session?
 
