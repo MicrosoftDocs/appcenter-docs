@@ -80,24 +80,23 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 ### 3.2 Integration via Carthage
 
-Below are the steps on how to integrate the AppCenter SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
-1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can lin k only those frameworks that you want to use in your app.
+1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
 
     ```ruby
     # Use the following line to use App Center.
     github "microsoft/appcenter-sdk-apple" "carthage"
-
     ```
 
     > [!NOTE]
-    > Carthage currently doesn't build with Xcode 10 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. So for a while AppCenter SDK supports Carthage in a separate from `master` branch.
+    > Carthage currently doesn't build with Xcode 10 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. Currently, App Center SDK supports Carthage separately from the `master` branch.
 
 1. Run `carthage update`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
 1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop each framework you want to use from the **Carthage/Build/iOS/Static** folder on disk.
 
     > [!NOTE]
-    > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the AppCenter SDKs there as they are shipped as static frameworks.
+    > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the App Center SDKs there, as they are shipped as static frameworks.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
