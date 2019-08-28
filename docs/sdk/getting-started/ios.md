@@ -68,6 +68,7 @@ The App Center SDK for iOS can be integrated into your app via [Cocoapods](https
 	# Use the following lines if you want to specify which service you want to use.
 	pod 'AppCenter/Analytics'
 	pod 'AppCenter/Crashes'
+	pod 'AppCenter/Distribute'
 	```
 
 2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
