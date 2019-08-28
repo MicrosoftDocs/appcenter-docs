@@ -1,17 +1,17 @@
 ---
-title: Why do I see This app is not accessible from your Google Play account?
+title: App not accessible from Google Play
 description: Insight documentation about how to make your app accessible for App Center
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 02/15/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.assetid: c5799bd0-0792-4b7a-8088-aeedaf053964
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Why do I see `This app is not accessible from your Google Play account.`?
+# The error `This app exists but is not accessible from your Google Play account`
 
 The package you entered exists but is not accessible through your Google Play Console account.
 Log into your Google Play Console account and [make sure your app is published](https://play.google.com/apps/publish/ "Published apps").
