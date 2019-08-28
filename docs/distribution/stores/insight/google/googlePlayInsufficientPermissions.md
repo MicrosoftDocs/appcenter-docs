@@ -18,4 +18,4 @@ This error happens when App Center does not have access to your Google service a
 **How can I fix it?**
 
 * Read [how-to to link your App Center app with your Google service account](https://docs.microsoft.com/en-us/appcenter/distribution/stores/googleplay#setting-up-api-access-clients "Setting up API access clients")
-* Especially, [make sure to grant access to your service account.](https://docs.microsoft.com/en-us/appcenter/https://play.google.com/apps/publish/#ApiAccessPlace "Grant access to your service account")
+* Especially, [make sure to grant access to your service account.](https://play.google.com/apps/publish/#ApiAccessPlace "Grant access to your service account")
