@@ -84,7 +84,7 @@ Below are the steps on how to integrate the AppCenter SDK in your Xcode project 
     > Carthage currently doesn't build with Xcode 10 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. So for a while AppCenter SDK will support Carthage in a branch separate from `master`.
 
 1. Run `carthage update --platform tvOS`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
-1. On your application targets’ **General** settings tab, in the **Linked Frameworks and Libraries** section, drag and drop each framework you want to use from the **Carthage/Build/tvOS/Static** folder on disk.
+1. Open your application target's **General** settings tab. Drag and dropeach framework you want to use from the **Carthage/Build/tvOS/Static** folder to the **Linked Frameworks and Libraries** section of XCode.
 
     > [!NOTE]
     > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the AppCenter SDKs there as they are shipped as static frameworks.
