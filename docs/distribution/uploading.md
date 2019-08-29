@@ -46,7 +46,7 @@ For macOS, you must produce an app package. App Center supports releasing app pa
 2. In Xcode, go to **Product** > **Archive** to archive your app.
 3. Export the archive using the proper provisioning profile.
 
-If .pkg or .dmg are used, you must specify a version and build in the App Center manually.
+If you package your app as .pkg or .dmg, you must specify a version and build in App Center manually.
 
 ### UWP
 
@@ -54,7 +54,7 @@ For UWP, you must produce an app package. App Center supports releasing app pack
 
 ### WPF and WinForms
 
-For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version in the App Center manually.
+For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version in App Center manually.
 
 ## Uploading the package
 
