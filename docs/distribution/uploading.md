@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: botatoes
 ms.author: bofu
-ms.date: 08/01/2019
+ms.date: 08/28/2019
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -40,11 +40,13 @@ For iOS, you must produce an IPA package for your application. For full details 
 
 ### macOS
 
-For macOS, you must produce an app.zip file. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
+For macOS, you must produce an app package. App Center supports releasing app packages of type .app.zip, .pkg or .dmg. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
 
 1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
 2. In Xcode, go to **Product** > **Archive** to archive your app.
 3. Export the archive using the proper provisioning profile.
+
+If you package your app as .pkg or .dmg, you must specify a version and build in App Center manually.
 
 ### UWP
 
@@ -52,7 +54,7 @@ For UWP, you must produce an app package. App Center supports releasing app pack
 
 ### WPF and WinForms
 
-For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version.
+For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version in App Center manually.
 
 ## Uploading the package
 
