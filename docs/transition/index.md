@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # HockeyApp Transition
 
-App Center is build to be the successor of HockeyApp that fills the gap and offers a full continuous integration to delivery lifecycle. A single solution for continuously building, testing, releasing, and monitoring your apps.
+App Center is built to be the successor of HockeyApp that fills the gap and offers a full continuous integration to delivery lifecycle. A single solution for continuously building, testing, releasing, and monitoring your apps.
 
 The known HockeyApp services, Distribution, Crash Reporting, and Analytics are available in App Center, where they join new services exclusive to App Center: Build, Test, Push Notifications, Auth and Data. We continued to build additional features - such as iOS auto-provisioning and public app store integrations - that makes App Center even better than HockeyApp. Because HockeyApp’s distribution, crash reporting, and analytics services are available in App Center, HockeyApp will be retired on November 16, 2019.
 
