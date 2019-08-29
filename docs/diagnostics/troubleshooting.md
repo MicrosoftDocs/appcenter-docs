@@ -27,6 +27,10 @@ To see deobfuscated stack traces for ProGuard enabled Android apps, follow the i
 
 App Center first looks for `dsym` directories at any level, then it looks for a source map by the title of `index.ios.map`. If `index.ios.map` file does not exist, it uses the first `.map` it finds.
 
-**I know I updated my symbols for the right executable of my app in the store, but the crash reports are still garbage.**
+**I know I updated my symbols for the right executable of my app in the store, but the crash reports are still unreadable.**
 
 This is probably due to the fact that App Center Crash Reporting doesn't support **bitcode** yet. Look at the doc on [how to disable bitcode](~/diagnostics/iOS-symbolication.md#bitcode) to learn more and fix that issue.
+
+**Why are all of my errors/crashes showing as affecting 100% of my users?**
+
+This is usually caused by enabling the App Center crashes module without also enabling the analytics module. The analytics module keeps track of user sessions and without that data App Center can't determine how many overall users there are for the application.
