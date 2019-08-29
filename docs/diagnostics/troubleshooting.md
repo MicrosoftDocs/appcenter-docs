@@ -33,4 +33,4 @@ This is probably due to the fact that App Center Crash Reporting doesn't support
 
 **Why are all of my errors/crashes showing as affecting 100% of my users?**
 
-This is usually caused by enabling the App Center crashes module without also enabling the analytics module. The anylytics module keeps track of user sessions and without that data App Center can't determine how many overall users there are for the application.
+This is usually caused by enabling the App Center crashes module without also enabling the analytics module. The analytics module keeps track of user sessions and without that data App Center can't determine how many overall users there are for the application.
