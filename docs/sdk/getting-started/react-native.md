@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/05/2019
+ms.date: 08/29/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -76,7 +76,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 #### 3.1.1 Integrate React Native iOS
 
-1. Run `pod install` from iOS directory to install CocoaPods dependencies.
+1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 
 2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to <App Name>...**).
 
