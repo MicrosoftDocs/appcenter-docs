@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 8/22/2019
+ms.date: 8/30/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -50,13 +50,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Go 1.12.9
 - Miniconda 4.7.10
 - MacOS toolcache Python 2.7.16 3.4.10 3.5.7 3.6.9 3.7.4
-- MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.2
+- MacOS toolcache Ruby 2.3.8 2.4.6 2.5.5 2.6.3
 
 ### Node.js versions
 - v6.17.1
 - v8.16.1
 - v10.16.3
-- v12.8.1
+- v12.9.0
 
 ### Package Management
 
@@ -78,7 +78,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 
 - Curl 7.65.3 (libcurl/7.65.3 SecureTransport zlib/1.2.11)
-- Git 2.22.1
+- Git 2.23.0
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
@@ -94,7 +94,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Version                | Build   |
 |------------------------|---------|
-| 11_beta 5              | 11M382q |
+| 11_beta 6              | 11M392q |
 | 10.3                   | 10G8    |
 | 10.2.1                 | 10E1001 |
 | 10.2                   | 10E125  |
@@ -305,7 +305,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.3.16
+- 8.2.4.17
 
 ### Mono
 
