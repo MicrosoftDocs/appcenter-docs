@@ -21,7 +21,7 @@ pod 'AppCenter/Push'
     ```
 
 1. Run `carthage update`.
-1. Open your application target's **General** settings tab. Drag and drop the **AppCenterPush.framework** file from the **Carthage/Build/iOS/Static** folder to the **Linked Frameworks and Libraries** section of XCode.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterPush.framework** file from the **Carthage/Build/iOS/Static** folder to the **Linked Frameworks and Libraries** section in XCode.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 #### Integration by copying the binaries into your project
