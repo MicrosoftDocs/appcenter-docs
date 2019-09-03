@@ -15,13 +15,13 @@
 
 1. Navigate to the [Microsoft Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview), sign-in with the same account you used when you reserved the app name. Click the Windows Store app you associated in the previous step.
 
-1. In the **Product management** > **Product identity** page, copy the value of the **Package SID** as you will use it later.
-
-    ![uwp app registration sid](images/appcenter-uwp-sdk-push-registration-get-sid.png)
-
 1. Go to the **WNS/MPNS** section of the **Product Management** page and click on the **Live Services** link. It will display the old **Microsoft Application Registration** portal settings page.
 
     ![uwp app registration](images/appcenter-uwp-sdk-push-registration.png)
+    
+1. Below at this page in the **Platforms** > **Windows store** section, copy the value of the **Package SID** as you will use it later.
+
+    ![uwp app registration sid](images/appcenter-uwp-sdk-push-registration-get-package-sid.png)
 
 1. At the top of this page, copy the value under **Application Secrets** as you will use it later.
 
