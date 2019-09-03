@@ -4,7 +4,7 @@ description: Registering a device for App Center Distribution
 keywords: UDID, Distribution,
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/02/2019
+ms.date: 09/03/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
@@ -43,7 +43,7 @@ When you distribute a new release to a group that does not have automatic device
 2. Add the devices to the provisioning profile and download it.
 3. Re-sign the uploaded binary so that all testers can install it.
 
-The flow requires username and password for the [Apple Developer portal](https://developer.apple.com/) and the certificate used to sign the app at build time. You export the certificate to a .p12 file. Read more on [how to generate a .p12 file](#generating-a-p12-file). If you already have your Apple ID and certificate saved in App Center, you can choose it from the dropdown menus.
+The flow requires username and password for the [Apple Developer portal](https://developer.apple.com/) and the certificate used to sign the app at build time. You export the certificate to a .p12 file. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file). If you already have your Apple ID and certificate saved in App Center, you can choose it from the dropdown menus.
 
 ## Device registration
 
@@ -126,7 +126,3 @@ If a tester accidentally selected **I already registered it**, follow these step
 
  1. Go to [https://install.appcenter.ms/register-device](https://install.appcenter.ms/register-device) on your mobile device.
  2. Select **Register** and follow the on-screen instructions.
-
-## Feedback
-
-Contact us with questions or suggestions about device registration. Either comment below or through App Center by selecting the blue chat button in the lower-right corner of every App Center page.
