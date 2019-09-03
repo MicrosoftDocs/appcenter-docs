@@ -58,7 +58,13 @@ pod 'AppCenter/Data'
 1. Add the following dependency to your `Cartfile` to include App Center.
 
     ```ruby
-    github "microsoft/appcenter-sdk-apple" "carthage"
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple" "master"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
     ```
 
 1. Run `carthage update`.

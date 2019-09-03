@@ -81,13 +81,15 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
 
     ```ruby
-    # Use the following line to use App Center.
-    github "microsoft/appcenter-sdk-apple" "carthage"
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple" "master"
     ```
 
-    > [!NOTE]
-    > Carthage currently doesn't build with Xcode 10.2 because of a known issue in a Xcode dependency. The issue should be resolved in Xcode 11. Currently, App Center SDK supports Carthage separately from the `master` branch.
-
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+    
 1. Run `carthage update --platform macOS`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
 1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/macOS/Static** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
