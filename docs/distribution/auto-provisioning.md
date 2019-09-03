@@ -12,15 +12,31 @@ ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
 
 # Device registration and app re-signing
 
-When developing an iOS app using your ad-hoc profile, you can only test on devices that are already specified in the provisioning profile for that app. Once you know these devices you must register them in your Apple developer account, add them to your provisioning profile, generate a new provisioning profile, download it and then build your app with the new profile.
+On this page you can read about the steps to take when distributing an iOS application to specific testers. Learn what device registration or provisioning and app re-signing are. When should you use it and how App Center helps you with it? There are also solutions to some common problems you may come across.
 
-App Center helps you register tester device IDs into your Apple developer account and apply them to the latest release without leaving the App Center portal.
+## App signing, re-signing, and device provisioning
 
-To configure devices, turn on [**Automatically manage devices**](groups.md#automatically-manage-devices) under the distribution group settings or opt in to doing it when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
+Developers sign apps for security as required by Apple when distributing. The requirement is the same for distribution through Xcode, App Center, or the iTunes Store. Code signing is a precaution to make sure nobody has tampered with your app. You can read more in the [Apple documentation on app signing](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW2).
 
-To add devices to an existing release, you can find **Register devices** on the page for a distribution group. See [Device registration](#device-registration).
+The following diagram displays the entire app re-signing flow in App Center. Let's go over these steps in more detail.
 
-## Limitations
+**Insert here diagram with alt text**
+
+App re-signing only applies when you want to distribute an iOS app to specific test devices. In the diagram, you want to distribute an app release to the devices of Tester 1 and Tester 2. To do this, you sign your app with an *ad hoc* provisioning profile. This provisioning profile has a list of unique device identifiers (UDIDs). Only devices that are on that list are "provisioned," or  able to install the .ipa. App Center can detect whether a device is provisioned, because we know the UDID of the device when a tester visits the install.appcenter.ms portal. If we detect that the device that the tester is using is not on the list of provisioned devices for the .ipa they want to download, then we show the message "The developers are working on a version for your device."
+
+Once you know which devices you want to use for testing, you must register them in your Apple developer account, add them to your provisioning profile, generate a new provisioning profile, download it and then build your app with this profile. When a new device appears, such as the device with UDID 3 in the diagram, you have to do these steps again. This can be inconvenient, as you don't want to have to change your continuous integration system or pester the developer to always keep adding new devices to the profile and releasing new builds. This is where re-signing comes in. It literally means taking an existing application build and signing it again (re-signing) with a different provisioning profile.
+
+App Center helps you with this process and can also automate it. These are the manual and automatic steps shown in the diagram, provisioning the device with UDID 3. App Center helps you register tester device IDs into your Apple developer account, create a new provisioning profile, and re-sign the app with it all from within the App Center portal. App Center requires access to your Apple developer account for registering the devices.
+
+To manually add devices to an existing release, you can use **Register devices** on the page for a distribution group. See [Device registration](#device-registration).
+
+To automatically add devices, turn on [**Automatically manage devices**](groups.md#automatically-manage-devices) under the distribution group settings. You can also opt in to doing it when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
+
+App Center adds the new device to the list in the provisioning profile, and now that device can also install the app. These are the bottom steps in the diagram.
+
+## Re-signing capabilities
+
+Some things to note when you use re-signing in App Center:
 
 - Automatically managing devices in groups works only for distributing to non-public and non-shared groups.
 - If you're distributing to individual users, you have to register their devices manually and re-sign the app. You can add these emails to a group to use the tools mentioned in this article.
@@ -29,11 +45,22 @@ To add devices to an existing release, you can find **Register devices** on the 
 
 ## Prerequisites
 
-Before you can use the device capabilities of App Center, you will need:
+Before you can use the device capabilities of App Center, you should:
 
-1. The production certificate used for the original app signing.
-2. The set of credentials to your Apple developer account which holds the [role of Account Holder, Admin, or App Manager](https://developer.apple.com/support/roles/).
-3. Turn off "Automatically manage signing" in your Xcode project.
+1. Have the production certificate used for the original app signing.
+2. Have the credentials to your Apple developer account which holds the [role of Account Holder, Admin, or App Manager](https://developer.apple.com/support/roles/).
+3. Use **Manually manage signing** instead of **Automatically manage signing** when distributing the app from Xcode.
+
+## Device registration
+
+You can only register devices that your testers have added to their accounts. Registering a device means making it part of the list of devices that releases can distribute to. To register a device, select a distribution group with at least one device that isn't yet provisioned and navigate to the **Devices** tab. You'll see a device here with the status "unprovisioned" and a message at the top saying there are unprovisioned devices. Follow these steps to register the devices:
+
+1. Select the **Register devices** button.
+2. A dialog prompts for your username and password used in the [Apple Developer portal](https://developer.apple.com/).
+3. Once you sign in with your Apple username and password, App Center adds the unprovisioned devices to both your Apple developer account and the releases provisioning profile.
+4. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#generating-a-p12-file).
+
+You can instead decide to add devices now but make a distribution later. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
 
 ## Distribute a new release
 
@@ -43,20 +70,7 @@ When you distribute a new release to a group that does not have automatic device
 2. Add the devices to the provisioning profile and download it.
 3. Re-sign the uploaded binary so that all testers can install it.
 
-The flow requires username and password for the [Apple Developer portal](https://developer.apple.com/) and the certificate used to sign the app at build time. You export the certificate to a .p12 file. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file). If you already have your Apple ID and certificate saved in App Center, you can choose it from the dropdown menus.
-
-## Device registration
-
-You can only register devices that your testers have added to their accounts. Registering a device means making it part of the list of devices that releases can distribute to. To register a device, select a distribution group with at least one device that isn't yet provisioned and navigate to the **Devices** tab. You'll see a device here with the status "unprovisioned" and a message at the top saying there are unprovisioned devices.
-
-1. Select the **Register devices** button.
-2. A dialog prompts for your username and password used in the [Apple Developer portal](https://developer.apple.com/).
-
-   a. Once you sign in with your Apple username and password, App Center adds the unprovisioned devices to both your Apple developer account and the releases provisioning profile.
-
-   b. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#generating-a-p12-file).
-
-3. You can add devices now but make a distribution later. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
+The flow requires the username and password for the [Apple Developer portal](https://developer.apple.com/) and the certificate used to sign the app at build time. You provide the certificate as an exported .p12 file. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file). If you already have your Apple ID and certificate saved in App Center, you can choose it from the dropdown menus.
 
 ## Privacy concerns on username and password
 
@@ -64,15 +78,9 @@ When you add your Apple credentials and a signing certificate to App Center, we 
 
 If you provide this set of credentials and a certificate, it is automatically available to app collaborators but only for that specific service. As an example, say developer X adds credentials and certificates to distribution group "Tester." Then when developer Y distributes a new release to the "Tester" group, X's username, password, and certificate are by default selected. App Center will use them for developer Y. App Center only uses your Apple ID during the transaction and it doesn't use it for anything else.
 
-## What happens when you click register devices
+## Apple device registration limit
 
-App Center registers device IDs in your Apple developer account and adds them to the provisioning profile used for distribution. An Apple developer account has a finite number of spots for devices per device type. Apple works with five device types: iPad, iPhone, iPod, Apple TV, and Apple Watch. Each of these has a limitation of 100 devices. Imagine you register six devices, all of which are iPhones. You then have 94 device IDs left for iPhones and still have 100 left for each of the four other device types.
-
-## What is re-signing
-
-For app distribution, code signing is a necessity set by Apple; this is the same for distribution through Xcode, App Center, or the iTunes Store. Code signing is a precaution to make sure nobody has tampered with your app. You can read more in the [Apple documentation on app signing](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW2).
-
-When you sign your app with an ad hoc distribution provisioning profile, it includes a list of devices that can install your app. App Center re-signs the app for release to a distribution group in two steps. First it updates the provisioning profile to include all devices in the distribution group. Then it re-signs the app with the updated provisioning profile. Now all the devices from the provisioning profile can install the latest release.
+Each Apple developer account has a finite number of spots for devices per device type. Apple works with five device types: iPad, iPhone, iPod, Apple TV, and Apple Watch. Each of these has a limitation of 100 devices. Imagine you register six devices, all of which are iPhones. You then have 94 device IDs left for iPhones and still have 100 left for each of the four other device types. You can only unregister devices once per year to get those slots back.
 
 ## How to generate a .p12 file
 
@@ -97,9 +105,9 @@ You can remove the certificates and Apple IDs from App Center in the developer a
 
 Read more about [managing your Apple ID and certificates](../dashboard/manage-apple-secrets.md).
 
-## How to manually register devices
+## Manually register devices with Apple
 
-If you're trying to distribute directly to users, you can follow the steps from the Apple Developer website on how to [distribute to registered devices](https://help.apple.com/xcode/mac/current/#/dev7ccaf4d3c). The steps describe how to manually add devices to your account and re-sign your app.
+If you're trying to distribute directly to users outside of App Center, you can follow the steps from the Apple Developer website on how to [distribute to registered devices](https://help.apple.com/xcode/mac/current/#/dev7ccaf4d3c). The steps describe how to manually add devices to your account and re-sign your app.
 
 ## Known errors
 
