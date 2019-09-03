@@ -58,7 +58,7 @@ You can only register devices that your testers have added to their accounts. Re
 1. Select the **Register devices** button.
 2. A dialog prompts for your username and password used in the [Apple Developer portal](https://developer.apple.com/).
 3. Once you sign in with your Apple username and password, App Center adds the unprovisioned devices to both your Apple developer account and the releases provisioning profile.
-4. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#generating-a-p12-file).
+4. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file).
 
 You can instead decide to add devices now but make a distribution later. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
 
