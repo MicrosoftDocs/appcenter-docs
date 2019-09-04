@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # API migration
 
-With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the App Center API as soon as you made yourself familiar with them. The following APIs will remain functional after you moved an app to App Center:
+With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the [App Center API](~/api-docs/index.md) as soon as you made yourself familiar with them. The following APIs will remain functional after you moved an app to App Center:
 
 ## Upload API
 
