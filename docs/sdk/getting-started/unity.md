@@ -69,7 +69,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 The App Center SDK is integrated by importing Unity Packages into your project. To do so, first install the [App Center Unity Editor Extensions](https://github.com/Microsoft/AppCenter-SDK-Unity-Extension) plugin. Open the Editor Extensions via the Unity menu: Window > App Center > Editor Extensions and select "Install App Center SDK".
 
 > [!NOTE]
-> In the Unity versions 2019.1.2f1 and newer, there could be errors in logs during the installation such as `Coroutine continue failure`. You should ignore it.
+> In the Unity versions 2019.1.2f1 and newer, there could be errors in logs during the installation such as `Coroutine continue failure`. It's a known Unity issue and you should ignore it.
 
 ### 3.1b Install Individual Packages
 
