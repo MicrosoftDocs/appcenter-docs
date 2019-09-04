@@ -18,7 +18,7 @@ pod 'AppCenter/Push'
 
     ```ruby
     # Use the following line to get the latest version of App Center
-    github "microsoft/appcenter-sdk-apple" "master"
+    github "microsoft/appcenter-sdk-apple"
     ```
 
     ```ruby
