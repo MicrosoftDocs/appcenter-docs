@@ -4,20 +4,21 @@ description: Insight documentation about how to make your app accessible for App
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 08/28/2019
+ms.date: 09/04/2019
 ms.topic: reference
 ms.assetid: c5799bd0-0792-4b7a-8088-aeedaf053964
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# The error `This app exists but is not accessible from your Google Play account`
+# Publishing to the Google Play Store fails because the app isn't accessible
 
-The package you entered exists but is not accessible through your Google Play Console account.
-Log into your Google Play Console account and [make sure your app is published](https://play.google.com/apps/publish/ "Published apps").
+When publishing to the Google Play Store, you may come across an error like this:
 
-**How can I fix it?**
+> This app exists but is not accessible from your Google Play account. Sign in to your Google Play Console and make sure your app is published.
 
-* If the package status is not published, you must first publish it manually via the Google Play Console to be able to use App Center to upgrade your app.
-* If the App you are trying to publish is accessible through a different Google Play Console account, you must provide the API access to this account instead.
-[Follow our instructions on how-to provide the correct .json file](https://docs.microsoft.com/en-us/appcenter/distribution/stores/googleplay "Provide the .json file").
+This error appears when your account doesn't have access to an app in the Google Play Console. This usually means the app is published by a different account, which you didn't give the API access to.
+
+## Fixing this issue
+
+Provide the App Center API access to a Google account, which does have access to the app. Follow the [instructions on how to provide the correct .json file](https://docs.microsoft.com/en-us/appcenter/distribution/stores/googleplay).
