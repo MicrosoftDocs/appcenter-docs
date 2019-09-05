@@ -3,7 +3,7 @@ title: "HockeyApp to App Center API migration"
 description: Transition from HockeyApp to App Center
 author: derpixeldan
 ms.author: daadam
-ms.date: 08/15/2019
+ms.date: 09/05/2019
 ms.topic: article
 ms.assetid: 32b8f487-40ed-4649-93fb-bfddf0538dd8
 ms.service: vs-appcenter
@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # API migration
 
-With the shutdown of HockeyApp, most APIs will go away and only a subset remains functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the [App Center API](~/api-docs/index.md) as soon as you made yourself familiar with them. The following APIs will remain functional after you moved an app to App Center:
+With the shutdown of HockeyApp, most APIs will go away and only a subset will remain functional. On App Center, only apps that [have been moved over from HockeyApp](~/transition/moving/index.md) are still able to access the below mentioned APIs. We recommend to upgrade to the [App Center API](~/api-docs/index.md) as soon as you make yourself familiar with them. The following APIs will remain functional after you moved an app to App Center:
 
 ## Upload API
 
