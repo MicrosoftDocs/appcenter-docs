@@ -440,22 +440,35 @@ Using the `listWithPartition` or `listDocuments` (swift) call you can fetch pagi
 
 ### Advanced offline scenarios
 
-`setRemoteOperationDelegate` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
+`setRemoteOperationDelegate` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippets.
+
+In the header file:
+```objc
+@interface MyClass : NSObject <MSRemoteOperationDelegate>
+
+@end
+```
+
+Implementation:
 
 ```objc
-Data.setRemoteOperationDelegate(
-    new RemoteOperationListener() {
-            @Override
-            public void onRemoteOperationCompleted(String operation, DocumentMetadata documentMetadata, DataException error) {
-                Log.i(
-                    LOG_TAG, 
-                    String.format(
-                        "Remote operation completed operation=%s partition=%s documentId=%s eTag=%s", 
-                        operation, 
-                        documentMetadata.getPartition(), 
-                        documentMetadata.getId(), 
-                        documentMetadata.getETag()), 
-                        error);
-            }
-        };
+@implementation MyClass
+
+(void)data:(MSData *)data didCompleteRemoteOperation:(NSString *)operation forDocumentMetadata:(MSDocumentMetadata *_Nullable)documentMetadata withError:(MSDataError *_Nullable)error{
+  NSLog(@"Operation processed: %@ ", operation);
+  if (documentMetadata) {
+    NSLog(@"Document: Partition : %@, document id : %@, eTag : %@ ", documentMetadata.partition, documentMetadata.documentId, documentMetadata.eTag);
+  }
+  if (error) {
+    NSLog(@"Error: %@ ", error);
+  }
+}
+
+@end
+```
+
+To setup the callback (delegation):
+```objc
+MyClass *myClass = [[MyClass alloc] init];
+[MSData setRemoteOperationDelegate:myClass];
 ```
