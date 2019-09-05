@@ -95,6 +95,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ### 3.3 Integration by copying the binaries into your project
+
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your tvOS app.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
