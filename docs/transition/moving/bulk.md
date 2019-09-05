@@ -41,7 +41,7 @@ Body:
 }
 ```
 
-Open the returned url in your browser and confirm to move the apps.
+Open the returned url in your browser and confirm to move the apps. The link will expire after 10 minutes.
 
 ## Move apps owned by an organization account
 Specify a list of app IDs or move all apps of an organization via `POST /api/2/organizations/<org-id>/apps/move`. You have to be owner of an organization in order move its apps.
@@ -67,4 +67,4 @@ Body:
 }
 ```
 
-Open the returned url in your browser and confirm to move the apps.
+Open the returned url in your browser and confirm to move the apps. The link will expire after 10 minutes.
