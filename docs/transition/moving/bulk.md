@@ -15,10 +15,10 @@ ms.custom: hockeyapp
 
 Moving apps one by one can be a challenge when you have to do it for many apps. The following APIs enable you to move multiple apps at once for your user or organization account.
 
-Please note: Your apps might use features or functionality that is not available in App Center. Make sure you read about potential [compatibility issues](~/transition/moving/incompatibilities.md). Once you've moved an app, only a [subset of HockeyApp APIs](~/transition/api.md) remains functional. Make sure you update those unavailable to the new App Center API. Also, understand what [data](~/transition/moving/data.md) will be moved for your apps.
+Note, that your apps might use features or functionality that is not available in App Center. Make sure you read about potential [compatibility issues](~/transition/moving/incompatibilities.md). Once you've moved an app, only a [subset of HockeyApp APIs](~/transition/api.md) will remain functional. Make sure you update those unavailable to the new App Center API. Also, understand what [data](~/transition/moving/data.md) will be moved for your apps.
 
 ## Move apps owned by a user account
-Specify a list of app IDs or move all apps of your user account via `POST /api/2/apps/move`. 
+Specify a list of app IDs or move all apps of your user account via `POST /api/2/apps/move`.
 
 Parameters:
 
@@ -44,7 +44,7 @@ Body:
 Open the returned url in your browser and confirm to move the apps.
 
 ## Move apps owned by an organization account
-Specify a list of app IDs or move all apps of an organization via `POST /api/2/organizations/<org-id>/apps/move`. You have to be owner of the organization to move apps.
+Specify a list of app IDs or move all apps of an organization via `POST /api/2/organizations/<org-id>/apps/move`. You have to be owner of an organization in order move its apps.
 
 Parameters:
 
