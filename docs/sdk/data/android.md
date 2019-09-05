@@ -386,3 +386,25 @@ Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccept( new Ap
      }
 });
 ```
+
+### Advanced offline scenarios
+
+`setRemoteOperationListener` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
+
+```java
+Data.setRemoteOperationListener(
+    new RemoteOperationListener() {
+            @Override
+            public void onRemoteOperationCompleted(String operation, DocumentMetadata documentMetadata, DataException error) {
+                Log.i(
+                    LOG_TAG, 
+                    String.format(
+                        "Remote operation completed operation=%s partition=%s documentId=%s eTag=%s", 
+                        operation, 
+                        documentMetadata.getPartition(), 
+                        documentMetadata.getId(), 
+                        documentMetadata.getETag()), 
+                        error);
+            }
+        };
+```

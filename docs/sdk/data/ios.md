@@ -437,3 +437,25 @@ The `MSPaginatedDocuments` class has 3 methods which can be used to manage pagin
 The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `items`, which represents the documents in the page.
 
 Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
+
+### Advanced offline scenarios
+
+`setRemoteOperationListener` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
+
+```objc
+Data.setRemoteOperationListener(
+    new RemoteOperationListener() {
+            @Override
+            public void onRemoteOperationCompleted(String operation, DocumentMetadata documentMetadata, DataException error) {
+                Log.i(
+                    LOG_TAG, 
+                    String.format(
+                        "Remote operation completed operation=%s partition=%s documentId=%s eTag=%s", 
+                        operation, 
+                        documentMetadata.getPartition(), 
+                        documentMetadata.getId(), 
+                        documentMetadata.getETag()), 
+                        error);
+            }
+        };
+```
