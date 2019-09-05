@@ -66,3 +66,5 @@ Body:
     "url":"https://rink.hockeyapp.net/confirm_moving_apps/6?confirmation_token=8bf7e14b-b813-473f-9b07-0aae28528e1e"
 }
 ```
+
+Open the returned url in your browser and confirm to move the apps.
