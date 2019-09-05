@@ -284,3 +284,15 @@ while(await paginatedDocuments.hasNextPage()) {
     }
 } //paginatedDocuments is cleaned up when `hasNextPage` resolves false
 ```
+
+### Advanced offline scenarios
+
+The `setRemoteOperationListener` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippet:
+
+```javascript
+Data.setRemoteOperationListener({
+  onRemoteOperationCompleted(document) {
+    console.log(`Remote operation completed. DocumentId: ${document.id}`);
+  }
+});
+```
