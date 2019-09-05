@@ -440,10 +440,10 @@ Using the `listWithPartition` or `listDocuments` (swift) call you can fetch pagi
 
 ### Advanced offline scenarios
 
-`setRemoteOperationListener` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
+`setRemoteOperationDelegate` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
 
 ```objc
-Data.setRemoteOperationListener(
+Data.setRemoteOperationDelegate(
     new RemoteOperationListener() {
             @Override
             public void onRemoteOperationCompleted(String operation, DocumentMetadata documentMetadata, DataException error) {
