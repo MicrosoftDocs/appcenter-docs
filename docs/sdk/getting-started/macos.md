@@ -4,12 +4,15 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/14/2019
+ms.date: 09/05/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: macos
+dev_langs:  
+ - swift
+ - objc
 ---
 
 # Get Started with macOS
@@ -103,20 +106,14 @@ In order to use App Center, you must opt in to the module(s) that you want to us
 
 ### 4.1 Add the import statements
 
-**Objective-C**
+Open the project's **AppDelegate** file and add the following import statements.
+If you're in the application extension, use the main view controller file.
 
-Open the project's **AppDelegate.m** file and add the following import statements:
-
-```obj-c
+```objc
 @import AppCenter;
 @import AppCenterAnalytics;
 @import AppCenterCrashes;
 ```
-
-**Swift**
-
-Open the project's **AppDelegate.swift** file and add the following import statements:
-
 ```swift
 import AppCenter
 import AppCenterAnalytics
@@ -125,18 +122,13 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-**Objective-C**
+Insert the following line:
+* In the app's `didFinishLaunchingWithOptions` delegate method if you're in the application.
+* In the app's `viewDidLoad` controller method if you're in the application extension.
 
-Insert the following line to start the SDK in the project's **AppDelegate.m** class in the `applicationDidFinishLaunching` method.
-
-```obj-c
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
-
-**Swift**
-
-Insert the following line to start the SDK in the project's **AppDelegate.swift** class in the `applicationDidFinishLaunching` method.
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
@@ -155,14 +147,9 @@ Note that, unless you explicitly specify each module as parameters in the start 
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
 ```
-
-**Swift**
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```

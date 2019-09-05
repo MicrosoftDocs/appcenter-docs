@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/05/2019
+ms.date: 09/05/2019
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: vs-appcenter
@@ -105,7 +105,8 @@ In order to use App Center, you must opt in to the module(s) that you want to us
 
 ### 4.1 Add the import statements
 
-Open the project's **AppDelegate** file and add the following import statements:
+Open the project's **AppDelegate** file and add the following import statements.
+If you're in the application extension, use the main view controller file.
 
 ```objc
 @import AppCenter;
@@ -120,7 +121,10 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line to start the SDK in the project's **AppDelegate** class in the `didFinishLaunchingWithOptions` method.
+Insert the following line:
+* In the app's `didFinishLaunchingWithOptions` delegate method if you're in the application.
+* In the app's `viewDidLoad` controller method if you're in the application extension.
+
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
