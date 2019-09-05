@@ -37,7 +37,7 @@ Return:
 ```Status: 200
 Body:
 {
-    "url":"https://rink.hockeyapp.net/confirm_moving_apps/5?confirmation_token=beadef8a-6c05-4837-8b4b-acc7b9539ed1"
+    "url":"https://rink.hockeyapp.net/confirm_moving_apps/6?confirmation_token=19k7e64b-k513-410f-9b07-0aae285su71e"
 }
 ```
 
@@ -63,7 +63,7 @@ Return:
 ```Status: 200
 Body:
 {
-    "url":"https://rink.hockeyapp.net/confirm_moving_apps/6?confirmation_token=8bf7e14b-b813-473f-9b07-0aae28528e1e"
+    "url":"https://rink.hockeyapp.net/confirm_moving_apps/6?confirmation_token=19k7e64b-k513-410f-9b07-0aae285su71e"
 }
 ```
 
