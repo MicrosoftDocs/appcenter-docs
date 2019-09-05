@@ -22,7 +22,7 @@ Specify a list of app IDs or move all apps of your user account via `POST /api/2
 
 Parameters:
 
-* *apps* - Array of app IDs. No app ID specified requests to move all apps of the account.
+* **apps** - Array of app IDs. No app ID specified requests to move all apps of the account.
 
 Example:
 ```curl \
@@ -30,22 +30,25 @@ Example:
     -F "apps[]=69e641a599f64e4c8adbb221b05a5ab1" \
     -F "apps[]=096dea13e6244155b0a7733328dcff57" \
     -H "X-HockeyAppToken: 182a66de22s040l591s014645b9d7c87" \
-    https://rink.hockeyapp.net/api/2/apps/move```
+    https://rink.hockeyapp.net/api/2/apps/move
+```
 
 Return:
 ```Status: 200
 Body:
 {
     "url":"https://rink.hockeyapp.net/confirm_moving_apps/5?confirmation_token=beadef8a-6c05-4837-8b4b-acc7b9539ed1"
-}```
+}
+```
 
 Open the returned url in your browser and confirm to move the apps.
 
 ## Move apps owned by an organization account
+Specify a list of app IDs or move all apps of an organization via `POST /api/2/organizations/<org-id>/apps/move`. You have to be owner of the organization to move apps.
 
 Parameters:
 
-* *apps* - Array of app IDs. No app ID specified requests to move all apps of the account.
+* **apps** - Array of app IDs. No app ID specified requests to move all apps of the account.
 
 Example:
 ```curl \
@@ -53,11 +56,13 @@ Example:
 -F "apps[]=096dea13e6244155b0a7733328dcff57" \
 -F "apps[]=69e641a599f64e4c8adbb221b05a5ab1" \
 -H "X-HockeyAppToken: 182a66de22s040l591s014645b9d7c87" \
-https://rink.hockeyapp.net/api/2/organizations/3407707/apps/move```
+https://rink.hockeyapp.net/api/2/organizations/3407707/apps/move
+```
 
 Return:
 ```Status: 200
 Body:
 {
     "url":"https://rink.hockeyapp.net/confirm_moving_apps/6?confirmation_token=8bf7e14b-b813-473f-9b07-0aae28528e1e"
-}```
+}
+```
