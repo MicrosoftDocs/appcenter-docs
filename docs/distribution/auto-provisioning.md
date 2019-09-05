@@ -22,7 +22,7 @@ The following diagram displays the entire app re-signing flow in App Center. Let
 
 ![App Center device registration and app re-signing flow](images/auto-provisioning-flow.png)
 
-App re-signing only applies when you want to distribute an iOS app to specific test devices. In the diagram, you want to distribute an app release to the devices of Tester 1 and Tester 2. To do this, you sign your app with an *ad hoc* provisioning profile. This provisioning profile has a list of unique device identifiers (UDIDs). Only devices that are on that list are "provisioned," or  able to install the .ipa. App Center can detect whether a device is provisioned, because we know the UDID of the device from when the tester first registered their device with App Center. If we detect that the device that the tester is using is not on the list of provisioned devices for the .ipa they want to download, then we show the message "The developers are working on a version for your device."
+App re-signing only applies when you want to distribute an iOS app to specific test devices. In the diagram, you want to distribute an app release to the devices of Tester 1 and Tester 2. To do this, you sign your app with an *ad hoc* provisioning profile. This provisioning profile has a list of unique device identifiers (UDIDs). Only devices that are on that list are "provisioned," or able to install the .ipa. App Center can detect whether a device is provisioned, because we know the UDID of the device from when the tester first registered their device with App Center. If we detect that the device that the tester is using is not on the list of provisioned devices for the .ipa they want to download, then we show the message "The developers are working on a version for your device."
 
 Once you know which devices you want to use for testing, you must register them in your Apple developer account, add them to your provisioning profile, generate a new provisioning profile, download it and then build your app with this profile. When a new device appears, such as the device with UDID 3 in the diagram, you have to do these steps again. This can be inconvenient, as you don't want to have to change your continuous integration system or ask the developer to always keep adding new devices to the profile and releasing new builds. This is where re-signing comes in. It means taking an existing application build and signing it again (re-signing) with a different provisioning profile, so you don't have to create a new build.
 
@@ -88,9 +88,7 @@ You can store an Apple distribution certificate and private key in a Private Inf
 
 1. Open the **Keychain Access** app on your Mac and select the **My Certificates** category on the left.
 2. Find the right distribution certificate and expand it to see the corresponding private key.
-
-    a. If the private key isn't there, you must either create a new certificate or perform these steps on the machine where you created the certificate.
-
+  a. If the private key isn't there, you must either create a new certificate or perform these steps on the machine where you created the certificate.
 3. Select either the certificate or the private key or both. Then right-click on the selected item(s) to get the context menu and select the action that starts with **Export**. ![Export certificate from keychain](images/ios-keychain-certificates.png)
 4. Select a location on disk to save the file as a .p12. Choose a strong password for the file.
 
