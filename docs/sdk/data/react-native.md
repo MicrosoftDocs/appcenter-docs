@@ -49,10 +49,10 @@ npm install appcenter-data --save-exact
 
 ### 2. Link the SDK
 
-Link the plugins to the React Native app using the react-native link command:
+Starting with React Native 0.60, plugins are autolinked to the project. Run one final step in CocoaPods for iOS:
 
 ```bash
-react-native link appcenter-data
+cd ios && pod install && cd ..
 ```
 
 ## Defining a Model
@@ -265,18 +265,22 @@ The `paginatedDocuments` object resolved from the `list` call has a few major pr
 
 The `paginatedDocuments.currentPage` object has a field called `items`, which represents the documents in the page.
 
-After you are finished with the paginatedDocuments, be sure to call the `close()` to clean up the instance.
+The `hasNextPage()` and `getNextPage()` methods will call `close()` automatically if there is not a next page. If it is possible that all pages of a `paginatedDocuments` object will not be retrieved, then `close()` should be called manually to prevent a memory leak.
 
 > [!IMPORTANT]
 > Each `Data.list` call creates a instance of the PaginatedDocuments which is persisted until either `hasNextPage()` resolves false, `getNextPage()` resolves null, or `close()` is invoked. 
 
-To fetch additional pages, call the `getNextPage()` method from the `paginatedDocuments` object. An example of the usage would be the following code snippet. 
+To fetch additional pages, call the `getNextPage()` method from the `paginatedDocuments` object. The following code snippet demonstrates this, as well as showing different ways to clean up the `paginatedDocuments` object once you are done using it.
 
 ```javascript
 const paginatedDocuments = await Data.list(Data.DefaultPartitions.USER_DOCUMENTS);
 // Do something with paginatedDocuments.currentPage.items
 while(await paginatedDocuments.hasNextPage()) {
     const nextPage = await paginatedDocuments.getNextPage();
-    // Do something with nextPage.items
-}
+    if (nextPage.items[0].deserializedValue == "some value") {
+        // Do something with nextPage.items[0]
+        paginatedDocuments.close(); //paginatedDocuments is cleaned up by manually calling `close()`
+        break;
+    }
+} //paginatedDocuments is cleaned up when `hasNextPage` resolves false
 ```
