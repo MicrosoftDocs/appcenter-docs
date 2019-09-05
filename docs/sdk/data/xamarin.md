@@ -294,7 +294,7 @@ The code snippet above will add deserialized value of documents existing in the 
 
 ### Advanced offline scenarios
 
-`setRemoteOperationListener` method allows to be notified of a pending operation being executed when a client device goes from offline to online. An example of the usage would be the following code snippet:
+The `setRemoteOperationListener` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippet:
 
 ```csharp
 Data.setRemoteOperationListener(
