@@ -17,7 +17,7 @@ When connecting to the Google Play Store, you may come across an error like this
 
 > This app exists but is not accessible from your Google Play account. Sign in to your Google Play Console and make sure your app is published.
 
-This error appears when your account doesn't have access to an app in the Google Play Console. This usually means the app is published by a different account, which you didn't give the API access to.
+This error appears when your account doesn't have access to an app in the Google Play Console. It usually means the app is published by a different account, which you didn't give the API access to.
 
 ## Fixing this issue
 

@@ -11,13 +11,13 @@ ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Connecting to the Google Play Store fails because the app is not published
+# Connecting to the Google Play Store fails because the app isn't published
 
 When connecting to the Google Play Store, you may come across an error like this:
 
 > You must publish your app to the Production, Beta or Alpha track from the Google Play Console before you can connect the store.
 
-This error appears when you try to connect to the Google Play Store before publishing the app. Because App Center does not support adding some of the metadata required for the first publication, you must publish your app to one of the built-in tracks at least once from the Google Play Console. Follow the steps below to fix the issue.
+This error appears when you try to connect to the Google Play Store before publishing the app. Because App Center doesn't support adding some of the metadata that is required for the first publication, you must publish your app to one of the built-in tracks at least once from the Google Play Console. Follow the steps below to fix the issue.
 
 ## Fixing this issue
 

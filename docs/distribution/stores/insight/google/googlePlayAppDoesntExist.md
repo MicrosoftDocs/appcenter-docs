@@ -29,7 +29,7 @@ First verify you used the correct app package name. You can see this in the Goog
 
 * Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
 * Make sure the app exists in the **All applications** list.
-  * If the app is not there, create it and go through the publishing steps below.
+  * If the app isn't there, create it and go through the publishing steps below.
 * The app package name is written in the **App name** column under the app name itself.
   * If it is not there, go through the publishing steps below.
 
