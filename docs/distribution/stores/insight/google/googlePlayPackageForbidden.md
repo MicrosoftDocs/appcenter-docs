@@ -4,16 +4,16 @@ description: Insight documentation about how to make your app accessible for App
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/04/2019
+ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: c5799bd0-0792-4b7a-8088-aeedaf053964
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Publishing to the Google Play Store fails because the app isn't accessible
+# Connecting to the Google Play Store fails because the app isn't accessible
 
-When publishing to the Google Play Store, you may come across an error like this:
+When connecting to the Google Play Store, you may come across an error like this:
 
 > This app exists but is not accessible from your Google Play account. Sign in to your Google Play Console and make sure your app is published.
 

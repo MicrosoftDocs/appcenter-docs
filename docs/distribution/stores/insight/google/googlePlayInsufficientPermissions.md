@@ -4,16 +4,16 @@ description: Insight documentation about granting the correct permissions so tha
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/04/2019
+ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: 536d7c06-ceeb-40e4-91e3-5ed90b03bbd0
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Publishing to the Google Play Store fails because of permissions
+# Connecting to the Google Play Store fails because of permissions
 
-When publishing to the Google Play Store, you may come across an error like this:
+When connecting to the Google Play Store, you may come across an error like this:
 
 > Your Google service account doesn't have permissions to publish the app to the Google Play Store.
 

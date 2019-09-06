@@ -4,24 +4,24 @@ description: Insight documentation about creating an app package in Google Play 
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/04/2019
+ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: 43efde4a-3249-46bc-83db-2d8d29b712e4
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Publishing to the Google Play Store fails because the app package name couldn't be found
+# Connecting to the Google Play Store fails fails because the app package name couldn't be found
 
-When publishing to the Google Play Store, you may come across an error like this:
+When connecting to the Google Play Store, you may come across an error like this:
 
 > The app package name could not be found in your Google Play Console account. Sign in to your Google Play Console account and make sure your app is published.
 
-This error appears when you try to publish an app through App Center before you ever published it through the Google Play Store. Publish the app through the Google Play Store to one of the built-in tracks at least once before publishing through App Center. Follow the steps below to fix the issue.
+This error appears when you try to connect to the Google Play Store before Google knows the package name of your app. Make sure you create the app in the Google Play Console first, and publish it to one of the built-in tracks at least once as well. Follow the steps below to fix the issue.
 
 ## Fixing this issue
 
-Make sure you have the right app package name, and that the app is published in the Google Play Console .
+Make sure you have the right app package name, and that the app is published in the Google Play Console.
 
 ### Verify the app package name
 
