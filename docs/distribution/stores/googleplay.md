@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 07/24/2019
+ms.date: 09/06/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
