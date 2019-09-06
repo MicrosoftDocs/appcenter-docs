@@ -1,10 +1,10 @@
 ---
 title: Publish to Google Play Store
-description: Simplify distribution of mobile applications to the Google Play store 
+description: Simplify distribution of mobile applications to the Google Play store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 07/24/2019
+ms.date: 09/06/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -12,7 +12,7 @@ ms.custom: distribute
 
 # Publish to Google Play Store
 
-Publish an update to Google Play Store, including the Alpha and Beta tracks from App Center. 
+Publish an update to Google Play Store, including the Alpha and Beta tracks from App Center.
 
 ## Prerequisites
 
@@ -123,6 +123,7 @@ Close the window and the new service account shows on the original page. Click t
    * The version of the .aab must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in Alpha and Beta track versions.
    * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
+   * If you have a draft release in the track you will publish to, that draft release will disappear in favor of the new release you publish.
 4. After uploading your package, you can see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribute Store Details page will show as **Submitted.**
 6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
@@ -139,6 +140,7 @@ Close the window and the new service account shows on the original page. Click t
    * The version of the .apk must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
    * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
+   * If you have a draft release in the track you will publish to, that draft release will disappear in favor of the new release you publish.
 4. After uploading your package, you can see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribution Store Details page will show as **Submitted.**
 6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
