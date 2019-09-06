@@ -17,11 +17,11 @@ When publishing to the Google Play Store, you may come across an error like this
 
 > The app package name could not be found in your Google Play Console account. Sign in to your Google Play Console account and make sure your app is published.
 
-This error appears when you try to publish an app through App Center before you ever published it through the Google Play Store. Publish the app through the Google Play Store at least once before publishing through App Center. Follow the steps below to fix the issue.
+This error appears when you try to publish an app through App Center before you ever published it through the Google Play Store. Publish the app through the Google Play Store to one of the built-in tracks at least once before publishing through App Center. Follow the steps below to fix the issue.
 
 ## Fixing this issue
 
-Make sure you have the right app package name, and that the app is published in the Google Play Console.
+Make sure you have the right app package name, and that the app is published in the Google Play Console .
 
 ### Verify the app package name
 
@@ -35,7 +35,7 @@ First verify you used the correct app package name. You can see this in the Goog
 
 ### Publish the app
 
-If you have the correct app package name and it still doesn't work, that means the app isn't yet published in the Google Play Console. Publish it there first, to the **Production**, **Beta** or **Alpha** track. App Center doesn't support manually created closed tracks.
+If you have the correct app package name and it still doesn't work, that means the app isn't yet published in the Google Play Console. Publish it there first, to the **Production**, **Beta** or **Alpha** track. App Center doesn't support manually created tracks.
 
 * Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
 * Make sure the app exists in the **All applications** list. Create the app if it doesn't exist.

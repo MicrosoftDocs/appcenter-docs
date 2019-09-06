@@ -17,7 +17,7 @@ When publishing an Android App Bundle .aab file, you may come across an error li
 
 > Google Play app signing is not enabled for this package. You must enroll into app signing by Google Play to upload an Android App Bundle.
 
-This error appears when you try to publish an app for which you have not enabled app signing in Google Play. Follow the steps below to fix the issue.
+This error appears when you try to publish an app for which you have not enabled app signing by Google Play. This is a requirement for releasing Android App Bundles. Follow the steps below to fix the issue.
 
 ## Fixing this issue
 
