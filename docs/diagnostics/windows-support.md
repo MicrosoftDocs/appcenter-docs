@@ -8,7 +8,7 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
-ms.custom: analytics 
+ms.custom: analytics
 ---
 
 # Windows Support
@@ -19,7 +19,7 @@ ms.custom: analytics
 ## Universal Windows Platform
 
 > [!NOTE]
-> We expect to make some improvements in our UWP support in the following months. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md)for more details. You can leave us a comment or file a Github issue if you have any questions or feedback.
+> We expect to make some improvements in our UWP support in the following months. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md)for more details. You can leave us a comment or file a Github issue if you have any questions or feedback. See [help and feedback](../help.md).
 
 App Center supports basic diagnostics features for UWP apps to help you fix your crashes. We have not yet implemented full feature parity for UWP apps so there are some known limitations and missing features compared to other supported platforms. To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md).
 
@@ -39,7 +39,7 @@ App Center displays a graph that indicates the number of crashes per day based o
 
 #### Crash group overview
 
-Select a crash group to view the crash group stack trace and report details such as the most affected device and most affected OS. The full stack trace will only be displayed if you submit your app to the Windows store and upload the proper symbol files. 
+Select a crash group to view the crash group stack trace and report details such as the most affected device and most affected OS. The full stack trace will only be displayed if you submit your app to the Windows store and upload the proper symbol files.
 
 ![App Center displays the stack trace and details of your crash group](~/diagnostics/images/UWP-Crash-Group-Overview.png)
 
@@ -49,7 +49,7 @@ Select a crash report to view the crash stack trace and events. The full stack t
 
 ![App Center displays the stack trace and events of a crash instance](~/diagnostics/images/UWP-Crash-Instance.png)
 
-### Known Limitations 
+### Known Limitations
 
 App Center works with the Windows crash reporting service built into Windows devices to send and process crash logs. Because of this, there are some known limitations, we plan to address this year, unique to UWP apps.
 
@@ -71,10 +71,10 @@ You also might notice some features you see in other platforms are missing for y
 
 ### Submitting your app to the Microsoft Store
 
-To distribute your app through the Microsoft Store, you must create an app package file and [submit the package](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages) to [Partner Center](https://partner.microsoft.com/dashboard). In creating your package file, you can include symbol files to upload to Partner Center. This will allow App Center to display symbolicated stack traces. 
+To distribute your app through the Microsoft Store, you must create an app package file and [submit the package](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages) to [Partner Center](https://partner.microsoft.com/dashboard). In creating your package file, you can include symbol files to upload to Partner Center. This will allow App Center to display symbolicated stack traces.
 
 Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/uwp/packaging/index) to package your app.
 
 ## WinRT, Silverlight, and Other Platforms
 
-App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. You can find more details about future Windows platform support in App Center in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please comment in the [App Center Github repo](https://github.com/Microsoft/appcenter) or reach out to us using the blue chat button in the lower-right corner of any App Center page.
+App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. You can find more details about future Windows platform support in App Center in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please leave your [feedback](../../../help.md).

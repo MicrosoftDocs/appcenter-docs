@@ -47,10 +47,10 @@ The recommended way to integrate the App Center Unity SDK is to use **App Center
 
 The App Center SDK uses application identifiers in the globally unique identifier (GUID) format. Your HockeyApp App ID can be used by App Center but you need to convert it to a different format. To convert the identifier you must add four hyphens to get an 8-4-4-4-12 representation.
 
-Before (HockeyApp):  
-`00112233445566778899aabbccddeeff`  
+Before (HockeyApp):
+`00112233445566778899aabbccddeeff`
 
-After (App Center):  
+After (App Center):
 `00112233-4455-6677-8899-aabbccddeeff`
 
 ### 2.2 Configure the SDK
@@ -94,8 +94,4 @@ Display a feedback form | [HockeyAppIOS.ShowFeedbackForm](https://github.com/bit
 
 ### Feedback
 
-This service wont be supported in App Center.
-
-## 4. Contact us
-
-In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving us a note in the docs itself.
+The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

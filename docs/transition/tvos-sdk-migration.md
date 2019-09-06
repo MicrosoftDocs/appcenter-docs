@@ -69,10 +69,10 @@ The recommended way to integrate the App Center SDK is to use **CocoaPods**, but
 
 The App Center SDK uses application identifiers in the globally unique identifier (GUID) format. Your HockeyApp App ID can be used by App Center but you need to convert it to a different format. To convert the identifier you must add four hyphens to get an 8-4-4-4-12 representation.
 
-Before (HockeyApp):  
-`00112233445566778899aabbccddeeff`  
+Before (HockeyApp):
+`00112233445566778899aabbccddeeff`
 
-After (App Center):  
+After (App Center):
 `00112233-4455-6677-8899-aabbccddeeff`
 
 ### 2.2 Replace SDK initialization in the application code
@@ -193,9 +193,3 @@ Info about the previous crash | `BITHockeyManager.shared().crashManager.lastSess
 Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/tvos#add-attachments-to-a-crash-report) |
 Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-tvOS/blob/62f4cff75262ca3e58ec80b2db3c7414637be8c3/Classes/BITCrashManager.h#L310) | [Documentation (not provided by default)](~/sdk/crashes/tvos#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](~/sdk/crashes/tvos#enable-or-disable-app-center-crashes-at-runtime)
-
-* * *
-
-## 4. Contact us
-
-In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving a comment below.

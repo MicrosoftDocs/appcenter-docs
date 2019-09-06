@@ -23,5 +23,3 @@ ms.custom: distribute
 Apple App Store   | ✅  | ❌       | ❌  | ❌    |
 Google Play Store | ❌  | ✅       | ❌  | ❌    |
 Microsoft Intune  | ✅  | ✅       | ❌  | ❌    |
-
-We are looking for feedback, feel free to contact us through the blue chat icon in the lower right-hand corner of every App Center page.

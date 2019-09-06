@@ -51,4 +51,4 @@ App Center doesn't currently support externally hosted builds. We won't move any
 
 ## Feedback
 
-App Center doesn't support HockeyApp's Feedback. Before moving an app using the HockeyApp Feedback, we recommend using another third-party in-app feedback tools instead. Once we move your app, you won't receive any feedback from the HockeySDK anymore. Make sure the version using the new in-app feedback tool is well adopted before moving to App Center.
+App Center doesn't support HockeyApp's Feedback service. Before moving an app using the HockeyApp Feedback, we recommend using another third-party in-app feedback tool instead. Once we move your app, you won't receive any feedback from the HockeySDK anymore. Make sure the version using the new in-app feedback tool is well adopted before moving to App Center.
