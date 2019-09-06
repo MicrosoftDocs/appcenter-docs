@@ -344,7 +344,9 @@
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
 ### [Migrated Data](transition/moving/data.md)
+## [API Migration](transition/api.md)
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
+
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
