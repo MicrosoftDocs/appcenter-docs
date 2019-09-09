@@ -18,6 +18,7 @@ ms.tgt_pltfrm: react-native
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
