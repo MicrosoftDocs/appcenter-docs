@@ -1,32 +1,44 @@
 ---
-title: Why do I see App package has no match in Google Play Console?
+title: Publishing to Google Play fails because the app isn't found
 description: Insight documentation about creating an app package in Google Play Console so that App Center can connect and work with Google Play
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 02/15/2019
+ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: 43efde4a-3249-46bc-83db-2d8d29b712e4
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Why do I see `App package has no match in Google Play Console.`?
+# Connecting to the Google Play Store fails fails because the app package name couldn't be found
 
-The package you entered could not be found in your Google Play Console account.
-Log into your Google Play Console account and [make sure your app is published.](https://play.google.com/apps/publish/ "Published apps")
+When connecting to the Google Play Store, you may come across an error like this:
 
-**How can I fix it?**
+> The app package name could not be found in your Google Play Console account. Sign in to your Google Play Console account and make sure your app is published.
 
-* You can publish your app on any track (alpha, beta, or production). Once your app is published in at least one track, App Center will be able to release and upgrade your app for any track.
-* If you don’t know what is you package name, you can find it inside the **manifest.json** file.
+This error appears when you try to connect to the Google Play Store before Google knows the package name of your app. Make sure you create the app in the Google Play Console first, and publish it to one of the built-in tracks at least once as well. Follow the steps below to fix the issue.
 
-    Example:\
-    `package="com.example.myapplication"`
+## Fixing this issue
 
-    [Read more in Googles documentation](https://play.google.com/apps/publish/ "Published apps") or by running the `aadt` command against your .apk file, example shown below:
+Make sure you have the right app package name, and that the app is published in the Google Play Console.
 
-    `$ ./aapt dump badging myapplication.apk`
+### Verify the app package name
 
-    Result:\
-    `package: name='com.example.myapplication'`
+First verify you used the correct app package name. You can see this in the Google Play Console:
+
+* Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
+* Make sure the app exists in the **All applications** list.
+  * If the app isn't there, create it and go through the publishing steps below.
+* The app package name is written in the **App name** column under the app name itself.
+  * If it is not there, go through the publishing steps below.
+
+### Publish the app
+
+If you have the correct app package name and it still doesn't work, that means the app isn't yet published in the Google Play Console. Publish it there first, to the **Production**, **Beta** or **Alpha** track. App Center doesn't support manually created tracks.
+
+* Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
+* Make sure the app exists in the **All applications** list. Create the app if it doesn't exist.
+* The **Status** likely says **Draft**. Your goal is to have the status say **Published**.
+* Go to the settings for the app.
+* Go through all the steps in the console to [publish the app](https://support.google.com/googleplay/android-developer/answer/6334282?hl=en&ref_topic=7072031).
