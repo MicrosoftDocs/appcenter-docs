@@ -29,7 +29,7 @@ Clicking on a Distribution Group will allow for management of the group. You can
 
 ### Private Distribution Groups
 
-In App Center, distribution groups are private by default. This means only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to login to their App Center account in order to access and download releases.  
+In App Center, distribution groups are private by default. This means only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to login to their App Center account in order to access and download releases.
 
 ### Public Distribution Groups
 
@@ -64,7 +64,7 @@ When releasing an iOS app signed with an ad-hoc or development provisioning prof
 
 App Center starts the automated tasks when you distribute a new release or one of your testers registers a new device. First, all devices from the target distribution group will be registered, using your Apple ID, in your developer portal and all provisioning profiles used in the app will be generated with both new and existing device ID. Afterward, the newly generated provisioning profiles are downloaded to App Center servers. Second, App Center uses your saved certificate and the downloaded provisioning profiles to re-sign your app so it can be installed on any device in the releases distribution group. Your testers will not have to wait for you to create a new release as the existing release is being updated and a download link will be available through the [App Center Install portal](https://install.appcenter.ms).
 
-Click on either to read more about [what is re-signing](auto-provisioning.md#what-is-re-signing) and [about privacy for how your Apple ID and certificate is stored](auto-provisioning.md#privacy-concerns-on-username-and-password).
+Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing-and-device-provisioning) and [privacy concerns when App Center stores your Apple ID and certificate](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
 ## Adding Azure Active Directory (AAD) groups to a Distribution Group
 
