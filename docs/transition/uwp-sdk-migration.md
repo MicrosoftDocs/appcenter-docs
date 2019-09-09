@@ -16,7 +16,7 @@ ms.tgt_pltfrm: uwp
 
 ## 1. Update the libraries
 
-> [!NOTE] 
+> [!NOTE]
 > Platforms like WinRT, Windows Phone 8.0 and 8.1, WPF and PCL are not supported in App Center SDK. Please continue to use the HockeySDK with them.
 
 Replace HockeySDK.UWP NuGet package with the App Center ones in all projects in your solution.
@@ -49,11 +49,11 @@ The App Center SDK uses a modular approach – you can integrate only those serv
 
 The App Center SDK uses application identifiers in the globally unique identifier (GUID) format. Your HockeyApp App ID can be used by App Center but you need to convert it to a different format. To convert the identifier you must add four hyphens to get `8-4-4-4-12` representation.
 
-Before (HockeyApp):  
+Before (HockeyApp):
 
 `00112233445566778899aabbccddeeff`
 
-After (App Center):  
+After (App Center):
 
 `00112233-4455-6677-8899-aabbccddeeff`
 
@@ -118,8 +118,4 @@ App Center SDK doesn't support distribution for UWP apps yet.
 
 ### Feedback
 
-This service wont be supported in App Center.
-
-## 4. Contact us
-
-If you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue chat icon in the lower-right corner of every App Center page.
+The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

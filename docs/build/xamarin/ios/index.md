@@ -29,7 +29,7 @@ If you haven't previously connected to your repository service account, you will
 
 ## 2. Selecting a branch
 
-After selecting a repository, select the branch you want to build. By default all the active branches will be listed. 
+After selecting a repository, select the branch you want to build. By default all the active branches will be listed.
 
 ## 3. Setting up your first build
 
@@ -170,4 +170,4 @@ The .dsym files contains the debug symbols for the app.
 
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
-App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us: Click on the blue bubble on the bottom right corner once you're logged in to App Center and share your feedback with us.
+App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us. See [help and feedback](../../../help.md).

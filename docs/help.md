@@ -1,5 +1,5 @@
 ---
-title: Help and Feedback
+title: Help and feedback
 description: What to do when you can't find what you need in the docs
 author: jwargo
 ms.author: jowargo
@@ -9,7 +9,7 @@ ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a
 ms.service: vs-appcenter
 ---
 
-# Help and Feedback
+# Help and feedback
 
 The docs you'll find here should explain everything you need to know about Visual Studio App Center, sometimes the docs are not as clear as they should be, or you're trying to do something that isn't (yet) covered in the docs.
 
@@ -33,15 +33,26 @@ Customers with a Microsoft Premier Support account can file a support request in
 
 ## Providing feedback
 
-The comments feature of our documentation is intended to enable customers to suggest changes to the docs or ask clarifying questions about the docs. At the bottom of every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/en-us/appcenter/)), you'll find the two options highlighted in the following figure:
+You can provide feedback on the documentation and the product in different ways, publicly and privately.
 
-![App Center docs feedback options](~/images/app-center-feedback-options.png)
+### Feedback on the documentation
 
-1. The **Feedback** section of the page lists two buttons; use the **Product Feedback** button to connect with the App Center Support team (as described in the previous section), use the **Content Feedback** button to suggest changes to the docs.
-2. In the bottom-right corner of the page you'll find a prompt asking you if the current page is helpful. Your vote here helps us understand how we're doing.
+The comments feature of our documentation is intended to enable customers to suggest changes to the docs or ask clarifying questions about the docs. Every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/en-us/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
+
+![App Center docs feedback options](images/app-center-feedback-options.png)
+
+The **Feedback** section has two buttons, see item 1. Use the **This product** button to learn how to connect with the App Center Support team (as described in the previous section). Use the **This page** button to suggest changes in a public feedback message right there on the page. The example has one such public feedback message, which is closed, as you can see at number 2. You can add comments to feedback messages. The feedback message in the example has two comments. To leave feedback or comment on existing feedback, you have to sign in with your GitHub account. You can also view the feedback directly on GitHub by following the **View on GitHub** link at item 3. If there are too many feedback messages to display on the page, you can still see them all on GitHub by following this link. The **View on GitHub** link is not available on some pages, such as this one.
+
+Pages also have a prompt asking you if the current page is helpful, see item 4. This will be in different locations of your screen depending on the screen size. Your vote here helps us understand how we're doing.
 
 > [!Note]
-> Option 1 is the preferred method to provide feedback; the feedback you provide here goes directly to the App Center product team and will get you the quickest response. Option 2 simply records your vote (and comments), but doesn't provide a way for us to respond to you.
+> Leaving a feedback message is the preferred method to provide feedback; the feedback you provide here goes directly to the App Center product team and will get you the quickest response. Voting whether the page is helpful simply records your vote (and comments), but doesn't provide a way for us to respond to you.
+
+### Feedback on the product
+
+We're constantly adding features and more capabilities to App Center. Do you not see your feature or are you curious about what new features are coming soon? We invite you to help shape the future of App Center by [sharing your feedback on our monthly public roadmap](https://github.com/Microsoft/appcenter/wiki/Iteration-Plans), or by [submitting and upvoting feature requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc).
+
+If you experience an issue, the best way to get help is to use the support features mentioned above.
 
 ## Contributing to the docs
 
