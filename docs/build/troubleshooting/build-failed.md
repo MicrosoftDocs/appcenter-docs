@@ -21,8 +21,7 @@ If your build succeeds on your local Windows or Mac computer but not on App Cent
 3. Clone your repository with: `git clone -b your-branch https://your-repo`
 4. Launch the freshly cloned project in your local IDE or command line. 
 5. Try comparing the build command executed in App Center to the command executed locally: https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center
-
-You can check the versions of the tools you're using against the tools in our Cloud Build Machines: https://docs.microsoft.com/en-us/appcenter/build/software. When multiple versions of the same tool are listed in the doc, the latest version is used by default, but all versions are installed. 
+6. Compare the versions of the tools you're using locally with our Cloud Build Machines: https://docs.microsoft.com/en-us/appcenter/build/software.  
 
 # Comparing different builds in App Center
 ## Some branches work while others fail
@@ -48,9 +47,9 @@ If you don't find relevant error messages, then the next step is to download the
 - 1_Intialize job.txt
 - 2_Checkout.txt
 - 3_Tag build.txt
-- etc. 
+- and so on 
 
-Logs are numbered based on the major tasks of your build. Most build failures cause subsequent tasks to be skipped which indicated when the failure happened.
+Logs are numbered based on the major tasks of your build. Most build failures cause tasks to be skipped:
 
 - (Steps 1-9)...
 - 10_Pre Build Script.txt
@@ -60,10 +59,10 @@ Logs are numbered based on the major tasks of your build. Most build failures ca
 - 20_Post-job Checkout.txt
 - 21_Finalize Job.txt
 
-The first log skipped is log #13. The log before it, "12_Sign APK.txt" probably has the most relevant errors to why the build failed. Other steps might have been skipped or hit failures, but they're less likely to be the primary failure in the build. 
+The first log skipped is log #13, so the log before it, "12_Sign APK.txt" probably has the most relevant errors to why the build failed. Other steps might have been skipped or hit failures, but they're less likely to be the primary failure in the build. 
 
 # Next Steps
-If comparing builds or isolating errors doesn't fix the issue; you have a few options on where to research next:
+Here are a few options for researching your issue further:
 
 - Other Build troubleshooting docs: https://docs.microsoft.com/en-us/appcenter/build/troubleshooting/
 - Build Help Center: https://intercom.help/appcenter/en/collections/206279-build
