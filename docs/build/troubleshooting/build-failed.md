@@ -11,26 +11,24 @@ ms.custom: build
 ---
 
 # Diagnosing failed builds
-There are various reasons why your build could have failed; so it helps to start by attempting to isolate as many variables between a working build versus a failing build to understand what could have happened.
+There are various reasons why your build could have failed that might be unique to your project. So usually the most efficient way to diagnose build failures is to compare it to a working build. This can help you minimize variables and identify the most relevant error conditions for your scenario. 
 
 # If building works locally but not in App Center
-If your build succeeds on your local Windows or Mac computer but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. 
+If your build succeeds on your local Windows or Mac computer but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can perform a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center. This can eliminate the most common root cause of these failures.  
 
-To check for this, you can perform a full git clone of your project into a new folder, this rules out dependencies which are cached locally. Then compile with the same configuration as App Center. This will ideally eliminate the most common root cause of these failures and expedite resolution.  
-
-1. Open your terminal or command line prompt then type in: `mkdir appcenterTest`
+1. Open your terminal or command-line prompt then type in: `mkdir appcenterTest`
 2. Then change directories: `cd appcenterTest`
 3. Clone your repository with: `git clone -b your-branch https://your-repo`
 4. Launch the freshly cloned project in your local IDE or command line. If possible, try comparing the build command executed in App Center to the command executed locally in the respective logs: https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center
 
-It's also a good idea to check the versions of the tools you're using against the tools in our Cloud Build Machines: https://docs.microsoft.com/en-us/appcenter/build/software. When multiple versions of the same tool are listed in the doc, the latest version is used by default, but all versions are installed. 
+You can check the versions of the tools you're using against the tools in our Cloud Build Machines: https://docs.microsoft.com/en-us/appcenter/build/software. When multiple versions of the same tool are listed in the doc, the latest version is used by default, but all versions are installed. 
 
 # Comparing different builds in App Center
 ## Some branches work while others fail
-In this case, it's a good idea to check if there are differences in the build settings that are correlated with the failing behavior. 
+Try checking for differences in the build settings or committed code between branches. 
 
 ## Builds fail intermittently
-If your builds sometimes work, but sometimes fail; with no change in source code, project settings, or build settings; then it's usually a good idea to check if the type of failure is the same in each case. 
+It's possible for a build to fail without any change in source code, project settings, or build settings. Try checking if the error for the build is consistent when the failures occur. 
 
 # Isolating and interpreting error messages
 ## Automatic error highlighting
@@ -44,14 +42,14 @@ The Build system automatically attempts to highlight common error messages or us
 Usually when an error occurs, clues can be found in the primary error, the logging before, or the logging afterwards. In this example, app signing is misconfigured. 
 
 ## Digging deeper
-If you're unable to find any suspect error messages, then the next step is to download the build logs, which you can do from the main build page. Open the folder named `logs_n > Build` and you will see a list of separate log files listed in numerical order. For example:
+If you don't find relevant error messages, then the next step is to download the build logs, which you can do from the main build page. Open the folder named `logs_n > Build` and you will see a list of separate log files listed in numerical order. For example:
 
 > 1_Intialize job.txt
 > 2_Checkout.txt
 > 3_Tag build.txt
 etc. 
 
-These logs are numbered and ordered based on the major sub-tasks of your build. Most build failures result in a skipped sequence of these sub-tasks, because when a step fails; usually a few steps immediately after it become invalid, such as in the example below:
+These logs are numbered and ordered based on the major subtasks of your build. Most build failures result in a skipped sequence of these subtasks, because when a step fails; usually a few steps immediately after it becomes invalid, such as in the example below:
 
 > (Steps 1-9)...
 > 10_Pre Build Script.txt
@@ -61,12 +59,10 @@ These logs are numbered and ordered based on the major sub-tasks of your build. 
 > 20_Post-job Checkout.txt
 > 21_Finalize Job.txt
 
-There are two places where the log sequence skipped. However, the first location where it occurred is between log #12 & log #15; therefore, most of the time, the failures in log #12 will be the most interesting as to why the build as a whole failed, essentially the failure _must_ have been while attempting to sign the APK. (This is reasonable because this example is the same as the "jarsigner" error above.)
-
-Essentially, if your builds are consistently failing on one particular step; this approach can help you isolate the problematic step.
+The first log skipped is log #13. So, "12_Sign APK.txt" probably has the most relevant errors to why the build failed. In this example, other steps might have been skipped or hit failures, but they're less likely to be the primary failure in the build. 
 
 # Next Steps
-Sometimes just isolating the error message & conditions to encounter the issue can be enough to address it. If not, you have a few options on where to research next:
+If comparing builds or isolating errors doesn't fix the issue; you have a few options on where to research next:
 
 - Other Build troubleshooting docs: https://docs.microsoft.com/en-us/appcenter/build/troubleshooting/
 - Build Help Center: https://intercom.help/appcenter/en/collections/206279-build
@@ -74,7 +70,7 @@ Sometimes just isolating the error message & conditions to encounter the issue c
 - Documentation for the development platform(s) your app uses
 
 # Contacting Support
-You can also reach out to AppCenter support by logging into https://appcenter.ms/apps and clicking the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
+If you need more help, log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
 
 - A summary of your observations
 - Details and citations of your research on the issue
