@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/05/2019
+ms.date: 09/11/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -30,6 +30,10 @@ App Center Crashes will automatically generate a crash log every time your app c
 The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++.
 
 Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) if you haven't set up the SDK in your application yet.
+
+> [!WARNING] In Windows Forms, when no debugger is attached, unhandled exceptions are automatically caught by the runtime and do not cause the application to crash - a dialog is displayed instead, giving the user an option to continue or end app execution. Regardless of what they choose, these exceptions are not reported automatically. To work around this, you can either force the app to crash on unhandled exceptions with
+`Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);`, or you can set a "thread exception handler" to the `Application.ThreadException` event, and report the exception using the `Crashes.TrackError` API described below. Note that this is *only* the case when the debugger is **not** attached. When the debugger is attached, unhandled exceptions will cause crashes *unless* a handler is attached to `Application.ThreadException`.
+
 
 ## Generate a test crash
 
