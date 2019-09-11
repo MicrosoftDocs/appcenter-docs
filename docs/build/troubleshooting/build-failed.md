@@ -64,7 +64,7 @@ Log #13 was skipped first, so "12_Sign APK.txt" is a good starting point. Later 
 # Next Steps
 Here are a few options for researching your issue further:
 
-- [Other Build troubleshooting docs](~/build/troubleshooting)
+- [Other Build troubleshooting docs](~/build/troubleshooting/index.md)
 - [Intercom Help Center (Build)](https://intercom.help/appcenter/en/collections/206279-build)
 - [StackOverflow (App Center)](https://stackoverflow.com/questions/tagged/visual-studio-app-center)
 - Documentation for the development platform your app uses
