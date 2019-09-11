@@ -11,10 +11,10 @@ ms.custom: build
 ---
 
 # Diagnosing failed builds
-There are various reasons why your build could have failed that might be unique to your project. So usually the most efficient way to diagnose build failures is to compare it to a working build. This  can help you minimize variables and identify the most relevant error conditions for your scenario. 
+There are various reasons why your build could have failed that might be unique to your project. Usually an efficient way to diagnose build failures is comparing them to a working build. This process can minimize variables and identify relevant conditions for your scenario. 
 
 # If building works locally but not in App Center
-If your build succeeds on your local machine but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can do a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center. This can eliminate the most common root cause of these failures.  
+If your build succeeds on your local machine but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can do a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center for comparison. 
 
 1. Open your terminal or command-line prompt then type in: `mkdir appcenter-test`
 2. Then change directories: `cd appcenter-test`
@@ -59,7 +59,7 @@ Logs are numbered based on the major tasks of your build. Most build failures ca
 - 20_Post-job Checkout.txt
 - 21_Finalize Job.txt
 
-The first log skipped is log #13, so the log before it, "12_Sign APK.txt" probably has the most relevant errors to why the build failed. Other steps might have been skipped or hit failures, but they're less likely to be the primary failure in the build. 
+Log #13 was skipped first, so "12_Sign APK.txt" is a good starting point. Later steps were skipped or hit errors, but they're less likely to be relevant.
 
 # Next Steps
 Here are a few options for researching your issue further:
