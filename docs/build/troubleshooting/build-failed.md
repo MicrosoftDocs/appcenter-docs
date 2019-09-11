@@ -10,11 +10,11 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Diagnosing failed builds
+# Failed builds
 There are various reasons why your build could have failed that might be unique to your project. Usually an efficient way to diagnose build failures is comparing them to a working build. This process can minimize variables and identify relevant conditions for your scenario. 
 
 # If building works locally but not in App Center
-If your build succeeds on your local machine but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can do a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center for comparison. 
+If your build succeeds on locally but not on App Center, it’s usually because of uncommitted files, different tooling or dependencies. To check, you can do a full git clone of your project into a new folder, to rule out dependencies cached locally. Then compile with the same configuration as App Center for comparison. 
 
 1. Open your terminal or command-line prompt then type in: `mkdir appcenter-test`
 2. Then change directories: `cd appcenter-test`
@@ -59,7 +59,7 @@ Logs are numbered based on the major tasks of your build. Most build failures ca
 - 20_Post-job Checkout.txt
 - 21_Finalize Job.txt
 
-Log #13 was skipped first, so "12_Sign APK.txt" is a good starting point. Later steps were skipped or hit errors, but they're less likely to be relevant.
+#13 was skipped first, so #12 is a good starting point. Later steps were skipped too, but they're less likely to be relevant.
 
 # Next Steps
 Here are a few options for researching your issue further:
