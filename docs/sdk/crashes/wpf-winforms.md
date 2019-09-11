@@ -34,7 +34,6 @@ Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md)
 > [!IMPORTANT]
 > In Windows Forms, when no debugger is attached, unhandled exceptions are automatically caught by the runtime and do not cause the application to crash - a dialog is displayed instead, giving the user an option to continue or end app execution. Regardless of what they choose, these exceptions are not reported automatically. To work around this, you can either force the app to crash on unhandled exceptions with `Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);`, or you can set a "thread exception handler" to the `Application.ThreadException` event, and report the exception using the `Crashes.TrackError` API described below. Note that this is *only* the case when the debugger is **not** attached. When the debugger is attached, unhandled exceptions will cause crashes *unless* a handler is attached to `Application.ThreadException`.
 
-
 ## Generate a test crash
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can only use it when debugging as it won't work for release apps.
