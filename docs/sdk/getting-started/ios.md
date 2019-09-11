@@ -95,7 +95,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
     ```
 
 1. Run `carthage update`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.  
-1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/iOS/Static** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
+1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/iOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
     > [!NOTE]

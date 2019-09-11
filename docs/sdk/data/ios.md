@@ -68,7 +68,7 @@ pod 'AppCenter/Data'
     ```
 
 1. Run `carthage update`.
-1. Open your application target's **General** settings tab. Drag and drop the **AppCenterData.framework** file from the **Carthage/Build/iOS/Static** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterData.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ### 2. Start App Center Data
