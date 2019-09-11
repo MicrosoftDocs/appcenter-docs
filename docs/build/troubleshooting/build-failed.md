@@ -21,7 +21,7 @@ If your build succeeds on your local Windows or Mac computer but not on App Cent
 3. Clone your repository with: `git clone -b your-branch https://your-repo`
 4. Launch the freshly cloned project in your local IDE or command line. 
 5. Try comparing the build command executed in App Center to the command executed locally: https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center
-6. Compare the versions of the tools you're using locally with our Cloud Build Machines: https://docs.microsoft.com/en-us/appcenter/build/software.  
+6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 # Comparing different builds in App Center
 ## Some branches work while others fail
@@ -64,10 +64,10 @@ The first log skipped is log #13, so the log before it, "12_Sign APK.txt" probab
 # Next Steps
 Here are a few options for researching your issue further:
 
-- Other Build troubleshooting docs: https://docs.microsoft.com/en-us/appcenter/build/troubleshooting/
-- Build Help Center: https://intercom.help/appcenter/en/collections/206279-build
-- StackOverflow: https://stackoverflow.com/questions/tagged/visual-studio-app-center
-- Documentation for the development platform(s) your app uses
+- [Other Build troubleshooting docs](~/build/troubleshooting.md)
+- [Intercom Help Center (Build)](https://intercom.help/appcenter/en/collections/206279-build)
+- [StackOverflow (App Center)](https://stackoverflow.com/questions/tagged/visual-studio-app-center)
+- Documentation for the development platform your app uses
 
 # Contacting Support
 If you need more help, log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
