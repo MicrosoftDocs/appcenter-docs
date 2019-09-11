@@ -98,7 +98,7 @@ App Center Crashes provides callbacks for developers to perform additional actio
 In order for your `Crash.setListener` methods to work as expected you need to check if your application configured properly.
 
 1. Open the project's `ios/YourAppName/AppDelegate.m` file and verify that you have `[AppCenterReactNativeCrashes register];` instead of `[AppCenterReactNativeCrashes registerWithAutomaticProcessing];`.
-2. Open the project's `android/app/src/main/res/values/strings.xml` file and verify that `appCenterAnalytics_whenToSendCrashes` is set to `ASK_JAVASCRIPT`.
+2. Open the project's `android/app/src/main/res/values/strings.xml` file and verify that `appCenterCrashes_whenToSendCrashes` is set to `ASK_JAVASCRIPT`.
 
 All the different callbacks of the event listener are discussed one by one in this document, but you need to set one event listener that define all callbacks at once.
 
