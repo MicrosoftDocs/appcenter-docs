@@ -28,7 +28,7 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 Try checking for differences in the build settings or committed code between branches. 
 
 ## Builds fail intermittently
-It's possible for a build to fail without any change in source code, project settings, or build settings. Try checking if the error for the build is consistent when the failures occur. 
+It's possible for a build to fail without any change in source code, project or build settings. Try checking if the error for the build is consistent when the failures occur. 
 
 # Isolating and interpreting error messages
 ## Automatic error highlighting
