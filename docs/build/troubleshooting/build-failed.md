@@ -24,24 +24,26 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 # Comparing different builds in App Center
-## Some branches work while others fail
+### Some branches work while others fail
 Try checking for differences in the build settings or committed code between branches. 
 
-## Builds fail intermittently
+### Builds fail intermittently
 A build can fail without any change in source code or build settings. Try checking if the error for the build is consistent when the failures occur. 
 
 # Isolating and interpreting error messages
-## Automatic error highlighting
+### Automatic error highlighting
 The Build system automatically attempts to highlight common error messages or useful output to make it more visible:
 (Screenshot here)
 
-> jarsigner: unable to sign jar: java.util.zip.ZipException: invalid entry compressed size (expected 13274 but got 13651 bytes)
-> ##[error]Error: /usr/bin/jarsigner failed with return code: 1
-> ##[error]Return code: 1
+```
+jarsigner: unable to sign jar: java.util.zip.ZipException: invalid entry compressed size (expected 13274 but got 13651 bytes)
+##[error]Error: /usr/bin/jarsigner failed with return code: 1
+##[error]Return code: 1
+```
 
 Usually when an error occurs, clues can be found in the primary error, the logging before, or the logging afterwards. In this example, app signing is misconfigured. 
 
-## Digging deeper
+### Digging deeper
 If you don't find relevant error messages, then the next step is to download the build logs, which you can do from the main build page. Open the folder named `logs_n > Build` and you'll see a list of separate log files listed in numerical order. For example:
 
 - 1_Intialize job.txt
