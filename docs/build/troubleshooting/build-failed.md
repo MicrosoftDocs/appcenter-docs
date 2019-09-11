@@ -14,7 +14,7 @@ ms.custom: build
 There are various reasons why your build could have failed that might be unique to your project. Usually an efficient way to diagnose build failures is comparing them to a working build. This process can minimize variables and identify relevant conditions for your scenario. 
 
 # If building works locally but not in App Center
-Usually this problem is due to uncommitted files, different tooling, or unrestored dependencies. To check, you can do a full git clone of your project into a new folder. Then compile with the same configuration as App Center for comparison. 
+Usually this problem is because of uncommitted files, different tooling, or unrestored dependencies. To check, you can do a full git clone of your project into a new folder. Then compile with the same configuration as App Center for comparison. 
 
 1. Open your terminal or command-line prompt then type in: `mkdir appcenter-test`
 2. Then change directories: `cd appcenter-test`
@@ -70,7 +70,7 @@ Here are a few options for researching your issue further:
 - Documentation for the development platform your app uses
 
 # Contacting Support
-If you need more help, log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
+Log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
 
 - A summary of your observations
 - Details and citations of your research on the issue
