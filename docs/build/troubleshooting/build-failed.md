@@ -1,11 +1,11 @@
 ---
-title: Diagnosing Failed Builds
+title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
 ms.date: 09/10/2019 
 ms.topic: article 
-ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - just use a GUID, you can generate one at https://www.guidgenerator.com/)
+ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 
 ms.custom: build
 ---
@@ -14,13 +14,13 @@ ms.custom: build
 There are various reasons why your build could have failed that might be unique to your project. So usually the most efficient way to diagnose build failures is to compare it to a working build. This  can help you minimize variables and identify the most relevant error conditions for your scenario. 
 
 # If building works locally but not in App Center
-If your build succeeds on your local Windows or Mac computer but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can do a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center. This can eliminate the most common root cause of these failures.  
+If your build succeeds on your local machine but not on App Center, that’s usually because of uncommitted files, tooling or dependency differentiation. To check, you can do a full git clone of your project into a new folder, to rule out dependencies that are cached locally. Then compile with the same configuration as App Center. This can eliminate the most common root cause of these failures.  
 
-1. Open your terminal or command-line prompt then type in: `mkdir appcenterTest`
-2. Then change directories: `cd appcenterTest`
-3. Clone your repository with: `git clone -b your-branch https://your-repo`
+1. Open your terminal or command-line prompt then type in: `mkdir appcenter-test`
+2. Then change directories: `cd appcenter-test`
+3. Clone your repository with: `git clone -b <branch> <remote_repo>`
 4. Launch the freshly cloned project in your local IDE or command line. 
-5. Try comparing the build command executed in App Center to the command executed locally: https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center
+5. Try comparing [the build command executed in App Center](https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 # Comparing different builds in App Center
