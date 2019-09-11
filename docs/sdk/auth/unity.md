@@ -32,41 +32,19 @@ Please follow the [Getting Started](~/sdk/getting-started/unity.md) section befo
 >```
 >You also must make sure that **Use Auth** is checked in the settings of your App Center game object.
 
-### Android 
-
-Open your **AndroidManifest.xml** file and add the following element to your file's `application` tag:
-
-```xml
-<activity android:name="com.microsoft.identity.client.BrowserTabActivity">
-    <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-
-        <data
-            android:host="auth"
-            android:scheme="msal{Your App Secret}" />
-    </intent-filter>
-</activity>
-```
-
-Be sure to replace `{Your App Secret}` in the code sample above with [your App Secret](~/dashboard/faq.md):
-`android:scheme="msal65dc3680-7325-4000-a0e7-dbd2276eafd1"`, given that `65dc3680-7325-4000-a0e7-dbd2276eafd1` is your App Secret.
-
 ## Sign users into the app
 
-App Center provides a `SignInAsync()` method that triggers the sign in policy defined in your Azure AD B2C tenant.
+App Center provides a `SignInAsync` method that triggers the sign in policy defined in your Azure AD B2C tenant.
 To present the sign-in UI to the user, call the `SignInAsync` method:
 
 ```csharp
-async void SignInAsync() 
+async void SignIn() 
 {
     try 
     {
         // Sign-in succeeded
         var userInformation = await Auth.SignInAsync();
-        string accountId = userInformation.accountId;
+        string accountId = userInformation.AccountId;
     } 
     catch (Exception e) 
     {
@@ -109,8 +87,8 @@ async void SignInAsync()
         UserInformation userInfo = await Auth.SignInAsync();
 
         // Get tokens. They are not null.
-        string idToken = userInfo.IdToken;
         string accessToken = userInfo.AccessToken;
+        string idToken = userInfo.IdToken;
 
         // Do work with either token.
     } 
@@ -206,10 +184,10 @@ catch (ArgumentException)
 
 ## Sign out
 
-To sign out the user and clear all associated authentication tokens, call the `signOut` method:
+To sign out the user and clear all associated authentication tokens, call the `SignOut` method:
 
 ```csharp
-Auth.signOut();
+Auth.SignOut();
 ```
 
 ## Enable or disable App Center Auth at runtime
@@ -241,8 +219,6 @@ You can also check if App Center Auth is enabled or not.
 ```csharp
 bool isEnabled = await Auth.IsEnabledAsync();
 ```
-
-[!include[](../unity-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Auth` has been started, it will always return `false` before start.
