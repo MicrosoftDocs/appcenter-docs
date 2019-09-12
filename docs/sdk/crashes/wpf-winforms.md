@@ -52,7 +52,7 @@ Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
 AppCenter.Start(...);
 ```
 
-If this option is not acceptable in your application, please read the following section as an alternative.
+If this option is not acceptable in your application, you can report the unhandled exception as a runtime error (described below).
 
 ### Report the unhandled exception as a runtime error
 
