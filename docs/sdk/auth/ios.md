@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 07/22/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter

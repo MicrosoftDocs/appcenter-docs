@@ -3,7 +3,7 @@ title: HockeySDK for tvOS Migration
 description: Migrate from the HockeySDK to App Center SDK
 author: elamalani
 ms.author: emalani
-ms.date: 08/09/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 44a08a47-85e2-4456-9b15-d524037df036
 ms.service: vs-appcenter

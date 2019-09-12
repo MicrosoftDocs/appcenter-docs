@@ -4,7 +4,7 @@ description: How to configure App Center data for iOS
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
 ms.service: vs-appcenter
