@@ -39,7 +39,7 @@ Instead Windows shows a dialog to the user and the crash cannot be captured by t
 
 Crashes are collected on App Center only if it causes the application to exit. App Center supports only 1 crash per session.
 
-To report unhandled exceptions on WinForms, you have 2 options discussed in the following sections.
+There are two ways to report unhandled exceptions in WinForms. The application can crash on unhandled exceptions, or continue running but report unhandled exceptions as runtime errors.
 
 ### Configure the application to exit on crash
 
