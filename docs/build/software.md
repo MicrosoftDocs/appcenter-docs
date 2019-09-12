@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 8/30/2019
+ms.date: 9/11/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -29,7 +29,7 @@ Java developers can now build and run production Java applications using Azul Sy
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.6 (18G87) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
+- OS X 10.14.6 (18G95) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G7024) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
@@ -45,7 +45,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - PowerShell 6.2.2
 - Python 2.7.16
 - Python 3.7.4
-- Ruby 2.6.3p62
+- Ruby 2.6.4p104
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.12.9
 - Miniconda 4.7.10
@@ -56,14 +56,14 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - v6.17.1
 - v8.16.1
 - v10.16.3
-- v12.9.0
+- v12.9.1
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.33.0
 - CocoaPods 1.7.5
-- Homebrew 2.1.10
+- Homebrew 2.1.11
 - NPM 3.10.10
 - Yarn 1.17.3
 - NuGet 4.7.0.5148
@@ -73,7 +73,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.6.1
-- Gradle 5.6
+- Gradle 5.6.1
 
 ### Utilities
 
@@ -82,19 +82,19 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
-- GNU parallel 20190722
+- GNU parallel 20190822
 
 ### Tools
 
-- Fastlane 2.129.0
+- Fastlane 2.130.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.71
+- Azure-CLI 2.0.72
 
 ## Xcode
 
 | Version                | Build   |
 |------------------------|---------|
-| 11_beta 6              | 11M392q |
+| 11_beta 7              | 11M392r |
 | 10.3                   | 10G8    |
 | 10.2.1                 | 10E1001 |
 | 10.2                   | 10E125  |
@@ -231,7 +231,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
 | android-28            | Android SDK Platform 28, Revision 6       |
-| android-29            | Android SDK Platform 29, Revision 1       |
+| android-29            | Android SDK Platform 29, Revision 3       |
 
 ### Android SDK Build-tools
 
@@ -278,7 +278,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.0.11                                    |
+| Android Emulator      | 29.1.12                                   |
 
 ### Google APIs
 
@@ -305,7 +305,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.4.17
+- 8.2.5.5
 
 ### Mono
 
