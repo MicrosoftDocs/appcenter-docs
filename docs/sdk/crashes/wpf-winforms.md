@@ -35,11 +35,11 @@ Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md)
 
 By default, an unhandled exception in a WinForms application does not trigger a crash (the application does not exit) if the debugger is not attached.
 
-Instead, Windows shows a dialog to the user giving the option of continuing app execution. Consequently, the App Center SDK is unable to automatically capture these exceptions.
+Instead, Windows shows a dialog to the user giving the option of continuing app execution. Consequently, the App Center SDK is unable to automatically capture these exceptions (even if the user clicks on the quit button).
 
-Crashes are collected on App Center only if it causes the application to exit. App Center supports only 1 crash per session.
+Crashes are collected on App Center only if it causes the application to exit automatically. App Center supports only one crash per session.
 
-There are two ways to report unhandled exceptions in WinForms. The application can crash on unhandled exceptions, or continue running but report unhandled exceptions as runtime errors.
+There are two ways to report unhandled exceptions in WinForms. The application can be configured to crash on unhandled exceptions, or continue running but report unhandled exceptions as runtime errors.
 
 ### Configure the application to exit on crash
 
