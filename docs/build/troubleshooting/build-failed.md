@@ -13,7 +13,7 @@ ms.custom: build
 # Failed builds
 There are various reasons why your build could have failed that might be unique to your project. Usually an efficient way to diagnose build failures is comparing them to a working build. This process can minimize variables and identify relevant conditions for your scenario. 
 
-# If building works locally but not in App Center
+## If building works locally but not in App Center
 Usually this problem is because of uncommitted files, different tooling, or unrestored dependencies. To check, you can do a full git clone of your project into a new folder. Then compile with the same configuration as App Center for comparison. 
 
 1. Open your terminal or command-line prompt then type in: `mkdir appcenter-test`
@@ -23,25 +23,30 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 5. Try comparing [the build command executed in App Center](https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
-# Comparing different builds in App Center
+## Comparing different builds in App Center
 ### Some branches work while others fail
-Try checking for differences in the build settings or committed code between branches. 
+Try checking for differences in the build settings or committed code between branches. Also, if the build starts failing consistently after a certain commit on the same branch, it is worth checking what changes were made in the failing commit.
 
 ### Builds fail intermittently
-A build can fail without any change in source code or build settings. Try checking if the error for the build is consistent when the failures occur. 
+A build can fail without any change in source code or build settings. For example:
+- Different versions of packages restored
+- External services not responding
+- Individual tasks in the build timing out
+- and so on
 
-# Isolating and interpreting error messages
+Try checking if the error for the build is consistent when the failures occur. 
+
+## Isolating and interpreting error messages
 ### Automatic error highlighting
-The Build system automatically attempts to highlight common error messages or useful output to make it more visible:
-(Screenshot here)
+App Center Build automatically attempts to highlight common error messages or useful output to make it more visible. Often clues can be found in the primary error, the logging before, or the logging afterwards. This app was misconfigured to be signed by both the project settings & build configuration. So the Android jarsigner logs an error:
+
+![Screenshot of highlighted error](images/errorlog.png)
 
 ```
 jarsigner: unable to sign jar: java.util.zip.ZipException: invalid entry compressed size (expected 13274 but got 13651 bytes)
 ##[error]Error: /usr/bin/jarsigner failed with return code: 1
 ##[error]Return code: 1
 ```
-
-Usually when an error occurs, clues can be found in the primary error, the logging before, or the logging afterwards. In this example, app signing is misconfigured. 
 
 ### Digging deeper
 If you don't find relevant error messages, then the next step is to download the build logs, which you can do from the main build page. Open the folder named `logs_n > Build` and you'll see a list of separate log files listed in numerical order. For example:
@@ -51,7 +56,7 @@ If you don't find relevant error messages, then the next step is to download the
 - 3_Tag build.txt
 - and so on 
 
-Logs are numbered based on the major tasks of your build. Most build failures cause tasks to be skipped:
+Logs are numbered based on the major phases of your build. Most build failures cause phases to be skipped & the associated log to be omitted:
 
 - (Steps 1-9)...
 - 10_Pre Build Script.txt
@@ -61,9 +66,9 @@ Logs are numbered based on the major tasks of your build. Most build failures ca
 - 20_Post-job Checkout.txt
 - 21_Finalize Job.txt
 
-#13 was skipped first, so #12 is a good starting point. Later steps were skipped too, but they're less likely to be relevant.
+Phase 13 was skipped first, so phase 12 is a good starting point. Later phases were skipped too, but they're less likely to be relevant.
 
-# Next Steps
+## Next Steps
 Here are a few options for researching your issue further:
 
 - [Other Build troubleshooting docs](~/build/troubleshooting/index.md)
@@ -71,10 +76,10 @@ Here are a few options for researching your issue further:
 - [StackOverflow (App Center)](https://stackoverflow.com/questions/tagged/visual-studio-app-center)
 - Documentation for the development platform your app uses
 
-# Contacting Support
+## Contacting Support
 Log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:
 
 - A summary of your observations
 - Details and citations of your research on the issue
-- Links to failing builds that demonstrate the issue
-- Links to passing builds for comparison to the failures (if applicable)
+- URLs to failing builds, including essential info like the app name & build id
+- URLs to passing builds to compare to the failures (if applicable)
