@@ -25,7 +25,7 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 
 ## Comparing different builds in App Center
 ### Some branches work while others fail
-Try checking for differences in the build settings or committed code between branches. Also, if the build starts failing consistently after a certain commit on the same branch, it is worth checking what changes were made in the failing commit.
+Try checking for differences in the build settings or committed code between branches. Also, if the build starts failing consistently after a certain commit on the same branch, it's worth checking what changes were made in the failing commit.
 
 ### Builds fail intermittently
 A build can fail without any change in source code or build settings. For example:
@@ -38,7 +38,7 @@ Try checking if the error for the build is consistent when the failures occur.
 
 ## Isolating and interpreting error messages
 ### Automatic error highlighting
-App Center Build automatically attempts to highlight common error messages or useful output to make it more visible. Often clues can be found in the primary error, the logging before, or the logging afterwards. This app was misconfigured to be signed by both the project settings & build configuration. So the Android jarsigner logs an error:
+App Center Build automatically attempts to highlight common error messages or useful output to make it more visible. Often clues can be found in the primary error, the logging before, or the logging afterwards. This app is signed by both the project settings & build configuration. So the Android jarsigner logs an error:
 
 ![Screenshot of highlighted error](images/errorlog.png)
 
@@ -81,5 +81,5 @@ Log into https://appcenter.ms/apps and click the chat icon in the lower right co
 
 - A summary of your observations
 - Details and citations of your research on the issue
-- URLs to failing builds, including essential info like the app name & build id
+- URLs to failing builds, including essential info like the app name & build ID
 - URLs to passing builds to compare to the failures (if applicable)
