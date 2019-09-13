@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/29/2019
+ms.date: 09/12/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -124,7 +124,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
 2. Modify the app's **res/values/strings.xml** to include the following lines:
 
     ```xml
-    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">ASK_JAVASCRIPT</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
     ```
 
@@ -317,7 +317,7 @@ Integration steps without the `react-native link` command.
 
     ```xml
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     ```
 
 5. Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `APP_SECRET_VALUE` with your app secret value.
