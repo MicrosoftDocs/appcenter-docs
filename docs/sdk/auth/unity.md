@@ -4,9 +4,9 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 09/05/2019
+ms.date: 09/13/2019
 ms.topic: article
-ms.assetid: TODO
+ms.assetid: 1cb318402dbe641798f78699b7355153
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: unity
@@ -130,37 +130,38 @@ public class TokenInfo
 {
     public string displayName;
     public string[] emails;
-
-    /// <summary>
-    /// Handle conversion from raw JWT token to JSON object
-    /// Unity reference of JSON conversion API: 
-    /// https://docs.unity3d.com/ScriptReference/JsonUtility.FromJson.html
-    /// </summary>
-    /// <param name="inputText">Raw JWT Token</param>
-    public static TokenInfo Convert(string inputText)
-    {
-        // Convert from JWT token to JSON string       
-        char[] separator = { '.' };
-        string[] splitedText = encodedText.Split(separator);
-        if (splitedText.Length < 2) 
-        {
-            return null;
-        }
-        string textToDecode = splitedText[1];
-        if (textToDecode.Length % 4 != 0)
-        {
-            int extraChars = 4 - textToDecode.Length % 4;
-            textToDecode = String.Concat(textToDecode, new string('=', extraChars));
-        }
-        byte[] decodedBytes = Convert.FromBase64String(textToDecode);
-        string decodedText = Encoding.UTF8.GetString(decodedBytes);
-        return decodedText;
-    }
 }
 
+/// <summary>
+/// Handle conversion from raw JWT token to JSON string representation
+/// Unity reference of JSON conversion API:
+/// https://docs.unity3d.com/ScriptReference/JsonUtility.FromJson.html
+/// </summary>
+/// <param name="inputText">Raw JWT Token</param>
+public static string ConvertJwtToken(string inputText)
+{
+    // Convert from JWT token to JSON string
+    char[] separator = { '.' };
+    string[] splitedText = inputText.Split(separator);
+    if (splitedText.Length < 2)
+    {
+        return null;
+    }
+    string textToDecode = splitedText[1];
+    if (textToDecode.Length % 4 != 0)
+    {
+        int extraChars = 4 - textToDecode.Length % 4;
+        textToDecode = String.Concat(textToDecode, new string('=', extraChars));
+    }
+    byte[] decodedBytes = Convert.FromBase64String(textToDecode);
+    string decodedText = Encoding.UTF8.GetString(decodedBytes);
+    return decodedText;
+}
+
+// In your SignIn method after getting the raw accessToken
 try 
 {
-    string jsonString = Convert(accessToken);
+    string jsonString = ConvertJwtToken(accessToken);
 
     // Convert JSON string representation to an object
     TokenInfo info = JsonUtility.FromJson<TokenInfo>(jsonString);
@@ -171,9 +172,9 @@ try
     }
 
     var emails = info.emails;
-    if (emails != null)
+    if (emails?.Length > 0)
     {
-        //Do something with email addresses.
+        // Do something with email addresses.
     }
 }
 catch (ArgumentException)
