@@ -344,9 +344,10 @@
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
 ### [Migrated Data](transition/moving/data.md)
-## [API Migration](transition/api.md)
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
-
+## Stage 3 - Switching Accounts
+### [Introduction](transition/accounts/index.md)
+## [API Migration](transition/api.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
@@ -357,8 +358,8 @@
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
 ### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
-## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
+## [Feedback](transition/feedback.md)
 
 # Migration
 ## [Introduction](migration/index.md)
