@@ -137,12 +137,12 @@ public class TokenInfo
 /// Unity reference of JSON conversion API:
 /// https://docs.unity3d.com/ScriptReference/JsonUtility.FromJson.html
 /// </summary>
-/// <param name="inputText">Raw JWT Token</param>
-public static string ConvertJwtToken(string inputText)
+/// <param name="rawJwtToken">Raw JWT Token</param>
+public static string ConvertJwtTokenToJsonString(string rawJwtToken)
 {
     // Convert from JWT token to JSON string
     char[] separator = { '.' };
-    string[] splitedText = inputText.Split(separator);
+    string[] splitedText = rawJwtToken.Split(separator);
     if (splitedText.Length < 2)
     {
         return null;
@@ -161,7 +161,7 @@ public static string ConvertJwtToken(string inputText)
 // In your SignIn method after getting the raw accessToken
 try 
 {
-    string jsonString = ConvertJwtToken(accessToken);
+    string jsonString = ConvertJwtTokenToJsonString(accessToken);
 
     // Convert JSON string representation to an object
     TokenInfo info = JsonUtility.FromJson<TokenInfo>(jsonString);
