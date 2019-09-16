@@ -61,6 +61,17 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ![App Center allows you to track events leading up to your crash](~/diagnostics/images/events.png)
 
+### Upload a custom crash
+
+You can upload a custom crash report to App Center and view the details in the App Center Diagnostics UI. App Center supports crash logs in two different formats.
+
+(add example of formats)
+
+To upload a custom crash:
+1. Make sure you crash logs are formatted correctly
+2. ?
+
+
 ### Key Value Pairs
 
 Xamarin developers can tailor the error report sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional.
