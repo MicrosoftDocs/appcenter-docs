@@ -4,7 +4,7 @@ description: App Center Crashes for iOS
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.service: vs-appcenter
@@ -133,3 +133,18 @@ MSCrashes.notify(with: .always)
 ```
 
 [!include[](apple-common-methods-2.md)]
+
+## Disabling Mach exception handling
+
+By default, App Center Crashes uses the Mach exception handler to catch fatal signals, e.g. stack overflows, via a Mach exception server.
+
+The `disableMachExceptionHandler`-method provides an option to disable catching fatal signals via a Mach exception server. If you want to disable the Mach exception handler, you should call this method *BEFORE* starting the SDK. Your typical setup code would look like this:
+
+```objc
+[MSCrashes disableMachExceptionHandler];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+```
+```swift
+MSCrashes.disableMachExceptionHandler()
+MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+```

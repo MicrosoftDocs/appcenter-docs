@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 1c1391e4-0c39-4141-893e-766ad22266d7
 ms.service: vs-appcenter
@@ -80,21 +80,6 @@ func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MS
 
 > [!NOTE]
 > The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
-
-## Disabling Mach exception handling
-
-By default, App Center Crashes uses the Mach exception handler to catch fatal signals, e.g. stack overflows, via a Mach exception server.
-
-The `disableMachExceptionHandler`-method provides an option to disable catching fatal signals via a Mach exception server. If you want to disable the Mach exception handler, you should call this method *BEFORE* starting the SDK. Your typical setup code would look like this:
-
-```objc
-[MSCrashes disableMachExceptionHandler];
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
-```
-```swift
-MSCrashes.disableMachExceptionHandler()
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
-```
 
 ## Enable or disable App Center Crashes at runtime
 
