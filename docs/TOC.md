@@ -61,6 +61,7 @@
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
+### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)
 ### [React Native](build/troubleshooting/react-native.md)
@@ -185,7 +186,7 @@
 # Data
 ## [Introduction](data/index.md)
 ## Getting Started
-### [Introducton](data/getting-started.md)
+### [Introduction](data/getting-started.md)
 ### [Android](sdk/data/android.md)
 ### [iOS](sdk/data/ios.md)
 ### [Xamarin](sdk/data/xamarin.md)
