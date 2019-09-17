@@ -26,25 +26,12 @@ ms.tgt_pltfrm: UWP
 > * [Unity](unity.md)
 > * [Cordova](cordova.md)
 
-App Center Crashes will automatically generate a crash log every time your app crashes. The log is sent to App Center through the Windows crash reporting service built into Windows devices. Crash logs contain valuable information for you to help fix the crash. The crash will be reported to App Center even if the app is not restarted.
+App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the Windows Store. Crash logs contain valuable information for you to help fix the crash.
 
 Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
-> [!IMPORTANT]
-> * Crash reporting is enabled only on devices running Windows 10 Creators update or more recent (version 10.0.15063).
-> * Crash reporting on Windows requires the app to be distributed through the Microsoft Store.
-> * Crashes will only be sent if the device is plugged in to power, this includes phones.
-> * Some crashes might appear unsymbolicated (missing method names or file names or even class names) from applications that are associated with Microsoft Store (such as when you add WNS push) before the application is actually published. This behavior can happen but there is no guarantee that it will.
-
 > [!NOTE]
-> We plan to improve App Center's Windows support in Summer 2019 and address the limitations listed above. You can find more details in our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md).
-
-> [!NOTE]
-> Currently we do not support detection of low memory warning on UWP platform. 
-
-## User consent to send a crash log
-
-App Center Crashes for UWP will utilize the built in Windows crash reporting service; therefore it honors the user's default [privacy settings](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy) for sending crash reports in Windows.
+> Currently we do not support detection of low memory warning on UWP platform.
 
 ## Adding the crashes module
 
@@ -56,9 +43,6 @@ App Center Crashes for UWP will utilize the built in Windows crash reporting ser
 ```shell
 Install-Package Microsoft.AppCenter.Crashes
 ```
-
-> [!IMPORTANT]
-> * The Crash SDK is compatible only with official releases of the NuGet package. Do not install `-preview` releases that are not yet ready for UWP (it would stop showing crashes for UWP on App Center portal).
 
 ### Add the using statements
 
