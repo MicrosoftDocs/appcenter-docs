@@ -21,6 +21,8 @@ You can read more about how to ask for the user's consent to send a crash/error 
 - [Android Consent](~/sdk/crashes/android.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [iOS Consent](~/sdk/crashes/ios.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [macOS Consent](~/sdk/crashes/macos.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [tvOS Consent](~/sdk/crashes/tvos.md#ask-for-the-users-consent-to-send-a-crash-log)
+- [Unity Consent](~/sdk/crashes/unity.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [UWP Consent](~/sdk/crashes/uwp.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [WPF/WinForms Consent](~/sdk/crashes/wpf-winforms.md#ask-for-the-users-consent-to-send-a-crash-log)
 - [React Native Consent](~/sdk/crashes/react-native.md#ask-for-the-users-consent-to-send-a-crash-log)
