@@ -23,7 +23,7 @@ The table below lists all the Operating System and Platforms and their supported
 | `tvOS`                   | No    | No   | No         | Yes     | Yes       | No   | No   | No   |
 | `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
 | `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `Windows - UWP`          | Yes   | No   | Yes        | Yes*    | Yes       | No   | No   | Yes  |
+| `Windows - UWP`          | Yes   | No   | Yes        | Yes     | Yes       | No   | No   | Yes  |
 | `Windows - WPF`          | No    | No   | Yes        | Yes     | Yes       | No   | No   | No   |
 | `Windows - WinForms`     | No    | No   | Yes        | Yes     | Yes       | No   | No   | No   |
 | `Xamarin - iOS`          | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
@@ -33,5 +33,3 @@ The table below lists all the Operating System and Platforms and their supported
 | `Unity - UWP`            | No    | No   | Yes        | No      | Yes       | No   | No   | Yes  |
 | `Cordova - iOS`          | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
 | `Cordova - Android`      | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-
-*For Windows - UWP, crashes are only collected if your app was submitted to the Windows Store.
