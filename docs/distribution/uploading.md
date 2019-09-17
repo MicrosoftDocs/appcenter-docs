@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Release a Build
 
-Upload your application binary package to App Center to release it. App Center supports package uploads for Android, iOS, macOS, UWP, WPF, and WinForms apps. 
+Upload your application binary package to App Center to release it. App Center supports package uploads for Android, iOS, macOS, UWP, WPF, and WinForms apps.
 
 ## Generating an application binary package
 
@@ -101,11 +101,14 @@ One other alternative for uploading releases is using the public App Center APIs
     curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
     ```
 
-4. Distribute the uploaded release to a distribution group — [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
+4. Distribute the uploaded release to destinations using testers, groups, or stores. This is nessesary to view uploaded releases in the developer portal.  [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
 
     ```shell
-    curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2'
+    curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "id": "10d82aa2-8449-499f-b6d3-44a855058eca", "mandatory_update": false, "notify_testers": false }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2/groups'
     ```
+    The distribution group ID can be found under that groups' setting page.
+
+The request to distribute to multiple destinations is referenced here for more complex scenarios  — [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
 
 ## Re-Release a build
 
@@ -126,6 +129,9 @@ For mandatory releases, App Center displays a red dot next to the release icon i
 [api-token-docs]: ~/api-docs/index.md
 [appcenter-cli]: https://github.com/Microsoft/appcenter-cli
 [POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_create
+[POSTtesters]: https://openapi.appcenter.ms/#/distribute/releases_addTesters
+[POSTgroups]: https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup
+[POSTstores]: https://openapi.appcenter.ms/#/distribute/releases_addStore
 [PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_complete
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
