@@ -15,6 +15,11 @@ dev_langs:
 
 # Configuring App Center Data for Xamarin
 
+> [!div  class="op_single_selector"]
+> * [Android](android.md)
+> * [iOS](ios.md)
+> * [Xamarin](xamarin.md)
+
 App Center Data is a data management service that lets you manage, persist, and sync your application data in the cloud across different devices and platforms in both online and offline scenarios.
 
 ## Prerequisites

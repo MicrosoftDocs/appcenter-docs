@@ -13,11 +13,6 @@ ms.custom: MBaaS
 
 # Getting Started with App Center's Data Service
 
-> [!div  class="op_single_selector"]
-> * [Android](../sdk/data/android.md)
-> * [iOS](../sdk/data/ios.md)
-> * [Xamarin](../sdk/data/xamarin.md)
-
 This guide shows you how to set up the App Center Data service and provision a new Cosmos DB instance or connect to an existing one already present in your Azure subscription. This guide starts with general directions independent of platform, but will break off into to additional steps relevant to your target platform.
 
 ## Configuring the Data Service
