@@ -4,7 +4,7 @@ description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 09/12/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
 ms.service: vs-appcenter
@@ -13,13 +13,15 @@ ms.custom: build
 
 # Code Repository Troubleshooting
 
-## <a name="not-listed"/>The repository I want to connect to is not listed in the Connect to Repository step
+## <a name="not-listed"/>Repository is not listed in the Connect to Repository step
 
 * Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFVC, etc), it will not show up in the repository list.
-* If connecting to a repository that belongs to an organization on GitHub or team on Bitbucket, first request admin access to the repository.
-  In order to use a repository for building apps with App Center, you must have admin rights to that repository. Admin rights are required because App Center will register a webhook on your repository coming from the appcenter.ms domain.
-  For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
-* If connecting to a repository owned by a user, you must be the owner of the repository. If you are not the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
+
+* Connecting to a repository owned by a user requires you are the owner of the repository. If you are not the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
+
+* Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access. This is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
+
+* For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
 ## <a name="on-premises"/>Can I use on-premises repositories?
 
