@@ -1,15 +1,15 @@
 ---
-title: Get Started with nacOS Extensions
+title: Get Started with macOS Extensions
 description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 09/18/2019
 ms.topic: get-started-article
-ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
+ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
 ms.service: vs-appcenter
 ms.custom: sdk
-ms.tgt_pltfrm: ios
+ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
  - objc

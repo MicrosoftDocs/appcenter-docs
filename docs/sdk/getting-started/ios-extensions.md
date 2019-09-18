@@ -6,7 +6,7 @@ author: elamalani
 ms.author: emalani
 ms.date: 09/18/2019
 ms.topic: get-started-article
-ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
+ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
