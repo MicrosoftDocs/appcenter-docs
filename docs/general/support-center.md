@@ -30,7 +30,7 @@ ms.service: vs-appcenter
 
 [macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
 
-## Recent updates  
+## Recent updates
 
 SDKs (open sourced on GitHub)
 
@@ -48,4 +48,4 @@ Check if there are any ongoing issues on the [App Center status page](https://st
 
 ## Contact us
 
-To report a bug or a make a feature request use our [App Center Github Repo](https://github.com/microsoft/appcenter/issues). To get help on any issue you may experience, use the blue chat button at the bottom-right corner of every App Center portal page. Alternatively, click on the **Contact us** option in the question menu on the top right of the portal page. Note that responsiveness might vary based on the support load at a given moment. [Read more about support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center).
+To make a feature request, use our [App Center Github Repo](https://github.com/microsoft/appcenter/issues). To get help on any issue you may experience, use the blue chat button at the bottom-right corner of every App Center portal page. Alternatively, click on the **Contact us** option in the question menu on the top right of the portal page. Note that responsiveness might vary based on the support load at a given moment. Read more about [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) and [help and feedback](../help.md).

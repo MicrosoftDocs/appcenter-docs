@@ -72,7 +72,7 @@ Signing apps with [app or watchOS extensions](https://developer.apple.com/librar
 
 ### 3.7. Launch your successful build on a real device
 
-Use the newly produced `.ipa` file to test if your app starts on a real device; the laumnch test adds about 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
+Use the newly produced `.ipa` file to test if your app starts on a real device; the launch test adds about 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.8. CocoaPods
 

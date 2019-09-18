@@ -2,7 +2,7 @@
 title: App Center and Azure Mobile Apps - Feature Matrix
 author: elamalani
 ms.author: emalani
-ms.date: 07/03/2019
+ms.date: 09/15/2019
 ms.topic: article
 ms.assetid: C5AB2B92-0690-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ This section compares services and features that exist in Azure Mobile Apps with
 
 |                  Azure Mobile Apps - Identity Service                                  |                                    App Center - Auth Service            |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| Supported Providers - Facebook, Twitter, Microsoft, Google, AAD | Supports Facebook, Twitter, Microsoft. Only missing provider is AAD and it is a [committed feature](https://github.com/Microsoft/appcenter/wiki/Roadmap#auth) on our roadmap|
+| Supported Providers - Facebook, Twitter, Microsoft, Google, AAD | Supports Facebook, Google, Microsoft. Only missing provider is AAD and it is a [committed feature](https://github.com/Microsoft/appcenter/wiki/Roadmap#auth) on our roadmap|
 | Custom authentication | Not supported but a [committed feature](https://github.com/Microsoft/appcenter/wiki/Roadmap#auth) on our roadmap|                             
 | Authentication with the client side SDK | [Supported](https://docs.microsoft.com/en-us/appcenter/auth/getting-started) |
 | Authentication with the server side SDK | Provides "Out of the Box" experience by deploying fully configured apps. Developers just need a client SDK to begin |

@@ -62,10 +62,10 @@ HockeyApp class  | App Center module
 
 The App Center SDK uses application identifiers in the globally unique identifier (GUID) format. Your HockeyApp App ID can be used by App Center but you need to convert it to a different format. To convert the identifier you must add four hyphens to get 8-4-4-4-12 representation.
 
-Before (HockeyApp):  
+Before (HockeyApp):
 `00112233445566778899aabbccddeeff`
 
-After (App Center):  
+After (App Center):
 `00112233-4455-6677-8899-aabbccddeeff`
 
 ### 2.2 Replace SDK initialization in the application code
@@ -171,7 +171,7 @@ Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only
 ### Distribute
 
 > [!NOTE]
-> Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.  
+> Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.
 Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
@@ -182,8 +182,4 @@ Customize the update dialog | Yes | [Distribute.ReleaseAvailable](~/sdk/distribu
 
 ### Feedback
 
-This service wont be supported in App Center.
-
-## 4. Contact us
-
-In case you have any questions or feedback related to the SDK migration, please contact us via support by clicking on the blue icon in App Center portal or leaving us a note in the docs itself.
+The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

@@ -61,6 +61,7 @@
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
+### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)
 ### [React Native](build/troubleshooting/react-native.md)
@@ -185,7 +186,7 @@
 # Data
 ## [Introduction](data/index.md)
 ## Getting Started
-### [Introducton](data/getting-started.md)
+### [Introduction](data/getting-started.md)
 ### [Android](sdk/data/android.md)
 ### [iOS](sdk/data/ios.md)
 ### [Xamarin](sdk/data/xamarin.md)
@@ -344,6 +345,10 @@
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
 ### [Migrated Data](transition/moving/data.md)
+### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
+## Stage 3 - Switching Accounts
+### [Introduction](transition/accounts/index.md)
+## [API Migration](transition/api.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
@@ -354,8 +359,8 @@
 ### [Xamarin](transition/xamarin-sdk-migration.md)
 ### [Cordova](transition/cordova-sdk-migration.md)
 ### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
-## [Feedback](transition/feedback.md)
 ## [FAQ](transition/faq.md)
+## [Feedback](transition/feedback.md)
 
 # Migration
 ## [Introduction](migration/index.md)

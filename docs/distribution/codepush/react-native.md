@@ -309,7 +309,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 2. [**"Manual"**](#plugin-installation-android---manual) - If you don't want to depend on any additional tools or are fine with a few extra installation steps (it's a one-time thing), then go with this approach.
 
 > [!NOTE]
-> Due to a code change from the React Native repository, if your installed React Native version ranges from 0.29 to 0.32, we recommend following the manual steps to set up correctly. 
+> Due to a code change from the React Native repository, if your installed React Native version ranges from 0.29 to 0.32, we recommend following the manual steps to set up correctly.
 
 #### Plugin Installation (Android - RNPM)
 
@@ -725,7 +725,7 @@ The CodePush client supports differential updates, so even though you are releas
 
 For more details about how the `release-react` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-react-native). Additionally, if you would prefer to handle running the `react-native bundle` command yourself, and therefore, want an even more flexible solution than `release-react`, refer to the [`release` command](./cli.md#releasing-updates-general) for more details.
 
-If you run into any issues, or have any questions/comments/feedback, you can ping us within the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) and/or check out the [troubleshooting](#debugging--troubleshooting) details below.
+If you run into any issues, or have any questions/comments/feedback, you can ping us within the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) and/or check out the [troubleshooting](#debugging--troubleshooting) details below. See also [help and feedback](../../help.md).
 
 ## Multi-Deployment Testing
 
@@ -1393,7 +1393,7 @@ In addition to the options, the `sync` method also accepts several optional func
 
   - **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
 
-- **handleBinaryVersionMismatchCallback** *((update: RemotePackage) => void)* - 
+- **handleBinaryVersionMismatchCallback** *((update: RemotePackage) => void)* -
   Called when there are any binary update available. The method is called with a [`RemotePackage`](#remotepackage) object. Refer to [codePush.checkForUpdate](#codepushcheckforupdate) section for more details.
 
 Example Usage:
