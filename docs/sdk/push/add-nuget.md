@@ -27,6 +27,6 @@ Install-Package Microsoft.AppCenter.Push
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 > [!NOTE]
-> If your Android project does not target the Mono framework version 8.1 or higher, you will not be able to install the package.
+> If your Android project does not target the Mono framework version 9.0 or higher, you will not be able to install the package.
 > You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
 > If you are using App Center Build, you must make sure Mono version is 5.8 or higher (in **Build Config > Build app > More options**).
