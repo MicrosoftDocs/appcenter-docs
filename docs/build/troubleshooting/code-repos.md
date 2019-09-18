@@ -17,7 +17,7 @@ ms.custom: build
 
 * Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFVC, etc), it will not show up in the repository list.
 
-* Connecting to a repository owned by a user requires you are the owner of the repository. If you are not the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
+* Connecting to a repository owned by a user requires you're the owner of the repository. If you aren't the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 
 * Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access. This is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
 
