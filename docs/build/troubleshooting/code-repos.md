@@ -15,38 +15,38 @@ ms.custom: build
 
 ## <a name="not-listed"/>Repository is not listed in the Connect to Repository step
 
-* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (e.g. Mercurial, TFVC, etc), it will not show up in the repository list.
+* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (for example, Mercurial, TFVC, etc.), it will not show up in the repository list.
 
-* Connecting to a repository owned by a user requires you're the owner of the repository. If you aren't the owner, you can still onboard the app to App Center build by inviting the repository owner as a collaborator to the app in App Center. Then, the owner can connect the repository as a source to the App Center build service.
+* Connecting to a repository owned by a user requires you're the owner of the repository. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 
-* Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access. This is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
+* Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
 
 * For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
 ## <a name="on-premises"/>Can I use on-premises repositories?
 
-App Center currently supports cloud hosted git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and Github, but does not support on-premises repositories.
+App Center currently supports cloud hosted git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but does not support on-premises repositories.
 
-## <a name="wrong-bitbucket"/>I have connected to the wrong Bitbucket account. How can I re-connect to the correct one?
+## <a name="wrong-bitbucket"/>I have connected to the wrong Bitbucket account. How can I reconnect to the correct one?
 
-Disconnect the connected Bitbucket account and [re-connect to the correct account](~/build/connect.md#bitbucket).
+Disconnect the connected Bitbucket account and [reconnect to the correct account](~/build/connect.md#bitbucket).
 
-## <a name="reconnect-github"/>I have connected to the wrong GitHub account. How can I re-connect to the correct one?
+## <a name="reconnect-github"/>I have connected to the wrong GitHub account. How can I reconnect to the correct one?
 
-Disconnect the connected GitHub account and [re-connect to the correct account](~/build/connect.md#github).
+Disconnect the connected GitHub account and [reconnect to the correct account](~/build/connect.md#github).
 
-## <a name="wrong-VSTS"/>I have connected to the wrong Azure DevOps account. How can I re-connect to the correct one?
+## <a name="wrong-VSTS"/>I have connected to the wrong Azure DevOps account. How can I reconnect to the correct one?
 
-Disconnect the connected Azure DevOps (formerly VSTS) account and [re-connect to the correct account](~/build/connect.md#vsts).
+Disconnect the connected Azure DevOps (formerly VSTS) account and [reconnect to the correct account](~/build/connect.md#vsts).
 
-## <a name="not-listed"/>When connecting a Azure DevOps repository, I see "No Projects Found"
+## <a name="not-listed"/>When connecting an Azure DevOps repository, I see "No Projects Found"
 
-It is possible when you first attempt to connect AppCenter to Azure DevOps (formerly VSTS), it's authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the OAuth flow, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [re-connect to the correct account](#wrong-VSTS) if you connected to the wrong account.
+It is possible when you first attempt to connect AppCenter to Azure DevOps (formerly VSTS), it's authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the OAuth flow, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
 
 ## <a name="git-sub"/>Are Git submodules supported?
 
 For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 
-For repositories hosted on Bitbucket, only un-authenticated Git submodules are supported for now.
+For repositories hosted on Bitbucket, only unauthenticated Git submodules are supported for now.
 
 ## <a name="bitbucket-git"/>I'm connected to Bitbucket and my builds fail with Git error
 
@@ -57,7 +57,7 @@ If your builds fail with an error similar to
 ##[error]Git checkout failed with exit code: 128",
 ```
 
-do the following:
+try the following steps:
 
 * Go to the Webhooks section of the connected Bitbucket account and look for any disabled Webhooks from **mobile.azure.com**
 * Re-enable the Webhooks
