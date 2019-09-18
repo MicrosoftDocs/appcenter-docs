@@ -36,12 +36,12 @@ To learn how to add App Center SDK to your container app, refer to the documenta
 
 ## 1. Connect your app extension to App Center Portal
 
-There are two ways you can connect your application extension to the App Center app.
+There are two ways you can connect your application extension to your App Center app.
 
-* Create a new app in App Center Portal to obtain App Secret.
-* Use an App Secret from the container app. Note that in this case, users data may not be quite correct.
+* Create a new app in the App Center Portal to obtain an App Secret.
+* Use an App Secret from the container app. Note that in this case, user data may not be quite correct.
 
-To learn how to create an App Center application, refer to the [App Center macOS Getting Started](./macos.md#2-create-your-app-in-the-app-center-portal-to-obtain-the-app-secret).
+To learn how to create an App Center application, refer to the [getting started page for macOS](./macos.md#2-create-your-app-in-the-app-center-portal-to-obtain-the-app-secret).
 
 ## 2. Add the App Center SDK modules
 
@@ -90,7 +90,7 @@ Insert the following line in the extensions's `viewDidLoad` controller method:
 MSAppCenter.start("{Your App Secret}", withServices: [MSCrashes.self])
 ```
 
-Note that the extension supports only crash reporting.
+Currently, only crash reporting is supported for application extensions.
 
 ### 3.3 Replace the placeholder with your App Secret
 
@@ -100,4 +100,4 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 Great, you are all set to visualize Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Crashes](~/sdk/crashes/macos.md) to learn how to customize and use more advanced functionalities of it.
+Look at the documentation for [App Center Crashes](~/sdk/crashes/macos.md) to learn how to customize your app and use more advanced functionalities.
