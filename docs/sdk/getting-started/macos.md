@@ -62,7 +62,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 The App Center SDK for macOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
-### 3.1  Integration via Cocoapods
+### 3.1 Integration via Cocoapods
 
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics** and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
 

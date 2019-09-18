@@ -47,7 +47,7 @@ To learn how to create an App Center application, refer to the [App Center iOS G
 
 The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
-### 3.1  Integration via Cocoapods
+### 3.1 Integration via Cocoapods
 
 If you've used **CocoaPods** to integrate App Center in to your container application, please follow the same steps from [App Center iOS Getting Started](./ios.md#31-integration-via-cocoapods) for the extension target to enable it in your extension.
 
