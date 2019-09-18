@@ -90,7 +90,7 @@ Insert the following line in the extensions's `viewDidLoad` controller method:
 MSAppCenter.start("{Your App Secret}", withServices: [MSCrashes.self])
 ```
 
-Note that the extension support only crash reporting.
+Note that the extension supports only crash reporting.
 
 ### 3.3 Replace the placeholder with your App Secret
 
