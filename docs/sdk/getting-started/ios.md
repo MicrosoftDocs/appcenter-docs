@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/05/2019
+ms.date: 09/18/2019
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: vs-appcenter
@@ -20,12 +20,14 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -102,11 +104,11 @@ Now that you've integrated the frameworks in your application, it's time to star
 ## 4. Start the SDK
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+If you're developing for an extension, please refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
 
-Open the project's **AppDelegate** file and add the following import statements.
-If you're in the application extension, use the main view controller file.
+Open the project's **AppDelegate** file and add the following import statements:
 
 ```objc
 @import AppCenter;
@@ -121,9 +123,7 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line:
-* In the app's `didFinishLaunchingWithOptions` delegate method if you're in the application.
-* In the app's `viewDidLoad` controller method if you're in the application extension.
+Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
