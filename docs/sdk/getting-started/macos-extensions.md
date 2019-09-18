@@ -32,43 +32,43 @@ dev_langs:
 > * [Cordova](cordova.md)
 
 Once you have integrated the App Center SDK into the container application, you can get started with using it in your extension. Note that extensions support only crash reporting.
-To learn how to add App Center SDK to your container app, refer to the documentation for [App Center iOS Getting Started](./macos.md).
+To learn how to add App Center SDK to your container app, refer to the documentation for [App Center macOS Getting Started](./macos.md).
 
 ## 1. Connect your app extension to App Center Portal
 
 There are two ways you can connect your application extension to the App Center app.
 
-1. Create a new app in App Center Portal to obtain App Secret.
-2. Use an App Secret from the container app. Note that in this case, users data may not be quite correct.
+* Create a new app in App Center Portal to obtain App Secret.
+* Use an App Secret from the container app. Note that in this case, users data may not be quite correct.
 
 To learn how to create an App Center application, refer to the [App Center macOS Getting Started](./macos.md#2-create-your-app-in-the-app-center-portal-to-obtain-the-app-secret).
 
-## 3. Add the App Center SDK modules
+## 2. Add the App Center SDK modules
 
-The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
+The App Center SDK for macOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
 
-### 3.1 Integration via Cocoapods
+### 2.1 Integration via Cocoapods
 
-If you've used **CocoaPods** to integrate App Center in to your container application, please follow the same steps from [App Center macOS Getting Started](./macos.md#31-integration-via-cocoapods) for the extension target to enable it in your extension.
-
-Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
-
-### 3.2 Integration by copying the binaries into your project
-
-If you've integration App Center SDK into your app manually, please follow the net steps:
-
-1. Open the app extension's target.
-2. Open the target's **General** settings tab. Drag and drop the **AppCenter.framework** and **AppCenterCrashes.framework** from the **Project Navigator** to the **Linked Frameworks and Libraries** section.
+If you've used **CocoaPods** to integrate App Center into your container application, please follow the same steps from [App Center macOS Getting Started](./macos.md#31-integration-via-cocoapods) for the extension target to enable it in your extension.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-## 4. Start the SDK
+### 2.2 Integration by copying the binaries into your project
+
+If you've integrated App Center SDK into your app manually, please follow the next steps:
+
+* Open the app extension's target.
+* Open the target's **General** settings tab. Drag and drop the **AppCenter.framework** and **AppCenterCrashes.framework** from the **Project Navigator** to the **Linked Frameworks and Libraries** section.
+
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
+
+## 3. Start the SDK
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-### 4.1 Add the import statements
+### 3.1 Add the import statements
 
-Open the extension's main view controller file and add the following import statements.
+Open the extension's main view controller file and add the following import statements:
 
 ```objc
 @import AppCenter;
@@ -79,7 +79,7 @@ import AppCenter
 import AppCenterCrashes
 ```
 
-### 4.2 Add the `start:withServices:` method
+### 3.2 Add the `start:withServices:` method
 
 Insert the following line in the extensions's `viewDidLoad` controller method:
 
@@ -92,7 +92,7 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSCrashes.self])
 
 Note that the extension support only crash reporting.
 
-### 4.3 Replace the placeholder with your App Secret
+### 3.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
