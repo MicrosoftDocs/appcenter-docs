@@ -106,7 +106,7 @@ Follow the documentation on how to do so for:
      ![Copy the sign-in user flow from Azure](./images/copy-sign-in-user-flow.png)
      - Make sure the user flow is configured to use the **tfp** claim. Click on the name of the user flow, then click on properties and make sure the **Claim representing the user flow** is set to **tfp**. App Center is compatible only with the **tfp** setting. If you are updating the claim, make sure to click the **Save** button.
      ![Configure the tfp claim](./images/configure-tfp-claim.png)
-     - Navigate back to App Center, and paste this name in the text box under the section **Manually add your user flow**.  
+     - Navigate back to App Center, and paste the user flow name in the text box under the section **Manually add your user flow**.  
      ![Paste the sign-in user flow in App Center](./images/paste-sign-in-user-flow.png)
 10. Click **Done**. You will be prompted to allow App Center Auth to show the details of the Azure AD B2C tenant to your App Center collaborators. Click **Grant access**.
 
