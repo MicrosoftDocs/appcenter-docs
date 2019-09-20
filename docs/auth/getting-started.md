@@ -104,7 +104,7 @@ Follow the documentation on how to do so for:
      ![Search for Azure AD B2C](./images/search-B2C.png)
      - In the column second from the left, select **User flows (policies)**, and under **name**, copy the name of the sign-in user flow you'd like to use.
      ![Copy the sign-in user flow from Azure](./images/copy-sign-in-user-flow.png)
-     - Make sure the user flow is configured to use the **tfp** claim. Click on the name of the user flow, then click on properties and make sure the **Claim representing the user flow** is set to **tfp**. App Center is compatible only with the **tfp** setting. If you are updating the claim, make sure to click the **Save** button.
+     - Make sure the user flow is configured to use the **tfp** claim. Click on the name of the user flow, select **Properties**, and ensure the **Claim representing the user flow** is set to **tfp**. If you are updating the claim, make sure to click the **Save** button. App Center is compatible only with the **tfp** setting. 
      ![Configure the tfp claim](./images/configure-tfp-claim.png)
      - Navigate back to App Center, and paste the user flow name in the text box under the section **Manually add your user flow**.  
      ![Paste the sign-in user flow in App Center](./images/paste-sign-in-user-flow.png)
