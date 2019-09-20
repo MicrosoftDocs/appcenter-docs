@@ -94,7 +94,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Version                | Build   |
 |------------------------|---------|
-| 11 GM Seed 2           | 11A420a |
+| 11 GM seed 2           | 11A420a |
 | 10.3                   | 10G8    |
 | 10.2.1                 | 10E1001 |
 | 10.2                   | 10E125  |
