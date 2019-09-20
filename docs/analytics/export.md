@@ -40,7 +40,7 @@ Azure Blob storage is a service for storing large amounts of unstructured object
 
 The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments".
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about export diagnositcs data](https://docs.microsoft.com/en-us/appcenter/gdpr/diagnostics-export)
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
