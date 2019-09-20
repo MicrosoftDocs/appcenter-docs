@@ -25,7 +25,7 @@ Available repositories will populate in App Center after a successful connection
 
 ### Connecting to Self-Hosted GitLab Instances
 
-You may connect to a self-hosted Gitlab instance by providing the instance URL (e.g. `mycompany.gitlab.com`) and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings** > **Developer Accounts**.
+You may connect to a self-hosted GitLab instance by providing the instance URL (e.g. `mycompany.gitlab.com`) and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings** > **Developer Accounts**.
 
 ## Removing connections and reconnecting
 
