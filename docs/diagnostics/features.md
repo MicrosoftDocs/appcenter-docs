@@ -63,14 +63,56 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Upload a custom crash
 
-You can upload a custom crash report to App Center and view the details in the App Center Diagnostics UI. App Center supports crash logs in two different formats.
+You can upload a custom crash report to App Center and view the details in the App Center Diagnostics UI. 
 
-(add example of formats)
+To upload a custom crash, trigger a `POST` request to [error_upload API](https://openapi.appcenter.ms/#/crash/textError_upload) with the parameters:
 
-To upload a custom crash:
-1. Make sure you crash logs are formatted correctly
-2. ?
+- `log`: file with the crash log. Note - the maximum allowed file size is 2MB. 
+- `error_user_id`: optional user account ID to associate the crash log to a specific user
+- `owner_name`: name of the app owner
+- `app_name`: name of the app
 
+An example curl command might look like:
+
+```
+curl -X POST "https://api.appcenter.ms/v0.1/apps/troublemakers/crashprobe/errors/upload" 
+-H "accept: application/json" 
+-H "X-API-Token: XXXXXXXXXXXXXXXX" 
+-H "Content-Type: multipart/form-data" 
+-F "log=@sample_crash.txt"
+
+```
+
+App Center supports uploading custom crashes in the following format:
+
+```
+Package: PACKAGE NAME
+Version: VERSION 
+OS: OS VERSION
+Manufacturer: DEVICE OEM
+Model: DEVICE MODEL
+Date: DATETIME
+CrashReporter Key: APP INSTALLATION UUID
+
+EXCEPTION REASON STRING
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+ANOTHER EXCEPTION REASON STRING
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  at CLASS.METHOD(FILE:LINE)
+  ```
+  
+
+  
 
 ### Key Value Pairs
 
