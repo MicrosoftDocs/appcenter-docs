@@ -4,7 +4,7 @@
 title: Distribute | Sample App Tutorials
 description: Tutorial to distribute a sample macOS app to a group in App Center.
 keywords: app center
-authors: clpolet
+author: clpolet
 ms.author: clpolet
 ms.date: 06/27/2017
 ms.topic: article
