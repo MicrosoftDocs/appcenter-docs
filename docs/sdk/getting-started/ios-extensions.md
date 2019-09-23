@@ -31,7 +31,7 @@ dev_langs:
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
-Once you have integrated the App Center SDK into the container application, you can get started with using it in your extension. Note that extensions support only crash reporting.
+Once you have integrated the App Center SDK into the container application, you can get started using it in your extension. Note that extensions only support crash reporting.
 To learn how to add App Center SDK to your container app, refer to the documentation for [App Center iOS Getting Started](./ios.md).
 
 ## 1. Connect your app extension to App Center Portal
@@ -64,7 +64,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 ## 3. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started, and you will have to explicitly call each of them when starting the SDK.
 
 ### 3.1 Add the import statements
 
@@ -81,7 +81,7 @@ import AppCenterCrashes
 
 ### 3.2 Add the `start:withServices:` method
 
-Insert the following line in the extensions's app entry point, for example, `viewDidLoad` controller method:
+Insert the following line in the extension's app entry point, for example, `viewDidLoad` controller method:
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSCrashes class]]];

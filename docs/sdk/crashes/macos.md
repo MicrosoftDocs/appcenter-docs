@@ -34,7 +34,7 @@ Please follow the [Getting Started](~/sdk/getting-started/macos.md) section if y
 
 Also note that crash logs on macOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
-## Crash reporting in extensions
+### Crash reporting in extensions
 
 App Center supports crash reporting in macOS extensions. The usage is the same as in the container application.
 
