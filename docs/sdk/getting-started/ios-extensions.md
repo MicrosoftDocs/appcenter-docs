@@ -81,7 +81,7 @@ import AppCenterCrashes
 
 ### 3.2 Add the `start:withServices:` method
 
-Insert the following line in the extensions's `viewDidLoad` controller method:
+Insert the following line in the extensions's app entry point, for example, `viewDidLoad` controller method:
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSCrashes class]]];
