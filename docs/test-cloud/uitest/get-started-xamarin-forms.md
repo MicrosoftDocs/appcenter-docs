@@ -1,7 +1,6 @@
 ---
 title: "Get started with UITest and Xamarin.Forms"
 description: "UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center."
-zone_pivot_groups: platform
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
