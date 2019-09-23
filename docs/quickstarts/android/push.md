@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Send Push Notifications to Users | Android Sample App Tutorials
+title: Send Push Notifications to Users
 description: Tutorial to send a push notification to the sample Android app.
 keywords: app center
 author: sshibu
