@@ -9,8 +9,6 @@ ms.author: t-sajia
 ms.date: 06/28/2017
 ms.topic: article
 ms.service: vs-appcenter
-ms.custom:
-ms.prod:
 ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 
 # optional metadata
