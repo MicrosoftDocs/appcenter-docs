@@ -8,6 +8,7 @@ ms.date: 09/06/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: 8c034e61-7fc5-4dea-9722-242a2d01ee1f
 ---
 
 # Publish to Google Play Store

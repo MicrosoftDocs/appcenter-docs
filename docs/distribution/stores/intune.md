@@ -8,6 +8,7 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: 7360e04f-01af-4c3f-ac0a-75c2dab979ba
 ---
 
 # Intune Company Portal Distribution

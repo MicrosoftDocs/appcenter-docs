@@ -9,6 +9,7 @@ ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 08/16/2019
+ms.assetid: a2a75032-0159-447b-9704-e420a3872003
 ---
 
 # Send Push Notifications to Users

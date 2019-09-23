@@ -8,6 +8,7 @@ ms.date: 10/05/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: 04325eb2-4730-47e9-b159-bbf7994d18f8
 ---
 
 # Distribute apps directly to stores from App Center

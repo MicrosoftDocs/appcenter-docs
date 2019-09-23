@@ -8,6 +8,7 @@ ms.date: 02/14/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: 32d31a11-8c89-458b-9074-0da4a06384a1
 ---
 
 # App Store and TestFlight Distribution
