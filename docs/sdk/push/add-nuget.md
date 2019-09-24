@@ -29,4 +29,3 @@ Install-Package Microsoft.AppCenter.Push
 > [!NOTE]
 > If your Android project does not target the Mono framework version 9.0 or higher, you will not be able to install the package.
 > You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
-> If you are using App Center Build, you must make sure Mono version is 5.8 or higher (in **Build Config > Build app > More options**).

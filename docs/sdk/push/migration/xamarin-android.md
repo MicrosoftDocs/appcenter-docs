@@ -20,8 +20,6 @@ If your Xamarin.Android project does not target version 9.0 or higher, you will 
 
 You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
 
-If you are using App Center Build, you must make sure Mono version is 5.8 or higher (in **Build Config > Build app > More options**).
-
 ## 2. AndroidManifest.xml
 
 Edit the project's **AndroidManifest.xml** file and **remove** the following lines **inside** the file's `<application>` section, if present:
