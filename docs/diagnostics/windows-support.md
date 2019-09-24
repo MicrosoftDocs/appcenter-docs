@@ -17,8 +17,11 @@ App Center currently supports diagnostics for WPF and WinForms applications targ
 
 ## Universal Windows Platform
 
-App Center supports basic diagnostics features for UWP apps to help you fix your crashes. We have not yet implemented full feature parity for UWP apps so there are some known limitations and missing features compared to other supported platforms. To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md).
+App Center supports basic diagnostics features for UWP apps to help you fix your crashes. There are some known limitations and missing features compared to other supported platforms that we are actively addressing. You can learn more about these improvements in the transition section below. 
 
+### Getting started
+
+To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md).
 
 ### Features Supported
 
@@ -72,11 +75,11 @@ To distribute your app through the Microsoft Store, you must create an app packa
 
 Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/uwp/packaging/index) to package your app.
 
-### Upcoming diagnostics updates for UWP apps
+## Upcoming diagnostics updates for UWP apps
 
 The App Center team is actively working on improving diagnostics support for UWP apps and addressing the limitations and gaps mentioned above. This section details the upcoming changes you can expect to see in the upcoming weeks. 
 
-## What is supported in the new experience?
+### What is supported in the new experience?
 
 The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
 
@@ -89,7 +92,7 @@ The new and improved diagnostics experience for UWP apps includes support for bo
 - Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
 - Ability to download crash and error reports.
 
-## What is the transition experience?
+### What is the transition experience?
 
 After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
 
@@ -98,8 +101,6 @@ After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see cras
 These old crashes can still be viewed in the UI and returned via our crashes APIs listed here: https://openapi.appcenter.ms/#/crash. 
 
 For the new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the errors section: https://openapi.appcenter.ms/#/errors. Learn more about the mappings of old to new APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
-
-
 
 
 ## WinRT, Silverlight, and Other Platforms
