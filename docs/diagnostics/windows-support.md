@@ -13,15 +13,12 @@ ms.custom: analytics
 
 # Windows Support
 
-> [!IMPORTANT]
-> Our team has shipped diagnostics support for WPF and WinForms applications as a part of our Summer 2019 work! Refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md) pages for more information.
+App Center currently supports diagnostics for WPF and WinForms applications targeting .NET Framework or .NET Core 3, and UWP apps released through the Windows store. This page details the current level of support and the upcoming changes for UWP apps. For WPF and WinForms apps, refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md) pages for more information.
 
 ## Universal Windows Platform
 
-> [!NOTE]
-> We expect to make some improvements in our UWP support in the following months. Follow our proposed [Windows plan](https://github.com/microsoft/appcenter/blob/specs/specs/2019-04/Windows-Plan.md)for more details. You can leave us a comment or file a Github issue if you have any questions or feedback. See [help and feedback](../help.md).
-
 App Center supports basic diagnostics features for UWP apps to help you fix your crashes. We have not yet implemented full feature parity for UWP apps so there are some known limitations and missing features compared to other supported platforms. To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md).
+
 
 ### Features Supported
 
@@ -74,6 +71,36 @@ You also might notice some features you see in other platforms are missing for y
 To distribute your app through the Microsoft Store, you must create an app package file and [submit the package](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages) to [Partner Center](https://partner.microsoft.com/dashboard). In creating your package file, you can include symbol files to upload to Partner Center. This will allow App Center to display symbolicated stack traces.
 
 Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/uwp/packaging/index) to package your app.
+
+### Upcoming diagnostics updates for UWP apps
+
+The App Center team is actively working on improving diagnostics support for UWP apps and addressing the limitations and gaps mentioned above. This section details the upcoming changes you can expect to see in the upcoming weeks. 
+
+## What is supported in the new experience?
+
+The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
+
+- A full symbolication experience that allows you to upload symbols in App Center.
+- Support for handled exceptions
+- Number of users affected per crash or error group.
+- Ability to add annotations per crash or error group
+- Ability to mark crash and error groups as open, closed, or ignored.
+- Ability to attach, view and download one binary and one text attachment to your crash reports.
+- Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
+- Ability to download crash and error reports.
+
+## What is the transition experience?
+
+After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
+
+(INSERT SCREENSHOT WHEN AVAILABLE)
+
+These old crashes can still be viewed in the UI and returned via our crashes APIs listed here: https://openapi.appcenter.ms/#/crash. 
+
+For the new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the errors section: https://openapi.appcenter.ms/#/errors. Learn more about the mappings of old to new APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+
+
+
 
 ## WinRT, Silverlight, and Other Platforms
 
