@@ -79,12 +79,12 @@ Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/
 
 The App Center team is actively working on improving diagnostics support for UWP apps and addressing the limitations and gaps mentioned above. This section details the upcoming changes you can expect to see in the upcoming weeks. 
 
-### What is supported in the new experience?
+### What improvements can I expect?
 
 The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
 
 - A full symbolication experience that allows you to upload symbols in App Center.
-- Support for handled exceptions
+- Support for handled exceptions.
 - Number of users affected per crash or error group.
 - Ability to add annotations per crash or error group
 - Ability to mark crash and error groups as open, closed, or ignored.
@@ -100,7 +100,11 @@ After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see cras
 
 These old crashes can still be viewed in the UI and returned via our crashes APIs listed here: https://openapi.appcenter.ms/#/crash. 
 
-For the new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the errors section: https://openapi.appcenter.ms/#/errors. Learn more about the mappings of old to new APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+For the new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the errors section: https://openapi.appcenter.ms/#/errors. Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+
+### What happens after the transition?
+
+We will stop supporting the old legacy experience (ADD ACTUAL DATE WHEN WE HAVE ETA) 90 days after we release the new experience. Please make sure your app is using the latest Windows App Center SDK and that you are using the new errors APIs. If you need help or have questions about the transition, you may contact our support team. 
 
 
 ## WinRT, Silverlight, and Other Platforms
