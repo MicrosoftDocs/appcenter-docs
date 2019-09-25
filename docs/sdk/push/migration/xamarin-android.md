@@ -4,7 +4,7 @@ description: Contains instructions for how to configure your project to use Fire
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 07/11/2019
+ms.date: 09/24/2019
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498
 ms.service: vs-appcenter
@@ -16,11 +16,9 @@ ms.tgt_pltfrm: android
 
 ## 1. Target framework
 
-If your Xamarin.Android project does not target version 8.1 or higher, you will not be able to update the Push package.
+If your Xamarin.Android project does not target version 9.0 or higher, you will not be able to update the Push package.
 
 You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
-
-If you are using App Center Build, you must make sure Mono version is 5.8 or higher (in **Build Config > Build app > More options**).
 
 ## 2. AndroidManifest.xml
 
