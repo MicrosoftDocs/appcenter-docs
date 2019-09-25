@@ -4,7 +4,7 @@ description: Instructions for how to launch your most recent build on a physical
 keywords: test, build, ios, android
 author: siminapasat
 ms.author: siminap
-ms.date: 08/27/2018
+ms.date: 09/25/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: ccc7e62f-90ad-4634-a25b-2e720fb34dff 
@@ -14,15 +14,23 @@ ms.reviewer: vigimm
 
 # Testing Builds on Real Devices
 
-In this document, you'll learn how to use App Center Build's Launch Test feature to run your latest successful build on a real device using App Center Test. Launching your app after each build validates that your latest build is working.
+In this document, you'll learn how to integrate App Center Build and App Center Test to run your latest successful build on real devices. 
 
-## Configuring your branch
+## Configuring your build for Launch Testing
 
-First, the branch needs to be setup before it's ready to run the launch test. You can read more about configuring your branch in the Configure a build respectively for [Android](~/build/android/first-build.md) and [iOS](~/build/ios/first-build.md).
+1. Log into https://appcenter.ms
+2. Create your app by going to **Add new > Add new app**. More details: [Creating and Managing Apps](~/dashboard/creating-and-managing-apps.md)
+3. Name your app, select the target OS of your app, and the platform your app is written in.
+4. Select the **Build** icon on the left side of the screen, it's a triangle arrow/playbutton.
+5. Connect your code repository. More details: [App Center Build Introduction](~/build/index.md).
+6. Choose your branch & click either the "Configure button" to create a new configuration or the wrench icon to edit an existing configuration. 
+7. For the most part, you can configure your app however you want; but at a minimum your build must:
+   - Be an [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
+   - Be a device build.
+8. Select the "launch testing" icon.
+9. Save & Build your configuration. If you can't save, usually it's because you've selected invalid or incomplete settings for your configuration; so check for warnings on the configuration page.  
 
-Secondly, you need a subscription to App Center Test before you can enable launch test. If you're a first-time user of App Center Test, there's a free trial so you can see how it works. To activate your free trial, use the link below the *Run a launch test on a device* option.
-
-When you have an active subscription it's time to enable testing, all you’ll need to do is to toggle *Run a launch test on a device* option to on and click *Finish setup* button. During the new build, there will be two parts, a build and a test part, so it's normal to have prolonged build time. The benefit is that you know whether your app starts on a physical device.
+During the new build, there will be two parts, a build and a test part, so it's normal to have prolonged build time. The benefit is that you know whether your app starts on a physical device.
 
 Finding your launch test result can be done in two ways:
 
