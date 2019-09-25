@@ -32,7 +32,7 @@ For crashes we support the new diagnostics UI which is the same as on other plat
 > Handled errors support is coming.
 
 #### Legacy UI
-App Center SDK previously used the Windows crash reporting service built into Windows devices to send and process crash logs. For displaying this logs we have Legacy UI. If all of your applications use recent SDK, you don't need this legacy view.
+App Center SDK previously used the Windows crash reporting service built into Windows devices to send and process crash logs. For displaying those logs we have Legacy UI. If all of your applications use recent SDK, you don't need this legacy view.
 
 We recommend to update your apps to use new SDK and get access to full featured new diagnostics UI.
 ##### Crash grouping
@@ -62,6 +62,7 @@ Select a crash report to view the crash stack trace and events. The full stack t
 ### Submitting your app to the Microsoft Store
 
 To distribute your app through the Microsoft Store, you must create an app package file and [submit the package](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages) to [Partner Center](https://partner.microsoft.com/dashboard).
+In creating your package file, you can include symbol files to upload to Partner Center. This will allow App Center to display symbolicated stack traces in legacy UI view.
 
 Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/uwp/packaging/index) to package your app.
 
