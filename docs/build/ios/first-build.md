@@ -37,8 +37,9 @@ Configure your iOS project before your first build.
 
 ### 3.1 Project/workspace and scheme
 
-For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. App Center automatically detects the projects, workspaces, and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme.
+For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. App Center automatically detects the projects, workspaces, and shared schemes (as long as the schemes are in the correct folder) in your branch. Select the project or the workspace you want to build and the corresponding scheme.
 If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
+Keep in mind that you cannot simply export an `.xcscheme` file and place it anywhere in the project. It must reside in the `xcshareddata/xcschemes/` folder. Make sure that this path is not in your `.gitignore` file.
 
 ![Mark scheme as shared](images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
