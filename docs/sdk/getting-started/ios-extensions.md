@@ -2,9 +2,9 @@
 title: Get Started with iOS Extensions
 description: Get started
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 09/24/2019
+author: winnieli
+ms.author: yuli1
+ms.date: 09/25/2019
 ms.topic: get-started-article
 ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.service: vs-appcenter

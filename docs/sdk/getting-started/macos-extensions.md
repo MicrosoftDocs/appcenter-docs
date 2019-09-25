@@ -2,9 +2,9 @@
 title: Get Started with macOS Extensions
 description: Get started
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 09/24/2019
+author: winnieli
+ms.author: yuli1
+ms.date: 09/25/2019
 ms.topic: get-started-article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
 ms.service: vs-appcenter
