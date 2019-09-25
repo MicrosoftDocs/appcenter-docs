@@ -3,7 +3,7 @@ title: HockeySDK for tvOS Migration
 description: Migrate from the HockeySDK to App Center SDK
 author: elamalani
 ms.author: emalani
-ms.date: 08/09/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 44a08a47-85e2-4456-9b15-d524037df036
 ms.service: vs-appcenter
@@ -61,7 +61,7 @@ HockeyApp class  | App Center module
 `MetricsManager` | `Analytics`
 `CrashManager`   | `Crashes`
 
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [integration by copying binaries](~/sdk/getting-started/tvos#32-integration-by-copying-the-binaries-into-your-project) documentation.
+The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [integration by copying binaries](~/sdk/getting-started/tvos#33-integration-by-copying-the-binaries-into-your-project) documentation.
 
 ## 2. Update the SDK setup code
 

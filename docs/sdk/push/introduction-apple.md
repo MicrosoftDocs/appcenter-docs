@@ -12,6 +12,24 @@ If you are integrating App Center into your app via Cocoapods, add the following
 pod 'AppCenter/Push'
 ```
 
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterPush.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
+
 #### Integration by copying the binaries into your project
 
 If you wish to manually integrate the module, follow this [documentation link](apple-manual-integration.md).
