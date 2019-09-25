@@ -39,6 +39,10 @@ Annotate your groups in App Center diagnostics to keep track of notes and other 
 
 ![Annotate a crash group](~/diagnostics/images/new-annotate.png)
 
+> [!NOTE]
+> Annotations are not supported for the UWP legacy Diagnostics UI.
+
+
 ### Track the status of your groups
 
 Mark each of your groups as open, closed, or ignored. To mark the status of your groups:
