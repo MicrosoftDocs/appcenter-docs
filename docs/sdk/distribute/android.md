@@ -52,6 +52,13 @@ The App Center SDK is designed with a modular approach – a developer only need
    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
+3. DownloadManager on Android SDK versions prior to 5.0 does not support TLS 1.2 so it cannot be used to download updates. If your **minSdkVersion** is less than 19, you need to add this permission to your **AndroidManifest.xml** for the App Center Distribute to work:
+
+    ```xml
+    <uses-permission
+       android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+       android:maxSdkVersion="18" />
+    ```
 
 ### 2. Start App Center Distribute
 
