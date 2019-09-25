@@ -4,7 +4,7 @@ description: How to configure App Center data for iOS
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
 ms.service: vs-appcenter
@@ -45,11 +45,31 @@ Please follow the [Get Started](../../data/getting-started.md) section if you ha
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
+#### Integration via Cocoapods
+
 - Add the data service to your Podfile and run `pod install`
 
 ```ruby
 pod 'AppCenter/Data'
 ```
+
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterData.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ### 2. Start App Center Data
 

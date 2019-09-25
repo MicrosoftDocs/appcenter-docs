@@ -57,7 +57,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 ## 3. Add the App Center SDK modules
 
-The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org) or by manually adding the binaries to your project.
+The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
 
@@ -81,7 +81,32 @@ The App Center SDK for iOS can be integrated into your app via [Cocoapods](https
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-### 3.2 Integration by copying the binaries into your project
+### 3.2 Integration via Carthage
+
+Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.  
+1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/iOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
+
+    > [!NOTE]
+    > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the App Center SDKs there, as they are shipped as static frameworks.
+
+Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
+
+### 3.3 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
