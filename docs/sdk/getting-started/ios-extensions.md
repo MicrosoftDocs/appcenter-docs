@@ -119,7 +119,7 @@ import AppCenterCrashes
 
 ### 3.2 Add the `start:withServices:` method
 
-Insert the following line in the app extension's entry point. For example, the `viewDidLoad` method of the main ViewController file of a Today extension.
+Insert the following line in the app extension's entry point. For example inside the `viewDidLoad` method of the main ViewController file of a Today extension.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSCrashes class]]];
