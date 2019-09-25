@@ -28,7 +28,8 @@ App Center supports basic diagnostics features for UWP apps to help you fix your
 #### New Diagnostics UI
 For crashes we support the new diagnostics UI which is the same as on other platforms. It is recommended way to access your crashes data. Please find more details on how to use it in [Using the Diagnostics UI](~/using-the-diagnostics-UI.md) section.
 
-Handled errors support is coming.
+> [!NOTE]
+> Handled errors support is coming.
 
 #### Legacy UI
 App Center SDK previously used the Windows crash reporting service built into Windows devices to send and process crash logs. For displaying this logs we have Legacy UI. If all of your applications use recent SDK, you don't need this legacy view.
