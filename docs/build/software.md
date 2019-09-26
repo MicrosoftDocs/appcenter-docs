@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 9/20/2019
+ms.date: 9/26/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ Each build runs on a separate, clean virtual machine (VM), and no other user has
 
 **App Center now uses the Java Azul OpenJDK**
 
-The following Java versions are available on the VM image: 7, 8, 11, 12. Java versions 9 and 10 were deprecated.
+The following Java versions are available on the VM image: 7, 8, 11, 12, 13. Java versions 9 and 10 were deprecated.
 
 Previously, Microsoft hosted Mac machines ran with pre-installed JDKs overloaded with complex licensing, end-user restrictions, and lack of long-term support. With recent image changes, App Center replaced the JDKs with tested, certified, LTS builds of OpenJDK from Azul Systems.
 
@@ -42,6 +42,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - java 1.8: OpenJDK Runtime Environment (Zulu 8.40.0.25-CA-macosx) (build 1.8.0_222-b10) (default)
 - java 11: OpenJDK Runtime Environment (Zulu11.33+15-CA) (build 11.0.4+11-LTS)
 - java 12: OpenJDK Runtime Environment (Zulu12.3+11-CA) (build 12.0.2+3)
+- java 13 : OpenJDK Runtime Environment Zulu13.27+9-CA (build 13+33)
 - PowerShell 6.2.3
 - Python 2.7.16
 - Python 3.7.4
@@ -278,7 +279,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.1.12                                   |
+| Android Emulator      | 29.2.1                                    |
 
 ### Google APIs
 
@@ -305,10 +306,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.2.6.26
+- 8.3.0.1805
 
 ### Mono
 
+- 6.4.0
 - 6.0.0
 - 5.18.1
 - 5.16.1
@@ -324,6 +326,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 13.2.0.42
 - 12.14.0.114
 - 12.10.0.157
 - 12.8.0.2
@@ -343,6 +346,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 10.0.0.43
 - 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
@@ -360,7 +364,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
-- 5.16.1.17
+- 13.2.0.42
+- 5.16.1.24
 - 5.10.0.157
 - 5.8.0.0
 - 5.6.0.25
