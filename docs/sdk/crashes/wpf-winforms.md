@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/05/2019
+ms.date: 09/11/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -30,6 +30,49 @@ App Center Crashes will automatically generate a crash log every time your app c
 The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++.
 
 Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) if you haven't set up the SDK in your application yet.
+
+## Unhandled exceptions on WinForms applications
+
+> [!NOTE]
+> This section and following sub sections apply only to WinForms. You can skip this section if you are integrating the SDK on WPF.
+
+By default, an unhandled exception in a WinForms application does not trigger a crash (the application does not exit) if the debugger is not attached.
+
+Instead, Windows shows a dialog to the user the option to continue or quit app execution. Consequently, the App Center SDK is unable to automatically capture these exceptions (even if the user clicks on the **Quit** button).
+
+Crashes are collected on App Center only if it causes the application to exit automatically. App Center supports only one crash per session.
+
+There are two ways to report unhandled exceptions in WinForms. The application can be configured to crash on unhandled exceptions, or continue running but report unhandled exceptions as runtime errors.
+
+### Configure the application to exit on crash
+
+This is the only way to report the unhandled exception as a **crash** on App Center, make the application exit on unhandled exceptions.
+
+To do that, simply call a Windows method before initializing the SDK:
+
+```csharp
+Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
+AppCenter.Start(...);
+```
+
+If this option is not acceptable in your application, you can report the unhandled exception as a runtime error (described below).
+
+### Report the unhandled exception as a runtime error
+
+If your application must keep running after an unhandled exception, you cannot report the exception as a **crash** in App Center but you can instead report it as an **error**.
+
+To do that, you can use the following code sample:
+
+```csharp
+Application.ThreadException += (sender, args) =>
+{
+    Crashes.TrackError(arg.Exception);
+};
+AppCenter.Start(...);
+```
+
+> [!NOTE]
+> When the debugger is attached, unhandled exceptions will cause application to exit (crashes) **unless** a handler is attached to `Application.ThreadException`.
 
 ## Generate a test crash
 
