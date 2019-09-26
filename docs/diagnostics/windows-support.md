@@ -92,6 +92,8 @@ The new and improved diagnostics experience for UWP apps includes support for bo
 - Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
 - Ability to download crash and error reports.
 
+You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md). 
+
 ### What is the transition experience?
 
 After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
