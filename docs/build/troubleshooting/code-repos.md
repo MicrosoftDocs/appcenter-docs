@@ -15,17 +15,14 @@ ms.custom: build
 
 ## <a name="not-listed"/>Repository is not listed in the Connect to Repository step
 
-* Only Git repositories are supported at this point. If you're trying to link to another type of repositories (for example, Mercurial, TFVC, etc.), it will not show up in the repository list.
-
-* Connecting to a repository owned by a user requires you're the owner of the repository. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
-
-* Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
-
-* For GitHub repositories, depending on your organization's configuration, the first time when a member requests App Center access to that organization, an organization member with owner privileges might need to approve that request. See the [GitHub-specific instructions on how to approve third party applications for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
+* **Only Git repositories are supported**. If you're trying to link to another type of repository (for example, Mercurial, TFVC, etc.), it will not show up in the repository list.
+* **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
+* **Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access**. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
+* **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
 ## <a name="on-premises"/>Can I use on-premises repositories?
 
-App Center currently supports cloud hosted git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but does not support on-premises repositories.
+App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but does not support on-premises repositories.
 
 ## <a name="wrong-bitbucket"/>I have connected to the wrong Bitbucket account. How can I reconnect to the correct one?
 
@@ -41,7 +38,7 @@ Disconnect the connected Azure DevOps (formerly VSTS) account and [reconnect to 
 
 ## <a name="not-listed"/>When connecting an Azure DevOps repository, I see "No Projects Found"
 
-It is possible when you first attempt to connect AppCenter to Azure DevOps (formerly VSTS), it's authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the OAuth flow, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
+It is possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from name@org.com (org)**. You will need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
 
 ## <a name="git-sub"/>Are Git submodules supported?
 
