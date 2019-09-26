@@ -16,26 +16,28 @@ ms.reviewer: vigimm
 
 In this document, you'll learn how to integrate App Center Build and App Center Test to run your latest successful build on real devices. 
 
-## Configuring your build for Launch Testing
+## Configuring your build
+For the most part, you can configure your app however you want; but for device testing it must be:
+   - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
+   - A device build.
 
 1. Log into https://appcenter.ms
 2. Create your app by going to **Add new > Add new app**. More details: [Creating and Managing Apps](~/dashboard/creating-and-managing-apps.md)
-3. Name your app, select the target OS of your app, and the platform your app is written in.
+3. Name your app, select the target OS of your app, and the platform your app uses.
 4. Select the **Build** icon on the left side of the screen, it's a triangle arrow/playbutton.
 5. Connect your code repository. More details: [App Center Build Introduction](~/build/index.md).
 6. Choose your branch & click either the "Configure button" to create a new configuration or the wrench icon to edit an existing configuration. 
-7. For the most part, you can configure your app however you want; but at a minimum your build must:
-   - Be an [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
-   - Be a device build.
-8. Select the "launch testing" icon.
-9. Save & Build your configuration. If you can't save, usually it's because you've selected invalid or incomplete settings for your configuration; so check for warnings on the configuration page.  
+7. Apply your settings & save your configuration. If you close the settings page without saving it will default back to it's previous settings. If you can't save, usually it's because you've selected invalid or incomplete settings for your configuration; so check for warnings on the configuration page.  
 
-During the new build, there will be two parts, a build and a test part, so it's normal to have prolonged build time. The benefit is that you know whether your app starts on a physical device.
+## Enable Launch Testing
+Select the "Test on a real device" switch on the branch configuration page.
 
-Finding your launch test result can be done in two ways:
+The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
 
-1. When the test is completed the app collaborators will receive an e-mail with test results
-2. Go to *Test* in the left-hand menu and follow along in the progress
+Finding your launch test result can be done in a few ways:
+
+- On the results page for each Build, a link to the launch test is displayed.
+- Go to **Test** in the left-hand menu, and select **Test Series > Launch-Tests** to view all launch tests for that app. 
 
 ## Unsupported configurations
 
