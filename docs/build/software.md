@@ -42,7 +42,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - java 1.8: OpenJDK Runtime Environment (Zulu 8.40.0.25-CA-macosx) (build 1.8.0_222-b10) (default)
 - java 11: OpenJDK Runtime Environment (Zulu11.33+15-CA) (build 11.0.4+11-LTS)
 - java 12: OpenJDK Runtime Environment (Zulu12.3+11-CA) (build 12.0.2+3)
-- java 13 : OpenJDK Runtime Environment Zulu13.27+9-CA (build 13+33)
+- java 13 : OpenJDK Runtime Environment (Zulu13.27+9-CA) (build 13+33)
 - PowerShell 6.2.3
 - Python 2.7.16
 - Python 3.7.4
