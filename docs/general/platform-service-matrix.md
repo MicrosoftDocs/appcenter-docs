@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
-ms.date: 08/07/2019
+ms.date: 09/26/2019
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -14,24 +14,23 @@ ms.service: vs-appcenter
 
 The table below lists all the Operating System and Platforms and their supported services in App Center:
 
+| OS/Platform            | Build | Test | Distribute | Crashes | Analytics | Auth | Data | Push |
+| :--------------------- | :---: | :--: | :--------: | :-----: | :-------: | :--: | :--: | :--: |
+| Android                |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
+| iOS                    |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
+| macOS                  |  ✅   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| tvOS                   |  ❌   |  ❌  |     ❌     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
+| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Windows - UWP          |  ✅   |  ❌  |     ✅     |  ✅\*   |    ✅     |  ❌  |  ❌  |  ✅  |
+| Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
+| Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
+| Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
+| Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
+| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Unity - UWP            |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 
-| OS/Platform              | Build | Test | Distribute | Crashes | Analytics | Auth | Data | Push |
-|:-------------------------|:------|:-----|:-----------|:--------|:----------|:-----|:-----|:-----|
-| `Android`                | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
-| `iOS`                    | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
-| `macOS`                  | Yes   | No   | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `tvOS`                   | No    | No   | No         | Yes     | Yes       | No   | No   | No   |
-| `React Native - iOS`     | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `React Native - Android` | Yes   | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `Windows - UWP`          | Yes   | No   | Yes        | Yes*    | Yes       | No   | No   | Yes  |
-| `Windows - WPF`          | No    | No   | Yes        | Yes     | Yes       | No   | No   | No   |
-| `Windows - WinForms`     | No    | No   | Yes        | Yes     | Yes       | No   | No   | No   |
-| `Xamarin - iOS`          | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
-| `Xamarin - Android`      | Yes   | Yes  | Yes        | Yes     | Yes       | Yes  | Yes  | Yes  |
-| `Unity - iOS`            | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `Unity - Android`        | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `Unity - UWP`            | No    | No   | Yes        | No      | Yes       | No   | No   | Yes  |
-| `Cordova - iOS`          | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-| `Cordova - Android`      | No    | Yes  | Yes        | Yes     | Yes       | No   | No   | Yes  |
-
-*For Windows - UWP, crashes are only collected if your app was submitted to the Windows Store.
+\*For Windows - UWP, crashes are only collected if your app was submitted to the Windows Store.
