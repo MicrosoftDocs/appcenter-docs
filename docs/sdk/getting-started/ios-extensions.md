@@ -60,6 +60,6 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 > [!NOTE]
 > Using an existing App Secret from another iOS project has side effects. App Center doesn't support filtering by project on the same App Center application. For instance listing crashes for a particular version will list all the crashes from both projects for this version without distinction. It can be confusing.
 
-[!include[](ios-macos-extension.md)]
+[!include[](ios-macos-extensions.md)]
 
 Look at the documentation for [App Center Crashes](~/sdk/crashes/ios.md) to learn how to customize your app extension and use more advanced functionalities.
