@@ -15,7 +15,7 @@ ms.custom: build
 
 ## <a name="not-listed"/>Repository isn't listed in the Connect to Repository step
 
-* **Only Git repositories are supported**. If you're trying to link to another type of repository (for example, Mercurial, TFVC, and so on), it won't show up in the repository list.
+* **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 * **Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access**. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
 * **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
@@ -64,7 +64,7 @@ Contact [App Center support]((https://intercom.help/appcenter/getting-started/ge
 
 ## <a name="tfvc"/>What can I do if I'm using Team Foundation Version Control (TFVC)?
 
-App Center Build only supports Git repositories. For projects using a TFVC repository, unless you want to [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
+App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
 
 ## <a name="code-source-secure"/>Is my source code secure?
 
