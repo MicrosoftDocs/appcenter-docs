@@ -91,12 +91,20 @@ Apps with [app or watchOS extensions](https://docs.microsoft.com/en-us/xamarin/i
 
 > [!NOTE]
 > There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` projects containing Xamarin watchOS apps.
-> To build watchOS apps on App Center, a workaround is required. Within the containing iOS project, which references to the Watch App, an [additional line must be included](https://github.com/xamarin/xamarin-macios/issues/5878#issuecomment-481277798): `<ReferenceOutputAssembly>False</ReferenceOutputAssembly>`. Example:
+> Building a watchOS app on App Center without a workaround will result in an error: 
+>
+>`Project <project> is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Project <project> supports: xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)`.
+>
+> To build watchOS apps on App Center, a workaround is required. Within the containing iOS project, which references to the Watch App, an [additional line must be included](https://github.com/xamarin/xamarin-macios/issues/5878#issuecomment-481277798):
+>
+> `<ReferenceOutputAssembly>False</ReferenceOutputAssembly>`
+>
+> Example WatchApp reference with workaround:
 
 ```xml
-    <ProjectReference Include="..\WatchApp3\WatchApp3.csproj">
-      <Project>{79EB034F-3D29-43A5-B89F-124879504771}</Project>
-      <Name>WatchApp3</Name>
+    <ProjectReference Include="..\MyWatchApp\MyWatchApp.csproj">
+      <Project>{59EB034F-3D29-43A5-B89F-124879504771}</Project>
+      <Name>MyWatchApp</Name>
       <IsWatchApp>True</IsWatchApp>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
     </ProjectReference>
