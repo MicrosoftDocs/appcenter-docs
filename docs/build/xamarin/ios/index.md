@@ -90,7 +90,7 @@ A successful device build will produce an ipa file. In order to install the buil
 Apps with [app or watchOS extensions](https://docs.microsoft.com/en-us/xamarin/ios/platform/extensions) require an additional provisioning profile per extension in order to be signed.
 
 > [!NOTE]
-> There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` projects containing Xamarin watchOS apps.
+> There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` in projects containing Xamarin watchOS apps.
 > Building a watchOS app on App Center without a workaround will result in an error: 
 >
 >`Project <project> is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Project <project> supports: xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)`.
