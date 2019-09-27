@@ -15,9 +15,9 @@ ms.custom: analytics
 
 **Is the data sampled?**
 
-The data is not sampled. Analytics will use all the data that is sent, unless it is sent in the wrong format or some of the known limits is reached.
+The data is not sampled. Analytics will use all the data that is sent, unless it is sent in the wrong format or some of the known limits are reached.
 
-**What is the latency between a log sent and its representation in the Analytics dashboards?**
+**What is the latency between a log being sent and its representation in the Analytics dashboards?**
 
 The latency is typically just a few seconds.
 
@@ -31,7 +31,7 @@ A session is defined as the time from the app coming to foreground to the last e
 
 **Why is my "OS Distribution" chart showing more devices than the number of installs?**
 
-OS Distribution counts are not snapshots. They are counts of devices that match the selected time period. For example, if users massively upgrade from one version to the next one within the selected time period, they will be counted in both versions.
+OS Distribution counts are not snapshots. They are counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they will be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
 
 **Why is the country information not showing? / The country information doesn't seem to be correct.**
 
