@@ -5,7 +5,7 @@ keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 06/12/2019
-ms.topic: troubleshooting-article
+ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
 ms.custom: sdk

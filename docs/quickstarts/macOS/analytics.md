@@ -4,7 +4,7 @@
 title: Analytics | Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: app center
-authors: clpolet
+author: clpolet
 ms.author: clpolet
 ms.date: 11/15/2017
 ms.topic: article

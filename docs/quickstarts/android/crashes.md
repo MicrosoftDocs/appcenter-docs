@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View Crashes Sent From Android App in App Center | Android Sample App Tutorials
+title: View Crashes Sent From Android App in App Center
 description: Tutorial on viewing crashes from a sample Android app in App Center
 keywords: app center
 author: sshibu
