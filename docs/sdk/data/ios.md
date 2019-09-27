@@ -457,3 +457,40 @@ The `MSPaginatedDocuments` class has 3 methods which can be used to manage pagin
 The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `items`, which represents the documents in the page.
 
 Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
+
+### Advanced offline scenarios
+
+The `setRemoteOperationDelegate` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippets:
+
+In the header file:
+
+```objc
+@interface MyClass : NSObject <MSRemoteOperationDelegate>
+
+@end
+```
+
+Implementation:
+
+```objc
+@implementation MyClass
+
+(void)data:(MSData *)data didCompleteRemoteOperation:(NSString *)operation forDocumentMetadata:(MSDocumentMetadata *_Nullable)documentMetadata withError:(MSDataError *_Nullable)error{
+  NSLog(@"Operation processed: %@ ", operation);
+  if (documentMetadata) {
+    NSLog(@"Document: Partition : %@, document id : %@, eTag : %@ ", documentMetadata.partition, documentMetadata.documentId, documentMetadata.eTag);
+  }
+  if (error) {
+    NSLog(@"Error: %@ ", error);
+  }
+}
+
+@end
+```
+
+To setup the callback (delegation):
+
+```objc
+MyClass *myClass = [[MyClass alloc] init];
+[MSData setRemoteOperationDelegate:myClass];
+```
