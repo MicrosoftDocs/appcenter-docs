@@ -364,7 +364,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
-- 13.2.0.42
+- 6.2.0.42
 - 5.16.1.24
 - 5.10.0.157
 - 5.8.0.0
