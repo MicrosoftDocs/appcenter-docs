@@ -16,11 +16,13 @@ ms.reviewer: vigimm
 
 In this document, you'll learn how to integrate App Center Build and App Center Test to run your latest successful build on real devices. 
 
-## Configuring your build
-For the most part, you can configure your app however you want; but for device testing it must be:
-   - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
-   - A device build.
+## Supported Configurations
+For the most part, you can configure your app however you want; but for App Center device testing it must:
+   - Be an [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app
+   - Generate an app package compatible with running on physical devices
+   - Android apps require Internet permissions for the test infrastructure to communicate with your app. Make sure to declare internet permissions in your app manifest
 
+## Configuring your build
 1. Log into https://appcenter.ms
 2. Create your app by going to **Add new > Add new app**. More details: [Creating and Managing Apps](~/dashboard/creating-and-managing-apps.md)
 3. Name your app, select the target OS of your app, and the platform your app uses.
@@ -30,6 +32,8 @@ For the most part, you can configure your app however you want; but for device t
 7. Apply your settings & save your configuration. If you close the settings page without saving it will default back to it's previous settings. If you can't save, usually it's because you've selected invalid or incomplete settings for your configuration; so check for warnings on the configuration page.  
 
 ## Enable Launch Testing
+* Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable **Generate one package(.apk) per selected ABI** in your Android Build options, only one APK is created.
+
 Select the "Test on a real device" switch on the branch configuration page.
 
 The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
@@ -39,11 +43,3 @@ Finding your launch test result can be done in a few ways:
 - On the results page for each Build, a link to the launch test is displayed.
 - Go to **Test** in the left-hand menu, and select **Test Series > Launch-Tests** to view all launch tests for that app. 
 
-## Unsupported configurations
-
-When a build is running, the build configuration is composed of several parts: the build definitions you made in the code or in the IDE, and the settings you have chosen in App Center. The way configurations work is platform and language specific. Below are some known configurations where launch test is not supported.
-
-* Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable **Generate one package(.apk) per selected ABI** in your Android Build options, only one APK is created.
-* Simulator builds for Xamarin apps don't output a binary executable file, and therefore can't be tested. This is the case for both Android and iOS.
-* Android apps without Internet permissions cannot be tested using App Center Test. Internet permissions are needed for the test infrastructure to communicate with your app. In order to use launch test for your Android project, make sure to declare internet permissions in your app manifest
-* iOS unsigned builds don't generate an `.ipa` file and they can't be tested on a real device.
