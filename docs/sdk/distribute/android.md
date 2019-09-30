@@ -64,7 +64,6 @@ If your `minSdkVersion` is lower than `19`, Android requires the [WRITE_EXTERNAL
    > [!NOTE]
    > You don't need to add `maxSdkVersion` if you already use it with a different value or if you already need the `WRITE_EXTERNAL_STORAGE` permission for all API levels.
 
-
 ### 2. Start App Center Distribute
 
 To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
