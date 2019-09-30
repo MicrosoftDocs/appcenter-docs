@@ -20,15 +20,15 @@ The table below lists all the Operating System and Platforms and their supported
 | iOS                    |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
 | macOS                  |  ✅   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | tvOS                   |  ❌   |  ❌  |     ❌     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
-| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
-| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
+| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
 | Windows - UWP          |  ✅   |  ❌  |     ✅     |  ✅\*   |    ✅     |  ❌  |  ❌  |  ✅  |
 | Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
 | Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
 | Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
-| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
-| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ❌  |  ✅  |
+| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ❌  |  ✅  |
 | Unity - UWP            |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
