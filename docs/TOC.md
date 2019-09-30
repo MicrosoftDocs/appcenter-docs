@@ -122,6 +122,7 @@
 ### [Microsoft Intune](distribution/stores/intune.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
+## [Sparkle Updates](distribution/sparkleupdates.md)
 ## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
 ## CodePush
 ### [Introduction](distribution/codepush/index.md)
