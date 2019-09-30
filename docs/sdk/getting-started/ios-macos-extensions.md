@@ -1,3 +1,20 @@
+---
+title: Shared docs for Apple Extensions
+description: Shared docs for Apple Extensions
+keywords: sdk
+author: winnieli
+ms.author: yuli1
+ms.date: 09/30/2019
+ms.topic: article
+ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0
+ms.service: vs-appcenter
+ms.custom: sdk
+ms.tgt_pltfrm: apple
+dev_langs:  
+ - swift
+ - objc
+---
+
 ## 3. Add the App Center SDK modules
 
 The App Center SDK can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) or by manually adding the binaries to your project.
