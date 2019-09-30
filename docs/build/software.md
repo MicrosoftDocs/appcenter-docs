@@ -26,6 +26,8 @@ Previously, Microsoft hosted Mac machines ran with pre-installed JDKs overloaded
 Java developers can now build and run production Java applications using Azul Systems Zulu Enterprise builds of OpenJDK without incurring additional support costs. This new offering is designed to make Microsoft hosted Java builds and deployments worry-free by incorporating quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.
 
 ## Operating System
+> [!NOTE]
+> All supported versions of tools in this document are co-installed on the respective VM.
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
@@ -35,6 +37,7 @@ Builds for iOS and Android apps (including Xamarin and React Native platforms) a
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
 
 ## Installed Software
+
 
 ### Language and Runtime
 
