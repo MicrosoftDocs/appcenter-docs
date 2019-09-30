@@ -66,6 +66,7 @@ Proper .Net Core version will be selected automatically based on Mono version us
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
+| 6.4 | 3.0.100 |
 
 ### 3.4. Xcode Version
 
