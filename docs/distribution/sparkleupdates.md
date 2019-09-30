@@ -15,7 +15,7 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 ## Setup for distribution
 Install the Sparkle [SDK][sparkle-sdk-url].
-As of today (09/2019), Sparkle doesn't support Mac sandboxes. If you require sandboxes, check out the following [fork][sparkle-fork] and this [discussion][github-discussion].
+Sparkle support for Mac sandboxes is under development (09/2019). If you require sandboxes, check out the following [fork][sparkle-fork] and this [discussion][github-discussion].
 
 Navigate to your app settings, click on the three dots menu, and copy the app secret.
 Set [SUFeedURL][sparkle-sufeedurl] to https://api.appcenter.ms/v0.1/public/sparkle/apps/{app_secret} and replace {app_secret} with your app secret.
