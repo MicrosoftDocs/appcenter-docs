@@ -13,7 +13,7 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 # Sparkle Updates
 
-## Setup for beta distribution
+## Setup for distribution
 Install the Sparkle [SDK][sparkle-sdk-url].
 As of today (09/2019), Sparkle doesn't support Mac sandboxes. If you require sandboxes, check out the following [fork][sparkle-fork] and this [discussion][github-discussion].
 
