@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 08/15/2019
+ms.date: 09/30/2019
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -66,6 +66,7 @@ Proper .Net Core version will be selected automatically based on Mono version us
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
+| 6.4 | 3.0.100 |
 
 ### 3.4. Xcode Version
 
