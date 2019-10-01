@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/19/2019
+ms.date: 09/30/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -77,7 +77,7 @@ Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/
 
 ## Upcoming diagnostics updates for UWP apps
 
-The App Center team is actively working on improving diagnostics support for UWP apps and addressing the limitations and gaps mentioned above. This section details the upcoming changes you can expect to see in the upcoming weeks. 
+The App Center team is actively working on improving diagnostics support for UWP apps to address the limitations and gaps mentioned above. This section details the improvements you can expect to see in the upcoming weeks. 
 
 ### What improvements can I expect?
 
@@ -92,22 +92,19 @@ The new and improved diagnostics experience for UWP apps includes support for bo
 - Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
 - Ability to download crash and error reports.
 
-You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md). 
+You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
 ### What is the transition experience?
 
-After you update to the new UWP SDK (ADD LINK TO SDK RELEASE), you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
+After you update to the App Center UWP SDK Version 2.5.0, you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
 
-(INSERT SCREENSHOT WHEN AVAILABLE)
+Your exsiting crashes data can still be viewed in the UI and returned via APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash).
 
-These old crashes can still be viewed in the UI and returned via our crashes APIs listed here: https://openapi.appcenter.ms/#/crash. 
-
-For the new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the errors section: https://openapi.appcenter.ms/#/errors. Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+For new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
 
 ### What happens after the transition?
 
-We will stop supporting the old legacy experience (ADD ACTUAL DATE WHEN WE HAVE ETA) 90 days after we release the new experience. Please make sure your app is using the latest Windows App Center SDK and that you are using the new errors APIs. If you need help or have questions about the transition, you may contact our support team. 
-
+We will stop supporting the old legacy experience on January 20th, 2020. We encourage you to upgrade to the 2.5.0 SDK once it is released and start using the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
 
 ## WinRT, Silverlight, and Other Platforms
 
