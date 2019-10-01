@@ -106,7 +106,7 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 To enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
 
 ```csharp
-Distribute.SetEnabledForDebbugableBuild(true);
+Distribute.SetEnabledForDebuggableBuild(true);
 ```
 
 ##### Xamarin.Forms
