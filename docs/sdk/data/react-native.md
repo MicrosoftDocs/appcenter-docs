@@ -4,7 +4,7 @@ description: How to configure App Center data for React Native
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 07/29/2019
+ms.date: 10/01/2019
 ms.topic: article
 ms.assetid: 4076c411-5a5d-4331-a024-4893031ebc7f
 ms.service: vs-appcenter
