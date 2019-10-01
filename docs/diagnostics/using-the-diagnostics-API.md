@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 09/24/2019
+ms.date: 10/01/2019
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -17,10 +17,10 @@ App Center Diagnostics supports multiple API functionalities listed under the cr
 
 ## Transitioning to the new APIs
 
-With our App Center Diagnostics General Availability announcement last year and our UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
+With our App Center Diagnostics General Availability announcement last year and our upcoming UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
 
 > [!NOTE]
-> For UWP apps, you can still use the old crashes APIs marked as deprecated. Once we release a new SDK for UWP apps, these APIs will continue to work for legacy crashes from older versions of the App Center SDK but you will need to use the new APIs under `/errors` to access the new crashes and errors data. 
+> For UWP apps, you can still use the old crashes APIs marked as deprecated. Once we release a the 2.5.0 SDK for UWP, you will need to use the new APIs under `/errors` to access the new crashes and errors data. Learn more in our [Windows transition docs](~/windows-support.md#upcoming-diagnostics-updates-for-uwp-apps).
 
 There are three types of crashes APIs:
 
