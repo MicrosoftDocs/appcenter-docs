@@ -77,7 +77,7 @@ Follow the [Windows packaging documentation](https://docs.microsoft.com/windows/
 
 ## Upcoming diagnostics updates for UWP apps
 
-The App Center team is actively working on improving diagnostics support for UWP apps to address the limitations and gaps mentioned above. This section details the improvements you can expect to see in the upcoming weeks. 
+The App Center team is actively working on improving our diagnostics support for UWP apps to address the limitations and gaps mentioned above. This section details the improvements and transition you can expect to see in the upcoming weeks. 
 
 ### What improvements can I expect?
 
@@ -104,7 +104,7 @@ For new crashes and errors data displayed in the new Diagnostics UI, you will ne
 
 ### What happens after the transition?
 
-We will stop supporting the old legacy experience on January 20th, 2020. We encourage you to upgrade to the 2.5.0 SDK once it is released and start using the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
+The old legacy experience will be disabled on January 20th, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
 
 ## WinRT, Silverlight, and Other Platforms
 
