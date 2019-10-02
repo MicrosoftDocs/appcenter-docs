@@ -12,6 +12,35 @@ ms.custom: build
 ---
 
 # Environment variables
+Environment variables can be used to manage your [build script tasks](~/build/custom/scripts/index.md) more easily and efficiently. You can either declare your own environment variables for use in Build, or you can leverage App Center's predefined variables. 
+
+## Pre-Defined variables
+
+| **General variables**             | **Description**                             |
+| --------------------------------- | ------------------------------------------- |
+| `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
+| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
+| `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
+| `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
+| `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
+| <br> **iOS specific**             | |
+| `APPCENTER_XCODE_PROJECT`         | Selected Xcode project                      |
+| `APPCENTER_XCODE_SCHEME`          | Selected Xcode scheme                       |
+| <br> **Android specific**         | |
+| `APPCENTER_ANDROID_VARIANT`       | Selected Android variant                    |
+| `APPCENTER_ANDROID_MODULE`        | Selected Android module                     |
+| <br> **UWP specific**             | |
+| `APPCENTER_UWP_SOLUTION`          | Selected solution                           |
+| `APPCENTER_UWP_CONFIGURATION`     | Selected configuration                      |
+| <br> **Xamarin specific**         | |
+| `APPCENTER_XAMARIN_PROJECT`       | Selected project                            |
+| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration                      |
+| <br> **React Native specific**    | |
+| `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
+
+[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+
+## Variables declared in Build Configuration
 
 Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. Create your environment variables in the build configuration and use them in your build, for example, to access an API key, a webhook token or other secrets.
 
@@ -23,8 +52,7 @@ The values of variables can be encrypted by clicking on the lock icon so they wo
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
 
 ## Access the variables
-
-Environment variables can be consumed during the build process. Depending on the toolsets, you're using the syntax is different.
+Pre-set environment variables can be consumed during the build process. Depending on the toolset you're using, the syntax is different.
 
 > [!NOTE]
 > The correct way to consume environment variables depends on the toolchain used.

@@ -17,10 +17,8 @@ You can add up to three custom build steps that run at pre-defined stages during
 
 You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
 
-When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
-
 > [!WARNING]
-> Every time you modify the project's build scripts, you must click the **Save** or **Save & Build** button to save the branch configuration to apply the changes.
+> When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 
@@ -93,30 +91,5 @@ To run scripts post-build, add the following file next to the project file in th
 
 - **appcenter-post-build.ps1** (PowerShell for UWP)
 
-## App Center variables
-
-We set the following environment variables, so you can access them from your build scripts.
-
-| **General variables**             | **Description**                             |
-| --------------------------------- | ------------------------------------------- |
-| `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
-| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
-| `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
-| `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
-| `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
-| <br> **iOS specific**             | |
-| `APPCENTER_XCODE_PROJECT`         | Selected Xcode project                      |
-| `APPCENTER_XCODE_SCHEME`          | Selected Xcode scheme                       |
-| <br> **Android specific**         | |
-| `APPCENTER_ANDROID_VARIANT`       | Selected Android variant                    |
-| `APPCENTER_ANDROID_MODULE`        | Selected Android module                     |
-| <br> **UWP specific**             | |
-| `APPCENTER_UWP_SOLUTION`          | Selected solution                           |
-| `APPCENTER_UWP_CONFIGURATION`     | Selected configuration                      |
-| <br> **Xamarin specific**         | |
-| `APPCENTER_XAMARIN_PROJECT`       | Selected project                            |
-| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration                      |
-| <br> **React Native specific**    | |
-| `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
-
-[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+## Environment Variables
+You can use pre-defined, custom or in-script environment variables to help write your Build scripts, see our [Environment Variables guide](~/build/custom/variables/index.md) for more info. 
