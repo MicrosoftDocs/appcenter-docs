@@ -13,7 +13,7 @@ ms.custom: hockeyapp
 
 # Shared Distribution Groups from HockeyApp
 
-In App Center, shared distribution groups from HockeyApp will only be available to organizations since shared distribution groups are not supported for user accounts. Distribution groups that were created in HockeyApp are now equal to App Center distribution groups. The testers can now be managed only in App Center. HockeyApp apps that haven't been moved to App Center yet can be controlled in HockeyApp only. Move the apps to be able to fully manage them as part of a shared distribution group in App Center.
+Distribution groups that were created in HockeyApp are now equal to App Center distribution groups. In App Center, shared distribution groups from HockeyApp are only available to organizations. App Center does not support shared distribution groups for user accounts. The testers of a HockeyApp distribution group can now be managed in App Center. Apps that were moved to or created in App Center can also be managed in App Center. HockeyApp apps that haven't been moved can be controlled only in HockeyApp. Move the apps so you can fully manage them as part of a shared distribution group in App Center.
 
 > [!NOTE]
 > To retain the share functionality of your distribution groups across apps on App Center make sure the distribution groups assigned to an app are owned by the same organization than the app. [Read more](~/transition/moving/incompatibilities.md#distribution-groups) about the limitation.
