@@ -352,6 +352,7 @@
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
 ## Stage 3 - Switching Accounts
 ### [Introduction](transition/accounts/index.md)
+### [Distribution Groups](transition/accounts/distribution-groups.md)
 ## [API Migration](transition/api.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
