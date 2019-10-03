@@ -133,7 +133,8 @@ This call allocates space on our backend for your symbols and returns a `symbol_
 3. Make a `PATCH` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
 
 
-Note: When you building the UWP app with AppCenter you don't have to manually download your symbols file and upload it to diagnostics, indeed it would be forwarded to diagnostics automatically. So if the app crash, then crash appear symbolicated"
+> [!NOTE]
+> When you building the UWP app with AppCenter you don't have to manually download your symbols file and upload it to diagnostics, indeed it would be forwarded to diagnostics automatically. So if the app crash, then crash appear symbolicated.
 
 ## WinRT, Silverlight, and Other Platforms
 
