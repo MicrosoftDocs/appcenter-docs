@@ -4,7 +4,7 @@ description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
 author: derpixeldan
 ms.author: daadam
-ms.date: 11/06/2017
+ms.date: 10/02/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: mobile-center
@@ -12,7 +12,7 @@ ms.custom: build
 ---
 
 # Environment variables
-Environment variables can be used to manage your [build script tasks](~/build/custom/scripts/index.md) more easily and efficiently. You can either declare your own environment variables for use in Build, or you can leverage App Center's predefined variables. 
+Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md) more easily and efficiently. You can declare your own environment variables for use in Build, or leverage App Center's predefined variables. 
 
 ## Pre-Defined variables
 
@@ -38,13 +38,13 @@ Environment variables can be used to manage your [build script tasks](~/build/cu
 | <br> **React Native specific**    | |
 | `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
 
-[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Configuration shows detected build scripts"
 
 ## Variables declared in Build Configuration
 
-Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. Create your environment variables in the build configuration and use them in your build, for example, to access an API key, a webhook token or other secrets.
+Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
 
-The values of variables can be encrypted by clicking on the lock icon so they won't get exposed to the build configuration and appear obfuscated in the build logs. Keep in mind that you can't view or edit variables with an encrypted value once they're saved, however, you can always delete and re-create them and for those with a non-encrypted value you can still encrypt them at a later time.
+The values of variables can be encrypted by clicking on the lock icon, so they are hidden to the build configuration and obfuscated in the build logs. Keep in mind that you can't view or edit variables with an encrypted value once they're saved; however, they can be deleted and re-created. For variables with a non-encrypted value you can encrypt them later.
 
 >[!NOTE]
 > 'Platform' is reserved from use as an environment variable.
@@ -75,7 +75,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
 
 ## NuGet.config for Xamarin or UWP
 
-If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed which requires authentication. In the `NuGet.config` you can simply consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` please read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
+If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```xml
 <packageSourceCredentials>
