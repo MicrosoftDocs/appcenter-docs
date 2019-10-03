@@ -94,6 +94,7 @@ The new and improved diagnostics experience for UWP apps includes support for bo
 
 You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
+
 ### What is the transition experience?
 
 After you update to the App Center UWP SDK Version 2.5.0, you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
@@ -105,6 +106,34 @@ For new crashes and errors data displayed in the new Diagnostics UI, you will ne
 ### What happens after the transition?
 
 The old legacy experience will be disabled on January 20th, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
+
+### Symbolication
+
+UWP stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes. To get these memory addresses translated you need to upload a pdb package to App Center, which contains all information required for symbolication. You can learn more about UWP symbol files in (Microsoft's UWP symbols documentation)[https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019].
+
+#### Finding the `.pdb` file
+1. 
+2. 
+3. 
+
+#### Uploading symbols
+
+##### App Center Portal
+1. Create a ZIP file for the pdb package on your machine
+2. Log into App Center and select your app
+3. In the left menu, navigate to the **Diagnostics** section
+4. Select **Symbols**
+5. In the top-right corner, click **Upload symbols** and upload the zip file
+6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
+
+##### App Center API
+1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create). 
+This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property.
+2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk. This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
+3. Make a `PATCH` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
+
+
+Note: When you building the UWP app with AppCenter you don't have to manually download your symbols file and upload it to diagnostics, indeed it would be forwarded to diagnostics automatically. So if the app crash, then crash appear symbolicated"
 
 ## WinRT, Silverlight, and Other Platforms
 
