@@ -36,4 +36,4 @@ ms.tgt_pltfrm: uwp
 
 5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
-7. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
+7. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent
