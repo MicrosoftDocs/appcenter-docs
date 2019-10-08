@@ -48,7 +48,7 @@ Opening a pull request on GitHub will start an App Center build, copying the bui
 Add a new app by adding repository access to your GitHub app installation. [Configure your GitHub app installation](https://github.com/settings/installations) and select the new repository to grant access to and connect. After clicking **Save** you will be redirected to App Center to configure your new app.
 
 > [!NOTE]
-> The best way to take advantage of this is to choose access for **Only select repositories** and add each repository as you want to configure it.
+> The best way to take advantage of this is to choose access for **Only select repositories** and add each repository as you want to configure it. You may also need to add private subrepositories if your build depends on them. 
 
 Additionally after you install the GitHub app, App Center sends a welcome email. Connect a new repository via the GitHub app by clicking the **Connect your repository** button in the email and repeat the process to create a new connection.
 
