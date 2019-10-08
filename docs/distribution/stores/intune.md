@@ -48,3 +48,12 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message.
 
 For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page.
+
+## Troubleshooting
+
+### Failed to publish app to Intune Store. The app was previously published as ***
+**Root Cause**
+This error can happen when you try to publish using an app you've already published to Intune with a different app name.  App Center uses the name of the app in App Center when publishing to Intune. If the name is different from what you have in Intune, Intune rejects with that error message.
+
+**Solution**
+In order to fix this problem, you need to rename or create a new app that exactly matches what you have in Intune. If you see the error message, try to rename your App Center app to what follows after ...published as '***'. 
