@@ -30,7 +30,7 @@ There are three types of crashes APIs:
 
 ### Crashes APIs that map to new APIs
 
-Old APIs that now map to new APIs are deprecated for all apps except for UWP. You must use the new diagnostics APIs as listed in the table below. 
+Old APIs listed in the crashes section are deprecated for all app platforms except for UWP apps. You must use the new diagnostics APIs as listed in the table below. 
 
 
 | Old Crashes APIs                                               | New Crashes API        |
