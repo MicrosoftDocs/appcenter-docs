@@ -4,7 +4,7 @@ description: A description of the search functionality in Diagnostics
 keywords: crashes, errors, search
 author: blparr
 ms.author: blparr
-ms.date: 04/17/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: 92ABCD39-D03A-4560-BE32-31C44DE1EAC6
 ms.service: vs-appcenter
@@ -44,6 +44,7 @@ For crash and error reports:
 - User ID
 - Method
 - Class
+- Exception Type
 - Reason
 - Model
 - OS Version
@@ -52,6 +53,7 @@ For crash and error groups:
 
 - Method
 - Class
+- Exception Type
 - Reason
 
 ## Considerations
