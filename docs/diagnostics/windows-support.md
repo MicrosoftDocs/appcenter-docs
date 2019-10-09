@@ -98,9 +98,9 @@ You can learn more about each feature in the [App Center diagnostics documentati
 
 ### What is the transition experience?
 
-After you update to the App Center UWP SDK Version 2.5.0, you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. For new crashes and errors data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+After you update to the App Center UWP SDK Version 2.5.0, you will see crash and error data coming into the App Center Diagnostics portal in a new and improved UI. For crash and error data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api.md#transitioning-to-the-new-apis). 
 
-All crashes from the old SDK will be still be available and displayed in a new section under Diagnostics called "Legacy issues". You can continue to use the APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash) to retrieve this data.
+All crashes from older SDK versions will be still be available and displayed in a new section under Diagnostics called "Legacy issues". You can continue to use the APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash) to retrieve this data.
 
 ### What happens after the transition?
 
@@ -132,4 +132,4 @@ This call allocates space on our backend for your symbols and returns a `symbol_
 
 ## WinRT, Silverlight, and Other Platforms
 
-App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. You can find more details about future Windows platform support in App Center in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please leave your [feedback](../../../help.md).
+App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. You can find more details about future Windows platform support in App Center in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).
