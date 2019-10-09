@@ -17,7 +17,7 @@ Sparkle is a software update framework for [macOS](http://sparkle-project.org) a
 
 ## Setup for distribution
 
-Install the Sparkle SDK in your app and configure the App Center Sparkle feed. To access the Sparkle feed of an app in App Center, navigate to your app settings, click on the three dots menu, and copy the app secret. Set [SUFeedURL](https://sparkle-project.org/documentation/customization/) to `https://api.appcenter.ms/v0.1/public/sparkle/apps/{app_secret}` and replace `{app_secret}` with your app secret. Build your app and release it to a [public distribution group](~/distribution/groups#public-distribution-groups) in App Center.
+Install the Sparkle SDK in your app and configure the App Center Sparkle feed. To access the Sparkle feed of an app in App Center, navigate to your app settings, click on the three dots menu, and copy the app secret. Set [SUFeedURL](https://sparkle-project.org/documentation/customization/) to `https://api.appcenter.ms/v0.1/public/sparkle/apps/{app_secret}` and replace `{app_secret}` with your app secret. Build your app and release it to a [public distribution group](~/distribution/groups.md#public-distribution-groups) in App Center.
 
 Sparkle support for sandboxes in macOS is under development (09/2019). If you require sandboxes, check out the [following fork](https://github.com/tumult/Sparkle) and [this discussion](https://github.com/andymatuschak/Sparkle/pull/165).
 
