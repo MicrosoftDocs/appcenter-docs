@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -104,11 +104,11 @@ All crashes from the old SDK will be still be available and displayed in a new s
 
 ### What happens after the transition?
 
-The old legacy experience will be disabled on January 20th, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
+The legacy experience will be disabled on January 20th, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
 
 ### Symbolication
 
-UWP stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes. To get these memory addresses translated you need to upload a pdb package to App Center, which contains all information required for symbolication. You can learn more about UWP symbol files in (Microsoft's UWP symbols documentation)[https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019].
+UWP apps built in the release configuration have stack traces that only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes. To get these memory addresses translated you need to upload a pdb package to App Center, which contains all information required for symbolication. You can learn more about UWP symbol files in (Microsoft's UWP symbols documentation)[https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019].
 
 #### Uploading symbols
 
@@ -116,7 +116,7 @@ UWP stack traces only contain memory addresses and don’t show class names, met
 1. Create a ZIP file for the pdb package on your machine
 2. Log into App Center and select your app
 3. In the left menu, navigate to the **Diagnostics** section
-4. Select **Symbols**
+4. Select the **Unsymbolicated** tab
 5. In the top-right corner, click **Upload symbols** and upload the zip file
 6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
 
