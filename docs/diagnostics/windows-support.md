@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Windows Support
 
-App Center currently supports diagnostics for WPF and WinForms applications targeting .NET Framework or .NET Core 3, and UWP apps released through the Windows store. This page details the current level of support and the upcoming changes for UWP apps. For WPF and WinForms apps, refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md) pages for more information.
+App Center currently supports diagnostics for UWP apps distributed through the Windows store and WPF and WinForms applications targeting .NET Framework or .NET Core 3. This section details the current level of support and the upcoming changes for UWP apps. Refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md) pages for more information on WPF and WinForms applications.
 
 ## Universal Windows Platform
 
@@ -83,25 +83,24 @@ The App Center team is actively working on improving our diagnostics support for
 
 The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
 
-- A full symbolication experience that allows you to upload symbols in App Center.
-- Support for handled exceptions.
-- Number of users affected per crash or error group.
+- A full symbolication experience that allows you to upload symbols in App Center
+- Support for handled exceptions
+- Number of users affected per crash or error group
 - Ability to add annotations per crash or error group
-- Ability to mark crash and error groups as open, closed, or ignored.
-- Ability to attach, view and download one binary and one text attachment to your crash reports.
-- Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
-- Ability to download crash and error reports.
+- Ability to mark crash and error groups as open, closed, or ignored
+- Ability to download crash and error reports
+- Ability to attach, view and download one binary and one text attachment to your crash reports
+- Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in
+
 
 You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
 
 ### What is the transition experience?
 
-After you update to the App Center UWP SDK Version 2.5.0, you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. All crashes from the old SDK will be displayed in a new section under Diagnostics, called "Legacy issues".
+After you update to the App Center UWP SDK Version 2.5.0, you will see crashes and errors data coming into the App Center Diagnostics portal in a new and improved UI. For new crashes and errors data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
 
-Your exsiting crashes data can still be viewed in the UI and returned via APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash).
-
-For new crashes and errors data displayed in the new Diagnostics UI, you will need to use APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api#transitioning-to-the-new-apis.md). 
+All crashes from the old SDK will be still be available and displayed in a new section under Diagnostics called "Legacy issues". You can continue to use the APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash) to retrieve this data.
 
 ### What happens after the transition?
 
@@ -110,11 +109,6 @@ The old legacy experience will be disabled on January 20th, 2020. Please upgrade
 ### Symbolication
 
 UWP stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes. To get these memory addresses translated you need to upload a pdb package to App Center, which contains all information required for symbolication. You can learn more about UWP symbol files in (Microsoft's UWP symbols documentation)[https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019].
-
-#### Finding the `.pdb` file
-1. 
-2. 
-3. 
 
 #### Uploading symbols
 
@@ -134,7 +128,7 @@ This call allocates space on our backend for your symbols and returns a `symbol_
 
 
 > [!NOTE]
-> When you building the UWP app with AppCenter you don't have to manually download your symbols file and upload it to diagnostics, indeed it would be forwarded to diagnostics automatically. So if the app crash, then crash appear symbolicated.
+> When you build UWP apps with App Center Build, you don't need to manually download your symbols file and upload it App Center Diagnostics. The symbol files are automatically forwarded to the Diagnostics service.
 
 ## WinRT, Silverlight, and Other Platforms
 
