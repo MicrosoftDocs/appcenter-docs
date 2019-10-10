@@ -23,3 +23,4 @@ Not all features or functionality is supported on App Center in the same way as 
 
 * [Incompatibilities](incompatibilities.md)
 * [Data being moved](data.md)
+* [Move multiple apps at once](bulk.md)
