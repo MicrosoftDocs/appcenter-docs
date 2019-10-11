@@ -37,18 +37,18 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click _Move to Trash_ button.
+1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click the **Move to Trash** button.
 
 1. Open the **Build Phases** tab and locate the **Run Script** section. Delete the `/usr/local/bin/carthage copy-frameworks` from any **Run Script**s.
 
 1. If you added a build phase to warn about outdated dependencies, open the **Build Phases** tab and locate the **Run Script** section. Delete any `/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null` from any **Run Script**s.
 
-### 1.2 Add new App Center SDK
+### 1.2 Add the new App Center SDK
 
-The App Center SDK supports to be integrated via Cocoapods, Carthage and using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
+The App Center SDK supports integration via Cocoapods, Carthage, and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
-> Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+> The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------

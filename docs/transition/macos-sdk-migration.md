@@ -43,7 +43,7 @@ If you have added the SDK using **Carthage**, follow these steps:
 
 1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click _Move to Trash_ button.
+1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click the **Move to Trash** button.
 
 ### 1.2 Add new App Center SDK
 
@@ -63,7 +63,7 @@ pod 'AppCenter/Crashes'
 The App Center SDK supports to be integrated via Cocoapods, Carthage and using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/macos.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
-> Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+> The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
