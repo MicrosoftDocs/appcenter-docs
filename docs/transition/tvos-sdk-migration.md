@@ -3,7 +3,7 @@ title: HockeySDK for tvOS Migration
 description: Migrate from the HockeySDK to App Center SDK
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: 44a08a47-85e2-4456-9b15-d524037df036
 ms.service: vs-appcenter
@@ -37,44 +37,23 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Do not click _Move to Trash_ button, just click the _Remove reference_ button.
+1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click _Move to Trash_ button.
 
-1. Open the **Build Phases** tab and locate the **Run Script** section. Delete the **Run Script** that copies the **Carthage** frameworks `/usr/local/bin/carthage copy-frameworks`.
+1. Open the **Build Phases** tab and locate the **Run Script** section. Delete the `/usr/local/bin/carthage copy-frameworks` from any **Run Script**s.
 
-1. If you added a build phase to warn about outdated dependencies, open the **Build Phases** tab and locate the **Run Script** section. Delete the **Run Script** that warns when there are outdated dependencies `/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null`.
-
-1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the file system.
+1. If you added a build phase to warn about outdated dependencies, open the **Build Phases** tab and locate the **Run Script** section. Delete any `/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null` from any **Run Script**s.
 
 ### 1.2 Add new App Center SDK
 
-#### Podfile
-
-Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
-
-Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on App Center. It will get pulled in automatically.
-
-```ruby
-# Use the following line to pull in both App Center Analytics and Crashes.
-pod 'AppCenter'
-
-# Use the following lines if you want to specify which service you want to use.
-pod 'AppCenter/Analytics'
-pod 'AppCenter/Crashes'
-```
+The App Center SDK supports to be integrated via Cocoapods, Carthage and using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
-> The App Center SDK is designed with a modular approach – you can choose which services you want to integrate. See the equivalences in the next table:
+> Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
 `MetricsManager` | `Analytics`
 `CrashManager`   | `Crashes`
-
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [integration by copying binaries](~/sdk/getting-started/tvos#33-integration-by-copying-the-binaries-into-your-project) documentation.
-
-#### Carthage
-
-See the [App Center tvOS documentation for integrating with Carthage](~/sdk/getting-started/tvos#32-integration-via-carthage).
 
 ## 2. Update the SDK setup code
 

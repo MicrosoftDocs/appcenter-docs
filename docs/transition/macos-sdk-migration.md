@@ -3,7 +3,7 @@ title: HockeySDK for macOS Migration
 description: Migrate from the HockeySDK to App Center SDK for macOS
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: b2edce7d-f0d6-4716-9a34-32da1ff2bc2d
 ms.service: vs-appcenter
@@ -43,13 +43,9 @@ If you have added the SDK using **Carthage**, follow these steps:
 
 1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Do not click _Move to Trash_ button, just click the _Remove reference_ button.
-
-1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the file system.
+1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click _Move to Trash_ button.
 
 ### 1.2 Add new App Center SDK
-
-#### Podfile
 
 Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
 
@@ -64,19 +60,15 @@ pod 'AppCenter/Analytics'
 pod 'AppCenter/Crashes'
 ```
 
+The App Center SDK supports to be integrated via Cocoapods, Carthage and using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/macos.md#3-add-the-app-center-sdk-modules).
+
 > [!NOTE]
-> The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+> Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
 `MetricsManager` | `Analytics`
 `CrashManager`   | `Crashes`
-
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [App Center Documentation](~/sdk/getting-started/macos.md#33-integration-by-copying-the-binaries-into-your-project).
-
-#### Carthage
-
-See the [App Center macOS documentation for integrating with Carthage](~/sdk/getting-started/macos#32-integration-via-carthage).
 
 ## 2. Update the SDK setup code
 
