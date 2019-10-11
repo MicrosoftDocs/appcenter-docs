@@ -41,11 +41,9 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line
 
 1. Remove HockeySDK references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click the **Move to Trash** button.
+1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the XCode project and click the **Move to Trash** button.
 
-1. Open the **Build Phases** tab and locate the **Run Script** section. Delete the `/usr/local/bin/carthage copy-frameworks` from any **Run Script**s.
-
-1. If you added a build phase to warn about outdated dependencies, open the **Build Phases** tab and locate the **Run Script** section. Delete any `/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null` from any **Run Script**s.
+1. Open the **Build Phases** tab and locate the **Run Script** section. Remove HockeyApp from the `input.xcfilelist` and `output.xcfilelist`.
 
 ### 1.2 Add the new App Center SDK
 

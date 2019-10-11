@@ -41,9 +41,9 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-Mac"` 
 
 If you have added the SDK using **Carthage**, follow these steps:
 
-1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
+1. Remove HockeySDK references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Click the **Move to Trash** button.
+1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the XCode project and click the **Move to Trash** button.
 
 ### 1.2 Add new App Center SDK
 
