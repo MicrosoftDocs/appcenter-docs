@@ -50,7 +50,7 @@ Custom environment variables allow you to define sensitive information that is r
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
 
 #### Encrypting variables
-Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editible once they're saved, but they can be deleted & re-created. 
+Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editable once they're saved, but they can be deleted & re-created. 
 
 Non-encrypted values can be encrypted at any time.
 
