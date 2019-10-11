@@ -39,7 +39,7 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line
 
 #### Carthage
 
-If you have added the SDK using **Carthage**, make sure to remove the line `github "bitstadium/HockeySDK-iOS"` from your Cartfile and run `carthage update`.
+If you have added the SDK using **Carthage**, remove the line `github "bitstadium/HockeySDK-iOS"` from your `Cartfile` and clean up the dependencies from your project.
 
 ### 1.2 Add the App Center SDK
 
