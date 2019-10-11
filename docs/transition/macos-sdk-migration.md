@@ -45,20 +45,7 @@ If you have added the SDK using **Carthage**, follow these steps:
 
 1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the XCode project and click the **Move to Trash** button.
 
-### 1.2 Add new App Center SDK
-
-Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
-
-Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
-
-```ruby
-# Use the following line to use App Center Analytics and Crashes.
-pod 'AppCenter'
-
-# Use the following lines if you want to specify which service you want to use.
-pod 'AppCenter/Analytics'
-pod 'AppCenter/Crashes'
-```
+### 1.2 Add the new App Center SDK
 
 The App Center SDK supports to be integrated via Cocoapods, Carthage and using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/macos.md#3-add-the-app-center-sdk-modules).
 
