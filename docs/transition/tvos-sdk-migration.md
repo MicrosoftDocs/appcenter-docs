@@ -47,11 +47,11 @@ The App Center SDK supports integration via Cocoapods, Carthage, and by using th
 
 > [!NOTE]
 > The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
-
-HockeyApp class  | App Center module
----------------- | -----------------
-`MetricsManager` | `Analytics`
-`CrashManager`   | `Crashes`
+> 
+> HockeyApp class  | App Center module
+> ---------------- | -----------------
+> `MetricsManager` | `Analytics`
+> `CrashManager`   | `Crashes`
 
 ## 2. Update the SDK setup code
 
