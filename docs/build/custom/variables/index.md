@@ -4,7 +4,7 @@ description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
 author: derpixeldan
 ms.author: daadam
-ms.date: 10/02/2019
+ms.date: 10/10/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: mobile-center
@@ -12,7 +12,7 @@ ms.custom: build
 ---
 
 # Environment variables
-Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md) more easily and efficiently. You can declare your own environment variables for use in Build, or leverage App Center's predefined variables. 
+Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own. 
 
 ## Pre-Defined variables
 
@@ -44,7 +44,7 @@ Environment variables help manage your [build script tasks](~/build/custom/scrip
 
 Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
 
-The values of variables can be encrypted by clicking on the lock icon, so they are hidden to the build configuration and obfuscated in the build logs. Keep in mind that you can't view or edit variables with an encrypted value once they're saved; however, they can be deleted and re-created. For variables with a non-encrypted value you can encrypt them later.
+Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. You aren't able to view or edit encrypted values once they're saved, but they can be deleted & re-created. Non-encrypted values can be encrypted at any time.
 
 >[!NOTE]
 > 'Platform' is reserved from use as an environment variable.
@@ -75,7 +75,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
 
 ## NuGet.config for Xamarin or UWP
 
-If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
+If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```xml
 <packageSourceCredentials>
