@@ -139,3 +139,158 @@ You can set your diagnostics data retention to 28 or 90 days via our APIs, as li
 If you change your settings from 28 to 90 days, older diagnostics data will not be backfilled. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started. 
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
+
+
+
+## Upload reports to App Center
+
+You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI. 
+
+To upload a report, you need to call the App Center ingestion endpoint with the headers:
+
+- `Content Type`: describes the format of the body. App Center currently only support JSON format. 
+- `App Secret`: this is the unique identifier associated with each app. You can find this in your app settings page. 
+- `Install ID`: this can be any GUID used to keep track of counts
+
+
+You can find examples of how to upload a crash report, error report, and attachment below.
+
+(TODO link swagger somewhere here)
+
+### Upload a crash report
+
+```shell
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
+  "logs:": 
+  [
+    {
+      "type": "managedError",
+      "timestamp": "2019-10-08T04:22:23.516Z",
+      "appLaunchTimestamp": "2019-09-29T22:22:23.516Z",
+      "processId": "123",
+      "id": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
+      "fatal": true,
+      "processName": "com.microsoft.appcenter.demo.project",
+      "device": {
+        "appVersion": "12.0",
+        "appBuild": "1",
+        "sdkName": "appcenter.android",
+        "sdkVersion": "1.0.0",
+        "osName": "android",
+        "osVersion": "9.3",
+        "model": "Pixel",
+        "locale": "en-US"
+      },
+      "userId": "TestID",
+      "exception": {
+          "type": "CustomerIssue",
+          "frames": []
+      }
+    }
+```
+
+
+### Upload an error report
+
+Handled errors are only supported for Xamarin, Unity, WPF and WinForms apps today. 
+
+```shell
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
+  "logs:": 
+  [
+    {
+      "type": "handledError",
+      "timestamp": "2019-10-08T06:22:23.516Z",
+      "appLaunchTimestamp": "2019-09-29T22:22:23.516Z",
+      "id": "118dee14-9193-4ac3-9ef0-f6c11b43f2c4",
+      "device": {
+        "appVersion": "11.0",
+        "appBuild": "1",
+        "sdkName": "appcenter.android",
+        "sdkVersion": "1.0.0",
+        "osName": "android",
+        "osVersion": "9.3",
+        "model": "Pixel",
+        "locale": "en-US"
+      },
+      "userId": "TestID",
+      "exception": {
+          "type": "System.IO.IOException",
+          "frames": []
+      }
+    }
+  ]
+}'
+```
+
+
+### Upload attachments
+
+Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls. The `errorId` property is the unique identifier that associates the attachment to the right crash report.
+
+Below is an example of uploading a crash report and an attachment in one call.
+
+
+```shell
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
+  "logs:": [
+    {
+      "type": "managedError",
+      "timestamp": "2019-10-01T02:22:23.516Z",
+      "appLaunchTimestamp": "2019-09-29T22:22:23.516Z",
+      "id": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
+      "fatal": true,
+      "processName": "com.microsoft.appcenter.sasquatch.project",
+      "device": {
+        "appVersion": "13.0",
+        "appBuild": "1",
+        "sdkName": "appcenter.android",
+        "sdkVersion": "1.0.0",
+        "osName": "android",
+        "osVersion": "9.3",
+        "model": "Pixel",
+        "locale": "en-US"
+      },
+      "userId": "118dee14",
+      "fatal": true,
+      "exception": {
+          "type": "CustomerIssue",
+          "frames": []
+      }
+    },
+    {
+      "type": "errorAttachment",
+      "contentType": "text/plain",
+      "timestamp": "2019-10-01T02:22:23.516Z",
+      "data": "aGVsbG8=",
+      "errorId": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
+      "device": {
+        "appVersion": "13.0",
+        "appBuild": "1",
+        "sdkName": "appcenter.android",
+        "sdkVersion": "1.0.0",
+        "osName": "android",
+        "osVersion": "9.3",
+        "model": "Pixel",
+        "locale": "en-US"
+      }
+    }
+  ]
+}'
+```
+
