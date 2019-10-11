@@ -44,12 +44,15 @@ Environment variables help manage your [build script tasks](~/build/custom/scrip
 
 Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
 
-Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. You aren't able to view or edit encrypted values once they're saved, but they can be deleted & re-created. Non-encrypted values can be encrypted at any time.
-
 >[!NOTE]
 > 'Platform' is reserved from use as an environment variable.
 
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
+
+#### Encrypting variables
+Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editible once they're saved, but they can be deleted & re-created. 
+
+Non-encrypted values can be encrypted at any time.
 
 ## Access the variables
 Pre-set environment variables can be consumed during the build process. Depending on the toolset you're using, the syntax is different.

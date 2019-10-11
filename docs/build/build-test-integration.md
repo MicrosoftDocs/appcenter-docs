@@ -32,11 +32,11 @@ For the most part, you can configure your app however you want; but for App Cent
 7. click "Configure" to create a new configuration, or click the wrench icon to edit an existing configuration. 
 8. Apply your settings & save your configuration. 
 
-If you close the settings page without saving, it will default back to its previous settings. If you can't save, usually it's because you've selected invalid or incomplete settings for your configuration; so check for warnings on the configuration page.  
+If you close the settings page without saving, it will default back to its previous settings. Saving is disabled when settings are invalid or missing required information.
 
 ## Enable Launch Testing
 > [!WARNING]
-> Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. If you disable **Generate one package(.apk) per selected ABI** in your Android Build options, only one APK is created.
+> Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. Disable **Generate one package(.apk) per selected ABI** in your Android Build options to resolve the problem.
 
 Select the "Test on a real device" switch on the branch configuration page. The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
 
@@ -54,13 +54,13 @@ You can integrate Build & Test to run a UI test suite with each build of your ap
 - Only UI tests written using Appium (JUnit), Calabash, Espresso, XCUITest, or Xamarin.UITest are currently supported. 
 - Some testing frameworks require additional setup to enable App Center Test support, including [Appium](~/test-cloud/preparing-for-upload/appium.md), [Espresso](~/test-cloud/preparing-for-upload/espresso.md) & [XCUITest](~/test-cloud/preparing-for-upload/xcuitest.md) 
 - Use a Post-Build script to handle any tasks your test suite requires that isn't handled by your app build directly. This might include compiling your test dlls & will include a command to upload your test suite to the Test service.
-- The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Because of this, your Build completion status won't reflect whether the test suite passed or not.
+- The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Your Build completion status won't reflect whether the test suite passed or not.
 
 Step-by-step instructions:
 1. Configure your app, Build & Test trial or license. (You can ignore the "Launch Test" setting in Build).
 2. Confirm that your test suite runs locally on a physical device, and that you can upload it locally to the Test service. 
 3. Write your [post-build script](~/build/custom/scripts/index.md#post-build). [Environment variables](~/build/custom/variables/index.md) can help you write a valid build script.
-4. You must manually save your Build configuration in App Center after the first time you add a build script, or if you change its location in your repository. The build script should be located in the main app project's root folder. 
+4. Save your Build configuration in App Center after the first time you commit a build script, or if you change its location in your repository. The build script should be located in the main app project's root folder. 
 5. Within your build script, make sure to build your test suite if it wasn't already built along with your main app.
 6. Also within your build script, provide and execute an upload command for App Center Test that:
 - Points to all your Test dependencies, including your test dlls, app package & any other requirements of your test such as included datafiles. 
