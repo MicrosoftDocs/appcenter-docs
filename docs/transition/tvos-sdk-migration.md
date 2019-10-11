@@ -35,10 +35,19 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 #### Carthage
 
-> [!NOTE]
-> App Center doesn't support Carthage yet. Please look at [our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to stay up to date on it.
+1. Remove **HockeySDK** references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
+
+1. Remove `HockeySDK.framework` and `HockeySDK.framework.dSYM` reference from the XCode project. Do not click _Move to Trash_ button, just click the _Remove reference_ button.
+
+1. Open the **Build Phases** tab and locate the **Run Script** section. Delete the **Run Script** that copies the **Carthage** frameworks `/usr/local/bin/carthage copy-frameworks`.
+
+1. If you added a build phase to warn about outdated dependencies, open the **Build Phases** tab and locate the **Run Script** section. Delete the **Run Script** that warns when there are outdated dependencies `/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null`.
+
+1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the file system.
 
 ### 1.2 Add new App Center SDK
+
+#### Podfile
 
 Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
 
@@ -62,6 +71,10 @@ HockeyApp class  | App Center module
 `CrashManager`   | `Crashes`
 
 The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [integration by copying binaries](~/sdk/getting-started/tvos#33-integration-by-copying-the-binaries-into-your-project) documentation.
+
+#### Carthage
+
+See the [App Center tvOS documentation for integrating with Carthage](~/sdk/getting-started/tvos#32-integration-via-carthage).
 
 ## 2. Update the SDK setup code
 
