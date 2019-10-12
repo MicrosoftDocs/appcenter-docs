@@ -24,3 +24,11 @@ Sparkle support for sandboxes in macOS is under development (09/2019). If you re
 ## Specify the dsa_signature via API
 
 Once the app is released, you can use the [following endpoint](https://openapi.appcenter.ms/#/distribute/releases_update) to update the dsa_signature of your release. Once updated, you can verify that the feed URL includes the dsa_signature.
+
+## Are you coming from HockeyApp?
+
+Please note that for apps from HockeyApp that haven't been moved yet:
+* Releases uploaded to HockeyApp don't show up in the App Center Sparkle feed.
+* Releases uploaded to App Center don't show up in the HockeyApp Sparkle feed.
+
+For apps that have been moved, all versions that are released to a public distribution group show up in the App Center Sparkle feed (regardless where they were formerly uploaded).
