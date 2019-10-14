@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/22/2019
+ms.date: 10/14/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -149,13 +149,35 @@ You can upload a crash, error, or attachment log to App Center and view the deta
 To upload a report, call the App Center ingestion endpoint with the headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format. 
-- `app-secret`: this is the unique identifier associated with each app. You can find this in your app settings page. 
-- `install-id`: this can be any GUID used to keep track of counts
+- `app-secret`: string that is the unique identifier associated with each app. You can find this in your app settings page. 
+- `install-id`: string that can be any GUID used to keep track of counts.
+
+
+Log properties:
+- `type`: required string with log type - "managedError", "handledError" or "errorAttachment".
+- `timestamp`: optional string with log timestamp date-time e.g '2017-03-13T18:05:42Z'.
+- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g.'2017-03-13T18:05:42Z'. 
+- `processId`: required integer with process identifier
+- `id`: required string with exception identifier
+- `fatal`: required boolean which indicates if the exception resulted in a crash
+- `processName`: required string with the process name
+- `device`: required object with device characteristics
+    - `appVersion`: required string with application version name, e.g. 1.1.0
+    - `appBuild`: required string with application build number, e.g. 42.
+    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.ios", "hockeysdk.android".
+    - `sdkVersion`: required string with version of the SDK in semver format, e.g. "1.2.0" or "0.12.3-alpha.1".
+    - `osName`: required string with OS name, e.g. "android"
+    - `osVersion`: required string with OS version, e.g. "9.3.0"
+    - `model`: optional string with device model, e.g. "iPad2"
+    - `locale`: required string with language code, e.g."en-US"
+- `userId`: optional string used for associating logs with users.
+- `exception`: required object with exception details
+    - `type`: required string with exception type
+    - `frame`: optional array with stack frames
 
 
 You can find examples of how to upload a crash report, error report, and attachment below.
 
-(TODO link swagger somewhere here)
 
 ### Upload a crash report
 
