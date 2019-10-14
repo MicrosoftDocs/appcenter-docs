@@ -174,12 +174,20 @@ Log properties:
 - `exception`: required object with exception details
     - `type`: required string with exception type
     - `frame`: optional array with stack frames
+    - `message`: optional string with exception reason
+    - `stackTrace`: optional string with raw stack trace
+    - `innerException`: optional array with inner exceptions
+    - `wrapperSDKName`: 
+
+
 
 
 You can find examples of how to upload a crash report, error report, and attachment below.
 
 
 ### Upload a crash report
+
+
 
 ```shell
 curl -X POST \
@@ -247,8 +255,32 @@ curl -X POST \
       },
       "userId": "TestID",
       "exception": {
-          "type": "System.IO.IOException",
-          "frames": []
+        "type": "System.IO.IOException",
+        "message": "Server did not respond",
+        "stackTrace": "  at Contoso.Forms.Puppet.FakeService+<>c.<DoStuffInBackground>b__0_0 () [0x00000] in <7ad93f134a5d4c00a8db8be9aa9c0f76>:0 \n  at System.Threading.Tasks.Task`1[TResult].InnerInvoke () [0x0000f] in <b38d4262627948c1b945a72f56ce6466>:0 \n  at System.Threading.Tasks.Task.Execute () [0x00010] in <b38d4262627948c1b945a72f56ce6466>:0 \n--- End of stack trace from previous location where exception was thrown ---\n  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <b38d4262627948c1b945a72f56ce6466>:0 \n  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <b38d4262627948c1b945a72f56ce6466>:0 \n  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <b38d4262627948c1b945a72f56ce6466>:0",
+        "innerExceptions": [
+          {
+            "type": "System.IO.IOException",
+            "message": "Network down",
+            "stackTrace": "  at Contoso.Forms.Demo.CrashesContentPage.SendHttp () [0x00002] in <4fd9174f6e18457b9721bfba2cd78098>:0 ",
+            "wrapperSdkName": "appcenter.xamarin"
+          },
+          {
+            "type": "System.ArgumentException",
+            "message": "Invalid parameter",
+            "innerExceptions": [
+              {
+                "type": "System.ArgumentOutOfRangeException",
+                "message": "It's over 9000!",
+                "stackTrace": "  at Contoso.Forms.Demo.CrashesContentPage.ValidateLength () [0x00002] in <4fd9174f6e18457b9721bfba2cd78098>:0 ",
+                "wrapperSdkName": "appcenter.xamarin"
+              }
+            ],
+            "wrapperSdkName": "appcenter.xamarin"
+          }
+        ],
+        "wrapperSdkName": "appcenter.xamarin"
+      }
       }
     }
   ]
@@ -258,7 +290,13 @@ curl -X POST \
 
 ### Upload attachments
 
-Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls. The `errorId` property is the unique identifier that associates the attachment to the right crash report.
+Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls. 
+
+Attachment specific properties:
+
+- `contentType`: required string with content type (text/plain for text)
+- `data`: required string with data encoded as base 64
+- `errorId` property is the unique identifier that associates the attachment to the right crash report.
 
 Below is an example of uploading a crash report and an attachment in one call.
 
