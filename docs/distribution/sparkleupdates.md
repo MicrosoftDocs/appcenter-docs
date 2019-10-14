@@ -28,7 +28,7 @@ Once the app is released, you can use the [following endpoint](https://openapi.a
 ## Are you coming from HockeyApp?
 
 Please note that for apps from HockeyApp that haven't been moved yet:
-* Releases uploaded to HockeyApp don't show up in the App Center Sparkle feed.
+* Releases uploaded to HockeyApp only show up in the App Center Sparkle feed when added to a public distribution group.
 * Releases uploaded to App Center don't show up in the HockeyApp Sparkle feed.
 
 For apps that have been moved, all versions that are released to a public distribution group show up in the App Center Sparkle feed (regardless where they were formerly uploaded).
