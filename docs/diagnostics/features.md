@@ -146,11 +146,11 @@ If you change your settings from 28 to 90 days, older diagnostics data will not 
 
 You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI. 
 
-To upload a report, you need to call the App Center ingestion endpoint with the headers:
+To upload a report, call the App Center ingestion endpoint with the headers:
 
-- `Content Type`: describes the format of the body. App Center currently only support JSON format. 
-- `App Secret`: this is the unique identifier associated with each app. You can find this in your app settings page. 
-- `Install ID`: this can be any GUID used to keep track of counts
+- `Content-Type`: describes the format of the body. App Center currently only supports JSON format. 
+- `app-secret`: this is the unique identifier associated with each app. You can find this in your app settings page. 
+- `install-id`: this can be any GUID used to keep track of counts
 
 
 You can find examples of how to upload a crash report, error report, and attachment below.
