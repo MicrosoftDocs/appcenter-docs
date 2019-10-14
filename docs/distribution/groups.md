@@ -4,7 +4,7 @@ description: Distribute mobile apps to groups of users
 keywords: distribution
 author: botatoes
 ms.author: bofu
-ms.date: 08/01/2019
+ms.date: 10/14/2019
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
 ms.service: vs-appcenter
@@ -23,7 +23,9 @@ To create a new Distribution Group, log into the App Center portal, select your 
 
 ## Managing Users in a Distribution Group
 
-Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
+Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Select users from the table to remove them from the group.
+
+From this page you can also see the full release history for this Distribution Group by clicking on the Releases tab.
 
 ## Types of Distribution Groups
 
@@ -47,9 +49,9 @@ Shared distribution groups are private or public distribution groups that are sh
 
 Unlike traditional public and private distribution groups, shared distribution groups are at the organization level rather than the app level. Due to this, the steps to create one are slightly different:
 
-1. Login to the App Center portal, then select the organization to which you would like to add a shared group
-2. On the navigator pane that opens, click **People**
-3. On the People page, click the distribution group link to open the shared distribution groups page
+1. Login to the App Center portal, then select the organization to which you would like to add a shared group.
+2. On the navigator pane that opens, click **People**.
+3. On the People page, click the distribution group link to open the shared distribution groups page.
 4. On the top right corner of the shared distribution groups page, select the blue **create new group** button.
 
 Once you have a distribution group, click the group entry in the table to add testers and apps to the group.
@@ -66,22 +68,25 @@ App Center starts the automated tasks when you distribute a new release or one o
 
 Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing-and-device-provisioning) and [privacy concerns when App Center stores your Apple ID and certificate](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
-## Adding Azure Active Directory (AAD) groups to a Distribution Group
+## Adding Azure Active Directory (AAD) security groups to a Distribution Group
 
-In addition to adding testers via email, we now support the addition of AAD groups to a distribution group. Any member of an AAD group can link their organization's subscription to their AAD tenant in App Center. Doing so will enable members of an organization to start adding managed groups to their app's distribution groups. To get started, link your AAD tenant to your organization using the following steps:
+In addition to adding testers via email, we now support the addition of AAD security groups to a distribution group. Any member of an AAD security group can link their organization's subscription to their AAD tenant in App Center. Doing so will enable members of an organization to start adding managed groups to their app's distribution groups. To get started, link your AAD tenant to your organization using the following steps:
 
-1. Login to the App Center portal, then select the organization to which you like to link to your AAD tenant
-2. On the navigator pane that opens, click **Manage**
-3. On the azure active directory panel on the Manage page, click the **connect** button
-4. You will be redirected to a Microsoft login page, login with your Microsoft/AAD credentials
-5. You will be redirected to the App Center portal, click the desired tenant you would like to attach.
-6. At the bottom right of the presented window, click the **connect**
+1. Login to the App Center portal, then select the organization to which you like to link to your AAD tenant.
+2. On the navigator pane that opens, click **Manage**.
+3. On the Azure Active Directory panel on the Manage page, click **Connect**.
+4. You will be redirected to a Microsoft login page. Login with your Microsoft/AAD credentials.
+5. After logging in, you will be redirected to the App Center portal. Click on the desired tenant you would like to attach.
+6. At the bottom right of the presented window, click **Connect**.
 
-Once your tenant is connected to the organization, you can [add an AAD group as you would an individual tester](#managing-users-in-a-distribution-group).
+Once your tenant is connected to the organization, you can add AAD security groups to the distribution group, using the same page you use to [add individual testers](#managing-users-in-a-distribution-group).
 
 ## Releasing a Build to a Distribution Group
 
 To [release a new build][upload] to a Distribution Group. Make use of the **Distribute new Release** button at the top of the screen and choose the Distribution Group from the list during the steps.
+
+> [!NOTE]
+> Testers added to a distribution group because they are members of an AAD security group will not receive emails when new builds are released. If you have users who should receive emails for each release, you should add them directly to the distribution group.
 
 ## User Download Analytics
 
