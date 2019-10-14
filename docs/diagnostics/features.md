@@ -155,17 +155,17 @@ To upload a report, call the App Center ingestion endpoint with the headers:
 
 Log properties:
 - `type`: required string with log type - "managedError", "handledError" or "errorAttachment".
-- `timestamp`: optional string with log timestamp date-time e.g '2017-03-13T18:05:42Z'.
-- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g.'2017-03-13T18:05:42Z'. 
+- `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
+- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z". 
 - `processId`: required integer with process identifier
 - `id`: required string with exception identifier
 - `fatal`: required boolean which indicates if the exception resulted in a crash
 - `processName`: required string with the process name
 - `device`: required object with device characteristics
-    - `appVersion`: required string with application version name, e.g. 1.1.0
-    - `appBuild`: required string with application build number, e.g. 42.
-    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.ios", "hockeysdk.android".
-    - `sdkVersion`: required string with version of the SDK in semver format, e.g. "1.2.0" or "0.12.3-alpha.1".
+    - `appVersion`: required string with application version name, e.g. "1.1.0"
+    - `appBuild`: required string with application build number, e.g. "42"
+    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.ios", "hockeysdk.android"
+    - `sdkVersion`: required string with version of the SDK in semver format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
     - `model`: optional string with device model, e.g. "iPad2"
