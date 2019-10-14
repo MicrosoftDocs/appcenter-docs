@@ -25,13 +25,13 @@ To create a new Distribution Group, log into the App Center portal, select your 
 
 Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Select users from the table to remove them from the group.
 
-From this page you can also see the full release history for this Distribution Group by clicking on the Releases tab.
+From this page, you can also see the full release history for this Distribution Group by clicking on the Releases tab.
 
 ## Types of Distribution Groups
 
 ### Private Distribution Groups
 
-In App Center, distribution groups are private by default. This means only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to login to their App Center account in order to access and download releases.
+In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to log in to their App Center account in order to access and download releases.
 
 ### Public Distribution Groups
 
@@ -39,7 +39,7 @@ Distribution groups must be public to enable unauthenticated installs from publi
 
 To make an existing distribution group public, open the distribution group and click on the settings icon in the upper right-hand corner of the screen. From the settings modal, you can enable **Allow public access**.
 
-As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to login with their App Center account.
+As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to log in with their App Center account.
 
 In addition to this, a **public download link** is displayed underneath the distribution group name at the top of the distribution group page. **Anyone, including testers who aren't explicitly added to the distribution group, can access the release without signing in using the public download link**.
 
@@ -49,10 +49,10 @@ Shared distribution groups are private or public distribution groups that are sh
 
 Unlike traditional public and private distribution groups, shared distribution groups are at the organization level rather than the app level. Due to this, the steps to create one are slightly different:
 
-1. Login to the App Center portal, then select the organization to which you would like to add a shared group.
+1. Log in to the App Center portal, then select the organization to which you would like to add a shared group.
 2. On the navigator pane that opens, click **People**.
 3. On the People page, click the distribution group link to open the shared distribution groups page.
-4. On the top right corner of the shared distribution groups page, select the blue **create new group** button.
+4. On the top-right corner of the shared distribution groups page, select the blue **Create new group** button.
 
 Once you have a distribution group, click the group entry in the table to add testers and apps to the group.
 
@@ -72,10 +72,10 @@ Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing
 
 In addition to adding testers via email, we now support the addition of AAD security groups to a distribution group. Any member of an AAD security group can link their organization's subscription to their AAD tenant in App Center. Doing so will enable members of an organization to start adding managed groups to their app's distribution groups. To get started, link your AAD tenant to your organization using the following steps:
 
-1. Login to the App Center portal, then select the organization to which you like to link to your AAD tenant.
+1. Log in to the App Center portal, then select the organization to which you like to link to your AAD tenant.
 2. On the navigator pane that opens, click **Manage**.
 3. On the Azure Active Directory panel on the Manage page, click **Connect**.
-4. You will be redirected to a Microsoft login page. Login with your Microsoft/AAD credentials.
+4. You will be redirected to a Microsoft page where you can log in with your Microsoft/AAD credentials.
 5. After logging in, you will be redirected to the App Center portal. Click on the desired tenant you would like to attach.
 6. At the bottom right of the presented window, click **Connect**.
 
@@ -90,7 +90,9 @@ To [release a new build][upload] to a Distribution Group. Make use of the **Dist
 
 ## User Download Analytics
 
-User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page as well as on the Release Details page. The total download count represents the total number of times the Install button has been hit by a tester. The unique download count represents the number of users that have installed the release. As an example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download. Note that public distribution groups will only include the total download count and not the unique download count.
+User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page as well as on the Release Details page. The total download count represents the total number of times the Install button has been clicked by a tester. The unique download count represents the number of users that have installed the release. For example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download.
+
+Public distribution groups include only the total download count, and not the unique download count.
 
 [app_users]: ~/dashboard/creating-and-managing-apps.md
 [upload]: ~/distribution/uploading.md
