@@ -19,7 +19,7 @@ Distribution Groups are used to control access to releases. A Distribution Group
 
 ## Creating a Distribution Group
 
-To create a new Distribution Group, log into the App Center portal, select your desired app, click  Distribute in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
+To create a new Distribution Group, sign in to the App Center portal, select your desired app, click **Distribute** in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
 
 ## Managing Users in a Distribution Group
 
@@ -31,7 +31,7 @@ From this page, you can also see the full release history for this Distribution 
 
 ### Private Distribution Groups
 
-In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to log in to their App Center account in order to access and download releases.
+In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to sign in to their App Center account in order to access and download releases.
 
 ### Public Distribution Groups
 
@@ -39,7 +39,7 @@ Distribution groups must be public to enable unauthenticated installs from publi
 
 To make an existing distribution group public, open the distribution group and click on the settings icon in the upper right-hand corner of the screen. From the settings modal, you can enable **Allow public access**.
 
-As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to log in with their App Center account.
+As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to sign in with their App Center account.
 
 In addition to this, a **public download link** is displayed underneath the distribution group name at the top of the distribution group page. **Anyone, including testers who aren't explicitly added to the distribution group, can access the release without signing in using the public download link**.
 
@@ -49,7 +49,7 @@ Shared distribution groups are private or public distribution groups that are sh
 
 Unlike traditional public and private distribution groups, shared distribution groups are at the organization level rather than the app level. Due to this, the steps to create one are slightly different:
 
-1. Log in to the App Center portal, then select the organization to which you would like to add a shared group.
+1. Sign in to the App Center portal, then select the organization to which you would like to add a shared group.
 2. On the navigator pane that opens, click **People**.
 3. On the People page, click the distribution group link to open the shared distribution groups page.
 4. On the top-right corner of the shared distribution groups page, select the blue **Create new group** button.
@@ -62,20 +62,29 @@ To add apps to your new shared distribution group, select the **Apps** tab and e
 
 ## Automatically manage devices
 
-When releasing an iOS app signed with an ad-hoc or development provisioning profile, you must obtain tester's device IDs (UDIDs), and add them to the provisioning profile before compiling a release. When you enable the distribution group's **Automatically manage devices** setting, App Center automates the before mentioned operations and removes the constraint for you to perform any manual tasks. As part of automating the workflow, you must provide the user name and password for your Apple ID and your production certificate in a .p12 format.
+Ordinarily, when you release an iOS app signed with an ad-hoc or development provisioning profile, you must obtain each tester's device IDs (UDIDs) and add them to the provisioning profile before compiling the release.
 
-App Center starts the automated tasks when you distribute a new release or one of your testers registers a new device. First, all devices from the target distribution group will be registered, using your Apple ID, in your developer portal and all provisioning profiles used in the app will be generated with both new and existing device ID. Afterward, the newly generated provisioning profiles are downloaded to App Center servers. Second, App Center uses your saved certificate and the downloaded provisioning profiles to re-sign your app so it can be installed on any device in the releases distribution group. Your testers will not have to wait for you to create a new release as the existing release is being updated and a download link will be available through the [App Center Install portal](https://install.appcenter.ms).
+By enabling the distribution group's **Automatically manage devices** setting, App Center automates this process, updating the provisioning profile every time a tester registers a new device.
+
+> [!NOTE]
+> As part of automating the workflow, you must provide the user name and password for your Apple ID and your production certificate in a .p12 format.
+
+Whenever a new device is added, App Center will ensure that all devices from the target distribution group are registered in your developer portal, using your Apple ID, and then all provisioning profiles used in the app will be re-generated with both existing and new device IDs. The re-generated provisioning profiles are then downloaded to App Center servers.
+
+App Center uses your saved certificate, and the re-generated provisioning profiles, to re-sign the current version of your app so it can be installed on any device in the release's distribution group, without waiting for a new version of your app to be built. A download link to the newly signed release will be available through the [App Center Install portal](https://install.appcenter.ms).
 
 Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing-and-device-provisioning) and [privacy concerns when App Center stores your Apple ID and certificate](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
 ## Adding Azure Active Directory (AAD) security groups to a Distribution Group
 
-In addition to adding testers via email, we now support the addition of AAD security groups to a distribution group. Any member of an AAD security group can link their organization's subscription to their AAD tenant in App Center. Doing so will enable members of an organization to start adding managed groups to their app's distribution groups. To get started, link your AAD tenant to your organization using the following steps:
+App Center supports adding AAD security groups to a distribution group. Any member of an AAD security group can link their organization's subscription to their AAD tenant in App Center. Doing so will enable members of an organization to start adding managed groups to their app's distribution groups.
 
-1. Log in to the App Center portal, then select the organization to which you like to link to your AAD tenant.
+To get started, link your AAD tenant to your organization:
+
+1. Sign in to the App Center portal, then select the organization to link to your AAD tenant.
 2. On the navigator pane that opens, click **Manage**.
 3. On the Azure Active Directory panel on the Manage page, click **Connect**.
-4. You will be redirected to a Microsoft page where you can log in with your Microsoft/AAD credentials.
+4. You will be redirected to a Microsoft page where you can sign in with your Azure AD account.
 5. After logging in, you will be redirected to the App Center portal. Click on the desired tenant you would like to attach.
 6. At the bottom right of the presented window, click **Connect**.
 
