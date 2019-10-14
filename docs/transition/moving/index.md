@@ -14,7 +14,7 @@ ms.custom: hockeyapp
 
 Even though your app data is synchronized to App Center already, it still originates in HockeyApp. The settings and user management can only be handled in HockeyApp. Moving apps will remove the synchronization and give you full control in App Center.
 
-Any HockeyApp app can move to App Center. If the platform doesn't exist yet, we will add support for it soon. In App Center, you'll move an app from HockeyApp to App Center from the App Center App's Overview. Apps can be moved by the owner or the owners of the organization owning the app. If an app was created in HockeyApp is indicated with a little HockeyApp icon behind the app title in the list of apps.
+Any HockeyApp app can be moved to App Center. For platforms that are not yet supported in App Center, we are working on adding them soon. You can move an app from HockeyApp to App Center through the App Center App's Overview. Apps can be moved by their owner or the owners of the organization owning the app. Apps created in HockeyApp are marked with a little HockeyApp icon behind the app title.
 
 > [!NOTE]
 > After you moved an app it still receives data from the HockeySDK in App Center from past releases. In-app updates also remain functional.
@@ -23,3 +23,4 @@ Not all features or functionality is supported on App Center in the same way as 
 
 * [Incompatibilities](incompatibilities.md)
 * [Data being moved](data.md)
+* [Move multiple apps at once](bulk.md)
