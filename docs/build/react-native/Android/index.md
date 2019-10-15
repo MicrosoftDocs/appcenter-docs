@@ -79,7 +79,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 > [!NOTE]
 > If Android React Native build with enabled code-signing fails on `:app:validateSigningRelease` step with error
 >```
-> Keystore file '/Users/vsts/agent/2.155.1/work/1/s/android/app/debug.keystore' not found for signing config 'debug'.
+> Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'.
 >```
 >
 > You should remove `signingConfig` section from `build.gradle` file. It prevents App Center to sign your app.
