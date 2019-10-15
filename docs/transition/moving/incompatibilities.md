@@ -21,7 +21,7 @@ App Center will only transfer associates with Azure DevOps, GitHub, and Jira. Ot
 
 ## Crashes
 
-In App Center, we currently don't supported to receive crashes for UWP apps. We're working to send crashes collected by the HockeySDK for UWP to App Center.
+In App Center, we currently don't support to receive crashes for UWP apps. We're working to send crashes collected by the HockeySDK for UWP to App Center.
 
 ## Distribution Groups
 
