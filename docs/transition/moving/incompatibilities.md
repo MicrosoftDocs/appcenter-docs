@@ -21,7 +21,7 @@ App Center will only transfer associates with Azure DevOps, GitHub, and Jira. Ot
 
 ## Crashes
 
-For UWP and Xamarin apps, we won't move any crashes data over to App Center. Also, once the app is moved, you won't receive crashes from versions using the HockeySDK any longer. We recommend [migrating to the App Center SDK](~/transition/sdk-migration.md) before making the move.
+In App Center, we currently don't support receiving crashes for UWP apps. However, we're working on sending crashes collected by the HockeySDK for UWP to App Center.
 
 ## Distribution Groups
 
