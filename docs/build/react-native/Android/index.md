@@ -82,7 +82,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 > Keystore file '/Users/vsts/agent/2.155.1/work/1/s/android/app/debug.keystore' not found for signing config 'debug'.
 >```
 >
-> You should remove `signingConfig` section section from `build.gradle` file. It prevents App Center to sign your app.
+> You should remove `signingConfig` section from `build.gradle` file. It prevents App Center to sign your app.
 
 ### 3.9. Distribute the build
 
