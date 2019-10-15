@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 08/16/2019
+ms.date: 10/15/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
         ```groovy
         dependencies {
-          def appCenterSdkVersion = '2.3.0'
+          def appCenterSdkVersion = '2.4.0'
           implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
         }
         ```
