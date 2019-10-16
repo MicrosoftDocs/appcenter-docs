@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Run Included Tests with App Center | Android Sample App Tutorials
+title: Run Included Tests with App Center
 description: Tutorial to run a test using Android sample app with App Center.
 keywords: app center
 author: sshibu
@@ -9,6 +9,7 @@ ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 07/26/2017
+ms.assetid: 7d2aa750-c7d0-47cb-acc8-97892bc78cf2
 ---
 
 # Run Included Tests with App Center

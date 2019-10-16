@@ -26,21 +26,17 @@ ms.tgt_pltfrm: cordova
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
-## Change state of service in runtime
+## Adjust the log level
 
-You can enable or disable desired service at the runtime with following code:
+You can control the amount of log messages that show up from App Center in the console. To do this, open the project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
 
-```javascript
-await AppCenter.Analytics.setEnabled(false);
+```xml
+<preference name="LOG_LEVEL" value="2" />
 ```
 
-## Check if App Center is enabled
+Set the value to one of the constants, described well in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). Same contants can be used for iOS.
 
-You can also check if App Center is enabled or not.
-
-```javascript
-const enabled = await AppCenter.isEnabled();
-```
+To have as many log messages as possible, use **VERBOSE (2)** level.
 
 ## Identify installations
 

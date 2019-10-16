@@ -4,7 +4,7 @@ description: How to connect/reconnect to a repository to start building your app
 keywords: android
 author: nrajpurkar
 ms.author: nirjapur
-ms.date: 07/30/2019
+ms.date: 09/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -22,6 +22,10 @@ App Center supports connections to the following code repository services: [Bitb
 To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign-in using the code repository service account credentials if you are not already signed in. Authorizing App Center is required to complete the connection.
 
 Available repositories will populate in App Center after a successful connection. Select a repository and a branch where your app lives and set up your first build.
+
+### Connecting to Self-Hosted GitLab Instances
+
+You may connect to a self-hosted GitLab instance by providing the instance URL (e.g. `mycompany.gitlab.com`) and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings** > **Developer Accounts**.
 
 ## Removing connections and reconnecting
 

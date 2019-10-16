@@ -4,13 +4,11 @@
 title: Getting Started | Sample App Tutorials
 description: Tutorial to onboard an iOS application in App Center
 keywords: app center
-authors: sabrinaj206
+author: sabrinaj206
 ms.author: t-sajia
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.custom:
-ms.prod:
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # optional metadata

@@ -4,13 +4,11 @@
 title: Overview | Sample App Tutorials
 description: Landing page to navigate through tutorials.
 keywords: app center
-authors: sabrinaj206
+author: sabrinaj206
 ms.author: t-sajia
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.custom:
-ms.prod:
 ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 # optional metadata

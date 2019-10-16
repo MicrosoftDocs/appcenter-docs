@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 09/12/2019
+ms.date: 10/09/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -60,9 +60,6 @@ Open a Terminal and navigate to the root of your React Native project, then ente
 ```shell
 npm install appcenter appcenter-analytics appcenter-crashes --save-exact
 ```
-
-> [!NOTE]
-> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
 
 In case you prefer `yarn` over `npm`, use the following command to install App Center:
 

@@ -4,7 +4,7 @@ description: How to configure App Center data for iOS
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/03/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
 ms.service: vs-appcenter
@@ -45,11 +45,31 @@ Please follow the [Get Started](../../data/getting-started.md) section if you ha
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
+#### Integration via Cocoapods
+
 - Add the data service to your Podfile and run `pod install`
 
 ```ruby
 pod 'AppCenter/Data'
 ```
+
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterData.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ### 2. Start App Center Data
 
@@ -437,3 +457,40 @@ The `MSPaginatedDocuments` class has 3 methods which can be used to manage pagin
 The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `items`, which represents the documents in the page.
 
 Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
+
+### Advanced offline scenarios
+
+The `setRemoteOperationDelegate` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippets:
+
+In the header file:
+
+```objc
+@interface MyClass : NSObject <MSRemoteOperationDelegate>
+
+@end
+```
+
+Implementation:
+
+```objc
+@implementation MyClass
+
+(void)data:(MSData *)data didCompleteRemoteOperation:(NSString *)operation forDocumentMetadata:(MSDocumentMetadata *_Nullable)documentMetadata withError:(MSDataError *_Nullable)error{
+  NSLog(@"Operation processed: %@ ", operation);
+  if (documentMetadata) {
+    NSLog(@"Document: Partition : %@, document id : %@, eTag : %@ ", documentMetadata.partition, documentMetadata.documentId, documentMetadata.eTag);
+  }
+  if (error) {
+    NSLog(@"Error: %@ ", error);
+  }
+}
+
+@end
+```
+
+To setup the callback (delegation):
+
+```objc
+MyClass *myClass = [[MyClass alloc] init];
+[MSData setRemoteOperationDelegate:myClass];
+```

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 08/19/2019
+ms.date: 09/20/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.service: vs-appcenter
@@ -24,7 +24,6 @@ ms.tgt_pltfrm: wpf-winforms
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [Cordova](cordova.md)
-
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
@@ -59,7 +58,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.3.0-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.4.0-preview** for both packages.
 
 ### Package Manager Console
 
@@ -67,8 +66,8 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.3.0-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.3.0-preview
+Install-Package Microsoft.AppCenter.Analytics -Version 2.4.0-preview
+Install-Package Microsoft.AppCenter.Crashes -Version 2.4.0-preview
 ```
 
 > [!NOTE]
@@ -78,6 +77,13 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that is running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
+
+> [!NOTE]
+> We currently have a known issue on .NET Core 3.0 when publishing as a single file. If you are using `PublishSingleFile`, install this package:
+>
+> ```shell
+> Install-Package SQLitePCLRaw.lib.e_sqlite3.v110_xp -Version 1.1.14
+> ```
 
 ## 5. Start the SDK
 

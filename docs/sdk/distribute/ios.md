@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -39,7 +39,6 @@ Please follow the [Get started](~/sdk/getting-started/ios.md) section if you hav
 
 The App Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
 
-
 #### Integration via Cocoapods
 
 If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
@@ -47,6 +46,25 @@ If you are integrating App Center into your app via Cocoapods, add the following
 ```ruby
 pod 'AppCenter/Distribute'
 ```
+
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center Distribute.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterDistribute.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. Drag and drop **AppCenterDistributeResources.bundle** from **AppCenterDistribute.framework** into XCode's Project Navigator.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 #### Integration by copying the binaries into your project
 

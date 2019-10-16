@@ -61,6 +61,7 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ![App Center allows you to track events leading up to your crash](~/diagnostics/images/events.png)
 
+
 ### Key Value Pairs
 
 Xamarin developers can tailor the error report sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional.

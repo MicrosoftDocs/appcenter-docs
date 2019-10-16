@@ -24,10 +24,9 @@ As a HockeyApp customer, your apps and account information automatically synchro
 
 ## Limitations
 
-While you can work in both services, settings for your HockeyApp apps are only editable in HockeyApp. The following app management tasks can only be edited in HockeyApp:
+While you can work in both services, settings for your HockeyApp apps are only editable in HockeyApp. The following app management tasks can only be performed in HockeyApp:
 
 * Managing app collaborators and testers.
-* Managing organization owners.
 * Editing app settings such as the app name, and its public or private access status. 
 * Managing notification settings.
 

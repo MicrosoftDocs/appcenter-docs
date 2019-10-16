@@ -4,7 +4,7 @@ description: How to set up a build system for Xamarin.Android apps
 keywords: android
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 08/16/2019
+ms.date: 09/30/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -61,6 +61,7 @@ Proper .Net Core version will be selected automatically based on Mono version us
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
+| 6.4 | 3.0.100 |
 
 ### 3.4. Build Android App Bundle (.aab)
 

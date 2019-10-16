@@ -4,7 +4,7 @@ description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 08/15/2019
+ms.date: 09/30/2019
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -66,6 +66,7 @@ Proper .Net Core version will be selected automatically based on Mono version us
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
+| 6.4 | 3.0.100 |
 
 ### 3.4. Xcode Version
 
@@ -87,8 +88,28 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 
 A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
 
+Apps with [app or watchOS extensions](https://docs.microsoft.com/en-us/xamarin/ios/platform/extensions) require an additional provisioning profile per extension in order to be signed.
+
 > [!NOTE]
-> App Center does not currently support signing app extensions for Xamarin apps.
+> There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` in projects containing Xamarin watchOS apps.
+> Building a watchOS app on App Center without a workaround will result in an error: 
+>
+>`Project <project> is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Project <project> supports: xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)`.
+>
+> To build watchOS apps on App Center, a workaround is required. Within the containing iOS project, which references to the Watch App, an [additional line must be included](https://github.com/xamarin/xamarin-macios/issues/5878#issuecomment-481277798):
+>
+> `<ReferenceOutputAssembly>False</ReferenceOutputAssembly>`
+>
+> Example WatchApp reference with workaround:
+
+```xml
+    <ProjectReference Include="..\MyWatchApp\MyWatchApp.csproj">
+      <Project>{59EB034F-3D29-43A5-B89F-124879504771}</Project>
+      <Name>MyWatchApp</Name>
+      <IsWatchApp>True</IsWatchApp>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+```
 
 ### 3.9. Launch your successful build on a real device
 

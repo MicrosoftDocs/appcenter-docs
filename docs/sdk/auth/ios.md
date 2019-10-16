@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 07/22/2019
+ms.date: 09/12/2019
 ms.topic: article
 ms.assetid: 8891c2d1-29c5-41fe-be49-70921b3ac1db
 ms.service: vs-appcenter
@@ -21,6 +21,7 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
@@ -40,6 +41,24 @@ When integrating App Center into your app via Cocoapods, add the following depen
 ```ruby
 pod 'AppCenter/Auth'
 ```
+
+#### Integration via Carthage
+
+1. Add the following dependency to your `Cartfile` to include App Center.
+
+    ```ruby
+    # Use the following line to get the latest version of App Center
+    github "microsoft/appcenter-sdk-apple"
+    ```
+
+    ```ruby
+    # Use the following line to get the specific version of App Center
+    github "microsoft/appcenter-sdk-apple" ~> X.X.X
+    ```
+
+1. Run `carthage update`.
+1. Open your application target's **General** settings tab. Drag and drop the **AppCenterAuth.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
+1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 #### Integration by copying the binaries into your project
 
