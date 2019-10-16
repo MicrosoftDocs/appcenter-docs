@@ -26,12 +26,12 @@ ms.tgt_pltfrm: UWP
 > * [Unity](unity.md)
 > * [Cordova](cordova.md)
 
-App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the Windows Store. Crash logs contain valuable information for you to help fix the crash.
+App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta apps and those submitted to the Windows Store. Crash logs contain valuable information for you to help fix the crash.
 
 Please follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
 > [!NOTE]
-> Currently we do not support detection of low memory warning on UWP platform.
+> Currently we do not support detection of low memory warnings on the UWP platform.
 
 ## Adding the crashes module
 
@@ -122,7 +122,7 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) => {
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you choose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.

@@ -18,10 +18,6 @@ ms.custom: analytics
 - You can only add one binary and one text attachment to a crash report.
 - Android React Native source maps are not supported.
 
-## Windows Support
-
-- User identification is not supported yet for UWP, WPF and WinForms applications.
-
 ## Handled Errors
 
 - Errors are only available in the Xamarin, Unity, WPF and WinForms platform.

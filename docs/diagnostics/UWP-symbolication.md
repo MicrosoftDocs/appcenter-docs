@@ -19,11 +19,11 @@ ms.custom: analytics
 UWP crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes.
 
 ## Uploading symbols
-To get these memory addresses translated you need to upload a **appxsym** file to App Center, which contains all information required for symbolication.
+To get these memory addresses translated you need to upload a **.appxsym** file to App Center, which contains all information required for symbolication.
 
 ### Generate the Symbols
 
-In order to obtain an **appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** inside the app bundle folder.
+In order to obtain an **.appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** inside the app bundle folder.
 
 ### App Center Portal
 
