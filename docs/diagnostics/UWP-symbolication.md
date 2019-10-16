@@ -15,7 +15,7 @@ ms.custom: analytics
 
 ## Overview
 
-UWP crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes.
+UWP crash reports show the stack trace for the thread that caused the crash. When the application is using .NET Native (typically in release builds) the stack trace may contain memory addresses instead of class names, methods, file names, and line numbers that are needed to read and understand the crashes.
 
 ## Uploading symbols
 
