@@ -373,12 +373,7 @@ try {
 try {
     // your code goes here.
 } catch (Exception exception) {
-    var properties = object : HashMap<String, String>() {
-        init {
-            put("Category", "Music")
-            put("Wifi", "On")
-        }
-    }
+    val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
     Crashes.trackException(exception, properties)
 }
 ```
