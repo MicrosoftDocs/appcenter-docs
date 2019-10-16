@@ -3,7 +3,7 @@ title: HockeySDK for tvOS Migration
 description: Migrate from the HockeySDK to App Center SDK
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: 44a08a47-85e2-4456-9b15-d524037df036
 ms.service: vs-appcenter
@@ -35,33 +35,23 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 #### Carthage
 
-> [!NOTE]
-> App Center doesn't support Carthage yet. Please look at [our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to stay up to date on it.
+1. Remove HockeySDK references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
-### 1.2 Add new App Center SDK
+1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the XCode project and click the **Move to Trash** button.
 
-Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
+1. Open the **Build Phases** tab and locate the **Run Script** section. Remove HockeyApp from the `input.xcfilelist` and `output.xcfilelist`.
 
-Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on App Center. It will get pulled in automatically.
+### 1.2 Add the new App Center SDK
 
-```ruby
-# Use the following line to pull in both App Center Analytics and Crashes.
-pod 'AppCenter'
-
-# Use the following lines if you want to specify which service you want to use.
-pod 'AppCenter/Analytics'
-pod 'AppCenter/Crashes'
-```
+The App Center SDK supports integration via Cocoapods, Carthage, and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
-> The App Center SDK is designed with a modular approach – you can choose which services you want to integrate. See the equivalences in the next table:
-
-HockeyApp class  | App Center module
----------------- | -----------------
-`MetricsManager` | `Analytics`
-`CrashManager`   | `Crashes`
-
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [integration by copying binaries](~/sdk/getting-started/tvos#33-integration-by-copying-the-binaries-into-your-project) documentation.
+> The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
+> 
+> HockeyApp class  | App Center module
+> ---------------- | -----------------
+> `MetricsManager` | `Analytics`
+> `CrashManager`   | `Crashes`
 
 ## 2. Update the SDK setup code
 
@@ -135,13 +125,13 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Adjust log level | [[BITHockeyManager sharedHockeyManager].logLevel = BITLogLevelVerbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#debuginfo) | [[MSAppCenter setLogLevel:MSLogLevelVerbose]](~/sdk/other-apis/tvos#adjust-the-log-level)
+Adjust log level | [[BITHockeyManager sharedHockeyManager].logLevel = BITLogLevelVerbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#debuginfo) | [[MSAppCenter setLogLevel:MSLogLevelVerbose]](~/sdk/other-apis/tvos.md#adjust-the-log-level)
 
 #### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#debuginfo) | [MSAppCenter.setLogLevel(MSLogLevel.Verbose)](~/sdk/other-apis/tvos#adjust-the-log-level)
+Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#debuginfo) | [MSAppCenter.setLogLevel(MSLogLevel.Verbose)](~/sdk/other-apis/tvos.md#adjust-the-log-level)
 
 * * *
 
@@ -153,17 +143,17 @@ The HockeySDK collects metrics by default. The App Center SDK does not collect a
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Automatically track sessions | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [Documentation (enabled by default)](~/sdk/analytics/tvos#session-and-device-information)
-Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-1-custom-events) | [[MSAnalytics trackEvent:withProperties:]](~/sdk/analytics/tvos#custom-events)
-Disable service at runtime | [[BITHockeyManager sharedHockeyManager].disableMetricsManager = YES](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [[MSAnalytics setEnabled:NO]](~/sdk/analytics/tvos#enable-or-disable-app-center-analytics-at-runtime)
+Automatically track sessions | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [Documentation (enabled by default)](~/sdk/analytics/tvos.md#session-and-device-information)
+Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-1-custom-events) | [[MSAnalytics trackEvent:withProperties:]](~/sdk/analytics/tvos.md#custom-events)
+Disable service at runtime | [[BITHockeyManager sharedHockeyManager].disableMetricsManager = YES](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [[MSAnalytics setEnabled:NO]](~/sdk/analytics/tvos.md#enable-or-disable-app-center-analytics-at-runtime)
 
 #### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Automatically track sessions | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [Documentation (enabled by default)](~/sdk/analytics/tvos#session-and-device-information)
-Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-1-custom-events) | [MSAnalytics.trackEvent(eventName, withProperties: properties)](~/sdk/analytics/tvos#custom-events)
-Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [MSAnalytics.setEnabled(false)](~/sdk/analytics/tvos#enable-or-disable-app-center-analytics-at-runtime)
+Automatically track sessions | [Documentation (enabled by default)](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [Documentation (enabled by default)](~/sdk/analytics/tvos.md#session-and-device-information)
+Custom events with properties | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-1-custom-events) | [MSAnalytics.trackEvent(eventName, withProperties: properties)](~/sdk/analytics/tvos.md#custom-events)
+Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-3-user-metrics) | [MSAnalytics.setEnabled(false)](~/sdk/analytics/tvos.md#enable-or-disable-app-center-analytics-at-runtime)
 
 * * *
 
@@ -176,20 +166,20 @@ The App Center SDK does not report any crashes by default. To collect crashes us
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Automatically send crashes | [[[Documentation (enabled by default)]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-2-how-are-crash-reports-sent-to-hockeyapp-) | [Documentation (enabled by default)](~/sdk/crashes/tvos#should-the-crash-be-processed)
-Generate a test crash | `[[BITHockeyManager sharedHockeyManager].crashManager generateTestCrash]` | [[MSCrashes generateTestCrash]](~/sdk/crashes/tvos#generate-a-test-crash)
-Info about the previous crash | `[[BITHockeyManager sharedHockeyManager].crashManager lastSessionCrashDetails]` | [[MSCrashes lastSessionCrashReport]](~/sdk/crashes/tvos#details-about-the-last-crash)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/tvos#add-attachments-to-a-crash-report) |
-Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-tvOS/blob/62f4cff75262ca3e58ec80b2db3c7414637be8c3/Classes/BITCrashManager.h#L310) | [Documentation (not provided by default)](~/sdk/crashes/tvos#ask-for-the-users-consent-to-send-a-crash-log)
-Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableCrashManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-1-disable-crash-reporting) | [[MSCrashes setEnabled:NO]](~/sdk/crashes/tvos#enable-or-disable-app-center-crashes-at-runtime)
+Automatically send crashes | [[[Documentation (enabled by default)]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-2-how-are-crash-reports-sent-to-hockeyapp-) | [Documentation (enabled by default)](~/sdk/crashes/tvos.md#should-the-crash-be-processed)
+Generate a test crash | `[[BITHockeyManager sharedHockeyManager].crashManager generateTestCrash]` | [[MSCrashes generateTestCrash]](~/sdk/crashes/tvos.md#generate-a-test-crash)
+Info about the previous crash | `[[BITHockeyManager sharedHockeyManager].crashManager lastSessionCrashDetails]` | [[MSCrashes lastSessionCrashReport]](~/sdk/crashes/tvos.md#details-about-the-last-crash)
+Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/tvos.md#add-attachments-to-a-crash-report) |
+Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-tvOS/blob/62f4cff75262ca3e58ec80b2db3c7414637be8c3/Classes/BITCrashManager.h#L310) | [Documentation (not provided by default)](~/sdk/crashes/tvos.md#ask-for-the-users-consent-to-send-a-crash-log)
+Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableCrashManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-1-disable-crash-reporting) | [[MSCrashes setEnabled:NO]](~/sdk/crashes/tvos.md#enable-or-disable-app-center-crashes-at-runtime)
 
 #### [Swift](#tab/swift/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
-Automatically send Crashes | [BITHockeyManager.shared().crashManager.isAutoSubmitCrashReport = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-2-how-are-crash-reports-sent-to-hockeyapp-) | [Documentation (enabled by default)](~/sdk/crashes/tvos#should-the-crash-be-processed)
-Generate a test crash | `BITHockeyManager.shared().crashManager.generateTestCrash()` | [MSCrashes.generateTestCrash()](~/sdk/crashes/tvos#generate-a-test-crash)
-Info about the previous crash | `BITHockeyManager.shared().crashManager.lastSessionCrashDetails` | [MSCrashes.lastSessionCrashReport()](~/sdk/crashes/tvos#details-about-the-last-crash)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/tvos#add-attachments-to-a-crash-report) |
-Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-tvOS/blob/62f4cff75262ca3e58ec80b2db3c7414637be8c3/Classes/BITCrashManager.h#L310) | [Documentation (not provided by default)](~/sdk/crashes/tvos#ask-for-the-users-consent-to-send-a-crash-log)
-Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](~/sdk/crashes/tvos#enable-or-disable-app-center-crashes-at-runtime)
+Automatically send Crashes | [BITHockeyManager.shared().crashManager.isAutoSubmitCrashReport = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-2-how-are-crash-reports-sent-to-hockeyapp-) | [Documentation (enabled by default)](~/sdk/crashes/tvos.md#should-the-crash-be-processed)
+Generate a test crash | `BITHockeyManager.shared().crashManager.generateTestCrash()` | [MSCrashes.generateTestCrash()](~/sdk/crashes/tvos.md#generate-a-test-crash)
+Info about the previous crash | `BITHockeyManager.shared().crashManager.lastSessionCrashDetails` | [MSCrashes.lastSessionCrashReport()](~/sdk/crashes/tvos.md#details-about-the-last-crash)
+Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/tvos.md#add-attachments-to-a-crash-report) |
+Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-tvOS/blob/62f4cff75262ca3e58ec80b2db3c7414637be8c3/Classes/BITCrashManager.h#L310) | [Documentation (not provided by default)](~/sdk/crashes/tvos.md#ask-for-the-users-consent-to-send-a-crash-log)
+Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeysdk-for-tvos#3-2-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](~/sdk/crashes/tvos.md#enable-or-disable-app-center-crashes-at-runtime)
