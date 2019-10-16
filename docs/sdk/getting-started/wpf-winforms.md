@@ -57,8 +57,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Open Visual Studio.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
-* Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.4.0-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
@@ -66,14 +65,9 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.4.0-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.4.0-preview
+Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
 ```
-
-> [!NOTE]
-> Make sure you install the **-preview** package as the official releases do not support WPF/WinForms.
-
-Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that is running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
