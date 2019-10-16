@@ -4,7 +4,7 @@ description: Help understanding symbolication for iOS and MacOS diagnostics in A
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/20/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
@@ -34,12 +34,12 @@ If you are using Visual Studio instead of XCode, see [Where can I find the dSYM 
 
 ### App Center Portal
 
-1. Create a ZIP file for the dSYM package on your Mac
-2. Log into App Center and select your app
-3. In the left menu, navigate to the **Diagnostics** section
-4. Select **Symbols**
-5. In the top-right corner, click **Upload symbols** and upload the zip file
-6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
+1. Create a ZIP file for the dSYM package on your Mac.
+1. Log into App Center and select your app.
+1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
+1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the zip file.
+1. If your application already has reported crashes that needs symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the zip file.
+1. After the symbols file are indexed by App Center, crashes will be symbolicated for you.
 
 #### React Native iOS apps
 
