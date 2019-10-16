@@ -363,9 +363,9 @@ try {
     // your code goes here.
 } catch (Exception exception) {
     Map<String, String> properties = new HashMap<String, String>() {{
-		put("Category", "Music");
-		put("Wifi", "On");
-	}};
+        put("Category", "Music");
+        put("Wifi", "On");
+    }};
     Crashes.trackException(exception, properties); 
 }
 ```
@@ -374,11 +374,11 @@ try {
     // your code goes here.
 } catch (Exception exception) {
     var properties = object : HashMap<String, String>() {
-		init {
-			put("Category", "Music")
-			put("Wifi", "On")
-		}
-	}
+        init {
+            put("Category", "Music")
+            put("Wifi", "On")
+        }
+    }
     Crashes.trackException(exception, properties)
 }
 ```
