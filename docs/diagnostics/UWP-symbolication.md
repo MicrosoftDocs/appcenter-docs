@@ -4,7 +4,7 @@ description: Help understanding symbolication for UWP diagnostics in App Center
 keywords: crashes, errors, UWP, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 09/24/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 84e46674-0558-4c95-8f33-b8f4cf8970d6
 ms.service: vs-appcenter
@@ -18,25 +18,20 @@ ms.custom: analytics
 
 UWP crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes.
 
-To get these memory addresses translated you need to upload a pdb package to App Center, which contains all information required for symbolication. You can learn more about UWP symbol files in (Microsoft's UWP symbols documentation)[https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019].
-
-## Finding the `.pdb` file
-
-1. TBD
-2. 
-3. 
-
-
 ## Uploading symbols
+To get these memory addresses translated you need to upload a **appxsym** file to App Center, which contains all information required for symbolication.
+
+### Generate the Symbols
+
+In order to obtain an **appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** inside the app bundle folder.
 
 ### App Center Portal
 
-1. Create a ZIP file for the pdb package on your machine
-2. Log into App Center and select your app
-3. In the left menu, navigate to the **Diagnostics** section
-4. Select **Symbols**
-5. In the top-right corner, click **Upload symbols** and upload the zip file
-6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
+1. Log into App Center and select your app
+2. In the left menu, navigate to the **Diagnostics** section
+3. Select **Symbols**
+4. In the top-right corner, click **Upload symbols** and upload the **appxsym** file you generated previously
+5. After the symbols file is indexed by App Center, new incoming crashes will be symbolicated for you
 
 
 ### App Center API
