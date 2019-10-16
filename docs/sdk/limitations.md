@@ -27,4 +27,3 @@ ms.custom: sdk
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the .NET runtime.
 2. Only crashes caused by .NET exceptions are reported, not C/C++ crashes.
-3. When using .NET Core, the session length is not reset after spending time into the minimized window state. Thus porting from .NET Framework to .NET Core causes session duration to increase and thus session count to decrease.
