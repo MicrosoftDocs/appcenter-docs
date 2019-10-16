@@ -179,6 +179,9 @@ You can find examples of how to upload a crash report, error report, and attachm
 
 ### Upload a crash report
 
+To upload a crash report, make sure the log type is set to "managedError".
+
+
 ```shell
 curl -X POST \
   'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
@@ -287,9 +290,139 @@ curl -X POST \
 }
 ```
 
+#### Upload an Apple crash log
+
+The following properties are required to upload an Apple crash log:  
+
+- `primaryArchitectureId`: required integer with CPU primary architecture.
+- `applicationPath`: required string with the path to the application.
+- `osExceptionType`: required string with OS exception type.
+- `osExceptionCode`: reqiured string with OS exception code
+- `osExceptionAddress`: required string with OS exception address
+
+For example:
+
+```shell
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
+  "logs:": 
+  [
+    {
+        "type": "appleError",
+        "timestamp": "2019-10-08T02:44:55.000Z",
+        "appLaunchTimestamp": "2019-09-29T22:22:23.516Z",
+        "id": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+        "applicationPath": "iOS/salesforce",
+        "osExceptionType": "CustomerIssue (TestIssue)",
+        "osExceptionCode": "0",
+        "osExceptionAddress": "0x00",
+        "processName": "salesforce",
+        "fatal": true,
+        "isTestMessage": false,
+        "device": {
+        "appVersion": "10.0",
+        "appBuild": "1",
+        "sdkName": "appcenter.ios",
+        "sdkVersion": "1.0.0",
+        "osName": "iOS",
+        "osVersion": "9.3",
+        "model": "iPhone9,1",
+        "locale": "en-US"
+        },
+        "userId": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+        "fatal": true,
+        "threads": [
+         {
+          "id": 0,
+          "frames": [
+            {
+              "address": "0x000000018ada4d70",
+              "code": "0x18ad87000 + 122224"
+            },
+            {
+              "address": "0x0000000104463884",
+              "code": "0x10445c000 + 30852"
+            },
+            {
+              "address": "0x000000010438f640",
+              "code": "0x104388000 + 30272"
+            },
+            {
+              "address": "0x00000001b859fb64",
+              "code": "0x1b8229000 + 3631972"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "frames": [
+            {
+              "address": "0x000000018bb4fce0",
+              "code": "0x18baa2000 + 711904"
+            },
+            {
+              "address": "0x000000018bbf7078",
+              "code": "0x18baa2000 + 1396856"
+            },
+            {
+              "address": "0x000000018baa8258",
+              "code": "0x18baa2000 + 25176"
+            },
+            {
+              "address": "0x000000018bb1c49c",
+              "code": "0x18baa2000 + 500892"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "frames": [
+            {
+              "address": "0x000000018b755b9c",
+              "code": "0x18b732000 + 146332"
+            },
+            {
+              "address": "0x000000018b7dcd00",
+              "code": "0x18b7ce000 + 60672"
+            }
+          ]
+        }
+      ],
+      "binaries": [
+        {
+          "id": "d449e33d-7e74-379d-8b79-15ee104ed1df",
+          "startAddress": "0x0000000104388000",
+          "endAddress": "0x0000000104413fff",
+          "name": "CrashProbeiOS",
+          "path": "/var/containers/Bundle/Application/023013EA-0D58-4F6D-8B98-49E1372F4044/CrashProbeiOS.app/CrashProbeiOS",
+          "primaryArchitectureId": 16777228,
+          "architectureVariantId": 0
+        },
+        {
+          "id": "5da23653-d126-39f0-bdcf-994b3019f92c",
+          "startAddress": "0x000000010445c000",
+          "endAddress": "0x0000000104467fff",
+          "name": "CrashLibiOS",
+          "path": "/private/var/containers/Bundle/Application/023013EA-0D58-4F6D-8B98-49E1372F4044/CrashProbeiOS.app/Frameworks/CrashLibiOS.framework/CrashLibiOS",
+          "primaryArchitectureId": 16777228,
+          "architectureVariantId": 0
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+
 ### Upload an error report
 
-Handled errors are only supported for Xamarin, Unity, WPF and WinForms apps today. 
+Handled errors are only supported for Xamarin, Unity, WPF and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+
 
 ```shell
 curl -X POST \
