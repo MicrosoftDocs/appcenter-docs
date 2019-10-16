@@ -58,7 +58,7 @@ AppCenter.SetUserId("your-user-id");
 After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+> The value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 
