@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for WPF and WinForms
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 06/18/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 3c917c07-a32f-4c5d-85d1-844c8d935c0c
 ms.service: vs-appcenter
@@ -23,6 +23,7 @@ ms.tgt_pltfrm: wpf-winforms
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 ## Adjust the log level
@@ -42,6 +43,22 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 ```csharp
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
+
+## Identify users
+
+The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
+2. Set a `userID` in the SDK using the following code:
+
+```csharp
+AppCenter.SetUserId("your-user-id");
+```
+
+After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.service: vs-appcenter
@@ -44,6 +44,22 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 System.Guid? installId = await AppCenter.GetInstallIdAsync();
 ```
 
+## Identify users
+
+The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+
+1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
+2. Set a `userID` in the SDK using the following code:
+
+```csharp
+AppCenter.SetUserId("your-user-id");
+```
+
+After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
+
+> [!NOTE]
+> Note that the value for the user id is limited to 256 characters.
+
 ## Disable all services at runtime
 
 If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
@@ -61,14 +77,6 @@ AppCenter.SetEnabledAsync(true);
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
 The state is persisted in the device's storage across application launches.
-
-## Change state of service in runtime
-
-You can enable or disable desired service at the runtime with following code:
-
-```csharp
-Analytics.SetEnabledAsync(true);
-```
 
 ## Check if App Center is enabled
 
