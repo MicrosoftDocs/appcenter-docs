@@ -4,7 +4,7 @@ description: Limitations and known issues with the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/18/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: vs-appcenter

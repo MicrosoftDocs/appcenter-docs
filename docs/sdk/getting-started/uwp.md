@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2019
+ms.date: 10/16/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -114,5 +114,4 @@ Note that, unless you explicitly specify each service as parameters in the start
 
 Great, you are all set to visualize Analytics on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) to learn how to customize and use more advanced functionalities.
-
+Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) and [App Center Crashes](~/sdk/crashes/wpf-winforms.md) to learn how to customize and use more advanced functionalities of both services.
