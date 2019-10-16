@@ -23,15 +23,29 @@ To get these memory addresses translated you need to upload a **.appxsym** file 
 
 ### Generate the Symbols
 
-In order to obtain an **.appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** inside the app bundle folder.
+In order to obtain an **.appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** file inside the app bundle folder.
+
+#### Symbols for applications built in App Center Build
+
+If your application is built in App Center, symbols can be downloaded from the build page using the **Download button**.
+
+#### Symbols for applications published to the Microsoft Store
+
+When you publish your application to the store, the .NET Native compilation happens server side. Thus you need to download the symbols from the [Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview).
+
+1. Locate your application in the list and click on it.
+1. Expand **Product management** menu from the left panel.
+1. Click on **Manage packages**.
+1. Click on **Show packages** on the top right corner for the **Submission** (version) you want symbols for.
+1. Locate the package for the version you need symbols for, and click on links for all the supported architectures to download all symbols (such as the **Download Windows 10 symbol file (x64)** link).
 
 ### App Center Portal
 
 1. Log into App Center and select your app.
-2. In the left menu, navigate to the **Diagnostics** section.
-3. Select **Symbols**
-4. In the top-right corner, click **Upload symbols** and upload the **appxsym** file you generated previously.
-5. After the symbols file are indexed by App Center, new incoming crashes will be symbolicated for you.
+1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
+1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the **appxsym** files or archives mentioned in the previous sections.
+1. If your application already has reported crashes that needs symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the files.
+1. After the symbols file are indexed by App Center, crashes will be symbolicated for you.
 
 ### App Center API
 
