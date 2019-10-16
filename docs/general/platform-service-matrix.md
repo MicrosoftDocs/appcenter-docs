@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
-ms.date: 09/26/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter

@@ -4,7 +4,7 @@ description: How to handle user consent with crashes and errors
 keywords: GDPR, DSR, privacy, EU
 author: blparr
 ms.author: blparr
-ms.date: 01/29/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 26C66069-05D6-4EC2-84DD-AB86AF59EB97
 ms.service: vs-appcenter
