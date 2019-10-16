@@ -27,7 +27,7 @@ In order to obtain an **.appxsym** file, you must create an app bundle as descri
 
 #### Symbols for applications built in App Center Build
 
-If your application is built in App Center, symbols can be downloaded from the build page using the **Download button**.
+If your application is built in App Center, symbols can be downloaded from the build page using the **Download** button.
 
 #### Symbols for applications published to the Microsoft Store
 
