@@ -140,8 +140,6 @@ If you change your settings from 28 to 90 days, older diagnostics data will not 
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
 
-
-
 ## Upload reports to App Center
 
 You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI. 
@@ -151,7 +149,6 @@ To upload a report, call the App Center ingestion endpoint with the headers:
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format. 
 - `app-secret`: string that is the unique identifier associated with each app. You can find this in your app settings page. 
 - `install-id`: string that can be any GUID used to keep track of counts.
-
 
 Log properties:
 - `type`: required string with log type - "managedError", "handledError" or "errorAttachment".
@@ -177,17 +174,10 @@ Log properties:
     - `message`: optional string with exception reason
     - `stackTrace`: optional string with raw stack trace
     - `innerException`: optional array with inner exceptions
-    - `wrapperSDKName`: 
-
-
-
 
 You can find examples of how to upload a crash report, error report, and attachment below.
 
-
 ### Upload a crash report
-
-
 
 ```shell
 curl -X POST \
@@ -218,12 +208,84 @@ curl -X POST \
       },
       "userId": "TestID",
       "exception": {
-          "type": "CustomerIssue",
-          "frames": []
-      }
+        "frames": [
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2575,
+            "methodName": "performResumeActivity"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2603,
+            "methodName": "handleResumeActivity"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2089,
+            "methodName": "handleLaunchActivity"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 130,
+            "methodName": "access$600"
+          },
+          {
+            "className": "android.app.ActivityThread$H",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 1195,
+            "methodName": "handleMessage"
+          },
+          {
+            "className": "android.os.Handler",
+            "fileName": "Handler.java",
+            "lineNumber": 99,
+            "methodName": "dispatchMessage"
+          },
+          {
+            "className": "android.os.Looper",
+            "fileName": "Looper.java",
+            "lineNumber": 137,
+            "methodName": "loop"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 4745,
+            "methodName": "main"
+          }
+        ],
+        "innerExceptions": [
+          {
+            "frames": [
+              {
+                "className": "android.app.Activity",
+                "fileName": "Activity.java",
+                "lineNumber": 5084,
+                "methodName": "performResume"
+              },
+              {
+                "className": "android.app.ActivityThread",
+                "fileName": "ActivityThread.java",
+                "lineNumber": 2565,
+                "methodName": "performResumeActivity"
+              },
+              {
+                "className": "android.app.ActivityThread",
+                "fileName": "ActivityThread.java",
+                "lineNumber": 2603,
+                "methodName": "handleResumeActivity"
+              }
+            ]
+        }
+      ]
     }
+  ]
+}
 ```
-
 
 ### Upload an error report
 
@@ -281,12 +343,10 @@ curl -X POST \
         ],
         "wrapperSdkName": "appcenter.xamarin"
       }
-      }
     }
   ]
 }'
 ```
-
 
 ### Upload attachments
 
