@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.service: vs-appcenter
@@ -67,7 +67,7 @@ MSAppCenter.setUserId("your-user-id")
 After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+> The value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 
