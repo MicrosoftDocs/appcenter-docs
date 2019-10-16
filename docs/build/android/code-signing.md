@@ -66,3 +66,11 @@ android {
 In the code above, securing values behind variable names keeps your signing credentials safe – the values are encrypted and only available to the build agents at build time. You may choose to hardcode the values if you prefer. Supply these values when [configuring a branch](~/build/android/first-build.md) in the [**Environment Variables**](~/build/custom/variables/index.md) section of your configuration.
 
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.
+
+> [!NOTE]
+> If Android app build with enabled code-signing fails on `:app:validateSigningRelease` step with error
+>```
+> Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'.
+>```
+>
+> You should remove `signingConfig` section from `build.gradle` file. It prevents App Center to sign your app.

@@ -76,14 +76,6 @@ Use the newly produced APK file to test if your app starts on a real device. Thi
 
 A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it must be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about Android code signing [App Center's Android code signing documentation](~/build/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
-> [!NOTE]
-> If Android React Native build with enabled code-signing fails on `:app:validateSigningRelease` step with error
->```
-> Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'.
->```
->
-> You should remove `signingConfig` section from `build.gradle` file. It prevents App Center to sign your app.
-
 ### 3.9. Distribute the build
 
 You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
