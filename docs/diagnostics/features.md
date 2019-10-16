@@ -113,7 +113,7 @@ In a crash report, you can see the current threads that were active when the app
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
 > [!NOTE]
-> Only the main thread at the time of the error will be available for UWP, WPF and WinForms reports.
+> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment the crash occurred is not supported on Windows.
 
 ## Configure Alerts
 
