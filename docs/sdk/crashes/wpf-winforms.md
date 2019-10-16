@@ -17,12 +17,13 @@ ms.tgt_pltfrm: windows
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
-> * [Unity](unity.md)
+> * [React Native](react-native.md)
 > * [macOS](macos.md)
+> * [tvOS](tvos.md)
+> * [Unity](unity.md)
 > * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center.
