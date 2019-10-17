@@ -118,15 +118,17 @@ There are numerous use cases for this API, the most common one is people who cal
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 > [!NOTE]
-> You must set callbacks *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
+> You must set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
-Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Set this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```csharp
-Crashes.ShouldProcessErrorReport = (ErrorReport report) => {
-    return true; // return true if the crash report should be processed, otherwise false.
+Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
+{
+    // Check the report in here and return true or false depending on the ErrorReport.
+    return true;
 };
 ```
 
@@ -138,6 +140,9 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 
 > [!NOTE]
 > The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+
+> [!NOTE]
+> The app should not call `NotifyUserConfirmation` explicitly if it does not implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
@@ -151,7 +156,7 @@ Crashes.ShouldAwaitUserConfirmation = () =>
 };
 ```
 
-If you return `true`, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
+In case you return `true` in the callback above, your app must obtain (using your own code) user permission and message the SDK with the result using the following API.
 
 ```csharp
 // Depending on the user's choice, call Crashes.NotifyUserConfirmation() with the right value.
@@ -162,47 +167,48 @@ Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes provides three different callbacks that you can use in your app to be notified of what is going on:
 
 #### The following callback will be invoked before the SDK sends a crash log
 
 ```csharp
-Crashes.SendingErrorReport += (object sender, SendingErrorReportEventArgs e) => {
-	// Your code, e.g. to present a custom UI.
-}
+Crashes.SendingErrorReport += (sender, e) =>
+{
+    // Your code, e.g. to present a custom UI.
+};
 ```
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
-Crashes.SentErrorReport += (object sender, SentErrorReportEventArgs e) => {
-	// Your code, e.g. to hide a custom UI.
+Crashes.SentErrorReport += (sender, e) =>
+{
+    // Your code, e.g. to hide the custom UI.
 };
 ```
 
-#### The following callback will be invoked if the SDK failed to send a crash log
+#### The following callback will be invoked if the SDK has failed to send a crash log
 
 ```csharp
-Crashes.FailedToSendErrorReport += (object sender, FailedToSendErrorReportEventArgs e) => {
-	// Your code goes here.
+Crashes.FailedToSendErrorReport += (sender, e) =>
+{
+    // Your code goes here.
 };
 ```
 
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
 
 ```csharp
-Crashes.GetErrorAttachments = (ErrorReport report) => {
-
-    // Attach some text.
-    ErrorAttachmentLog textLog = ErrorAttachmentLog.AttachmentWithText("This is a text attachment.", "text.txt");
-
-    // Attach binary data.
-    var fakeImage = System.Text.Encoding.Default.GetBytes("Fake image");
-    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.AttachmentWithBinary(fakeImage, "ic_launcher.jpeg", "image/jpeg");
-
-    return new List<ErrorAttachmentLog> { textLog, binaryLog };
+Crashes.GetErrorAttachments = (ErrorReport report) =>
+{
+    // Your code goes here.
+    return new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
 };
 ```
 
@@ -237,7 +243,8 @@ bool isEnabled = await Crashes.IsEnabledAsync();
 
 ## Handled Errors
 
-App Center also allows you to track errors by sending handled exceptions; to do so, use the `TrackError` method:
+App Center also allows you to track errors by using handled exceptions.
+In order to do so, simply use the `TrackError` method:
 
 ```csharp
 try {

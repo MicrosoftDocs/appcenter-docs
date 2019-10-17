@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/12/2019
+ms.date: 10/17/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -100,7 +100,7 @@ Set this callback if you'd like to decide if a particular crash needs to be proc
 ```csharp
 Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 {
-     // Check the report in here and return true or false depending on the ErrorReport.
+    // Check the report in here and return true or false depending on the ErrorReport.
     return true;
 };
 ```
