@@ -39,7 +39,7 @@ If you are using Visual Studio instead of XCode, see [Where can I find the dSYM 
 1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
 1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the zip file.
 1. If your application already has reported crashes that needs symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the zip file.
-1. After the symbols file are indexed by App Center, crashes will be symbolicated for you.
+1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
 
 #### React Native iOS apps
 
