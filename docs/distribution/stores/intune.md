@@ -4,7 +4,7 @@ description: Simplify distribution of line of business mobile applications to th
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/05/2018
+ms.date: 10/17/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -48,3 +48,41 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message.
 
 For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page.
+
+## Publishing through the CLI
+Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+
+You can list your stores by using the list command like this:
+```
+appcenter distribute stores list \
+--app {app_owner}/{app_name}
+You must replace app_owner and app_name with your own. If you run
+appcenter apps list
+```
+
+You will get a result like this:
+```
+
+| Store      │ Type       │ Track      │
+├────────────┼────────────┼────────────┤
+│ Alpha      │ googleplay │ alpha      │
+├────────────┼────────────┼────────────┤
+│ Beta       │ googleplay │ beta       │
+├────────────┼────────────┼────────────┤
+│ Production │ googleplay │ production │
+└────────────┴────────────┴────────────┘
+
+And it's the Store column we will be using in the final step.
+
+The final step is to publish your app by running:
+```
+appcenter distribute stores publish \
+--file /path/to/file.aab \
+--store Production \
+--app {app_owner}/{app_name} \
+--release-notes "Some note."
+```
+
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead.

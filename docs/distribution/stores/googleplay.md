@@ -185,5 +185,3 @@ appcenter distribute stores publish \
 ```
 
 You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead.
-
-Congratulations, you are now able to publish your app through the CLI.
