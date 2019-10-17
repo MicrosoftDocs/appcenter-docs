@@ -113,7 +113,7 @@ In a crash report, you can see the current threads that were active when the app
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
 > [!NOTE]
-> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment the crash occurred is not supported on Windows.
+> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment of the crash is not supported on Windows.
 
 ## Configure Alerts
 

@@ -31,7 +31,7 @@ If your application is built in App Center, symbols can be downloaded from the b
 
 #### Symbols for applications published to the Microsoft Store
 
-When you publish your application to the store, the .NET Native compilation happens server side. Thus you need to download the symbols from the [Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview).
+When you publish your application to the store, the .NET Native compilation happens on server side. Thus you need to download the symbols from the [Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview).
 
 1. Locate your application in the list and click on it.
 1. Expand **Product management** menu from the left panel.
@@ -55,4 +55,4 @@ This call allocates space on our backend for your symbols and returns a `symbol_
 3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
 
 > [!NOTE]
-> The symbol uploads API will not work for symbols files that are 256MB or larger in size. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
+> The symbol uploads API does not work for symbols files that are larger than 256MB. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
