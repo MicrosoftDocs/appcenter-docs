@@ -351,7 +351,7 @@ try {
 ```kotlin
 try {
     // your code goes here.
-} catch (Exception exception) {
+} catch (exception: Exception) {
     Crashes.trackException(exception)
 }
 ```
@@ -372,7 +372,7 @@ try {
 ```kotlin
 try {
     // your code goes here.
-} catch (Exception exception) {
+} catch (exception: Exception) {
     val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
     Crashes.trackException(exception, properties)
 }
