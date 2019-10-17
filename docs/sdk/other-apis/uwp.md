@@ -82,11 +82,8 @@ The state is persisted in the device's storage across application launches.
 
 Enable or disable desired services at the runtime with following code:
 
-```java
-Analytics.setEnabled(false);
-```
-```kotlin
-Analytics.setEnabled(false)
+```csharp
+Analytics.SetEnabledAsync(false);
 ```
 
 ## Check if App Center is enabled
