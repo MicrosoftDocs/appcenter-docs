@@ -89,9 +89,6 @@ Analytics.setEnabled(false);
 Analytics.setEnabled(false)
 ```
 
-> [!NOTE]
-> This method must only be used after `Analytics` has been started.
-
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
