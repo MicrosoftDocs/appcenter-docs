@@ -78,6 +78,20 @@ You don't need to await this call to make other API calls (such as `IsEnabledAsy
 
 The state is persisted in the device's storage across application launches.
 
+## Change state of service in runtime
+
+Enable or disable desired services at the runtime with following code:
+
+```java
+Analytics.setEnabled(false);
+```
+```kotlin
+Analytics.setEnabled(false)
+```
+
+> [!NOTE]
+> This method must only be used after `Analytics` has been started.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
