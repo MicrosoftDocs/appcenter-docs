@@ -74,6 +74,7 @@ You will get a result like this:
 ├────────────┼────────────┼────────────┤
 │ Production │ googleplay │ production │
 └────────────┴────────────┴────────────┘
+```
 
 And it's the Store column we will be using in the final step.
 
@@ -85,5 +86,4 @@ appcenter distribute stores publish \
 --app {app_owner}/{app_name} \
 --release-notes "Some note."
 ```
-
-You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead.
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
