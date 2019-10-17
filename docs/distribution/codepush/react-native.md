@@ -52,6 +52,7 @@ We try our best to maintain backwards compatibility of our plugin with previous 
 | v0.54-v0.55             | v5.3+ *(Android Gradle Plugin 3.x integration)*       |
 | v0.56-v0.58             | v5.4+ *(RN upgraded versions for Android tools)*      |
 | v0.59                   | v5.6+ *(RN refactored js bundle loader code)*         |
+| v0.60-v0.61             | v5.7+ *(RN refactored js bundle loader code)*         |
 
 We work hard to respond to new React Native releases, but they do occasionally break us. We will update this chart with each React Native release, so that users can check to see what our official support is.
 
@@ -107,7 +108,9 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 #### Plugin Installation (iOS - RNPM)
 
-1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
+1.  As of v0.60 of React Native, automatic linking is supported and you do not have to run any commands.
+
+    As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
 
     ```shell
     react-native link react-native-code-push
@@ -115,7 +118,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
     If your app uses a version of React Native that is lower than v0.27, execute the following command:
 
-   ```shell
+    ```shell
     rnpm link react-native-code-push
     ```
 
@@ -313,7 +316,17 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 #### Plugin Installation (Android - RNPM)
 
-1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
+1.  As of v0.60 of React Native, automatic linking is supported but you still have to apply codepush specific build configuration.
+    In your `android/app/build.gradle` file, add the `codepush.gradle` file as an additional build task definition underneath `react.gradle`:
+
+    ```gradle
+    ...
+    apply from: "../../node_modules/react-native/react.gradle"
+    apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+    ...
+    ```
+
+    As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
 
     ```shell
     react-native link react-native-code-push
@@ -366,6 +379,39 @@ And that's it for installation using RNPM! Continue below to the [Plugin Configu
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
 
 After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
+
+**For React Native >= v0.60**
+
+If you are integrating CodePush into React Native application please do the following steps:
+
+Update the `MainApplication.java` file to use CodePush via the following changes:
+
+```java
+...
+// 1. Import the plugin class.
+import com.microsoft.codepush.react.CodePush;
+
+public class MainApplication extends Application implements ReactApplication {
+
+    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+        ...
+        // 2. Override the getJSBundleFile method in order to let
+        // the CodePush runtime determine where to get the JS
+        // bundle location from on each app start
+        @Override
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
+        }
+    };
+}
+```
+
+Update `strings.xml` file with the deployment key
+
+```
+<string name="reactNativeCodePush_androidDeploymentKey" moduleConfig="true" translatable="false">deployment-key-here</string>
+
+```
 
 **For React Native >= v0.29**
 
