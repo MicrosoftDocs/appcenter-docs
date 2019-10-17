@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 02/14/2019
+ms.date: 10/17/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -71,6 +71,45 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 5. Copy the generated app-specific password and paste it into the dialogue.
 6. Save by clicking **Update**.
 
+## Publishing through the CLI
+Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+
+You can list your stores by using the list command like this:
+```
+appcenter distribute stores list \
+--app {app_owner}/{app_name}
+```
+
+You must replace app_owner and app_name with your own. If you run
+appcenter apps list
+
+You will get a result like this:
+
+```
+┌─────────────────────────┬───────┬─────────────────────┐
+│ Store                   │ Type  │ Track               │
+├─────────────────────────┼───────┼─────────────────────┤
+│ Production              │ apple │ production          │
+├─────────────────────────┼───────┼─────────────────────┤
+│ App Store Connect Users │ apple │ testflight-internal │
+└─────────────────────────┴───────┴─────────────────────┘
+```
+And it's the Store column we will be using in the final step.
+
+The final step is to publish your app by running:
+```
+appcenter distribute stores publish \
+--file /path/to/file.ipa \
+--store Production \
+--app {app_owner}/{app_name} \
+--release-notes "Some note."
+```
+
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the --release-notes-file instead.
+
+Congratulations, you are now able to publish your app through the CLI.
 ## Debugging a failed release
 
 If a release fails to publish, you can debug the release by downloading the Fastlane logs that provides more verbose logs than the App Center portal.
