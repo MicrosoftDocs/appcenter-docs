@@ -56,3 +56,7 @@ The log flow page will show you the incoming logs as they come in. In order to s
 **Can I export the raw data?**
 
 Yes. Under app settings, you can export all your Analytics raw data into Azure Blob Storage and Application Insights.
+
+**What are the time period limitations to send a log to App Center?**
+
+The App Center backend will only accept logs that are no more than 25 days in the past or 3 days in the future.

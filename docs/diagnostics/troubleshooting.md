@@ -34,3 +34,6 @@ This is probably due to the fact that App Center Crash Reporting doesn't support
 **Why are all of my errors/crashes showing as affecting 100% of my users?**
 
 This is usually caused by enabling the App Center crashes module without also enabling the analytics module. The analytics module keeps track of user sessions and without that data App Center can't determine how many overall users there are for the application.
+
+**What are the time period limitations to send a log to App Center?**
+The App Center backend will only accept logs that are no more than 25 days in the past or 3 days in the future.

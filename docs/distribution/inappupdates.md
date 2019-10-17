@@ -8,6 +8,7 @@ ms.date: 10/19/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 ---
 
 # In-App Updates

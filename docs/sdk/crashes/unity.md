@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/12/2019
+ms.date: 10/15/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -31,6 +31,9 @@ App Center Crashes automatically generates a crash log every time your app crash
 Follow the instructions in the [Unity Getting Started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
 Crash logs on iOS require Symbolication. To enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md), which explains how to provide symbols for your app.
+
+> [!IMPORTANT]
+> The current SDK does not support Crashes for Unity when running on UWP, the instructions in this page cover only Android and iOS.
 
 ## Generate a test crash
 

@@ -17,12 +17,15 @@ ms.tgt_pltfrm: wpf-winforms
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
@@ -58,7 +61,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
 * Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.3.0-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.4.0-preview** for both packages.
 
 ### Package Manager Console
 
@@ -66,8 +69,8 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.3.0-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.3.0-preview
+Install-Package Microsoft.AppCenter.Analytics -Version 2.4.0-preview
+Install-Package Microsoft.AppCenter.Crashes -Version 2.4.0-preview
 ```
 
 > [!NOTE]

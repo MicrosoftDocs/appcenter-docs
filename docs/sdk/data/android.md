@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 08/16/2019
+ms.date: 10/15/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
         ```groovy
         dependencies {
-          def appCenterSdkVersion = '2.3.0'
+          def appCenterSdkVersion = '2.4.0'
           implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
         }
         ```
@@ -385,4 +385,26 @@ Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccept( new Ap
         // Do something here
      }
 });
+```
+
+### Advanced offline scenarios
+
+The `setRemoteOperationListener` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippet:
+
+```java
+Data.setRemoteOperationListener(
+    new RemoteOperationListener() {
+            @Override
+            public void onRemoteOperationCompleted(String operation, DocumentMetadata documentMetadata, DataException error) {
+                Log.i(
+                    LOG_TAG, 
+                    String.format(
+                        "Remote operation completed operation=%s partition=%s documentId=%s eTag=%s", 
+                        operation, 
+                        documentMetadata.getPartition(), 
+                        documentMetadata.getId(), 
+                        documentMetadata.getETag()), 
+                        error);
+            }
+        };
 ```

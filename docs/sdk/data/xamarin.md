@@ -291,3 +291,15 @@ page.AddRange(result.CurrentPage.Items.Select(a => a.DeserializedValue));
 ```
 
 The code snippet above will add deserialized value of documents existing in the current page to the `page` variable.
+
+### Advanced offline scenarios
+
+The `setRemoteOperationListener` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippet:
+
+```csharp
+Data.RemoteOperationCompleted += (sender, eventArgs) =>
+{
+    AppCenterLog.Info(
+        App.LogTag, "Remote operation completed. Sender = " + sender);
+};
+```

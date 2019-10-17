@@ -191,7 +191,7 @@ Start by creating your app and setting it up to work with the CodePush service:
 appcenter apps create -d VSTSCDSample-Android -o android -p react-native
 ```
 
-Then use the following commmands to create both `Staging` and `Production` deployments:
+Then use the following commands to create both `Staging` and `Production` deployments:
 
 ```shell
 appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Staging

@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 10/01/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -106,7 +106,7 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 To enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
 
 ```csharp
-Distribute.SetEnabledInDebbugableBuild(true);
+Distribute.SetEnabledForDebuggableBuild(true);
 ```
 
 ##### Xamarin.Forms

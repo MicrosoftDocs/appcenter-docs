@@ -122,6 +122,7 @@
 ### [Microsoft Intune](distribution/stores/intune.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
+## [Sparkle Updates](distribution/sparkleupdates.md)
 ## [Distribution with Azure DevOps (formerly VSTS)](distribution/vsts-deploy.md)
 ## CodePush
 ### [Introduction](distribution/codepush/index.md)
@@ -180,6 +181,7 @@
 ### [Android](sdk/auth/android.md)
 ### [iOS](sdk/auth/ios.md)
 ### [React Native](sdk/auth/react-native.md)
+### [Unity](sdk/auth/unity.md)
 ### [Xamarin](sdk/auth/xamarin.md)
 ## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
 
@@ -211,6 +213,7 @@
 ## [Sending Push Notifications](push/send-notification.md)
 ## [Push to User](push/push-to-user.md)
 ## [Using the REST API](push/rest-api.md)
+## [GCM to FCM Migration](push/gcm-fcm.md)
 ## [Tips and Tricks](push/tips.md)
 ## [Troubleshooting](push/troubleshooting.md)
 ## [FAQ](push/faq.md)
@@ -242,6 +245,7 @@
 ### [Android](sdk/auth/android.md)
 ### [iOS](sdk/auth/ios.md)
 ### [React Native](sdk/auth/react-native.md)
+### [Unity](sdk/auth/unity.md)
 ### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
@@ -257,6 +261,7 @@
 ## Data
 ### [Android](sdk/data/android.md)
 ### [iOS](sdk/data/ios.md)
+### [React Native](sdk/data/react-native.md)
 ### [Xamarin](sdk/data/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
@@ -348,6 +353,7 @@
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
 ## Stage 3 - Switching Accounts
 ### [Introduction](transition/accounts/index.md)
+### [Distribution Groups](transition/accounts/distribution-groups.md)
 ## [API Migration](transition/api.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
