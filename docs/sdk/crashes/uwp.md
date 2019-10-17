@@ -133,11 +133,12 @@ If you choose to do so, you are responsible for obtaining the user's confirmatio
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
-Crashes.ShouldAwaitUserConfirmation = () => {
-	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+Crashes.ShouldAwaitUserConfirmation = () =>
+{
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-	// Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
-	return true;
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+    return true;
 };
 ```
 
