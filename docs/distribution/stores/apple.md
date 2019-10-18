@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/17/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -79,22 +79,14 @@ Before you can use the CLI, you will need to establish a connection to a destina
 You can list your stores by using the list command like this:
 ```
 appcenter distribute stores list \
---app {app_owner}/{app_name}
+--app {app_owner}/{app_name} \
+--output json
 ```
-
-You must replace app_owner and app_name with your own. If you run
-appcenter apps list
 
 You will get a result like this:
 
 ```
-┌─────────────────────────┬───────┬─────────────────────┐
-│ Store                   │ Type  │ Track               │
-├─────────────────────────┼───────┼─────────────────────┤
-│ Production              │ apple │ production          │
-├─────────────────────────┼───────┼─────────────────────┤
-│ App Store Connect Users │ apple │ testflight-internal │
-└─────────────────────────┴───────┴─────────────────────┘
+[["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
 ```
 And it's the Store column we will be using in the final step.
 
