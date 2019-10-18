@@ -35,7 +35,7 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 6. **Select Category** of the app from the drop down.
 7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the auto-complete drop down.
 8. Click **Connect**.
-9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. Setting up the connection is a one time process for an application in App Center.
+9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. The connection is valid for 90 days for an application in App Center. 
 
 ## Step 2: Publish your application to the Intune Company Portal
 
@@ -52,8 +52,7 @@ For any issues, contact us via the [blue chat icon](https://intercom.help/appcen
 ## Troubleshooting
 
 ### Failed to publish app to Intune Store. The app was previously published as ***
-**Root Cause**
+
 This error can happen when you try to publish using an app you've already published to Intune with a different app name.  App Center uses the name of the app in App Center when publishing to Intune. If the name is different from what you have in Intune, Intune rejects with that error message.
 
-**Solution**
 In order to fix this problem, you need to rename or create a new app that exactly matches what you have in Intune. If you see the error message, try to rename your App Center app to what follows after ...published as '***'. 
