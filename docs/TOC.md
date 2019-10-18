@@ -342,8 +342,7 @@
 ## [Introduction](transition/index.md)
 ## Synchronization
 ### [Introduction](transition/side-by-side.md)
-### [Distribution Groups](transition/distribution-groups.md)
-### [Distributing Releases](transition/distribution.md)
+### [Distribute](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
 ## Moving Apps
