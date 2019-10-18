@@ -68,12 +68,12 @@ In the code above, securing values behind variable names keeps your signing cred
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.
 
 > [!NOTE]
-> If you use `signingConfig` option inside `buildTypes` section in your `build.gradle` file you may face with code-signing errors during App Center build (this is especially relevant for the apps that are used React Native for Android version 0.60.x and higher):
+> If you use `signingConfig` option inside `buildTypes` section in your `build.gradle` file you may face with code-signing errors during App Center build (this is especially relevant for the apps that used React Native for Android version 0.60.x and higher):
 >```
 > Execution failed for task ':app:validateSigningRelease'.
 > Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'
 >```
 >
-> In order to fix this issue you have to commit proper keystore used for signing into remote repository and select `My Gradle settings are entirely set to handle signing automatically` checkbox in branch configuration in App Center UI.
+> In order to fix this issue you have to push a proper keystore used for signing to your repository and select `My Gradle settings are entirely set to handle signing automatically` checkbox in branch configuration in the App Center portal.
 >
-> In case you're uploaded keystore to the branch configuration in App Center UI,  take into account that this approach will require to delete `signingConfig` option from `buildTypes` section of `build.gradle` file.
+> In case you uploaded keystore to the branch configuration in the App Center portal, take into account that this approach will require to delete `signingConfig` option from `buildTypes` section of `build.gradle` file.
