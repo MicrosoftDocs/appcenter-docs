@@ -162,7 +162,6 @@
 ## [Android ProGuard](diagnostics/Android-ProGuard.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
-## [UWP Symbolication](diagnostics/UWP-symbolication.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
