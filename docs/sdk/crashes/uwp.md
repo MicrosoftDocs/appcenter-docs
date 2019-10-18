@@ -88,7 +88,7 @@ bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers choose to show additional UI to apologize to their users, or want a way to get in touch after a crash has occurred.
 
 > [!NOTE]
-> This method must only be used after `Crashes` has been started, it will always return `false` before start.
+> This method must only be used after `Crashes` has been started; it will always return `false` before start.
 
 ### Details about the last crash
 
@@ -99,7 +99,7 @@ ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
 ```
 
 > [!NOTE]
-> This method must only be used after `Crashes` has been started, it will always return `null` before start.
+> This method must only be used after `Crashes` has been started; it will always return `null` before start.
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [Crashes delegate or listener](#customize-your-usage-of-app-center-crashes).
 
@@ -139,7 +139,7 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. The SDK does not provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
