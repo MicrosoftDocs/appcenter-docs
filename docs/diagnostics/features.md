@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -64,33 +64,10 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Key Value Pairs
 
-Xamarin developers can tailor the error report sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional.
-
-For example:
-
-```csharp
-try
-{
-    using (var text = File.OpenText("saved_game001.txt"))
-    {
-        Console.WriteLine("{0}", text.ReadLine());
-        ...
-    }
-}
-catch (FileNotFoundException ex)
-{
-    Crashes.TrackError(ex, new Dictionary<string,string>{
-        { "Filename", "saved_game001.txt" },
-        { "Where", "Reload game" },
-        { "Issue", "Index of available games is corrupted" }
-    });
-}
-```
-
-Here the full exception (`ex`) is sent back to the App Center service, plus a dictionary containing additional debugging information as well.
+You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional. To set key value pairs, take a look at our [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [WPF/WinForms](~sdk/crashes/wpf-winforms.md#handled-errors), and [UWP](~sdk/crashes/wpf-winforms.md#handled-errors) documentation. 
 
 > [!NOTE]
-> This feature is only supported for Xamarin Errors today.
+> This feature is only supported for Xamarin, WinForms, WPF, and UWP Errors today.
 
 ### Export Diagnostics Data
 
