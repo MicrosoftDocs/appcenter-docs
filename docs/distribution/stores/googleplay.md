@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/07/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -74,8 +74,8 @@ Choose a name for the new Service Account, and click **Create**.
 
 Click the **Select a role** in the drop-down menu. Select **Project**, then **Owner**. Navigate to the next step by clicking **Continue**.
 
-> [!WARNING]
-> Some users are experience problems downloading the json file using Edge and Internet Explorer.
+> [!NOTE]
+> Some users can't download the .json file using Edge and Internet Explorer.
 
 On the new page click **+ Create Key (optional)** and a modal appears.
 
