@@ -22,10 +22,12 @@ Today, all your user and organization [accounts are fully transitioned](~/transi
 > [!NOTE]
 > It will take us a few months to complete the move of all apps. If your app is affected by any of the feature gaps listed on our [public roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp), we won't move them until the gaps are closed. HockeyApp will still be available until then. We recommend you to [move your app](~/transition/moving/index.md) immediately once it becomes unaffected.
 
-## The three stages of the transition
+## Recommended actions
 
-The three stages of the transition are completed:
+First, make yourself familiar with App Center. Feel free to reach out to us in case you've any questions.
 
-* Stage 1: [Your HockeyApp data is synchronized to App Center](~/transition/moving/index.md)
-* Stage 2: [Move your apps to App Center](~/transition/moving/index.md)
-* Stage 3: [We switched the user and account management to App Center](~/transition/accounts/index.md)
+* Checkout potential [incompatibilities](~/transition/moving/incompatibilities.md) of your apps
+* Move your apps to App Center
+    * [One by one](~/transition/moving/index.md)
+    * [Multiple apps at once](~/transition/moving/bulk.md)
+* Verify everything is working as expected
