@@ -4,7 +4,7 @@ description: Simplify distribution of line of business mobile applications to th
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/05/2018
+ms.date: 10/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
