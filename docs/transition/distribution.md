@@ -15,4 +15,4 @@ You can distribute new releases in both App Center and HockeyApp for your Hockey
 
 ## Distributing Groups
 
-On App Center, distribution groups exist on an app or on an organization level. On HockeyApp, all distribution groups exist globally and are owned by a user or an organization. **Distribution groups owned by a user or distribution groups that have a different owner than the app aren't supported on App Center.** To keep the global syncing functionality of distribution groups, we recommend to transfer all app and distribution groups to the same organization before moving apps.
+In App Center, your distribution groups exist on an app or on an organization level. On HockeyApp, all your distribution groups exist globally and are owned by either a user or an organization. Distribution groups owned by a user or distribution groups that have a different owner than the app aren't supported in App Center. To keep the global syncing functionality of distribution groups, we recommend to transfer all your apps and distribution groups to the same organization before moving your apps.
