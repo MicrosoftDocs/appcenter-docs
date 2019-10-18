@@ -17,10 +17,10 @@ ms.reviewer: vigimm
 In this document, you'll learn how to integrate App Center Build and [App Center Test](~/test-cloud/index.md) to run your latest successful build on real devices. 
 
 ## Supported Configurations
-For the most part, you can configure your app however you want; but for App Center device testing it must:
-   - Be an [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app
-   - Generate an app package compatible with running on physical devices
-   - Android apps require Internet permissions for the test infrastructure to communicate with your app. Make sure to declare internet permissions in your app manifest
+App Center device testing requires:
+   - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
+   - The app package is compatible with running on physical devices.
+   - Android apps require Internet permissions for the test infrastructure to communicate with your app. Make sure to declare internet permissions in your app manifest.
 
 ## Configuring your build
 1. Log into https://appcenter.ms
@@ -29,16 +29,16 @@ For the most part, you can configure your app however you want; but for App Cent
 4. Select the **Build** icon on the left side of the screen, it's a triangle arrow/playbutton.
 5. Connect your code repository. More details: [App Center Build Introduction](~/build/index.md).
 6. Choose your branch. 
-7. click "Configure" to create a new configuration, or click the wrench icon to edit an existing configuration. 
-8. Apply your settings & save your configuration. 
+7. click **Configure** to create a new configuration, or click the wrench icon to edit an existing configuration. 
+8. Click **Save** 
 
 If you close the settings page without saving, it will default back to its previous settings. Saving is disabled when settings are invalid or missing required information.
 
 ## Enable Launch Testing
-> [!WARNING]
+> [!TIP]
 > Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. Disable **Generate one package(.apk) per selected ABI** in your Android Build options to resolve the problem.
 
-Select the "Test on a real device" switch on the branch configuration page. The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
+Select the **Test on a real device** switch on the branch configuration page. The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
 
 Finding your launch test result can be done in a few ways:
 
@@ -57,7 +57,7 @@ You can integrate Build & Test to run a UI test suite with each build of your ap
 - The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Your Build completion status won't reflect whether the test suite passed or not.
 
 Step-by-step instructions:
-1. Configure your app, Build & Test trial or license. (You can ignore the "Launch Test" setting in Build).
+1. Configure your app, Build & Test trial or license. (You can ignore the **Launch Test** setting in Build).
 2. Confirm that your test suite runs locally on a physical device, and that you can upload it locally to the Test service. 
 3. Write your [post-build script](~/build/custom/scripts/index.md#post-build). [Environment variables](~/build/custom/variables/index.md) can help you write a valid build script.
 4. Save your Build configuration in App Center after the first time you commit a build script, or if you change its location in your repository. The build script should be located in the main app project's root folder. 
