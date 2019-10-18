@@ -46,20 +46,20 @@ Prior to the 2.5.0 SDK release, App Center worked with the Windows crash reporti
 
 ## New diagnostics experience for UWP apps
 
-With the 2.5.0 SDK release in Octobe 2019, App Center released a new diagnostics experience to address the limitations and gaps mentioned above. This section details the improvements and transition experience with the new release.
+With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience to address the limitations and gaps mentioned above. This section details the improvements and transition experience with the new release.
 
 ### What improvements were made?
 
 The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
 
-- A full symbolication experience that allows you to upload symbols in App Center. See the symbolication section below for more detials.
+- A full symbolication experience that allows you to upload symbols in App Center. See the symbolication section below for more details.
 - Support for handled exceptions
 - Number of users affected per crash or error group
 - Ability to add annotations per crash or error group
 - Ability to mark crash and error groups as open, closed, or ignored
 - Ability to download crash and error reports
 - Ability to attach, view and download one binary and one text attachment to your crash reports
-- Crash and error report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in
+- Crash and error report details per crash instance including when the app was launched, when it crashed, and what country and language the device was in
 
 You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
