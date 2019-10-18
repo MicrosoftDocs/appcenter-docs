@@ -339,19 +339,18 @@
 #### [Export](gdpr/test-export.md)
 
 # HockeyApp Transition
-## [Timeline](transition/index.md)
-## Stage 1 - Synchronization
+## [Introduction](transition/index.md)
+## Synchronization
 ### [Introduction](transition/side-by-side.md)
-### [Distribution Groups](transition/distribution-groups.md)
-### [Distributing Releases](transition/distribution.md)
+### [Distribute](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
-## Stage 2 - Moving Apps
+## Moving Apps
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
 ### [Migrated Data](transition/moving/data.md)
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
-## Stage 3 - Switching Accounts
+## HockeyApp Accounts
 ### [Introduction](transition/accounts/index.md)
 ### [Distribution Groups](transition/accounts/distribution-groups.md)
 ## [API Migration](transition/api.md)

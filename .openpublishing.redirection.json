@@ -283,6 +283,10 @@
 	      {
 	          "source_path": "docs/migration/test-cloud/frameworks.md",
 	          "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
-	      }
+          },
+          {
+            "source_path": "docs/transition/distribution-groups.md",
+            "redirect_url": "/appcenter/transition/distribution"
+          }
  ]
 }
