@@ -13,19 +13,18 @@ ms.custom: analytics
 
 # Windows Support
 
-App Center currently supports diagnostics for UWP, WPF and WinForms applications. This section details the new experience for UWP apps as part of the 2.5.0 SDK release. For more information on WPF and WinForms applications, 
+App Center currently supports diagnostics for UWP, WPF and WinForms applications. This section explains the new experience for UWP apps as part of the 2.5.0 SDK release. For more information on WPF and WinForms applications, 
 refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md) pages.
 
 ## Universal Windows Platform
 
-App Center supports the full diagnostics feature set for both sideloaded and Windows Store UWP apps using the 2.5.0 SDK. To enable App Center’s diagnostics for your UWP app, make sure you have the App Center SDK integrated for your app. Learn more about the UWP SDK in [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md) and about the features supported in the [diagnostics features documentation](~/diagnostics/features.md).  
+App Center supports the full diagnostics feature set for both sideloaded and Windows Store UWP apps using the 2.5.0 SDK. To enable App Center’s diagnostics for your UWP app, follow [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md) to integrate the App Center SDK. You can learn more about the complete feature set in the [diagnostics features documentation](~/diagnostics/features.md).  
 
-
-There are some known limitations and missing features for UWP apps using earlier versions on the SDK. You can learn more about these differences and the transition experience in the section below.
+For UWP apps using older versions of the SDK, there are known limitations and missing features. You can learn more about these differences and the transition experience in the section below.
 
 ### UWP legacy experience
 
-Prior to the 2.5.0 SDK release, App Center worked with the Windows crash reporting service built into Windows devices to send and process crash logs. Because of this, there were some known limitations and missing features in App Center's crash reporting for UWP apps. 
+Prior to the 2.5.0 SDK release, App Center worked with the Windows crash reporting service built into Windows devices to send and process crash logs. Because of this, there were some limitations and missing features in App Center's crash reporting for UWP apps. 
 
 *Limitations*
 
@@ -68,7 +67,7 @@ You can learn more about each feature in the [App Center diagnostics documentati
 
 After you update to the App Center UWP SDK Version 2.5.0, you will see crash and error data coming into the App Center Diagnostics portal in a new and improved UI. For crash and error data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api.md#transitioning-to-the-new-apis). 
 
-All crashes from older SDK versions will be still be available and displayed in a new section under Diagnostics called "Legacy issues". You can continue to use the APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash) to retrieve this data.
+All crashes from older SDK versions will be still be available and displayed in a new section under Diagnostics called "Legacy issues". You can continue to use the APIs listed under the [crashes section](https://openapi.appcenter.ms/#/crash) to retrieve this data. If you would like to see your UWP app crashes in one place, we recommend you use Partner Center's crash reporting for Windows store apps. 
 
 ### What happens after the transition?
 
@@ -100,7 +99,7 @@ When you publish your application to the store, the .NET Native compilation happ
 1. Click on **Show packages** on the top right corner for the **Submission** (version) you want symbols for.
 1. Locate the package for the version you need symbols for, and click on links for all the supported architectures to download all symbols (such as the **Download Windows 10 symbol file (x64)** link).
 
-### App Center Portal
+#### App Center Portal
 
 1. Log into App Center and select your app.
 1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
@@ -108,7 +107,7 @@ When you publish your application to the store, the .NET Native compilation happ
 1. If your application already has reported crashes that needs symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the files.
 1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
 
-### App Center API
+#### App Center API
 
 1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create). 
 This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property.
@@ -121,4 +120,4 @@ This call allocates space on our backend for your symbols and returns a `symbol_
 
 ## WinRT, Silverlight, and Other Platforms
 
-App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. You can find more details about future Windows platform support in App Center in our [Windows Plan on Github](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md). If you have any feedback or feature requests, please leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).
+App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. If you have any feedback or feature requests, please leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).
