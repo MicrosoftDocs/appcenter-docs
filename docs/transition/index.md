@@ -17,14 +17,14 @@ The known HockeyApp services, Distribution, Crash Reporting, and Analytics are a
 
 ## November 16, 2019
 
-Today, all your user and organization [accounts are fully transitioned](~/transition/accounts/index.md) to App Center. Beginning November 16, we will start moving over apps with little active usage automatically. Once your app is moved, you’ll no longer have access to it through HockeyApp. You’ll need to use App Center.
+Today, all your user and organization [accounts are fully transitioned](~/transition/accounts/index.md) to App Center. Beginning November 16, we'll start moving over apps with little active usage automatically. Once your app is moved, you’ll no longer have access to it through HockeyApp. You’ll need to use App Center.
 
 > [!NOTE]
 > It will take us a few months to complete the move of all apps. If your app is affected by any of the feature gaps listed on our [public roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp), we won't move them until the gaps are closed. HockeyApp will still be available until then. We recommend you to [move your app](~/transition/moving/index.md) immediately once it becomes unaffected.
 
 ## Recommended actions
 
-First, make yourself familiar with App Center. Feel free to reach out to us in case you've any questions.
+If you haven't yet, make yourself familiar with App Center. Let us know in case you've any questions.
 
 * Checkout potential [incompatibilities](~/transition/moving/incompatibilities.md) of your apps
 * Move your apps to App Center
