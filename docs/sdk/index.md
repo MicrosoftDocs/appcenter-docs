@@ -71,7 +71,7 @@ Analytics        | 4.1 and later      | 16 and later
 Auth             | 4.1 and later      | 16 and later
 Crashes          | 4.1 and later      | 16 and later
 Data             | 4.1 and later      | 16 and later
-Distribute       | 4.1 and later      | 16 and later
+Distribute       | 4.4 and later      | 19 and later
 Push             | 4.1 and later      | 16 and later
 
 ### iOS
