@@ -1,6 +1,6 @@
 ---
 title: Publish applications to Intune Company Portal
-description: Simplify distribution of line of business mobile applications to the Company Portal on Intune
+description: Simplify distribution of line-of-business mobile applications to the Company Portal on Intune
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
@@ -13,7 +13,7 @@ ms.assetid: 7360e04f-01af-4c3f-ac0a-75c2dab979ba
 
 # Intune Company Portal Distribution
 
-Publish new and upgrade existing line of business(LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
+Publish new and upgrade existing line-of-business (LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
 
 ## Pre-requisites
 
@@ -25,6 +25,7 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 * It is important to note that Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. The tenants Azure Active Directory (AD) global admin needs to give consent. To provide this consent, the global admin of your company's Azure Active Directory global admin will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph APIs. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). Providing consent is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, should be able to navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
 * For more information, review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
 
+
 ## Step 1: Create an Intune connection in App Center
 
 1. Select **Stores** under Distribution.
@@ -32,10 +33,11 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 3. Select the store type as Intune Company Portal and click **Next**.
 4. You will be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
 5. On successful login, you will be asked to enter a **Store name**.
-6. **Select Category** of the app from the drop down.
-7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the auto-complete drop down.
+6. **Select Category** of the app from the drop-down.
+7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The InTune administrator that connected App Center to the InTune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the autocomplete drop-down.
 8. Click **Connect**.
 9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. The connection is valid for 90 days for an application in App Center. 
+
 
 ## Step 2: Publish your application to the Intune Company Portal
 
@@ -49,10 +51,38 @@ Publish new and upgrade existing line of business(LOB) iOS and Android applicati
 
 For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page.
 
+## Publishing through the CLI
+Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+
+```
+appcenter distribute stores list \
+--app {app_owner}/{app_name} \
+--output json
+```
+
+You will get a result like this:
+```
+[["Alpha","googleplay","alpha"],["Beta","googleplay","beta"],["Production","googleplay","production"]
+```
+
+And it's the Store column we will use in the final step.
+
+The final step is to publish your app by running:
+```
+appcenter distribute stores publish \
+--file /path/to/file.aab \
+--store Production \
+--app {app_owner}/{app_name} \
+--release-notes "Some note."
+```
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
+
 ## Troubleshooting
 
 ### Failed to publish app to Intune Store. The app was previously published as ***
 
 This error can happen when you try to publish using an app you've already published to Intune with a different app name.  App Center uses the name of the app in App Center when publishing to Intune. If the name is different from what you have in Intune, Intune rejects with that error message.
 
-In order to fix this problem, you need to rename or create a new app that exactly matches what you have in Intune. If you see the error message, try to rename your App Center app to what follows after ...published as '***'. 
+In order to fix this problem, you need to rename or create a new app that exactly matches what you have in Intune. If you see the error message, try to rename your App Center app to what follows after ...published as '***'.
