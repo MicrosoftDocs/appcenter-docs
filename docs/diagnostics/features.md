@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/14/2019
+ms.date: 10/17/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -161,7 +161,7 @@ Log properties:
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
-    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.ios", "hockeysdk.android"
+    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
     - `sdkVersion`: required string with version of the SDK in semver format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
@@ -202,7 +202,7 @@ curl -X POST \
       "device": {
         "appVersion": "12.0",
         "appBuild": "1",
-        "sdkName": "appcenter.android",
+        "sdkName": "custom.android",
         "sdkVersion": "1.0.0",
         "osName": "android",
         "osVersion": "9.3",
@@ -326,7 +326,7 @@ curl -X POST \
         "device": {
         "appVersion": "10.0",
         "appBuild": "1",
-        "sdkName": "appcenter.ios",
+        "sdkName": "custom.ios",
         "sdkVersion": "1.0.0",
         "osName": "iOS",
         "osVersion": "9.3",
@@ -441,7 +441,7 @@ curl -X POST \
       "device": {
         "appVersion": "11.0",
         "appBuild": "1",
-        "sdkName": "appcenter.android",
+        "sdkName": "custom.android",
         "sdkVersion": "1.0.0",
         "osName": "android",
         "osVersion": "9.3",
@@ -468,13 +468,10 @@ curl -X POST \
                 "type": "System.ArgumentOutOfRangeException",
                 "message": "It's over 9000!",
                 "stackTrace": "  at Contoso.Forms.Demo.CrashesContentPage.ValidateLength () [0x00002] in <4fd9174f6e18457b9721bfba2cd78098>:0 ",
-                "wrapperSdkName": "appcenter.xamarin"
               }
             ],
-            "wrapperSdkName": "appcenter.xamarin"
           }
         ],
-        "wrapperSdkName": "appcenter.xamarin"
       }
     }
   ]
@@ -487,7 +484,7 @@ Please note that all attachments need to be associated with a crash report. You 
 
 Attachment specific properties:
 
-- `contentType`: required string with content type (text/plain for text)
+- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type).
 - `data`: required string with data encoded as base 64
 - `errorId` property is the unique identifier that associates the attachment to the right crash report.
 
