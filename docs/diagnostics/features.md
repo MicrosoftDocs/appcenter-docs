@@ -175,7 +175,7 @@ Log properties:
     - `stackTrace`: optional string with raw stack trace
     - `innerException`: optional array with inner exceptions
 
-You can find examples of how to upload a crash report, error report, and attachment below.
+You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json). 
 
 ### Upload a crash report
 
