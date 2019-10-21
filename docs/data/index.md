@@ -56,8 +56,10 @@ App Center Data supports offline reads and writes. For both reads and writes, al
 | -------------------------------------- | ----------- |
 | Provision a new Cosmos DB database     | App Center enables you to easily provision a new Cosmos DB database with required prerequisites directly in the Portal |
 | Connect an existing Cosmos DB database | Connect existing CosmosDB databases and associated collections  |
-| Client SDKs                            | Native Android, iOS, Xamarin (Android and iOS) SDKs that allow you to easily manage both private and public app data |
-| Offline Reads & Writes                 | Perform Offline Read and Writes in your app, making your app usable in any scenario |
+| Client SDKs                            | Native Android, iOS, Xamarin (Android and iOS), and React Native SDKs that allow you to easily manage both private and public app data |
+| Offline Reads & Writes                 | Perform Offline Read and Writes in your app, making your app usable in any scenario | 
+| Data Explorer                          | Create, read, update, delete, and filter documents directly from the App Center portal |
+| Metrics View                           | View metrics associated with your data such as throughput, requests per second, latency, etc.   |
 
 ## Limitations
 
