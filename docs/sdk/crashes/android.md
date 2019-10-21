@@ -249,9 +249,9 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 }
 ```
 
-### Add attachments to a crash report
+### Add attachments to a crash or a handled error report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash or a handled error report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. Here is an example of how to attach text and an image to a report:
 
 ```java
 @Override
@@ -377,6 +377,8 @@ try {
     Crashes.trackException(exception, properties)
 }
 ```
+
+You can optionally add **one binary** and **one text** attachment to a handled error report by implementing the [getErrorAttachments](#add-attachments-to-a-crash-or-a-handled-error-report) callback from the [CrashesListener](#customize-your-usage-of-app-center-crashes).
 
 ## Reporting NDK crashes
 
