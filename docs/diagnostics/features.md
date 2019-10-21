@@ -151,7 +151,7 @@ To upload a report, call the App Center ingestion endpoint with the headers:
 - `install-id`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-- `type`: required string with log type - "managedError", "handledError" or "errorAttachment".
+- `type`: required string with log type - "managedError", "appleError", "handledError" or "errorAttachment".
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z". 
 - `device`: required object with device characteristics
@@ -294,7 +294,7 @@ curl -X POST \
 
 #### Upload an Apple crash log
 
-To upload an Apple crash log, make sure the log type is set to "managedError".
+To upload an Apple crash log, make sure the log type is set to "appleError".
 The following properties are also required:
 
 - `primaryArchitectureId`: required integer with CPU primary architecture.
