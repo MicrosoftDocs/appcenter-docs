@@ -74,6 +74,9 @@ Choose a name for the new Service Account, and click **Create**.
 
 Click the **Select a role** in the drop-down menu. Select **Project**, then **Owner**. Navigate to the next step by clicking **Continue**.
 
+> [!NOTE]
+> Some users can't download the .json file using Edge and Internet Explorer.
+
 On the new page click **+ Create Key (optional)** and a modal appears.
 
 ![Google Play: Click + Create Key to generate a JSON file](~/distribution/images/image7.png)
