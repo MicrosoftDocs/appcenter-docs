@@ -154,10 +154,6 @@ Log properties:
 - `type`: required string with log type - "managedError", "handledError" or "errorAttachment".
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z". 
-- `processId`: required integer with process identifier
-- `id`: required string with exception identifier
-- `fatal`: required boolean which indicates if the exception resulted in a crash
-- `processName`: required string with the process name
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
@@ -167,7 +163,7 @@ Log properties:
     - `osVersion`: required string with OS version, e.g. "9.3.0"
     - `model`: optional string with device model, e.g. "iPad2"
     - `locale`: required string with language code, e.g."en-US"
-- `userId`: optional string used for associating logs with users.
+- `userId`: optional string used for associating logs with users
 - `exception`: required object with exception details
     - `type`: required string with exception type
     - `frame`: optional array with stack frames
@@ -179,8 +175,14 @@ You can find examples of how to upload a crash report, error report, and attachm
 
 ### Upload a crash report
 
-To upload a crash report, make sure the log type is set to "managedError".
+ The following properties are required to upload a crash report:
 
+- `processId`: required integer with process identifier
+- `id`: required string with exception identifier
+- `fatal`: required boolean which indicates if the exception resulted in a crash
+- `processName`: required string with the process name
+
+To upload a crash report that is not Apple formatted, make sure the log type is set to "managedError."
 
 ```shell
 curl -X POST \
@@ -292,7 +294,8 @@ curl -X POST \
 
 #### Upload an Apple crash log
 
-The following properties are required to upload an Apple crash log:  
+To upload an Apple crash log, make sure the log type is set to "managedError".
+The following properties are also required:
 
 - `primaryArchitectureId`: required integer with CPU primary architecture.
 - `applicationPath`: required string with the path to the application.
