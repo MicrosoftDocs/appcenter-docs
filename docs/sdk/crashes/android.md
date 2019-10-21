@@ -366,7 +366,7 @@ try {
         put("Category", "Music");
         put("Wifi", "On");
     }};
-    Crashes.trackException(exception, properties); 
+    Crashes.trackException(exception, properties, null); 
 }
 ```
 ```kotlin
@@ -374,8 +374,40 @@ try {
     // your code goes here.
 } catch (exception: Exception) {
     val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
-    Crashes.trackException(exception, properties)
+    Crashes.trackException(exception, properties, null)
 }
+```
+
+You can optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an iterable of key/value pairs (strings only) as shown in the example below
+
+
+```java
+/* Attach some text. */
+ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+
+/* Attach app icon. */
+Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+ByteArrayOutputStream stream = new ByteArrayOutputStream();
+bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+byte[] bitmapData = stream.toByteArray();
+ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+
+/* Track an exception with attachments as linked list. */
+Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
+```
+```kotlin	
+/* Attach some text. */
+val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+/* Attach app icon. */
+val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
+val stream = ByteArrayOutputStream()
+bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+val bitmapData = stream.toByteArray()
+val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
+	
+/* Track an exception with attachments as linked list. */
+Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
 ```
 
 ## Reporting NDK crashes
