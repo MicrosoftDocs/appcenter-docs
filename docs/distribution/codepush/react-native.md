@@ -840,6 +840,9 @@ To set this up, perform the following steps:
         ...
     }
     ```
+    
+   > [!NOTE]
+   > Remember to remove the key from `strings.xml` if you are configuring the deployment key in the build process
 
    > [!NOTE]
    > The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
