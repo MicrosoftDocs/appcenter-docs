@@ -27,9 +27,6 @@ Azure DevOps, GitHub and Jira are the bug trackers currently supported on App Ce
 
 App Center continues to receive crashes from the HockeySDK. The data that already exists in App Center will remain. The data retention will be mapped to a maximum of 90 days.
 
-> [!NOTE]
-> For UWP apps, App Center isn't receiving crashes from the HockeySDK at the moment and we don't move any crashes data. We're planning to add support for UWP on App Center and recommend you to wait until then. Follow our [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) for updates.
-
 ## Distribution
 
 For each app we create an "app name" distribution group on the app level containing all the users of the app on HockeyApp. A maximum of 90 and a minimum of 30 releases are moved to App Center with all their states and restrictions. To determine the number of releases to move, we calculate the average number of releases uploaded per day in the last 90 days and multiple it by 30. In-app updates with the HockeySDK integrated continue to work.
