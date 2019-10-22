@@ -4,7 +4,7 @@ description: Simplify distribution of line-of-business mobile applications to th
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -20,7 +20,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 * Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](https://docs.microsoft.com/en-us/intune/free-trial-sign-up).
 * An Intune admin and tenant account activated. 
 * Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
-* Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator and service administrator permissions.
+* Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator permission.
 * Create [groups](https://docs.microsoft.com/intune/groups-add) to organize users or devices by geographic location, department, or hardware characteristics.
 * It is important to note that Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. The tenants Azure Active Directory (AD) global admin needs to give consent. To provide this consent, the global admin of your company's Azure Active Directory global admin will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph APIs. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). Providing consent is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, should be able to navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
 * For more information, review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
