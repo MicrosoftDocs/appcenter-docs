@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 10/15/2019
+ms.date: 10/23/2019
 ms.topic: article
 ms.assetid: b19b58c4-f662-41bd-8ca3-049ae1e0b90d
 ms.service: vs-appcenter
@@ -38,7 +38,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '2.4.0'
+       def appCenterSdkVersion = '2.4.1'
        implementation "com.microsoft.appcenter:appcenter-auth:${appCenterSdkVersion}"
     }
     ```
