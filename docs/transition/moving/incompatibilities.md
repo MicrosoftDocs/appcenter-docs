@@ -4,7 +4,7 @@ description: When moving apps from HockeyApp to App Center we are checking for i
 keywords: transition
 author: derpixeldan
 ms.author: daadam
-ms.date: 02/18/2019
+ms.date: 10/22/2019
 ms.topic: article
 ms.assetid: 59e9c687-8447-4354-8844-43ac6d241e15
 ms.service: vs-appcenter
@@ -18,10 +18,6 @@ When you move an app from HockeyApp to App Center, we check and indicate potenti
 ## Bug tracker integration
 
 App Center will only transfer associates with Azure DevOps, GitHub, and Jira. Other bug trackers will not create new tickets, and the associations are lost.
-
-## Crashes
-
-In App Center, we currently don't support receiving crashes for UWP apps. However, we're working on sending crashes collected by the HockeySDK for UWP to App Center.
 
 ## Distribution Groups
 

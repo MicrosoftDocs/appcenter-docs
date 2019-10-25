@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: elamalani
 ms.author: emalani
-ms.date: 09/26/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -22,7 +22,7 @@ The table below lists all the Operating System and Platforms and their supported
 | tvOS                   |  ❌   |  ❌  |     ❌     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
 | React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
 | React Native - Android |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
-| Windows - UWP          |  ✅   |  ❌  |     ✅     |  ✅\*   |    ✅     |  ❌  |  ❌  |  ✅  |
+| Windows - UWP          |  ✅   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
 | Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ❌  |
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
@@ -32,5 +32,3 @@ The table below lists all the Operating System and Platforms and their supported
 | Unity - UWP            |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
-
-\*For Windows - UWP, crashes are only collected if your app was submitted to the Windows Store.

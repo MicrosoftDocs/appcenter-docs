@@ -64,33 +64,10 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Key Value Pairs
 
-Xamarin developers can tailor the error report sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional.
-
-For example:
-
-```csharp
-try
-{
-    using (var text = File.OpenText("saved_game001.txt"))
-    {
-        Console.WriteLine("{0}", text.ReadLine());
-        ...
-    }
-}
-catch (FileNotFoundException ex)
-{
-    Crashes.TrackError(ex, new Dictionary<string,string>{
-        { "Filename", "saved_game001.txt" },
-        { "Where", "Reload game" },
-        { "Issue", "Index of available games is corrupted" }
-    });
-}
-```
-
-Here the full exception (`ex`) is sent back to the App Center service, plus a dictionary containing additional debugging information as well.
+You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional. To set key value pairs, take a look at our [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [UWP](~/sdk/crashes/uwp.md#handled-errors) documentation.
 
 > [!NOTE]
-> This feature is only supported for Xamarin Errors today.
+> This feature is only supported for Xamarin, WinForms, WPF, and UWP Errors today.
 
 ### Export Diagnostics Data
 
@@ -113,7 +90,7 @@ In a crash report, you can see the current threads that were active when the app
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
 > [!NOTE]
-> Only the main thread at the time of the error will be available for WPF and WinForms reports
+> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment of the crash is not supported on Windows.
 
 ## Configure Alerts
 

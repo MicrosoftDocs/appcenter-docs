@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications to users.
 keywords: app center, push, user
 author: jwargo
 ms.author: jowargo
-ms.date: 10/07/2019
+ms.date: 10/24/2019
 ms.topic: article
 ms.assetid: df3187de-0295-475e-9be2-4f46034cdcbe
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.custom: push
 Along with sending notifications to devices directly or via Audiences, App Center Push enables customers to send notification messages to all of the devices associated with one or more users. App Center's ability to do this is controlled by the developer setting the user's identity directly through the App Center SDK or configuring the application to use the App Center Auth service.  The app user's identity must be set using one of these options to send notifications to users.
 
 > [!NOTE]
-> The Push to User feature currently supports sending notifications to devices running Android and iOS.
+> The Push to User feature currently supports sending notifications to devices running Android, iOS, and Windows (for UWP apps).
 
 ## Setting user identity
 
@@ -33,6 +33,7 @@ To set an app user's identity using the App Center SDK, refer to the following a
 + [macOS SDK](~/sdk/other-apis/macOS.md#identify-users)
 + [React Native SDK](~/sdk/other-apis/react-native.md#identify-users)
 + [Unity SDK](~/sdk/other-apis/unity.md#identify-users)
++ [UWP SDK](~/sdk/other-apis/uwp.md#identify-users)
 + [Xamarin SDK](~/sdk/other-apis/xamarin.md#identify-users)
 
 > [!NOTE]

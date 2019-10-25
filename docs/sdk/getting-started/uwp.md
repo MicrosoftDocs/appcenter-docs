@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/18/2019
+ms.date: 10/16/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -46,11 +46,10 @@ Before you begin, please make sure that the following prerequisites are met:
 
 If you have already created your app in the App Center portal, you can skip this step.
 
-1. To learn how to get started with Push, read the [appcenter.ms](https://appcenter.ms) documentation.
-2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
-3. Enter a name and an optional description for your app.
-4. Select the appropriate OS and platform depending on your project as described above.
-5. Hit the button at the bottom right that says **Add new app**.
+1. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+2. Enter a name and an optional description for your app.
+3. Select the appropriate OS and platform depending on your project as described above.
+4. Hit the button at the bottom right that says **Add new app**.
 
 Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
@@ -63,16 +62,16 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Open Visual Studio.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
-* Search for **App Center**, and install **Microsoft.AppCenter.Analytics**.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following commands:
 
 ```shell
 Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
 ```
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
@@ -102,7 +101,7 @@ using Microsoft.AppCenter.Analytics;
 Add the following call to your application's **constructor**:
 
 ```csharp
-AppCenter.Start("{Your App Secret}", typeof(Analytics));
+AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 ### 5.3 Replace the placeholder with your App Secret
@@ -117,5 +116,4 @@ Note that, unless you explicitly specify each service as parameters in the start
 
 Great, you are all set to visualize Analytics on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) to learn how to customize and use more advanced functionalities.
-
+Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) and [App Center Crashes](~/sdk/crashes/wpf-winforms.md) to learn how to customize and use more advanced functionalities of both services.

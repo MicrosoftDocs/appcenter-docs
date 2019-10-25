@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/15/2019
+ms.date: 10/17/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -99,7 +99,7 @@ Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.
 Service          | Windows Version    | Visual Studio
 -----------------|--------------------|----------------------------
 Analytics        | 10 build 10240     | Visual Studio 2015 or later
-Crashes          | not available      | not available
+Crashes          | 10 build 10240     | Visual Studio 2015 or later
 Distribute       | not available      | not available
 Push             | 10 build 10240     | Visual Studio 2015 or later
 
