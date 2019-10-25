@@ -386,18 +386,18 @@ try {
     // your code goes here.
 } catch (Exception exception) {
 	
-	// Attach some text.
-	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-	// Attach app icon.
-	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-	byte[] bitmapData = stream.toByteArray();
-	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+    // Attach app icon.
+    Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+    byte[] bitmapData = stream.toByteArray();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
 
-	// Track an exception with attachments.
-	Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
 }
 ```
 ```kotlin
@@ -405,18 +405,18 @@ try {
     // your code goes here.
 } catch (exception: Exception) {
 
-	// Attach some text.
-	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-	// Attach app icon.
-	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
-	val stream = ByteArrayOutputStream()
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-	val bitmapData = stream.toByteArray()
-	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-		
-	// Track an exception with attachments.
-	Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
+    // Attach app icon.
+    val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
+    val stream = ByteArrayOutputStream()
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+    val bitmapData = stream.toByteArray()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
+	
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
 }
 ```
 
