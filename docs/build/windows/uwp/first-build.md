@@ -54,7 +54,7 @@ When enabled, the version number of your app automatically increments for each b
 
 ### 3.5. Simulator build
 
-Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
+Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster than device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
 ### 3.6. Code signing
 
