@@ -392,7 +392,7 @@ bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 byte[] bitmapData = stream.toByteArray();
 ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
 
-/* Track an exception with attachments as linked list. */
+/* Track an exception with attachments. */
 Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
 ```
 ```kotlin	
@@ -406,7 +406,7 @@ bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 val bitmapData = stream.toByteArray()
 val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
 	
-/* Track an exception with attachments as linked list. */
+/* Track an exception with attachments. */
 Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
 ```
 
