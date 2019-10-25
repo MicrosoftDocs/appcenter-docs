@@ -2,13 +2,14 @@
 title: Environment Variables
 description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
-author: derpixeldan
-ms.author: daadam
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/10/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: mobile-center
 ms.custom: build
+ms.reviewer: nirajpur
 ---
 
 # Environment variables

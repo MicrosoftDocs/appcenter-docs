@@ -2,13 +2,14 @@
 title: Build Scripts
 description: Details on how to write build scripts to enhance the build process
 keywords: build, pre, post, custom, scripts
-author: derpixeldan
-ms.author: daadam
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/10/2019
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
 ms.custom: build
+ms.reviewer: nirajpur
 ---
 
 # Build scripts
