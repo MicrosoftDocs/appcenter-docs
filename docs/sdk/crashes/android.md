@@ -257,34 +257,34 @@ You can add **one binary** and **one text** attachment to a crash report. The SD
 @Override
 public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
-	/* Attach some text. */
+	// Attach some text.
 	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-	/* Attach app icon. */
+	// Attach app icon.
 	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
 	ByteArrayOutputStream stream = new ByteArrayOutputStream();
 	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 	byte[] bitmapData = stream.toByteArray();
 	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
 
-	/* Return attachments as list. */
+	// Return attachments as list.
 	return Arrays.asList(textLog, binaryLog);
 }
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
 	
-	/* Attach some text. */
+	// Attach some text.
 	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-	/* Attach app icon. */
+	// Attach app icon.
 	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
 	val stream = ByteArrayOutputStream()
 	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 	val bitmapData = stream.toByteArray()
 	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
 	
-	/* Return attachments as list. */
+	// Return attachments as list.
 	return Arrays.asList(textLog, binaryLog)
 }
 ```
@@ -382,31 +382,31 @@ You can optionally add **one binary** and **one text** attachment to a crash rep
 
 
 ```java
-/* Attach some text. */
+// Attach some text.
 ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-/* Attach app icon. */
+// Attach app icon.
 Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
 ByteArrayOutputStream stream = new ByteArrayOutputStream();
 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 byte[] bitmapData = stream.toByteArray();
 ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
 
-/* Track an exception with attachments. */
+// Track an exception with attachments as linked list.
 Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
 ```
 ```kotlin	
-/* Attach some text. */
+// Attach some text.
 val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-/* Attach app icon. */
+// Attach app icon.
 val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
 val stream = ByteArrayOutputStream()
 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 val bitmapData = stream.toByteArray()
 val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
 	
-/* Track an exception with attachments. */
+// Track an exception with attachments as linked list.
 Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
 ```
 
@@ -428,12 +428,12 @@ Next, you must include and compile Google Breakpad by following the instructions
 Once you have Google Breakpad included, attach the NDK Crash Handler after `AppCenter.start`:
 
 ```java
-/* Attach NDK Crash Handler after SDK is initialized. */
+// Attach NDK Crash Handler after SDK is initialized.
 Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
     @Override
     public void accept(String path) {
 
-        /* Path is null when Crashes is disabled. */
+        // Path is null when Crashes is disabled.
         if (path != null) {
             setupNativeCrashesListener(path);
         }
@@ -466,7 +466,7 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
                   void *context,
                   bool succeeded) {
 
-    /* Allow system to log the native stack trace. */
+    // Allow system to log the native stack trace.
     __android_log_print(ANDROID_LOG_INFO, "YourLogTag",
                         "Wrote breakpad minidump at %s succeeded=%d\n", descriptor.path(),
                         succeeded);
