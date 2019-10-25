@@ -35,8 +35,7 @@ App Center device testing requires:
 If you close the settings page without saving, it will default back to its previous settings. Saving is disabled when settings are invalid or missing required information.
 
 ## Enable Launch Testing
-> [!TIP]
-> Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. Disable **Generate one package(.apk) per selected ABI** in your Android Build options to resolve the problem.
+Using Launch Testing doesn't require a license for App Center Test, or even writing UI tests yourself. For Android apps, the Launch Testing feature automatically handles testing using Xamarin.UITest, while for iOS it uses Appium. 
 
 Select the **Test on a real device** switch on the branch configuration page. The launch test adds a few minutes to your build time since the build waits for the test to complete. The benefit is that you know whether your app starts on a physical device.
 
@@ -45,7 +44,8 @@ Finding your launch test result can be done in a few ways:
 - On the results page for each Build, a link to the launch test is displayed.
 - Go to **Test** in the left-hand menu, and select **Test Series > Launch-Tests** to view all launch tests for that app. 
 
-Using Launch Testing doesn't require a license for App Center Test, or even writing UI tests yourself. For Android apps, the Launch Testing feature automatically handles testing using Xamarin.UITest, while for iOS it uses Appium. 
+> [!TIP]
+> Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. Disable **Generate one package(.apk) per selected ABI** in your Android Build options to resolve the problem.
 
 ## Automatically Deploy to App Center Test
 You can integrate Build & Test to run a UI test suite with each build of your app. This feature has additional requirements and limitations compared to Launch Testing:
