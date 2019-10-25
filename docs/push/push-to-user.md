@@ -16,7 +16,7 @@ ms.custom: push
 Along with sending notifications to devices directly or via Audiences, App Center Push enables customers to send notification messages to all of the devices associated with one or more users. App Center's ability to do this is controlled by the developer setting the user's identity directly through the App Center SDK or configuring the application to use the App Center Auth service.  The app user's identity must be set using one of these options to send notifications to users.
 
 > [!NOTE]
-> The Push to User feature currently supports sending notifications to devices running Android and iOS.
+> The Push to User feature currently supports sending notifications to devices running Android, iOS, and Windows (for UWP apps).
 
 ## Setting user identity
 
