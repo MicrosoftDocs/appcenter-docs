@@ -237,9 +237,12 @@ App Center also allows you to track errors by using handled exceptions.
 In order to do so, simply use the `TrackError` method:
 
 ```csharp
-try {
+try 
+{
     // your code goes here.
-} catch (Exception exception) {
+} 
+catch (Exception exception) 
+{
     Crashes.TrackError(exception);
 }
 ```
@@ -247,9 +250,12 @@ try {
 An app can optionally attach properties to a handled error report to provide further context. Pass the properties as a dictionary of key/value pairs (strings only) as shown in the example below.
 
 ```csharp
-try {
+try 
+{
     // your code goes here.
-} catch (Exception exception) {
+} 
+catch (Exception exception)
+{
     var properties = new Dictionary<string, string>
     {
         { "Category", "Music" },
