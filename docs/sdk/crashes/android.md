@@ -378,7 +378,7 @@ try {
 }
 ```
 
-You can optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an `Iterable` of key/value pairs (strings only) as shown in the example below
+You can optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an `Iterable` of key/value pairs (strings only) as shown in the example below.
 
 
 ```java
