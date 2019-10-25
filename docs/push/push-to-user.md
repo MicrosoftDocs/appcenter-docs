@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications to users.
 keywords: app center, push, user
 author: jwargo
 ms.author: jowargo
-ms.date: 10/07/2019
+ms.date: 10/24/2019
 ms.topic: article
 ms.assetid: df3187de-0295-475e-9be2-4f46034cdcbe
 ms.service: vs-appcenter
@@ -33,6 +33,7 @@ To set an app user's identity using the App Center SDK, refer to the following a
 + [macOS SDK](~/sdk/other-apis/macOS.md#identify-users)
 + [React Native SDK](~/sdk/other-apis/react-native.md#identify-users)
 + [Unity SDK](~/sdk/other-apis/unity.md#identify-users)
++ [UWP SDK](~/sdk/other-apis/uwp.md#identify-users)
 + [Xamarin SDK](~/sdk/other-apis/xamarin.md#identify-users)
 
 > [!NOTE]
