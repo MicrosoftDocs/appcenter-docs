@@ -115,13 +115,13 @@ Create your own CrashesListener and assign it like this:
 
 ```java
 CrashesListener customListener = new CrashesListener() {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : CrashesListener {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 }
 Crashes.setListener(customListener)
 ```
@@ -130,13 +130,13 @@ In case you are only interested in customizing some of the callbacks, use the `A
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 }
 Crashes.setListener(customListener)
 ```
@@ -151,12 +151,12 @@ Implement this callback if you'd like to decide if a particular crash needs to b
 ```java
 @Override
 public boolean shouldProcess(ErrorReport report) {
-	return true; // return true if the crash report should be processed, otherwise false.
+    return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
 ```kotlin
 override fun shouldProcess(report: ErrorReport?): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -175,15 +175,15 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
-	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-	// Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
-	return true;
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    return true;
 }
 ```
 ```kotlin
 override fun shouldAwaitUserConfirmation(): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -212,12 +212,12 @@ At times, you would like to know the status of your app crash. A common use case
 ```java
 @Override
 public void onBeforeSending(ErrorReport errorReport) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
 ```kotlin
 override fun onBeforeSending(report: ErrorReport?) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
 
@@ -226,12 +226,12 @@ override fun onBeforeSending(report: ErrorReport?) {
 ```java
 @Override
 public void onSendingSucceeded(ErrorReport report) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 ```kotlin
 override fun onSendingSucceeded(report: ErrorReport?) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 
@@ -240,12 +240,12 @@ override fun onSendingSucceeded(report: ErrorReport?) {
 ```java
 @Override
 public void onSendingFailed(ErrorReport report, Exception e) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 ```kotlin
 override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 
@@ -257,35 +257,29 @@ You can add **one binary** and **one text** attachment to a crash report. The SD
 @Override
 public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
-	// Attach some text.
-	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-	// Attach app icon.
-	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-	byte[] bitmapData = stream.toByteArray();
-	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+    // Attach binary data.
+    byte[] data = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg");
 
-	// Return attachments as list.
-	return Arrays.asList(textLog, binaryLog);
+    // Return attachments as list.
+    return Arrays.asList(textLog, binaryLog);
 }
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
-	
-	// Attach some text.
-	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-	// Attach app icon.
-	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
-	val stream = ByteArrayOutputStream()
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-	val bitmapData = stream.toByteArray()
-	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-	
-	// Return attachments as list.
-	return Arrays.asList(textLog, binaryLog)
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+    // Attach binary data.
+    val data = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
+
+    // Return attachments as list.
+    return Arrays.asList(textLog, binaryLog)
 }
 ```
 
@@ -385,16 +379,13 @@ You can optionally add **one binary** and **one text** attachment to a crash rep
 try {
     // your code goes here.
 } catch (Exception exception) {
-	
+    
     // Attach some text.
     ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-    // Attach app icon.
-    Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-    ByteArrayOutputStream stream = new ByteArrayOutputStream();
-    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-    byte[] bitmapData = stream.toByteArray();
-    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+    // Attach binary data.
+    byte[] data = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg");
 
     // Track an exception with attachments.
     Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
@@ -408,13 +399,10 @@ try {
     // Attach some text.
     val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-    // Attach app icon.
-    val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
-    val stream = ByteArrayOutputStream()
-    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-    val bitmapData = stream.toByteArray()
-    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-	
+    // Attach binary data.
+    val data = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
+    
     // Track an exception with attachments.
     Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
 }
