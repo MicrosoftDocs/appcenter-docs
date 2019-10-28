@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 10/17/2019
+ms.date: 10/28/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -30,34 +30,33 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 
 ### Language and Runtime
-
-- java 1.7: OpenJDK Runtime Environment (Zulu 7.31.0.5-CA-macosx) (build 1.7.0_232-b6)
-- java 1.8: OpenJDK Runtime Environment (Zulu 8.40.0.25-CA-macosx) (build 1.8.0_222-b10) (default)
-- java 11: OpenJDK Runtime Environment (Zulu11.33+15-CA) (build 11.0.4+11-LTS)
+- java 1.7: OpenJDK Runtime Environment (Zulu 7.34.0.5-CA-macosx) (build 1.7.0_242-b7)
+- java 1.8: OpenJDK Runtime Environment (Zulu 8.42.0.21-CA-macosx) (build 1.8.0_232-b18) (default)
+- java 11: OpenJDK Runtime Environment Zulu11.35+13-CA (build 11.0.5+10-LTS)
 - java 12: OpenJDK Runtime Environment (Zulu12.3+11-CA) (build 12.0.2+3)
-- java 13: OpenJDK Runtime Environment (Zulu13.27+9-CA) (build 13+33)
+- java 13: OpenJDK Runtime Environment Zulu13.28+11-CA (build 13.0.1+10-MTS)
 - PowerShell 6.2.3
 - Python 2.7.16
 - Python 3.7.4
 - Ruby 2.6.5p114
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.13.1
-- Miniconda 4.7.10
-- MacOS tool cache Python 2.7.16 3.4.10 3.5.7 3.6.9 3.7.4
+- Go 1.13.3
+- Miniconda 4.7.12
+- MacOS tool cache Python 2.7.16 3.4.10 3.5.7 3.6.9 3.7.5 3.8.0
 - MacOS tool cache Ruby 2.3.8 2.4.6 2.5.5 2.6.3
 
 ### Node.js versions
 - v6.17.1
 - v8.16.2
-- v10.16.3
-- v12.12.0
+- v10.17.0
+- v12.13.0
 
 ### Package Management
 
 - Bundler 2.0.2
-- Carthage 0.33.0
-- CocoaPods 1.8.3
-- Homebrew 2.1.13
+- Carthage 0.34.0
+- CocoaPods 1.8.4
+- Homebrew 2.1.15
 - NPM 3.10.10
 - Yarn 1.19.1
 - NuGet 4.7.0.5148
@@ -67,7 +66,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Project Management
 
 - Apache Maven 3.6.2
-- Gradle 5.6.2
+- Gradle 5.6.3
 
 ### Utilities
 
@@ -80,9 +79,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 
-- Fastlane 2.133.0
+- Fastlane 2.134.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.74
+- Azure-CLI 2.0.75
 
 ## Xcode
 
@@ -315,7 +314,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.3.3.8
+- 8.3.4.8
 
 ### Mono
 
