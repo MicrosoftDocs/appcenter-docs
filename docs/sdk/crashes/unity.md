@@ -185,6 +185,9 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 > [!NOTE]
 > The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
+> [!NOTE]
+> You can differentiate a **crash** report form an **unhandled exception** report via the `IsCrash` property of the provided error report.
+
 ## Enable or disable App Center Crashes at runtime
 
 You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not perform any crash reporting for the app.
@@ -255,7 +258,7 @@ try {
 
 ## Unhandled Exceptions in Unity
 
-### Report unhandled exceptions in Unity
+### Report unhandled exceptions
 
 By default, the App Center SDK doesn't report unhandled exceptions thrown in your app that don't cause a fatal crash. To enable this functionality, call the following method:
 
@@ -272,7 +275,7 @@ Crashes.ReportUnhandledExceptions(false);
 > [!NOTE]
 > Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
 
-### Add attachments to a unhandled exceptions report
+### Add attachments to an unhandled exceptions report
 
 By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
 
