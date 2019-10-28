@@ -374,7 +374,7 @@ try {
     // your code goes here.
 } catch (exception: Exception) {
     val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
-    Crashes.trackException(exception, properties, null)
+    Crashes.trackError(exception, properties, null)
 }
 ```
 
