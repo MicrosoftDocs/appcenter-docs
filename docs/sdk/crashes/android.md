@@ -279,7 +279,7 @@ override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAtt
     val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
 
     // Return attachments as list.
-    return Arrays.asList(textLog, binaryLog)
+    return listOf(textLog, binaryLog)
 }
 ```
 
@@ -367,7 +367,7 @@ try {
 try {
     // your code goes here.
 } catch (exception: Exception) {
-    val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
+    val properties = mapOf("Category" to "Music", "Wifi" to "On")
     Crashes.trackError(exception, properties, null)
 }
 ```
@@ -404,7 +404,7 @@ try {
     val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
     
     // Track an exception with attachments.
-    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog))
+    Crashes.trackException(exception, null, listOf(textLog, binaryLog))
 }
 ```
 
