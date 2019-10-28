@@ -168,7 +168,7 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 
 ### Add attachments to a crash or an unhandled exception report
 
-You can add one binary and one text attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. Here is an example of how to attach text and an image to a report:
+You can add **one binary** and **one text** attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -182,11 +182,10 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 };
 ```
 
-> [!NOTE]
-> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
+Crashes are differentiated from unhandled exceptions in reports with the `IsCrash` property. The property will be true for crashes and false otherwise.
 
 > [!NOTE]
-> You can differentiate a **crash** report form an **unhandled exception** report via the `IsCrash` property of the provided error report.
+> The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 ## Enable or disable App Center Crashes at runtime
 
@@ -275,7 +274,7 @@ Crashes.ReportUnhandledExceptions(false);
 > [!NOTE]
 > Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
 
-### Add attachments to an unhandled exceptions report
+### Add attachments to an unhandled exception report
 
 By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
 
@@ -283,7 +282,7 @@ By default, the App Center SDK doesn't enable attachments on unhandled exception
 Crashes.ReportUnhandledExceptions(true, true);
 ```
 
-Then you can optionally add **one binary** and **one text** attachment to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
+You can optionally add **one binary** and **one text** attachment to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
@@ -355,7 +354,7 @@ Once these methods are properly set up, the app sends the minidump to App Center
 > [!NOTE]
 > The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
-> [!NOTE]
+> [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
