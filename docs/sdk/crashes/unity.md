@@ -282,7 +282,7 @@ By default, the App Center SDK doesn't enable attachments on unhandled exception
 Crashes.ReportUnhandledExceptions(true, true);
 ```
 
-You can optionally add **one binary** and **one text** attachment to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
+Then you can optionally add attachments to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
