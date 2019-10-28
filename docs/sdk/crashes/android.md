@@ -261,8 +261,8 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
     ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
     // Attach binary data.
-    byte[] data = getYourBinary();
-    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg");
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
 
     // Return attachments as list.
     return Arrays.asList(textLog, binaryLog);
@@ -275,8 +275,8 @@ override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAtt
     val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
     // Attach binary data.
-    val data = getYourBinary()
-    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
 
     // Return attachments as list.
     return listOf(textLog, binaryLog)
@@ -384,8 +384,8 @@ try {
     ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
     // Attach binary data.
-    byte[] data = getYourBinary();
-    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg");
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
 
     // Track an exception with attachments.
     Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
@@ -400,8 +400,8 @@ try {
     val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
     // Attach binary data.
-    val data = getYourBinary()
-    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(data, "your_filename.jpeg", "image/jpeg")
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
     
     // Track an exception with attachments.
     Crashes.trackException(exception, null, listOf(textLog, binaryLog))
