@@ -275,7 +275,7 @@ Crashes.ReportUnhandledExceptions(false);
 > [!NOTE]
 > Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
 
-### Add attachments to an unhandled exceptions report
+### Add attachments to an unhandled exception report
 
 By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
 
@@ -283,7 +283,7 @@ By default, the App Center SDK doesn't enable attachments on unhandled exception
 Crashes.ReportUnhandledExceptions(true, true);
 ```
 
-Then you can optionally add **one binary** and **one text** attachment to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
+Then you can optionally add attachments to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
