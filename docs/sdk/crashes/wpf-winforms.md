@@ -280,6 +280,6 @@ try {
         ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
         ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
     };
-    Crashes.TrackError(exception,attachments:attachments);
+    Crashes.TrackError(exception, attachments: attachments);
 }
 ```
