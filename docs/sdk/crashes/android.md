@@ -366,7 +366,7 @@ try {
         put("Category", "Music");
         put("Wifi", "On");
     }};
-    Crashes.trackException(exception, properties, null); 
+    Crashes.trackError(exception, properties, null); 
 }
 ```
 ```kotlin
