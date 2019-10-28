@@ -166,9 +166,9 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 };
 ```
 
-### Add attachments to a crash report
+### Add attachments to a crash or an unhandled exception report
 
-You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -255,6 +255,8 @@ try {
 
 ## Unhandled Exceptions in Unity
 
+### Report unhandled exceptions in Unity
+
 By default, the App Center SDK doesn't report unhandled exceptions thrown in your app that don't cause a fatal crash. To enable this functionality, call the following method:
 
 ```csharp
@@ -269,6 +271,16 @@ Crashes.ReportUnhandledExceptions(false);
 
 > [!NOTE]
 > Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
+
+### Add attachments to a unhandled exceptions report
+
+By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
+
+```csharp
+Crashes.ReportUnhandledExceptions(true, true);
+```
+
+Then you can optionally add **one binary** and **one text** attachment to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
