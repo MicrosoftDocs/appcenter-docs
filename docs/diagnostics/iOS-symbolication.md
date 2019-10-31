@@ -22,11 +22,11 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 ## Finding the `.dSYM` bundle
 
 1. In Xcode, open the **Window** menu, then select **Organizer**
-2. Select the **Archives** tab
-3. Select your app in the left sidebar
-4. Right-click on the latest archive and select **Show in Finder**
-5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
-6. You should see a folder named `dSYMs` which contains your dSYM bundle
+1. Select the **Archives** tab
+1. Select your app in the left sidebar
+1. Right-click on the latest archive and select **Show in Finder**
+1. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
+1. You should see a folder named `dSYMs` which contains your dSYM bundle
 
 If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/en-us/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
