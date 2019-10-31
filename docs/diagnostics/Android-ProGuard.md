@@ -45,7 +45,7 @@ curl -X POST "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
 ```shell
 curl -X PUT '{upload_url}' \
     -H 'x-ms-blob-type: BlockBlob' \
-    --upload-file '{path to file on disk}'
+    --upload-file '{path to file}'
 ```
 
 3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
@@ -56,6 +56,13 @@ curl -X PATCH "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol
     -H "X-API-Token: {API TOKEN}" \
     -H "Content-Type: application/json" \
     -d "{ \"status\": \"committed\" }"
+```
+
+### App Center CLI
+You can also use the CLI to upload mapping files:
+
+```shell
+appcenter crashes upload-mappings --mapping {mapping file} --version-name {version name} --version-code {version code}
 ```
 
 > [!NOTE]
