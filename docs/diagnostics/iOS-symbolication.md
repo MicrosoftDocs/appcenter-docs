@@ -57,11 +57,11 @@ The App Center Build and Distribution service can automatically generate a valid
 This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property. The body of the request should specify the `symbol_type` as `Apple`.
 
 ```shell
-curl -X POST "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads" \
-    -H "accept: application/json" \
-    -H "X-API-Token: {API TOKEN}" \
-    -H "Content-Type: application/json" \
-    -d "{ \"symbol_type\": \"Apple\" }"
+curl -X POST 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads' \
+    -H 'accept: application/json' \
+    -H 'X-API-Token: {API TOKEN}' \
+    -H 'Content-Type: application/json' \
+    -d '{ "symbol_type": "Apple" }'
 ```
 
 2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
@@ -75,11 +75,11 @@ curl -X PUT '{upload_url}' \
 3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
 
 ```shell
-curl -X PATCH "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}" \
-    -H "accept: application/json" \
-    -H "X-API-Token: {API TOKEN}" \
-    -H "Content-Type: application/json" \
-    -d "{ \"status\": \"committed\" }"
+curl -X PATCH 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}' \
+    -H 'accept: application/json' \
+    -H 'X-API-Token: {API TOKEN}' \
+    -H 'Content-Type: application/json' \
+    -d '{ "status": "committed" }'
 ```
 
 > [!NOTE]
