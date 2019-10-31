@@ -24,7 +24,7 @@ With ProGuard enabled in your Android app, your stack traces must be deobfuscate
 2. Log into App Center and select your app
 3. In the left menu, navigate to the **Diagnostics** section
 4. Select **Mappings**
-5. Click the **Upload Mappings** button in the upper right
+5. Click the **Upload mappings** button in the upper right
 6. Fill in the Version Name and Version Code (these must match that build's Gradle configuration in order for the mapping to work for a particular build)
 7. Upload the `mapping.txt` file from your app module's build directory.
 8. Click the **Save** button
@@ -40,6 +40,7 @@ curl -X POST "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
     -H "Content-Type: application/json" \
     -d "{ \"symbol_type\": \"AndroidProguard\", \"file_name\": \"{file name}\", \"build\": \"{version code}\", \"version\": \"{version name}\" }"
 ```
+
 2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
 
 ```shell
