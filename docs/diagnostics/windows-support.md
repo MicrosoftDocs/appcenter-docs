@@ -83,7 +83,7 @@ To get these memory addresses translated you need to upload a **.appxsym** file 
 
 #### Generate the Symbols
 
-In order to obtain an **.appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** file inside the app bundle folder.
+In order to obtain an **.appxsym** file, you must create an app bundle as described [here](https://docs.microsoft.com/windows/msix/package/packaging-uwp-apps). Once you have created the bundle, you'll find the symbols file as an **.appxsym** file inside the app bundle folder.
 
 #### Symbols for applications built in App Center Build
 
