@@ -28,7 +28,7 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 1. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
 1. You should see a folder named `dSYMs` which contains your dSYM bundle
 
-If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/en-us/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
+If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
 ## Uploading symbols
 
@@ -64,7 +64,7 @@ curl -X POST "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
     -d "{ \"symbol_type\": \"Apple\" }"
 ```
 
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
+2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
 
 ```shell
 curl -X PUT '{upload_url}' \

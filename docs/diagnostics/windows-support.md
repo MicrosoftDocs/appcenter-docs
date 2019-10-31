@@ -91,7 +91,7 @@ If your application is built in App Center, symbols can be downloaded from the b
 
 #### Symbols for applications published to the Microsoft Store
 
-When you publish your application to the store, the .NET Native compilation happens on server side. Thus you need to download the symbols from the [Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview).
+When you publish your application to the store, the .NET Native compilation happens on server side. Thus you need to download the symbols from the [Partner Center](https://partner.microsoft.com/dashboard/windows/overview).
 
 1. Locate your application in the list and click on it.
 1. Expand **Product management** menu from the left panel.
@@ -120,7 +120,7 @@ curl -X POST "https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
     -d "{ \"symbol_type\": \"UWP\" }"
 ```
 
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
+2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
 
 ```shell
 curl -X PUT '{upload_url}' \
