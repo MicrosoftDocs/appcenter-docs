@@ -28,7 +28,7 @@ App Center device testing requires:
 4. Select the **Build** icon on the left side of the screen, it's a triangle arrow/playbutton.
 5. Connect your code repository. More details: [App Center Build Introduction](~/build/index.md).
 6. Choose your branch. 
-7. click **Configure** to create a new configuration, or click the wrench icon to edit an existing configuration. 
+7. click **Configure** to create a new configuration, or click the wrench/gear icon to edit an existing configuration. 
 8. Click **Save** 
 
 If you close the settings page without saving, it will default back to its previous settings. Saving is disabled when settings are invalid or missing required information.
