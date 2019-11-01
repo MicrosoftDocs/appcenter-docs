@@ -20,7 +20,6 @@ In this document, you'll learn how to integrate App Center Build and [App Center
 App Center device testing requires:
    - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
    - The app package is compatible with running on physical devices.
-   - Android apps require Internet permissions for the test infrastructure to communicate with your app. Make sure to declare internet permissions in your app manifest.
 
 ## Configuring your build
 1. Log into https://appcenter.ms
@@ -46,6 +45,7 @@ Finding your launch test result can be done in a few ways:
 
 > [!TIP]
 > Some Android configurations can create several APK files. Which makes it unclear to the build service which binary to test. Disable **Generate one package(.apk) per selected ABI** in your Android Build options to resolve the problem.
+> Android apps require Internet permissions for Launch Testing. Make sure to declare internet permissions in your app manifest.
 
 ## Automatically Deploy to App Center Test
 You can integrate Build & Test to run a UI test suite with each build of your app. This feature has additional requirements and limitations compared to Launch Testing:
