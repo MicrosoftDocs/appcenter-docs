@@ -4,11 +4,11 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/17/2019
+ms.date: 11/01/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
-ms.custom: analytics 
+ms.custom: analytics
 ---
 
 # Diagnostics Features
@@ -17,11 +17,11 @@ In this section, you will learn about the feature set available for the App Cent
 
 ## Crash and Errors Analytics
 
-In App Center Diagnostics, you can view analytics data generated automatically by App Center to understand when a crash or error occurs in your app.  
+In App Center Diagnostics, you can view analytics data generated automatically by App Center to understand when a crash or error occurs in your app.
 
 By default, App Center displays an app's crashes and errors per day in a side by side view.
 
-Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame and status for a more focused view.  
+Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame and status for a more focused view.
 
 ![App Center shows you analytics on crashes and errors](~/diagnostics/images/new-crash-analytics.png)
 
@@ -71,7 +71,7 @@ You can tailor error reports sent to App Center to include additional context fo
 
 ### Export Diagnostics Data
 
-App Center can export diagnostics (crashes and errors) raw data to Azure. Export diagnostics data to Blob Storage for customization of the data.  
+App Center can export diagnostics (crashes and errors) raw data to Azure. Export diagnostics data to Blob Storage for customization of the data.
 
 To export crashes, attachments and errors, you must call the [Export Configurations API](https://openapi.appcenter.ms/#/export/ExportConfigurations_Create):
 
@@ -79,13 +79,13 @@ To export crashes, attachments and errors, you must call the [Export Configurati
 POST /v0.1/apps/{owner_name}/{app_name}/export_configurations
 ```
 
-In the `exportEntities` field of the API property, you must indicate what type of data you wish to export: crashes, errors, attachments. When doing so, the full symbolicated crashes and corresponding stack traces will be exported. 
+In the `exportEntities` field of the API property, you must indicate what type of data you wish to export: crashes, errors, attachments. When doing so, the full symbolicated crashes and corresponding stack traces will be exported.
 
-Learn more about the benefits of, and how to export your data in the [export documentation](~/analytics/export.md).  
+Learn more about the benefits of, and how to export your data in the [export documentation](~/analytics/export.md).
 
 ### Threads
 
-In a crash report, you can see the current threads that were active when the app crashed. The thread that crashed is highlighted in red for you to better understand the state of the app.  
+In a crash report, you can see the current threads that were active when the app crashed. The thread that crashed is highlighted in red for you to better understand the state of the app.
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
@@ -99,38 +99,38 @@ Stay on top of your crashes by configuring your App Center app definition settin
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select the box next to Crashes  
+4. Select the box next to Crashes
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
-You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md). 
+You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md).
 
 ## Create a Bug Tracker
 
-You can integrate third party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.  
+You can integrate third party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.
 
 ## Set Data Retention
 
 You can set your diagnostics data retention to 28 or 90 days via our APIs, as listed in the [App Center API documentation](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings), or in the app settings page. If you change your retention setting from 90 to 28 days, any existing diagnostics data older than 28 days will be removed and any new data will only be stored for 28 days.
 
-If you change your settings from 28 to 90 days, older diagnostics data will not be backfilled. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started. 
+If you change your settings from 28 to 90 days, older diagnostics data will not be backfilled. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started.
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
 
 ## Upload reports to App Center
 
-You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI. 
+You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
 
 To upload a report, call the App Center ingestion endpoint with the headers:
 
-- `Content-Type`: describes the format of the body. App Center currently only supports JSON format. 
-- `app-secret`: string that is the unique identifier associated with each app. You can find this in your app settings page. 
+- `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
+- `app-secret`: string that is the unique identifier associated with each app. You can find this in your app settings page.
 - `install-id`: string that can be any GUID used to keep track of counts.
 
 Log properties:
 - `type`: required string with log type - "managedError", "appleError", "handledError" or "errorAttachment".
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
-- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z". 
+- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
@@ -148,7 +148,7 @@ Log properties:
     - `stackTrace`: optional string with raw stack trace
     - `innerException`: optional array with inner exceptions
 
-You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json). 
+You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
 ### Upload a crash report
 
@@ -168,7 +168,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:": 
+  "logs:":
   [
     {
       "type": "managedError",
@@ -190,6 +190,7 @@ curl -X POST \
       },
       "userId": "TestID",
       "exception": {
+        "type": "java.lang.RuntimeException",
         "frames": [
           {
             "className": "android.app.ActivityThread",
@@ -289,7 +290,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:": 
+  "logs:":
   [
     {
         "type": "appleError",
@@ -411,7 +412,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:": 
+  "logs:":
   [
     {
       "type": "handledError",
@@ -460,7 +461,7 @@ curl -X POST \
 
 ### Upload attachments
 
-Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls. 
+Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls.
 
 Attachment specific properties:
 
