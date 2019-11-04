@@ -373,10 +373,6 @@
 ## [Introduction](migration/index.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
-# Azure Mobile Apps
-## [Introduction](azure-mobile-apps/index.md)
-## [Feature Matrix](azure-mobile-apps/feature-matrix.md)
-
 # Reference
 ## [API docs](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
