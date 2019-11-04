@@ -139,7 +139,8 @@ Log properties:
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
     - `model`: optional string with device model, e.g. "iPad2"
-    - `locale`: required string with language code, e.g."en-US"
+    - `locale`: required string with language code, e.g. "en-US"
+    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone, including daylight savings time, e.g. 120
 - `userId`: optional string used for associating logs with users
 - `exception`: required object with exception details
     - `type`: required string with exception type
@@ -305,14 +306,14 @@ curl -X POST \
         "fatal": true,
         "isTestMessage": false,
         "device": {
-        "appVersion": "10.0",
-        "appBuild": "1",
-        "sdkName": "custom.ios",
-        "sdkVersion": "1.0.0",
-        "osName": "iOS",
-        "osVersion": "9.3",
-        "model": "iPhone9,1",
-        "locale": "en-US"
+          "appVersion": "10.0",
+          "appBuild": "1",
+          "sdkName": "custom.ios",
+          "sdkVersion": "1.0.0",
+          "osName": "iOS",
+          "osVersion": "9.3",
+          "model": "iPhone9,1",
+          "locale": "en-US"
         },
         "userId": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
         "fatal": true,
