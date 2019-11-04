@@ -124,7 +124,7 @@ You can upload a crash, error, or attachment log to App Center and view the deta
 To upload a report, call the App Center ingestion endpoint with the headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
-- `app-secret`: string that is the unique identifier associated with each app. You can find this in your app settings page.
+- `App-Secret`: string that is the unique identifier associated with each app. You can find this in your app settings page.
 - `install-id`: string that can be any GUID used to keep track of counts.
 
 Log properties:
