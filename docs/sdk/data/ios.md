@@ -488,9 +488,30 @@ Implementation:
 @end
 ```
 
+```swift
+class MyClass: NSObject, MSRemoteOperationDelegate {
+  
+  func data(data: MSData, operation: String, documentMetadata: MSDocumentMetadata?, error: MSDataError?) {
+    NSLog("Operation processed: %a", operation)
+    if (documentMetadata != nil) {
+      NSLog("Document: Partition: %a, document id : @a, eTag : %a", documentMetadata!.partition, documentMetadata!.documentId, documentMetadata!.eTag)
+    }
+    if (error != nil) {
+      NSLog("Error: %@", error!);
+    }
+  }
+  
+}
+```
+
 To setup the callback (delegation):
 
 ```objc
 MyClass *myClass = [[MyClass alloc] init];
 [MSData setRemoteOperationDelegate:myClass];
+```
+
+```swift
+let myClass = MyClass()
+MSData.setRemoteOperationDelegate(myClass)
 ```
