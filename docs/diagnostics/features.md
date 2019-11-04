@@ -125,7 +125,7 @@ To upload a report, call the App Center ingestion endpoint with the headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
 - `App-Secret`: string that is the unique identifier associated with each app. You can find this in your app settings page.
-- `install-id`: string that can be any GUID used to keep track of counts.
+- `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
 - `type`: required string with log type - "managedError", "appleError", "handledError" or "errorAttachment".
