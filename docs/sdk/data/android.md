@@ -408,3 +408,20 @@ Data.setRemoteOperationListener(
             }
         };
 ```
+
+```kotlin
+class CRemoteOperationListener : RemoteOperationListener {
+
+    public override fun onRemoteOperationCompleted(operation: String?, documentMetadata: DocumentMetadata?, error: DataException?) {
+        Log.i(LOG_TAG,
+            String.format("Remote operation completed operation=%s partition=%s documentId=%s eTag=%s",
+            operation,
+            documentMetadata?.partition,
+            documentMetadata?.id,
+            documentMetadata?.eTag),
+            error)
+    }
+
+}
+Data.setRemoteOperationListener(CRemoteOperationListener())
+```
