@@ -38,7 +38,7 @@ If you are using Visual Studio instead of XCode, see [Where can I find the dSYM 
 1. Log into App Center and select your app.
 1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
 1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the zip file.
-1. If your application already has reported crashes that needs symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the zip file.
+1. If your application already has reported crashes that need symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the zip file.
 1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
 
 #### React Native iOS apps
@@ -49,7 +49,7 @@ To obtain symbol files for React Native iOS files, create a ZIP file with the dS
 react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
 ```
 
-The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the diagnostics service. If you use the App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps above.
+The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use the App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps above.
 
 ### App Center API
 
@@ -128,7 +128,6 @@ If the Xcode organizer doesn't provide any new symbols, you must download the dS
 
 ## Troubleshooting symbol issues
 
-
 If your crashes still appear unsymbolicated after uploading symbols and disabling bitcode, it might be because the uploaded dSYM files don't match the ones required by App Center. When you upload dSYM files, App Center matches them to the right app version based on their UUIDs.
 
 You can double check whether your dSYM files have the right UUIDs by using a CLI tool called **dwarfdump**.
@@ -145,7 +144,7 @@ You can double check whether your dSYM files have the right UUIDs by using a CLI
   UUID:D449E33D-7E74-379D-8B79-15EE104ED1DF (arm64)CrashProbeiOS.app.dSYM/Contents/Resources/DWARF/CrashProbeiOS
   ```
 
-3. Double check if the UUID returned matches the UUIDs shown in the debug symbols dialogue:
+3. Double check if the UUID returned matches the UUIDs shown in the debug symbols dialog:
 
   ![App Center displays the UUID of required symbols](~/diagnostics/images/symbols-UUID.png)
 

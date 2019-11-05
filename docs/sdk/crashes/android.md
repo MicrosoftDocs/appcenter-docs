@@ -273,7 +273,7 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
-	
+
 	/* Attach some text. */
 	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
@@ -283,7 +283,7 @@ override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAtt
 	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 	val bitmapData = stream.toByteArray()
 	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-	
+
 	/* Return attachments as list. */
 	return Arrays.asList(textLog, binaryLog)
 }
@@ -411,4 +411,4 @@ To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` 
 
 ### Symbolication
 
-[!include[](./ndk-symbolication.md)]
+See the [Diagnostics documentation](~/diagnostics/Android-NDK.md) for more information regarding the processing of crashes.
