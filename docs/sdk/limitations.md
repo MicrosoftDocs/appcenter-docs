@@ -4,7 +4,7 @@ description: Limitations and known issues with the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/29/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ms.service: vs-appcenter
@@ -23,8 +23,7 @@ ms.custom: sdk
 2. You can't use most AppCenter SDK APIs in a Xamarin Forms application constructor if you want to use the previewer. The Xamarin previewer does not support native code.
 3. You cannot deploy an application using the AppCenter SDK to the Xamarin Live Player as the SDK contains native code.
 
-## WPF/WinForms
+## UWP, WPF, and WinForms
 
 1. Crashes caused by `StackOverflowException` are not reported. This is a limitation of the .NET runtime.
 2. Only crashes caused by .NET exceptions are reported, not C/C++ crashes.
-3. When using .NET Core, the session length is not reset after spending time into the minimized window state. Thus porting from .NET Framework to .NET Core causes session duration to increase and thus session count to decrease.

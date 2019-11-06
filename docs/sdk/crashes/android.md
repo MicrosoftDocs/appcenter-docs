@@ -483,4 +483,4 @@ To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` 
 
 ### Symbolication
 
-[!include[](./ndk-symbolication.md)]
+See the [Diagnostics documentation](~/diagnostics/Android-NDK.md) for more information regarding the processing of crashes.

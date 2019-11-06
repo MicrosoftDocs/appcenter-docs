@@ -213,6 +213,7 @@
 ## [Sending Push Notifications](push/send-notification.md)
 ## [Push to User](push/push-to-user.md)
 ## [Using the REST API](push/rest-api.md)
+## [GCM to FCM Migration](push/gcm-fcm.md)
 ## [Tips and Tricks](push/tips.md)
 ## [Troubleshooting](push/troubleshooting.md)
 ## [FAQ](push/faq.md)
@@ -308,6 +309,8 @@
 ## [Introduction](general/index.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
+## [Connection to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
@@ -338,19 +341,18 @@
 #### [Export](gdpr/test-export.md)
 
 # HockeyApp Transition
-## [Timeline](transition/index.md)
-## Stage 1 - Synchronization
+## [Introduction](transition/index.md)
+## Synchronization
 ### [Introduction](transition/side-by-side.md)
-### [Distribution Groups](transition/distribution-groups.md)
-### [Distributing Releases](transition/distribution.md)
+### [Distribute](transition/distribution.md)
 ### [Diagnostics](transition/crashes.md)
 ### [Analytics](transition/analytics.md)
-## Stage 2 - Moving Apps
+## Moving Apps
 ### [Introduction](transition/moving/index.md)
 ### [Incompatibilities](transition/moving/incompatibilities.md)
 ### [Migrated Data](transition/moving/data.md)
 ### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
-## Stage 3 - Switching Accounts
+## HockeyApp Accounts
 ### [Introduction](transition/accounts/index.md)
 ### [Distribution Groups](transition/accounts/distribution-groups.md)
 ## [API Migration](transition/api.md)
@@ -370,10 +372,6 @@
 # Migration
 ## [Introduction](migration/index.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
-
-# Azure Mobile Apps
-## [Introduction](azure-mobile-apps/index.md)
-## [Feature Matrix](azure-mobile-apps/feature-matrix.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
