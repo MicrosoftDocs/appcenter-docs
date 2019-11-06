@@ -4,7 +4,7 @@ description: Limitations with the Diagnostic Service in App Center
 keywords: diagnostic, crashes
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 11/06/2019
 ms.topic: article
 ms.assetid: e720dade-8d0c-44c6-8746-8b6a61da0f6f
 ms.service: vs-appcenter
