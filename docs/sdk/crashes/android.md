@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/15/2019
+ms.date: 10/28/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -115,13 +115,13 @@ Create your own CrashesListener and assign it like this:
 
 ```java
 CrashesListener customListener = new CrashesListener() {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : CrashesListener {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 }
 Crashes.setListener(customListener)
 ```
@@ -130,13 +130,13 @@ In case you are only interested in customizing some of the callbacks, use the `A
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 }
 Crashes.setListener(customListener)
 ```
@@ -151,12 +151,12 @@ Implement this callback if you'd like to decide if a particular crash needs to b
 ```java
 @Override
 public boolean shouldProcess(ErrorReport report) {
-	return true; // return true if the crash report should be processed, otherwise false.
+    return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
 ```kotlin
 override fun shouldProcess(report: ErrorReport?): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -175,15 +175,15 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
-	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-	// Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
-	return true;
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    return true;
 }
 ```
 ```kotlin
 override fun shouldAwaitUserConfirmation(): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -212,12 +212,12 @@ At times, you would like to know the status of your app crash. A common use case
 ```java
 @Override
 public void onBeforeSending(ErrorReport errorReport) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
 ```kotlin
 override fun onBeforeSending(report: ErrorReport?) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
 
@@ -226,12 +226,12 @@ override fun onBeforeSending(report: ErrorReport?) {
 ```java
 @Override
 public void onSendingSucceeded(ErrorReport report) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 ```kotlin
 override fun onSendingSucceeded(report: ErrorReport?) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 
@@ -240,12 +240,12 @@ override fun onSendingSucceeded(report: ErrorReport?) {
 ```java
 @Override
 public void onSendingFailed(ErrorReport report, Exception e) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 ```kotlin
 override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 
@@ -257,35 +257,29 @@ You can add **one binary** and **one text** attachment to a crash report. The SD
 @Override
 public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
-	/* Attach some text. */
-	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-	/* Attach app icon. */
-	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-	byte[] bitmapData = stream.toByteArray();
-	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+    // Attach binary data.
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
 
-	/* Return attachments as list. */
-	return Arrays.asList(textLog, binaryLog);
+    // Return attachments as list.
+    return Arrays.asList(textLog, binaryLog);
 }
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
-	
-	/* Attach some text. */
-	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-	/* Attach app icon. */
-	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
-	val stream = ByteArrayOutputStream()
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-	val bitmapData = stream.toByteArray()
-	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-	
-	/* Return attachments as list. */
-	return Arrays.asList(textLog, binaryLog)
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+    // Attach binary data.
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
+
+    // Return attachments as list.
+    return listOf(textLog, binaryLog)
 }
 ```
 
@@ -366,15 +360,51 @@ try {
         put("Category", "Music");
         put("Wifi", "On");
     }};
-    Crashes.trackException(exception, properties); 
+    Crashes.trackError(exception, properties, null); 
 }
 ```
 ```kotlin
 try {
     // your code goes here.
 } catch (exception: Exception) {
-    val properties: HashMap<String, String> = hashMapOf("Category" to "Music", "Wifi" to "On")
-    Crashes.trackException(exception, properties)
+    val properties = mapOf("Category" to "Music", "Wifi" to "On")
+    Crashes.trackError(exception, properties, null)
+}
+```
+
+You can optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an `Iterable` as shown in the example below.
+
+
+```java
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+
+    // Attach binary data.
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
+
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
+}
+```
+```kotlin
+try {
+    // your code goes here.
+} catch (exception: Exception) {
+
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+    // Attach binary data.
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
+    
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, listOf(textLog, binaryLog))
 }
 ```
 
@@ -396,12 +426,12 @@ Next, you must include and compile Google Breakpad by following the instructions
 Once you have Google Breakpad included, attach the NDK Crash Handler after `AppCenter.start`:
 
 ```java
-/* Attach NDK Crash Handler after SDK is initialized. */
+// Attach NDK Crash Handler after SDK is initialized.
 Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
     @Override
     public void accept(String path) {
 
-        /* Path is null when Crashes is disabled. */
+        // Path is null when Crashes is disabled.
         if (path != null) {
             setupNativeCrashesListener(path);
         }
@@ -434,7 +464,7 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
                   void *context,
                   bool succeeded) {
 
-    /* Allow system to log the native stack trace. */
+    // Allow system to log the native stack trace.
     __android_log_print(ANDROID_LOG_INFO, "YourLogTag",
                         "Wrote breakpad minidump at %s succeeded=%d\n", descriptor.path(),
                         succeeded);
