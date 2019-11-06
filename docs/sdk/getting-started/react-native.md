@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 10/09/2019
+ms.date: 11/05/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -95,7 +95,6 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     * Add these lines to import section
 
     ```objc
-    #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
     #import <AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes.h>
