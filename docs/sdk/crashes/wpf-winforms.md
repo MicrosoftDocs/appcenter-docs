@@ -269,7 +269,7 @@ try {
 }
 ```
 
-You can also optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
 
 ```csharp
 try {
