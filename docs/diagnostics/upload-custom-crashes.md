@@ -13,12 +13,12 @@ ms.custom: diagnostics
 
 # Upload custom crashes via API
 
-Post a crash report, e.g. if you don't want to use our SDK or develop for a custom platform. You can upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
+You can upload a custom crash report if you don't want to use our SDK or develop for a custom platform. Upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
-- `App-Secret`: string that is the unique identifier associated with each app. You can find this in your app settings page.
+- `App-Secret`: string that is the unique identifier associated with each app. You can find the app secret in the settings of an app.
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
@@ -354,11 +354,11 @@ curl -X POST \
 }'
 ```
 
-## Upload an attachments
+## Upload an attachment
 
-Please note that all attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls.
+All attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls.
 
-Attachment specific properties:
+Attachment-specific properties:
 
 - `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type).
 - `data`: required string with data encoded as base 64
