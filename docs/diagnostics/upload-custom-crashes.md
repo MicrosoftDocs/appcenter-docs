@@ -29,12 +29,12 @@ Log properties:
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
     - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
-    - `sdkVersion`: required string with version of the SDK in semver format, e.g. "1.2.0" or "0.12.3-alpha.1"
+    - `sdkVersion`: required string with version of the SDK in semantic versioning format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
     - `model`: optional string with device model, e.g. "iPad2"
     - `locale`: required string with language code, e.g. "en-US"
-    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone, including daylight savings time, e.g. 120
+    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone. Including daylight savings time, e.g. 120
 - `userId`: optional string used for associating logs with users
 - `exception`: required object with exception details
     - `type`: required string with exception type
@@ -51,10 +51,10 @@ You can find examples of how to upload a crash report, error report, and attachm
 
 - `processId`: required integer with process identifier
 - `id`: required string with exception identifier
-- `fatal`: required boolean which indicates if the exception resulted in a crash
+- `fatal`: required boolean that indicates if the exception resulted in a crash
 - `processName`: required string with the process name
 
-To upload a crash report that is not Apple formatted, make sure the log type is set to "managedError."
+To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
 
 ```shell
 curl -X POST \
@@ -173,7 +173,7 @@ The following properties are also required:
 - `primaryArchitectureId`: required integer with CPU primary architecture.
 - `applicationPath`: required string with the path to the application.
 - `osExceptionType`: required string with OS exception type.
-- `osExceptionCode`: reqiured string with OS exception code
+- `osExceptionCode`: required string with OS exception code
 - `osExceptionAddress`: required string with OS exception address
 
 For example:
@@ -297,7 +297,7 @@ curl -X POST \
 
 ## Upload an error report
 
-Handled errors are only supported for Xamarin, Unity, WPF and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+Handled errors are only supported for Xamarin, Unity, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
 
 
 ```shell
@@ -356,7 +356,7 @@ curl -X POST \
 
 ## Upload an attachment
 
-All attachments need to be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls.
+All attachments must be associated with a crash report. You can either upload an attachment with a crash report in one call or in two separate calls.
 
 Attachment-specific properties:
 
