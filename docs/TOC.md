@@ -162,6 +162,7 @@
 ## [Android ProGuard](diagnostics/Android-ProGuard.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
+## [Upload custom crashes](diagnostics/upload-custom-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
