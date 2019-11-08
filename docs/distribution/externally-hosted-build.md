@@ -80,20 +80,16 @@ The URL you provided is the download URL, and `is_external_build` shows this is 
 
 ### Distributing the release
 
-After creating the release, you distribute it by calling the [release PATCH endpoint](https://openapi.appcenter.ms/#/distribute/releases_update) `/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}`. Keep in mind you can only distribute a release with an externally hosted build to testers and groups of testers, not to stores. See [Requirements and limitations](#requirements-and-limitations).
+After creating the release, you distribute it by calling the [distribute to a group POST endpoint](https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup) `/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups`. Or you can use the similar endpoint for distributing to testers. Keep in mind you can not distribute a release with an externally hosted build to stores. See [Requirements and limitations](#requirements-and-limitations).
 
-Use the `id` value returned when you created the release for the `{release_id}` parameter in the URL. Enter the rest of the values from the Swagger documentation as you desire. To distribute to the default `Collaborators` group, send a body such as this:
+Use the `id` value returned when you created the release for the `{release_id}` parameter in the URL. Find the `id` of the group you want to distribute to by calling the [distribution groups GET endpoint](https://openapi.appcenter.ms/#/account/distributionGroups_list). Here we are distributing the release to the group `86aa9283-4e04-4872-a003-208c267d9388` and notifying testers of the release:
 
 ``` json
 {
-  "distribution_group_name": "Collaborators",
-  "release_notes": "Version 1.12 of the calculator adds subtraction!",
-  "mandatory_update": false,
+  "id": "86aa9283-4e04-4872-a003-208c267d9388",
   "notify_testers": true
 }
 ```
-
-The result will show `Collaborators` as one of the `destinations`. Your testers will receive an email of your new release, with a link to the build URL you provided when you created the release.
 
 ## Requirements and limitations
 
