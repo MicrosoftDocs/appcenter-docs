@@ -4,7 +4,7 @@ description: Instructions for how to launch your most recent build on a physical
 keywords: test, build, ios, android
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/10/2019
+ms.date: 11/08/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: ccc7e62f-90ad-4634-a25b-2e720fb34dff 
@@ -57,7 +57,7 @@ You can integrate Build & Test to run a UI test suite with each build of your ap
 - The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Your Build completion status won't reflect whether the test suite passed or not.
 
 Step-by-step instructions:
-1. Configure your app, Build & Test [trial or license](https://docs.microsoft.com/en-us/appcenter/general/billing). (You can ignore the **Launch Test** setting in Build).
+1. Configure your app, Build & Test [trial or license](~/general/billing). (You can ignore the **Launch Test** setting in Build).
 2. Confirm that your test suite runs locally on a physical device, and that you can upload it locally to the Test service. 
 3. Write your [post-build script](~/build/custom/scripts/index.md#post-build). [Environment variables](~/build/custom/variables/index.md) can help you write a valid build script.
 4. Save your Build configuration in App Center after the first time you commit a build script, or if you change its location in your repository. The build script should be located in the main app project's root folder. 
