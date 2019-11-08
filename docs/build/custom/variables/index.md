@@ -4,7 +4,7 @@ description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/10/2019
+ms.date: 11/08/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: mobile-center
@@ -79,7 +79,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
 
 ## NuGet.config for Xamarin or UWP
 
-If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
+If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```xml
 <packageSourceCredentials>
