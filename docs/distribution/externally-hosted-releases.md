@@ -66,7 +66,7 @@ Set your API token in the `X-API-Token` header and set the `Content-Type` header
 ``` json
 {
     "app_name": "Calculator",
-    "is_external_build": false,
+    "is_external_build": true,
     "id": 4,
     "version": "87324",
     "short_version": "1.12",
@@ -76,9 +76,7 @@ Set your API token in the `X-API-Token` header and set the `Content-Type` header
 }
 ```
 
-The URL you provided is the download URL. The install URL can be different depending on the operating system of the app. You may notice the return value for `is_external_build` is set to `false`. This is a known issue. If you query the endpoint again with a `GET` request, you see the value is indeed `true`.
-
-You created the release. It has not been distributed to any users (`destinations` is empty). Let's do that next.
+The URL you provided is the download URL, and `is_external_build` shows this is the right type of release. The install URL can be different depending on the operating system of the app. The `destinations` list is empty, meaning no testers have access to the release yet. Let's distribute the release next.
 
 ### Distributing the release
 
