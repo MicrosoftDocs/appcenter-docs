@@ -42,16 +42,16 @@ Keystore files have the extension `**.keystore**` or `**.jks**`. After toggling 
 
 ### 3. Storing Signing Details in the Repository with Environment Variables
 
-Use this method if your repository already contains the keystore, but you don't want to store the credentials there. At build time, the credentials will be provided as environment variables, see the following code sample on how to make use of them:
+Use this method if your repository already contains the keystore, but you don't want to store the credentials there. At build time, the credentials will be provided as [System properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_system_properties) to the Gradle build, see the following code sample on how to make use of them:
 
 ```groovy
 android { 
     signingConfigs {
         releaseSigningConfig {
             storeFile rootProject.file("app/testapp.jks")
-            storePassword System.getenv("APPCENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getenv("APPCENTER_KEY_ALIAS")
-            keyPassword System.getenv("APPCENTER_KEY_PASSWORD")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
         }
     }
 
@@ -63,6 +63,17 @@ android {
 }
 ```
 
-In the code above, securing values behind variable names keeps your signing credentials safe – the values are encrypted and only available to the build agents at build time. You may choose to hardcode the values if you prefer. Supply these values when [configuring a branch](~/build/android/first-build.md) in the [**Environment Variables**](~/build/custom/variables/index.md) section of your configuration.
+In the code above, securing values behind system properties injected into your build keeps your signing credentials safe – the values are encrypted and only available to the build agents at build time. You may choose to hardcode the values if you prefer. Supply these values when [configuring a branch](~/build/android/first-build.md) in the [**Environment Variables**](~/build/custom/variables/index.md) section of your configuration.
 
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.
+
+> [!NOTE]
+> If you use the `signingConfig` option inside the `buildTypes` section in your `build.gradle` file, you may face with code-signing errors during App Center build (this is especially relevant for the apps that use React Native for Android version 0.60.x and higher):
+>```
+> Execution failed for task ':app:validateSigningRelease'.
+> Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'
+>```
+>
+> In order to fix this issue you have to push a proper keystore used for signing to your repository and enable `My Gradle settings are entirely set to handle signing automatically` in your branch configuration in the App Center portal.
+>
+> In case you uploaded a keystore to the branch configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from `buildTypes` section of `build.gradle` file if you didn't update it from the default state of the React Native project template.

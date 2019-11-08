@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 02/14/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -70,6 +70,36 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
     * The name is for you to remember which service or app is using the app-specific password.
 5. Copy the generated app-specific password and paste it into the dialogue.
 6. Save by clicking **Update**.
+
+## Publishing through the CLI
+Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+
+You can list your stores by using the list command like this:
+```
+appcenter distribute stores list \
+--app {app_owner}/{app_name} \
+--output json
+```
+
+You will get a result like this:
+
+```
+[["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
+```
+And it's the Store column we will be using in the final step.
+
+The final step is to publish your app by running:
+```
+appcenter distribute stores publish \
+--file /path/to/file.ipa \
+--store Production \
+--app {app_owner}/{app_name} \
+--release-notes "Some note."
+```
+
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
 
 ## Debugging a failed release
 

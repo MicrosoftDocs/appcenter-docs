@@ -3,7 +3,7 @@ title: "HockeyApp Transition"
 description: Transition from HockeyApp to App Center
 author: derpixeldan
 ms.author: daadam
-ms.date: 10/09/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
@@ -17,15 +17,19 @@ The known HockeyApp services, Distribution, Crash Reporting, and Analytics are a
 
 ## November 16, 2019
 
-Today, all your user and organization [accounts are fully transitioned](~/transition/accounts/index.md) to App Center. Beginning November 16, we will start moving over apps with little active usage automatically. Once your app is moved, you’ll no longer have access to it through HockeyApp. You’ll need to use App Center.
+Today, all your user and organization [accounts are fully transitioned](~/transition/accounts/index.md) to App Center. Beginning November 16, we'll start moving over apps with little active usage automatically. Once your app is moved, you’ll no longer have access to it through HockeyApp. You’ll need to use App Center.
 
 > [!NOTE]
 > It will take us a few months to complete the move of all apps. If your app is affected by any of the feature gaps listed on our [public roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp), we won't move them until the gaps are closed. HockeyApp will still be available until then. We recommend you to [move your app](~/transition/moving/index.md) immediately once it becomes unaffected.
 
-## The three stages of the transition
+## How to transition to App Center successfully
+If you haven't yet, make yourself familiar with App Center. Let us know in case you've any questions.
 
-The three stages of the transition are completed:
-
-* Stage 1: [Your HockeyApp data is synchronized to App Center](~/transition/moving/index.md)
-* Stage 2: [Move your apps to App Center](~/transition/moving/index.md)
-* Stage 3: [We switched the user and account management to App Center](~/transition/accounts/index.md)
+* Checkout potential [incompatibilities](~/transition/moving/incompatibilities.md) of your apps
+* In case you've any API integrations, make sure to switch to the [App Center API](~/api-docs/index.md) or [clients](https://github.com/Microsoft/appcenter/wiki/Repositories#integrations)
+* Move your apps to App Center
+    * [One by one](~/transition/moving/index.md)
+    * [Multiple apps at once](~/transition/moving/bulk.md)
+* Verify everything is working as expected
+* Update to the [App Center SDK](~/transition/sdk-migration.md)
+* Verify one more time that everything is going as intended
