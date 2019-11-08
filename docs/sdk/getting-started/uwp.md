@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 10/16/2019
+ms.date: 10/27/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.service: vs-appcenter
@@ -30,7 +30,7 @@ ms.tgt_pltfrm: uwp
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center UWP SDK in your app to use App Center Analytics.
+Let's get started with setting up App Center UWP SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 
