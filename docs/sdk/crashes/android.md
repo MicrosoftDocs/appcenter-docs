@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/06/2019
+ms.date: 11/07/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -360,7 +360,7 @@ try {
         put("Category", "Music");
         put("Wifi", "On");
     }};
-    Crashes.trackError(exception, properties, null); 
+    Crashes.trackError(exception, properties, null);
 }
 ```
 ```kotlin
@@ -372,14 +372,14 @@ try {
 }
 ```
 
-You can optionally add **one binary** and **one text** attachment to a crash report. Pass the attachments as an `Iterable` as shown in the example below.
+You can optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an `Iterable` as shown in the example below.
 
 
 ```java
 try {
     // your code goes here.
 } catch (Exception exception) {
-    
+
     // Attach some text.
     ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
@@ -402,7 +402,7 @@ try {
     // Attach binary data.
     val binaryData = getYourBinary()
     val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
-    
+
     // Track an exception with attachments.
     Crashes.trackException(exception, null, listOf(textLog, binaryLog))
 }

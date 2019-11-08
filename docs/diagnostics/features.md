@@ -64,10 +64,10 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Key Value Pairs
 
-You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional. To set key value pairs, take a look at our [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [UWP](~/sdk/crashes/uwp.md#handled-errors) documentation.
+You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
 
 > [!NOTE]
-> This feature is only supported for Xamarin, WinForms, WPF, and UWP Errors today.
+> This feature is only supported for Android, Xamarin, Unity, UWP, WinForms, and WPF Errors today.
 
 ### Export Diagnostics Data
 
