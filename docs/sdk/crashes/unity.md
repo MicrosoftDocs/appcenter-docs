@@ -275,7 +275,7 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash.
 
 ### Add attachments to an unhandled exception report
 
@@ -362,4 +362,4 @@ Once these methods are properly set up, the app sends the minidump to App Center
 
 ### Symbolication
 
-[!include[](./ndk-symbolication.md)]
+See the [Diagnostics documentation](~/diagnostics/Android-NDK.md) for more information regarding the processing of crashes.

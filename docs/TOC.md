@@ -162,6 +162,7 @@
 ## [Android ProGuard](diagnostics/Android-ProGuard.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
+## [Upload custom crashes](diagnostics/upload-custom-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
@@ -309,6 +310,8 @@
 ## [Introduction](general/index.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
+## [Connection to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
@@ -370,10 +373,6 @@
 # Migration
 ## [Introduction](migration/index.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
-
-# Azure Mobile Apps
-## [Introduction](azure-mobile-apps/index.md)
-## [Feature Matrix](azure-mobile-apps/feature-matrix.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
