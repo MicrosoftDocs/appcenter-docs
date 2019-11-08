@@ -50,7 +50,7 @@ If you package your app as .pkg or .dmg, you must specify a version and build in
 
 ### Windows
 
-App Center supports releasing Windows app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package]. If .zip or .msi are used, you must specify a build version in App Center manually. 
+App Center supports releasing Windows app packages of type .appx, .appxbundle, .appxupload, .msi, .msix, .msixbundle, .msixupload, or .zip. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package]. If .zip or .msi are used, you must specify a build version in App Center manually. 
 
 
 ## Uploading the package
