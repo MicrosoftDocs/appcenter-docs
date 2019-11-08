@@ -1,10 +1,10 @@
 ---
 title: Distribute a release with an externally hosted build
 description: Host the binary of a release outside of App Center
-keywords: distribution external release
+keywords: distribution external build release
 author: derpixeldan
 ms.author: daadam
-ms.date: 11/07/2019
+ms.date: 11/08/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -25,12 +25,12 @@ You start creating a release to a tester or group of testers the same way as any
 2. Choose **Specify build URL** to go to the wizard for creating a release without uploading a binary to App Center.
 3. Enter the required information
    1. The HTTPS URL pointing to the binary you're hosting.
-   2. The build number of your release. This is for you to keep track of exactly which binary the release points to.
-   3. For some operating systems: the version of your release. This is the version number users will see when asked to update.
+   2. The build number of your release.
+   3. For some operating systems: the version of your release.
 4. Choose **Next** to enter the rest of the release information. From here on, the flow is the same as for regular releases.
 5. On the **Notes** tab, optionally enter the release notes for your testers. Choose **Next**.
 6. On the **Destinations** tab, select the tester(s)/group(s) to distribute the release to. Choose **Next**.
-7. On the **Review** tab, verify the details of the release. Optionally select whether it's a mandatory update, or to not notify users of the release.
+7. On the **Review** tab, verify the details of the release. Optionally select not to notify users of the release.
 8. Finally choose **Distribute** to distribute the release. It will appear to the testers you gave access and they'll be notified depending on your settings.
 
 ## Using the API to create a release with an externally hosted build
