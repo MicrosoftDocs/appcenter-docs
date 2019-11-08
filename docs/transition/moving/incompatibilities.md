@@ -43,7 +43,7 @@ Transfer an app:
 
 ## Externally hosted builds
 
-App Center doesn't currently support externally hosted builds. We won't move any versions with externally hosted builds.
+App Center supports externally hosted builds. If you are unable to move your app, please contact support.
 
 ## Feedback
 
