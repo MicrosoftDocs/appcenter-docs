@@ -3,8 +3,8 @@ title: Android NDK
 description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnieli1208
-ms.author: yuli1
-ms.date: 11/1/2019
+ms.author: gallave
+ms.date: 11/8/2019
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -21,8 +21,11 @@ To get the memory addresses translated for your Android NDK app, you must upload
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
-## Obtaining symbol files
+## Obtaining files to upload
+### Option 1
+1. Put all .so files from the project's `obj/local/$ABI/` directory into a .zip file.
 
+### Option 2
 1. Dump the symbols using the Breakpad toolchain as described in the [Breakpad documentation](https://chromium.googlesource.com/breakpad/breakpad/+/master/README.ANDROID#93).
 2. Create a **symbols.zip** file with the following structure:
 
