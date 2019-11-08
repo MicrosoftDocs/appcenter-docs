@@ -19,6 +19,8 @@ MacOS, tvOS and iOS crash reports show the stack traces for all running threads 
 
 To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
 
+The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps below.
+
 ## Finding the `.dSYM` bundle
 
 1. In Xcode, open the **Window** menu, then select **Organizer**
@@ -48,8 +50,6 @@ To obtain symbol files for React Native iOS files, create a ZIP file with the dS
 ```shell
 react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
 ```
-
-The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use the App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps above.
 
 ### App Center API
 
