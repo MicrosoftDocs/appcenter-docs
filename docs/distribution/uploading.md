@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: botatoes
 ms.author: bofu
-ms.date: 08/28/2019
+ms.date: 11/08/2019
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -48,13 +48,10 @@ For macOS, you must produce an app package. App Center supports releasing app pa
 
 If you package your app as .pkg or .dmg, you must specify a version and build in App Center manually.
 
-### UWP
+### Windows
 
-For UWP, you must produce an app package. App Center supports releasing app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details of this process, see the official [Microsoft UWP documentation][uwp-package].
+App Center supports releasing Windows app packages of type .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload, or .zip. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package]. If .zip or .msi are used, you must specify a build version in App Center manually. 
 
-### WPF and WinForms
-
-For WPF and WinForms, a variety of formats are supported. You can package your app in the UWP formats listed above or as a .zip or .msi package. If .zip or .msi are used, you must specify a build version in App Center manually.
 
 ## Uploading the package
 
