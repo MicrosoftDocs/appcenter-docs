@@ -53,6 +53,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `id`: required string with exception identifier
 - `fatal`: required boolean that indicates if the exception resulted in a crash
 - `processName`: required string with the process name
+- `appNamespace`: required string for symbolication with the bundle identifier, package identifier, or namespace, depending on what the individual plattforms used 
 
 To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
 
@@ -81,7 +82,8 @@ curl -X POST \
         "osName": "android",
         "osVersion": "9.3",
         "model": "Pixel",
-        "locale": "en-US"
+        "locale": "en-US",
+        "appNamespace": "com.microsoft.vsappcenter.CrashProbeiOS"
       },
       "userId": "TestID",
       "exception": {
@@ -175,6 +177,7 @@ The following properties are also required:
 - `osExceptionType`: required string with OS exception type.
 - `osExceptionCode`: required string with OS exception code
 - `osExceptionAddress`: required string with OS exception address
+- `binaries`: required array for symbolication with binaries associated to the error
 
 For example:
 
