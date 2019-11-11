@@ -4,7 +4,7 @@ description: Host the binary of a release outside of App Center
 keywords: distribution external build release
 author: derpixeldan
 ms.author: daadam
-ms.date: 11/08/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -95,7 +95,6 @@ Use the `id` value returned when you created the release for the `{release_id}` 
 
 Externally hosted releases have the following requirements and limitations:
 
-- If you created your app in App Center (i.e. you didn't move from HockeyApp), your first release must be a normal one. After that, you can create both normal and externally hosted build releases.
 - You must host the binary behind a secure HTTPS URL. App Center doesn't accept URLs starting with `http://`, but only ones starting with `https://`.
 - You can only distribute releases with externally hosted builds to testers and groups. Stores like Google Play and the App Store require that you send them the binary.
 - In-app updates don't work.
