@@ -107,4 +107,5 @@ Externally hosted releases have the following requirements and limitations:
 Releases with externally hosted builds show up in App Center with a chain symbol in the icon. When you query the API for release details, the ones showing `is_external_build` as `true` are the releases with builds hosted outside of App Center.
 
 ![The icon of a release with externally hosted build](images/release-externally-hosted-build.png)
+
 *In this figure, release 4 is an external release, while the other three are hosted by App Center.*
