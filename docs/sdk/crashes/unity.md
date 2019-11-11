@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 10/15/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -148,6 +148,8 @@ Crashes.SendingErrorReport += (errorReport) =>
 };
 ```
 
+In the event we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is replayed after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
@@ -165,6 +167,10 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
     // Your code goes here.
 };
 ```
+
+When you receive `FailedToSendErrorReport`, it's a non recoverable error such as a **4XX** code which means something seriously wrong happened, for example wrong `appSecret` that cannot be retried.
+
+Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries while network is offline and wait for it to become up again). 
 
 ### Add attachments to a crash report
 

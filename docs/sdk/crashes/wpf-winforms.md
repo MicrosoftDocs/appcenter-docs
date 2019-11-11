@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -178,6 +178,8 @@ Crashes.SendingErrorReport += (sender, e) =>
 };
 ```
 
+In the event we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is replayed after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
@@ -195,6 +197,10 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
     // Your code goes here.
 };
 ```
+
+When you receive `FailedToSendErrorReport`, it's a non recoverable error such as a **4XX** code which means something seriously wrong happened, for example wrong `appSecret` that cannot be retried.
+
+Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries while network is offline and wait for it to become up again). 
 
 ### Add attachments to a crash report
 

@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 1c1391e4-0c39-4141-893e-766ad22266d7
 ms.service: vs-appcenter
@@ -32,6 +32,8 @@ func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
 }
 ```
 
+In the event we have network issues or we have an outage on the endpoint and you restart the app, `willSendErrorReport` is replayed after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```objc
@@ -57,6 +59,10 @@ func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, 
   // Your code goes here.
 }
 ```
+
+When you receive `didFailSendingErrorReport`, it's a non recoverable error such as a **4XX** code which means something seriously wrong happened, for example wrong `appSecret` that cannot be retried.
+
+Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries while network is offline and wait for it to become up again). 
 
 ### Add attachments to a crash report
 
