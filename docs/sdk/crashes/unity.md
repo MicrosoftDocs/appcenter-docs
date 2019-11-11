@@ -148,7 +148,7 @@ Crashes.SendingErrorReport += (errorReport) =>
 };
 ```
 
-In the event we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is replayed after process restart.
+In the event we have network issues or we have an outrage on the endpoint and you restart the app, `SendingErrorReport` is replayed after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
