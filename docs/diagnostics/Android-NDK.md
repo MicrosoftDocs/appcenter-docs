@@ -21,7 +21,7 @@ To get the memory addresses translated for your Android NDK app, you must upload
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
-## Obtaining files to upload
+## Generate a .zip file to upload
 
 There are two ways for App Center to retrieve the symbols necessary for symbolication. App Center can generate them from the native binaries used in your project, or you can upload the breakpad symbols directly.
 
