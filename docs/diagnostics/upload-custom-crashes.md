@@ -177,7 +177,7 @@ The following properties are also required:
 - `osExceptionType`: required string with OS exception type.
 - `osExceptionCode`: required string with OS exception code
 - `osExceptionAddress`: required string with OS exception address
-- `binaries`: required array for symbolication with binaries associated to the error
+- `binaries`: required array with binaries associated to the error
 
 For example:
 
