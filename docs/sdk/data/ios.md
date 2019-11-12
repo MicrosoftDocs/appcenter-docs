@@ -497,7 +497,7 @@ class MyClass: NSObject, MSRemoteOperationDelegate {
       NSLog("Document: Partition: %a, document id : @a, eTag : %a", documentMetadata!.partition, documentMetadata!.documentId, documentMetadata!.eTag)
     }
     if (error != nil) {
-      NSLog("Error: %@", error!);
+      NSLog("Error: %@", error!)
     }
   }
   
