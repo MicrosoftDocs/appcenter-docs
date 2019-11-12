@@ -45,6 +45,9 @@ Log properties:
 
 You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
+> [!NOTE]
+> Due to retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
+
 ## Upload a crash report
 
  The following properties are required to upload a crash report:
@@ -370,6 +373,8 @@ Attachment-specific properties:
 - `errorId` property is the unique identifier that associates the attachment to the right crash report
 - `fileName`: required string for NDK crashes that is set to "minidump.dmp"
 
+> [!NOTE]
+> The size limit for attachments is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 Below is an example of uploading a crash report and an attachment in one call.
 
