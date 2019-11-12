@@ -4,7 +4,7 @@ description: Post a crash report, e.g. if you don't want to use our SDK or devel
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/07/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -55,7 +55,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `processName`: required string with the process name
 - `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
 
-To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
+To upload a crash report other than the Apple format, make sure the log type is set to "managedError." 
 
 ```shell
 curl -X POST \
@@ -166,15 +166,17 @@ curl -X POST \
   ]
 }
 ```
+> [!NOTE]
+> To upload a NDK crash, you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/upload-custom-crashes.md#upload-an-attachment) of this page.
 
 ### Upload an Apple crash log
 
 To upload an Apple crash log, make sure the log type is set to "appleError".
 The following properties are also required:
 
-- `primaryArchitectureId`: required integer with CPU primary architecture.
-- `applicationPath`: required string with the path to the application.
-- `osExceptionType`: required string with OS exception type.
+- `primaryArchitectureId`: required integer with CPU primary architecture
+- `applicationPath`: required string with the path to the application
+- `osExceptionType`: required string with OS exception type
 - `osExceptionCode`: required string with OS exception code
 - `osExceptionAddress`: required string with OS exception address
 - `binaries`: required array with binaries associated to the error
@@ -300,7 +302,7 @@ curl -X POST \
 
 ## Upload an error report
 
-Handled errors are only supported for Xamarin, Unity, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+Handled errors are only supported for Xamarin, Unity, UWP, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
 
 
 ```shell
@@ -363,9 +365,11 @@ All attachments must be associated with a crash report. You can either upload an
 
 Attachment-specific properties:
 
-- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type).
+- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
-- `errorId` property is the unique identifier that associates the attachment to the right crash report.
+- `errorId` property is the unique identifier that associates the attachment to the right crash report
+- `fileName`: required string for NDK crashes that is set to "minidump.dmp"
+
 
 Below is an example of uploading a crash report and an attachment in one call.
 
