@@ -28,7 +28,7 @@ Log properties:
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
-    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
+    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
     - `sdkVersion`: required string with version of the SDK in semantic versioning format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
@@ -167,7 +167,7 @@ curl -X POST \
       ]
     }
   ]
-}
+}'
 ```
 > [!NOTE]
 > To upload a NDK crash, you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/upload-custom-crashes.md#upload-an-attachment) of this page.
@@ -298,14 +298,14 @@ curl -X POST \
       ]
     }
   ]
-}
+}'
 
 ```
 
 
 ## Upload an error report
 
-Handled errors are only supported for Xamarin, Unity, UWP, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+Handled errors are only supported for Android, Xamarin, Unity, UWP, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
 
 
 ```shell
