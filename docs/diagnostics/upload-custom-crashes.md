@@ -53,7 +53,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `id`: required string with exception identifier
 - `fatal`: required boolean that indicates if the exception resulted in a crash
 - `processName`: required string with the process name
-- `appNamespace`: required string for symbolication with the bundle identifier, package identifier, or namespace, depending on what the individual plattforms used 
+- `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
 
 To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
 
