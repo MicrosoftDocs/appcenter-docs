@@ -83,7 +83,7 @@ curl -X POST \
         "osVersion": "9.3",
         "model": "Pixel",
         "locale": "en-US",
-        "appNamespace": "com.microsoft.vsappcenter.CrashProbeiOS"
+        "appNamespace": "com.contoso.myapp"
       },
       "userId": "TestID",
       "exception": {
