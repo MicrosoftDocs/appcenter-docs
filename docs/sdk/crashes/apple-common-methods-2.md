@@ -31,8 +31,7 @@ func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
   // Your code, e.g. to present a custom UI.
 }
 ```
-
-In the event we have network issues or we have an outrage on the endpoint and you restart the app, `willSendErrorReport` is replayed after process restart.
+In case we have network issues or we have an outage on the endpoint and you restart the app, `willSendErrorReport` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
@@ -60,9 +59,9 @@ func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, 
 }
 ```
 
-When you receive `didFailSendingErrorReport`, it's a non recoverable error such as a **4XX** code which means something seriously wrong happened, for example wrong `appSecret` that cannot be retried.
+Recieving `didFailSendingErrorReport` means non-recoverable error such as a **4XX** code occured, like for example wrong `appSecret` which cannot be retrieved.
 
-Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries while network is offline and wait for it to become up again). 
+Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries on network connection is down, up until connection is up again). 
 
 ### Add attachments to a crash report
 
