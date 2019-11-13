@@ -169,7 +169,7 @@ After you finish upgrading you may remove the .git directory.
     pod repo update
     ```
 
-#### 1 Update React Native Android
+#### 2 Update React Native Android
 
 1. Open the **gradle.properties** file and add the following lines:
 
