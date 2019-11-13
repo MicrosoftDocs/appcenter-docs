@@ -4,7 +4,7 @@ description: How to configure App Center email notifications
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group, test, test run, test run completed, test run complete
 author: amchew
 ms.author: amchew
-ms.date: 04/17/2019
+ms.date: 11/12/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
@@ -34,7 +34,7 @@ You can choose to have email notifications automatically sent for the following 
     - **Never**: you will not receive notifications when a new crash group is created
 
 > [!NOTE]
-> In the daily crash group email, only the top 3 crash groups based on number of occurences will be included.
+> Only the top 3 crash groups based on number of occurrences will be included in the daily email. 
     
 - Distribute: 
   - A new version is released:
