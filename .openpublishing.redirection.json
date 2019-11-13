@@ -287,6 +287,10 @@
           {
             "source_path": "docs/transition/distribution-groups.md",
             "redirect_url": "/appcenter/transition/distribution"
+          },
+	  {
+            "source_path": "docs/diagnostics/Android-ProGuard.md",
+            "redirect_url": "/appcenter/diagnostics/Android-Deobfuscation"
           }
  ]
 }
