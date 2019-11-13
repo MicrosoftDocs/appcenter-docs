@@ -134,14 +134,14 @@ You should run `pod repo update` to update the spec repo, and try `react-native 
 
 ## How to upgrade React Native SDK 0.59 to the 0.60 version
 
-For upgrade React Native to the version 0.60 use the next command:
+For upgrading React Native to the version 0.60 use the following command:
 
 ```shell
 react-native upgrade 0.60.*
 ```
 
 > [!NOTE] 
-> If during the upgrade you get this error `Command failed: git status -s fatal: not a git repository (or any of the parent directories): .git` please try the next steps:
+> If during an upgrade you get this error `Command failed: git status -s fatal: not a git repository (or any of the parent directories): .git`, perform the next steps:
 >   ```shell
 >   git init
 >   git add .
@@ -151,12 +151,14 @@ react-native upgrade 0.60.*
 
 #### 1 Update React Native iOS
 
-1. Open `[project-name].xcodeproj` in Xcode and remove `Libraries\RCTGeolocation.xcodeproj`.
+1. Open **<project-name>.xcodeproj** in **XCode** and remove `Libraries\RCTGeolocation.xcodeproj`.
 
-2. Update the dependencies in `Podfile` like this:
+2. Open **Podfile** and update the dependencies:
 
     ```ruby
+
     ...
+
     pod 'appcenter', :path => '../node_modules/appcenter/ios'
     pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics/ios'
     pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes/ios'
@@ -181,13 +183,17 @@ react-native upgrade 0.60.*
 
     ```groovy
     project.ext.react = [
+
         ...
+
         enableHermes: false
     ]
     def jscFlavor = 'org.webkit:android-jsc:+'
     def enableHermes = project.ext.react.get("enableHermes", false);
     dependencies {
+
         ...
+
         if (enableHermes) {
             def hermesPath = "../../node_modules/hermes-engine/android/";
             debugImplementation files(hermesPath + "hermes-debug.aar")
@@ -198,7 +204,7 @@ react-native upgrade 0.60.*
     }
     ```
 
-3. Open the **android/build.gradle** and add the following lines:
+3. Open the **android/build.gradle** file and add the following lines:
 
     ```groovy
     maven {
