@@ -141,14 +141,13 @@ react-native upgrade 0.60.*
 ```
 
 > [!NOTE] 
-> If during the upgrade you get this error `Command failed: git status -s
-fatal: not a git repository (or any of the parent directories): .git` please try the next steps:
-```shell
-git init
-git add .
-git commit -m "Upgrade react-native"
-```
-After you finish upgrading you may remove the .git directory.
+> If during the upgrade you get this error `Command failed: git status -s fatal: not a git repository (or any of the parent directories): .git` please try the next steps:
+>   ```shell
+>   git init
+>   git add .
+>   git commit -m "Upgrade react-native"
+>   ```
+> After you finish upgrading you may remove the .git directory.
 
 #### 1 Update React Native iOS
 
