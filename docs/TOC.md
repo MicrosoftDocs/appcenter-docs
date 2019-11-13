@@ -159,7 +159,7 @@
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
 ## [Android NDK](diagnostics/Android-NDK.md) 
-## [Android ProGuard](diagnostics/Android-ProGuard.md)
+## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
 ## [Upload custom crashes](diagnostics/upload-custom-crashes.md)
