@@ -4,7 +4,7 @@ description: How to configure App Center data for iOS
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 09/12/2019
+ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
 ms.service: vs-appcenter
@@ -458,7 +458,7 @@ The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `it
 
 Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
 
-### Advanced offline scenarios
+## Advanced offline scenarios
 
 The `setRemoteOperationDelegate` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippets:
 
