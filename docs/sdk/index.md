@@ -89,10 +89,10 @@ Push             | 9.0 or later    | 10 and later
 
 Service    |  Unity version  | iOS Version  | Android Version            | UWP Windows Version
 -----------|-----------------|--------------|----------------------------|---------------------
-Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
-Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| not available
-Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| not available
-Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
+Analytics  | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
+Crashes    | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Distribute | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Push       | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
 
 ### Windows UWP
 
