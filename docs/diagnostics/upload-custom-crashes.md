@@ -58,7 +58,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `processName`: required string with the process name
 - `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
 
-To upload a crash report other than the Apple format, make sure the log type is set to "managedError." 
+To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
 
 ```shell
 curl -X POST \
@@ -170,7 +170,7 @@ curl -X POST \
 }'
 ```
 > [!NOTE]
-> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/upload-custom-crashes.md#upload-an-attachment) of this page.
+> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-custom-crashes.md#upload-an-attachment) of this page.
 
 ### Upload an Apple crash log
 
