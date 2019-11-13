@@ -152,11 +152,11 @@ After you finish upgrading you may remove the .git directory.
 
 #### 1 Update React Native iOS
 
-1. Open [project-name].xcodeproj in Xcode and remove `Libraries\RCTGeolocation.xcodeproj`.
+1. Open `[project-name].xcodeproj` in Xcode and remove `Libraries\RCTGeolocation.xcodeproj`.
 
 2. Update the dependencies in `Podfile` like this:
 
-    ```objc
+    ```ruby
     ...
     pod 'appcenter', :path => '../node_modules/appcenter/ios'
     pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics/ios'
@@ -173,14 +173,14 @@ After you finish upgrading you may remove the .git directory.
 
 1. Open the **gradle.properties** file and add the following lines:
 
-    ```objc
+    ```text
     android.useAndroidX=true
     android.enableJetifier=true
     ```
 
 2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and add the following lines:
 
-    ```objc
+    ```groovy
     project.ext.react = [
         ...
         enableHermes: false
@@ -201,7 +201,7 @@ After you finish upgrading you may remove the .git directory.
 
 3. Open the **android/build.gradle** and add the following lines:
 
-    ```objc
+    ```groovy
     maven {
         url("$rootDir/../node_modules/jsc-android/dist")
     }
