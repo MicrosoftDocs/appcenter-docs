@@ -28,7 +28,14 @@ You can choose to have email notifications automatically sent for the following 
     - **Only if previously successful**: when your app has failed to build after one or more successful builds
     - **Never**: you will not receive notifications for build failure
 
-- Crashes: when a crash group is created
+- Crashes: 
+    - **Immediately**: when a new crash group is created
+    - **Daily**: a summary of all your new crash groups for that day will be sent at approximately 0:00 UTC
+    - **Never**: you will not receive notifications when a new crash group is created
+
+> [!NOTE]
+> In the daily crash group email, only the top 3 crash groups based on number of occurences will be included.
+    
 - Distribute: 
   - A new version is released:
     - **Immediately**: when a new version is released
