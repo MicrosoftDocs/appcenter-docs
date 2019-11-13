@@ -23,6 +23,9 @@ Crash reports collected by the HockeySDK are also send to App Center. Also after
 * React Native
 * tvOS
 * Xamarin
+* UWP
+* WinForms
+* WPF
 
 > [!NOTE]
 > The actions you take in App Center, such as adding annotations or changing the status of a crash group, will not be reflected in HockeyApp.

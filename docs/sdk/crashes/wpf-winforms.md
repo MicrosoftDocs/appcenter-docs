@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 10/28/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -266,5 +266,20 @@ try {
         { "Wifi", "On"}
     };
     Crashes.TrackError(exception, properties); 
+}
+```
+
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
 }
 ```

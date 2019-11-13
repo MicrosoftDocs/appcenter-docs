@@ -19,6 +19,8 @@ ProGuard is a tool to optimize and obfuscate the code of Android apps. It remov
 
 With ProGuard enabled in your Android app, your stack traces must be deobfuscated. App Center automatically deobfuscates stack traces for your Java, Kotlin, and React Native Android apps when you upload the `mapping.txt` file created by ProGuard on each build. This file maps the original class, method, and field names to the obfuscated names making the stack traces readable.
 
+The App Center Build and Distribution service can automatically generate mapping files and upload them to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the mapping files as detailed in the steps below.
+
 ## Uploading the mapping.txt file
 
 ### App Center Portal

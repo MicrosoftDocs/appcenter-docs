@@ -162,6 +162,7 @@
 ## [Android ProGuard](diagnostics/Android-ProGuard.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
+## [Upload custom crashes](diagnostics/upload-custom-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
@@ -372,10 +373,6 @@
 # Migration
 ## [Introduction](migration/index.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
-
-# Azure Mobile Apps
-## [Introduction](azure-mobile-apps/index.md)
-## [Feature Matrix](azure-mobile-apps/feature-matrix.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
