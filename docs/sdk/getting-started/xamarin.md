@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 11/13/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -105,7 +105,7 @@ Install-Package Microsoft.AppCenter.Crashes
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
+> If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 ## 4. Start the SDK
 
@@ -210,4 +210,4 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md)
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you will see **Crashes** and **Distribute** APIs, however those APIs are not yet supported on the **UWP** platform and are doing nothing when running on your **UWP** application.
+> Using the portable APIs from Xamarin Forms, you will see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP does not support the following modules: **Distribute**, **Auth** and **Data**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.
