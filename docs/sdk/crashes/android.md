@@ -251,7 +251,7 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 }
 ```
 
-Receiving `onSendingFailed` means non-recoverable error such as a **4XX** code occured, like for example wrong `appSecret` which cannot be retrieved.
+Receiving `onSendingFailed` means non-recoverable error such as a **4XX** code occured. For example, **401** means the `appSecret` is wrong.
 
 Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries on network connection is down, up until connection is up again). 
 
