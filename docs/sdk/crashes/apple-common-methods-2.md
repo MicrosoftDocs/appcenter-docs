@@ -59,9 +59,9 @@ func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, 
 }
 ```
 
-Receiving `didFailSendingErrorReport` means non-recoverable error such as a **4xx** code occured. For example, **401** means the `appSecret` is wrong.
+Receiving `didFailSendingErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries on network connection is down, up until connection is up again). 
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
 ### Add attachments to a crash report
 

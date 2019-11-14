@@ -199,9 +199,9 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 > [!NOTE]
 > If `Crashes.setListener` is called more than once, the last one wins; it overrides listeners previously set by `Crashes.setListener`.
 
-Receiving `onSendingFailed` means non-recoverable error such as a **4xx** code occured. For example, **401** means the `appSecret` is wrong.
+Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback will not be triggered if it's a network issue. In this case, it would keep retrying (and also pause retries on network connection is down, up until connection is up again). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 ### Add attachments to a crash report
 
