@@ -74,7 +74,7 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 ## Publishing through the CLI
 Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, i.e., Jenkins or Go CI.
 
-Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that us compatible with your destination.
+You will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center, before you can use the CLI. And compile a binary that us compatible with your destination.
 
 You can list your stores by using the list command like this:
 ```
@@ -103,5 +103,5 @@ You will need to fill in the blanks like the list command. Instead of having a s
 
 ## Debugging a failed release
 
-If a release fails to publish, you can debug the release by downloading the Fastlane log. The Fastlane logs is more verbose than the App Center portal's log.
+If a release fails to publish, you can debug the release by downloading the Fastlane log. The Fastlane log is more verbose than the App Center portal's log.
 You find the Fastlane logs on the detailed release page by clicking **Download Fastlane logs**  under the **Status** section.
