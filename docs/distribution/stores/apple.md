@@ -30,7 +30,7 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 3. Select the store type as **iTunes Connect** from the panel that opens.
 4. Click on **Next** in the lower-right corner.
 5. Sign in with your Apple developer account (a onetime activity) and click **Connect**.
-6. On successful sign in, if the Apple account is a member of multiple teams an option to select the team to associate the builds will be available. If the Apple account is a member of only a single team, then the selection is defaulted to the single one available.
+6. On successful sign-in, if the Apple account is a member of multiple teams an option to select the team to associate the builds will be available. If the Apple account is a member of only a single team, then the selection is defaulted to the single one available.
 7. Now a list of apps for the team selected will be available for selection.
 8. Select to app to be upgraded.
 9. Store connections for the selected app will be automatically set up
@@ -72,9 +72,9 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 6. Save by clicking **Update**.
 
 ## Publishing through the CLI
-Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, i.e., Jenkins or Go CI.
 
-Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that us compatible with your destination.
 
 You can list your stores by using the list command like this:
 ```
@@ -103,5 +103,5 @@ You will need to fill in the blanks like the list command. Instead of having a s
 
 ## Debugging a failed release
 
-If a release fails to publish, you can debug the release by downloading the Fastlane logs that provides more verbose logs than the App Center portal.
+If a release fails to publish, you can debug the release by downloading the Fastlane log. The Fastlane logs is more verbose than the App Center portal's log.
 You find the Fastlane logs on the detailed release page by clicking **Download Fastlane logs**  under the **Status** section.
