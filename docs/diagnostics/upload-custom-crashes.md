@@ -63,8 +63,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:":
-  [
+  "logs:": [
     {
       "type": "managedError",
       "timestamp": "2019-10-08T04:22:23.516Z",
@@ -138,6 +137,7 @@ curl -X POST \
         ],
         "innerExceptions": [
           {
+            "type": "java.lang.RuntimeException",
             "frames": [
               {
                 "className": "android.app.Activity",
@@ -158,11 +158,12 @@ curl -X POST \
                 "methodName": "handleResumeActivity"
               }
             ]
-        }
-      ]
+          }
+        ]
+      }
     }
   ]
-}
+}'
 ```
 
 ### Upload an Apple crash log
