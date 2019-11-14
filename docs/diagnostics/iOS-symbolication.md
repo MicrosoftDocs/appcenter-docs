@@ -4,7 +4,7 @@ description: Help understanding symbolication for iOS and MacOS diagnostics in A
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/01/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
@@ -23,12 +23,13 @@ The App Center Build and Distribution service can automatically generate a valid
 
 ## Finding the `.dSYM` bundle
 
-1. In Xcode, open the **Window** menu, then select **Organizer**
-1. Select the **Archives** tab
-1. Select your app in the left sidebar
-1. Right-click on the latest archive and select **Show in Finder**
-1. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
-1. You should see a folder named `dSYMs` which contains your dSYM bundle
+1. In Xcode, open the **Window** menu, then select **Organizer**.
+1. Select the **Archives** tab.
+1. Select your app in the left sidebar.
+1. Right-click on the latest archive and select **Show in Finder**.
+1. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**.
+1. You should see a folder named `dSYMs` which contains your dSYM bundle.
+1. Create a zip file of the dSYM bundle.
 
 If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
@@ -36,12 +37,7 @@ If you are using Visual Studio instead of XCode, see [Where can I find the dSYM 
 
 ### App Center Portal
 
-1. Create a ZIP file for the dSYM package on your Mac.
-1. Log into App Center and select your app.
-1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
-1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the zip file.
-1. If your application already has reported crashes that need symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the zip file.
-1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
+[!include[](./symbol-upload-ui.md)]
 
 #### React Native iOS apps
 
@@ -53,39 +49,12 @@ react-native bundle --entry-file index.ios.js --platform ios --dev false --reset
 
 ### App Center API
 
-1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create).
-This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property. The body of the request should specify the `symbol_type` as `Apple`.
+The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Apple`.
 
-```shell
-curl -X POST 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads' \
-    -H 'accept: application/json' \
-    -H 'X-API-Token: {API TOKEN}' \
-    -H 'Content-Type: application/json' \
-    -d '{ "symbol_type": "Apple" }'
-```
-
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
-
-```shell
-curl -X PUT '{upload_url}' \
-    -H 'x-ms-blob-type: BlockBlob' \
-    --upload-file '{path to file}'
-```
-
-3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
-
-```shell
-curl -X PATCH 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}' \
-    -H 'accept: application/json' \
-    -H 'X-API-Token: {API TOKEN}' \
-    -H 'Content-Type: application/json' \
-    -d '{ "status": "committed" }'
-```
-
-> [!NOTE]
-> The symbol uploads API will not work for symbols files that are 256MB or larger in size. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
+[!include[](./symbol-upload-api.md)]
 
 ### App Center CLI
+
 You can also use the CLI to upload symbol files:
 
 ```shell
@@ -148,6 +117,5 @@ You can double check whether your dSYM files have the right UUIDs by using a CLI
 
   ![App Center displays the UUID of required symbols](~/diagnostics/images/symbols-UUID.png)
 
-
-
+[!include[](./ignoring-symbols.md)]
 

@@ -172,9 +172,9 @@ Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4x
 
 Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
-### Add attachments to a crash report
+### Add attachments to a crash or an unhandled exception report
 
-You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -188,8 +188,13 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 };
 ```
 
+Crashes are differentiated from unhandled exceptions in reports with the `IsCrash` property. The property will be true for crashes and false otherwise.
+
 > [!NOTE]
-> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
+> The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
+
+> [!NOTE]
+> `GetErrorAttachments` is invoked on the main thread and does not split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
 
 ## Enable or disable App Center Crashes at runtime
 
@@ -244,7 +249,24 @@ try {
 }
 ```
 
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
+}
+```
+
 ## Unhandled Exceptions in Unity
+
+### Report unhandled exceptions
 
 By default, the App Center SDK doesn't report unhandled exceptions thrown in your app that don't cause a fatal crash. To enable this functionality, call the following method:
 
@@ -260,6 +282,16 @@ Crashes.ReportUnhandledExceptions(false);
 
 > [!NOTE]
 > Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash.
+
+### Add attachments to an unhandled exception report
+
+By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
+
+```csharp
+Crashes.ReportUnhandledExceptions(true, true);
+```
+
+Then you can optionally add attachments to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
@@ -331,7 +363,7 @@ Once these methods are properly set up, the app sends the minidump to App Center
 > [!NOTE]
 > The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
-> [!NOTE]
+> [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication

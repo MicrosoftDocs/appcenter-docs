@@ -21,6 +21,6 @@ ms.custom: analytics
 ## Handled Errors
 
 - Errors are only available for Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
-- Attachments are only available for Android, Xamarin, UWP, WPF and WinForms platforms.
+- Attachments are only available for Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
 - You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
 - The maximum number of characters per error property key and error property value is 125 characters.

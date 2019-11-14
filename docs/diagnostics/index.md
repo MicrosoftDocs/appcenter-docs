@@ -4,7 +4,7 @@ description: Help using the Diagnostic service on App Center
 keywords: app center, crashes, errors, diagnostics
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
 ms.service: vs-appcenter
