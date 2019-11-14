@@ -4,7 +4,7 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 10/17/2019
+ms.date: 10/28/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.service: vs-appcenter
@@ -247,5 +247,20 @@ try {
         { "Wifi", "On"}
     };
     Crashes.TrackError(exception, properties); 
+}
+```
+
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
 }
 ```

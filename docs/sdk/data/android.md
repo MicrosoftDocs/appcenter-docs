@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 11/06/2019
+ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -387,7 +387,7 @@ Data.list(User::class.java, DefaultPartitions.USER_DOCUMENTS).thenAccept( new Ap
 });
 ```
 
-### Advanced offline scenarios
+## Advanced offline scenarios
 
 The `setRemoteOperationListener` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippet:
 
@@ -407,4 +407,21 @@ Data.setRemoteOperationListener(
                         error);
             }
         };
+```
+
+```kotlin
+Data.setRemoteOperationListener(object: RemoteOperationListener {
+    override fun onRemoteOperationCompleted(
+        operation: String?,
+        documentMetadata: DocumentMetadata?,
+        error: DataException?
+    ) {
+        Log.i(LOG_TAG, String.format("Remote operation completed operation=%s partition=%s documentId=%s eTag=%s",
+            operation,
+            documentMetadata?.partition,
+            documentMetadata?.id,
+            documentMetadata?.eTag),
+            error)
+    }
+})
 ```
