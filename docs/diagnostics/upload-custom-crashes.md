@@ -370,7 +370,7 @@ Attachment-specific properties:
 
 - `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
-- `errorId` property is the unique identifier that associates the attachment to the right crash report
+- `errorId`: required string containing the unique identifier of the attachment's associated error report
 - `fileName`: required string for NDK crashes that is set to "minidump.dmp"
 
 > [!NOTE]
