@@ -310,7 +310,7 @@
 ## [Introduction](general/index.md)
 ## [Product Roadmap](general/roadmap.md)
 ## [Accounts in App Center](general/account.md)
-## [Connection to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
 ## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)
