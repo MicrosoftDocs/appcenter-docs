@@ -17,17 +17,17 @@ Publish iOS app upgrades to the App Store and TestFlight with Fastlane in App Ce
 
 ## Pre-requisites
 
-* The first version of an iOS application must be published through the iTunes Connect portal.
+* The first version of an iOS application must be published through the App Store Connect portal.
 * App should be ready for submission and pass the [App Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
-* An active [Apple Developer Program](https://developer.apple.com/programs/enroll/) account, or have your Apple ID added as an admin in your teams [iTunes Connect](https://itunesconnect.apple.com/login) account.
+* An active [Apple Developer Program](https://developer.apple.com/programs/enroll/) account, or have your Apple ID added as an admin in your teams' [App Store Connect](https://itunesconnect.apple.com/login) account.
 
 For more information, review the [Apple App Distribution Guide](https://help.apple.com/xcode/mac/current/#/dev8b4250b57).
 
-## Set up the connection between App Center to iTunes and TestFlight
+## Set up the connection between App Center and App Store Connect
 
 1. Select **Stores** under Distribution.
 2. In the middle of the page, click on the **Connect to Store** button.
-3. Select the store type as **iTunes Connect** from the panel that opens.
+3. Select the store type as **App Store Connect** from the panel that opens.
 4. Click on **Next** in the lower-right corner.
 5. Sign in with your Apple developer account (a onetime activity) and click **Connect**.
 6. On successful sign in, if the Apple account is a member of multiple teams an option to select the team to associate the builds will be available. If the Apple account is a member of only a single team, then the selection is defaulted to the single one available.
@@ -35,8 +35,8 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 8. Select to app to be upgraded.
 9. Store connections for the selected app will be automatically set up
    * An App Store connection named **Production**.
-   * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **iTunes Connect users**.
-   * External tester groups connections based on the external groups created in the iTunes Connect console.
+   * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **App Store Connect Users**.
+   * External tester groups connections based on the external groups created in the App Store Connect console.
 
 10. Setting up this connection is a one time process for an app in App Center.
 
