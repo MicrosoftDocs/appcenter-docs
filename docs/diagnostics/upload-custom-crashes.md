@@ -350,7 +350,7 @@ curl -X POST \
             "innerExceptions": [
               {
                 "type": "System.ArgumentOutOfRangeException",
-                "message": "It's over 9000!",
+                "message": "It is over 9000!",
                 "stackTrace": "  at Contoso.Forms.Demo.CrashesContentPage.ValidateLength () [0x00002] in <4fd9174f6e18457b9721bfba2cd78098>:0 ",
               }
             ],
