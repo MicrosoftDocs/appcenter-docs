@@ -1,10 +1,10 @@
 ---
-title: Publish to iTunes
+title: Publish to App Store Connect
 description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/18/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
