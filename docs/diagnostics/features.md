@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/08/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -94,12 +94,12 @@ In a crash report, you can see the current threads that were active when the app
 
 ## Configure Alerts
 
-Stay on top of your crashes by configuring your App Center app definition settings to send an email when a new crash group is created. To configure these alerts:
+Stay on top of your crashes by configuring your App Center app definition settings to send an email notifications. You can configure this setting per app to either send an email immediatly when a new crash group is created or send a daily summary with your app's top crashes. To configure these alerts:
 
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select the box next to Crashes
+4. Select **Immediatly** ,**Daily**, or **Never**. The default configuration is set to **Never**.
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
