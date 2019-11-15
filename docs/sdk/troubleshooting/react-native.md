@@ -132,12 +132,12 @@ Analyzing dependencies [!] Unable to find a specification for AppCenterReactNati
 
 You should run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, please see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
-## How to upgrade React Native SDK 0.59 to the 0.60 version
+## How to upgrade app using App Center SDK from React Native 0.59 to 0.60
 
-For upgrading React Native to the version 0.60 use the following command:
+For upgrading React Native to the version 0.60.0 use the following command:
 
 ```shell
-react-native upgrade 0.60.*
+react-native upgrade 0.60.0
 ```
 
 > [!NOTE] 
@@ -147,18 +147,15 @@ react-native upgrade 0.60.*
 >   git add .
 >   git commit -m "Upgrade react-native"
 >   ```
-> After you finish upgrading you may remove the .git directory.
+> After you finish upgrading you may remove the `.git` directory.
 
 #### 1 Update React Native iOS
 
 1. Open **<project-name>.xcodeproj** in **XCode** and remove `Libraries\RCTGeolocation.xcodeproj`.
 
-2. Open **Podfile** and update the dependencies:
+2. Open **Podfile** and add the dependencies:
 
     ```ruby
-
-    ...
-
     pod 'appcenter', :path => '../node_modules/appcenter/ios'
     pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics/ios'
     pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes/ios'
@@ -183,17 +180,11 @@ react-native upgrade 0.60.*
 
     ```groovy
     project.ext.react = [
-
-        ...
-
         enableHermes: false
     ]
     def jscFlavor = 'org.webkit:android-jsc:+'
     def enableHermes = project.ext.react.get("enableHermes", false);
     dependencies {
-
-        ...
-
         if (enableHermes) {
             def hermesPath = "../../node_modules/hermes-engine/android/";
             debugImplementation files(hermesPath + "hermes-debug.aar")
