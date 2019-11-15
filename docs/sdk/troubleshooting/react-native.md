@@ -155,7 +155,7 @@ react-native upgrade 0.60.0
 
 2. Open **Podfile** and add the dependencies:
 
-    ```text
+    ```ruby
     use_native_modules!
     ```
 
