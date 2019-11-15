@@ -103,4 +103,4 @@ You'll need to fill in the blanks like the list command. Instead of having a sta
 
 ## Debugging a failed release
 
-If publishing a release fails, you can download the Fastlane log which is more verbose than App Center's log. The Fastlane logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
+If publishing a release fails, you can download the verbose Fastlane logs. These logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
