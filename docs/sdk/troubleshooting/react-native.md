@@ -155,10 +155,8 @@ react-native upgrade 0.60.0
 
 2. Open **Podfile** and add the dependencies:
 
-    ```ruby
-    pod 'appcenter', :path => '../node_modules/appcenter/ios'
-    pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics/ios'
-    pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes/ios'
+    ```text
+    use_native_modules!
     ```
 
 3. Run the following command:
