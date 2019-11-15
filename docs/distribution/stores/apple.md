@@ -74,7 +74,7 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 ## Publishing through the CLI
 Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, i.e., Jenkins or Go CI.
 
-You will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center, before you can use the CLI. And compile a binary that us compatible with your destination.
+You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 
 
 You can list your stores by using the list command like this:
 ```
@@ -83,12 +83,12 @@ appcenter distribute stores list \
 --output json
 ```
 
-You will get a result like this:
+You'll get a result like this:
 
 ```
 [["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
 ```
-And it's the Store column we will be using in the final step.
+And it's the Store column we'll be using in the final step.
 
 The final step is to publish your app by running:
 ```
@@ -99,7 +99,7 @@ appcenter distribute stores publish \
 --release-notes "Some note."
 ```
 
-You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
+You'll need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
 
 ## Debugging a failed release
 
