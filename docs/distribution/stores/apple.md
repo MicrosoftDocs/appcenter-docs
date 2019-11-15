@@ -57,7 +57,7 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 
 ## Adding Two-factor authentication
 
-If your Apple account has two-factor authentication enabled, App Store Connect requires an app-specific password as security. You can add an App-specific password to your account by navigating to [Developer accounts in your Account settings](https://appcenter.ms/settings/accounts).
+If your Apple account has two-factor authentication enabled, App Store Connect requires an app-specific password as security. You can add an App-specific password in [Account Settings > Developer Accounts](https://appcenter.ms/settings/accounts).
 
 > [!TIP]
 > Only App Store and TestFlight require an app-specific password.
