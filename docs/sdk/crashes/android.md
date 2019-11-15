@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/07/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -221,6 +221,8 @@ override fun onBeforeSending(report: ErrorReport?) {
 }
 ```
 
+In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```java
@@ -248,6 +250,10 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
     // Your code goes here.
 }
 ```
+
+Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). 
 
 ### Add attachments to a crash report
 
