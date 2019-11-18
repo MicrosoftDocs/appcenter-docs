@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/15/2019
+ms.date: 11/18/2019
 ms.topic: article
 ms.assetid: 64de4cef-207e-48fb-a1f7-c3f04d69a1bb
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ To run a test in App Center, you need to build your application and an XCUITest 
 rm -rf DerivedData
 xcrun xcodebuild build-for-testing \
   -configuration Debug \
-  -workspace YOUR_WORKSPACE \
+  -project YOUR_XCODEPROJ \
   -sdk iphoneos \
   -scheme YOUR_APP_SCHEME \
   -derivedDataPath DerivedData
