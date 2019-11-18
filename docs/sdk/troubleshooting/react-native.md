@@ -151,15 +151,13 @@ react-native upgrade 0.60.0
 
 #### 1 Update React Native iOS
 
-1. Open **<project-name>.xcodeproj** in **XCode** and remove `Libraries\RCTGeolocation.xcodeproj`.
-
-2. Open **Podfile** and add the dependencies:
+1. Open **Podfile** and add the dependencies:
 
     ```ruby
     use_native_modules!
     ```
 
-3. Run the following command:
+2. Run the following command:
 
     ```shell
     pod repo update
@@ -167,14 +165,14 @@ react-native upgrade 0.60.0
 
 #### 2 Update React Native Android
 
-1. Open the **gradle.properties** file and add the following lines:
+1. Open the **gradle.properties** file and make sure that the following lines were added:
 
     ```text
     android.useAndroidX=true
     android.enableJetifier=true
     ```
 
-2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and add the following lines:
+2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and make sure that the following lines were added:
 
     ```groovy
     project.ext.react = [
@@ -193,7 +191,7 @@ react-native upgrade 0.60.0
     }
     ```
 
-3. Open the **android/build.gradle** file and add the following lines:
+3. Open the **android/build.gradle** file and make sure that the following lines were added:
 
     ```groovy
     maven {
