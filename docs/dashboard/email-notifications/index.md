@@ -80,15 +80,15 @@ App level email notifications send information for the specific app to the user.
 
     ![How to configure email notifications at the app level](media/configureEmailNotificationApp.png)
 
-4. In the row titled **Receive notifications**, click the **toggle button** to enable or disable email notifications for the app. Select the **dropdown** for Build status notifications and the **checkbox** for Crashes, Distribute and Test notifications to decide what events will trigger an email.
+4. In the row titled **Receive notifications**, click the **toggle button** to enable or disable email notifications for the app. Select the **dropdown** for Build, Crashes, Distribute and Test notifications to decide what events will trigger an email.
 
 The default email notification settings at the app level are:
   - **On** for receiving email notifications
   - **Never** for Build
   - **Immediately** for Distribute new release
   - **Checked** for when Distribute fails to add new devices to a release
-  - **Unchecked** for Crashes
-  - **Checked** for Test events
+  - **Never** for Crashes
+  - **Never** for Test events
 
 You will receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
 
