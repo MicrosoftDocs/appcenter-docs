@@ -22,12 +22,7 @@ The steps necessary to prepare an app and its corresponding test suite for uploa
 
 ## Build For Testing
 
-To run a test in App Center, you need to build your application and an XCUITest bundle. To do this, run the following command from the root of your application project directory:
-
-> [!div class="op_single_selector"]
-> * [Workspace](./xcuitest/workspace.md)
-> * [Xcode project](./xcuitest/project.md)
-
+To run a test in App Center, you need to build your application and an XCUITest bundle. To do this, run one of the two following commands from the root of your application project directory:
 
 ```shell
 # How to build a xcodeproj
