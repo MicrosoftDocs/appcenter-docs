@@ -4,7 +4,7 @@ description: App Center Crashes for Windows
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
 ms.service: vs-appcenter
@@ -178,6 +178,8 @@ Crashes.SendingErrorReport += (sender, e) =>
 };
 ```
 
+In case we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is triggered again after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
@@ -195,6 +197,10 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
     // Your code goes here.
 };
 ```
+
+Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
 ### Add attachments to a crash report
 
@@ -266,5 +272,20 @@ try {
         { "Wifi", "On"}
     };
     Crashes.TrackError(exception, properties); 
+}
+```
+
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
 }
 ```

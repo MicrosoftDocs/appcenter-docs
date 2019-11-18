@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/01/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -101,54 +101,21 @@ When you publish your application to the store, the .NET Native compilation happ
 
 #### App Center Portal
 
-1. Log into App Center and select your app.
-1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
-1. If your application has not reported any crash yet, in the top-right corner, click **Upload symbols** and upload the **appxsym** files or archives mentioned in the previous sections.
-1. If your application already has reported crashes that need symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the files.
-1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
+[!include[](./symbol-upload-ui.md)]
 
 #### App Center API
+The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `UWP`.
 
-1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create).
-This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property. The body of the request should specify the `symbol_type` as `UWP`.
+[!include[](./symbol-upload-api.md)]
 
-```shell
-curl -X POST 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads' \
-    -H 'accept: application/json' \
-    -H 'X-API-Token: {API TOKEN}' \
-    -H 'Content-Type: application/json' \
-    -d '{ "symbol_type": "UWP" }'
-```
-
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
-
-```shell
-curl -X PUT '{upload_url}' \
-    -H 'x-ms-blob-type: BlockBlob' \
-    --upload-file '{path to file}'
-```
-
-3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
-
-```shell
-curl -X PATCH 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}' \
-    -H 'accept: application/json' \
-    -H 'X-API-Token: {API TOKEN}' \
-    -H 'Content-Type: application/json' \
-    -d '{ "status": "committed" }'
-```
-
-### App Center CLI
+#### App Center CLI
 You can also use the CLI to upload symbol files:
 
 ```shell
 appcenter crashes upload-symbols --appxsym {symbol file}
 ```
 
-
-> [!NOTE]
-> The symbol uploads API does not work for symbols files that are larger than 256MB. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
-
+[!include[](./ignoring-symbols.md)]
 
 ## WinRT, Silverlight, and Other Platforms
 

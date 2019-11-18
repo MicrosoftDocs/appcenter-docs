@@ -2,25 +2,24 @@
 title: Build Scripts
 description: Details on how to write build scripts to enhance the build process
 keywords: build, pre, post, custom, scripts
-author: derpixeldan
-ms.author: daadam
-ms.date: 08/08/2018
+author: king-of-spades
+ms.author: kegr
+ms.date: 10/10/2019
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
 ms.custom: build
+ms.reviewer: nirajpur
 ---
 
 # Build scripts
 
-You can add up to three custom build steps that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln** or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we will run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail. This way we ensure it won’t fail at a later time and therefore saves you build time.
+You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln**, or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we'll run them as custom build steps. For iOS and Android apps, we support Bash scripts, for UWP apps we support PowerShell scripts. If one of your scripts is failing, the whole build will fail.
 
-You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). We welcome contributions and suggestions - feel free to use the sample scripts, to modify them or to submit new pull requests with your most useful scripts, for the rest of the community to use them.
-
-When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
+You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). Feel free to use the sample scripts, modify them, or submit new pull requests with your most useful scripts for the rest of the community to use.
 
 > [!WARNING]
-> Every time you modify the project's build scripts, you must click the **Save** or **Save & Build** button to save the branch configuration to apply the changes.
+> When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 
@@ -46,7 +45,7 @@ To run scripts post-clone, add the following file next to the project file in yo
 
 ## Pre-build
 
-The pre-build script runs before the actual build starts. For React Native apps, the script runs before generating source maps. For other platforms, it runs after we have installed dependencies from e.g. NuGet, CocoaPods or Carthage.
+The pre-build script runs before the actual build starts. For React Native apps, the script runs before generating source maps. For other platforms, it runs after we have installed dependencies, for example from NuGet, CocoaPods, or Carthage.
 
 To run scripts pre-build, add the following file next to the project file in your repository:
 
@@ -66,7 +65,7 @@ To run scripts pre-build, add the following file next to the project file in you
 
 ## Post-build
 
-The post-build script runs after the build has finished and we have copied all the necessary artifacts to the output directory. Note that the post-build script will run even if the build fails.
+The post-build script runs after the build has finished and copied all the necessary artifacts to the output directory. The post-build script will run even if the build fails.
 
 To run scripts post-build, add the following file next to the project file in the repository:
 
@@ -93,30 +92,5 @@ To run scripts post-build, add the following file next to the project file in th
 
 - **appcenter-post-build.ps1** (PowerShell for UWP)
 
-## App Center variables
-
-We set the following environment variables, so you can access them from your build scripts.
-
-| **General variables**             | **Description**                             |
-| --------------------------------- | ------------------------------------------- |
-| `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
-| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
-| `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
-| `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
-| `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
-| <br> **iOS specific**             | |
-| `APPCENTER_XCODE_PROJECT`         | Selected Xcode project                      |
-| `APPCENTER_XCODE_SCHEME`          | Selected Xcode scheme                       |
-| <br> **Android specific**         | |
-| `APPCENTER_ANDROID_VARIANT`       | Selected Android variant                    |
-| `APPCENTER_ANDROID_MODULE`        | Selected Android module                     |
-| <br> **UWP specific**             | |
-| `APPCENTER_UWP_SOLUTION`          | Selected solution                           |
-| `APPCENTER_UWP_CONFIGURATION`     | Selected configuration                      |
-| <br> **Xamarin specific**         | |
-| `APPCENTER_XAMARIN_PROJECT`       | Selected project                            |
-| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration                      |
-| <br> **React Native specific**    | |
-| `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
-
-[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts"
+## Environment Variables
+You can use pre-defined, custom, or in-script environment variables to help write your Build scripts, see our [Environment Variables guide](~/build/custom/variables/index.md) for more info. 

@@ -32,4 +32,7 @@ Customers who want to use a custom email address with their account can do so by
 
 ### Additional considerations
 
+> [!WARNING]
+> All apps that are owned by an App Center are automatically deleted when the owner's account is deleted. If the owner's account needs to be deleted (because, for instance, they've left your organization), make sure that ownership of the app is transferred to someone else before deleting the account. 
+
 Customers who create apps and organizations in App Center should pay special attention to ownership; especially when creating these entities on behalf of an external organization or company. Ownership transfers are executed at App Center's discretion in order to protect the privacy of our customers. For this reason, enterprise customers are encouraged to use AAD and to set up admin accounts created specifically for administering their app and orgs; for example: <i>admin@contoso.com</i> or <i>awesomeapp_admin@contoso.com.</i> 

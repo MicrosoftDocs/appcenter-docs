@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.service: vs-appcenter
@@ -198,6 +198,10 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 > [!NOTE]
 > If `Crashes.setListener` is called more than once, the last one wins; it overrides listeners previously set by `Crashes.setListener`.
+
+Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 ### Add attachments to a crash report
 
