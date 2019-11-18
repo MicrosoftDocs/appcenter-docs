@@ -28,7 +28,9 @@ To run a test in App Center, you need to build your application and an XCUITest 
 > * [Workspace](./xcuitest/workspace.md)
 > * [Xcode project](./xcuitest/project.md)
 
+
 ```shell
+# How to build a xcodeproj
 rm -rf DerivedData
 xcrun xcodebuild build-for-testing \
   -configuration Debug \
@@ -36,6 +38,20 @@ xcrun xcodebuild build-for-testing \
   -sdk iphoneos \
   -scheme YOUR_APP_SCHEME \
   -derivedDataPath DerivedData
+```
+
+`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application.
+
+
+```shell
+#How to build a workspace
+rm -rf DerivedData
+xcrun xcodebuild build-for-testing \
+-configuration Debug \
+-workspace YOUR_WORKSPACE \
+-sdk iphoneos \
+-scheme YOUR_APPSCHEME \
+-deriveData DerivedData
 ```
 
 This will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
@@ -50,13 +66,9 @@ xcrun xcodebuild -list
 
 Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
 
-Here is a sample script you might use to clean, build and submit your XCUITest tests.
+Here is a sample script you might use to submit your XCUITest tests.
 
 ```shell
-# Generate an XCUITest bundle and your iOS application as described above.
-rm -rf DerivedData
-xcrun xcodebuild build-for-testing -derivedDataPath DerivedData -scheme YOUR_APP_SCHEME
-
 # Upload your test to App Center
 appcenter test run xcuitest \
   --app "APP_ID" \
