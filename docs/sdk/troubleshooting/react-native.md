@@ -151,7 +151,7 @@ react-native upgrade 0.60.0
 
 #### 1 Update React Native iOS
 
-1. Open **Podfile** and add the dependencies:
+1. Open **Podfile** and replace App Center dependencies on the following line:
 
     ```ruby
     use_native_modules!
@@ -161,42 +161,6 @@ react-native upgrade 0.60.0
 
     ```shell
     pod repo update
-    ```
-
-#### 2 Update React Native Android
-
-1. Open the **gradle.properties** file and make sure that the following lines were added:
-
-    ```text
-    android.useAndroidX=true
-    android.enableJetifier=true
-    ```
-
-2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and make sure that the following lines were added:
-
-    ```groovy
-    project.ext.react = [
-        enableHermes: false
-    ]
-    def jscFlavor = 'org.webkit:android-jsc:+'
-    def enableHermes = project.ext.react.get("enableHermes", false);
-    dependencies {
-        if (enableHermes) {
-            def hermesPath = "../../node_modules/hermes-engine/android/";
-            debugImplementation files(hermesPath + "hermes-debug.aar")
-            releaseImplementation files(hermesPath + "hermes-release.aar")
-        } else {
-            implementation jscFlavor
-        }
-    }
-    ```
-
-3. Open the **android/build.gradle** file and make sure that the following lines were added:
-
-    ```groovy
-    maven {
-        url("$rootDir/../node_modules/jsc-android/dist")
-    }
     ```
 
 ## How to update React Native SDK to the latest version
