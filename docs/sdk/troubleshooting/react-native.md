@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/12/2019
+ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.service: vs-appcenter
@@ -131,6 +131,37 @@ Analyzing dependencies [!] Unable to find a specification for AppCenterReactNati
 ```
 
 You should run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, please see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
+
+## How to upgrade app using App Center SDK from React Native 0.59 to 0.60
+
+For upgrading React Native to the version 0.60.0 use the following command:
+
+```shell
+react-native upgrade 0.60.0
+```
+
+> [!NOTE] 
+> If during an upgrade you get this error `Command failed: git status -s fatal: not a git repository (or any of the parent directories): .git`, perform the next steps:
+>   ```shell
+>   git init
+>   git add .
+>   git commit -m "Upgrade react-native"
+>   ```
+> After you finish upgrading you may remove the `.git` directory.
+
+#### Update React Native iOS
+
+1. Open **Podfile** and replace App Center dependencies on the following line:
+
+    ```ruby
+    use_native_modules!
+    ```
+
+2. Run the following command:
+
+    ```shell
+    pod repo update
+    ```
 
 ## How to update React Native SDK to the latest version
 
