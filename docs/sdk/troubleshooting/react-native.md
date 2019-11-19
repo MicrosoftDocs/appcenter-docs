@@ -149,7 +149,7 @@ react-native upgrade 0.60.0
 >   ```
 > After you finish upgrading you may remove the `.git` directory.
 
-#### 1 Update React Native iOS
+#### Update React Native iOS
 
 1. Open **Podfile** and replace App Center dependencies on the following line:
 
