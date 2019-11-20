@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/18/2019
+ms.date: 11/21/2019
 ms.topic: article
 ms.assetid: 64de4cef-207e-48fb-a1f7-c3f04d69a1bb
 ms.service: vs-appcenter
@@ -35,23 +35,9 @@ xcrun xcodebuild build-for-testing \
   -derivedDataPath DerivedData
 ```
 
-`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application.
-
-
-```shell
-#How to build a workspace
-rm -rf DerivedData
-xcrun xcodebuild build-for-testing \
--configuration Debug \
--workspace YOUR_WORKSPACE \
--sdk iphoneos \
--scheme YOUR_APPSCHEME \
--deriveData DerivedData
-```
+`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. If you use a `.xcworkspace` use `-workspace` instead of `-project`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application.
 
 The xcrun will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
-
-`YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application. To see the list of schemes defined in your Xcode project, run:
 
 ```shell
 xcrun xcodebuild -list
@@ -61,7 +47,7 @@ xcrun xcodebuild -list
 
 Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
 
-Here is a sample script you might use to submit your XCUITest tests.
+Here is an example of how you might your XCUITest tests to App Center Test.
 
 ```shell
 # Upload your test to App Center
