@@ -33,20 +33,20 @@ App Center Diagnostics groups crashes and errors by similarities, such as reason
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md), [Apache Cordova](~/sdk/other-apis/cordova.md), [iOS](~/sdk/other-apis/apple.md), [macOS](~/sdk/other-apis/macos.md), [React Native](~/sdk/other-apis/react-native.md), [tvOS](~/sdk/other-apis/tvos.md), [Unity](~/sdk/other-apis/unity.md) and [Xamarin](~/sdk/other-apis/xamarin.md). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/apple.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
-> [!NOTE]
-> User ID is not yet supported for WPF, WinForms, and UWP applications. Visit our [diagnostics limitations page](~/diagnostics/limitations.md) and our proposed [Windows plan](https://github.com/Microsoft/appcenter/blob/windows/specs/2019-04/Windows-Plan.md) for more details.
 
 ### Attachments
 
-In the App Center Diagnostics UI, you can attach, view and download one binary and one text attachment to your crash reports.
+In the App Center Diagnostics UI, you can attach, view and download one binary and one text attachment to your crash and error reports.
 
-You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report) and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
+You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [UWP](~/sdk/crashes/uwp.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report) and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
 
-To view and download the attachments, select a crash group, a specific device report and then click on the attachments tab.
+Attachments for handled errors is only supported for Android, Unity, UWP, WPF, WinForms, and Xamarin platforms. Learn how to add attachments to your error reports in the SDK documentation for your [Android](~/sdk/crashes/android.md#handled-errors), [Unity](~/sdk/crashes/unity.md#add-attachments-to-a-crash-or-an-unhandled-exception-report), [UWP](~/sdk/crashes/uwp.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [Xamarin](~/sdk/crashes/xamarin.md#handled-errors) apps.
+
+To view and download the attachments, select a crash or error group, a specific device report and then click on the attachments tab.
 
 ![App Center allows you to add attachments to your crash and error reports](~/diagnostics/images/new-attachments.png)
 

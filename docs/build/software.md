@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -31,8 +31,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Language and Runtime
 - java 1.7: OpenJDK Runtime Environment (Zulu 7.34.0.5-CA-macosx) (build 1.7.0_242-b7)
-- java 1.8: OpenJDK Runtime Environment (Zulu 8.42.0.21-CA-macosx) (build 1.8.0_232-b18) (default)
-- java 11: OpenJDK Runtime Environment Zulu11.35+13-CA (build 11.0.5+10-LTS)
+- java 1.8: OpenJDK Runtime Environment (Zulu 8.42.0.23-CA-macosx) (build 1.8.0_232-b18) (default)
+- java 11: OpenJDK Runtime Environment Zulu11.35+15-CA (build 11.0.5+10-LTS)
 - java 12: OpenJDK Runtime Environment (Zulu12.3+11-CA) (build 12.0.2+3)
 - java 13: OpenJDK Runtime Environment Zulu13.28+11-CA (build 13.0.1+10-MTS)
 - PowerShell 6.2.3
@@ -50,13 +50,14 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - v8.16.2
 - v10.17.0
 - v12.13.0
+- v13.1.0
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.34.0
 - CocoaPods 1.8.4
-- Homebrew 2.1.15
+- Homebrew 2.1.16
 - NPM 3.10.10
 - Yarn 1.19.1
 - NuGet 4.7.0.5148
@@ -70,12 +71,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Utilities
 
-- Curl 7.66.0 (x86_64-apple-darwin18.6.0) libcurl/7.66.0 SecureTransport zlib/1.2.11
-- Git 2.23.0
+- Curl 7.67.0 (x86_64-apple-darwin17.7.0) libcurl/7.67.0 SecureTransport zlib/1.2.11
+- Git 2.24.0
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.12.2
-- GNU parallel 20190922
+- GNU parallel 20191022
 
 ### Tools
 
@@ -87,6 +88,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 | Version                | Build   |
 |------------------------|---------|
+| 11.2.1                 | 11B53   |
 | 11.2                   | 11B52   |
 | 11.1 GM seed           | 11A1027 |
 | 11.0                   | 11A420a |
@@ -119,7 +121,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 |---------------------------|-------------|--------------|
 | macOS 10.13               | macosx10.13 | 9.4.1        |
 | macOS 10.14               | macosx10.14 | 10.0, 10.1, 10.2, 10.2.1, 10.3 |
-| macOS 10.15               | macosx10.15 | 11.0, 11.1, 11.2 |
+| macOS 10.15               | macosx10.15 | 11.0, 11.1, 11.2, 11.2.1 |
 | iOS 11.4                  | iphoneos11.4 | 9.4.1       |
 | iOS 12.0                  | iphoneos12.0 | 10.0        |
 | iOS 12.1                  | iphoneos12.1 | 10.1        |
@@ -127,7 +129,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 12.4                  | iphoneos12.4 | 10.3        |
 | iOS 13.0                  | iphoneos13.0 | 11.0        |
 | iOS 13.1                  | iphoneos13.1 | 11.1        |
-| iOS 13.2                  | iphoneos13.2 | 11.2        |
+| iOS 13.2                  | iphoneos13.2 | 11.2, 11.2.1        |
 | iOS Simulator 11.4        | iphonesimulator11.4 | 9.4.1    |
 | iOS Simulator 12.0        | iphonesimulator12.0 | 10.0     |
 | iOS Simulator 12.1        | iphonesimulator12.1 | 10.1     |
@@ -135,36 +137,36 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS Simulator 12.4        | iphonesimulator12.4 | 10.3     |
 | iOS Simulator 13.0        | iphonesimulator13.0 | 11.0     |
 | iOS Simulator 13.1        | iphonesimulator13.1 | 11.1     |
-| iOS Simulator 13.2        | iphonesimulator13.2 | 11.2     |
+| iOS Simulator 13.2        | iphonesimulator13.2 | 11.2, 11.2.1     |
 | tvOS 11.4                 | appletvos11.4 | 9.4.1          |
 | tvOS 12.0                 | appletvos12.0 | 10.0           |
 | tvOS 12.1                 | appletvos12.1 | 10.1           |
 | tvOS 12.2                 | appletvos12.2 | 10.2, 10.2.1   |
 | tvOS 12.4                 | appletvos12.4 | 10.3           |
 | tvOS 13.0                 | appletvos13.0 | 11.0, 11.1     |
-| tvOS 13.2                 | appletvos13.2 | 11.2           |
+| tvOS 13.2                 | appletvos13.2 | 11.2, 11.2.1   |
 | tvOS Simulator 11.4       | appletvsimulator11.4 | 9.4.1   |
 | tvOS Simulator 12.0       | appletvsimulator12.0 | 10.0    |
 | tvOS Simulator 12.1       | appletvsimulator12.1 | 10.1    |
 | tvOS Simulator 12.2       | appletvsimulator12.2 | 10.2, 10.2.1 |
 | tvOS Simulator 12.4       | appletvsimulator12.4 | 10.3    |
 | tvOS Simulator 13.0       | appletvsimulator13.0 | 11.0, 11.1 |
-| tvOS Simulator 13.2       | appletvsimulator13.2 | 11.2    |
+| tvOS Simulator 13.2       | appletvsimulator13.2 | 11.2, 11.2.1    |
 | watchOS 4.3               | watchos4.3 | 9.4.1         |
 | watchOS 5.0               | watchos5.0 | 10.0          |
 | watchOS 5.1               | watchos5.1 | 10.1          |
 | watchOS 5.2               | watchos5.2 | 10.2, 10.2.1  |
 | watchOS 5.3               | watchos5.3 | 10.3          |
 | watchOS 6.0               | watchos6.0 | 11.0, 11.1    |
-| watchOS 6.1               | watchos6.1 | 11.2          |
+| watchOS 6.1               | watchos6.1 | 11.2, 11.2.1  |
 | watchOS Simulator 4.3     | watchsimulator4.3 | 9.4.1         |
 | watchOS Simulator 5.0     | watchsimulator5.0 | 10.0          |
 | watchOS Simulator 5.1     | watchsimulator5.1 | 10.1          |
 | watchOS Simulator 5.2     | watchsimulator5.2 | 10.2, 10.2.1  |
 | watchOS Simulator 5.3     | watchsimulator5.3 | 10.3          |
 | watchOS Simulator 6.0     | watchsimulator6.0 | 11.0, 11.1    |
-| watchOS Simulator 6.1     | watchsimulator6.1 | 11.2          |
-| DriverKit 19.0            | driverkit.macosx19.0 | 11.0, 11.1, 11.2 |
+| watchOS Simulator 6.1     | watchsimulator6.1 | 11.2, 11.2.1  |
+| DriverKit 19.0            | driverkit.macosx19.0 | 11.0, 11.1, 11.2, 11.2.1 |
 
 ### Installed Simulators
 
@@ -183,11 +185,11 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 12.2 (16E226)<br>iOS 12.4 (16G73) | 10.2, 10.2.1<br>10.3  | iPhone 5s<br>iPhone 6<br>iPhone 6 Plus<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone 7<br>iPhone 7 Plus<br>iPhone SE<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Air (3rd generation)<br>iPad mini 2<br>iPad mini 3<br>iPad mini 4<br>iPad mini (5th generation)<br>iPad (5th generation)<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation) |
 | iOS 13.0 (17A577a) | 11         | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
 | iOS 13.1 (17A844) | 11.1        | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
-| iOS 13.2 (17B84) | 11.2     | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad (7th generation)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
-| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J559)<br>tvOS 13.2 (17K81) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0<br>11.1        | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
+| iOS 13.2 (17B102) | 11.2, 11.2.1     | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad (7th generation)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
+| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J559)<br>tvOS 13.2 (17K90) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0, 11.1<br>11.2, 11.2.1        | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
 | watchOS 4.3 (15T212) | 9.4.1        | Apple Watch 38mm<br>Apple Watch 42mm<br>Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm |
 | watchOS 5.0 (16R5283q)<br>watchOS 5.1 (16R591)<br>watchOS 5.2 (16T224)<br>watchOS 5.3 (16U567) | 10.0<br>10.1<br>10.2, 10.2.1<br>10.3      | Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm<br>Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm |
-| watchOS 6.0 (17R566)<br><br>watchOS 6.1 (17S83) | 11.0<br>11.1<br>11.2     | Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm<br>Apple Watch Series 5 40mm<br>Apple Watch Series 5 44mm |
+| watchOS 6.0 (17R566)<br><br>watchOS 6.1 (17S80) | 11.0<br>11.1<br>11.2, 11.2.1     | Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm<br>Apple Watch Series 5 40mm<br>Apple Watch Series 5 44mm |
 
 
 ### Device Pairs
@@ -314,7 +316,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.3.5.13
+- 8.3.7.1
 
 ### Mono
 
@@ -334,6 +336,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.iOS SDK
 
+- 13.6.0.12
 - 13.4.0.2
 - 13.2.0.47
 - 12.14.0.114
@@ -355,6 +358,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Android SDK
 
+- 10.0.6.2
 - 10.0.3.0
 - 9.4.1.0
 - 9.3.0-23
@@ -373,6 +377,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin.Mac SDK
 
+- 6.6.0.12
 - 6.4.0.2
 - 6.2.0.47
 - 5.16.1.24

@@ -1,5 +1,5 @@
 ---
-title: Connecting to Azure Active Directory
+title: Connecting App Center Organizations to Azure Active Directory
 description: Connect an Azure Active Directory tenant to App Center
 keywords: dashboard Azure organizations
 author: scottarbeit
@@ -11,9 +11,9 @@ ms.service: vs-appcenter
 ms.custom: general
 ---
 
-# Azure Active Directory integration
+# Connecting App Center Organizations to Azure Active Directory
 
-## Connect your Azure Active Directory tenant
+## Connect your Azure Active Directory tenant to App Center
 To connect your App Center organization to Azure Active Directory, click on your organization, click **Manage**, and then click **Azure**. On the Azure page, click **Connect** and sign in to Azure Active Directory if you're not already signed in.
 
 ![App Center: Manage your organization's connection to Azure](./images/add-aad-tenant-1.png)

@@ -4,7 +4,7 @@ description: Post a crash report, e.g. if you don't want to use our SDK or devel
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/07/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ Log properties:
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
-    - `sdkName`": required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
+    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
     - `sdkVersion`: required string with version of the SDK in semantic versioning format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
@@ -45,6 +45,9 @@ Log properties:
 
 You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
+> [!NOTE]
+> Due to retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
+
 ## Upload a crash report
 
  The following properties are required to upload a crash report:
@@ -53,6 +56,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `id`: required string with exception identifier
 - `fatal`: required boolean that indicates if the exception resulted in a crash
 - `processName`: required string with the process name
+- `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
 
 To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
 
@@ -63,8 +67,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:":
-  [
+  "logs:": [
     {
       "type": "managedError",
       "timestamp": "2019-10-08T04:22:23.516Z",
@@ -81,7 +84,8 @@ curl -X POST \
         "osName": "android",
         "osVersion": "9.3",
         "model": "Pixel",
-        "locale": "en-US"
+        "locale": "en-US",
+        "appNamespace": "com.contoso.myapp"
       },
       "userId": "TestID",
       "exception": {
@@ -138,6 +142,7 @@ curl -X POST \
         ],
         "innerExceptions": [
           {
+            "type": "java.lang.RuntimeException",
             "frames": [
               {
                 "className": "android.app.Activity",
@@ -158,23 +163,27 @@ curl -X POST \
                 "methodName": "handleResumeActivity"
               }
             ]
-        }
-      ]
+          }
+        ]
+      }
     }
   ]
-}
+}'
 ```
+> [!NOTE]
+> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-custom-crashes.md#upload-an-attachment) of this page.
 
 ### Upload an Apple crash log
 
 To upload an Apple crash log, make sure the log type is set to "appleError".
 The following properties are also required:
 
-- `primaryArchitectureId`: required integer with CPU primary architecture.
-- `applicationPath`: required string with the path to the application.
-- `osExceptionType`: required string with OS exception type.
+- `primaryArchitectureId`: required integer with CPU primary architecture
+- `applicationPath`: required string with the path to the application
+- `osExceptionType`: required string with OS exception type
 - `osExceptionCode`: required string with OS exception code
 - `osExceptionAddress`: required string with OS exception address
+- `binaries`: required array with binaries associated to the error
 
 For example:
 
@@ -290,14 +299,14 @@ curl -X POST \
       ]
     }
   ]
-}
+}'
 
 ```
 
 
 ## Upload an error report
 
-Handled errors are only supported for Xamarin, Unity, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+Handled errors are only supported for Android, Xamarin, Unity, UWP, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
 
 
 ```shell
@@ -342,7 +351,7 @@ curl -X POST \
             "innerExceptions": [
               {
                 "type": "System.ArgumentOutOfRangeException",
-                "message": "It's over 9000!",
+                "message": "It is over 9000!",
                 "stackTrace": "  at Contoso.Forms.Demo.CrashesContentPage.ValidateLength () [0x00002] in <4fd9174f6e18457b9721bfba2cd78098>:0 ",
               }
             ],
@@ -360,9 +369,13 @@ All attachments must be associated with a crash report. You can either upload an
 
 Attachment-specific properties:
 
-- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type).
+- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
-- `errorId` property is the unique identifier that associates the attachment to the right crash report.
+- `errorId`: required string containing the unique identifier of the attachment's associated error report
+- `fileName`: required string for NDK crashes that is set to "minidump.dmp"
+
+> [!NOTE]
+> The size limit for attachments is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 Below is an example of uploading a crash report and an attachment in one call.
 
