@@ -49,6 +49,9 @@ Select your project’s `package.json`. App Center will automatically extract in
 
 The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle** file. Select which build variant should be built.
 
+> [!NOTE]
+> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one optional Product Flavor. Detecting combinations of multiple product flavors are not supported at this time.
+
 ### 3.3. Node.js version
 
 Select the Node.js version to use for the build 
