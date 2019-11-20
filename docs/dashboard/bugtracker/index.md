@@ -4,7 +4,7 @@ description: how to integrate App Center with bug trackers like Jira, Visual Stu
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
 author: amchew
 ms.author: amchew
-ms.date: 05/09/2019
+ms.date: 11/18/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 97b6f745-736f-4abc-a85b-88
@@ -28,30 +28,21 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
       1. Login with your Jira credentials (username, password and base URL) and click **Add**. Please see here on [how to find your base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html).
       > Note: Jira has [deprecated basic authentication](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-basic-auth-and-cookie-based-auth/). Instead of typing in your password, you must create an [API token in Jira](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) and use that as your password.
-      1. Select which Jira projects to integrate the bug tracker with and click **Next**.
-      2. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
-         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Jira.
-
-             ![How to add a bug tracker for Jira](media/addBugTrackerJira.gif)
+      2. Select which Jira projects to integrate the bug tracker with and click **Next**.
+      3. Toggle **On** for **Auto create ticket** and click **Add**:
 
    2. For Azure DevOps (formerly VSTS):
 
       1. Login with your Azure DevOps credentials and click **Accept** when prompted on app authorization.
       2. Select which Azure DevOps projects to integrate the bug tracker with and click **Next**.
-      3. Under **Add bug tracker**, fill in the fields for **Number of crashes**, **Area** and **Default Payload**, and click **Add**:
-         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before a ticket is created in Azure DevOps.
+      3. Toggle **On** for **Auto create ticket**, and fill in the fields for **Area** and **Default Payload**, and click **Add**:
          - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/en-us/rest/api/vsts/wit/work%20item%20types) for additional information.
-
-             ![How to add a bug tracker for Azure DevOps](media/addBugTrackerVSTS.gif)
 
    3. For GitHub:
 
       1. Login with your GitHub credentials and click **Authorize App Center**.
       2. Select which GitHub repository to integrate the bug tracker with and click **Next**.
-      3. Under **Add bug tracker**, fill in the fields for **Number of crashes** and click **Add**:
-         - Number of crashes is a threshold you can set for the minimum number of crashes to happen in a crash group before an issue is created in GitHub.
-
-           ![How to add a bug tracker for GitHub](media/addBugTrackerGitHub.gif)
+      3. Toggle **On** for **Auto create ticket** and click **Add**:
 
 4. Done! Your bug tracker is now configured. With this configuration:
 
