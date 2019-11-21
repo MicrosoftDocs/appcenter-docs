@@ -15,7 +15,7 @@ This document contains a list of frequently asked questions for Distribution in 
 
 ## Frequently asked questions
 ### Can I distribute using an App Store Provisioning Profile?
-No, it's not possible to distribute apps using the App Store Provisioning profile outside of the store. You can use an Ad Hoc profile or an Enterprise profile. You can learn more by reading our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning). 
+No, it's not possible to distribute apps using the App Store Provisioning profile outside of the store. You can use an Ad Hoc profile or an Enterprise profile. You can learn more by reading our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning.md). 
 
 ### How do I add an iOS device for testing?
 1. Invite a tester to a distribution group using their email address. If you don't have an existing distribution group, you'll need to create one. The tester will be notified that they've been invited to test your app.
@@ -23,7 +23,7 @@ No, it's not possible to distribute apps using the App Store Provisioning profil
 3. The tester will be notified that a new release is available. The user will try to install and won't be able to download. 
 4. Navigate to **Distribute** > **Groups** > **Select the Group** > **Devices**.
 5. Find the user in the list and choose three bullet points on the right to find "Copy UDID".
-6. Then follow the process of adding the UDID to your provisioning profile. For more information read our [[Device Registration and App Re-signing guide](~/distribution/auto-provisioning)](~/distribution/auto-provisioning). 
+6. Then follow the process of adding the UDID to your provisioning profile. For more information read our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning.md).
 
 ### How to inspect the iOS console log
 If you're the developer of the app and can reproduce the problem on your device, please follow these steps:
