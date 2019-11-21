@@ -85,19 +85,19 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
   b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
 
-  ```text
+  ```xml
   android:fullBackupContent="@xml/appcenter_backup_rule"
   ```
 
   c. Add the next backup rules in `appcenter_backup_rule.xml` file:
 
-  ```text
+  ```xml
   <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-      <exclude domain="sharedpref" path="AppCenter.xml"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence.db"/>
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
       <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-      <exclude domain="file/error" path="." tools:ignore="FullBackupContent" />
-      <exclude domain="file/appcenter/database_large_payloads" path="." tools:ignore="FullBackupContent" />
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
   </full-backup-content>
   ```
 
