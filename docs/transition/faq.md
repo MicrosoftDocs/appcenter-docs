@@ -54,3 +54,6 @@ Releases added to a public distribution group in App Center are available to app
 
 ### I use the HockeySDK without authentication, how can I do the same with the App Center SDK?
 We're currently working on improving this scenario. Until then, it will require to cancel the log-in request to receive the latest release from a public distribution group. On iOS, you will see two alerts and you should cancel both.
+
+### Why do downloads not count when using the HockeySDK for in-app updates?
+The download count for in-app updates doesn't work using the HockeySDK. To get download counts you have to switch to the App Center SDK.
