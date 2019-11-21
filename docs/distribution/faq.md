@@ -11,16 +11,14 @@ ms.service: vs-appcenter
 
 # Distribution FAQ
 
-In the following we collected a list of frequently asked questions for Distribution in App Center. If you are missing anything please [reach out](~/general/support-center.md) to us.
+This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here please [contact support](~/general/support-center.md).
 
 ## Frequently asked questions
-
 ### Can I distribute using an App Store Provisioning Profile?
-No, it is not possible to distribute apps using the App Store Provisioning profile outside of the store. You can use an Ad Hoc profile or an Enterprise profile. You can learn more about distribution service at [https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning](https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning). 
+No, it's not possible to distribute apps using the App Store Provisioning profile outside of the store. You can use an Ad Hoc profile or an Enterprise profile. You can learn more about distribution service at [https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning](https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning). 
 
 ### How do I add an iOS device for testing?
-
-1. Invite a tester to a distribution group using their email address. If you don't have an existing distribution group, you'll first need to create one. The tester will be notified that they have been invited to test your app.
+1. Invite a tester to a distribution group using their email address. If you don't have an existing distribution group, you'll need to create one. The tester will be notified that they've been invited to test your app.
 2. Distribute a new release to the group.
 3. The tester will be notified that a new release is available. The user will try to install and will not be able to download. 
 4. Navigate to **Distribute** > **Groups** > **Select the Group** > **Devices**.
@@ -28,7 +26,6 @@ No, it is not possible to distribute apps using the App Store Provisioning profi
 6. Then follow the process of adding the UDID to your provisioning profile. You can learn more about device registration at [https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning](https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning). 
 
 ### How to inspect the iOS console log
-
 If you are the developer of the app and can reproduce the problem on your device, please follow these steps.
 
 1. Connect your iPhone, iPad, or iPod touch to your Mac.
