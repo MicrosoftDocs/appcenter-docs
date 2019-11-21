@@ -12,8 +12,7 @@ ms.custom: test
 ---
 
 # Preparing XCUITest Tests for Upload
-
-The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework. The section below provides instructions for preparing XCUITest tests for upload to App Center Test.
+This guide provides instructions for preparing XCUITest tests for upload to App Center Test.
 
 ## Requirements
 
@@ -35,7 +34,7 @@ xcrun xcodebuild build-for-testing \
   -derivedDataPath DerivedData
 ```
 
-`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. If you use a `.xcworkspace` use `-workspace` instead of `-project`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it is usually the name of your application.
+`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. If you use a `.xcworkspace`, use `-workspace` instead of `-project`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it's usually the name of your application.
 
 The xcrun will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
@@ -47,7 +46,7 @@ xcrun xcodebuild -list
 
 Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests.
 
-Here is an example of how you might your XCUITest tests to App Center Test.
+Here's an example of how you might upload your XCUITest suite to App Center Test.
 
 ```shell
 # Upload your test to App Center
