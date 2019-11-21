@@ -23,7 +23,7 @@ No, it's not possible to distribute apps using the App Store Provisioning profil
 3. The tester will be notified that a new release is available. The user will try to install and won't be able to download. 
 4. Navigate to **Distribute** > **Groups** > **Select the Group** > **Devices**.
 5. Find the user in the list and choose three bullet points on the right to find "Copy UDID".
-6. Then follow the process of adding the UDID to your provisioning profile. For more information read our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning.md).
+6. Then follow the process of adding the UDID to your provisioning profile. For more information, read our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning.md).
 
 ### How to inspect the iOS console log
 If you're the developer of the app and can reproduce the problem on your device, please follow these steps:
