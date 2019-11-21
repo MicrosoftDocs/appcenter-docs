@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Distribution FAQ
 
-This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here please [contact support](~/general/support-center.md).
+This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here, please [contact support](~/general/support-center.md).
 
 ## Frequently asked questions
 ### Can I distribute using an App Store Provisioning Profile?
@@ -20,7 +20,7 @@ No, it's not possible to distribute apps using the App Store Provisioning profil
 ### How do I add an iOS device for testing?
 1. Invite a tester to a distribution group using their email address. If you don't have an existing distribution group, you'll need to create one. The tester will be notified that they've been invited to test your app.
 2. Distribute a new release to the group.
-3. The tester will be notified that a new release is available. The user will try to install and will not be able to download. 
+3. The tester will be notified that a new release is available. The user will try to install and won't be able to download. 
 4. Navigate to **Distribute** > **Groups** > **Select the Group** > **Devices**.
 5. Find the user in the list and choose three bullet points on the right to find "Copy UDID".
 6. Then follow the process of adding the UDID to your provisioning profile. You can learn more about device registration at [https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning](https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning). 
@@ -35,5 +35,5 @@ If you are the developer of the app and can reproduce the problem on your device
  ![FAQ: how to inspect iOS console log](~/distribution/images/inspect_ios_console_log.png)
 5. Start the installation of your app.
 
-During the installation, you should see one or more warning or error messages. If you need help with those messages, please store the log into a .txt file and send it to the customer support team.
+During the installation, you may see one or more warning or error messages. If you need help with those messages, please save the log as a .txt file and send it to [support](~/general/support-center.md).
 
