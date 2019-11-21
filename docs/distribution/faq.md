@@ -26,7 +26,7 @@ No, it's not possible to distribute apps using the App Store Provisioning profil
 6. Then follow the process of adding the UDID to your provisioning profile. You can learn more about device registration at [https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning](https://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning). 
 
 ### How to inspect the iOS console log
-If you are the developer of the app and can reproduce the problem on your device, please follow these steps.
+If you're the developer of the app and can reproduce the problem on your device, please follow these steps:
 
 1. Connect your iPhone, iPad, or iPod touch to your Mac.
 2. Open Xcode, then go to **Window** > **Devices**.
@@ -35,5 +35,5 @@ If you are the developer of the app and can reproduce the problem on your device
  ![FAQ: how to inspect iOS console log](~/distribution/images/inspect_ios_console_log.png)
 5. Start the installation of your app.
 
-During the installation, you may see one or more warning or error messages. If you need help with those messages, please save the log as a .txt file and send it to [support](~/general/support-center.md).
+During the installation, you might see warnings or errors. If you need help with those messages, please save the log as a .txt file and send it to [support](~/general/support-center.md).
 
