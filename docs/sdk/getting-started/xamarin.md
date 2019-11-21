@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/13/2019
+ms.date: 11/21/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.service: vs-appcenter
@@ -174,6 +174,34 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
+
+##### 4.2.4 If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher are automatically enabled for Auto Backup. 
+
+> [!NOTE]
+> If you already have custom file with backup rules please switch on the third step.
+
+    a. Create `appcenter_backup_rule.xml` file in the `Resources/xml` directory.
+
+    b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+
+    ```text
+    android:fullBackupContent="@xml/appcenter_backup_rule"
+    ```
+
+    c. Add the next backup rules in `appcenter_backup_rule.xml` file:
+
+    ```xml
+    <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+        <exclude domain="sharedpref" path="AppCenter.xml"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+        <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+    </full-backup-content>
+    ```
 
 ### 4.3 Replace the placeholder with your App Secret
 

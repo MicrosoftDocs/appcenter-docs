@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 11/05/2019
+ms.date: 11/21/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -325,6 +325,33 @@ Integration steps without the `react-native link` command.
         "app_secret": "APP_SECRET_VALUE"
     }
     ```
+### 3.5 If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher are automatically enabled for Auto Backup. 
+
+> [!NOTE]
+> If you already have custom file with backup rules please switch on the third step.
+
+  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory.
+
+  b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  c. Add the next backup rules in `appcenter_backup_rule.xml` file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
 
 ## 4. Start the SDK
 

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/06/2019
+ms.date: 11/21/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.service: vs-appcenter
@@ -85,7 +85,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
   b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
 
-  ```xml
+  ```text
   android:fullBackupContent="@xml/appcenter_backup_rule"
   ```
 
