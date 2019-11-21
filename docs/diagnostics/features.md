@@ -94,12 +94,12 @@ In a crash report, you can see the current threads that were active when the app
 
 ## Configure Alerts
 
-Stay on top of your crashes by configuring your App Center app definition settings to send an email when a new crash group is created. To configure these alerts:
+Stay on top of your crashes by configuring your App Center app definition settings to send an email notification. You can configure this setting per app to either send an email immediately when a new crash group is created, or send a daily summary email with your app's top crashes. To configure these alerts:
 
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select the box next to Crashes
+4. Select **Immediatly** ,**Daily**, or **Never**. The default configuration is set to **Never**.
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
