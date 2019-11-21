@@ -22,10 +22,10 @@ Your HockeyApp account data including your apps is currently already synchronize
 Not until you moved all of them to App Center and the HockeyApp icon disappeared from the app. Complete the migration and [move your apps](https://appcenter.ms/hockeyapp-transition-center) to App Center.
 
 ### Do I need to change my SDK?
-AYes, but not before you [moved](~/transition/moving/index.md) your apps to App Center.
+Yes, but not before you [moved](~/transition/moving/index.md) your apps to App Center.
 
 ### What happens to data sent by the HockeySDK?
-AApp Center currently receives data from the HockeySDK and continuous to do so after you have moved an app and the shutdown.
+App Center currently receives data from the HockeySDK and continuous to do so after you have moved an app and the shutdown.
 
 ### Does App Center have feature-parity with HockeyApp?
 App Center does not yet have all of HockeyApp's features, but we are getting close. [View our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to keep track of this progress.
