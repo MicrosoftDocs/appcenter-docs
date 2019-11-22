@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 12/24/2018
+ms.date: 11/22/2018
 ms.topic: get-started-article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903
 ms.service: vs-appcenter
@@ -151,6 +151,40 @@ If you're using App Center Analytics in your app, there's some additional config
   <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
   ```
   
+  #### If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher are automatically enabled for Auto Backup. 
+
+> [!NOTE]
+> If you already have custom file with backup rules please switch on the third step.
+
+  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory.
+
+   ```xml
+   <resource-file src="appcenter_backup_rule.xml" target="res/xml/appcenter_backup_rule.xml" />
+   ```
+
+  b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+
+   ```xml
+   <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:fullBackupContent="@xml/appcenter_backup_rule" />
+   </edit-config>
+    ```
+
+  c. Add the next backup rules in `appcenter_backup_rule.xml` file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
+
   ## 4. Where to go next?
 
 Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There is no additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.

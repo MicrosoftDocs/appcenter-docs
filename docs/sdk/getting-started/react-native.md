@@ -325,6 +325,7 @@ Integration steps without the `react-native link` command.
         "app_secret": "APP_SECRET_VALUE"
     }
     ```
+
 ### 3.5 If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
 
 > [!NOTE]
@@ -333,7 +334,7 @@ Integration steps without the `react-native link` command.
 > [!NOTE]
 > If you already have custom file with backup rules please switch on the third step.
 
-  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory.
+  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory. This folder placed by the `android/app/src/main/` path.
 
   b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
 
