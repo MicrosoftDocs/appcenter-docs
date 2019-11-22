@@ -89,12 +89,12 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
 > [!NOTE]
 > If you already have a custom file with backup rules please switch to the third step.
 
-  a. Create `appcenter_backup_rule.xml` file in the `Assets/Plugins/Android/res/xml` directory.
+  a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
 
-  b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+  b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 
 > [!NOTE]
-> To use the `AndroidManifest.xml` that you have created outside of Unity, import your `AndroidManifest.xml` file to the following directory: Assets/Plugins/Android/AndroidManifest.xml. This overrides the default Unity-created Manifest.
+> If you don't have your own **AndroidManifest.xml** file already, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created Manifest at the time of build.
 
   ```text
   android:fullBackupContent="@xml/appcenter_backup_rule"

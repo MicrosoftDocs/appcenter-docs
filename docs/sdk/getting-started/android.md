@@ -83,7 +83,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
   a. Create **appcenter_backup_rule.xml** file in the **res/xml** directory.
 
-  b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+  b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 
   ```text
   android:fullBackupContent="@xml/appcenter_backup_rule"

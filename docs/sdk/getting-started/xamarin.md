@@ -183,9 +183,9 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > [!NOTE]
 > If you already have a custom file with backup rules please switch to the third step.
 
-    a. Create `appcenter_backup_rule.xml` file in the `Resources/xml` directory.
+    a. Create **appcenter_backup_rule.xml** file in the **Resources/xml** directory.
 
-    b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+    b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 
     ```text
     android:fullBackupContent="@xml/appcenter_backup_rule"

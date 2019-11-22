@@ -165,7 +165,7 @@ If you're using App Center Analytics in your app, there's some additional config
    <resource-file src="appcenter_backup_rule.xml" target="res/xml/appcenter_backup_rule.xml" />
    ```
 
-  b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
+  b. In order for `android:fullBackupContent` attribute to be added to the `<application>` element inside **AndroidManifest.xml** file, add the following lines to the app's **config.xml** file:
 
    ```xml
    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
