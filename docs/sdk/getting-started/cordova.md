@@ -151,15 +151,15 @@ If you're using App Center Analytics in your app, there's some additional config
   <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
   ```
   
-  #### If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
+  #### If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
 
 > [!NOTE]
-> Apps that target Android 6.0 (API level 23) or higher are automatically enabled for Auto Backup. 
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have custom file with backup rules please switch on the third step.
+> If you already have a custom file with backup rules please switch to the third step.
 
-  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory.
+  a. Create **appcenter_backup_rule.xml** file in the **res/xml** directory.
 
    ```xml
    <resource-file src="appcenter_backup_rule.xml" target="res/xml/appcenter_backup_rule.xml" />
@@ -173,7 +173,7 @@ If you're using App Center Analytics in your app, there's some additional config
    </edit-config>
     ```
 
-  c. Add the next backup rules in `appcenter_backup_rule.xml` file:
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
   ```xml
   <full-backup-content xmlns:tools="http://schemas.android.com/tools">

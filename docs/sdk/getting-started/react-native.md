@@ -326,15 +326,15 @@ Integration steps without the `react-native link` command.
     }
     ```
 
-### 3.5 If you use auto-backup to avoid getting incorrect information about devices please following the next steps:
+### 3.5 If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
 
 > [!NOTE]
-> Apps that target Android 6.0 (API level 23) or higher are automatically enabled for Auto Backup. 
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have custom file with backup rules please switch on the third step.
+> If you already have a custom file with backup rules please switch to the third step.
 
-  a. Create `appcenter_backup_rule.xml` file in the `res/xml` directory. This folder placed by the `android/app/src/main/` path.
+  a. Create **appcenter_backup_rule.xml** file in the **android/app/src/main/res/xml** folder.
 
   b. Add in `AndroidManifest.xml` the `android:fullBackupContent` attribute to the `<application>` element with indicating on `appcenter_backup_rule.xml` file:
 
@@ -342,7 +342,7 @@ Integration steps without the `react-native link` command.
   android:fullBackupContent="@xml/appcenter_backup_rule"
   ```
 
-  c. Add the next backup rules in `appcenter_backup_rule.xml` file:
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
   ```xml
   <full-backup-content xmlns:tools="http://schemas.android.com/tools">
