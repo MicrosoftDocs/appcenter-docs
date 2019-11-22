@@ -175,15 +175,15 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
 
-##### 4.2.4 If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
+##### 4.2.4 If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have a custom file with backup rules please switch to the third step.
+> If you already have a custom file with backup rules, switch to the third step.
 
-    a. Create **appcenter_backup_rule.xml** file in the **Resources/xml** directory.
+    a. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
 
     b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 

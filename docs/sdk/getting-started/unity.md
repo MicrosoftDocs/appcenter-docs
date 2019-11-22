@@ -81,20 +81,20 @@ As an alternative, each of the individual Unity packages can be downloaded and i
 
 Open your Unity project, then double-click the package you downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Repeat this step for each package you downloaded and plan to use in your project.
 
-### 3.3 If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
+### 3.3 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have a custom file with backup rules please switch to the third step.
+> If you already have a custom file with backup rule, switch to the third step.
 
   a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
 
   b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 
 > [!NOTE]
-> If you don't have your own **AndroidManifest.xml** file already, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created Manifest at the time of build.
+> If you don't already have your own **AndroidManifest.xml** file, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created one at the time of build.
 
   ```text
   android:fullBackupContent="@xml/appcenter_backup_rule"

@@ -73,15 +73,15 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of App Center.
 
-3. If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
+3. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have a custom file with backup rules please switch to the third step.
+> If you already have a custom file with backup rule, switch to the third step.
 
-  a. Create **appcenter_backup_rule.xml** file in the **res/xml** directory.
+  a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
 
   b. Open the project's **AndroidManifest.xml** file and add the `android:fullBackupContent` attribute, indicating to the **appcenter_backup_rule.xml** file, to the `<application>` element:
 

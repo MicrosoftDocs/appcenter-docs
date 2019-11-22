@@ -326,13 +326,13 @@ Integration steps without the `react-native link` command.
     }
     ```
 
-### 3.5 If you use auto-backup to avoid getting incorrect information about devices please follow the next steps:
+### 3.5 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
-> If you already have a custom file with backup rules please switch to the third step.
+> If you already have a custom file with backup rule, switch to the third step.
 
   a. Create **appcenter_backup_rule.xml** file in the **android/app/src/main/res/xml** folder.
 
