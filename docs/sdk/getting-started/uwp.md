@@ -94,6 +94,7 @@ Add the appropriate namespaces before you use our APIs.
 ```csharp
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 ```
 
 ### 5.2 Add the `Start()` method

@@ -9,11 +9,11 @@
 3. After completing the app registration, select the new app name, click **Next**, and then click **Associate**. This adds the required Windows Store registration information to the application manifest.
 
 > [!NOTE]
-> You must have a Windows Developer account to send push notifications to your UWP app. You can [register a Microsoft developer account](https://developer.microsoft.com/en-us/store/register) if you don't already have one.
+> You must have a Windows Developer account to send push notifications to your UWP app. You can [register a Microsoft developer account](https://developer.microsoft.com/store/register) if you don't already have one.
 
 ### 2. Get the Package SID and Application secret from the Partner Center
 
-1. Navigate to the [Microsoft Partner Center](https://partner.microsoft.com/en-us/dashboard/windows/overview), sign-in with the same account you used when you reserved the app name. Click the Windows Store app you associated in the previous step.
+1. Navigate to the [Microsoft Partner Center](https://partner.microsoft.com/dashboard/windows/overview), sign-in with the same account you used when you reserved the app name. Click the Windows Store app you associated in the previous step.
 
 1. Go to the **WNS/MPNS** section of the **Product Management** page and click on the **Live Services** link. It will display the old **Microsoft Application Registration** portal settings page.
 

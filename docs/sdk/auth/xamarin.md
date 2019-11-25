@@ -281,7 +281,7 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 #### Add keychain sharing capability
 
 > [!NOTE]
-> You should enable Keychain sharing capability for your provisioning profile. See [Working with Capabilities in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/capabilities/?#devcenter) for a detailed guide.
+> You should enable Keychain sharing capability for your provisioning profile. See [Working with Capabilities in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/deploy-test/provisioning/capabilities/?#devcenter) for a detailed guide.
 
 App Center uses the `com.microsoft.adalcache` keychain access group to support single sign-on by enabling different apps to share keychain items (i.e. user secrets and credentials) with each other. We use this access group to securely share a user secret within a family of apps that rely on the same user secret. This way, logging into one of your apps will automatically grant the same user access to all of the family of apps.
 
@@ -378,7 +378,7 @@ You also need to collect the user profile fields during the sign-up process so t
 
 ![User Attributes Settings](images/user-attributes.png)
 
-If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.

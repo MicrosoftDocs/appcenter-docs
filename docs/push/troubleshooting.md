@@ -14,7 +14,7 @@ ms.service: vs-appcenter
 
 ## <a name="push-verbosity"/>Increase Push SDK Verbosity
 
-To get a better understanding what's happening under the covers, [increase log output](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#adjust-the-log-level) in the Push SDK. Since the Push SDK is often initialized during app launch, verbose logs will tell you more about what's happening when the app starts.
+To get a better understanding what's happening under the covers, [increase log output](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) in the Push SDK. Since the Push SDK is often initialized during app launch, verbose logs will tell you more about what's happening when the app starts.
 
 ## Common Error Messages
 
@@ -40,7 +40,7 @@ Check for one of the following reasons:
 - The device registration expired - this occurs when an app is uninstalled, or the registration App Center has for the device is obsolete.
 - You are not using a valid certificate - it's possible that you have re-signed the app with a different certificate.
 - You may be sending an incorrect device ID through the API.
-- The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
+- The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
 
 ### "Wrong Token"
 

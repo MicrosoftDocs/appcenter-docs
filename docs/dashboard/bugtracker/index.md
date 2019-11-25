@@ -36,7 +36,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
       1. Login with your Azure DevOps credentials and click **Accept** when prompted on app authorization.
       2. Select which Azure DevOps projects to integrate the bug tracker with and click **Next**.
       3. Toggle **On** for **Auto create ticket**, and fill in the fields for **Area** and **Default Payload**, and click **Add**:
-         - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/en-us/rest/api/vsts/wit/work%20item%20types) for additional information.
+         - Default payload is an optional field to fill in for use in work items. For example, `{"System.IterationPath": "Area\\Iteration 1", "System.AssignedTo": "Fabrikam"}`. Please refer to the [work item types API](https://docs.microsoft.com/rest/api/vsts/wit/work%20item%20types) for additional information.
 
    3. For GitHub:
 
