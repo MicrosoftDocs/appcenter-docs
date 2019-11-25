@@ -145,11 +145,14 @@ In Unity, a debuggable build is a build with a **Development build** option chec
 
 ## How in-app updates work
 
+> [!NOTE]
+> For in-app updates to work, an update should be downloaded from the link. It won't work if installed from an IDE or manually.
+
 The in-app updates feature works as follows:
 
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading.
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. Once the app is installed, and opened for the first time after adding the App Center Distribute SDK, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur on future releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
