@@ -199,7 +199,7 @@ MSAnalytics.isEnabled()
 
 ## Local storage size
 
-By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
+By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 
