@@ -1,3 +1,11 @@
+---
+author: elamalani
+ms.author: emalani
+ms.date: 11/25/2019
+ms.service: vs-appcenter
+ms.topic: include
+---
+
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.

@@ -25,18 +25,18 @@ Follow the steps below:
 
 You can read more about how to ask for the user's consent to send Analytics data per platform:
   
-- [Android](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/android#enable-or-disable-app-center-analytics-at-runtime)
-- [iOS](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
+- [Android](https://docs.microsoft.com/appcenter/sdk/analytics/android#enable-or-disable-app-center-analytics-at-runtime)
+- [iOS](https://docs.microsoft.com/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
 
-- [Xamarin](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
+- [Xamarin](https://docs.microsoft.com/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
 
-- [React Native](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/react-native#enable-or-disable-app-center-analytics-at-runtime)
+- [React Native](https://docs.microsoft.com/appcenter/sdk/analytics/react-native#enable-or-disable-app-center-analytics-at-runtime)
 
-- [Windows](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/windows#enable-or-disable-app-center-analytics-at-runtime)
+- [Windows](https://docs.microsoft.com/appcenter/sdk/analytics/windows#enable-or-disable-app-center-analytics-at-runtime)
 
-- [Unity](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/unity#enable-or-disable-app-center-analytics-at-runtime)
+- [Unity](https://docs.microsoft.com/appcenter/sdk/analytics/unity#enable-or-disable-app-center-analytics-at-runtime)
 
-- [macOS](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/macos#enable-or-disable-app-center-analytics-at-runtime)
+- [macOS](https://docs.microsoft.com/appcenter/sdk/analytics/macos#enable-or-disable-app-center-analytics-at-runtime)
     
 4. If the user chooses '**No**', in your application code, you can call this App Center SDK API which disables sending of data to App Center backend. Make sure to pass the parameter as '**false**' in the API.
 

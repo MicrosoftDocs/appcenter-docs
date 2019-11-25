@@ -24,7 +24,7 @@ Builds for iOS and Android apps (including Xamarin and React Native platforms) a
 - OS X 10.14.6 (18G1012) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G9016) **High Sierra** for builds running Xcode 9.4 and lower
 
-Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/en-us/docs/build/concepts/agents/hosted).
+Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted).
 
 ## Installed Software
 

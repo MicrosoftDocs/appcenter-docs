@@ -19,7 +19,7 @@ ms.custom: diagnostics
 PlayFab users can link their PlayFab titles directly to apps within App Center. Connecting these services brings a complete diagnostics pipeline into PlayFab, exposing App Center crash data. Soon PlayFab player IDs will be attached to crash information, linking crashes to specific players. For example, when a tester reports an issue, developers can look up the crash details in the tester's player profile in the PlayFab portal.
 
 > [!NOTE]
-> You must add the [App Center Crash SDK](https://docs.microsoft.com/en-us/appcenter/sdk/) to your app to enable crash collection.
+> You must add the [App Center Crash SDK](https://docs.microsoft.com/appcenter/sdk/) to your app to enable crash collection.
 
 ## Getting Started
 

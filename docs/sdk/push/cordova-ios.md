@@ -77,13 +77,13 @@ Log in to the App Center portal, select your application, click on the **Push** 
 
      * Download the key file.
 
-       ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
+       ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
 
   3. **Push Token**
 
      * On the App Center push settings page, upload your key file using the button labelled "Auth key file:" (you can also drag and drop the file onto it):
 
-       ![auth-key-file](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/apple-push-settings-upload-key-button.png)
+       ![auth-key-file](https://docs.microsoft.com/appcenter/sdk/push/images/apple-push-settings-upload-key-button.png)
 
      * Click Done to complete this configuration.
 
