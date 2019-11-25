@@ -72,7 +72,7 @@ Using App Center Auth has the following limitations in preview:
 
 ## Pricing
 
-App Center Auth is a free service, but you pay for [Azure AD B2C authentications](https://azure.microsoft.com/pricing/details/active-directory-b2c/). The first 50,000 authentications per month are free. An authentication is defined as a token issued either in response to a sign-in request initiated by a user, or initiated by an application on behalf of a user (e.g. token refresh, where the refresh interval is configurable). It is free to store authenticated users in the Azure AD B2C tenant. If you turn on **Multi-Factor Authentication**, you will be charged at a flat fee of $0.03 per authentication.
+App Center Auth is a free service, but you pay for [Azure AD B2C authentications](https://azure.microsoft.com/pricing/details/active-directory-b2c/). The first 50,000 active monthly users are free. An authentication is defined as a token issued either in response to a sign-in request initiated by a user, or initiated by an application on behalf of a user (e.g. token refresh, where the refresh interval is configurable). It is free to store authenticated users in the Azure AD B2C tenant. If you turn on **Multi-Factor Authentication**, you will be charged at a flat fee of $0.03 per authentication.
 
 ## Getting Started
 
