@@ -32,7 +32,7 @@ You can read more about how to ask for the user's consent to send Analytics data
 
 - [React Native](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/react-native#enable-or-disable-app-center-analytics-at-runtime)
 
-- [UWP](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/uwp#enable-or-disable-app-center-analytics-at-runtime)
+- [Windows](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/windows#enable-or-disable-app-center-analytics-at-runtime)
 
 - [Unity](https://docs.microsoft.com/en-us/appcenter/sdk/analytics/unity#enable-or-disable-app-center-analytics-at-runtime)
 
