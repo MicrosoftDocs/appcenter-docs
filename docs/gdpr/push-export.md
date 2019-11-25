@@ -41,8 +41,8 @@ https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/devices/export
 Body: {SAS Token for the container}
 
 > [!NOTE]
-> You must have an Azure Blob storage account to retrieve the information. Here's [Getting started information](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=portal) on Azure Blob storage accounts.
-> Once you have created an Azure Blob storage container, you can use information in the [Authorize with SAS](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1#example-create-a-stored-access-policy) article to get the SAS token for a specific container.
+> You must have an Azure Blob storage account to retrieve the information. Here's [Getting started information](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=portal) on Azure Blob storage accounts.
+> Once you have created an Azure Blob storage container, you can use information in the [Authorize with SAS](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1#example-create-a-stored-access-policy) article to get the SAS token for a specific container.
 
 The POST method call returns a status code and an export ID which can later be used to [check the status of the export request](https://openapi.appcenter.ms/#/push/Push_ExportDevicesStatus).
 

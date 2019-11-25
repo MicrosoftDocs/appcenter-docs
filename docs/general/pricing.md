@@ -40,8 +40,8 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
 
 ## Azure Subscription Services
 
-- Auth: Using this feature will require an Azure connection with Azure B2C whose pricing is found here: [Azure B2C](https://azure.microsoft.com/en-us/pricing/details/active-directory-b2c/).
-- Data: Using this feature will require an Azure connection with Azure CosmosDB whose pricing is found here: [Azure CosmosDB](https://azure.microsoft.com/en-us/pricing/details/cosmos-db/).
+- Auth: Using this feature will require an Azure connection with Azure B2C whose pricing is found here: [Azure B2C](https://azure.microsoft.com/pricing/details/active-directory-b2c/).
+- Data: Using this feature will require an Azure connection with Azure CosmosDB whose pricing is found here: [Azure CosmosDB](https://azure.microsoft.com/pricing/details/cosmos-db/).
 
 ## OneSignal Integration
 

@@ -29,7 +29,7 @@ The way you can change your **Configuration Mapping** depends on IDE you use. He
 
 Choose the desired active solution configuration and platform in the upper drop-downs and then select respective project configurations (via dropdowns) and **Build/Deploy** options (via checkboxes). Note that **Deploy** option has no effect for building in App Center. 
 
-You can read additional configuration mappings information in [Visual Studio official documentation](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/configuration-options-overview).
+You can read additional configuration mappings information in [Visual Studio official documentation](https://docs.microsoft.com/visualstudio/extensibility/internals/configuration-options-overview).
 
 #### [Visual Studio for Mac](#tab/vsmac/)
 ### 1. Double click on your solution name in the **Solution Explorer**

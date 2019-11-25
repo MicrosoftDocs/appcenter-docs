@@ -1,3 +1,11 @@
+---
+author: elamalani
+ms.author: emalani
+ms.date: 11/25/2019
+ms.service: vs-appcenter
+ms.topic: include
+---
+
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.
@@ -191,7 +199,7 @@ MSAnalytics.isEnabled()
 
 ## Local storage size
 
-By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
+By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 

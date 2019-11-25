@@ -68,8 +68,8 @@
 
 # Test
 ## [Introduction](test-cloud/index.md)
-## [Getting Started](test-cloud/getting-started.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
+## [Getting Started](test-cloud/getting-started.md)
 ## [Devices Available](test-cloud/devices.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
 ## Preparing Test for Upload

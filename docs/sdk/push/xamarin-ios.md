@@ -52,7 +52,7 @@ For more information, refer to the [Xamarin documentation](https://docs.microsof
 
 #### [Optional] Enable silent notifications
 
-Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#silent-remote-notifications)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#silent-remote-notifications)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
 
 ![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
 
@@ -177,7 +177,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Xamarin.iOS documentation](https://docs.microsoft.com/en-us/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Xamarin.iOS documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.

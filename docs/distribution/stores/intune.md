@@ -17,7 +17,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 
 ## Pre-requisites
 
-* Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](https://docs.microsoft.com/en-us/intune/free-trial-sign-up).
+* Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](https://docs.microsoft.com/intune/free-trial-sign-up).
 * An Intune admin and tenant account activated. 
 * Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
 * Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator permission.

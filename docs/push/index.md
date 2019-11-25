@@ -31,7 +31,7 @@ Configuring Push for your application project is as simple as:
 4. Configure any required settings for your app’s target platform. For example:
     + Apple iOS devices use the [Apple Push Notification service](https://developer.apple.com/notifications/) (APNs) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
     + Google Android devices use the [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) service to deliver notifications, so you’ll have some configuration to do in FCM to enable Push in App Center.
-    + Windows devices use the [Windows Notifications Services](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
+    + Windows devices use the [Windows Notifications Services](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
 5. Copy the appropriate notification service settings into your App Center App project.
 
 For additional information, refer to [Configuring the Push Service](~/push/service-config.md).

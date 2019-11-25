@@ -3,7 +3,7 @@ title: "Migration"
 description: App Center migration guide
 author: glennwester
 ms.author: glwest
-ms.date: 88/06/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
 ms.service: vs-appcenter
