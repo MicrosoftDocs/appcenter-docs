@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: winnieli
 ms.author: yuli1
-ms.date: 09/25/2019
+ms.date: 11/25/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -154,4 +154,86 @@ The `disableMachExceptionHandler`-method provides an option to disable catching 
 ```swift
 MSCrashes.disableMachExceptionHandler()
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+```
+
+## Reporting crashes without swizzling
+
+By default **App Center SDK** uses **swizzling**. If for any reason you don't want to use **swizzling**, you should override crash handler yourself in order for crashes to work correctly.
+
+### For **Objective-C**
+
+1. Create **CrashExceptionApplication.h** file and add the following implementation:
+
+```objc
+#import <Cocoa/Cocoa.h>
+
+@interface CrashExceptionApplication : NSApplication
+@end
+```
+
+2. Create **CrashExceptionApplication.m** file and add the following implementation:
+
+```objc
+#import "CrashExceptionApplication.h"
+@import AppCenterCrashes;
+
+@implementation CrashExceptionApplication
+
+- (void)reportException:(NSException *)exception {
+  [MSCrashes applicationDidReportException:exception];
+  [super reportException:exception];
+}
+
+- (void)sendEvent:(NSEvent *)theEvent {
+  @try {
+    [super sendEvent:theEvent];
+  } @catch (NSException *exception) {
+    [self reportException:exception];
+  }
+}
+
+@end
+```
+
+3. Open **Info.plist** and replace the **NSApplication** in the **Principal class** field with your application class name, **CrashExceptionApplication** in this example.
+
+4. In order to disable swizzling in **App Center SDK**, add the following line under `applicationDidFinishLaunching`:
+
+```objc
+[[NSUserDefaults standardUserDefaults] registerDefaults:@{@"NSApplicationCrashOnExceptions" : @NO}];
+```
+
+### For **Swift**
+
+1. Create **CrashExceptionApplication.swift** file and add the following implementation:
+
+```swift
+import Cocoa
+import AppCenterCrashes
+import Foundation
+
+class CrashExceptionApplication : NSApplication {
+  
+  override func reportException(_ exception: NSException) {
+    MSCrashes.applicationDidReport(exception)
+    NSLog("fdxfdsgysdgfsghhfs")
+    super.reportException(exception)
+  }
+  
+  override func sendEvent(_ theEvent: NSEvent) {
+    do {
+        super.sendEvent(theEvent)
+    } catch let exception {
+      self.reportException(NSException(name: NSExceptionName(rawValue: "NSException"), reason: exception.localizedDescription, userInfo: nil))
+    }
+  }
+}
+```
+
+2. Open **Info.plist** and replace the **NSApplication** in the **Principal class** field with your application class name, **[project-name].CrashExceptionApplication** in this example.
+
+3. In order to disable swizzling in **App Center SDK**, add the following line under `applicationDidFinishLaunching`:
+
+```swift
+ UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": false])
 ```
