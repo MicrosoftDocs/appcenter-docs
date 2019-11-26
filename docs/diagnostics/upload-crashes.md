@@ -58,7 +58,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 - `processName`: required string with the process name
 - `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
 
-To upload a crash report other than the Apple format, make sure the log type is set to "managedError."
+To upload a crash report other than the Apple format, make sure the log type is set to "managedError".
 
 ```shell
 curl -X POST \
