@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -291,7 +291,7 @@ Distribute.setEnabledForDebuggableBuild(true)
 ## How do in-app updates work?
 
 > [!NOTE]
-> For in-app updates to work, an update should be downloaded from the link. It won't work if installed from an IDE or manually.
+> For in-app updates to work, an app build should be downloaded from the link. It won't work if installed from an IDE or manually.
 
 The in-app updates feature works as follows:
 
