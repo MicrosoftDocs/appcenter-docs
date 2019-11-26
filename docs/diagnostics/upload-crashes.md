@@ -22,7 +22,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-- `type`: required string with log type - "appleError" for apple crashes, "managedError" for other crashes, "handledError" for errors and "errorAttachment" for error attachments. 
+- `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors and "errorAttachment" for error attachments. 
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
@@ -337,7 +337,7 @@ For example:
         "osName": "Android",
         "osVersion": "4.1.1",
         "screenSize": "720x1184",
-        "sdkName": "appcenter.android",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "1.9.1",
         "timeZoneOffset": -480
       },
