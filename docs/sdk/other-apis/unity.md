@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 10/16/2019
+ms.date: 11/26/2019
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.service: vs-appcenter
@@ -133,3 +133,6 @@ AppCenter.SetCustomProperties(properties);
 
 There may be cases where you want to delay the start of App Center until after **AppCenterBehavior** starts. For example, if you want to request user consent before starting any App Center services.  
 To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK the in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.
+
+> [!NOTE]
+> You can attain the same result using a scripting define symbol. This is also useful if you generate the settings at build time. Go to **Player Settings** > **Other Settings** > **Scripting Define Symbols** and paste `DONT_USE_NATIVE_STARTER`. 
