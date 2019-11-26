@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 10/23/2019
+ms.date: 11/26/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -272,11 +272,14 @@ App Center Distribute will pop up it's UI/browser at application start. While th
 
 ## How do in-app updates work?
 
+> [!NOTE]
+> For in-app updates to work, an app build should be downloaded from the link. It won't work if installed from an IDE or manually.
+
 The in-app updates feature works as follows:
 
 1. This feature will ONLY work with builds that are distributed using **App Center Distribute** service. It won't work when the debugger is attached or if the iOS Guided Access feature is turned on..
 2. Once you integrate the SDK, build a release version of your app and upload it to App Center, users in that distribution group will be notified for the new release via an email.
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment).
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment). When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a *one time* step that will not occur for subsequent releases of your app.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
