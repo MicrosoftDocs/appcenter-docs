@@ -13,7 +13,7 @@ ms.custom: diagnostics
 
 # Upload crashes via API
 
-You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md/#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.mds#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
+You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
@@ -309,7 +309,12 @@ To upload a crash for a custom platform, make sure the log type is set to "manag
 For example:
 
 ```shell
-{
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
   "logs": [
     {
       "type": "managedError",
@@ -413,7 +418,8 @@ For example:
       ]
     }
   ]
-}
+}'
+
 ```
 
 ## Upload an error report
