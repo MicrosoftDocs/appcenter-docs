@@ -13,7 +13,7 @@ ms.custom: diagnostics
 
 # Upload crashes via API
 
-You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
+You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](https://docs.microsoft.com/appcenter/diagnostics/#crashes), [error](https://docs.microsoft.com/appcenter/diagnostics/#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](https://docs.microsoft.com/appcenter/diagnostics/upload-custom-crashes#upload-a-crash-report), [errors](https://docs.microsoft.com/appcenter/diagnostics/upload-custom-crashes#upload-an-error-report) and [attachments](https://docs.microsoft.com/appcenter/diagnostics/upload-custom-crashes#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
