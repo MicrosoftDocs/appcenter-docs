@@ -171,7 +171,7 @@ curl -X POST \
 }'
 ```
 > [!NOTE]
-> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-custom-crashes.md#upload-an-attachment) of this page.
+> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
 
 ### Upload an Apple crash log
 

@@ -119,4 +119,4 @@ If you change your settings from 28 to 90 days, older diagnostics data will not 
 
 ## Upload reports to App Center
 
-The documentation to [upload custom crashes via API](~/diagnostics/upload-custom-crashes.md) has moved.
+The documentation to [upload crashes via API](~/diagnostics/upload-crashes.md) has moved.
