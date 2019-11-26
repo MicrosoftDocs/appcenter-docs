@@ -1,5 +1,5 @@
 ---
-title: Upload custom crashes via API
+title: Upload crashes via API
 description: Post a crash report, e.g. if you don't want to use our SDK or develop for a custom platform.
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnieli1208
@@ -11,9 +11,9 @@ ms.service: vs-appcenter
 ms.custom: diagnostics
 ---
 
-# Upload custom crashes via API
+# Upload crashes via API
 
-You can upload a custom crash report if you don't want to use our SDK or develop for a custom platform. Upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
+You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a crash, error, or attachment log to App Center and view the details in the App Center Diagnostics UI.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
@@ -22,13 +22,13 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-- `type`: required string with log type - "managedError", "appleError", "handledError" or "errorAttachment".
+- `type`: required string with log type - "appleError" for apple crashes, "managedError" for other crashes, "handledError" for errors and "errorAttachment" for error attachments. 
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
     - `appBuild`: required string with application build number, e.g. "42"
-    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "custom.platform"
+    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.android" for Android and "appcenter.custom" for custom platforms
     - `sdkVersion`: required string with version of the SDK in semantic versioning format, e.g. "1.2.0" or "0.12.3-alpha.1"
     - `osName`: required string with OS name, e.g. "android"
     - `osVersion`: required string with OS version, e.g. "9.3.0"
@@ -302,7 +302,119 @@ curl -X POST \
 }'
 
 ```
+### Upload a custom crash log
 
+To upload a crash for a custom platform, make sure the log type is set to "managedError" and the sdkName is set to "appcenter.custom".
+
+For example:
+
+```shell
+{
+  "logs": [
+    {
+      "type": "managedError",
+      "id": "a7bea41b-1e4d-4e42-ae76-1025f4fdfc4f",
+      "userId": "TestID",
+      "timestamp": "2019-11-26T02:00:04Z",
+      "appLaunchTimestamp": "2019-11-26T02:00:04Z",
+      "architecture": "armeabi-v7a",
+      "fatal": true,
+      "processId": 4871,
+      "processName": "com.microsoft.appcenter.sasquatch.project",
+      "sid": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
+      "errorThreadId": 1,
+      "errorThreadName": "main",
+      "device": {
+        "appBuild": "1337",
+        "appVersion": "7.1.0",
+        "appNamespace": "com.microsoft.appcenter.sasquatch.project",
+        "carrierCountry": "us",
+        "locale": "en_US",
+        "model": "Galaxy Nexus",
+        "oemName": "samsung",
+        "osApiLevel": 16,
+        "osBuild": "JRO03O",
+        "osName": "Android",
+        "osVersion": "4.1.1",
+        "screenSize": "720x1184",
+        "sdkName": "appcenter.android",
+        "sdkVersion": "1.9.1",
+        "timeZoneOffset": -480
+      },
+       "exception": {
+        "frames": [
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2575,
+            "methodName": "performResumeActivity"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2603,
+            "methodName": "handleResumeActivity"
+          },
+          {
+            "className": "android.app.ActivityThread",
+            "fileName": "ActivityThread.java",
+            "lineNumber": 2089,
+            "methodName": "handleLaunchActivity"
+          }
+        ],
+        "innerExceptions": [
+          {
+            "frames": [
+              {
+                "className": "android.app.CustomActivity",
+                "fileName": "CustomActivity.java",
+                "lineNumber": 8673,
+                "methodName": "performCustomResume"
+              },
+              {
+                "className": "android.app.ActivityThread",
+                "fileName": "ActivityThread.java",
+                "lineNumber": 2565,
+                "methodName": "performResumeActivity"
+              }
+            ],
+            "message": "Activity {com.microsoft.appcenter.sasquatch.project/com.microsoft.appcenter.sasquatch.activities.CrashSubActivity2} did not call through to super.onResume()",
+            "type": "android.app.CustomNotCalledException"
+          }
+        ],
+        "message": "Unable to resume activity {com.microsoft.appcenter.sasquatch.project/com.microsoft.appcenter.sasquatch.activities.CrashSubActivity2}: android.app.SuperNotCalledException: Activity {com.microsoft.appcenter.sasquatch.project/com.microsoft.appcenter.sasquatch.activities.CrashSubActivity2} did not call through to super.onResume()",
+        "type": "java.lang.RuntimeException"
+      },
+      "threads": [
+        {
+          "frames": [
+            {
+              "className": "dalvik.system.NativeStart",
+              "fileName": "NativeStart.java",
+              "lineNumber": -2,
+              "methodName": "run"
+            }
+          ],
+          "id": 369,
+          "name": "Binder_3"
+        },
+        {
+          "frames": [
+            {
+              "className": "dalvik.system.NativeStart",
+              "fileName": "NativeStart.java",
+              "lineNumber": -2,
+              "methodName": "run"
+            }
+          ],
+          "id": 345,
+          "name": "Compiler"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ## Upload an error report
 
