@@ -54,7 +54,7 @@ For frameworks for which App Center Test supports environment variables within t
 When you upload your tests to AppCenter with the appcenter CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner and for your application (the application under test or AUT).
 
 > [!NOTE]
-> See the *Support by framework* section for details of which frameworks support test and application variables in App Center Test.
+> See [Support by framework](#support-by-framework) for details of which frameworks support test and application variables in App Center Test.
 
 ### Environment variables for your tests
 
@@ -178,7 +178,7 @@ string xtcplatform = Environment.GetEnvironmentVariable("XTC_PLATFORM");
 ### Sample native Android application code
 
 > [!NOTE]
-> See the *Support by framework* section for details of which frameworks support application variables in App Center Test.
+> See [Support by framework](#support-by-framework) for details of which frameworks support application variables in App Center Test.
 
 Since Android does not support environment variables, App Center Test sets `InstrumentationRegistry` values instead. The following code snippet shows how to access the `InstrumentationRegistry` values.
 
@@ -205,7 +205,7 @@ String xtcplatform = InstrumentationRegistry.getArguments().getString("XTC_PLATF
 ### Sample native iOS application code
 
 > [!NOTE]
-> See the *Support by framework* section for details of which frameworks support application variables in App Center Test.
+> See [Support by framework](#support-by-framework) for details of which frameworks support application variables in App Center Test.
 
 Native iOS applications access environment variables through the NSProcessInfo API.
 
