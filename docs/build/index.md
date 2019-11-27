@@ -34,4 +34,4 @@ If you're having trouble with your builds, [contact our dedicated support team](
 
 
 > [!NOTE]
-> App Center build history and associated artifacts are limited to only 30 days. 
+> App Center build history and associated artifacts are available for 30 days. 
