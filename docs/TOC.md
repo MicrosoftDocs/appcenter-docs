@@ -162,7 +162,7 @@
 ## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
-## [Upload custom crashes](diagnostics/upload-custom-crashes.md)
+## [Upload crashes via API](diagnostics/upload-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
