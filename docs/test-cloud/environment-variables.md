@@ -2,9 +2,9 @@
 title: Environment variables
 description: Environment variables in App Center Test
 keywords: test cloud
-author: glennwilson
-ms.author: v-glenw
-ms.date: 04/29/2019
+author: jonstoneman
+ms.author: jonsto
+ms.date: 11/27/2019
 ms.topic: article
 ms.assetid: 51964205-c1d7-4fd7-8259-83485590c6e1
 ms.service: vs-appcenter
@@ -13,104 +13,46 @@ ms.custom: test
 
 # Environment variables
 
-When App Center runs tests for an application, there are useful environment variables available.  You can set additional environment variables for your application and tests via the App Center CLI.
+For most frameworks, useful environment variables are available within the test and/or application and you can set additional environment variables via the App Center CLI.
 
-## Environment variables: available in your application
+## Support by framework
+
+It is unfortunately currently not possible to use environment variables within the application and test for each framework that App Center support.
+
+The app environment variable are available in Calabash (iOS only), Xamarin UITest (iOS only) and Espresso.
+
+The test environment variables are available in Appium, Calabash, Espresso and Xamarin UITest.
+
+_Note: In Espresso tests and Android applications, variables are available in the `InstrumentationRegistry` since Android does not support environment variables._
+
+## Environment variables available in your application
+
+For frameworks for which App Center Test supports environment variables within the application, the following variables are provided:
 
 | Environment Variable    | Description |
 | ----------------------- | ----------- |
 | `RUNNING_IN_APP_CENTER` | Set to `1` when the device is running in App Center Test
 
-## Environment variables: available in your tests
+## Environment variables available in your tests
 
-These variables are only available to your tests when running in App
-Center Test.
+For frameworks for which App Center Test supports environment variables within the tests, the following variables are provided:
 
 | Environment Variable | Description |
 | -------------------- | ----------- |
-| `XAMARIN_TEST_CLOUD` | Set to `1` when your tests run in App Center Test. |
-| `XTC_APP_ENDPOINT`   | Address of a secure port on the device that allows other services to communicate with the application. Used by applications that embed their own HTTP servers in an application and need to interact with the app outside of the test framework. (Android Only). |
-| `XTC_DEVICE`         | Combines the operating system name and the device name. |
+| `APP_CENTER_TEST`    | Set to `1` when your tests run in App Center Test. |
+| `XTC_APP_ENDPOINT`   | Address of a secure port on the device that allows other services to communicate with the application. Used by applications that embed their own HTTP servers in an application and need to interact with the app outside of the test framework. (Android Only).<br><br>Example: `http://devicehost151.prod:37777/proxy2/token-c059c5c6-37cc-4400-9038-96d1d342ed6e/` |
+| `XTC_DEVICE`         | Combines the operating system name and the device name.<br><br>Example: `Google Pixel 2 XL (8.1.0)` |
 | `XTC_DEVICE_INDEX`   | A string in the range of 0 to N-1, where N is the number of devices the test is run on. Used in situations where the same test is being run in parallel on multiple devices. `XTC_DEVICE_INDEX` is unique for each test run for each device. For additional discussion, see:  [Handling Concurrent Database Changes During Tests](https://intercom.help/appcenter/test/handling-concurrent-database-changes-during-tests). |
-| `XTC_DEVICE_NAME`    | Name of the device running the test. |
-| `XTC_DEVICE_OS`      | Name of the operating system for the device running the test. |
-| `XTC_LANG`           | Language code used to run the test. |
+| `XTC_DEVICE_NAME`    | Name of the device running the test.<br><br>Example: `Google Pixel 2 XL` |
+| `XTC_DEVICE_OS`      | Name of the operating system for the device running the test.<br><br>Example: `8.1.0` |
+| `XTC_LANG`           | Language code used to run the test.<br><br>Example: `en` |
 | `XTC_PLATFORM`       | Platform under test, either `android` or `ios`. |
-
-## Sample Xamarin.UITest code
-
-The following code snippet shows how to access environment variables in App Center Test using Xamarin.UITest:
-
-```csharp
-var xamarintestcloud = Environment.GetEnvironmentVariable("XAMARIN_TEST_CLOUD");
-Console.WriteLine($"XAMARIN_TEST_CLOUD={xamarintestcloud}");
-
-var xtcappendpoint = Environment.GetEnvironmentVariable("XTC_APP_ENDPOINT");
-Console.WriteLine($"XTC_APP_ENDPOINT={xtcappendpoint}");
-
-var xtcdevice = Environment.GetEnvironmentVariable("XTC_DEVICE");
-Console.WriteLine($"XTC_DEVICE={xtcdevice}");
-
-var xtcdeviceindex = Environment.GetEnvironmentVariable("XTC_DEVICE_INDEX");
-Console.WriteLine($"XTC_DEVICE_INDEX={xtcdeviceindex}");
-
-var xtcdevicename = Environment.GetEnvironmentVariable("XTC_DEVICE_NAME");
-Console.WriteLine($"XTC_DEVICE_NAME={xtcdevicename}");
-
-var xtcdeviceos = Environment.GetEnvironmentVariable("XTC_DEVICE_OS");
-Console.WriteLine($"XTC_DEVICE_OS={xtcdeviceos}");
-
-var xtclang = Environment.GetEnvironmentVariable("XTC_LANG");
-Console.WriteLine($"XTC_LANG={xtclang}");
-
-var xtcplatform = Environment.GetEnvironmentVariable("XTC_PLATFORM");
-Console.WriteLine($"XTC_PLATFORM={xtcplatform}");
-```
-
-### Example test log output in App Center Test
-
-The code snippet in the previous section produces output in the Test Log similar to the following when run in App Center Test.
-
-```shell
-XAMARIN_TEST_CLOUD=1
-XTC_APP_ENDPOINT=http://devicehost151.prod:37777/proxy2/token-c059c5c6-37cc-4400-9038-96d1d342ed6e/
-XTC_DEVICE=Google Pixel 2 XL (8.1.0)
-XTC_DEVICE_INDEX=0
-XTC_DEVICE_NAME=Google Pixel 2 XL
-XTC_DEVICE_OS=8.1.0
-XTC_LANG=en
-XTC_PLATFORM=android
-```
-
-## Sample XCUITest and native iOS application code
-
-XCUITest and native iOS applications access environment variables through the NSProcessInfo API.
-
-```Objective-C
-[[NSProcessInfo processInfo] environment]["XAMARIN_TEST_CLOUD"]
-```
-
-```swift
-ProcessInfo.processInfo.environment["XAMARIN_TEST_CLOUD"]
-```
-
-## Calabash Cucumber
-
-Calabash Android and iOS use Cucumber Ruby as the test runner.  You can access the test environment variables with `ENV`.  Access your application's environment using the native APIs (NSProcessInfo for Objc/Swift, Properties for Android Java, and Environment for Xamarin).
-
-```ruby
-if ENV["XAMARIN_TEST_CLOUD"]
-  puts "running in Test Cloud!"
-else
-  puts "running locally!"
-  end
-```
 
 ## Setting additional environment variables
 
-When you upload your tests to AppCenter with the appcenter CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner (XCUITest, Espresso, Xamarin.UITest, etc.) and for your application (the application under test or AUT).
+When you upload your tests to AppCenter with the appcenter CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner and for your application (the application under test or AUT).
 
-These variables will be available at runtime in the test runner or application under test. This feature is available for all test frameworks.
+_Note: see [Support by framework](#Support-by-framework) for details of which frameworks support test and application variables in App Center Test._
 
 ### Environment variables for your tests
 
@@ -134,7 +76,142 @@ $ appcenter test run < > \
   --test-parameter "app_env=UPGRADE_PURCHASED=0"
 ```
 
-Your application is automatically launched with `RUNNING_IN_APP_CENTER=1`.
+## Using environment variables in your tests
+
+### Sample Appium test code:
+
+The following code snippet shows how to access environment variables in App Center Test using Appium
+
+```java
+
+String xamarintestcloud = System.getenv("XAMARIN_TEST_CLOUD");
+
+String xtcappendpoint = System.getenv("XTC_APP_ENDPOINT");
+
+String xtcdevice = System.getenv("XTC_DEVICE");
+
+String xtcdeviceindex = System.getenv("XTC_DEVICE_INDEX");
+
+String xtcdevicename = System.getenv("XTC_DEVICE_NAME");
+
+String xtcdeviceos = System.getenv("XTC_DEVICE_OS");
+
+String xtclang = System.getenv("XTC_LANG");
+
+String xtcplatform = System.getenv("XTC_PLATFORM");
+```
+
+### Sample Calabash test code:
+
+The following code snippet shows how to access environment variables in App Center Test using Calabash
+
+```ruby
+
+xamarintestcloud = ENV["XAMARIN_TEST_CLOUD"]
+
+xtcappendpoint = ENV["XTC_APP_ENDPOINT"]
+
+xtcdevice = ENV["XTC_DEVICE"]
+
+xtcdeviceindex = ENV["XTC_DEVICE_INDEX"]
+
+xtcdevicename = ENV["XTC_DEVICE_NAME"]
+
+xtcdeviceos = ENV["XTC_DEVICE_OS"]
+
+xtclang = ENV["XTC_LANG"]
+
+xtcplatform = ENV["XTC_PLATFORM"]
+
+```
+
+### Sample Espresso test code
+
+Since Android does not support environment variables, App Center Test sets `InstrumentationRegistry` values instead for Espresso. The following code snippet shows how to access the `InstrumentationRegistry` values.
+
+```java
+
+String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+
+String xtcappendpoint = InstrumentationRegistry.getArguments().getString("XTC_APP_ENDPOINT");
+
+String xtcdevice = InstrumentationRegistry.getArguments().getString("XTC_DEVICE");
+
+String xtcdeviceindex = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_INDEX");
+
+String xtcdevicename = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_NAME");
+
+String xtcdeviceos = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_OS");
+
+String xtclang = InstrumentationRegistry.getArguments().getString("XTC_LANG");
+
+String xtcplatform = InstrumentationRegistry.getArguments().getString("XTC_PLATFORM");
+
+```
+
+### Sample Xamarin.UITest test code
+
+The following code snippet shows how to access environment variables in App Center Test using Xamarin.UITest:
+
+```csharp
+string xamarintestcloud = Environment.GetEnvironmentVariable("XAMARIN_TEST_CLOUD");
+
+string xtcappendpoint = Environment.GetEnvironmentVariable("XTC_APP_ENDPOINT");
+
+string xtcdevice = Environment.GetEnvironmentVariable("XTC_DEVICE");
+
+string xtcdeviceindex = Environment.GetEnvironmentVariable("XTC_DEVICE_INDEX");
+
+string xtcdevicename = Environment.GetEnvironmentVariable("XTC_DEVICE_NAME");
+
+string xtcdeviceos = Environment.GetEnvironmentVariable("XTC_DEVICE_OS");
+
+string xtclang = Environment.GetEnvironmentVariable("XTC_LANG");
+
+string xtcplatform = Environment.GetEnvironmentVariable("XTC_PLATFORM");
+```
+
+## Using environment variables in your application
+
+### Sample native Android application code
+
+_Note: see [Support by framework](#Support-by-framework) for details of which frameworks support application variables in App Center Test._
+
+Since Android does not support environment variables, App Center Test sets `InstrumentationRegistry` values instead. The following code snippet shows how to access the `InstrumentationRegistry` values.
+
+```java
+
+String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+
+String xtcappendpoint = InstrumentationRegistry.getArguments().getString("XTC_APP_ENDPOINT");
+
+String xtcdevice = InstrumentationRegistry.getArguments().getString("XTC_DEVICE");
+
+String xtcdeviceindex = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_INDEX");
+
+String xtcdevicename = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_NAME");
+
+String xtcdeviceos = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_OS");
+
+String xtclang = InstrumentationRegistry.getArguments().getString("XTC_LANG");
+
+String xtcplatform = InstrumentationRegistry.getArguments().getString("XTC_PLATFORM");
+
+```
+
+### Sample native iOS application code
+
+_Note: see [Support by framework](#Support-by-framework) for details of which frameworks support application variables in App Center Test._
+
+Native iOS applications access environment variables through the NSProcessInfo API.
+
+```Objective-C
+[[NSProcessInfo processInfo] environment]["XAMARIN_TEST_CLOUD"]
+```
+
+```swift
+ProcessInfo.processInfo.environment["XAMARIN_TEST_CLOUD"]
+```
 
 ## Getting help
 
