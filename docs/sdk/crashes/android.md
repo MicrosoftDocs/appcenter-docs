@@ -482,9 +482,6 @@ Once these methods are properly set up, the app sends the minidump to App Center
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
-
-> [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
