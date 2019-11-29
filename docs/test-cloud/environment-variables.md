@@ -21,7 +21,7 @@ It is unfortunately currently not possible to use environment variables within t
 
 App environment variables are available in Calabash (iOS only), Xamarin UITest (iOS only) and Espresso.
 
-The test environment variables are available in Appium, Calabash, Espresso and Xamarin UITest.
+Test environment variables are available in Appium, Calabash, Espresso and Xamarin UITest.
 
 > [!NOTE]
 > In Espresso tests and Android applications, variables are available in the `InstrumentationRegistry` since Android does not support environment variables.
