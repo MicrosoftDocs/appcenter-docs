@@ -36,7 +36,7 @@ For supported frameworks, these environment variables are available within the a
 
 ## Environment variables available in your tests
 
-For frameworks for which App Center Test supports environment variables within the tests, the following variables are provided:
+For supported frameworks, these environment variables are available within the tests:
 
 | Environment Variable | Description |
 | -------------------- | ----------- |
