@@ -19,7 +19,7 @@ For most frameworks, useful environment variables are available within the test 
 
 It is unfortunately currently not possible to use environment variables within the application and test for each framework that App Center supports.
 
-The app environment variable are available in Calabash (iOS only), Xamarin UITest (iOS only) and Espresso.
+App environment variables are available in Calabash (iOS only), Xamarin UITest (iOS only) and Espresso.
 
 The test environment variables are available in Appium, Calabash, Espresso and Xamarin UITest.
 
