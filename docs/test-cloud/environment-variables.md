@@ -28,7 +28,7 @@ The test environment variables are available in Appium, Calabash, Espresso and X
 
 ## Environment variables available in your application
 
-For frameworks for which App Center Test supports environment variables within the application, the following variables are provided:
+For supported frameworks, these environment variables are available within the application:
 
 | Environment Variable    | Description |
 | ----------------------- | ----------- |
