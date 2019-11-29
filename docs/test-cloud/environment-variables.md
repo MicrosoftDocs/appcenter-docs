@@ -87,20 +87,6 @@ The following code snippet shows how to access environment variables in App Cent
 ```java
 
 String xamarintestcloud = System.getenv("XAMARIN_TEST_CLOUD");
-
-String xtcappendpoint = System.getenv("XTC_APP_ENDPOINT");
-
-String xtcdevice = System.getenv("XTC_DEVICE");
-
-String xtcdeviceindex = System.getenv("XTC_DEVICE_INDEX");
-
-String xtcdevicename = System.getenv("XTC_DEVICE_NAME");
-
-String xtcdeviceos = System.getenv("XTC_DEVICE_OS");
-
-String xtclang = System.getenv("XTC_LANG");
-
-String xtcplatform = System.getenv("XTC_PLATFORM");
 ```
 
 ### Sample Calabash test code:
@@ -110,20 +96,6 @@ The following code snippet shows how to access environment variables in App Cent
 ```ruby
 
 xamarintestcloud = ENV["XAMARIN_TEST_CLOUD"]
-
-xtcappendpoint = ENV["XTC_APP_ENDPOINT"]
-
-xtcdevice = ENV["XTC_DEVICE"]
-
-xtcdeviceindex = ENV["XTC_DEVICE_INDEX"]
-
-xtcdevicename = ENV["XTC_DEVICE_NAME"]
-
-xtcdeviceos = ENV["XTC_DEVICE_OS"]
-
-xtclang = ENV["XTC_LANG"]
-
-xtcplatform = ENV["XTC_PLATFORM"]
 
 ```
 
@@ -135,20 +107,6 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
 
-String xtcappendpoint = InstrumentationRegistry.getArguments().getString("XTC_APP_ENDPOINT");
-
-String xtcdevice = InstrumentationRegistry.getArguments().getString("XTC_DEVICE");
-
-String xtcdeviceindex = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_INDEX");
-
-String xtcdevicename = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_NAME");
-
-String xtcdeviceos = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_OS");
-
-String xtclang = InstrumentationRegistry.getArguments().getString("XTC_LANG");
-
-String xtcplatform = InstrumentationRegistry.getArguments().getString("XTC_PLATFORM");
-
 ```
 
 ### Sample Xamarin.UITest test code
@@ -157,20 +115,6 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```csharp
 string xamarintestcloud = Environment.GetEnvironmentVariable("XAMARIN_TEST_CLOUD");
-
-string xtcappendpoint = Environment.GetEnvironmentVariable("XTC_APP_ENDPOINT");
-
-string xtcdevice = Environment.GetEnvironmentVariable("XTC_DEVICE");
-
-string xtcdeviceindex = Environment.GetEnvironmentVariable("XTC_DEVICE_INDEX");
-
-string xtcdevicename = Environment.GetEnvironmentVariable("XTC_DEVICE_NAME");
-
-string xtcdeviceos = Environment.GetEnvironmentVariable("XTC_DEVICE_OS");
-
-string xtclang = Environment.GetEnvironmentVariable("XTC_LANG");
-
-string xtcplatform = Environment.GetEnvironmentVariable("XTC_PLATFORM");
 ```
 
 ## Using environment variables in your application
@@ -185,20 +129,6 @@ Since Android does not support environment variables, App Center Test sets `Inst
 ```java
 
 String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
-
-String xtcappendpoint = InstrumentationRegistry.getArguments().getString("XTC_APP_ENDPOINT");
-
-String xtcdevice = InstrumentationRegistry.getArguments().getString("XTC_DEVICE");
-
-String xtcdeviceindex = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_INDEX");
-
-String xtcdevicename = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_NAME");
-
-String xtcdeviceos = InstrumentationRegistry.getArguments().getString("XTC_DEVICE_OS");
-
-String xtclang = InstrumentationRegistry.getArguments().getString("XTC_LANG");
-
-String xtcplatform = InstrumentationRegistry.getArguments().getString("XTC_PLATFORM");
 
 ```
 
