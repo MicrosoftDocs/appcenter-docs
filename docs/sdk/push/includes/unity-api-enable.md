@@ -22,7 +22,7 @@ Push.SetEnabledAsync(true);
 
 The state is persisted in the device's storage across application launches.
 
-[!INCLUDE [unity see async](../includes/unity-see-async.md)]
+[!INCLUDE [unity see async](../../includes/unity-see-async.md)]
 
 ## Check if App Center Push is enabled
 
@@ -31,4 +31,5 @@ You can also check if App Center Push is enabled or not.
 ```csharp
 bool isEnabled = await Push.IsEnabledAsync();
 ```
-[!INCLUDE [unity see async](../includes/unity-see-async.md)]
+
+[!INCLUDE [unity see async](../../includes/unity-see-async.md)]

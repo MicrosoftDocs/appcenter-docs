@@ -16,16 +16,16 @@ dev_langs:
 ---
 
 > [!div  class="op_single_selector"]
-> * [Android](android.md)
-> * [iOS](ios.md)
-> * [Xamarin](xamarin.md)
-> * [UWP](uwp.md)
-> * [WPF/WinForms](wpf-winforms.md)
-> * [React Native](react-native.md)
-> * [macOS](macos.md)
-> * [tvOS](tvos.md)
-> * [Unity](unity.md)
-> * [Cordova](cordova.md)
+> * [Android](../android.md)
+> * [iOS](../ios.md)
+> * [Xamarin](../xamarin.md)
+> * [UWP](../uwp.md)
+> * [WPF/WinForms](../wpf-winforms.md)
+> * [React Native](../react-native.md)
+> * [macOS](../macos.md)
+> * [tvOS](../tvos.md)
+> * [Unity](../unity.md)
+> * [Cordova](../cordova.md)
 
 ## Adjust the log level
 
@@ -138,7 +138,7 @@ MSAppCenter.sdkVersion()
 App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/send-notification.md#audiences).
 
 > [!NOTE]
-> Only devices that have [Push](../push/ios.md) successfully registered are matched in audiences.
+> Only devices that have [Push](../../push/ios.md) successfully registered are matched in audiences.
 > As a consequence, the iOS simulator can not be used to test audience matching.
 
 You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.

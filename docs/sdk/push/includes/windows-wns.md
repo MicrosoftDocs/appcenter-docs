@@ -10,7 +10,7 @@ ms.author: amburns
 
 1. In Visual Studio Solution Explorer, right-click the UWP project, then select **Store -> Associate App with the Store...**
 
-    ![uwp store association](images/appcenter-uwp-sdk-store-association.png)
+    ![uwp store association](../images/appcenter-uwp-sdk-store-association.png)
 
 2. In the wizard, click **Next**, sign in with your Windows developer account, type a name for your app in **Reserve a new app name**, then click **Reserve**.
 
@@ -25,15 +25,15 @@ ms.author: amburns
 
 1. Go to the **WNS/MPNS** section of the **Product Management** page and click on the **Live Services** link. It will display the old **Microsoft Application Registration** portal settings page.
 
-    ![uwp app registration](images/appcenter-uwp-sdk-push-registration.png)
+    ![uwp app registration](../images/appcenter-uwp-sdk-push-registration.png)
     
 1. Below at this page in the **Platforms** > **Windows store** section, copy the value of the **Package SID** as you will use it later.
 
-    ![uwp app registration sid](images/appcenter-uwp-sdk-push-registration-get-package-sid.png)
+    ![uwp app registration sid](../images/appcenter-uwp-sdk-push-registration-get-package-sid.png)
 
 1. At the top of this page, copy the value under **Application Secrets** as you will use it later.
 
-    ![uwp app registration](images/appcenter-uwp-sdk-push-registration-secret.png)
+    ![uwp app registration](../images/appcenter-uwp-sdk-push-registration-secret.png)
 
 1. Prepend the copied on the 2nd step **Package SID** with the `ms-app://` value. 
 1. Use the **Application secret** and **Package SID** values to configure your App Center Push backend.
