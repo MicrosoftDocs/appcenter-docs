@@ -1,3 +1,11 @@
+---
+author: asb3993
+ms.service: vs-appcenter
+ms.topic: include
+ms.date: 12/02/2019
+ms.author: amburns
+---
+
 The following example demonstrates how to use the push event.
 
 ```csharp

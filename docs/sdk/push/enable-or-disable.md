@@ -1,3 +1,11 @@
+---
+author: asb3993
+ms.service: vs-appcenter
+ms.topic: include
+ms.date: 12/02/2019
+ms.author: amburns
+---
+
 You can enable and disable App Center Push at runtime. If you disable it, the SDK will stop updating the registration identifier that is used to push notifications, but the existing one will continue to work. In other words, disabling the App Center Push in the SDK will **NOT** stop your application from receiving push notifications.
 
 ```csharp

@@ -1,3 +1,11 @@
+---
+author: asb3993
+ms.service: vs-appcenter
+ms.topic: include
+ms.date: 12/02/2019
+ms.author: amburns
+---
+
 You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
 
 ```javascript

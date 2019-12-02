@@ -1,6 +1,7 @@
 ---
 title: Uploading symbols through the API
 author: cainejette
+ms.topic: include
 ---
 
 1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create).

@@ -1,3 +1,11 @@
+---
+author: asb3993
+ms.service: vs-appcenter
+ms.topic: include
+ms.date: 12/02/2019
+ms.author: amburns
+---
+
 > [!div  class="op_single_selector"]
 > * [Android](android-sdk-migration.md)
 > * [iOS](ios-sdk-migration.md)

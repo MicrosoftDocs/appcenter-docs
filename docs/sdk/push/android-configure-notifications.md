@@ -1,3 +1,11 @@
+---
+author: asb3993
+ms.service: vs-appcenter
+ms.topic: include
+ms.date: 12/02/2019
+ms.author: amburns
+---
+
 You can specify custom defaults for the icon and color that gets applied when it isn't set in the push payload.
 
 The lines below should be added to **AndroidManifest.xml** inside the `application` tag:

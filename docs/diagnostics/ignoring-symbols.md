@@ -1,6 +1,7 @@
 ---
 title: Ignoring symbols
 author: cainejette
+ms.topic: include
 ---
 
 ## Ignoring symbols

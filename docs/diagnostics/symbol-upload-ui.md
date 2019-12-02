@@ -1,6 +1,7 @@
 ---
 title: Uploading symbols through the UI
 author: cainejette
+ms.topic: include
 ---
 
 1. Log into App Center and select your app.
