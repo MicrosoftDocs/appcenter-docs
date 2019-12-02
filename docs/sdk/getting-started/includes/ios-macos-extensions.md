@@ -5,7 +5,7 @@ keywords: sdk
 author: winnieli
 ms.author: yuli1
 ms.date: 09/30/2019
-ms.topic: article
+ms.topic: include
 ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0
 ms.service: vs-appcenter
 ms.custom: sdk

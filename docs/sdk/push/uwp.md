@@ -39,7 +39,7 @@ App Center Push enables you to send push notifications to users of your app from
 
 Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registration, you need to associate your app with the Windows Store in Visual Studio.
 
-[!include[](windows-wns.md)]
+[!INCLUDE [windows wns](includes/windows-wns.md)]
 
 ## Add App Center Push to your app
 
@@ -49,13 +49,13 @@ Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you hav
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. It can be integrated using Visual Studio or Package Manager Console.
 
-[!include[](add-nuget.md)]
+[!INCLUDE [add nuget](includes/add-nuget.md)]
 
 Now that you've integrated App Center Push in your application, it's time to start the SDK and make use of App Center.
 
 ### 2. Start App Center Push
 
-[!include[](start-push.md)]
+[!INCLUDE [start push](includes/start-push.md)]
 
 > [!NOTE]
 > If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application in the `OnStart` callback.
@@ -84,7 +84,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ### Subscribe to the push event
 
-[!include[](dotnet-push-event-intro.md)]
+[!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 > [!NOTE]
 > No toast is shown when the push is received in foreground.
@@ -95,7 +95,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 > [!NOTE]
 > UWP toasts do **NOT** expose **title** and **message** to the background notification click callback. **Title** and **message** are only available in **foreground** pushes.
 
-[!include[](dotnet-push-event-example.md)]
+[!INCLUDE [dotnet push event example](includes/dotnet-push-event-example.md)]
 
 ## Custom data in your notifications
 
@@ -109,4 +109,4 @@ There are few reserved keywords that can be set via custom data.
 
 ## Enable or disable App Center Push at runtime
 
-[!include[](enable-or-disable.md)]
+[!INCLUDE [enable or disable](includes/enable-or-disable.md)]

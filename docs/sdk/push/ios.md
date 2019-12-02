@@ -48,15 +48,15 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 #### [Optional] Enable silent notifications
 
-[!include[](ios-enable-silent-notifications.md)]
+[!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
-[!include[](introduction-apple.md)]
+[!INCLUDE [introduction to apple](includes/introduction-apple.md)]
 
 #### 2.2 Add the `start:withServices:` method
 
@@ -148,7 +148,7 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

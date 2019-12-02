@@ -38,7 +38,7 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ### Enable push notifications on your application
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, see to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
@@ -48,10 +48,10 @@ If you haven't set up the SDK in your application already, see instructions in t
 
 ### Enable App Center Push
 
-[!include[](unity-enable.md)]
+[!INCLUDE [unity enable](includes/unity-enable.md)]
 
 ## Intercept push notifications
 
-[!include[](unity-intercept.md)]
+[!INCLUDE [unity intercept](includes/unity-intercept.md)]
 
-[!include[](unity-api-enable.md)]
+[!INCLUDE [unity api enable](includes/unity-api-enable.md)]

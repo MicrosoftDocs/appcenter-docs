@@ -117,7 +117,7 @@ To enable App Center Distribute again, use the same API but pass `true` as a par
 Distribute.SetEnabledAsync(true);
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
@@ -131,7 +131,7 @@ You can also check if App Center Distribute is enabled:
 Distribute.IsEnabledAsync();
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 ## Enable in-app updates for debug builds
 

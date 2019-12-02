@@ -5,7 +5,7 @@ keywords: sdk, crash
 author: elamalani
 ms.author: emalani
 ms.date: 08/12/2019
-ms.topic: article
+ms.topic: include
 ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
 ms.service: vs-appcenter
 ms.custom: sdk

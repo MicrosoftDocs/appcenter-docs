@@ -6,8 +6,6 @@ ms.date: 12/02/2019
 ms.author: amburns
 ---
 
-# How to add Firebase SDK dependencies
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [Xamarin.Android](xamarin-android.md)

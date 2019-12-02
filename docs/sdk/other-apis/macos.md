@@ -17,4 +17,4 @@ dev_langs:
 
 # Other macOS APIs
 
-[!include[](apple.md)]
+[!INCLUDE [apple](includes/apple.md)]

@@ -55,11 +55,11 @@ Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven'
 
 ### 1. Add the App Center Push module
 
-[!include[](add-nuget.md)]
+[!INCLUDE [add nuget](includes/add-nuget.md)]
 
 ### 2. Start App Center Push
 
-[!include[](start-push.md)]
+[!INCLUDE [start push](includes/start-push.md)]
 
 ## Intercept push notifications
 
@@ -150,7 +150,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ### Subscribe to the push event
 
-[!include[](dotnet-push-event-intro.md)]
+[!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 The behavior of the event depends on:
 
@@ -173,7 +173,7 @@ When the push is received in **foreground**, the event is fired right away but
 > [!NOTE]
 > On iOS only, if silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
-[!include[](dotnet-push-event-example.md)]
+[!INCLUDE [dotnet push event example](includes/dotnet-push-event-example.md)]
 
 ## Custom Data in your notifications
 
@@ -188,7 +188,7 @@ There are few reserved keywords in each platform that can be set via custom data
 
 #### Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android configre notifications](includes/android-configure-notifications.md)]
 
 ### iOS
 - **badge**: Add this key when you want to modify the badge of your app icon. If this key is not included, the badge is not changed. To remove the badge, set the value of this key to 0.
@@ -202,4 +202,4 @@ There are few reserved keywords in each platform that can be set via custom data
 
 ## Enable or disable Push at runtime
 
-[!include[](enable-or-disable.md)]
+[!INCLUDE [enable or disable](includes/enable-or-disable.md)]

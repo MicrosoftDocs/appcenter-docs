@@ -12,7 +12,7 @@ ms.tgt_pltfrm: WPF/Winforms
 
 # Migrate from the HockeySDK to App Center WPF/Winforms
 
-[!include[](sdk-migration-dropdown.md)]
+[!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 
 ## 1. Update the libraries
 

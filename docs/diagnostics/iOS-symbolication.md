@@ -37,7 +37,7 @@ If you are using Visual Studio instead of XCode, see [Where can I find the dSYM 
 
 ### App Center Portal
 
-[!include[](./symbol-upload-ui.md)]
+[!INCLUDE [symbol upload ui](includes/symbol-upload-ui.md)]
 
 #### React Native iOS apps
 
@@ -51,7 +51,7 @@ react-native bundle --entry-file index.ios.js --platform ios --dev false --reset
 
 The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Apple`.
 
-[!include[](./symbol-upload-api.md)]
+[!INCLUDE [symbol upload api](includes/symbol-upload-api.md)]
 
 ### App Center CLI
 
@@ -117,5 +117,5 @@ You can double check whether your dSYM files have the right UUIDs by using a CLI
 
   ![App Center displays the UUID of required symbols](~/diagnostics/images/symbols-UUID.png)
 
-[!include[](./ignoring-symbols.md)]
+[!INCLUDE [ignoring symbols](includes/ignoring-symbols.md)]
 

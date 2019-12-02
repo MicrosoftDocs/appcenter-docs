@@ -17,7 +17,7 @@ dev_langs:
 
 # Other tvOS APIs
 
-[!include[](apple.md)]
+[!INCLUDE [apple](includes/apple.md)]
 
 ## Storage size
 
