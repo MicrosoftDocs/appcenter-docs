@@ -13,8 +13,6 @@ ms.custom: analytics
 
 # Android Deobfuscation
 
-## Overview
-
 ProGuard and R8 are tools to optimize and obfuscate the code of Android apps. It removes unused code, renames classes, fields, and methods with semantically obscure names, making the code base smaller and harder to reverse engineer. To enable obfuscation with ProGuard or R8 in your Android app, follow the [official Android Developer documentation](https://developer.android.com/studio/build/shrink-code#shrink-code).
 
 With ProGuard or R8 enabled in your Android app, your stack traces must be deobfuscated. App Center automatically deobfuscates stack traces for your Java, Kotlin, and React Native Android apps when you upload the `mapping.txt` file created on each build. This file maps the original class, method, and field names to the obfuscated names making the stack traces readable.

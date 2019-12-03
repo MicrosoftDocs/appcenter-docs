@@ -170,8 +170,6 @@ curl -X POST \
   ]
 }'
 ```
-> [!NOTE]
-> To upload a NDK crash, the `wrapperSdkName` field must be set to "appcenter.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
 
 ### Upload an Apple crash log
 
@@ -305,7 +303,6 @@ curl -X POST \
 ### Upload a custom crash log
 
 To upload a crash for a custom platform, make sure the log type is set to "managedError" and the sdkName is set to "appcenter.custom".
-
 For example:
 
 ```shell
@@ -416,11 +413,99 @@ curl -X POST \
           "name": "Compiler"
         }
       ]
+
     }
   ]
 }'
 
 ```
+
+
+### Upload a Breakpad crash log and Minidump
+
+You can upload a custom Breakpad crash for Android and Windows.
+For example:
+
+```shell
+curl -X POST \
+  'https://in.appcenter.ms/logs?Api-Version=1.0.0' \
+  -H 'Content-Type: application/json' \
+  -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
+  -H 'install-id: 00000000-0000-0000-0000-000000000001' \
+  -d '{
+  "logs:":
+  [
+    {
+      "type": "managedError",
+      "id": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+      "userId": "TestID",
+      "processId": 9448,
+      "processName": "Contoso.UWP.Puppet.exe",
+      "fatal": true,
+      "timestamp": "2019-10-08T06:22:23.530Z",
+      "architecture": "X64",
+      "timestamp": "2019-10-08T06:22:23.516Z",
+      "sid": "d4608adf-83b9-4f69-90ad-8bb0234080a7",
+      "device": {
+        "sdkName": "appcenter.uwp",
+        "sdkVersion": "2.4.1-SNAPSHOT",
+        "model": "Parallels Virtual Platform",
+        "oemName": "Parallels Software International Inc.",
+        "osName": "WINDOWS",
+        "osVersion": "10.0.18363",
+        "osBuild": "10.0.18363.418",
+        "locale": "en-US",
+        "timeZoneOffset": -300,
+        "screenSize": "4608x2470",
+        "appVersion": "1.0",
+        "appBuild": "1.0",
+        "appNamespace": "10805zumoTestUser.AppCenter-Contoso.UWP.Puppet",
+        "carrierCountry": "us",
+        "wrapperSdkName": "custom.ndk"
+      },
+      "exception": {
+        "type": "minidump",
+        "wrapperSdkName": "custom.ndk"
+      }
+    },
+    {
+      "contentType": "application/octet-stream",
+      "errorId": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+      "fileName": "minidump.dmp",
+      "id": "7b975468-5656-40a5-8242-c1907b26fc31",
+      "sid": "03693776-cdd4-46b8-bbda-12af457f1732",
+      "timestamp": "2019-10-08T06:22:23.516Z",
+      "type": "errorAttachment",
+       "device": {
+        "sdkName": "appcenter.uwp",
+        "sdkVersion": "2.4.1-SNAPSHOT",
+        "model": "Parallels Virtual Platform",
+        "oemName": "Parallels Software International Inc.",
+        "osName": "WINDOWS",
+        "osVersion": "10.0.18363",
+        "osBuild": "10.0.18363.418",
+        "locale": "en-US",
+        "timeZoneOffset": -300,
+        "screenSize": "4608x2470",
+        "appVersion": "1.0",
+        "appBuild": "1.0",
+        "appNamespace": "10805zumoTestUser.AppCenter-Contoso.UWP.Puppet",
+        "carrierCountry": "us",
+        "wrapperSdkName": "custom.ndk"
+      },
+      "data": "<base64 encoded minidump>"
+    }
+  ]
+}'
+
+```
+
+### Caveats
+
+To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
+To symbolicate your crash, you must upload your symbols through the API or CLI, and for more information see our [API documentation](~/diagnostics/android-ndk.md#app-center-api). 
+> [!NOTE]
+> If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 
 ## Upload an error report
 
