@@ -46,6 +46,9 @@ Crashes.GenerateTestCrash();
 > [!NOTE]
 > This method will only work with **Development Build** setting turned on.
 
+> [!NOTE]
+> If you have ‘Enable CrashReport API’ enabled in PlayerSettings, collecting crashes will not work.
+
 ## Get more information about a previous crash
 
 App Center Crashes has two APIs that give you more information in case your app has crashed.
