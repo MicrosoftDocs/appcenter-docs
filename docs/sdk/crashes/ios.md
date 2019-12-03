@@ -45,7 +45,7 @@ Also note that crash logs on iOS require Symbolication, check out the [App Cente
 
 App Center supports crash reporting in iOS extensions. The usage is the same as in the container application.
 
-[!include[](apple-common-methods-1.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
 ### Ask for the user's consent to send a crash log
 
@@ -136,7 +136,7 @@ MSCrashes.notify(with: .send)
 MSCrashes.notify(with: .always)
 ```
 
-[!include[](apple-common-methods-2.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 
 ## Disabling Mach exception handling
 

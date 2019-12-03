@@ -61,7 +61,7 @@ Archive:  symbols.zip
 
 The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Breakpad`.
 
-[!include[](./symbol-upload-api.md)]
+[!INCLUDE [symbol upload api](includes/symbol-upload-api.md)]
 
 ### App Center CLI
 You can also use the CLI to upload symbol files:
@@ -70,4 +70,4 @@ You can also use the CLI to upload symbol files:
 appcenter crashes upload-symbols --breakpad {symbols file}
 ```
 
-[!include[](./ignoring-symbols.md)]
+[!INCLUDE [ignoring symbols](includes/ignoring-symbols.md)]

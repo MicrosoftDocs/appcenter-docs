@@ -242,7 +242,7 @@ Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptio
 
 You specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > Calling `get()` on any `AppCenterFuture` object returned by any `Data` API on the UI thread will cause a deadlock.

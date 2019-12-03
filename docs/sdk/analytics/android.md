@@ -128,7 +128,7 @@ Analytics.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started.
@@ -144,7 +144,7 @@ Analytics.isEnabled();
 Analytics.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.

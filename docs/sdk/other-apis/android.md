@@ -53,7 +53,7 @@ AppCenter.getInstallId();
 AppCenter.getInstallId()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `AppCenter` has been started, it will always return `null` before start.
@@ -99,7 +99,7 @@ AppCenter.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `AppCenter` has been started.
@@ -129,7 +129,7 @@ AppCenter.isEnabled();
 AppCenter.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `AppCenter` has been started, it will always return `false` before start.

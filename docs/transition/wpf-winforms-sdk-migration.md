@@ -12,7 +12,7 @@ ms.tgt_pltfrm: WPF/Winforms
 
 # Migrate from the HockeySDK to App Center WPF/Winforms
 
-[!include[](sdk-migration-dropdown.md)]
+[!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 
 ## 1. Update the libraries
 
@@ -92,7 +92,7 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms#adjust-the-log-level)
+Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/wpf-winforms.md#adjust-the-log-level)
 
 ### Analytics
 
@@ -106,8 +106,8 @@ Custom events with properties | [HockeyClient.TrackEvent](https://support.hockey
 Feature | HockeyApp | App Center
 ------- | --------- | ---
 Automatically send crashes | [Crash Reporting (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Crash Reporting](~/sdk/crashes/wpf-winforms.md)
-Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Adding Attachments](~/sdk/crashes/wpf-winforms#add-attachments-to-a-crash-report)
-Track handled exceptions | `HockeyClient.Current.TrackException` | [Handled Errors](~/sdk/crashes/wpf-winforms#handled-errors)
+Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | [Adding Attachments](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report)
+Track handled exceptions | `HockeyClient.Current.TrackException` | [Handled Errors](~/sdk/crashes/wpf-winforms.md#handled-errors)
 
 ### Distribution
 

@@ -45,13 +45,13 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 #### [Optional] Enable silent notifications
 
-[!include[](ios-enable-silent-notifications.md)]
+[!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
 
@@ -103,11 +103,11 @@ You can set up a listener to be notified whenever a push notification is receive
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-[!include[](react-native-listener.md)]
+[!INCLUDE [react native listener](includes/react-native-listener.md)]
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

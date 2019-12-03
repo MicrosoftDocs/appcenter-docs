@@ -37,7 +37,7 @@ The App Center Build and Distribution service can automatically generate mapping
 ### App Center API
 The process for uploading mapping files through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `AndroidProguard`, `build` and `version` properties that correspond to the Version Code and Version Name, respectively, as well as a `file_name`.
 
-[!include[](./symbol-upload-api.md)]
+[!INCLUDE [symbol upload api](includes/symbol-upload-api.md)]
 
 ### App Center CLI
 
