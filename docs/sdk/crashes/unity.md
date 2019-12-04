@@ -35,6 +35,12 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 > [!IMPORTANT]
 > The current SDK does not support Crashes for Unity when running on UWP, the instructions in this page cover only Android and iOS.
 
+> [!NOTE]
+> The SDK will not forward any crash log if you are attached to the debugger. Make sure the debugger is not attached when you crash the app.
+
+> [!NOTE]
+> If you have `Enable CrashReport API` enabled in **PlayerSettings**, collecting crashes will not work.
+
 ## Generate a test crash
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API checks for debug vs release configurations. So you can only use it when debugging as it won't work for release apps.
@@ -45,9 +51,6 @@ Crashes.GenerateTestCrash();
 
 > [!NOTE]
 > This method will only work with **Development Build** setting turned on.
-
-> [!NOTE]
-> If you have `Enable CrashReport API` enabled in **PlayerSettings**, collecting crashes will not work.
 
 ## Get more information about a previous crash
 
