@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/11/2019
+ms.date: 12/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -480,9 +480,6 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart.
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
-
-> [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
