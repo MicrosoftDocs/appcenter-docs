@@ -99,7 +99,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```ruby
 
-xamarintestcloud = ENV["APP_CENTER_TEST"]
+app_center_test = ENV["APP_CENTER_TEST"]
 
 ```
 
