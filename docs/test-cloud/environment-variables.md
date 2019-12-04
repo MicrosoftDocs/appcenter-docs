@@ -118,7 +118,7 @@ String appCenterTest = InstrumentationRegistry.getArguments().getString("APP_CEN
 The following code snippet shows how to access environment variables in App Center Test using Xamarin.UITest:
 
 ```csharp
-string xamarintestcloud = Environment.GetEnvironmentVariable("APP_CENTER_TEST");
+string appCenterTest = Environment.GetEnvironmentVariable("APP_CENTER_TEST");
 ```
 
 ## Using environment variables in your application
