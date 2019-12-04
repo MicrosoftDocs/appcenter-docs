@@ -24,7 +24,7 @@ It is unfortunately currently not possible to use environment variables within t
 | Appium | Available | Not Available |
 | Calabash | Available | Available in iOS only |
 | Espresso | Available | Available |
-| UITest | Available | Available in iOS only |
+| Xamarin.UITest | Available | Available in iOS only |
 | XCUITest | Not Available | Not Available |
 
 > [!NOTE]
