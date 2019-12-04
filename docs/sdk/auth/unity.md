@@ -207,7 +207,7 @@ To enable App Center Auth again, use the same API but pass `true` as a parameter
 Auth.SetEnabledAsync(true);
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 

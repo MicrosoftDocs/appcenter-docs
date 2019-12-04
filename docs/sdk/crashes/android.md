@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/11/2019
+ms.date: 12/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -59,7 +59,7 @@ Crashes.hasReceivedMemoryWarningInLastSession();
 Crashes.hasReceivedMemoryWarningInLastSession()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
@@ -78,7 +78,7 @@ Crashes.hasCrashedInLastSession();
 Crashes.hasCrashedInLastSession()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
@@ -96,7 +96,7 @@ Crashes.getLastSessionCrashReport();
 Crashes.getLastSessionCrashReport()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-app-center-crashes).
 
@@ -315,7 +315,7 @@ Crashes.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started.
@@ -331,7 +331,7 @@ Crashes.isEnabled();
 Crashes.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
@@ -480,9 +480,6 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart.
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
-
-> [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

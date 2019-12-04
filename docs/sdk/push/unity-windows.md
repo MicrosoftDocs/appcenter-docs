@@ -41,7 +41,7 @@ If you haven't already set up and started the SDK in your application, see the [
 
 ### Enable App Center Push
 
-[!include[](unity-enable.md)]
+[!INCLUDE [unity enable](includes/unity-enable.md)]
 
 
 ## Register your app for Windows Notification Services (WNS)
@@ -50,10 +50,10 @@ Before you can send notification using WNS, your app must be registered with the
 
 To register the app, first export it as a project. To do so, build the app on the Unity **Build Settings** tab, then open the built solution in **Visual Studio**.
 
-[!include[](windows-wns.md)]
+[!INCLUDE [windows wns](includes/windows-wns.md)]
 
 ## Intercept push notifications
 
-[!include[](unity-intercept.md)]
+[!INCLUDE [unity intercept](includes/unity-intercept.md)]
 
-[!include[](unity-api-enable.md)]
+[!INCLUDE [unity api enable](includes/unity-api-enable.md)]

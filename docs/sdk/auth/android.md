@@ -337,7 +337,7 @@ Auth.isEnabled();
 Auth.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Auth` has been started, it will always return `false` before start.

@@ -91,7 +91,7 @@ For more information, refer to the [Apple documentation](https://help.apple.com/
 
 #### [Optional] Enable silent notifications
 
-[!include[](ios-enable-silent-notifications.md)]
+[!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
 
@@ -151,7 +151,7 @@ app.initialize();
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 
