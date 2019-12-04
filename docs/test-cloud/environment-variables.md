@@ -132,7 +132,7 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 ```java
 
-String xamarintestcloud = InstrumentationRegistry.getArguments().getString("RUNNING_IN_APP_CENTER");
+String runningInAppCenter = InstrumentationRegistry.getArguments().getString("RUNNING_IN_APP_CENTER");
 
 ```
 
