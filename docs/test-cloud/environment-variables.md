@@ -90,7 +90,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```java
 
-String xamarintestcloud = System.getenv("APP_CENTER_TEST");
+String appCenterTest = System.getenv("APP_CENTER_TEST");
 ```
 
 ### Sample Calabash test code:
