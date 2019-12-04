@@ -90,7 +90,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```java
 
-String xamarintestcloud = System.getenv("XAMARIN_TEST_CLOUD");
+String xamarintestcloud = System.getenv("APP_CENTER_TEST");
 ```
 
 ### Sample Calabash test code:
@@ -99,7 +99,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```ruby
 
-xamarintestcloud = ENV["XAMARIN_TEST_CLOUD"]
+xamarintestcloud = ENV["APP_CENTER_TEST"]
 
 ```
 
@@ -109,7 +109,7 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 ```java
 
-String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+String xamarintestcloud = InstrumentationRegistry.getArguments().getString("APP_CENTER_TEST");
 
 ```
 
@@ -118,7 +118,7 @@ String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMA
 The following code snippet shows how to access environment variables in App Center Test using Xamarin.UITest:
 
 ```csharp
-string xamarintestcloud = Environment.GetEnvironmentVariable("XAMARIN_TEST_CLOUD");
+string xamarintestcloud = Environment.GetEnvironmentVariable("APP_CENTER_TEST");
 ```
 
 ## Using environment variables in your application
@@ -132,7 +132,7 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 ```java
 
-String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+String xamarintestcloud = InstrumentationRegistry.getArguments().getString("RUNNING_IN_APP_CENTER");
 
 ```
 
@@ -144,11 +144,11 @@ String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMA
 Native iOS applications access environment variables through the NSProcessInfo API.
 
 ```Objective-C
-[[NSProcessInfo processInfo] environment]["XAMARIN_TEST_CLOUD"]
+[[NSProcessInfo processInfo] environment]["RUNNING_IN_APP_CENTER"]
 ```
 
 ```swift
-ProcessInfo.processInfo.environment["XAMARIN_TEST_CLOUD"]
+ProcessInfo.processInfo.environment["RUNNING_IN_APP_CENTER"]
 ```
 
 ## Getting help
