@@ -151,7 +151,7 @@ import AppCenterCrashes
 
 **Objective-C**
 
-Insert the following line to start the SDK in the project's **AppDelegate.m** class in the `applicationDidFinishLaunching` method.
+Insert the following line to start the SDK in the project's **AppDelegate.m** class in the `didFinishLaunching` method.
 
 ```obj-c
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
@@ -159,7 +159,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 
 **Swift**
 
-Insert the following line to start the SDK in the project's **AppDelegate.swift** class in the `applicationDidFinishLaunching` method.
+Insert the following line to start the SDK in the project's **AppDelegate.swift** class in the `didFinishLaunching` method.
 
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])

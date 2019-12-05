@@ -24,6 +24,7 @@ dev_langs:
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Issues during setup
 

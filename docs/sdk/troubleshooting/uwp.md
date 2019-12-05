@@ -22,6 +22,7 @@ ms.tgt_pltfrm: uwp
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Analytics data doesn't show up in the portal
 
