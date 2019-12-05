@@ -38,6 +38,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2015 Update 3 or later.
 * Your project references Universal Windows Platform [5.2.2](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/5.2.2) or later
+* If your project explicitly or implicitly uses SQLitePCLRaw.bundle_green, its version must be greater than or equal to 1.14.0, but less than 2.0.
 
 > [!NOTE]
 > If you want to use Xamarin.Forms for UWP, please follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
