@@ -22,7 +22,7 @@ Enable your tester to easily stay up to date with the latest releases. Integrate
 
 ## Public In-App Updates 
 
-To enable public in-app updates, create a public distribution group and distribute a release with the App Center SDK. Once your testers install the app, they will be be alerted when new releases are publicly available. You can use multiple public distribution groups to help organize your releases, but testers will be alerted to all publicly available releases via in-app updates regardless of which public distribution group you release to. 
+To enable public in-app updates, create a public distribution group and distribute a release with the App Center SDK. Once your testers install the app, they will be be alerted when new releases are publicly available. Because publicly available releases are available to anyone with the app, users that downloaded the app through a private distribution group will also get alerted for publicly available releases. 
 
 [ios-sdk]: ~/sdk/distribute/ios.md
 [android-sdk]: ~/sdk/distribute/android.md
