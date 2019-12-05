@@ -36,7 +36,7 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 > The current SDK does not support Crashes for Unity when running on UWP, the instructions in this page cover only Android and iOS.
 
 > [!NOTE]
-> The SDK will not forward any crash log if you are attached to the debugger. Make sure the debugger is not attached when you crash the app.
+> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
 
 > [!NOTE]
 > If you have `Enable CrashReport API` enabled in **PlayerSettings**, collecting crashes will not work.
