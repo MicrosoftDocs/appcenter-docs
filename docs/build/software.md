@@ -49,25 +49,25 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - v6.17.1
 - v8.16.2
 - v10.17.0
-- v12.13.0
-- v13.1.0
+- v12.13.1
+- v13.2.0
 
 ### Package Management
 
 - Bundler 2.0.2
 - Carthage 0.34.0
 - CocoaPods 1.8.4
-- Homebrew 2.1.16
+- Homebrew 2.2.0
 - NPM 3.10.10
-- Yarn 1.19.1
+- Yarn 1.19.2
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 3.7)
 - Pip 19.3.1 (python 2.7)
 
 ### Project Management
 
-- Apache Maven 3.6.2
-- Gradle 6.0
+- Apache Maven 3.6.3
+- Gradle 6.0.1
 
 ### Utilities
 
@@ -76,13 +76,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Git LFS 2.8.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- GNU parallel 20191022
+- GNU parallel 20191122
 
 ### Tools
 
-- Fastlane 2.136.0
+- Fastlane 2.137.0
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.76
+- Azure-CLI 2.0.77
 
 ## Xcode
 
@@ -318,7 +318,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.3.8.8
+- 8.3.10.2
 
 ### Mono
 
