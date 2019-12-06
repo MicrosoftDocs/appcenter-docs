@@ -13,15 +13,23 @@ ms.custom: test
 
 # Environment variables
 
+When testing, it is often helpful to launch your application and/or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
+
 For most frameworks, useful environment variables are available within the test and/or application and you can set additional environment variables via the App Center CLI.
 
 ## Support by framework
 
-It is unfortunately currently not possible to use environment variables within the application and test for each framework that App Center supports.
+In App Center, some frameworks and platform combinations support setting and using custom environment variables as well as using variables that are made available to your application and tests automatically (for example `RUNNING_IN_APP_CENTER` and `APP_CENTER_TEST`). 
 
-App environment variables are available in Calabash (iOS only), Xamarin UITest (iOS only) and Espresso.
+The table below details the environment variable support in tests and applications for each framework or platform:
 
-Test environment variables are available in Appium, Calabash, Espresso and Xamarin UITest.
+| Framework | Test Environment Variables | Application Environment Variables |
+| --------- | ---------------------------| ----------------------------------|
+| Appium | Available | Not Available |
+| Calabash | Available | Available in iOS only |
+| Espresso | Available | Available |
+| Xamarin.UITest | Available | Available in iOS only |
+| XCUITest | Not Available | Not Available |
 
 > [!NOTE]
 > In Espresso tests and Android applications, variables are available in the `InstrumentationRegistry` since Android does not support environment variables.
@@ -86,7 +94,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```java
 
-String xamarintestcloud = System.getenv("XAMARIN_TEST_CLOUD");
+String appCenterTest = System.getenv("APP_CENTER_TEST");
 ```
 
 ### Sample Calabash test code:
@@ -95,7 +103,7 @@ The following code snippet shows how to access environment variables in App Cent
 
 ```ruby
 
-xamarintestcloud = ENV["XAMARIN_TEST_CLOUD"]
+app_center_test = ENV["APP_CENTER_TEST"]
 
 ```
 
@@ -105,7 +113,7 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 ```java
 
-String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+String appCenterTest = InstrumentationRegistry.getArguments().getString("APP_CENTER_TEST");
 
 ```
 
@@ -114,7 +122,7 @@ String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMA
 The following code snippet shows how to access environment variables in App Center Test using Xamarin.UITest:
 
 ```csharp
-string xamarintestcloud = Environment.GetEnvironmentVariable("XAMARIN_TEST_CLOUD");
+string appCenterTest = Environment.GetEnvironmentVariable("APP_CENTER_TEST");
 ```
 
 ## Using environment variables in your application
@@ -128,7 +136,7 @@ Since Android does not support environment variables, App Center Test sets `Inst
 
 ```java
 
-String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMARIN_TEST_CLOUD");
+String runningInAppCenter = InstrumentationRegistry.getArguments().getString("RUNNING_IN_APP_CENTER");
 
 ```
 
@@ -140,11 +148,11 @@ String xamarintestcloud = InstrumentationRegistry.getArguments().getString("XAMA
 Native iOS applications access environment variables through the NSProcessInfo API.
 
 ```Objective-C
-[[NSProcessInfo processInfo] environment]["XAMARIN_TEST_CLOUD"]
+[[NSProcessInfo processInfo] environment]["RUNNING_IN_APP_CENTER"]
 ```
 
 ```swift
-ProcessInfo.processInfo.environment["XAMARIN_TEST_CLOUD"]
+ProcessInfo.processInfo.environment["RUNNING_IN_APP_CENTER"]
 ```
 
 ## Getting help
