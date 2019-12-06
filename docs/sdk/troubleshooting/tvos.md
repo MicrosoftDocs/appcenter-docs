@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for tvOS
 keywords: sdk
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 12/04/2019
+ms.date: 12/05/2019
 ms.topic: article
 ms.assetid: aaedb72a-3fb1-4c5c-b53b-4e3bf189656d
 ms.service: vs-appcenter
