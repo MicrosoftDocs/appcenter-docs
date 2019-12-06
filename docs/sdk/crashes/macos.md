@@ -156,11 +156,9 @@ MSCrashes.disableMachExceptionHandler()
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
-## Reporting crashes without swizzling
+### Crash reporting without swizzling
 
-By default **App Center SDK** uses **swizzling**. If for any reason you don't want to use **swizzling**, you should override crash handler yourself in order for crashes to work correctly.
-
-### For **Objective-C**
+By default **App Center SDK** uses **swizzling**. If for any reason you don't want to use **swizzling**, you should override application `reportException` handler yourself in order for crashes to work correctly.
 
 1. Create **CrashExceptionApplication.h** file and add the following implementation:
 
@@ -201,39 +199,4 @@ By default **App Center SDK** uses **swizzling**. If for any reason you don't wa
 
 ```objc
 [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"NSApplicationCrashOnExceptions" : @NO}];
-```
-
-### For **Swift**
-
-1. Create **CrashExceptionApplication.swift** file and add the following implementation:
-
-```swift
-import Cocoa
-import AppCenterCrashes
-import Foundation
-
-class CrashExceptionApplication : NSApplication {
-  
-  override func reportException(_ exception: NSException) {
-    MSCrashes.applicationDidReport(exception)
-    NSLog("fdxfdsgysdgfsghhfs")
-    super.reportException(exception)
-  }
-  
-  override func sendEvent(_ theEvent: NSEvent) {
-    do {
-        super.sendEvent(theEvent)
-    } catch let exception {
-      self.reportException(NSException(name: NSExceptionName(rawValue: "NSException"), reason: exception.localizedDescription, userInfo: nil))
-    }
-  }
-}
-```
-
-2. Open **Info.plist** and replace the **NSApplication** in the **Principal class** field with your application class name, **[project-name].CrashExceptionApplication** in this example.
-
-3. In order to disable swizzling in **App Center SDK**, add the following line under `applicationDidFinishLaunching`:
-
-```swift
- UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": false])
 ```
