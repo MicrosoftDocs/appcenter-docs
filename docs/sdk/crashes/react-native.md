@@ -253,6 +253,30 @@ Crashes.setListener({
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
 
+## Breakpad
+
+App Center supports Breakpad crashes from Android NDK in a React Native apps.
+
+Follow the normal setup steps above, and in your `MainActivity.java` override `OnCreate` and add the minidump configuration and call into your native code that sets up your Breakpad configuration.
+
+Example:
+```java
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
+      @Override
+      public void accept(String path) {
+        // Path is null when Crashes is disabled.
+        if (path != null) {
+          // links to NDK
+          setupBreakpadListener(path);
+        }
+      }
+    });
+  }
+```
+
 ## Enable or disable App Center Crashes at runtime
 
 You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.

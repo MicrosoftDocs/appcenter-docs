@@ -15,7 +15,7 @@ ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9
 
 This guide describes how to modify your existing Azure Pipelines build that creates an application binary (`.apk` or `.ipa` file) to add an App Center Test task that runs your test suite in App Center Test.
 
-Azure Pipelines is available as part of Azure DevOps Services. Azure Pipelines helps you implement a build, test, and deployment pipeline for any app. For more information about Azure DevOps Services or Azure Pipelines, see [Azure DevOps Documentation](https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops) or [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops), respectively.
+Azure Pipelines is available as part of Azure DevOps Services. Azure Pipelines helps you implement a build, test, and deployment pipeline for any app. For more information about Azure DevOps Services or Azure Pipelines, see [Azure DevOps Documentation](https://docs.microsoft.com/azure/devops/?view=azure-devops) or [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/?view=azure-devops), respectively.
 
 The App Center Test task for Azure Pipelines lets you run your test suites in App Center Test. You can use Appium, XCUItest, Espresso, and Xamarin.UITest frameworks. Read more about the frameworks on the [App Center Test Supported frameworks](supported-frameworks.md) page.
 
@@ -58,7 +58,7 @@ The first method uses an API token; to acquire your account's API token:
 
     ![Screen showing a generated API token](images/vsts-api-token.png)
 
-* Click **Add new API token** button. A pop-up displays the new API token; this pop-up is the **only time** App Center will display this token. Click the clipboard button to copy the API Token to the browser's clipboard. Save the API token somewhere ([Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), for example) where you can securely reference it again later if needed.
+* Click **Add new API token** button. A pop-up displays the new API token; this pop-up is the **only time** App Center will display this token. Click the clipboard button to copy the API Token to the browser's clipboard. Save the API token somewhere ([Azure Key Vault](https://azure.microsoft.com/services/key-vault/), for example) where you can securely reference it again later if needed.
 
 With the API Token on the clipboard:
 
@@ -92,7 +92,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked, then for **Test Framework**, select **Appium Test Framework**. Insert the path to the Appium test-classes, dependency-jars, and the `pom.xml` file into the **Build directory** field. These three artifacts are usually in the `upload` folder.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/en-us/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run appium --app "username/appname" --devices 209ed689
@@ -122,7 +122,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked, then for **Test Framework**, select **Espresso Test Framework**.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/en-us/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run espresso --app "username/appname" --devices 209ed689
@@ -153,7 +153,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **Xamarin UI Test** is selected under **Test Framework**. Insert the path to your build directory; in most cases the build folder is: `<ProjectName>/bin/<configuration>`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/en-us/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run uitest --app "username/appname" --devices 209ed689
@@ -186,7 +186,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **XCUITest** is selected under **Test Framework**. Insert the path to your build directory from the Xcode `build-for-testing` step. Typically, the build folder is: `DerivedData/Build/Products/Debug-iphoneos/`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/en-us/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "master" --locale "en_US" --build-dir pathToXCUItestBuildFolder

@@ -33,7 +33,7 @@ ms.tgt_pltfrm: react-native
 > [!NOTE]
 > For Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its required at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. For additional information, please refer to the [App Center React Native migration guide](migration/react-native-android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -99,7 +99,7 @@ You can set up a listener to be notified whenever a push notification is receive
 > The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.
 
-[!include[](react-native-listener.md)]
+[!INCLUDE [react native listener](includes/react-native-listener.md)]
 
 If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must override the `onNewIntent` method. Inside the Java code for your launcher activity (typically the **MainActivity.java** file), add the following:
 
@@ -116,11 +116,11 @@ public void onNewIntent(Intent intent) {
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android configure notifications](includes/android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 

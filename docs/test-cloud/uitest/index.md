@@ -104,7 +104,7 @@ The relative path example tells `AppBundle` to go up three directories from the 
 | `DeviceIdentifier` | Configures the device to use with the device identifier. This method will be described in more detail below. |
 | `EnableLocalScreenshots` | Enable screenshots when running tests locally. Screenshots are always enabled when tests are running in the cloud. |
 
-For more information on how to run iOS tests on a specific iOS Simulator, please see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/en-us/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
+For more information on how to run iOS tests on a specific iOS Simulator, please see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
 

@@ -33,7 +33,7 @@ App Center Diagnostics groups crashes and errors by similarities, such as reason
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/apple.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
@@ -94,12 +94,12 @@ In a crash report, you can see the current threads that were active when the app
 
 ## Configure Alerts
 
-Stay on top of your crashes by configuring your App Center app definition settings to send an email when a new crash group is created. To configure these alerts:
+Stay on top of your crashes by configuring your App Center app definition settings to send an email notification. You can configure this setting per app to either send an email immediately when a new crash group is created, or send a daily summary email with your app's top crashes. To configure these alerts:
 
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select the box next to Crashes
+4. Select **Immediatly** ,**Daily**, or **Never**. The default configuration is set to **Never**.
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
@@ -119,4 +119,4 @@ If you change your settings from 28 to 90 days, older diagnostics data will not 
 
 ## Upload reports to App Center
 
-The documentation to [upload custom crashes via API](~/diagnostics/upload-custom-crashes.md) has moved.
+The documentation to [upload crashes via API](~/diagnostics/upload-crashes.md) has moved.

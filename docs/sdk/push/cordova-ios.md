@@ -77,13 +77,13 @@ Log in to the App Center portal, select your application, click on the **Push** 
 
      * Download the key file.
 
-       ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
+       ![apple-dev-center-confirm-auth-key](https://docs.microsoft.com/appcenter/sdk/push/images/ios-confirm-auth-key-apple-portal.png)
 
   3. **Push Token**
 
      * On the App Center push settings page, upload your key file using the button labelled "Auth key file:" (you can also drag and drop the file onto it):
 
-       ![auth-key-file](https://docs.microsoft.com/en-us/appcenter/sdk/push/images/apple-push-settings-upload-key-button.png)
+       ![auth-key-file](https://docs.microsoft.com/appcenter/sdk/push/images/apple-push-settings-upload-key-button.png)
 
      * Click Done to complete this configuration.
 
@@ -91,7 +91,7 @@ For more information, refer to the [Apple documentation](https://help.apple.com/
 
 #### [Optional] Enable silent notifications
 
-[!include[](ios-enable-silent-notifications.md)]
+[!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
 
@@ -151,7 +151,7 @@ app.initialize();
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

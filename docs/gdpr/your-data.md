@@ -18,7 +18,7 @@ App Center customers who wish to exercise their rights as data subjects may do s
 
 The right to be forgotten differs from typical account closure in that we must delete your personal information within thirty days of your request. It also differs in that we provide you with a mechanism to programmatically and anonymously validate that your request has been serviced; even after your account has been closed.
 
-To call the delete API, you must first have an API token from Visual Studio App Center with which to call the API method. If you don't have an API token, follow the steps to [get an App Center API Token](https://docs.microsoft.com/en-us/appcenter/api-docs/). The delete endpoint can be found here:
+To call the delete API, you must first have an API token from Visual Studio App Center with which to call the API method. If you don't have an API token, follow the steps to [get an App Center API Token](https://docs.microsoft.com/appcenter/api-docs/). The delete endpoint can be found here:
 
 ```TEXT
 https://appcenter.ms/api/v0.1/user/dsr/delete
@@ -83,7 +83,7 @@ Like the DSR delete method, posting to the DSR export method returns a token tha
 https://appcenter.ms/api/v0.1/user/dsr/export/<your receipt token>
 ```
 
-Some of App Center's services may take a while to execute an export. For long running operations, calls to check export status may initially return an error code specifying that work is in progress. Once the work has completed, a successful response from the method will indicate the Azure storage location from which the information may be [retrieved securely using a returned SAS token](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1#sas-examples). 
+Some of App Center's services may take a while to execute an export. For long running operations, calls to check export status may initially return an error code specifying that work is in progress. Once the work has completed, a successful response from the method will indicate the Azure storage location from which the information may be [retrieved securely using a returned SAS token](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1#sas-examples). 
 
 To cancel your export request, use the cancellation endpoint:
 

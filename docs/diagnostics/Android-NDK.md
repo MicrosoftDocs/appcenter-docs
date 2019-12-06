@@ -13,24 +13,24 @@ ms.custom: analytics
 
 # Android NDK
 
-## Overview
-
-Android NDK allows you to implement parts of your Android apps using C and C++. You can use the **Google Breakpad** client library for your Android apps to receive valid stack traces in native code. The stack traces may only contain memory addresses. They don’t show class names, methods, file names, and line numbers needed to read and understand the crashes.
-
-To get the memory addresses translated for your Android NDK app, you must upload symbols for each build using [Google's Breakpad tool](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md)
+Android NDK allows you to implement parts of your Android apps using C and C++. You can use the **Google Breakpad** client library for your Android apps to receive valid stack traces in native code. The stack traces may only contain memory addresses. They don’t show class names, methods, file names, and line numbers needed to read and understand the crashes. To get the memory addresses translated for your Android NDK app, you must upload application symbols for each build.
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
+If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](/upload-custom-crashes.md#upload-a-breakpad-crash-log-and-minidump).
+
 ## Generate a .zip file to upload
 
-There are two ways for App Center to retrieve the symbols necessary for symbolication. App Center can generate them from the native binaries used in your project, or you can upload the breakpad symbols directly.
+There are two ways for App Center to retrieve the symbols necessary for symbolication. App Center can generate them from the native binaries used in your project, or you can upload the Breakpad symbols directly.
 
 ### Option 1: Upload native binaries
 Put all .so files from the project's `obj/local/$ABI/` directory into a .zip file.
 
-### Option 2: Upload breakpad symbols
+### Option 2: Upload Breakpad symbols
 1. Dump the symbols using the Breakpad toolchain as described in the [Breakpad documentation](https://chromium.googlesource.com/breakpad/breakpad/+/master/README.ANDROID#93).
 2. Create a **symbols.zip** file with the following structure:
+> [!NOTE]
+> If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 
 ```text
 $ unzip -l symbols.zip
@@ -61,7 +61,7 @@ Archive:  symbols.zip
 
 The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Breakpad`.
 
-[!include[](./symbol-upload-api.md)]
+[!INCLUDE [symbol upload api](includes/symbol-upload-api.md)]
 
 ### App Center CLI
 You can also use the CLI to upload symbol files:
@@ -70,4 +70,4 @@ You can also use the CLI to upload symbol files:
 appcenter crashes upload-symbols --breakpad {symbols file}
 ```
 
-[!include[](./ignoring-symbols.md)]
+[!INCLUDE [ignoring symbols](includes/ignoring-symbols.md)]

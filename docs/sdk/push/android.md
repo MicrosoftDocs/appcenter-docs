@@ -36,7 +36,7 @@ dev_langs:
 > [!NOTE]
 > Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, please refer to [the SDK migration guide](migration/android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -238,11 +238,11 @@ class MyPushListener : PushListener {
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android congifure notifications](includes/android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 
@@ -275,7 +275,7 @@ Push.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Push` has been started.
@@ -291,7 +291,7 @@ Push.isEnabled();
 Push.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Push` has been started, it will always return `false` before start.
