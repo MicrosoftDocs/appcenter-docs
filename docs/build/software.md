@@ -28,6 +28,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ## Installed Software
 
+						
 
 ### Language and Runtime
 - java 1.7: OpenJDK Runtime Environment (Zulu 7.34.0.5-CA-macosx) (build 1.7.0_242-b7)
@@ -35,6 +36,14 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - java 11: OpenJDK Runtime Environment Zulu11.35+15-CA (build 11.0.5+10-LTS)
 - java 12: OpenJDK Runtime Environment (Zulu12.3+11-CA) (build 12.0.2+3)
 - java 13: OpenJDK Runtime Environment Zulu13.28+11-CA (build 13.0.1+10-MTS)
+				
+			 
+								
+		
+		
+		 
+		 
+		
 - PowerShell 6.2.3
 - Python 2.7.17
 - Python 3.7.5
@@ -63,6 +72,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 3.7)
 - Pip 19.3.1 (python 2.7)
+				  
 
 ### Project Management
 
@@ -83,6 +93,21 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Fastlane 2.137.0
 - App Center CLI 1.2.2
 - Azure-CLI 2.0.77
+
+					
+
+																										  
+		  
+		 
+		 
+		 
+		 
+		 
+		 
+																									   
+		 
+		 
+		 
 
 ## Xcode
 
@@ -169,6 +194,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | watchOS Simulator 6.1     | watchsimulator6.1 | 11.2, 11.2.1, 11.3_beta |
 | DriverKit 19.0            | driverkit.macosx19.0 | 11.0, 11.1, 11.2, 11.2.1, 11.3_beta |
 
+
 ### Installed Simulators
 
 #### Runtimes
@@ -188,11 +214,18 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 13.1 (17A844) | 11.1        | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
 | iOS 13.2 (17B102) | 11.2, 11.2.1     | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad (7th generation)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
 | iOS 13.3 (17C5032d) | 11.2 11.2.1 11.3_beta | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad (7th generation)<br>iPad Pro<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) | 
-| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J559)<br>tvOS 13.2 (17K90) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0, 11.1<br>11.2, 11.2.1        | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
+| tvOS 11.4 (15L576)<br>tvOS 12.0 (16J5283n)<br>tvOS 12.1 (16J602)<br>tvOS 12.2 (16L225)<br>tvOS 12.4 (16M567)<br>tvOS 13.0 (17J559)<br>tvOS 13.2 (17K90) | 9.4.1<br>10.0<br>10.1<br>10.2, 10.2.1<br>10.3<br>11.0, 11.1<br>11.2, 11.2.1, 11.3_beta        | Apple TV<br>Apple TV 4K<br>Apple TV 4K (at 1080p) |
 | watchOS 4.3 (15T212) | 9.4.1        | Apple Watch 38mm<br>Apple Watch 42mm<br>Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm |
 | watchOS 5.0 (16R5283q)<br>watchOS 5.1 (16R591)<br>watchOS 5.2 (16T224)<br>watchOS 5.3 (16U567) | 10.0<br>10.1<br>10.2, 10.2.1<br>10.3      | Apple Watch Series 2 38mm<br>Apple Watch Series 2 42mm<br>Apple Watch Series 3 38mm<br>Apple Watch Series 3 42mm<br>Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm |
 | watchOS 6.0 (17R566)<br><br>watchOS 6.1 (17S80) | 11.0<br>11.1<br>11.2, 11.2.1, 11.3_beta    | Apple Watch Series 4 40mm<br>Apple Watch Series 4 44mm<br>Apple Watch Series 5 40mm<br>Apple Watch Series 5 44mm |
 
+
+										  
+																																		 
+   
+										
+   
+																		   
 
 ### Device Pairs
 
@@ -305,6 +338,12 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Extra packages
 
+																				
+																				
+																				
+																				
+																				
+																				 
 
 | Package name                           | Description                              |
 |----------------------------------------|------------------------------------------|
@@ -319,6 +358,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Visual Studio for Mac
 
 - 8.3.10.2
+
 
 ### Mono
 
@@ -357,6 +397,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - 11.0.0.0
 - 10.10.0.36
 - 10.6.0.10
+
 
 ### Xamarin.Android SDK
 
