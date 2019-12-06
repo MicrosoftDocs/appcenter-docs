@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/14/2019
+ms.date: 12/10/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -100,6 +100,10 @@ appcenter distribute stores publish \
 ```
 
 You'll need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
+
+## Why does the Apple ID require the admin role
+
+Apple requires atleast an admin role to create new version for apps, [see this table which clarifies permissions](https://developer.apple.com/support/roles/).
 
 ## Debugging a failed release
 
