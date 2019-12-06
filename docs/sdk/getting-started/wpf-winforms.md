@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 12/06/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.service: vs-appcenter
