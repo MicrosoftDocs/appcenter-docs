@@ -38,7 +38,6 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
 * .NET Core is supported only when the WPF/WinForms application runs on Windows.
-* If your project explicitly or implicitly uses SQLitePCLRaw.bundle_green, its version must be greater than or equal to 1.14.0, but less than 2.0.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
