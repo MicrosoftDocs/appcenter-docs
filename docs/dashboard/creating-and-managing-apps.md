@@ -16,7 +16,7 @@ ms.service: vs-appcenter
 
 To create an app:
 
-1. Log in to [Visual Studio App Center](https://appcenter.ms)
+1. Log in to [Visual Studio App Center](https://appcenter.ms).
 2. Click the **Add new** dropdown in the upper-right corner of the page, then choose **Add new app**.
 3. Populate the panel that appears with information about the new app.
 
@@ -40,9 +40,9 @@ App secret is like an api key for your app, it allows events and telemetry to be
 
 On each app there are three roles:
 
-* **Managers** can manage app settings, collaborators, and integrations
-* **Developers** can manage app services (e.g. create builds, run tests)
-* **Viewers** can view and download all data but cannot make changes
+* **Managers** can manage app settings, collaborators, and integrations.
+* **Developers** can manage app services (e.g. create builds, run tests).
+* **Viewers** can view and download all data but cannot make changes.
 
 For every app you create, whether owned by you or your organization, you are automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
 
@@ -53,10 +53,10 @@ For every app you create, whether owned by you or your organization, you are aut
 
 To change the permission of a collaborator:
 
-1. Select an app from the dashboard
-2. In the left side navigation, select **Settings**
-3. Select **Collaborators**
-4. Next to the name of the user you wish to change roles of, reassign the role by making a selection from the drop-down
+1. Select an app from the dashboard.
+2. In the left side navigation, select **Settings**.
+3. Select **Collaborators**.
+4. Next to the name of the user you wish to change roles of, reassign the role by making a selection from the drop-down.
 
 > [!NOTE]
 > Only managers can change collaborator permissions.
@@ -74,11 +74,11 @@ When you transfer an app into an organization, all app data will be transferred 
 
 To transfer an app from your personal account to an organization or from one organization to another:
 
-1. Select an app from the dashboard
-2. In the left side navigation, select **Settings**
-3. In the top right corner, select the menu (three dots)
-4. Select **Transfer app to organization**
-5. Select the organization you wish to transfer the app into
+1. Select an app from the dashboard.
+2. In the left side navigation, select **Settings**.
+3. In the upper-right corner, select the menu (three dots).
+4. Select **Transfer app to organization**.
+5. Select the organization you wish to transfer the app into.
 
 > [!NOTE]
 > * You can only transfer an app in and out of organizations you are an admin of.
@@ -86,11 +86,11 @@ To transfer an app from your personal account to an organization or from one org
 
 ## Deleting an app
 
-You can delete any App Center app which you no longer need. Be careful: if you delete your app, you will lose all data associated with the app permanently. Follow the steps to delete any of your apps:
+You can delete any App Center app which you no longer need. Be careful: if you delete your app, you'll lose all data associated with the app permanently. Follow the steps to delete any of your apps:
 
 1. Select the app you want to delete from the dashboard.
 2. In the left side navigation, select **Settings**.
-3. In the top right corner, select the menu (three dots).
+3. In the upper-right corner, select the menu (three dots).
 4. Select **Delete app**.
 5. Carefully consider the action, then choose **Delete app** or **Cancel**.
 
