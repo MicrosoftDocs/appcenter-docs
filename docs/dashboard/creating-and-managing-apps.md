@@ -76,7 +76,7 @@ To transfer an app from your personal account to an organization or from one org
 
 1. Select an app from the dashboard.
 2. In the left side navigation, select **Settings**.
-3. In the upper-right corner, select the menu (three dots).
+3. Select the 'More' menu, the three dots in the upper-right corner.
 4. Select **Transfer app to organization**.
 5. Select the organization you wish to transfer the app into.
 
@@ -90,7 +90,7 @@ You can delete any App Center app which you no longer need. Be careful: if you d
 
 1. Select the app you want to delete from the dashboard.
 2. In the left side navigation, select **Settings**.
-3. In the upper-right corner, select the menu (three dots).
+3. Select the 'More' menu, the three dots in the upper-right corner.
 4. Select **Delete app**.
 5. Carefully consider the action, then choose **Delete app** or **Cancel**.
 
