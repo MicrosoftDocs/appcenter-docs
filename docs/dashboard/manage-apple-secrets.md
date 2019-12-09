@@ -23,9 +23,9 @@ You can add your Apple ID and signing certificate as part of the distribution wo
 
 App Center uses your Apple ID to manage your provisioning profile and your signing certificate to re-sign for a release which includes all testers.
 
-## How can app members use my Apple ID
+## How can app members use my Apple ID?
 
-When you add an Apple ID to an app all other members will use it for App Store Connect communication and automatic device management. Because the Apple ID is a personal log it's only possible to add it to an app.
+When you add an Apple ID to an app, all other app members will use it for to communicate with App Store Connect and automatic device management. Because the Apple ID is a personal login, it is only possible to add it to an app and not an organization.
 
 ## Two factor authentication
 
