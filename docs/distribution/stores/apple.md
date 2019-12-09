@@ -72,7 +72,7 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 6. Save by clicking **Update**.
 
 ## Publishing through the CLI
-Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, e.g., Jenkins or Go CI.
+Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, for example, Jenkins or Go CI.
 
 You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 
 
@@ -103,7 +103,7 @@ You'll need to fill in the blanks like the list command. Instead of having a sta
 
 ## Why does the Apple ID require the admin role
 
-Apple requires atleast an admin role to create new version for apps, [see this table which clarifies permissions](https://developer.apple.com/support/roles/).
+Apple requires at least an admin role to create a new version for apps, [see this table that clarifies permissions](https://developer.apple.com/support/roles/).
 
 ## Debugging a failed release
 
