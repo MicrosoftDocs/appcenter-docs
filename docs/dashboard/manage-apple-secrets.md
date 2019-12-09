@@ -15,7 +15,7 @@ ms.custom: dashboard
 
 ## How does Secret storage work
 
-Your Apple ID and certificate are stored securely in an encrypted vault designed so that only App Center internal services can read the values. As with any other credentials, users can't download them after adding to the Secret storage. However, the Apple ID owner can assign it to services in App Center.
+Your Apple ID and certificate are stored securely in an encrypted vault designed so that only App Center internal services are allowed to read the values. As with any other credentials, it is not possible to download them from the Secret storage. However, the Apple ID owner can assign it to services in App Center.
 
 ## How do I add Apple ID and certificate to storage?
 
@@ -30,11 +30,11 @@ App Center uses your Apple ID to manage your provisioning profile and your signi
 
 ## How can app members use my Apple ID?
 
-When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members and they will use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
+When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members, and they will use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
 
 ## Two factor authentication
 
-App Center supports Apple IDs with two-factor authentication protection enabled. App Center only supports six-digit codes generated from a trusted devices.
+App Center supports Apple IDs with two-factor authentication protection enabled. App Center only supports six-digit codes generated from a trusted device.
 
 Any of your trusted Apple devices can generate a six-digit code by clicking "Allow." Once you have a code, fill out the dialogue and App Center uses the same session next time it's needed. A six-digit code must be renewed every 30 days. You can renew a code with a click on **Reconnect account** from the UI. The UI will be prompted for a new six-digit code.
 
