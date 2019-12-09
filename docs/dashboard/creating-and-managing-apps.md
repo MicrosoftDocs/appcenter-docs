@@ -84,6 +84,8 @@ To transfer an app from your personal account to an organization or from one org
 > * You can only transfer an app in and out of organizations you are an admin of.
 > * After transferring an app into an organization, you cannot transfer it back to your personal account.
 
+![The three dots 'More' settings menu](images/settings-dot-menu.png)
+
 ## Deleting an app
 
 You can delete any App Center app which you no longer need. Be careful: if you delete your app, you'll lose all data associated with the app permanently. Follow the steps to delete any of your apps:
@@ -93,8 +95,6 @@ You can delete any App Center app which you no longer need. Be careful: if you d
 3. Select the 'More' menu, the three dots in the upper-right corner.
 4. Select **Delete app**.
 5. Carefully consider the action, then choose **Delete app** or **Cancel**.
-
-![The 'three dot' settings menu](images/settings-dot-menu.png)
 
 ## Next steps
 
