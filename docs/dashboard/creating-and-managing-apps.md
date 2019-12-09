@@ -4,7 +4,7 @@ description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
 author: blparr
 ms.author: blparr
-ms.date: 06/13/2019
+ms.date: 12/09/2019
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
@@ -49,7 +49,6 @@ For every app you create, whether owned by you or your organization, you are aut
 > [!NOTE]
 > When someone gets added to an app owned by an organization, they get invited as **Members** to that organization.
 
-
 ## Changing app roles
 
 To change the permission of a collaborator:
@@ -83,7 +82,19 @@ To transfer an app from your personal account to an organization or from one org
 
 > [!NOTE]
 > * You can only transfer an app in and out of organizations you are an admin of.
-> * After transferring an app into an organization, you cannot transfer it back to your personal account. 
+> * After transferring an app into an organization, you cannot transfer it back to your personal account.
+
+## Deleting an app
+
+You can delete any App Center app which you no longer need. Be careful: if you delete your app, you will lose all data associated with the app permanently. Follow the steps to delete any of your apps:
+
+1. Select the app you want to delete from the dashboard.
+2. In the left side navigation, select **Settings**.
+3. In the top right corner, select the menu (three dots).
+4. Select **Delete app**.
+5. Carefully consider the action, then choose **Delete app** or **Cancel**.
+
+![The 'three dot' settings menu](images/settings-dot-menu.png)
 
 ## Next steps
 
