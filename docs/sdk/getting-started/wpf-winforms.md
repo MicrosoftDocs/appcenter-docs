@@ -38,6 +38,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 * Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
 * .NET Core is supported only when the WPF/WinForms application runs on Windows.
+* If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
