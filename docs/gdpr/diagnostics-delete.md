@@ -1,6 +1,6 @@
 ---
-title: Deleting diagnostics Data
-description: How to delete personal information from diagnostics to your users
+title: Deleting diagnostics data
+description: How to delete personal information from user diagnostics
 keywords: GDPR, DSR, privacy, EU
 author: blparr
 ms.author: blparr
@@ -12,19 +12,19 @@ ms.service: vs-appcenter
 
 # Deleting diagnostics data
 
-Data Subject Requests (DSRs) to be forgotten must be serviced within thirty (30) days. App Center diagnostics retains raw data for ninety (90) days by default. You can adjust your retention settings in the App Center portal and [application programming interface](../api-docs/index.md) (API).
-This documentation is a guide on the steps you must follow if a Data Subject Request for delete comes in and your retention setting is higher than twenty-eight (28) days.
+Data Subject Requests (DSRs) to be forgotten must be serviced within 30 days. App Center diagnostics retains raw data for 90 days by default. You can adjust your retention settings in the App Center portal and [application programming interface](../api-docs/index.md) (API).
+This documentation is a guide on the steps you must follow if a Data Subject Request for delete comes in and your retention setting is higher than 28 days.
 
 There are two possible starting points:
 
-- You don't have a mapping of your user IDs to install IDs.
-- You have a mapping of your user IDs to install IDs.
+- You [don't have a mapping](#you-have-a-mapping-of-your-user-ids-to-install-ids) of your user IDs to install IDs.
+- You [have a mapping](#you-have-a-mapping-of-your-user-ids-to-install-ids) of your user IDs to install IDs.
 
 In both cases, once you have the install IDs of the user, you should delete the associated diagnostics data. Details for both cases are in the sections below.
 
-## You did not retain a mapping of your user IDs to install IDs
+## You have a mapping of your user IDs to install IDs
 
-If you did not keep a mapping between your user IDs and install IDs, you must follow some extra steps outlined below.
+If you did not keep a mapping between your user IDs and install IDs, you must follow some extra steps, described in the following subsections.
 
 1. Export diagnostics data to Blob Storage.
 2. Search for personal data within the exported information in Azure Blob Storage.
@@ -66,9 +66,9 @@ Search within your exported diagnostics data in Azure Blob Storage for any occur
 
 Locate the install ID for the diagnostics logs that contain personal information. Learn more in the [application install ID documentation](install-id.md). Now that you have the install IDs, you can delete the diagnostic data.
 
-## You retained a mapping of your user IDs to install IDs
+## You don't have a mapping of your user IDs to install IDs
 
-If you are keeping a mapping between your user IDs and their App Center install IDs, you can directly use them to block and delete the data of interest.
+If you keep a mapping between your user IDs and their App Center install IDs, you can directly use them to block and delete the data of interest.
 
 ## Delete diagnostics data
 
