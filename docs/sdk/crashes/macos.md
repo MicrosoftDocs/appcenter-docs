@@ -139,6 +139,47 @@ UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true
 > [!NOTE]
 > App Center SDK set the flag automatically in versions 1.10.0 and below. Starting with version 1.11.0 this flag is no longer set automatically.
 
+### Disable swizzling for reporting exceptions thrown on the main thread
+
+> [!NOTE]
+> In most cases, it works as-is, so the actions below should be only performed if your app can't use swizzling for some reason.
+
+By default **App Center SDK** uses **swizzling** to handle additional exception details. If for any reason you don't want to use **swizzling**, you should override application's `reportException:` handler yourself in order for crashes to work correctly.
+
+1. Create **ReportExceptionApplication.m** file and add the following implementation:
+
+    ```objc
+    @import Cocoa;
+    @import AppCenterCrashes;
+
+    @interface ReportExceptionApplication : NSApplication
+    @end
+
+    @implementation ReportExceptionApplication
+
+    - (void)reportException:(NSException *)exception {
+      [MSCrashes applicationDidReportException:exception];
+      [super reportException:exception];
+    }
+
+    - (void)sendEvent:(NSEvent *)theEvent {
+      @try {
+        [super sendEvent:theEvent];
+      } @catch (NSException *exception) {
+        [self reportException:exception];
+      }
+    }
+
+    @end
+    ```
+
+    > [!NOTE]
+    > Swift's `try`/`catch` doesn't work with `NSException`. These exceptions can be handled in Objective-C only.
+
+2. Open **Info.plist** file and replace the **NSApplication** in the **Principal class** field with your application class name, **ReportExceptionApplication** in this example.
+
+3. In order to disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
+
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 
 ## Disabling Mach exception handling
@@ -154,49 +195,4 @@ The `disableMachExceptionHandler`-method provides an option to disable catching 
 ```swift
 MSCrashes.disableMachExceptionHandler()
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
-```
-
-### Crash reporting without swizzling
-
-By default **App Center SDK** uses **swizzling**. If for any reason you don't want to use **swizzling**, you should override application `reportException` handler yourself in order for crashes to work correctly.
-
-1. Create **CrashExceptionApplication.h** file and add the following implementation:
-
-```objc
-#import <Cocoa/Cocoa.h>
-
-@interface CrashExceptionApplication : NSApplication
-@end
-```
-
-2. Create **CrashExceptionApplication.m** file and add the following implementation:
-
-```objc
-#import "CrashExceptionApplication.h"
-@import AppCenterCrashes;
-
-@implementation CrashExceptionApplication
-
-- (void)reportException:(NSException *)exception {
-  [MSCrashes applicationDidReportException:exception];
-  [super reportException:exception];
-}
-
-- (void)sendEvent:(NSEvent *)theEvent {
-  @try {
-    [super sendEvent:theEvent];
-  } @catch (NSException *exception) {
-    [self reportException:exception];
-  }
-}
-
-@end
-```
-
-3. Open **Info.plist** and replace the **NSApplication** in the **Principal class** field with your application class name, **CrashExceptionApplication** in this example.
-
-4. In order to disable swizzling in **App Center SDK**, add the following line under `applicationDidFinishLaunching`:
-
-```objc
-[[NSUserDefaults standardUserDefaults] registerDefaults:@{@"NSApplicationCrashOnExceptions" : @NO}];
 ```
