@@ -103,7 +103,7 @@ You'll need to fill in the blanks like the list command. Instead of having a sta
 
 ## Why does the Apple ID require the admin role
 
-Apple requires at least an admin role to create a new version for apps, [see this table that clarifies permissions](https://developer.apple.com/support/roles/).
+Apple requires at least an admin role to _Create apps and submit versions_ and _Upload builds_, [see this table that clarifies permissions](https://developer.apple.com/support/roles/).
 
 ## Debugging a failed release
 
