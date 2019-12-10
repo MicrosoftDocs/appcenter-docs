@@ -50,7 +50,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - v8.16.2
 - v10.17.0
 - v12.13.1
-- v13.2.0
+- v13.3.0
 
 ### Package Management
 
@@ -244,7 +244,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-26            | Android SDK Platform 26, Revision 2       |
 | android-27            | Android SDK Platform 27, Revision 3       |
 | android-28            | Android SDK Platform 28, Revision 6       |
-| android-29            | Android SDK Platform 29, Revision 3       |
+| android-29            | Android SDK Platform 29, Revision 4       |
 
 ### Android SDK Build-tools
 
@@ -291,7 +291,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.2.1                                    |
+| Android Emulator      | 29.2.11                                   |
 
 ### Google APIs
 
