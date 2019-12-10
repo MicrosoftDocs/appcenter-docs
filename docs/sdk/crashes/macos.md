@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: winnieli
 ms.author: yuli1
-ms.date: 11/25/2019
+ms.date: 12/10/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -125,7 +125,7 @@ MSCrashes.notify(with: .send)
 MSCrashes.notify(with: .always)
 ```
 
-### Enable catching uncaught exceptions thrown on the main thread
+## Enable catching uncaught exceptions thrown on the main thread
 
 AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK cannot catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this will allow the application to crash on uncaught exceptions and the SDK can report them.
 
