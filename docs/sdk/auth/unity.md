@@ -113,7 +113,7 @@ You also need to collect the user profile fields during the sign-up process so t
 
 ![User Attributes Settings](images/user-attributes.png)
 
-If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.
@@ -207,7 +207,7 @@ To enable App Center Auth again, use the same API but pass `true` as a parameter
 Auth.SetEnabledAsync(true);
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 

@@ -94,4 +94,4 @@ Once you save the configuration, a new build will be kicked off automatically.
 
 ### 4. Supported versions and requirements
 
-The minimum [Windows 10 Build](https://docs.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version) supported to build UWP apps is 10240. Our build machines are running Visual Studio 2017.
+The minimum [Windows 10 Build](https://docs.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version) supported to build UWP apps is 10240. Our build machines are running Visual Studio 2017.

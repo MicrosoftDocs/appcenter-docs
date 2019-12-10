@@ -29,7 +29,7 @@ a.	Third Party Components.  The software may include third party components wit
 •	remove, minimize, block or modify any notices of Microsoft or its suppliers in the software; 
 •	use the software in any way that is against the law; or
 •	share, publish, rent or lease the software, or provide the software as a stand-alone offering for others to use, or transfer the software or this agreement to any third party.
-4.	EXPORT RESTRICTIONS. You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit www.microsoft.com/exporting. 
+4.	EXPORT RESTRICTIONS. You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit https://www.microsoft.com/exporting. 
 5.	SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for it.
 6.	ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
 7.	APPLICABLE LAW. If you acquired the software in the United States, Washington law applies to interpretation of and claims for breach of this agreement, and the laws of the state where you live apply to all other claims. If you acquired the software in any other country, its laws apply.

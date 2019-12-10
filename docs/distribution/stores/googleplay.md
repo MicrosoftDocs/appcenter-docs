@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/18/2019
+ms.date: 12/10/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -109,7 +109,7 @@ Close the window and the new service account shows on the original page. Click t
 
 ## Create a Google Play connection in App Center
 
-1. Click on **Stores** under Distribution in the left menu.
+1. Click on **Stores** under Distribute in the left menu.
 2. In the middle of the page, click on the **Connect to Store** button.
 3. Select **Google Play** store.
 4. Click on **Next**.

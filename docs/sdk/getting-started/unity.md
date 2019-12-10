@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: jwhitedev
 ms.author: jawh
-ms.date: 08/01/2019
+ms.date: 11/22/2019
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.service: vs-appcenter
@@ -80,6 +80,37 @@ As an alternative, each of the individual Unity packages can be downloaded and i
 ### 3.2b Import the package
 
 Open your Unity project, then double-click the package you downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Repeat this step for each package you downloaded and plan to use in your project.
+
+### 3.3 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+  a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
+
+  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+> [!NOTE]
+> If you don't already have your own **AndroidManifest.xml** file, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created one at the time of build.
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
 
 ## 4. Enable the SDK
 

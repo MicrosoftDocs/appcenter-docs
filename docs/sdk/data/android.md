@@ -4,7 +4,7 @@ description: How to configure App Center data for Android
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 11/13/2019
+ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
         ```groovy
         dependencies {
-          def appCenterSdkVersion = '2.5.0'
+          def appCenterSdkVersion = '2.5.1'
           implementation "com.microsoft.appcenter:appcenter-data:${appCenterSdkVersion}"
         }
         ```
@@ -242,7 +242,7 @@ Data.read(user.id, User::class.java, DefaultPartitions.USER_DOCUMENTS, ReadOptio
 
 You specify the time-to-live (TTL) on a document by using `new ReadOptions(timeToLiveInSeconds)` as the last parameter (omit `new` for kotlin).
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > Calling `get()` on any `AppCenterFuture` object returned by any `Data` API on the UI thread will cause a deadlock.

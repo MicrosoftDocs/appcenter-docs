@@ -4,7 +4,7 @@ description: Using Auth in App Center
 keywords: sdk, auth
 author: amchew
 ms.author: achew
-ms.date: 11/06/2019
+ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: b19b58c4-f662-41bd-8ca3-049ae1e0b90d
 ms.service: vs-appcenter
@@ -38,7 +38,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '2.5.0'
+       def appCenterSdkVersion = '2.5.1'
        implementation "com.microsoft.appcenter:appcenter-auth:${appCenterSdkVersion}"
     }
     ```
@@ -229,7 +229,7 @@ You also need to collect the user profile fields during the sign-up process so t
 
 ![User Attributes Settings](images/user-attributes.png)
 
-If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.
@@ -337,7 +337,7 @@ Auth.isEnabled();
 Auth.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Auth` has been started, it will always return `false` before start.

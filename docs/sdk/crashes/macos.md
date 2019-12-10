@@ -38,7 +38,7 @@ Also note that crash logs on macOS require Symbolication, please check out the [
 
 App Center supports crash reporting in macOS extensions. The usage is the same as in the container application.
 
-[!include[](apple-common-methods-1.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
 ### Ask for the user's consent to send a crash log
 
@@ -139,7 +139,7 @@ UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true
 > [!NOTE]
 > App Center SDK set the flag automatically in versions 1.10.0 and below. Starting with version 1.11.0 this flag is no longer set automatically.
 
-[!include[](apple-common-methods-2.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 
 ## Disabling Mach exception handling
 

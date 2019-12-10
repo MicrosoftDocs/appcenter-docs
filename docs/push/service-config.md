@@ -17,7 +17,7 @@ The target platforms for your app (Apple iOS, Google Android, and Microsoft Wind
 
 - Apple iOS devices use the [Apple Push Notification service (APNs)](https://developer.apple.com/notifications/) to deliver notifications.
 - Google Android devices use the [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) service to deliver notifications.
-- Windows devices use the [Windows Notifications Services (WNS)](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) to deliver notifications.
+- Windows devices use the [Windows Notifications Services (WNS)](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) to deliver notifications.
 
 The App Center Push (ACP) service abstracts away the complexities of dealing with multiple vendor services, and gives you a single interface for sending notifications to devices running your app, and single SDK to use in your apps to process notifications. However, before ACP can send notifications to your app's registered devices, you must provide configuration details for the third-party notification service your app's target platform uses.
 

@@ -4,7 +4,7 @@ description: Using Push in App Center
 keywords: sdk, push
 author: elamalani
 ms.author: emalani
-ms.date: 11/06/2019
+ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.service: vs-appcenter
@@ -36,7 +36,7 @@ dev_langs:
 > [!NOTE]
 > Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, please refer to [the SDK migration guide](migration/android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -79,7 +79,7 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     dependencies {
         // Add App Center Push module dependency
-        def appCenterSdkVersion = '2.5.0'
+        def appCenterSdkVersion = '2.5.1'
         implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
     }
 
@@ -238,11 +238,11 @@ class MyPushListener : PushListener {
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android congifure notifications](includes/android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 
@@ -275,7 +275,7 @@ Push.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Push` has been started.
@@ -291,7 +291,7 @@ Push.isEnabled();
 Push.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Push` has been started, it will always return `false` before start.

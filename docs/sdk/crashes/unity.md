@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/11/2019
+ms.date: 12/04/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -34,6 +34,12 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 
 > [!IMPORTANT]
 > The current SDK does not support Crashes for Unity when running on UWP, the instructions in this page cover only Android and iOS.
+
+> [!NOTE]
+> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
+
+> [!NOTE]
+> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK will not collect crash logs.
 
 ## Generate a test crash
 
@@ -359,9 +365,6 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 ```
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
-
-> [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
 
 > [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

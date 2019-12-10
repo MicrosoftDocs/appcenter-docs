@@ -19,7 +19,7 @@ This article walks you through how to export data per your user request. In orde
 
 ## Use Azure Blob Storage
 
-Export all your errors and symbolicated crashes, including stack traces and attachments, to Azure Blog Storage. Note that you need an Azure subscription to export your data to Azure Blob Storage. You can learn more about how App Center works with Azure Blob Storage in the [App Center Export documentation](https://docs.microsoft.com/en-us/appcenter/analytics/export).
+Export all your errors and symbolicated crashes, including stack traces and attachments, to Azure Blog Storage. Note that you need an Azure subscription to export your data to Azure Blob Storage. You can learn more about how App Center works with Azure Blob Storage in the [App Center Export documentation](https://docs.microsoft.com/appcenter/analytics/export).
 
 To export Diagnostics data to Blob Storage, call the following App Center API:
 
