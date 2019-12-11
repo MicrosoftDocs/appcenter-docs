@@ -28,30 +28,30 @@ App Center supports three different ways of setting up code signing for Android 
 
 1. Go to your app.
 2. Go to **Build**.
-3. Either choose the wrench 'Settings' menu, or the three dots 'More' menu at the right end of a branch row. In the three dots menu choose **Configure build**.
-4. Enable the **Sign builds** slider.
+3. Choose the menu at the right of the branch row (either 'Settings' or 'More'). If this branch has no settings yet, choose **Configure build** from the menu.
+4. Enable **Sign builds**.
+5. Choose **Save**.
 
-Then, depending on your scenario, use the most suitable of the three options in the sections below:
+Then, depending on your scenario, use the most suitable of the three options in the sections below. The first option involves checking in credentials to your repository, while the other two use App Center to handle your credentials instead.
 
-### A. Storing everything in the Gradle configuration
+## A. Storing everything in the Gradle configuration
 
-You can specify the signing details in the `build.gradle` file. The signing details, along with all credentials and the keystore information, will be available in the repository. Just add all the items you need to your code and check them in to your repository. Then in the branch configuration in App Center, check the checkbox titled **My Gradle settings are entirely set to handle signing automatically**.
+You can specify the signing details in the `build.gradle` file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the branch configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
 
-The other two methods don't involve checking in credentials to your repository.
-
-### B. Uploading everything to App Center
+## B. Uploading everything to App Center
 
 You can upload the keystore and configure the signing credentials through App Center. In this case, App Center will first build your Android app and then run a signing step after the successful build.
 
-A build can only be signed once. Please make sure you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant. If there are signing settings both in App Center and in the Gradle file, the build may end up signed twice and this will lead to conflicts.
+> [!NOTE]
+> A build can only be signed once. Make sure you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant. If there are signing settings both in App Center and in the Gradle file, the build may end up signed twice and this will lead to conflicts.
 
 Set up your [branch configuration](#setting-up-code-signing) in App Center as follows:
 
-1. Uncheck the checkbox **My Gradle settings are entirely set to handle signing automatically**.
+1. Disable **My Gradle settings are entirely set to handle signing automatically**.
 2. Upload your keystore file to the **Keystore file** upload file drop. You can drag the file onto the box or click it and browse for the file. Keystore files have the extension .keystore or .jks.
-3. Enter the keystore password, key alias, and key password in the **Environment variables** section. These values are the same ones you would otherwise enter in Android Studio where you created the keystore.
+3. Enter the keystore password, key alias, and key password in the **Environment variables** section. These values are the same ones you would otherwise enter in Android Studio when you sign a build.
 
-### C. Storing Signing Details in the Repository with Environment Variables
+## C. Storing Signing Details in the Repository with Environment Variables
 
 Use this method if your repository already contains the keystore, but you don't want to store the credentials there. At build time, the credentials will be provided as [System properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_system_properties) to the Gradle build. See the following code sample on how to make use of them:
 
@@ -78,7 +78,7 @@ In the code above, securing values behind system properties injected into your b
 
 1. Go to your [branch configuration](#setting-up-code-signing).
 2. Make sure the checkbox called **My Gradle settings are entirely set to handle signing automatically** it not checked.
-3. Enter the keystore password, key alias, and key password in the **Environment variables** section. These values are the same ones you would otherwise enter in Android Studio where you created the keystore.
+3. Enter the keystore password, key alias, and key password in the **Environment variables** section. These values are the same ones you would otherwise enter in Android Studio when you sign a build.
 
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.
 
