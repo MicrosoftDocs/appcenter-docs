@@ -142,9 +142,9 @@ Once you've acquired the CodePush plugin, you must integrate it into the Xcode p
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](../README.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
-   *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](./api-js.md#CodePushOptions)*
+   *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#CodePushOptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (iOS)
 
@@ -389,7 +389,7 @@ In order to integrate CodePush into your Android project, perform the following 
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](../README.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
    Your `strings.xml` should looks like this:
 
@@ -400,7 +400,7 @@ In order to integrate CodePush into your Android project, perform the following 
     </resources>
     ```
 
-    *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](./api-js.md#CodePushOptions)*
+    *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#CodePushOptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (Android)
 
