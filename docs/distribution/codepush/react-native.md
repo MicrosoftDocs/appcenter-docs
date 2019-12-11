@@ -235,7 +235,7 @@ And that's it! Isn't RNPM awesome? :)
    > [!NOTE]
    > Alternatively, if you prefer, you can add the `-lz` flag to the `Other Linker Flags` field in the `Linking` section of the `Build Settings`.*
 
-### Plugin Configuration (iOS)
+### Plugin Configuration for React Native lower than 0.60 (iOS)
 
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
@@ -248,7 +248,7 @@ Once your Xcode project has been set up to build/link the CodePush plugin, you n
     #import <CodePush/CodePush.h>
     ```
 
-For React Native 0.59 and above:
+For React Native 0.59 - 0.59.10:
 
 2. Find the following line of code, which sets the source URL for bridge for production releases:
 
@@ -283,7 +283,7 @@ This change configures your app to always load the most recent version of your a
 
 Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
-For React Native 0.59 and above:
+For React Native 0.59 - 0.59.10:
 
 ```objective-c
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
