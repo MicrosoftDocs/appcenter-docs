@@ -45,7 +45,7 @@ We try our best to maintain backwards compatibility of our plugin with previous 
 | v0.34-v0.35             | v1.15-v1.17 *(RN refactored native hosting code)*    |
 | v0.36-v0.39             | v1.16-v1.17 *(RN refactored resume handler)*         |
 | v0.40-v0.42             | v1.17 *(RN refactored iOS header files)*             |
-| v0.43-v0.44             | v2.0+ *(RN refactored unmanage dependencies)*       |
+| v0.43-v0.44             | v2.0+ *(RN refactored uimanager dependencies)*       |
 | v0.45                   | v3.0+ *(RN refactored instance manager code)*        |
 | v0.46                   | v4.0+ *(RN refactored js bundle loader code)*         |
 | v0.46-v0.53             | v5.1+ *(RN removed unused registration of JS modules)*|
