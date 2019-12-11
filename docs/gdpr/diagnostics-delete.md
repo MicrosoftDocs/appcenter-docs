@@ -22,7 +22,7 @@ There are two possible starting points:
 
 In both cases, once you have the install IDs of the user, you should delete the associated diagnostics data. Details for both cases are in the sections below.
 
-## You have a mapping of your user IDs to install IDs
+## You don't have a mapping of your user IDs to install IDs
 
 If you did not keep a mapping between your user IDs and install IDs, you must follow some extra steps, described in the following subsections.
 
@@ -66,7 +66,7 @@ Search within your exported diagnostics data in Azure Blob Storage for any occur
 
 Locate the install ID for the diagnostics logs that contain personal information. Learn more in the [application install ID documentation](install-id.md). Now that you have the install IDs, you can delete the diagnostic data.
 
-## You don't have a mapping of your user IDs to install IDs
+## You have a mapping of your user IDs to install IDs
 
 If you keep a mapping between your user IDs and their App Center install IDs, you can directly use them to block and delete the data of interest.
 
