@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: winnieli
 ms.author: yuli1
-ms.date: 12/10/2019
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -139,12 +139,9 @@ UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true
 > [!NOTE]
 > App Center SDK set the flag automatically in versions 1.10.0 and below. Starting with version 1.11.0 this flag is no longer set automatically.
 
-### Disable swizzling for reporting exceptions thrown on the main thread
+### Disable forwarding of the application main class's methods calls to App Center Crashes
 
-> [!NOTE]
-> In most cases, it works as-is, so the actions below should be only performed if your app can't use swizzling for some reason.
-
-By default **App Center SDK** uses **swizzling** to handle additional exception details. If for any reason you don't want to use **swizzling**, you should override application's `reportException:` handler yourself in order for crashes to work correctly.
+The App Center Crashes SDK uses swizzling to improve its integration by forwarding itself some of the application main class's methods calls. Method swizzling is a way to change the implementation of methods at runtime. If for any reason you don't want to use swizzling (e.g. because of a specific policy), you should override the application's `reportException:` and `sendEvent:` methods yourself in order for Crashes to report exceptions thrown on the main thread correctly.
 
 1. Create **ReportExceptionApplication.m** file and add the following implementation:
 
