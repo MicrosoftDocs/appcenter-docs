@@ -88,7 +88,12 @@ To transfer an app from your personal account to an organization or from one org
 
 ## Deleting an app
 
-You can delete any App Center app that you no longer need. Be careful: if you delete your app, you'll lose all data associated with the app permanently. Follow the steps to delete any of your apps:
+You can delete any App Center app that you no longer need.
+
+> [!WARNING]
+> Be careful: if you delete your app, you'll lose all data associated with the app permanently.
+
+Follow these steps to delete any of your apps:
 
 1. Select the app you want to delete from the dashboard.
 2. In the left side navigation, select **Settings**.
