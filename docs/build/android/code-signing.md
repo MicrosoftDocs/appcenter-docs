@@ -24,7 +24,7 @@ If you don't currently have a keystore, you can generate one in Android Studio. 
 
 ## Setting up Code Signing
 
-App Center supports three different ways of setting up code signing for Android apps. For all three methods, you first need to go to the branch configuration and enable code signing:
+App Center supports three different ways of setting up code signing for Android apps. For all three methods, you first need to go to the build configuration and enable code signing:
 
 1. Go to your app.
 2. Go to **Build**.
@@ -36,7 +36,7 @@ Then, depending on your scenario, use the most suitable of the three options in 
 
 ## A. Storing everything in the Gradle configuration
 
-You can specify the signing details in the `build.gradle` file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the branch configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
+You can specify the signing details in the `build.gradle` file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the build configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
 
 ## B. Uploading everything to App Center
 
@@ -45,7 +45,7 @@ You can upload the keystore and configure the signing credentials through App Ce
 > [!NOTE]
 > A build can only be signed once. Make sure you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant. If there are signing settings both in App Center and in the Gradle file, the build may end up signed twice and this will lead to conflicts.
 
-Set up your [branch configuration](#setting-up-code-signing) in App Center as follows:
+Set up your [build configuration](#setting-up-code-signing) in App Center as follows:
 
 1. Disable **My Gradle settings are entirely set to handle signing automatically**.
 2. Upload your keystore file to the **Keystore file** upload file drop. You can drag the file onto the box or click it and browse for the file. Keystore files have the extension .keystore or .jks.
@@ -76,7 +76,7 @@ android {
 
 In the code above, securing values behind system properties injected into your build keeps your signing credentials safe – the values are encrypted and only available to the build agents at build time. You can provide the values through App Center. You can also hard code any of the values, and check them in to your repository. To use App Center to safeguard the values:
 
-1. Go to your [branch configuration](#setting-up-code-signing).
+1. Go to your [build configuration](#setting-up-code-signing).
 2. Make sure the checkbox called **My Gradle settings are entirely set to handle signing automatically** it not checked.
 3. Enter the keystore password, key alias, and key password in the **Environment variables** section. These values are the same ones you would otherwise enter in Android Studio when you sign a build.
 
@@ -90,6 +90,6 @@ If you use product flavors, you may need to adjust the code above so all your re
 >  Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'
 > ```
 >
-> To fix this issue you have to push a proper keystore used for signing to your repository and enable **My Gradle settings are entirely set to handle signing automatically** in your branch configuration in the App Center portal.
+> To fix this issue you have to push a proper keystore used for signing to your repository and enable **My Gradle settings are entirely set to handle signing automatically** in your build configuration in the App Center portal.
 >
-> In case you uploaded a keystore to the branch configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from the `buildTypes` section of your `build.gradle` file if you didn't update it from the default state of the React Native project template.
+> In case you uploaded a keystore to the build configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from the `buildTypes` section of your `build.gradle` file if you didn't update it from the default state of the React Native project template.
