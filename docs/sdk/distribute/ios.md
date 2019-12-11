@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 11/26/2019
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -23,13 +23,16 @@ dev_langs:
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 
-App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
 > 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target. 
+> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
+
+> [!NOTE]
+> App Center SDK doesn't support multiple window apps that were introduced in iOS 13.
 
 ## Add in-app updates to your app
 
