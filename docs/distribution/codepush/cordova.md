@@ -71,6 +71,20 @@ With the CodePush plugin installed, configure your app to use it via the followi
    > [!IMPORTANT]
    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample illustrates declaring separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
 
+  Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing please refer to relevant documentation [section](FIX LINK)). In order to enable code signing for Cordova application you should setup public key to verify bundles signature by providing following `preference` setting in `config.xml`:
+
+     ```xml
+    <platform name="android">
+        ...
+        <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
+    </platform>
+    <platform name="ios">
+        ...
+        <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
+    </platform>
+    ```
+    You can use the same private/public key pair for each platform. 
+
 2. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
 
     ```xml
