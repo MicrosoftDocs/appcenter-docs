@@ -287,6 +287,7 @@ Distribute.setEnabledForDebuggableBuild(true)
 
 > [!NOTE]
 > This method only affects debug builds, and has no impact on release builds.
+> Debug build means that `android:debuggable` flag is set to `true` otherwise, this is the release build.
 
 ## How do in-app updates work?
 
