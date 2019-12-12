@@ -127,9 +127,9 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or la
 
 Service          | macOS Version   | Xcode
 -----------------|-----------------|--------------
-Analytics        | 10.9 or later   | 8.2 and later
-Crashes          | 10.9 or later   | 8.2 and later
-Push             | 10.9 or later   | 8.2 and later
+Analytics        | 10.12 or later   | 10 or later
+Crashes          | 10.12 or later   | 10 or later
+Push             | 10.12 or later   | 10 or later
 
 ### tvOS
 
@@ -138,7 +138,7 @@ Service          | tvOS Version    | Xcode
 Analytics        | 11.0 or later   | 10 and later
 Crashes          | 11.0 or later   | 10 and later
 
-### Apache Cordova 
+### Apache Cordova
 
 Service    |  AC CLI version      | iOS Version     | Android Version
 -----------|----------------------|-----------------|----------------
