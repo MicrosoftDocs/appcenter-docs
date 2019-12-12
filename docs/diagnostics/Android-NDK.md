@@ -17,7 +17,7 @@ Android NDK allows you to implement parts of your Android apps using C and C++. 
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
-If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
+If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
 ## Generate a .zip file to upload
 
