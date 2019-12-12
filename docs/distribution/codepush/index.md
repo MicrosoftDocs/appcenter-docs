@@ -4,7 +4,7 @@ description: Fix bugs and add content quickly
 keywords: distribution
 author: iageoghe
 ms.author: iageoghe
-ms.date: 08/08/2018
+ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: F19F4122-B9F0-42CC-85B8-E3C344AE5419
 ms.service: vs-appcenter
@@ -29,7 +29,7 @@ npm install -g appcenter-cli
 > [!NOTE]
 > If you encounter an `EACCES` error executing this command, you may have to [fix npm permissions on your system](https://docs.npmjs.com/getting-started/fixing-npm-permissions). Many sites recommend using the `sudo` command to get around this error, but you should never install npm modules using `sudo`.
 
- After successfuly installing the App Center CLI, execute the `appcenter login` command to configure the CLI for your App Center account details.
+ After successfully installing the App Center CLI, execute the `appcenter login` command to configure the CLI for your App Center account details.
 
 ## 2. CodePush-ify your app
 

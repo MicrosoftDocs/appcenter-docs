@@ -4,7 +4,7 @@ description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 10/11/2018
+ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: E5791947-AF21-47D0-84A0-90D5F06DC8A9
 ms.service: vs-appcenter
@@ -91,7 +91,7 @@ To customize the update dialog, developers can create an updateDialogOption obje
     codePush.sync({ updateDialog: updateDialogOptions});
 ```
 
-Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./react-native.md#api-reference) API Reference pages for a full description of all the avaiable UpdateDialogOptions options.
+Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./react-native.md#api-reference) API Reference pages for a full description of all the available UpdateDialogOptions options.
 
 > [!IMPORTANT]
 > While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.

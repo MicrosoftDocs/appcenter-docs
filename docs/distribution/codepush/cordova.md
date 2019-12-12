@@ -4,7 +4,7 @@ description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 08/20/2019
+ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: 591025F9-C7DA-400E-8CCA-DF39514B3DD0
 ms.service: vs-appcenter
@@ -461,7 +461,7 @@ codePush.sync(null, {
 
 // Silently check for the update, but
 // display a custom downloading UI
-// via the SyncStatus and DowloadProgress callbacks
+// via the SyncStatus and DownloadProgress callbacks
 codePush.sync(syncStatus, null, downloadProgress);
 
 function syncStatus(status) {
