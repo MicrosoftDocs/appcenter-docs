@@ -296,6 +296,27 @@ Before doing anything, please [read the docs][ats] first.
 
 [ats]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 
+### Code Signing setup
+
+Starting with CLI version **2.1.0** you can self sign bundles during release and verify its signature before installation of update. For more info about Code Signing please refer to [relevant code-push documentation section](FIX LINK).
+
+In order to configure Public Key for bundle verification you need to add record in `Info.plist` with name `CodePushPublicKey` and string value of public key content. Example:
+
+```xml
+<plist version="1.0">
+  <dict>
+    <!-- ...other configs... -->
+
+    <key>CodePushPublicKey</key>
+        <string>-----BEGIN PUBLIC KEY-----
+MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANkWYydPuyOumR/sn2agNBVDnzyRpM16NAUpYPGxNgjSEp0etkDNgzzdzyvyl+OsAGBYF3jCxYOXozum+uV5hQECAwEAAQ==
+-----END PUBLIC KEY-----</string>
+
+    <!-- ...other configs... -->
+  </dict>
+</plist>
+```
+
 ## Android Setup
 
 In order to integrate CodePush into your Android project, perform the following steps:
@@ -523,7 +544,50 @@ public class MainApplication extends Application {
 }
 ```
 
-In order to effectively make use of the `Staging` and `Production` deployments that we recommmend you created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+In order to effectively make use of the `Staging` and `Production` deployments that we recommend you created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+
+### Code Signing setup
+
+Starting with CLI version **2.1.0** you can self sign bundles during release and verify its signature before installation of update. For more info about Code Signing please refer to [relevant code-push documentation section](https://github.com/Microsoft/code-push/tree/master/cli#code-signing). In order to use Public Key for Code Signing you need to do following steps:
+
+   Add `CodePushPublicKey` string item to `/path_to_your_app/android/app/src/main/res/values/strings.xml`. It may looks like this:
+
+ ```xml
+ <resources>
+    <string name="app_name">my_app</string>
+    <string name="CodePushPublicKey">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtPSR9lkGzZ4FR0lxF+ZA
+P6jJ8+Xi5L601BPN4QESoRVSrJM08roOCVrs4qoYqYJy3Of2cQWvNBEh8ti3FhHu
+tiuLFpNdfzM4DjAw0Ti5hOTfTixqVBXTJPYpSjDh7K6tUvp9MV0l5q/Ps3se1vud
+M1/X6g54lIX/QoEXTdMgR+SKXvlUIC13T7GkDHT6Z4RlwxkWkOmf2tGguRcEBL6j
+ww7w/3g0kWILz7nNPtXyDhIB9WLH7MKSJWdVCZm+cAqabUfpCFo7sHiyHLnUxcVY
+OTw3sz9ceaci7z2r8SZdsfjyjiDJrq69eWtvKVUpredy9HtyALtNuLjDITahdh8A
+zwIDAQAB
+-----END PUBLIC KEY-----</string>
+</resources>
+ ```
+
+#### For React Native <= v0.60 you should configure the `CodePush` instance to use this parameter using one of the following approaches
+
+##### Using constructor
+
+```java
+new CodePush(
+    "deployment-key",
+    getApplicationContext(),
+    BuildConfig.DEBUG,
+    R.string.CodePushPublicKey)
+```
+
+##### Using builder
+
+ ```java
+new CodePushBuilder("deployment-key-here",getApplicationContext())
+    .setIsDebugMode(BuildConfig.DEBUG)
+    .setPublicKeyResourceDescriptor(R.string.CodePushPublicKey)
+    .build()
+```
+
 
 ## Windows Setup
 
