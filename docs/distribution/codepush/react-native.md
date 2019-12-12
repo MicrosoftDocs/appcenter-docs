@@ -21,7 +21,7 @@ React Native apps are composed of JavaScript files and any associated [images](h
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your JavaScript and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they are available.
 
-In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically rollback. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to [roll back](./cli.md#rolling-back-updates) on the server.
+In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to [roll back](./cli.md#rolling-back-updates) on the server.
 
 > [!NOTE]
 > Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) cannot be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
@@ -78,7 +78,7 @@ We'll update this list as new core components are released, which support refere
 
 ## Getting Started
 
-Once you've followed the general-purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your React Native app by running the following command from within your app's root directory:
+Once you've followed the general purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your React Native app by running the following command from within your app's root directory:
 
 ```shell
 npm install --save react-native-code-push
@@ -1128,7 +1128,7 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
 - **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds that the app needs to have been in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which has the effect of applying the update immediately after a resume or unless the app suspension is long enough to not matter, regardless how long it was in the background.
 
-- **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which has the effect of disabling the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings. Before enabling this option within an App Store-distributed app, please refer to [this note](https://github.com/Microsoft/react-native-code-push#user-content-apple-note).
+- **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which has the effect of disabling the dialog completely. Setting this to any truth value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings. Before enabling this option within an App Store-distributed app, please refer to [this note](https://github.com/Microsoft/react-native-code-push#user-content-apple-note).
 
     The following list represents the available options and their defaults:
 
@@ -1362,7 +1362,7 @@ If you are using the `sync` function, and doing your update check on app start, 
 codePush.restartApp(onlyIfUpdateIsPending: Boolean = false): void;
 ```
 
-Immediately restarts the app. If a truthy value is provided to the `onlyIfUpdateIsPending` parameter, then the app will only restart if there is actually a pending update waiting to be applied.
+Immediately restarts the app. If a truth value is provided to the `onlyIfUpdateIsPending` parameter, then the app will only restart if there is actually a pending update waiting to be applied.
 
 This method is for advanced scenarios, and is primarily useful when the following conditions are true:
 
@@ -1496,7 +1496,7 @@ The `sync` method can be called anywhere you'd like to check for an update. That
 
 #### Package objects
 
-The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide acces to "package" objects. The package represents your code update as well as any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
+The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide access to "package" objects. The package represents your code update as well as any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
 
 - [LocalPackage](#localpackage): Represents a downloaded update that is either already running, or has been installed and is pending an app restart.
 
@@ -1559,7 +1559,7 @@ This enum specifies when you would like your app to sync with the server for upd
 
 - **codePush.CheckFrequency.ON_APP_START** *(0)* - Indicates that you want to check for updates whenever the app's process is started.
 
-- **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a separate payment process, etc).
+- **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a separate payment process, etc.).
 
 - **codePush.CheckFrequency.MANUAL** *(2)* - Disable automatic checking for updates, but only check when [`codePush.sync()`](#codepushsync) is called in app code.
 
