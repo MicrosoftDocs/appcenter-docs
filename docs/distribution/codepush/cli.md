@@ -786,3 +786,96 @@ appcenter codepush deployment clear -a <ownerName>/<appName> <deploymentName>
 ```
 
 After running this command, client devices configured to receive updates using its associated deployment key will no longer receive the updates that have been cleared. This command is irreversible, and therefore should not be used in a production deployment.
+
+## Code Signing
+
+### What is it?
+
+Code signing is a way of creating digital signatures for bundles that can later be validated on the client-side prior to installation.
+
+### Why do we need it?
+
+Developers want to know that the code they ship is the code that they wrote. Code signing is the primary mechanism for providing such assurance and can help mitigate or eliminate a whole class of man-in-the-middle attacks.
+
+### How does it work?
+
+First, the developer generates an asymmetric key pair: the private key will be used for signing bundles; the public key for bundle signature verification. The CodePush cli then uses the private key to sign bundles during `release`, `release-react` and `release-cordova` commands. The public key is shipped with the mobile application. Control over the generation and management of keys is in the hands of the developer.
+
+At the end of release command, the cli computes the bundle's content hash and places this value into a JWT signed with the private key. When the codepush plugin downloads a bundle to a device, it checks the `.codepushrelease` file containing the JWT and validates the JWT signature using the public key. If validation fails, the update is not installed.
+
+### Requirements for using this feature
+
+If you are planning to use this feature you need to do the following:
+
+1. Produce new binary update including 
+   * updated codepush plugin supporting Code Signing
+   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](react-native.md#code-signing-setup-ios),  [Android](react-native.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
+
+2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or simply `-k`) parameter value
+
+Please refer to our compatibility tables to identify if code-signing feature is supported within your SDK/CLI:
+
+|CodePush SDK|Version from which Code Signing is supporting|Supported Platforms|Minimal CodePush CLI version required|
+|----|----|----|----|
+|[`react-native-code-push`](react-native.md)|5.1.0|Android, iOS|2.1.0|
+|[`cordova-plugin-code-push`](cordova.md)|1.10.0|Android, iOS|2.1.2|
+
+### Key generation
+
+Code signing supports PEM encoded RSA keys (non-certificates) for signing. You can generate them via openssl as shown below:
+
+```shell
+# generate private RSA key and write it to private.pem file
+openssl genrsa -out private.pem
+
+# export public key from private.pem into public.pem
+openssl rsa -pubout -in private.pem -out public.pem
+```
+
+Generated keys example:
+
+```shell
+# public key
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4moC3GsqF7YISFMQ0fnU
+0rUF2xhxNqSGx9/GTxCynsQhR3hceroDXj3rAOTxnNkePB27uZfRDHrH3/LLoj9V
+k2ghKRtfjDwXa85uDK8slSQDB9ZlD1TLQEJDZpKr1OTXY9VwbgtFaotSXoFmG3MO
+RQeALCbrAgDxQ5Q2kJn6rfBuBoszfUz1qZqrlrY74Axerv1/UtTjL8uyF5r00Bxj
+kvTveC2Pm5A3kq6QANktgfKWy9Ugs/4ykZF7fxfH+ukJW+iXwLACrdfzhegg/41H
+5w06m30h0jqhIBZ3nbj5MN+qVbANHJMjz+fXqXx1Ovr1DfGtdKOku/BTWDxojCl1
+iwIDAQAB
+-----END PUBLIC KEY-----
+
+# private key
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA4moC3GsqF7YISFMQ0fnU0rUF2xhxNqSGx9/GTxCynsQhR3hc
+eroDXj3rAOTxnNkePB27uZfRDHrH3/LLoj9Vk2ghKRtfjDwXa85uDK8slSQDB9Zl
+D1TLQEJDZpKr1OTXY9VwbgtFaotSXoFmG3MORQeALCbrAgDxQ5Q2kJn6rfBuBosz
+fUz1qZqrlrY74Axerv1/UtTjL8uyF5r00BxjkvTveC2Pm5A3kq6QANktgfKWy9Ug
+s/4ykZF7fxfH+ukJW+iXwLACrdfzhegg/41H5w06m30h0jqhIBZ3nbj5MN+qVbAN
+HJMjz+fXqXx1Ovr1DfGtdKOku/BTWDxojCl1iwIDAQABAoIBAQCdwf/8VS8fFlbv
+DfHKXKlNp5RM9Nrtl/XRjro+nQPYXBBUHClT2gg+wiXcmalAAIhwmscSqhWe/G4I
+PMRmaHrYGtYALnKE49nt5AgKDoSh5lW2QExqQkrcm08bSVcxH8J0bWPJSVE0y564
++rCKr8BhmLhWC0f0PXPeAoeCeceRKYX2oDgO8A0yZRSQUdRWiXOiQ4mUQ3IPCmBc
+gD1JJNZ5kR4O904PZz5pbgyvN2t5BKOgLKq+x+8Pa8Rb21rFZKMHO8W04oKaRiGs
+f4xwOBAWDOfzDKJzT5xepcPyycgjxcuvyKB2g8biWnDGGOTxDgqMX+R4XeP1aISC
+h9bzfRoBAoGBAPREuPhIXRJOsIgSWAAiC5vhLZ9wWELWG95eibQm2SfpY4F0sPpE
+lNQJ4yzC7J4BiApFzs1yxwwRmgpVd+wF9iMb4NSzaiTM7fju/Xv4aGhBqRXEokGF
+v3QxIlbAwBqeL0rJAAadjbUTTO/u6sC80LI3bfPrn/z1hupZQGR559gjAoGBAO1J
+xQ2ODVS4dSH2P+Ocd9LiUBPGyV97+MFixh6z1c2Fd3bNuiIhCxkrng45Dq0CkX84
+nPUvtYxEQZoFvyB7gAm0SVlLHnJwBiq+Mp9g0UXSy6rZbjhiFkQs1W/W+Z2OIDsC
+y+uXZT7No/J9VyjdrWzZJaBImO8/E4NONXWn8M95AoGACH97j+e0lTZ3ncRFm3uT
+u9CRrcJSz8BzJ8FSORpA48qS06YjohFQvC+734rIgJa9DN5w22Tq19ik60cd7PAo
+KACISd4UC0O147ssxmtV9oqSP1ef7XehuYEcGLiL9mEadBeaEKDalToeqxo8wIfR
+GuIiySGhZ0ODdhO00coL7tECgYBargddD70udDNnICj4PbJY5928QQpxr/m3RZz6
+3LTHDstBnosUQdZw7wc+3jUqjsG1gZgR5wKVMPx09N8+dZPPoZMqSZfAGelxajAE
+UkaHTXBBwUfqyilCMnP6gofv2wGcK4xsYvXxEzslDxtA5b5By5Yic7vmKg+17Sxm
+4yAW2QKBgDyEUzXq3Rrm7ZT720pPhuQDDSO0eHe1L1MUjTRsJ96GkIl0iqQCVgK8
+A/6rFFTEeVf8L6GNMTwdtnDFz/CqIU+K1X4HLXmUY2suffWVxZ4KYqiEszCbyrdO
+puayMcrx2unhKQyDYjUvD8GxHyquA+p52KDke2TkKfDxfzv0WOE1
+-----END RSA PRIVATE KEY-----
+```
+
+### Releasing signed update
+
+To release signed update you should use `--privateKeyPath` (or simply `-k`) option for `release` or `release-react` command.
