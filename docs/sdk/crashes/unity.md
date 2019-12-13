@@ -4,7 +4,7 @@ description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
 author: jwhitedev
 ms.author: jawh
-ms.date: 12/04/2019
+ms.date: 12/13/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
 ms.service: vs-appcenter
@@ -365,6 +365,9 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 ```
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
+
+> [!NOTE]
+> The App Center use reserved name `minidump.dmp` for minidump attachment, so please make sure name your attachment different way unless it real minidump file so that keep diagnostics work properly.
 
 > [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
