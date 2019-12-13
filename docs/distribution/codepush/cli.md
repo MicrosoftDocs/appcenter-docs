@@ -1,6 +1,6 @@
 ---
 title: Releasing CodePush updates using the App Center CLI
-description: "How to use and set up the App Center CLI to release CodePush updates"
+description: "How to use and setup the App Center CLI to release CodePush updates"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
@@ -20,27 +20,27 @@ ms.custom: distribute
 
 ## Getting Started
 
-1. Create an [App Center account](https://appcenter.ms) or sign in through the CLI using the `appcenter login` command.
+1. Create an [App Center account](https://appcenter.ms) or sign-in through the CLI using the `appcenter login` command.
 2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
 3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/react-native.md)).
 4. [Release and update for your app](#releasing-app-updates).
 
 ## <a name="account-creation"/>Account Management
 
-Before you can begin releasing app updates, you must sign in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
+Before you can begin releasing app updates, you must sign-in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
 
 ```shell
 appcenter login
 ```
 
-This command will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. Once authenticated, it will create a CodePush account "linked" to your GitHub/MSA identity, and generate an access key you can copy/paste into the CLI in order to sign in.
+This command will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. Once authenticated, it will create a CodePush account "linked" to your GitHub/MSA identity, and generate an access key you can copy/paste into the CLI in order to sign-in.
 
 > [!NOTE]
-> After registering, you are automatically logged-in with the CLI, so until you explicitly log out, you don't have to sign in again from the same machine.
+> After registering, you are automatically logged-in with the CLI, so until you explicitly log out, you don't have to sign-in again from the same machine.
 
 ### Authentication
 
-Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must sign in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
+Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must sign-in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
 
 ```shell
 appcenter login
@@ -54,13 +54,13 @@ If at any time you want to determine if you're already logged in, you can run th
 appcenter profile list
 ```
 
-When you sign in from the CLI, your access key persists to disk for the duration of your session so that you don't have to sign in every time you attempt to access your account. To end your session and delete this access key, execute the following command:
+When you sign-in from the CLI, your access key persists to disk for the duration of your session so that you don't have to sign-in every time you attempt to access your account. To end your session and delete this access key, execute the following command:
 
 ```shell
 appcenter logout
 ```
 
-If you forget to sign out from a machine you'd prefer not to leave a running session on (e.g. your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
+If you forget to sign-out from a machine you'd prefer not to leave a running session on (e.g. your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
 
 ```shell
 appcenter tokens list
@@ -81,7 +81,7 @@ The key will only display once, so remember to save it somewhere if needed! Afte
 appcenter login --token <accessToken>
 ```
 
-When signing in using this method, the access token will not automatically invalidate on sign-out, and can be used in future sessions until it is explicitly removed from the App Center server. However, you should sign out once your session is complete, to remove your credentials from disk.
+When signing in using this method, the access token will not automatically invalidate on sign-out, and can be used in future sessions until it is explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
 
 ## App Management
 
@@ -278,7 +278,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 
 | Range Expression | Who gets the update                                                                    |
 |------------------|----------------------------------------------------------------------------------------|
-| `1.2.3`          | Only devices running the specific binary binary version `1.2.3` of your app         |
+| `1.2.3`          | Only devices running the specific binary version `1.2.3` of your app         |
 | `*`              | Any device configured to consume updates from your CodePush app                        |
 | `1.2.x`          | Devices running major version 1, minor version 2, and any patch version of your app     |
 | `1.2.3 - 1.2.7`  | Devices running any binary version between `1.2.3` (inclusive) and `1.2.7` (inclusive) |
@@ -799,16 +799,16 @@ Developers want to know that the code they ship is the code that they wrote. Cod
 
 ### How does it work?
 
-First, the developer generates an asymmetric key pair: the private key will be used for signing bundles; the public key for bundle signature verification. The CodePush cli then uses the private key to sign bundles during `release`, `release-react` and `release-cordova` commands. The public key is shipped with the mobile application. Control over the generation and management of keys is in the hands of the developer.
+First, the developer generates an asymmetric key pair: the private key will be used for signing bundles; the public key for bundle signature verification. The CodePush CLI then uses the private key to sign bundles during `release`, `release-react` and `release-cordova` commands. The public key is shipped with the mobile application. Control over the generation and management of keys is in the hands of the developer.
 
-At the end of release command, the cli computes the bundle's content hash and places this value into a JWT signed with the private key. When the codepush plugin downloads a bundle to a device, it checks the `.codepushrelease` file containing the JWT and validates the JWT signature using the public key. If validation fails, the update is not installed.
+At the end of release command, the CLI computes the bundle's content hash and places this value into a JWT signed with the private key. When the CodePush plugin downloads a bundle to a device, it checks the `.codepushrelease` file containing the JWT and validates the JWT signature using the public key. If validation fails, the update is not installed.
 
 ### Requirements for using this feature
 
 If you are planning to use this feature you need to do the following:
 
 1. Produce new binary update including 
-   * updated codepush plugin supporting Code Signing
+   * updated CodePush plugin supporting Code Signing
    * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](react-native.md#code-signing-setup-ios),  [Android](react-native.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
 
 2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or simply `-k`) parameter value
