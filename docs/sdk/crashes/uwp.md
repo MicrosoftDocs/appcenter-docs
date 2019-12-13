@@ -265,7 +265,7 @@ try {
 }
 ```
 
-You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Please be sure to **not** name the attachment file `minidump.dmp` as that name is reserved for minidump files. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
 
 ```csharp
 try {
