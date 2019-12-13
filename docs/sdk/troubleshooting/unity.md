@@ -22,5 +22,6 @@ ms.custom: sdk
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 No Troubleshooting Steps available yet. To be filled out over time.

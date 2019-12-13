@@ -2,9 +2,9 @@
 title: App Center Push for iOS
 description: Using Push in App Center
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
-ms.date: 08/09/2019
+author: jwargo
+ms.author: jowargo
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
 ms.service: vs-appcenter
@@ -189,9 +189,9 @@ var enabled = MSPush.isEnabled()
 > [!NOTE]
 > This method must only be used after `MSPush` has been started, it will always return `NO` or `false` before start.
 
-## Disable automatic method forwarding to App Center services
+## Disable forwarding of the application and user notification center delegates' methods calls to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the application delegate itself. You may want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+The App Center SDK uses swizzling to improve its integration by forwarding itself some of the delegates' methods calls. Method swizzling is a way to change the implementation of methods at runtime. If for any reason you don't want to use swizzling (e.g. because of a specific policy) you can disable this forwarding for all App Center services by following the steps below:
 
 ### Application Delegate
 
