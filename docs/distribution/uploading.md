@@ -119,6 +119,14 @@ You can only make a release mandatory if your app uses the App Center Distribute
 
 For mandatory releases, App Center displays a red dot next to the release icon in your releases table under a selected distribution group.
 
+## Link to Releases
+
+If you've successfully released, your testers can access the release through email, logging onto App Center, or through a direct link. 
+
+You can find links to specific releases on the release page for private destinations ![Install button] (~/distribution/images/installButton.png). 
+
+You can find links to specific releases to public destinations on the releases tab in public groups. ![Public deep link] (~/distribution/images/publicDeepLink.png)
+
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [google-prepare-for-release]: https://developer.android.com/studio/publish/preparing.html
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
