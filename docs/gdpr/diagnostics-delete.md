@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Deleting diagnostics data
 
-Data Subject Requests (DSRs) to be forgotten must be serviced within 30 days. App Center diagnostics retains raw data for 90 days by default. You can adjust your retention settings in the App Center portal and [application programming interface](../api-docs/index.md) (API).
+Data Subject Requests (DSRs) to be forgotten must be serviced within 30 days. App Center Diagnostics retains raw data for 90 days by default. You can adjust your retention settings in the App Center portal and [application programming interface](../api-docs/index.md) (API).
 This documentation is a guide on the steps you must follow if a Data Subject Request for delete comes in and your retention setting is higher than 28 days.
 
 There are two possible starting points:
