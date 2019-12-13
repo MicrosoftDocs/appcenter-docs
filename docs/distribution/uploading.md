@@ -98,7 +98,7 @@ One other alternative for uploading releases is using the public App Center APIs
     curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
     ```
 
-4. Distribute the uploaded release to destinations using testers, groups, or stores. This is nessesary to view uploaded releases in the developer portal.  [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
+4. Distribute the uploaded release to destinations using testers, groups, or stores. This is necessary to view uploaded releases in the developer portal.  [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups], [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
 
     ```shell
     curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "id": "10d82aa2-8449-499f-b6d3-44a855058eca", "mandatory_update": false, "notify_testers": false }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APITesting/releases/2/groups'
@@ -113,7 +113,7 @@ To release a build to another distribution group, from any place in App Center g
 
 ## Mandatory Updates
 
-Make a release mandatory to force all users to run the same version of your app. When you do this, App Center will installs the selected update on all tester devices.
+Make a release mandatory to force all users to run the same version of your app. When you do this, App Center will install the selected update on all tester devices.
 
 You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory via the API or by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
 
@@ -121,7 +121,7 @@ For mandatory releases, App Center displays a red dot next to the release icon i
 
 ## Link to Releases
 
-If you've successfully released, your testers can access the release through email, logging onto App Center, or through a direct link. 
+Once you've released successfully, your testers can access the release through email, logging onto App Center, or through a direct link. 
 
 You can find links to specific releases on the release page for private destinations ![Install button] (~/distribution/images/installButton.png). 
 
