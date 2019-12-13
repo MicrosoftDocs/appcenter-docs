@@ -1180,7 +1180,7 @@ For example, calling `allowRestart` would trigger an immediate restart if either
 
 4. No calls to `restartApp` were made since the last time `disallowRestart` was called.
 
-This behavior ensures that no restarts will be triggered as a result of calling `allowRestart` unless one was explicitly requested during the disallowed period. In this way, `allowRestart` is similar to calling `restartApp(true)`, except the former will only trigger a restart if the currently pending update wanted to restart, whereas the later would restart as long as an update is pending.
+This behavior ensures that no restarts will be triggered as a result of calling `allowRestart` unless one was explicitly requested during the disallowed period. In this way, `allowRestart` is similar to calling `restartApp(true)`, except the former will only trigger a restart if the currently pending update wanted to restart, but the later would restart as long as an update is pending.
 
 See [disallowRestart](#codepushdisallowrestart) for an example of how this method can be used.
 
@@ -1242,7 +1242,7 @@ After calling this method, any calls to `sync` would still be allowed to check f
 
 This is an advanced API, and is primarily useful when individual components within your app (like an onboarding process) need to ensure that no end-user interruptions can occur during their lifetime, while continuing to allow the app to keep syncing with the CodePush server at its own pace and using whatever install modes are appropriate. This has the benefit of allowing the app to discover and download available updates as soon as possible, while also preventing any disruptions during key end-user experiences.
 
-As an alternative, you could also choose to simply use `InstallMode.ON_NEXT_RESTART` whenever calling `sync` (which will never attempt to programmatically restart the app), and then explicitly calling `restartApp` at points in your app that you know it is "safe" to do so. `disallowRestart` provides an alternative approach to this when the code that synchronizes with the CodePush server is separate from the code/components that want to enforce a no-restart policy.
+As an alternative, you could also choose to simply use `InstallMode.ON_NEXT_RESTART` whenever calling `sync` (which will never attempt to programmatically restart the app), and then explicitly calling `restartApp` at points in your app that is "safe" to do so. `disallowRestart` provides an alternative approach to this when the code that synchronizes with the CodePush server is separate from the code/components that want to enforce a no-restart policy.
 
 Example Usage:
 
@@ -1313,7 +1313,7 @@ This method returns a `Promise`, which resolves to one of two possible values:
 
 1. `null` if an update with the specified state doesn't currently exist. This occurs in the following scenarios:
 
-   1. The end-user hasn't installed any CodePush updates yet, and therefore, no metadata is available for any updates, regardless what you specify as the `updateState` parameter.
+   1. The end-user hasn't installed any CodePush updates yet, and that's why no metadata is available for any updates, regardless what you specify as the `updateState` parameter.
 
    2. The end-user installed an update of the binary (for example from the store), which cleared away the old CodePush updates, and gave precedence back to the JS binary in the binary. Therefore, it would exhibit the same behavior as #1
 
@@ -1351,7 +1351,7 @@ codePush.notifyAppReady(): Promise<void>;
 
 Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It is mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
-If you are using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyAppReady` since `sync` will call it for you. This behavior exists due to the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
+If you are using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyAppReady` since `sync` will call it for you. This behavior exists because of the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
 
 > [!NOTE]
 > This method is also aliased as `notifyApplicationReady` (for backwards compatibility).*
@@ -1403,7 +1403,7 @@ codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE 
 
 ##### SyncOptions
 
-While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above. The options available are identical to the [CodePushOptions](#codepushoptions), with the exception of the `checkFrequency` option:
+While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize many aspects of the default behavior mentioned above. The options available are identical to the [CodePushOptions](#codepushoptions), with the exception of the `checkFrequency` option:
 
 - **deploymentKey** *(String)* - Refer to [`CodePushOptions`](#codepushoptions).
 
@@ -1496,7 +1496,7 @@ The `sync` method can be called anywhere you'd like to check for an update. That
 
 #### Package objects
 
-The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide access to "package" objects. The package represents your code update as well as any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
+The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide access to "package" objects. The package represents your code update and any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
 
 - [LocalPackage](#localpackage): Represents a downloaded update that is either already running, or has been installed and is pending an app restart.
 
@@ -1514,7 +1514,7 @@ Contains details about an update that has been downloaded locally or already ins
 - **failedInstall**: Indicates whether this update has been previously installed but was rolled back. The `sync` method will automatically ignore updates, which have previously failed, so you only need to worry about this property if using `checkForUpdate`. *(Boolean)*
 - **isFirstRun**: Indicates whether this is the first time the update has been run after being installed. This is useful for determining whether you would like to show a "What's New?" UI to the end user after installing an update. *(Boolean)*
 - **isMandatory**: Indicates whether the update is considered mandatory.  This is the value that was specified in the CLI when the update was released. *(Boolean)*
-- **isPending**: Indicates whether this update is in a "pending" state. When `true`, that means the update has been downloaded and installed, but the app restart needed to apply it hasn't occurred yet, and therefore, it's changes aren't currently visible to the end-user. *(Boolean)*
+- **isPending**: Indicates whether this update is in a "pending" state. When `true`, that means the update has been downloaded and installed, but the app restart needed to apply it hasn't occurred yet, and that's why it's changes aren't currently visible to the end-user. *(Boolean)*
 - **label**: The internal label automatically given to the update by the CodePush server, such as `v5`. This value uniquely identifies the update within it's deployment. *(String)*
 - **packageHash**: The SHA hash value of the update. *(String)*
 - **packageSize**: The size of the code contained within the update, in bytes. *(Number)*
@@ -1547,7 +1547,7 @@ This enum specifies when you would like an installed update to actually be appli
 
 - **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially undesired latency between the update installation and the next time the end user restarts or resumes the app.
 
-- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
 - **codePush.InstallMode.ON_NEXT_RESUME** *(2)* - Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner then having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 
@@ -1559,7 +1559,7 @@ This enum specifies when you would like your app to sync with the server for upd
 
 - **codePush.CheckFrequency.ON_APP_START** *(0)* - Indicates that you want to check for updates whenever the app's process is started.
 
-- **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a separate payment process, etc.).
+- **codePush.CheckFrequency.ON_APP_RESUME** *(1)* - Indicates that you want to check for updates whenever the app is brought back to the foreground after being "backgrounded" (user pressed the home button, app launches a separate payment process, and so on).
 
 - **codePush.CheckFrequency.MANUAL** *(2)* - Disable automatic checking for updates, but only check when [`codePush.sync()`](#codepushsync) is called in app code.
 
@@ -1635,7 +1635,7 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
 
   1. Old CodePush updates aren't deleted from storage whenever a new binary is deployed to the emulator/device. This behavior enables you to deploy new binaries, without bumping the version during development, and without continuously getting the same update every time your app calls `sync`.
 
-  2. The local cache that the React Native runtime maintains in debug mode is deleted whenever a CodePush update is installed. This ensures that when the app is restarted after an update is applied, you will see the expected changes. As soon as [this PR](https://github.com/facebook/react-native/pull/4738) is merged, we won't need to do this anymore.
+  2. The local cache that the React Native runtime maintains in debug mode is deleted whenever a CodePush update is installed. This ensures that when the app is restarted after an update is applied, it is possible to see the expected changes. As soon as [this PR](https://github.com/facebook/react-native/pull/4738) is merged, we won't need to do this anymore.
 
 ##### Static Methods
 
@@ -1664,7 +1664,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 
 ## Debugging / Troubleshooting
 
-The `sync` method includes a lot of diagnostic logging out-of-the-box, so if you're encountering an issue when using it, the best thing to try first is examining the output logs of your app. This will tell you whether the app is configured correctly (like can the plugin find your deployment key?), if the app is able to reach the server, if an available update is being discovered, if the update is being successfully downloaded/installed, etc. We want to continue improving the logging to be as intuitive/comprehensive as possible, so please [let us know](mailto:codepushfeed@microsoft.com) if you find it to be confusing or missing anything.
+The `sync` method includes a lot of diagnostic logging out-of-the-box, so if you're encountering an issue when using it, the best thing to try first is examining the output logs of your app. This will tell you whether the app is configured correctly (like can the plugin find your deployment key?), if the app can reach the server, if an available update is being discovered, if the update is being successfully downloaded/installed, etc. We want to continue improving the logging to be as intuitive/comprehensive as possible, so please [let us know](mailto:codepushfeed@microsoft.com) if you find it to be confusing or missing anything.
 
 Additionally, you can also use any of the platform-specific tools to view the CodePush logs. Simply start up the Chrome DevTools Console, the Xcode Console (iOS), the [macOS Console](https://en.wikipedia.org/wiki/Console_%28OS_X%29#.7E.2FLibrary.2FLogs) (iOS) and/or ADB logcat (Android), and look for messages, which are prefixed with `[CodePush]`.
 
@@ -1678,7 +1678,7 @@ Note that by default, React Native logs are disabled on iOS in release builds, s
     RCTSetLogThreshold(RCTLogLevelInfo);
     ```
 
-Now you'll be able to see CodePush logs in release mode, on both iOS or Android. If examining the logs don't provide an indication of the issue, please refer to the following common issues for additional resolution ideas:
+Now you can see CodePush logs in release mode, on both iOS or Android. If examining the logs don't provide an indication of the issue, please refer to the following common issues for additional resolution ideas:
 
 | Issue / Symptom | Possible Solution |
 |-----------------|-------------------|
@@ -1687,7 +1687,7 @@ Now you'll be able to see CodePush logs in release mode, on both iOS or Android.
 | Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your **Info.plist** (iOS), **build.gradle** (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName> --displayKeys` to view the correct keys for your app deployments. |
 | Update not being discovered | Double-check that the version of your running app (like `1.0.0`) matches the version you specified when releasing the update to CodePush. Additionally, make sure that you are releasing to the same deployment that your app is configured to sync with. |
 | Update not being displayed after restart | If you're not calling `sync` on app start (like within `componentDidMount` of your root component), then you need to explicitly call `notifyApplicationReady` on app start, otherwise, the plugin will think your update failed and roll it back. |
-| I've released an update for iOS but my Android app also shows an update and it breaks it | Be sure you have different deployment keys for each platform in order to receive updates correctly |
+| I've released an update for iOS but my Android app also shows an update and it breaks it | Be sure you have different deployment keys for each platform to receive updates correctly |
 | Images disappear after installing CodePush update | If your app is using the React Native assets system to load images (that is the `require(./foo.png)` syntax), then you **MUST** release your assets along with your JS bundle to CodePush. |
 | No JS bundle is being found when running your app against the iOS simulator | By default, React Native doesn't generate your JS bundle when running against the simulator. Therefore, if you're using `[CodePush bundleURL]`, and targeting the iOS simulator, you may be getting a `nil` result. This issue will be fixed in RN 0.22.0, but only for release builds. You can unblock this scenario right now by making [this change](https://github.com/facebook/react-native/commit/9ae3714f4bebdd2bcab4d7fdbf23acebdc5ed2ba) locally.
 
