@@ -149,7 +149,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending stored crash from previous application launches, but not at the crash time. Please be sure to **not** name the attachment file `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach a text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending stored crash from previous application launches, but not at the crash time. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach a text and an image to a crash:
 
 ```js
 var errorCallback = function(error) {

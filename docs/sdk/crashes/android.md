@@ -378,7 +378,7 @@ try {
 }
 ```
 
-You can optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an `Iterable` as shown in the example below.
+You can optionally add **one binary** and **one text** attachment to a handled error report. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Pass the attachments as an `Iterable` as shown in the example below.
 
 
 ```java

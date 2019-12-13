@@ -180,7 +180,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash or an unhandled exception report
 
-You can add **one binary** and **one text** attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Here is an example of how to attach text and an image to a report:
+You can add **one binary** and **one text** attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
