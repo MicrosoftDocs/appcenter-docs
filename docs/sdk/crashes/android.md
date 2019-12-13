@@ -482,7 +482,7 @@ Once these methods are properly set up, the app sends the minidump to App Center
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> The App Center use reserved name `minidump.dmp` for minidump attachment, so please make sure name your attachment different way unless it real minidump file so that keep diagnostics work properly.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
