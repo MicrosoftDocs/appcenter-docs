@@ -16,6 +16,9 @@ ms.custom: sdk
 App Center is your continuous integration, delivery and learning solution for iOS, Android, Windows, and macOS apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
 
+> [!WARNING]
+> Do not embed any of your [API tokens](../api-docs/index.md) into source code.
+
 ## App Center Services
 
 The App Center SDKs use a modular architecture so you can use any or all of the services below. To learn more about how each service works for your platform, check out the in-depth documentation.
@@ -127,9 +130,9 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or la
 
 Service          | macOS Version   | Xcode
 -----------------|-----------------|--------------
-Analytics        | 10.9 or later   | 8.2 and later
-Crashes          | 10.9 or later   | 8.2 and later
-Push             | 10.9 or later   | 8.2 and later
+Analytics        | 10.9 or later   | 10 or later
+Crashes          | 10.9 or later   | 10 or later
+Push             | 10.9 or later   | 10 or later
 
 ### tvOS
 
@@ -138,7 +141,7 @@ Service          | tvOS Version    | Xcode
 Analytics        | 11.0 or later   | 10 and later
 Crashes          | 11.0 or later   | 10 and later
 
-### Apache Cordova 
+### Apache Cordova
 
 Service    |  AC CLI version      | iOS Version     | Android Version
 -----------|----------------------|-----------------|----------------

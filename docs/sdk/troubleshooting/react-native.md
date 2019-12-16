@@ -22,6 +22,7 @@ ms.tgt_pltfrm: react-native
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## 'React/RCTDefines.h' file not found
 

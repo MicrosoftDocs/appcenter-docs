@@ -4,7 +4,7 @@ description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/18/2019
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -17,7 +17,7 @@ Android NDK allows you to implement parts of your Android apps using C and C++. 
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
-If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](/upload-custom-crashes.md#upload-a-breakpad-crash-log-and-minidump).
+If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
 ## Generate a .zip file to upload
 

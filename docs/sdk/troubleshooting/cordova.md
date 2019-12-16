@@ -22,6 +22,7 @@ ms.tgt_pltfrm: cordova
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Failed to install plugin - pod command failed with exit code 1
 

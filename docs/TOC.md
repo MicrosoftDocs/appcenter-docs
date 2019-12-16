@@ -221,6 +221,7 @@
 
 # SDK
 ## [Introduction](sdk/index.md)
+## [Data Collected By App Center](sdk/data-collected.md)
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
 ### [Cordova](sdk/getting-started/cordova.md)

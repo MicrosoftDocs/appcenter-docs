@@ -2,9 +2,9 @@
 title: App Center Distribute for iOS
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
-author: elamalani
-ms.author: emalani
-ms.date: 11/26/2019
+author: botatoes
+ms.author: bofu
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.service: vs-appcenter
@@ -313,9 +313,9 @@ You need to upload release builds (that use the Distribute module of the App Cen
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 > While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
-## Disable automatic forwarding of application delegate's methods to App Center services
+## Disable forwarding of the application delegate's methods calls to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. Method swizzling is a way to change implementation of methods at runtime. There is a possibility of conflicts with other third party libraries or the application delegate itself. You may want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+The App Center SDK uses swizzling to improve its integration by forwarding itself some of the application delegate's methods calls. Method swizzling is a way to change the implementation of methods at runtime. If for any reason you don't want to use swizzling (e.g. because of a specific policy) then you can disable this forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.

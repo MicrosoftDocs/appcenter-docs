@@ -22,6 +22,7 @@ ms.tgt_pltfrm: xamarin
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Collecting verbose logs
 
