@@ -77,6 +77,8 @@ The legacy experience will be disabled on January 20th, 2020. Please upgrade to 
 
 UWP crash reports show the stack trace for the thread that caused the crash. When the application is using .NET Native (typically in release builds) the stack trace may contain memory addresses instead of class names, methods, file names, and line numbers that are needed to read and understand the crashes.
 
+[!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
+
 ### Uploading symbols
 
 To get these memory addresses translated you need to upload a **.appxsym** file to App Center, which contains all information required for symbolication.
