@@ -19,6 +19,8 @@ To learn how to report NDK crashes, refer to the [Android SDK documentation](~/s
 
 If you want to send Breakpad crashes from other platforms to App Center, see the [upload custom crashes documentation](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
+[!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
+
 ## Generate a .zip file to upload
 
 There are two ways for App Center to retrieve the symbols necessary for symbolication. App Center can generate them from the native binaries used in your project, or you can upload the Breakpad symbols directly.
