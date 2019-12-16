@@ -1,6 +1,6 @@
 ---
 title: Releasing CodePush updates using the App Center CLI
-description: "How to use and setup the App Center CLI to release CodePush updates"
+description: "How to use and set up the App Center CLI to release CodePush updates"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
@@ -91,7 +91,7 @@ Before deploying updates, you must create an app with App Center using the follo
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
 ```
 
-If your app targets both Android and iOS, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-Android` and `-iOS`. for example,:
+If your app targets both Android and iOS, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-Android` and `-iOS`. for example:
 
 ```shell
 appcenter apps create -d MyApp-Android -o Android -p React-Native
@@ -102,7 +102,7 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 > Using the same app for Android and iOS may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
 > 
 > [!TIP]
-> One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. for example,, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
+> One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
 
 With the original CodePush, apps automatically had two deployments (`Staging` and `Production`). In App Center, you'll have to create them yourself using the following commands:
 
@@ -331,7 +331,7 @@ This parameter specifies whether the update should be considered mandatory or no
 > [!NOTE]
 > This parameter is a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (for example, `--mandatory true`), however, specifying `--mandatory` is sufficient for marking a release as mandatory.*
 
-The mandatory attribute is unique because the server will dynamically modify it as necessary in order to ensure that the semantics of the app's releases are maintained for your end users. for example,, imagine that you released the following three updates to your app:
+The mandatory attribute is unique because the server will dynamically modify it as necessary in order to ensure that the semantics of the app's releases are maintained for your end users. For example, imagine that you released the following three updates to your app:
 
 | Release | Mandatory? |
 |---------|------------|
@@ -731,7 +731,7 @@ appcenter codepush rollback <ownerName>/<appName> <deploymentName>
 appcenter codepush rollback -a <ownerName>/MyApp-iOS Production
 ```
 
-Executing this command has the effect of creating a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. for example,, imagine that you released the following updates to your app:
+Executing this command has the effect of creating a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. For example, imagine that you released the following updates to your app:
 
 | Release | Description       | Mandatory |
 |---------|-------------------|-----------|
