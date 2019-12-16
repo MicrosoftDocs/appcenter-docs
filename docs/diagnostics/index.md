@@ -32,4 +32,4 @@ Experienced developers know where code can fail and wrap potentially risky code 
 
 - The maximum number of error properties per error is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped by the SDK.
 - The SDK truncates each property key and value to the first 125 characters.
-- The portal may show up only 1 text attachment and 1 binary attachment per error.
+- The portal may show only 1 text attachment and 1 binary attachment per error.
