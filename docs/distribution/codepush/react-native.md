@@ -113,7 +113,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     react-native link react-native-code-push
     ```
 
-    If your app uses a version of React Native that is lower than v0.27, execute the following command:
+    If your app uses a version of React Native lower than v0.27, execute the following command:
 
    ```shell
     rnpm link react-native-code-push
@@ -340,7 +340,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     react-native link react-native-code-push
     ```
 
-    If your app uses a version of React Native that is lower than v0.27, run the next command:
+    If your app uses a version of React Native lower than v0.27, run the next command:
 
     ```shell
     rnpm link react-native-code-push
@@ -900,7 +900,7 @@ And that's it! Now when you run or build your app, your debug builds will automa
 > [!NOTE]
 > By default, the `react-native run-android` command builds and deploys the debug version of your app, so if you want to test out a release/production build, simply run `react-native run-android --variant release. Refer to the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#conten) for details about how to configure and create release builds for your Android apps.
 
-If you want to be able to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS nor you will be able to differentiate between the two. You can achieve this by performing the following steps:
+If you want to be able to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS or you will be able to differentiate between the two. You can achieve this by performing the following steps:
 
 1. In your **build.gradle** file, specify the [`applicationIdSuffix`](https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
 
@@ -1547,9 +1547,9 @@ This enum specifies when you would like an installed update to actually be appli
 
 - **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially undesired latency between the update installation and the next time the end user restarts or resumes the app.
 
-- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
-- **codePush.InstallMode.ON_NEXT_RESUME** *(2)* - Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner then having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
+- **codePush.InstallMode.ON_NEXT_RESUME** *(2)* - Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 
 - **codePush.InstallMode.ON_NEXT_SUSPEND** *(3)* - Indicates that you want to install the update *while* it is in the background, but only after it has been in the background for `minimumBackgroundDuration` seconds (0 by default), so that user context isn't lost unless the app suspension is long enough to not matter.
 
