@@ -10,6 +10,5 @@ ms.service: vs-appcenter
 ms.custom: analytics
 ---
 
-## Unsymbolicated crashes
 
-Unsymoblicated crashes are displayed in the App Center Diagnostics section so you can gather useful information before uploading symbols. The missing symbols from these crashes will be shown in the "unsymbolicated" tab. If the missing symbols are uploaded, the unsymbolicated crash group will be replaced by a symbolicated crash group.  
+Unsymbolicated crashes are displayed in the App Center Diagnostics section so you can view some details even before uploading symbols. The missing symbols from these crashes will be shown in the "unsymbolicated" tab. If the missing symbols are uploaded, the unsymbolicated crash group will be replaced by a symbolicated crash group.  
