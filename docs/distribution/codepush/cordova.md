@@ -149,7 +149,7 @@ Once your app has been configured and distributed to your users, and you've made
 > [!NOTE]
 > Before you can start releasing updates, please log into App Center by running the `appcenter login` command
 
-In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
+In its most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
 ```shell
 appcenter codepush release-cordova -a <ownerName>/<appName>
@@ -353,7 +353,7 @@ Immediately restarts the app. This method is for advanced scenarios, and is prim
 
 1. Your app is specifying an install mode value of `ON_NEXT_RESTART` or `ON_NEXT_RESUME` when calling the `sync` or `LocalPackage.install` methods. This has the effect of not applying your update until the app has been restarted (by either the end user or OS) or resumed, and therefore, the update won't be immediately displayed to the end user.
 
-2. You have an app-specific user event (e.g. the end user navigated back to the app's home route) that allows you to apply the update in an unobtrusive way, and potentially gets the update in front of the end user sooner then waiting until the next restart or resume.
+2. You have an app-specific user event (e.g. the end user navigated back to the app's home route) that allows you to apply the update in an unobtrusive way, and potentially gets the update in front of the end user sooner than waiting until the next restart or resume.
 
 ### codePush.sync
 
@@ -505,7 +505,7 @@ Contains details about an update that has been downloaded locally or already ins
 * **failedInstall**: Indicates whether this update has been previously installed but was rolled back. The `sync` method will automatically ignore updates which have previously failed, so you only need to worry about this property if using `checkForUpdate`. *(Boolean)*
 * **isFirstRun**: Flag indicating if the current application run is the first one after the package was applied. *(Boolean)*
 * **isMandatory**: Indicates whether the update is considered mandatory. This is the value that was specified in the CLI when the update was released. *(Boolean)*
-* **label**: The internal label automatically given to the update by the CodePush server, such as `v5`. This value uniquely identifies the update within it's deployment. *(String)*
+* **label**: The internal label automatically given to the update by the CodePush server, such as `v5`. This value uniquely identifies the update within its deployment. *(String)*
 * **packageHash**: The SHA hash value of the update. *(String)*
 * **packageSize**: The size of the code contained within the update, in bytes. *(Number)*
 
@@ -642,7 +642,7 @@ This enum specified when you would like an installed update to actually be appli
 
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 
-* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
 For an example on how you are protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
@@ -710,9 +710,9 @@ This enum specified when you would like an installed update to actually be appli
 
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 
-* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
-* **ON_NEXT_RESUME**: Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner then having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
+* **ON_NEXT_RESUME**: Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 
 #### SyncStatus
 
