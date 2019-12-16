@@ -21,7 +21,7 @@ Each build runs on a separate, clean virtual machine (VM), and no other user has
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.6 (18G1012) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
+- OS X 10.14.6 (18G2022) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G9016) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted).
