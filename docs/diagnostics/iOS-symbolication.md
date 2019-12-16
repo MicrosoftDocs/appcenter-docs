@@ -19,6 +19,7 @@ To get these memory addresses translated you need to upload a dSYM package to Ap
 
 The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps below.
 
+## Unsymbolicated crashes
 [!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
 
 ## Finding the `.dSYM` bundle
