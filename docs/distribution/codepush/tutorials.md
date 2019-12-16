@@ -17,7 +17,7 @@ ms.custom: distribute
 
 CodePush provides Cordova and React Native developers with multiple options to configure the end users update experience.
 
-This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
+This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
 
 > [!NOTE]
 > This tutorial does not cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./react-native.md#getting-started) "Getting Started" sections.
@@ -102,7 +102,7 @@ Custom mode provides the flexibility to customize any stage of the update experi
 
 #### Update cycle notifications
 
-The `codePush.sync()` method allows the use of a call back to hook into the overall update process and thus provide a custom experience on each stage of the update process as follows.
+The `codePush.sync()` method allows the use of a callback to hook into the overall update process and thus provide a custom experience on each stage of the update process as follows.
 
 ```javascript
 var onSyncStatusChange = function(SyncStatus) {
@@ -130,7 +130,7 @@ Visit the  [Cordova](./cordova.md#syncstatus) or [React Native](./react-native.m
 
 #### Adding a "downloading" progress indicator
 
-To provide an enhanced experience, developers can choose to provide a download progress indicator. The `codePush.sync()` method provides a different call back to make this possible.
+To provide an enhanced experience, developers can choose to provide a download progress indicator. The `codePush.sync()` method provides a different callback to make this possible.
 
 ```javascript
 
@@ -151,7 +151,7 @@ codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, on
 
 Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to leverage the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
-This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to setup the CD environment.
+This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
 
 ### Overview
 
@@ -168,7 +168,7 @@ From a high-level it provides developers with:
 
 In addition, Azure DevOps allows developers to extend the service by creating Azure DevOps extensions that can help with tasks covering the full CI and CD spectrum.
 
-The CodePush service provides a Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
+The CodePush service provides an Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
 
 Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can simply push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
@@ -216,7 +216,7 @@ Navigate to line #2 and add the previously recorded `Staging` deployment key:
 
 ![Adding new deployment keys](images/tutorials2.png)
 
-### 3. Push the source code to a Azure DevOps team project
+### 3. Push the source code to an Azure DevOps team project
 
 Create a new project in Azure DevOps by clicking on `New`:
 
@@ -414,7 +414,7 @@ Create the described release definition by following these steps:
 
 If you had both `Staging` and `Production` users, you could test the full release environment as configured. Since that's not the case for this tutorial, you can focus on testing the `Staging` environment.
 
-To test the automated workflow, you'll need deploy a "release" version of the test app and push a change to the master branch in order to kick off a build and eventually a release.
+To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch in order to kick off a build and eventually a release.
 
 You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content).
 
