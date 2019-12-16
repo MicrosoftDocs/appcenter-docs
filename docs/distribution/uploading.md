@@ -112,9 +112,6 @@ You can call the App Center API to distribute a release.
 
         The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
 
-        ```shell
-        curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed"  }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads/c18df340-069f-0135-3290-22000b559634'
-        ```
 
 4. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
 
@@ -143,6 +140,16 @@ Make a release mandatory to force all users to run the same version of your app.
 You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory via the API or by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
 
 For mandatory releases, App Center displays a red dot next to the release icon in your releases table under a selected distribution group.
+
+## Link to Releases
+
+Once you've released successfully, your testers can access the release through email, logging onto App Center, or through a direct link. 
+
+You can find links to specific releases on the release page for private destinations.
+![Install button] (~/distribution/images/installButton.png)
+
+You can find links to specific releases to public destinations on the releases tab in public groups. 
+![Public deep link] (~/distribution/images/publicDeepLink.png)
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [google-prepare-for-release]: https://developer.android.com/studio/publish/preparing.html
