@@ -1,5 +1,5 @@
 ---
-title: iOS Symbolication
+title: Unsymbolicaed crashes
 description: Help understanding behavior for unsymbolicated crashes in App Center
 author: winnie
 ms.author: yuli1
