@@ -6,7 +6,7 @@ author: elamalani
 ms.author: emalani
 ms.date: 12/05/2018
 ms.topic: article
-ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
+ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 ms.service: vs-appcenter
 ms.custom: sdk
 dev_langs:  

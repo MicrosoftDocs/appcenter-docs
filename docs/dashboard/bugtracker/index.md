@@ -7,7 +7,7 @@ ms.author: amchew
 ms.date: 11/18/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.assetid: 97b6f745-736f-4abc-a85b-88
+ms.assetid: f56710ac-9797-4e58-8bd4-9581553c28a1
 ---
 
 # App Center bug tracker integration

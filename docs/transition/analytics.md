@@ -4,7 +4,7 @@ author: blparr
 ms.author: blparr
 ms.date: 10/30/2018
 ms.topic: article
-ms.assetid: 6B321989-C880-4970-BD4F-2D0515ECCDF
+ms.assetid: 798db61e-9ad9-421f-8e86-887d92927083
 ms.service: vs-appcenter
 ---
 

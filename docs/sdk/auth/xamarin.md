@@ -6,7 +6,7 @@ author: amchew
 ms.author: achew
 ms.date: 07/22/2019
 ms.topic: article
-ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
+ms.assetid: 4d2277c5-8a3a-484c-b5c6-47a210c0118e
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: xamarin

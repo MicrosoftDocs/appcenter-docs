@@ -6,7 +6,7 @@ author: amchew
 ms.author: amchew
 ms.date: 07/08/2019
 ms.topic: article
-ms.assetid: f24d7db6e-9eab-4272-be10-938fc4ae296b
+ms.assetid: 297d338f-cd75-4ecd-87fb-e5b57a2eb430
 ms.service: vs-appcenter
 ms.custom: MBaaS
 ---
