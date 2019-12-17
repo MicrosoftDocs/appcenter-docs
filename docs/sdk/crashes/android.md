@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/04/2019
+ms.date: 12/13/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.service: vs-appcenter
@@ -257,7 +257,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```java
 @Override
@@ -480,6 +480,9 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart.
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
+
+> [!NOTE]
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

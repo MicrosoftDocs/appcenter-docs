@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: winnieli
 ms.author: yuli1
-ms.date: 09/25/2019
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.service: vs-appcenter
@@ -125,7 +125,7 @@ MSCrashes.notify(with: .send)
 MSCrashes.notify(with: .always)
 ```
 
-### Enable catching uncaught exceptions thrown on the main thread
+## Enable catching uncaught exceptions thrown on the main thread
 
 AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK cannot catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this will allow the application to crash on uncaught exceptions and the SDK can report them.
 
@@ -138,6 +138,44 @@ UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true
 
 > [!NOTE]
 > App Center SDK set the flag automatically in versions 1.10.0 and below. Starting with version 1.11.0 this flag is no longer set automatically.
+
+### Disable forwarding of the application main class's methods calls to App Center Crashes
+
+The App Center Crashes SDK uses swizzling to improve its integration by forwarding itself some of the application main class's methods calls. Method swizzling is a way to change the implementation of methods at runtime. If for any reason you don't want to use swizzling (e.g. because of a specific policy), you should override the application's `reportException:` and `sendEvent:` methods yourself in order for Crashes to report exceptions thrown on the main thread correctly.
+
+1. Create **ReportExceptionApplication.m** file and add the following implementation:
+
+    ```objc
+    @import Cocoa;
+    @import AppCenterCrashes;
+
+    @interface ReportExceptionApplication : NSApplication
+    @end
+
+    @implementation ReportExceptionApplication
+
+    - (void)reportException:(NSException *)exception {
+      [MSCrashes applicationDidReportException:exception];
+      [super reportException:exception];
+    }
+
+    - (void)sendEvent:(NSEvent *)theEvent {
+      @try {
+        [super sendEvent:theEvent];
+      } @catch (NSException *exception) {
+        [self reportException:exception];
+      }
+    }
+
+    @end
+    ```
+
+    > [!NOTE]
+    > Swift's `try`/`catch` doesn't work with `NSException`. These exceptions can be handled in Objective-C only.
+
+2. Open **Info.plist** file and replace the **NSApplication** in the **Principal class** field with your application class name, **ReportExceptionApplication** in this example.
+
+3. In order to disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 

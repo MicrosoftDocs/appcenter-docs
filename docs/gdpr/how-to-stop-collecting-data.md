@@ -6,7 +6,7 @@ author: kpiteira
 ms.author: kapiteir
 ms.date: 05/31/2018 
 ms.topic: article 
-ms.assetid: 0DA5C4FB-B64F-40F4-9077-4B7D31B746CD
+ms.assetid: facd442a-14ae-41a6-958e-d32617d1ab22
 ms.service: vs-appcenter
 ---
 
