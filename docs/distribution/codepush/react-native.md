@@ -144,7 +144,7 @@ Once you have acquired the CodePush plugin, you must integrate it into the Xcode
 
    In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
-   *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#CodePushOptions)*
+   *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (iOS)
 
@@ -421,7 +421,7 @@ In order to integrate CodePush into your Android project, perform the following 
     </resources>
     ```
 
-    *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#CodePushOptions)*
+    *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (Android)
 
@@ -453,7 +453,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
-And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#Plugin-Configuration-for-React-Native-lower-than-060-android) section to complete the setup.
+And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 
 #### Plugin Installation (Android - Manual)
 
@@ -1769,7 +1769,7 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 Since `autolinking` uses `react-native.config.js` to link plugins, constructors are specified in that file. But you can override custom variables to manage the CodePush plugin by placing these values in string resources.
 
-* __Public Key__ - used for bundle verification in the Code Signing Feature. Please refer to [Code Signing](setup-android.md#code-signing-setup) section for more details about the Code Signing Feature.
+* __Public Key__ - used for bundle verification in the Code Signing Feature. Please refer to [Code Signing](cli.md#code-signing) section for more details about the Code Signing Feature.
     To set the public key, you should add the content of the public key to `strings.xml` with name `CodePushPublicKey`. CodePush automatically gets this property and enables the Code Signing feature. For example:
     ```xml
     <string moduleConfig="true" name="CodePushPublicKey">your-public-key</string>
@@ -1799,7 +1799,7 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
 
   2. The local cache that the React Native runtime maintains in debug mode is deleted whenever a CodePush update is installed. This ensures that when the app is restarted after an update is applied, it is possible to see the expected changes. As soon as [this PR](https://github.com/facebook/react-native/pull/4738) is merged, we won't need to do this anymore.
 
-- **CodePush(String deploymentKey, Context context, boolean isDebugMode, Integer publicKeyResourceDescriptor)** - Equivalent to the previous constructor, but allows you to specify the public key resource descriptor needed to read public key content. Please refer to [Code Signing](setup-android.md#code-signing-setup) section for more details about the Code Signing Feature.
+- **CodePush(String deploymentKey, Context context, boolean isDebugMode, Integer publicKeyResourceDescriptor)** - Equivalent to the previous constructor, but allows you to specify the public key resource descriptor needed to read public key content. Please refer to [Code Signing](cli.md#code-signing) section for more details about the Code Signing Feature.
 
 - **CodePush(String deploymentKey, Context context, boolean isDebugMode, String serverUrl)** - Constructor allows you to specify CodePush Server Url. The Default value: `"https://codepush.appcenter.ms/"` is overridden by value specified in `serverUrl`.
 
