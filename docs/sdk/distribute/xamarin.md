@@ -6,7 +6,7 @@ author: elamalani
 ms.author: emalani
 ms.date: 11/26/2019
 ms.topic: article
-ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
+ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
