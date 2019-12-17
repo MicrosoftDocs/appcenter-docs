@@ -15,7 +15,7 @@ ms.custom: analytics
 
 ## General
 
-App Center’s Diagnostics service is designed for you to easily monitor your apps health and get the information you need to fix issues. 
+App Center’s Diagnostics service is designed for you to easily monitor your apps' health and get the information you need to fix issues. 
 
 1. Login to the App Center Portal
 2. Select an application
