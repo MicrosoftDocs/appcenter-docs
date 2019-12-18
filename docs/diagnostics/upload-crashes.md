@@ -15,6 +15,9 @@ ms.custom: diagnostics
 
 You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
 
+> [!NOTE]
+> App Center only accepts up to 60 crashes and handled errors per minute per unique app. We will not process any crashes or errors that exceed this limit.
+
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
