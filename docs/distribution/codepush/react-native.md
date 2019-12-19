@@ -119,7 +119,7 @@ Once you have acquired the CodePush plugin, you must integrate it into the Xcode
    ```
    This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this will correspond to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
-   > [!NOTE] 
+   > [!NOTE]
    > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
 
 
@@ -961,6 +961,7 @@ To set this up, perform the following steps:
         ...
     }
     ```
+
 > [!NOTE]
 > Remember to remove the key from `strings.xml` if you are configuring the deployment key in the build process*
 
@@ -1177,7 +1178,8 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [getCurrentPackage](#codepushgetcurrentpackage): Retrieves the metadata about the currently installed update (like description, installation time, size). 
 
-    > [!NOTE] As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
+    > [!NOTE] 
+    > As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
 
 - [getUpdateMetadata](#codepushgetupdatemetadata): Retrieves the metadata for an installed update (like description, mandatory).
 
