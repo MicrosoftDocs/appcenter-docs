@@ -119,7 +119,9 @@ Once you have acquired the CodePush plugin, you must integrate it into the Xcode
    ```
    This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this will correspond to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
-   *NOTE: The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+   > [!NOTE] 
+   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+
 
    Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
@@ -144,7 +146,8 @@ Once you have acquired the CodePush plugin, you must integrate it into the Xcode
 
    In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
-   *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
+   > [!NOTE]
+   > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (iOS)
 
@@ -421,7 +424,8 @@ In order to integrate CodePush into your Android project, perform the following 
     </resources>
     ```
 
-    *Note: If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
+    > [!NOTE]
+    > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (Android)
 
@@ -919,7 +923,8 @@ You will notice that the above steps refer to a "staging build" and "production 
 
 The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release). This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
 
-*NOTE: As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
+> [!NOTE] 
+> As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
 
 To set this up, perform the following steps:
 
@@ -1101,7 +1106,8 @@ To set this up, perform the following steps:
 
     ![Setting Keys](./images/rn-ios-11.png)
 
-    *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
+    > [!NOTE]
+    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
 
 10. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
@@ -1169,7 +1175,9 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [disallowRestart](#codepushdisallowrestart): Temporarily disallows any programmatic restarts to occur as a result of a CodePush update being installed. This is an advanced API, and is useful when a component within your app (for example an onboarding process) needs to ensure that no end-user interruptions can occur during its lifetime.
 
-- [getCurrentPackage](#codepushgetcurrentpackage): Retrieves the metadata about the currently installed update (like description, installation time, size). *NOTE: As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
+- [getCurrentPackage](#codepushgetcurrentpackage): Retrieves the metadata about the currently installed update (like description, installation time, size). 
+
+    > [!NOTE] As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
 
 - [getUpdateMetadata](#codepushgetupdatemetadata): Retrieves the metadata for an installed update (like description, mandatory).
 
@@ -1861,7 +1869,7 @@ Now you can see CodePush logs in release mode, on both iOS or Android. If examin
 
 In addition to being able to use the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you and/or your team to create and maintain the rhythm of performing agile deployments. In order to assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
 
-- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - *NOTE: Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.*
+- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.*
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)
 
 Additionally, if you'd like more details of what a complete mobile CI/CD workflow  can look like, which includes CodePush, check out this [excellent article](https://zeemee.engineering/zeemee-engineering-and-the-quest-for-the-holy-mobile-dev-grail-1310be4953d1#.zfwaxtbco) by the [ZeeMee engineering team](https://zeemee.engineering).
