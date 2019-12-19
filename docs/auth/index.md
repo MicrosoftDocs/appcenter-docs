@@ -1,5 +1,5 @@
 ---
-title: Managing identities with the App Center Auth Service
+title: Managing identities with the App Center Auth
 description: Introduction to the App Center Auth Service
 keywords: MBaaS, Auth, Identity
 author: amchew
