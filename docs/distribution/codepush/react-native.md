@@ -45,13 +45,14 @@ We try our best to maintain backwards compatibility of our plugin with previous 
 | v0.34-v0.35             | v1.15-v1.17 *(RN refactored native hosting code)*    |
 | v0.36-v0.39             | v1.16-v1.17 *(RN refactored resume handler)*         |
 | v0.40-v0.42             | v1.17 *(RN refactored iOS header files)*             |
-| v0.43-v0.44             | v2.0+ *(RN refactored unmanage dependencies)*       |
+| v0.43-v0.44             | v2.0+ *(RN refactored uimanager dependencies)*       |
 | v0.45                   | v3.0+ *(RN refactored instance manager code)*        |
 | v0.46                   | v4.0+ *(RN refactored js bundle loader code)*         |
 | v0.46-v0.53             | v5.1+ *(RN removed unused registration of JS modules)*|
 | v0.54-v0.55             | v5.3+ *(Android Gradle Plugin 3.x integration)*       |
 | v0.56-v0.58             | v5.4+ *(RN upgraded versions for Android tools)*      |
 | v0.59                   | v5.6+ *(RN refactored js bundle loader code)*         |
+| v0.60-v0.61             | v6.0+ *(RN migrated to Autolinking)*                  |
 
 We work hard to respond to new React Native releases, but they do occasionally break us. We will update this chart with each React Native release, so that users can check to see what our official support is.
 
@@ -95,7 +96,60 @@ If you want to see how other projects have integrated with CodePush, you can che
 
 Once you have acquired the CodePush plugin, you must integrate it into the Xcode project of your React Native app and configure it correctly.
 
-### Plugin Installation (iOS)
+### Plugin Installation and Configuration for React Native 0.60 version and above (iOS)
+
+1. Run `cd ios && pod install && cd ..` to install all the necessary CocoaPods dependencies.
+​
+2. Open up the `AppDelegate.m` file, and add an import statement for the CodePush headers:
+
+   ```objective-c
+   #import <CodePush/CodePush.h>
+   ```
+
+3. Find the following line of code, which sets the source URL for bridge for production releases:
+
+   ```objective-c
+   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+   ```
+
+4. Replace it with this line:
+
+   ```objective-c
+   return [CodePush bundleURL];
+   ```
+   This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this will correspond to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
+
+   > [!NOTE]
+   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+
+
+   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+
+   Your `sourceURLForBridge` method should look like this:
+
+   ```objective-c
+   - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+   {
+     #if DEBUG
+       return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+     #else
+       return [CodePush bundleURL];
+     #endif
+   }
+   ```
+
+5. Add the Deployment key to `Info.plist`:
+
+   To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+
+   ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
+
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+
+   > [!NOTE]
+   > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
+
+### Plugin Installation for React Native lower than 0.60 (iOS)
 
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
 
@@ -184,7 +238,7 @@ And that's it! Isn't RNPM awesome? :)
    > [!NOTE]
    > Alternatively, if you prefer, you can add the `-lz` flag to the `Other Linker Flags` field in the `Linking` section of the `Build Settings`.*
 
-### Plugin Configuration (iOS)
+### Plugin Configuration for React Native lower than 0.60 (iOS)
 
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
@@ -197,7 +251,7 @@ Once your Xcode project has been set up to build/link the CodePush plugin, you n
     #import <CodePush/CodePush.h>
     ```
 
-For React Native 0.59 and above:
+For React Native 0.59 - 0.59.10:
 
 2. Find the following line of code, which sets the source URL for bridge for production releases:
 
@@ -232,7 +286,7 @@ This change configures your app to always load the most recent version of your a
 
 Typically, you are only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
-For React Native 0.59 and above:
+For React Native 0.59 - 0.59.10:
 
 ```objective-c
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
@@ -323,6 +377,58 @@ In order to integrate CodePush into your Android project, perform the following 
 
 ### Plugin Installation (Android)
 
+### Plugin Installation and Configuration for React Native 0.60 version and above (Android)
+
+1. In your `android/app/build.gradle` file, add the `codepush.gradle` file as an additional build task definition underneath `react.gradle`:
+
+    ```gradle
+    ...
+    apply from: "../../node_modules/react-native/react.gradle"
+    apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+    ...
+    ```
+2. Update the `MainApplication.java` file to use CodePush via the following changes:
+
+    ```java
+    ...
+    // 1. Import the plugin class.
+    import com.microsoft.codepush.react.CodePush;
+    public class MainApplication extends Application implements ReactApplication {
+        private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+            ...
+            // 2. Override the getJSBundleFile method in order to let
+            // the CodePush runtime determine where to get the JS
+            // bundle location from on each app start
+            @Override
+            protected String getJSBundleFile() {
+                return CodePush.getJSBundleFile();
+            }
+        };
+    }
+    ```
+
+3. Add the Deployment key to `strings.xml`:
+
+   To let the CodePush runtime know which deployment it should query for updates, open your app's `strings.xml` file and add a new string named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. The "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+
+   ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
+
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+
+   Your `strings.xml` should looks like this:
+
+   ```xml
+    <resources>
+        <string name="app_name">AppName</string>
+        <string moduleConfig="true" name="CodePushDeploymentKey">DeploymentKey</string>
+    </resources>
+    ```
+
+    > [!NOTE]
+    > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](#codepushoptions)*
+
+### Plugin Installation for React Native lower than 0.60 (Android)
+
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports Android installation via two mechanisms:
 
 1. [**RNPM**](#plugin-installation-android---rnpm) - [React Native Package Manager (RNPM)](https://github.com/rnpm/rnpm) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you are already using it, or you want to use it, then we recommend this approach.
@@ -351,7 +457,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
-And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-android) section to complete the setup.
+And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 
 #### Plugin Installation (Android - Manual)
 
@@ -381,7 +487,7 @@ And that's it for installation using RNPM! Continue below to the [Plugin Configu
     ...
     ```
 
-### Plugin Configuration (Android)
+### Plugin Configuration for React Native lower than 0.60 (Android)
 
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
@@ -815,13 +921,72 @@ You will notice that the above steps refer to a "staging build" and "production 
 
 ### Android
 
-The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release), which in turn are generated as properties on the `BuildConfig` class that you can reference from your Java code. This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
+The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release). This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
+
+> [!NOTE] 
+> As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
 
 To set this up, perform the following steps:
 
-1. Open the project's app level **build.gradle** file (for example `android/app/build.gradle` in standard React Native projects)
+**For React Native >= v0.60**
 
-2. Find the `android { buildTypes {} }` section and define `buildConfigField` entries for both your `debug` and `release` build types, which reference your `Staging` and `Production` deployment keys respectively. If you prefer, you can define the key literals in your `gradle.properties` file, and then reference them here. Either way will work, and it's just a matter of personal preference.
+1. Open the project's app level `build.gradle` file (for example `android/app/build.gradle` in standard React Native projects)
+
+2. Find the `android { buildTypes {} }` section and define `resValue` entries for both your `debug` and `release` build types, which reference your `Staging` and `Production` deployment keys respectively.
+
+    ```groovy
+    android {
+        ...
+        buildTypes {
+            debug {
+                ...
+                // Note: CodePush updates should not be tested in Debug mode as they are overriden by the RN packager. However, because CodePush checks for updates in all modes, we must supply a key.
+                resValue "string", "CodePushDeploymentKey", '""'
+                ...
+            }
+            releaseStaging {
+                ...
+                resValue "string", "CodePushDeploymentKey", '"<INSERT_STAGING_KEY>"'
+                // Note: It is a good idea to provide matchingFallbacks for the new buildType you create to prevent build issues
+                // Add the following line if not already there
+                matchingFallbacks = ['release']
+                ...
+            }
+            release {
+                ...
+                resValue "string", "CodePushDeploymentKey", '"<INSERT_PRODUCTION_KEY>"'
+                ...
+            }
+        }
+        ...
+    }
+    ```
+
+> [!NOTE]
+> Remember to remove the key from `strings.xml` if you are configuring the deployment key in the build process*
+
+> [!NOTE]
+> The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).*
+
+
+**For React Native v0.29 - v0.59**
+
+1. Open up your `MainApplication.java` file and make the following changes:
+
+    ```java
+    @Override
+    protected List<ReactPackage> getPackages() {
+         return Arrays.<ReactPackage>asList(
+             ...
+             new CodePush(BuildConfig.CODEPUSH_KEY, MainApplication.this, BuildConfig.DEBUG), // Add/change this line.
+             ...
+         );
+    }
+    ```
+
+2. Open your app's `build.gradle` file (for example `android/app/build.gradle` in standard React Native projects)
+
+3. Find the `android { buildTypes {} }` section and define `buildConfigField` entries for both your `debug` and `release` build types, which reference your `Staging` and `Production` deployment keys respectively. If you prefer, you can define the key literals in your `gradle.properties` file, and then reference them here. Either way will work, and it's just a matter of personal preference.
 
     ```groovy
     android {
@@ -861,21 +1026,6 @@ To set this up, perform the following steps:
    > The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
 
 3. Pass the deployment key to the `CodePush` constructor via the build config you defined, as opposed to a string literal.
-
-**For React Native >= v0.29**
-
-Open up your `MainApplication.java` file and make the following changes:
-
- ```java
-@Override
-protected List<ReactPackage> getPackages() {
-     return Arrays.<ReactPackage>asList(
-         ...
-         new CodePush(BuildConfig.CODEPUSH_KEY, MainApplication.this, BuildConfig.DEBUG), // Add/change this line.
-         ...
-     );
-}
- ```
 
 **For React Native v0.19 - v0.28**
 
@@ -957,7 +1107,8 @@ To set this up, perform the following steps:
 
     ![Setting Keys](./images/rn-ios-11.png)
 
-    *NOTE: As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
+    > [!NOTE]
+    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
 
 10. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
@@ -1025,7 +1176,10 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [disallowRestart](#codepushdisallowrestart): Temporarily disallows any programmatic restarts to occur as a result of a CodePush update being installed. This is an advanced API, and is useful when a component within your app (for example an onboarding process) needs to ensure that no end-user interruptions can occur during its lifetime.
 
-- [getCurrentPackage](#codepushgetcurrentpackage): Retrieves the metadata about the currently installed update (like description, installation time, size). *NOTE: As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
+- [getCurrentPackage](#codepushgetcurrentpackage): Retrieves the metadata about the currently installed update (like description, installation time, size). 
+
+    > [!NOTE] 
+    > As of `v1.10.3-beta` of the CodePush module, this method is deprecated in favor of [`getUpdateMetadata`](#codepushgetupdatemetadata)*.
 
 - [getUpdateMetadata](#codepushgetupdatemetadata): Retrieves the metadata for an installed update (like description, mandatory).
 
@@ -1621,6 +1775,24 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 ### Java API Reference (Android)
 
+### API for React Native 0.60 version and above
+
+Since `autolinking` uses `react-native.config.js` to link plugins, constructors are specified in that file. But you can override custom variables to manage the CodePush plugin by placing these values in string resources.
+
+* __Public Key__ - used for bundle verification in the Code Signing Feature. Please refer to [Code Signing](cli.md#code-signing) section for more details about the Code Signing Feature.
+    To set the public key, you should add the content of the public key to `strings.xml` with name `CodePushPublicKey`. CodePush automatically gets this property and enables the Code Signing feature. For example:
+    ```xml
+    <string moduleConfig="true" name="CodePushPublicKey">your-public-key</string>
+    ```
+
+* __Server Url__ - used for specifying CodePush Server Url.
+    The Default value: "https://codepush.appcenter.ms/" is overridden by adding your path to `strings.xml` with name `CodePushServerUrl`. CodePush automatically gets this property and will use this path to send requests. For example:
+    ```xml
+    <string moduleConfig="true" name="CodePushServerUrl">https://yourcodepush.server.com</string>
+    ```
+
+### API for React Native lower than 0.60
+
 The Java API is made available by importing the `com.microsoft.codepush.react.CodePush` class into your **MainActivity.java** file, and consists of a single public class named `CodePush`.
 
 #### CodePush
@@ -1636,6 +1808,10 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
   1. Old CodePush updates aren't deleted from storage whenever a new binary is deployed to the emulator/device. This behavior enables you to deploy new binaries, without bumping the version during development, and without continuously getting the same update every time your app calls `sync`.
 
   2. The local cache that the React Native runtime maintains in debug mode is deleted whenever a CodePush update is installed. This ensures that when the app is restarted after an update is applied, it is possible to see the expected changes. As soon as [this PR](https://github.com/facebook/react-native/pull/4738) is merged, we won't need to do this anymore.
+
+- **CodePush(String deploymentKey, Context context, boolean isDebugMode, Integer publicKeyResourceDescriptor)** - Equivalent to the previous constructor, but allows you to specify the public key resource descriptor needed to read public key content. Please refer to [Code Signing](cli.md#code-signing) section for more details about the Code Signing Feature.
+
+- **CodePush(String deploymentKey, Context context, boolean isDebugMode, String serverUrl)** - Constructor allows you to specify CodePush Server Url. The Default value: `"https://codepush.appcenter.ms/"` is overridden by value specified in `serverUrl`.
 
 ##### Static Methods
 
@@ -1695,7 +1871,7 @@ Now you can see CodePush logs in release mode, on both iOS or Android. If examin
 
 In addition to being able to use the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you and/or your team to create and maintain the rhythm of performing agile deployments. In order to assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
 
-- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - *NOTE: Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.*
+- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.*
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)
 
 Additionally, if you'd like more details of what a complete mobile CI/CD workflow  can look like, which includes CodePush, check out this [excellent article](https://zeemee.engineering/zeemee-engineering-and-the-quest-for-the-holy-mobile-dev-grail-1310be4953d1#.zfwaxtbco) by the [ZeeMee engineering team](https://zeemee.engineering).
