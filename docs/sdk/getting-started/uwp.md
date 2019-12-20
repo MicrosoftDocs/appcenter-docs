@@ -36,8 +36,8 @@ Let's get started with setting up App Center UWP SDK in your app to use App Cent
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is set up in Visual Studio 2015 Update 3 or later.
-* Your project references Universal Windows Platform [5.2.2](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/5.2.2) or later
+* Your project is set up in Visual Studio 2017 Update 15.9 or later.
+* Your project references Universal Windows Platform [6.2.8](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.2.8) or later
 
 > [!NOTE]
 > If you want to use Xamarin.Forms for UWP, please follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
