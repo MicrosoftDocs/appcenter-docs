@@ -40,6 +40,8 @@ Disconnect the connected Azure DevOps (formerly VSTS) account and [reconnect to 
 
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**. You'll need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
 
+Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) to enable it.
+
 ## <a name="git-sub"/>Are Git submodules supported?
 
 For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 
