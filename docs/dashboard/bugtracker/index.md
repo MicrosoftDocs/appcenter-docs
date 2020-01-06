@@ -26,7 +26,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 
    1. For Jira:
 
-      1. Login with your Jira credentials (username, password and base URL) and click **Add**. Please see here on [how to find your base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html).
+      1. Login with your Jira credentials (email, password and base URL) and click **Add**. Please see here on [how to find your base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html).
       > Note: Jira has [deprecated basic authentication](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-basic-auth-and-cookie-based-auth/). Instead of typing in your password, you must create an [API token in Jira](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) and use that as your password.
       2. Select which Jira projects to integrate the bug tracker with and click **Next**.
       3. Toggle **On** for **Auto create ticket** and click **Add**:
