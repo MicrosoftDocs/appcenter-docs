@@ -72,29 +72,15 @@
 ## [Getting Started](test-cloud/getting-started.md)
 ## [Devices Available](test-cloud/devices.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
-## Preparing Test for Upload
-### [Introduction](test-cloud/preparing-for-upload/index.md)
-### [Appium](test-cloud/preparing-for-upload/appium.md)
-### [Espresso](test-cloud/preparing-for-upload/espresso.md)
-### [Calabash [deprecated]](test-cloud/preparing-for-upload/calabash.md)
-### [Xamarin.UITest in Xamarin.Android app](test-cloud/preparing-for-upload/xamarin-android-uitest.md)
-### [Xamarin.UITest in Xamarin.iOS app](test-cloud/preparing-for-upload/xamarin-ios-uitest.md)
-### [XCUITest](test-cloud/preparing-for-upload/xcuitest.md)
-### [XCUITest with Extensions](test-cloud/preparing-for-upload/xcuitest-extension.md)
-## [Starting a Test Run](test-cloud/starting-a-test-run.md)
-## [Test Reports](test-cloud/test-reports.md)
-## [Security](test-cloud/security.md)
-## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
-## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
-## Troubleshooting
-### [Introduction](test-cloud/troubleshooting/index.md)
-### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
-### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+## Appium
+### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
+## Espresso
+### [Preparing for upload](test-cloud/espresso/preparing-for-upload.md)
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
+### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
+### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
 ### Working With
@@ -109,6 +95,23 @@
 #### [iOS Simulator](test-cloud/uitest/working-with-ios-simulator.md)
 #### [Timeouts](test-cloud/uitest/working-with-timeouts.md)
 #### [Webviews](test-cloud/uitest/working-with-webviews.md)
+## XCUITest
+### [Preparing for upload](test-cloud/preparing-for-upload/xcuitest.md)
+### [Preparing for upload with Extensions](test-cloud/preparing-for-upload/xcuitest-extension.md)
+## Calabash [Depreciated]
+### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
+## [Starting a Test Run](test-cloud/starting-a-test-run.md)
+## [Test Reports](test-cloud/test-reports.md)
+## [Security](test-cloud/security.md)
+## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## Troubleshooting
+### [Introduction](test-cloud/troubleshooting/index.md)
+### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
+### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
+### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
+### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+
 
 # Distribute
 ## [Introduction](distribution/index.md)
