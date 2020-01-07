@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 12/16/2019
+ms.date: 01/07/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -22,7 +22,7 @@ Each build runs on a separate, clean virtual machine (VM), and no other user has
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
 - OS X 10.14.6 (18G2022) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
-- OS X 10.13.6 (17G9016) **High Sierra** for builds running Xcode 9.4 and lower
+- OS X 10.13.6 (17G10021) **High Sierra** for builds running Xcode 9.4 and lower
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted).
 
@@ -37,27 +37,27 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - java 13: OpenJDK Runtime Environment Zulu13.28+11-CA (build 13.0.1+10-MTS)
 - PowerShell 6.2.3
 - Python 2.7.17
-- Python 3.7.5
+- Python 3.7.6
 - Ruby 2.6.5p114
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.2 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.4 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.13.4
+- Go 1.13.5
 - Miniconda 4.7.12
 - MacOS tool cache Python 2.7.16 3.5.7 3.6.9 3.7.5 3.8.0
 - MacOS tool cache Ruby 2.4.6 2.5.5 2.6.3
 
 ### Node.js versions
 - v6.17.1
-- v8.16.2
-- v10.17.0
-- v12.13.1
-- v13.3.0
+- v8.17.0
+- v10.18.0
+- v12.14.0
+- v13.5.0
 
 ### Package Management
 
-- Bundler 2.0.2
+- Bundler 2.1.3
 - Carthage 0.34.0
 - CocoaPods 1.8.4
-- Homebrew 2.2.1
+- Homebrew 2.2.2
 - NPM 3.10.10
 - Yarn 1.21.1
 - NuGet 4.7.0.5148
@@ -73,17 +73,22 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 - Curl 7.67.0 (x86_64-apple-darwin17.7.0) libcurl/7.67.0 SecureTransport zlib/1.2.11
 - Git 2.24.1
-- Git LFS 2.8.0
+- Git LFS 2.9.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- GNU parallel 20191122
+- GNU parallel 20191222
 
 ### Tools
 
-- Fastlane 2.137.0
-- CMake 3.15.5
+- Fastlane 2.139.0
+- CMake 3.16.2
 - App Center CLI 1.2.2
-- Azure-CLI 2.0.77
+- Azure-CLI 2.0.78
+
+### Browsers
+
+- Google Chrome 79.0.3945.88
+- ChromeDriver 79.0.3945.36
 
 ## Xcode
 
@@ -290,7 +295,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | lldb                  | 3.1.4508709                               |
 | ndk-bundle            | 18.1.5063045                              |
 | ProGuard              | 5.3.3                                     |
-| Android Emulator      | 29.3.0                                    |
+| Android Emulator      | 29.3.2                                    |
 
 ### Google APIs
 
@@ -319,7 +324,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Visual Studio for Mac
 
-- 8.3.10.2
+- 8.3.11.1
 
 ### Mono
 
@@ -330,9 +335,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - 5.12.0
 - 5.10.1
 - 5.8.1
-- 5.8.0
 - 5.4.1.7
-- 5.4.0.201
 - 5.2.0.224
 - 5.0.1.1
 - 4.8.1.0
@@ -347,7 +350,6 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - 12.8.0.2
 - 12.6.0.25
 - 12.2.1.16
-- 12.2.1.11
 - 12.0.0.15
 - 11.14.0.13
 - 11.12.0.4
@@ -362,16 +364,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Xamarin.Android SDK
 
 - 10.0.6.2
-- 10.0.3.0
 - 9.4.1.0
 - 9.3.0-23
 - 9.2.3-0
 - 9.1.8-0
 - 9.0.0-20
-- 9.0.0-18
 - 8.3.3-2
 - 8.2.0-16
-- 8.2.0-15
 - 8.1.5-0
 - 8.0.0-33
 - 7.4.5-1
@@ -389,11 +388,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - 5.6.0.25
 - 5.3.1.28
 - 5.2.1.16
-- 5.2.1.9
 - 4.6.0.13
 - 4.4.1.193
 - 4.2.1.28
-- 4.2.0.20
 - 4.0.0.216
 - 3.8.0.49
 - 3.6.3.3
