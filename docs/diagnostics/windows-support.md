@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/11/2019
+ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -76,6 +76,10 @@ The legacy experience will be disabled on January 20th, 2020. Please upgrade to 
 ## Symbolication
 
 UWP crash reports show the stack trace for the thread that caused the crash. When the application is using .NET Native (typically in release builds) the stack trace may contain memory addresses instead of class names, methods, file names, and line numbers that are needed to read and understand the crashes.
+
+### Unsymbolicated crashes
+
+[!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
 
 ### Uploading symbols
 

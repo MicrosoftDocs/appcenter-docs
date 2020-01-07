@@ -4,7 +4,7 @@ description: "Learn how to utilize the Management SDK"
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 01/14/2019
+ms.date: 12/23/2019
 ms.topic: article
 ms.assetid: 5A294968-C232-41B4-BAD3-EF23981C91F2
 ms.service: vs-appcenter
@@ -32,15 +32,22 @@ A JavaScript library for programmatically managing your App Center account (e.g.
     ```
 
 3. Import it using the following statement (using ES6 syntax as applicable):
+    * On commonjs environments:
 
     ```javascript
-    var CodePush = require("code-push");
+    const CodePush = require("code-push");    
+    ```
+    
+    * Using ES6 syntax with tsconfig.json:
+
+    ```javascript
+    import CodePush from "code-push";
     ```
 
 4. Create an instance of the `CodePush` class, passing it the `API Token` you created in step #1:
 
     ```javascript
-    var codePush = new CodePush("YOUR_API_TOKEN");
+    const codePush = new CodePush("YOUR_API_TOKEN");
     ```
 
 5. Begin automating the management of your account! For more details on what you can do with this `codePush` object, refer to the API reference section below.
@@ -55,6 +62,9 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 
 ### Methods
 
+> [!NOTE]
+>  `access key` here refers to an AppCenter API Token.
+
 - **addAccessKey(description: string): Promise&lt;AccessKey&gt;** - Creates a new access key with the specified description (e.g. "Azure DevOps CI").
 - **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If `manuallyProvisionDeployments` is set to true, the app will not create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
 - **addCollaborator(appName: string, email: string): Promise&lt;void&gt;** - Adds the specified CodePush user as a collaborator to the specified CodePush app.
@@ -68,7 +78,7 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 - **getDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Retrieves the metadata for the specified app deployment.
 - **getDeploymentHistory(appName: string, deploymentName: string): Promise&lt;Package[]&gt;** - Retrieves the list of releases that have been made to the specified app deployment.
 - **getDeploymentMetrics(appName: string, deploymentName): Promise&lt;DeploymentMetrics&gt;** - Retrieves the installation metrics for the specified app deployment.
-- **getDeployments(appName: string): Promose&lt;Deployment[]&gt;** - Retrieves the list of deployments associated with the specified app.
+- **getDeployments(appName: string): Promise&lt;Deployment[]&gt;** - Retrieves the list of deployments associated with the specified app.
 - **patchRelease(appName: string, deploymentName: string, label: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Updates the specified release's metadata with the given information.
 - **promote(appName: string, sourceDeploymentName: string, destinationDeploymentName: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Promotes the latest release from one deployment to another for the specified app and updates the release with the given metadata.
 - **release(appName: string, deploymentName: string, updateContentsPath: string, targetBinaryVersion: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Releases a new update to the specified deployment with the given metadata.
