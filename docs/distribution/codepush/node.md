@@ -62,7 +62,8 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 
 ### Methods
 
-*Note: `access key` here refers to an AppCenter API Token.*
+> [!NOTE]
+>  `access key` here refers to an AppCenter API Token.
 
 - **addAccessKey(description: string): Promise&lt;AccessKey&gt;** - Creates a new access key with the specified description (e.g. "Azure DevOps CI").
 - **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If `manuallyProvisionDeployments` is set to true, the app will not create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
