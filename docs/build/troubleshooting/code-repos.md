@@ -4,7 +4,7 @@ description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: nrajpurkar
 ms.author: nirajpur
-ms.date: 09/27/2019
+ms.date: 01/06/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
 ms.service: vs-appcenter
@@ -38,9 +38,9 @@ Disconnect the connected Azure DevOps (formerly VSTS) account and [reconnect to 
 
 ## <a name="not-listed"/>When connecting an Azure DevOps repository, I see "No Projects Found"
 
-It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me?mkt=en-US) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**. You'll need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
+It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**. You'll need to [reconnect to the correct account](#wrong-VSTS) if you connected to the wrong account.
 
-Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) to enable it.
+Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) to enable it.
 
 ## <a name="git-sub"/>Are Git submodules supported?
 
