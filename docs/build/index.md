@@ -4,7 +4,7 @@ description: Building apps with App Center
 keywords: build
 author: siminapasat
 ms.author: siminap
-ms.date: 09/12/2018
+ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 3ebe875a-e8e0-4b76-bba1-277047a321b7
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ To get started using the Build service, you'll first need to connect to a source
 - Azure DevOps (formerly Visual Studio Team Services or VSTS)
 - Bitbucket
 - GitHub
-- GitLab (currently in private preview)
+- GitLab
 
 App Center doesn't support Team Foundation Version Control (TFVC).
 
@@ -34,4 +34,4 @@ If you're having trouble with your builds, [contact our dedicated support team](
 
 
 > [!NOTE]
-> App Center build history and associated artifacts are available for 30 days. 
+> App Center build artifacts and logs are kept for 30 days after build completion.
