@@ -375,6 +375,7 @@
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 ## [Auth](migration/auth/index.md)
 ## [Push](migration/push/index.md)
+## [Data](migration/data/index.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
