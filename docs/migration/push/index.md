@@ -26,8 +26,8 @@ If your app sets the user identity using the App Center SDK, the user’s identi
 
 With Azure Notification Hubs, applications must request the device token manually and decide what to do with it:
 
-+ Many applications store the device token in their app backend then use the [Azure Notification Hubs Direct Send](https://docs.microsoft.com/en-us/rest/api/notificationhubs/direct-send) API to send notifications to specific devices. This approach allows you to directly target notifications based on application or account data maintained in your app backend.
-+ Other applications submit the device token to Azure Notification Hubs using the [Registrations or Installations APIs](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-push-notification-registration-management). This action can happen in mobile app running on the device, or the app backend service. Each approach has its pros and cons plus varies in the ways you target devices for notifications. We recommend you use the [Installations API](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.notificationhubs.installation?view=azure-dotnet) for maximum manageability and notification flexibility.
++ Many applications store the device token in their app backend then use the [Azure Notification Hubs Direct Send](https://docs.microsoft.com/rest/api/notificationhubs/direct-send) API to send notifications to specific devices. This approach allows you to directly target notifications based on application or account data maintained in your app backend.
++ Other applications submit the device token to Azure Notification Hubs using the [Registrations or Installations APIs](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management). This action can happen in mobile app running on the device, or the app backend service. Each approach has its pros and cons plus varies in the ways you target devices for notifications. We recommend you use the [Installations API](https://docs.microsoft.com/dotnet/api/microsoft.azure.notificationhubs.installation?view=azure-dotnet) for maximum manageability and notification flexibility.
 
 ### Push Targets
 
@@ -54,11 +54,11 @@ The App Center SDK automatically collects device information at startup and subm
 
 Developers can also set custom properties using the SDK, passing app, user, or device-specific data to App Center to use for Analytics, Diagnostics, or Push.
 
-For sending notifications, developers have the option to define [Audiences](https://docs.microsoft.com/en-us/appcenter/push/send-notification#audiences) built using these properties (both device and custom) and send notifications to all devices in the audience (within the 1,000 device limit imposed by the service). Audience are refreshed automatically by App Center on a scheduled basis, so they won’t represent changes immediately.
+For sending notifications, developers have the option to define [Audiences](~/push/send-notification#audiences) built using these properties (both device and custom) and send notifications to all devices in the audience (within the 1,000 device limit imposed by the service). Audience are refreshed automatically by App Center on a scheduled basis, so they won’t represent changes immediately.
 
-Azure Notification Hubs doesn’t have the concept of audiences. However, both Installations and Registrations support tagging device registrations with up to 60 unique [tags](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-tags-segment-push-message) you can use to target devices for notifications.
+Azure Notification Hubs doesn’t have the concept of audiences. However, both Installations and Registrations support tagging device registrations with up to 60 unique [tags](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message) you can use to target devices for notifications.
 
-Tags are string values and are limited to 120 characters. Azure Notification Hubs supports [tag expressions](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-tags-segment-push-message#tag-expressions) which enable an application to target a subset of your app’s devices based on a Boolean expression built using multiple tag values.
+Tags are string values and are limited to 120 characters. Azure Notification Hubs supports [tag expressions](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message#tag-expressions) which enable an application to target a subset of your app’s devices based on a Boolean expression built using multiple tag values.
 
 **Limitation:** Tags are string values and only Boolean operations are supported in tag expressions (specifying the existence or non-existence of a particular tag), so any non-string device or custom property available in App Center Push will not work in Azure Notification Hubs.
 Campaigns and Sending Notifications from the Portal
@@ -68,7 +68,7 @@ If you want to mimic the audience builder and send notification capability from 
 
 ### Users
 
-App Center Push understands the concept of a user identity (set by the app using App Center Auth or using the App Center SDK), and allows you to send notifications to all of the devices associated with one or more users. Azure Notification Hubs does not have any concept of user identity. However, you can mimic App Center Push’s User notifications using [tags](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-tags-segment-push-message#using-tags-to-target-users).
+App Center Push understands the concept of a user identity (set by the app using App Center Auth or using the App Center SDK), and allows you to send notifications to all of the devices associated with one or more users. Azure Notification Hubs does not have any concept of user identity. However, you can mimic App Center Push’s User notifications using [tags](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message#using-tags-to-target-users).
 
 ## Benefits of Azure Notification Hubs
 
