@@ -54,7 +54,7 @@ The App Center SDK automatically collects device information at startup and subm
 
 Developers can also set custom properties using the SDK, passing app, user, or device-specific data to App Center to use for Analytics, Diagnostics, or Push.
 
-For sending notifications, developers have the option to define [Audiences](~/push/send-notification#audiences) built using these properties (both device and custom) and send notifications to all devices in the audience (within the 1,000 device limit imposed by the service). Audience are refreshed automatically by App Center on a scheduled basis, so they won’t represent changes immediately.
+For sending notifications, developers have the option to define [Audiences](~/push/send-notification.md#audiences) built using these properties (both device and custom) and send notifications to all devices in the audience (within the 1,000 device limit imposed by the service). Audience are refreshed automatically by App Center on a scheduled basis, so they won’t represent changes immediately.
 
 Azure Notification Hubs doesn’t have the concept of audiences. However, both Installations and Registrations support tagging device registrations with up to 60 unique [tags](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message) you can use to target devices for notifications.
 
