@@ -187,7 +187,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 
     b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
-    ```text
+    ```console
     android:fullBackupContent="@xml/appcenter_backup_rule"
     ```
 

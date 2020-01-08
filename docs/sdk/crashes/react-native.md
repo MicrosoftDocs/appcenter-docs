@@ -40,7 +40,7 @@ import Crashes from 'appcenter-crashes';
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
-```
+```csharp
 Crashes.generateTestCrash();
 ```
 
