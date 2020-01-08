@@ -4,7 +4,7 @@ description: Introduction to the App Center Data Service
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 05/13/2019
+ms.date: 01/08/2020
 ms.topic: article
 ms.assetid: 82a2eef5-497f-45c3-849d-6b005bfcbb48
 ms.service: vs-appcenter
