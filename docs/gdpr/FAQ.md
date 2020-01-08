@@ -14,7 +14,7 @@ ms.custom: gdpr
 The following content is a list of frequently asked questions for GDPR. If you have additional questions that aren't answered here, contact us.  
 
 ### To meet our GDPR obligations, we've created a DPA. Can you sign it and send it back to us?
-For operational reasons, we aren't signing agreements sent to us by our customers. The terms and agreements for usage of our product are here. GDPR-specific terms are near the end of the Azure Online Service Terms.
+For operational reasons, we aren't signing agreements sent to us by our customers. The terms and agreements of our product are here: [Azure Legal Information](https://azure.microsoft.com/en-us/support/legal/). GDPR-specific terms are near the end of the Azure Online Service Terms.
 
 ### What personal information does your service store?
 The information stored by HockeyApp or App Center depends on several factors including how you've configured the SDK, what data your application handles, and so on. For example, if your application transmits crashes back, our services can't determine what personal information is in the stack trace or crash dump. We have several features under development to help you find data associated with your customers. You can check our [roadmap](https://docs.microsoft.com/appcenter/general/roadmap) for updates and details.
