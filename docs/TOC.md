@@ -79,7 +79,7 @@
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
-### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
+### [Preparing Xamarin.Android apps for testing](test-cloud/uitest/preparing-for-upload-android.md)
 ### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
@@ -96,8 +96,8 @@
 #### [Timeouts](test-cloud/uitest/working-with-timeouts.md)
 #### [Webviews](test-cloud/uitest/working-with-webviews.md)
 ## XCUITest
-### [Preparing for upload](test-cloud/preparing-for-upload/xcuitest.md)
-### [Preparing for upload with Extensions](test-cloud/preparing-for-upload/xcuitest-extension.md)
+### [Preparing for upload](test-cloud/xcuitest/preparing-for-upload.md)
+### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
 ## Calabash [Depreciated]
 ### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
