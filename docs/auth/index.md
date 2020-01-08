@@ -4,7 +4,7 @@ description: Introduction to the App Center Auth Service
 keywords: MBaaS, Auth, Identity
 author: amchew
 ms.author: amchew
-ms.date: 07/11/2019
+ms.date: 01/07/2020
 ms.topic: article
 ms.assetid: 012e4140-924c-4434-b191-c2411adc513d
 ms.service: vs-appcenter
