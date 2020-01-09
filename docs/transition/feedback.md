@@ -1,5 +1,6 @@
 ---
 title: HockeyApp Feedback
+description: Information on HockeyApp Feedback for your transition
 author: derpixeldan
 ms.author: daadam
 ms.date: 04/09/2019

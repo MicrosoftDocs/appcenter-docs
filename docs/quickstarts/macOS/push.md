@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Push | Sample App Tutorials
+title: macOS Push Sample App Tutorials
 description: Tutorial to send a push notification to the sample macOS app.
 keywords: app center
 author: clpolet

@@ -1,5 +1,6 @@
 ---
 title: "Analytics"
+description: Comparing analytics in HockeyApp and App Center
 author: blparr
 ms.author: blparr
 ms.date: 10/30/2018

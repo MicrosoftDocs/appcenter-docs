@@ -66,7 +66,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
-   ```
+   ```bash
    npm install appcenter-push --save-exact
    ```
 

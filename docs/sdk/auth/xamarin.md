@@ -246,13 +246,10 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 
 > [!NOTE]
 > If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
-> ``` 
+> ```
 > <array>
 >   <dict>
->       <key>CFBundleTypeRole</key>
->       <string>Editor</string>
->       <key>CFBundleURLName</key>
->       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       ...
 >       <key>CFBundleURLSchemes</key>
 >       <array>
 >           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
@@ -262,14 +259,10 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 > ```
 > 
 > If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
-> ``` 
+> ```
 > <array>
 >   <dict>
->       <key>CFBundleTypeRole</key>
->       <string>Editor</string>
->       <key>CFBundleURLName</key>
->       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
->       <key>CFBundleURLSchemes</key>
+>       ...
 >       <array>
 >           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
 >           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>

@@ -1,5 +1,6 @@
 ---
 title:  Moving from HockeyApp to App Center
+description: Overview on moving from HockeyApp to App Center
 keywords: transition
 author: derpixeldan
 ms.author: daadam

@@ -19,7 +19,7 @@ This setting is controlled by the constant `FLAG_SECURE` in `WindowManager.Layou
 
  >Window flag: treat the content of the window as secure, preventing it from appearing in screenshots or from being viewed on non-secure displays.
 
-See [WindowManager.LayoutParams FLAG_SECURE](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE). For Xamarin.Android, also see [Android.Views.WindowManagerFlags.Secure](https://developer.xamarin.com/api/field/Android.Views.WindowManagerFlags.Secure/).
+See [WindowManager.LayoutParams FLAG_SECURE](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE). For Xamarin.Android, also see [Android.Views.WindowManagerFlags.Secure](https://docs.microsoft.com/dotnet/api/android.views.windowmanagerflags).
 
 `FLAG_SECURE` is handled differently from device to device and between different Android OS versions. Some devices or older Android versions will still allow screenshots, others show blank screens, and still others show scrambled screenshots.
 

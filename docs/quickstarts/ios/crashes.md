@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Crashes | Sample App Tutorials
+title: Crashes in iOS Swift Apps
 description: Tutorial on viewing crashes from a sample iOS app in App Center
 keywords: app center
 author: sabrinaj206
@@ -10,16 +8,10 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: 
-#ms.reviewer: [ALIAS]
 ---
 
 # Crashes - Sample Swift App and Tutorials
+
 In this tutorial, you will learn to view crashes from a sample Swift app in App Center.
 
 If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
