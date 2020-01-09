@@ -22,7 +22,7 @@ Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .i
 
 For an iOS project in Visual Studio for Mac, right click on the **Packages** folder, select **Add Package**. Search for **Xamarin Test Cloud Agent**, and click **Add Package**:
 
-![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-xs.png)
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/uitest/images/05-addpackage-xs.png)
 
 ### Visual Studio (Windows)
 
@@ -31,7 +31,7 @@ For an iOS project in Visual Studio for Mac, right click on the **Packages** fol
 
 For an iOS project in Visual Studio for Windows, right click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
 
-![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-vs.png)
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/uitest/images/05-addpackage-vs.png)
 
 ### Initialize the Xamarin Test Cloud Agent
 

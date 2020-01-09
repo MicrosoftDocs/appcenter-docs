@@ -20,8 +20,8 @@ _UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on 
 This guide does assume that familiarity with Xamarin.UITest. The following guides are recommended for gaining familiarity with Xamarin.UITest:
 
 - [Introduction to App Center Test](~/test-cloud/index.md)
-- [Introduction to UITest for Xamarin.Android](~/test-cloud/preparing-for-upload/xamarin-android-uitest.md)
-- [Introduction to UITest for Xamarin.iOS](~/test-cloud/preparing-for-upload/xamarin-ios-uitest.md)
+- [Introduction to UITest for Xamarin.Android](~/test-cloud/uitest/xamarin-android-uitest.md)
+- [Introduction to UITest for Xamarin.iOS](~/test-cloud/uitest/xamarin-ios-uitest.md)
 
 Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
@@ -200,7 +200,7 @@ After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to crea
 
 Xamarin.Forms applications can be easily tested with **Xamarin.UITest** using a simple mechanism to expose the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) as a unique view identifier for test automation. Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
-For information about how to submit tests to App Center Test, see [Submitting UITests for Xamarin.Android](~/test-cloud/preparing-for-upload/xamarin-android-uitest.md) or [Submitting UITests for Xamarin.iOS](~/test-cloud/preparing-for-upload/xamarin-ios-uitest.md). For more information about UITest, see [App Center Test documentation](~/test-cloud/index.md).
+For information about how to submit tests to App Center Test, see [Submitting UITests for Xamarin.Android](~/test-cloud/uitest/xamarin-android-uitest.md) or [Submitting UITests for Xamarin.iOS](~/test-cloud/uitest/xamarin-ios-uitest.md). For more information about UITest, see [App Center Test documentation](~/test-cloud/index.md).
 
 ## Related links
 

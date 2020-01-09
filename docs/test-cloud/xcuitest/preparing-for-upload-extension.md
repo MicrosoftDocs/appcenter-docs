@@ -23,7 +23,7 @@ If you are just starting with XCUITest, do not link this framework.
 
 If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
 
-For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
+For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/xcuitest/preparing-for-upload.md).
 
 [AppCenter XCUITest Extensions](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions) is an iOS Framework for taking screenshots and labeling test steps when running XCUITest test in App Center. At the conclusion of each test method, a label and screenshot are automatically generated for the test report. You can create additional labels and screenshots to track your app's progress during a test method.
 

@@ -28,4 +28,12 @@ All test assets and operations are within the context of an app. Create the app 
 Understanding the core concepts of the test service improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](~/test-cloud/core-concepts.md) before running your first tests.
 
 ## 5. Prepare the project for upload
-Each test framework has different requirements for uploading to App Center Test. Follow the appropriate test framework branch from [this page](~/test-cloud/preparing-for-upload/index.md).
+Each test framework has different requirements for uploading to App Center Test. Follow the appropriate test framework instructions:
+
+- [Appium](~/test-cloud/appium/preparing-for-upload.md)
+- [Espresso](~/test-cloud/espresso/preparing-for-upload.md)
+- [XCUITest](~/test-cloud/xcuitest/preparing-for-upload.md)
+- [Xamarin.UITest](~/test-cloud/uitest/index.md)
+    - [For Xamarin.Android](~/test-cloud/uitest/xamarin-android-uitest.md)
+    - [For Xamarin.iOS](~/test-cloud/uitest/xamarin-ios-uitest.md)
+- [Calabash (Depreciated)](~/test-cloud/calabash/preparing-for-upload.md)

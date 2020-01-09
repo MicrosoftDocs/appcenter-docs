@@ -82,7 +82,7 @@ The second method uses your App Center account credentials:
 ## Appium
 
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Prepare your repository for App Center Test, Appium testing](preparing-for-upload/appium.md).
+* [Prepare your repository for App Center Test, Appium testing](appium/preparing-for-upload.md).
 
 ### Azure Pipelines configuration for Appium
 
@@ -92,7 +92,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked, then for **Test Framework**, select **Appium Test Framework**. Insert the path to the Appium test-classes, dependency-jars, and the `pom.xml` file into the **Build directory** field. These three artifacts are usually in the `upload` folder.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run appium --app "username/appname" --devices 209ed689
@@ -112,7 +112,7 @@ Save the configuration and you are all set to start the build and App Center Tes
 ## Espresso
 
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your repository for App Center Test, Espresso testing](preparing-for-upload/espresso.md).
+* [Read how to prepare your repository for App Center Test, Espresso testing](espresso/preparing-for-upload.md).
 
 ### Azure Pipelines configuration for Espresso
 
@@ -142,8 +142,8 @@ Save the configuration and you're all set to start the build and App Center Test
 ## Xamarin.UITest
 
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](preparing-for-upload/xamarin-android-uitest.md).
-* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](preparing-for-upload/xamarin-ios-uitest.md).
+* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](uitest/xamarin-android-uitest.md).
+* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](uitest/xamarin-ios-uitest.md).
 
 ### Azure Pipelines configuration for Xamarin.UITest
 
@@ -153,7 +153,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **Xamarin UI Test** is selected under **Test Framework**. Insert the path to your build directory; in most cases the build folder is: `<ProjectName>/bin/<configuration>`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run uitest --app "username/appname" --devices 209ed689
@@ -173,7 +173,7 @@ Save the configuration and you're all set to start the build and App Center Test
 ## XCUITest
 
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your repository for App Center Test, XCUITest testing](preparing-for-upload/xcuitest.md).
+* [Read how to prepare your repository for App Center Test, XCUITest testing](xcuitest/preparing-for-upload.md).
 
 > [!NOTE]
 > In your pipeline, before the App Center Test task, you will need an **Xcode** task step with an action of `build-for-testing` to build the test runner app needed for testing. In that task, under **Arguments** in the **Advanced** section, specify a derived data path, typically using `-derivedDataPath DerivedData`. You will also need an `.ipa file` for your application. You can build the `.ipa file` in the same **Xcode** `build-for-testing` task by checking the `Create app package` option, or in a separate **Xcode** build step or in a **Bash** script step.
@@ -186,7 +186,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **XCUITest** is selected under **Test Framework**. Insert the path to your build directory from the Xcode `build-for-testing` step. Typically, the build folder is: `DerivedData/Build/Products/Debug-iphoneos/`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "master" --locale "en_US" --build-dir pathToXCUItestBuildFolder

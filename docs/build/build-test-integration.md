@@ -52,7 +52,7 @@ You can integrate Build & Test to run a UI test suite with each build of your ap
 
 - A valid Test trial or paid license is required.
 - Only UI tests written using Appium (JUnit), Calabash, Espresso, XCUITest, or Xamarin.UITest are currently supported. 
-- Some testing frameworks require additional setup to enable App Center Test support, including [Appium](~/test-cloud/preparing-for-upload/appium.md), [Espresso](~/test-cloud/preparing-for-upload/espresso.md) & [XCUITest](~/test-cloud/preparing-for-upload/xcuitest.md) 
+- Some testing frameworks require additional setup to enable App Center Test support, including [Appium](~/test-cloud/appium/preparing-for-upload.md), [Espresso](~/test-cloud/espresso/preparing-for-upload.md) & [XCUITest](~/test-cloud/xcuitest/preparing-for-upload.md) 
 - Use a Post-Build script to handle any tasks your test suite requires that isn't handled by your app build directly. This might include compiling your test dlls & will include a command to upload your test suite to the Test service.
 - The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Your Build completion status won't reflect whether the test suite passed or not.
 
