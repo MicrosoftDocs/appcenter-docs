@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Getting Started
+title: Android Getting Started
 description: Getting started prerequisites to onboard an Android application in App Center
 keywords: app center
 author: sshibu
