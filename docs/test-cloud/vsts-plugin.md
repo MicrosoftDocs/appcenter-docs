@@ -92,7 +92,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked, then for **Test Framework**, select **Appium Test Framework**. Insert the path to the Appium test-classes, dependency-jars, and the `pom.xml` file into the **Build directory** field. These three artifacts are usually in the `upload` folder.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run appium --app "username/appname" --devices 209ed689
@@ -122,7 +122,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked, then for **Test Framework**, select **Espresso Test Framework**.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](https://docs.microsoft.com/appcenter/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run espresso --app "username/appname" --devices 209ed689
@@ -186,7 +186,7 @@ Start by adding the App Center Test task to the build definition as described ea
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **XCUITest** is selected under **Test Framework**. Insert the path to your build directory from the Xcode `build-for-testing` step. Typically, the build folder is: `DerivedData/Build/Products/Debug-iphoneos/`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "master" --locale "en_US" --build-dir pathToXCUItestBuildFolder
