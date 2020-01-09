@@ -87,7 +87,7 @@ In Visual Studio solution explorer, double-click the **Package.appxmanifest** fi
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-### 5.1 Add the using statements
+### 5.1 Add the using directives
 
 Add the appropriate namespaces before you use our APIs.
 
