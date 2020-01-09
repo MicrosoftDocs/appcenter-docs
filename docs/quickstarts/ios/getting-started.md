@@ -21,9 +21,9 @@ In this tutorial, you'll learn how to set up a sample Swift app with App Center 
 
 ## Sign in to GitHub and fork the repository
 
-1. sign in to your [GitHub account](https://github.com/join).
+1. Sign in to your [GitHub account](https://github.com/join).
 
-2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter/tree/master/sample-apps/ios/getting-started).
+2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter-sampleapp-ios-swift/tree/master).
 
 3. Click **Fork** at the top-right hand corner of the page, and clone the repository.
 

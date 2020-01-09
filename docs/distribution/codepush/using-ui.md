@@ -53,7 +53,7 @@ App Center enables developers to modify several aspects of a CodePush release. T
 Specifies the binary version of the application you are releasing the update for; only users running that version will receive the update, while users running an older and/or newer version of the app binary will not. 
 
 > [!NOTE]
-> This setting corresponds to the [CLI's targetBinaryVersion parameter](https://github.com/Microsoft/code-push/tree/master/cli#target-binary-version-parameter).
+> This setting corresponds to the [CLI's targetBinaryVersion parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#target-binary-version-parameter).
 
 This is useful for the following reasons:
 
@@ -82,21 +82,21 @@ If you ever want an update to target multiple versions of the app store binary, 
 A brief description of this release. This provides an optional "change log" for the deployment. The value is simply round tripped to the client so that when the update is detected, your app can choose to display it to the end-user (e.g. via a "What's new?" dialog). This string accepts control characters such as \n and \t so that you can include whitespace formatting within your descriptions for improved readability.
 
 > [!NOTE]
-> This setting corresponds to the [CLI's description parameter](https://github.com/Microsoft/code-push/tree/master/cli#description-parameter).
+> This setting corresponds to the [CLI's description parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#description-parameter).
 
 ### Enabled
 
 Controls whether the update is available for deployment to users. This option is enabled by default, you would disable this setting when you want to keep a particular release from deploying (due to a bug in the code, or when you're not ready for a version to be deployed yet).
 
 > [!NOTE]
-> This setting corresponds to the [CLI's disabled parameter](https://github.com/Microsoft/code-push/tree/master/cli#disabled-parameter).
+> This setting corresponds to the [CLI's disabled parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#disabled-parameter).
 
 ### Required Update
 
 Specifies whether a particular release is required (for example, when it includes a critical security fix). When an application manually synchronizes with the CodePush server process (using `codepush.sync`), application can decide whether or not to apply an update, unless the required attribute is enabled.
 
 > [!NOTE]
-> This setting corresponds to the [CLI's mandatory parameter](https://github.com/Microsoft/code-push/tree/master/cli#mandatory-parameter).
+> This setting corresponds to the [CLI's mandatory parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#mandatory-parameter).
 
 The required attribute is unique because the server will dynamically modify it, as necessary, in order to ensure that the semantics of your releases are maintained for your end-users. For example, imagine that you released the following three updates to your app:
 
@@ -115,6 +115,6 @@ If you never release an update marked as mandatory, then the described behavior 
 
 ### Rollout Percentage
 
-Developers use the [CLI's rollout parameter](https://github.com/Microsoft/code-push/tree/master/cli#rollout-parameter) to instruct CodePush to push a particular release to a percentage of the devices running the app. This enables developers to test out a release before rolling it out to everyone.
+Developers use the [CLI's rollout parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#rollout-parameter) to instruct CodePush to push a particular release to a percentage of the devices running the app. This enables developers to test out a release before rolling it out to everyone.
 
 You'll use this setting to increase the rollout percentage for a particular release. Since the release was already distributed to a percentage of the audience, you can only increase the rollout percentage value.
