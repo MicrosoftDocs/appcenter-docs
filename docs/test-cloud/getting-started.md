@@ -34,6 +34,6 @@ Each test framework has different requirements for uploading to App Center Test.
 - [Espresso](~/test-cloud/espresso/preparing-for-upload.md)
 - [XCUITest](~/test-cloud/xcuitest/preparing-for-upload.md)
 - [Xamarin.UITest](~/test-cloud/uitest/index.md)
-    - [For Xamarin.Android](~/test-cloud/uitest/xamarin-android-uitest.md)
-    - [For Xamarin.iOS](~/test-cloud/uitest/xamarin-ios-uitest.md)
+    - [For Xamarin.Android](~/test-cloud/uitest/preparing-for-upload-android.md)
+    - [For Xamarin.iOS](~/test-cloud/uitest/preparing-for-upload-ios.md)
 - [Calabash (Depreciated)](~/test-cloud/calabash/preparing-for-upload.md)

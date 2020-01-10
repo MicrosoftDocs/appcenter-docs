@@ -140,20 +140,18 @@ appcenter test run espresso --app "username/appname" --devices 209ed689
 Save the configuration and you're all set to start the build and App Center Test run.
 
 ## Xamarin.UITest
-
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](uitest/xamarin-android-uitest.md).
-* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](uitest/xamarin-ios-uitest.md).
+* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](~/test-cloud/uitest/preparing-for-upload-android.md).
+* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](~/test-cloud/uitest/preparing-for-upload-ios.md).
 
 ### Azure Pipelines configuration for Xamarin.UITest
-
 Start by adding the App Center Test task to the build definition as described earlier at [Azure Pipelines general configuration](#azure-pipelines-general-configuration).
 
 ![Prepare test section for the Xamarin.UITest framework](images/vsts-uitest-prepare.png)
 
 In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checked and that **Xamarin UI Test** is selected under **Test Framework**. Insert the path to your build directory; in most cases the build folder is: `<ProjectName>/bin/<configuration>`.
 
-Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
+Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
 appcenter test run uitest --app "username/appname" --devices 209ed689
