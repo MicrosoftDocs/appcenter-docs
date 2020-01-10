@@ -1,10 +1,10 @@
 ---
 title: App Center Build FAQs – Xamarin
-description: Code signing apps built with App Center
+description: Troubleshooting guides for Xamarin apps
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 08/08/2018
+ms.date: 01/10/2020
 ms.topic: article
 ms.assetid: 7365bb27-d7c1-4fe1-91b4-346359c705ea
 ms.service: vs-appcenter
@@ -151,3 +151,9 @@ For Mac build machines:
 For Windows build machines, please refer to [UWP C#](~/build/windows/uwp/first-build.md).
 
 If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+
+## <a name="stuck-at-compiletonative"/>Builds stuck at _CompileToNative
+If the build experience similar sympton as described [here](https://github.com/xamarin/xamarin-macios/issues/6818), try to build only for ARM64, as suggested in the GitHub Issue.
+```xml
+<MtouchArch>ARM64</MtouchArch>
+```
