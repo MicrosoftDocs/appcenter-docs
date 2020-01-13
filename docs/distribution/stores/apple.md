@@ -77,7 +77,8 @@ Use the CLI as an easy way to integrate the App Center's store connection as par
 You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 
 
 You can list your stores by using the list command like this:
-```
+
+```bash
 appcenter distribute stores list \
 --app {app_owner}/{app_name} \
 --output json
@@ -85,13 +86,15 @@ appcenter distribute stores list \
 
 You'll get a result like this:
 
-```
+```bash
 [["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
 ```
+
 And it's the Store column we'll be using in the final step.
 
 The final step is to publish your app by running:
-```
+
+```bash
 appcenter distribute stores publish \
 --file /path/to/file.ipa \
 --store Production \

@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Distribute | Sample App Tutorials
+title: macOS Distribute Sample Tutorials
 description: Tutorial to distribute a sample macOS app to a group in App Center.
 keywords: app center
 author: clpolet
@@ -13,13 +11,6 @@ ms.assetid: 35ee91dd-9660-480f-8db2-f3f4a04673f8
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 # Distribute - Sample Swift App and Tutorials

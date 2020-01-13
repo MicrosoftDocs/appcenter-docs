@@ -1,5 +1,6 @@
 ---
-title: "Crashes"
+title: "Working with Crashes"
+description: Comparing Crashes in HockeyApp and App Center
 author: derpixeldan
 ms.author: daadam
 ms.date: 07/16/2019
