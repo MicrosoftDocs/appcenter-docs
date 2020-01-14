@@ -19,39 +19,38 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
-      # Card
-    - title: Service Status
-      itemType: get-started
-      url: https://status.appcenter.ms/
-    # Card
-    - title: Pricing
-      itemType: how-to-guide
-      url: https://docs.microsoft.com/en-us/appcenter/general/pricing/
-    # Card
-    - title: Roadmap
-      itemType: how-to-guide
-      url: fhttps://docs.microsoft.com/en-us/appcenter/general/roadmap/
-    # Card
-    - title: API Swagger
-      itemType: how-to-guide
-      url: https://openapi.appcenter.ms/
-    # Card
-    - title: Migration guidance for existing customers
-      itemType: how-to-guide
-      url: https://docs.microsoft.com/en-us/appcenter/migration/
     # Card
     - title: Dashboard overview
       itemType: get-started
       url: /dashboard/index.md
     # Card
-    - title: Creating and managing apps
+    - title: Create and manage apps
       itemType: how-to-guide
       url: file2.md OR https://docs.microsoft.com/file2
     # Card
-    - title: Creating and managing organizations
+    - title: Create and manage organizations
       itemType: how-to-guide
       url: file3.md OR https://docs.microsoft.com/file3
-
+    # Card
+    - title: HockeyApp and CodePush Migration
+      itemType: how-to-guide
+      url: https://docs.microsoft.com/en-us/appcenter/migration/
+      # Card
+    - title: Service Status
+      itemType: overview
+      url: https://status.appcenter.ms/
+    # Card
+    - title: Pricing
+      itemType: overview
+      url: https://docs.microsoft.com/en-us/appcenter/general/pricing/
+    # Card
+    - title: Roadmap
+      itemType: overview
+      url: fhttps://docs.microsoft.com/en-us/appcenter/general/roadmap/
+    # Card
+    - title: API Swagger
+      itemType: reference
+      url: https://openapi.appcenter.ms/
 
 conceptualContent:
     title: Services
@@ -139,6 +138,22 @@ conceptualContent:
             url: ~/analytics/faq.md
             itemType: reference
       # Card
+      - title: Diagnostics
+        summary: Collect crash data from all devices.
+        links:
+          - text: Introduction to Diagnostics
+            url: ~/diagnostics/index.md
+            itemType: overview
+          - text: Enable Diagnostics in an App
+            url: ~/diagnostics/enabling-diagnostics.md
+            itemType: how-to-guide
+          - text: Diagnostics Features
+            url: ~/diagnostics/enabling-diagnostics.md
+            itemType: overview
+          - text: Troubleshooting
+            url: ~/diagnostics/troubleshooting.md
+            itemType: reference
+      # Card
       - title: Auth
         summary: Authenticate users and leverage user identities to view user data.
         links:
@@ -185,22 +200,6 @@ conceptualContent:
             itemType: reference
           - text: Frequently Asked Questions
             url: ~/push/faq.md
-            itemType: reference
-      # Card
-      - title: Diagnostics (Formerly Crashes)
-        summary: Collect crash data from all devices.
-        links:
-          - text: Introduction to Diagnostics
-            url: ~/diagnostics/index.md
-            itemType: overview
-          - text: Enable Diagnostics in an App
-            url: ~/diagnostics/enabling-diagnostics.md
-            itemType: how-to-guide
-          - text: Diagnostics Features
-            url: ~/diagnostics/enabling-diagnostics.md
-            itemType: overview
-          - text: Troubleshooting
-            url: ~/diagnostics/troubleshooting.md
             itemType: reference
 
 tools:
