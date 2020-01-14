@@ -25,7 +25,7 @@ We're sorry you're having difficulty using App Center. If you can't find the ans
 
 * [Why do I get an extended build time when "Run launch test on a device" is enabled?](~/build/troubleshooting/general.md#launch-test)
 
-* [My build scripts (Bash) does not execute the logic written inside it.](~/build/troubleshooting/general.md#scripts-execute)
+* [My build scripts (Bash) doesn't execute the logic written inside it.](~/build/troubleshooting/general.md#scripts-execute)
 
 * [When do I have to update my build configuration manually through Save & Build?](~/build/troubleshooting/general.md#update-manually)
 
@@ -67,7 +67,7 @@ We're sorry you're having difficulty using App Center. If you can't find the ans
 
 * [My iOS builds using CocoaPods on Xcode 9 keep failing](~/build/troubleshooting/ios.md#cocoapods-error)
 
-* [Since I've upgraded my project to Xcode 10 beta my app build fails with the error **Cycle in dependencies between targets**](~/build/troubleshooting/ios.md#xcode-10-beta-error)
+* [Since I've upgraded my project to Xcode 10 beta, my app build fails with the error **Cycle in dependencies between targets**](~/build/troubleshooting/ios.md#xcode-10-beta-error)
 
 ## [Xamarin](~/build/troubleshooting/xamarin.md)
 
