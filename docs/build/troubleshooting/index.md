@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 09/12/2018
+ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 8835183e-4261-4bae-b119-8a8beca72ad4
 ms.service: vs-appcenter
@@ -75,8 +75,6 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 * [My Xamarin.iOS builds build from solution file (.sln) instead of project file (.csproj)](~/build/troubleshooting/xamarin.md#solution-file)
 
 * [My Xamarin.iOS builds fail claiming I need to provide signing information](~/build/troubleshooting/xamarin.md#fail-signing)
-
-* [Configuring Build scripts](~/build/troubleshooting/xamarin.md#build-scripts)
 
 * [My Xamarin.Android build failed with **Error: No APK files found**. What can be done?](~/build/troubleshooting/xamarin.md#no-apk)
 
