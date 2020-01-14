@@ -26,15 +26,15 @@ highlightedContent:
     # Card
     - title: Create and manage apps
       itemType: how-to-guide
-      url: file2.md OR https://docs.microsoft.com/file2
+      url: /dashboard/creating-and-managing-apps
     # Card
     - title: Create and manage organizations
       itemType: how-to-guide
-      url: file3.md OR https://docs.microsoft.com/file3
+      url: /dashboard/creating-and-managing-organizations
     # Card
-    - title: HockeyApp and CodePush Migration
+    - title: HockeyApp Migration
       itemType: how-to-guide
-      url: https://docs.microsoft.com/en-us/appcenter/migration/
+      url: https://docs.microsoft.com/appcenter/transition/
       # Card
     - title: Service Status
       itemType: overview
@@ -42,11 +42,11 @@ highlightedContent:
     # Card
     - title: Pricing
       itemType: overview
-      url: https://docs.microsoft.com/en-us/appcenter/general/pricing/
+      url: https://docs.microsoft.com/appcenter/general/pricing/
     # Card
     - title: Roadmap
       itemType: overview
-      url: fhttps://docs.microsoft.com/en-us/appcenter/general/roadmap/
+      url: https://docs.microsoft.com/appcenter/general/roadmap/
     # Card
     - title: API Swagger
       itemType: reference
