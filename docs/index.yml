@@ -1,159 +1,272 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Overview
+### YamlMime:Hub
+
+title: Visual Studio App Center documentation
+summary: Learn how to continuously build, test, release, and monitor apps for every platform.
+brand: visual-studio
+
 metadata:
-  description: Set up your app to distribute to your beta testers on every commit, see live user data, and test your app on 1000’s of real devices.
-  author: conceptdev
-  ms.author: apexprodleads
-  ms.date: 07/15/2019
-  ms.topic: landing-page
+  title: Visual Studio App Center
+  description: Learn how to continuously build, test, release, and monitor apps for every platform.
+  services: service
   ms.service: vs-appcenter
-abstract:
-  description: <a href="https://appcenter.ms/">Visual Studio App Center</a> brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services, and engage with users using the Push service.
-  menu:
-    items:
-    - href: https://status.appcenter.ms
-      text: Service Status
-    - href: ~/general/pricing/
-      text: Pricing
-    - href: ~/general/roadmap/
-      text: Roadmap
-    - href: https://openapi.appcenter.ms
-      text: API Swagger
-    - href: ~/migration/
-      text: Migration guidance for existing customers
-sections:
-- title: Get Started
+  ms.topic: hub-page
+  author: amburns
+  ms.author: apexprodleads
+  ms.date: 12/06/2019
+
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
-  - type: paragraph
-    text: Learn how to add the SDK to your app and get started with App Center.
-  - type: list
-    style: icon48
+    # Card
+    - title: Dashboard overview
+      itemType: get-started
+      url: /dashboard/index.md
+    # Card
+    - title: Create and manage apps
+      itemType: how-to-guide
+      url: /dashboard/creating-and-managing-apps
+    # Card
+    - title: Create and manage organizations
+      itemType: how-to-guide
+      url: /dashboard/creating-and-managing-organizations
+    # Card
+    - title: HockeyApp Migration
+      itemType: how-to-guide
+      url: https://docs.microsoft.com/appcenter/transition/
+      # Card
+    - title: Service Status
+      itemType: overview
+      url: https://status.appcenter.ms/
+    # Card
+    - title: Pricing
+      itemType: overview
+      url: https://docs.microsoft.com/appcenter/general/pricing/
+    # Card
+    - title: Roadmap
+      itemType: overview
+      url: https://docs.microsoft.com/appcenter/general/roadmap/
+    # Card
+    - title: API Swagger
+      itemType: reference
+      url: https://openapi.appcenter.ms/
+
+conceptualContent:
+    title: Services
     items:
-    - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_android.svg
-        alt: logo-Android
-      text: Android
-      href: ~/sdk/getting-started/android/
-    - image:
-        src: ~/media/logo_ios.svg
-        alt: logo-iOS
-      text: iOS
-      href: ~/sdk/getting-started/ios/
-    - image:
-        src: ~/media/logo_react.svg
-        alt: logo-ReactNative
-      text: React Native
-      href: ~/sdk/getting-started/react-native/
-    - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
-        alt: logo-Windows
-      text: Windows
-      href: ~/sdk/getting-started/uwp/
-    - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
-        alt: logo-Xamarin
-      text: Xamarin
-      href: ~/sdk/getting-started/xamarin/
-    - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
-        alt: logo-macOS
-      text: macOS
-      href: ~/sdk/getting-started/macos/
-    - image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_cordova.svg
-        alt: logo-Cordova
-      text: Cordova
-      href: ~/sdk/getting-started/cordova/
-    - image:
-        src: ~/media/logo_unity.svg
-        alt: logo-Unity
-      text: Unity
-      href: ~/sdk/getting-started/unity/
-    - image:
-        src: ~/media/logo_tvos.svg
-        alt: logo-tvOS
-      text: tvOS
-      href: ~/sdk/getting-started/tvos/      
-- title: Services
+      # Card
+      - title: Build
+        summary: Create an installable app package automatically with every push to your repository. 
+        links:
+          - text: Introduction
+            url: ~/build/index.md
+            itemType: overview
+          - text: Android
+            url: ~/build/android/index.md
+            itemType: how-to-guide
+          - text: iOS
+            url: ~/build/ios/index.md
+            itemType: how-to-guide
+          - text: macOS
+            url: ~/build/macos/index.md
+            itemType: how-to-guide
+          - text: React Native
+            url: ~/build/react-native/index.md
+            itemType: how-to-guide
+          - text: Windows
+            url: ~/build/windows/index.md
+            itemType: how-to-guide
+          - text: Xamarin
+            url: ~/build/xamarin/index.md
+            itemType: how-to-guide
+          - text: Troubleshooting
+            url: ~/build/troubleshooting/index.md
+            itemType: reference
+      # Card
+      - title: Test
+        summary: Run tests on more than 400 unique device configurations.
+        links:
+          - text: Introduction to App Center Test
+            url: ~/test-cloud/index.md
+            itemType: overview
+          - text: Core Concepts
+            url: ~/test-cloud/core-concepts.md
+            itemType: concept
+          - text: Get Started with App Center Test
+            url: ~/test-cloud/getting-started.md
+            itemType: get-started
+          - text: Start a test run
+            url: ~/test-cloud/starting-a-test-run.md
+            itemType: how-to-guide
+          - text: Troubleshooting
+            url: ~/test-cloud/troubleshooting/index.md
+            itemType: reference
+      # Card
+      - title: Distribute
+        summary: Quickly release Android, iOS, macOS, and UWP builds to end user devices.
+        links:
+          - text: Introduction to App Center Distribute
+            url: ~/distribution/index.md
+            itemType: overview
+          - text: Release a Build
+            url: ~/distribution/uploading.md
+            itemType: deploy
+          - text: iOS Device registration
+            url: ~/distribution/auto-provisioning.md
+            itemType: how-to-guide
+          - text: Manage Distribution Groups
+            url: ~/distribution/groups.md
+            itemType: how-to-guide
+          - text: Distribute to Store
+            url: ~/distribution/stores/index.md
+            itemType: deploy
+      # Card
+      - title: Analytics
+        summary: Get information about the number of users, the session duration, top devices and more.
+        links:
+          - text: Introduction to Analytics
+            url: ~/analytics/index.md
+            itemType: overview
+          - text: Analytics Overview Page
+            url: ~/analytics/overview.md
+            itemType: overview
+          - text: Events Metrics
+            url: ~/analytics/event-metrics.md
+            itemType: concept
+          - text: FAQ
+            url: ~/analytics/faq.md
+            itemType: reference
+      # Card
+      - title: Diagnostics
+        summary: Collect crash data from all devices.
+        links:
+          - text: Introduction to Diagnostics
+            url: ~/diagnostics/index.md
+            itemType: overview
+          - text: Enable Diagnostics in an App
+            url: ~/diagnostics/enabling-diagnostics.md
+            itemType: how-to-guide
+          - text: Diagnostics Features
+            url: ~/diagnostics/enabling-diagnostics.md
+            itemType: overview
+          - text: Troubleshooting
+            url: ~/diagnostics/troubleshooting.md
+            itemType: reference
+      # Card
+      - title: Auth
+        summary: Authenticate users and leverage user identities to view user data.
+        links:
+          - text: Introduction to Auth
+            url: ~/auth/index.md
+            itemType: overview
+          - text: Get Started with Auth
+            url: ~/auth/getting-started.md
+            itemType: get-started
+          - text: Understanding Azure AD B2C
+            url: ~/auth/understanding-azure-ad-b2c.md
+            itemType: concept
+      # Card
+      - title: Data
+        summary: Persist, manage, and sync app data in the cloud.
+        links:
+          - text: Introduction to Data
+            url: ~/data/index.md
+            itemType: overview
+          - text: Get Started with Data
+            url: ~/data/getting-started.md
+            itemType: get-started
+          - text: Understanding Cosmos DB
+            url: ~/data/understanding-cosmos-db.md
+            itemType: concept
+      # Card
+      - title: Push
+        summary: Engage user base by sending targeted messages to specific users at exactly the right time.
+        links:
+          - text: Introduction to Push
+            url: ~/push/index.md
+            itemType: overview
+          - text: Configuring the Push service
+            url: ~/push/service-config.md
+            itemType: how-to-guide
+          - text: Configuring an App for Push
+            url: ~/push/app-config.md
+            itemType: how-to-guide
+          - text: Sending Push Notifications
+            url: ~/push/send-notification.md
+            itemType: how-to-guide
+          - text: Troubleshooting
+            url: ~/push/troubleshooting.md
+            itemType: reference
+          - text: Frequently Asked Questions
+            url: ~/push/faq.md
+            itemType: reference
+
+tools:
+  title: Get Started with the SDK
   items:
-  - type: grid
-    style: columns
-    className: column50
-    items:
-    - type: list
-      style: cards
-      className: cardsB
+    # Card
+    - title: Android
+      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_android.svg
+      url: ~/sdk/getting-started/android.md
+    # Card
+    - title: iOS
+      imageSrc: ~/media/logo_ios.svg
+      url: ~/sdk/getting-started/ios.md
+    # Card
+    - title: React Native
+      imageSrc: ~/media/logo_react.svg
+      url: ~/sdk/getting-started/react-native.md
+        # Card
+    - title: Windows
+      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+      url: ~/sdk/getting-started/uwp.md
+    # Card
+    - title: Xamarin
+      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
+      url: ~/sdk/getting-started/xamarin.md
+    # Card
+    - title: macOS
+      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+      url: ~/sdk/getting-started/macos.md
+        # Card
+    - title: Cordova
+      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_cordova.svg
+      url: ~/sdk/getting-started/cordova.md
+    # Card
+    - title: Unity
+      imageSrc: ~/media/logo_unity.svg
+      url: ~/sdk/getting-started/unity.md
+    # Card
+    - title: tvOS
+      imageSrc: ~/media/logo_tvos.svg
+      url: ~/sdk/getting-started/tvos.md
+
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: Reference # < 60 chars (optional)
       items:
-      - href: ~/build/
-        html: Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Azure DevOps (formerly known as Visual Studio Team Services (VSTS)). No additional build hardware required.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/build.svg
-          alt: build-icon
-          href: ~/build/
-        title: Build
-      - href: ~/test-cloud/
-        html: Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS). The next generation of Xamarin Test Cloud.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/test.svg
-          alt: test-icon
-          href: ~/test-cloud/
-        title: Test
-      - href: ~/distribution/
-        html: Whether used for beta app distribution or as an alternative to public app stores, Distribute is a tool for developers to quickly release Android, iOS, macOS, and UWP builds to end user devices.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/distribute.svg
-          alt: distribution-icon
-          href: ~/distribution/
-        title: Distribute
-      - href: ~/analytics/
-        html: Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/analytics.svg
-          alt: analytics-icon
-          href: ~/analytics/
-        title: Analytics
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/auth/
-        html: Authenticate your users and leverage user identities to view user data and send push notifications to users instead of individual devices. 
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/auth.svg
-          alt: auth-icon
-          href: ~/auth/
-        title: Auth
-      - href: ~/data/
-        html: Persist, manage, and sync app data in the cloud across multiple platforms in both online and offline scenarios. 
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/data.svg
-          alt: data-icon
-          href: ~/data/
-        title: Data
-      - href: ~/push/
-        html: Engage your users by sending them targeted messages to specific sets of users at exactly the right time. Create segments of users based on device and custom properties.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/push-notification.svg
-          alt: push-icon
-          href: ~/push/
-        title: Push
-      - href: ~/diagnostics/
-        html: Collect crash data from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them. Backed by HockeyApp.
-        image:
-          src: https://docs.microsoft.com/media/landing/mobile-center/crashes.svg
-          alt: diagnostics-icon
-        title: Diagnostics (Formerly Crashes)
-      
-- title: Reference
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: SDKs
-      html: <p><a href="~/sdk/analytics/android/">Analytics</a></p><p><a href="~/sdk/crashes/android/">Diagnostics (Crashes)</a></p><p><a href="~/sdk/distribute/android/">Distribute</a></p><p><a href="~/sdk/push/android/">Push</a></p>
-    - title: Command line
-      html: <p><a href="~/cli/">Overview</a></p>
-    - title: APIs
-      html: <p><a href="~/api-docs/">REST Interface</a></p><p><a href="https://openapi.appcenter.ms">Swagger</a></p>
+        # Card
+        - title: SDKs
+          links:
+            - text: Analytics
+              url: ~/sdk/analytics/android.md
+            - text: Diagnostics (Crashes)
+              url: ~/sdk/crashes/android.md
+            - text: Distribute
+              url: ~/sdk/distribute/android.md
+            - text: Push
+              url: ~/sdk/push/android.md
+        # Card
+        - title: Command Line
+          links:
+            - text: Overview
+              url: ~/cli/index.md
+        # Card
+        - title: APIs
+          links:
+            - text: REST Interface
+              url: ~/api-docs/index.md
+            - text: Swagger
+              url: https://openapi.appcenter.ms
