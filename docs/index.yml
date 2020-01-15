@@ -26,7 +26,7 @@ highlightedContent:
     # Card
     - title: Create and manage apps
       itemType: how-to-guide
-      url: ~dashboard/creating-and-managing-apps.md
+      url: ~/dashboard/creating-and-managing-apps.md
     # Card
     - title: Create and manage organizations
       itemType: how-to-guide
