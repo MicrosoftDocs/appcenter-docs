@@ -22,15 +22,15 @@ highlightedContent:
     # Card
     - title: Dashboard overview
       itemType: get-started
-      url: /dashboard/index.md
+      url: dashboard/index.md
     # Card
     - title: Create and manage apps
       itemType: how-to-guide
-      url: /dashboard/creating-and-managing-apps
+      url: dashboard/creating-and-managing-apps
     # Card
     - title: Create and manage organizations
       itemType: how-to-guide
-      url: /dashboard/creating-and-managing-organizations
+      url: dashboard/creating-and-managing-organizations
     # Card
     - title: HockeyApp Migration
       itemType: how-to-guide
