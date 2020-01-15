@@ -22,19 +22,19 @@ highlightedContent:
     # Card
     - title: Dashboard overview
       itemType: get-started
-      url: /dashboard/index.md
+      url: ~/dashboard/index.md
     # Card
     - title: Create and manage apps
       itemType: how-to-guide
-      url: /dashboard/creating-and-managing-apps
+      url: ~/dashboard/creating-and-managing-apps.md
     # Card
     - title: Create and manage organizations
       itemType: how-to-guide
-      url: /dashboard/creating-and-managing-organizations
+      url: ~/dashboard/creating-and-managing-organizations.md
     # Card
     - title: HockeyApp Migration
       itemType: how-to-guide
-      url: https://docs.microsoft.com/appcenter/transition/
+      url: ~/transition/index.md
       # Card
     - title: Service Status
       itemType: overview
@@ -42,11 +42,11 @@ highlightedContent:
     # Card
     - title: Pricing
       itemType: overview
-      url: https://docs.microsoft.com/appcenter/general/pricing/
+      url: ~/general/pricing.md
     # Card
     - title: Roadmap
       itemType: overview
-      url: https://docs.microsoft.com/appcenter/general/roadmap/
+      url: ~/general/roadmap.md
     # Card
     - title: API Swagger
       itemType: reference
@@ -250,14 +250,62 @@ additionalContent:
         # Card
         - title: SDKs
           links:
+            - text: Data Collected by App Center
+              url: ~/sdk/data-collected.md
             - text: Analytics
               url: ~/sdk/analytics/android.md
+            - text: Auth
+              url: ~/sdk/auth/android.md
             - text: Diagnostics (Crashes)
               url: ~/sdk/crashes/android.md
+            - text: Data
+              url: ~/sdk/data/android.md  
             - text: Distribute
               url: ~/sdk/distribute/android.md
             - text: Push
               url: ~/sdk/push/android.md
+            - text: Other APIs
+              url: ~/sdk/other-apis/android.md
+            - text: Troubleshooting
+              url: ~/sdk/troubleshooting/android.md
+        # Card
+        - title: General Information
+          links:
+            - text: Accounts in App Center
+              url: ~/general/account.md
+            - text: Pricing
+              url: ~/general/pricing.md
+            - text: Billing
+              url: ~/general/billing.md
+            - text: Azure Subscriptions
+              url: ~/general/azure-subscriptions.md
+            - text: OS/Platform and Services Matrix
+              url: ~/general/platform-service-matrix.md
+            - text: Connecting App Center Organizations to Azure AD
+              url: ~/general/connecting-to-azure-active-directory.md
+            - text: Configuring Azure AD Conditional Access
+              url: ~/general/configuring-aad-conditional-access.md
+        # Card
+        - title: GDPR
+          links:
+            - text: Your Data
+              url: ~/gdpr/your-data.md
+            - text: Data from your users
+              url: ~/gdpr/data-from-your-end-users.md
+            - text: Does GDPR apply to me?
+              url: ~/gdpr/does-it-apply-to-me.md
+            - text: How to stop collecting data
+              url: ~/gdpr/how-to-stop-collecting-data.md
+            - text: Using the Application install ID
+              url: ~/gdpr/install-id.md
+            - text: Analytics
+              url: ~/gdpr/analytics-forget-me.md
+            - text: Diagnostics
+              url: ~/gdpr/diagnostics-delete.md
+            - text: Push
+              url: ~/gdpr/push-forget-me.md
+            - text: Test
+              url: ~/gdpr/test-forget-me.md
         # Card
         - title: Command Line
           links:
