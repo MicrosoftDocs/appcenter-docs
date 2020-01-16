@@ -4,16 +4,16 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 01/14/2020
+ms.date: 01/16/2020
 ms.topic: article
 ms.assetid: 8835183e-4261-4bae-b119-8a8beca72ad4
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Hello and welcome to Troubleshooting
+# Troubleshooting
 
-We're sorry you're having difficulty using App Center. If you can't find the answer to your issue below, contact support via the chat bubble on App Center.
+If you can't find the answer to your issue below, contact support via the chat bubble on App Center.
 
 ## [General Issues](~/build/troubleshooting/general.md)
 
@@ -73,17 +73,17 @@ We're sorry you're having difficulty using App Center. If you can't find the ans
 
 * [Xamarin.iOS builds from solution file (.sln) instead of project file (.csproj)](~/build/troubleshooting/xamarin.md#solution-file)
 
-* [Xamarin.iOS builds fail claiming I need to provide signing information](~/build/troubleshooting/xamarin.md#fail-signing)
+* [Xamarin.iOS builds fail, claiming I need to provide signing information](~/build/troubleshooting/xamarin.md#fail-signing)
 
 * [My Xamarin.Android build failed with **Error: No APK files found**.](~/build/troubleshooting/xamarin.md#no-apk)
 
 * [I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information](~/build/troubleshooting/xamarin.md#signing-info-failed)
 
-* [My Xamarin.iOS simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error.](~/build/troubleshooting/xamarin.md#sim-fails)
+* [My Xamarin.iOS Simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error.](~/build/troubleshooting/xamarin.md#sim-fails)
 
-* [My Xamarin build fails with error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly.](~/build/troubleshooting/xamarin.md#task-fails)
+* [My Xamarin build fails with **error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly**.](~/build/troubleshooting/xamarin.md#task-fails)
 
-* [My Xamarin build fails with error: This project references NuGet package(s) that are missing on this computer.](~/build/troubleshooting/xamarin.md#nuget-missing)
+* [My Xamarin build fails with **error: This project references NuGet package(s) that are missing on this computer**.](~/build/troubleshooting/xamarin.md#nuget-missing)
 
 * [I want to run unit tests for my Xamarin application.](~/build/troubleshooting/xamarin.md#unit-tests)
 
