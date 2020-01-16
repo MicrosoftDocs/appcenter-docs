@@ -76,8 +76,6 @@ We are sorry to hear you are having difficulty in using App Center. If you canno
 
 * [My Xamarin.iOS builds fail claiming I need to provide signing information](~/build/troubleshooting/xamarin.md#fail-signing)
 
-* [Configuring Build scripts](~/build/troubleshooting/xamarin.md#build-scripts)
-
 * [My Xamarin.Android build failed with **Error: No APK files found**. What can be done?](~/build/troubleshooting/xamarin.md#no-apk)
 
 * [I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information, why is that?](~/build/troubleshooting/xamarin.md#signing-info-failed)

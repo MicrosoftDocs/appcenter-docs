@@ -65,7 +65,7 @@ When sending notifications through ACP, you can target destination devices (noti
 In the wizard's **Target** panel, make the selection that makes the most sense for your campaign.
 
 > [!NOTE]
-> The only way to get the Install ID for a particular device is through the [App Center SDK](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#identify-installations). Your app must call the appropriate SDK method depending on the target platform (Android, iOS, Windows, etc.) to collect the ID, then share it with you (perhaps storing it in a server-based database) for use later.
+> The only way to get the Install ID for a particular device is through the [App Center SDK](https://docs.microsoft.com/appcenter/sdk/other-apis/android#identify-installations). Your app must call the appropriate SDK method depending on the target platform (Android, iOS, Windows, etc.) to collect the ID, then share it with you (perhaps storing it in a server-based database) for use later.
 
 ![App Center Push Campaign Target page](~/push/images/campaign-target-device-list.png)
 

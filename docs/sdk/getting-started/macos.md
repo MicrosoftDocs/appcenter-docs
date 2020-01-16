@@ -4,12 +4,15 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: macos
+dev_langs:  
+ - swift
+ - objc
 ---
 
 # Get Started with macOS
@@ -17,12 +20,14 @@ ms.tgt_pltfrm: macos
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -57,7 +62,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 The App Center SDK for macOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) or by manually adding the binaries to your project.
 
-### 3.1  Integration via Cocoapods
+### 3.1 Integration via Cocoapods
 
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics** and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
 
@@ -126,23 +131,17 @@ Now that you've integrated the frameworks in your application, it's time to star
 ## 4. Start the SDK
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+If you're developing for an extension, please refer to the [Extension getting started page](./macos-extensions.md).
 
 ### 4.1 Add the import statements
 
-**Objective-C**
+Open the project's **AppDelegate** file and add the following import statements:
 
-Open the project's **AppDelegate.m** file and add the following import statements:
-
-```obj-c
+```objc
 @import AppCenter;
 @import AppCenterAnalytics;
 @import AppCenterCrashes;
 ```
-
-**Swift**
-
-Open the project's **AppDelegate.swift** file and add the following import statements:
-
 ```swift
 import AppCenter
 import AppCenterAnalytics
@@ -151,18 +150,11 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-**Objective-C**
+Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
 
-Insert the following line to start the SDK in the project's **AppDelegate.m** class in the `applicationDidFinishLaunching` method.
-
-```obj-c
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
-
-**Swift**
-
-Insert the following line to start the SDK in the project's **AppDelegate.swift** class in the `applicationDidFinishLaunching` method.
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
@@ -181,14 +173,9 @@ Note that, unless you explicitly specify each module as parameters in the start 
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
-**Objective-C**
-
-```obj-c
+```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
 ```
-
-**Swift**
-
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```

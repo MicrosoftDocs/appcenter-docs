@@ -45,11 +45,11 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](macos-apns-setup.md)]
+[!INCLUDE [macos apns setup](includes/macos-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
-[!include[](introduction-apple.md)]
+[!INCLUDE [introduction to apple](includes/introduction-apple.md)]
 
 #### 2.2 Add the `start:withServices:` method
 

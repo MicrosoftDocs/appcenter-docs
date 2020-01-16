@@ -316,7 +316,7 @@ Since App Center supports setting user identity two different ways (using the SD
 
 #### User Identity set through the SDK
 
-Many apps use proprietary methods or third-party services to authenticate users in the app. To accommodate this use case, the App Center SDK offers a method the app uses to set the captured user identifier and pass it to App Center. With this ID set, App Center can then associate users with their [Analytics](https://docs.microsoft.com/en-us/appcenter/analytics/) and [Diagnostics](https://docs.microsoft.com/en-us/appcenter/diagnostics/) data as well as send notifications to specific users.
+Many apps use proprietary methods or third-party services to authenticate users in the app. To accommodate this use case, the App Center SDK offers a method the app uses to set the captured user identifier and pass it to App Center. With this ID set, App Center can then associate users with their [Analytics](https://docs.microsoft.com/appcenter/analytics/) and [Diagnostics](https://docs.microsoft.com/appcenter/diagnostics/) data as well as send notifications to specific users.
 
 To set an app user's identity using the App Center SDK, refer to the following articles based on the target platform:
 

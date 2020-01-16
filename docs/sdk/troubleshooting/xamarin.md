@@ -5,8 +5,8 @@ keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 06/19/2019
-ms.topic: article
-ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
+ms.topic: troubleshooting-article
+ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
@@ -22,6 +22,7 @@ ms.tgt_pltfrm: xamarin
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Collecting verbose logs
 

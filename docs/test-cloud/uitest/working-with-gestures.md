@@ -14,7 +14,7 @@ ms.custom: test
 
 # Working with gestures
 
-Gestures are an import part of user interaction in a mobile app. Taps, swipes, and flicks allow users multiple ways to interact with an application in creative and intuitive ways. This guide discusses the API's for Xamarin.UITest for Android and iOS. 
+Gestures are an important part of user interaction in a mobile app. Taps, swipes, and flicks allow users multiple ways to interact with an application in creative and intuitive ways. This guide discusses the API's for Xamarin.UITest for Android and iOS. 
 
 UITest provides a very large number of API's to simulate gestures or physical interactions with the device. Some (but not all) of these API's are listed below:
 

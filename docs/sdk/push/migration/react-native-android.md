@@ -12,7 +12,9 @@ ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 
-[!include[](introduction-android.md)]
+# How to add Firebase SDK dependencies
+
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## 1. Integrate Firebase in application
 

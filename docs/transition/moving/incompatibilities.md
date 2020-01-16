@@ -4,7 +4,7 @@ description: When moving apps from HockeyApp to App Center we are checking for i
 keywords: transition
 author: derpixeldan
 ms.author: daadam
-ms.date: 02/18/2019
+ms.date: 10/22/2019
 ms.topic: article
 ms.assetid: 59e9c687-8447-4354-8844-43ac6d241e15
 ms.service: vs-appcenter
@@ -18,10 +18,6 @@ When you move an app from HockeyApp to App Center, we check and indicate potenti
 ## Bug tracker integration
 
 App Center will only transfer associates with Azure DevOps, GitHub, and Jira. Other bug trackers will not create new tickets, and the associations are lost.
-
-## Crashes
-
-For UWP and Xamarin apps, we won't move any crashes data over to App Center. Also, once the app is moved, you won't receive crashes from versions using the HockeySDK any longer. We recommend [migrating to the App Center SDK](~/transition/sdk-migration.md) before making the move.
 
 ## Distribution Groups
 
@@ -47,7 +43,7 @@ Transfer an app:
 
 ## Externally hosted builds
 
-App Center doesn't currently support externally hosted builds. We won't move any versions with externally hosted builds.
+App Center supports externally hosted builds. If you are unable to move your app, please contact support.
 
 ## Feedback
 

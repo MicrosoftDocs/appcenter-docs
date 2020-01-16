@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Push | Sample App Tutorials
+title: iOS Push Sample App Tutorials
 description: Tutorial to send a push notification to the sample ios app.
 keywords: app center
 author: sabrinaj206
@@ -10,13 +8,6 @@ ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 # Push - Sample Swift App and Tutorials

@@ -26,4 +26,4 @@ The different owner flags of HockeyApp organizations are mapped to the new App C
 * "All Apps" flag is `true` == Admin
 * "Billing" flag is `true` == Admin
 * "All Distribution Groups" flag is `true` == Collaborator
-* "All Apps" flag is `false` && "All Distribution Groups" flag is `false` && "All Distribution Groups" flag is `false` == Member
+* "All Apps" flag is `false` && "Billing" flag is `false` && "All Distribution Groups" flag is `false` == Member

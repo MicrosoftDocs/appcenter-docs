@@ -46,13 +46,13 @@ Please configure Apple Push Notifications service (APNs) for your app from your 
 Double-click the **Entitlements.plist** file in your Xamarin Solution Explorer. This will open the Entitlements.plist editor. Check the **Enable Push Notifications** checkbox from the **Push Notifications** section.
 ![enable-push-capability](images/xamarin-ios-enable-push-capability.png)
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, refer to the [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications#configuring-the-remote-notifications-environment).
 
 #### [Optional] Enable silent notifications
 
-Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#silent-remote-notifications)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
+Silent notifications give you a way to wake up your app  so that it can refresh its data in the background (see [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background#silent-remote-notifications)). To enable silent notifications double-click the **Info.plist** file in your Xamarin Solution Explorer. This will open the Info.plist editor. Check **Background modes** then **Remote notifications** checkboxes from the **Background modes** section.
 
 ![enable-silent-notifications](images/xamarin-ios-enable-silent-notifications.png)
 
@@ -65,11 +65,11 @@ Silent notifications give you a way to wake up your app  so that it can refresh 
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in. It can be integrated using Visual Studio or Package Manager Console.
 
-[!include[](add-nuget.md)]
+[!INCLUDE [add nuget](includes/add-nuget.md)]
 
 ### 2. Start App Center Push
 
-[!include[](start-push.md)]
+[!INCLUDE [start push](includes/start-push.md)]
 
 > [!NOTE]
 > If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
@@ -78,20 +78,20 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### Subscribe to the push event
 
-[!include[](dotnet-push-event-intro.md)]
+[!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 > [!NOTE]
 > If silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
-[!include[](dotnet-push-event-example.md)]
+[!INCLUDE [dotnet push event example](includes/dotnet-push-event-example.md)]
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable Push at runtime
 
-[!include[](enable-or-disable.md)]
+[!INCLUDE [enable or disable](includes/enable-or-disable.md)]
 
 ## Disable automatic method forwarding to App Center services
 
@@ -177,7 +177,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Xamarin.iOS documentation](https://docs.microsoft.com/en-us/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Xamarin.iOS documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.

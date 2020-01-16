@@ -32,7 +32,7 @@ ms.tgt_pltfrm: cordova
 > [!NOTE]
 > For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow [the SDK migration guide](migration/cordova-android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -109,7 +109,7 @@ app.initialize();
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Enable or disable App Center Push at runtime
 

@@ -6,7 +6,7 @@ author: amchew
 ms.author: achew
 ms.date: 07/22/2019
 ms.topic: article
-ms.assetid: c9ph013b-2o49-69q3-8ca3-572b07z12y79
+ms.assetid: 4d2277c5-8a3a-484c-b5c6-47a210c0118e
 ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: xamarin
@@ -18,6 +18,7 @@ ms.tgt_pltfrm: xamarin
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
+> * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 
 ## Add the SDK to your app
@@ -245,13 +246,10 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 
 > [!NOTE]
 > If you have already integrated other App Center SDKs, for example, the [Xamarin Distribute SDK](~/sdk/distribute/xamarin.md), then you may see an existing `string` for the `key`: `CFBundleURLSchemes`. For example, 
-> ``` 
+> ```
 > <array>
 >   <dict>
->       <key>CFBundleTypeRole</key>
->       <string>Editor</string>
->       <key>CFBundleURLName</key>
->       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>       ...
 >       <key>CFBundleURLSchemes</key>
 >       <array>
 >           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
@@ -261,14 +259,10 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 > ```
 > 
 > If so, add a new line `<string>msal{APP_SECRET}</string>` under the `key`: `CFBundleURLSchemes`. For example, given that your app secret is `65dc3680-7325-4000-a0e7-dbd2276eafd1`, then the code snippet will be:
-> ``` 
+> ```
 > <array>
 >   <dict>
->       <key>CFBundleTypeRole</key>
->       <string>Editor</string>
->       <key>CFBundleURLName</key>
->       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
->       <key>CFBundleURLSchemes</key>
+>       ...
 >       <array>
 >           <string>msal65dc3680-7325-4000-a0e7-dbd2276eafd1</string>
 >           <string>appcenter-889s4f4-9ac2-4e2e-ae54-dre54f2c6399</string>
@@ -280,7 +274,7 @@ Here's an example of the code snippet given that the app secret is `65dc3680-732
 #### Add keychain sharing capability
 
 > [!NOTE]
-> You should enable Keychain sharing capability for your provisioning profile. See [Working with Capabilities in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/capabilities/?#devcenter) for a detailed guide.
+> You should enable Keychain sharing capability for your provisioning profile. See [Working with Capabilities in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/deploy-test/provisioning/capabilities/?#devcenter) for a detailed guide.
 
 App Center uses the `com.microsoft.adalcache` keychain access group to support single sign-on by enabling different apps to share keychain items (i.e. user secrets and credentials) with each other. We use this access group to securely share a user secret within a family of apps that rely on the same user secret. This way, logging into one of your apps will automatically grant the same user access to all of the family of apps.
 
@@ -377,7 +371,7 @@ You also need to collect the user profile fields during the sign-up process so t
 
 ![User Attributes Settings](images/user-attributes.png)
 
-If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
+If you are using a custom policy instead of a user flow, you can configure the claims as shown in the [XML configuration example](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-setup-aad-custom#add-a-claims-provider) in the `OutputClaims` section.
 
 > [!NOTE]
 > Adding new user attributes will not update users that signed up before updating the settings.

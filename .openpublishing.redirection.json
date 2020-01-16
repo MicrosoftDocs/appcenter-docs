@@ -283,6 +283,19 @@
 	      {
 	          "source_path": "docs/migration/test-cloud/frameworks.md",
 	          "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
-	      }
+          },
+          {
+            "source_path": "docs/transition/distribution-groups.md",
+            "redirect_url": "/appcenter/transition/distribution"
+          },
+	      {
+            "source_path": "docs/diagnostics/android-proguard.md",
+            "redirect_url": "/appcenter/diagnostics/android-deobfuscation"
+          },
+          {
+            "source_path": "docs/diagnostics/upload-custom-crashes.md",
+            "redirect_url": "/appcenter/diagnostics/upload-crashes"  
+          }
+	   
  ]
 }

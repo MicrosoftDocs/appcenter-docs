@@ -38,7 +38,7 @@ Also note that crash logs on tvOS require Symbolication, check out the [App Cent
 > [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
-[!include[](apple-common-methods-1.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
 ### Ask for the users' consent to send a crash log
 
@@ -129,4 +129,4 @@ MSCrashes.notify(with: .send)
 MSCrashes.notify(with: .always)
 ```
 
-[!include[](apple-common-methods-2.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]

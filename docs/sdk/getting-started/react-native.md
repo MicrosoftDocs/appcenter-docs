@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 09/12/2019
+ms.date: 11/21/2019
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.service: vs-appcenter
@@ -17,12 +17,14 @@ ms.tgt_pltfrm: react-native
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -61,9 +63,6 @@ Open a Terminal and navigate to the root of your React Native project, then ente
 npm install appcenter appcenter-analytics appcenter-crashes --save-exact
 ```
 
-> [!NOTE]
-> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
-
 In case you prefer `yarn` over `npm`, use the following command to install App Center:
 
 ```shell
@@ -96,7 +95,6 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     * Add these lines to import section
 
     ```objc
-    #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
     #import <AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes.h>
@@ -327,6 +325,34 @@ Integration steps without the `react-native link` command.
         "app_secret": "APP_SECRET_VALUE"
     }
     ```
+
+### 3.5 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+  a. Create **appcenter_backup_rule.xml** file in the **android/app/src/main/res/xml** folder.
+
+  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
 
 ## 4. Start the SDK
 

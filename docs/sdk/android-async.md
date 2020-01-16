@@ -28,7 +28,7 @@ future.thenAccept(new AppCenterConsumer<{ReturnType}>() {
     @Override
     public void accept({ReturnType} result) {
 
-        // do something with result, this is called back in U.I. thread.
+        // do something with result, this is called back in UI thread.
     }
 });
 ```
@@ -36,7 +36,7 @@ future.thenAccept(new AppCenterConsumer<{ReturnType}>() {
 val future = {AnyAsyncApi}()
 future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
     override fun accept(t: {ReturnType}?) {
-        // do something with result, this is called back in U.I. thread.
+        // do something with result, this is called back in UI thread.
     }
 })
 ```

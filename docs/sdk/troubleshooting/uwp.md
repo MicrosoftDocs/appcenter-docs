@@ -5,8 +5,8 @@ keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 11/29/2017
-ms.topic: article
-ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
+ms.topic: troubleshooting-article
+ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: uwp
@@ -22,6 +22,7 @@ ms.tgt_pltfrm: uwp
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Analytics data doesn't show up in the portal
 

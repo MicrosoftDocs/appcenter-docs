@@ -29,7 +29,7 @@ For additional information, or to browse a list of articles available through su
 
 ## Microsoft Premier Support
 
-Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/en-us/premier).  If you are new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/en-us/enterprise/services/support).
+Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier).  If you are new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support).
 
 ## Providing feedback
 
@@ -37,7 +37,7 @@ You can provide feedback on the documentation and the product in different ways,
 
 ### Feedback on the documentation
 
-The comments feature of our documentation is intended to enable customers to suggest changes to the docs or ask clarifying questions about the docs. Every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/en-us/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
+The comments feature of our documentation is intended to enable customers to suggest changes to the docs or ask clarifying questions about the docs. Every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
 
 ![App Center docs feedback options](images/app-center-feedback-options.png)
 
@@ -68,4 +68,4 @@ If you have some suggestions on how to make the docs better, and you have the ti
 3. Submit a pull request (PR)
 4. We'll review your changes and get back to you
 
-For more information on contributing to the App Center docs, read the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
+For more information on contributing to the App Center docs, read the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/).

@@ -4,7 +4,7 @@ description: How to configure App Center data for iOS
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 09/12/2019
+ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
 ms.service: vs-appcenter
@@ -458,7 +458,7 @@ The `Page` class has one field of type `NSArray<MSDocumentWrapper *>` called `it
 
 Using the `listWithPartition` or `listDocuments` (swift) call you can fetch paginated data from Cosmos DB. This is handled in the completion handler of the method.
 
-### Advanced offline scenarios
+## Advanced offline scenarios
 
 The `setRemoteOperationDelegate` method allows the client to be notified of a pending operation being executed when the client device goes from offline to online. An example of the usage would be the following code snippets:
 
@@ -488,9 +488,30 @@ Implementation:
 @end
 ```
 
+```swift
+class MyClass: NSObject, MSRemoteOperationDelegate {
+  
+  func data(data: MSData, operation: String, documentMetadata: MSDocumentMetadata?, error: MSDataError?) {
+    NSLog("Operation processed: %a", operation)
+    if (documentMetadata != nil) {
+      NSLog("Document: Partition: %a, document id : @a, eTag : %a", documentMetadata!.partition, documentMetadata!.documentId, documentMetadata!.eTag)
+    }
+    if (error != nil) {
+      NSLog("Error: %@", error!)
+    }
+  }
+  
+}
+```
+
 To setup the callback (delegation):
 
 ```objc
 MyClass *myClass = [[MyClass alloc] init];
 [MSData setRemoteOperationDelegate:myClass];
+```
+
+```swift
+let myClass = MyClass()
+MSData.setRemoteOperationDelegate(myClass)
 ```

@@ -14,7 +14,7 @@ ms.custom: analytics
 # Export
 
 
-App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
+App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview).
 By exporting the data, you benefit from:
 
 - Unlimited data retention
@@ -30,8 +30,8 @@ App Center continuously exports Analytics data to Blob Storage from the moment y
 
 You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
 
-[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
-[Learn more about Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+[Learn more about Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)
 
 
 ## Azure Blob Storage
@@ -40,7 +40,7 @@ Azure Blob storage is a service for storing large amounts of unstructured object
 
 The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnositcs data](https://docs.microsoft.com/en-us/appcenter/gdpr/diagnostics-export)
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnositcs data](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export)
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
@@ -158,7 +158,7 @@ More information about Application Insights and App Center:
 
 ## Prerequisities
 
-You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/en-us/free/) account before you begin.
+You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/free/) account before you begin.
 
 
 ## Azure Subscription Linking
@@ -229,7 +229,7 @@ Custom Export enables users to customize their export configuration in [Azure](h
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
-For Additional details on export to [Application Insights refer to the Quick Start ](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/mobile-center-quickstart).
+For Additional details on export to [Application Insights refer to the Quick Start ](https://docs.microsoft.com/azure/azure-monitor/learn/mobile-center-quickstart).
 
 ### Exporting multiple apps to the same storage account
 

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.service: vs-appcenter
@@ -20,12 +20,14 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -57,7 +59,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) or by manually adding the binaries to your project.
 
-### 3.1  Integration via Cocoapods
+### 3.1 Integration via Cocoapods
 
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
 
@@ -127,6 +129,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 ## 4. Start the SDK
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+If you're developing for an extension, please refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
 
@@ -145,7 +148,8 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line to start the SDK in the project's **AppDelegate** class in the `didFinishLaunchingWithOptions` method.
+Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
+
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```

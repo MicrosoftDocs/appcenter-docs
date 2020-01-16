@@ -2,29 +2,61 @@
 title: Environment Variables
 description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
-author: derpixeldan
-ms.author: daadam
-ms.date: 11/06/2017
+author: king-of-spades
+ms.author: kegr
+ms.date: 11/08/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: mobile-center
 ms.custom: build
+ms.reviewer: nirajpur
 ---
 
 # Environment variables
+Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own. 
 
-Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. Create your environment variables in the build configuration and use them in your build, for example, to access an API key, a webhook token or other secrets.
+## Pre-Defined variables
 
-The values of variables can be encrypted by clicking on the lock icon so they won't get exposed to the build configuration and appear obfuscated in the build logs. Keep in mind that you can't view or edit variables with an encrypted value once they're saved, however, you can always delete and re-create them and for those with a non-encrypted value you can still encrypt them at a later time.
+| **General variables**             | **Description**                             |
+| --------------------------------- | ------------------------------------------- |
+| `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
+| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
+| `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
+| `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
+| `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
+| <br> **iOS specific**             | |
+| `APPCENTER_XCODE_PROJECT`         | Selected Xcode project                      |
+| `APPCENTER_XCODE_SCHEME`          | Selected Xcode scheme                       |
+| <br> **Android specific**         | |
+| `APPCENTER_ANDROID_VARIANT`       | Selected Android variant                    |
+| `APPCENTER_ANDROID_MODULE`        | Selected Android module                     |
+| <br> **UWP specific**             | |
+| `APPCENTER_UWP_SOLUTION`          | Selected solution                           |
+| `APPCENTER_UWP_CONFIGURATION`     | Selected configuration                      |
+| <br> **Xamarin specific**         | |
+| `APPCENTER_XAMARIN_PROJECT`       | Selected project                            |
+| `APPCENTER_XAMARIN_CONFIGURATION` | Selected configuration                      |
+| <br> **React Native specific**    | |
+| `APPCENTER_REACTNATIVE_PACKAGE`   | Selected package                            |
+
+[build-scripts-detected]: ~/build/custom/scripts/images/build-scripts-detected.png "Configuration shows detected build scripts"
+
+## Variables declared in Build Configuration
+
+Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
 
 >[!NOTE]
 > 'Platform' is reserved from use as an environment variable.
 
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
 
-## Access the variables
+#### Encrypting variables
+Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editable once they're saved, but they can be deleted & re-created. 
 
-Environment variables can be consumed during the build process. Depending on the toolsets, you're using the syntax is different.
+Non-encrypted values can be encrypted at any time.
+
+## Access the variables
+Pre-set environment variables can be consumed during the build process. Depending on the toolset you're using, the syntax is different.
 
 > [!NOTE]
 > The correct way to consume environment variables depends on the toolchain used.
@@ -47,7 +79,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
 
 ## NuGet.config for Xamarin or UWP
 
-If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed which requires authentication. In the `NuGet.config` you can simply consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` please read the [reference documentation](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file#packagesourcecredentials).
+If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.config` file, read the [reference documentation](https://docs.microsoft.com/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```xml
 <packageSourceCredentials>

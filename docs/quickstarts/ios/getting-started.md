@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Getting Started | Sample App Tutorials
+title: iOS Getting Started
 description: Tutorial to onboard an iOS application in App Center
 keywords: app center
 author: sabrinaj206
@@ -10,13 +8,6 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 # Getting Started - Sample Swift App and Tutorials
@@ -30,9 +21,9 @@ In this tutorial, you'll learn how to set up a sample Swift app with App Center 
 
 ## Sign in to GitHub and fork the repository
 
-1. sign in to your [GitHub account](https://github.com/join).
+1. Sign in to your [GitHub account](https://github.com/join).
 
-2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter/tree/master/sample-apps/ios/getting-started).
+2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter-sampleapp-ios-swift/tree/master).
 
 3. Click **Fork** at the top-right hand corner of the page, and clone the repository.
 

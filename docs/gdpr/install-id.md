@@ -24,9 +24,9 @@ The easiest way to associate install IDs with users is via a login mechanism. In
 
 Here is how to retrieve an install ID for....
 
-* [UWP](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/uwp#identify-installations)
-* [Xamarin](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/xamarin#identify-installations)
-* [Android](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#identify-installations)
-* [iOS](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#identify-installations)
-* [MacOS](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/macos#identify-installations)
-* [React Native](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/react-native#identify-installations)
+* [UWP](https://docs.microsoft.com/appcenter/sdk/other-apis/uwp#identify-installations)
+* [Xamarin](https://docs.microsoft.com/appcenter/sdk/other-apis/xamarin#identify-installations)
+* [Android](https://docs.microsoft.com/appcenter/sdk/other-apis/android#identify-installations)
+* [iOS](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#identify-installations)
+* [MacOS](https://docs.microsoft.com/appcenter/sdk/other-apis/macos#identify-installations)
+* [React Native](https://docs.microsoft.com/appcenter/sdk/other-apis/react-native#identify-installations)

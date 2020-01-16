@@ -35,7 +35,7 @@ ms.tgt_pltfrm: xamarin.android
 > [!NOTE]
 > For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -43,11 +43,11 @@ Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you
 
 ### 1. Add the App Center Push module
 
-[!include[](add-nuget.md)]
+[!INCLUDE [add nuget](includes/add-nuget.md)]
 
 ### 2. Start App Center Push
 
-[!include[](start-push.md)]
+[!INCLUDE [start push](includes/start-push.md)]
 
 ### 3. Add google-services.json
 
@@ -120,7 +120,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 ### Subscribe to the push event
 
-[!include[](dotnet-push-event-intro.md)]
+[!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 > [!NOTE]
 > A notification is not generated when your application receives a push in the foreground.
@@ -133,15 +133,15 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 > The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.
 
-[!include[](dotnet-push-event-example.md)]
+[!INCLUDE [dotnet push event example](includes/dotnet-push-event-example.md)]
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android configure notifications](includes/android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 
@@ -154,4 +154,4 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(
 
 ## Enable or disable Push at runtime
 
-[!include[](enable-or-disable.md)]
+[!INCLUDE [enable or disable](includes/enable-or-disable.md)]

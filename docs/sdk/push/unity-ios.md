@@ -6,7 +6,7 @@ author: jwhitedev
 ms.author: jawh
 ms.date: 02/14/2019
 ms.topic: article
-ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
+ms.assetid: c6ee6d0a-940e-4266-887d-5baf181efece
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: unity
@@ -38,7 +38,7 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ### Enable push notifications on your application
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, see to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
@@ -48,10 +48,10 @@ If you haven't set up the SDK in your application already, see instructions in t
 
 ### Enable App Center Push
 
-[!include[](unity-enable.md)]
+[!INCLUDE [unity enable](includes/unity-enable.md)]
 
 ## Intercept push notifications
 
-[!include[](unity-intercept.md)]
+[!INCLUDE [unity intercept](includes/unity-intercept.md)]
 
-[!include[](unity-api-enable.md)]
+[!INCLUDE [unity api enable](includes/unity-api-enable.md)]

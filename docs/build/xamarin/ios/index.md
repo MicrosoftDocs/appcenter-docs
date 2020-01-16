@@ -88,7 +88,7 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 
 A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/uploading-signing-files.md), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
 
-Apps with [app or watchOS extensions](https://docs.microsoft.com/en-us/xamarin/ios/platform/extensions) require an additional provisioning profile per extension in order to be signed.
+Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/platform/extensions) require an additional provisioning profile per extension in order to be signed.
 
 > [!NOTE]
 > There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` in projects containing Xamarin watchOS apps.

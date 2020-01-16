@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 08/16/2019
+ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.service: vs-appcenter
@@ -43,7 +43,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '2.3.0'
+       def appCenterSdkVersion = '2.5.1'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
@@ -52,6 +52,17 @@ The App Center SDK is designed with a modular approach – a developer only need
    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
 2. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
+3. [DownloadManager](https://developer.android.com/reference/android/app/DownloadManager) on Android versions prior to 5.0 does not enable TLS 1.2, so it cannot be used to download updates. The App Center SDK enforces TLS 1.2 to improve security.
+If your `minSdkVersion` is lower than `19`, Android requires the [WRITE_EXTERNAL_STORAGE](https://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE) permission to write files in application-specific directories, so you need to add this permission to the project's **AndroidManifest.xml** file to allow App Center Distribute to store new downloaded updates:
+
+    ```xml
+    <uses-permission
+       android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+       android:maxSdkVersion="18" />
+    ```
+
+   > [!NOTE]
+   > You don't need to add `maxSdkVersion` if you already use it with a different value or if you already need the `WRITE_EXTERNAL_STORAGE` permission for all API levels.
 
 ### 2. Start App Center Distribute
 
@@ -240,7 +251,7 @@ Distribute.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Distribute` has been started.
@@ -256,7 +267,7 @@ Distribute.isEnabled();
 Distribute.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Distribute` has been started, it will always return `false` before start.
@@ -276,14 +287,18 @@ Distribute.setEnabledForDebuggableBuild(true)
 
 > [!NOTE]
 > This method only affects debug builds, and has no impact on release builds.
+> Debug build means that the `android:debuggable` flag is set to `true` (which is usually automatically set by gradle predefined debug build variants). Otherwise, this is a release build.
 
 ## How do in-app updates work?
+
+> [!NOTE]
+> For in-app updates to work, an app build should be downloaded from the link. It won't work if installed from an IDE or manually.
 
 The in-app updates feature works as follows:
 
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
@@ -307,7 +322,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 7. Review the Distribution and distribute the build to your in-app testing group.
 8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 9. Bump the `versionCode` of your app.
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

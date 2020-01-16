@@ -4,7 +4,7 @@ description: How to configure App Center data for React Native
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
-ms.date: 07/29/2019
+ms.date: 10/01/2019
 ms.topic: article
 ms.assetid: 4076c411-5a5d-4331-a024-4893031ebc7f
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.custom: MBaaS
 ms.tgt_pltfrm: react-native
 ---
 
-# Configuring App Center Data for Android
+# Configuring App Center Data for React Native
 
 App Center Data is a data management service that lets you manage, persist, and sync your application data in the cloud across different devices and platforms in both online and offline scenarios.
 
@@ -291,8 +291,14 @@ The `setRemoteOperationListener` method allows the client to be notified of a pe
 
 ```javascript
 Data.setRemoteOperationListener({
-  onRemoteOperationCompleted(document) {
-    console.log(`Remote operation completed. DocumentId: ${document.id}`);
+ onRemoteOperationCompleted(remoteOperationCompletedData) {
+    console.log(`Remote operation completed. Operation: ${remoteOperationCompletedData.operation}`);
+    if (remoteOperationCompletedData.id) {
+      console.log(`Partition: ${remoteOperationCompletedData.partition}, Id: ${remoteOperationCompletedData.id}, ETag: ${remoteOperationCompletedData.eTag}.`);
+    }
+    if (remoteOperationCompletedData.error) {
+      console.error(`Error: ${remoteOperationCompletedData.error}`);
+    }
   }
 });
 ```

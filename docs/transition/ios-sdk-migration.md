@@ -3,7 +3,7 @@ title: HockeySDK for iOS Migration
 description: Migrate from the HockeySDK to App Center SDK for iOS
 author: elamalani
 ms.author: emalani
-ms.date: 08/06/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter
@@ -15,7 +15,7 @@ dev_langs:
 
 # Migrate from the HockeySDK to App Center SDK for iOS
 
-[!include[](sdk-migration-dropdown.md)]
+[!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 
 ## 1. Update the libraries
 
@@ -39,40 +39,24 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line
 
 #### Carthage
 
+1. Remove HockeySDK references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
+
+1. Delete `HockeySDK.framework` and `HockeySDK.framework.dSYM` from the XCode project and click the **Move to Trash** button.
+
+1. Open the **Build Phases** tab and locate the **Run Script** section. Remove HockeyApp from the `input.xcfilelist` and `output.xcfilelist`.
+
+### 1.2 Add the new App Center SDK
+
+The App Center SDK supports integration via Cocoapods, Carthage, and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/ios.md#3-add-the-app-center-sdk-modules).
+
 > [!NOTE]
-> App Center doesn't support Carthage yet. Please look at [our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to stay up to date on it.
-
-### 1.2 Add new App Center SDK
-
-Add the `pod 'AppCenter'` line to your Podfile and run `pod install`.
-
-Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
-
-```ruby
-# Use the following line to use App Center Analytics and Crashes.
-pod 'AppCenter'
-
-# Use the following lines if you want to specify which service you want to use.
-pod 'AppCenter/Analytics'
-pod 'AppCenter/Crashes'
-pod 'AppCenter/Distribute'
-```
-
-For example, if you had `pod "HockeySDK", :subspecs => ['CrashOnlyLib']` previously, you must use:
-
-```ruby
-pod 'AppCenter/Crashes'
-```
-
-Please note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
-
-HockeyApp class  | App Center module
----------------- | -----------------
-`MetricsManager` | `Analytics`
-`CrashManager`   | `Crashes`
-`UpdateManager`  | `Distribute`
-
-The recommended way to integrate the App Center SDK is to use **CocoaPods**, but we support other scenarios. For more info, refer to the [App Center Documentation](~/sdk/getting-started/ios.md#3-add-the-app-center-sdk-modules).
+> The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
+>
+> HockeyApp class  | App Center module
+> ---------------- | -----------------
+> `MetricsManager` | `Analytics`
+> `CrashManager`   | `Crashes`
+> `UpdateManager`  | `Distribute`
 
 ## 2. Update the SDK setup code
 
@@ -244,7 +228,7 @@ App Center SDK registers in-app updates service only if you pass `MSDistribute` 
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [[[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/en-us/appcenter/distribution/groups)
+Restricted in-app updates | [[[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/appcenter/distribution/groups)
 Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableUpdateManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [[MSDistribute setEnabled:NO]](~/sdk/distribute/ios.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](~/sdk/distribute/ios.md#2-customize-the-update-dialog)
 
@@ -252,7 +236,7 @@ Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https:/
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticateInstallation()](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/en-us/appcenter/distribution/groups)
+Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticateInstallation()](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/appcenter/distribution/groups)
 Disable service at runtime | [BITHockeyManager.shared().isUpdateManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [MSDistribute.setEnabled(false)](~/sdk/distribute/ios.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](~/sdk/distribute/ios.md#2-customize-the-update-dialog)
 

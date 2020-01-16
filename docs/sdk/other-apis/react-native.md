@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.service: vs-appcenter
@@ -71,7 +71,7 @@ AppCenter.setUserId("your-user-id");
 After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+> The value for the user id is limited to 256 characters.
 
 ## Disable all services at runtime
 

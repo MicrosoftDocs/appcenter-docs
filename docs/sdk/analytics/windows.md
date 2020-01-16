@@ -41,8 +41,8 @@ Country code is not automatically reported by the SDK. If you want to report it 
 
 #### UWP
 
-1. Make sure that you [enable Location Capability](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location#enable-the-location-capability) for your app.
-2. [Obtain a Bing Maps Authentication Key](https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/authentication-key#get-a-key).
+1. Make sure that you [enable Location Capability](https://docs.microsoft.com/windows/uwp/maps-and-location/get-location#enable-the-location-capability) for your app.
+2. [Obtain a Bing Maps Authentication Key](https://docs.microsoft.com/windows/uwp/maps-and-location/authentication-key#get-a-key).
 3. Use the following code in any place before you call `AppCenter.Start(... typeof(Analytics) ...);`. 
 	As `BingMapsToken`, use the key obtained in step 2.
 

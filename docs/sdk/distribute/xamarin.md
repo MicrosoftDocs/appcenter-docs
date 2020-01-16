@@ -4,9 +4,9 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 11/26/2019
 ms.topic: article
-ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
+ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
@@ -106,7 +106,7 @@ AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 To enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
 
 ```csharp
-Distribute.SetEnabledForDebbugableBuild(true);
+Distribute.SetEnabledForDebuggableBuild(true);
 ```
 
 ##### Xamarin.Forms
@@ -265,11 +265,14 @@ bool enabled = await Distribute.IsEnabledAsync();
 
 ## How do in-app updates work?
 
+> [!NOTE]
+> For in-app updates to work, an app build should be downloaded from the link. It won't work if installed from an IDE or manually.
+
 The in-app updates feature works as follows:
 
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email. 
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
@@ -301,7 +304,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 7. Review the Distribution and distribute the build to your in-app testing group.
 8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 9. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android)
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

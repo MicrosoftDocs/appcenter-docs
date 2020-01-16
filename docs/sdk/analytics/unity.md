@@ -78,7 +78,7 @@ Analytics.SetEnabledAsync(true);
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 ## Check if App Center Analytics is enabled
 
@@ -117,7 +117,7 @@ Analytics.Pause();
 Analytics.Resume();
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 ## Local storage size
 

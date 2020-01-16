@@ -4,9 +4,9 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/12/2019
+ms.date: 11/13/2019
 ms.topic: article
-ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
+ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
 ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
@@ -22,10 +22,11 @@ ms.tgt_pltfrm: react-native
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## 'React/RCTDefines.h' file not found
 
-This error appears when RN core libraries are not referenced correctly, which can be caused by a variety of integrating/linking issues. 
+This error appears when RN core libraries are not referenced correctly, which can be caused by a variety of integrating/linking issues.
 It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
 Our linking script supports only the standard way of linking pods, so in order to resolve this, do the following:
 
@@ -114,8 +115,8 @@ This line is located in the following section of the logs:
 Added code to initialize iOS AppCenter SDK in ios/TestApp/AppDelegate.m
 Installing Cocoapods dependencies...
 Could not configure AppCenter for iOS. Error Reason - spawn pod ENOENT
-rnpm-install info Platform 'ios' module appcenter-analytics is already linked 
-rnpm-install info Platform 'android' module appcenter-analytics is already linked 
+rnpm-install info Platform 'ios' module appcenter-analytics is already linked
+rnpm-install info Platform 'android' module appcenter-analytics is already linked
 ```
 
 If you see that error, make sure the `pod` command from **CocoaPods** is available in your system's **PATH** environment variable.
@@ -131,6 +132,37 @@ Analyzing dependencies [!] Unable to find a specification for AppCenterReactNati
 ```
 
 You should run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, please see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
+
+## How to upgrade app using App Center SDK from React Native 0.59 to 0.60
+
+For upgrading React Native to the version 0.60.0 use the following command:
+
+```shell
+react-native upgrade 0.60.0
+```
+
+> [!NOTE]
+> If during an upgrade you get this error `Command failed: git status -s fatal: not a git repository (or any of the parent directories): .git`, perform the next steps:
+>   ```shell
+>   git init
+>   git add .
+>   git commit -m "Upgrade react-native"
+>   ```
+> After you finish upgrading you may remove the `.git` directory.
+
+#### Update React Native iOS
+
+1. Open **Podfile** and replace App Center dependencies on the following line:
+
+    ```ruby
+    use_native_modules!
+    ```
+
+2. Run the following command:
+
+    ```shell
+    pod repo update
+    ```
 
 ## How to update React Native SDK to the latest version
 
@@ -149,7 +181,7 @@ If you have already integrated our SDK into your application and want to upgrade
 
 > ```Text
 > [!] Unable to satisfy the following requirements:
-> 
+>
 > - `AppCenter/Core (= 1.0.0)` required by `Podfile.lock`
 > - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Push (1.0.0)`
 > - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Crashes (1.0.0)`

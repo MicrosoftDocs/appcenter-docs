@@ -35,4 +35,4 @@ App Center Analytics helps you understand user behavior and customer engagement 
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
-[!include[](apple-common-methods.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods.md)]

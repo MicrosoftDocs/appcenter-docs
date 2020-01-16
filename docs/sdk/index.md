@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/25/2019
+ms.date: 11/12/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ms.service: vs-appcenter
@@ -15,6 +15,9 @@ ms.custom: sdk
 
 App Center is your continuous integration, delivery and learning solution for iOS, Android, Windows, and macOS apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
+
+> [!WARNING]
+> Do not embed any of your [API tokens](../api-docs/index.md) into source code.
 
 ## App Center Services
 
@@ -89,17 +92,17 @@ Push             | 9.0 or later    | 10 and later
 
 Service    |  Unity version  | iOS Version  | Android Version            | UWP Windows Version
 -----------|-----------------|--------------|----------------------------|---------------------
-Analytics  | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
-Crashes    | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.15063 or later
-Distribute | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| not available
-Push       | 2017.1 or later | 9.0 or later | 4.1 / API Level 16 or later| 10.0.10240 or later
+Analytics  | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
+Crashes    | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Distribute | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Push       | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
 
 ### Windows UWP
 
 Service          | Windows Version    | Visual Studio
 -----------------|--------------------|----------------------------
 Analytics        | 10 build 10240     | Visual Studio 2015 or later
-Crashes          | not available      | not available
+Crashes          | 10 build 10240     | Visual Studio 2015 or later
 Distribute       | not available      | not available
 Push             | 10 build 10240     | Visual Studio 2015 or later
 
@@ -127,9 +130,9 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or la
 
 Service          | macOS Version   | Xcode
 -----------------|-----------------|--------------
-Analytics        | 10.9 or later   | 8.2 and later
-Crashes          | 10.9 or later   | 8.2 and later
-Push             | 10.9 or later   | 8.2 and later
+Analytics        | 10.9 or later   | 10 or later
+Crashes          | 10.9 or later   | 10 or later
+Push             | 10.9 or later   | 10 or later
 
 ### tvOS
 
@@ -138,7 +141,7 @@ Service          | tvOS Version    | Xcode
 Analytics        | 11.0 or later   | 10 and later
 Crashes          | 11.0 or later   | 10 and later
 
-### Apache Cordova 
+### Apache Cordova
 
 Service    |  AC CLI version      | iOS Version     | Android Version
 -----------|----------------------|-----------------|----------------
