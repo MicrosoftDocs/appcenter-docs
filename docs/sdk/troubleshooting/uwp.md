@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 11/29/2017
 ms.topic: troubleshooting-article
 ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: uwp
 ---
 

@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: add07be4-1116-4960-961c-89c9922b3c0e
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 

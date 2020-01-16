@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 12/05/2018
 ms.topic: article
 ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0
-ms.service: vs-appcenter
-ms.custom: sdk
 dev_langs:  
  - swift
  - objc

@@ -7,7 +7,6 @@ ms.author: jawh
 ms.date: 12/13/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
-ms.service: vs-appcenter
 ms.custom: crashes
 ms.tgt_pltfrm: unity
 ---

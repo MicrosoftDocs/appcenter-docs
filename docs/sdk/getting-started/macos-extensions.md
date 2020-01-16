@@ -7,8 +7,6 @@ ms.author: yuli1
 ms.date: 09/25/2019
 ms.topic: get-started-article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: macos
 dev_langs:  
  - swift
