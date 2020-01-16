@@ -20,8 +20,9 @@ When your Xamarin.iOS builds run from solution file (.sln), there are several th
 Android and UWP projects should be disabled in your code for build configurations that are intended for iOS builds. Go into the solution's configuration mappings, and for all mappings that target iPhone and iPhoneSimulator, uncheck all the projects that target different platforms. This configuration ensures when the `.sln` begins building, it won't attempt to build other projects. 
 
 ## <a name="fail-signing"/>My Xamarin.iOS builds fail claiming I need to provide signing information
-If your Xamarin.iOS builds are set up without signing, but the build process requires you to provide signing information; it's probably because you've selected `Sign builds: Off` in the App Center branch configuration. If your build log contains: 
+If your Xamarin.iOS builds aren't signed, but the build process requires signing, it's probably because you've selected `Sign builds: Off` in the App Center branch configuration. 
 
+If your build log contains: 
 ```Javascript
 RequireProvisioningProfile: True. 
 ```
