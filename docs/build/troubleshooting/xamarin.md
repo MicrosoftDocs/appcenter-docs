@@ -4,7 +4,7 @@ description: Troubleshooting guides for Xamarin apps
 keywords: build, faq
 author: siminapasat
 ms.author: siminap
-ms.date: 01/10/2020
+ms.date: 01/16/2020
 ms.topic: article
 ms.assetid: 7365bb27-d7c1-4fe1-91b4-346359c705ea
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ RequireProvisioningProfile: True.
 ```
 It means that your project itself is configured for signing and applies signing despite the App Center configuration. 
 
-To fix it, open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (for example, Debug|iPhoneSimulator) doesn't contain any signing information other than `Automatic`.
+To fix it, open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (for example, Debug|iPhoneSimulator) doesn't contain any signing information other than **Automatic**.
 
 ## <a name="no-apk"/>My Xamarin.Android build failed with **Error: No APK files found**.
 
