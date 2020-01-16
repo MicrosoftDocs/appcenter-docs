@@ -7,7 +7,6 @@ ms.author: achew
 ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: b19b58c4-f662-41bd-8ca3-049ae1e0b90d
-ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: android
 dev_langs:

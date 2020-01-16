@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: 7fe521e7-66fc-42ac-b804-a779525ad39e
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: android
 ---
 

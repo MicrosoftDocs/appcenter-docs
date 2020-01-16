@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 

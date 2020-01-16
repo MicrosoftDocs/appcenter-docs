@@ -7,7 +7,6 @@ ms.author: Zakeelm
 ms.date: 11/13/2019
 ms.topic: article
 ms.assetid: fc653188-e2c5-4e4b-afbc-a9315fb9259e
-ms.service: vs-appcenter
 ms.custom: MBaaS
 dev_langs:
  - objc

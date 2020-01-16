@@ -7,7 +7,6 @@ ms.author: Zakeelm
 ms.date: 06/03/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
-ms.service: vs-appcenter
 ms.custom: MBaaS
 dev_langs:
  - csharp

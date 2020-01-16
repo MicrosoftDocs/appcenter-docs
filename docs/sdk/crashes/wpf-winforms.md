@@ -7,7 +7,6 @@ ms.author: yuli1
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: f4324186-2e6a-46a6-8916-53646cea7bc9
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: windows
 ---

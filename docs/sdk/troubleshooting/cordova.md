@@ -7,8 +7,6 @@ ms.author: elamalani
 ms.date: 08/26/2019
 ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
