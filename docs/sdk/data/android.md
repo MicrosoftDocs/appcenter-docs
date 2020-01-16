@@ -7,7 +7,6 @@ ms.author: Zakeelm
 ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: af1456dc-8eb3-48a3-8989-fb694610f39f
-ms.service: vs-appcenter
 ms.custom: MBaaS
 dev_langs:
  - java

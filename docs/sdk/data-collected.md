@@ -7,7 +7,6 @@ ms.author: iageoghe
 ms.date: 11/21/2019
 ms.topic: article
 ms.assetid: 6acd2e52-b001-11e9-8b56-784f438a64fa
-ms.service: vs-appcenter
 ms.custom: sdk
 ---
 

@@ -1827,7 +1827,7 @@ The React Native community has graciously created some awesome open-source apps 
 
 - [F8 App](https://github.com/fbsamples/f8app) - The official conference app for [F8 2016](https://www.fbf8.com/).
 - [Feline for Product Hunt](https://github.com/arjunkomath/Feline-for-Product-Hunt) - An Android client for Product Hunt.
-- [GeoEncoding](https://github.com/LynxITDigital/GeoEncoding) - An app by [Lynx IT Digital](https://digital.lynxit.com.au), which demonstrates how to use numerous React Native components and modules.
+- [GeoEncoding](https://github.com/LynxITDigital/GeoEncoding) - An app by Lynx IT Digital, which demonstrates how to use numerous React Native components and modules.
 - [Math Facts](https://github.com/Khan/math-facts) - An app by Khan Academy to help memorize math facts more easily.
 
 Additionally, if you're looking to get started with React Native + CodePush, and are looking for an awesome starter kit, you should check out the following:

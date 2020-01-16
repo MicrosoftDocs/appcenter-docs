@@ -7,7 +7,6 @@ ms.author: achew
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 4d2277c5-8a3a-484c-b5c6-47a210c0118e
-ms.service: vs-appcenter
 ms.custom: sdk, auth
 ms.tgt_pltfrm: xamarin
 ---

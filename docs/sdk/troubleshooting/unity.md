@@ -7,8 +7,6 @@ ms.author: jawh
 ms.date: 12/19/2018
 ms.topic: article
 ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
-ms.service: vs-appcenter
-ms.custom: sdk
 ---
 
 # Unity SDK Troubleshooting

@@ -7,7 +7,7 @@ ms.author: t-anzha
 ms.date: 08/08/2018
 ms.topic: article
 ms.assetid: 9476467c-2823-4fd0-948a-08be81660113
-ms.service: app-center
+ms.service: vs-appcenter
 ms.custom: build
 ms.tgt_pltfrm: macos
 ---

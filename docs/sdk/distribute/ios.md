@@ -7,8 +7,6 @@ ms.author: bofu
 ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:
  - swift

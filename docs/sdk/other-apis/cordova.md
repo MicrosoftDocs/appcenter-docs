@@ -7,8 +7,6 @@ ms.author: zakeelm
 ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 

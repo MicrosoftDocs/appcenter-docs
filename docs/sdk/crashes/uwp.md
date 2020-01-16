@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---

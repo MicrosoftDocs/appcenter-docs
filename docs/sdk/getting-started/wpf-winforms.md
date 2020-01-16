@@ -7,8 +7,6 @@ ms.author: yuli1
 ms.date: 10/16/2019
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: wpf-winforms
 ---
 

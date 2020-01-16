@@ -7,8 +7,6 @@ ms.author: jowargo
 ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:
  - swift

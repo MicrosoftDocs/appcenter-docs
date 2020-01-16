@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 10/16/2019
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: apple
 dev_langs:  
  - swift

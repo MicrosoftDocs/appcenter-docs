@@ -7,7 +7,6 @@ ms.author: yuli1
 ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: macos
 dev_langs:  
