@@ -66,7 +66,7 @@ To do that, you can use the following code sample:
 ```csharp
 Application.ThreadException += (sender, args) =>
 {
-    Crashes.TrackError(arg.Exception);
+    Crashes.TrackError(args.Exception);
 };
 AppCenter.Start(...);
 ```
