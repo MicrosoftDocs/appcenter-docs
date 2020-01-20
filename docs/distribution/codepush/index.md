@@ -4,7 +4,7 @@ description: Fix bugs and add content quickly
 keywords: distribution
 author: iageoghe
 ms.author: iageoghe
-ms.date: 08/08/2018
+ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: F19F4122-B9F0-42CC-85B8-E3C344AE5419
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # CodePush
 
-CodePush is an App Center cloud service that enables Apache Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using the provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores. All React Native apps created on App Center are CodePush enabled by default, to start using CodePush you simply need to follow the following steps.
+CodePush is an App Center cloud service that enables Apache Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using the provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to rebuild a binary and/or redistribute it through any public app stores. All React Native apps created on App Center are CodePush enabled by default, to start using CodePush you simply need to follow the following steps.
 
 > [!NOTE]
 > For Android devices, CodePush will only work on TLS 1.2 compatible devices
@@ -29,7 +29,7 @@ npm install -g appcenter-cli
 > [!NOTE]
 > If you encounter an `EACCES` error executing this command, you may have to [fix npm permissions on your system](https://docs.npmjs.com/getting-started/fixing-npm-permissions). Many sites recommend using the `sudo` command to get around this error, but you should never install npm modules using `sudo`.
 
- After successfuly installing the App Center CLI, execute the `appcenter login` command to configure the CLI for your App Center account details.
+ After successfully installing the App Center CLI, execute the `appcenter login` command to configure the CLI for your App Center account details.
 
 ## 2. CodePush-ify your app
 
@@ -63,7 +63,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp
 
 ## 4. Run your app
 
-Once these steps are complete, all users running your app will receive the update using the experience you configured in step #2. For more details, refer to the [CLI][cli] and client SDK documentation ([Apache Cordova][cordova], [React Native][react-native]).
+Once these steps are complete, all users running your app will receive the update using the experience you configured in step #2. For more details, see the [CLI][cli] and client SDK documentation ([Apache Cordova][cordova], [React Native][react-native]).
 
 [cordova]:./cordova.md#getting-started
 [react-native]:./react-native.md#getting-started

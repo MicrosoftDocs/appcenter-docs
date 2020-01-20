@@ -5,7 +5,7 @@ author: michaelsmith
 ms.author: michaelsmitha
 ms.date: 08/09/2019
 ms.topic: article
-ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
+ms.assetid: 16051440-0b6f-4a2b-a209-0ee56dd4b5e9
 ms.service: vs-appcenter
 ms.tgt_pltfrm: WPF/Winforms
 ---

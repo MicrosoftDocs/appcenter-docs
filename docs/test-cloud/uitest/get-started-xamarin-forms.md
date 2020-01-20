@@ -81,12 +81,12 @@ The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for
 
 ::: zone pivot="windows"
 
-![](images/get-started-xamarin-forms-12-compiler-directive-vs.png "Build Options")
+![conditional compilation symbols option in Visual Studio](images/get-started-xamarin-forms-12-compiler-directive-vs.png "Build Options")
 
 ::: zone-end
 ::: zone pivot="macos"
 
-![](images/get-started-xamarin-forms-11-compiler-directive-xs.png "Compiler Options")
+![Define symbols option in Visual Studio for Mac](images/get-started-xamarin-forms-11-compiler-directive-xs.png "Compiler Options")
 
 ::: zone-end
 

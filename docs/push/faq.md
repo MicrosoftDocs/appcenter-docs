@@ -6,7 +6,7 @@ author: jwargo
 ms.author: jowargo
 ms.date: 06/26/2019
 ms.topic: article
-ms.assetid: 0d663191-1b13-44f0-9df0-51185656d541
+ms.assetid: 47e12907-38fb-40c3-bb14-45f3d3a09cd1
 ms.service: vs-appcenter
 ms.custom: push
 ---

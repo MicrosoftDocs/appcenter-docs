@@ -7,7 +7,6 @@ ms.author: achew
 ms.date: 06/28/2019
 ms.topic: article
 ms.assetid: ee09ce87-2661-4503-bc09-7c6b8c2018fe
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:

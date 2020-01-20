@@ -4,7 +4,7 @@ description: Help understanding symbolication for iOS and MacOS diagnostics in A
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/11/2019
+ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
@@ -18,6 +18,9 @@ MacOS, tvOS and iOS crash reports show the stack traces for all running threads 
 To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
 
 The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps below.
+
+## Unsymbolicated crashes
+[!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
 
 ## Finding the `.dSYM` bundle
 

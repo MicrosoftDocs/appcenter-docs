@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 12/06/2019
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
@@ -287,6 +286,7 @@ Distribute.setEnabledForDebuggableBuild(true)
 
 > [!NOTE]
 > This method only affects debug builds, and has no impact on release builds.
+> Debug build means that the `android:debuggable` flag is set to `true` (which is usually automatically set by gradle predefined debug build variants). Otherwise, this is a release build.
 
 ## How do in-app updates work?
 

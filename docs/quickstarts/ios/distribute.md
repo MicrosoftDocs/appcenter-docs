@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Distribute | Sample App Tutorials
+title: iOS Distribute Sample Tutorials
 description: Tutorial to distribute a sample iOS app to a group in App Center.
 keywords: app center
 author: sabrinaj206
@@ -10,13 +8,6 @@ ms.date: 06/27/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 # Distribute - Sample Swift App and Tutorials

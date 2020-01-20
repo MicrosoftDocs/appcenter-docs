@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
@@ -40,7 +39,7 @@ import Crashes from 'appcenter-crashes';
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
-```
+```csharp
 Crashes.generateTestCrash();
 ```
 
@@ -205,7 +204,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';

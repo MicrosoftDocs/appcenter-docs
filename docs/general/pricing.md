@@ -43,10 +43,6 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
 - Auth: Using this feature will require an Azure connection with Azure B2C whose pricing is found here: [Azure B2C](https://azure.microsoft.com/pricing/details/active-directory-b2c/).
 - Data: Using this feature will require an Azure connection with Azure CosmosDB whose pricing is found here: [Azure CosmosDB](https://azure.microsoft.com/pricing/details/cosmos-db/).
 
-## OneSignal Integration
-
-- Push: App Center has an official partnership with OneSignal to enable users to integrate Push notifications into their applications with advanced targeting and segmentation. Pricing for this service is handled by OneSignal and is available on OneSignal's pricing page; [OneSignal](https://onesignal.com/pricing).
-
 ## Configuring your billing plan
 
 Refer to the [App Center Billing](~/general/billing.md) article for information on how to set up and configure your billing plan.
