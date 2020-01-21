@@ -36,19 +36,16 @@ To retrieve crash reports from MacOS device follow these steps:
 
 
 ## Manually upload crash reports via Diagnostics UI
-To manually upload Apple crash reports go to the main Diagnostics page:
+To manually upload Apple crash reports, follow the instructions below:
 
-1. Login to the App Center Portal
-2. Select an application
-3. In the navigation area on the left, select Diagnostics
-
-On the right top corner of page click on Menu button and select `Upload Crash Log`
+1. Log into App Center and select your app.
+2. In the left menu, navigate to the **Diagnostics** section
+3. On the right top corner of page, click the three dots in the upper-right corner.
+4. Select **Upload Crash Log**
 ![Manual Crash Upload Menu](~/diagnostics/images/diagnostics-crash-upload-menu.png)
-
-Then it opens Crash Upload Dialog. Please follow the wizard to upload your crash report:
+5. In the Crash Upload Dialog, follow the wizard to upload your crash report:
 ![Manual Crash Upload Start](~/diagnostics/images/diagnostics-manual-crash-upload-start.png)
-
-Once your report was uploaded successfully this message will be shown:
+6. Once your report is successfully uploaded, you will see confirmation message:
 ![Manual Crash Upload Finish](~/diagnostics/images/diagnostics-manual-crash-upload-finish.png)
 
-Please wait for symbolication for some time and your crash will appear on Diagnostics UI.
+Please allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
