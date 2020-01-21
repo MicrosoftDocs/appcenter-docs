@@ -18,7 +18,7 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 > [!IMPORTANT]
 > At this time, there are some limitations to In-App Updates:
 > 1) Android devices will not be prompted for an update if there is no change in the version or build version.
-> 2) In-app updates only work for public distribution groups if testers have downloaded the app from their default browser with cookies enabled.
+> 2) For iOS public in-app updates, Apple has a default dialog that will have to be dismissed. Login is not required for the public flow.
 
 ## Public In-App Updates 
 
