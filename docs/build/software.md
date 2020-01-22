@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 01/14/2020
+ms.date: 01/22/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -378,21 +378,5 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | Google Play services                            | 49                                              |
 | Google Repository                               | 58                                              |
 | Intel x86 Emulator Accelerator (HAXM installer) | 7.5.1                                           |
-
-## Disk info
-- Total size: 379.8 Gb
-- Free size: 104.61 Gb
-- Used size: 275.19 Gb
-
-## Precache packages
-| Package   | Count     | Size      |
-| --------- | --------- | --------- |
-| Nuget     | 752       | 7.35Gb    |
-| CocoaPods | 1523      | 11.4Gb    |
-| Carthage  | 150       | 4.3Gb     |
-| Gradle    | 2660      | 4.65Gb    |
-| Maven     | 120       | 0.11Gb    |
-| Npm       | 3831      | 1.19Gb    |
-| Yarn      | 1524      | 1.27Gb    |
 
 
