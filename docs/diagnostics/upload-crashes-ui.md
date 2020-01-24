@@ -28,6 +28,6 @@ To manually upload Apple crash reports, follow the instructions below:
 3. On the right top corner of page, click the three dots in the upper-right corner.
 4. Select **Upload Crash Log**.
 5. In the Crash Upload Dialog, follow the wizard to upload your crash report.
-6. Once your report is successfully uploaded, you will see confirmation message.
+6. Once your report is successfully uploaded, you will see a confirmation message.
 
 Please allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
