@@ -3,7 +3,7 @@ title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
 author: elamalani
 ms.author: emalani
-ms.date: 27/01/2020
+ms.date: 01/27/2020
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
 ms.service: vs-appcenter
