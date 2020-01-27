@@ -73,7 +73,7 @@ HockeyApp Setting | App Center Setting | Notes
 ------------------- | ------------------- | ---
 App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
-Restricted in-app updates | NA | Works out of the box
+Restricted in-app updates | NA | [Distribute.UpdateTrack](~/sdk/distribute/unity.md#use-private-distribution-group)
 Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity.md)
 Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)](~/sdk/crashes/unity.md#ask-for-the-users-consent-to-send-a-crash-log)
 Exception Logging | [Initial Log level](~/sdk/other-apis/unity.md#adjust-the-log-level), _Other Setup_ section | If you want more detailed logging, use `Verbose`

@@ -3,7 +3,7 @@ title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2019
+ms.date: 27/01/2020
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
 ms.service: vs-appcenter
@@ -132,11 +132,11 @@ Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getL
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.
-Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/android.md#how-do-in-app-updates-work) for more details.
+ If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/android.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-5-authentication) | [Documentation (works out of box)](~/sdk/distribute/android.md#how-do-in-app-updates-work)
+Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-5-authentication) | [Distribute.setUpdateTrack](~/sdk/distribute/android.md#use-private-distribution-group)
 Disable service at runtime | [UpdateManager.unregister](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-6-add-update-distribution) | [Distribute.setEnabled](~/sdk/distribute/android.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-3-1-providing-your-own-user-interface-for-the-update-process) | [Documentation](~/sdk/distribute/android.md#customize-or-localize-the-in-app-update-dialog)
 
