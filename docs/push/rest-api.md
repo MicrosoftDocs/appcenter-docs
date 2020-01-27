@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications using the App Center
 keywords: app center, push, audiences, API
 author: jwargo
 ms.author: jowargo
-ms.date: 04/30/2019
+ms.date: 12/20/2019
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ When sending notifications through App Center, you can target destination device
 + **All registered devices**: Send notifications to all registered devices.
 + **Audiences**: Send notifications to a segment of your app's registered device audience. Build audiences based on a set of device and custom properties either using the App Center Portal or through the REST API
 + **Device list**: Send notifications to up to 100 devices (using the install IDs for the target devices).
-+ **User list**: Send notifications to up to 100 users using a list of unique user identifiers provided to App Center through the App Center SDK ([Android SDK example](~/sdk/other-apis/android.md#identify-installations)) or the App Center Auth service.
++ **User list**: Send notifications to up to 100 users using a list of unique user identifiers provided to App Center through the App Center SDK ([Android SDK example](~/sdk/other-apis/android.md#identify-installations)).
 
 > [!NOTE]
 > All notifications sent using the App Center Push API are limited to a target audience of 1,000 devices.
@@ -309,11 +309,6 @@ In this example:
 
 ### Send notifications to users
 
-Since App Center supports setting user identity two different ways (using the SDK or using the App Center Auth service), the approach an app takes to send a notification to one or more users varies depending on how App Center obtained the target user's identity.
-
-> [!NOTE]
-> The two supported methods for sending notifications to users are mutually exclusive; you can only work with one approach at a time. If an app is configured for App Center Auth *and* sets user identity manually using the SDK, you can use the Push API (or the App Center portal) to send notifications to users via App Center Auth or the SDK set identity, but not both. If you want to use both, you must submit separate notification requests for each.
-
 #### User Identity set through the SDK
 
 Many apps use proprietary methods or third-party services to authenticate users in the app. To accommodate this use case, the App Center SDK offers a method the app uses to set the captured user identifier and pass it to App Center. With this ID set, App Center can then associate users with their [Analytics](https://docs.microsoft.com/appcenter/analytics/) and [Diagnostics](https://docs.microsoft.com/appcenter/diagnostics/) data as well as send notifications to specific users.
@@ -362,44 +357,6 @@ In this example:
 + `body`: Defines the notification content displayed with the message.
 + `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
 + `user_ids` Defines the list of user identities (User ID) to which notifications are sent.
-
-> [!NOTE]
-> The App Center Push to User feature limits notifications to 100 users and up to a maximum of 1,000 target devices.
-
-#### User Identity set using Auth
-
-The App Center Auth service delivers an easy way for apps to authenticate users using a variety of third-party identity providers (like Facebook, Google, Microsoft). Auth handles signing in users and assigns a unique Account ID for the user. Using that Account ID, an application can send notifications to specific users. To send a notification to one or more users, the app must grab the Account ID (included in the asynchronous result returned from Auth's `signin` method) in order to identify target users for notifications. Developers typically store the Account ID in the app's backend system for reference later.
-
-Assuming the following array of Account IDs: `[ "00000000-0000-0000-0000-000000000001", "00000000-0000-0000-0000-000000000002", "00000000-0000-0000-0000-000000000003" ]`, to send a notification message to the specified users, use the [`push/notifications`](https://openapi.appcenter.ms/#/push/Push_Send) API. Submit an HTTP POST request using the following URL:
-
-```text
-https://appcenter.ms/api/v0.1/apps/{owner_name}/{app_name}/push/notifications
-```
-
-Send the body of the request in JSON format (using the `application/json` content type), and include the `notification_content` and `notification_target` data values shown in the example below:
-
-```JSON
-{
-  "notification_content": {
-    "name": "First Push From App Center",
-    "title": "Push From App Center",
-    "body": "Hello! Isn't this an amazing notification message?",
-    "custom_data": {"key1": "val1", "key2": "val2"}
-  },
-  "notification_target": {
-    "type": "account_ids_target",
-    "account_ids": ["00000000-0000-0000-0000-000000000001", "00000000-0000-0000-0000-000000000002", "00000000-0000-0000-0000-000000000003"]
-  },
-}
-```
-
-In this example:
-
-+ `name`: Defines the name for the notification message.
-+ `title`: Defines the title for the notification message. On target platforms where the notification is displayed in a notification area, this value displays in the title area of the notification.
-+ `body`: Defines the notification content displayed with the message.
-+ `custom_data`: Defines additional data values (delivered as a JSON object) passed to the target application running on the device. The application retrieves this data from the message and uses it in some app-appropriate way. The maximum number of characters per custom data value is 100.
-+ `account_ids` Defines the list of user identities (Account ID) to which notifications are sent.
 
 > [!NOTE]
 > The App Center Push to User feature limits notifications to 100 users and up to a maximum of 1,000 target devices.

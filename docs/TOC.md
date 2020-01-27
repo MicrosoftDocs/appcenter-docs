@@ -176,26 +176,6 @@
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
-# Auth
-## [Introduction](auth/index.md)
-## Getting Started
-### [Introduction](auth/getting-started.md)
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
-## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
-
-# Data
-## [Introduction](data/index.md)
-## Getting Started
-### [Introduction](data/getting-started.md)
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [Xamarin](sdk/data/xamarin.md)
-## [Understanding Cosmos DB](data/understanding-cosmos-db.md)
-
 # Push
 ## [Introduction](push/index.md)
 ## [Configure the Push Service](push/service-config.md)
@@ -244,12 +224,6 @@
 ### [Unity](sdk/analytics/unity.md)
 ### [Windows](sdk/analytics/windows.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
-## Auth
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [Cordova](sdk/crashes/cordova.md)
@@ -261,11 +235,6 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
-## Data
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [React Native](sdk/data/react-native.md)
-### [Xamarin](sdk/data/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
