@@ -42,8 +42,7 @@ By default, Distribute uses the public distribution group. If you want to use a 
 Distribute.UpdateTrack = UpdateTrack.Private
 ```
 
-All the subsequent update checks will get the latest release on the set track. The update track is persisted in the SDK across app launches.
-If the track is private, a browser window will pop up after the call to authenticate the user.
+After this call, a browser window will pop up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
 
 If you want to switch back to public update track, simply set
 
@@ -172,7 +171,7 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private track at runtime. This is a ONE TIME step that will not occur on future releases of your app.
+4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE TIME step that will not occur on future releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
     * iOS:
@@ -192,7 +191,7 @@ You must upload release builds (that use the Distribute module of the App Center
 1. Create your app in the App Center Portal if you haven't done that already.
 2. Create a new distribution group and give it a name.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this step, one not already used with this app. This will ensure that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below.
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track using the [UpdateTrack API](#use-private-distribution-group).
 5. Click on the **Distribute new release** button in the portal and upload your build of the app.
 6. Once the upload has finished, click **Next** and select the **Distribution group** that you previously created as the **Destination** of that app distribution.
 7. Review the Distribution and distribute the build to your in-app testing group.

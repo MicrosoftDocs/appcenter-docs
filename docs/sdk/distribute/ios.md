@@ -140,8 +140,7 @@ MSDistribute.updateTrack = MSUpdateTrackPrivate;
 MSDistribute.updateTrack = MSUpdateTrackPrivate
 ```
 
-All the subsequent update checks will get the latest release on the set track. The update track is persisted in the SDK across app launches.
-If the track is private, a browser window will pop up after the call to authenticate the user.
+After this call, a browser window will pop up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
 
 If you want to switch back to public update track, simply call
 
@@ -307,7 +306,7 @@ The in-app updates feature works as follows:
 1. This feature will ONLY work with builds that are distributed using **App Center Distribute** service. It won't work when the debugger is attached or if the iOS Guided Access feature is turned on..
 2. Once you integrate the SDK, build a release version of your app and upload it to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment). When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private track at runtime. This is a *one time* step that will not occur for subsequent releases of your app.
+4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a *one time* step that will not occur for subsequent releases of your app.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
    * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
@@ -328,7 +327,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you have not done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below.
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track using the [setUpdateTrack API](#use-private-distribution-group).
 5. Click on the **Distribute new release** button in the portal and upload your build of the app.
 6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
 7. Review the Distribution and distribute the build to your in-app testing group.
