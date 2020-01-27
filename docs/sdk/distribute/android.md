@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2019
+ms.date: 27/01/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -86,6 +86,32 @@ import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
+
+## Use private distribution group
+
+By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
+
+```java
+Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
+```
+```kotlin
+Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
+```
+
+All the subsequent update checks will get the latest release on the set track. The update track is persisted in the SDK across app launches.
+If the track is private, a browser window will pop up after the call to authenticate the user.
+
+If you want to switch back to public update track, simply call
+
+```java
+Distribute.setUpdateTrack(UpdateTrack.PUBLIC);
+```
+```kotlin
+Distribute.setUpdateTrack(UpdateTrack.PUBLIC)
+```
+
+> [!NOTE]
+> This method can be called anywhere at runtime and doesn't require the app to be restarted. If it is called after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
 ## Customize or localize the in-app update dialog
 
@@ -298,7 +324,7 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private track at runtime. This is a ONE TIME step that will not occur for subsequent releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
 

@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/26/2019
+ms.date: 27/01/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -33,6 +33,26 @@ App Center Distribution enables your users/testers to install new versions of an
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format AppCenterDistribute-v{version}.unitypackage
+
+## Use private distribution group
+
+By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
+
+```csharp
+Distribute.UpdateTrack = UpdateTrack.Private
+```
+
+All the subsequent update checks will get the latest release on the set track. The update track is persisted in the SDK across app launches.
+If the track is private, a browser window will pop up after the call to authenticate the user.
+
+If you want to switch back to public update track, simply set
+
+```csharp
+Distribute.UpdateTrack = UpdateTrack.Public
+```
+
+> [!NOTE]
+> This property can be set anywhere at runtime and doesn't require the app to be restarted. If it is set after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
 ## Customize or localize the in-app update dialog
 
@@ -152,7 +172,7 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. Once the app is installed, and opened for the first time after adding the App Center Distribute SDK, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur on future releases of your app.
+4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private track at runtime. This is a ONE TIME step that will not occur on future releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
     * iOS:
