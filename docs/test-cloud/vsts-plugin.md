@@ -29,7 +29,7 @@ You need the following before you can start testing,
 
 * An Azure Pipelines build that creates your application binary (`.apk` or `.ipa` file).
 * An active App Center Test account. You can activate a trial for App Center Test at [App Center](https://appcenter.ms/). First select your app and then select Test in the left-hand menu.
-* Configure the pipeline to use Node 10.x.x. [Read howto on the Azure DevOps documention](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/javascript?view=azure-devops#build-environment), the documentation is about Javascript but the principle applies here as well.
+* Configure the pipeline to use Node 10.x.x. [Read how to on the Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/javascript?view=azure-devops#build-environment), the documentation is about Javascript but the principle applies here as well.
 
 ### Azure Pipelines general configuration
 
