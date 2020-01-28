@@ -279,7 +279,7 @@ var enabled = MSDistribute.isEnabled()
 
 ## Don't initialize App Center Distribute during development
 
-If in private mode, App Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
+If in private mode, App Center Distribute will pop up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `MSDistribute` for your `DEBUG` configuration.
 
  ```objc
  #if DEBUG

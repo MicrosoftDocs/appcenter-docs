@@ -157,7 +157,7 @@ Distribute.SetEnabledForDebuggableBuild(true);
 By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
 
 ```csharp
-Distribute.UpdateTrack = UpdateTrack.Private
+Distribute.UpdateTrack = UpdateTrack.Private;
 ```
 
 After this call, a browser window will pop up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
@@ -165,7 +165,7 @@ After this call, a browser window will pop up to authenticate the user. All the 
 If you want to switch back to public update track, simply set
 
 ```csharp
-Distribute.UpdateTrack = UpdateTrack.Public
+Distribute.UpdateTrack = UpdateTrack.Public;
 ```
 
 > [!NOTE]
