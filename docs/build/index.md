@@ -32,7 +32,7 @@ To get started using the Build service, you'll first need to connect to a source
 
 App Center doesn't support Team Foundation Version Control (TFVC).
 
-If you're having trouble with your builds, [contact our dedicated support team](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) using the blue chat icon in the lower-right corner of every App Center page.
+If you're having trouble with your builds, check the [troubleshooting guide](https://docs.microsoft.com/en-us/appcenter/build/troubleshooting/) or [contact our dedicated support team](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) using the blue chat icon in the lower-right corner of every App Center page.
 
 
 > [!NOTE]
