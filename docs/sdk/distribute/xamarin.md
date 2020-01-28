@@ -171,6 +171,12 @@ Distribute.UpdateTrack = UpdateTrack.Public
 > [!NOTE]
 > This property can be set anywhere at runtime and doesn't require the app to be restarted. If it is set after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
+You can get the current update track by calling
+
+```csharp
+int updateTrack = Distribute.UpdateTrack;
+```
+
 ## Customize or localize the in-app update dialog
 
 ### 1. Customize or localize text

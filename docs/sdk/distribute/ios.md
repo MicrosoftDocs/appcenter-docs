@@ -154,6 +154,15 @@ MSDistribute.updateTrack = MSUpdateTrackPublic
 > [!NOTE]
 > This method can be called anywhere at runtime and doesn't require the app to be restarted. If it is called after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
+You can get the current update track by calling
+
+```objc
+int updateTrack = MSDistribute.updateTrack;
+```
+```swift
+int updateTrack = MSDistribute.updateTrack
+```
+
 ## Customize or localize the in-app update dialog
 
 ### 1. Customize or localize text

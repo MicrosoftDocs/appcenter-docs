@@ -4,7 +4,7 @@ description: Distribute mobile apps to groups of users
 keywords: distribution
 author: botatoes
 ms.author: bofu
-ms.date: 10/14/2019
+ms.date: 01/28/2019
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
 ms.service: vs-appcenter
@@ -23,19 +23,19 @@ To create a new Distribution Group, sign in to the App Center portal, select you
 
 ## Types of Distribution Groups
 
-### Private Distribution Groups
-
-In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to sign in to their App Center account in order to access and download releases.
-
 ### Public Distribution Groups
 
-Distribution groups must be public to enable unauthenticated installs from public links. When creating a new distribution group, the options is available during the setup process. After giving your group a name, you can enable **Allow public access**.
+In App Center, distribution groups are public by default. Distribution groups must be public to enable unauthenticated installs from public links. When creating a new distribution group, the options is available during the setup process. After giving your group a name, you can enable **Allow public access**.
 
 To make an existing distribution group public, open the distribution group and click on the settings icon in the upper right-hand corner of the screen. From the settings modal, you can enable **Allow public access**.
 
 As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to sign in with their App Center account.
 
 In addition to this, a **public download link** is displayed underneath the distribution group name at the top of the distribution group page. **Anyone, including testers who aren't explicitly added to the distribution group, can access the release without signing in using the public download link**.
+
+### Private Distribution Groups
+
+Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to sign in to their App Center account in order to access and download releases.
 
 ### Shared Distribution Groups
 
