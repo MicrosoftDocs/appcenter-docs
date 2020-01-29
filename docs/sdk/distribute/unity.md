@@ -56,7 +56,7 @@ Distribute.UpdateTrack = UpdateTrack.Public;
 You can get the current update track by calling
 
 ```csharp
-int updateTrack = Distribute.UpdateTrack;
+UpdateTrack updateTrack = Distribute.UpdateTrack;
 ```
 
 ## Customize or localize the in-app update dialog

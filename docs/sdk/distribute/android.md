@@ -115,7 +115,7 @@ Distribute.setUpdateTrack(UpdateTrack.PUBLIC)
 You can get the current update track by calling
 
 ```java
-Distribute.getUpdateTrack();
+UpdateTrack updateTrack = Distribute.getUpdateTrack();
 ```
 ```kotlin
 Distribute.getUpdateTrack()
