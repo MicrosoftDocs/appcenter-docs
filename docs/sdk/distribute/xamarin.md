@@ -160,7 +160,7 @@ By default, Distribute uses the public distribution group. If you want to use a 
 Distribute.UpdateTrack = UpdateTrack.Private;
 ```
 
-After this call, a browser window will pop up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
+After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
 
 If you want to switch back to public update track, simply set
 
@@ -296,13 +296,12 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email. 
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE TIME step that will not occur for subsequent releases of your app.
+4. If the application updates the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
    * On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
 
-5. Once the above step is successful, they should navigate back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+5. A new release of the app shows the in-app update dialog asking users to update your application if it has
    * iOS: 
      * a higher value of `CFBundleShortVersionString` or
      * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
