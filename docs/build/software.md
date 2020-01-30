@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 01/28/2020
+ms.date: 01/30/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -24,7 +24,7 @@ Builds for iOS and Android apps (including Xamarin and React Native platforms) a
 - OS X 10.14.6 (18G2022) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G10021) **High Sierra** for builds running Xcode 9.4 and lower
 
-Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted).
+Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2016 & Visual Studio 2017](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2016-Readme.md).
 
 ## Installed Software
 ### Language and Runtime
