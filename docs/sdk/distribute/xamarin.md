@@ -160,7 +160,13 @@ By default, Distribute uses the public distribution group. If you want to use a 
 Distribute.UpdateTrack = UpdateTrack.Private;
 ```
 
-After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.
+After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.  
+
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release they have access to from any public distribution groups plus any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they will get the latest release only from public distribution groups.
+
+> [!NOTE]
+> This property can be set anywhere at runtime and doesn't require the app to be restarted. If it is set after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
 If you want to switch back to public update track, simply set
 
@@ -168,8 +174,10 @@ If you want to switch back to public update track, simply set
 Distribute.UpdateTrack = UpdateTrack.Public;
 ```
 
+This call will cause in-app updates to only use the public track going forwards.
+
 > [!NOTE]
-> This property can be set anywhere at runtime and doesn't require the app to be restarted. If it is set after SDK start it would check for an update on the given track. It will only impact the next update flow.
+> Since the private track can include public releases, to allow users on the private track to remain on the private track after getting a public release, the app should rely on the default behaviour and not set `UpdateTrack`. This way, users on the public track stay on the public track due to the default behaviour and users on the private track remain on the private track due to the setting persistence from a previous private release.
 
 You can get the current update track by calling
 
@@ -320,13 +328,14 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track using the [UpdateTrack API](#use-private-distribution-group).
-5. Click on the **Distribute new release** button in the portal and upload your build of the app.
-6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
-7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
-9. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android)
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track using the [UpdateTrack property](#use-private-distribution-group).
+5. Public releases are accessible to authenticated users regardless of their membership, so you can expose a setting in the app on public releases for testers to switch track. This setting can use the abovementioned [UpdateTrack property](#use-private-distribution-group) for implementing a switch control.
+6. Click on the **Distribute new release** button in the portal and upload your build of the app.
+7. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+8. Review the Distribution and distribute the build to your in-app testing group.
+9. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+10. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android)
+11. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
