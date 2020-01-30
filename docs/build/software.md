@@ -13,7 +13,7 @@ ms.custom: build
 
 # App Center Cloud Build Machines
 
-Each build runs on a separate, clean virtual machine (VM) that no one else has access to. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
+Each build runs on a separate, clean virtual machine (VM) no one else has access to. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
 
 ## Operating System
 > [!NOTE]
