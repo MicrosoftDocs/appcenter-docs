@@ -2,8 +2,8 @@
 title: Xamarin.UITest
 description: Key features of App Center Test 
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
+author: oddj0b
+ms.author: vigimm
 ms.reviewer: crdun
 ms.date: 05/13/2019
 ms.topic: article
