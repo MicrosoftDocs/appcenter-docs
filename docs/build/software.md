@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 01/22/2020
+ms.date: 01/30/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: build
 
 # App Center Cloud Build Machines
 
-Each build runs on a separate, clean virtual machine (VM), and no other user has access to the VM. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
+Each build runs on a separate, clean virtual machine (VM) no one else has access to. Once the build completes, App Center discards the virtual machine, and all files removed. The artifacts resulting from the build (log files, application files, symbol files) are stored on App Center servers.
 
 ## Operating System
 > [!NOTE]
@@ -24,18 +24,18 @@ Builds for iOS and Android apps (including Xamarin and React Native platforms) a
 - OS X 10.14.6 (18G2022) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
 - OS X 10.13.6 (17G10021) **High Sierra** for builds running Xcode 9.4 and lower
 
-Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted).
+Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2016 & Visual Studio 2017](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2016-Readme.md).
 
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
-- Java 1.8: (Zulu 8.44.0.9-CA-macosx) (build 1.8.0_242-b20) (default)
+- Java 1.8: (Zulu 8.44.0.11-CA-macosx) (build 1.8.0_242-b20) (default)
 - Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.18.1 v12.14.1 v13.6.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.18.1 v12.14.1 v13.7.0
 - PowerShell 6.2.3
 - Python 2.7.17
 - Python 3.7.6
@@ -56,6 +56,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Pip 19.3.1 (python 3.7)
 - Rustup 1.21.1
 - Miniconda 4.7.12
+- RubyGems 3.1.2
 
 ### Project Management
 - Apache Maven 3.6.3
@@ -64,10 +65,10 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 ### Utilities
 - Curl 7.68.0
 - Git: 2.25.0
-- Git LFS: 2.9.2
+- Git LFS: 2.10.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- GNU parallel 20191222
+- GNU parallel 20200122
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
 - gpg (GnuPG) 2.2.19
@@ -83,26 +84,26 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - ChromeDriver 79.0.3945.36
 
 ### Toolcache
-#### Ruby (available through the [Use Ruby Version](https://go.microsoft.com/fwlink/?linkid=2005989) task)
+#### Ruby
 - 2.4.9
 - 2.5.7
 - 2.6.5
 - 2.7.0
 
-#### Python (available through the [Use Python Version](https://go.microsoft.com/fwlink/?linkid=871498) task)
+#### Python
 - 2.7.17
 - 3.5.9
 - 3.6.10
 - 3.7.6
 - 3.8.1
 
-#### PyPy (available through the [Use Python Version](https://go.microsoft.com/fwlink/?linkid=871498) task)
-- 2.7.13
+#### PyPy
+- 2.7.17
 - 3.6.9
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.4.1.4
+- 8.4.2.59
 
 #### Mono
 - 6.6.0.155
@@ -197,7 +198,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | 9.4.1                          | 9F2000                         | /Applications/Xcode_9.4.1.app  |
 
 #### Xcode Support Tools
-- Nomad CLI 3.0.6
+- Nomad CLI 3.1.2
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
@@ -269,8 +270,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | iOS 11.4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 9.4.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone X<br>iPhone 8<br>iPhone 8 Plus<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)                                                                                                                                                                 |
 | iOS 12.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)                                                                                             |
 | iOS 12.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)                              |
-| iOS 12.2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.2<br>10.2.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone Xs<br>iPhone Xs Max<br>iPhone XÊ€<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
-| iOS 12.4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone Xs<br>iPhone Xs Max<br>iPhone XÊ€<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
+| iOS 12.2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.2<br>10.2.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone Xs<br>iPhone Xs Max<br>iPhone Xʀ<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
+| iOS 12.4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 10.3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone Xs<br>iPhone Xs Max<br>iPhone Xʀ<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
 | iOS 13.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 11.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation)                                                                                                                                                                                                                                                                                             |
 | iOS 13.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 11.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation)                                                                                                                                                                                                                                                                                             |
 | iOS 13.2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 11.2<br>11.2.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad (7th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation)                                                                                                                                                                                                                                                                    |
