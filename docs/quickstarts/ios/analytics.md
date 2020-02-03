@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Analytics | Sample App Tutorials
+title: iOS Analytics Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: app center
 author: sabrinaj206
@@ -10,14 +8,6 @@ ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 

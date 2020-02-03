@@ -61,37 +61,37 @@ These are the different APIs you must call to export the associated Diagnostics 
 
 <span>1. GET the crash/error log metadata for every crash/error in a crash/error group by calling:</span>
 
-```text
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors
 ```
 
 <span>2. GET the stacktrace by calling:</span>
 
-```text
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace
 ```
 
 <span>3. GET any recorded events by calling:</span>
 
-```
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/session_logs
 ```
 
 <span>4. GET any attachments IDs by calling:</span>
 
-```
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments
 ```
 
 1. If this is a text attachment, you can GET the text by calling:
 
-```
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text
 ```
 
 2. If this is a binary attachment, you can GET URI location by calling:
 
-```
+```json
 https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentIdd}/location
 ```
 

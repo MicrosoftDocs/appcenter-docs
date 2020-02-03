@@ -7,7 +7,7 @@ ms.author: amchew
 ms.date: 06/10/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
+ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 ---
 
 # App Center Webhooks

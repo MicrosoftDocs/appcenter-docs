@@ -42,7 +42,7 @@ App Center Build automatically attempts to highlight common error messages or us
 
 ![Screenshot of highlighted error](images/errorlog.png)
 
-```
+```console
 jarsigner: unable to sign jar: java.util.zip.ZipException: invalid entry compressed size (expected 13274 but got 13651 bytes)
 ##[error]Error: /usr/bin/jarsigner failed with return code: 1
 ##[error]Return code: 1

@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 11/14/2019
+ms.date: 12/10/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -72,12 +72,13 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 6. Save by clicking **Update**.
 
 ## Publishing through the CLI
-Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, e.g., Jenkins or Go CI.
+Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, for example, Jenkins or Go CI.
 
 You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 
 
 You can list your stores by using the list command like this:
-```
+
+```bash
 appcenter distribute stores list \
 --app {app_owner}/{app_name} \
 --output json
@@ -85,13 +86,15 @@ appcenter distribute stores list \
 
 You'll get a result like this:
 
-```
+```bash
 [["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
 ```
+
 And it's the Store column we'll be using in the final step.
 
 The final step is to publish your app by running:
-```
+
+```bash
 appcenter distribute stores publish \
 --file /path/to/file.ipa \
 --store Production \
@@ -100,6 +103,10 @@ appcenter distribute stores publish \
 ```
 
 You'll need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.
+
+## Why does the Apple ID require the admin role
+
+Apple requires at least an admin role to _Create apps and submit versions_ and _Upload builds_, [see this table that clarifies permissions](https://developer.apple.com/support/roles/).
 
 ## Debugging a failed release
 

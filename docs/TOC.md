@@ -162,6 +162,7 @@
 ## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
+## [Upload crashes via UI](diagnostics/upload-crashes-ui.md)
 ## [Upload crashes via API](diagnostics/upload-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
@@ -221,6 +222,7 @@
 
 # SDK
 ## [Introduction](sdk/index.md)
+## [Data Collected By App Center](sdk/data-collected.md)
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
 ### [Cordova](sdk/getting-started/cordova.md)

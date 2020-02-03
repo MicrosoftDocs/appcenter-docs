@@ -4,7 +4,7 @@ description: The data that is being moved when moving an app from HockeyApp to A
 keywords: transition
 author: derpixeldan
 ms.author: daadam
-ms.date: 11/07/2019
+ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 322c74b9-0666-4059-a1dd-f529530a66df
 ms.service: vs-appcenter
@@ -27,8 +27,7 @@ Azure DevOps, GitHub and Jira are the bug trackers currently supported on App Ce
 
 App Center continues to receive crashes from the HockeySDK. The data that already exists in App Center will remain. The data retention will be mapped to a maximum of 90 days.
 
-> [!NOTE]
-> Crashes uploaded with the [custom crashes API](https://support.hockeyapp.net/kb/api/api-crashes#post-custom-crashes) are not currently forwarded to App Center.
+Crashes uploaded via the HockeyApp custom crashes API are forwarded to App Center. Note that, if the `OS` is not provided in the crash logs, they won't be symbolicated in App Center.
 
 ## Distribution
 

@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 04/05/2018
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
-ms.service: vs-appcenter
-ms.custom: sdk
 dev_langs:
  - java
  - kotlin
@@ -24,6 +22,7 @@ dev_langs:
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## What Android permissions are required?
 

@@ -36,7 +36,7 @@ ms.assetid: 7d2aa750-c7d0-47cb-acc8-97892bc78cf2
 1. Open terminal and go to the project directory.
 2. Run each of the following commands:
 
-   ```
+   ```bash
    ./gradlew assembleDebug
    ./gradlew assembleDebugAndroidTest
    ```

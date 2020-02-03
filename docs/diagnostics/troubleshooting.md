@@ -42,5 +42,3 @@ The App Center backend will only accept logs that are no more than 25 days in th
 **Why are my crash counts different on App Center compared to HockeyApp?**
 
 HockeyApp lists crashes as they are ingested, whereas App Center uses the device timestamp. This means that HockeyApp might show your app as receiving 10 crashes today, but App Center might list those 10 crashes as happening on different days based on the device timestamp.
-
-Another reason crash counts may be different is because App Center excludes unsymbolicated reports from counts.

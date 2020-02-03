@@ -4,11 +4,9 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/21/2019
+ms.date: 12/06/2019
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
  - java
@@ -60,7 +58,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '2.5.0'
+      def appCenterSdkVersion = '2.5.1'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }

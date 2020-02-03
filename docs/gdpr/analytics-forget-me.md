@@ -22,7 +22,7 @@ Since Data Subject requests to be forgotten must be serviced within thirty days,
 
 **Step 3.** Block incoming Analytics data to prevent it from being processed. For each install ID found in Step 1, call the following App Center API:
 
-```
+```json
 PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
 ```
 
@@ -32,7 +32,7 @@ Additional details are available in the [Analytics API documentation](https://op
 
 To process all data for a given app ID, call the following App Center API:
 
-```
+```json
 PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs
 ```
 

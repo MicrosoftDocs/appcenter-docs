@@ -1,13 +1,12 @@
 ---
-title: Configuring App Center Data for Xamarin 
-description: How to configure App Center data for Xamarin 
+title: Configuring App Center Data for Xamarin
+description: How to configure App Center data for Xamarin
 keywords: MBaaS
 author: Zakeelm
 ms.author: Zakeelm
 ms.date: 06/03/2019
 ms.topic: article
 ms.assetid: 68ad36c9-acd1-458a-8816-3b60aeeb8b7a
-ms.service: vs-appcenter
 ms.custom: MBaaS
 dev_langs:
  - csharp
@@ -118,7 +117,7 @@ To get your app secrets, you can follow the documentation in the [FAQ](https://d
 One advantage of NoSQL databases is the ability to use both unstructured and structured data. App Center Data utilizes documents, in which you can store JSON objects. The easiest way to get started is by defining a class that aligns with the type of data you would like to manage. For example, if you wanted to store documents that held relevant information associated with users on my app when they signed up, you may use something like this:
 
 ```csharp
-public class User 
+public class User
 {
     public string Name { get; set; }
     public string Email { get; set; }
@@ -159,7 +158,7 @@ Going forward with the `User` class we defined earlier, let's go over how to cre
 Now, let's create our first document:
 
 ```csharp
-User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
+User user = new User { Name = "Alex", Email = "alex@appcenter.ms", PhoneNumber = "+1-(855)-555-5555" };
 await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments)
 ```
 
@@ -168,7 +167,7 @@ This code snippet creates a document and inserts the details of the `user` objec
 Now, let's take a step further. Say there's the chance of no connectivity when this document is created. By default, offline persistence is enabled with an infinite time-to-live (TTL), meaning offline write is supported and your documents are cached with no expiration time. But, App Center Data also enables you to give these locally cached documents a TTL of your choosing using `WriteOptions`, meaning they expire in a time span of your choice.
 
 ```csharp
-User user = new User("Alex", "alex@appcenter.ms", "+1-(855)-555-5555");
+User user = new User { Name = "Alex", Email = "alex@appcenter.ms", PhoneNumber = "+1-(855)-555-5555" };
 await Data.CreateAsync(user.Id.ToString(), user, DefaultPartitions.UserDocuments, new WriteOptions(deviceTimeToLive));
 ```
 

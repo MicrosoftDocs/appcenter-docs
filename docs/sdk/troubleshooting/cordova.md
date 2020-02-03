@@ -7,8 +7,6 @@ ms.author: elamalani
 ms.date: 08/26/2019
 ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
@@ -22,6 +20,7 @@ ms.tgt_pltfrm: cordova
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Failed to install plugin - pod command failed with exit code 1
 

@@ -36,7 +36,7 @@ If you are using [Analytics Custom Events](~/analytics/event-metrics.md) in App 
 
 Personal information can be introduced via event property values. For example, you could create an event called "Login" that captures email addresses in the property value field.
 
-```
+```csharp
 Map<String, String> properties = new HashMap<>();
 properties.put("email_address", "blXXX@microsoft.com");
 properties.put("phone_number","555-123-XXX");
@@ -49,13 +49,13 @@ These two cases are less probable because they are static defined by the develop
 
 Event name:
 
-```
+```csharp
 Analytics.trackEvent("blXXX@microsoft.com", properties);
 ```
 
 Event property key:
 
-```
+```csharp
 Map<String, String> properties = new HashMap<>();
 properties.put("blXXX@microsoft.com", "microsoft_address");
 properties.put("555-123-XXX", "washington_state");
@@ -87,7 +87,7 @@ The most common scenario is to have personal information in the Error Property V
 
 Error property value:
 
-```cs
+```csharp
 try 
 {
   // your code here.
@@ -109,7 +109,7 @@ This is a less common case because they are static,  defined by the developer ju
 
 Personal information in the error property key:
 
-```cs
+```csharp
 try 
 {
   // your code here.

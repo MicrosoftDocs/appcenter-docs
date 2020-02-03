@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 10/27/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: uwp
 ---
 
@@ -87,7 +85,7 @@ In Visual Studio solution explorer, double-click the **Package.appxmanifest** fi
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-### 5.1 Add the using statements
+### 5.1 Add the using directives
 
 Add the appropriate namespaces before you use our APIs.
 
