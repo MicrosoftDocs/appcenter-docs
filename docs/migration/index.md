@@ -28,8 +28,8 @@ App Center Auth has retired, and you must remove the App Center Auth SDK from yo
 
 ## [App Center Data](~/migration/data/index.md)
 
-App Center Auth has retired, and you must remove the App Center Data SDK from your apps and move to [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/). Learn more about [App Center's mobile backend retirement]https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
+App Center Auth has retired, and you must remove the App Center Data SDK from your apps and move to [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/). Learn more about [App Center's mobile backend retirement](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
 
 ## [App Center Push](~/migration/push/index.md)
 
-App Center Auth has retired, and you must remove the App Center Push SDK from your apps and move to [Notification Hubs]https://docs.microsoft.com/azure/notification-hubs/). Learn more about [App Center's mobile backend retirement](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
+App Center Auth has retired, and you must remove the App Center Push SDK from your apps and move to [Notification Hubs](https://docs.microsoft.com/azure/notification-hubs/). Learn more about [App Center's mobile backend retirement](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).

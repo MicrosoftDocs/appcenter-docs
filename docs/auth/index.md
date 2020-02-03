@@ -14,19 +14,19 @@ ms.custom: MBaaS
 # App Center Auth
 
 > [!IMPORTANT]
-> Please note this feature is being deprecated, for more information please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Auth Migration Guide](~/migration/auth/index.md).
+> Please note this feature is being deprecated. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Auth Migration Guide](~/migration/auth/index.md).
 
 App Center Auth is a cloud-based identity management service that enables developers to authenticate users and manage user identities.
 
 App Center Auth also integrates with other parts of App Center, enabling developers to leverage user identity to [view user data](~/data/index.md) in other services and even [send push notifications to users](~/push/push-to-user.md#app-center-auth-set-identity) instead of individual devices. Whether you are an app developer building a collaboration app for users inside your organization or the next social networking platform, you will need a way to authenticate users and manage user identities.
 
-Auth is currently in preview, but is fully supported. Our preview supports native iOS, Android, Xamarin and React Native. Setting up the Auth preview requires an existing Azure subscription and [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) tenant. 
+Auth is currently in preview, but is fully supported. Our preview supports native iOS, Android, Xamarin, and React Native. Setting up the Auth preview requires an existing Azure subscription and [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) tenant. 
 
-App Center Auth brings the magic of a seamless and easy portal and SDK set up experience. It only takes 5 steps to connect your existing Azure AD B2C tenant and a few lines of code to integrate the App Center Auth SDK. It is also currently one of the two ways to use the signed-in user's identity with other App Center services like Data and Push, the other being setting the signed-in user's identity via the SDK.
+App Center Auth brings the magic of a seamless and easy portal and SDK set up experience. It only takes a few steps to connect your existing Azure AD B2C tenant and a few lines of code to integrate the App Center Auth SDK. It is also currently one of the two ways to use the signed-in user's identity with other App Center services like Data and Push, the other being setting the signed-in user's identity via the SDK.
 
 ## How Auth works
 
-App Center Auth is powered by [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) (Azure AD B2C). We chose Azure AD B2C because it is an enterprise-grade, highly available, and secure global service that handles and scales to billions of authentications per day. Using Azure AD B2C, you can easily customize and control how users securely interact with your mobile applications at scale. If you'd like to learn more about how Azure AD B2C works, please refer to the section on [Understanding Azure AD B2C](~/auth/understanding-azure-ad-b2c.md).
+App Center Auth is powered by [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) (Azure AD B2C). We chose Azure AD B2C because it is an enterprise-grade, highly available, and secure global service that handles and scales to billions of authentications per day. Using Azure AD B2C, you can easily customize and control how users securely interact with your mobile applications at scale. If you'd like to learn more about how Azure AD B2C works, see the section on [Understanding Azure AD B2C](~/auth/understanding-azure-ad-b2c.md).
 
 The App Center Auth SDK wraps the [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview), which is a platform that gives your application the ability to access identities in Azure AD B2C. Azure AD B2C implements a form of the [OpenID Connect and OAuth 2.0 protocols](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-protocols). 
 
@@ -81,7 +81,7 @@ App Center Auth is a free service, but you pay for [Azure AD B2C authentications
 
 Getting started is easy! Follow these steps in the [Getting Started](./getting-started.md) documentation:
 
-1. Connect an Azure subscriptipn
+1. Connect an Azure subscription
 2. Connect an existing Azure AD B2C tenant
 3. Configure the App Center Auth SDK
 4. Run your app

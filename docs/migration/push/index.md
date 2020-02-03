@@ -62,7 +62,8 @@ Azure Notification Hubs doesn’t have the concept of audiences. However, both I
 Tags are string values and are limited to 120 characters. Azure Notification Hubs supports [tag expressions](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message#tag-expressions) which enable an application to target a subset of your app’s devices based on a Boolean expression built using multiple tag values.
 
 **Limitation:** Tags are string values and only Boolean operations are supported in tag expressions (specifying the existence or non-existence of a particular tag), so any non-string device or custom property available in App Center Push will not work in Azure Notification Hubs.
-Campaigns and Sending Notifications from the Portal
+
+### Campaigns and Sending Notifications from the Portal
 
 Azure Notification Hubs has no concept of campaigns and, except for a simple test panel in the Azure portal, apps must send all notifications using the Azure Notification Hubs REST API.
 If you want to mimic the audience builder and send notification capability from App Center Push, you must build the portal UI to support it yourself.
