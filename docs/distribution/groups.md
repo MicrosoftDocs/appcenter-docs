@@ -4,7 +4,7 @@ description: Distribute mobile apps to groups of users
 keywords: distribution
 author: botatoes
 ms.author: bofu
-ms.date: 01/28/2019
+ms.date: 10/14/2019
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
 ms.service: vs-appcenter

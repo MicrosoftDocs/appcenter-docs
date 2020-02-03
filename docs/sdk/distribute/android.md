@@ -126,7 +126,7 @@ You can get the current update track by calling
 UpdateTrack updateTrack = Distribute.getUpdateTrack();
 ```
 ```kotlin
-Distribute.getUpdateTrack()
+UpdateTrack updateTrack = Distribute.getUpdateTrack()
 ```
 
 ## Customize or localize the in-app update dialog
