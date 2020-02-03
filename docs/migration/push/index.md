@@ -43,7 +43,7 @@ App Center Push supports multiple notification target types and the following ta
 
 ### Audiences
 
-The App Center SDK automatically collects device information at startup and submits it to App Center for use by the difference services. The device properties collected include:
+The App Center SDK automatically collects device information at startup and submits it to App Center for use by the different services. The device properties collected include:
 
 + Application Version (`appVersion`)
 + Country (`carrierCountry`)
