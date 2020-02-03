@@ -28,7 +28,7 @@ App Center Auth is powered by Azure AD B2C, but with the limitations. For exampl
 - You can't configure a native sign-in screen, create a password reset user experience or change the user language of the sign-in page.
 - The App Center Auth portal experience also did not support searching and managing users, identity providers, applications, or permissions.
 
-When you use Azure AD B2C directly, you'll be able to use any user flows and custom polcies including [configuring a native sign-in screen](https://docs.microsoft.com/azure/active-directory-b2c/configure-ropc?tabs=applications) and [creating a password reset experience](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-sspr). Learn more about the [complete list of Azure AD B2C user flows](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-versions#v1). Additionally, you'll be able to manage your users and experience the full capabilities of Azure AD B2C in the Azure portal.
+When you use Azure AD B2C directly, you'll be able to use any user flows and custom policies including [configuring a native sign-in screen](https://docs.microsoft.com/azure/active-directory-b2c/configure-ropc?tabs=applications) and [creating a password reset experience](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-sspr). Learn more about the [complete list of Azure AD B2C user flows](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-versions#v1). Additionally, you'll be able to manage your users and experience the full capabilities of Azure AD B2C in the Azure portal.
 
 ### Added Benefits of using MSAL
 
