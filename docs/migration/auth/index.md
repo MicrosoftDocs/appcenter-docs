@@ -13,7 +13,7 @@ ms.service: vs-appcenter
 
 We recently announced that we will be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post). What this change means for App Center Auth customers is that:
 
-- Auth SDK deprecated on February 3rd
+- Auth SDK deprecated on February 3rd 2020
 - Auth Portal UI removed at the end of May 3rd 2020
 - Auth API/SDK deprecated at the end of May 3rd 2020
 
