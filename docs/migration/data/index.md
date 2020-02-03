@@ -18,7 +18,7 @@ We announced that we are shutting down the Visual Studio App Center MBaaS servic
 What this means for App Center Data customers is:
 
 * Data Portal UI removed at the April 2020 
-* Data API deprecated at the end of April 2020
+* Data API/SDK deprecated at the end of April 2020
 
 As an alternative to App Center Data, we recommend that you use [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) directly for your applications going forward. App Center Data is powered by Cosmos DB and we’ve worked closely with the Cosmos DB team as we’ve built this solution. Due to the close nature of the two services, all your existing data is already in Cosmos DB. By simply logging into Azure and viewing the Azure Data Explorer, you can visibly see and interact with all your existing data.  
 
