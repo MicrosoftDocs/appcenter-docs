@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # App Center Auth Migration Guide
 
-On xxx, we announced that we will be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post). What this change means for App Center Auth customers is that:
+We recently announced that we will be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post). What this change means for App Center Auth customers is that:
 
 - Auth Portal UI removed at the end of April 2020
 - Auth API/SDK deprecated at the end of April 2020
