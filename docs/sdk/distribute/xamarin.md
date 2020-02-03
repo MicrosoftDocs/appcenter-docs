@@ -162,7 +162,7 @@ Distribute.UpdateTrack = UpdateTrack.Private;
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.  
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release they have access to from any public distribution groups plus any private distribution groups they are a member of.
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any public distribution groups they are a member of, plus any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release only from public distribution groups.
 
 > [!NOTE]
