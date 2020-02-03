@@ -3,7 +3,7 @@ title: "App Center Auth Migration Guide"
 description: App Center Auth migration guide to Azure Active Directory B2C
 author: amchew
 ms.author: amchew
-ms.date: 01/07/2020
+ms.date: 02/03/2020
 ms.topic: article
 ms.assetid: ca1357b3-1fb0-4751-a235-16833fca53c9
 ms.service: vs-appcenter

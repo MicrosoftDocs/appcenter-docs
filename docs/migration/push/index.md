@@ -3,7 +3,7 @@ title: Push Migration Guide
 description: App Center Push migration guide
 author: jwargo
 ms.author: jowargo
-ms.date: 01/15/2020
+ms.date: 02/03/2020
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C
 ms.service: vs-appcenter
@@ -12,6 +12,7 @@ ms.service: vs-appcenter
 # Push Migration Guide
 
 We recently announced that we were retiring the Visual Studio App Center MBaaS services. As an alternative to App Center Push, we recommend that you use Azure Notification Hubs for your applications going forward.
+
 You may not have known this, but the App Center Push and Azure Notification Hubs products are maintained by the same team and they offer similar capabilities. There are some differences between the services, so the purpose of this document is to highlight those differences and guide your migration from App Center Push to Azure Notification Hubs.
 
 ## Service Comparison

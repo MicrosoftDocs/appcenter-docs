@@ -4,7 +4,7 @@ description: How to migrate from App Center Data to Azure Cosmos DB
 keywords: app center, data
 author: zakeelm
 ms.author: zakeelm
-ms.date: 01/06/2020
+ms.date: 02/03/2020
 ms.topic: article
 ms.assetid: 1716caa4-2f34-4385-94ff-8a15eae0d792
 ms.service: vs-appcenter
