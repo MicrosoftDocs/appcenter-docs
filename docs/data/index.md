@@ -14,7 +14,7 @@ ms.custom: MBaaS
 # App Center Data
 
 > [!IMPORTANT]
-> Please note this feature is being deprecated. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Data Migration Guide](~/migration/data/index.md).
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Data Migration Guide](~/migration/data/index.md).
 
 App Center Data (currently in preview) enables developers to solve some of the significant problems associated with data. Many apps require data persistence in the cloud, which is the core of what App Center Data offers. App Center Data is a data management service that enables apps to manage, persist, and sync application data in the cloud across different devices and platforms in both online and offline scenarios.
 

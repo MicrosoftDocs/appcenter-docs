@@ -13,7 +13,7 @@ ms.service: vs-appcenter
 # App Center Push
 
 > [!IMPORTANT]
-> Please note this feature is being deprecated. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 The Visual Studio App Center Push (ACP) service is a notification aggregation service, it manages the process of sending notifications to devices using Push Notification Services (PNS) from Apple, Google, and Microsoft. You could easily build your own application that does this for you:
 

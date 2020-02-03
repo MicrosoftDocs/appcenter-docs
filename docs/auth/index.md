@@ -14,7 +14,7 @@ ms.custom: MBaaS
 # App Center Auth
 
 > [!IMPORTANT]
-> Please note this feature is being deprecated. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Auth Migration Guide](~/migration/auth/index.md).
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For information on migration, refer to the [Auth Migration Guide](~/migration/auth/index.md).
 
 App Center Auth is a cloud-based identity management service that enables developers to authenticate users and manage user identities.
 
