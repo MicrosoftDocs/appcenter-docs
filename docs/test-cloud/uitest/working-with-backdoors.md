@@ -71,7 +71,7 @@ public class InvokeExampleTestFixture()
 ```
 
 > [!NOTE]
-> It may be neccessary to add a reference to the **Mono.Android.Export.dll** assembly in the Xamarin.Android project.
+> It may be necessary to add a reference to the **Mono.Android.Export.dll** assembly in the Xamarin.Android project.
 
 
 ### IApp.Invoke on iOS
