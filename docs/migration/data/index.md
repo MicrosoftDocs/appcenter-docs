@@ -17,9 +17,8 @@ We announced that we are shutting down the Visual Studio App Center MBaaS servic
 
 What this means for App Center Data customers is:
 
-* Data Portal UI removed at the end xxx
-* Data SDK deprecated at the end of xxx
-* Service shutdown at the end of xxx
+* Data Portal UI removed at the April 2020 
+* Data API deprecated at the end of April 2020
 
 As an alternative to App Center Data, we recommend that you use [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) directly for your applications going forward. App Center Data is powered by Cosmos DB and we’ve worked closely with the Cosmos DB team as we’ve built this solution. Due to the close nature of the two services, all your existing data is already in Cosmos DB. By simply logging into Azure and viewing the Azure Data Explorer, you can visibly see and interact with all your existing data.  
 
@@ -37,7 +36,7 @@ The key difference in the two different offerings is what they are and how they 
 * [Azure Cosmos DB .NET Core SDK](https://docs.microsoft.com/azure/cosmos-db/sql-api-sdk-dotnet-core)
 * [Azure Cosmos DB Java SDK](https://docs.microsoft.com/azure/cosmos-db/sql-api-sdk-java)
 * [Azure Cosmos DB Rest API Reference](https://docs.microsoft.com/rest/api/cosmos-db/)
-* [Build Mobile Applications with Xamarin and Cosmos DB tutorial](https://docs.microsoft.com/en-us/azure/cosmos-db/mobile-apps-with-xamarin)
+* [Build Mobile Applications with Xamarin and Cosmos DB tutorial](https://docs.microsoft.com/azure/cosmos-db/mobile-apps-with-xamarin)
 
 Although the portal experience for App Center Data and Cosmos DB is very similar and you won't notice much of a change, there are some differences that you will notice as you use Cosmos DB.  App Center Data provides additional functionality on top of Cosmos DB targeted for mobile development. Cosmos DB does not include functionality for offline sync functionality or include native mobile SDKs, which is a key benefit of App Center Data for mobile developers. In order to continue using offline syncing, you will have to create an offline solution yourself or use another third-party service that supports offline syncing.
 
