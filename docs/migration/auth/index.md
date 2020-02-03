@@ -13,9 +13,8 @@ ms.service: vs-appcenter
 
 On xxx, we announced that we will be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post). What this change means for App Center Auth customers is that:
 
-- Auth Portal UI removed on xxx
-- SDK deprecated on xxx
-- Service retirement on xxx
+- Auth Portal UI removed at the end of April 2020
+- SDK deprecated at the end of April 2020
 
 Instead of App Center Auth, we recommend that you use [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) (Azure AD B2C) and [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) directly.
 
