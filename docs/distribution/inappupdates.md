@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 2/04/2019
+ms.date: 2/04/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
