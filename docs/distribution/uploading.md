@@ -111,8 +111,6 @@ You can call the App Center API to distribute a release.
     3. After the upload has finished, update the upload resource's status to `committed` and get a `release_id`. Save that for the next step.
 
         The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
-
-
 4. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
 
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
@@ -143,13 +141,13 @@ For mandatory releases, App Center displays a red dot next to the release icon i
 
 ## Link to Releases
 
-Once you've released successfully, your testers can access the release through email, logging onto App Center, or through a direct link. 
+Once you've released successfully, your testers can access the release through email, logging onto App Center, or through a direct link.
 
 You can find links to specific releases on the release page for private destinations.
-![Install button] (~/distribution/images/installButton.png)
+![Install button](~/distribution/images/installButton.png)
 
-You can find links to specific releases to public destinations on the releases tab in public groups. 
-![Public deep link] (~/distribution/images/publicDeepLink.png)
+You can find links to specific releases to public destinations on the releases tab in public groups.
+![Public deep link](~/distribution/images/publicDeepLink.png)
 
 [apple-ipa]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1
 [google-prepare-for-release]: https://developer.android.com/studio/publish/preparing.html
