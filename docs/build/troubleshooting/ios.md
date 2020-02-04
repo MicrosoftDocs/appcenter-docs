@@ -82,7 +82,7 @@ The likely cause of this error is the linking type of **Apple Mach-O Linker** is
 ## <a name="cocoapods-error"/>My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
 It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If so, your Pods project must use the same signing method as your Main project. 
 
-If your Pods aren't checked-in, there might be different issues. There are a few workarounds you can use in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964) with [pre-build scripts](~/build/custom/scripts/index.md#pre-build).
+If your Pods aren't checked-in, there might be different issues. There are a few workarounds you can use in this [GitHub Issue](https://github.com/CocoaPods/CocoaPods/pull/6964) with [pre-build scripts](~/build/custom/scripts/index.md#pre-build).
 
 ## <a name="xcode-10-beta-error"/>Since I've upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets** 
 Xcode 10's new build system detects dependency cycles in your build and fails your build if there are any.
