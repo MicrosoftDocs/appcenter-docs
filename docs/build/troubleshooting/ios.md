@@ -35,13 +35,13 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ** ARCHIVE FAILED **
 ```
 
-To fix this error, open your project's Build configuration & click **Save**. App Center will automatically choose the workspace correctly for future builds. 
+To fix this error, open your project's Build configuration and click **Save**. App Center will automatically choose the workspace correctly for future builds. 
 
 ## <a name="signing-issues"/>iOS signing issues explained
 > [!NOTE]
 > Signing identities which use non-ascii characters are not supported in Build.
 
-Dealing with provisioning profiles and certificates can be a challenging process. Here's three handy tips to help you successfully sign your iOS apps: 
+Dealing with provisioning profiles and certificates can be a challenging process. The following tips should help you successfully sign your iOS apps: 
 
 1. **Save the build configuration in App Center after you've pushed signing changes to your project.**
 In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes. If you don't save after pushing, your build may fail with a signing error.
