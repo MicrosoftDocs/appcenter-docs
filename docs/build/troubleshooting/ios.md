@@ -15,7 +15,11 @@ ms.custom: build
 ## <a name="no-scheme"/>No Xcode scheme is found
 Building an xcworkspace or an xcproject requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them. By default schemes aren't shared with others or included in source control.
 
-To share a scheme in Xcode, select **Product > Scheme > Manage schemes**. Make sure that the scheme for your xcproject/xcworkspace is marked as **shared**. The scheme's container must be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
+To share a scheme in Xcode, use the following steps:
+1. Select **Product > Scheme > Manage schemes**. 
+2. Set the scheme for your xcproject/xcworkspace as **shared**. 
+3. The scheme's container must be set to the Xcode project or workspace you want to build. 
+4. Add the `.xcscheme` file to source control and pushed to your remote repository so that App Center can access it.
 
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 [xcode-share-scheme]: ../build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
