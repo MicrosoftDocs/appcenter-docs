@@ -57,14 +57,14 @@ To troubleshoot and get build signing up and running, we suggest the following s
 4. Most importantly: make sure you’ve pushed the latest state of your project before saving the new certificate and profile to the build configuration.
 
 ## <a name="ipa"/>Where is my .ipa file?
-Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build is not signed. Unsigned builds produce an `.xcarchive` instead. If you wish to generate an `.ipa` file with the artifacts of an unsigned build, you can use the `.xcarchive` file to do so.
+Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build isn't signed. Unsigned builds produce an `.xcarchive` instead. If you wish to generate an `.ipa` file with the artifacts of an unsigned build, you can use the `.xcarchive` file to do so.
 
 ![Export xcarchive file using xcode](~/build/images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer")
 
 [export-xcode-xcarchive-organizer]: images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 ## <a name="bitcode-error"/>My iOS app using Xcode fails with Invalid bitcode version error
-If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you are using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
+If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you're using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
 
 ## <a name="test-error"/>My iOS app fails to run a test
 A common reason for tests to fail is where the linker commands hit an error similar to the following:
@@ -74,7 +74,7 @@ A common reason for tests to fail is where the linker commands hit an error simi
   ❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  
 ```
 
-The likely cause of this error is the linking type of **Apple Mach-O Linker** is not set to **static library**. In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
+The likely cause of this error is the linking type of **Apple Mach-O Linker** isn't set to **static library**. In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
 
 ![Apple Mach-O Linker](~/build/images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library")
 [mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
@@ -84,7 +84,7 @@ It might be because the signing configuration in you Pods project differs from t
 
 If your Pods aren't checked-in, there might be different issues. There are a few workarounds you can use in this [link](https://github.com/CocoaPods/CocoaPods/pull/6964) with [pre-build scripts](~/build/custom/scripts/index.md#pre-build).
 
-## <a name="xcode-10-beta-error"/>Since I have upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets**, why is that? 
+## <a name="xcode-10-beta-error"/>Since I've upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets** 
 Xcode 10's new build system detects dependency cycles in your build and fails your build if there are any.
 
 For more information on how to fix the build, see [Apple's documentation on resolving common types of dependency cycles](https://help.apple.com/xcode/mac/current/#/dev621201fb0).
