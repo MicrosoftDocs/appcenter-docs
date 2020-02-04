@@ -22,7 +22,6 @@ To share a scheme in Xcode, use the following steps:
 4. Add the `.xcscheme` file to source control and pushed to your remote repository so that App Center can access it.
 
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
-[xcode-share-scheme]: ../build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
 ## <a name="clang-error"/>My iOS builds fail with "clang: error: linker command failed with exit code 1"
 The error could be caused by App Center building with the xcodeproj instead of the workspace. When adding CocoaPods to your project, you must switch to using the workspace when building in App Center. 
@@ -65,8 +64,6 @@ Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build i
 
 ![Export xcarchive file using xcode](~/build/images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer")
 
-[export-xcode-xcarchive-organizer]: images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
-
 ## <a name="bitcode-error"/>My iOS app using Xcode fails with Invalid bitcode version error
 If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you're using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
 
@@ -81,7 +78,6 @@ A common reason for tests to fail is where the linker commands hit an error simi
 The likely cause of this error is the linking type of **Apple Mach-O Linker** isn't set to **static library**. In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
 
 ![Apple Mach-O Linker](~/build/images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library")
-[mach-o-apple-linkage]: images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library"
 
 ## <a name="cocoapods-error"/>My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
 It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If so, your Pods project must use the same signing method as your Main project. 
