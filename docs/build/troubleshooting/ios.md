@@ -13,9 +13,9 @@ ms.custom: build
 # iOS Build Troubleshooting
 
 ## <a name="no-scheme"/>No Xcode scheme is found
-Building an xcworkspace or an xcproject requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them, but by default they aren't shared with others or included in source control.
+Building an xcworkspace or an xcproject requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them. By default schemes aren't shared with others or included in source control.
 
-To share a scheme, select **Product > Scheme > Manage schemes** in Xcode and make sure that the scheme used for building your xcproject/xcworkspace is marked as **shared**. The scheme's container must be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
+To share a scheme in Xcode, select **Product > Scheme > Manage schemes**. Make sure that the scheme for your xcproject/xcworkspace is marked as **shared**. The scheme's container must be set to the Xcode project or workspace you want to build. Then make sure the added `.xcscheme` file is added to source control and pushed to your remote repository - which App Center accesses.
 
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 [xcode-share-scheme]: ../build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
@@ -27,7 +27,7 @@ Indicator: Look for this line in your build log:
 ```text
 ld: library not found for -lPods-GarageController
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-​
+
 ** ARCHIVE FAILED **
 ```
 
@@ -40,7 +40,7 @@ To fix this error, open your project's Build configuration & click **Save**. App
 Dealing with provisioning profiles and certificates can be a challenging process. Here's three handy tips to help you successfully sign your iOS apps: 
 
 1. **Save the build configuration in App Center after you've pushed signing changes to your project.**
-In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes, or your build will likely fail with a signing error.
+In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes. If you don't save after pushing your build may fail with a signing error.
 
 2. **Easily drag and drop the correct provisioning profile when using automatic signing.**
 In Xcode, in the General tab of your target under **Signing**, click the info icon next to **Xcode Managed Profile**. You’ll then see a popover with profile information. Click and drag the **PROV** icon on the top left to a desired location (as shown below).
