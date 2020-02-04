@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: build, faq
 author: nrajpurkar
 ms.author: nirajp
-ms.date: 08/08/2018
+ms.date: 02/04/2020
 ms.topic: article
 ms.assetid: 85e33f0b-ea23-485e-bcb9-cc2aa5fa775c
 ms.service: vs-appcenter
@@ -38,6 +38,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 To fix this, open your App Center project's Build Configuration, then click Save & Build, App Center will automatically choose the workspace correctly for future builds. 
 
 ## <a name="signing-issues"/>iOS signing issues explained
+> [!NOTE]
+> Signing identities which use non-ascii characters are not supported in Build.
 
 Dealing with provisioning profiles and certificates can sometimes be a challenging process. Here's three handy tips to help you successfully sign your iOS apps.
 
