@@ -67,7 +67,7 @@ Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build i
 If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you're using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
 
 ## <a name="test-error"/>My iOS app fails to run a test
-A common reason for tests to fail is where the linker commands hit an error similar to the following:
+A common reason for tests to fail is where the linker commands hit an error similar to the following one:
 ```text
  ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks 
   ❌ ld: embedded dylibs/frameworks are only supported on iOS 8.0 and later (@rpath/XCTest.framework/XCTest) for architecture x86_64 
