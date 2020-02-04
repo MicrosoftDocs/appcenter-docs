@@ -42,7 +42,7 @@ Dealing with provisioning profiles and certificates can be a challenging process
 1. **Save the build configuration in App Center after you've pushed signing changes to your project.**
 In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes. If you don't save after pushing, your build may fail with a signing error.
 
-2. **Easily drag and drop the correct provisioning profile when using automatic signing.**
+2. **Drag and drop the correct provisioning profile when using automatic signing.**
 In Xcode, in the General tab of your target under **Signing**, click the info icon next to **Xcode Managed Profile**. You’ll then see a popover with profile information. Click and drag the **PROV** icon on the top left to a desired location (as shown below).
 
 3. **Take note of App Center's currently supported options when using manual and automatic signing.**
