@@ -98,13 +98,13 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
 Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
+> [!NOTE]
+> This method should be called before App Center start. 
+
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is persisted in the SDK across app launches.  
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any public distribution groups they are a member of, plus any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release only from public distribution groups.
-
-> [!NOTE]
-> This method can be called anywhere at runtime and doesn't require the app to be restarted. If it is called after SDK start it would check for an update on the given track. It will only impact the next update flow.
 
 If you want to switch back to public update track, simply call
 
@@ -119,15 +119,6 @@ This call will cause in-app updates to only use the public track going forwards.
 
 > [!NOTE]
 > Since the private track can include public releases, to allow users on the private track to remain on the private track after getting a public release, the app should rely on the default behaviour and not call `setUpdateTrack`. This way, users on the public track stay on the public track due to the default behaviour and users on the private track remain on the private track due to the setting persistence from a previous private release.
-
-You can get the current update track by calling
-
-```java
-UpdateTrack updateTrack = Distribute.getUpdateTrack();
-```
-```kotlin
-UpdateTrack updateTrack = Distribute.getUpdateTrack()
-```
 
 ## Customize or localize the in-app update dialog
 
