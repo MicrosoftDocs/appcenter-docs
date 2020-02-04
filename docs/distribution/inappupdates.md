@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 12/05/2019
+ms.date: 2/04/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -22,7 +22,7 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 
 ## Public In-App Updates 
 
-To enable public in-app updates, create a [public distribution group][public-dg] and distribute a release with the App Center SDK. Once your testers install the app, they will be alerted when new releases are publicly available. Because publicly available releases are available to anyone with the app, testers that downloaded the app through a private distribution group will be alerted for publicly available releases. 
+To enable public in-app updates, create a [public distribution group][public-dg] and distribute a release with the App Center SDK. Once your testers install the app, they will be alerted when new releases are publicly available.
 
 ## FAQ
 
