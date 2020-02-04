@@ -40,7 +40,7 @@ To fix this error, open your project's Build configuration & click **Save**. App
 Dealing with provisioning profiles and certificates can be a challenging process. Here's three handy tips to help you successfully sign your iOS apps: 
 
 1. **Save the build configuration in App Center after you've pushed signing changes to your project.**
-In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes. If you don't save after pushing your build may fail with a signing error.
+In App Center, the build configuration of any branch stores two values of your Xcode project: the `CODE_SIGN_STYLE` and `DEVELOPMENT_TEAM` (set in the `project.pbxproj` file in your `.xcodeproj` folder). Whenever you change between manual and automatic signing or switch the development team, make sure you save the build configuration on App Center after pushing the changes. If you don't save after pushing, your build may fail with a signing error.
 
 2. **Easily drag and drop the correct provisioning profile when using automatic signing.**
 In Xcode, in the General tab of your target under **Signing**, click the info icon next to **Xcode Managed Profile**. You’ll then see a popover with profile information. Click and drag the **PROV** icon on the top left to a desired location (as shown below).
@@ -64,7 +64,7 @@ Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build i
 [export-xcode-xcarchive-organizer]: images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer"
 
 ## <a name="bitcode-error"/>My iOS app using Xcode fails with Invalid bitcode version error
-If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you are using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate, older version of the problematic library which is compiled with a matching version of Xcode.
+If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you are using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
 
 ## <a name="test-error"/>My iOS app fails to run a test
 A common reason for tests to fail is where the linker commands hit an error similar to the following:
@@ -87,4 +87,4 @@ If your Pods aren't checked-in, there might be different issues. There are a few
 ## <a name="xcode-10-beta-error"/>Since I have upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets**, why is that? 
 Xcode 10's new build system detects dependency cycles in your build and fails your build if there are any.
 
-For more information on how to fix the build, refer to [Apple's documentation on resolving common types of dependency cycles](https://help.apple.com/xcode/mac/current/#/dev621201fb0).
+For more information on how to fix the build, see [Apple's documentation on resolving common types of dependency cycles](https://help.apple.com/xcode/mac/current/#/dev621201fb0).
