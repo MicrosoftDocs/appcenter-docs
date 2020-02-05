@@ -141,14 +141,14 @@ MSDistribute.updateTrack = MSUpdateTrackPrivate
 ```
 
 > [!NOTE]
-> This property should be set before App Center start. 
+> This property must be set before App Center start. If the method is not called before start every time, the update track is by default public.
 
-After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is not persisted in the SDK across app launches.  
+After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any public distribution groups they are a member of, plus any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release only from public distribution groups.
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
 
-If you want to switch back to public update track, simply set
+If you want to configure the application to use the public update track, you can call:
 
 ```objc
 MSDistribute.updateTrack = MSUpdateTrackPublic;
@@ -156,6 +156,9 @@ MSDistribute.updateTrack = MSUpdateTrackPublic;
 ```swift
 MSDistribute.updateTrack = MSUpdateTrackPublic
 ```
+
+> [!NOTE]
+> This method must be called before App Center start. `MSUpdateTrackPublic` is also the default value.
 
 ## Customize or localize the in-app update dialog
 
@@ -309,7 +312,7 @@ The in-app updates feature works as follows:
 1. This feature will ONLY work with builds that are distributed using **App Center Distribute** service. It won't work when the debugger is attached or if the iOS Guided Access feature is turned on..
 2. Once you integrate the SDK, build a release version of your app and upload it to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment). When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the application updates the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
    * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.

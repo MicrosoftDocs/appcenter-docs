@@ -36,25 +36,12 @@ Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you h
 
 ## Use private distribution group
 
-By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
-
-```csharp
-Distribute.UpdateTrack = UpdateTrack.Private;
-```
-
-> [!NOTE]
-> This property should be set before App Center start. 
+By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property in the **Distribute** section of the **AppCenterBehavior** behavior to the `Private` value.
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is not persisted in the SDK across app launches.  
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any public distribution groups they are a member of, plus any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release only from public distribution groups.
-
-If you want to switch to public update track, simply set
-
-```csharp
-Distribute.UpdateTrack = UpdateTrack.Public;
-```
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
 
 ## Customize or localize the in-app update dialog
 
@@ -174,7 +161,7 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the application updates the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 5. A new release of the app shows the in-app update dialog asking users to update your application if it has
     * iOS:
         * a higher value of `CFBundleShortVersionString` or
