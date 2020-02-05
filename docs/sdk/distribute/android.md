@@ -315,7 +315,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below.
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above.
 5. Click on the **Distribute new release** button in the portal and upload your build of the app.
 6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
 7. Review the Distribution and distribute the build to your in-app testing group.
