@@ -343,6 +343,9 @@
 
 # Migration
 ## [Introduction](migration/index.md)
+## [Auth](migration/auth/index.md)
+## [Data](migration/data/index.md)
+## [Push](migration/push/index.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Reference
