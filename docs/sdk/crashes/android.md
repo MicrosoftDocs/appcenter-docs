@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/13/2019
+ms.date: 02/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.custom: sdk
@@ -338,20 +338,20 @@ Crashes.isEnabled()
 ## Handled Errors
 
 App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `trackException` method:
+In order to do so, simply use the `trackError` method:
 
 ```java
 try {
     // your code goes here.
 } catch (Exception exception) {
-    Crashes.trackException(exception);
+    Crashes.trackError(exception);
 }
 ```
 ```kotlin
 try {
     // your code goes here.
 } catch (exception: Exception) {
-    Crashes.trackException(exception)
+    Crashes.trackError(exception)
 }
 ```
 
