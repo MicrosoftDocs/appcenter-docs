@@ -175,7 +175,7 @@ Distribute.UpdateTrack = UpdateTrack.Public;
 ```
 
 > [!NOTE]
-> This method must be called before App Center start. `PUBLIC` is also the default value.
+> This method must be called before App Center start. `Public` is also the default value.
 
 ## Customize or localize the in-app update dialog
 
