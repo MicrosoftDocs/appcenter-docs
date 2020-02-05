@@ -338,20 +338,20 @@ Crashes.isEnabled()
 ## Handled Errors
 
 App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `trackException` method:
+In order to do so, simply use the `trackError` method:
 
 ```java
 try {
     // your code goes here.
 } catch (Exception exception) {
-    Crashes.trackException(exception);
+    Crashes.trackError(exception);
 }
 ```
 ```kotlin
 try {
     // your code goes here.
 } catch (exception: Exception) {
-    Crashes.trackException(exception)
+    Crashes.trackError(exception)
 }
 ```
 
