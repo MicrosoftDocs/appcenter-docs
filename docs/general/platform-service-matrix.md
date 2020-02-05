@@ -33,4 +33,4 @@ The table below lists all the Operating System and Platforms and their supported
 | Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 
-*For UWP Hololens support has not been verified.
+*For UWP, Hololens support has not been verified.
