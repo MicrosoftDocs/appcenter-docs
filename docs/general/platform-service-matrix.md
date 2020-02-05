@@ -29,6 +29,8 @@ The table below lists all the Operating System and Platforms and their supported
 | Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ✅  |  ✅  |
 | Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ❌  |  ✅  |
 | Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |  ❌  |  ✅  |
-| Unity - UWP            |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ❌  |  ❌  |  ✅  |
+| Unity - UWP*           |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ❌  |  ❌  |  ✅  |
+
+*For UWP Hololens support has not been verified.
