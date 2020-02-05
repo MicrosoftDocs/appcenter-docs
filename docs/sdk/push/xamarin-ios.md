@@ -219,7 +219,7 @@ To distinguish between notifications received in the foreground and notification
 
         if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
         {
-            this.myOwnNotificationDelegate = YourOwnUNUserNotificationCenterDelegate();
+            this.myOwnNotificationDelegate = new YourOwnUNUserNotificationCenterDelegate();
             UNUserNotificationCenter.Current.Delegate = this.myOwnNotificationDelegate;
         }
 
