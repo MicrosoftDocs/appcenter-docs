@@ -145,7 +145,7 @@ MSDistribute.updateTrack = MSUpdateTrackPrivate
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of instead of public distribution groups.
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
 
 If you want to configure the application to use the public update track, you can call:
