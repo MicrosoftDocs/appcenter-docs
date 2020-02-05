@@ -507,7 +507,7 @@ curl -X POST \
 ### Caveats
 
 To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
-To symbolicate your crash, you must upload your symbols through the API or CLI, and for more information see our [API documentation](~/diagnostics/android-ndk.md#app-center-api).
+To symbolicate your crash, you must upload your symbols through the API or CLI according to our [API documentation](~/diagnostics/android-ndk.md#app-center-api). If you are using Breakpad with Android, both options as specified in our [Android NDK documentation](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported, but if you are using Breakpad with Windows, only Option 2 is supported.
 
 > [!NOTE]
 > If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
