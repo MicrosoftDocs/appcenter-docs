@@ -250,7 +250,7 @@ By default, a new export configuration will back-fill two last days of data for 
 
 ### Choosing what kind of data to export
 
-By default, a new export configuration exports Analytics data only (events, sessions, etc.) Diagnostics-related data [could be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model). The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
+By default, a new export configuration exports Analytics data only (events, sessions, etc.) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
 ## Pricing
 
