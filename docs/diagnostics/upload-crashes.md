@@ -13,7 +13,7 @@ ms.custom: diagnostics
 
 # Upload crashes via API
 
-You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
+You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment).
 
 > [!NOTE]
 > App Center only accepts up to 60 crashes and handled errors per minute per unique app. We will not ingest any crashes or errors that exceed this limit.
@@ -25,7 +25,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-- `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors and "errorAttachment" for error attachments. 
+- `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
@@ -507,6 +507,7 @@ curl -X POST \
 ### Caveats
 
 To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
+
 To symbolicate your crash, you must upload your symbols through the API or CLI according to our [API documentation](~/diagnostics/android-ndk.md#app-center-api). If you are using Breakpad with Android, both options as specified in our [Android NDK documentation](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported, but if you are using Breakpad with Windows, only Option 2 is supported.
 
 > [!NOTE]
