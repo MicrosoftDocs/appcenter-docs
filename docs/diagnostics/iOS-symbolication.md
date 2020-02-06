@@ -59,7 +59,7 @@ The process for uploading symbols through the API involves a series of three API
 You can also use the CLI to upload symbol files:
 
 ```shell
-appcenter crashes upload-symbols --symbols {symbol file}
+appcenter crashes upload-symbols --symbol {symbol file}
 ```
 
 ## Bitcode
