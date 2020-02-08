@@ -345,7 +345,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you haven't done that already.
 2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [setUpdateTrack API](#use-private-distribution-group). 
+4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above. If the group is private, don't forget to set the private in-app update track before start using the [setUpdateTrack API](#use-private-distribution-group). 
 5. Public releases are accessible to authenticated users regardless of their membership, so you can expose a setting in the app on public releases for testers to switch track. This setting can use the abovementioned [setUpdateTrack API](#use-private-distribution-group) for implementing a switch control and updating the track after the app restart.
 6. Click on the **Distribute new release** button in the portal and upload your build of the app.
 7. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
