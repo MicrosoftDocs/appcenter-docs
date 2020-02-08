@@ -89,7 +89,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Use private distribution group
 
-By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
 
 ```java
 Distribute.setUpdateTrack(UpdateTrack.PRIVATE);

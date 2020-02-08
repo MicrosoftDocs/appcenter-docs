@@ -131,7 +131,7 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 ## Use private distribution group
 
-By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `updateTrack` property.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `updateTrack` property.
 
 ```objc
 MSDistribute.updateTrack = MSUpdateTrackPrivate;

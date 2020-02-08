@@ -154,7 +154,7 @@ Distribute.SetEnabledForDebuggableBuild(true);
 
 ## Use private distribution group
 
-By default, Distribute uses the public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
 
 ```csharp
 Distribute.UpdateTrack = UpdateTrack.Private;
