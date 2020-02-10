@@ -16,8 +16,8 @@ ms.service: vs-appcenter
 > [Build your app according to Apples guidelines](https://developer.apple.com/app-store/submissions/)
 
 1. From the Stores home page, select “App Store Connect users”.
-2. Click on **Publish to TestFlight** in the upper-right corner.
+2. Click **Publish to TestFlight** in the upper-right corner.
 3. At the first step of the wizard, you must upload you .ipa file. After the file has been successfully uploaded, you'll see details, like icon and version. Click **Next**.
-4. Click on **Publish**. The status for this release on the store details page will show as **Submitted**. Submitted means that the .ipa have been delivered to App Store Connect for evaluation.
+4. Click **Publish**. The status for this release on the store details page will show as **Submitted**. Submitted means that the .ipa have been delivered to App Store Connect for evaluation.
 5. Once App Center has completed handing over the app to iTunes, the status of the app will change to **Published**, and the app is available to download through Apple's TestFlight service.
 6. If a failure occurs with publishing by Apple, the status will change to **Failed** with the appropriate error message.
