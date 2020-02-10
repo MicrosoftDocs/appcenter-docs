@@ -4,7 +4,7 @@ description: Learn how to release to internal testers in TestFlight from App Cen
 keywords: distribute, stores, fastlane, testflight
 author: oddj0b
 ms.author: vigim
-ms.date: 02/07/2020
+ms.date: 02/10/2020
 ms.topic: article
 ms.assetid: c6a908c8-6273-4e30-92c0-7c40ccf58aa9
 ms.service: vs-appcenter
