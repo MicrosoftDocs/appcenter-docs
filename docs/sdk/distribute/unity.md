@@ -168,7 +168,7 @@ The in-app updates feature works as follows:
         * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
     * Android:
         * a higher value of `versionCode` or
-        * an equal value of `versionCode` but a higher value of `versionName`.
+        * an equal value of `versionCode` but a different value of `versionName`.
 
 > [!TIP]
 > If you upload the same .apk/.ipa a second time, the dialog will NOT appear as the binaries are identical. On iOS, if you upload a new build with the same version properties, it will show the update dialog. The reason for this is that it is a different binary. On Android, binaries are considered the same if both version properties are the same.
