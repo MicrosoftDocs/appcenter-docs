@@ -17,8 +17,8 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 
 > [!IMPORTANT]
 > At this time, there are some limitations to In-App Updates:
-> 1) Android devices will not be prompted for an update if there is no change in the version or build version.
-> 2) For iOS public in-app updates, Apple has a default dialog that will have to be dismissed. Login is not required for the public flow.
+> 1) Android devices will not be prompted for an update if there is no change in `versionCode` or `versionNname`.
+> 2) iOS devices will not be prompted for an update if there is no change in `CFBundleShortVersionString` or `CFBundleVersion`.
 
 ## Public In-App Updates 
 
