@@ -321,6 +321,7 @@ The in-app updates feature works as follows:
 
    * a higher value of `CFBundleShortVersionString` or
    * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
+   * the versions are the same but the build unique identifier is different.
 
 > [!TIP]
 > If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it is a **different** binary.

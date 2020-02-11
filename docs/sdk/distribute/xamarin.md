@@ -305,6 +305,7 @@ The in-app updates feature works as follows:
    * iOS: 
      * a higher value of `CFBundleShortVersionString` or
      * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
+     * the versions are the same but the build unique identifier is different.
 
    * Android:
      * a higher value of `versionCode` or
