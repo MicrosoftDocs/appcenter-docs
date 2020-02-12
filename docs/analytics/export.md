@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 01/16/2020
+ms.date: 02/12/2020
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
