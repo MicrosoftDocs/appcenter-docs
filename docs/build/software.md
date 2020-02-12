@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 02/04/2020
+ms.date: 02/11/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -21,8 +21,7 @@ Each build runs on a separate, clean virtual machine (VM) no one else has access
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.6 (18G2022) **Mojave** for builds running Xcode 9.4.1 and higher and also for non-Xcode builds
-- OS X 10.13.6 (17G10021) **High Sierra** for builds running Xcode 9.4 and lower
+- OS X 10.14.6 (18G3020) **Mojave**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2016 & Visual Studio 2017](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2016-Readme.md).
 
@@ -34,24 +33,30 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
 - Rust 1.41.0
+- Clang/LLVM 9.0.1
+- gcc-8 (Homebrew GCC 8.3.0_2) 8.3.0
+- gcc-9 (Homebrew GCC 9.2.0_3) 9.2.0
+- GNU Fortran (Homebrew GCC 8.3.0_2) 8.3.0
+- GNU Fortran (Homebrew GCC 9.2.0_3) 9.2.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.18.1 v12.14.1 v13.7.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.15.0 v13.8.0
 - PowerShell 6.2.4
 - Python 2.7.17
 - Python 3.7.6
 - Ruby 2.6.5p114
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.13.7
+- PHP 7.4.2
 
 ### Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.8.4
-- Homebrew 2.2.4
+- Homebrew 2.2.5
 - NPM 3.10.10
-- Yarn 1.21.1
+- Yarn 1.22.0
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 2.7)
 - Pip 19.3.1 (python 3.7)
@@ -72,18 +77,21 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
 - gpg (GnuPG) 2.2.19
+- psql (PostgreSQL) 12.1
+- aria2 1.35.0
+- azcopy 10.3.4
 
 ### Tools
 - Fastlane 2.141.0
 - Cmake 3.16.3
 - App Center CLI 1.2.2
-- Azure CLI 2.0.80
+- Azure CLI 2.0.81
 
 ### Browsers
-- Google Chrome 79.0.3945.130 
-- ChromeDriver 79.0.3945.36
-- Microsoft Edge 79.0.309.71 
-- MSEdgeDriver 79.0.309.71
+- Google Chrome 80.0.3987.87 
+- ChromeDriver 80.0.3987.16
+- Microsoft Edge 80.0.361.48 
+- MSEdgeDriver 80.0.361.48
 
 ### Toolcache
 #### Ruby
@@ -105,7 +113,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.4.3.12
+- 8.4.4.91
 
 #### Mono
 - 6.6.0.155
