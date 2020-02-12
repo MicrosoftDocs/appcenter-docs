@@ -18,8 +18,7 @@ ms.service: vs-appcenter
 1. From the Stores home page, select the “Production” store created above.
 2. Select **Publish to App Store** in the upper-right corner.
 3. At the first step of the wizard, you must upload your .ipa file. After the file has a been successfully uploaded, you'll see details, like icon and version. Select **Next**.
-4. Enter release notes, only plain text is support. Release notes must be longer than 10 characters. Select **Next**.
-4. Select **Publish**. The status for this release on the store details page will show as **Submitted**. Submitted means that the .ipa has been delivered to App Store Connect for evaluation.
-5. Once App Center has completed the hand-over of the app to App Store Connect, the status of the app will change to **Published**, and the app is available to download through Apple's App Store.
-6. If a failure occurs while publishing by Apple, the status on the store details page will change to **Failed** with the appropriate error message.
-   Review [Apple's app review process](https://developer.apple.com/support/app-review/).
+4. Enter release notes. Only plain text is supported and release notes must be longer than 10 characters. Select **Next**.
+5. Select **Publish**. The status for this release will show as **Submitted** on the store details page. Submitted means that the .ipa has been delivered to App Store Connect for evaluation.
+6. Once App Center has completed the hand-over of the app to App Store Connect, the status of the app changes to **Published**, and the app is available to download through Apple's App Store.
+7. If a failure occurs while publishing by Apple, the status on the store details page changes to **Failed** with the appropriate error message. For more information, see [Apple's app review process](https://developer.apple.com/support/app-review/).
