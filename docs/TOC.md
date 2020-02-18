@@ -362,7 +362,6 @@
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ### [FAQ](transition/faq.md)
 ### [Feedback](transition/feedback.md)
-## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
