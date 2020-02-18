@@ -40,13 +40,13 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - GNU Fortran (Homebrew GCC 9.2.0_3) 9.2.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.15.0 v13.8.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.0 v13.8.0
 - PowerShell 6.2.4
 - Python 2.7.17
 - Python 3.7.6
 - Ruby 2.6.5p114
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.13.7
+- Go 1.13.8
 - PHP 7.4.2
 
 ### Package Management
@@ -83,15 +83,17 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Tools
 - Fastlane 2.141.0
-- Cmake 3.16.3
+- Cmake 3.16.4
 - App Center CLI 1.2.2
 - Azure CLI 2.0.81
 
 ### Browsers
-- Google Chrome 80.0.3987.87 
-- ChromeDriver 80.0.3987.16
-- Microsoft Edge 80.0.361.48 
-- MSEdgeDriver 80.0.361.48
+- Google Chrome 80.0.3987.106 
+- ChromeDriver 80.0.3987.106
+- Microsoft Edge 80.0.361.54 
+- MSEdgeDriver 80.0.361.54
+- Mozilla Firefox 73.0
+- geckodriver 0.26.0
 
 ### Toolcache
 #### Ruby
@@ -113,7 +115,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.4.4.91
+- 8.4.5.19
 
 #### Mono
 - 6.6.0.155
