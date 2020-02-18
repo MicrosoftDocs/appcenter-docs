@@ -343,26 +343,25 @@
 #### [Delete](gdpr/test-forget-me.md)
 #### [Export](gdpr/test-export.md)
 
-# HockeyApp Transition
-## [Introduction](transition/index.md)
-## SDK Migration
-### [Introduction](transition/sdk-migration.md)
-### [iOS](transition/ios-sdk-migration.md)
-### [macOS](transition/macos-sdk-migration.md)
-### [tvOS](transition/tvos-sdk-migration.md)
-### [Android](transition/android-sdk-migration.md)
-### [UWP](transition/uwp-sdk-migration.md)
-### [Xamarin](transition/xamarin-sdk-migration.md)
-### [Cordova](transition/cordova-sdk-migration.md)
-### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
-## [FAQ](transition/faq.md)
-## [Feedback](transition/feedback.md)
-
 # Migration
 ## [Introduction](migration/index.md)
 ## [Auth](migration/auth/index.md)
 ## [Data](migration/data/index.md)
 ## [Push](migration/push/index.md)
+## HockeyApp
+### [Introduction](transition/index.md)
+### SDK Migration
+#### [Introduction](transition/sdk-migration.md)
+#### [iOS](transition/ios-sdk-migration.md)
+#### [macOS](transition/macos-sdk-migration.md)
+#### [tvOS](transition/tvos-sdk-migration.md)
+#### [Android](transition/android-sdk-migration.md)
+#### [UWP](transition/uwp-sdk-migration.md)
+#### [Xamarin](transition/xamarin-sdk-migration.md)
+#### [Cordova](transition/cordova-sdk-migration.md)
+#### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
+### [FAQ](transition/faq.md)
+### [Feedback](transition/feedback.md)
 ## [Xamarin Insights](migration/xamarin-insights/index.md)
 
 # Reference
