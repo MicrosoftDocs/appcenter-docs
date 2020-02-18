@@ -345,9 +345,6 @@
 
 # Migration
 ## [Introduction](migration/index.md)
-## [Auth](migration/auth/index.md)
-## [Data](migration/data/index.md)
-## [Push](migration/push/index.md)
 ## HockeyApp
 ### [Introduction](transition/index.md)
 ### SDK Migration
@@ -360,6 +357,9 @@
 #### [Cordova](transition/cordova-sdk-migration.md)
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ### [Feedback](transition/feedback.md)
+## [Auth](migration/auth/index.md)
+## [Data](migration/data/index.md)
+## [Push](migration/push/index.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
