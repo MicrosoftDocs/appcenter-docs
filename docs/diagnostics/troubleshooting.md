@@ -4,7 +4,7 @@ description: Help troubleshooting Diagnostics in App Center
 keywords: crashes, errors, troubleshooting, diagnostics
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/11/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: 601a597e-37e5-4714-bdf5-fff29373cae5
 ms.service: vs-appcenter
@@ -38,7 +38,3 @@ This is usually caused by enabling the App Center crashes module without also en
 **What are the time period limitations to send a log to App Center?**
 
 The App Center backend will only accept logs that are no more than 25 days in the past or 3 days in the future.
-
-**Why are my crash counts different on App Center compared to HockeyApp?**
-
-HockeyApp lists crashes as they are ingested, whereas App Center uses the device timestamp. This means that HockeyApp might show your app as receiving 10 crashes today, but App Center might list those 10 crashes as happening on different days based on the device timestamp.
