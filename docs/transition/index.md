@@ -26,3 +26,7 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 * [HockeySDK Unity](unity-sdk-migration.md)
 * [HockeySDK Cordova](cordova-sdk-migration.md)
 * [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
+
+## Feedback
+
+App Center does not support the HockeyApp Feedback functionality. Find out about potential [alternatives](feedback.md).

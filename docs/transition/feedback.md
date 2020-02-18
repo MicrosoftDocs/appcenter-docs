@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # HockeyApp Feedback
 
-App Center does not support the HockeyApp Feedback functionality. Therefore it’s not possible to move feedback data to App Center. In the following we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
+HockeyApp Feedback data wasn't migrated to App Center. In the following we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
 
 ## Microsoft Flow & Azure Boards
 
