@@ -351,7 +351,6 @@
 ## HockeyApp
 ### [Introduction](transition/index.md)
 ### SDK Migration
-#### [Introduction](transition/sdk-migration.md)
 #### [iOS](transition/ios-sdk-migration.md)
 #### [macOS](transition/macos-sdk-migration.md)
 #### [tvOS](transition/tvos-sdk-migration.md)
@@ -360,8 +359,6 @@
 #### [Xamarin](transition/xamarin-sdk-migration.md)
 #### [Cordova](transition/cordova-sdk-migration.md)
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
-### [FAQ](transition/faq.md)
-### [Feedback](transition/feedback.md)
 
 # Reference
 ## [API docs](api-docs/index.md)
