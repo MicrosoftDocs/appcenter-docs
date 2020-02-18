@@ -2,9 +2,9 @@
 title: Enable Sparkle updates
 description: Easily stay up-to-date on the latest build with Sparkle update notifications.
 keywords: distribution
-author: derpixeldan
+author: dipree
 ms.author: daadam
-ms.date: 10/09/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -24,11 +24,3 @@ Sparkle support for sandboxes in macOS is under development (09/2019). If you re
 ## Specify the dsa_signature via API
 
 Once the app is released, you can use the [following endpoint](https://openapi.appcenter.ms/#/distribute/releases_update) to update the dsa_signature of your release. Once updated, you can verify that the feed URL includes the dsa_signature.
-
-## Are you coming from HockeyApp?
-
-Please note that for apps from HockeyApp that haven't been moved yet:
-* Releases uploaded to HockeyApp only show up in the App Center Sparkle feed when added to a public distribution group.
-* Releases uploaded to App Center don't show up in the HockeyApp Sparkle feed.
-
-For apps that have been moved, all versions that are released to a public distribution group show up in the App Center Sparkle feed (regardless where they were formerly uploaded).
