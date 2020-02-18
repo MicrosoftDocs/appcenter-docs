@@ -345,20 +345,6 @@
 
 # HockeyApp Transition
 ## [Introduction](transition/index.md)
-## Synchronization
-### [Introduction](transition/side-by-side.md)
-### [Distribute](transition/distribution.md)
-### [Diagnostics](transition/crashes.md)
-### [Analytics](transition/analytics.md)
-## Moving Apps
-### [Introduction](transition/moving/index.md)
-### [Incompatibilities](transition/moving/incompatibilities.md)
-### [Migrated Data](transition/moving/data.md)
-### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
-## HockeyApp Accounts
-### [Introduction](transition/accounts/index.md)
-### [Distribution Groups](transition/accounts/distribution-groups.md)
-## [API Migration](transition/api.md)
 ## SDK Migration
 ### [Introduction](transition/sdk-migration.md)
 ### [iOS](transition/ios-sdk-migration.md)
