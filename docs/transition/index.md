@@ -29,4 +29,4 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 
 ## Feedback
 
-App Center does not support the HockeyApp Feedback functionality. Find out about potential [alternatives](feedback.md).
+App Center does not support the HockeyApp Feedback functionality. For potential alternatives, see the [feedback guide](feedback.md).
