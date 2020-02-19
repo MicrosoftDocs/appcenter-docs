@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 11/26/2019
+ms.date: 02/19/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -151,6 +151,27 @@ Distribute.SetEnabledForDebuggableBuild(true);
 >       </dict>
 >   </array>
 >   ```
+
+## Disable Automatic Check for Update
+
+By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
+If you want to check for the new releases manually, you can disable automatic check for update.
+To do this, call the following method before SDK start:
+
+```csharp
+Distribute.DisableAutomaticCheckForUpdate();
+```
+
+> [!NOTE]
+> This method must be called before App Center start. If the method is not called before start every time, the SDK will automatically check for update.
+
+Then you can use the following API when you need to check for update:
+
+```java
+Distribute.CheckForUpdate();
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
 
 ## Customize or localize the in-app update dialog
 

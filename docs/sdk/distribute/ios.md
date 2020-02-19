@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: botatoes
 ms.author: bofu
-ms.date: 12/11/2019
+ms.date: 02/19/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -128,6 +128,33 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 > 	</dict>
 > </array>
 > ```
+
+## Disable Automatic Check for Update
+
+By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
+If you want to check for the new releases manually, you can disable automatic check for update.
+To do this, call the following method before SDK start:
+
+```objc
+[MSDistribute disableAutomaticCheckForUpdate];
+```
+```swift
+MSDistribute.disableAutomaticCheckForUpdate()
+```
+
+> [!NOTE]
+> This method must be called before App Center start. If the method is not called before start every time, the SDK will automatically check for update.
+
+Then you can use the following API when you need to check for update:
+
+```objc
+[MSDistribute checkForUpdate];
+```
+```swift
+MSDistribute.checkForUpdate()
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
 
 ## Customize or localize the in-app update dialog
 

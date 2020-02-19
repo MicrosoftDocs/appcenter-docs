@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2019
+ms.date: 02/19/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -86,6 +86,33 @@ import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
+
+## Disable Automatic Check for Update
+
+By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
+If you want to check for the new releases manually, you can disable automatic check for update.
+To do this, call the following method before SDK start:
+
+```java
+Distribute.disableAutomaticCheckForUpdate();
+```
+```kotlin
+Distribute.disableAutomaticCheckForUpdate()
+```
+
+> [!NOTE]
+> This method must be called before App Center start. If the method is not called before start every time, the SDK will automatically check for update.
+
+Then you can use the following API when you need to check for update:
+
+```java
+Distribute.checkForUpdate();
+```
+```kotlin
+Distribute.checkForUpdate()
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
 
 ## Customize or localize the in-app update dialog
 

@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 2/04/2020
+ms.date: 2/19/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -39,6 +39,7 @@ To enable public in-app updates, create a [public distribution group][public-dg]
  3. Why do testers not see an in-app update message when a new version of the app is released?
 - Multiple scenarios can cause testers to not get in-app update notifications:
     - App Center SDK distribute feature is disabled. App Center SDK distribute feature must be enabled and initialized at app launch. If testers installed a version with the distribute feature disabled, they would need to install the latest version manually.
+    - Automatic check for update is disabled. If automatic check for update is disabled, the app will not check for the new releases at the app startup. The check will happen at the time **checkForUpdate** is called.
     - Release version of your app is incorrect for a new release 
       - For Android: increment version code.
       - For iOS: increment CFBundleShortVersionString and conform to semantic versioning standards
