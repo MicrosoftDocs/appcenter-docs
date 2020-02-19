@@ -13,17 +13,17 @@ ms.custom: distribute
 
 # Azure DevOps Extension
 
-The Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) CodePush extension can reduce the effort needed to keep your dev/alpha/beta/etc. deployments up-to-date, since you can push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
+The Azure DevOps CodePush extension can reduce the effort needed to keep your dev/alpha/beta/etc. deployments up to date by pushing changes to the configured source control branches. Your automated build takes care of the rest, meaning there is no need to manually release, promote, or rollout from the App Center CLI.
 
 These tasks can be used with either Azure DevOps or TFS 2015 Update 2 and are intended to work with any Cordova or React Native project. Additionally, the tasks can be paired nicely with the [Cordova Command task](https://marketplace.visualstudio.com/items/ms-vsclient.cordova-extension) and/or the [React Native Bundle task](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension), which allow you to easily "prepare" the platform-specific assets that can be subsequently released to CodePush.
 
 ![CodePush Task + Cordova](images/vsts1.png)
 
-## Quick Start
+## Quickstart
 
 Follow these steps to automate the release and promotion of app updates via CodePush:
 
-1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for Azure DevOps CI builds (e.g. `appcenter tokens create -d "VSTS-CI"`)
+1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for Azure DevOps CI builds (for example, `appcenter tokens create -d "VSTS-CI"`)
 
    > [!NOTE]
    > You can use the API key that is displayed in the App Center portal, and don't have to generate an additional token via the App Center CLI.
@@ -41,17 +41,17 @@ Follow these steps to automate the release and promotion of app updates via Code
 
    2. **CodePush - Release** - Select this item if you're not releasing updates for a Cordova app or you want additional flexibility beyond what the platform-specific tasks provide you. See the [reference docs](./cli.md#releasing-updates-general) for details about how it works.
 
-5. Configure the release task with the access token created or retrieved in step #1, specifying your app name (e.g. **MyApp-iOS**), deployment name, and all other required parameters. See the reference docs below in order to find details on each option. 
+5. Configure the release task with the access token created or retrieved in step #1, specifying your app name ( **MyApp-iOS**), deployment name, and all other required parameters. See the reference docs below to find details on each option. 
 
 6. Click the **Queue Build** button or push a change to your repository in order to run the newly defined build pipeline
 
 7. Run your CodePush-ified app to see the change that was automatically deployed!
 
-Moving forward, you can choose to take advantage of the **CodePush - Promote** task for automating the release of updates to one deployment (e.g. **Staging**) and then automating the promotion of it to another deployment (e.g. **Production**) as appropriate. This task pairs well with the Azure DevOps Release Management capabilities, where you can define multiple environments (each with their own deployment pipeline), as well as manual approvers, which allows you to automate updates, without sacrificing any of the controls you want in terms of validation.
+Moving forward, you can choose to take advantage of the **CodePush - Promote** task for automating the release of updates to one deployment (for example, **Staging**) and then automating the promotion of it to another deployment (for example, **Production**) as appropriate. This task pairs well with the Azure DevOps Release Management capabilities, where you can define multiple environments (each with their own deployment pipeline), as well as manual approvers, which allows you to automate updates, without sacrificing any of the controls you want for validation.
 
 ## Globally Configuring Your Credentials
 
-In addition to specifying your access token directly within each build task instance (as illustrated in the getting started section), you can also configure your CodePush credentials globally and refer to them within each build or release definition as needed. This can simplify the use of CodePush across a team, and increase security, since every build and release definition doesn't have to manually configure the account credentials. To do this, perform the following steps:
+In addition to specifying your access token directly within each build task instance (as illustrated in the quickstart section), you can also configure your CodePush credentials globally and refer to them within each build or release definition as needed. Global credentials can simplify the use of CodePush across a team, and increase security, since every build and release definition doesn't have to manually configure the account credentials. To globally configure your credentials, do the following steps:
 
 1. Generate or retrieve your access token as described above
 
@@ -63,9 +63,6 @@ In addition to specifying your access token directly within each build task inst
 3. Click on the **Services** tab
 
 4. Click on **New Service Endpoint** and select **CodePush**
-
-   > [!NOTE]
-   > If you're using CodePush as part of an integration with HockeyApp, you can also select the **HockeyApp** service endpoint type instead.*
 
 5. Give the new endpoint a name (e.g. "MyApp-iOS") and enter the access token you generated in step #1
 
@@ -93,7 +90,7 @@ Allows you to release a CodePush update to the App Center server. This task beha
 
 1. **Authentication Method** - Specifies how you would like to authenticate with the App Center server. The available options are:
 
-   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either have been generated by the App Center CLI, or provided to you by the App Center portal after you autoprovisioned your account and app.
+   1. **Access Token** - Allows you to directly specify an access token to the task. This value can either be generated by the App Center CLI, or provided to you by the App Center portal after you autoprovisioned your account and app.
 
    2. **Service Endpoint (CodePush)** - Allows you to reference a globally configured CodePush service endpoint.
 
