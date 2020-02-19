@@ -37,7 +37,7 @@ Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you h
 ## Disable Automatic Check for Update
 
 By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
-If you want to check for the new releases manually, you can disable automatic check for update.
+If you want to check for new releases manually, you can disable automatic check for update.
 To do this, check the **Disable Automatic Check for Update** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 Then you can use the following API when you need to check for update:

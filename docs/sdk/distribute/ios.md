@@ -132,8 +132,8 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 ## Disable Automatic Check for Update
 
 By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
-If you want to check for the new releases manually, you can disable automatic check for update.
-To do this, call the following method before SDK start:
+If you want to check for new releases manually, you can disable automatic check for update.
+To do this, call the following method before the SDK start:
 
 ```objc
 [MSDistribute disableAutomaticCheckForUpdate];
