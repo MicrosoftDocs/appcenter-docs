@@ -294,8 +294,55 @@
           },
           {
             "source_path": "docs/diagnostics/upload-custom-crashes.md",
-            "redirect_url": "/appcenter/diagnostics/upload-crashes"  
+            "redirect_url": "/appcenter/diagnostics/upload-crashes"
+          },
+          {
+            "source_path": "docs/transition/api.md",
+            "redirect_url": "/appcenter/api-docs"
+          },
+          {
+            "source_path": "docs/transition/side-by-side.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/distribution.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/crashes.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/analytics.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/moving/bulk.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/moving/data.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/moving/incompatibilities.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/moving/index.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/accounts/index.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/accounts/distribution-groups.md",
+            "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/transition/faq.md",
+            "redirect_url": "/appcenter/transition/"
           }
-	   
  ]
 }

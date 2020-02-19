@@ -2,9 +2,9 @@
 title: Distribute a build via App Center
 description: Distribute a completed build to users
 keywords: distribution
-author: botatoes
-ms.author: bofu
-ms.date: 12/12/2019
+author: ahdbilal
+ms.author: ahbilal
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -102,11 +102,11 @@ You can call the App Center API to distribute a release.
         curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
           ```
 
-    2. Copy the `upload_url` (it will be a rink.hockeyapp.net URL) from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
+    2. Copy the `upload_url` from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
 
-        ```shell
-          curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
-        ```
+    ```shell
+     curl -F "ipa=@Versions_1_1_0_12.ipa" https://upload.appcenter.ms/v0.1/apps/4cf3837f-c074-4014-ba6a-07550fcf588a/uploads/85cf7d9c-1a77-4197-8d1c-1a0c19dbdf60%7C4534cc89-164d-474d-8806-4c672c41dfea%7C096c735c-62cf-4280-88ef-baec5596b803%7CP3N2PTIwMTgtMDMtMjgmc3I9YyZzaT0wOTZjNzM1Yy02MmNmLTQyODAtODhlZi1iYWVjNTU5NmI4MDMyfDIwLTItMTgtMDktMDItMTAmc2lnPUF6UiUyQjNod3Q5OFpJSnJuQ2l5a3g2RFplVWdZSCUyRmdIUjN6JTJCa2ZuenJtJTJGVSUzRCZzZT0yMDIwLTAyLTIzVDA5JTNBNDUlM0ExMFomdD1kaXN0cmlidXRpb24%3D%7Cfile.appcenter.ms
+     ```
 
     3. After the upload has finished, update the upload resource's status to `committed` and get a `release_id`. Save that for the next step.
 

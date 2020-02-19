@@ -1,9 +1,9 @@
 ---
 title: HockeyApp Feedback
 description: Information on HockeyApp Feedback for your transition
-author: derpixeldan
+author: dipree
 ms.author: daadam
-ms.date: 04/09/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: dcaba8de-35a3-431a-9720-ee54f8ff2e42
 ms.service: vs-appcenter
@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # HockeyApp Feedback
 
-App Center does not support the [HockeyApp Feedback](https://hockeyapp.net/features/feedback/) functionality. Therefore it’s not possible to move feedback data to App Center. In the following we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
+HockeyApp Feedback data wasn't migrated to App Center. In the following sections we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
 
 ## Microsoft Flow & Azure Boards
 
