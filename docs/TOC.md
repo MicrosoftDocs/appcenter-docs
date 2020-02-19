@@ -130,7 +130,12 @@
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
 ### [Cordova Client SDK](distribution/codepush/Cordova.md)
-### [React Native Client SDK](distribution/codepush/React-Native.md)
+### React Native Client SDK
+#### [Overview](distribution/codepush/React-Native.md)
+#### [Get Started with the React Native Client SDK](distribution/codepush/react-native-get-started.md)
+#### [React Native Client SDK Plugin](distribution/codepush/react-native-plugin.md)
+#### [React Native Client SDK API Reference](distribution/codepush/react-native-api-ref.md)
+#### [React Native Client SDK Troubleshooting](distribution/codepush/react-native-troubleshooting.md)
 ### [Tutorials](distribution/codepush/Tutorials.md)
 ### [Azure DevOps (formerly VSTS) Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
