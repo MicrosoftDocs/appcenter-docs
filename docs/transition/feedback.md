@@ -26,7 +26,7 @@ With Flow + Azure Boards, users can fill out an online form to submit their feed
 2. Log into [Microsoft Flow](https://preview.flow.microsoft.com/), and create the [Automatically file bugs and notify team](https://preview.flow.microsoft.com/galleries/public/templates/1a5cd7ae0a3746b39696556ae702c53e/automatically-file-bugs-and-notify-team/) workflow.
 3. In Microsoft Flow, connect to Azure DevOps, Microsoft Teams and Microsoft Forms.
 4. Select your feedback submission form in the Microsoft Flow setup wizard.
-5. Once your Flow is setup, return to your feedback form in Microsoft Forms.  From the sharing settings on your form, select **Anyone with the link can respond**.
+5. Once your Flow is set up, return to your feedback form in Microsoft Forms.  From the sharing settings on your form, select **Anyone with the link can respond**.
 
 ![Microsoft Forms Select Sharing Option](images/feedback-form-b.png)
 

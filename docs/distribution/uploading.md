@@ -141,7 +141,7 @@ For mandatory releases, App Center displays a red dot next to the release icon i
 
 ## Link to Releases
 
-Once you've released successfully, your testers can access the release through email, logging onto App Center, or through a direct link.
+Once you've released successfully, your testers can access the release through email, logging in to App Center, or through a direct link.
 
 You can find links to specific releases on the release page for private destinations.
 ![Install button](~/distribution/images/installButton.png)
