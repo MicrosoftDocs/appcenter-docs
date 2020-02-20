@@ -161,21 +161,12 @@ Distribute.UpdateTrack = UpdateTrack.Private;
 ```
 
 > [!NOTE]
-> This property can only be updated before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the property is not always updated before the `AppCenter.Start` call, it will be public, by default.
+> The default value is `UpdateTrack.Public`. This property can only be updated before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the property is not always updated before the `AppCenter.Start` call, it will be public, by default.
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is not persisted in the SDK across app launches.  
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
-
-If you want to configure the application to use the public update track, you can call:
-
-```csharp
-Distribute.UpdateTrack = UpdateTrack.Public;
-```
-
-> [!NOTE]
-> This method must be called before App Center start. `Public` is also the default value.
 
 ## Customize or localize the in-app update dialog
 

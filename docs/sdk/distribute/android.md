@@ -99,24 +99,12 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> This method can only be called before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.Start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.Start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
-
-If you want to configure the application to use the public update track, you can call:
-
-```java
-Distribute.setUpdateTrack(UpdateTrack.PUBLIC);
-```
-```kotlin
-Distribute.setUpdateTrack(UpdateTrack.PUBLIC)
-```
-
-> [!NOTE]
-> This method must be called before App Center start. `PUBLIC` is also the default value.
 
 ## Customize or localize the in-app update dialog
 
