@@ -317,7 +317,7 @@ The in-app updates feature works as follows:
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
    * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
 
-5. A new release of the app shows the in-app update dialog asking users to update your application if it has
+5. A new release of the app shows the in-app update dialog asking users to update your application if it has:
 
    * a higher value of `CFBundleShortVersionString` or
    * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.

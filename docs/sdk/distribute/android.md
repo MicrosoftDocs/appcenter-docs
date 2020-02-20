@@ -330,7 +330,7 @@ The in-app updates feature works as follows:
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
-5. A new release of the app shows the in-app update dialog asking users to update your application if it has
+5. A new release of the app shows the in-app update dialog asking users to update your application if it has:
 
    * a higher value of `versionCode` or
    * an equal value of `versionCode` but a different value of `versionName`.
