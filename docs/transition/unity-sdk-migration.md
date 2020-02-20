@@ -3,7 +3,7 @@ title: HockeySDK for Unity Migration
 description: Migrate from the HockeySDK to App Center SDK for Unity
 author: elamalani
 ms.author: emalani
-ms.date: 01/27/2020
+ms.date: 02/20/2020
 ms.topic: article
 ms.assetid: 4d582645-4b1b-42f8-a40a-dee5d06fb0e1
 ms.service: vs-appcenter
