@@ -21,7 +21,7 @@ The CodePush plugin is made up of two components:
 
 The following sections describe the shape and behavior of these APIs in detail:
 
-### JavaScript API Reference
+## JavaScript API Reference
 
 When you require `react-native-code-push`, the module object provides the following top-level methods in addition to the root-level [component decorator](#codepush):
 
@@ -44,7 +44,7 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [sync](#codepushsync): Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps
 
-#### codePush
+### codePush
 
 ```javascript
 // Wrapper function
@@ -123,7 +123,7 @@ This decorator provides support for letting you customize its behavior to easily
     MyApp = codePush(MyApp);
     ```
 
-##### CodePushOptions
+#### CodePushOptions
 
 The `codePush` decorator accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above:
 
@@ -157,11 +157,11 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
   - **title** *(String)* - The text used as the header of an update notification that is displayed to the end user. Defaults to `"Update available"`.
 
-##### codePushStatusDidChange (event hook)
+#### codePushStatusDidChange (event hook)
 
 Called when the sync process moves from one stage to another in the overall update process. The event hook is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
 
-##### codePushDownloadDidProgress (event hook)
+#### codePushDownloadDidProgress (event hook)
 
 Called periodically when an available update is being downloaded from the CodePush server. The method is called with a `DownloadProgress` object, which contains the following two properties:
 
@@ -169,7 +169,7 @@ Called periodically when an available update is being downloaded from the CodePu
 
 - **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
 
-#### codePush.allowRestart
+### codePush.allowRestart
 
 ```javascript
 codePush.allowRestart(): void;
@@ -193,7 +193,7 @@ This behavior ensures that no restarts will be triggered as a result of calling 
 
 See [disallowRestart](#codepushdisallowrestart) for an example of how this method can be used.
 
-#### codePush.checkForUpdate
+### codePush.checkForUpdate
 
 ```javascript
 codePush.checkForUpdate(deploymentKey: String = null, handleBinaryVersionMismatchCallback: (update: RemotePackage) => void): Promise<RemotePackage>;
@@ -232,7 +232,7 @@ codePush.checkForUpdate()
 });
 ```
 
-#### codePush.disallowRestart
+### codePush.disallowRestart
 
 ```javascript
 codePush.disallowRestart(): void;
@@ -276,7 +276,7 @@ class OnboardingProcess extends Component {
 }
 ```
 
-#### codePush.getCurrentPackage
+### codePush.getCurrentPackage
 
 > [!NOTE]
 > This method is considered deprecated as of `v1.10.3-beta` of the CodePush module. If you're running this version (or newer), we would recommend using the [`codePush.getUpdateMetadata`](#codepushgetupdatemetadata) instead, since it has more predictable behavior.
@@ -310,7 +310,7 @@ codePush.getCurrentPackage()
 });
 ```
 
-#### codePush.getUpdateMetadata
+### codePush.getUpdateMetadata
 
 ```javascript
 codePush.getUpdateMetadata(updateState: UpdateState = UpdateState.RUNNING): Promise<LocalPackage>;
@@ -352,7 +352,7 @@ codePush.getUpdateMetadata(UpdateState.PENDING).then((update) => {
 });
 ```
 
-#### codePush.notifyAppReady
+### codePush.notifyAppReady
 
 ```javascript
 codePush.notifyAppReady(): Promise<void>;
@@ -365,7 +365,7 @@ If you are using the `sync` function, and doing your update check on app start, 
 > [!NOTE]
 > This method is also aliased as `notifyApplicationReady` (for backwards compatibility).*
 
-#### codePush.restartApp
+### codePush.restartApp
 
 ```javascript
 codePush.restartApp(onlyIfUpdateIsPending: Boolean = false): void;
@@ -379,7 +379,7 @@ This method is for advanced scenarios, and is primarily useful when the followin
 
 2. You have an app-specific user event (like the end user navigated back to the app's home route) that allows you to apply the update in an unobtrusive way, and potentially gets the update to the end user sooner than waiting until the next restart or resume.
 
-#### codePush.sync
+### codePush.sync
 
 ```javascript
 codePush.sync(options: Object, syncStatusChangeCallback: function(syncStatus: Number), downloadProgressCallback: function(progress: DownloadProgress), handleBinaryVersionMismatchCallback: function(update: RemotePackage)): Promise<Number>;
@@ -410,7 +410,7 @@ codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE 
 > [!TIP]
 > If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then simply wrap the call to `sync` in a condition that ensures you only call it when desired.*
 
-##### SyncOptions
+#### SyncOptions
 
 While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize many aspects of the default behavior mentioned above. The options available are identical to the [CodePushOptions](#codepushoptions), with the exception of the `checkFrequency` option:
 
@@ -503,7 +503,7 @@ This method returns a `Promise`, which is resolved to a `SyncStatus` code that i
 
 The `sync` method can be called anywhere you'd like to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
-#### Package objects
+### Package objects
 
 The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide access to "package" objects. The package represents your code update and any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
 
@@ -511,11 +511,11 @@ The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, t
 
 - [RemotePackage](#remotepackage): Represents an available update on the CodePush server that hasn't been downloaded yet.
 
-##### LocalPackage
+#### LocalPackage
 
 Contains details about an update that has been downloaded locally or already installed. You can get a reference to an instance of this object either by calling the module-level `getUpdateMetadata` method, or as the value of the promise returned by the `RemotePackage.download` method.
 
-###### Properties
+##### Properties
 
 - **appVersion**: The app binary version that this update is dependent on. This is the value that was specified via the `appStoreVersion` parameter when calling the CLI's `release` command. *(String)*
 - **deploymentKey**: The deployment key that was used to originally download this update. *(String)*
@@ -528,29 +528,29 @@ Contains details about an update that has been downloaded locally or already ins
 - **packageHash**: The SHA hash value of the update. *(String)*
 - **packageSize**: The size of the code contained within the update, in bytes. *(Number)*
 
-###### Methods
+##### Methods
 
 - **install(installMode: codePush.InstallMode = codePush.InstallMode.ON_NEXT_RESTART, minimumBackgroundDuration = 0): Promise&lt;void&gt;**: Installs the update by saving it to the location on disk where the runtime expects to find the latest version of the app. The `installMode` parameter controls when the changes are presented to the end user. The default value is to wait until the next app restart to display the changes, but you can refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do. If the `installMode` parameter is set to `InstallMode.ON_NEXT_RESUME`, then the `minimumBackgroundDuration` parameter allows you to control how long the app must have been in the background before forcing the install after it is resumed.
 
-##### RemotePackage
+#### RemotePackage
 
 Contains details about an update that is available for download from the CodePush server. You get a reference to an instance of this object by calling the `checkForUpdate` method when an update is available. If you are using the `sync` API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
-###### Properties
+##### Properties
 
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
 
 - **downloadUrl**: The URL at which the package is available for download. This property is only needed for advanced usage, since the `download` method will automatically handle the acquisition of updates for you. *(String)*
 
-###### Methods
+##### Methods
 
 - **download(downloadProgressCallback?: Function): Promise&lt;LocalPackage&gt;**: Downloads the available update from the CodePush service. If a `downloadProgressCallback` is specified, it will be called periodically with a `DownloadProgress` object (`{ totalBytes: Number, receivedBytes: Number }`) that reports the progress of the download until it completes. Returns a Promise that resolves with the `LocalPackage`.
 
-#### Enums
+### Enums
 
 The CodePush API includes the following enums, which can be used to customize the update experience:
 
-##### InstallMode
+#### InstallMode
 
 This enum specifies when you would like an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 
@@ -562,7 +562,7 @@ This enum specifies when you would like an installed update to actually be appli
 
 - **codePush.InstallMode.ON_NEXT_SUSPEND** *(3)* - Indicates that you want to install the update *while* it is in the background, but only after it has been in the background for `minimumBackgroundDuration` seconds (0 by default), so that user context isn't lost unless the app suspension is long enough to not matter.
 
-##### CheckFrequency
+#### CheckFrequency
 
 This enum specifies when you would like your app to sync with the server for updates, and can be passed to the `codePushify` decorator. It includes the following values:
 
@@ -572,7 +572,7 @@ This enum specifies when you would like your app to sync with the server for upd
 
 - **codePush.CheckFrequency.MANUAL** *(2)* - Disable automatic checking for updates, but only check when [`codePush.sync()`](#codepushsync) is called in app code.
 
-##### SyncStatus
+#### SyncStatus
 
 This enum is provided to the `syncStatusChangedCallback` function that can be passed to the `sync` method, in order to hook into the overall update process. It includes the following values:
 
@@ -586,7 +586,7 @@ This enum is provided to the `syncStatusChangedCallback` function that can be pa
 - **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There is an ongoing `sync` operation running which prevents the current call from being executed.
 - **codePush.SyncStatus.UNKNOWN_ERROR** *(-1)* - The sync operation encountered an unknown error.
 
-##### UpdateState
+#### UpdateState
 
 This enum specifies the state that an update is currently in, and can be specified when calling the `getUpdateMetadata` method. It includes the following values:
 
@@ -596,11 +596,11 @@ This enum specifies the state that an update is currently in, and can be specifi
 
 - **codePush.UpdateState.LATEST** *(2)* - Indicates that an update represents the latest available release, and can be either currently running or pending.
 
-### Objective-C API Reference (iOS)
+## Objective-C API Reference (iOS)
 
 The Objective-C API is made available by importing the `CodePush.h` header into your **AppDelegate.m** file, and consists of a single public class named `CodePush`.
 
-#### CodePush
+### CodePush
 
 Contains static methods for retrieving the `NSURL` that represents the most recent JavaScript bundle file, and can be passed to the `RCTRootView`'s `initWithBundleURL` method when bootstrapping your app in the **AppDelegate.m** file.
 
@@ -616,7 +616,7 @@ The `CodePush` class' methods can be thought of as composite resolvers, which al
 
 Because of this behavior, you can safely deploy updates to both the app store(s) and CodePush as necessary, and rest assured that your end users will always get the most recent version.
 
-##### Methods
+#### Methods
 
 - **(NSURL \*)bundleURL** - Returns the most recent JS bundle `NSURL` as described above. This method assumes that the name of the JS bundle contained within your app binary is `main.jsbundle`.
 
@@ -628,7 +628,7 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 - **(void)setDeploymentKey:(NSString \*)deploymentKey** - Sets the deployment key that the app should use when querying for updates. This is a dynamic alternative to setting the deployment key in your **Info.plist** and/or specifying a deployment key in JS when calling `checkForUpdate` or `sync`.
 
-### Java API Reference (Android)
+## Java API Reference (Android)
 
 ### API for React Native 0.60 version and above
 
@@ -650,11 +650,11 @@ Since `autolinking` uses `react-native.config.js` to link plugins, constructors 
 
 The Java API is made available by importing the `com.microsoft.codepush.react.CodePush` class into your **MainActivity.java** file, and consists of a single public class named `CodePush`.
 
-#### CodePush
+### CodePush
 
 Constructs the CodePush client runtime and represents the `ReactPackage` instance that you add to your app's list of packages.
 
-##### Constructors
+#### Constructors
 
 - **CodePush(String deploymentKey, Activity mainActivity)** - Creates a new instance of the CodePush runtime, that will be used to query the service for updates via the provided deployment key. The `mainActivity` parameter should always be set to `this` when configuring your React packages list inside the `MainActivity` class. This constructor puts the CodePush runtime into "release mode", so if you want to enable debugging behavior, use the following constructor instead.
 
@@ -668,7 +668,7 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
 
 - **CodePush(String deploymentKey, Context context, boolean isDebugMode, String serverUrl)** - Constructor allows you to specify CodePush Server Url. The Default value: `"https://codepush.appcenter.ms/"` is overridden by value specified in `serverUrl`.
 
-##### Static Methods
+#### Static Methods
 
 - **getBundleUrl()** - Returns the path to the most recent version of your app's JS bundle file, assuming that the resource name is `index.android.bundle`. If your app is using a different bundle name, then use the overloaded version of this method, which allows specifying it. This method has the same resolution behavior as the Objective-C equivalent described above.
 

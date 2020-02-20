@@ -78,7 +78,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
    > [!NOTE]
    > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](react-native-api-ref.md#codepushoptions)*
@@ -249,7 +249,7 @@ To let the CodePush runtime know which deployment it should query for updates ag
 
 ![Deployment list](./images/rn-key-4.png)
 
-In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
 ### HTTP exception domains configuration (iOS)
 
@@ -347,7 +347,7 @@ In order to integrate CodePush into your Android project, perform the following 
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
    Your `strings.xml` file should look like this:
 
@@ -584,7 +584,7 @@ public class MainApplication extends Application {
 }
 ```
 
-In order to effectively make use of the `Staging` and `Production` deployments that we recommend you created along with your CodePush app, refer to the [multi-deployment testing](react-native.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+In order to effectively make use of the `Staging` and `Production` deployments that we recommend you created along with your CodePush app, refer to the [multi-deployment testing](react-native-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
 ### Code Signing setup (Android)
 
