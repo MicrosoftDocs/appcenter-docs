@@ -99,7 +99,7 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> This method must be called before App Center start. If the method is not called before start every time, the update track is by default public.
+> This method can only be called before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.Start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 

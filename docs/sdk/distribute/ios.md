@@ -141,7 +141,7 @@ MSDistribute.updateTrack = MSUpdateTrackPrivate
 ```
 
 > [!NOTE]
-> This property must be set before App Center start. If the method is not called before start every time, the update track is by default public.
+> This property can only be updated before the `MSAppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `MSAppCenter.start` call, it will be public, by default.
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
