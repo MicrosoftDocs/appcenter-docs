@@ -2,8 +2,8 @@
 title: Using the React Native SDK with CodePush
 description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
-author: Zakeelm
-ms.author: zakeelm
+author: ahdbilal
+ms.author: ahbilal
 ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
@@ -17,7 +17,7 @@ This plugin provides client-side integration for the CodePush service, allowing 
 
 ## How does it work?
 
-React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the store(s) to which you are publishing.
+React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the stores to which you are publishing.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your JavaScript and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they are available.
 
@@ -83,7 +83,7 @@ While Google Play and internally distributed apps (for example Enterprise, Fabri
 
 [Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed performing over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
 
-> Interpreted code may be downloaded to an Application but only so long as such code: (a) does not change the primary purpose of the Application by providing features or functionality that are inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) does not create a store or storefront for other code or applications, and (c) does not bypass signing, sandbox, or other security features of the OS.
+> Interpreted code may be downloaded to an Application but only so long as such code: (a) does not change the primary purpose of the Application by providing features or functionality that is inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) does not create a store or storefront for other code or applications, and (c) does not bypass signing, sandbox, or other security features of the OS.
 
 CodePush allows you to follow these rules in full compliance so long as the update you push does not significantly deviate your product from its original App Store approved intent.
 
@@ -95,7 +95,7 @@ This is not necessarily the case for `updateDialog`, since it won't force the us
 
 ## Releasing Updates
 
-Once your app has been configured and distributed to your users, and you have made some JS and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-react` command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server.
+Once your app has been configured and distributed to your users, and you have made some JS and/or asset changes, it's time to release them. The simplest (and recommended) way to do this is to use the `release-react` command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server.
 
 > [!NOTE]
 > Before you can start releasing updates, please log into App Center by running the `appcenter login` command.
@@ -130,7 +130,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  --rollout 25% --d
 appcenter codepush release-react -a <ownerName>/MyApp-Android  --target-binary-version "~1.1.0"
 ```
 
-The CodePush client supports differential updates, so even though you are releasing your JS bundle and assets on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
+The CodePush client supports differential updates, so even though you are releasing your JS bundle and assets on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end-user downloads.
 
 For more details about how the `release-react` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-react-native). Additionally, if you would prefer to handle running the `react-native bundle` command yourself, and therefore, want an even more flexible solution than `release-react`, see to the [`release` command](./cli.md#releasing-updates-general) for more details.
 

@@ -2,8 +2,8 @@
 title: Get Started with the React Native Client SDK
 description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
-author: Zakeelm
-ms.author: zakeelm
+author: ahdbilal
+ms.author: ahbilal
 ms.date: 02/19/2020
 ms.topic: article
 ms.assetid: EE233A46-0D14-4E01-970B-37C025F1A390
@@ -13,22 +13,22 @@ ms.custom: distribute
 
 # Get Started with the React Native Client SDK
 
-Once you have followed the general purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your React Native app by running the following command from within your app's root directory:
+Once you've followed the general purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start integrating CodePush in your React Native app by running the following command from within your app's root directory:
 
 ```shell
 npm install --save react-native-code-push
 ```
 
-As with all other React Native plugins, the integration experience is different for iOS and Android, so perform the following setup steps depending on the platform(s) you target for your app. Note, if you are targeting both platforms it is recommended to create separate CodePush applications for each platform.
+As with all other React Native plugins, the integration experience is different for iOS and Android, so follow the setup steps depending on the platform(s) you target for your app. Note, if you're targeting both platforms it's recommended to create separate CodePush applications for each platform.
 
-If you want to see how other projects have integrated with CodePush, you can check out the excellent [example apps](react-native.md#example-apps--starters) provided by the community. Additionally, if you would like to quickly familiarize yourself with CodePush + React Native, you can check out the awesome getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and/or [Deepak Sisodiya ](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
+If you want to see how other projects have integrated with CodePush, see the [example apps](react-native.md#example-apps--starters), which are provided by the community. Additionally, if you would like to familiarize yourself with CodePush + React Native, see the getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and [Deepak Sisodiya](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
 
 > [!IMPORTANT]
 > This guide assumes you have used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, please run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would have created.*
 
 ## iOS Setup
 
-Once you have acquired the CodePush plugin, you must integrate it into the Xcode project of your React Native app and configure it correctly.
+Once you have the CodePush plugin, you must integrate it into the Xcode project of your React Native app and configure it correctly.
 
 ### Plugin Installation and Configuration for React Native 0.60 version and above (iOS)
 
@@ -74,7 +74,7 @@ Once you have acquired the CodePush plugin, you must integrate it into the Xcode
 
 5. Add the Deployment key to `Info.plist`:
 
-   To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+   To let the CodePush runtime know which deployment it should query for updates against, open your app's `Info.plist` file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column that corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
@@ -95,7 +95,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 #### Plugin Installation (iOS - RNPM)
 
-1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
+1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Run:
 
     ```shell
     react-native link react-native-code-push
@@ -108,7 +108,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ```
 
    > [!NOTE]
-   > If you don't already have RNPM installed, you can do so by simply running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
+   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
 
 2. You will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
@@ -245,7 +245,7 @@ NSURL *jsCodeLocation;
 #endif
 ```
 
-To let the CodePush runtime know which deployment it should query for updates against, open the project's **Info.plist** file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` in the CodePush CLI  and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like `Staging`) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+To let the CodePush runtime know which deployment it should query for updates against, open the project's **Info.plist** file and add a new entry named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` in the CodePush CLI  and copying the value of the `Deployment Key` column that corresponds to the deployment you want to use (see below). Note that using the deployment's name (like `Staging`) will not work. That "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
 
 ![Deployment list](./images/rn-key-4.png)
 
@@ -280,15 +280,15 @@ If you want to change the default HTTP security configuration for any of these d
 </plist>
 ```
 
-Before doing anything, please [read the docs][ats] first.
+Before doing anything, see the [Apple docs][ats] first.
 
 [ats]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 
 ### Code Signing setup (iOS)
 
-You can self sign bundles during release and verify their signatures before installation of update. For more info about Code Signing please refer to [relevant code-push documentation section](cli.md#code-signing).
+You can self-sign bundles during release and verify their signatures before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing).
 
-In order to configure a Public Key for bundle verification you need to add a record in `Info.plist` with the name `CodePushPublicKey` and string value of public key content. Example:
+In order to configure a Public Key for bundle verification, you need to add a record in `Info.plist` with the name `CodePushPublicKey` and string value of public key content. Example:
 
 ```xml
 <plist version="1.0">
@@ -343,13 +343,13 @@ In order to integrate CodePush into your Android project, perform the following 
 
 3. Add the Deployment key to `strings.xml`:
 
-   To let the CodePush runtime know which deployment it should query for updates, open your app's `strings.xml` file and add a new string named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column which corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. The "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
+   To let the CodePush runtime know which deployment it should query for updates, open your app's `strings.xml` file and add a new string named `CodePushDeploymentKey`, whose value is the key of the deployment you want to configure this app against (like the key for the `Staging` deployment for the `FooBar` app). You can retrieve this value by running `code-push deployment ls <appName> -k` in the CodePush CLI (the `-k` flag is necessary since keys aren't displayed by default) and copying the value of the `Deployment Key` column that corresponds to the deployment you want to use (see below). Note that using the deployment's name (like Staging) will not work. The "friendly name" is intended only for authenticated management usage from the CLI, and not for public consumption within your app.
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
    In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](react-native.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
-   Your `strings.xml` should looks like this:
+   Your `strings.xml` file should look like this:
 
    ```xml
     <resources>
@@ -374,7 +374,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 
 #### Plugin Installation (Android - RNPM)
 
-1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Simply run:
+1. As of v0.27 of React Native, `rnpm link` has already been merged into the React Native CLI. Run:
 
     ```shell
     react-native link react-native-code-push
@@ -387,9 +387,9 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ```
 
    > [!NOTE]
-   > If you don't already have RNPM installed, you can do so by simply running `npm i -g rnpm` and then executing the above command.*
+   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.*
 
-2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we would recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 
@@ -430,7 +430,7 @@ After installing the plugin and syncing your Android Studio project with Gradle,
 
 **For React Native >= v0.29**
 
-If you are integrating CodePush into React Native application please do the following steps:
+If you are integrating CodePush into React Native application, do the following steps:
 
 Update the `MainApplication.java` file to use CodePush via the following changes:
 
@@ -465,7 +465,7 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
-If you are integrating React Native into existing native application please do the following steps:
+If you are integrating React Native into existing native application, do the following steps:
 
 Update `MyReactActivity.java` (it could be named differently in your app) file to use CodePush via the following changes:
 
@@ -588,7 +588,7 @@ In order to effectively make use of the `Staging` and `Production` deployments t
 
 ### Code Signing setup (Android)
 
-Starting with CLI version **2.1.0** you can self sign bundles during release and verify its signature before installation of update. For more info about Code Signing please refer to [relevant code-push documentation section](cli.md#code-signing). In order to use Public Key for Code Signing you need to do following steps:
+Starting with CLI version **2.1.0** you can self-sign bundles during release and verify its signature before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing). In order to use Public Key for Code Signing, you need to do following steps:
 
    Add a `CodePushPublicKey` string item to `/path_to_your_app/android/app/src/main/res/values/strings.xml`. It may look like this:
 
@@ -647,7 +647,7 @@ Once you have acquired the CodePush plugin, you need to integrate it into the Vi
 
    ![Add Reference](./images/rn-windows-6.png)
 
-5. Select the `Projects` tab on the left hand side, check the `CodePush` item and then click `OK`
+5. Select the `Projects` tab on the left-hand side, check the `CodePush` item, and then click `OK`
 
    ![Add Reference Dialog](./images/rn-windows-7.png)
 
