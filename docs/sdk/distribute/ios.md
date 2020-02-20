@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: botatoes
 ms.author: bofu
-ms.date: 12/11/2019
+ms.date: 01/27/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -128,6 +128,25 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 > 	</dict>
 > </array>
 > ```
+
+## Use private distribution group
+
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `updateTrack` property.
+
+```objc
+MSDistribute.updateTrack = MSUpdateTrackPrivate;
+```
+```swift
+MSDistribute.updateTrack = MSUpdateTrackPrivate
+```
+
+> [!NOTE]
+> The default value is `MSUpdateTrackPublic`. This property can only be updated before the `MSAppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `MSAppCenter.start` call, it will be public, by default.
+
+After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
+
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
 
 ## Customize or localize the in-app update dialog
 
@@ -254,7 +273,7 @@ var enabled = MSDistribute.isEnabled()
 
 ## Don't initialize App Center Distribute during development
 
-App Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize `MSDistribute` for your `DEBUG` configuration.
+If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `MSDistribute` for your `DEBUG` configuration.
 
  ```objc
  #if DEBUG
@@ -281,16 +300,16 @@ The in-app updates feature works as follows:
 1. This feature will ONLY work with builds that are distributed using **App Center Distribute** service. It won't work when the debugger is attached or if the iOS Guided Access feature is turned on..
 2. Once you integrate the SDK, build a release version of your app and upload it to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install the app - App Center Distribute does not support in-app-updates for apps that have been installed from other sources (e.g. downloading the app from an email attachment). When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a *one time* step that will not occur for subsequent releases of your app.
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
    * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it cannot be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
 
-5. Once the above step is successful, they should be navigated back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+5. A new release of the app shows the in-app update dialog asking users to update your application if it has:
 
    * a higher value of `CFBundleShortVersionString` or
    * an equal value of `CFBundleShortVersionString` but a higher value of `CFBundleVersion`.
+   * the versions are the same but the build unique identifier is different.
 
 > [!TIP]
 > If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it is a **different** binary.
@@ -300,15 +319,15 @@ The in-app updates feature works as follows:
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the App Center Portal if you have not done that already.
-2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below.
-5. Click on the **Distribute new release** button in the portal and upload your build of the app.
-6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
-7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
-9. Bump the version name (`CFBundleShortVersionString`) of your app.
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
+1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [updateTrack property](#use-private-distribution-group).
+1. Click on the **Distribute new release** button in the portal and upload your build of the app.
+1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+1. Review the Distribution and distribute the build to your in-app testing group.
+1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+1. Bump the version name (`CFBundleShortVersionString`) of your app.
+1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

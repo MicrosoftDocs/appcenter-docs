@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 1/7/2019
+ms.date: 2/19/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -28,7 +28,7 @@ Amazon Kindle Fire HDX 8.9 | 4.4.3
 Apple iPad 2 | 9.3.5
 Apple iPad 7th Gen | 13.1.3
 Apple iPad 7th Gen | 13.2.3
-Apple iPad 7th Gen | 13.3
+Apple iPad 7th Gen | 13.3.1
 Apple iPad 9.7" | 10.3.3
 Apple iPad 9.7" | 11.0.3
 Apple iPad 9.7" | 11.1.2
@@ -44,7 +44,7 @@ Apple iPad Air (2019) | 12.3.1
 Apple iPad Air (2019) | 12.4.1
 Apple iPad Air (2019) | 13.1.3
 Apple iPad Air (2019) | 13.2.3
-Apple iPad Air (2019) | 13.3
+Apple iPad Air (2019) | 13.3.1
 Apple iPad Air | 9.0.2
 Apple iPad Air | 9.1
 Apple iPad Air | 9.2
@@ -63,7 +63,7 @@ Apple iPad Mini 2 (Retina) | 10.1.1
 Apple iPad Mini 2 (Retina) | 10.2.1
 Apple iPad Mini 2 (Retina) | 10.3.3
 Apple iPad Mini 2 (Retina) | 12.1.3
-Apple iPad Mini 2 (Retina) | 12.4.4
+Apple iPad Mini 2 (Retina) | 12.4.5
 Apple iPad Mini 2 (Retina) | 9.0.2
 Apple iPad Mini 2 (Retina) | 9.1
 Apple iPad Mini 2 (Retina) | 9.2
@@ -90,7 +90,7 @@ Apple iPad Mini 5th Gen | 12.3.1
 Apple iPad Mini 5th Gen | 12.4.1
 Apple iPad Mini 5th Gen | 13.1.3
 Apple iPad Mini 5th Gen | 13.2.3
-Apple iPad Mini 5th Gen | 13.3
+Apple iPad Mini 5th Gen | 13.3.1
 Apple iPad Pro | 10.0.2
 Apple iPad Pro | 10.1.1
 Apple iPad Pro | 10.2.1
@@ -115,7 +115,7 @@ Apple iPad Pro 11" | 12.3.1
 Apple iPad Pro 11" | 12.4.1
 Apple iPad Pro 11" | 13.1.3
 Apple iPad Pro 11" | 13.2.3
-Apple iPad Pro 11" | 13.3
+Apple iPad Pro 11" | 13.3.1
 Apple iPad Pro 12.9" | 11.0.3
 Apple iPad Pro 12.9" | 11.1.2
 Apple iPad Pro 12.9" | 11.2.6
@@ -129,7 +129,7 @@ Apple iPad Pro 12.9" (2018) | 12.3.1
 Apple iPad Pro 12.9" (2018) | 12.4.1
 Apple iPad Pro 12.9" (2018) | 13.1.3
 Apple iPad Pro 12.9" (2018) | 13.2.3
-Apple iPad Pro 12.9" (2018) | 13.3
+Apple iPad Pro 12.9" (2018) | 13.3.1
 Apple iPad Pro 9.7" | 10.0.2
 Apple iPad Pro 9.7" | 10.1.1
 Apple iPad Pro 9.7" | 10.2.1
@@ -141,15 +141,15 @@ Apple iPad mini 3 | 9.0.2
 Apple iPhone 11 | 13.0
 Apple iPhone 11 | 13.1.3
 Apple iPhone 11 | 13.2.3
-Apple iPhone 11 | 13.3
+Apple iPhone 11 | 13.3.1
 Apple iPhone 11 Pro | 13.0
 Apple iPhone 11 Pro | 13.1.3
 Apple iPhone 11 Pro | 13.2.3
-Apple iPhone 11 Pro | 13.3
+Apple iPhone 11 Pro | 13.3.1
 Apple iPhone 11 Pro Max | 13.0
 Apple iPhone 11 Pro Max | 13.1.3
 Apple iPhone 11 Pro Max | 13.2.3
-Apple iPhone 11 Pro Max | 13.3
+Apple iPhone 11 Pro Max | 13.3.1
 Apple iPhone 4S | 9.0.2
 Apple iPhone 4S | 9.1
 Apple iPhone 4S | 9.2
@@ -162,7 +162,7 @@ Apple iPhone 5 | 9.3.5
 Apple iPhone 5C | 10.3.4
 Apple iPhone 5C | 9.0.2
 Apple iPhone 5S | 12.0.1
-Apple iPhone 5S | 12.4.4
+Apple iPhone 5S | 12.4.5
 Apple iPhone 5S | 9.0.2
 Apple iPhone 5S | 9.1
 Apple iPhone 5S | 9.2
@@ -228,7 +228,7 @@ Apple iPhone 7 | 12.4.1
 Apple iPhone 7 | 13.0
 Apple iPhone 7 | 13.1.3
 Apple iPhone 7 | 13.2.3
-Apple iPhone 7 | 13.3
+Apple iPhone 7 | 13.3.1
 Apple iPhone 7 Plus | 10.0.3
 Apple iPhone 7 Plus | 10.1.1
 Apple iPhone 7 Plus | 10.2.1
@@ -246,7 +246,7 @@ Apple iPhone 7 Plus | 12.4.1
 Apple iPhone 7 Plus | 13.0
 Apple iPhone 7 Plus | 13.1.3
 Apple iPhone 7 Plus | 13.2.3
-Apple iPhone 7 Plus | 13.3
+Apple iPhone 7 Plus | 13.3.1
 Apple iPhone 8 | 11.0.3
 Apple iPhone 8 | 11.1.2
 Apple iPhone 8 | 11.2.6
@@ -260,7 +260,7 @@ Apple iPhone 8 | 12.4.1
 Apple iPhone 8 | 13.0
 Apple iPhone 8 | 13.1.3
 Apple iPhone 8 | 13.2.3
-Apple iPhone 8 | 13.3
+Apple iPhone 8 | 13.3.1
 Apple iPhone 8 Plus | 11.0.3
 Apple iPhone 8 Plus | 11.1.2
 Apple iPhone 8 Plus | 11.2.6
@@ -274,7 +274,7 @@ Apple iPhone 8 Plus | 12.4.1
 Apple iPhone 8 Plus | 13.0
 Apple iPhone 8 Plus | 13.1.3
 Apple iPhone 8 Plus | 13.2.3
-Apple iPhone 8 Plus | 13.3
+Apple iPhone 8 Plus | 13.3.1
 Apple iPhone SE | 10.0.2
 Apple iPhone SE | 10.1.1
 Apple iPhone SE | 10.2.1
@@ -292,7 +292,7 @@ Apple iPhone SE | 12.4.1
 Apple iPhone SE | 13.0
 Apple iPhone SE | 13.1.3
 Apple iPhone SE | 13.2.3
-Apple iPhone SE | 13.3
+Apple iPhone SE | 13.3.1
 Apple iPhone SE | 9.3.5
 Apple iPhone X | 11.1.2
 Apple iPhone X | 11.2.6
@@ -340,7 +340,7 @@ Apple iPod touch 6th Gen | 12.0.1
 Apple iPod touch 6th Gen | 12.1.4
 Apple iPod touch 6th Gen | 12.2
 Apple iPod touch 6th Gen | 12.3.1
-Apple iPod touch 6th Gen | 12.4.4
+Apple iPod touch 6th Gen | 12.4.5
 Apple iPod touch 6th Gen | 9.0.2
 Apple iPod touch 6th Gen | 9.1
 Apple iPod touch 6th Gen | 9.2
@@ -349,7 +349,7 @@ Apple iPod touch 7th Gen | 12.3.1
 Apple iPod touch 7th Gen | 12.4.1
 Apple iPod touch 7th Gen | 13.1.3
 Apple iPod touch 7th Gen | 13.2.3
-Apple iPod touch 7th Gen | 13.3
+Apple iPod touch 7th Gen | 13.3.1
 Asus Google Nexus 7 (2013) | 4.4.4
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Transformer Pad TF300T | 4.1.1
@@ -414,6 +414,7 @@ Huawei Nexus 6P | 8.1.0
 Huawei P Smart (2019) | 9
 Huawei P10 | 7.0
 Huawei P20 Pro | 8.1.0
+Huawei P30 Pro | 10
 Huawei P30 Pro | 9
 Karbonn Sparkle V | 4.4.4
 Kobo Arc 7HD | 4.2.2
@@ -471,10 +472,12 @@ Motorola Nexus 6 | 6.0.1
 Motorola Nexus 6 | 7.1.1
 Motorola One | 8.1.0
 Motorola One Action | 9
+Motorola One Vision | 10
 Motorola One Vision | 9
 Motorola One Zoom | 9
 Motorola Solutions - MC67NA | 4.1.1
 Motorola XOOM | 3.1
+Nokia 7 Plus | 10
 Nokia 7 Plus | 9
 Nokia 7.1 | 10
 Nokia 7.1 | 9
@@ -505,6 +508,7 @@ Samsung Galaxy A5 (2017) | 8.0.0
 Samsung Galaxy A5 | 4.4.4
 Samsung Galaxy A5 | 5.0.2
 Samsung Galaxy A50 | 9
+Samsung Galaxy A51 | 10
 Samsung Galaxy A6+ | 8.0.0
 Samsung Galaxy A7 (2018) | 8.0.0
 Samsung Galaxy A7 (2018) | 9
@@ -526,8 +530,11 @@ Samsung Galaxy Grand Duos | 4.2.2
 Samsung Galaxy J6 | 8.0.0
 Samsung Galaxy J7 (2017) | 7.0
 Samsung Galaxy J7 (2017) | 8.1.0
+Samsung Galaxy J7 (2017) | 9
 Samsung Galaxy M10 | 8.1.0
+Samsung Galaxy M20 | 10
 Samsung Galaxy M20 | 8.1.0
+Samsung Galaxy M30 | 10
 Samsung Galaxy M30 | 9
 Samsung Galaxy Mega 6.3 | 4.2.2
 Samsung Galaxy Mini 2 | 2.3.6
@@ -548,6 +555,7 @@ Samsung Galaxy Note 8 | 7.1.1
 Samsung Galaxy Note 8 | 8.0.0
 Samsung Galaxy Note 8 | 9
 Samsung Galaxy Note 8.0 | 4.1.2
+Samsung Galaxy Note 9 | 10
 Samsung Galaxy Note 9 | 8.1.0
 Samsung Galaxy Note 9 | 9
 Samsung Galaxy Note II | 4.1.2
@@ -608,8 +616,10 @@ Samsung Galaxy S8 | 9
 Samsung Galaxy S8 Plus | 7.0
 Samsung Galaxy S8 Plus | 8.0.0
 Samsung Galaxy S8 Plus | 9
+Samsung Galaxy S9 | 10
 Samsung Galaxy S9 | 8.0.0
 Samsung Galaxy S9 | 9
+Samsung Galaxy S9 Plus | 10
 Samsung Galaxy S9 Plus | 8.0.0
 Samsung Galaxy S9 Plus | 9
 Samsung Galaxy Star | 4.1.2
@@ -636,6 +646,7 @@ Samsung Galaxy Tab S3 | 7.0
 Samsung Galaxy Tab S4 | 8.1.0
 Samsung Galaxy Tab S6 | 9
 Samsung Galaxy Trend Plus | 4.2.2
+Samsung Galaxy XCover Pro | 10
 Samsung Galaxy Xcover 3 | 4.4.4
 Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4s | 9
@@ -668,6 +679,7 @@ Sony Xperia XZ | 6.0.1
 Sony Xperia XZ2 | 10
 Sony Xperia XZ2 | 8.0.0
 Sony Xperia XZ2 | 9
+Sony Xperia XZ2 Compact | 10
 Sony Xperia XZ2 Compact | 8.0.0
 Sony Xperia XZ3 | 10
 Sony Xperia XZ3 | 9
@@ -696,7 +708,9 @@ Xiaomi MI 2 | 4.1.1
 Xiaomi MI 3 | 4.4.4
 Xiaomi MI NOTE LTE | 4.4.4
 Xiaomi Mi A1 | 9
+Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
 Xiaomi Mi A3 | 9
 Xiaomi Redmi Note 4G | 4.4.4
 ZTE Nubia Z7 Max | 4.4.2
+

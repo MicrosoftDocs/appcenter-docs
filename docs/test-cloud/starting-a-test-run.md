@@ -2,9 +2,9 @@
 title: Starting a test run
 description: How to start a test run in App Center Test
 keywords: test cloud
-author: glennwester
-ms.author: glwest
-ms.date: 01/23/2019
+author: oddj0b
+ms.author: vigimm
+ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: fccaea20-b7ca-45d2-b111-46c23ff1832d
 ms.service: vs-appcenter

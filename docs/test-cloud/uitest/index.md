@@ -2,10 +2,9 @@
 title: Xamarin.UITest
 description: Key features of App Center Test 
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
-ms.reviewer: crdun
-ms.date: 05/13/2019
+author: oddj0b
+ms.author: vigimm
+ms.date: 02/06/2019
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -16,7 +15,7 @@ ms.custom: test
 
 *Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in C# using the [NUnit](http://www.nunit.org/) unit testing framework to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would: entering text, tapping buttons, and performing gestures - such as swipes.
 
-Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be peformed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
+Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be performed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
 
 1. **Arrange**: The test will setup conditions and initialize things so that the test can be actioned.
 2. **Act**: The test will interact with the application, enter text, pushing buttons, and so on.
@@ -192,7 +191,7 @@ public class ValidateCreditCard
     [SetUp]
     public void Setup()
     {
-        app = ConfigureApp.Android.AppBundle("/path/to/application.apk").StartApp();
+        app = ConfigureApp.Android.ApkFile("/path/to/application.apk").StartApp();
     }
     [Test]
     public void CreditCardNumber_TooLong_DisplayErrorMessage()

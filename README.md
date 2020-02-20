@@ -4,8 +4,11 @@ Welcome! This repo contains source files for the work-in-progress App Center tec
 
 ## Contributing to the documentation
 
-To contribute to this documentation, please see the [Contributing guide](CONTRIBUTING.md).
 We welcome your contributions to help us improve the App Center docs. All the articles in this repository use GitHub flavored markdown.
+
+To contribute to this documentation, please see the [Contributing guide](CONTRIBUTING.md).
+
+If you are an internal docs contributor, please refer to the [Contributing guide – Internal](CONTRIBUTING-INTERNAL.md)
 
 Several feature areas of App Center have their own folders in this repo, such as **build** for topics on Build, **crashes** for topics on the Crash Reporting service, and so forth. The **/images** subfolder in each folder contains art files for the topics. The [Contributing guide](CONTRIBUTING.md) has more information.
 
