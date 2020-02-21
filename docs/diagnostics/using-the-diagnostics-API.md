@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnieli1208
 ms.author: yuli1
-ms.date: 10/01/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -61,15 +61,6 @@ Old APIs listed in the crashes section are deprecated for all app platforms exce
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups_info | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups_info |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups/{symbol_group_id} | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups/{symbol_group_id} |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups |
-
-### Crashes APIs that no longer exist
-
-There are few crashes APIs that are deprecated due to changes in our backend pipeline. App Center is also now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/transition/index.md) to learn more about the transition.
-
-| Deprecated Old Crashes APIs                                         |
-| ------------------------------------------------------------------- |
-| GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
-| PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
 
 ### Unaltered Crashes APIs
 
