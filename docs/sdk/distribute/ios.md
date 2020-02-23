@@ -150,7 +150,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 ## Disable Automatic Check for Update
 
-By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
+By default, the SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
 If you want to check for new releases manually, you can disable automatic check for update.
 To do this, call the following method before the SDK start:
 
@@ -162,7 +162,7 @@ MSDistribute.disableAutomaticCheckForUpdate()
 ```
 
 > [!NOTE]
-> This method must be called before App Center start. If the method is not called before start every time, the SDK will automatically check for update.
+> This method must be called before the `AppCenter.start` method call.
 
 Then you can use the following API when you need to check for update:
 
