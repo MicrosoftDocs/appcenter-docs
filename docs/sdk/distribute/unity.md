@@ -36,7 +36,8 @@ Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you h
 
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change the `UpdateTrack` property in the **Distribute** section of the **AppCenterBehavior** behavior to the `Private` value.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change `UpdateTrack` to Private. 
+To do this, choose **Private** in the **Update Track** dropdown under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 When using the private track, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
