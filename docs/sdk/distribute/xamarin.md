@@ -180,7 +180,7 @@ Distribute.DisableAutomaticCheckForUpdate();
 ```
 
 > [!NOTE]
-> This method must be called before the `AppCenter.start` method call.
+> This method must be called before the `AppCenter.Start` method call.
 
 Then you can use the following API when you need to check for update:
 
