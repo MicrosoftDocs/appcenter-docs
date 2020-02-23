@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: jwhitedev
 ms.author: jawh
-ms.date: 11/26/2019
+ms.date: 02/22/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -33,6 +33,22 @@ App Center Distribution enables your users/testers to install new versions of an
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format AppCenterDistribute-v{version}.unitypackage
+
+## Disable Automatic Check for Update
+
+By default, the SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module.
+
+If you want to check for new releases manually, you can disable automatic check for update.
+
+To do this, check the **Disable Automatic Check for Update** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
+
+Then you can use the following API when you need to check for update:
+
+```csharp
+Distribute.CheckForUpdate();
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
 
 ## Customize or localize the in-app update dialog
 
