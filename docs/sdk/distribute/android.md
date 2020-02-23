@@ -4,7 +4,6 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2020
 ms.date: 02/20/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
@@ -106,33 +105,6 @@ When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIV
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
-
-## Disable Automatic Check for Update
-
-By default, SDK automatically checks for new releases at the app startup and after re-enabling the Distribute module. 
-If you want to check for new releases manually, you can disable automatic check for update.
-To do this, call the following method before the SDK start:
-
-```java
-Distribute.disableAutomaticCheckForUpdate();
-```
-```kotlin
-Distribute.disableAutomaticCheckForUpdate()
-```
-
-> [!NOTE]
-> This method must be called before App Center start. If the method is not called before start every time, the SDK will automatically check for update.
-
-Then you can use the following API when you need to check for update:
-
-```java
-Distribute.checkForUpdate();
-```
-```kotlin
-Distribute.checkForUpdate()
-```
-
-This will send a request to App Center and display an update dialog in case there is a new release available.
 
 ## Customize or localize the in-app update dialog
 

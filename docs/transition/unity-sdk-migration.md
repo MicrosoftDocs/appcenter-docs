@@ -3,7 +3,7 @@ title: HockeySDK for Unity Migration
 description: Migrate from the HockeySDK to App Center SDK for Unity
 author: elamalani
 ms.author: emalani
-ms.date: 02/19/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: 4d582645-4b1b-42f8-a40a-dee5d06fb0e1
 ms.service: vs-appcenter
@@ -89,7 +89,7 @@ If your project has the HockeySDK API calls throughout the application, replace 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
 Custom events with properties | [HockeyAppIOS.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L150-L158) or [HockeyAppAndroid.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L149-L156) | [Analytics.TrackEvent](~/sdk/analytics/unity.md#custom-events)
-Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | [Distribute.CheckforUpdate](~/sdk/distribute/unity.md#disable-automatic-check-for-update)
+Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | NA
 Display a feedback form | [HockeyAppIOS.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L178-L181) or [HockeyAppAndroid.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L238-L241) | NA (please see the section below)
 
 ### Feedback
