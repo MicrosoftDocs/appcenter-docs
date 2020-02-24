@@ -27,6 +27,13 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 * [HockeySDK Cordova](cordova-sdk-migration.md)
 * [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
 
+## Download Links
+
+Requests to the link with the format `https://rink.hockeyapp.net/api/2/apps/0873e2b98ad046a92c170a243a8515f6?format=apk` are forwarded to App Center. The latest version that is released to the "All users of AppName" distribution group or to any other public distribution group will be returned.
+
+> [!Note]
+> The app id used in the link above is the app secret of your app in App Center but without the dashes.
+
 ## Feedback
 
 App Center does not support the HockeyApp Feedback functionality. For potential alternatives, see the [feedback guide](feedback.md).
