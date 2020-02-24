@@ -3,7 +3,7 @@ title: "HockeyApp Transition"
 description: Transition from HockeyApp to App Center
 author: dipree
 ms.author: daadam
-ms.date: 02/18/2020
+ms.date: 02/24/2020
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
