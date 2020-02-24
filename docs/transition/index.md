@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # HockeyApp
 
-Apps that were migrated from HockeyApp still receive data from the HockeySDK.
+Apps that have been migrated from HockeyApp still receive data from the HockeySDK. In-app updates remain functional as well.
 
 ## Migrate from the HockeySDK to the App Center SDK
 
