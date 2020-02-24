@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 01/16/2020
+ms.date: 02/12/2020
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -229,13 +229,28 @@ For Additional details on export to [Application Insights refer to the Quick Sta
 
 ### Exporting multiple apps to the same storage account
 
-When configuring export for multiple apps, you should create or update a configuration with the `blob_path_format_kind` set to `WithAppId`, which prefixes the export path with the respective appID's. The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
+When configuring export for multiple apps, you should create or update a configuration with the `blob_path_format_kind` (part of the `ExportBlobConfiguration` model) set to `WithAppId`, which prefixes the export path with the respective appID's.
+
+The path to the blob is formatted as follows:
+
+- when the enum is set to `WithoutAppId=false` is `year/month/day/hour/minute`
+- when the enum is set to `WithAppId=true` is `appId/year/month/day/hour/minute`
+
+The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
 
 ```HTTP
 PATCH /v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}
 ```
 
-The changes will take time to propagate, and entities from that point will then be written to the new path.
+The changes will take 5-10 minutes to propagate, and entities from that point on will then be written using the new path format.
+
+### Back-filling opt-out
+
+By default, a new export configuration will back-fill two last days of data for AI resources and 30 days for blob storage. There are scenarios when back-filling is not necessary (for example, if doing so would result in data being overwritten or duplicated). In this case, set `backfill` property to `false` when creating a new configuration.
+
+### Choosing what kind of data to export
+
+By default, a new export configuration exports Analytics data only (events, sessions, etc.) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
 ## Pricing
 

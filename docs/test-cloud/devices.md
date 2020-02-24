@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 3/2/2019
+ms.date: 2/19/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -472,6 +472,7 @@ Motorola Nexus 6 | 6.0.1
 Motorola Nexus 6 | 7.1.1
 Motorola One | 8.1.0
 Motorola One Action | 9
+Motorola One Vision | 10
 Motorola One Vision | 9
 Motorola One Zoom | 9
 Motorola Solutions - MC67NA | 4.1.1
@@ -529,7 +530,9 @@ Samsung Galaxy Grand Duos | 4.2.2
 Samsung Galaxy J6 | 8.0.0
 Samsung Galaxy J7 (2017) | 7.0
 Samsung Galaxy J7 (2017) | 8.1.0
+Samsung Galaxy J7 (2017) | 9
 Samsung Galaxy M10 | 8.1.0
+Samsung Galaxy M20 | 10
 Samsung Galaxy M20 | 8.1.0
 Samsung Galaxy M30 | 10
 Samsung Galaxy M30 | 9
@@ -613,8 +616,10 @@ Samsung Galaxy S8 | 9
 Samsung Galaxy S8 Plus | 7.0
 Samsung Galaxy S8 Plus | 8.0.0
 Samsung Galaxy S8 Plus | 9
+Samsung Galaxy S9 | 10
 Samsung Galaxy S9 | 8.0.0
 Samsung Galaxy S9 | 9
+Samsung Galaxy S9 Plus | 10
 Samsung Galaxy S9 Plus | 8.0.0
 Samsung Galaxy S9 Plus | 9
 Samsung Galaxy Star | 4.1.2
@@ -641,6 +646,7 @@ Samsung Galaxy Tab S3 | 7.0
 Samsung Galaxy Tab S4 | 8.1.0
 Samsung Galaxy Tab S6 | 9
 Samsung Galaxy Trend Plus | 4.2.2
+Samsung Galaxy XCover Pro | 10
 Samsung Galaxy Xcover 3 | 4.4.4
 Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4s | 9
