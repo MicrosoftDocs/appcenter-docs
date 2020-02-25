@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 12/10/2019
+ms.date: 02/26/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -111,3 +111,7 @@ Apple requires at least an admin role to _Create apps and submit versions_ and _
 ## Debugging a failed release
 
 If publishing a release fails, you can download the verbose Fastlane logs. These logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
+
+## Re-authenticate failed
+
+In the rare occasion when re-authenticate does not work. It can be fixed by visiting [Account settings](https://appcenter.ms/settings/accounts) and completely remove the Apple ID, then visit the App's store connection at [https://appcenter.ms/orgs/%7Byour-org-here%7D/apps/%7Byour-app-here%7D/Production/releases/settings]() and re-select your connection.
