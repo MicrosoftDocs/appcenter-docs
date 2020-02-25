@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: botatoes
 ms.author: bofu
-ms.date: 01/27/2020
+ms.date: 02/24/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -104,9 +104,6 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 #### 2.3 Modify the project's **Info.plist**
-
-> [!NOTE]
-> If you've previously configured App Center Auth, the `URL types` key may already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.
 
 1. In the project's **Info.plist** file, add a new key for `URL types` by clicking the '+' button next to "Information Property List" at the top. If Xcode displays your **Info.plist** as source code, refer to the tip below.
 2. Change the key type to Array.
