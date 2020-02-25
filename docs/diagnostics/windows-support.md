@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/17/2019
+ms.date: 02/05/2020
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -123,4 +123,4 @@ appcenter crashes upload-symbols --appxsym {symbol file}
 
 ## WinRT, Silverlight, and Other Platforms
 
-App Center doesn't currently support any other Windows platforms besides UWP, WPF, and WinForms. If you have any feedback or feature requests, please leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).
+App Center doesn't support any other Windows platforms besides UWP, WPF, and WinForms. If you have a Windows app with native C++ crashes, you can upload these crashes to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump) If you have any feedback or feature requests, please leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).

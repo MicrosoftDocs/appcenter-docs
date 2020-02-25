@@ -4,7 +4,7 @@ description: Intructions on how to install a build
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 10/17/2018
+ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 89a78fd8-ee2d-4f2d-9026-756047866351
 ms.service: vs-appcenter

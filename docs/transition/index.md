@@ -1,35 +1,39 @@
 ---
 title: "HockeyApp Transition"
 description: Transition from HockeyApp to App Center
-author: derpixeldan
+author: dipree
 ms.author: daadam
-ms.date: 10/18/2019
+ms.date: 02/24/2020
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
 ---
 
-# HockeyApp Transition
+# HockeyApp
 
-App Center is built to be the successor of HockeyApp that fills the gap and offers a full continuous integration to delivery lifecycle. A single solution for continuously building, testing, releasing, and monitoring your apps.
+Apps that have been migrated from HockeyApp still receive data from the HockeySDK. In-app updates remain functional as well.
 
-The known HockeyApp services, Distribution, Crash Reporting, and Analytics are available in App Center, where they join new services exclusive to App Center: Build, Test, Push Notifications, Auth, and Data. We continued to build additional features such as iOS autoprovisioning and public app store integrations. Because HockeyApp’s distribution, crash reporting, and analytics services are available in App Center, HockeyApp will be retired on November 16, 2019.
+## Migrate from the HockeySDK to the App Center SDK
 
-## November 16, 2019
+Follow this documentation to update your apps to use the App Center SDK instead of the HockeySDK. The guides for each platform are listed below.
 
-Today, all your user and organization [accounts are fully transitioned](~/transition/accounts/index.md) to App Center. Beginning November 16, we'll start moving over apps with little active usage automatically. Once your app is moved, you’ll no longer have access to it through HockeyApp. You’ll need to use App Center.
+* [HockeySDK Android](android-sdk-migration.md)
+* [HockeySDK iOS](ios-sdk-migration.md)
+* [HockeySDK UWP](uwp-sdk-migration.md)
+* [HockeySDK macOS](macos-sdk-migration.md)
+* [HockeySDK tvOS](tvos-sdk-migration.md)
+* [HockeySDK Xamarin](xamarin-sdk-migration.md)
+* [HockeySDK Unity](unity-sdk-migration.md)
+* [HockeySDK Cordova](cordova-sdk-migration.md)
+* [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
 
-> [!NOTE]
-> It will take us a few months to complete the move of all apps. If your app is affected by any of the feature gaps listed on our [public roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap#hockeyapp), we won't move them until the gaps are closed. HockeyApp will still be available until then. We recommend you to [move your app](~/transition/moving/index.md) immediately once it becomes unaffected.
+## Download Links
 
-## How to transition to App Center successfully
-If you haven't yet, make yourself familiar with App Center. Let us know in case you've any questions.
+Requests to the link of the format `https://rink.hockeyapp.net/api/2/apps/0873e2b98ad046a92c170a243a8515f6?format=apk` are forwarded to App Center. Make sure the file format is appropriate to the binary uploaded. The latest version that is released to the "All users of AppName" distribution group or to any other public distribution group will be returned.
 
-* Checkout potential [incompatibilities](~/transition/moving/incompatibilities.md) of your apps
-* In case you've any API integrations, make sure to switch to the [App Center API](~/api-docs/index.md) or [clients](https://github.com/Microsoft/appcenter/wiki/Repositories#integrations)
-* Move your apps to App Center
-    * [One by one](~/transition/moving/index.md)
-    * [Multiple apps at once](~/transition/moving/bulk.md)
-* Verify everything is working as expected
-* Update to the [App Center SDK](~/transition/sdk-migration.md)
-* Verify one more time that everything is going as intended
+> [!Note]
+> The HockeyApp app id used in the link above is equivalent to the app secret of your app in App Center but without dashes.
+
+## Feedback
+
+App Center doesn't support the HockeyApp Feedback functionality. For potential alternatives, see the [feedback guide](feedback.md).

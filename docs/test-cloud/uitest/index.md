@@ -4,8 +4,7 @@ description: Key features of App Center Test
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.reviewer: crdun
-ms.date: 05/13/2019
+ms.date: 02/06/2019
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
@@ -83,7 +82,7 @@ IApp app = ConfigureApp
     .StartApp();
 ```
 
-To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
+To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is an example of how to use a relative path to locate the app bundle:
 
 ```csharp
 IApp app = ConfigureApp
@@ -192,7 +191,7 @@ public class ValidateCreditCard
     [SetUp]
     public void Setup()
     {
-        app = ConfigureApp.Android.AppBundle("/path/to/application.apk").StartApp();
+        app = ConfigureApp.Android.ApkFile("/path/to/application.apk").StartApp();
     }
     [Test]
     public void CreditCardNumber_TooLong_DisplayErrorMessage()

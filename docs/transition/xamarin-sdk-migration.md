@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: elamalani
 ms.author: emalani
-ms.date: 08/06/2019
+ms.date: 01/27/2020
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -172,11 +172,11 @@ Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.
-Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work) for more details.
+If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator.AuthenticateInstallation (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-8-add-authentication) | [Documentation (works out of the box)](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work)
+Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator.AuthenticateInstallation (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-8-add-authentication) | [Distribute.UpdateTrack](~/sdk/distribute/xamarin.md#use-private-distribution-group)
 Disable service at runtime | [UpdateManager.Unregister (Android) or SharedHockeyManager.DisableUpdateManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-6-add-update-distribution) | [Distribute.SetEnabledAsync](~/sdk/distribute/xamarin.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | Yes | [Distribute.ReleaseAvailable](~/sdk/distribute/xamarin.md#customize-or-localize-the-in-app-update-dialog)
 
