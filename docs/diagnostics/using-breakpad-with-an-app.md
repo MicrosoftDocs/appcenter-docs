@@ -35,12 +35,12 @@ Once Breakpad is integrated with your application, you can [Upload Breakpad cras
 App Center Diagnostics requires symbols to take a Breakpad minidump and generate a readable stack trace.
 The uploaded symbols `.zip` must either contain `.sym` files, which are produced using the Breakpad `dump_syms` tool, or `.so` binary files.
 
-[!INCLUDE [generate breakpad symbols payload](includes/generate-breakpad-symbols-payload.md)
+[!INCLUDE [generate breakpad symbols payload](includes/generate-breakpad-symbols-payload.md)]
 
 ### Uploading Symbols to App Center
 Symbols can be uploaded through the App Center Portal, API, or CLI.
 
-[!INCLUDE [symbol upload ui](includes/symbol-upload-ui.md)
+[!INCLUDE [symbol upload ui](includes/symbol-upload-ui.md)]
 
 The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Breakpad`.
 
