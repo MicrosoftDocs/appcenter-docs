@@ -114,4 +114,4 @@ If publishing a release fails, you can download the verbose Fastlane logs. These
 
 ## Reauthenticate failed
 
-In the rare occasion when reauthenticate does not work. It can be fixed by visiting [Account settings](https://appcenter.ms/settings/accounts) and completely remove the Apple ID, then visit the App's store connection at [https://appcenter.ms/orgs/%7Byour-org-here%7D/apps/%7Byour-app-here%7D/Production/releases/settings]() and select your connection to establish the connection.
+In the rare occasion when reauthenticate fails, you can fix the issue by visiting the [Account settings](https://appcenter.ms/settings/accounts) sections and removing your Apple ID. Then, visit the [App's store connection](https://appcenter.ms/orgs/%7Byour-org-here%7D/apps/%7Byour-app-here%7D/Production/releases/settings) and select your connection to establish the connection.
