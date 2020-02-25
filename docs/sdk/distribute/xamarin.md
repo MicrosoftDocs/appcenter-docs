@@ -185,7 +185,7 @@ Distribute.DisableAutomaticCheckForUpdate();
 > [!NOTE]
 > This method must be called before the `AppCenter.Start` method call.
 
-Then you can use the `checkForUpdate` API which is described in the following section.
+Then you can use the `CheckForUpdate` API which is described in the following section.
 
 ## Manually Check for Update
 
