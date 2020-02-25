@@ -343,6 +343,78 @@
           {
             "source_path": "docs/transition/faq.md",
             "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/auth/faq.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/getting-started.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/index.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/understanding-azure-ad-b2c.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/getting-started.md ",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/index.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/understanding-cosmos-db.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/general/platform-service-matrix.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/android.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/ios-manual-integration.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/ios.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/react-native.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/unity.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/xamarin.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/android.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/ios.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/react-native.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/xamarin.md",
+            "redirect_url": "/appcenter/"
           }
  ]
 }
