@@ -182,7 +182,7 @@ MSDistribute.checkForUpdate()
 This will send a request to App Center and display an update dialog in case there is a new release available.
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
