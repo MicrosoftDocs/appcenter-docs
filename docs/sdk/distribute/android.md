@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 02/22/2020
+ms.date: 02/25/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -99,7 +99,7 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.Start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
