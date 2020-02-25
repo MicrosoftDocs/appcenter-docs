@@ -110,11 +110,6 @@ App Center SDKs send data to App Center services. The data sent varies by the SD
 
     
 
-## Auth
-
-*	[ID Token](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-tokens)
-        This JSON Web Token contains claims that a customer uses to identify a user of the application. 
-
 ## Analytics
 *	**Engagement Metrics**
         Engagement measures the daily sessions per user and session duration.
