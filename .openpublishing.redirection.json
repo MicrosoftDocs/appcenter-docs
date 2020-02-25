@@ -361,7 +361,7 @@
             "redirect_url": "/appcenter/"
           },
           {
-            "source_path": "docs/data/getting-started.md ",
+            "source_path": "docs/data/getting-started.md",
             "redirect_url": "/appcenter/"
           },
           {
@@ -370,10 +370,6 @@
           },
           {
             "source_path": "docs/data/understanding-cosmos-db.md",
-            "redirect_url": "/appcenter/"
-          },
-          {
-            "source_path": "docs/general/platform-service-matrix.md",
             "redirect_url": "/appcenter/"
           },
           {
