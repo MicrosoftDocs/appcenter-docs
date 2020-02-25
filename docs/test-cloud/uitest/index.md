@@ -82,7 +82,7 @@ IApp app = ConfigureApp
     .StartApp();
 ```
 
-To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is and example of how to use a relative path to locate the app bundle:
+To use a relative path, the path must be relative to the Xamarin.UITest assembly. This snippet is an example of how to use a relative path to locate the app bundle:
 
 ```csharp
 IApp app = ConfigureApp
