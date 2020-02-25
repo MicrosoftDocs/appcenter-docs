@@ -112,6 +112,6 @@ Apple requires at least an admin role to _Create apps and submit versions_ and _
 
 If publishing a release fails, you can download the verbose Fastlane logs. These logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
 
-## Re-authenticate failed
+## Reauthenticate failed
 
-In the rare occasion when re-authenticate does not work. It can be fixed by visiting [Account settings](https://appcenter.ms/settings/accounts) and completely remove the Apple ID, then visit the App's store connection at [https://appcenter.ms/orgs/%7Byour-org-here%7D/apps/%7Byour-app-here%7D/Production/releases/settings]() and re-select your connection.
+In the rare occasion when reauthenticate does not work. It can be fixed by visiting [Account settings](https://appcenter.ms/settings/accounts) and completely remove the Apple ID, then visit the App's store connection at [https://appcenter.ms/orgs/%7Byour-org-here%7D/apps/%7Byour-app-here%7D/Production/releases/settings]() and select your connection to establish the connection.
