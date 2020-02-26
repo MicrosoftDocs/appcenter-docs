@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 02/19/2020
+ms.date: 02/25/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -21,7 +21,7 @@ Each build runs on a separate, clean virtual machine (VM) no one else has access
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 
-- OS X 10.14.6 (18G3020) **Mojave**
+- macOS 10.14.6 (18G3020) **Mojave**
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2016 & Visual Studio 2017](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2016-Readme.md).
 
@@ -40,21 +40,21 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - GNU Fortran (Homebrew GCC 9.2.0_3) 9.2.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.0 v13.8.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.9.0
 - PowerShell 6.2.4
 - Python 2.7.17
 - Python 3.7.6
-- Ruby 2.6.5p114
+- Ruby 2.7.0p0
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.13.8
-- PHP 7.4.2
+- PHP 7.4.3
 
 ### Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.8.4
-- Homebrew 2.2.5
+- Homebrew 2.2.6
 - NPM 3.10.10
 - Yarn 1.22.0
 - NuGet 4.7.0.5148
@@ -65,7 +65,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.1.1
+- Gradle 6.2
 
 ### Utilities
 - Curl 7.68.0
@@ -77,22 +77,22 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
 - gpg (GnuPG) 2.2.19
-- psql (PostgreSQL) 12.1
+- psql (PostgreSQL) 12.2
 - aria2 1.35.0
 - azcopy 10.3.4
 
 ### Tools
-- Fastlane 2.141.0
+- Fastlane 2.142.0
 - Cmake 3.16.4
 - App Center CLI 1.2.2
-- Azure CLI 2.0.81
+- Azure CLI 2.1.0
 
 ### Browsers
-- Google Chrome 80.0.3987.106 
+- Google Chrome 80.0.3987.116 
 - ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.54 
-- MSEdgeDriver 80.0.361.54
-- Mozilla Firefox 73.0
+- Microsoft Edge 80.0.361.57 
+- MSEdgeDriver 80.0.361.57
+- Mozilla Firefox 73.0.1
 - geckodriver 0.26.0
 
 ### Toolcache
@@ -115,7 +115,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.4.5.19
+- 8.4.6.36
 
 #### Mono
 - 6.6.0.155
@@ -313,7 +313,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 #### Android SDK Platform-Tools
 | Package Name                                | Description                                 |
 | ------------------------------------------- | ------------------------------------------- |
-| platform-tools                              | Android SDK Platform-Tools, Revision 29.0.5 |
+| platform-tools                              | Android SDK Platform-Tools, Revision 29.0.6 |
 
 #### Android SDK Platforms
 | Package Name                        | Description                         |
@@ -335,39 +335,40 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | android-29                          | Android SDK Platform 29, Revision 4 |
 
 #### Android SDK Build-Tools
-| Package Name                             | Description                              |
-| ---------------------------------------- | ---------------------------------------- |
-| build-tools-19.1.0                       | Android SDK Build-Tools, Revision 19.1.0 |
-| build-tools-20.0.0                       | Android SDK Build-Tools, Revision 20.0.0 |
-| build-tools-21.1.2                       | Android SDK Build-Tools, Revision 21.1.2 |
-| build-tools-22.0.1                       | Android SDK Build-Tools, Revision 22.0.1 |
-| build-tools-23.0.1                       | Android SDK Build-Tools, Revision 23.0.1 |
-| build-tools-23.0.2                       | Android SDK Build-Tools, Revision 23.0.2 |
-| build-tools-23.0.3                       | Android SDK Build-Tools, Revision 23.0.3 |
-| build-tools-24.0.0                       | Android SDK Build-Tools, Revision 24.0.0 |
-| build-tools-24.0.1                       | Android SDK Build-Tools, Revision 24.0.1 |
-| build-tools-24.0.2                       | Android SDK Build-Tools, Revision 24.0.2 |
-| build-tools-24.0.3                       | Android SDK Build-Tools, Revision 24.0.3 |
-| build-tools-25.0.0                       | Android SDK Build-Tools, Revision 25.0.0 |
-| build-tools-25.0.1                       | Android SDK Build-Tools, Revision 25.0.1 |
-| build-tools-25.0.2                       | Android SDK Build-Tools, Revision 25.0.2 |
-| build-tools-25.0.3                       | Android SDK Build-Tools, Revision 25.0.3 |
-| build-tools-26.0.0                       | Android SDK Build-Tools, Revision 26.0.0 |
-| build-tools-26.0.1                       | Android SDK Build-Tools, Revision 26.0.1 |
-| build-tools-26.0.2                       | Android SDK Build-Tools, Revision 26.0.2 |
-| build-tools-26.0.3                       | Android SDK Build-Tools, Revision 26.0.3 |
-| build-tools-27.0.0                       | Android SDK Build-Tools, Revision 27.0.0 |
-| build-tools-27.0.1                       | Android SDK Build-Tools, Revision 27.0.1 |
-| build-tools-27.0.2                       | Android SDK Build-Tools, Revision 27.0.2 |
-| build-tools-27.0.3                       | Android SDK Build-Tools, Revision 27.0.3 |
-| build-tools-28.0.0                       | Android SDK Build-Tools, Revision 28.0.0 |
-| build-tools-28.0.1                       | Android SDK Build-Tools, Revision 28.0.1 |
-| build-tools-28.0.2                       | Android SDK Build-Tools, Revision 28.0.2 |
-| build-tools-28.0.3                       | Android SDK Build-Tools, Revision 28.0.3 |
-| build-tools-29.0.0                       | Android SDK Build-Tools, Revision 29.0.0 |
-| build-tools-29.0.1                       | Android SDK Build-Tools, Revision 29.0.1 |
-| build-tools-29.0.2                       | Android SDK Build-Tools, Revision 29.0.2 |
-| build-tools-29.0.3                       | Android SDK Build-Tools, Revision 29.0.3 |
+| Package Name                                 | Description                                  |
+| -------------------------------------------- | -------------------------------------------- |
+| build-tools-19.1.0                           | Android SDK Build-Tools, Revision 19.1.0     |
+| build-tools-20.0.0                           | Android SDK Build-Tools, Revision 20.0.0     |
+| build-tools-21.1.2                           | Android SDK Build-Tools, Revision 21.1.2     |
+| build-tools-22.0.1                           | Android SDK Build-Tools, Revision 22.0.1     |
+| build-tools-23.0.1                           | Android SDK Build-Tools, Revision 23.0.1     |
+| build-tools-23.0.2                           | Android SDK Build-Tools, Revision 23.0.2     |
+| build-tools-23.0.3                           | Android SDK Build-Tools, Revision 23.0.3     |
+| build-tools-24.0.0                           | Android SDK Build-Tools, Revision 24.0.0     |
+| build-tools-24.0.1                           | Android SDK Build-Tools, Revision 24.0.1     |
+| build-tools-24.0.2                           | Android SDK Build-Tools, Revision 24.0.2     |
+| build-tools-24.0.3                           | Android SDK Build-Tools, Revision 24.0.3     |
+| build-tools-25.0.0                           | Android SDK Build-Tools, Revision 25.0.0     |
+| build-tools-25.0.1                           | Android SDK Build-Tools, Revision 25.0.1     |
+| build-tools-25.0.2                           | Android SDK Build-Tools, Revision 25.0.2     |
+| build-tools-25.0.3                           | Android SDK Build-Tools, Revision 25.0.3     |
+| build-tools-26.0.0                           | Android SDK Build-Tools, Revision 26.0.0     |
+| build-tools-26.0.1                           | Android SDK Build-Tools, Revision 26.0.1     |
+| build-tools-26.0.2                           | Android SDK Build-Tools, Revision 26.0.2     |
+| build-tools-26.0.3                           | Android SDK Build-Tools, Revision 26.0.3     |
+| build-tools-27.0.0                           | Android SDK Build-Tools, Revision 27.0.0     |
+| build-tools-27.0.1                           | Android SDK Build-Tools, Revision 27.0.1     |
+| build-tools-27.0.2                           | Android SDK Build-Tools, Revision 27.0.2     |
+| build-tools-27.0.3                           | Android SDK Build-Tools, Revision 27.0.3     |
+| build-tools-28.0.0                           | Android SDK Build-Tools, Revision 28.0.0     |
+| build-tools-28.0.1                           | Android SDK Build-Tools, Revision 28.0.1     |
+| build-tools-28.0.2                           | Android SDK Build-Tools, Revision 28.0.2     |
+| build-tools-28.0.3                           | Android SDK Build-Tools, Revision 28.0.3     |
+| build-tools-29.0.0                           | Android SDK Build-Tools, Revision 29.0.0     |
+| build-tools-29.0.1                           | Android SDK Build-Tools, Revision 29.0.1     |
+| build-tools-29.0.2                           | Android SDK Build-Tools, Revision 29.0.2     |
+| build-tools-29.0.3                           | Android SDK Build-Tools, Revision 29.0.3     |
+| build-tools-30.0.0-rc1                       | Android SDK Build-Tools, Revision 30.0.0 rc1 |
 
 #### Android Utils
 | Package Name     | Version          |
@@ -375,7 +376,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | cmake            | 3.6.4111459      |
 | lldb             | 3.1.4508709      |
 | ndk-bundle       | 18.1.5063045     |
-| Android Emulator | 29.3.4           |
+| Android Emulator | 30.0.0           |
 
 #### Android Google APIs
 | Package Name                | Description                 |
