@@ -2,11 +2,11 @@
 title: Using Breakpad with an App
 description: Learn how to symbolicate your App's unmanaged code crashes
 keywords: unmanaged, crashes, upload, symbolication
-author: bryansmith //TODO: winnie?
-ms.author: yuli1  //TODO: wat?
+author: winnieli1208
+ms.author: yuli1
 ms.date: 2/25/2020
 ms.topic: article
-ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57 //TODO: new guid?
+ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
 ms.custom: diagnostics
 ---
