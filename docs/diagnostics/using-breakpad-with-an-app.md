@@ -34,7 +34,7 @@ Once Breakpad is integrated with your application, you can [Upload Breakpad cras
 
 ### Generating Breakpad Symbols Payload
 App Center Diagnostics requires symbols to generate a readable stack trace from a Breakpad minidump.
-The uploaded symbols `.zip` must either contain `.sym` files, which are produced using the Breakpad `dump_syms` tool, or `.so` binary files.
+The uploaded symbols archive must either contain `.sym` files, which are produced using the Breakpad `dump_syms` tool, or `.so` binary files.
 
 [!INCLUDE [generate breakpad symbols payload](includes/generate-breakpad-symbols-payload.md)]
 
