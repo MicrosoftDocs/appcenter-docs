@@ -18,7 +18,8 @@ You can symbolicate unmanaged code crashes which originate in your [Android NDK 
 
 ## Using Breakpad with App Center
 
-[Breakpad](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md) is a library and tool suite which helps produce C and C++ stack traces. These stack traces are generated from [`minidump` files](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md#the-minidump-file-format) produced once Breakpad is integrated with your unmanaged code. Breakpad offers starter guides for integrating with [Linux](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/linux_starter_guide.md), [Windows](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/windows_client_integration.md), and [Mac](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/mac_breakpad_starter_guide.md) applications.
+[Breakpad](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md) is a library and tool suite which helps produce C and C++ stack traces. These stack traces are generated from [`minidump` files](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md#the-minidump-file-format) produced once Breakpad is integrated with your project.
+Breakpad offers starter guides for integrating with [Linux](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/linux_starter_guide.md), [Windows](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/windows_client_integration.md), and [Mac](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/mac_breakpad_starter_guide.md) applications.
 
 ## Sending Breakpad Crash Logs to App Center
 
