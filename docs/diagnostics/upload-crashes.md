@@ -451,7 +451,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "sid": "d4608adf-83b9-4f69-90ad-8bb0234080a7",
       "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
@@ -481,7 +481,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "type": "errorAttachment",
        "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
