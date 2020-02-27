@@ -1,5 +1,5 @@
 ---
-title: Using Breakpad with an App
+title: Unmanaged Code Crash Support
 description: Learn how to symbolicate your App's unmanaged code crashes
 keywords: unmanaged, crashes, upload, symbolication
 author: winnieli1208

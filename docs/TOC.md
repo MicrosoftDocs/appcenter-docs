@@ -158,7 +158,7 @@
 ## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
-## [Using Breakpad with an App](diagnostics/using-breakpad-with-an-app.md)
+## [Unmanaged Code Crash Support](diagnostics/unmanaged-code-crash-support.md)
 ## [Android NDK](diagnostics/Android-NDK.md) 
 ## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
