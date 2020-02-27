@@ -14,7 +14,7 @@ ms.custom: diagnostics
 # Symbolicating Unmanaged Code Crashes
 
 App Center Diagnostics supports symbolicating unmanaged C/C++ code crashes in your application.
-You can symbolicate unmanaged code crashes which originate in your [Android NDK code](~/diagnostics/Android-NDK.md), as well as unmanaged code crashes formatted as [Breakpad minidumps](~/diagnostics/using-breakpad-with-an-app.md#using-breakpad-with-app-center) uploaded through the [Upload Crashes API](~/diagnostics/upload-crashes.md#upload-a-crash-report).
+You can symbolicate unmanaged code crashes which originate in your [Android NDK code](~/diagnostics/Android-NDK.md), as well as unmanaged code crashes formatted as [Breakpad minidumps](~/diagnostics/unmanaged-code-crash-support.md#using-breakpad-with-app-center) uploaded through the [Upload Crashes API](~/diagnostics/upload-crashes.md#upload-a-crash-report).
 
 ## Using Breakpad with App Center
 
