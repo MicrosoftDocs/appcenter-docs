@@ -481,7 +481,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "type": "errorAttachment",
        "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
