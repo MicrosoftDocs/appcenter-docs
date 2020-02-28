@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: jwhitedev
 ms.author: jawh
-ms.date: 02/22/2020
+ms.date: 02/27/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -43,7 +43,7 @@ By default, the SDK automatically checks for new releases:
 
 If you want to check for new releases manually, you can disable automatic check for update.
 
-To do this, check the **Disable Automatic Check for Update** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
+To do this, uncheck the **Automatic Check for Update** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 Then you can use the `CheckForUpdate` API which is described in the following section.
 
