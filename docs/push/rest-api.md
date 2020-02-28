@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications using the App Center
 keywords: app center, push, audiences, API
 author: jwargo
 ms.author: jowargo
-ms.date: 12/20/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA
 ms.service: vs-appcenter
@@ -12,6 +12,9 @@ ms.custom: push
 ---
 
 # Using the Push API
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 The Visual Studio App Center Push (ACP) service offers two ways to send notifications to registered devices:
 

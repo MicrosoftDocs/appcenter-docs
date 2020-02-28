@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications to users.
 keywords: app center, push, user
 author: jwargo
 ms.author: jowargo
-ms.date: 12/20/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: df3187de-0295-475e-9be2-4f46034cdcbe
 ms.service: vs-appcenter
@@ -12,6 +12,9 @@ ms.custom: push
 ---
 
 # Push to User
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 Along with sending notifications to devices directly or via Audiences, App Center Push enables customers to send notification messages to all of the devices associated with one or more users. App Center's ability to do this is controlled by the developer setting the user's identity directly through the App Center SDK. The app user's identity must be set using this option to send notifications to users.
 

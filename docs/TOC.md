@@ -176,7 +176,7 @@
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
-# Push
+# Push (Retiring)
 ## [Introduction](push/index.md)
 ## [Configure the Push Service](push/service-config.md)
 ## App Configuration
