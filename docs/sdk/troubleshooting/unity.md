@@ -14,7 +14,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
+> * [Windows](uwp.md)
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
