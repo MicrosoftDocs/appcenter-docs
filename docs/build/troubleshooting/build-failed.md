@@ -24,9 +24,9 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 ### Files with modified filenames or locations are ignored
-If the Build system fails due to ignoring or missing a key file that was recently moved or renamed; try selecting **Save** or **Save & Build** in the build configuration. With either option App Center performs an analysis to index your repository tree and update the build definition. 
+Builds might ignore a key file that was recently moved or renamed. Try selecting **Save** or **Save & Build** in the build configuration. Either option reindexes your repository tree and updates the build definition.
 
-Common triggers of this problem include [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file). Other files might cause similar problems if they're critical to the build and had a name or location change. 
+Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file).
 
 ## Comparing different builds in App Center
 ### Some branches work while others fail
