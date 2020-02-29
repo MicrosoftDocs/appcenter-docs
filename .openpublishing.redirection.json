@@ -285,38 +285,37 @@
 	     "redirect_url": "/appcenter/test-cloud/supported-frameworks.md"
         },
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload",
 	     "redirect_url": "/appcenter/test-cloud/supported-frameworks.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/appium.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/appium.md",
 	     "redirect_url": "/appcenter/test-cloud/appium/preparing-for-upload.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/espresso.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/espresso.md",
 	     "redirect_url": "/appcenter/test-cloud/espresso/preparing-for-upload.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/calabash.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/calabash.md",
 	     "redirect_url": "/appcenter/test-cloud/calabash/preparing-for-upload.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest.md",
 	     "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-android.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest.md",
 	     "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-ios.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xcuitest.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xcuitest.md",
 	     "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload.md"
 	},
 	{
-	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xcuitest-extension.md"
+	     "source_path": "/appcenter/test-cloud/preparing-for-upload/xcuitest-extension.md",
 	     "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload-extension.md"
 	},
-
           {
             "source_path": "docs/transition/distribution-groups.md",
             "redirect_url": "/appcenter/transition/distribution"
