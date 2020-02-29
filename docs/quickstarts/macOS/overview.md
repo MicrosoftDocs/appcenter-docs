@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Overview | Sample App Tutorials
+title: macOS Overview
 description: Landing page to navigate through tutorials.
 keywords: app center
 author: clpolet

@@ -7,8 +7,6 @@ ms.author: jawh
 ms.date: 01/25/2019
 ms.topic: article
 ms.assetid: e7b23bad-5cc4-4112-8122-6083351417d2
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 

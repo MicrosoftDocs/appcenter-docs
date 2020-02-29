@@ -7,7 +7,6 @@ ms.author: iageoghe
 ms.date: 11/21/2019
 ms.topic: article
 ms.assetid: 6acd2e52-b001-11e9-8b56-784f438a64fa
-ms.service: vs-appcenter
 ms.custom: sdk
 ---
 
@@ -110,11 +109,6 @@ App Center SDKs send data to App Center services. The data sent varies by the SD
         A flag indicating if the device has been jailbroken.
 
     
-
-## Auth
-
-*	[ID Token](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-tokens)
-        This JSON Web Token contains claims that a customer uses to identify a user of the application. 
 
 ## Analytics
 *	**Engagement Metrics**

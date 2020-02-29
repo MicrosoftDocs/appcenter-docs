@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Build | Sample App Tutorials
+title: iOS Build Sample Tutorials
 description: Tutorial to build sample iOS app in App Center.
 keywords: app center
 author: sabrinaj206

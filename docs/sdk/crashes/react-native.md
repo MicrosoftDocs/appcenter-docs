@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
@@ -40,7 +39,7 @@ import Crashes from 'appcenter-crashes';
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
-```
+```csharp
 Crashes.generateTestCrash();
 ```
 

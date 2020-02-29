@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 08/22/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
@@ -42,7 +40,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 First, open a Terminal and navigate to the root of your React Native project. Then, enter the following to add App Center Push to the app:
 
-   ```
+   ```bash
    npm install appcenter-push --save-exact
    ```
 

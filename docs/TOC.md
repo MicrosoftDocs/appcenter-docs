@@ -161,10 +161,12 @@
 ## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
+## [Unmanaged Code Crash Support](diagnostics/unmanaged-code-crash-support.md)
 ## [Android NDK](diagnostics/Android-NDK.md) 
 ## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
 ## [Windows Support](diagnostics/windows-support.md)
+## [Upload crashes via UI](diagnostics/upload-crashes-ui.md)
 ## [Upload crashes via API](diagnostics/upload-crashes.md)
 ## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
@@ -178,27 +180,7 @@
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
-# Auth
-## [Introduction](auth/index.md)
-## Getting Started
-### [Introduction](auth/getting-started.md)
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
-## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
-
-# Data
-## [Introduction](data/index.md)
-## Getting Started
-### [Introduction](data/getting-started.md)
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [Xamarin](sdk/data/xamarin.md)
-## [Understanding Cosmos DB](data/understanding-cosmos-db.md)
-
-# Push
+# Push (Retiring)
 ## [Introduction](push/index.md)
 ## [Configure the Push Service](push/service-config.md)
 ## App Configuration
@@ -246,12 +228,6 @@
 ### [Unity](sdk/analytics/unity.md)
 ### [Windows](sdk/analytics/windows.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
-## Auth
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [Cordova](sdk/crashes/cordova.md)
@@ -263,11 +239,6 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
-## Data
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [React Native](sdk/data/react-native.md)
-### [Xamarin](sdk/data/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
@@ -345,38 +316,23 @@
 #### [Delete](gdpr/test-forget-me.md)
 #### [Export](gdpr/test-export.md)
 
-# HockeyApp Transition
-## [Introduction](transition/index.md)
-## Synchronization
-### [Introduction](transition/side-by-side.md)
-### [Distribute](transition/distribution.md)
-### [Diagnostics](transition/crashes.md)
-### [Analytics](transition/analytics.md)
-## Moving Apps
-### [Introduction](transition/moving/index.md)
-### [Incompatibilities](transition/moving/incompatibilities.md)
-### [Migrated Data](transition/moving/data.md)
-### [Move Multiple Apps Simultaneously](transition/moving/bulk.md)
-## HockeyApp Accounts
-### [Introduction](transition/accounts/index.md)
-### [Distribution Groups](transition/accounts/distribution-groups.md)
-## [API Migration](transition/api.md)
-## SDK Migration
-### [Introduction](transition/sdk-migration.md)
-### [iOS](transition/ios-sdk-migration.md)
-### [macOS](transition/macos-sdk-migration.md)
-### [tvOS](transition/tvos-sdk-migration.md)
-### [Android](transition/android-sdk-migration.md)
-### [UWP](transition/uwp-sdk-migration.md)
-### [Xamarin](transition/xamarin-sdk-migration.md)
-### [Cordova](transition/cordova-sdk-migration.md)
-### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
-## [FAQ](transition/faq.md)
-## [Feedback](transition/feedback.md)
-
 # Migration
 ## [Introduction](migration/index.md)
-## [Xamarin Insights](migration/xamarin-insights/index.md)
+## HockeyApp
+### [Introduction](transition/index.md)
+### SDK Migration
+#### [iOS](transition/ios-sdk-migration.md)
+#### [macOS](transition/macos-sdk-migration.md)
+#### [tvOS](transition/tvos-sdk-migration.md)
+#### [Android](transition/android-sdk-migration.md)
+#### [UWP](transition/uwp-sdk-migration.md)
+#### [Xamarin](transition/xamarin-sdk-migration.md)
+#### [Cordova](transition/cordova-sdk-migration.md)
+#### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
+### [Feedback](transition/feedback.md)
+## [Auth](migration/auth/index.md)
+## [Data](migration/data/index.md)
+## [Push](migration/push/index.md)
 
 # Reference
 ## [API docs](api-docs/index.md)

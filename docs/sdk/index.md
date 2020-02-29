@@ -4,11 +4,9 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/12/2019
+ms.date: 12/20/2019
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
-ms.service: vs-appcenter
-ms.custom: sdk
 ---
 
 # App Center SDK
@@ -27,17 +25,9 @@ The App Center SDKs use a modular architecture so you can use any or all of the 
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count, device properties like model, OS version, etc. You can define your own custom events to measure things that matter to your business. All the information captured is available in the App Center portal for you to analyze the data.
 
-### App Center Auth
-
-App Center Auth is a cloud-based identity management service that enables developers to authenticate application users and manage user identities. The service integrates with other parts of App Center, enabling developers to leverage the user identity to view user data in other services and even send push notifications to users instead of individual devices. App Center Auth is powered by [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/).
-
 ### App Center Crashes
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash log will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store or Google Play. Crash logs contain valuable information for you to help fix the crash.
-
-### App Center Data
-
-App Center Data is a data synchronization and storage solution that enables you to persist, manage, and sync application data across multiple devices and platforms, all in the cloud. Using the client SDKs, you can create a seamless experience around your data, tying it to users by identity via App Center Auth and even create experiences pertaining to both online and offline scenarios in your app.  App Center Data is powered by [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) ensuring low latency, high availability, and global availability of your data.
 
 ### App Center Distribute
 
@@ -71,9 +61,7 @@ Android Studio 2.2 or later.
 Service          | Android OS Version | API Level
 -----------------|--------------------|-------------
 Analytics        | 4.1 and later      | 16 and later
-Auth             | 4.1 and later      | 16 and later
 Crashes          | 4.1 and later      | 16 and later
-Data             | 4.1 and later      | 16 and later
 Distribute       | 4.1 and later      | 16 and later
 Push             | 4.1 and later      | 16 and later
 
@@ -82,9 +70,7 @@ Push             | 4.1 and later      | 16 and later
 Service          | iOS Version     | Xcode
 -----------------|-----------------|--------------
 Analytics        | 9.0 or later    | 10 and later
-Auth             | 10.0 or later   | 10 and later
 Crashes          | 9.0 or later    | 10 and later
-Data             | 9.0 or later    | 10 and later
 Distribute       | 9.0 or later    | 10 and later
 Push             | 9.0 or later    | 10 and later
 

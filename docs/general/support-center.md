@@ -4,7 +4,7 @@ description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
 author: blparr
 ms.author: blparr
-ms.date: 08/01/2019
+ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
@@ -48,4 +48,4 @@ Check if there are any ongoing issues on the [App Center status page](https://st
 
 ## Contact us
 
-To make a feature request, use our [App Center Github Repo](https://github.com/microsoft/appcenter/issues). To get help on any issue you may experience, use the blue chat button at the bottom-right corner of every App Center portal page. Alternatively, click on the **Contact us** option in the question menu on the top right of the portal page. Note that responsiveness might vary based on the support load at a given moment. Read more about [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) and [help and feedback](../help.md).
+To make a feature request, use our [App Center Github Repo](https://github.com/microsoft/appcenter/issues). To get help on any issue you may experience, use the blue chat button at the bottom-right corner of every App Center portal page. Note that responsiveness might vary based on the support load at a given moment. Read more about [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) and [help and feedback](../help.md).

@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 12/10/2019
+ms.date: 02/26/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -77,7 +77,8 @@ Use the CLI as an easy way to integrate the App Center's store connection as par
 You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 
 
 You can list your stores by using the list command like this:
-```
+
+```bash
 appcenter distribute stores list \
 --app {app_owner}/{app_name} \
 --output json
@@ -85,13 +86,15 @@ appcenter distribute stores list \
 
 You'll get a result like this:
 
-```
+```bash
 [["Production","apple","production"],["App Store Connect Users","apple","testflight-internal"]]
 ```
+
 And it's the Store column we'll be using in the final step.
 
 The final step is to publish your app by running:
-```
+
+```bash
 appcenter distribute stores publish \
 --file /path/to/file.ipa \
 --store Production \
@@ -108,3 +111,7 @@ Apple requires at least an admin role to _Create apps and submit versions_ and _
 ## Debugging a failed release
 
 If publishing a release fails, you can download the verbose Fastlane logs. These logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
+
+## Reauthenticate failed
+
+In the rare occasion when reauthenticate fails, you can fix the issue by visiting the [Account settings](https://appcenter.ms/settings/accounts) sections and removing your Apple ID. Then, visit the App's store connection page and select your connection to establish the connection.

@@ -24,7 +24,7 @@ You can add your Apple ID and signing certificate in two ways:
 1. While going through the Distribute upload wizard
 2. Navigating to **Account settings** -> **Developer accounts**  and click the blue **+** button. 
 
-Secrets are store in a secure vault, to protect the confidentiality of your credentials.
+Secrets are stored in a secure vault, to protect the confidentiality of your credentials.
 
 App Center uses your Apple ID to manage your provisioning profile and your signing certificate to re-sign a release.
 

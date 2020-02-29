@@ -156,21 +156,24 @@ Using the CLI is an easy way to integrate the App Center's store connection as p
 Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
 
 You can list your stores by using the list command like this:
-```
+
+```bash
 appcenter distribute stores list \
 --app {app_owner}/{app_name} \
 --output json
 ```
 
 You will get a result like this:
-```
+
+```bash
 [["Alpha","googleplay","alpha"],["Beta","googleplay","beta"],["Production","googleplay","production"]
 ```
 
 And it's the Store column we will use in the final step.
 
 The final step is to publish your app by running:
-```
+
+```bash
 appcenter distribute stores publish \
 --file /path/to/file.aab \
 --store Production \

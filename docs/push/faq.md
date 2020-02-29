@@ -4,7 +4,7 @@ description: Help using the Push features of App Center
 keywords: app center, push, faq
 author: jwargo
 ms.author: jowargo
-ms.date: 06/26/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: 47e12907-38fb-40c3-bb14-45f3d3a09cd1
 ms.service: vs-appcenter
@@ -12,6 +12,9 @@ ms.custom: push
 ---
 
 # App Center Push Frequently Asked Questions
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 **When sending a Push to device IDs, how many devices can I send to each request?**
 

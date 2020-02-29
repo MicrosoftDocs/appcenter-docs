@@ -9,8 +9,6 @@ ms.author: emalani
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 1fe3506e-ba5c-406d-8ba2-b38a2d1ca588
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: xamarin.ios
 ---
 
@@ -221,7 +219,7 @@ To distinguish between notifications received in the foreground and notification
 
         if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
         {
-            this.myOwnNotificationDelegate = YourOwnUNUserNotificationCenterDelegate();
+            this.myOwnNotificationDelegate = new YourOwnUNUserNotificationCenterDelegate();
             UNUserNotificationCenter.Current.Delegate = this.myOwnNotificationDelegate;
         }
 

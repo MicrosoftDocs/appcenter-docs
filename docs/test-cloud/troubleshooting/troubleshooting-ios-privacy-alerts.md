@@ -2,8 +2,8 @@
 title: iOS privacy alerts
 description: Handling iOS privacy dialogs in App Center Test
 keywords: test cloud, iOS, alerts, privacy, permission
-author: glennwilson
-ms.author: v-glenw
+author: oddj0b
+ms.author: vigimm
 ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: bd84fb9f-8500-4fdf-beca-06d904ebb4db
@@ -26,7 +26,20 @@ Handling these alerts in App Center Test varies by the test framework.
 
 ## Xamarin.UITest and Calabash iOS
 
-Xamarin.UITest and Calabash automatically accept alerts that they know about. Known alerts are based on text matching. For a list of known alerts, see [SpringBoardAlerts.m](https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Utilities/SpringBoardAlerts.m). If your application has alerts that are not automatically accepted check to see if they are in that file and, if not, contact App Center Test Support (the blue chat icon in the lower right corner) to get them added. If they are in that file, make sure that you are using the latest versions of Xamarin.UITest and Xamarin.TestCloud.Agent or Calabash.
+Xamarin.UITest and Calabash automatically accept alerts that they know about. Known alerts are based on text matching. If you have a case where a SpringBoard alert is not dismissed, search for the alert title in the [DeviceAgent.json files](https://github.com/calabash/DeviceAgent.iOS/tree/develop/Server/Resources.xcassets/springboard-alerts). 
+
+```xml
+$ cd DeviceAgent.iOS
+$ git pull
+$ find Server/Resources.xcassets -name "alerts.json" -exec grep -q "Allow “%@” to access your location?" {} \; -print
+Server/Resources.xcassets/springboard-alerts/springboard-alerts-en_GB.dataset/alerts.json
+Server/Resources.xcassets/springboard-alerts/springboard-alerts-en_AU.dataset/alerts.json
+Server/Resources.xcassets/springboard-alerts/springboard-alerts-en.dataset/alerts.json
+```
+
+When searching, be aware that titles which contain the app name have a format specifier: %@ for example - `"Allow “%@” to access your location?"`
+
+If your application has alerts that are not in that file, contact App Center Test Support (the blue chat icon in the lower right corner) to get them added. If they are in that file, there may be some problem with the device configuration which should be considered as a bug and reported to App Center Test Support for a quick fix.  
 
 > [!NOTE]
 >You may notice `DismissSpringboardAlerts()` in the Xamarin.UITest API. `DismissSpringboardAlerts()` is a method that Xamarin.UITest uses internally. There is generally no need to call `DismissSpringboardAlerts()` in user test code.

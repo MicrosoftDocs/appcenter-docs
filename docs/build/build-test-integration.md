@@ -24,7 +24,7 @@ App Center device testing requires:
 1. Log into https://appcenter.ms
 2. Create your app by going to **Add new > Add new app**. More details: [Creating and Managing Apps](~/dashboard/creating-and-managing-apps.md)
 3. Name your app, select the target OS of your app, and the platform your app uses.
-4. Select the **Build** icon on the left side of the screen, it's a triangle arrow/playbutton.
+4. Select the **Build** icon on the left side of the screen.
 5. Connect your code repository. More details: [App Center Build Introduction](~/build/index.md).
 6. Choose your branch. 
 7. click **Configure** to create a new configuration, or click the wrench/gear icon to edit an existing configuration. 

@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 08/09/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
@@ -66,7 +64,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
-   ```
+   ```bash
    npm install appcenter-push --save-exact
    ```
 

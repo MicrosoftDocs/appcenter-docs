@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 582bf961-0e4d-4fe0-9731-0a57fd1c222b
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---

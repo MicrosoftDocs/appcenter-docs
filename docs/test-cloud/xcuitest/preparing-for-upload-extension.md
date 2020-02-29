@@ -1,11 +1,11 @@
 ---
-title: Uploading XCUITests with App Center Extensions Framework
+title: Uploading XCUITests with Extensions Framework
 description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
 ms.reviewer: kegr
-ms.date: 10/08/2018
+ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
 ms.service: vs-appcenter

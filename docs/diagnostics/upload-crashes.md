@@ -4,7 +4,7 @@ description: Post a crash report, e.g. if you don't want to use our SDK or devel
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnieli1208
 ms.author: yuli1
-ms.date: 11/27/2019
+ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -13,7 +13,10 @@ ms.custom: diagnostics
 
 # Upload crashes via API
 
-You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment) and the specificities of Apple and Custom OS and platforms.
+You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment).
+
+> [!NOTE]
+> App Center only accepts up to 60 crashes and handled errors per minute per unique app. We will not ingest any crashes or errors that exceed this limit.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
@@ -22,7 +25,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-- `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors and "errorAttachment" for error attachments. 
+- `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
 - `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
@@ -300,6 +303,7 @@ curl -X POST \
 }'
 
 ```
+
 ### Upload a custom crash log
 
 To upload a crash for a custom platform, make sure the log type is set to "managedError" and the sdkName is set to "appcenter.custom".
@@ -447,7 +451,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "sid": "d4608adf-83b9-4f69-90ad-8bb0234080a7",
       "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
@@ -477,7 +481,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "type": "errorAttachment",
        "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
@@ -503,7 +507,9 @@ curl -X POST \
 ### Caveats
 
 To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
-To symbolicate your crash, you must upload your symbols through the API or CLI, and for more information see our [API documentation](~/diagnostics/android-ndk.md#app-center-api). 
+
+To symbolicate your crash, you must upload your symbols through the API or CLI according to our [API documentation](~/diagnostics/android-ndk.md#app-center-api). If you are using Breakpad with Android, both options as specified in our [Android NDK documentation](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported, but if you are using Breakpad with Windows, only option 2: "Upload Breakpad symbols" is supported.
+
 > [!NOTE]
 > If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 

@@ -48,7 +48,7 @@ The POST method call returns a status code and an export ID which can later be u
 
 To retrieve status for this Export request, can use the following App Center API:
 
-```
+```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/devices/export/{export_id}
 ```
 
@@ -81,7 +81,7 @@ Here’s a summary of what you need to do:
 
 Use the [App Center List Audiences API](https://openapi.appcenter.ms/#/analytics/Analytics_ListAudiences) to retrieve all Audience information under your app:
 
-```
+```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/analytics/audiences
 ```
 
@@ -93,7 +93,7 @@ Go through the list retrieved in step 1, and search for any audience information
 
 Using the [App Center Get Audiences](https://openapi.appcenter.ms/#/analytics/Analytics_GetAudience) API, make a call for each of the audience names retrieved in step 2:
 
-```
+```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}
 ```
 
@@ -107,7 +107,7 @@ Every time you send a push notification (campaign), the push notification detail
 
 Use the [App Center Push List API](https://openapi.appcenter.ms/#/push/Push_List) to retrieve the list of push notifications associated with your App by App name:
 
-```
+```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/notifications
 ```
 
@@ -119,6 +119,6 @@ Search through all Push Notifications, find push notification containing your cu
 
 For each Push Notification ID returned in Step 2, use the [App Center Push Get API](https://openapi.appcenter.ms/#/push/Push_Get) for each:
 
-```
+```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/notifications/{notification_id}
 ```

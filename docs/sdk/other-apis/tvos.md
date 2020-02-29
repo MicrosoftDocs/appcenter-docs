@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: c13d5c6c-b3ab-4aa0-9f0c-8a96c3e742af
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: tvos
 dev_langs:  
  - swift

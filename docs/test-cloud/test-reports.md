@@ -2,9 +2,9 @@
 title: Test reports
 description: Understanding test reports in App Center Test
 keywords: test cloud
-author: glennwilson
-ms.author: v-glenw
-ms.date: 01/17/2019
+author: oddj0b
+ms.author: vigimm
+ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: 810505bc-9df6-4640-8c21-0039a339ad06
 ms.service: vs-appcenter

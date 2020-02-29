@@ -40,7 +40,7 @@ If you are sending push notifications to an audience, this method will help you 
 
 Use the [App Center Analytics List Audiences API](https://openapi.appcenter.ms/#/analytics/Analytics_ListAudiences) to retrieve all Audience information under your app:
 
- ```
+ ```json
  GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/analytics/audiences
  ```
 

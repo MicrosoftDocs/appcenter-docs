@@ -4,10 +4,9 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 11/11/2019
+ms.date: 02/05/2020
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---
@@ -28,7 +27,7 @@ ms.tgt_pltfrm: UWP
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta apps and those submitted to the Windows Store. Crash logs contain valuable information for you to help fix the crashes.
 
-The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++.
+The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++. However, if you have an app with C++ crashes, you can upload them to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
 Follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
