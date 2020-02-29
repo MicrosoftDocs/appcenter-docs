@@ -15,7 +15,7 @@ ms.tgt_pltfrm: react-native
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
+> * [Windows](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
