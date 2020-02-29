@@ -14,13 +14,8 @@ ms.custom: test
 
 # Preparing XCUITest Tests for Upload with App Center Extensions Framework
 
-This framework has been *deprecated*.
-
-This framework is *no longer required* for running XCUITest tests in App Center.
-
-This framework will not be updated to be compatible with versions of Xcode > 10.0.
-
-If you are just starting with XCUITest, do not link this framework.
+> [!WARNING]
+> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you are just starting with XCUITest, don't link this framework.
 
 If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
 
