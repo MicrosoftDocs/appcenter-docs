@@ -79,7 +79,7 @@
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
-### [Preparing Xamarin.Android apps for testing](test-cloud/uitest/preparing-for-upload-android.md)
+### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
 ### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
