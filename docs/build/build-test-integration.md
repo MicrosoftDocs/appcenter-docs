@@ -4,16 +4,15 @@ description: Instructions for how to launch your most recent build on a physical
 keywords: test, build, ios, android
 author: king-of-spades
 ms.author: kegr
+ms.reviewer: nirajpur
 ms.date: 11/08/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: ccc7e62f-90ad-4634-a25b-2e720fb34dff 
 ms.custom: build
-ms.reviewer: nirajpur
 ---
 
 # Testing Builds on Real Devices
-
 In this document, you'll learn how to integrate App Center Build and [App Center Test](~/test-cloud/index.md) to run your latest successful build on real devices. 
 
 ## Supported Configurations
