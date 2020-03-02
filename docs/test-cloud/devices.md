@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 2/19/2020
+ms.date: 3/2/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -414,6 +414,7 @@ Huawei Nexus 6P | 8.1.0
 Huawei P Smart (2019) | 9
 Huawei P10 | 7.0
 Huawei P20 Pro | 8.1.0
+Huawei P20 Pro | 9
 Huawei P30 Pro | 10
 Huawei P30 Pro | 9
 Karbonn Sparkle V | 4.4.4
@@ -542,6 +543,7 @@ Samsung Galaxy Nexus | 4.2.2
 Samsung Galaxy Note | 4.1.2
 Samsung Galaxy Note 10 | 10
 Samsung Galaxy Note 10 | 9
+Samsung Galaxy Note 10 Lite | 10
 Samsung Galaxy Note 10+ | 10
 Samsung Galaxy Note 10+ | 9
 Samsung Galaxy Note 10.1 3G & WiFi | 4.1.2
@@ -579,6 +581,7 @@ Samsung Galaxy S III Mini (NFC) | 4.1.2
 Samsung Galaxy S III mini VE | 4.2.2
 Samsung Galaxy S10 | 10
 Samsung Galaxy S10 | 9
+Samsung Galaxy S10 Lite | 10
 Samsung Galaxy S10 Plus | 10
 Samsung Galaxy S10 Plus | 9
 Samsung Galaxy S10e | 10
@@ -713,4 +716,6 @@ Xiaomi Mi A2 | 9
 Xiaomi Mi A3 | 9
 Xiaomi Redmi Note 4G | 4.4.4
 ZTE Nubia Z7 Max | 4.4.2
+
+
 
