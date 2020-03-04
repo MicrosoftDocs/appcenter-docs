@@ -61,7 +61,7 @@ public class Tests
 
 There are two ways to run Xamarin.UITests according to category:
 
-* `appcenter` - is the [Command Line Interface](/appcenter/cli/index) for App Center.
+* `appcenter` - The [Command Line Interface](/appcenter/cli/index) for App Center.
 * `nunit-console.exe` - is the command-line runner for NUnit tests. It is also used to run Xamarin.UITests locally.
 
 > [!NOTE]
