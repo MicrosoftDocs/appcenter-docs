@@ -15,7 +15,7 @@ ms.custom: test
 
 Xamarin.UITests may be grouped into logical categories by adorning them with the [CategoryAttribute](http://www.nunit.org/index.php?p=category&r=2.6.4) from the NUnit framework, which provides some flexibility on what tests are run.
 
-For example, an application may have one set of tests that are specifically for tablets, and another set for phones. With categories it is possible to run the tablet-specific tests separately from the phone tests.
+For example, an application may have one set of tests that are specifically for tablets, and another set for phones. With, categories it is possible to run the tablet-specific tests separately from the phone tests.
 
 Another popular scenario is to segregate slow tests from fast tests. The fast tests are run more frequently, perhaps at each commit to source code control. The slow tests are run less frequently, for example at the end of the day.
 
@@ -104,9 +104,9 @@ appcenter test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-pat
 --exclude-category erp
 ```
 
-For more information, see the [NUnit console documentation](http://www.nunit.org/index.php?p=consoleCommandLine&r=2.6.4) for more information on how to use *category expressions* to include or exclude tests according to category combinations.
+For more information, see the [NUnit console documentation](http://www.nunit.org/index.php?p=consoleCommandLine&r=2.6.4) on how to use *category expressions* to include or exclude tests according to category combinations.
 
-When using `--fixture-chunk` both `--include-cateogry` nor `--exclude-category` switches are ignores and the whole test suite will be executed.
+When using `--fixture-chunk`, the whole test suite will be executed and both `--include-cateogry` and `--exclude-category` switches are ignored.
 
 > [!NOTE]
 > ️ When running tests locally, `IApp` must be configured with the path to the application and the application bundle.
