@@ -2,7 +2,7 @@
 title: App Center Asynchronous APIs for Unity
 description: Usage of asynchronous APIs in the Unity SDK
 keywords: sdk
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 01/25/2019
 ms.topic: article
