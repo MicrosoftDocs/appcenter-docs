@@ -2,7 +2,7 @@
 title: App Center Push for Unity Android
 description: Using Push in App Center
 keywords: sdk, push
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 03/22/2019
 ms.topic: article
