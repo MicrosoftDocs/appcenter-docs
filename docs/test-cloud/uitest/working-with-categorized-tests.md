@@ -15,7 +15,7 @@ ms.custom: test
 
 Xamarin.UITests may be grouped into logical categories by adorning them with the [CategoryAttribute](http://www.nunit.org/index.php?p=category&r=2.6.4) from the NUnit framework, which provides some flexibility on what tests are run.
 
-For example, an application may have one set of tests that are specifically for tablets, and another set for phones. With, categories it is possible to run the tablet-specific tests separately from the phone tests.
+For example, an application may have one set of tests that are specifically for tablets, and another set for phones. With categories it is possible to run the tablet-specific tests separately from the phone tests.
 
 Another popular scenario is to segregate slow tests from fast tests. The fast tests are run more frequently, perhaps at each commit to source code control. The slow tests are run less frequently, for example at the end of the day.
 
