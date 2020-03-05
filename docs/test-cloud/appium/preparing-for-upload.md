@@ -170,4 +170,4 @@ On a shared device cloud, it's important for us to guarantee that devices are cl
 It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.
 
 ### Network Tasks
-Local network tasks are faster because of usually it's closer and more dedicated to the remote host compared to App Center's connection. 
+Local network tasks are faster because the server is closer and more dedicated to the remote host.
