@@ -155,18 +155,19 @@ Steps to upload a test:
    ```
 
 ## 4. Performance Troubleshooting
-Tests on devices in the AppCenter may execute slightly slower than on a local device. Normally, slower execution is outweighed by having many more devices available and the ability to parallelize test runs.
+Tests on devices in App Center will execute slightly slower than on a local device. Normally, slower execution is outweighed by having many more devices available and the ability to parallelize test runs.
 
-There are two main sources of slower test runs: re-signing and reinstallation.
+There are three main sources of slower test runs: re-signing, reinstallation, and network tasks.
 
 ### Re-signing (on iOS)
-
 Before being installed on the iOS device, your app goes through a process called re-signing. This process is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. Rarely, re-signing also causes performance degradation because re-signed apps are cached. The time consuming process will only run once per binary.
 
 If you have an automated Continuous Delivery setup where the IPA is having its version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
 
 ### Reinstallation
-
 On a shared device cloud, it's important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.  In App Center Test, the app is automatically uninstalled after the completion of your test run. 
 
 It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.
+
+### Network Tasks
+Local network tasks are faster because of usually it's closer and more dedicated to the remote host compared to App Center's connection. 
