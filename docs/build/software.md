@@ -308,6 +308,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android
 #### Android SDK Tools
+| Package Name                       | Description                        |
+| ---------------------------------- | ---------------------------------- |
+| tools                              | Android SDK Tools, Revision 26.1.1 |
 
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
