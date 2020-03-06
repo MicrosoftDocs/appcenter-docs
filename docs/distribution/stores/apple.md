@@ -18,7 +18,7 @@ Publish iOS app upgrades to the App Store and TestFlight with Fastlane in App Ce
 ## Pre-requisites
 
 * The first version of an iOS application must be published through the App Store Connect portal.
-* Compile the app using an App Store provisioninig profile and production certificate.
+* Compile the app using an App Store provisioning profile and production certificate.
 * App should be ready for submission and pass the [App Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
 * An active [Apple Developer Program](https://developer.apple.com/programs/enroll/) account, or have your Apple ID added as an admin in your teams' [App Store Connect](https://itunesconnect.apple.com/login) account.
 
