@@ -23,7 +23,7 @@ Builds for iOS and Android apps (including Xamarin and React Native platforms) a
 
 - macOS 10.14.6 (18G3020) **Mojave**
 
-Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2016 & Visual Studio 2017](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2016-Readme.md).
+Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2019 & Visual Studio 2019](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md).
 
 ## Installed Software
 ### Language and Runtime
