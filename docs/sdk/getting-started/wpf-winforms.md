@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/06/2019
+ms.date: 03/09/2020
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.tgt_pltfrm: wpf-winforms
@@ -34,7 +34,7 @@ Let's get started with setting up App Center SDK in your app to use App Center A
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* Your project is targeting either .NET Framework 4.6.1 (or higher) or .NET Core 3.0 (or higher).
 * .NET Core is supported only when the WPF/WinForms application runs on Windows.
 * If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
