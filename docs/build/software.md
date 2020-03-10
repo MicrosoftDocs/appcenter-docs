@@ -4,7 +4,7 @@ description: Software used on build machines
 keywords: build
 author: nrajpurkar
 ms.author: niloferr
-ms.date: 03/03/2020
+ms.date: 03/10/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98
 ms.service: vs-appcenter
@@ -40,40 +40,42 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - GNU Fortran (Homebrew GCC 9.2.0_3) 9.2.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.9.0
-- PowerShell 6.2.4
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.10.1
+- PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.6
 - Ruby 2.6.5p114
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
 - Go 1.14
 - PHP 7.4.3
+- julia 1.3.1
 
 ### Package Management
 - Rustup 1.21.1
+- Vcpkg 2020.02.04
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.0
-- Homebrew 2.2.6
+- Homebrew 2.2.9
 - NPM 3.10.10
-- Yarn 1.22.0
+- Yarn 1.22.1
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 2.7)
 - Pip 19.3.1 (python 3.7)
 - Miniconda 4.7.12
 - RubyGems 3.1.2
-- Vcpkg 2020.02.04
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.2.1
+- Gradle 6.2.2
 
 ### Utilities
-- Curl 7.68.0
+- Curl 7.69.0
 - Git: 2.25.0
 - Git LFS: 2.10.0
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
+- Packer 1.5.4
 - GNU parallel 20200222
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
@@ -82,18 +84,20 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 - aria2 1.35.0
 - azcopy 10.3.4
 - zstd 1.4.4
+- bazel 2.2.0
+- bazelisk v1.3.0
 
 ### Tools
-- Fastlane 2.142.0
-- Cmake 3.16.4
+- Fastlane 2.143.0
+- Cmake 3.16.5
 - App Center CLI 1.2.2
 - Azure CLI 2.1.0
 
 ### Browsers
-- Google Chrome 80.0.3987.122 
+- Google Chrome 80.0.3987.132 
 - ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.62 
-- MSEdgeDriver 80.0.361.62
+- Microsoft Edge 80.0.361.66 
+- MSEdgeDriver 80.0.361.66
 - Mozilla Firefox 73.0.1
 - geckodriver 0.26.0
 
@@ -117,7 +121,7 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.4.7.17
+- 8.4.8.2
 
 #### Mono
 - 6.6.0.166
@@ -308,9 +312,9 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 
 ### Android
 #### Android SDK Tools
-| Package Name                       | Description                        |
-| ---------------------------------- | ---------------------------------- |
-| tools                              | Android SDK Tools, Revision 26.1.1 |
+| Package Name | Description                        |
+| ------------ | ---------------------------------- |
+| tools        | Android SDK Tools, Revision 26.1.1 |
 
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
@@ -371,6 +375,8 @@ Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.
 | build-tools-29.0.2     | Android SDK Build-Tools, Revision 29.0.2     |
 | build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
 | build-tools-30.0.0-rc1 | Android SDK Build-Tools, Revision 30.0.0 rc1 |
+| build-tools-17.0.0     | Android SDK Build-Tools, Revision 17.0.0     |
+| build-tools-23.0.0     | Android SDK Build-Tools, Revision 23.0.0     |
 
 #### Android Utils
 | Package Name     | Version      |
