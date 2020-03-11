@@ -2,7 +2,7 @@
 title: Get Started with Unity
 description: Get started
 keywords: sdk
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 03/04/2020
 ms.topic: get-started-article

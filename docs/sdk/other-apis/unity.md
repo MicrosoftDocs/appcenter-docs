@@ -2,7 +2,7 @@
 title: Other Unity APIs
 description: Other APIs in the App Center SDK for Unity
 keywords: sdk
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 11/26/2019
 ms.topic: article

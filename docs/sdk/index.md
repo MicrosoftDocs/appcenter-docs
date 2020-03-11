@@ -86,18 +86,18 @@ Push       | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.
 ### Windows UWP
 
 Service          | Windows Version    | Visual Studio
------------------|--------------------|----------------------------
-Analytics        | 10 build 10240     | Visual Studio 2015 or later
-Crashes          | 10 build 10240     | Visual Studio 2015 or later
+-----------------|--------------------|----------------------------------------
+Analytics        | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
+Crashes          | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
 Distribute       | not available      | not available
-Push             | 10 build 10240     | Visual Studio 2015 or later
+Push             | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
 
 ### WPF and WinForms
 
 Service          | .NET Framework | .NET Core     | Windows Version | Visual Studio
------------------|----------------|---------------|-----------------|--------------
-Analytics        | 4.5 or later   | 3.0 or later  | 10 build 10240  | Visual Studio 2015 or later
-Crashes          | 4.5 or later   | 3.0 or later  | 10 build 10240  | Visual Studio 2015 or later
+-----------------|----------------|---------------|-----------------|----------------------------------------
+Analytics        | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
+Crashes          | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
 Distribute       | not available  | not available | not available   | not available
 Push             | not available  | not available | not available   | not available
 
