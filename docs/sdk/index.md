@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/20/2019
+ms.date: 03/11/2020
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
