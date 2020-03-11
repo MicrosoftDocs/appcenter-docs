@@ -41,7 +41,8 @@ The App Center SDK for Unity supports the following platforms:
 * UWP (Build 16299 or later)
 
 > [!NOTE]
-> Starting from SDK version 3.0.0 we no longer support using .NET scripting backend. Use [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) instead.
+> Starting from SDK version 3.0.0 we no longer support using .NET 3.5 scripting runtime version
+> and .NET scripting backend.
 
 In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asyncronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
