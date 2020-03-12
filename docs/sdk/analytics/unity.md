@@ -2,7 +2,7 @@
 title: App Center Analytics for Unity
 description: App Center Analytics for Unity
 keywords: unity
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 02/14/2019
 ms.topic: article

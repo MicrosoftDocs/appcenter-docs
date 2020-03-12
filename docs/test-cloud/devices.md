@@ -405,6 +405,7 @@ Huawei Ascend Y511 | 4.2.2
 Huawei Honor 6 | 4.4.2
 Huawei Honor View 10 | 8.0.0
 Huawei Mate 10 Pro | 8.0.0
+Huawei Mate 20 Pro | 10
 Huawei Mate 20 Pro | 9
 Huawei Nexus 6P | 6.0.1
 Huawei Nexus 6P | 7.0
@@ -586,6 +587,9 @@ Samsung Galaxy S10 Plus | 10
 Samsung Galaxy S10 Plus | 9
 Samsung Galaxy S10e | 10
 Samsung Galaxy S10e | 9
+Samsung Galaxy S20 | 10
+Samsung Galaxy S20 Plus | 10
+Samsung Galaxy S20 Ultra | 10
 Samsung Galaxy S4 | 4.2.2
 Samsung Galaxy S4 | 4.3
 Samsung Galaxy S4 | 4.4.2

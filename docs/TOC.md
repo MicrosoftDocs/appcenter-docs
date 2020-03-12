@@ -288,6 +288,7 @@
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
+## [Supported Browsers](general/browsers.md)
 ## [Support Center](general/support-center.md)
 
 # GDPR
