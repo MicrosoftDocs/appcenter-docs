@@ -41,7 +41,7 @@ The App Center SDK for Unity supports the following platforms:
 * UWP (Build 16299 or later)
 
 > [!NOTE]
-> We no longer support using .NET 3.5 scripting runtime version and .NET scripting backend on the UWP platform.
+> .NET 3.5 scripting runtime version and .NET scripting backend are no longer supported on the UWP platform.
 
 In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asyncronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
