@@ -4,7 +4,7 @@ description: Code signing apps built with App Center
 keywords: code signing, ios
 author: siminapasat
 ms.author: siminap
-ms.date: 08/08/2018
+ms.date: 03/13/2020
 ms.topic: article
 ms.assetid: 6a9c7fcc-7a9b-4d9b-bea2-c6ee8e4208a1
 ms.service: vs-appcenter
