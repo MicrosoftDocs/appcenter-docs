@@ -74,16 +74,16 @@ Logs are numbered based on the major phases of your build. Most build failures c
 Phase 13 was skipped first, so phase 12 is a good starting point. Later phases were skipped too, but they're less likely to be relevant.
 
 ## Identifying Correlated Commits
-In the Build UI, you can view the commit message and hash applicable to your current build. You can use this to trace and correlate build outcomes to particular changes in your sourcecode. 
+In the Build UI, you can view the commit message and hash applicable to your current build. You can use this feature to trace and correlate build outcomes to changes in your source code. 
 
-You can view these by going to 
+You can view commit messages & hashes by going to 
 **Appcenter.ms -> [Organization-Name] -> [App-Name] -> Build -> [Branch-Name] -> [Build-Number]**
 
 Prototype URL: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/build/branches/[BRANCH-NAME]/builds/[BUILD-NUMBER] 
 
 ![Screenshot showing commit & hash from source](images/commit-hash.png)
 
-At the top of the information for the build, you'll see the name and abbreviated hash of the commit. In this screenshot, those are:
+At the top of the information for the build, you'll see the name and abbreviated hash of the commit. In the screenshot:
 - Bump Xamarin.UITest from 3.0.5 to 3.0.6
 - Commit 328ff115
 
