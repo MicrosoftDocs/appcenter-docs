@@ -277,7 +277,7 @@
 ### [React Native](sdk/troubleshooting/react-native.md)
 ### [Cordova](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
-### [UWP](sdk/troubleshooting/uwp.md)
+### [UWP, WPF, and WinForms](sdk/troubleshooting/uwp.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
@@ -291,6 +291,7 @@
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
+## [Supported Browsers](general/browsers.md)
 ## [Support Center](general/support-center.md)
 
 # GDPR

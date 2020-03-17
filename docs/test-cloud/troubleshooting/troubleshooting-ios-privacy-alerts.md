@@ -31,13 +31,11 @@ Xamarin.UITest and Calabash automatically accept alerts that they know about. Kn
 ```xml
 $ cd DeviceAgent.iOS
 $ git pull
-$ find Server/Resources.xcassets -name "alerts.json" -exec grep -q "Allow “%@” to access your location?" {} \; -print
+$ find Server/Resources.xcassets -name "alerts.json" -exec grep -q "to access your location" {} \; -print
 Server/Resources.xcassets/springboard-alerts/springboard-alerts-en_GB.dataset/alerts.json
 Server/Resources.xcassets/springboard-alerts/springboard-alerts-en_AU.dataset/alerts.json
 Server/Resources.xcassets/springboard-alerts/springboard-alerts-en.dataset/alerts.json
 ```
-
-When searching, be aware that titles which contain the app name have a format specifier: %@ for example - `"Allow “%@” to access your location?"`
 
 If your application has alerts that are not in that file, contact App Center Test Support (the blue chat icon in the lower right corner) to get them added. If they are in that file, there may be some problem with the device configuration which should be considered as a bug and reported to App Center Test Support for a quick fix.  
 

@@ -2,7 +2,7 @@
 title: App Center Push for Unity Windows
 description: Using Push in App Center
 keywords: sdk, push
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 08/01/2019
 ms.topic: article
