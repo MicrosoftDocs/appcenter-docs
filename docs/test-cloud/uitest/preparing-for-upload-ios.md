@@ -3,6 +3,7 @@ title: Preparing Xamarin.iOS app for testing
 description: A step-by-step guide to set up Xamarin.UITest for Xamarin.iOS apps
 author: oddj0b
 ms.author: vigimm
+ms.reviewer: kegr
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: D938098B-EA2F-4EC8-BCB2-A79D25B2F964
@@ -10,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # Preparing Xamarin.iOS Apps
-
 The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
 
 Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .ipa file. The Xamarin Test Cloud Agent is a special, embedded HTTP server that allows Xamarin.UITests to interact with the iOS user interface. The Test Cloud Agent is added to the iOS project via NuGet.
@@ -19,10 +19,9 @@ Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .i
 > Non-Xamarin.iOS apps are also supported by Xamarin.UITest, but instead of the Xamarin Test Cloud Agent require [linking Calabash](https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode).
 
 ### Visual Studio for Mac
-
 For an iOS project in Visual Studio for Mac, right click on the **Packages** folder, select **Add Package**. Search for **Xamarin Test Cloud Agent**, and click **Add Package**:
 
-![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-xs.png)
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/uitest/images/05-addpackage-xs.png)
 
 ### Visual Studio (Windows)
 
@@ -31,7 +30,7 @@ For an iOS project in Visual Studio for Mac, right click on the **Packages** fol
 
 For an iOS project in Visual Studio for Windows, right click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
 
-![Adding the Xamarin Test Cloud Agent](~/test-cloud/preparing-for-upload/images/05-addpackage-vs.png)
+![Adding the Xamarin Test Cloud Agent](~/test-cloud/uitest/images/05-addpackage-vs.png)
 
 ### Initialize the Xamarin Test Cloud Agent
 
