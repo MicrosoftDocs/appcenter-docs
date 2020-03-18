@@ -1,5 +1,17 @@
-## Installed Software
-### Language and Runtime
+---
+title: App Center macOS 10.14 (Mojave)
+description: Software used on macOS 10.14 build machines
+keywords: build
+author: elamalani
+ms.author: elamalani
+ms.date: 03/17/2020
+ms.topic: article
+ms.service: vs-appcenter
+ms.custom: build
+---
+
+# Installed Software
+## Language and Runtime
 - Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
 - Java 1.8: (Zulu 8.44.0.11-CA-macosx) (build 1.8.0_242-b20) (default)
 - Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
@@ -23,7 +35,7 @@
 - PHP 7.4.3
 - julia 1.3.1
 
-### Package Management
+## Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
@@ -37,11 +49,11 @@
 - Miniconda 4.8.2
 - RubyGems 3.1.2
 
-### Project Management
+## Project Management
 - Apache Maven 3.6.3
 - Gradle 6.2.2
 
-### Utilities
+## Utilities
 - Curl 7.69.1
 - Git: 2.25.1
 - Git LFS: 2.10.0
@@ -60,13 +72,13 @@
 - bazel 2.2.0
 - bazelisk v1.3.0
 
-### Tools
+## Tools
 - Fastlane 2.143.0
 - Cmake 3.16.5
 - App Center CLI 1.2.2
 - Azure CLI 2.2.0
 
-### Browsers
+## Browsers
 - Google Chrome 80.0.3987.132 
 - ChromeDriver 80.0.3987.106
 - Microsoft Edge 80.0.361.66 
@@ -74,7 +86,7 @@
 - Mozilla Firefox 74.0
 - geckodriver 0.26.0
 
-### Toolcache
+## Toolcache
 #### Ruby
 - 2.4.9
 - 2.5.7
@@ -92,7 +104,7 @@
 - 2.7.17
 - 3.6.9
 
-### Xamarin
+## Xamarin
 #### Visual Studio for Mac
 - 8.4.8.2
 
@@ -172,7 +184,7 @@
 #### Unit Test Framework
 - NUnit 3.6.1
 
-### Xcode
+## Xcode
 | Version          | Build   | Path                           |
 | ---------------- | ------- | ------------------------------ |
 | 11.3.1 (default) | 11C505  | /Applications/Xcode_11.3.1.app |
@@ -283,7 +295,7 @@
 | watchOS 6.0 | 11.0<br>11.1                                                                                        | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 | watchOS 6.1 | 11.2<br>11.2.1<br>11.3<br>11.3.1                                                                    | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 
-### Android
+## Android
 #### Android SDK Tools
 | Package Name | Description                        |
 | ------------ | ---------------------------------- |
