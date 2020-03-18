@@ -3,7 +3,7 @@ title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/10/2019 
+ms.date: 03/13/2020
 ms.topic: article 
 ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 
@@ -22,6 +22,11 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 4. Launch the freshly cloned project in your local IDE or command line. 
 5. Try comparing [the build command executed in App Center](https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
+
+### Files with modified filenames or locations are ignored
+Builds might ignore a key file that was recently moved or renamed. Try selecting **Save** or **Save & Build** in the build configuration. Either option reindexes your repository tree and updates the build definition.
+
+Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file).
 
 ## Comparing different builds in App Center
 ### Some branches work while others fail
@@ -42,7 +47,7 @@ App Center Build automatically attempts to highlight common error messages or us
 
 ![Screenshot of highlighted error](images/errorlog.png)
 
-```
+```console
 jarsigner: unable to sign jar: java.util.zip.ZipException: invalid entry compressed size (expected 13274 but got 13651 bytes)
 ##[error]Error: /usr/bin/jarsigner failed with return code: 1
 ##[error]Return code: 1
@@ -67,6 +72,22 @@ Logs are numbered based on the major phases of your build. Most build failures c
 - 21_Finalize Job.txt
 
 Phase 13 was skipped first, so phase 12 is a good starting point. Later phases were skipped too, but they're less likely to be relevant.
+
+## Identifying Correlated Commits
+In the Build UI, you can view the commit message and hash applicable to your current build. You can use this feature to trace and correlate build outcomes to changes in your source code. 
+
+You can view commit messages & hashes by going to 
+**Appcenter.ms -> [Organization-Name] -> [App-Name] -> Build -> [Branch-Name] -> [Build-Number]**
+
+Prototype URL: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/build/branches/[BRANCH-NAME]/builds/[BUILD-NUMBER] 
+
+![Screenshot showing commit & hash from source](images/commit-hash.png)
+
+At the top of the information for the build, you'll see the name and abbreviated hash of the commit. In the screenshot:
+- Bump Xamarin.UITest from 3.0.5 to 3.0.6
+- Commit 328ff115
+
+Clicking on the abbreviated hash opens the linked repository on the same commit: https://github.com/microsoft/appcenter-Xamarin.UITest-Demo/commit/328ff115cb67280f7bdc70074ff605c8962470e4
 
 ## Next Steps
 Here are a few options for researching your issue further:

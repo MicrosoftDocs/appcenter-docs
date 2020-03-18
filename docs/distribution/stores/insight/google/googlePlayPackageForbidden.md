@@ -21,4 +21,4 @@ This error appears when your account doesn't have access to an app in the Google
 
 ## Fixing this issue
 
-Provide the App Center API access to a Google account, which does have access to the app. Follow the [instructions on how to provide the correct .json file](https://docs.microsoft.com/en-us/appcenter/distribution/stores/googleplay).
+Provide the App Center API access to a Google account, which does have access to the app. Follow the [instructions on how to provide the correct .json file](https://docs.microsoft.com/appcenter/distribution/stores/googleplay).

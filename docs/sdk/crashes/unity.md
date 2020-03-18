@@ -2,12 +2,11 @@
 title: App Center Crashes for Unity
 description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
-author: jwhitedev
+author: maestersid
 ms.author: jawh
-ms.date: 08/12/2019
+ms.date: 12/13/2019
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a
-ms.service: vs-appcenter
 ms.custom: crashes
 ms.tgt_pltfrm: unity
 ---
@@ -31,6 +30,15 @@ App Center Crashes automatically generates a crash log every time your app crash
 Follow the instructions in the [Unity Getting Started](~/sdk/getting-started/unity.md) section if you haven't set up the SDK in your application yet.
 
 Crash logs on iOS require Symbolication. To enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md), which explains how to provide symbols for your app.
+
+> [!IMPORTANT]
+> The current SDK does not support Crashes for Unity when running on UWP, the instructions in this page cover only Android and iOS.
+
+> [!NOTE]
+> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
+
+> [!NOTE]
+> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK will not collect crash logs.
 
 ## Generate a test crash
 
@@ -116,7 +124,7 @@ Crashes.ShouldAwaitUserConfirmation = () =>
 {
     // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-    // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
 };
 ```
@@ -145,6 +153,8 @@ Crashes.SendingErrorReport += (errorReport) =>
 };
 ```
 
+In case we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is triggered again after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
@@ -163,9 +173,13 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 };
 ```
 
-### Add attachments to a crash report
+Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
+
+### Add attachments to a crash or an unhandled exception report
+
+You can add **one binary** and **one text** attachment to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send it along with the report so that you can see it in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -179,8 +193,13 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 };
 ```
 
+Crashes are differentiated from unhandled exceptions in reports with the `IsCrash` property. The property will be true for crashes and false otherwise.
+
 > [!NOTE]
-> The size limit is currently 7 MB. Attempting to send a larger attachment will trigger an error.
+> The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
+
+> [!NOTE]
+> `GetErrorAttachments` is invoked on the main thread and does not split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
 
 ## Enable or disable App Center Crashes at runtime
 
@@ -235,7 +254,24 @@ try {
 }
 ```
 
+You can also optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
+}
+```
+
 ## Unhandled Exceptions in Unity
+
+### Report unhandled exceptions
 
 By default, the App Center SDK doesn't report unhandled exceptions thrown in your app that don't cause a fatal crash. To enable this functionality, call the following method:
 
@@ -250,7 +286,17 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. 
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash.
+
+### Add attachments to an unhandled exception report
+
+By default, the App Center SDK doesn't enable attachments on unhandled exceptions. To enable this functionality, set the `enableAttachmentsCallback` boolean parameter of the `ReportUnhandledExceptions` method to `true`:
+
+```csharp
+Crashes.ReportUnhandledExceptions(true, true);
+```
+
+Then you can optionally add attachments to an unhandled exception report by implementing the [GetErrorAttachments](#add-attachments-to-a-crash-or-an-unhandled-exception-report) callback.
 
 ## Reporting NDK crashes
 
@@ -320,11 +366,11 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
 
-> [!NOTE]
+> [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 
-[!include[](./ndk-symbolication.md)]
+See the [Diagnostics documentation](~/diagnostics/Android-NDK.md) for more information regarding the processing of crashes.

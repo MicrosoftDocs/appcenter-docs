@@ -1,5 +1,5 @@
 ---
-title: App Center Build Frequently Asked Questions
+title: App Center Build FAQs
 description: Code signing apps built with App Center
 keywords: build, faq
 author: nrajpurkar
@@ -82,4 +82,4 @@ We're working on improving re-indexing Build Scripts when changed. Until then, a
 
 App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
 
-App Center currently only searches four directory levels deep for your project files. If you encounter situations where App Center does not find your project in your branch, moving it to the root directory might help. Reach out to us for any projects we're not able to find.
+App Center currently only searches four directory levels deep for your project files. If you encounter situations where App Center does not find your project in your branch, moving it to the root directory might help. If your repository is extremely large, it may help to reduce its size or number of files. Reach out to us for any projects we're not able to find.

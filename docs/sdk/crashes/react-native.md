@@ -4,10 +4,9 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 09/12/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
@@ -40,7 +39,7 @@ import Crashes from 'appcenter-crashes';
 
 App Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
 
-```
+```csharp
 Crashes.generateTestCrash();
 ```
 
@@ -199,9 +198,13 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 > [!NOTE]
 > If `Crashes.setListener` is called more than once, the last one wins; it overrides listeners previously set by `Crashes.setListener`.
 
+Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+
 ### Add attachments to a crash report
 
-You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add one binary and one text attachment to a crash report. The SDK sends it along with the crash so that you can see it in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
@@ -248,6 +251,30 @@ Crashes.setListener({
 > 
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
+
+## Breakpad
+
+App Center supports Breakpad crashes from Android NDK in a React Native apps.
+
+Follow the normal setup steps above, and in your `MainActivity.java` override `OnCreate` and add the minidump configuration and call into your native code that sets up your Breakpad configuration.
+
+Example:
+```java
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
+      @Override
+      public void accept(String path) {
+        // Path is null when Crashes is disabled.
+        if (path != null) {
+          // links to NDK
+          setupBreakpadListener(path);
+        }
+      }
+    });
+  }
+```
 
 ## Enable or disable App Center Crashes at runtime
 

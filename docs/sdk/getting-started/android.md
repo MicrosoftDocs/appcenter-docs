@@ -4,11 +4,9 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 08/16/2019
+ms.date: 02/18/2020
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
  - java
@@ -20,12 +18,14 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -58,7 +58,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '2.3.0'
+      def appCenterSdkVersion = '3.0.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }
@@ -70,6 +70,34 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 2. Make sure to trigger a Gradle sync in Android Studio.
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of App Center.
+
+3. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+  a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
 
 ## 4. Start the SDK
 

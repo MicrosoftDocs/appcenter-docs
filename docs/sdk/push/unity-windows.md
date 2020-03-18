@@ -2,13 +2,11 @@
 title: App Center Push for Unity Windows
 description: Using Push in App Center
 keywords: sdk, push
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 08/01/2019
 ms.topic: article
-ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
-ms.service: vs-appcenter
-ms.custom: sdk
+ms.assetid: f038f869-9ab2-40c2-8860-2e02eb54f9ac
 ms.tgt_pltfrm: unity
 ---
 
@@ -41,7 +39,7 @@ If you haven't already set up and started the SDK in your application, see the [
 
 ### Enable App Center Push
 
-[!include[](unity-enable.md)]
+[!INCLUDE [unity enable](includes/unity-enable.md)]
 
 
 ## Register your app for Windows Notification Services (WNS)
@@ -50,10 +48,10 @@ Before you can send notification using WNS, your app must be registered with the
 
 To register the app, first export it as a project. To do so, build the app on the Unity **Build Settings** tab, then open the built solution in **Visual Studio**.
 
-[!include[](windows-wns.md)]
+[!INCLUDE [windows wns](includes/windows-wns.md)]
 
 ## Intercept push notifications
 
-[!include[](unity-intercept.md)]
+[!INCLUDE [unity intercept](includes/unity-intercept.md)]
 
-[!include[](unity-api-enable.md)]
+[!INCLUDE [unity api enable](includes/unity-api-enable.md)]

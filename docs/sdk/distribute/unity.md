@@ -2,12 +2,11 @@
 title: App Center Distribute for Unity
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
-author: jwhitedev
+author: maestersid
 ms.author: jawh
-ms.date: 05/20/2019
+ms.date: 11/26/2019
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
@@ -117,7 +116,7 @@ To enable App Center Distribute again, use the same API but pass `true` as a par
 Distribute.SetEnabledAsync(true);
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 You don't need to await this call to make other API calls (such as `IsEnabledAsync`) consistent.
 
@@ -131,7 +130,7 @@ You can also check if App Center Distribute is enabled:
 Distribute.IsEnabledAsync();
 ```
 
-[!include[](../unity-see-async.md)]
+[!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
 ## Enable in-app updates for debug builds
 
@@ -145,11 +144,14 @@ In Unity, a debuggable build is a build with a **Development build** option chec
 
 ## How in-app updates work
 
+> [!NOTE]
+> For in-app updates to work, an app build should be downloaded from the link. It won't work if installed from an IDE or manually.
+
 The in-app updates feature works as follows:
 
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading.
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
 4. Once the app is installed, and opened for the first time after adding the App Center Distribute SDK, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur on future releases of your app.
 5. Once the above step is successful, they should navigate back to the app.
 6. A new release of the app shows the in-app update dialog asking users to update your application if it has
@@ -176,7 +178,7 @@ You must upload release builds (that use the Distribute module of the App Center
 7. Review the Distribution and distribute the build to your in-app testing group.
 8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 9. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android).
-10. Build the release version of your app and upload a new build just like you did in the previous step. Distribute to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
+10. Build the release version of your app and upload a new build just like you did in the previous step. Distribute to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

@@ -4,11 +4,9 @@ description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
-ms.date: 08/26/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: cordova
 ---
 
@@ -66,4 +64,4 @@ AppCenter.setUserId("your-user-id");
 After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
 
 > [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+> The value for the user id is limited to 256 characters.

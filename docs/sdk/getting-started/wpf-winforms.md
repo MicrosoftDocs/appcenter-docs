@@ -4,11 +4,9 @@ description: Get started
 keywords: sdk
 author: winnieli1208
 ms.author: yuli1
-ms.date: 09/20/2019
+ms.date: 03/09/2020
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: wpf-winforms
 ---
 
@@ -17,12 +15,15 @@ ms.tgt_pltfrm: wpf-winforms
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
+> * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
@@ -33,7 +34,7 @@ Let's get started with setting up App Center SDK in your app to use App Center A
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* Your project is targeting either .NET Framework 4.6.1 (or higher) or .NET Core 3.0 (or higher).
 * .NET Core is supported only when the WPF/WinForms application runs on Windows.
 * If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
@@ -57,8 +58,7 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Open Visual Studio.
 * Click **File** > **Open** and choose your solution.
 * In the solution navigator, right-click **References** and choose **Manage NuGet Packages**.
-* Check the **Include prerelease** box, as the support for WPF/WinForms SDK is currently in **preview**.
-* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages with version **2.4.0-preview** for both packages.
+* In the **Browse tab**, Search for **App Center**, and install **Microsoft.AppCenter.Analytics** and **Microsoft.AppCenter.Crashes** packages.
 
 ### Package Manager Console
 
@@ -66,24 +66,12 @@ The App Center SDK can be integrated using Visual Studio, or the Package Manager
 * Type the following commands:
 
 ```shell
-Install-Package Microsoft.AppCenter.Analytics -Version 2.4.0-preview
-Install-Package Microsoft.AppCenter.Crashes -Version 2.4.0-preview
+Install-Package Microsoft.AppCenter.Analytics
+Install-Package Microsoft.AppCenter.Crashes
 ```
 
 > [!NOTE]
-> Make sure you install the **-preview** package as the official releases do not support WPF/WinForms.
-
-Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the App Center services.
-
-> [!NOTE]
 > If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that is running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
-
-> [!NOTE]
-> We currently have a known issue on .NET Core 3.0 when publishing as a single file. If you are using `PublishSingleFile`, install this package:
->
-> ```shell
-> Install-Package SQLitePCLRaw.lib.e_sqlite3.v110_xp -Version 1.1.14
-> ```
 
 ## 5. Start the SDK
 

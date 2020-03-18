@@ -4,11 +4,9 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/14/2019
+ms.date: 12/20/2019
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
@@ -17,12 +15,14 @@ ms.tgt_pltfrm: xamarin
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -173,6 +173,34 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
 
+##### 4.2.4 If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rules, switch to the third step.
+
+    a. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
+
+    b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+    ```console
+    android:fullBackupContent="@xml/appcenter_backup_rule"
+    ```
+
+    c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+    ```xml
+    <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+        <exclude domain="sharedpref" path="AppCenter.xml"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+        <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+    </full-backup-content>
+    ```
+
 ### 4.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
@@ -208,4 +236,4 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md)
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you will see **Crashes** and **Distribute** APIs, however those APIs are not yet supported on the **UWP** platform and are doing nothing when running on your **UWP** application.
+> Using the portable APIs from Xamarin Forms, you will see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP does not support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.

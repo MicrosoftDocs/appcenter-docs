@@ -2,12 +2,11 @@
 title: App Center Crashes for iOS
 description: App Center Crashes for iOS
 keywords: sdk, crash
-author: elamalani
-ms.author: emalani
-ms.date: 09/12/2019
+author: winnieli
+ms.author: yuli1
+ms.date: 09/25/2019
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:
@@ -41,7 +40,11 @@ Also note that crash logs on iOS require Symbolication, check out the [App Cente
 > [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
-[!include[](apple-common-methods-1.md)]
+### Crash reporting in extensions
+
+App Center supports crash reporting in iOS extensions. The usage is the same as in the container application.
+
+[!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
 ### Ask for the user's consent to send a crash log
 
@@ -132,7 +135,7 @@ MSCrashes.notify(with: .send)
 MSCrashes.notify(with: .always)
 ```
 
-[!include[](apple-common-methods-2.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 
 ## Disabling Mach exception handling
 

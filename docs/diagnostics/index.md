@@ -4,9 +4,9 @@ description: Help using the Diagnostic service on App Center
 keywords: app center, crashes, errors, diagnostics
 author: winnieli1208
 ms.author: yuli1
-ms.date: 07/31/2019
+ms.date: 12/16/2019
 ms.topic: article
-ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
+ms.assetid: f3cc2bc9-29a5-4b39-84fa-a82d6902ea6f
 ms.service: vs-appcenter
 ms.custom: diagnostics
 ---
@@ -23,57 +23,13 @@ Crashes are what happens when a runtime exception occurs from an unexpected even
 
 ## Errors
 
-Experienced developers know where code can fail and wrap potentially risky code with error checking or try/catch blocks to handle problems as they occur. For Xamarin, Unity, WPF and WinForms apps, App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. Learn more about best practices about when and how to use errors in the [official documentation for exceptions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/using-exceptions).
+Experienced developers know where code can fail and wrap potentially risky code with error checking or try/catch blocks to handle problems as they occur. For [Android](../sdk/crashes/android.md), [Xamarin](../sdk/crashes/xamarin.md), [Unity](../sdk/crashes/unity.md), [UWP](../sdk/crashes/uwp.md), [WPF and WinForms](/sdk/crashes/wpf-winforms.md) apps, App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. Learn more about best practices about when and how to use errors in the [official documentation for exceptions](https://docs.microsoft.com/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 
 > [!NOTE]
-> App Center Errors is only supported for Xamarin, Unity, WPF and WinForms apps.
+> App Center Errors is only supported for Android, Xamarin, Unity, UWP, WPF and WinForms apps.
 
+### Limits
 
-### Inside a Try/Catch Enclosure (Errors)
-
-By calling `TrackError` method inside try/catch enclosure, you can control what information is sent to the App Center service when an error occurs, and therefore get a clearer picture of the error and the state of the device.
-
-There are a number of benefits using the `TrackError` method:
-
-- Send reports to the service with greater accuracy.
-- Send reports to the service with additional information.
-
-#### Track Handled Errors in App Center
-
-Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you will be able to track errors by using the `TrackError` method:
-
-```csharp
-try
-{
-    int divByZero = 42 / int.Parse("0");
-} catch (DivideByZeroException ex){
-    Crashes.TrackError(ex);
-}
-```
-
-Learn more about how to use the Crashes SDK to track errors in Xamarin in our [Crashes SDK Documentation](~/sdk/crashes/xamarin.md).
-
-### Adding Additional Information to Error Catching
-
-It's possible to tailor the error report sent to App Center to provide additional information for further context about the error. Achieve this by passing a Dictionary of strings key/value pairs to the `TrackError` method. These properties are completely optional. For example:
-
-```csharp
-try
-{
-    using (var text = File.OpenText("saved_game001.txt"))
-    {
-        Console.WriteLine("{0}", text.ReadLine());
-        ...
-    }
-}
-catch (FileNotFoundException ex)
-{
-    Crashes.TrackError(ex, new Dictionary<string,string>{
-        { "Filename", "saved_game001.txt" },
-        { "Where", "Reload game" },
-        { "Issue", "Index of available games is corrupted" }
-    });
-}
-```
-
-Here the full exception (ex) is still sent to the App Center service, but the SDK adds a dictionary containing additional debugging information and sends it to the server with the error report.
+- The maximum number of error properties per error is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped by the SDK.
+- The SDK truncates each property key and value to the first 125 characters.
+- The portal may show only 1 text attachment and 1 binary attachment per error.

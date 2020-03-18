@@ -17,7 +17,6 @@ ms.author: jowargo (your Microsoft Alias)
 ms.date: 02/26/2018 (Expected publish date, in **US format: mm/dd/yyyy**)
 ms.topic: article (one only of the following: article, get-started-article, hero-article, hub-page, landing-page, non-content, reference, search)
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - just use a GUID, you can generate one at https://www.guidgenerator.com/)
-ms.service: vs-appcenter (**no reason to change this**)
 ms.custom: Analytics data, a field that gets imported into SkyEye so you can use it in custom reports
 ---
 ```
@@ -368,7 +367,7 @@ And they'll render like this:
 [button links](../docs/core/index.md)
 ```
 
-You can see an example of buttons in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/get-started/choose-how-to-enroll-devices).
+You can see an example of buttons in action at the [Intune docs](https://docs.microsoft.com/intune/get-started/choose-how-to-enroll-devices).
 
 ### Selectors
 
@@ -378,7 +377,7 @@ You can see an example of buttons in action at the [Intune docs](https://docs.mi
 > * [Windows](../docs/core/tutorials/using-on-windows.md)
 ```
 
-You can see an example of selectors in action at the [Intune docs](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
+You can see an example of selectors in action at the [Intune docs](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
 
 ### Step-By-Steps
 
@@ -388,4 +387,4 @@ You can see an example of selectors in action at the [Intune docs](https://docs.
 [Next](../docs/csharp/expression-trees-translating.md)
 ```
 
-You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/install-ata-step2).
+You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/install-ata-step2).
