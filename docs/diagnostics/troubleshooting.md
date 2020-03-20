@@ -42,3 +42,13 @@ This is usually caused by enabling the App Center crashes module without also en
 **What are the time period limitations to send a log to App Center?**
 
 The App Center backend will only accept logs that are no more than 25 days in the past or 3 days in the future.
+
+**The numbers in the affected users charts look off. How are they calculated?**
+The affected users for a error group are calculated as: `Total number of affected users / Total number of devices` over the respective time frame (i.e. last 30 days).
+This means that the total value can be higher than any or the average of any daily value. Here's a simple example:
+
+1. Your app had a total of three active users A, B, C.
+1. In the last 30 days, A, B, and C were active every day.
+1. On day 1 user A experienced a crash. On day 2 user B experienced a crash. On day 3 user C experienced a crash.
+1. The local maximums on days 1, 2, 3 are 33.3% respectively (since each day, one out of three users experienced a crash).
+1. The total maximum is 100% since in the surveyed time frame, since all of your users experienced a crash at some time.
