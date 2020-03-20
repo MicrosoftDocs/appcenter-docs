@@ -147,7 +147,7 @@ conceptualContent:
             url: ~/diagnostics/enabling-diagnostics.md
             itemType: how-to-guide
           - text: Diagnostics Features
-            url: ~/diagnostics/enabling-diagnostics.md
+            url: ~/diagnostics/features.md
             itemType: overview
           - text: Troubleshooting
             url: ~/diagnostics/troubleshooting.md
