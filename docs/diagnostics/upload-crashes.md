@@ -26,7 +26,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 
 Log properties:
 - `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
-- `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72h in the future of time of ingestion
+- `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72h in the future of time of ingestion
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
