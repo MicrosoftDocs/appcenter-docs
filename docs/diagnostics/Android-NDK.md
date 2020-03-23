@@ -4,7 +4,7 @@ description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnieli1208
 ms.author: yuli1
-ms.date: 12/17/2019
+ms.date: 03/24/2020
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -52,6 +52,8 @@ Archive:  symbols.zip
 ```
 
 ## Uploading symbols
+> [!NOTE]
+> The App Center Build and Distribution service can automatically forward symbols to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps below.
 
 ### App Center Portal
 
