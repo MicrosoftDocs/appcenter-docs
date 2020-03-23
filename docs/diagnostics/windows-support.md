@@ -20,13 +20,13 @@ refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms
 
 App Center supports the full diagnostics feature set for both sideloaded and Windows Store UWP apps using the 2.5.0 SDK or later versions. To enable App Center’s diagnostics for your UWP app, follow [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md) to integrate the App Center SDK. You can learn more about the complete feature set in the [diagnostics features documentation](~/diagnostics/features.md).
 
-## New diagnostics experience for UWP apps
+## New diagnostics experience
 
-With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience to address the limitations and gaps in the old experience. This section details the improvements and transition experience with the new release.
+With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience. This section details the improvements and transition experience with the new release.
 
 ### What improvements were made?
 
-The new and improved diagnostics experience for UWP apps includes support for both Windows store and sideloaded apps. This includes the following additions:
+The new and improved diagnostics experience includes the following additions:
 
 - A full symbolication experience that allows you to upload symbols in App Center. See the symbolication section below for more details.
 - Support for handled exceptions
@@ -42,10 +42,6 @@ You can learn more about each feature in the [App Center diagnostics documentati
 ### What is the transition experience?
 
 After you update to the App Center UWP SDK Version 2.5.0, you will see crash and error data coming into the App Center Diagnostics portal in a new and improved UI. For crash and error data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api.md#transitioning-to-the-new-apis).
-
-### What happens after the transition?
-
-Please upgrade to the 2.5.0 SDK and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
 
 ## Symbolication
 
