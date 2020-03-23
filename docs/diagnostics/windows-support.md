@@ -18,11 +18,11 @@ refer to our [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms
 
 ## Universal Windows Platform
 
-App Center supports the full diagnostics feature set for both sideloaded and Windows Store UWP apps using the 2.5.0 SDK. To enable App Center’s diagnostics for your UWP app, follow [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md) to integrate the App Center SDK. You can learn more about the complete feature set in the [diagnostics features documentation](~/diagnostics/features.md).
+App Center supports the full diagnostics feature set for both sideloaded and Windows Store UWP apps using the 2.5.0 SDK or later versions. To enable App Center’s diagnostics for your UWP app, follow [App Center's UWP SDK documentation](~/sdk/crashes/uwp.md) to integrate the App Center SDK. You can learn more about the complete feature set in the [diagnostics features documentation](~/diagnostics/features.md).
 
 ## New diagnostics experience for UWP apps
 
-With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience to address the limitations and gaps mentioned above. This section details the improvements and transition experience with the new release.
+With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience to address the limitations and gaps in the old experience. This section details the improvements and transition experience with the new release.
 
 ### What improvements were made?
 
