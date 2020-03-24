@@ -127,7 +127,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
 > [!NOTE]
-> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-lower-than-060-without-react-native-link-or-cocoapods)
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
