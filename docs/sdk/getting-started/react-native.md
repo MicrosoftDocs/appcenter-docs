@@ -264,7 +264,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 13. Disable autolinking for React Native 0.60 and above:
     
-    * Inside the **node_modules** folder in each App Center package open **react-native.config.js** and set `dependency.platforms.ios` to **null**:
+    * Inside the **node_modules** folder in each App Center package open **react-native.config.js** and set `dependency.platforms.ios` to `null`:
 
     ```javascript
     module.exports = {
@@ -277,7 +277,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     };
     ```
 
-14. Modify **Header Search Paths** to find React Native headers from the AppCenter React Native plugins projects.
+14. Modify **Header Search Paths** to find React Native headers from the App Center React Native plugins projects:
 
     * Make sure the Project Navigator is visible (⌘+1).
     * For each AppCenter React Native plugins project that you have added to the **Libraries** group in the step 8:
