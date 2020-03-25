@@ -4,7 +4,7 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 11/21/2019
+ms.date: 03/25/2020
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.tgt_pltfrm: react-native
@@ -280,7 +280,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 14. Modify **Header Search Paths** to find React Native headers from the AppCenter React Native plugins projects.
 
     * Make sure the Project Navigator is visible (⌘+1).
-    * For each AppCenter React Native plugins project that you have added to the **Libraries** group in the step eight:
+    * For each AppCenter React Native plugins project that you have added to the **Libraries** group in the step 8:
       * Select the project and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files with a `recursive` option: `${SRCROOT}/../../../ios/Pods/Headers`
 
 ### 3.4 [Android only] Integrate the SDK manually for React Native lower than 0.60 without react-native link
