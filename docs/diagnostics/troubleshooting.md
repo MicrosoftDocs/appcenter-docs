@@ -46,3 +46,5 @@ This means that the total value can be higher than any or the average of any dai
 1. On day 1 user A experienced a crash. On day 2 user B experienced a crash. On day 3 user C experienced a crash.
 1. The local maximums on days 1, 2, 3 are 33.3% respectively (since each day, one out of three users experienced a crash).
 1. The total maximum is 100% since in the surveyed time frame, since all of your users experienced a crash at some time.
+
+There are other factors which might contribute to that, i.e. different users of your app hitting different issues thus only being reported in specific crash or error groups.
