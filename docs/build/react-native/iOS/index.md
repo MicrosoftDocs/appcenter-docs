@@ -54,7 +54,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 When enabled, the `CFBundleVersion` in the project's **Info.plist** of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.6. Code signing
-A successful build produces an `.ipa` file. To install the build on a device, the build must be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision` file) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles-`.mobileprovision`), along with the password for the certificate.
+A successful build produces an `.ipa` file. To install the build on a device, the build must be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision` file) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate.
 
 The settings in your Xcode project must be compatible with the files you are uploading. Read more about [App Center's iOS code signing](~/build/ios/code-signing.md) and the [Apple Developer documentation](https://developer.apple.com/support/code-signing/).
 
