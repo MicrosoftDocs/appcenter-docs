@@ -20,11 +20,11 @@ iOS apps must be signed to run on real devices. In App Center, this process requ
 
 ## Signing files
 ### Certificates (.p12)
-- **iOS Development:** Used to enable certain app services during development and testing.
-- **iOS Distribution:** For submission to the App Store, Ad Hoc or Enterprise distribution.
+- **Apple Development:** Used to enable certain app services during development and testing.
+- **Apple Distribution:** For submission to the App Store, Ad Hoc or Enterprise distribution.
 
 ### Provisioning Profiles (.mobileprovision)
-- **iOS App Development:** Install development apps on developer test devices.
+- **Apple App Development:** Install development apps on developer test devices.
 - **Ad Hoc:** Install an app on a limited number of registered devices.
 - **App Store:** Required for submitting your app to the Apple App Store.
 - **In-House:** for In-House app distribution (the profile is only available via the Apple Enterprise program).
