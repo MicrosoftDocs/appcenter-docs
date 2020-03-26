@@ -12,6 +12,12 @@ ms.custom: build
 ms.tgt_pltfrm: xamarin-ios
 ---
 
+> [!NOTE] 
+> Supported versions and requirements
+App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
+App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever available. If you're using a Component that can't be replaced, contact us. See [help and feedback](../../../help.md).
+
+
 # Building Xamarin apps for iOS
 To start building your first Xamarin iOS app, you'll need to:
 
@@ -32,16 +38,16 @@ After selecting a repository, select the branch you want to build. By default al
 Before your first build, the Xamarin project needs to be configured.
 
 ### 3.1. Project/solution
-App Center automatically detects the solution and project files in your repository if they are located within the range of analysis. Select the **.sln** or **.csproj/.fsproj** you would like to build.
+App Center automatically detects the solution and project files in your repository if they're located within the range of analysis. Select the **.sln** or **.csproj/.fsproj** you would like to build.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to two directory levels for **.sln** and four directory levels for **.csproj/fsproj** including the root of your repository.
 
 #### 3.1.1. Building from the solution file (.sln)
-In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more [solution configurations mapping information](~/build/xamarin/ios/solution-configuration-mappings.md) you can read.
+In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects targeting other platforms. This change will ensure that when the **.sln** is building, it won't attempt to build the other projects. There's more [solution configurations mapping information](~/build/xamarin/ios/solution-configuration-mappings.md) you can read.
 
 #### 3.1.2. Building from the project file (.csproj/.fsproj)
-In order to build from a **.csproj/.fsproj** file all the referenced projects (for example, your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
+To build from a **.csproj/.fsproj** file all the referenced projects (for example, your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
 
 ### 3.2. Configuration
 Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
@@ -62,21 +68,21 @@ Proper .Net Core version will be selected automatically based on Mono version us
 Current supported versions of Xamarin require Xcode 8.3.3 or higher
 
 ### 3.5. Build triggers
-By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
+By default, a new build is triggered every time a developer pushes to a configured branch. If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.6. Simulator build
-Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster than device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
+Simulator builds can only be ran on simulators and can't be installed on the device, however the builds complete faster than device builds. If your build isn't a simulator build, you need to upload code signing files in the next step.
 
 ### 3.7. Increment build number
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.8. Code signing
-A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
+A successful device build will produce an ipa file. To install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
 
-Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/platform/extensions) require an additional provisioning profile per extension in order to be signed.
+Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/platform/extensions) require an additional provisioning profile per extension to be signed.
 
 > [!NOTE]
-> There is an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when performing `nuget restore` in projects containing Xamarin watchOS apps.
+> There's an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when running `nuget restore` in projects containing Xamarin watchOS apps.
 > Building a watchOS app on App Center without a workaround will result in an error: 
 >
 >`Project <project> is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Project <project> supports: xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)`.
@@ -97,10 +103,10 @@ Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/pla
 ```
 
 ### 3.9. Launch your successful build on a real device
-Use your newly produced .ipa file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
+Use your newly produced .ipa file to test if your app starts on a real device. Launch testing adds about 10 more minutes to the build time. You may want to check more [comprehensive guide about testing your builds](~/build/build-test-integration.md)
 
 ### 3.10. NuGet restore
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
+If the **NuGet.config** file is checked-in for the repository and sitting next to the **.sln** or the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -125,7 +131,7 @@ If the **NuGet.config** file is checked-in into the repository and sitting next 
 If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.11. Distribute to a distribution group
-You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be automatically kicked off.
 
@@ -133,7 +139,7 @@ Once you save the configuration, a new build will be automatically kicked off.
 After a build has been triggered, it can be in the following states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and performing the predefined tasks
+* **building** - the build is running and executing the predefined tasks
 * **succeeded** - the build is completed and it has succeeded
 * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
 * **canceled** - the build has been canceled by a user action or it has timed out
@@ -153,19 +159,14 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step-specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.ipa or .app)
-The .ipa is an iPhone application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](~/build/ios/code-signing.md).
+The .ipa is an iOS application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](~/build/ios/code-signing.md).
 
-If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
+If the app is a simulator build, you can run the .app file on a simulator, but you can't use it on a real device.
 
 ### 4.3. The symbol files (.dsym)
-Symbol files are only generated for device builds.
+Symbol files are only generated for device builds. The .dsym files contain the debug symbols for the app.
 
-The .dsym files contain the debug symbols for the app.
+* If previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build to display human readable (symbolicated) crash reports.
+* If you previously integrated another SDK for crash reporting in your app (for example, HockeyApp SDK), the corresponding service requires the .dsym file to display human readable crash reports.
 
-* If you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports.
-* If you have previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable crash reports.
 
-## Supported versions and requirements
-App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
-
-App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us. See [help and feedback](../../../help.md).
