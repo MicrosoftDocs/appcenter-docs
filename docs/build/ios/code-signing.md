@@ -36,7 +36,7 @@ Upload an additional provisioning profile for each app extension in your app. Pr
 To sign your iOS builds, upload a provisioning profile (.mobileprovision) and your certificate (.p12 file) when [configuring the build](~/build/ios/first-build.md), along with the password you've set for the certificate. These files can be found in the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles.
 ![Apple Developer: Certificates, IDs & Profiles](images/apple-developer-certificates-blurred-outlier.png)
 
-## Finding provisioning profiles (.mobileprovision)
+## Finding provisioning profiles `.mobileprovision`
 ### Option 1 - Getting a provisioning profile from Apple Developer Center
 1. On the **Certificates, IDs & Profiles** page, click on **Provisioning Profiles**.
 2. Pick the provisioning profile for signing your app in App Center and download it. Make sure to select the right type of profile (development or distribution).
@@ -53,7 +53,7 @@ To sign your iOS builds, upload a provisioning profile (.mobileprovision) and yo
 3. Get the generated provisioning profile from `~/Library/MobileDevice/Provisioning Profiles/`
 4. Upload the new provisioning profile Xcode has generated to App Center when [configuring a branch](~/build/ios/first-build.md).
 
-## Getting a certificate from Apple Developer Center (.p12)
+## Getting a certificate from Apple Developer Center `.p12`
 1. On the **Certificates, IDs & Profile** page, click on **Certificates**.
 2. Select the certificate for signing your app in App Center and download it. Make sure to select the right type of certificate (development or production) and that the provisioning profile you've previously selected contains this certificate. Also, you need to have the private key for the certificate installed on your Mac - it won't be included if you only download the certificate from the Apple Developer Center.
    ![Download certificate from Apple Developer](images/certificate-blurred-outlier.png)

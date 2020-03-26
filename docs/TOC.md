@@ -24,11 +24,11 @@
 ### [Introduction](build/ios/index.md)
 ### [Configure a build](build/ios/first-build.md)
 ### [Code Signing](build/ios/code-signing.md)
-### [Upload signing files](build/ios/uploading-signing-files.md)
 ## macOS
 ### [Introduction](build/macos/index.md)
 ### [Configure a build](build/macos/first-build.md)
 ### [Code Signing](build/macos/code-signing.md)
+### [Upload signing files](build/macos/uploading-signing-files.md)
 ## React Native
 ### [Introduction](build/react-native/index.md)
 ### [Android](build/react-native/android/index.md)
