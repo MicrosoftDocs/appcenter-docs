@@ -4,7 +4,7 @@ description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: winnieli1208
 ms.author: yuli1
-ms.date: 02/05/2020
+ms.date: 03/16/2020
 ms.topic: article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
@@ -44,6 +44,9 @@ Prior to the 2.5.0 SDK release, App Center worked with the Windows crash reporti
 - Crash report details per crash instance including when the app was launched, when it crashes, and what country, network, and language the device is in.
 - Ability to download crash reports.
 
+> [!NOTE]
+> The legacy experience will be disabled on March 31, 2020 and all legacy crashes data will no longer be available in App Center. You can continue to use Partner Center to access this data.
+
 ## New diagnostics experience for UWP apps
 
 With the 2.5.0 SDK release in October 2019, App Center released a new diagnostics experience to address the limitations and gaps mentioned above. This section details the improvements and transition experience with the new release.
@@ -71,7 +74,7 @@ All crashes from older SDK versions will be still be available and displayed in 
 
 ### What happens after the transition?
 
-The legacy experience will be disabled on January 20th, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
+The legacy experience will be disabled on March 31, 2020. Please upgrade to the 2.5.0 SDK as soon as it's released and use the new errors APIs as soon as you can to ensure a smooth transition. If you need help or have questions about the transition, please reach out to our support team.
 
 ## Symbolication
 
