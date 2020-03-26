@@ -16,7 +16,6 @@ ms.tgt_pltfrm: react-native
 App Center can build React Native apps written in React Native version 0.34 or newer.
 
 To build a React Native app for iOS, you must:
-
 1. Connect to your repository service account (for example: Azure DevOps, Bitbucket, GitHub, Bitbucket, or VSTS).
 2. Select a repository and a branch where your app lives.
 3. Configure the build's project or workspace, and the scheme you would like to build.
@@ -38,17 +37,17 @@ Select your project’s `package.json`. App Center will automatically detect the
 
 ### <a name="xcode-version"/>3.2. Xcode version
 Select the Xcode version to run the build on from the dropdown list.
-If the toggle "Use legacy build system" is in `On` state then the legacy build system will be used despite of  the project or workspace settings.
-If the toggle "Use legacy build system" is in `Off` state then build system configuration from the project or workspace settings will be used.
+If the toggle "Use legacy build system" is `On` then the legacy build system will be used regardless of the project or workspace settings.
+If the toggle "Use legacy build system" is `Off` then the build system configuration from the project or workspace settings will be used.
 *Note that:*
    - Workspace setting should be committed to the repository
-   - If workspace setting is not committed then the modern build system will be used
+   - If workspace setting isn't committed, then the modern build system will be used
 
 ### 3.3. Node.js version
 Select the Node.js version to use for the build. Learn more about [how to select Node.js version](~/build/react-native/nodejs.md)
 
 ### 3.4. Build triggers
-By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
+By default, a new build is triggered every time a developer pushes to a configured branch. If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.5. Increment build number
 When enabled, the `CFBundleVersion` in the project's **Info.plist** of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
@@ -56,7 +55,7 @@ When enabled, the `CFBundleVersion` in the project's **Info.plist** of your app 
 ### 3.6. Code signing
 A successful build produces an `.ipa` file. To install the build on a device, the build must be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision` file) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate.
 
-The settings in your Xcode project must be compatible with the files you are uploading. Read more about [App Center's iOS code signing](~/build/ios/code-signing.md) and the [Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+The settings in your Xcode project must be compatible with the files you're uploading. Read more about [App Center's iOS code signing](~/build/ios/code-signing.md) and the [Apple Developer documentation](https://developer.apple.com/support/code-signing/).
 
 Signing apps with [app or watchOS extensions](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html) requires an additional provisioning profile per extension.
 
@@ -67,15 +66,14 @@ Use the newly produced `.ipa` file to test if your app starts on a real device; 
 App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
 
 ### 3.9. Distribute to a distribution group
-Configure each successful build from a branch to be distributed to a previously created distribution group. Add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all users who have access to the app.
+Configure each successful build from a branch to be distributed to a previously created distribution group. Add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all users who have access to the app.
 
-Once you save the configuration, a new build will be automatically kicked off.
+Once you save the configuration, a new build will be automatically started.
 
 ## 4. Build results
 Builds can be in one the following states:
-
 - **queued** -  the build is enqueued waiting for available resources
-- **building** - the build is running and performing predefined tasks
+- **building** - the build is running and executing predefined tasks
 - **succeeded** - the build completed successfully
 - **failed** - the build completed unsuccessfully; troubleshoot what went wrong by downloading and inspecting the build log
 - **canceled** - the build was canceled through user action or timed out
@@ -98,25 +96,25 @@ The build logs (located in the `build/` directory of the archive) are helpful fo
 The `.ipa` file is an iPhone application archive file that contains the iOS app.
 
 - If the build was signed correctly, you can install the `.ipa` file on a real device that is included in the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
-- If the build is not signed during the build, developers can sign the `.ipa` file (locally using codesign) or used for other purposes (for example, upload to Test service for UI testing on real devices or run in the simulator).
-- Unsigned builds will not produce an .ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+- If the build isn't signed during the build, developers can sign the `.ipa` file (locally using codesign) or used for other purposes (for example, upload to Test service for UI testing on real devices or run in the simulator).
+- Unsigned builds won't produce an `.ipa` file. The artifact of an unsigned build is the `.xcarchive` file, which can be used to generate an `.ipa` file with the Xcode Archives organizer.
 
 ### 4.3. The source maps and symbol files
 Upon building a React Native iOS app, a JavaScript source map and one or multiple `.dsym` files are automatically generated with each build and can be downloaded once the build is completed.
 
-- if you have previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this `.dsym` file and the JavaScript sourcemap for a build to display human readable (symbolicated) crash reports.
-- if you have previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the `.dsym` file and the JavaScript sourcemap to display human readable (symbolicated) crash reports.
+- if you've previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this `.dsym` file and the JavaScript sourcemap for a build to display human readable (symbolicated) crash reports.
+- if you've previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the `.dsym` file and the JavaScript sourcemap to display human readable (symbolicated) crash reports.
 
-Keep in mind that the `.dsym` file does not change upon code signing the `.ipa`. If you decide to code sign the build later, the `.dsym` generated before code signing is still valid.
+Keep in mind that the `.dsym` file doesn't change upon code signing the `.ipa`. If you decide to code sign the build later, the `.dsym` generated before code signing is still valid.
 
-If this app has the crashes SDK integrated, iOS symbols and source maps will automatically be sent to App Center Crashes service to enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
+If this app has the crashes SDK integrated, iOS symbols and source maps will be sent to the App Center Crashes service. The symbols will enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
 
 ## 5. Build tips
 ### 5.1. Yarn
 [Yarn](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repo next to `package.json`, then App Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
 
 ### 5.2. Custom build scripts
-In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md) you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts) for example, when your React Native app uses TypeScript and you have to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
+In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md), you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts). For example, when your React Native app uses TypeScript and you need to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
 
 ```javascript
   "scripts": {

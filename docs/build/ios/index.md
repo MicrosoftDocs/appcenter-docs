@@ -19,4 +19,4 @@ You can build iOS apps written in Objective-C or Swift:
 - [Configuring your first build](first-build.md)
 - [Code Signing](code-signing.md)
 
-We are constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.
+We're constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: ios
 ---
 
 # Code signing for iOS
-iOS apps must be signed to run on real devices. In App Center, this requires uploading valid signing files generated using [Apple's code signing process](https://developer.apple.com/support/code-signing/). You must be able to successfully sign a valid app package locally before attempting to in App Center. If you're having trouble with local app signing, it's a good idea to reach out to the iOS developer community for troubleshooting assistance. 
+iOS apps must be signed to run on real devices. In App Center, this process requires uploading valid signing files generated using [Apple's code signing process](https://developer.apple.com/support/code-signing/). You must be able to successfully sign a valid app package locally before attempting to in App Center. 
 
 > [!IMPORTANT]
 > Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets.
@@ -27,7 +27,7 @@ iOS apps must be signed to run on real devices. In App Center, this requires upl
 - **iOS App Development:** Install development apps on developer test devices.
 - **Ad Hoc:** Install an app on a limited number of registered devices.
 - **App Store:** Required for submitting your app to the Apple App Store.
-- **In House:** for In House app distribution (the profile is only available via the Apple Enterprise program).
+- **In-House:** for In-House app distribution (the profile is only available via the Apple Enterprise program).
 
 ### Code signing for app and watchOS extensions
 Upload an additional provisioning profile for each app extension in your app. Provisioning profiles must be of the same type.
