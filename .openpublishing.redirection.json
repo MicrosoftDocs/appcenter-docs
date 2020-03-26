@@ -117,7 +117,7 @@
             "redirect_url": "/appcenter/build/react-native/ios/"
         },
         {
-            "source_path": "docs/build/ios/code-signing/uploading-files.md",
+            "source_path": "docs/build/ios/code-signing/uploading-signing-files.md",
             "redirect_url": "/appcenter/build/ios/code-signing"
         },
         {
