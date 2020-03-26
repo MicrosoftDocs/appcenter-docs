@@ -109,4 +109,4 @@ Keep in mind that the `.dsym` files do not change upon code signing the `.ipa`. 
 [xcode-share-scheme]: images/xcode-share-scheme.png "Marking a scheme as shared in Xcode"
 
 ## Supported versions and requirements
-[Build machine Xcode version details](~/build/software.md#xcode) are updated each time a new version of Xcode is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
+[Build machine Xcode version details](~/build/macos-10.15-software.md#xcode) are updated each time a new version of Xcode is added. We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
