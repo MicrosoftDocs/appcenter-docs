@@ -17,7 +17,7 @@ iOS apps must be signed to run on real devices. In App Center, this process requ
 
 ## Signing files
 > [!WARNING]
-> App Center doesn't support signing files with special characters or symbols in the name. For example, accented characters like `Ç`, `Ã` or symbols like `/`.
+> App Center doesn't support signing files with special characters or symbols in the name. For example, accented characters like **Ç**, **Ã** or symbols like **/**.
 
 ### Certificates (.p12)
 - **Apple Development:** Used to enable certain app services during development and testing.
