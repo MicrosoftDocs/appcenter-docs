@@ -2,8 +2,8 @@
 title: macOS Overview
 description: Landing page to navigate through tutorials.
 keywords: app center
-author: clpolet
-ms.author: clpolet
+author: iamclement
+ms.author: iamclement
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter
