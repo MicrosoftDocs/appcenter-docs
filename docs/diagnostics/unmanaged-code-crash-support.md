@@ -2,7 +2,7 @@
 title: Unmanaged Code Crash Support
 description: Learn how to symbolicate your App's unmanaged code crashes
 keywords: unmanaged, crashes, upload, symbolication
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 2/25/2020
 ms.topic: article

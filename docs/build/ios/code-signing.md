@@ -15,10 +15,10 @@ ms.tgt_pltfrm: ios
 # Code signing for iOS
 iOS apps must be signed to run on real devices. In App Center, this process requires uploading valid signing files generated using [Apple's code signing process](https://developer.apple.com/support/code-signing/). You must be able to successfully sign a valid app package locally before attempting to in App Center. 
 
-> [!IMPORTANT]
-> Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets.
-
 ## Signing files
+> [!WARNING]
+> App Center doesn't support signing files with special characters or symbols in the name. For example, accented characters like **Ç**, **Ã** or symbols like **/**.
+
 ### Certificates (.p12)
 - **Apple Development:** Used to enable certain app services during development and testing.
 - **Apple Distribution:** For submission to the App Store, Ad Hoc or Enterprise distribution.
@@ -33,6 +33,9 @@ iOS apps must be signed to run on real devices. In App Center, this process requ
 Upload an additional provisioning profile for each app extension in your app. Provisioning profiles must be of the same type.
 
 ### Uploading Signing Files
+> [!IMPORTANT]
+> Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets. 
+
 To sign your iOS builds, upload a provisioning profile (.mobileprovision) and your certificate (.p12 file) when [configuring the build](~/build/ios/first-build.md), along with the password you've set for the certificate. These files can be found in the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles.
 ![Apple Developer: Certificates, IDs & Profiles](images/apple-developer-certificates-blurred-outlier.png)
 
