@@ -16,9 +16,12 @@ ms.tgt_pltfrm: ios
 iOS apps must be signed to run on real devices. In App Center, this process requires uploading valid signing files generated using [Apple's code signing process](https://developer.apple.com/support/code-signing/). You must be able to successfully sign a valid app package locally before attempting to in App Center. 
 
 > [!IMPORTANT]
-> Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets.
+> Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets. 
 
 ## Signing files
+> [!WARNING]
+> App Center doesn't currently support provisioning profiles or certificates with special characters or symbols in the name. For example, accented characters like `Ç` or `Ã` or symbols like `/`. Including these characters can prevent the profile from being added to the configuration or successfully building in App Center even if it works locally. 
+
 ### Certificates (.p12)
 - **Apple Development:** Used to enable certain app services during development and testing.
 - **Apple Distribution:** For submission to the App Store, Ad Hoc or Enterprise distribution.
