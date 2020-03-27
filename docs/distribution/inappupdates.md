@@ -55,4 +55,4 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 [android-sdk]: ~/sdk/distribute/android.md
 [xamarin-sdk]: ~/sdk/distribute/xamarin.md
 [uploading]: uploading.md
-[public-dg]: groups.md##creating-a-distribution-group
+[public-dg]: groups.md#creating-a-distribution-group
