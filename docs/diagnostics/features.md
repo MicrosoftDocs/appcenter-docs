@@ -2,7 +2,7 @@
 title: Diagnostics Features
 description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 11/14/2019
 ms.topic: article

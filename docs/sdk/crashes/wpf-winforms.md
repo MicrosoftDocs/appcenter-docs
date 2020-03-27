@@ -2,7 +2,7 @@
 title: App Center Crashes for Windows
 description: App Center Crashes for Windows
 keywords: sdk, crash
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 02/05/2020
 ms.topic: article

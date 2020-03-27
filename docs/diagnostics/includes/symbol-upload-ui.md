@@ -1,6 +1,6 @@
 ---
 title: Uploading symbols through the UI
-author: winnieli1208
+author: winnie
 ms.topic: include
 ---
 

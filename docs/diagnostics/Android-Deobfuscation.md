@@ -2,7 +2,7 @@
 title: Android Deobfuscation
 description: Learn how to deobfuscate your crash reports with ProGuard enabled
 keywords: crashes, errors, Android, obfuscate
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 11/11/2019
 ms.topic: article
