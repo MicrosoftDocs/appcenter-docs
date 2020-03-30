@@ -172,7 +172,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 By default, the SDK automatically checks for new releases:
  * When the application starts.
- * When the application goes into background then in foreground again (iOS only).
+ * When the application goes into background then in foreground again.
  * When enabling the Distribute module if previously disabled.
 
 If you want to check for new releases manually, you can disable automatic check for update.
