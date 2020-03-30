@@ -55,15 +55,16 @@
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
-
 ## Troubleshooting
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
+### [Backup Build Data](build/troubleshooting/backup-data.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)
 ### [React Native](build/troubleshooting/react-native.md)
+
 
 # Test
 ## [Introduction](test-cloud/index.md)
