@@ -30,7 +30,7 @@ Known causes are moving or renaming [build scripts](~/build/custom/scripts/index
 
 ## Comparing different builds in App Center
 ### Tracking changes in your build settings
-You can record your branch configuration using this command: https://openapi.appcenter.ms/#/build/branchConfigurations_get
+You can record your branch configuration by calling this API method: https://openapi.appcenter.ms/#/build/branchConfigurations_get
 
 The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
 
