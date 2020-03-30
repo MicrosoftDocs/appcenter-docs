@@ -32,10 +32,10 @@ Known causes are moving or renaming [build scripts](~/build/custom/scripts/index
 ### Tracking changes in your build settings
 You can record your branch configuration using this command: https://openapi.appcenter.ms/#/build/branchConfigurations_get
 
-The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
+The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
 
 #### Tracking changes in App Center Cloud Build Machines
-Like your build settings, this is simple to check the current tooling by reviewing this documentation: [Cloud Build Machines](~/build/software.md). 
+Like your build settings, you can check the current tooling by reviewing this document: [Cloud Build Machines](~/build/software.md). 
 
 However, you can record which of those tools are available for a particular build by running this command in a build script:
 > eval cat $HOME/systeminfo.md 

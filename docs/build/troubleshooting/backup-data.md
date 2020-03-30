@@ -1,5 +1,5 @@
 ---
-title: Backing up Build data locally
+title: Backing up Build data
 description: How to download build logs, binaries and symbols
 author: king-of-spades
 ms.author: kegr
@@ -10,8 +10,8 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Backing up Build data locally
-Build data in App Center is retained for 30 days after creation. However, it can also be deleted before 30 days have passed in two ways:
+# Backing up Build data
+Build data in App Center is kept for 30 days after creation. However, it can also be deleted before 30 days have passed in two ways:
 
 - The configuration for the branch in App Center is deleted, which erases all data for that branch.
 - The repository is disconnected via App Center, which erases all data for that repository.
@@ -31,7 +31,7 @@ General References:
 - [App Center API Guide](https://docs.microsoft.com/appcenter/api-docs/)
 - [Swagger API methods for Build](https://openapi.appcenter.ms/#/build)
 
-You can download logs & build artifacts using this command: https://openapi.appcenter.ms/#/build/builds_getDownloadUri. This works as long as the build data exists and your API credentials have permission to access that data.
+You can download logs & build artifacts using this API call: https://openapi.appcenter.ms/#/build/builds_getDownloadUri. The call works as long as the build data exists and your API credentials have permission to access that data.
 
 ## Backup using the App Center CLI
 General References:
