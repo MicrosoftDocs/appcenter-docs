@@ -2,7 +2,7 @@
 title: App Center Build FAQs – iOS
 description: Code signing apps built with App Center
 keywords: build, faq
-author: nrajpurkar
+author: nilofer
 ms.author: nirajp
 ms.date: 02/04/2020
 ms.topic: article

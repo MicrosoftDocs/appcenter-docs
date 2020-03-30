@@ -3,7 +3,7 @@ title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/10/2019 
+ms.date: 03/27/2020
 ms.topic: article 
 ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 
@@ -23,7 +23,23 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 5. Try comparing [the build command executed in App Center](https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
+### Files with modified filenames or locations are ignored
+Builds might ignore a key file that was recently moved or renamed. Try selecting **Save** or **Save & Build** in the build configuration. Either option reindexes your repository tree and updates the build definition.
+
+Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file).
+
 ## Comparing different builds in App Center
+### Tracking changes in your build settings
+You can record your branch configuration by calling this API method: https://openapi.appcenter.ms/#/build/branchConfigurations_get
+
+The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
+
+#### Tracking changes in App Center Cloud Build Machines
+Like your build settings, you can check the current tooling by reviewing this document: [Cloud Build Machines](~/build/software.md). 
+
+However, you can record which of those tools are available for a particular build by running this command in a build script:
+> eval cat $HOME/systeminfo.md 
+
 ### Some branches work while others fail
 Try checking for differences in the build settings or committed code between branches. Also, if the build starts failing consistently after a certain commit on the same branch, it's worth checking what changes were made in the failing commit.
 
@@ -67,6 +83,22 @@ Logs are numbered based on the major phases of your build. Most build failures c
 - 21_Finalize Job.txt
 
 Phase 13 was skipped first, so phase 12 is a good starting point. Later phases were skipped too, but they're less likely to be relevant.
+
+## Identifying Correlated Commits
+In the Build UI, you can view the commit message and hash applicable to your current build. You can use this feature to trace and correlate build outcomes to changes in your source code. 
+
+You can view commit messages & hashes by going to 
+**Appcenter.ms -> [Organization-Name] -> [App-Name] -> Build -> [Branch-Name] -> [Build-Number]**
+
+Prototype URL: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/build/branches/[BRANCH-NAME]/builds/[BUILD-NUMBER] 
+
+![Screenshot showing commit & hash from source](images/commit-hash.png)
+
+At the top of the information for the build, you'll see the name and abbreviated hash of the commit. In the screenshot:
+- Bump Xamarin.UITest from 3.0.5 to 3.0.6
+- Commit 328ff115
+
+Clicking on the abbreviated hash opens the linked repository on the same commit: https://github.com/microsoft/appcenter-Xamarin.UITest-Demo/commit/328ff115cb67280f7bdc70074ff605c8962470e4
 
 ## Next Steps
 Here are a few options for researching your issue further:

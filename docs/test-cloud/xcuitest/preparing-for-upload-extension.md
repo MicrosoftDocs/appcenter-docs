@@ -4,6 +4,7 @@ description: How to upload XCUITests to App Center Test Cloud
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
+ms.reviewer: kegr
 ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: D39D30B0-B009-4BC5-8BDA-5B0B4A44E57E
@@ -13,17 +14,12 @@ ms.custom: test
 
 # Preparing XCUITest Tests for Upload with App Center Extensions Framework
 
-This framework has been *deprecated*.
-
-This framework is *no longer required* for running XCUITest tests in App Center.
-
-This framework will not be updated to be compatible with versions of Xcode > 10.0.
-
-If you are just starting with XCUITest, do not link this framework.
+> [!WARNING]
+> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you are just starting with XCUITest, don't link this framework.
 
 If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
 
-For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/preparing-for-upload/xcuitest.md).
+For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/xcuitest/preparing-for-upload.md).
 
 [AppCenter XCUITest Extensions](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions) is an iOS Framework for taking screenshots and labeling test steps when running XCUITest test in App Center. At the conclusion of each test method, a label and screenshot are automatically generated for the test report. You can create additional labels and screenshots to track your app's progress during a test method.
 

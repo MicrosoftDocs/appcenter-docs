@@ -2,7 +2,7 @@
 title: Upload crashes via API
 description: Post a crash report, e.g. if you don't want to use our SDK or develop for a custom platform.
 keywords: crashes, diagnostics, errors, attachments, upload, api
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 02/06/2020
 ms.topic: article
@@ -26,7 +26,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 
 Log properties:
 - `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
-- `timestamp`: optional string with log timestamp date-time e.g "2017-03-13T18:05:42Z".
+- `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72h in the future of time of ingestion
 - `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, e.g. "1.1.0"
@@ -56,7 +56,7 @@ You can find examples of how to upload a crash report, error report, and attachm
  The following properties are required to upload a crash report:
 
 - `processId`: required integer with process identifier
-- `id`: required string with exception identifier
+- `id`: required string with exception identifier, needs to be a unique ID for this report
 - `fatal`: required boolean that indicates if the exception resulted in a crash
 - `processName`: required string with the process name
 - `appNamespace`: required for Android apps, otherwise optional string with the bundle identifier, package identifier, or namespace, depending on what platform is used.
@@ -451,7 +451,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "sid": "d4608adf-83b9-4f69-90ad-8bb0234080a7",
       "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",
@@ -481,7 +481,7 @@ curl -X POST \
       "timestamp": "2019-10-08T06:22:23.516Z",
       "type": "errorAttachment",
        "device": {
-        "sdkName": "appcenter.uwp",
+        "sdkName": "appcenter.custom",
         "sdkVersion": "2.4.1-SNAPSHOT",
         "model": "Parallels Virtual Platform",
         "oemName": "Parallels Software International Inc.",

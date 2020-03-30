@@ -24,7 +24,6 @@
 ### [Introduction](build/ios/index.md)
 ### [Configure a build](build/ios/first-build.md)
 ### [Code Signing](build/ios/code-signing.md)
-### [Upload signing files](build/ios/uploading-signing-files.md)
 ## macOS
 ### [Introduction](build/macos/index.md)
 ### [Configure a build](build/macos/first-build.md)
@@ -56,15 +55,16 @@
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
-
 ## Troubleshooting
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
+### [Backup Build Data](build/troubleshooting/backup-data.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)
 ### [React Native](build/troubleshooting/react-native.md)
+
 
 # Test
 ## [Introduction](test-cloud/index.md)
@@ -72,29 +72,15 @@
 ## [Getting Started](test-cloud/getting-started.md)
 ## [Devices Available](test-cloud/devices.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
-## Preparing Test for Upload
-### [Introduction](test-cloud/preparing-for-upload/index.md)
-### [Appium](test-cloud/preparing-for-upload/appium.md)
-### [Espresso](test-cloud/preparing-for-upload/espresso.md)
-### [Calabash [deprecated]](test-cloud/preparing-for-upload/calabash.md)
-### [Xamarin.UITest in Xamarin.Android app](test-cloud/preparing-for-upload/xamarin-android-uitest.md)
-### [Xamarin.UITest in Xamarin.iOS app](test-cloud/preparing-for-upload/xamarin-ios-uitest.md)
-### [XCUITest](test-cloud/preparing-for-upload/xcuitest.md)
-### [XCUITest with Extensions](test-cloud/preparing-for-upload/xcuitest-extension.md)
-## [Starting a Test Run](test-cloud/starting-a-test-run.md)
-## [Test Reports](test-cloud/test-reports.md)
-## [Security](test-cloud/security.md)
-## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
-## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
-## Troubleshooting
-### [Introduction](test-cloud/troubleshooting/index.md)
-### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
-### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+## Appium
+### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
+## Espresso
+### [Preparing for upload](test-cloud/espresso/preparing-for-upload.md)
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
+### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
+### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
 ### Working With
@@ -109,6 +95,23 @@
 #### [iOS Simulator](test-cloud/uitest/working-with-ios-simulator.md)
 #### [Timeouts](test-cloud/uitest/working-with-timeouts.md)
 #### [Webviews](test-cloud/uitest/working-with-webviews.md)
+## XCUITest
+### [Preparing for upload](test-cloud/xcuitest/preparing-for-upload.md)
+### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
+## Calabash [Depreciated]
+### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
+## [Starting a Test Run](test-cloud/starting-a-test-run.md)
+## [Test Reports](test-cloud/test-reports.md)
+## [Security](test-cloud/security.md)
+## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
+## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## Troubleshooting
+### [Introduction](test-cloud/troubleshooting/index.md)
+### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
+### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
+### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
+### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+
 
 # Distribute
 ## [Introduction](distribution/index.md)
@@ -158,6 +161,7 @@
 ## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
 ## [Using the Diagnostics API](diagnostics/using-the-diagnostics-API.md)
+## [Unmanaged Code Crash Support](diagnostics/unmanaged-code-crash-support.md)
 ## [Android NDK](diagnostics/Android-NDK.md) 
 ## [Android Deobfuscation](diagnostics/Android-Deobfuscation.md)
 ## [iOS Symbolication](diagnostics/iOS-symbolication.md) 
@@ -176,27 +180,7 @@
 ## [Export](analytics/export.md)
 ## [FAQ](analytics/faq.md)
 
-# Auth
-## [Introduction](auth/index.md)
-## Getting Started
-### [Introduction](auth/getting-started.md)
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
-## [Understanding Azure AD B2C](auth/understanding-azure-ad-b2c.md)
-
-# Data
-## [Introduction](data/index.md)
-## Getting Started
-### [Introduction](data/getting-started.md)
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [Xamarin](sdk/data/xamarin.md)
-## [Understanding Cosmos DB](data/understanding-cosmos-db.md)
-
-# Push
+# Push (Retiring)
 ## [Introduction](push/index.md)
 ## [Configure the Push Service](push/service-config.md)
 ## App Configuration
@@ -244,12 +228,6 @@
 ### [Unity](sdk/analytics/unity.md)
 ### [Windows](sdk/analytics/windows.md)
 ### [Xamarin](sdk/analytics/xamarin.md)
-## Auth
-### [Android](sdk/auth/android.md)
-### [iOS](sdk/auth/ios.md)
-### [React Native](sdk/auth/react-native.md)
-### [Unity](sdk/auth/unity.md)
-### [Xamarin](sdk/auth/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [Cordova](sdk/crashes/cordova.md)
@@ -261,11 +239,6 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
-## Data
-### [Android](sdk/data/android.md)
-### [iOS](sdk/data/ios.md)
-### [React Native](sdk/data/react-native.md)
-### [Xamarin](sdk/data/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
@@ -304,7 +277,7 @@
 ### [React Native](sdk/troubleshooting/react-native.md)
 ### [Cordova](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
-### [UWP](sdk/troubleshooting/uwp.md)
+### [UWP, WPF, and WinForms](sdk/troubleshooting/uwp.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
@@ -318,6 +291,7 @@
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
+## [Supported Browsers](general/browsers.md)
 ## [Support Center](general/support-center.md)
 
 # GDPR

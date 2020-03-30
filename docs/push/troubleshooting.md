@@ -4,13 +4,16 @@ description: Troubleshooting help for the push service
 keywords: push
 author: manb-msft
 ms.author: manb
-ms.date: 02/11/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: c0ade5f0-4c37-4a04-8615-142b6a09a192
 ms.service: vs-appcenter
 ---
 
 # Push Troubleshooting
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 ## <a name="push-verbosity"/>Increase Push SDK Verbosity
 

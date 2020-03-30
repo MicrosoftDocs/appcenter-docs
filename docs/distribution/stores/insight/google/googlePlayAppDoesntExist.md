@@ -4,14 +4,14 @@ description: Insight documentation about creating an app package in Google Play 
 keywords: google, google play store, store, insight
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/06/2019
+ms.date: 03/18/2020
 ms.topic: reference
 ms.assetid: 43efde4a-3249-46bc-83db-2d8d29b712e4
 ms.service: vs-appcenter
 ms.custom: insight, distribution store
 ---
 
-# Connecting to the Google Play Store fails fails because the app package name couldn't be found
+# Connecting to the Google Play Store fails because the app package name couldn't be found
 
 When connecting to the Google Play Store, you may come across an error like this:
 

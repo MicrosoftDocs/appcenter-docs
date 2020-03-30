@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 02/20/2020
+ms.date: 02/25/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -99,12 +99,47 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.Start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.Start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+
+## Disable Automatic Check for Update
+
+By default, the SDK automatically checks for new releases:
+ * When the application starts.
+ * When enabling the Distribute module if previously disabled.
+
+If you want to check for new releases manually, you can disable automatic check for update.
+To do this, call the following method before the SDK start:
+
+```java
+Distribute.disableAutomaticCheckForUpdate();
+```
+```kotlin
+Distribute.disableAutomaticCheckForUpdate()
+```
+
+> [!NOTE]
+> This method must be called before the `AppCenter.start` method call.
+
+Then you can use the `checkForUpdate` API which is described in the following section.
+
+## Manually Check for Update
+
+```java
+Distribute.checkForUpdate();
+```
+```kotlin
+Distribute.checkForUpdate()
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
+
+> [!NOTE]
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 

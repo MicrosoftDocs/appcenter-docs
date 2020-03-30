@@ -2,7 +2,7 @@
 title: PlayFab Integration
 description: Integrating App Center Diagnostics in PlayFab
 keywords: diagnostic, crashes
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 03/05/2019
 ms.topic: article

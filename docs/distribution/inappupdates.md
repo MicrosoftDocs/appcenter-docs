@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 2/04/2020
+ms.date: 2/19/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -19,6 +19,7 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 > At this time, there are some limitations to In-App Updates:
 > 1) Android devices will not be prompted for an update if there is no change in `versionCode` or `versionName`.
 > 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that will have to be dismissed. Login is not required for the public flow.
+> 3) In-App Updates don't work on windows/UWP applications.
 
 ## Public In-App Updates 
 
@@ -36,6 +37,7 @@ To enable public in-app updates, create a [public distribution group][public-dg]
  2. Why do testers not see an in-app update message when a new version of the app is released?
 - Multiple scenarios can cause testers to not get in-app update notifications:
     - App Center SDK distribute feature is disabled. App Center SDK distribute feature must be enabled and initialized at app launch. If testers installed a version with the distribute feature disabled, they would need to install the latest version manually.
+    - Automatic check for update is disabled. If automatic check for update is disabled, the app will not check for new releases at startup. The check will happen at the time **checkForUpdate** is called.
     - Release version of your app is incorrect for a new release 
       - For Android: increment version code.
       - For iOS: increment CFBundleShortVersionString and conform to semantic versioning standards
@@ -53,4 +55,4 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 [android-sdk]: ~/sdk/distribute/android.md
 [xamarin-sdk]: ~/sdk/distribute/xamarin.md
 [uploading]: uploading.md
-[public-dg]: groups.md##creating-a-distribution-group
+[public-dg]: groups.md#creating-a-distribution-group

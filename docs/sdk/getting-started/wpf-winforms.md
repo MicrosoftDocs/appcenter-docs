@@ -2,9 +2,9 @@
 title: Get Started with WPF/WinForms
 description: Get started
 keywords: sdk
-author: winnieli1208
+author: winnie
 ms.author: yuli1
-ms.date: 10/16/2019
+ms.date: 03/09/2020
 ms.topic: get-started-article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.tgt_pltfrm: wpf-winforms
@@ -34,7 +34,7 @@ Let's get started with setting up App Center SDK in your app to use App Center A
 
 Before you begin, please make sure that the following prerequisites are met:
 
-* Your project is targeting either .NET Framework 4.5 (or higher) or .NET Core 3.0 (or higher).
+* Your project is targeting either .NET Framework 4.6.1 (or higher) or .NET Core 3.0 (or higher).
 * .NET Core is supported only when the WPF/WinForms application runs on Windows.
 * If you use the SDK from a portable library, it must target .NET standard 1.0 or higher (PCL is not supported).
 
@@ -72,13 +72,6 @@ Install-Package Microsoft.AppCenter.Crashes
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that is running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
-
-> [!NOTE]
-> We currently have a known issue on .NET Core 3.0 when publishing as a single file. If you are using `PublishSingleFile`, install this package:
->
-> ```shell
-> Install-Package SQLitePCLRaw.lib.e_sqlite3.v110_xp -Version 1.1.14
-> ```
 
 ## 5. Start the SDK
 

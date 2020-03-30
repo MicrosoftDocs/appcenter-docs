@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: botatoes
 ms.author: bofu
-ms.date: 01/27/2020
+ms.date: 02/24/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -105,9 +105,6 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 
 #### 2.3 Modify the project's **Info.plist**
 
-> [!NOTE]
-> If you've previously configured App Center Auth, the `URL types` key may already be present. In this case, add a new entry to the `URL types` key by following the instructions from step 3.
-
 1. In the project's **Info.plist** file, add a new key for `URL types` by clicking the '+' button next to "Information Property List" at the top. If Xcode displays your **Info.plist** as source code, refer to the tip below.
 2. Change the key type to Array.
 3. Add a new entry to the array (`Item 0`) and change the type to Dictionary.
@@ -147,6 +144,42 @@ After this call, a browser window will open up to authenticate the user. All the
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+
+## Disable Automatic Check for Update
+
+By default, the SDK automatically checks for new releases:
+ * When the application starts.
+ * When the application goes into background then in foreground again.
+ * When enabling the Distribute module if previously disabled.
+
+If you want to check for new releases manually, you can disable automatic check for update.
+To do this, call the following method before the SDK start:
+
+```objc
+[MSDistribute disableAutomaticCheckForUpdate];
+```
+```swift
+MSDistribute.disableAutomaticCheckForUpdate()
+```
+
+> [!NOTE]
+> This method must be called before the `AppCenter.start` method call.
+
+Then you can use the `checkForUpdate` API which is described in the following section.
+
+## Manually Check for Update
+
+```objc
+[MSDistribute checkForUpdate];
+```
+```swift
+MSDistribute.checkForUpdate()
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
+
+> [!NOTE]
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 

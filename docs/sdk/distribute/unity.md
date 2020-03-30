@@ -2,9 +2,9 @@
 title: App Center Distribute for Unity
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
-author: jwhitedev
+author: maestersid
 ms.author: jawh
-ms.date: 02/20/2020
+ms.date: 03/30/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -43,6 +43,30 @@ When using the private track, a browser window will open up to authenticate the 
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+
+## Disable Automatic Check for Update
+
+By default, the SDK automatically checks for new releases:
+ * When the application starts.
+ * When the application goes into background then in foreground again (iOS only).
+ * When enabling the Distribute module if previously disabled.
+
+If you want to check for new releases manually, you can disable automatic check for update.
+
+To do this, uncheck the **Automatic Check for Update** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
+
+Then you can use the `CheckForUpdate` API which is described in the following section.
+
+## Manually Check for Update
+
+```csharp
+Distribute.CheckForUpdate();
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
+
+> [!NOTE]
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 

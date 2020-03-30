@@ -4,7 +4,7 @@ description: Understanding test reports in App Center Test
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 01/31/2020
+ms.date: 03/25/2020
 ms.topic: article
 ms.assetid: 810505bc-9df6-4640-8c21-0039a339ad06
 ms.service: vs-appcenter
@@ -13,13 +13,18 @@ ms.custom: test
 
 # Test reports
 
-When your tests execute in App Center Test, we generate reports with summary and detail information for the test run, the tests and the devices. At the completion of the test run, you can view these reports in the **Tests** section of App Center.
+When your tests execute in App Center Test, we generate reports with a summary and detailed information for
+* the test run
+* the tests
+* the devices.
 
-For an explanation of some of the terms and concepts used below see [App Center Test Core concepts](~/test-cloud/core-concepts.md).
+At the completion of the test run, you can view these reports in the **Tests** section of App Center.
+
+Read [App Center Test Core concepts](~/test-cloud/core-concepts.md) to understand the terms and concepts used below.
 
 ## Navigating to test runs
 
-Starting from the App Center **My Apps** page, select an application, then select **Tests** in the navigation list. This brings you to the *Test runs dashboard* for all test runs in the default test series for that application.
+Starting from the App Center **My Apps** page, select an application, then select **Tests** in the navigation list. From the *Test runs dashboard* all test runs in the default test series for that application are displayed.
 
 ## Test runs dashboard
 
@@ -28,10 +33,10 @@ Starting from the App Center **My Apps** page, select an application, then selec
 The color green or a check mark on a green background indicates passing and the color red or a lightning bolt on a red background indicates failing, throughout the test reports.
 
 * The **Test series** button filters or creates a test series.
-* The **New test run** button starts the new test run wizard used to create a sample command line to submit a new test run.
+* The **New test run** button starts a wizard that helps you to create a sample command line to submit a new test run.
 * The **Number of Tests** graphic near the top left shows the test run history with the number of tests passed and tests failed. Click in this graph to navigate to a specific test run.
 * The **Peak Memory** graphic at top right shows test run history for the peak memory consumed by the application. Click in this graph to navigate to a specific test run.
-* The **Test runs** list shows summary test run results including **Date**, **Duration**, **Status**, **Results** and number of **Devices**. When filtering by test series, only test runs from the selected  test series are shown.
+* The **Test runs** list shows summary test run results including **Date**, **Duration**, **Status**, **Results**, and number of **Devices**. When filtering by test series, only test runs from the selected  test series are shown.
 
 Click on the test run of interest to see the *Test run summary* page for that test run.
 
@@ -45,7 +50,7 @@ Click in the Test Runs navigation list on the left to view the summary for that 
 * The number of **Devices** in the test run.
 * The **Run Time** for the test run. *Run time* is the total elapsed time from when the test run was submitted until the final reports are viewable in App Center Test.
 * The number of tests in the test run.
-* The **Tests passed** graphic shows the percentage and number of tests that passed. To *pass* a test must pass on every device in the test run.
+* The **Tests passed** graphic shows the percentage and number of tests that passed. To *pass* a test, must pass on every device in the test run.
 * The **Devices passed** graphic shows the percentage and number of devices on which all tests passed.
 * The **Tests** list displays the tests in the test run.
 
@@ -63,6 +68,12 @@ The detail pane shows screenshots for each of the devices in the test run for th
 
 Click on a screenshot to navigate to the **Test detail** page for that device.
 
+### Download the full sized screenshot
+
+To speed up the page rendering, all screenshots are resized to match multiple browser windows sizes. For larger screenshots, the test report automatically renders with the 50% screenshot. The API can be used to download the full sized screenshots by getting the test report `https://openapi.appcenter.ms/#/test/test_getTestReport` and from the report fetch the step report (step_report_url). Within the step report, there will be a field called original (/deviceScreenshots/*/screenshot/urls/original) that will point to the full size screenshot.
+
+[Follow this link for instructions on how to use App Center's API](https://docs.microsoft.com/appcenter/api-docs/)
+
 ## Test detail
 
 ![App Center Test, test detail page](images/test-report-test-detail.png)
@@ -71,7 +82,7 @@ The **Tests** navigation list on the left shows the test step name or test label
 
 * The **test name**, **device** and **os version** are listed across the top of the page.
 * The screenshot is displayed for the selected device for the selected test step.
-* The **Details** icon displays device information like memory, CPU speed and dimensions.
+* The **Details** icon displays device information like memory, CPU speed, and dimensions.
 * Clicking the **Logs** icon will navigate to the *Test logs* page.
 * The **Hardware usage** graph displays the **Memory** and **CPU** utilization during the test. 
 * **Duration** shows the time to complete this test and test step. The test step time shown here is the test time starting with the displayed screenshot and the selected test step until the following screenshot. It is not the time ending with this screenshot.
@@ -94,7 +105,7 @@ Click the **Stack Trace** tab near the top of the page.
 
 Stack traces are errors captured during the test run. Any stack traces should be examined along with the test logs and device logs for more context to troubleshoot application issues.
 
-On iOS the stack trace is usually relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it is generally relevant.
+On iOS, the stack trace is relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it is relevant.
 
 ### Device log tab
 
