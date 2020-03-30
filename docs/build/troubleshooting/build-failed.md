@@ -3,7 +3,7 @@ title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/13/2020
+ms.date: 03/27/2020
 ms.topic: article 
 ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 
@@ -29,6 +29,17 @@ Builds might ignore a key file that was recently moved or renamed. Try selecting
 Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file).
 
 ## Comparing different builds in App Center
+### Tracking changes in your build settings
+You can record your branch configuration by calling this API method: https://openapi.appcenter.ms/#/build/branchConfigurations_get
+
+The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
+
+#### Tracking changes in App Center Cloud Build Machines
+Like your build settings, you can check the current tooling by reviewing this document: [Cloud Build Machines](~/build/software.md). 
+
+However, you can record which of those tools are available for a particular build by running this command in a build script:
+> eval cat $HOME/systeminfo.md 
+
 ### Some branches work while others fail
 Try checking for differences in the build settings or committed code between branches. Also, if the build starts failing consistently after a certain commit on the same branch, it's worth checking what changes were made in the failing commit.
 
