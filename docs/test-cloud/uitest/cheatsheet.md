@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
 ms.reviewer: crdun
-ms.date: 05/24/2019
+ms.date: 03/30/2019
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04
 ms.service: vs-appcenter
@@ -212,3 +212,11 @@ app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
 
 Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# `TextView.[Gravity](https://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)` property.
+
+### Handling Android permissions
+
+```csharp
+ConfigureApp.Android.Debug().ApkFile(apkpath).StartApp()
+```
+
+If you install using `.ApkFile(apkpath)` instead of `PreferIdeSettings()` then the app is granted with "all" permissions which will remove the permission pop-ups. In the `.ApkFile(apkpath)` method, `apkpath` must point to the apps compiled apk file.
