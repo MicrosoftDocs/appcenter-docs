@@ -219,4 +219,4 @@ Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# `
 ConfigureApp.Android.Debug().ApkFile(apkpath).StartApp()
 ```
 
-If you install using `.ApkFile(apkpath)` instead of `PreferIdeSettings()` then the app is granted with "all" permissions which will remove the permission pop-ups. In the `.ApkFile(apkpath)` method, `apkpath` must point to the apps compiled apk file.
+If you install using `.ApkFile(apkpath)` instead of `PreferIdeSettings()` then the app is granted with "all" permissions, which will remove the permission pop-ups. In the `.ApkFile(apkpath)` method, `apkpath` must point to the apps compiled apk file.
