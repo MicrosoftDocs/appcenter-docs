@@ -244,7 +244,7 @@
 ### [iOS](sdk/distribute/ios.md)
 ### [Unity](sdk/distribute/unity.md)
 ### [Xamarin](sdk/distribute/xamarin.md)
-## Push
+## Push (Retiring)
 ### [Android](sdk/push/android.md)
 ### [Cordova Android](sdk/push/cordova-android.md)
 ### [Cordova iOS](sdk/push/cordova-ios.md)
