@@ -10,8 +10,8 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-## Installed Software
-### Language and Runtime
+# Installed Software
+## Language and Runtime
 - Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
 - Java 1.8: (Zulu 8.44.0.11-CA-macosx) (build 1.8.0_242-b20) (default)
 - Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
