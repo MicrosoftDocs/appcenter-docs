@@ -8,7 +8,7 @@ author: sshibu
 ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.assetid: a2a75032-0159-447b-9704-e420a3872003
 ---
 
@@ -68,7 +68,7 @@ You need a Google Account and use the Firebase console.
   ```groovy
   dependencies {
       // Add App Center Push module dependency
-      def appCenterSdkVersion = '3.0.0'
+      def appCenterSdkVersion = '3.1.0'
       implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
   }
 
