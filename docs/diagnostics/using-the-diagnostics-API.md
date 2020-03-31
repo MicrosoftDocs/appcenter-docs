@@ -17,10 +17,7 @@ App Center Diagnostics supports multiple API functionalities listed under the cr
 
 ## Transitioning to the new APIs
 
-With our App Center Diagnostics General Availability announcement last year and our upcoming UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
-
-> [!NOTE]
-> For UWP apps, you can still use the old crashes APIs marked as deprecated. Once we release the 2.5.0 SDK for UWP, you will need to use the new APIs under `/errors` to access the new crashes and errors data. Learn more in our [Windows transition docs](windows-support.md#new-diagnostics-experience-for-uwp-apps).
+With our App Center Diagnostics General Availability announcement last year and our UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
 
 There are three types of crashes APIs:
 
@@ -30,11 +27,11 @@ There are three types of crashes APIs:
 
 ### Crashes APIs that map to new APIs
 
-Old APIs listed in the crashes section are deprecated for all app platforms except for UWP apps. You must use the new diagnostics APIs as listed in the table below. 
+Old APIs listed in the crashes section are deprecated and have been removed. You must use the new diagnostics APIs as listed in the table below. 
 
 
 | Old Crashes APIs                                               | New Crashes API        |
-| -------------------------------------------------------------- |:----------------------:|
+| -------------------------------------------------------------- |:----------------------|
 | GET/v0.1/apps/{owner_name}/{app_name}/retention_settings      | GET/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings               |
 | GET/v0.1/apps/{owner_name}/{app_name}/versions                | GET/v0.1/apps/{owner_name}/{app_name}/analytics/versions     |
 | GET/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text |GET/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text              |
