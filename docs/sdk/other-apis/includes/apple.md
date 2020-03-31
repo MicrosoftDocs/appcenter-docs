@@ -62,10 +62,7 @@ The App Center SDK supports setting a **user ID** that is used to augment crash 
 ```swift
 MSAppCenter.setUserId("your-user-id")
 ```
-After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
-
-> [!NOTE]
-> The value for the user id is limited to 256 characters.
+[!INCLUDE [user id](user-id.md)]
 
 ## Disable all services at runtime
 
