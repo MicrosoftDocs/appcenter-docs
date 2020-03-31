@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: maestersid
 ms.author: jawh
-ms.date: 11/22/2019
+ms.date: 03/04/2020
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.tgt_pltfrm: unity
@@ -32,19 +32,16 @@ Let's get started and set up the App Center Unity SDK to use App Center Analytic
 
 ## 1. Prerequisites
 
-Before you begin, make sure that your project is set up in Unity 5.6 or later.
+Before you begin, make sure that your project is set up in Unity 2018.1 or later.
 
 The App Center SDK for Unity supports the following platforms:
 
 * iOS (9.0 or later)
 * Android (5.0/API 21 or later)
-* UWP (Build 10240 or later)
+* UWP (Build 16299 or later)
 
 > [!NOTE]
-> For versions of Unity with UWP lower than 2017.4, only a .NET scripting backend is supported. IL2CPP as a backend is not supported.
-
-> [!NOTE]
-> For versions of Unity with iOS lower than 2017.4, it is required to enable Push notifications capability in XCode manually.
+> .NET 3.5 scripting runtime version and .NET scripting backend are no longer supported on the UWP platform.
 
 In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asyncronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
@@ -82,14 +79,14 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
 ### 3.3 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 
 > [!NOTE]
-> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled.
 
 > [!NOTE]
 > If you already have a custom file with backup rule, switch to the third step.
 
   a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
 
-  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  b. Open the project's **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
 > [!NOTE]
 > If you don't already have your own **AndroidManifest.xml** file, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created one at the time of build.

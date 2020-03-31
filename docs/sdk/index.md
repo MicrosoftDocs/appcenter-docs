@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/10/2020
+ms.date: 03/11/2020
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -78,10 +78,10 @@ Push             | 9.0 or later    | 10 and later
 
 Service    |  Unity version  | iOS Version  | Android Version            | UWP Windows Version
 -----------|-----------------|--------------|----------------------------|---------------------
-Analytics  | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
-Crashes    | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
-Distribute | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
-Push       | 2017.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.10240 or later
+Analytics  | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.16299 or later
+Crashes    | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Distribute | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Push       | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.16299 or later
 
 ### Windows UWP
 
