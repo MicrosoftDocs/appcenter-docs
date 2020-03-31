@@ -10,15 +10,6 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-## OS X info
-- System Version: macOS 10.15.4 (19E266)
-- Kernel Version: Darwin 19.4.0
-- Boot Volume: Macintosh HD
-- Boot Mode: Normal
-- User Name: runner (runner)
-- Secure Virtual Memory: Enabled
-- System Integrity Protection: Enabled
-
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
