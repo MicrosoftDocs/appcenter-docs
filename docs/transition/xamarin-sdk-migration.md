@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: elamalani
 ms.author: emalani
-ms.date: 01/27/2020
+ms.date: 03/30/2020
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -116,17 +116,47 @@ After (App Center):
     using Microsoft.AppCenter.Distribute;
     ```
 
-    **Xamarin.Android** and **Xamarin.iOS**:
+    **Xamarin.Android**:
+
+    Open the project's **MainActivity.cs** file and add the `Start()` call inside the `OnCreate()` method
 
     ```csharp
     AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
     ```
 
+    > [!NOTE]
+    > If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, please look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
+
+    **Xamarin.iOS**:
+    
+    Open the project's `AppDelegate.cs` file and add the `Start()` call inside the `FinishedLaunching()` method
+
+    ```csharp
+    AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+    ```
+
+    > [!NOTE]
+    > If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
+    > The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
+    > Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
+    > You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
+
     **Xamarin.Forms**:
+
+    To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open the project's **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
 
     ```csharp
     AppCenter.Start("ios={Your App Secret};android={Your App Secret}", typeof(Analytics), typeof(Crashes), typeof(Distribute));
     ```
+
+    > [!IMPORTANT]
+    > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
+    > 
+    > [!NOTE]
+    > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+
+    > [!NOTE]
+    > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
 
 1. [For distribute iOS only] Modify the project's **Info.plist** file
 
