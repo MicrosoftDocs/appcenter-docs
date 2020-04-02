@@ -4,7 +4,7 @@ description: Easily stay up-to-date on the latest build with Sparkle update noti
 keywords: distribution
 author: dipree
 ms.author: daadam
-ms.date: 02/18/2020
+ms.date: 04/02/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -21,6 +21,6 @@ Install the Sparkle SDK in your app and configure the App Center Sparkle feed. T
 
 Sparkle support for sandboxes in macOS is under development (09/2019). If you require sandboxes, check out the [following fork](https://github.com/tumult/Sparkle) and [this discussion](https://github.com/andymatuschak/Sparkle/pull/165).
 
-## Specify the dsa_signature via API
+## Specify the dsa_signature or ed_signature via API
 
-Once the app is released, you can use the [following endpoint](https://openapi.appcenter.ms/#/distribute/releases_update) to update the dsa_signature of your release. Once updated, you can verify that the feed URL includes the dsa_signature.
+Once the app is released, you can use the [following endpoint](https://openapi.appcenter.ms/#/distribute/releases_update) to update the dsa_signature or ed_signature of your release. Once updated, you can verify that the feed URL includes the provided signature.
