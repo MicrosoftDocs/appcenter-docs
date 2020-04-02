@@ -105,9 +105,7 @@ After (App Center):
 
 1. Start the App Center SDK
 
-    * **Xamarin.iOS** - Open the project's **AppDelegate.cs** and add the following lines below the existing `using` statements
-    * **Xamarin.Android** - Open the project's **MainActivity.cs** and add the following lines below the existing `using` statements
-    * **Xamarin.Forms** - You can initialize the App Center SDK only in one place. Open the project's **App.xaml.cs** file in your shared project and add the following `using` statements:
+    * For all described below files add the following lines below the existing `using` statements:
 
     ```csharp
     using Microsoft.AppCenter;
@@ -151,6 +149,7 @@ After (App Center):
 
     > [!IMPORTANT]
     > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
+
     > [!NOTE]
     > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
