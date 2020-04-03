@@ -105,7 +105,7 @@ After (App Center):
 
 1. Start the App Center SDK
 
-    * For all described below files add the following lines below the existing `using` statements:
+    * The initialization code mentioned later in this section requires adding the following lines below the existing `using` statements:
 
     ```csharp
     using Microsoft.AppCenter;
