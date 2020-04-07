@@ -4,43 +4,44 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 03/17/2020
+ms.date: 04/07/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Installed Software
-## Language and Runtime
+## Installed Software
+### Language and Runtime
 - Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
 - Java 1.8: (Zulu 8.44.0.11-CA-macosx) (build 1.8.0_242-b20) (default)
 - Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
+- Java 14: Zulu14.27+1-CA (build 14+36)
 - Rust 1.42.0
-- Clang/LLVM 9.0.1
+- Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0) 8.4.0
 - GNU Fortran (Homebrew GCC 9.3.0) 9.3.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.11.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.12.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
-- Ruby 2.6.5p114
+- Ruby 2.6.6p146
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.14
-- PHP 7.4.3
-- julia 1.3.1
+- Go 1.14.1
+- PHP 7.4.4
+- julia 1.4.0
 
-## Package Management
+### Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.10
+- Homebrew 2.2.11
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -49,44 +50,49 @@ ms.custom: build
 - Miniconda 4.8.2
 - RubyGems 3.1.2
 
-## Project Management
+### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.2.2
+- Gradle 6.3
 
-## Utilities
+### Utilities
 - Curl 7.69.1
-- Git: 2.25.1
+- Git: 2.26.0
 - Git LFS: 2.10.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- Packer 1.5.4
-- GNU parallel 20200222
+- Packer 1.5.5
+- GNU parallel 20200322
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
-- gpg (GnuPG) 2.2.19
+- gpg (GnuPG) 2.2.20
 - psql (PostgreSQL) 12.2
 - aria2 1.35.0
 - azcopy 10.3.4
 - zstd 1.4.4
 - bazel 2.2.0
 - bazelisk v1.3.0
+- helm v3.1.2+gd878d4d
+- Docker 19.03.8
+- docker-machine 0.16.2
+- docker-compose 1.25.4
 
-## Tools
-- Fastlane 2.143.0
-- Cmake 3.16.5
+### Tools
+- Fastlane 2.144.0
+- Cmake 3.17.0
 - App Center CLI 1.2.2
-- Azure CLI 2.2.0
+- Azure CLI 2.3.1
+- AWS CLI 2.0.6
 
-## Browsers
-- Google Chrome 80.0.3987.132 
+### Browsers
+- Google Chrome 80.0.3987.163 
 - ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.66 
-- MSEdgeDriver 80.0.361.66
-- Mozilla Firefox 74.0
+- Microsoft Edge 80.0.361.109 
+- MSEdgeDriver 80.0.361.109
+- Mozilla Firefox 74.0.1
 - geckodriver 0.26.0
 
-## Toolcache
+### Toolcache
 #### Ruby
 - 2.4.9
 - 2.5.7
@@ -104,11 +110,12 @@ ms.custom: build
 - 2.7.17
 - 3.6.9
 
-## Xamarin
+### Xamarin
 #### Visual Studio for Mac
-- 8.4.8.2
+- 8.5.0.3183
 
 #### Mono
+- 6.8.0.123
 - 6.6.0.166
 - 6.4.0.208
 - 6.0.0.334
@@ -123,6 +130,7 @@ ms.custom: build
 - 4.8.1
 
 #### Xamarin.iOS
+- 13.14.1.39
 - 13.10.0.21
 - 13.8.3.0
 - 13.6.0.12
@@ -145,6 +153,7 @@ ms.custom: build
 - 10.6.0.10
 
 #### Xamarin.Mac
+- 6.14.1.39
 - 6.10.0.21
 - 6.8.3.0
 - 6.6.0.12
@@ -166,6 +175,7 @@ ms.custom: build
 - 3.0.0.398
 
 #### Xamarin.Android
+- 10.2.0
 - 10.1.3
 - 10.0.6
 - 9.4.1
@@ -184,7 +194,7 @@ ms.custom: build
 #### Unit Test Framework
 - NUnit 3.6.1
 
-## Xcode
+### Xcode
 | Version          | Build   | Path                           |
 | ---------------- | ------- | ------------------------------ |
 | 11.3.1 (default) | 11C505  | /Applications/Xcode_11.3.1.app |
@@ -205,7 +215,7 @@ ms.custom: build
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.3
+- xcversion 2.6.4
 
 #### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                          |
@@ -295,7 +305,7 @@ ms.custom: build
 | watchOS 6.0 | 11.0<br>11.1                                                                                        | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 | watchOS 6.1 | 11.2<br>11.2.1<br>11.3<br>11.3.1                                                                    | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 
-## Android
+### Android
 #### Android SDK Tools
 | Package Name | Description                        |
 | ------------ | ---------------------------------- |
@@ -369,7 +379,7 @@ ms.custom: build
 | cmake            | 3.6.4111459  |
 | lldb             | 3.1.4508709  |
 | ndk-bundle       | 18.1.5063045 |
-| Android Emulator | 30.0.0       |
+| Android Emulator | 30.0.5       |
 
 #### Android Google APIs
 | Package Name                | Description             |
