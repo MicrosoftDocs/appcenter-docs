@@ -1,5 +1,5 @@
 ---
-title: Help and feedback
+title: Help and Feedback
 description: What to do when you can't find what you need in the docs
 author: jwargo
 ms.author: jowargo
@@ -19,11 +19,9 @@ App Center, and its product documentation, are both a work in progress, we're ma
 
 ## Accessing App Center Free Support
 
-Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just click the blue chat button in the lower-right corner of any App Center page and the dedicated App Center support team will respond. Use the **New Conversation** button shown in the following figure to start a conversation with our support team. You'll even find the App Center Program Management team hopping in to join the conversation as needed.
+Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just click ("?") button in the top right corner of your screen, then select "Contact support". Once you fill out the form our team will be in contact with you via email.  You'll even find the App Center Program Management team hopping in to join the conversation as needed.
 
-![App Center Support Chat](~/images/app-center-support-chat.png)
-
-Use the **Search for answers...** input field to search help and troubleshooting documents that haven't made it into the formal docs yet.
+![App Center Support Chat](images/app-center-support-chat.png)
 
 For additional information, or to browse a list of articles available through support, see the [App Center Help Center](https://intercom.help/appcenter).
 
