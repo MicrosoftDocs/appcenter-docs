@@ -1,5 +1,5 @@
 ---
-title: Help and feedback
+title: Help and Feedback
 description: What to do when you can't find what you need in the docs
 author: jwargo
 ms.author: jowargo
