@@ -4,7 +4,7 @@ description: Configuring your app to use the App Center Push service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 06/27/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: 4f4f4478-6367-4a1e-8fe7-99b51da018c1
 ms.service: vs-appcenter
@@ -12,6 +12,9 @@ ms.custom: push
 ---
 
 # Configuring an App for Push
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 This section contains instructions for how to use the App Center Push SDK in your applications; the links below contain instructions for each supported target platform for your application.
 

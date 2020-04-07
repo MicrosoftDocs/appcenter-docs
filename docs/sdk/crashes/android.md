@@ -2,9 +2,9 @@
 title: App Center Crashes for Android
 description:  App Center Crashes for Android
 keywords: sdk, crash
-author: winnieli1208
+author: winnie
 ms.author: yuli1
-ms.date: 12/13/2019
+ms.date: 02/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.custom: sdk
@@ -256,7 +256,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```java
 @Override
@@ -338,20 +338,20 @@ Crashes.isEnabled()
 ## Handled Errors
 
 App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `trackException` method:
+In order to do so, simply use the `trackError` method:
 
 ```java
 try {
     // your code goes here.
 } catch (Exception exception) {
-    Crashes.trackException(exception);
+    Crashes.trackError(exception);
 }
 ```
 ```kotlin
 try {
     // your code goes here.
 } catch (exception: Exception) {
-    Crashes.trackException(exception)
+    Crashes.trackError(exception)
 }
 ```
 
@@ -377,7 +377,7 @@ try {
 }
 ```
 
-You can optionally add **one binary** and **one text** attachment to a handled error report. Pass the attachments as an `Iterable` as shown in the example below.
+You can also optionally add binary and text attachments to a handled error report. Pass the attachments as an `Iterable` as shown in the example below.
 
 
 ```java

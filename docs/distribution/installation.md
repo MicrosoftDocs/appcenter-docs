@@ -4,7 +4,7 @@ description: Intructions on how to install a build
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 10/17/2018
+ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 89a78fd8-ee2d-4f2d-9026-756047866351
 ms.service: vs-appcenter
@@ -14,6 +14,9 @@ ms.custom: distribute
 # Install a Build
 
 Installation of an application being distributed by App Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing App Center, you can instead [create a new account][signup]. Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
+
+> [!NOTE]
+> If you or your testers have email notifications disabled (or the option 'Do not notify testers' has been selected when distributing a release), then you will not receive the email mentioned above. In that case releases that you have access to can be downloaded at [the install portal](https://install.appcenter.ms/).  For more information on installation for testers please check out the guide [here](https://docs.microsoft.com/appcenter/distribution/testers/).
 
 ## Windows and Certificates Requirements
 

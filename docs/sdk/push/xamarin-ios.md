@@ -13,6 +13,8 @@ ms.tgt_pltfrm: xamarin.ios
 ---
 
 # App Center Push
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -219,7 +221,7 @@ To distinguish between notifications received in the foreground and notification
 
         if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
         {
-            this.myOwnNotificationDelegate = YourOwnUNUserNotificationCenterDelegate();
+            this.myOwnNotificationDelegate = new YourOwnUNUserNotificationCenterDelegate();
             UNUserNotificationCenter.Current.Delegate = this.myOwnNotificationDelegate;
         }
 

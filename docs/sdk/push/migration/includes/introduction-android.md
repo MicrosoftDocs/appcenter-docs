@@ -5,6 +5,9 @@ ms.date: 12/02/2019
 ms.author: amburns
 ---
 
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+
 > [!div  class="op_single_selector"]
 > * [Android](../android.md)
 > * [Xamarin.Android](../xamarin-android.md)

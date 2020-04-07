@@ -3,7 +3,7 @@ title: HockeySDK for iOS Migration
 description: Migrate from the HockeySDK to App Center SDK for iOS
 author: elamalani
 ms.author: emalani
-ms.date: 10/09/2019
+ms.date: 01/27/2020
 ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter
@@ -219,7 +219,7 @@ Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled =
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature will ONLY work with builds that are distributed using the App Center Distribute service. Distribute won't work when the debugger is attached.
-Also, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser window will open to enable in-app updates. This is a one-time step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/ios.md#how-do-in-app-updates-work) for more details.
+If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a one-time step that will not occur for subsequent releases of your app. Please refer to the [App Center Distribute Documentation](~/sdk/distribute/ios.md#how-do-in-app-updates-work) for more details.
 
 The HockeySDK does not enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `MSDistribute` class to the `start:` method. This module is enabled by default, unlike in the HockeySDK.
@@ -228,7 +228,7 @@ App Center SDK registers in-app updates service only if you pass `MSDistribute` 
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [[[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/appcenter/distribution/groups)
+Restricted in-app updates | [[[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [MSDistribute.updateTrack](~/sdk/distribute/ios.md#use-private-distribution-group)
 Disable service at runtime | [[[BITHockeyManager sharedHockeyManager] setDisableUpdateManager: YES]](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [[MSDistribute setEnabled:NO]](~/sdk/distribute/ios.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](~/sdk/distribute/ios.md#2-customize-the-update-dialog)
 
@@ -236,7 +236,7 @@ Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https:/
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticateInstallation()](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [Documentation (works out of the box)](https://docs.microsoft.com/appcenter/distribution/groups)
+Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticateInstallation()](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/authenticating-users-on-ios) | [MSDistribute.updateTrack](~/sdk/distribute/ios.md#use-private-distribution-group)
 Disable service at runtime | [BITHockeyManager.shared().isUpdateManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [MSDistribute.setEnabled(false)](~/sdk/distribute/ios.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](~/sdk/distribute/ios.md#2-customize-the-update-dialog)
 

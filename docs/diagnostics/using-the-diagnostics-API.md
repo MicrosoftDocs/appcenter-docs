@@ -2,9 +2,9 @@
 title: Using the Diagnostics API
 description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
-author: winnieli1208
+author: winnie
 ms.author: yuli1
-ms.date: 10/01/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -17,10 +17,7 @@ App Center Diagnostics supports multiple API functionalities listed under the cr
 
 ## Transitioning to the new APIs
 
-With our App Center Diagnostics General Availability announcement last year and our upcoming UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
-
-> [!NOTE]
-> For UWP apps, you can still use the old crashes APIs marked as deprecated. Once we release the 2.5.0 SDK for UWP, you will need to use the new APIs under `/errors` to access the new crashes and errors data. Learn more in our [Windows transition docs](windows-support.md#new-diagnostics-experience-for-uwp-apps).
+With our App Center Diagnostics General Availability announcement last year and our UWP diagnostics improvements, we made some changes in our APIs to enable an improved backend pipeline to process your crashes and errors. Depending on which APIs you use, there might be some action required on your end to ensure a smooth transition.
 
 There are three types of crashes APIs:
 
@@ -30,11 +27,11 @@ There are three types of crashes APIs:
 
 ### Crashes APIs that map to new APIs
 
-Old APIs listed in the crashes section are deprecated for all app platforms except for UWP apps. You must use the new diagnostics APIs as listed in the table below. 
+Old APIs listed in the crashes section are deprecated and have been removed. You must use the new diagnostics APIs as listed in the table below. 
 
 
 | Old Crashes APIs                                               | New Crashes API        |
-| -------------------------------------------------------------- |:----------------------:|
+| -------------------------------------------------------------- |:----------------------|
 | GET/v0.1/apps/{owner_name}/{app_name}/retention_settings      | GET/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings               |
 | GET/v0.1/apps/{owner_name}/{app_name}/versions                | GET/v0.1/apps/{owner_name}/{app_name}/analytics/versions     |
 | GET/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text |GET/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text              |
@@ -61,15 +58,6 @@ Old APIs listed in the crashes section are deprecated for all app platforms exce
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups_info | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups_info |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups/{symbol_group_id} | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups/{symbol_group_id} |
 | GET/v0.1/apps/{owner_name}/{app_name}/symbol_groups | GET/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups |
-
-### Crashes APIs that no longer exist
-
-There are few crashes APIs that are deprecated due to changes in our backend pipeline. App Center is also now forwarding crashes from HockeyApp to App Center and these APIs are no longer needed. Read the [HockeyApp migration documentation](~/transition/index.md) to learn more about the transition.
-
-| Deprecated Old Crashes APIs                                         |
-| ------------------------------------------------------------------- |
-| GET/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding    |
-| PATCH/v0.1/apps/{owner_name}/{app_name}/hockeyapp_crash_forwarding  |
 
 ### Unaltered Crashes APIs
 

@@ -2,7 +2,6 @@
 
 title: Visual Studio App Center documentation
 summary: Learn how to continuously build, test, release, and monitor apps for every platform.
-brand: visual-studio
 
 metadata:
   title: Visual Studio App Center
@@ -148,37 +147,11 @@ conceptualContent:
             url: ~/diagnostics/enabling-diagnostics.md
             itemType: how-to-guide
           - text: Diagnostics Features
-            url: ~/diagnostics/enabling-diagnostics.md
+            url: ~/diagnostics/features.md
             itemType: overview
           - text: Troubleshooting
             url: ~/diagnostics/troubleshooting.md
             itemType: reference
-      # Card
-      - title: Auth
-        summary: Authenticate users and leverage user identities to view user data.
-        links:
-          - text: Introduction to Auth
-            url: ~/auth/index.md
-            itemType: overview
-          - text: Get Started with Auth
-            url: ~/auth/getting-started.md
-            itemType: get-started
-          - text: Understanding Azure AD B2C
-            url: ~/auth/understanding-azure-ad-b2c.md
-            itemType: concept
-      # Card
-      - title: Data
-        summary: Persist, manage, and sync app data in the cloud.
-        links:
-          - text: Introduction to Data
-            url: ~/data/index.md
-            itemType: overview
-          - text: Get Started with Data
-            url: ~/data/getting-started.md
-            itemType: get-started
-          - text: Understanding Cosmos DB
-            url: ~/data/understanding-cosmos-db.md
-            itemType: concept
       # Card
       - title: Push
         summary: Engage user base by sending targeted messages to specific users at exactly the right time.
@@ -254,12 +227,8 @@ additionalContent:
               url: ~/sdk/data-collected.md
             - text: Analytics
               url: ~/sdk/analytics/android.md
-            - text: Auth
-              url: ~/sdk/auth/android.md
             - text: Diagnostics (Crashes)
               url: ~/sdk/crashes/android.md
-            - text: Data
-              url: ~/sdk/data/android.md  
             - text: Distribute
               url: ~/sdk/distribute/android.md
             - text: Push

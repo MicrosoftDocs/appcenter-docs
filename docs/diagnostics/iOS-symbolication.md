@@ -2,7 +2,7 @@
 title: iOS Symbolication
 description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 12/17/2019
 ms.topic: article
@@ -59,7 +59,7 @@ The process for uploading symbols through the API involves a series of three API
 You can also use the CLI to upload symbol files:
 
 ```shell
-appcenter crashes upload-symbols --symbols {symbol file}
+appcenter crashes upload-symbols --symbol {symbol file}
 ```
 
 ## Bitcode
