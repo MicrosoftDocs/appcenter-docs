@@ -4,7 +4,7 @@ description: How to sign Android apks with your Android keystore in App Center T
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 07/04/2019
+ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: 819e647d-be5c-43ce-afbf-c58e51d52e03
 ms.service: vs-appcenter
@@ -147,6 +147,6 @@ Required argument:
 
 ## Getting help
 
-You can always contact us through [the blue chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). We do not provide 24/7 support, but will reply as soon as we can.
+You can always contact us via support, using the 'Contact support' option under the "?" menu in the App Center portal. We do not provide 24/7 support, but will reply as soon as we can.
 
 If you want help with a test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
