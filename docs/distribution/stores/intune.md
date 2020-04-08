@@ -4,7 +4,7 @@ description: Simplify distribution of line-of-business mobile applications to th
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 10/22/2019
+ms.date: 04/08/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -49,7 +49,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Submitted**.
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message.
 
-For any issues, contact us via the [blue chat icon](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) in the lower-right corner of any App Center page.
+For any issues, contact us via support, by clicking on the 'Contact support' option under the "?" button in the App Center portal.
 
 ## Publishing through the CLI
 Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
