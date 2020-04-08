@@ -4,7 +4,7 @@ description: Software used on macOS 10.15 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 04/07/2020
+ms.date: 03/31/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -19,7 +19,7 @@ ms.custom: build
 - Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
 - Java 14: Zulu14.27+1-CA (build 14+36)
 - Rust 1.42.0
-- Clang/LLVM 10.0.0
+- Clang/LLVM 9.0.1
 - gcc-8 (Homebrew GCC 8.4.0) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0) 8.4.0
@@ -30,13 +30,13 @@ ms.custom: build
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
-- Ruby 2.6.6p146
+- Ruby 2.6.5p114
 - .NET SDK 2.0.0 3.0.100 3.0.101 3.0.102 3.0.103 3.1.100 3.1.101 3.1.200 3.1.201
 - Go 1.14.1
 - PHP 7.4.4
 - julia 1.4.0
 
-## Package Management
+### Package Management
 - Rustup 1.21.1
 - Vcpkg 2020.02.04
 - Bundler version 2.1.4
@@ -51,11 +51,11 @@ ms.custom: build
 - Miniconda 4.8.2
 - RubyGems 3.1.2
 
-## Project Management
+### Project Management
 - Apache Maven 3.6.3
 - Gradle 6.3
 
-## Utilities
+### Utilities
 - Curl 7.69.1
 - Git: 2.26.0
 - Git LFS: 2.10.0
@@ -78,75 +78,71 @@ ms.custom: build
 - docker-machine 0.16.2
 - docker-compose 1.25.4
 
-## Tools
+### Tools
 - Fastlane 2.144.0
 - Cmake 3.17.0
-- App Center CLI 2.4.0
-- Azure CLI 2.3.1
-- AWS CLI 2.0.6
+- App Center CLI 2.3.5
+- Azure CLI 2.2.0
+- AWS CLI 2.0.5
 
-## Browsers
-- Google Chrome 80.0.3987.163 
+### Browsers
+- Google Chrome 80.0.3987.149 
 - ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.109 
-- MSEdgeDriver 80.0.361.109
-- Mozilla Firefox 74.0.1
+- Microsoft Edge 80.0.361.69 
+- MSEdgeDriver 80.0.361.69
+- Mozilla Firefox 74.0
 - geckodriver 0.26.0
 
-## Toolcache
-### Ruby
+### Toolcache
+#### Ruby
 - 2.4.9
 - 2.5.7
 - 2.6.5
 - 2.7.0
 
-### Python
+#### Python
 - 2.7.17
 - 3.5.9
 - 3.6.10
 - 3.7.6
 - 3.8.2
 
-### PyPy
+#### PyPy
 - 2.7.17
 - 3.6.9
 
-## Xamarin
-### Visual Studio for Mac
-- 8.5.1.42
+### Xamarin
+#### Visual Studio for Mac
+- 8.5.0.3183
 
-### Mono
+#### Mono
 - 6.8.0.123
 - 6.6.0.166
 - 6.4.0.208
 
-### Xamarin.iOS
-- 13.16.0.11
+#### Xamarin.iOS
 - 13.14.1.39
 - 13.10.0.21
 - 13.8.3.0
 - 13.6.0.12
 - 13.4.0.2
-- 13.2.0.47
 
-### Xamarin.Mac
-- 6.16.0.11
+#### Xamarin.Mac
 - 6.14.1.39
 - 6.10.0.21
 - 6.8.3.0
 - 6.6.0.12
 - 6.4.0.2
-- 6.2.0.47
 
-### Xamarin.Android
+#### Xamarin.Android
 - 10.2.0
 - 10.1.3
 - 10.0.6
 
-### Unit Test Framework
+#### Unit Test Framework
 - NUnit 3.6.1
 
-## Xcode
+### Xcode
 | Version          | Build   | Path                           |
 | ---------------- | ------- | ------------------------------ |
 | 11.4             | 11E146  | /Applications/Xcode_11.4.app   |
@@ -157,14 +153,14 @@ ms.custom: build
 | 11.1             | 11A1027 | /Applications/Xcode_11.1.app   |
 | 11.0             | 11A420a | /Applications/Xcode_11.app     |
 
-### Xcode Support Tools
+#### Xcode Support Tools
 - Nomad CLI 3.1.2
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.4
+- xcversion 2.6.3
 
-### Installed SDKs
+#### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                                |
 | ----------------------- | -------------------- | -------------------------------------------- |
 | macOS 10.15             | macosx10.15          | 11.0, 11.1, 11.2, 11.2.1, 11.3, 11.3.1, 11.4 |
@@ -190,7 +186,7 @@ ms.custom: build
 | Simulator - watchOS 6.2 | watchsimulator6.2    | 11.4                                         |
 | DriverKit 19.0          | driverkit.macosx19.0 | 11.0, 11.1, 11.2, 11.2.1, 11.3, 11.3.1, 11.4 |
 
-### Installed Simulators
+#### Installed Simulators
 | OS          | Xcode Version                    | Simulators                                                                                                                                                                                                                                                      |
 | ----------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS 13.0    | 11.0                             | iPhone 8<br>iPhone 8 Plus<br>iPhone 11<br>iPhone 11 Pro<br>iPhone 11 Pro Max<br>iPad Pro (9.7-inch)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation)                                                                 |
@@ -206,18 +202,18 @@ ms.custom: build
 | watchOS 6.1 | 11.2<br>11.2.1<br>11.3<br>11.3.1 | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                        |
 | watchOS 6.2 | 11.4                             | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                        |
 
-## Android
-### Android SDK Tools
+### Android
+#### Android SDK Tools
 | Package Name | Description                        |
 | ------------ | ---------------------------------- |
 | tools        | Android SDK Tools, Revision 26.1.1 |
 
-### Android SDK Platform-Tools
+#### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
 | platform-tools | Android SDK Platform-Tools, Revision 29.0.6 |
 
-### Android SDK Platforms
+#### Android SDK Platforms
 | Package Name | Description                         |
 | ------------ | ----------------------------------- |
 | android-24   | Android SDK Platform 24, Revision 2 |
@@ -227,7 +223,7 @@ ms.custom: build
 | android-28   | Android SDK Platform 28, Revision 6 |
 | android-29   | Android SDK Platform 29, Revision 4 |
 
-### Android SDK Build-Tools
+#### Android SDK Build-Tools
 | Package Name           | Description                                  |
 | ---------------------- | -------------------------------------------- |
 | build-tools-24.0.0     | Android SDK Build-Tools, Revision 24.0.0     |
@@ -256,7 +252,7 @@ ms.custom: build
 | build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
 | build-tools-30.0.0-rc1 | Android SDK Build-Tools, Revision 30.0.0 rc1 |
 
-### Android Utils
+#### Android Utils
 | Package Name     | Version      |
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
@@ -264,7 +260,7 @@ ms.custom: build
 | ndk-bundle       | 18.1.5063045 |
 | Android Emulator | 30.0.5       |
 
-### Android Google APIs
+#### Android Google APIs
 | Package Name                | Description             |
 | --------------------------- | ----------------------- |
 | addon-google_apis-google-21 | Google APIs, Revision 1 |
@@ -272,7 +268,7 @@ ms.custom: build
 | addon-google_apis-google-23 | Google APIs, Revision 1 |
 | addon-google_apis-google-24 | Google APIs, Revision 1 |
 
-### Extra Packages
+#### Extra Packages
 | Package Name                                    | Version |
 | ----------------------------------------------- | ------- |
 | Android Support Repository                      | 47.0.0  |
