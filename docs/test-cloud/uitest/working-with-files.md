@@ -4,7 +4,7 @@ description: How to include files in Xamarin.UITest test runs in App Center
 keywords: test cloud
 author: glennwilson
 ms.author: v-glenw
-ms.date: 01/29/2019
+ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: 5d989ba4-6356-4bd3-9db4-b4fd7ae5bf69
 ms.service: vs-appcenter
@@ -90,6 +90,6 @@ Use the `--include` option multiple times on your command line to include multip
 
 ## Getting help
 
-You can always contact us through [the blue chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). We do not provide 24/7 support, but will reply as soon as we can.
+You can always contact us via support, using the 'Contact support' option under the "?" menu in the App Center portal. We do not provide 24/7 support, but will reply as soon as we can.
 
 If you want help with a test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
