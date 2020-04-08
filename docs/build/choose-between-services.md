@@ -4,7 +4,7 @@ description: Helps user choose between Visual Studio AppCenter and Azure DevOps 
 keywords: build
 author: manb-msft
 ms.author: manb
-ms.date: 12/17/2018
+ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: c7d77240-3a2c-4e0f-9724-20f67dbba6c6
 ms.service: vs-appcenter
@@ -52,7 +52,7 @@ When building your app using the App Center Build service, the corresponding deb
 App Center brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services and engage with users using the Push service. 
 
 > [!NOTE]
-> If you feel we are missing something critical from App Center Build, you can always reach out and let us know by using the blue chat icon in the lower-right corner of every App Center page.
+> If you feel we are missing something critical from App Center Build, you can always reach out and let us know by using the 'Contact support' option under the "?" button in the App Center portal.
 
 ## <a name="azure-devops"/>Azure DevOps
 
