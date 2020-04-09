@@ -14,9 +14,9 @@ ms.service: vs-appcenter
 
 ## Documentation
 
-[Product Documentation](~/index.yml)
+[Product Docs](~/index.yml)
 
-[API Documentation](~/api-docs/index.md)
+[API Docs](~/api-docs/index.md)
 
 [Product Roadmap](~/general/roadmap.md)
 
@@ -32,7 +32,7 @@ ms.service: vs-appcenter
 
 ## Recent updates
 
-SDKs (open sourced on GitHub)
+SDKs (open-sourced on GitHub)
 
 - [Android SDK](https://github.com/microsoft/appcenter-sdk-android)
 
@@ -48,4 +48,4 @@ Check if there are any ongoing issues on the [App Center status page](https://st
 
 ## Contact us
 
-To make a feature request, use our [App Center Github Repo](https://github.com/microsoft/appcenter/issues). To get help on any issue you may experience, click the help menu in the upper right corner of App Center portal, then select **Contact support**. Once you fill out the form, our team will be in contact with you via email. Note that responsiveness might vary based on the support load at a given moment. Read more about [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) and [help and feedback](../help.md).
+To make a feature request, use our [App Center GitHub Repo](https://github.com/microsoft/appcenter/issues). To get help, click the help menu (?) in the upper right corner of the App Center portal, then select **Contact support**. Once you fill out the form, our team will be in contact with you via email. Responsiveness might vary based on the support load at a given moment. Read more about [App Center support](https://intercom.help/appcenter/getting-started/getting-help-with-app-center) and [help and feedback](../help.md).
