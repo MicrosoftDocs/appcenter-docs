@@ -25,4 +25,4 @@ Your comments on the Iteration Plan and Features create an open dialog between u
 - Like to change how a feature works? Let us know. 
 - See someone else’s feature or comment that looks interesting? Give it a Thumbs Up or a +1 so we know you agree. Be sure to search the existing issues first before adding a new one to help us avoid duplicates.
 
-The GitHub repository isn't where you'll get [product support](https://docs.microsoft.com/appcenter/help). When you have issues, problems, or questions about App Center and how App Center works;  use the 'Contact support' option under the "?" menu in the App Center portal. Our support team is there to answer your questions and help you solve your problems.
+The GitHub repository isn't where you'll get [product support](https://docs.microsoft.com/appcenter/help). When you have issues, problems, or questions about App Center and how App Center works;  use the 'Contact support' option under the help menu in the upper right corner of App Center portal. Our support team is there to answer your questions and help you solve your problems.
