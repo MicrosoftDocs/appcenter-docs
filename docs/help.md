@@ -18,7 +18,7 @@ App Center and its product documentation are both under development and we welco
 
 ## Accessing App Center Free Support
 
-Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just choose **'Contact support'** inside the help menu on the top right of the App Center portal. Use the message field to explain your issue or question. 
+Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just choose **'Contact support'** inside the help menu on the upper right of the App Center portal. Use the message field to explain your issue or question. 
 
 ![App Center Support Form](~/images/app-center-support-form.png)
 
@@ -26,7 +26,7 @@ Support is provided in English only and during work day's business hours. You ma
 
 ## Microsoft Premier Support
 
-Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier).  If you are new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support).
+Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier). If you are new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support).
 
 ## Providing feedback
 
