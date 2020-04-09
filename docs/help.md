@@ -18,7 +18,7 @@ App Center and its product documentation are both under development and we welco
 
 ## Accessing App Center Free Support
 
-Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just click on **'Contact support'** inside the "?" menu on the top right of the App Center portal. Use the message field to explain your issue or question. 
+Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just choose **'Contact support'** inside the help menu on the top right of the App Center portal. Use the message field to explain your issue or question. 
 
 ![App Center Support Form](~/images/app-center-support-form.png)
 
