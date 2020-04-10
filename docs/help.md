@@ -18,11 +18,11 @@ App Center and its product documentation are both under development and we welco
 
 ## Accessing App Center Free Support
 
-Get support for App Center directly from within the App Center portal (not here in the docs). Any time you need help, just choose **'Contact support'** inside the help menu on the upper right of the App Center portal. Use the message field to explain your issue or question. 
+Get support for App Center directly from within the App Center portal. Any time you need help, in the upper right corner of the App Center portal, open the help menu **? > Contact support**. Use the message field to explain your issue or question. 
 
 ![App Center Support Form](~/images/app-center-support-form.png)
 
-Support is provided in English only and during work day's business hours. You may expect an answer within 8 business hours, or less when possible, depending on the support load.
+Support is provided in English only and during business hours. You can expect an answer within 8 business hours or less, depending on the support load.
 
 ## Microsoft Premier Support
 

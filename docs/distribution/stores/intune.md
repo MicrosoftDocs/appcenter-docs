@@ -49,7 +49,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Submitted**.
 7. In case of a failure while publishing, the status will change to failed with an appropriate error message.
 
-For any issues, you can always reach out and let us know by opening a support ticket. Select the help menu in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
+For any issues, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
 
 
 ## Publishing through the CLI

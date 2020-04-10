@@ -90,6 +90,6 @@ Use the `--include` option multiple times on your command line to include multip
 
 ## Getting help
 
-You can always contact us via support in the App Center portal. Select the help menu in the upper right corner of screen, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
+You can contact support in the App Center portal. In the upper right corner of screen, select the Help (?) menu, then choose 'Contact support'. Our dedicated support team will respond to your questions.
 
 If you want help with a test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
