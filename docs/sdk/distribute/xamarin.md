@@ -134,6 +134,8 @@ Distribute.SetEnabledForDebuggableBuild(true);
 
 #### 2.3 [For iOS only] Modify the project's **Info.plist**
 
+App Center SDK checks links to avoid sideloading, so in order for updates distributed through the portal to be handled correctly, you would need to specify `CFBundleURLSchemes` in `CFBundleURLTypes` section of `Info.plist` file:
+
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
 3. Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
