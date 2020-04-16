@@ -4,7 +4,7 @@ description: Helps user choose between Visual Studio AppCenter and Azure Pipelin
 keywords: build
 author: manb-msft
 ms.author: manb
-ms.date: 04/08/2020
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: c7d77240-3a2c-4e0f-9724-20f67dbba6c6
 ms.service: vs-appcenter
@@ -26,7 +26,7 @@ To [get started](https://docs.microsoft.com/appcenter/build/),
 
 1. Log into App Center at [https://appcenter.ms](https://appcenter.ms).
 2. Select the application project you want to build.
-3. Open build settings, and connect the App Center app to a cloud-hosted source control system (Azure DevOps, GitHub, Bitbucket).
+3. Open build settings, and connect the App Center app to a cloud-hosted source control system (Azure Pipelines, GitHub, Bitbucket).
 4. Select the repository where the app's source code is located.
 5. Set up the desired branch to be built. 
   
@@ -34,7 +34,7 @@ To [get started](https://docs.microsoft.com/appcenter/build/),
 
 In App Center, if your app follows the usual standard layout on the respective platform and does not rely on numerous external build steps, App Center finds the app automatically in your repository and builds it right away. We take care of creating the steps/tasks that builds the app on [Cloud Build Machines](https://docs.microsoft.com/appcenter/build/software). 
 
-All we need to know is the app you want us to build, from the repositories hosted on Azure DevOps, Bitbucket, or GitHub.
+All we need to know is the app you want us to build, from the repositories hosted on Azure Pipelines, Bitbucket, or GitHub.
  
 > [!TIP]
 > We still offer you a way to do some customizations during build, using [Build Scripts!](https://docs.microsoft.com/appcenter/build/custom/scripts/) 
@@ -54,12 +54,11 @@ App Center brings together multiple services commonly used by mobile developers 
 > [!NOTE]
 > If you feel we are missing something critical from App Center Build, you can always reach out and let us know by using the blue chat icon in the lower-right corner of every App Center page.
 
-## <a name="azure-devops"/>Azure DevOps
+## <a name="azure-pipelines"/>Azure Pipelines
 
 If you answer “Yes” to these questions, Azure Pipelines may be the best tool for you. 
 
 **1. Did you want to Build other apps (Web apps, for instance)?**
-  
 You should stick to Azure Pipelines. App Center only supports the OS/Platforms and services as mentioned in our [Platform Service Matrix page](https://docs.microsoft.com/appcenter/general/platform-service-matrix)
 
 **2. Are you ready to [create your own Build Pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?toc=/azure/devops/pipelines/toc.json&bc=/azure/devops/boards/pipelines/breadcrumb/toc.json&view=vsts), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
@@ -71,11 +70,11 @@ If your app is fairly complex, with a lot of customizations, and/or uses a frame
 
 **3. Have you invested already in Azure Pipelines for your Build needs in your Organization?**
  
-If you already have a billing plan set for Azure Pipelines, because your organization is already using it for other application needs (like Web apps) you should probably continue using Azure DevOps for Build.  
+If you already have a billing plan set for Azure Pipelines, because your organization is already using it for other application needs (like Web apps) you should probably continue using Azure Pipelines for Build.  
  
-Billing is not shared between Azure DevOps and App Center. The pipelines you purchased for Azure DevOps cannot be used with App Center. 
+Billing is not shared between Azure Pipelines and App Center. The pipelines you purchased for Azure Pipelines cannot be used with App Center. 
   
-Your team might also be used to Azure Pipelines, and would like to continue using the service for builds, in this case, Azure DevOps might be better for you.   
+Your team might also be used to Azure Pipelines, and would like to continue using the service for builds, in this case, Azure Pipelines might be better for you.   
 
 > [!TIP]
 > If you still want to use App Center Features as part of Build, you can use [Distribute](https://docs.microsoft.com/appcenter/distribution/vsts-deploy) and [Test](https://docs.microsoft.com/appcenter/test-cloud/vsts-plugin) tasks created for Azure Pipelines!
