@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/14/2020
+ms.date: 04/16/2020
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -111,6 +111,19 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 ```
 ```kotlin
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
+
+If you have more than one start activity (for example, deep link activity), you should also call `start` in each of them. To avoid duplicate start calls, check if App Center is enabled before the `start` call:
+
+```java
+if (!AppCenter.isEnabled().get()) {
+  AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
+}
+```
+```kotlin
+if (!AppCenter.isEnabled().get()) {
+  AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+}
 ```
 
 ### 4.2 Replace the placeholder with your App Secret
