@@ -110,6 +110,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 By default, the SDK automatically checks for new releases:
  * When the application starts.
+ * When the application goes into foreground after going to background.
  * When enabling the Distribute module if previously disabled.
 
 If you want to check for new releases manually, you can disable automatic check for update.
