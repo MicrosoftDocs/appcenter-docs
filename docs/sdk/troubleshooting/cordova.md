@@ -25,32 +25,29 @@ ms.tgt_pltfrm: cordova
 
 ## Failed to install plugin - pod command failed with exit code 1
 
-After updating to the latest plugin version, chances are you will see the following error message during `cordova plugin add cordova-plugin-appcenter-<module>`:
+After updating to the latest plugin version, chances are you'll see the following error message during `cordova plugin add cordova-plugin-appcenter-<module>`:
 
 ```Text
 Installing "cordova-plugin-appcenter-shared" for ios
 Failed to install 'cordova-plugin-appcenter-shared': Error: pod: Command failed with exit code 1
 ```
 
-In `0.3.0` we dropped iOS 8 support. The issue with this is that the `4.5.5` version of `cordova-ios` by default targeted ios `9.0`, but used ios `8.0` in the podfile. This has been fixed with `cordova-ios 5.0.0`.
+In `0.3.0`, we dropped iOS 8 support. The issue with this is that the `4.5.5` version of `cordova-ios` targeted iOS `9.0` by default, but used iOS `8.0` in the podfile. The problem is fixed with `cordova-ios 5.0.0`.
 
-There are two ways to resolve this:
-
+There are two options to resolve this:
 1. `cordova platform add ios@5.0.0`
-
-1. If for some reason you want to stay on older cordova version, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`. Then run `pod install`.
+2. If for some reason you want to stay on older cordova version, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`. Then run `pod install`.
 
 ## Failed to install 'cordova-plugin-appcenter-shared': undefined
 
 One possible cause of this error is when running `cordova plugin add cordova-plugin-appcenter-<module>` without **CocoaPods** installed.
 
 In this case, the error usually includes this line:
-
 ```Text
 Error: CocoaPods was not found. Please install version 1.0.1 or greater from https://cocoapods.org/
 ```
 
-If you see this line, simply run:
+If you see this line, run:
 
 ```shell
 sudo gem install cocoapods
@@ -59,7 +56,7 @@ pod setup
 
 ## CocoaPods could not find compatible versions for pod "AppCenter"
 
-If you see the following error message during `cordova plugin add cordova-plugin-appcenter-<module>`, chances are your local clone (`~/.cocoapods/repos` on your system) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up-to-date.
+If you see the following error message during `cordova plugin add cordova-plugin-appcenter-<module>`, chances are your local clone (`~/.cocoapods/repos` on your system) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) isn't up to date.
 
 ```Text
 CocoaPods could not find compatible versions for pod "AppCenter":
@@ -67,7 +64,7 @@ CocoaPods could not find compatible versions for pod "AppCenter":
    AppCenter (~> 1.12.0)
 ```
 
-You should run `pod repo update` to update the spec repo, and try adding the plugin again. For more information on CocoaPods commands, please see the [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
+Run `pod repo update` to update the spec repo, and try adding the plugin again. For more information on CocoaPods commands, see the [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
 ## Module 'AppCenter' not found iOS build error
 
@@ -80,9 +77,9 @@ If you see the following error message during `cordova build ios`, it means that
 1 error generated.
 ```
 
-One possible cause is that your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up-to-date.
+One possible cause is that your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) isn't up to date.
 
-Run `pod repo update` to update the spec repo, and try adding plugin again. For more information on CocoaPods commands, please see the [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
+Run `pod repo update` to update the spec repo, and try adding plugin again. For more information on CocoaPods commands, see the [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
 ## Archive not found at path iOS build error
 
@@ -110,7 +107,7 @@ A problem occurred evaluating script.
 > Could not find method google() for arguments [] on repository container.
 ```
 
-You should update `cordova-android` to at least `6.4.0`. You can run `cordova platform update android` to update the platform to the latest version or `cordova platform add android@6.4.0` to use the exact version.
+Update `cordova-android` to at least `6.4.0`. You can run `cordova platform update android` to update the platform to the latest version or `cordova platform add android@6.4.0` to use the exact version.
 
 ## Analytics not showing up in the portal
 
