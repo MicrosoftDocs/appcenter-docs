@@ -54,7 +54,7 @@
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
-## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
+## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
