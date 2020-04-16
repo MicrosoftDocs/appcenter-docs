@@ -33,6 +33,6 @@ Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamari
 
 Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamarin.UITests from running in App Center for Test.
 
-   In Visual Studio 2017, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck the **Use Shared Runtime** checkbox.
+   In Visual Studio 2019, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck the **Use Shared Runtime** checkbox.
 
 ![Remove Use Shared Runtime](./images/remove-share-runtime-vs2019.png)

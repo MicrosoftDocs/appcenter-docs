@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 03/17/2020
+ms.date: 04/07/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -17,30 +17,31 @@ ms.custom: build
 - Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
+- Java 14: Zulu14.27+1-CA (build 14+36)
 - Rust 1.42.0
-- Clang/LLVM 9.0.1
+- Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0) 8.4.0
 - GNU Fortran (Homebrew GCC 9.3.0) 9.3.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.11.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.12.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
-- Ruby 2.6.5p114
+- Ruby 2.6.6p146
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.14
-- PHP 7.4.3
-- julia 1.3.1
+- Go 1.14.1
+- PHP 7.4.4
+- julia 1.4.0
 
 ## Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.10
+- Homebrew 2.2.11
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -51,64 +52,70 @@ ms.custom: build
 
 ## Project Management
 - Apache Maven 3.6.3
-- Gradle 6.2.2
+- Gradle 6.3
 
 ## Utilities
 - Curl 7.69.1
-- Git: 2.25.1
+- Git: 2.26.0
 - Git LFS: 2.10.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- Packer 1.5.4
-- GNU parallel 20200222
+- Packer 1.5.5
+- GNU parallel 20200322
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
-- gpg (GnuPG) 2.2.19
+- gpg (GnuPG) 2.2.20
 - psql (PostgreSQL) 12.2
 - aria2 1.35.0
 - azcopy 10.3.4
 - zstd 1.4.4
 - bazel 2.2.0
 - bazelisk v1.3.0
+- helm v3.1.2+gd878d4d
+- Docker 19.03.8
+- docker-machine 0.16.2
+- docker-compose 1.25.4
 
 ## Tools
-- Fastlane 2.143.0
-- Cmake 3.16.5
+- Fastlane 2.144.0
+- Cmake 3.17.0
 - App Center CLI 1.2.2
-- Azure CLI 2.2.0
+- Azure CLI 2.3.1
+- AWS CLI 2.0.6
 
 ## Browsers
-- Google Chrome 80.0.3987.132 
+- Google Chrome 80.0.3987.163 
 - ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.66 
-- MSEdgeDriver 80.0.361.66
-- Mozilla Firefox 74.0
+- Microsoft Edge 80.0.361.109 
+- MSEdgeDriver 80.0.361.109
+- Mozilla Firefox 74.0.1
 - geckodriver 0.26.0
 
 ## Toolcache
-#### Ruby
+### Ruby
 - 2.4.9
 - 2.5.7
 - 2.6.5
 - 2.7.0
 
-#### Python
+### Python
 - 2.7.17
 - 3.5.9
 - 3.6.10
 - 3.7.6
 - 3.8.2
 
-#### PyPy
+### PyPy
 - 2.7.17
 - 3.6.9
 
 ## Xamarin
-#### Visual Studio for Mac
-- 8.4.8.2
+### Visual Studio for Mac
+- 8.5.0.3183
 
-#### Mono
+### Mono
+- 6.8.0.123
 - 6.6.0.166
 - 6.4.0.208
 - 6.0.0.334
@@ -122,7 +129,8 @@ ms.custom: build
 - 5.0.1.1
 - 4.8.1
 
-#### Xamarin.iOS
+### Xamarin.iOS
+- 13.14.1.39
 - 13.10.0.21
 - 13.8.3.0
 - 13.6.0.12
@@ -144,7 +152,8 @@ ms.custom: build
 - 10.10.0.36
 - 10.6.0.10
 
-#### Xamarin.Mac
+### Xamarin.Mac
+- 6.14.1.39
 - 6.10.0.21
 - 6.8.3.0
 - 6.6.0.12
@@ -165,7 +174,8 @@ ms.custom: build
 - 3.4.0.36
 - 3.0.0.398
 
-#### Xamarin.Android
+### Xamarin.Android
+- 10.2.0
 - 10.1.3
 - 10.0.6
 - 9.4.1
@@ -181,7 +191,7 @@ ms.custom: build
 - 7.3.1
 - 7.1.0
 
-#### Unit Test Framework
+### Unit Test Framework
 - NUnit 3.6.1
 
 ## Xcode
@@ -200,14 +210,14 @@ ms.custom: build
 | 10.0             | 10A255  | /Applications/Xcode_10.app     |
 | 9.4.1            | 9F2000  | /Applications/Xcode_9.4.1.app  |
 
-#### Xcode Support Tools
+### Xcode Support Tools
 - Nomad CLI 3.1.2
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.3
+- xcversion 2.6.4
 
-#### Installed SDKs
+### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                          |
 | ----------------------- | -------------------- | -------------------------------------- |
 | macOS 10.13             | macosx10.13          | 9.4.1                                  |
@@ -259,7 +269,7 @@ ms.custom: build
 | Simulator - watchOS 6.1 | watchsimulator6.1    | 11.2, 11.2.1, 11.3, 11.3.1             |
 | DriverKit 19.0          | driverkit.macosx19.0 | 11.0, 11.1, 11.2, 11.2.1, 11.3, 11.3.1 |
 
-#### Installed Simulators
+### Installed Simulators
 | OS          | Xcode Version                                                                                       | Simulators                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS 8.4     | 9.4.1<br>10.0<br>10.1<br>10.2<br>10.2.1<br>10.3<br>11.0<br>11.1<br>11.2<br>11.2.1<br>11.3<br>11.3.1 | iPhone 4s<br>iPhone 5<br>iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPad 2<br>iPad Retina<br>iPad Air                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -296,17 +306,17 @@ ms.custom: build
 | watchOS 6.1 | 11.2<br>11.2.1<br>11.3<br>11.3.1                                                                    | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Android
-#### Android SDK Tools
+### Android SDK Tools
 | Package Name | Description                        |
 | ------------ | ---------------------------------- |
 | tools        | Android SDK Tools, Revision 26.1.1 |
 
-#### Android SDK Platform-Tools
+### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
 | platform-tools | Android SDK Platform-Tools, Revision 29.0.6 |
 
-#### Android SDK Platforms
+### Android SDK Platforms
 | Package Name | Description                         |
 | ------------ | ----------------------------------- |
 | android-15   | Android SDK Platform 15, Revision 5 |
@@ -325,7 +335,7 @@ ms.custom: build
 | android-28   | Android SDK Platform 28, Revision 6 |
 | android-29   | Android SDK Platform 29, Revision 4 |
 
-#### Android SDK Build-Tools
+### Android SDK Build-Tools
 | Package Name           | Description                                  |
 | ---------------------- | -------------------------------------------- |
 | build-tools-19.1.0     | Android SDK Build-Tools, Revision 19.1.0     |
@@ -363,15 +373,15 @@ ms.custom: build
 | build-tools-17.0.0     | Android SDK Build-Tools, Revision 17.0.0     |
 | build-tools-23.0.0     | Android SDK Build-Tools, Revision 23.0.0     |
 
-#### Android Utils
+### Android Utils
 | Package Name     | Version      |
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
 | lldb             | 3.1.4508709  |
 | ndk-bundle       | 18.1.5063045 |
-| Android Emulator | 30.0.0       |
+| Android Emulator | 30.0.5       |
 
-#### Android Google APIs
+### Android Google APIs
 | Package Name                | Description             |
 | --------------------------- | ----------------------- |
 | addon-google_apis-google-21 | Google APIs, Revision 1 |
@@ -379,7 +389,7 @@ ms.custom: build
 | addon-google_apis-google-23 | Google APIs, Revision 1 |
 | addon-google_apis-google-24 | Google APIs, Revision 1 |
 
-#### Extra Packages
+### Extra Packages
 | Package Name                                    | Version |
 | ----------------------------------------------- | ------- |
 | Android Support Repository                      | 47.0.0  |
