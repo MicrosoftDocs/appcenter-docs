@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 03/17/2020
+ms.date: 04/14/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -42,7 +42,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '3.1.0'
+       def appCenterSdkVersion = '3.2.0'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
@@ -110,6 +110,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 By default, the SDK automatically checks for new releases:
  * When the application starts.
+ * When the application goes into foreground after going to background.
  * When enabling the Distribute module if previously disabled.
 
 If you want to check for new releases manually, you can disable automatic check for update.
