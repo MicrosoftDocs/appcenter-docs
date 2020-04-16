@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Cordova
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 08/26/2019
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db
 ms.tgt_pltfrm: cordova
@@ -15,12 +15,13 @@ ms.tgt_pltfrm: cordova
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Failed to install plugin - pod command failed with exit code 1
 

@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/13/2019
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
 ms.tgt_pltfrm: react-native
@@ -15,12 +15,13 @@ ms.tgt_pltfrm: react-native
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## 'React/RCTDefines.h' file not found
 
