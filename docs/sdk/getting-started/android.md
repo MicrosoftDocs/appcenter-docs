@@ -116,12 +116,12 @@ AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes
 If you have more than one start activity (for example, deep link activity), call `start` in the application custom class or in _each entry point_. In the second case, in order to avoid duplicate start calls, check if App Center is enabled before the `start` call:
 
 ```java
-if (!AppCenter.isEnabled().get()) {
+if (!AppCenter.isConfigured())) {
   AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
 }
 ```
 ```kotlin
-if (!AppCenter.isEnabled().get()) {
+if (!AppCenter.isConfigured()) {
   AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 }
 ```
