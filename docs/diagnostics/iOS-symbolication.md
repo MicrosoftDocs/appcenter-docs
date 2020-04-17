@@ -4,6 +4,7 @@ description: Help understanding symbolication for iOS and MacOS diagnostics in A
 keywords: crashes, errors, iOS, MacOS, symbols, symbolication
 author: winnie
 ms.author: yuli1
+ms.reviewer: kegr
 ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
