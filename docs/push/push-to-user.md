@@ -73,7 +73,6 @@ To send a notification to one or more users, the app must set the User ID throug
 
 > [!NOTE]
 > The user's identity set through the SDK can be whatever the developer wants it to be: the user's name, email address, phone number, or some other unique identifier.
-> If multiple devices have the same user identity set, the push will be sent to _all of them_.
 
 When all of the targeted users are in the list, click the **Next>** button to complete the wizard and send the notification.
 
