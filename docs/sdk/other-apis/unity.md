@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: maestersid
 ms.author: jawh
-ms.date: 11/26/2019
+ms.date: 04/17/2020
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.tgt_pltfrm: unity

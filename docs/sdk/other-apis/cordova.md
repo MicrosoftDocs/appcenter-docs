@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
-ms.date: 10/16/2019
+ms.date: 04/17/2020
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
 ms.tgt_pltfrm: cordova

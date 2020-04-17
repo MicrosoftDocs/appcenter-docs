@@ -4,7 +4,7 @@ description: Instructions on how to send push notifications to users.
 keywords: app center, push, user
 author: jwargo
 ms.author: jowargo
-ms.date: 02/28/2020
+ms.date: 04/17/2020
 ms.topic: article
 ms.assetid: df3187de-0295-475e-9be2-4f46034cdcbe
 ms.service: vs-appcenter
@@ -73,6 +73,7 @@ To send a notification to one or more users, the app must set the User ID throug
 
 > [!NOTE]
 > The user's identity set through the SDK can be whatever the developer wants it to be: the user's name, email address, phone number, or some other unique identifier.
+> If multiple devices have the same user identity set, the push will be senbt to _all of them_.
 
 When all of the targeted users are in the list, click the **Next>** button to complete the wizard and send the notification.
 
