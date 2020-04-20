@@ -134,7 +134,7 @@ Distribute.SetEnabledForDebuggableBuild(true);
 
 #### 2.3 [For iOS only] Modify the project's **Info.plist**
 
-App Center SDK checks links to avoid sideloading, so in order for updates distributed through the portal to be handled correctly, you would need to specify `CFBundleURLSchemes` in `CFBundleURLTypes` section of `Info.plist` file:
+App Center SDK checks urls redirecting to the application to avoid sideloading, so in order for updates distributed through the portal to be handled correctly, you would need to specify `CFBundleURLSchemes` in `CFBundleURLTypes` section of `Info.plist` file:
 
 > [!NOTE]
 > `Info.plist`, or an information property list file is a structured text file that contains essential configuration information for a bundled executable.
