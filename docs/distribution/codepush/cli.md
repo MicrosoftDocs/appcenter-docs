@@ -377,6 +377,7 @@ appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t
 [-t|--target-binary-version <targetBinaryVersion>]
 [-o|--output-dir]
 [-s|--sourcemap-output]
+[-c|--build-configuration-name <arg>]
 [--plist-file-prefix]
 [-p|--plist-file]
 [-g|--gradle-file]
@@ -524,6 +525,13 @@ This parameter specifies the relative path to where the generated JS bundle's so
 
 > [!TIP]
 > This parameter can be set using either `--sourcemap-output`  or `-s`*
+
+#### Build configuration name
+
+Name of build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
+
+> [!NOTE]
+> This parameter should be used with Xcode v11. After update version to 11 and above Xcode uses release build configuration by default. This flag can change configuration type (i.e. Debug/Release)
 
 ### Releasing Updates (Cordova)
 
