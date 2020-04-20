@@ -4,10 +4,9 @@ description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: elamalani
 ms.author: emalani
-ms.date: 08/12/2019
+ms.date: 11/11/2019
 ms.topic: article
-ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
-ms.service: vs-appcenter
+ms.assetid: 582bf961-0e4d-4fe0-9731-0a57fd1c222b
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
@@ -100,7 +99,7 @@ Set this callback if you'd like to decide if a particular crash needs to be proc
 ```csharp
 Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 {
-     // Check the report in here and return true or false depending on the ErrorReport.
+    // Check the report in here and return true or false depending on the ErrorReport.
     return true;
 };
 ```
@@ -124,7 +123,7 @@ Crashes.ShouldAwaitUserConfirmation = () =>
 {
     // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-    // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
 };
 ```
@@ -153,6 +152,8 @@ Crashes.SendingErrorReport += (sender, e) =>
 };
 ```
 
+In case we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is triggered again after process restart.
+
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```csharp
@@ -171,9 +172,13 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
 };
 ```
 
+Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
+
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -247,5 +252,20 @@ try {
         { "Wifi", "On"}
     };
     Crashes.TrackError(exception, properties); 
+}
+```
+
+You can also optionally add binary and text attachments to a handled error report. Pass the attachments as an array of `ErrorAttachmentLog` objects as shown in the example below.
+
+```csharp
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    var attachments = new ErrorAttachmentLog[]
+    {
+        ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+        ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
+    };
+    Crashes.TrackError(exception, attachments: attachments);
 }
 ```

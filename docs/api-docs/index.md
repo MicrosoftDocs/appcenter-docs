@@ -36,6 +36,9 @@ Each API request must include an API token from your App Center account; to obta
 
 Store the token somewhere as you'll need it when working with the App Center Swagger and when sending API requests from an application to App Center.
 
+> [!WARNING]
+> Do not embed any of your API tokens into source code.
+
 > [!NOTE]
 > Each App Center account may create up to 5000 API tokens.
 
@@ -107,3 +110,11 @@ The App Center CLI requires Node.js version 8 or higher.
     App Center displays a list of apps with the format `{owner-name}`/`{app-name}`.
 
 Refer to [App Center CLI](https://github.com/Microsoft/appcenter-cli) for the full documentation and list of commands.
+
+## Revoking an API Token
+
+In the event that an API token is leaked, you will want to revoke it. To do so, follow these steps:
+
+1. Navigate to [https://appcenter.ms](https://appcenter.ms).
+2. On the top right corner of the App Center portal, click your account avatar, then select **Account Settings**.
+3. Under the **APIToken** section, check the box next to the token in question and click the **Delete** button in the upper right hand corner

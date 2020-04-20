@@ -2,8 +2,8 @@
 title: Working with Xamarin.UITest
 description: How to perform common tasks when writing and running Xamarin.UITest.
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
+author: oddj0b
+ms.author: vigimm
 ms.reviewer: crdun
 ms.date: 01/31/2019
 ms.topic: article

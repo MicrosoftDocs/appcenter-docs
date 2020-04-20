@@ -7,7 +7,7 @@ ms.author: emalani
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
-ms.service: vs-appcenter
+ms.service: vs-appcenter-sdk
 ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
@@ -128,7 +128,7 @@ Analytics.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started.
@@ -144,7 +144,7 @@ Analytics.isEnabled();
 Analytics.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.

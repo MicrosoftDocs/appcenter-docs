@@ -4,13 +4,16 @@ description: An introduction to the App Center Push service
 keywords: app center,push
 author: jwargo
 ms.author: jowargo
-ms.date: 04/09/2019
+ms.date: 02/03/2020
 ms.topic: article
 ms.assetid: B2CF9BFA-4C31-484C-83F7-9DD0E10AA8BD
 ms.service: vs-appcenter
 ---
 
 # App Center Push
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 The Visual Studio App Center Push (ACP) service is a notification aggregation service, it manages the process of sending notifications to devices using Push Notification Services (PNS) from Apple, Google, and Microsoft. You could easily build your own application that does this for you:
 
@@ -31,7 +34,7 @@ Configuring Push for your application project is as simple as:
 4. Configure any required settings for your app’s target platform. For example:
     + Apple iOS devices use the [Apple Push Notification service](https://developer.apple.com/notifications/) (APNs) to deliver notifications, you’ll have some configuration to do in APNs to enable Push in App Center.
     + Google Android devices use the [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) service to deliver notifications, so you’ll have some configuration to do in FCM to enable Push in App Center.
-    + Windows devices use the [Windows Notifications Services](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
+    + Windows devices use the [Windows Notifications Services](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) (WNS) to deliver notifications, so you’ll have some configuration to do in WNS to enable Push in App Center.
 5. Copy the appropriate notification service settings into your App Center App project.
 
 For additional information, refer to [Configuring the Push Service](~/push/service-config.md).

@@ -1,8 +1,8 @@
 ---
-title: Getting Started | Sample App Tutorials
+title: macOS Getting Started
 description: Tutorial to onboard an macOS application in App Center
 keywords: app center
-authors: sabrinaj206
+author: sabrinaj206
 ms.author: t-sajia
 ms.date: 06/26/2017
 ms.topic: article

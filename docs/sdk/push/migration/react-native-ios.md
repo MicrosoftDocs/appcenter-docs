@@ -6,13 +6,14 @@ author: elamalani
 ms.author: emalani
 ms.date: 01/07/2019
 ms.topic: article
-ms.assetid: cdd0a651-29b6-4fb2-8fc5-4a25b54eb2ca
-ms.service: vs-appcenter
-ms.custom: sdk
+ms.assetid: add07be4-1116-4960-961c-89c9922b3c0e
 ms.tgt_pltfrm: ios
 ---
 
 # How to upgrade App Center Push to a newer version
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 Updating the App Center SDK does not require any action by the developer except for the exceptions that are outlined below.
 

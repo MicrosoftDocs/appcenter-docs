@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Getting Started | Android Sample App Tutorials
+title: Android Getting Started
 description: Getting started prerequisites to onboard an Android application in App Center
 keywords: app center
 author: sshibu
@@ -9,6 +7,7 @@ ms.author: t-shshib
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 05/20/2019
+ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
 ---
 
 
@@ -24,7 +23,7 @@ In this tutorial, you will learn to set up a sample Android app with App Center.
 ## Sign in to GitHub and fork the repository
 
 1. Sign in to your [GitHub account](https://github.com/join).
-2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter/tree/master/sample-apps/android/getting-started).
+2. Access the [sample app's GitHub repository](https://github.com/microsoft/appcenter-sampleapp-android/tree/master).
 3. Click **Fork** at the top-right hand corner of the page.
 
 ## Sign in to App Center

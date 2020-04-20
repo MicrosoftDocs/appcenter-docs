@@ -7,12 +7,12 @@ ms.author: emalani
 ms.date: 08/09/2019
 ms.topic: article
 ms.assetid: 74B832B4-C9C6-40C5-A693-473F385DC817
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
 # App Center Push
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -45,13 +45,13 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](ios-apns-setup.md)]
+[!INCLUDE [ios apns setup](includes/ios-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
 #### [Optional] Enable silent notifications
 
-[!include[](ios-enable-silent-notifications.md)]
+[!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
 
@@ -66,7 +66,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 1. Open a Terminal and navigate to the root of your React Native project, then enter the following to add App Center Push to the app:
 
-   ```
+   ```bash
    npm install appcenter-push --save-exact
    ```
 
@@ -74,7 +74,7 @@ The default integration of the SDK uses Cocoapods for iOS.
 
 #### Integrate the iOS SDK manually
 
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-sdk-manually-for-react-native-lower-than-060-without-react-native-link-or-cocoapods)
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](~/sdk/getting-started/react-native.md#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 ### 2.Start App Center Push
 
@@ -103,11 +103,11 @@ You can set up a listener to be notified whenever a push notification is receive
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-[!include[](react-native-listener.md)]
+[!INCLUDE [react native listener](includes/react-native-listener.md)]
 
 ## Custom data in your notifications
 
-[!include[](custom-data-ios.md)]
+[!INCLUDE [custom data ios](includes/custom-data-ios.md)]
 
 ## Enable or disable App Center Push at runtime
 

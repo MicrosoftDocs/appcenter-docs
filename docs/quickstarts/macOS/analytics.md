@@ -1,11 +1,10 @@
 ---
 # required metadata
-
-title: Analytics | Sample App Tutorials
+title: macOS Analytics Sample App Tutorials
 description: Tutorial to help user set up analytics, track custom events and check logflow.
 keywords: app center
-authors: clpolet
-ms.author: clpolet
+author: iamclement
+ms.author: iamclement
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter

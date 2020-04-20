@@ -1,27 +1,26 @@
 ---
-title: UWP SDK Troubleshooting
+title: UWP, WPF, and WinForms SDK Troubleshooting
 description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
 ms.date: 11/29/2017
 ms.topic: troubleshooting-article
-ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
-ms.service: vs-appcenter
-ms.custom: sdk
+ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
 ms.tgt_pltfrm: uwp
 ---
 
-# UWP SDK Troubleshooting
+# UWP, WPF, and WinForms SDK Troubleshooting
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
+> * [Windows](uwp.md)
 > * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
+> * [tvOS](tvOS.md)
 
 ## Analytics data doesn't show up in the portal
 

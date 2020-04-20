@@ -12,13 +12,13 @@ ms.service: vs-appcenter
 
 # Deleting Test Data
 
-This document covers the scenario where an App Center Test customer has a client of their own whose test report data resides on the same account. When this client of the customer requests deletion of their data, App Center Test has APIs to satisfy this request. All the APIs detailed are public, exposed in our swagger and discoverable through [https://openapi.appcenter.ms/#/test](https://openapi.appcenter.ms/#/test). For more information, refer to the [App Center GDPR documentation](https://docs.microsoft.com/en-us/appcenter/gdpr/your-data).
+This document covers the scenario where an App Center Test customer has a client of their own whose test report data resides on the same account. When this client of the customer requests deletion of their data, App Center Test has APIs to satisfy this request. All the APIs detailed are public, exposed in our swagger and discoverable through [https://openapi.appcenter.ms/#/test](https://openapi.appcenter.ms/#/test). For more information, refer to the [App Center GDPR documentation](https://docs.microsoft.com/appcenter/gdpr/your-data).
 
 ## Deleting Test Data
 
 When a client requests deletion of their test reports, service this request using the follow process:
 
-**1. [Generate an API token](https://docs.microsoft.com/en-us/appcenter/api-docs/).**
+**1. [Generate an API token](https://docs.microsoft.com/appcenter/api-docs/).**
 
 **2. Make the following [API call](https://openapi.appcenter.ms/#/test) to acquire a list of all the test runs ids owned by the client requesting deletion. You will need the owner name (this could be a user name or organization name) and the app name.**
 

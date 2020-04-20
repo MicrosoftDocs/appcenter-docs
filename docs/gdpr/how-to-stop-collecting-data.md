@@ -6,7 +6,7 @@ author: kpiteira
 ms.author: kapiteir
 ms.date: 05/31/2018 
 ms.topic: article 
-ms.assetid: 0DA5C4FB-B64F-40F4-9077-4B7D31B746CD
+ms.assetid: facd442a-14ae-41a6-958e-d32617d1ab22
 ms.service: vs-appcenter
 ---
 
@@ -18,7 +18,7 @@ This section describes how to stop collection of *all* data coming from apps con
 
 If you would like to stop using the Analytics, Diagnostics (Crashes and Errors) and Push services in App Center and stop processing all the SDK logs being sent, but you would still like to use other App Center services such as Build, Distribution, or Test, you can use the [Analytics block logs API](https://openapi.appcenter.ms/#/analytics/App_BlockLogs).
 
-```
+```json
 PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 ```
 
@@ -29,7 +29,7 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 
 To stop collection for a specific device, include the installation identifier in your call.
 
-```
+```json
 PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}
 ```
 

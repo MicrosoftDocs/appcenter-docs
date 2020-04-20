@@ -2,12 +2,11 @@
 title: App Center Crashes for Android
 description:  App Center Crashes for Android
 keywords: sdk, crash
-author: elamalani
-ms.author: emalani
-ms.date: 08/12/2019
+author: winnie
+ms.author: yuli1
+ms.date: 02/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
@@ -59,7 +58,7 @@ Crashes.hasReceivedMemoryWarningInLastSession();
 Crashes.hasReceivedMemoryWarningInLastSession()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
@@ -78,7 +77,7 @@ Crashes.hasCrashedInLastSession();
 Crashes.hasCrashedInLastSession()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occurred.
 
@@ -96,7 +95,7 @@ Crashes.getLastSessionCrashReport();
 Crashes.getLastSessionCrashReport()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesListener](#customize-your-usage-of-app-center-crashes).
 
@@ -115,13 +114,13 @@ Create your own CrashesListener and assign it like this:
 
 ```java
 CrashesListener customListener = new CrashesListener() {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : CrashesListener {
-	// Implement all callbacks here.
+    // Implement all callbacks here.
 }
 Crashes.setListener(customListener)
 ```
@@ -130,13 +129,13 @@ In case you are only interested in customizing some of the callbacks, use the `A
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 };
 Crashes.setListener(customListener);
 ```
 ```kotlin
 val customListener = object : AbstractCrashesListener() {
-	// Implement any callback here as required.
+    // Implement any callback here as required.
 }
 Crashes.setListener(customListener)
 ```
@@ -151,12 +150,12 @@ Implement this callback if you'd like to decide if a particular crash needs to b
 ```java
 @Override
 public boolean shouldProcess(ErrorReport report) {
-	return true; // return true if the crash report should be processed, otherwise false.
+    return true; // return true if the crash report should be processed, otherwise false.
 }
 ```
 ```kotlin
 override fun shouldProcess(report: ErrorReport?): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -175,15 +174,15 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
-	// Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
-	// Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
-	return true;
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    return true;
 }
 ```
 ```kotlin
 override fun shouldAwaitUserConfirmation(): Boolean {
-	return true
+    return true
 }
 ```
 
@@ -212,26 +211,28 @@ At times, you would like to know the status of your app crash. A common use case
 ```java
 @Override
 public void onBeforeSending(ErrorReport errorReport) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
 ```kotlin
 override fun onBeforeSending(report: ErrorReport?) {
-	// Your code, e.g. to present a custom UI.
+    // Your code, e.g. to present a custom UI.
 }
 ```
+
+In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
 ```java
 @Override
 public void onSendingSucceeded(ErrorReport report) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 ```kotlin
 override fun onSendingSucceeded(report: ErrorReport?) {
-	// Your code, e.g. to hide the custom UI.
+    // Your code, e.g. to hide the custom UI.
 }
 ```
 
@@ -240,52 +241,50 @@ override fun onSendingSucceeded(report: ErrorReport?) {
 ```java
 @Override
 public void onSendingFailed(ErrorReport report, Exception e) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 ```kotlin
 override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
-	// Your code goes here.
+    // Your code goes here.
 }
 ```
 
+Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
+
+Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). 
+
 ### Add attachments to a crash report
 
-You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```java
 @Override
 public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
-	/* Attach some text. */
-	ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
 
-	/* Attach app icon. */
-	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-	byte[] bitmapData = stream.toByteArray();
-	ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg");
+    // Attach binary data.
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
 
-	/* Return attachments as list. */
-	return Arrays.asList(textLog, binaryLog);
+    // Return attachments as list.
+    return Arrays.asList(textLog, binaryLog);
 }
 ```
 ```kotlin
 override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAttachmentLog> {
-	
-	/* Attach some text. */
-	val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
 
-	/* Attach app icon. */
-	val bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher)
-	val stream = ByteArrayOutputStream()
-	bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-	val bitmapData = stream.toByteArray()
-	val binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitmapData, "ic_launcher.jpeg", "image/jpeg")
-	
-	/* Return attachments as list. */
-	return Arrays.asList(textLog, binaryLog)
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+    // Attach binary data.
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
+
+    // Return attachments as list.
+    return listOf(textLog, binaryLog)
 }
 ```
 
@@ -315,7 +314,7 @@ Crashes.setEnabled(true)
 
 The state is persisted in the device's storage across application launches.
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started.
@@ -331,10 +330,88 @@ Crashes.isEnabled();
 Crashes.isEnabled()
 ```
 
-[!include[](../android-see-async.md)]
+[!INCLUDE [android see async](../includes/android-see-async.md)]
 
 > [!NOTE]
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
+
+## Handled Errors
+
+App Center also allows you to track errors by using handled exceptions.
+In order to do so, simply use the `trackError` method:
+
+```java
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    Crashes.trackError(exception);
+}
+```
+```kotlin
+try {
+    // your code goes here.
+} catch (exception: Exception) {
+    Crashes.trackError(exception)
+}
+```
+
+An app can optionally attach properties to a handled error report to provide further context. Pass the properties as a map of key/value pairs (strings only) as shown in the example below.
+
+```java
+try {
+    // your code goes here.
+} catch (Exception exception) {
+    Map<String, String> properties = new HashMap<String, String>() {{
+        put("Category", "Music");
+        put("Wifi", "On");
+    }};
+    Crashes.trackError(exception, properties, null);
+}
+```
+```kotlin
+try {
+    // your code goes here.
+} catch (exception: Exception) {
+    val properties = mapOf("Category" to "Music", "Wifi" to "On")
+    Crashes.trackError(exception, properties, null)
+}
+```
+
+You can also optionally add binary and text attachments to a handled error report. Pass the attachments as an `Iterable` as shown in the example below.
+
+
+```java
+try {
+    // your code goes here.
+} catch (Exception exception) {
+
+    // Attach some text.
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+
+    // Attach binary data.
+    byte[] binaryData = getYourBinary();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
+
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
+}
+```
+```kotlin
+try {
+    // your code goes here.
+} catch (exception: Exception) {
+
+    // Attach some text.
+    val textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt")
+
+    // Attach binary data.
+    val binaryData = getYourBinary()
+    val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
+
+    // Track an exception with attachments.
+    Crashes.trackException(exception, null, listOf(textLog, binaryLog))
+}
+```
 
 ## Reporting NDK crashes
 
@@ -354,12 +431,12 @@ Next, you must include and compile Google Breakpad by following the instructions
 Once you have Google Breakpad included, attach the NDK Crash Handler after `AppCenter.start`:
 
 ```java
-/* Attach NDK Crash Handler after SDK is initialized. */
+// Attach NDK Crash Handler after SDK is initialized.
 Crashes.getMinidumpDirectory().thenAccept(new AppCenterConsumer<String>() {
     @Override
     public void accept(String path) {
 
-        /* Path is null when Crashes is disabled. */
+        // Path is null when Crashes is disabled.
         if (path != null) {
             setupNativeCrashesListener(path);
         }
@@ -392,7 +469,7 @@ bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
                   void *context,
                   bool succeeded) {
 
-    /* Allow system to log the native stack trace. */
+    // Allow system to log the native stack trace.
     __android_log_print(ANDROID_LOG_INFO, "YourLogTag",
                         "Wrote breakpad minidump at %s succeeded=%d\n", descriptor.path(),
                         succeeded);
@@ -404,11 +481,11 @@ Once these methods are properly set up, the app sends the minidump to App Center
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> The app sends the minidump file as a binary attachment to App Center. Since App Center allows only one binary attachment, you can send only text attachments with the native crash report.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 
-[!include[](./ndk-symbolication.md)]
+See the [Diagnostics documentation](~/diagnostics/Android-NDK.md) for more information regarding the processing of crashes.

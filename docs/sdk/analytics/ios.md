@@ -7,7 +7,6 @@ ms.author: emalani
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: ios
 dev_langs:  
@@ -35,4 +34,4 @@ App Center Analytics helps you understand user behavior and customer engagement 
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
-[!include[](apple-common-methods.md)]
+[!INCLUDE [apple common methods](includes/apple-common-methods.md)]

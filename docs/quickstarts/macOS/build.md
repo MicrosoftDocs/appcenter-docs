@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Build | Sample App Tutorials
+title: macOS Build Sample Tutorials
 description: Tutorial to build sample macOS app in App Center.
 keywords: app center
-authors: clpolet
-ms.author: clpolet
+author: iamclement
+ms.author: iamclement
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter

@@ -2,17 +2,17 @@
 title: App Center Push for Unity Android
 description: Using Push in App Center
 keywords: sdk, push
-author: jwhitedev
+author: maestersid
 ms.author: jawh
 ms.date: 03/22/2019
 ms.topic: article
 ms.assetid: 136a7159-9aee-4064-b2b1-dbc513110b12
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 
 # App Center Push
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -30,7 +30,7 @@ ms.tgt_pltfrm: unity
 > * [Unity iOS](unity-ios.md)
 > * [Unity Windows](unity-windows.md)
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -38,15 +38,15 @@ If you haven't set up the SDK in your application yet, see the instructions in t
 
 ### Enable App Center Push
 
-[!include[](unity-enable.md)]
+[!INCLUDE [unity enable](includes/unity-enable.md)]
 
 ## Intercept push notifications
 
-[!include[](unity-intercept.md)]
+[!INCLUDE [unity intercept](includes/unity-intercept.md)]
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
@@ -70,4 +70,4 @@ App Center displays the application icon if a custom default icon and an icon ar
 
 App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must check the **Enable Firebase Analytics** checkbox in the settings of your App Center game object.
 
-[!include[](unity-api-enable.md)]
+[!INCLUDE [unity api enable](includes/unity-api-enable.md)]

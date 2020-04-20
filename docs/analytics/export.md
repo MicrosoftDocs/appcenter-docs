@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: blparr
 ms.author: blparr
-ms.date: 05/30/2019
+ms.date: 02/12/2020
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -13,8 +13,7 @@ ms.custom: analytics
 
 # Export
 
-
-App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
+App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview).
 By exporting the data, you benefit from:
 
 - Unlimited data retention
@@ -30,9 +29,8 @@ App Center continuously exports Analytics data to Blob Storage from the moment y
 
 You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
 
-[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
-[Learn more about Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
-
+[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+[Learn more about Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)
 
 ## Azure Blob Storage
 
@@ -40,7 +38,7 @@ Azure Blob storage is a service for storing large amounts of unstructured object
 
 The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnositcs data](https://docs.microsoft.com/en-us/appcenter/gdpr/diagnostics-export)
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnositcs data](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export)
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
@@ -86,6 +84,7 @@ The contents of the blob file is a JSON array of client device logs, that looks 
     }
 ]
 ```
+
 ## Azure Application Insights
 
 Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you will get access to the following features:
@@ -134,6 +133,7 @@ The table below shows the field mapping for the "customDimensions" field.
 |  SdkName                        | App Center SDK name                            |
 |  SdkVersion                     | App Center SDK version                         |
 |  TimeZoneOffset                 | Time zone offset                               |
+|  UserId                         | Custom user identifier (developer set)         |
 |  WrapperRuntimeVersion          | App Center SDK wrapper runtime version         |
 |  WrapperSdkName                 | App Center SDK wrapper name                    |
 |  WrapperSdkVersion              | App Center SDK wrapper version                 |
@@ -153,13 +153,9 @@ More information about Application Insights and App Center:
 * Learn about [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
 * Learn about [Better Decisions Through Better Analytics](https://blogs.msdn.microsoft.com/vsappcenter/better-decisions-through-better-analytics-visual-studio-app-center-with-azure-application-insights/) on App Center blog
 
-
-
-
 ## Prerequisities
 
-You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/en-us/free/) account before you begin.
-
+You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/free/) account before you begin.
 
 ## Azure Subscription Linking
 
@@ -229,17 +225,32 @@ Custom Export enables users to customize their export configuration in [Azure](h
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
-For Additional details on export to [Application Insights refer to the Quick Start ](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/mobile-center-quickstart).
+For Additional details on export to [Application Insights refer to the Quick Start ](https://docs.microsoft.com/azure/azure-monitor/learn/mobile-center-quickstart).
 
 ### Exporting multiple apps to the same storage account
 
-When configuring export for multiple apps, you should create or update a configuration with the `blob_path_format_kind` set to `WithAppId`, which prefixes the export path with the respective appID's. The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
+When configuring export for multiple apps, you should create or update a configuration with the `blob_path_format_kind` (part of the `ExportBlobConfiguration` model) set to `WithAppId`, which prefixes the export path with the respective appID's.
+
+The path to the blob is formatted as follows:
+
+- when the enum is set to `WithoutAppId=false` is `year/month/day/hour/minute`
+- when the enum is set to `WithAppId=true` is `appId/year/month/day/hour/minute`
+
+The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
 
 ```HTTP
 PATCH /v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}
 ```
 
-The changes will take time to propagate, and entities from that point will then be written to the new path.
+The changes will take 5-10 minutes to propagate, and entities from that point on will then be written using the new path format.
+
+### Back-filling opt-out
+
+By default, a new export configuration will back-fill two last days of data for AI resources and 30 days for blob storage. There are scenarios when back-filling is not necessary (for example, if doing so would result in data being overwritten or duplicated). In this case, set `backfill` property to `false` when creating a new configuration.
+
+### Choosing what kind of data to export
+
+By default, a new export configuration exports Analytics data only (events, sessions, etc.) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
 ## Pricing
 
@@ -248,5 +259,3 @@ In order to set up Export, you will need to create an Azure subscription. Export
 [Application Insights pricing](https://azure.microsoft.com/pricing/details/application-insights/)
 
 [Blob Storage pricing](https://azure.microsoft.com/pricing/)
-
-
