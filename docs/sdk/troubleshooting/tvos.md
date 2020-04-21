@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for tvOS
 keywords: sdk
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 12/05/2019
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: aaedb72a-3fb1-4c5c-b53b-4e3bf189656d
 dev_langs:  
@@ -17,12 +17,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Issues during setup
 

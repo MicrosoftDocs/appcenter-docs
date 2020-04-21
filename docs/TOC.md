@@ -274,6 +274,7 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [macOS](sdk/troubleshooting/macos.md)
+### [tvOS](sdk/troubleshooting/tvos.md)
 ### [React Native](sdk/troubleshooting/react-native.md)
 ### [Cordova](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
