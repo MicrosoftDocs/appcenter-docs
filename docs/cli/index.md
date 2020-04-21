@@ -41,7 +41,7 @@ There are two ways to use App Center CLI commands without running `appcenter log
  
 **Using the `--token` parameter:**
 
-1. Create a `Full Access` [API token](https://docs.microsoft.com/en-us/appcenter/api-docs/) (See steps 1-5).
+1. Create a `Full Access` [API token](https://docs.microsoft.com/appcenter/api-docs/) (See steps 1-5).
 2. Open a terminal/command window.
 3. Add the `--token` switch to the CLI command you are running. For example, run `appcenter apps list --token {API-token}` to get a list of your configured applications. 
 

@@ -1,45 +1,45 @@
 ---
 title: iOS Symbolication
-description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
-keywords: crashes, errors, iOS, MacOS, symbols, symbolication
-author: winnieli1208
+description: Help understanding symbolication for iOS and macOS diagnostics in App Center
+keywords: crashes, errors, iOS, macOS, symbols, symbolication
+author: winnie
 ms.author: yuli1
-ms.date: 06/20/2019
+ms.reviewer: kegr
+ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
 ms.service: vs-appcenter
-ms.custom: analytics 
+ms.custom: analytics
 ---
 
 # iOS Symbolication
 
-## Overview
+macOS, tvOS, and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses; not class names, methods, file names, or line numbers needed to understand the crashes.
 
-MacOS, tvOS and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes.
+To get the memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
 
-To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
+The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files.
+
+## Unsymbolicated crashes
+[!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
 
 ## Finding the `.dSYM` bundle
 
-1. In Xcode, open the **Window** menu, then select **Organizer**
-2. Select the **Archives** tab
-3. Select your app in the left sidebar
-4. Right-click on the latest archive and select **Show in Finder**
-5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**
-6. You should see a folder named `dSYMs` which contains your dSYM bundle
+1. In Xcode, open the **Window** menu, then select **Organizer**.
+2. Select the **Archives** tab.
+3. Select your app in the left sidebar.
+4. Right-click on the latest archive and select **Show in Finder**.
+5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**.
+6. You should see a folder named `dSYMs` that contains your dSYM bundle.
+7. Create a zip file of the dSYM bundle.
 
-If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/en-us/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
+If you're using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
 ## Uploading symbols
 
 ### App Center Portal
 
-1. Create a ZIP file for the dSYM package on your Mac
-2. Log into App Center and select your app
-3. In the left menu, navigate to the **Diagnostics** section
-4. Select **Symbols**
-5. In the top-right corner, click **Upload symbols** and upload the zip file
-6. After the zip file is indexed by App Center, new incoming crashes will be symbolicated for you
+[!INCLUDE [symbol upload ui](includes/symbol-upload-ui.md)]
 
 #### React Native iOS apps
 
@@ -49,23 +49,25 @@ To obtain symbol files for React Native iOS files, create a ZIP file with the dS
 react-native bundle --entry-file index.ios.js --platform ios --dev false --reset-cache --bundle-output unused.jsbundle --sourcemap-output index.ios.map
 ```
 
-The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the diagnostics service. If you use the App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps above.
-
 ### App Center API
 
-1. Trigger a `POST` request to the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_create). 
-This call allocates space on our backend for your symbols and returns a `symbol_upload_id` and an `upload_url` property.
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your symbols on disk.  This call uploads the symbols to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob#request-headers-all-blob-types).
-3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
+The process for uploading symbols through the API involves a series of three API calls: one to allocate space on our backend, one to upload the file, and one to update the status of the upload. The body of the first API call should set `symbol_type` to `Apple`.
 
-> [!NOTE]
-> The symbol uploads API will not work for symbols files that are 256MB or larger in size. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
+[!INCLUDE [symbol upload api](includes/symbol-upload-api.md)]
+
+### App Center CLI
+
+You can also use the CLI to upload symbol files:
+
+```shell
+appcenter crashes upload-symbols --symbol {symbol file}
+```
 
 ## Bitcode
 
 Bitcode was introduced by Apple to allow apps sent to the App Store to be recompiled by Apple itself and apply the latest optimization. If Bitcode is enabled, the symbols generated for your app in the store will be different than the ones from your own build system.
 
-App Center crash reporting does not completely support the symbolication of crashes from bitcode-enabled apps yet. In the meantime, we advise that you **disable bitcode**. Disabling bitcode significantly simplifies symbols management and currently does not have any known downsides for iOS apps. 
+App Center crash reporting doesn't completely support the symbolication of crashes from bitcode-enabled apps yet. In the meantime, we advise that you **disable bitcode**. Disabling bitcode significantly simplifies symbols management and currently doesn't have any known downsides for iOS apps.
 
 ### Disable bitcode for your app
 
@@ -80,11 +82,11 @@ With these simple steps, App Center crash reporting will behave as usual.
 
 ### Retrieve symbols for bitcode enabled apps
 
-If you would like to keep bitcode enabled, you can download the proper dSYM files by following these steps:
+If you'd like to keep bitcode enabled, you can download the proper dSYM files by following these steps:
 
 1. Open the Xcode's Organizer
 2. Select the specific archive of your app that you uploaded to iTunes Connect
-3. Click on the "Download dSYMs" button. This step will insert the Bitcode compiled dSYM files into the original archive. 
+3. Click on the "Download dSYMs" button. This step will insert the Bitcode compiled dSYM files into the original archive.
 4. Upload the symbols to the corresponding app and version in App Center
 
 If the Xcode organizer doesn't provide any new symbols, you must download the dSYM files from the iTunes Connect portal by following these steps:
@@ -97,8 +99,7 @@ If the Xcode organizer doesn't provide any new symbols, you must download the dS
 
 ## Troubleshooting symbol issues
 
-
-If your crashes still appear unsymbolicated after uploading symbols and disabling bitcode, it might be because the uploaded dSYM files don't match the ones required by App Center. When you upload dSYM files, App Center matches them to the right app version based on their UUIDs. 
+If your crashes still appear unsymbolicated after uploading symbols and disabling bitcode, it might be because the uploaded dSYM files don't match the ones required by App Center. When you upload dSYM files, App Center matches them to the right app version based on their UUIDs.
 
 You can double check whether your dSYM files have the right UUIDs by using a CLI tool called **dwarfdump**.
 
@@ -106,18 +107,17 @@ You can double check whether your dSYM files have the right UUIDs by using a CLI
 
   ```shell
   dwarfdump --u CrashProbeiOS.app.dSYM
-  ```  
-2. The result should look something like this: 
+  ```
+2. The result should look something like this:
 
   ```text
   UUID:ADF53C85-4638-3EFF-A33C-42C13A18E915 (armv7)CrashProbeiOS.app.dSYM/Contents/Resources/DWARF/CrashProbeiOS
   UUID:D449E33D-7E74-379D-8B79-15EE104ED1DF (arm64)CrashProbeiOS.app.dSYM/Contents/Resources/DWARF/CrashProbeiOS
   ```
 
-3. Double check if the UUID returned matches the UUIDs shown in the debug symbols dialogue: 
+3. Double check if the UUID returned matches the UUIDs shown in the debug symbols dialog:
 
   ![App Center displays the UUID of required symbols](~/diagnostics/images/symbols-UUID.png)
 
-
-
+[!INCLUDE [ignoring symbols](includes/ignoring-symbols.md)]
 

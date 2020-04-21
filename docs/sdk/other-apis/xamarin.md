@@ -4,11 +4,9 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 10/16/2019
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
@@ -58,10 +56,7 @@ The App Center SDK supports setting a **user ID** that is used to augment crash 
 AppCenter.SetUserId("your-user-id");
 ```
 
-After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
-
-> [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+[!INCLUDE [user id](includes/user-id.md)]
 
 ## Disable all services at runtime
 

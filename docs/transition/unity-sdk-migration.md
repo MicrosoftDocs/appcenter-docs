@@ -3,7 +3,7 @@ title: HockeySDK for Unity Migration
 description: Migrate from the HockeySDK to App Center SDK for Unity
 author: elamalani
 ms.author: emalani
-ms.date: 08/06/2019
+ms.date: 03/30/2020
 ms.topic: article
 ms.assetid: 4d582645-4b1b-42f8-a40a-dee5d06fb0e1
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: unity
 
 # Migrate from the HockeySDK to App Center SDK for Unity
 
-[!include[](sdk-migration-dropdown.md)]
+[!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 
 ## 1. Update the libraries
 
@@ -73,7 +73,7 @@ HockeyApp Setting | App Center Setting | Notes
 ------------------- | ------------------- | ---
 App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
-Restricted in-app updates | NA | Works out of the box
+Restricted in-app updates | NA | [Distribute.UpdateTrack](~/sdk/distribute/unity.md#use-private-distribution-group)
 Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity.md)
 Auto Upload Crashes | NA (enabled by default) | [Documentation (enabled by default, can be configured)](~/sdk/crashes/unity.md#ask-for-the-users-consent-to-send-a-crash-log)
 Exception Logging | [Initial Log level](~/sdk/other-apis/unity.md#adjust-the-log-level), _Other Setup_ section | If you want more detailed logging, use `Verbose`
@@ -89,7 +89,7 @@ If your project has the HockeySDK API calls throughout the application, replace 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
 Custom events with properties | [HockeyAppIOS.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L150-L158) or [HockeyAppAndroid.TrackEvent](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L149-L156) | [Analytics.TrackEvent](~/sdk/analytics/unity.md#custom-events)
-Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | NA
+Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | [Distribute.CheckforUpdate](~/sdk/distribute/unity.md#disable-automatic-check-for-update)
 Display a feedback form | [HockeyAppIOS.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L178-L181) or [HockeyAppAndroid.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L238-L241) | NA (please see the section below)
 
 ### Feedback

@@ -6,7 +6,7 @@ description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
 author: oddj0b
 ms.author: vigimm
-ms.date: 12/18/2018
+ms.date: 03/25/2020
 ms.topic: article
 ms.service: vs-appcenter
 
@@ -29,7 +29,7 @@ When configuring the App Center Distribute task, you'll need your App Center API
 
 ![Get your API key from App Center](images/distribution_new-api-token.png)
 
-Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. Paste the API key you copied from App Center, and give the connection a name.
+Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. Paste the API key you copied from App Center, ensure that the server URL is `https://api.appcenter.ms/v0.1`, and give the connection a name.
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 

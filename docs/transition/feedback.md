@@ -1,8 +1,9 @@
 ---
 title: HockeyApp Feedback
-author: derpixeldan
+description: Information on HockeyApp Feedback for your transition
+author: dipree
 ms.author: daadam
-ms.date: 04/09/2019
+ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: dcaba8de-35a3-431a-9720-ee54f8ff2e42
 ms.service: vs-appcenter
@@ -10,11 +11,11 @@ ms.service: vs-appcenter
 
 # HockeyApp Feedback
 
-App Center does not support the [HockeyApp Feedback](https://hockeyapp.net/features/feedback/) functionality. Therefore it’s not possible to move feedback data to App Center. In the following we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
+HockeyApp Feedback data wasn't migrated to App Center. In the following sections we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
 
 ## Microsoft Flow & Azure Boards
 
-With Flow + Azure Boards, users can fill out an online form to submit their feedback.  Flow then takes the form submission and auto creates a work item in Azure Boards.  Flow will also autopost the feedback into [Microsoft Teams](https://products.office.com/en-us/microsoft-teams/group-chat-software).
+With Flow + Azure Boards, users can fill out an online form to submit their feedback.  Flow then takes the form submission and auto creates a work item in Azure Boards.  Flow will also autopost the feedback into [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software).
 
 **To start:**
 
@@ -22,10 +23,10 @@ With Flow + Azure Boards, users can fill out an online form to submit their feed
 
 ![Microsoft Forms Create](images/feedback-form-a.png)
 
-2. Log into [Microsoft Flow](https://preview.flow.microsoft.com/en-us/), and create the [Automatically file bugs and notify team](https://preview.flow.microsoft.com/en-us/galleries/public/templates/1a5cd7ae0a3746b39696556ae702c53e/automatically-file-bugs-and-notify-team/) workflow.
+2. Log into [Microsoft Flow](https://preview.flow.microsoft.com/), and create the [Automatically file bugs and notify team](https://preview.flow.microsoft.com/galleries/public/templates/1a5cd7ae0a3746b39696556ae702c53e/automatically-file-bugs-and-notify-team/) workflow.
 3. In Microsoft Flow, connect to Azure DevOps, Microsoft Teams and Microsoft Forms.
 4. Select your feedback submission form in the Microsoft Flow setup wizard.
-5. Once your Flow is setup, return to your feedback form in Microsoft Forms.  From the sharing settings on your form, select **Anyone with the link can respond**.
+5. Once your Flow is set up, return to your feedback form in Microsoft Forms.  From the sharing settings on your form, select **Anyone with the link can respond**.
 
 ![Microsoft Forms Select Sharing Option](images/feedback-form-b.png)
 

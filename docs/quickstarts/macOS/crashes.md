@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Crashes | Sample App Tutorials
+title: Crashes in macOS Swift apps
 description: Tutorial on viewing crashes from a sample macOS app in App Center
 keywords: app center
-authors: clpolet
-ms.author: clpolet
+author: iamclement
+ms.author: iamclement
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter

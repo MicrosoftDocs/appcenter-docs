@@ -7,8 +7,6 @@ ms.author: emalani
 ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: macos
 dev_langs:
  - swift
@@ -16,6 +14,9 @@ dev_langs:
 ---
 
 # App Center Push
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -45,11 +46,11 @@ Configure Apple Push Notifications service (APNs) for your app from your Apple d
 
 ![enable-push-capability](images/apple-enable-push-capability.png)
 
-[!include[](macos-apns-setup.md)]
+[!INCLUDE [macos apns setup](includes/macos-apns-setup.md)]
 
 For more information, refer to the [Apple documentation](https://help.apple.com/xcode/mac/current/#/dev11b059073).
 
-[!include[](introduction-apple.md)]
+[!INCLUDE [introduction to apple](includes/introduction-apple.md)]
 
 #### 2.2 Add the `start:withServices:` method
 

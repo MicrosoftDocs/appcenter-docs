@@ -7,7 +7,7 @@ ms.author: amchew
 ms.date: 06/10/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.assetid: 8366a8-4d5e-8535-1f965bf12f3f
+ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 ---
 
 # App Center Webhooks
@@ -83,7 +83,7 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
   "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33",
   "build_reason": "manual",
   "finish_time": "2018-06-14T23:59:05.2542221Z",
-  "icon_link": "https://dl0tgz6ee3upo.cloudfront.net/production/apps/icons/000/590/821/original/0c9184328703e417a6a0df02c6b587f0.png",
+  "icon_link": "https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/f7794e4c-42f1-4e7c-8013-07ed2e1b733d/ic_launcher.png?sv=2020-02-18&sr=c&sig=gs4JfcWjpKeYH%2F%2Fg0jEtSKKbeRkug9q%2FldslmzzeOg0%3D&se=2020-02-26T08%3A57%3A58Z&sp=r",
   "notification_settings_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications",
   "os": "iOS",
   "start_time": "2018-06-14T23:57:03.4379381Z",
@@ -98,7 +98,7 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
   "id":"3698593379u",
   "name":"Activity.java line 6314",
   "reason":"android.util.SuperNotCalledException",
-  "url":"https://portal-server-core-integration.dev.avalanch.es/orgs/{org-id}/apps/{app-name}/crashes/errors/3698273379u",
+  "url":"https://appcenter.ms/orgs/{org-id}/apps/{app-name}/crashes/errors/3698273379u",
   "app_display_name":"{app-name}",
   "app_platform":"Java",
   "app_version":"2.0.1(42)",
@@ -120,7 +120,7 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
   "platform":"Android",
   "uploaded_at":"2018-07-17T20:46:14Z",
   "fingerprint":"0abed1269e4ae3bf524e4cc7165f4f34",
-  "release_notes":"Merge pull request #756 from Microsoft/fix/fix-transmission-target-selection\n\nFix regression in EventActivityUtil",
+  "release_notes":"",
   "version":"74",
   "short_version":"1.7.0",
   "min_os":"4.0.3",
@@ -128,9 +128,9 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
   "size":2634279,
   "provisioning_profile_name":null,
   "provisioning_profile_type":null,
-  "bundle_identifier":"com.microsoft.appcenter.test.jcenter",
+  "bundle_identifier":"com.microsoft.appcenter.test",
   "install_link":"https://install.appcenter.ms/orgs/{org-name}/apps/{app-name}/releases/123?source=email",
-  "icon_link":"https://rink.hockeyapp.net/api/2/apps/45d1d9f624924e4686447190345325f3?format=png",
+  "icon_link":"https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/f7794e4c-42f1-4e7c-8013-07ed2e1b733d/ic_launcher.png?sv=2020-02-18&sr=c&sig=gs4JfcWjpKeYH%2F%2Fg0jEtSKKbeRkug9q%2FldslmzzeOg0%3D&se=2020-02-26T08%3A57%3A58Z&sp=r",
   "distribution_group_id":"1a5a0605-4b9c-4de2-9a35-t569456df0cc",
   "installable":true,
   "sent_at":"2019-05-16T23:20:08.7799314Z",
@@ -138,7 +138,7 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
 }
 ```
 
-You can also inspect the payload by using [RequestBin](https://requestbin.fullcontact.com/). To do that, navigate to [RequestBin](https://requestbin.fullcontact.com/), click **Create a RequestBin**, and then copy the generated URL under **Bin URL** and paste the URL as a webhook in App Center.
+You can also inspect the payload by using [RequestBin](https://requestbin.com/). To do that, navigate to [RequestBin](https://requestbin.com/), click **Create a RequestBin**, and then copy the generated URL under **Bin URL** and paste the URL as a webhook in App Center.
 
 ## Custom webhook support
 

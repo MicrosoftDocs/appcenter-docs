@@ -2,9 +2,9 @@
 title: Building Xamarin apps for Android
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
-author: nrajpurkar
+author: nilofer
 ms.author: nirajpur
-ms.date: 08/16/2019
+ms.date: 09/30/2019
 ms.topic: article
 ms.assetid: 408956a2-8570-40c1-bc62-edc44cd9ec0c
 ms.service: vs-appcenter
@@ -61,10 +61,11 @@ Proper .Net Core version will be selected automatically based on Mono version us
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
+| 6.4 | 3.0.100 |
 
 ### 3.4. Build Android App Bundle (.aab)
 
- The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) and the [Xamarin.Android 9.4 release notes](https://docs.microsoft.com/en-us/xamarin/android/release-notes/9/9.4#initial-support-for-android-app-bundle-publishing-format) which also help you understand whether you want to build a bundle in addition to your regular `.apk.`
+ The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) and the [Xamarin.Android 9.4 release notes](https://docs.microsoft.com/xamarin/android/release-notes/9/9.4#initial-support-for-android-app-bundle-publishing-format) which also help you understand whether you want to build a bundle in addition to your regular `.apk.`
 
  Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `.csproj` file contains `aab` in the `AndroidPackageFormat` property, this option will automatically be toggled on. Building an `.aab` is supported for Xamarin.Android 9.4 and higher.
 

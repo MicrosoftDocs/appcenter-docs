@@ -4,11 +4,9 @@ description: Get Started
 keywords: sdk
 author: elamalani
 ms.author: elamalani
-ms.date: 09/12/2019
+ms.date: 03/25/2020
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
@@ -17,12 +15,14 @@ ms.tgt_pltfrm: react-native
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+> * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
 > * [Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
+> * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
@@ -61,9 +61,6 @@ Open a Terminal and navigate to the root of your React Native project, then ente
 npm install appcenter appcenter-analytics appcenter-crashes --save-exact
 ```
 
-> [!NOTE]
-> `--save` or `--save-dev` flag is required in this step. React Native will link modules based on dependencies and devDependencies in your **package.json** file.
-
 In case you prefer `yarn` over `npm`, use the following command to install App Center:
 
 ```shell
@@ -96,7 +93,6 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     * Add these lines to import section
 
     ```objc
-    #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
     #import <AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes.h>
@@ -131,7 +127,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
 > [!NOTE]
-> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-lower-than-060-without-react-native-link-or-cocoapods)
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
@@ -175,7 +171,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
 
 3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret. If **AppCenter-Config.plist** already exists but not part of your Xcode project, you must add it to the Xcode project manually (right-click the app in XCode and click **Add files to <App Name>...**).
 
-### 3.3 [iOS only] Integrate the SDK manually for React Native lower than 0.60 without react-native link or CocoaPods
+### 3.3 [iOS only] Integrate the SDK manually for React Native without react-native link or CocoaPods
 
 Do this integration, if you don't want to use **CocoaPods**.
 We **strongly** recommend integrating the SDK via CocoaPods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
@@ -263,6 +259,30 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     </plist>
     ```
 
+> [!NOTE]
+> The next two steps are only for the apps that use React Native 0.60 and above.
+
+13. Disable autolinking for React Native 0.60 and above:
+    
+    * Inside the **node_modules** folder in each App Center package open **react-native.config.js** and set `dependency.platforms.ios` to `null`:
+
+    ```javascript
+    module.exports = {
+      dependency: {
+        platforms: {
+          ios: null,
+          ...
+        }
+      }
+    };
+    ```
+
+14. Modify **Header Search Paths** to find React Native headers from the App Center React Native plugins projects:
+
+    * Make sure the Project Navigator is visible (⌘+1).
+    * For each AppCenter React Native plugins project that you have added to the **Libraries** group in step 8:
+      * Select the project and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files with a `recursive` option: `${SRCROOT}/../../../ios/Pods/Headers`
+
 ### 3.4 [Android only] Integrate the SDK manually for React Native lower than 0.60 without react-native link
 
 Integration steps without the `react-native link` command.
@@ -327,6 +347,34 @@ Integration steps without the `react-native link` command.
         "app_secret": "APP_SECRET_VALUE"
     }
     ```
+
+### 3.5 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+  a. Create **appcenter_backup_rule.xml** file in the **android/app/src/main/res/xml** folder.
+
+  b. Open the project's **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+  ```
 
 ## 4. Start the SDK
 

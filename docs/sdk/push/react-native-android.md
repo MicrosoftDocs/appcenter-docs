@@ -7,12 +7,13 @@ ms.author: emalani
 ms.date: 08/22/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
 # App Center Push
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -33,7 +34,7 @@ ms.tgt_pltfrm: react-native
 > [!NOTE]
 > For Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its required at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. For additional information, please refer to the [App Center React Native migration guide](migration/react-native-android.md).
 
-[!include[](introduction-android.md)]
+[!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
 
@@ -42,7 +43,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 First, open a Terminal and navigate to the root of your React Native project. Then, enter the following to add App Center Push to the app:
 
-   ```
+   ```bash
    npm install appcenter-push --save-exact
    ```
 
@@ -99,7 +100,7 @@ You can set up a listener to be notified whenever a push notification is receive
 > The background notification click callback does **NOT** expose **title** and **message**.
 > **Title** and **message** are only available in **foreground** pushes.
 
-[!include[](react-native-listener.md)]
+[!INCLUDE [react native listener](includes/react-native-listener.md)]
 
 If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, `singleInstance` or `singleTask`, you must override the `onNewIntent` method. Inside the Java code for your launcher activity (typically the **MainActivity.java** file), add the following:
 
@@ -116,11 +117,11 @@ public void onNewIntent(Intent intent) {
 
 ## Custom data in your notifications
 
-[!include[](custom-data-android.md)]
+[!INCLUDE [custom data android](includes/custom-data-android.md)]
 
 ## Configure notification's default values
 
-[!include[](android-configure-notifications.md)]
+[!INCLUDE [android configure notifications](includes/android-configure-notifications.md)]
 
 ## Existing Firebase Analytics users
 

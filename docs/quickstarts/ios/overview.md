@@ -1,16 +1,14 @@
 ---
 # required metadata
 
-title: Overview | Sample App Tutorials
+title: iOS Overview
 description: Landing page to navigate through tutorials.
 keywords: app center
-authors: sabrinaj206
+author: sabrinaj206
 ms.author: t-sajia
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
-ms.custom:
-ms.prod:
 ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 # optional metadata
@@ -23,7 +21,7 @@ ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 # Overview - Sample Swift App and Tutorials
 
-These quickstart tutorials will help you onboard to App Center for iOS. The [sample swift app](https://github.com/microsoft/appcenter/tree/master/sample-apps/ios/getting-started) has the App Center SDK already integrated, and links to its tutorials are below.
+These quickstart tutorials will help you onboard to App Center for iOS. The [sample swift app](https://github.com/microsoft/appcenter-sampleapp-ios-swift/tree/master) has the App Center SDK already integrated, and links to its tutorials are below.
 
 Begin with the **Getting Started** tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.
 

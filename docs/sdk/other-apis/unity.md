@@ -2,13 +2,11 @@
 title: Other Unity APIs
 description: Other APIs in the App Center SDK for Unity
 keywords: sdk
-author: jwhitedev
+author: maestersid
 ms.author: jawh
-ms.date: 07/30/2019
+ms.date: 11/26/2019
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
-ms.service: vs-appcenter
-ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 
@@ -55,10 +53,7 @@ The App Center SDK supports setting a **user ID** that is used to augment crash 
 AppCenter.SetUserId("your-user-id");
 ```
 
-After setting a user ID, you can use App Center's search feature to search for specific crash reports associated with the ID. Learn more in App Center's [search documentation](~/diagnostics/search.md). 
-
-> [!NOTE]
-> Note that the value for the user id is limited to 256 characters.
+[!INCLUDE [user id](includes/user-id.md)]
 
 ## Disable all services at runtime
 
@@ -133,3 +128,6 @@ AppCenter.SetCustomProperties(properties);
 
 There may be cases where you want to delay the start of App Center until after **AppCenterBehavior** starts. For example, if you want to request user consent before starting any App Center services.  
 To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK the in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.
+
+> [!TIP]
+> If you generate the settings at build time, another way is to go to **Player Settings** > **Other Settings** > **Scripting Define Symbols** and paste `APPCENTER_DONT_USE_NATIVE_STARTER`. 

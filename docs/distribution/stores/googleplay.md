@@ -4,10 +4,11 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 09/06/2019
+ms.date: 12/10/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
+ms.assetid: 8c034e61-7fc5-4dea-9722-242a2d01ee1f
 ---
 
 # Publish to Google Play Store
@@ -73,6 +74,9 @@ Choose a name for the new Service Account, and click **Create**.
 
 Click the **Select a role** in the drop-down menu. Select **Project**, then **Owner**. Navigate to the next step by clicking **Continue**.
 
+> [!NOTE]
+> Some users can't download the .json file using Edge and Internet Explorer.
+
 On the new page click **+ Create Key (optional)** and a modal appears.
 
 ![Google Play: Click + Create Key to generate a JSON file](~/distribution/images/image7.png)
@@ -105,7 +109,7 @@ Close the window and the new service account shows on the original page. Click t
 
 ## Create a Google Play connection in App Center
 
-1. Click on **Stores** under Distribution in the left menu.
+1. Click on **Stores** under Distribute in the left menu.
 2. In the middle of the page, click on the **Connect to Store** button.
 3. Select **Google Play** store.
 4. Click on **Next**.
@@ -145,3 +149,36 @@ Close the window and the new service account shows on the original page. Click t
 5. Click on **Publish** to push the app to the **Google Play Store**. The status for this release on the Distribution Store Details page will show as **Submitted.**
 6. Once App Center has completed the handover of the app to Google, the status of the app will change to **Published**. Google could take up to 24 hours to show the app in the Play store.
 7. In case publishing by Google fails, the app owner receives a notification to the registered Google mail.
+
+## Publishing through the CLI
+Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
+
+Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+
+You can list your stores by using the list command like this:
+
+```bash
+appcenter distribute stores list \
+--app {app_owner}/{app_name} \
+--output json
+```
+
+You will get a result like this:
+
+```bash
+[["Alpha","googleplay","alpha"],["Beta","googleplay","beta"],["Production","googleplay","production"]
+```
+
+And it's the Store column we will use in the final step.
+
+The final step is to publish your app by running:
+
+```bash
+appcenter distribute stores publish \
+--file /path/to/file.aab \
+--store Production \
+--app {app_owner}/{app_name} \
+--release-notes "Some note."
+```
+
+You will need to fill in the blanks like the list command. Instead of having a static release note, it's possible to use the `--release-notes-file` instead. A release note file is plain text file encoded with UTF-8.

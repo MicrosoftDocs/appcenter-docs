@@ -2,8 +2,8 @@
 title: Working with Timeouts
 description: This guide will discuss how to identify and select an iOS simulator that should be used to run Xamarin.UITests locally.
 keywords: uitest test cloud
-author: glennwester
-ms.author: glwest
+author: oddj0b
+ms.author: vigimm
 ms.reviewer: crdun
 ms.date: 10/17/2018
 ms.topic: article

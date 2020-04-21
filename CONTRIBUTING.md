@@ -8,17 +8,22 @@ In this topic, we'll cover:
 
 * [Process for contributing](#process-for-contributing)
 * [Guidance checklist](#guidance-checklist)
-* [Building the docs](#building-the-docs)
-* [Contributing to samples](#contributing-to-samples)
-* [Contributor License Agreement](#contributor-license-agreement)
 
-## Process for contributing
+## How can I contribute?
 
-**Step 1:**
+There is a variety of ways to contribute to the documentation. Review the sections below to find out which one is right for you.
 
-* For small changes, edits, and fixes, skip to Step 2.
+### Report bugs or suggest enhancements
 
-* For larger contributions of new content, _open an issue_ describing the article you wish to write and how it relates to existing content. The content inside the **docs** folder is organized into sections that are organized by content area (e.g. **build** and **distribution**). Try to determine the correct folder for your new content. Get feedback on your proposal via the issue before starting to write.
+Please use the feedback tool at the bottom of any article to submit bugs and suggestions.
+
+### Quick edit in GitHub
+
+Follow the guidance for [quick edits to existing documents](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
+
+### Larger edits
+
+**Step 1:** For larger contributions of new content, _open an issue_ describing the article you wish to write and how it relates to existing content. The content inside the **docs** folder is organized into sections that are organized by content area (e.g. **build** and **distribution**). Try to determine the correct folder for your new content. Get feedback on your proposal via the issue before starting to write.
 
 **Step 2:** Fork the `MicrosoftDocs/appcenter-docs` repository.
 
@@ -68,25 +73,3 @@ Below is a short list of guiding rules that you should keep in mind when you are
 
 > [!NOTE]
 > You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.
-
-## Building the docs
-
-The documentation is written in [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/) and built using [DocFX](https://dotnet.github.io/docfx/) and other internal publishing/building tools. It is hosted at [docs.microsoft.com](https://docs.microsoft.com/dotnet).
-
-If you want to build the docs locally, you need to install [DocFX](https://dotnet.github.io/docfx/); latest versions are the best.
-
-There are several ways to use DocFX, and most of them are covered in the [DocFX getting started guide](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html).
-The following instructions use the [command-line based](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool) version of the tool.
-If you are comfortable with other ways listed on the link above, feel free to use those.
-
-**Note:** Currently DocFX requires the .NET Framework on Windows or Mono (for Linux or macOS). We hope to port it to .NET Core in the future.
-
-You can build and preview the resulting site locally using a built-in web server. Navigate to the `docs` folder on your machine and type the following command:
-
-```shell
-docfx -t default --serve
-```
-
-This starts the local preview on [localhost:8080](http://localhost:8080). You can then view the changes by going to `http://localhost:8080/[path]`, such as `http://localhost:8080/vs-appcenter/dashboard/faq.html`.
-
-**Note:** the local preview currently doesn't contain any themes at the moment so the look and feel won't be the same as in the documentation site. We're working towards fixing that experience.

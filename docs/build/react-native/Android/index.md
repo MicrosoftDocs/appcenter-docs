@@ -2,7 +2,7 @@
 title: Configure a React Native Android build
 description: How to set up a build system for Android apps
 keywords: android
-author: nrajpurkar
+author: nilofer
 ms.author: nirajpur
 ms.date: 08/16/2019
 ms.topic: article
@@ -48,6 +48,9 @@ Select your project’s `package.json`. App Center will automatically extract in
 ### 3.2. Build variant
 
 The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle** file. Select which build variant should be built.
+
+> [!NOTE]
+> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one optional Product Flavor. Detecting combinations of multiple product flavors are not supported at this time.
 
 ### 3.3. Node.js version
 

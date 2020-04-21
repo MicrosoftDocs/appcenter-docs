@@ -7,7 +7,6 @@ ms.author: guperrot
 ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 610b8797-6884-4dd4-bad3-7c05f39b3922
-ms.service: vs-appcenter
 ms.custom: sdk
 ms.tgt_pltfrm: android
 dev_langs:
@@ -28,7 +27,7 @@ future.thenAccept(new AppCenterConsumer<{ReturnType}>() {
     @Override
     public void accept({ReturnType} result) {
 
-        // do something with result, this is called back in U.I. thread.
+        // do something with result, this is called back in UI thread.
     }
 });
 ```
@@ -36,7 +35,7 @@ future.thenAccept(new AppCenterConsumer<{ReturnType}>() {
 val future = {AnyAsyncApi}()
 future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
     override fun accept(t: {ReturnType}?) {
-        // do something with result, this is called back in U.I. thread.
+        // do something with result, this is called back in UI thread.
     }
 })
 ```

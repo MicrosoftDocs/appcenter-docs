@@ -4,7 +4,7 @@ description: Tips and Tricks for using the App Center Push Service
 keywords: app center, push
 author: jwargo
 ms.author: jowargo
-ms.date: 05/15/2019
+ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: f0e3bd85-817a-423f-a1ca-b89c487d0180
 ms.service: vs-appcenter
@@ -12,6 +12,9 @@ ms.custom: push
 ---
 
 # Tips and tricks
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 This document contains tips and tricks for the App Center Push service.
 

@@ -21,5 +21,5 @@ This error happens when App Center doesn't have access to your Google service ac
 
 ## Fixing this issue
 
-* Read [how to link your App Center app with your Google service account](https://docs.microsoft.com/en-us/appcenter/distribution/stores/googleplay#setting-up-api-access-clients "Setting up API access clients").
+* Read [how to link your App Center app with your Google service account](https://docs.microsoft.com/appcenter/distribution/stores/googleplay#setting-up-api-access-clients "Setting up API access clients").
 * Especially, make sure to [grant access to your service account](https://play.google.com/apps/publish/#ApiAccessPlace "Grant access to your service account").
