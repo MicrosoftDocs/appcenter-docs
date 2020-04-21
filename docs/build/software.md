@@ -19,6 +19,6 @@ Each build runs on a separate, clean virtual machine (VM) no one else has access
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration:
 - [macOS 10.14.6 (18G4032) **Mojave**](~/build/macos-10.14-software.md)
-- [macOS 10.15.4 (19E266) **Catalina**](~/build/macos-10.15-software.md)
+- [macOS 10.15.4 (19E287) **Catalina**](~/build/macos-10.15-software.md)
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2019 & Visual Studio 2019](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md).
