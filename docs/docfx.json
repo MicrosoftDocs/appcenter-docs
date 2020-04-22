@@ -33,7 +33,8 @@
     "globalMetadata": {
       "contributors_to_exclude": [
         "conceptdev",
-        "meganbradley"
+        "meganbradley",
+        "timeyoutakeit"
       ],
       "breadcrumb_path": "~/_breadcrumb/toc.yml",
       "titleSuffix": "Visual Studio App Center",
