@@ -52,7 +52,8 @@
         }
       },
       "feedback_system": "GitHub",
-      "feedback_product_url": "https://docs.microsoft.com/appcenter/help",
+      "feedback_github_repo": "MicrosoftDocs/appcenter-docs",
+      "feedback_product_url": "https://docs.microsoft.com/appcenter/help#accessing-app-center-free-support",
       "uhfHeaderId": "MSDocsHeader-AppCenter"
     },
     "fileMetadata": {
