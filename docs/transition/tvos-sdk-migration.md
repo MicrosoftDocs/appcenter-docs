@@ -43,7 +43,7 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"`
 
 ### 1.2 Add the new App Center SDK
 
-The App Center SDK supports integration via Cocoapods, Carthage, and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
+The App Center SDK supports integration via Cocoapods, Carthage, Swift Package Manager and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/tvos.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
 > The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
