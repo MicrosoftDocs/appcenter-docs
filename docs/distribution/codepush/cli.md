@@ -809,7 +809,7 @@ If you are planning to use this feature you need to do the following:
 
 1. Produce new binary update including 
    * updated CodePush plugin supporting Code Signing
-   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](rn-overview.md#code-signing-setup-ios),  [Android](rn-overview.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
+   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](rn-get-started.md#code-signing-setup-ios),  [Android](rn-get-started.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
 
 2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or simply `-k`) parameter value
 
