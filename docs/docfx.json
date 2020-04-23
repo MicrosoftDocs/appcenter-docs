@@ -34,7 +34,8 @@
       "contributors_to_exclude": [
         "conceptdev",
         "meganbradley",
-        "timeyoutakeit"
+        "timeyoutakeit",
+        "jwargo"
       ],
       "breadcrumb_path": "~/_breadcrumb/toc.yml",
       "titleSuffix": "Visual Studio App Center",
