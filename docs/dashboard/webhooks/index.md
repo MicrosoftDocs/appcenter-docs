@@ -4,7 +4,7 @@ description: how to configure App Center webhooks to applications like Slack, Mi
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
 author: amchew
 ms.author: amchew
-ms.date: 06/10/2019
+ms.date: 04/24/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
@@ -96,8 +96,8 @@ Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
 ```JSON
 {
   "id":"3698593379u",
-  "name":"Activity.java line 6314",
-  "reason":"android.util.SuperNotCalledException",
+  "name":"android.app.Activity.performResume (Activity.java:5084)",
+  "reason":"android.app.SuperNotCalledException",
   "url":"https://appcenter.ms/orgs/{org-id}/apps/{app-name}/crashes/errors/3698273379u",
   "app_display_name":"{app-name}",
   "app_platform":"Java",
