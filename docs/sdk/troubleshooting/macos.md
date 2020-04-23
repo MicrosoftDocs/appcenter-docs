@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for macOS
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/05/2018
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0
 dev_langs:  
@@ -17,12 +17,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Issues during setup
 

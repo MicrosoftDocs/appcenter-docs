@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 12/10/2019
+ms.date: 03/06/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -18,6 +18,7 @@ Publish iOS app upgrades to the App Store and TestFlight with Fastlane in App Ce
 ## Pre-requisites
 
 * The first version of an iOS application must be published through the App Store Connect portal.
+* Compile the app using an App Store provisioning profile and production certificate.
 * App should be ready for submission and pass the [App Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
 * An active [Apple Developer Program](https://developer.apple.com/programs/enroll/) account, or have your Apple ID added as an admin in your teams' [App Store Connect](https://itunesconnect.apple.com/login) account.
 
@@ -111,3 +112,7 @@ Apple requires at least an admin role to _Create apps and submit versions_ and _
 ## Debugging a failed release
 
 If publishing a release fails, you can download the verbose Fastlane logs. These logs are found on the detailed release page by clicking **Status > Download Fastlane Logs**.
+
+## Reauthenticate failed
+
+In the rare occasion when reauthenticate fails, you can fix the issue by visiting the [Account settings](https://appcenter.ms/settings/accounts) sections and removing your Apple ID. Then, visit the App's store connection page and select your connection to establish the connection.

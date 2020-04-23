@@ -2,7 +2,7 @@
 title: Shared docs for Apple Extensions
 description: Shared docs for Apple Extensions
 keywords: sdk
-author: winnieli
+author: winnie
 ms.author: yuli1
 ms.date: 09/30/2019
 ms.topic: include

@@ -117,7 +117,7 @@
             "redirect_url": "/appcenter/build/react-native/ios/"
         },
         {
-            "source_path": "docs/build/ios/code-signing/uploading-files.md",
+            "source_path": "docs/build/ios/code-signing/uploading-signing-files.md",
             "redirect_url": "/appcenter/build/ios/code-signing"
         },
         {
@@ -343,6 +343,106 @@
           {
             "source_path": "docs/transition/faq.md",
             "redirect_url": "/appcenter/transition/"
+          },
+          {
+            "source_path": "docs/auth/faq.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/getting-started.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/index.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/auth/understanding-azure-ad-b2c.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/getting-started.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/index.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/data/understanding-cosmos-db.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/android.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/ios-manual-integration.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/ios.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/react-native.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/unity.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/auth/xamarin.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/android.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/ios.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/react-native.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/sdk/data/xamarin.md",
+            "redirect_url": "/appcenter/"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/index.md",
+            "redirect_url": "/appcenter/test-cloud/supported-frameworks"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/appium.md",
+            "redirect_url": "/appcenter/test-cloud/appium/preparing-for-upload"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/espresso.md",
+            "redirect_url": "/appcenter/test-cloud/espresso/preparing-for-upload"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/calabash.md",
+            "redirect_url": "/appcenter/test-cloud/calabash/preparing-for-upload"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/xamarin-android-uitest.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-android"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/xamarin-ios-uitest.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-ios"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/xcuitest.md",
+            "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload"
+          },
+          {
+            "source_path": "docs/test-cloud/preparing-for-upload/xcuitest-extension.md",
+            "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload-extension"
           }
  ]
 }

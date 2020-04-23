@@ -12,6 +12,9 @@ ms.tgt_pltfrm: ios
 
 # Upgrading to App Center Push 1.11.0 or later from a version < 1.11.0
 
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+
 Version 1.11.0 (released in November 2018) fixes a bug in the `Push.DidReceiveRemoteNotification(...)` callback. If (and only if) the developer sets their own `UNUserNotificationCenterDelegate`, the callback was not triggered once a notification was tapped or once it was received while the app was in the foreground. To fix this issue, App Center Push captures the `UNUserNotificationCenter`'s delegate and swizzles its methods to forward incoming notifications and notification-related actions to the App Center SDK.
 
 If you want to disable the swizzling of `UNUserNotificationCenterDelegate` callbacks,  please refer to [the documentation to disable automatic method forwarding of UNUserNotificationCenterDelegate methods](~/sdk/push/xamarin-ios.md#user-notification-center-delegate).

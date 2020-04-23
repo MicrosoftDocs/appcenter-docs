@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: winnieli
 ms.author: yuli1
-ms.date: 12/11/2019
+ms.date: 04/16/2019
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -109,7 +109,7 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 })
 ```
 
-In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it from within your implementation of the `alertView:clickedButtonAtIndex:`-callback.
+In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it based on the result (**ModalResponse**) of `runModal` call.
 
 ```objc
 // Depending on the user's choice, call notifyWithUserConfirmation: with the right value.

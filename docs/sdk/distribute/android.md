@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 12/06/2019
+ms.date: 04/14/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -42,7 +42,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '2.5.1'
+       def appCenterSdkVersion = '3.2.0'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
@@ -86,6 +86,61 @@ import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
+
+## Use private distribution group
+
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
+
+```java
+Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
+```
+```kotlin
+Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
+```
+
+> [!NOTE]
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
+
+When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
+
+If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+
+## Disable Automatic Check for Update
+
+By default, the SDK automatically checks for new releases:
+ * When the application starts.
+ * When the application goes into foreground after going to background.
+ * When enabling the Distribute module if previously disabled.
+
+If you want to check for new releases manually, you can disable automatic check for update.
+To do this, call the following method before the SDK start:
+
+```java
+Distribute.disableAutomaticCheckForUpdate();
+```
+```kotlin
+Distribute.disableAutomaticCheckForUpdate()
+```
+
+> [!NOTE]
+> This method must be called before the `AppCenter.start` method call.
+
+Then you can use the `checkForUpdate` API which is described in the following section.
+
+## Manually Check for Update
+
+```java
+Distribute.checkForUpdate();
+```
+```kotlin
+Distribute.checkForUpdate()
+```
+
+This will send a request to App Center and display an update dialog in case there is a new release available.
+
+> [!NOTE]
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
@@ -298,12 +353,11 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. Once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
-5. Once the above step is successful, they should navigate back to the app.
-6. A new release of the app shows the in-app update dialog asking users to update your application if it has
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
+5. A new release of the app shows the in-app update dialog asking users to update your application if it has:
 
    * a higher value of `versionCode` or
-   * an equal value of `versionCode` but a higher value of `versionName`.
+   * an equal value of `versionCode` but a different value of `versionName`.
 
 > [!TIP]
 > If you upload the same APK a second time, the dialog will **NOT** appear as the versions are identical.
@@ -313,15 +367,15 @@ The in-app updates feature works as follows:
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the App Center Portal if you haven't done that already.
-2. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-3. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-4. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above.
-5. Click on the **Distribute new release** button in the portal and upload your build of the app.
-6. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
-7. Review the Distribution and distribute the build to your in-app testing group.
-8. People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
-9. Bump the `versionCode` of your app.
-10. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
+1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above. If the group is private, don't forget to set the private in-app update track before start using the [setUpdateTrack API](#use-private-distribution-group).
+1. Click on the **Distribute new release** button in the portal and upload your build of the app.
+1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+1. Review the Distribution and distribute the build to your in-app testing group.
+1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+1. Bump the `versionCode` of your app.
+1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

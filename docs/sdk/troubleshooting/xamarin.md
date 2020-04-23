@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/19/2019
+ms.date: 04/16/2020
 ms.topic: troubleshooting-article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
@@ -15,12 +15,13 @@ ms.tgt_pltfrm: xamarin
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Collecting verbose logs
 

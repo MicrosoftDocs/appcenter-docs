@@ -2,7 +2,7 @@
 title: Using the Diagnostics UI
 description: help using the Diagnostics UI in App Center
 keywords: crashes, errors, annotate, status, download
-author: winnieli1208
+author: winnie
 ms.author: yuli1
 ms.date: 12/16/2019
 ms.topic: article
@@ -38,9 +38,6 @@ Annotate your groups in App Center diagnostics to keep track of notes and other 
 4. Leave a text in the text box and your note will be automatically saved
 
 ![Annotate a crash group](~/diagnostics/images/new-annotate.png)
-
-> [!NOTE]
-> Annotations are not supported for the UWP legacy Diagnostics UI.
 
 ### Track the status of your groups
 

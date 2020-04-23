@@ -4,6 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: blparr
 ms.author: blparr
+ms.reviewer: kegr
 ms.date: 10/30/2018
 ms.topic: article
 ms.assetid: 513252EA-C802-4606-B733-FC0916E64EC5
@@ -12,32 +13,28 @@ ms.custom: diagnostics
 ---
 
 # Updates on App Center Diagnostics are coming soon
+The Diagnostics team is releasing backend improvements that will make the App Center Diagnostics service more stable, performant, and scalable. We're also improving the portal experience to help you prioritize your issues.
 
-The Diagnostics team has been working hard to provide a better experience. We are releasing some relevant backend improvements, using a new pipeline that will make the App Center Diagnostics service more stable, performant, and scalable. We are also improving the portal experience to help you better prioritize your issues.
+We're enabling the new Diagnostics experience soon and want to inform you about these changes in advance.
 
-We plan to enable the new Diagnostics experience very soon and we want to inform you about these changes in advance.
+## How does this change affect your data?
+Because we want you to enjoy the new improved experience as early as possible, we'll be enabling it soon. Customers who have set retention to 90 days may be surprised to find less than 90 days worth of data for the first few months. At launch, we'll have only processed 28 days worth of data in the new pipeline. 
 
-## How does this affect your data?
-
-Because we want you to enjoy the new improved experience as early as possible, we will be enabling it very soon. Customers who have set retention to 90 days may be surprised to find less than 90 days worth of data for the first few months. This is because as of launch, we will only have processed 28 days worth of data in the new pipeline. If, during this period, you need access to older data please reach out to us via the blue chat button and we will grant you with access. Note that your current retention settings have not been altered and that you still have control over these settings.
+If during this period, you need access to older data contact us via **? > Contact Support** and we'll grant you access. Your current retention settings haven't been altered and that you still have control over these settings.
 
 ## What is different in the new experience?
-
 ### More stable backend
-
-We have invested a lot of time and resources on building a more stable, performant and scalable backend to provide a great crash and error reporting service for your apps.
+We're building a more stable, performant, and scalable backend to provide a great crash and error reporting service for your apps.
 
 ### Merged view for crashes and errors (for Xamarin and Unity apps) 
- 
-By clicking on Diagnostics, you can now see all your crashes and errors in one merged view, making it easier for you to prioritize what issues are more crucial to your apps and compare your analytics for both. Note that you can still access to your crashes and errors separately by using the top left tabs on the Diagnostics overview page. 
+By clicking on Diagnostics, you can now see all your crashes and errors in one merged view, making it easier for you to prioritize what issues are most crucial to your apps and compare your analytics for both. You can still access to your crashes and errors separately by using the top left tabs on the Diagnostics overview page. 
 
 Your crashes will be indicated with a lightning icon, while your errors are indicated with a warning icon. 
  
 ![Merged view for crashes and errors](~/diagnostics/images/merged-view.png) 
  
 ### New upload symbols experience 
- 
-We have made some significant changes on how the symbol upload experience works for your apps. 
+We've made significant changes on how the symbol upload experience works for your apps. 
 
 If there are missing symbols, App Center will notify you in the main Diagnostics page. Upload your missing symbols directly from this page.
 
@@ -47,7 +44,7 @@ To learn more about missing symbols, you can click on a tab on the top left of t
 
 ![Crashes with missing symbols](~/diagnostics/images/missing-symbols.png)
  
-To ignore the crashes for an old app version, select the crash group and enable the **Ignore version** option. Note that this action cannot be undone and this will ignore these crashes forever.
+To ignore the crashes for an old app version, select the crash group and enable the **Ignore version** option. _This action can't be undone and will ignore these crashes forever._
  
 ![Ignore all crashes from a version](~/diagnostics/images/ignore-crashes.png)
 

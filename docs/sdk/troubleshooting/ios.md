@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/17/2019
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
@@ -17,12 +17,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [UWP](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Issues during setup
 

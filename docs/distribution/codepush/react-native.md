@@ -78,7 +78,6 @@ The following list represents the set of components (and props) that don't curre
 We will update this list as new core components are released, which support referencing assets, to ensure users know what exactly they can expect to update using CodePush.
 
 ## Store Guideline Compliance
-
 While Google Play and internally distributed apps (for example Enterprise, Fabric, HockeyApp) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
 
 [Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed performing over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
