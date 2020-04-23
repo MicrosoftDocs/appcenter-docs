@@ -31,7 +31,7 @@ If examining the logs don't provide an indication of the issue, refer to the fol
 
 | Issue / Symptom | Possible Solution |
 |-----------------|-------------------|
-| Compilation Error | Double-check that your version of React Native is [compatible](react-native.md#supported-react-native-platforms) with the CodePush version you are using. |
+| Compilation Error | Double-check that your version of React Native is [compatible](rn-overview.md#supported-react-native-platforms) with the CodePush version you are using. |
 | Network timeout / hang when calling `sync` or `checkForUpdate` in the iOS Simulator | Try resetting the simulator by selecting the `Simulator -> Reset Content and Settings..` menu item, and then rerunning your app. |
 | Server responds with a `404` when calling `sync` or `checkForUpdate` | Double-check that the deployment key you added to your **Info.plist** (iOS), **build.gradle** (Android) or that you're passing to `sync`/`checkForUpdate`, is in fact correct. You can run `appcenter codepush deployment list <ownerName>/<appName> --displayKeys` to view the correct keys for your app deployments. |
 | Update not being discovered | Double-check that the version of your running app (like `1.0.0`) matches the version you specified when releasing the update to CodePush. Additionally, make sure that you are releasing to the same deployment that your app is configured to sync with. |

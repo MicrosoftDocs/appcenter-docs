@@ -52,4 +52,4 @@ The CodePush client supports differential updates, so even though you are releas
 
 For more details about how the `release-react` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-react-native). Additionally, if you would prefer to handle running the `react-native bundle` command yourself, and therefore, want an even more flexible solution than `release-react`, see to the [`release` command](./cli.md#releasing-updates-general) for more details.
 
-If you run into any issues, or have any questions/comments/feedback, you can ping us within the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) or see the [troubleshooting](react-native-troubleshooting.md) guide. See also [help and feedback](../../help.md).
+If you run into any issues, or have any questions/comments/feedback, you can ping us within the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) or see the [troubleshooting](rn-troubleshooting.md) guide. See also [help and feedback](../../help.md).
