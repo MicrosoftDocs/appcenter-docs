@@ -13,12 +13,12 @@ ms.custom: distribute
 
 # Releasing Updates
 
-Once your app has been configured and distributed to your users, and you have made some JS and/or asset changes, it's time to release them. The simplest (and recommended) way to do this is to use the `release-react` command in the CodePush CLI, which will handle bundling your JavaScript and asset files and releasing the update to the CodePush server.
+Once your app is configured and distributed to your users, and you have made some JS or asset changes, it's time to release them. The recommended way to release them is using the `release-react` command in the CodePush CLI, which will bundle your JavaScript files, asset files, and release the update to the CodePush server.
 
 > [!NOTE]
 > Before you can start releasing updates, please log into App Center by running the `appcenter login` command.
 
-In it's most basic form, this command only requires one parameter: your owner name + "/" + app name.
+In its most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
 ```shell
 appcenter codepush release-react -a <ownerName>/<appName>
@@ -48,8 +48,8 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  --rollout 25% --d
 appcenter codepush release-react -a <ownerName>/MyApp-Android  --target-binary-version "~1.1.0"
 ```
 
-The CodePush client supports differential updates, so even though you are releasing your JS bundle and assets on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end-user downloads.
+The CodePush client supports differential updates, so even though you're releasing your JS bundle and assets on every update, your end users will only download the files they need. The service handles this process automatically.
 
-For more details about how the `release-react` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-react-native). Additionally, if you would prefer to handle running the `react-native bundle` command yourself, and therefore, want an even more flexible solution than `release-react`, see to the [`release` command](./cli.md#releasing-updates-general) for more details.
+For more information about how the `release-react` command works, and the various parameters it exposes, see to the [CLI docs](./cli.md#releasing-updates-react-native). Additionally, if you'd prefer running the `react-native bundle` command yourself, and want a more flexible solution than `release-react`, see the [`release` command docs](./cli.md#releasing-updates-general) for more information.
 
-If you run into any issues, or have any questions/comments/feedback, you can ping us within the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) or see the [troubleshooting](rn-troubleshooting.md) guide. See also [help and feedback](../../help.md).
+If you have an questions, comments, or feedback, you can contact us in the [#code-push](https://discord.gg/0ZcbPKXt5bWxFdFu) channel on Reactiflux, [e-mail us](mailto:codepushfeed@microsoft.com) or see the [troubleshooting](rn-troubleshooting.md) guide. See also [help and feedback](../../help.md).
