@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 12/12/2019
+ms.date: 04/22/2020
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -377,6 +377,7 @@ appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t
 [-t|--target-binary-version <targetBinaryVersion>]
 [-o|--output-dir]
 [-s|--sourcemap-output]
+[-c|--build-configuration-name <arg>]
 [--plist-file-prefix]
 [-p|--plist-file]
 [-g|--gradle-file]
@@ -524,6 +525,13 @@ This parameter specifies the relative path to where the generated JS bundle's so
 
 > [!TIP]
 > This parameter can be set using either `--sourcemap-output`  or `-s`*
+
+#### Build configuration name
+
+Name of the build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
+
+> [!NOTE]
+> This parameter should be used when building with Xcode 11 and later to override the default configuration used by Xcode.
 
 ### Releasing Updates (Cordova)
 
