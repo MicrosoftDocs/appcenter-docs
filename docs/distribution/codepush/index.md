@@ -66,5 +66,5 @@ appcenter codepush release-cordova -a <ownerName>/MyApp
 Once these steps are complete, all users running your app will receive the update using the experience you configured in step #2. For more details, see the [CLI][cli] and client SDK documentation ([Apache Cordova][cordova], [React Native][react-native]).
 
 [cordova]:./cordova.md#getting-started
-[react-native]:./react-native-get-started.md
+[react-native]:./rn-get-started.md
 [cli]:./cli.md#getting-started
