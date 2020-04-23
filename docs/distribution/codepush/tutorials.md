@@ -20,7 +20,7 @@ CodePush provides Cordova and React Native developers with multiple options to c
 This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
 
 > [!NOTE]
-> This tutorial does not cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./react-native.md#getting-started) "Getting Started" sections.
+> This tutorial does not cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
 
 ### 1.  Silent mode
 
@@ -91,7 +91,7 @@ To customize the update dialog, developers can create an updateDialogOption obje
     codePush.sync({ updateDialog: updateDialogOptions});
 ```
 
-Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./react-native.md#api-reference) API Reference pages for a full description of all the available UpdateDialogOptions options.
+Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./rn-api-ref.md) API Reference pages for a full description of all the available UpdateDialogOptions options.
 
 > [!IMPORTANT]
 > While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
@@ -126,7 +126,7 @@ var onSyncStatusChange = function(SyncStatus) {
 codePush.sync({ updateDialog: true }, onSyncStatusChange);
 ```
 
-Visit the  [Cordova](./cordova.md#syncstatus) or [React Native](./react-native.md#syncstatus) SyncStatus enum for a full description of all the available enum values.
+Visit the  [Cordova](./cordova.md#syncstatus) or [React Native](./rn-api-ref.md#syncstatus) SyncStatus enum for a full description of all the available enum values.
 
 #### Adding a "downloading" progress indicator
 
