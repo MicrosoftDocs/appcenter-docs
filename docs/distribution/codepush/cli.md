@@ -528,10 +528,10 @@ This parameter specifies the relative path to where the generated JS bundle's so
 
 #### Build configuration name
 
-Name of build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
+Name of the build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
 
 > [!NOTE]
-> This parameter should be used with Xcode v11. After update version to 11 and above Xcode uses release build configuration by default. This flag can change configuration type (i.e. Debug/Release)
+> This parameter should be used when building with Xcode 11 and later to override the default configuration used by Xcode.
 
 ### Releasing Updates (Cordova)
 
