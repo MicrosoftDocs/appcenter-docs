@@ -13,39 +13,39 @@ ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 # App Center Webhooks
 ## Overview
 
-Webhooks are a simple way to notify third party applications when a specified event has occurred. The main goal of webhooks is to communicate important information from App Center to users rather than having users come to the portal, or run API calls to be notified when certain events happen.
+Webhooks are a simple way to notify third-party applications when a specified event has occurred. The main goal of webhooks is to communicate important information from App Center to users rather than having users come to the portal, or run API calls to be notified when certain events happen.
 
-App Center's webhooks empower users to send automatic notifications to connected applications for the following events:
+App Center's webhooks allow users to send automatic notifications to connected applications for the following events:
 
 - Build:
   - Build success:
     - **Always**: when your app builds successfully
     - **Only if previously failed**: when your app has successfully built after one or more failed builds
-    - **Never**: you will not receive notifications for build success
+    - **Never**: you won't receive notifications for build success
 
   - Build failure:
     - **Always**: when your app fails to build
     - **Only if previously successful**: when your app has failed to build after one or more successful builds
-    - **Never**: you will not receive notifications for build failure
+    - **Never**: you won't receive notifications for build failure
 
 - Crashes: when a crash group is created
 - Distribute: when a new version is released to a distribution group
   > [!NOTE]
-  > For Distribute, the webhook will be triggered when you when a new version is released to a distribution group. If you checked **do not notify testers** in the **Review** step of creating a new release, the webhook will not fire.
+  > For Distribute, the webhook will be triggered when you when a new version is released to a distribution group. If you checked **do not notify testers** in the **Review** step of creating a new release, the webhook won't fire.
 
-App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have have manager or developer permissions in the app to be able to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
+App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
 
 ## Getting Started
 
 1. Navigate to [App Center](https://appcenter.ms), and select the specific app you would like for webhooks integration.
 
-2. In your app, in the far left hand panel, select **Settings**
+2. In your app, in the far left-hand panel, select **Settings**
 
-3. In the row panel titled **Webhooks**, go to the right hand corner and click on the **pencil icon**. This will bring up the **Webhooks** panel.
+3. In the row panel titled **Webhooks**, go to the right-hand corner and click on the **pencil icon**, which will bring up the **Webhooks** panel.
 
     ![How to edit the webhook's settings](media/editWebhook.png)
 
-4. <a name="step4"></a>In the top right hand corner, click the blue **New Webhook** button and enter:
+4. <a name="step4"></a>In the top-right corner, click the blue **New Webhook** button and enter:
 
    - Webhook name
    - Webhook URL
@@ -58,7 +58,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 
 5. Done! Your webhook is now created and enabled. You may create multiple webhooks by repeating [step 4](#step4).
 
-6. Toggle to the extreme right hand of the webhook to **test, disable or delete** the webhook.
+6. Toggle to the extreme right hand of the webhook to **test**, **disable**, or **delete** the webhook.
 
    - **test** will send a test alert to your connected application.
    - **disable** keeps the webhook inactive but present in your dashboard.
