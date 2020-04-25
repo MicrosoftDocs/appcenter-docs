@@ -203,7 +203,7 @@ Custom Export enables users to customize their export configuration in [Azure](h
 4. Click on **Create**. This will open the Create storage account page.
 5. Select an Azure Subscription.
 6. Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
-7. For Account kinds, you will see the following drop-down. There are three options supported. Choose what is right for you.
+7. For Account kinds, you'll see the following drop-down. There are three options supported. Choose what's right for you.
 ![Supported Blob Storage accounts](~/analytics/images/Export-Storage.png)
 8. Click on **Review + create**
 9. Once Validation has passed
@@ -220,7 +220,7 @@ Custom Export enables users to customize their export configuration in [Azure](h
 2. Select **Create a resource** > Management Tools > Application Insights.
 3. A configuration box will appear
 4. Set the **Application Type** to *App Center application*.
-5. Copy the **instrumentation key** from the Azure portal and add it into your App Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
+5. Copy the **instrumentation key** from the Azure portal and add it into your App Center custom configurations. You'll find the instrumentation key in the Overview page in the Application Insights resource.
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
