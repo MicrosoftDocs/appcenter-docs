@@ -2,8 +2,8 @@
 title: App Center Build FAQs – iOS
 description: Code signing apps built with App Center
 keywords: build, faq
-author: nilofer
-ms.author: nirajp
+author: elamalani
+ms.author: emalani
 ms.date: 02/04/2020
 ms.topic: article
 ms.assetid: 85e33f0b-ea23-485e-bcb9-cc2aa5fa775c
@@ -22,6 +22,10 @@ To share a scheme in Xcode, use the following steps:
 4. Add the `.xcscheme` file to source control and pushed to your remote repository so that App Center can access it.
 
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
+
+> [!WARNING]
+> Make sure that your `xcshareddata/xcschemes/` folder is not in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder will not work.
+
 
 ## <a name="clang-error"/>My iOS builds fail with "clang: error: linker command failed with exit code 1"
 The error could be caused by App Center building with the xcodeproj instead of the workspace. When adding CocoaPods to your project, you must switch to using the workspace when building in App Center. 

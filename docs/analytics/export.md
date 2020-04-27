@@ -21,7 +21,7 @@ By exporting the data, you benefit from:
 - Unified dashboard
 - Additional rich features from Application Insights such as funnels, retention
 
-App Center continuously exports Analytics data to Application Insights from the moment you configure export along with 2 days of backfilled data.
+App Center continuously exports Analytics data to Application Insights from the moment you configure export along with two days of backfilled data.
 With the new updated dashboard in Application Insights, App Center users can get a unified view of both Application and Backend Analytics on one dashboard.
 
 App Center continuously exports Analytics data to Blob Storage from the moment you configure export along with 28 days of backfilled data.
@@ -34,11 +34,11 @@ You can also export data to Azure General Purpose v2 Storage Blob. General-purpo
 
 ## Azure Blob Storage
 
-Azure Blob storage is a service for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
+Azure Blob Storage is a service for storing large amounts of unstructured object data, such as text or binary data, available worldwide via HTTP or HTTPS. You can use Blob Storage to expose data publicly, or to store data privately.
 
-The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
+The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored in the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnositcs data](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export)
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnostics data](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export)
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
@@ -87,10 +87,10 @@ The contents of the blob file is a JSON array of client device logs, that looks 
 
 ## Azure Application Insights
 
-Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you will get access to the following features:
+Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you'll get access to the following features:
 
-- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics). Use a powerful query language to analyze your raw event data and create visualizations. You can export the results of your queries into PowerBI or Excel.
-- [Users, Sessions and Events](https://docs.microsoft.com/azure/application-insights/app-insights-usage-segmentation). Learn how many people are using each page and feature of your app, then segment by country, browser, or other properties to understand why.
+- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics). Use a powerful query language to analyze your raw event data and create visualizations. You can export the results of your queries into _Power BI_ or _Excel_.
+- [Users, Sessions, and Events](https://docs.microsoft.com/azure/application-insights/app-insights-usage-segmentation). Learn how many people are using each page and feature of your app, then segment by country, browser, or other properties to understand why.
 - [Funnels](https://docs.microsoft.com/azure/application-insights/usage-funnels) and [User flows](https://docs.microsoft.com/azure/application-insights/app-insights-usage-flows). Understand how users navigate through your app. Identify bottlenecks. Discover ways to increase conversion rates and eliminate pain points.
 - [Retention](https://docs.microsoft.com/azure/application-insights/app-insights-usage-retention). Discover how many users return to use your app. Find out where and why they drop out.
 - [Workbooks](https://docs.microsoft.com/azure/application-insights/app-insights-usage-workbooks). Create interactive workbooks that combine usage analysis visualizations, Application Insights Analytics queries, and text to share insights on your team.
@@ -153,33 +153,33 @@ More information about Application Insights and App Center:
 * Learn about [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
 * Learn about [Better Decisions Through Better Analytics](https://blogs.msdn.microsoft.com/vsappcenter/better-decisions-through-better-analytics-visual-studio-app-center-with-azure-application-insights/) on App Center blog
 
-## Prerequisities
+## Prerequisites
 
-You must have an Azure Subscription to use Export; If you do not have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/free/) account before you begin.
+You must have an Azure Subscription to use Export; If you don't have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/free/) account before you begin.
 
 ## Azure Subscription Linking
 
 > [!NOTE]
 > This step is only needed for Standard Export; Custom Export doesn't require an Azure subscription.
 
-App Center's standard export of app data to Azure requires an Azure subscription linked to the App Center app. Adding the subscription and linking it to an app needs to be done by the app owner (if the app doesn't belong to an organization) or by the organization's admin.
+App Center's standard export of app data to Azure requires an Azure subscription linked to the App Center app. Adding the subscription and linking it to an app must be done by the app owner (if the app doesn't belong to an organization), or by the organization's admin.
 
 ### Adding an Azure Subscription
 
-- **App belonging to an organization:** If you are the organization admin, go to the **Manage** section under the organization where the app belongs to.
-- **App belonging to a user:** If you are the app owner, follow these steps.
-1. Login to Appcenter portal
+- **App belonging to an organization:** If you're the organization admin, go to the **Manage** section under the organization where the app belongs to.
+- **App belonging to a user:** If you're the app owner, follow these steps.
+1. Login to the App Center portal.
 2. Go to user settings.
 3. Under Azure, click **Add subscription**
 4. Select an existing Azure subscription or create a new one.
 
 ### Linking an app to an Azure Subscription
 
-Once you've added your Azure subscription to the user or org account, you need to provide apps with access so that the subscription can be used within that app. By doing this, you are allowing any manager/developer in that app to use the subscription for exporting purposes. Note that this will have an associated cost that will be charged iagainst your Azure Subscription.
+Once you've added your Azure subscription to the user or org account, you need to provide apps with access so that the subscription can be used within that app. By doing this, you're allowing any manager/developer in that app to use the subscription for exporting purposes. This will have an associated cost charged against your Azure Subscription.
 
 ## Set up Export
 
-1. On the Appcenter Portal, choose the App.
+1. On the App Center portal, choose the App.
 2. Go to the **App Settings**.
 3. Click on **Export** and select the **New Export** option.
 4. Select blog storage or Application Insights based on your app needs.
@@ -195,37 +195,36 @@ Standard Export provides a one-click experience for exporting your data. With th
 
 Custom Export enables users to customize their export configuration in [Azure](https://portal.azure.com).
 
-**For Blob Storage:**
+**For Blob Storage**
 
-- Once in the [Azure Portal ](https://portal.azure.com),
-
-1. Click on **Create a new resource**
-2. Search for **Storage account** in Search the Marketplace.
-3. Click on **Create**, This will open the Create storage account page.
-4. Select an Azure Subscription.
-5. Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
-6. For Account kinds, you will see the following drop-down. There are three options supported. Choose what is right for you.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+2. Click on **Create a new resource**
+3. Search for **Storage account** in Search the Marketplace.
+4. Click on **Create**. This will open the Create storage account page.
+5. Select an Azure Subscription.
+6. Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
+7. For Account kinds, you'll see the following drop-down. There are three options supported. Choose what's right for you.
 ![Supported Blob Storage accounts](~/analytics/images/Export-Storage.png)
-7. Click on **Review + create**
-8. Once Validation has passed
-9. Click **create**
-10. Once deployment has succeeded go to the resource
-11. Locate **Access Keys** in the Settings tab
-12. Copy the **connection string** and add it into your App Center custom configurations. 
+8. Click on **Review + create**
+9. Once Validation has passed
+10. Click **create**
+11. Once deployment has succeeded, go to the resource
+12. Locate **Access Keys** in the Settings tab
+13. Copy the **connection string** and add it into your App Center custom configurations. 
 
 ![Add the connection string in App Center](~/analytics/images/connectionstring.png)
 
-**For Application Insights:**
+**For Application Insights**
 
-1. Sign in to the [Azure Portal ](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Select **Create a resource** > Management Tools > Application Insights.
 3. A configuration box will appear
-4. Select the **Application Type**to be *App Center application* type.
-5. Copy the **instrumentation key** from the Azure portal and add it into your App Center custom configurations. You will find the instrumentation key in the Overview page in the Application Insights resource.
+4. Set the **Application Type** to *App Center application*.
+5. Copy the **instrumentation key** from the Azure portal and add it into your App Center custom configurations. You'll find the instrumentation key in the Overview page in the Application Insights resource.
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
-For Additional details on export to [Application Insights refer to the Quick Start ](https://docs.microsoft.com/azure/azure-monitor/learn/mobile-center-quickstart).
+For more info on export, refer to the [Application Insights quickstart guide](https://docs.microsoft.com/azure/azure-monitor/learn/mobile-center-quickstart).
 
 ### Exporting multiple apps to the same storage account
 
@@ -236,7 +235,7 @@ The path to the blob is formatted as follows:
 - when the enum is set to `WithoutAppId=false` is `year/month/day/hour/minute`
 - when the enum is set to `WithAppId=true` is `appId/year/month/day/hour/minute`
 
-The export configuration creation API was outlined above.  For existing configurations, there is the [following API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
+The export configuration creation API was outlined above. For existing configurations, here's the [partial update API](https://openapi.appcenter.ms/#/export/ExportConfigurations_PartialUpdate):
 
 ```HTTP
 PATCH /v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}
@@ -246,15 +245,15 @@ The changes will take 5-10 minutes to propagate, and entities from that point on
 
 ### Back-filling opt-out
 
-By default, a new export configuration will back-fill two last days of data for AI resources and 30 days for blob storage. There are scenarios when back-filling is not necessary (for example, if doing so would result in data being overwritten or duplicated). In this case, set `backfill` property to `false` when creating a new configuration.
+By default, a new export configuration will back-fill two last days of data for AI resources and 30 days for blob storage. There are scenarios when back-filling isn't necessary; for example, if doing so would result in overwriting or duplicating data. In this case, set `backfill` property to `false` when creating a new configuration.
 
 ### Choosing what kind of data to export
 
-By default, a new export configuration exports Analytics data only (events, sessions, etc.) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
+By default, a new export configuration exports Analytics data only (events, sessions, and so on) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
 ## Pricing
 
-In order to set up Export, you will need to create an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you are exporting to. Find the details on pricing for each service at:
+To set up Export, you'll need to create an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you're exporting to. Find the details on pricing for each service at:
 
 [Application Insights pricing](https://azure.microsoft.com/pricing/details/application-insights/)
 

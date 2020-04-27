@@ -1,9 +1,10 @@
 ---
 title: Upload crashes via API
-description: Post a crash report, e.g. if you don't want to use our SDK or develop for a custom platform.
+description: Post a crash report, for example, if you don't want to use our SDK or develop for a custom platform.
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnie
 ms.author: yuli1
+ms.reviewer: kegr
 ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
@@ -26,18 +27,18 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 
 Log properties:
 - `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
-- `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72h in the future of time of ingestion
-- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched e.g."2017-03-13T18:05:42Z".
+- `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72 hours in the future of time of ingestion
+- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched, for example "2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
-    - `appVersion`: required string with application version name, e.g. "1.1.0"
-    - `appBuild`: required string with application build number, e.g. "42"
-    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.android" for Android and "appcenter.custom" for custom platforms
-    - `sdkVersion`: required string with version of the SDK in semantic versioning format, e.g. "1.2.0" or "0.12.3-alpha.1"
-    - `osName`: required string with OS name, e.g. "android"
-    - `osVersion`: required string with OS version, e.g. "9.3.0"
-    - `model`: optional string with device model, e.g. "iPad2"
-    - `locale`: required string with language code, e.g. "en-US"
-    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone. Including daylight savings time, e.g. 120
+    - `appVersion`: required string with application version name, for example "1.1.0"
+    - `appBuild`: required string with application build number, for example "42"
+    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, for example "appcenter.android" for Android and "appcenter.custom" for custom platforms
+    - `sdkVersion`: required string with version of the SDK in semantic versioning format, for example "1.2.0" or "0.12.3-alpha.1"
+    - `osName`: required string with OS name, for example "android"
+    - `osVersion`: required string with OS version, for example "9.3.0"
+    - `model`: optional string with device model, for example "iPad2"
+    - `locale`: required string with language code, for example "en-US"
+    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone. Including daylight savings time, for example 120.
 - `userId`: optional string used for associating logs with users
 - `exception`: required object with exception details
     - `type`: required string with exception type
@@ -508,10 +509,10 @@ curl -X POST \
 
 To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.ndk" and you must attach the minidump file as an attachment to the crash report. Learn how to send an attachment in the [attachments section](~/diagnostics/upload-crashes.md#upload-an-attachment) of this page.
 
-To symbolicate your crash, you must upload your symbols through the API or CLI according to our [API documentation](~/diagnostics/android-ndk.md#app-center-api). If you are using Breakpad with Android, both options as specified in our [Android NDK documentation](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported, but if you are using Breakpad with Windows, only option 2: "Upload Breakpad symbols" is supported.
+To symbolicate your crash, you must upload your symbols through the CLI, or API according to our [API docs](~/diagnostics/android-ndk.md#app-center-api). If you're using Breakpad with Android, both options specified in our [Android NDK docs](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported; if you're using Breakpad with Windows, only option 2: "Upload Breakpad symbols" is supported.
 
 > [!NOTE]
-> If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
+> If you're uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, for example, __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 
 ## Upload an error report
 
@@ -578,7 +579,7 @@ All attachments must be associated with a crash report. You can either upload an
 
 Attachment-specific properties:
 
-- `contentType`: required string with content type, e.g. "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
+- `contentType`: required string with content type, for example, "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
 - `errorId`: required string containing the unique identifier of the attachment's associated error report
 - `fileName`: required string for NDK crashes that is set to "minidump.dmp"

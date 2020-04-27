@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 04/07/2020
+ms.date: 04/21/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -12,36 +12,36 @@ ms.custom: build
 
 # Installed Software
 ## Language and Runtime
-- Java 1.7: (Zulu 7.36.0.5-CA-macosx) (build 1.7.0_252-b10)
-- Java 1.8: (Zulu 8.44.0.11-CA-macosx) (build 1.8.0_242-b20) (default)
-- Java 11: Zulu11.37+17-CA (build 11.0.6+10-LTS)
+- Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
+- Java 1.8: (Zulu 8.46.0.19-CA-macosx) (build 1.8.0_252-b14) (default)
+- Java 11: Zulu11.39+15-CA (build 11.0.7+10-LTS)
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
-- Java 13: Zulu13.29+9-CA (build 13.0.2+6-MTS)
-- Java 14: Zulu14.27+1-CA (build 14+36)
+- Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
+- Java 14: Zulu14.28+21-CA (build 14.0.1+8)
 - Rust 1.42.0
 - Clang/LLVM 10.0.0
-- gcc-8 (Homebrew GCC 8.4.0) 8.4.0
-- gcc-9 (Homebrew GCC 9.3.0) 9.3.0
-- GNU Fortran (Homebrew GCC 8.4.0) 8.4.0
-- GNU Fortran (Homebrew GCC 9.3.0) 9.3.0
+- gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
+- gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
+- GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
+- GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.19.0 v12.16.1 v13.12.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.0 v12.16.2 v13.13.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.14.1
-- PHP 7.4.4
-- julia 1.4.0
+- Go 1.14.2
+- PHP 7.4.5
+- julia 1.4.1
 
 ## Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.11
+- Homebrew 2.2.13
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -56,7 +56,7 @@ ms.custom: build
 
 ## Utilities
 - Curl 7.69.1
-- Git: 2.26.0
+- Git: 2.26.1
 - Git LFS: 2.10.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
@@ -67,37 +67,41 @@ ms.custom: build
 - jq 1.6
 - gpg (GnuPG) 2.2.20
 - psql (PostgreSQL) 12.2
+- PostgreSQL 12.2
 - aria2 1.35.0
-- azcopy 10.3.4
+- azcopy 10.4.0
 - zstd 1.4.4
-- bazel 2.2.0
-- bazelisk v1.3.0
+- bazel 3.0.0
+- bazelisk v1.4.0
 - helm v3.1.2+gd878d4d
-- Docker 19.03.8
-- docker-machine 0.16.2
-- docker-compose 1.25.4
+- virtualbox 6.1.6r137129
+- Vagrant 2.2.7
 
 ## Tools
-- Fastlane 2.144.0
-- Cmake 3.17.0
+- Fastlane 2.145.0
+- Cmake 3.17.1
 - App Center CLI 1.2.2
 - Azure CLI 2.3.1
-- AWS CLI 2.0.6
+- AWS CLI 2.0.8
+- AWS SAM CLI 0.47.0
+- Aliyun CLI 3.0.37
 
 ## Browsers
-- Google Chrome 80.0.3987.163 
-- ChromeDriver 80.0.3987.106
-- Microsoft Edge 80.0.361.109 
-- MSEdgeDriver 80.0.361.109
-- Mozilla Firefox 74.0.1
+- Safari 13.1 (14609.1.20.111.8)
+- SafariDriver 13.1 (14609.1.20.111.8)
+- Google Chrome 81.0.4044.113 
+- ChromeDriver 81.0.4044.69
+- Microsoft Edge 81.0.416.53 
+- MSEdgeDriver 81.0.416.58
+- Mozilla Firefox 75.0
 - geckodriver 0.26.0
 
 ## Toolcache
 ### Ruby
-- 2.4.9
-- 2.5.7
-- 2.6.5
-- 2.7.0
+- 2.4.10
+- 2.5.8
+- 2.6.6
+- 2.7.1
 
 ### Python
 - 2.7.17
@@ -378,7 +382,7 @@ ms.custom: build
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
 | lldb             | 3.1.4508709  |
-| ndk-bundle       | 18.1.5063045 |
+| ndk-bundle       | 21.0.6113669 |
 | Android Emulator | 30.0.5       |
 
 ### Android Google APIs
