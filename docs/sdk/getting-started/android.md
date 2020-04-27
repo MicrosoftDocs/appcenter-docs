@@ -113,7 +113,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 ```
 
-If you have more than one start activity (for example, deep link activity), call `start` in the application custom class or in _each entry point_. In the second case, in order to avoid duplicate start calls, check if App Center is enabled before the `start` call:
+If you have more than one entry point to your application (for example, a deep link activity, a service or a broadcast receiver), call `start` in the application custom class or in each entry point. In the latter case, check if App Center is already configured before the `start` call:
 
 ```java
 if (!AppCenter.isConfigured())) {
