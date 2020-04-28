@@ -10,13 +10,13 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# OS X info
+# Installed Software
+## macOS details
 - System Version: macOS 10.14.6 (18G4032)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
 - Image Version: 20200425.1
 
-# Installed Software
 ## Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
 - Java 1.8: (Zulu 8.46.0.19-CA-macosx) (build 1.8.0_252-b14) (default)
