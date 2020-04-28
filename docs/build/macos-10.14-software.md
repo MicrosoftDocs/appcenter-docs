@@ -4,11 +4,17 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 04/21/2020
+ms.date: 04/28/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
+
+# OS X info
+- System Version: macOS 10.14.6 (18G4032)
+- Kernel Version: Darwin 18.7.0
+- System Integrity Protection: Enabled
+- Image Version: 20200425.1
 
 # Installed Software
 ## Language and Runtime
@@ -18,7 +24,7 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.42.0
+- Rust 1.43.0
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
@@ -26,7 +32,7 @@ ms.custom: build
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.0 v12.16.2 v13.13.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.2 v13.13.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
@@ -56,43 +62,43 @@ ms.custom: build
 
 ## Utilities
 - Curl 7.69.1
-- Git: 2.26.1
+- Git: 2.26.2
 - Git LFS: 2.10.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
 - Packer 1.5.5
-- GNU parallel 20200322
+- GNU parallel 20200422
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
 - gpg (GnuPG) 2.2.20
 - psql (PostgreSQL) 12.2
 - PostgreSQL 12.2
 - aria2 1.35.0
-- azcopy 10.4.0
+- azcopy 10.4.1
 - zstd 1.4.4
-- bazel 3.0.0
+- bazel 3.1.0
 - bazelisk v1.4.0
-- helm v3.1.2+gd878d4d
+- helm v3.2.0+ge11b7ce
 - virtualbox 6.1.6r137129
 - Vagrant 2.2.7
 
 ## Tools
-- Fastlane 2.145.0
+- Fastlane 2.146.1
 - Cmake 3.17.1
 - App Center CLI 1.2.2
-- Azure CLI 2.3.1
-- AWS CLI 2.0.8
+- Azure CLI 2.4.0
+- AWS CLI 2.0.9
 - AWS SAM CLI 0.47.0
-- Aliyun CLI 3.0.37
+- Aliyun CLI 3.0.39
 
 ## Browsers
 - Safari 13.1 (14609.1.20.111.8)
 - SafariDriver 13.1 (14609.1.20.111.8)
-- Google Chrome 81.0.4044.113 
+- Google Chrome 81.0.4044.122 
 - ChromeDriver 81.0.4044.69
-- Microsoft Edge 81.0.416.53 
-- MSEdgeDriver 81.0.416.58
+- Microsoft Edge 81.0.416.64 
+- MSEdgeDriver 81.0.416.64
 - Mozilla Firefox 75.0
 - geckodriver 0.26.0
 
@@ -318,7 +324,7 @@ ms.custom: build
 ### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 29.0.6 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.0 |
 
 ### Android SDK Platforms
 | Package Name | Description                         |
@@ -382,7 +388,7 @@ ms.custom: build
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
 | lldb             | 3.1.4508709  |
-| ndk-bundle       | 21.0.6113669 |
+| ndk-bundle       | 21.1.6352462 |
 | Android Emulator | 30.0.5       |
 
 ### Android Google APIs
