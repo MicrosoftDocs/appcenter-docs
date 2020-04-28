@@ -33,12 +33,14 @@
     "globalMetadata": {
       "contributors_to_exclude": [
         "conceptdev",
-        "meganbradley"
+        "meganbradley",
+        "timeyoutakeit",
+        "jwargo"
       ],
       "breadcrumb_path": "~/_breadcrumb/toc.yml",
       "titleSuffix": "Visual Studio App Center",
       "extendBreadcrumb": true,
-      "manager": "amburns",
+      "manager": "kegr",
       "audience": "developer",
       "ms.service": "vs-appcenter",
       "ms.topic": "article",
@@ -52,7 +54,7 @@
       },
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/appcenter-docs",
-      "feedback_product_url": "https://intercom.help/appcenter/getting-started/getting-help-with-app-center",
+      "feedback_product_url": "https://docs.microsoft.com/appcenter/help#accessing-app-center-free-support",
       "uhfHeaderId": "MSDocsHeader-AppCenter"
     },
     "fileMetadata": {
