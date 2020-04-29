@@ -4,6 +4,7 @@ description: Troubleshooting issues with React Native in Build
 keywords: build, troubleshooting
 author: nilofer
 ms.author: nirajpur
+ms.reviewer: kegr
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 3b2dde5f-e2c2-44fc-8834-928f7d73ce9a
