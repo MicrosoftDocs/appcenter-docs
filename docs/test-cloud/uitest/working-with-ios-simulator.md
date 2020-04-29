@@ -4,7 +4,7 @@ description: This guide will discuss how to identify and select an iOS simulator
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.reviewer: crdun
+ms.reviewer: kegr
 ms.date: 10/26/2018
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378

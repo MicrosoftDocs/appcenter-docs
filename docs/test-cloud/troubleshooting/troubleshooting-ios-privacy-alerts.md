@@ -4,6 +4,7 @@ description: Handling iOS privacy dialogs in App Center Test
 keywords: test cloud, iOS, alerts, privacy, permission
 author: oddj0b
 ms.author: vigimm
+ms.reviewer: kegr
 ms.date: 02/11/2019
 ms.topic: article
 ms.assetid: bd84fb9f-8500-4fdf-beca-06d904ebb4db
