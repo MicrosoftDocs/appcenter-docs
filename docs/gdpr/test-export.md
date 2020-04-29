@@ -4,6 +4,7 @@ description: How to export personal information from Test to your users
 keywords: GDPR, DSR, privacy, EU
 author: glennwester
 ms.author: glwest
+ms.reviewer: kegr
 ms.date: 06/20/2018 
 ms.topic: article 
 ms.assetid: 46e6e17c-6b43-484f-98ff-1f92f8871c2b
