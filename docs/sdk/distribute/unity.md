@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: maestersid
 ms.author: jawh
-ms.date: 03/30/2020
+ms.date: 04/01/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -48,7 +48,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 By default, the SDK automatically checks for new releases:
  * When the application starts.
- * When the application goes into background then in foreground again (iOS only).
+ * When the application goes into background then in foreground again.
  * When enabling the Distribute module if previously disabled.
 
 If you want to check for new releases manually, you can disable automatic check for update.

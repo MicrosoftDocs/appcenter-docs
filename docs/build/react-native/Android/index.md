@@ -127,16 +127,28 @@ The [Yarn package manager](https://yarnpkg.com) is a faster, more deterministic 
 
 ### 6.2. Custom build scripts
 
-In addition to App Center's [custom build scripts](~/build/custom/scripts/index.md) you might want to use [npm-scripts](https://docs.npmjs.com/misc/scripts) for example when your React Native app uses TypeScript and you have to run the `tsc` compiler at build start. Add a `postinstall` script in the `package.json` like this:
+There are several options for running scripts before App Center's default build commands are executed.
 
-```javascript
-  "scripts": {
-    ...
-    "postinstall" : "./postinstall.sh"     [other examples: "node ./postinstall.js" or just a single command like "tsc"]
-  },
-```
+- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This will automatically execute after your dependencies are installed.
 
-Postinstall scripts run right after all the `package.json` packages are installed, so you use those packages in your script.
+  ```javascript
+    "scripts": {
+      ...
+      "postinstall" : "npx jetify" // other examples: "node ./postinstall.js" or "./postinstall.sh"
+    },
+  ```
+
+- Write a shell script using App Center's [custom build scripts](~/build/custom/scripts/index.md) functionality.
+
+  ```shell
+  #!/usr/bin/env bash
+
+  # Example: Authenticate with private NPM registry
+  echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+
+  # Example: Add your signing key file (from base64 encoded environment variable)
+  base64 -d <<< "$ANDROID_JSON_KEY_FILE" > android/keystores/json_key_file.json
+  ```
 
 ### 6.3. Building multiple APKs
 
