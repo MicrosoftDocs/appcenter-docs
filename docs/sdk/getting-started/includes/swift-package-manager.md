@@ -4,7 +4,7 @@ description: Shared docs for Apple Swift Package Manager
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 04/28/2020
+ms.date: 04/23/2020
 ms.topic: include
 ms.assetid: 12b31177-2d25-4fda-a193-136e84049f90
 ms.tgt_pltfrm: apple
@@ -16,11 +16,11 @@ dev_langs:
 ### 3.3 Integration via Swift Package Manager
 
 > [!NOTE]
-> Only the **Analytics** and **Crashes** modules support the use of Swift Package Manager at the moment.
+> Only the **Analytics** module supports the use of Swift Package Manager at the moment.
 
 1. From the Xcode menu click **File > Swift Packages > Add Package Dependency**.
 1. In the dialog that appears, enter the repository URL: https://github.com/microsoft/appcenter-sdk-apple.git.
 1. In **Version**, select **Up to Next Major** and take the default option.
-1. Choose **AppCenter** and **AppCenterAnalytics** and **AppCenterCrashes** in the **Package Product** column.
+1. Choose **AppCenter** and **AppCenterAnalytics** in the **Package Product** column.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
