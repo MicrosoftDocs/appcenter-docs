@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin
 # Configuration mappings
 Xamarin Solutions can be configured to build certain projects and ignore others using custom build configurations. These configurations can minimize possible errors and reduce the build time for your code. 
 
-This guide explains how to configure a custom build in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](https://www.visualstudio.com/ru-ru/docs/build/apps/mobile/xamarin) 
+This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](https://www.visualstudio.com/ru-ru/docs/build/apps/mobile/xamarin) 
 
 ## Modifying Solution Configuration Mappings
 Where to change the **Configuration Mapping** depends on the IDE you use. 
@@ -28,7 +28,7 @@ Where to change the **Configuration Mapping** depends on the IDE you use.
 2. Select the solution configuration and platform.
 ![Visual Studio for Windows Configuration Manager General View](images/vswindows-configuration-manager.png)
 
-3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. Note that the **Deploy** option has no effect when building in App Center. 
+3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. The **Deploy** option has no effect when building in App Center. 
 
 You can read more about configuration mappings in the [Visual Studio official documentation](https://docs.microsoft.com/visualstudio/extensibility/internals/configuration-options-overview).
 
@@ -39,7 +39,7 @@ You can read more about configuration mappings in the [Visual Studio official do
 2. In your solution options, go to **Build > Configurations > Configuration Mappings**.
 ![Visual Studio for Mac Solution Configurations Mappings](images/vsmac-solution-configurations-mappings.png)
 
-3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. Unlinke in Windows, there's no **Deploy** option.
+3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. Unlike in Windows, there's no **Deploy** option.
 
 There's additional information in the [Visual Studio for Mac configuration guide](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations#creating-a-solution-build-configuration).
 
