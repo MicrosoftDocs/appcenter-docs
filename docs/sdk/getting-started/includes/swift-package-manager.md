@@ -21,6 +21,6 @@ dev_langs:
 1. From the Xcode menu click **File > Swift Packages > Add Package Dependency**.
 1. In the dialog that appears, enter the repository URL: https://github.com/microsoft/appcenter-sdk-apple.git.
 1. In **Version**, select **Up to Next Major** and take the default option.
-1. Choose **AppCenter** and **AppCenterAnalytics** and **AppCenterCrashes** in the **Package Product** column.
+1. Choose **AppCenterAnalytics** and/or **AppCenterCrashes** in the **Package Product** column.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
