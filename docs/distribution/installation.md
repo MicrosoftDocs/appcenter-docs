@@ -13,7 +13,7 @@ ms.custom: distribute
 ---
 
 # Install a Build
-Installating an application distributed by App Center begins with an email. If you have access to the application, you'll receive a notification email for each new version available. Click on the install link in the email to begin the process. You'll need to enter your credentials to log in. If it's your first time accessing App Center, you can [create a new account][signup]. Once logged in, you can review the app information, release notes, and click the `install` button to install it on your device.
+Installing an application distributed by App Center begins with an email. If you have access to the application, you'll receive a notification email for each new version available. Click on the install link in the email to begin the process. You'll need to enter your credentials to log in. If it's your first time accessing App Center, you can [create a new account][signup]. Once logged in, you can review the app information, release notes, and click the `install` button to install it on your device.
 
 > [!NOTE]
 > If you or your testers have email notifications disabled (or the option 'Do not notify testers' has been selected when distributing a release), then you won't receive the email mentioned above. In that case releases that you have access to can be downloaded at [the install portal](https://install.appcenter.ms/).  For more information on installation for testers please check out the guide [here](https://docs.microsoft.com/appcenter/distribution/testers/).
@@ -30,7 +30,7 @@ You can install a test signed app by first installing the test certificate (whic
 4. Select the button **Install Certificate**.
 5. From the **Store Location** radio buttons, select **Local Machine**. Click the **Next** button.
 6. Click **Yes** on the admin prompt for changes to your device.
-7. On the **Certificate Import Wizard**, chose the radio button **Place all certificates in the following store**, then select the **Browse** button.
+7. On the **Certificate Import Wizard**, choose the radio button **Place all certificates in the following store**, then select the **Browse** button.
 8. Select the **Trusted People** certificate store. Then click the **OK** button.
 9. Click the **Next** button on the **Certificate Import Wizard** window.
 10. Click **Finish** button to complete the certificate install.
