@@ -53,6 +53,9 @@ throw new Error('This is a test javascript crash!');
 > Your React Native app needs to be compiled in **release mode** for this crash to be sent to App Center.
 
 > [!NOTE]
+> At this time, App Center does not support source maps to unminify JavaScript stack traces for Android React Native apps.
+
+> [!NOTE]
 > It is best practice to avoid JavaScript `throw` statement with a string value (e.g.: `throw 'message'`), as [React Native doesn't preserve full JavaScript stack](https://github.com/facebook/react-native/blob/v0.57.1/Libraries/Core/ExceptionsManager.js#L67-L71) in this scenario. Please `throw` a JavaScript `Error` (e.g.: `throw Error('message')`) instead.
 
 ## Get more information about a previous crash
