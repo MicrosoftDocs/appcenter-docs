@@ -2,8 +2,8 @@
 title: CodePush Migration Guide
 description: "How to migrate from CodePush to App Center"
 keywords: distribution
-author: zakeelm
-ms.author: zakeelm
+author: ahdbilal
+ms.author: ahbilal
 ms.reviewer: kegr
 ms.date: 10/11/2018
 ms.topic: article
@@ -37,7 +37,7 @@ Once you log in, the first thing you'll see is a list of all your applications. 
 
 ![All Your Apps](./images/mg-portal-1.png)
 
-The back-end migration of CodePush into App Center was completed on June 2nd, 2017. If any of your apps were made before this, you'll have to specify the OS and Platform of the app.
+The back-end migration of CodePush was completed on June 2, 2017. If any of your apps were made before this date, you'll have to specify the OS and Platform of the app.
 
 ![Import](./images/mg-portal-2.png)
 
@@ -79,7 +79,7 @@ Clicking the "Edit" button will provide you with a panel for patching your relea
 
 ![Release Patch](./images/mg-portal-4.png)
 
-For now, developers using CodePush must distribute releases using the release commands in the App Center CLI. Note that if you create your React Native app using the dashboard, *first* you'll have to create default deployments using App Center.
+For now, developers using CodePush must distribute releases using the release commands in the App Center CLI. You'll have to create default deployments using App Center, if you create your React Native app using the dashboard.
 
 ![CreateDeployments](./images/mg-portal-5.png)
 
@@ -161,7 +161,7 @@ appcenter codepush deployment list MyApp
 No.
 
 #### What changes for CodePush?
-For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today, it'd be possible without such an amazing community.
+For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
 
 #### Is using CodePush functionality still free?
 Yes.
