@@ -10,9 +10,9 @@ ms.service: vs-appcenter
 ---
 
 # Push Migration Guide
-Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/) the retirement of Visual Studio App Center MBaaS offering. As an alternative to App Center Push (ACP), we recommend that you migrate to [Azure Notification Hubs](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview), which serves as the underlying foundational block on which ACP was built. We understand the unique capabilities that App Center Push provides and with the upcoming retirement, we have 2 main goals in mind:
+Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/) the retirement of Visual Studio App Center MBaaS offering. As an alternative to App Center Push (ACP), we recommend that you migrate to [Azure Notification Hubs](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview), which serves as the underlying foundational technology on which ACP was built. We understand the unique capabilities that App Center Push provides and with the upcoming retirement, we have 2 main goals in mind:
 
-+ We are committed to offering the same simplicity that made App Center Push a compelling offering. 
++ We are committed to offering the developer experience that made App Center Push a compelling offering. 
 + We want to help make this migration process from App Center Push to Notification Hubs as seamless as possible.
 
 To help with these goals, we [announced a new preview release](https://go.microsoft.com/fwlink/?linkid=2128265) of the Notification Hubs SDK and created this migration guide to help you get started with the transition.
@@ -23,7 +23,7 @@ Azure Notification Hubs offers numerous benefits to mobile app developers:
 + App Center Push was designed for smaller applications, sending notifications to smaller target audiences of 1,000 devices or less. Azure Notification Hubs does not have such a limitation and is built to support huge application audiences, as well as sending notifications to millions of devices every day.
 + Azure Notification Hubs supports sending notifications to devices running different operating systems with a single API call while App Center Push required a separate API call for each target platform.
 + With the Standard pricing plan, Azure Notification Hubs provides more detailed information about the status of a notification (including delivery success or failure with additional information available for failure).
-+ Azure Notification Hubs is available in multiple regions, enabling customers to easily comply with data confidentiality regulations.
++ Azure Notification Hubs is available in multiple regions, and enables customers to easily scale as well as design high availability into their application .
 
 ## Migration Steps
 In order to fully migrate your application(s) from using App Center Push to Azure Notification Hubs, you will need to complete the following steps:
@@ -89,7 +89,7 @@ NotificationHub.initialize(
 ```
 
 #### Intercept push notifications
-Set up a listener to be notified whenever a push notification is received in the foreground, or a background push notification has been clicked on by the user. Azure Notification Hubs registers a callback for notifications via the setListener method.
+Set up a listener to be notified whenever a push notification is received in the background, or a foreground push notification has been clicked on by the user. Azure Notification Hubs registers a callback for notifications via the setListener method.
 ```
 NotificationHub.setListener(new NotificationListener() {
     @override 
@@ -107,7 +107,7 @@ public interface NotificationListener {
 ```
 
 #### Target devices
-The new Notification Hubs SDK supports tags that enable you to collect custom properties associated with users and devices and use for targeting your audience.
+The new Notification Hubs SDK supports tags that enable you to collect custom properties associated with users and devices and use them for targeting an audience.
 
 The NotificationHub class has information about tags and how to add, remove, clear, and list the tags. It also has the ability to add or remove tags via a List<String> with addTags and removeTags. Below is a sample of adding, removing and fetching all tags. 
 ```
@@ -165,7 +165,7 @@ App Center Push supports multiple notification target types and the following ta
 | ---------------------- | -------------------------------- |
 | Audience               | Delivers the same functionality through tags |
 | Broadcast              | Supported |
-| Device or device list  | Supported |
+| Device or device list  | Supported using tags |
 | User or user list      | Supported using tags |
 
 Check out our [tutorials](https://go.microsoft.com/fwlink/?linkid=2128396) to learn more about the APIs available with Azure Notification Hubs and how to effectively target both devices and users.
