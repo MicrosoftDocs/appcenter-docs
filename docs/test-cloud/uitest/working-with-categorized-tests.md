@@ -70,14 +70,14 @@ There are two ways to run Xamarin.UITests according to category:
 ## Running Tests Locally by Category
 
 #### [Visual Studio](#tab/vswin/)
-Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `/include` identifies the test categories to run, while the switch `/exclude` specifies the test categories to ignore.
+Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `--where` matches the categories using a [test selection language](https://github.com/nunit/docs/wiki/Test-Selection-Language).
 
 ```shell
 nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iOS.UITests.dll --where="cat == flerp"
 ```
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `-include` identifies the test categories to run, while the switch `-exclude` specifies the test categories to ignore.
+Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `--where` matches the categories using a [test selection language](https://github.com/nunit/docs/wiki/Test-Selection-Language).
 
 ```shell
 nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll --where="cat == flerp"
