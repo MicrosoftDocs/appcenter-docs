@@ -1,8 +1,9 @@
 ---
 title: "App Center Auth Migration Guide"
 description: App Center Auth migration guide to Azure Active Directory B2C
-author: amchew
-ms.author: amchew
+author: dimazaid
+ms.author: dimazaid
+ms.reviewer: kegr
 ms.date: 02/03/2020
 ms.topic: article
 ms.assetid: ca1357b3-1fb0-4751-a235-16833fca53c9
@@ -10,41 +11,38 @@ ms.service: vs-appcenter
 ---
 
 # App Center Auth Migration Guide
+We recently announced we'll be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post):
+- Auth SDK retired on February 3, 2020
+- Auth Portal UI removed on May 3, 2020
+- Auth API retired on May 3, 2020
 
-We recently announced that we will be retiring [App Center's mobile backend services in preview](https://aka.ms/MBaaS-retirement-blog-post). What this change means for App Center Auth customers is that:
+Instead of App Center Auth, we recommend you use [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) (Azure AD B2C) and [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) directly.
 
-- Auth SDK retired on February 3rd 2020
-- Auth Portal UI removed on May 3rd 2020
-- Auth API retired on May 3rd 2020
-
-Instead of App Center Auth, we recommend that you use [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory-b2c/) (Azure AD B2C) and [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) directly.
-
-App Center Auth is powered by Azure AD B2C. By using Azure AD B2C directly, you can use the full capabilities of Azure AD B2C and easily customize and control how users securely interact with your mobile applications at scale. The App Center Auth SDK wraps MSAL, which is a platform that gives your application the ability to access identities in Azure AD B2C. MSAL enables developers to acquire [security tokens](https://docs.microsoft.com/azure/active-directory/develop/developer-glossary#security-token) from the Microsoft identity platform endpoint in order to access secured Web APIs. These Web APIs can be the Microsoft Graph, other Microsoft APIs, third-party Web APIs, or your own Web API. [MSAL is available for Android, iOS, .NET, JavaScript](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks), which support many different application architectures and platforms.
+App Center Auth is powered by Azure AD B2C. By using Azure AD B2C directly, you can use the full capabilities of Azure AD B2C and easily customize and control how users securely interact with your mobile applications at scale. The App Center Auth SDK wraps MSAL, which is a platform that gives your application the ability to access identities in Azure AD B2C. MSAL enables developers to acquire [security tokens](https://docs.microsoft.com/azure/active-directory/develop/developer-glossary#security-token) from the Microsoft identity platform endpoint to access secured Web APIs. These Web APIs can be the Microsoft Graph, other Microsoft APIs, third-party Web APIs, or your own Web API. [MSAL is available for Android, iOS, .NET, JavaScript](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks), which support many different application architectures and platforms.
 
 ## Service Comparison
 
-App Center Auth is powered by Azure AD B2C, but with the limitations. For example, 
-- You can only select one scope (or permission) to use with your application, 
-- You must use the **Sign up and sign in** [user flow](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#user-flow-versions) or [custom policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom) that contains the sign-in identity task.
-- You can't configure a native sign-in screen, create a password reset user experience or change the user language of the sign-in page.
-- The App Center Auth portal experience also did not support searching and managing users, identity providers, applications, or permissions.
+App Center Auth is powered by Azure AD B2C, but with the limitations. For example: 
+- You can only select one scope (or permission) to use with your application. 
+- Use the [sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#user-flow-versions) or [custom policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview-custom) that contains the sign-in identity task.
+- You can't configure a native sign-in screen, create a password reset user experience, or change the user language of the sign-in page.
+- The App Center Auth portal experience also didn't support searching and managing users, identity providers, applications, or permissions.
 
-When you use Azure AD B2C directly, you'll be able to use any user flows and custom policies including [configuring a native sign-in screen](https://docs.microsoft.com/azure/active-directory-b2c/configure-ropc?tabs=applications) and [creating a password reset experience](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-sspr). Learn more about the [complete list of Azure AD B2C user flows](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-versions#v1). Additionally, you'll be able to manage your users and experience the full capabilities of Azure AD B2C in the Azure portal.
+When you use Azure AD B2C directly, you can use any user flows and custom policies including [configuring a native sign-in screen](https://docs.microsoft.com/azure/active-directory-b2c/configure-ropc?tabs=applications) and [creating a password reset experience](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-sspr). Learn more about the [complete list of Azure AD B2C user flows](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-versions#v1). Additionally, you can manage your users and experience the full capabilities of Azure AD B2C in the Azure portal.
 
 ### Added Benefits of using MSAL
 
 MSAL gives you more flexibility in acquiring tokens from the Microsoft identity platform endpoint. Using MSAL provides the following benefits:
 
 - No need to directly use the OAuth libraries or code against the protocol in your application.
-- Acquires tokens on behalf of a user or on behalf of an application (when applicable to the platform).
-- Maintains a token cache and refreshes tokens for you when they are close to expiring. You don't need to handle token expiration on your own.
-- Helps you specify which audience you want your application to sign in (your org, several orgs, work, and school and Microsoft personal accounts, social identities with Azure AD B2C, users in sovereign, and national clouds).
+- Acquires tokens for a user, or for an app, when applicable to the platform.
+- Maintains a token cache and refreshes tokens for you when they're close to expiring. You don't need to handle token expiration on your own.
+- Helps you specify which audience you want your application to sign in: your org, several orgs, work, school, Microsoft personal accounts, social identities with Azure AD B2C, users in sovereign, and national clouds.
 - Helps you set up your application from configuration files.
 - Helps you troubleshoot your app by exposing actionable exceptions, logging, and telemetry.
 
 ## Migration Guide
-
-When you configured App Center Auth, you will already have an existing Azure AD B2C tenant, so there is no work to do there. There is no direct migration path from App Center Auth SDK to the MSAL SDK, existing App Center Auth customers can migrate SDKs by the instructions for the following platforms:
+When you configured App Center Auth, you'll already have an existing Azure AD B2C tenant. There's no direct migration path from App Center Auth SDK to the MSAL SDK. Existing App Center Auth customers can migrate SDKs by the instructions for the following platforms:
 
 - [MSAL for Android](https://github.com/AzureAD/microsoft-authentication-library-for-android)
 - [MSAL for iOS](https://github.com/AzureAD/microsoft-authentication-library-for-objc)
