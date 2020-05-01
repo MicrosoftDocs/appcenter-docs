@@ -15,7 +15,7 @@ Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-cent
 + We are committed to continuing the developer experience that made App Center Push a compelling offering. 
 + We want to help make this migration process from App Center Push to Azure Notification Hubs as seamless as possible.
 
-To help with these goals, we [announced a new preview release](https://go.microsoft.com/fwlink/?linkid=2128265) of the Notification Hubs SDK and created this migration guide to help you get started with the transition.
+To help with these goals, we [announced a new preview release](https://go.microsoft.com/fwlink/?linkid=2128265) of the Notification Hubs Android SDK and created this migration guide to help you get started with the transition.
 
 ## Benefits of Azure Notification Hubs
 Azure Notification Hubs offers numerous benefits to mobile app developers:
