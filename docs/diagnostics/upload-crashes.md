@@ -28,7 +28,7 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 Log properties:
 - `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
 - `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72 hours in the future of time of ingestion
-- `appLaunchTimestamp`: optional string that specifies timestamp date-time when the app was launched, for example "2017-03-13T18:05:42Z".
+- `appLaunchTimestamp`: required string that specifies timestamp date-time when the app was launched, for example "2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
     - `appVersion`: required string with application version name, for example "1.1.0"
     - `appBuild`: required string with application build number, for example "42"
@@ -71,7 +71,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:": [
+  "logs": [
     {
       "type": "managedError",
       "timestamp": "2019-10-08T04:22:23.516Z",
