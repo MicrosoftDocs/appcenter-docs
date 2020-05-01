@@ -33,7 +33,7 @@ IApp app = ConfigureApp.iOS.AppBundle("/path/to/iosapp.app")
 
 There are two ways to list the simulators and their device identifiers:
 
-1. The first way to identify available simulators is to start up Terminal and type `xcrun instruments -s devices`. This will display a list of known devices, similar to the following:
+1. The first way to identify available simulators is to start up Terminal and type `xcrun instruments -s devices`. The following output will display a list of known devices:
 
    ```bash
    $ xcrun instruments -s devices
@@ -61,7 +61,7 @@ There are two ways to list the simulators and their device identifiers:
 
 ![Device Identifiers for simulator images](./images/working-with-ios-simulator-01.png)]
 
-Xcode will present a window showing attached devices, select Simulators top in the windows to see installed simulators. When a simulator is selected the device identifier can be seen in the right hand side of the window:
+Xcode will present a window showing attached devices, select Simulators top in the windows to see installed simulators. When a simulator, is selected the device identifier can be seen in the right-hand side of the window:
 
 [ ![Selecting a simulator](./images/working-with-ios-simulator-02-sml.png)](./images/working-with-ios-simulator-02.png#lightbox)
 
