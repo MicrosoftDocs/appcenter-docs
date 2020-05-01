@@ -12,8 +12,8 @@ ms.service: vs-appcenter
 # Push Migration Guide
 Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/) the retirement of Visual Studio App Center MBaaS offering. As an alternative to App Center Push (ACP), we recommend that you migrate to [Azure Notification Hubs](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview), which serves as the underlying foundational technology on which ACP was built. We understand the unique capabilities that App Center Push provides and with the upcoming retirement, we have 2 main goals in mind:
 
-+ We are committed to offering the developer experience that made App Center Push a compelling offering. 
-+ We want to help make this migration process from App Center Push to Notification Hubs as seamless as possible.
++ We are committed to continuing the developer experience that made App Center Push a compelling offering. 
++ We want to help make this migration process from App Center Push to Azure Notification Hubs as seamless as possible.
 
 To help with these goals, we [announced a new preview release](https://go.microsoft.com/fwlink/?linkid=2128265) of the Notification Hubs SDK and created this migration guide to help you get started with the transition.
 
