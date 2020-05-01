@@ -4,8 +4,7 @@ description: This guide will discuss how to identify and select an iOS simulator
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.reviewer: crdun
-ms.date: 10/26/2018
+ms.date: 05/01/2020
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378
 ms.service: vs-appcenter
@@ -58,11 +57,11 @@ There are two ways to list the simulators and their device identifiers:
    iPhone 6 Plus (8.1 Simulator) [AB1C20F6-BFFC-4C80-879C-F19A7E3F0B5C]
    ```
 
-2. Xcode provides another way to obtain a list of devices and their device identifiers. Once Xcode is running, select **Window > Devices**:
+2. Xcode provides another way to obtain a list of devices and their device identifiers. Once Xcode is running, select **Window > Devices and Simulators**:
 
 ![Device Identifiers for simulator images](./images/working-with-ios-simulator-01-sml.png)]
 
-Xcode will present a window showing the simulators installed on the computer. When a simulator is selected the device identifier can be seen in the right hand side of the window:
+Xcode will present a window showing attached devices, select Simulators top in the windows to see installed simulators. When a simulator is selected the device identifier can be seen in the right hand side of the window:
 
 [ ![Selecting a simulator](./images/working-with-ios-simulator-02-sml.png)](./images/working-with-ios-simulator-02.png#lightbox)
 
