@@ -1,6 +1,6 @@
 ---
 title: Working with Timeouts
-description: This guide will discuss how to identify and select an iOS simulator that should be used to run Xamarin.UITests locally.
+description: This guide will discuss how to identify and select an iOS simulator to run Xamarin.UITests locally.
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
@@ -14,23 +14,23 @@ ms.custom: test
 
 # Working with Timeouts
 
-Sometimes it is necessary to pause test execution while waiting for the user interface to update while a long running action is in progress. UITest provides two API's to address these concerns:
+Sometimes it's necessary to pause test execution to wait for the UI to update during a long running action. UITest provides two APIs to address these concerns:
 
 * `IApp.WaitForElement`
 * `IApp.WaitForNoElement`
 
-The methods `IApp.WaitForElement`, and `IApp.WaitForNoElement` fundamentally work the same: they will wait for a query to be satisfied and will throw a `TimeoutException` if it is not satisfied in the specified time limit.
+The methods `IApp.WaitForElement`, and `IApp.WaitForNoElement` fundamentally work the same: they'll wait for a query to be satisfied and will throw a `TimeoutException` if it isn't satisfied in the specified time limit.
 
-By default, UITests waits a maximum of 15 seconds for tests running locally and one minute for tests running in App Center tests before throwing the exception. If you specify a different wait time, that will override the default and apply to both local & App Center tests. 
+By default, UITests waits up to 15 seconds for tests running locally, and one minute for tests running in App Center before throwing the `TimeoutException`. If you specify a different wait time, that will override the default, and apply to both local & App Center tests. 
 
-`IApp.WaitForElement` is useful for situations where the test needs to confirm the presence of a view that provides important information to the user, such as a success message or perhaps an icon. This is an example of `IApp.WaitForElement` that will wait 90 seconds for a view that is marked with `success_message_label` to appear on the screen:
+`IApp.WaitForElement` is useful to confirm the presence of a view, such as a success message or icon. This sample is an example of `IApp.WaitForElement` that will wait up to 90 seconds for a view marked with `success_message_label` to appear:
 
 ```csharp
 app.WaitForElement(c=>c.Marked("success_message_label"),
                    "Did not see the success message.",
                    new TimeSpan(0,0,0,90,0));
 ```
-In particular, it is a good idea to call `IApp.WaitForElement` before interacting with views. Many of the gesture API's will fail if the view is not visible or if animating. The following snippet is one such example of an extension method that will first verify the visibility of a view and then try to enter text:
+It's a good idea to call `IApp.WaitForElement` before interacting with views. Many of the gesture APIs will fail if the view isn't visible or is still animating. The following snippet is an extension method that verifies the visibility of a view, and then tries to enter text:
 
 ```csharp
 public static class UITestHelpers
