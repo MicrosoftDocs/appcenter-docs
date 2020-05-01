@@ -67,6 +67,9 @@ First, you will need to add the Notification Hubs SDK to your app.
 dependencies {
     // Other dependencies here
     implementation 'com.microsoft.azure:notification-hubs-android-sdk: 1.0.0-preivew1@aar'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
+    implementation 'com.android.volley:volley:1.1.1'
 }
 
 repositories {
