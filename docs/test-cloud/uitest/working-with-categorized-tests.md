@@ -4,7 +4,7 @@ description: Working with categorized tests in App Center
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 03/05/2020
+ms.date: 05/01/2020
 ms.topic: article
 ms.assetid: EBA22D3B-EB39-400E-8881-B78D621301D4
 ms.service: vs-appcenter
@@ -73,14 +73,14 @@ There are two ways to run Xamarin.UITests according to category:
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `/include` identifies the test categories to run, while the switch `/exclude` specifies the test categories to ignore.
 
 ```shell
-nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iOS.UITests.dll /include:flerp
+nunit-console .\CreditCardValidator.iOS.UITests\bin\Debug\CreditCardValidator.iOS.UITests.dll --where="cat == flerp"
 ```
 
 #### [Visual Studio for Mac](#tab/vsmac/)
 Running tests locally is accomplished using **nunit-console.exe**, NUnit's command-line runner. The command-line switch `-include` identifies the test categories to run, while the switch `-exclude` specifies the test categories to ignore.
 
 ```shell
-nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll -include=flerp
+nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iOS.UITests.dll --where="cat == flerp"
 ```
 
 * * *
