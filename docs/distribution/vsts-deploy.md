@@ -15,11 +15,11 @@ ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 
 # Deploy Azure DevOps Builds with App Center
 
-With the **Deploy with App Center** Task in Visual Studio Team Services, you can deploy your apps from Azure DevOps (formerly known as VSTS) to App Center. By deploying to App Center, you will be able to distribute your builds to your users.
+You can deploy your apps from Azure DevOps to  App Center with the **Deploy with App Center** Task.
 
 ## Creating a signed build
 
-Before deploying your app to App Center, ensure your existing Azure DevOps build definition produces a signed build; only signed builds can be deployed and installed to devices.
+Only signed builds can be deployed and installed to devices, ensure your existing Azure DevOps build definition produces a signed build.
 
 ## Setting up distribution with App Center
 
@@ -29,11 +29,11 @@ When configuring the App Center Distribute task, you'll need your App Center API
 
 ![Get your API key from App Center](images/distribution_new-api-token.png)
 
-Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. If you are using the new YAML editor [follow the VSTS documentation to create a new connection](https://docs.microsoft.com/en-au/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml#create-a-service-connection).Paste the API key you copied from App Center, ensure that the server URL is `https://api.appcenter.ms/v0.1`, and give the connection a name.
+Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. If you are using the new YAML editor, [follow the VSTS documentation to create a new connection](https://docs.microsoft.com/en-au/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml#create-a-service-connection).Paste the API key you copied from App Center, ensure that the server URL is `https://api.appcenter.ms/v0.1`, and give the connection a name.
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 
-After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. Grab the app slug from App Center; you can find this by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/vigimm/apps/SkyTube` is `vigimm/Skytube`.
+After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. You can find the app slug by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/vigimm/apps/SkyTube` is `vigimm/Skytube`.
 
 ![Copy your App Slug from App Center](images/vsts-deploy-app-center-slug.png)
 
@@ -86,7 +86,7 @@ Once you finished configuring the App Center Distribute task, you can Save and Q
 
 ![Releases](images/distribution_successful-release.png)
 
-Now that your signed build is in App Center, you're all set! You and your users can download the signed build directly from App Center, or further re-distribute the release to another group.
+Now that your signed build is in App Center, you're all set! You and your users can download the signed build directly from App Center, or further redistribute the release to another group.
 
 [vsts-deploy-api]: images/vsts-deploy-api.png
 [vsts-deploy-app-center-api]: images/vsts-deploy-app-center-api.png
