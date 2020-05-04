@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 12/05/2019
+ms.date: 05/01/2019
 ms.topic: get-started-article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: tvOS
@@ -101,6 +101,8 @@ Now that you've integrated the frameworks in your application, it's time to star
 ### 3.3 Integration by copying the binaries into your project
 
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your tvOS app.
+
+[!INCLUDE [xcframework support](includes/xcframeworks.md)]
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
