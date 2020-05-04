@@ -30,12 +30,12 @@ App tokens have the same rights that you do, but within only one app.
 Each App Center account may create up to 5000 API tokens.
 
 > [!TIP]
-> We recommend creating and using app tokens for operations within one app to limit the authorization scope, and therefore the risk if one is exposed. If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a user token.
+> We recommend creating and using app tokens for operations within one app to limit the authorization scope (and therefore the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a user token.
 
 > [!WARNING]
 > Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
-## <a name="section03"/>Creating an App Center API app token
+## <a name="section03"/>Creating an App Center App API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login using your account credentials.
 2. **Select the app** that you want to create an API token for.
@@ -45,9 +45,9 @@ Each App Center account may create up to 5000 API tokens.
 6. In the text field, enter a descriptive name for your token.
 7. Select the type of access for your API token:
 
-   **Full Access:** A full access app token has all the permissions that the associated user has for that app. For example, if the user does not have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions) even though the user is using a full access API token.
+   **Full Access:** A full access App API token has the equivalent of Manager permissions for that app. Only Managers can create full access App API tokens.
 
-   **Read Only:** A read-only app token has viewer access permissions. For example, with a read only API token, the user can perform actions such as reading data from crashes, analytics, and getting basic app information. Users cannot perform actions such as changing the app settings, triggering a build, creating an export configuration etc.
+   **Read Only:** A read only App API token has the equivalent of Developer access permissions for that app. Managers and Developers can create read-only App API tokens.
 
 8. At the bottom of the panel, click **Add new API token**.
 9. This will generate a pop up with your API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
@@ -55,7 +55,7 @@ Each App Center account may create up to 5000 API tokens.
 
 Store the token somewhere secure, as you'll need it when working with the App Center OpenAPI Specification, and when sending API requests from an application to App Center.
 
-## <a name="section04"/>Creating an App Center API user token
+## <a name="section04"/>Creating an App Center User API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login using your account credentials.
 2. On the top right corner of the App Center portal, click your account avatar, then select **Account Settings**.
@@ -66,7 +66,7 @@ Store the token somewhere secure, as you'll need it when working with the App Ce
 
    **Full Access:** A full access user token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions), even though you're using a full access user token.
 
-   **Read Only:** A read-only user token has viewer access permission for the current account / organization. For example, with a read-only user token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read-only user tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
+   **Read Only:** A read only user token has Viewer access permission for the current account / organization. For example, with a read-only user token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read-only user tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
 
 7. At the bottom of the panel, click **Add new API token**.
 8. This will generate a pop up with your API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
