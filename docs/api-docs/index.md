@@ -23,14 +23,14 @@ On that page, you can authenticate using your API token and interactively call A
 
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
 
-User tokens have the same rights that you do as a user of App Center, across all organizations and apps that you're associated with.
+User API tokens have the same rights that you do as a user of App Center, across all organizations and apps that you're associated with.
 
-App tokens have the same rights that you do, but within only one app.
+App API tokens have either Manager or Viewer rights, but within only one app.
 
 Each App Center account may create up to 5000 API tokens.
 
 > [!TIP]
-> We recommend creating and using app tokens for operations within one app to limit the authorization scope (and therefore the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a user token.
+> We recommend creating and using App API tokens to limit the authorization scope to only one app at a time (and therefore limit the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a User API token.
 
 > [!WARNING]
 > Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
@@ -43,14 +43,14 @@ Each App Center account may create up to 5000 API tokens.
 4. In the middle panel, select **App API Tokens** from the menu list.
 5. On the top right corner, click **New API token**.
 6. In the text field, enter a descriptive name for your token.
-7. Select the type of access for your API token:
+7. Select the type of access for your App API token:
 
    **Full Access:** A full access App API token has the equivalent of Manager permissions for that app. Only Managers can create full access App API tokens.
 
-   **Read Only:** A read only App API token has the equivalent of Developer access permissions for that app. Managers and Developers can create read-only App API tokens.
+   **Read Only:** A read only App API token has the equivalent of Viewer access permissions for that app. Managers and Developers can create read only App API tokens.
 
 8. At the bottom of the panel, click **Add new API token**.
-9. This will generate a pop up with your API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
+9. This will generate a pop up with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
 10. Click the **Close** button.
 
 Store the token somewhere secure, as you'll need it when working with the App Center OpenAPI Specification, and when sending API requests from an application to App Center.
@@ -62,14 +62,14 @@ Store the token somewhere secure, as you'll need it when working with the App Ce
 3. In the middle panel, select **User API Tokens** from the menu list.
 4. On the top right corner, click **New API token**.
 5. In the text field, enter a descriptive name for your token.
-6. Select the type of access for your API token:
+6. Select the type of access for your User API token:
 
    **Full Access:** A full access user token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions), even though you're using a full access user token.
 
-   **Read Only:** A read only user token has Viewer access permission for the current account / organization. For example, with a read-only user token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read-only user tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
+   **Read Only:** A read only user token has Viewer access permission for the current account / organization. For example, with a read only user token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read only user tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
 
 7. At the bottom of the panel, click **Add new API token**.
-8. This will generate a pop up with your API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
+8. This will generate a pop up with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
 9. Click the **Close** button.
 
 Store the token somewhere secure, as you'll need it when working with the App Center OpenAPI Specification, and when sending API requests from an application to App Center.
@@ -143,17 +143,17 @@ This section shows you how to use App Center's [OpenAPI page](https://openapi.ap
 
 In the event that an API token is leaked, you should revoke it immediately to prevent unauthorized access to your App Center account.
 
-### Revoking a user token
+### Revoking a User API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. On the top right corner of the App Center portal, click your account avatar, then select **Account Settings**.
 3. In the middle panel, select **User API Tokens** from the menu.
 4. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right hand corner.
 
-### Revoking an app token
+### Revoking an App API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
-2. **Select the app** that you want to create an API token for.
+2. **Select the app** that you want to revoke an API token for.
 3. On the left side, choose **Settings**.
 4. In the middle panel, select **App API Tokens** from the menu.
 5. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right hand corner.
