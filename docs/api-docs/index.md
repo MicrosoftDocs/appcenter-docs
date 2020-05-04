@@ -17,13 +17,13 @@ ms.custom: api
 
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 
-On that page, you can authenticate using your API token and interactively call App Center to learn about the API and see what data it returns.
+The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
 
 ## <a name="section02" />Types of tokens: user tokens and app tokens
 
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
 
-User API tokens have the same rights that you do as a user of App Center, across all organizations and apps that you're associated with.
+User API tokens have the same rights that you do as a user of App Center. User API tokens work across all organizations and apps that you're associated with.
 
 App API tokens have either Manager or Viewer rights, but within only one app.
 
@@ -37,11 +37,11 @@ Each App Center account may create up to 5000 API tokens.
 
 ## <a name="section03"/>Creating an App Center App API token
 
-1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login using your account credentials.
+1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. **Select the app** that you want to create an API token for.
 3. On the left side, choose **Settings**.
 4. In the middle panel, select **App API Tokens** from the menu list.
-5. On the top right corner, click **New API token**.
+5. On the top-right corner, click **New API token**.
 6. In the text field, enter a descriptive name for your token.
 7. Select the type of access for your App API token:
 
@@ -50,29 +50,25 @@ Each App Center account may create up to 5000 API tokens.
    **Read Only:** A read only App API token has the equivalent of Viewer access permissions for that app. Managers and Developers can create read only App API tokens.
 
 8. At the bottom of the panel, click **Add new API token**.
-9. This will generate a pop up with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
+9. A pop-up will open with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you won't be able to see or generate the same token again after you click the **Close** button.
 10. Click the **Close** button.
-
-Store the token somewhere secure, as you'll need it when working with the App Center OpenAPI Specification, and when sending API requests from an application to App Center.
 
 ## <a name="section04"/>Creating an App Center User API token
 
-1. Navigate to [https://appcenter.ms](https://appcenter.ms) and login using your account credentials.
-2. On the top right corner of the App Center portal, click your account avatar, then select **Account Settings**.
+1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
+2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
 3. In the middle panel, select **User API Tokens** from the menu list.
-4. On the top right corner, click **New API token**.
+4. On the top-right corner, click **New API token**.
 5. In the text field, enter a descriptive name for your token.
 6. Select the type of access for your User API token:
 
-   **Full Access:** A full access user token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions), even though you're using a full access user token.
+   **Full Access:** A full access User API token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions), even though you're using a full access User API token.
 
-   **Read Only:** A read only user token has Viewer access permission for the current account / organization. For example, with a read only user token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read only user tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
+   **Read Only:** A read only User API token has Viewer access permission for the current account / organization. For example, with a read only User API token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read only User API tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
 
 7. At the bottom of the panel, click **Add new API token**.
-8. This will generate a pop up with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
+8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
 9. Click the **Close** button.
-
-Store the token somewhere secure, as you'll need it when working with the App Center OpenAPI Specification, and when sending API requests from an application to App Center.
 
 ## <a name="section05" />Using an API Token in an API request
 
@@ -82,7 +78,7 @@ Pass the API token in the request's `X-API-Token` header property.
 
 ## Find your App Center app name and owner name
 
-Some of App Center's API functions and CLI requests require an app name and/or owner name as parameters.
+Some of App Center's API functions and CLI requests require an app name or owner name as parameters.
 
 For instance, the API call to remove the user from the app requires both: [`DELETE /v0.1/apps/{owner_name}/{app_name}/users/{user_email}`](https://openapi.appcenter.ms/#/account/apps_removeUser).
 
@@ -118,7 +114,7 @@ Refer to the [App Center CLI documentation](https://github.com/Microsoft/appcent
 
 ## <a name="section06" />Using an API Token with the App Center OpenAPI Specification
 
-The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (i.e. Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center API's with your API token:
+The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center APIs with your API token:
 
 1. Navigate to App Center's [OpenAPI specification](https://openapi.appcenter.ms) to explore our APIs.
 2. On the upper right corner, click on the **Authorize** button.
@@ -126,7 +122,7 @@ The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (i.e. Swag
 
     ![Setting API token to authorize App Center usage](~/api-docs/images/authorization_withtoken.PNG)
 
-4. If it shows "Authorized" and a Logout button, authorization was successful. On the top right corner of the pop up, click the "X" to exit the pop up.
+4. If it shows "Authorized" and a Logout button, authorization was successful. On the top-right corner of the pop-up, click the "X" to exit the pop-up.
 
 ## <a name="section07" />Making your first API call using OpenAPI (Swagger)
 
@@ -146,9 +142,9 @@ In the event that an API token is leaked, you should revoke it immediately to pr
 ### Revoking a User API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
-2. On the top right corner of the App Center portal, click your account avatar, then select **Account Settings**.
+2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
 3. In the middle panel, select **User API Tokens** from the menu.
-4. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right hand corner.
+4. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right-hand corner.
 
 ### Revoking an App API token
 
@@ -156,4 +152,4 @@ In the event that an API token is leaked, you should revoke it immediately to pr
 2. **Select the app** that you want to revoke an API token for.
 3. On the left side, choose **Settings**.
 4. In the middle panel, select **App API Tokens** from the menu.
-5. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right hand corner.
+5. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right-hand corner.
