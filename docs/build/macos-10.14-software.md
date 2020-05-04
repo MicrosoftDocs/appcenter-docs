@@ -75,7 +75,7 @@ ms.custom: build
 - psql (PostgreSQL) 12.2
 - PostgreSQL 12.2
 - aria2 1.35.0
-- azcopy 
+- azcopy 10.4.1
 - zstd 1.4.4
 - bazel 3.1.0
 - bazelisk v1.4.0
