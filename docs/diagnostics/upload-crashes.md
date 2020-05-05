@@ -628,7 +628,7 @@ curl -X POST \
       "timestamp": "2019-10-01T02:22:23.516Z",
       "data": "aGVsbG8=",
       "errorId": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
-      ""id": "7caaea8e-dab1-4588-993c-95de2d9a4fd1",
+      "id": "7caaea8e-dab1-4588-993c-95de2d9a4fd1",
       "device": {
         "appVersion": "13.0",
         "appBuild": "1",
