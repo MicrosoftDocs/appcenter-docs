@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnie
 ms.author: yuli1
 ms.reviewer: kegr
-ms.date: 02/06/2020
+ms.date: 05/04/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -628,7 +628,7 @@ curl -X POST \
       "timestamp": "2019-10-01T02:22:23.516Z",
       "data": "aGVsbG8=",
       "errorId": "bca65f46-46ee-451b-83bb-2e358c3f45bf",
-	  "id": "7caaea8e-dab1-4588-993c-95de2d9a4fd1"
+      ""id": "7caaea8e-dab1-4588-993c-95de2d9a4fd1",
       "device": {
         "appVersion": "13.0",
         "appBuild": "1",
