@@ -342,7 +342,7 @@
 ## [Push](migration/push/index.md)
 
 # Reference
-## [API docs](api-docs/index.md)
+## [App Center API tokens and documentation](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
 # [Resources](general/resources.md)
