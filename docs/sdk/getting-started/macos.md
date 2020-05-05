@@ -123,6 +123,8 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
+[!INCLUDE [xcframework distribute support](includes/xcframeworks-distribute.md)]
+
 > [!NOTE]
 > The SDK binary is not packaged following the macOS framework convention. The reason is that the App Center SDK for Mac is not a conventional framework but a static one. You have to link it as a static framework: make sure that you are not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 

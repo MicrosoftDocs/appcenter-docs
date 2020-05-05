@@ -124,6 +124,8 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
+[!INCLUDE [xcframework distribute support](includes/xcframeworks-distribute.md)]
+
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
