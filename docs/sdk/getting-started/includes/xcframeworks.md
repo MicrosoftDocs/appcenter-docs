@@ -14,4 +14,4 @@ dev_langs:
 ---
 
 > [!NOTE]
-> App Center SDK supports the use of `xcframework`. If you want to integrate xcframeworks into your project, download the **AppCenter-SDK-Apple-XCFramework.zip** and unzip it. This folder does not contain different platforms' subfolders, instead it contains xcframeworks for each module. They can be integrated the same way as usual frameworks.
+> App Center SDK supports the use of `xcframework`. If you want to integrate xcframeworks into your project, download the **AppCenter-SDK-Apple-XCFramework.zip** from the [releases page](https://github.com/microsoft/appcenter-sdk-apple/releases) and unzip it. This folder does not contain different platforms' subfolders, instead it contains xcframeworks for each module. They can be integrated the same way as usual frameworks, as described below.
