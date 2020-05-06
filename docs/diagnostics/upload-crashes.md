@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnie
 ms.author: yuli1
 ms.reviewer: kegr
-ms.date: 05/04/2020
+ms.date: 05/06/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -196,7 +196,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:":
+  "logs":
   [
     {
         "type": "appleError",
@@ -438,7 +438,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:":
+  "logs":
   [
     {
       "type": "managedError",
@@ -526,7 +526,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:":
+  "logs":
   [
     {
       "type": "handledError",
@@ -597,7 +597,7 @@ curl -X POST \
   -H 'app-secret: 8e14e67c-7c91-40ac-8517-c62ece8424a6' \
   -H 'install-id: 00000000-0000-0000-0000-000000000001' \
   -d '{
-  "logs:": [
+  "logs": [
     {
       "type": "managedError",
       "timestamp": "2019-10-01T02:22:23.516Z",
