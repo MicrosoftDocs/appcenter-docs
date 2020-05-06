@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# OS X info
+# macOS info
 - System Version: macOS 10.15.4 (19E287)
 - Kernel Version: Darwin 19.4.0
 - System Integrity Protection: Enabled
