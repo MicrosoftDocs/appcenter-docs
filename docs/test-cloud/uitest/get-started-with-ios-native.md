@@ -18,9 +18,9 @@ To follow the guide, you must have access to the app source code.
 
 Part of the Xamarin.UITest toolchain is the backend that runs alongside the app. The Xamarin.UITest test script communicates with the backend, which executes the commands on the simulator or device.
 
-Because Xamarin.UITest shares backend with Calabash, first step is to [link the calabash.framework by using one of the three recommended method in the docs start](https://github.com/calabash/calabash-ios#step-1-link-calabashframework).
+Because Xamarin.UITest shares backend with Calabash, first step is to [link the calabash.framework, using one of the three methods from the Calabash doc](https://github.com/calabash/calabash-ios#step-1-link-calabashframework).
 
-After following the Calabash guide, you should see that a server is running in the Xcode output area, when running the app through Xcode.
+You should see that the server is running in Xcode, after following the Calabash guide.
 
 You build the `.app` file from the terminal like this: `xcrun xcodebuild build-for-testing -project ProjectFile.xcodeproj -configuration ConfiguratonWithCalabashLinked -sdk iphonesimulator13.4 -scheme SchemeWithCalabashLinked -derivedDataPath DerivedData`
 
@@ -37,4 +37,4 @@ The `.AppBundle()` and `.DeviceIdentifier()` must be configured. You can find th
 
 ## Run a test
 
-The test will be started from Visual Studio for Mac by selecting Unit Tests in the right side.
+Start your tests from Visual Studio for Mac by selecting Unit Tests in the right side.
