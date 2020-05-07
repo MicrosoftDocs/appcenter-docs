@@ -4,7 +4,7 @@ description: Shared docs for Apple Swift Package Manager
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 04/23/2020
+ms.date: 05/07/2020
 ms.topic: include
 ms.assetid: 12b31177-2d25-4fda-a193-136e84049f90
 ms.tgt_pltfrm: apple
@@ -24,3 +24,6 @@ dev_langs:
 1. Choose **AppCenter** and **AppCenterAnalytics** in the **Package Product** column.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
+
+> [!NOTE]
+> If you're integrating App Center via SPM and want to use it in your app's extension target as well, make sure that you provide `DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES` in your configuration. This is necessary to avoid SPM limitations in linking a module to multiple targets.
