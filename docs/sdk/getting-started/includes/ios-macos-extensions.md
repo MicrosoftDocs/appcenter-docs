@@ -61,7 +61,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 ### 3.3 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Crashes for your app extension.
 
-[!INCLUDE [xcframework support](includes/xcframeworks.md)]
+[!INCLUDE [xcframework support](xcframeworks.md)]
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
@@ -78,7 +78,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * Now drag and drop **AppCenter.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app extension won't compile.
    * A dialog will appear, make sure your app extension target is checked. Then click **Finish**.
 
-[!INCLUDE [xcframework distribute support](includes/xcframeworks-distribute.md)]
+[!INCLUDE [xcframework distribute support](xcframeworks-distribute.md)]
 
 Now that you've integrated the frameworks in your app extension, it's time to start the SDK and make use of the App Center services.
 
