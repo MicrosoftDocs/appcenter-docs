@@ -19,11 +19,11 @@ Each build runs on a separate, clean virtual machine (VM) no one else has access
 ## Operating System
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration. (If the specification maps to both VMs, then the newer one is used):
-- [macOS 10.14.6 (18G4032) **Mojave**](~/build/macos-10.14-software.md)
+- [macOS 10.14 **Mojave**](~/build/macos-10.14-software.md)
    - **iOS** (Xcode < 11.0)
    - **Xamarin** (Mono < 6.4) 
    - **Android Native**
-- [macOS 10.15.4 (19E287) **Catalina**](~/build/macos-10.15-software.md)
+- [macOS 10.15 **Catalina**](~/build/macos-10.15-software.md)
    - **iOS** (Xcode >= 11.0)
    - **Xamarin** (Mono >= 6.4)
    - **React Native Android**
