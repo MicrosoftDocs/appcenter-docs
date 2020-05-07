@@ -16,7 +16,7 @@ Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-cent
 + We're committed to continuing the developer experience that made App Center Push a compelling offering. 
 + We want to make the migration process from App Center Push to Azure Notification Hubs as seamless as possible.
 
-To help with these goals, we [announced](https://go.microsoft.com/fwlink/?linkid=2128265) a new [preview release of the Notification Hubs Android SDK](https://go.microsoft.com/fwlink/?linkid=2128633) and created this migration guide to help you get started with the transition.
+To help with these goals, we've released a new [preview release of the Notification Hubs Android SDK](https://go.microsoft.com/fwlink/?linkid=2128633) and created this migration guide to help you get started with the transition.
 
 ## Benefits of Azure Notification Hubs
 Azure Notification Hubs offers many benefits to mobile app developers:
@@ -68,9 +68,6 @@ First, you'll need to add the Notification Hubs SDK to your app.
 dependencies {
     // Other dependencies here
     implementation 'com.microsoft.azure:notification-hubs-android-sdk: 1.0.0-preview1@aar'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.firebase:firebase-messaging:20.1.5'
-    implementation 'com.android.volley:volley:1.1.1'
 }
 
 repositories {
@@ -170,3 +167,6 @@ Check out our [tutorials](https://go.microsoft.com/fwlink/?linkid=2128396) to le
 
 ### Publish your app
 Now that you've updated your app to use the new Notification Hubs SDK, and your back-end to push to Notification Hubs, you're all set to publish your new app.
+
+## Support
+If you encounter issues with migrating your application to Azure Notification Hubs, please submit your feedback request in the [ANH GitHub repository](https://github.com/Azure/AzureNotificationHubs/issues).  
