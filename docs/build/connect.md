@@ -4,7 +4,7 @@ description: How to connect/reconnect to a repository to start building your app
 keywords: android
 author: nilofer
 ms.author: nirajpur
-ms.date: 09/20/2019
+ms.date: 05/07/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
