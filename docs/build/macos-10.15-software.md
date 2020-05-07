@@ -10,14 +10,14 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# OS X info
+# macOS info
 - System Version: macOS 10.15.4 (19E287)
 - Kernel Version: Darwin 19.4.0
 - System Integrity Protection: Enabled
 - Image Version: 20200430.1
 
-# Installed Software
-## Language and Runtime
+## Installed Software
+### Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
 - Java 1.8: (Zulu 8.46.0.19-CA-macosx) (build 1.8.0_252-b14) (default)
 - Java 11: Zulu11.39+15-CA (build 11.0.7+10-LTS)
@@ -42,7 +42,7 @@ ms.custom: build
 - PHP 7.4.5
 - julia 1.4.1
 
-## Package Management
+### Package Management
 - Rustup 1.21.1
 - Vcpkg 2020.02.04
 - Bundler version 2.1.4
@@ -57,11 +57,11 @@ ms.custom: build
 - Miniconda 4.8.2
 - RubyGems 3.1.2
 
-## Project Management
+### Project Management
 - Apache Maven 3.6.3
 - Gradle 6.3
 
-## Utilities
+### Utilities
 - Curl 7.70.0
 - Git: 2.26.2
 - Git LFS: 2.10.0
@@ -84,7 +84,7 @@ ms.custom: build
 - virtualbox 6.1.6r137129
 - Vagrant 2.2.7
 
-## Tools
+### Tools
 - Fastlane 2.146.1
 - Cmake 3.17.2
 - App Center CLI 2.5.0
@@ -93,7 +93,7 @@ ms.custom: build
 - AWS SAM CLI 0.48.0
 - Aliyun CLI 3.0.39
 
-## Browsers
+### Browsers
 - Safari 13.1 (15609.1.20.111.8)
 - SafariDriver 13.1 (15609.1.20.111.8)
 - Google Chrome 81.0.4044.129 
@@ -103,34 +103,34 @@ ms.custom: build
 - Mozilla Firefox 75.0
 - geckodriver 0.26.0
 
-## Toolcache
-### Ruby
+### Toolcache
+#### Ruby
 - 2.4.10
 - 2.5.8
 - 2.6.6
 - 2.7.1
 
-### Python
+#### Python
 - 2.7.18
 - 3.5.9
 - 3.6.10
 - 3.7.7
 - 3.8.2
 
-### PyPy
+#### PyPy
 - 2.7.17
 - 3.6.9
 
-## Xamarin
-### Visual Studio for Mac
+### Xamarin
+#### Visual Studio for Mac
 - 8.5.4.12
 
-### Mono
+#### Mono
 - 6.8.0.123
 - 6.6.0.166
 - 6.4.0.208
 
-### Xamarin.iOS
+#### Xamarin.iOS
 - 13.16.0.13
 - 13.14.1.39
 - 13.10.0.21
@@ -139,7 +139,7 @@ ms.custom: build
 - 13.4.0.2
 - 13.2.0.47
 
-### Xamarin.Mac
+#### Xamarin.Mac
 - 6.16.0.13
 - 6.14.1.39
 - 6.10.0.21
@@ -148,15 +148,15 @@ ms.custom: build
 - 6.4.0.2
 - 6.2.0.47
 
-### Xamarin.Android
+#### Xamarin.Android
 - 10.2.0
 - 10.1.3
 - 10.0.6
 
-### Unit Test Framework
+#### Unit Test Framework
 - NUnit 3.6.1
 
-## Xcode
+### Xcode
 | Version          | Build   | Path                              |
 | ---------------- | ------- | --------------------------------- |
 | 11.5 (beta)      | 11N605c | /Applications/Xcode_11.5_beta.app |
@@ -170,14 +170,14 @@ ms.custom: build
 | 11.0             | 11A420a | /Applications/Xcode_11.app        |
 | 10.3             | 10G8    | /Applications/Xcode_10.3.app      |
 
-### Xcode Support Tools
+#### Xcode Support Tools
 - Nomad CLI 3.1.2
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
 - xcversion 2.6.4
 
-### Installed SDKs
+#### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                                              |
 | ----------------------- | -------------------- | ---------------------------------------------------------- |
 | macOS 10.14             | macosx10.14          | 10.3                                                       |
@@ -212,7 +212,7 @@ ms.custom: build
 | Simulator - watchOS 6.2 | watchsimulator6.2    | 11.4, 11.4.1, 11.5                                         |
 | DriverKit 19.0          | driverkit.macosx19.0 | 11.0, 11.1, 11.2, 11.2.1, 11.3, 11.3.1, 11.4, 11.4.1, 11.5 |
 
-### Installed Simulators
+#### Installed Simulators
 | OS          | Xcode Version                    | Simulators                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS 12.4    | 10.3                             | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone Xs<br>iPhone Xs Max<br>iPhone Xʀ<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)<br>iPad Air (3rd generation) |
@@ -232,18 +232,18 @@ ms.custom: build
 | watchOS 6.1 | 11.2<br>11.2.1<br>11.3<br>11.3.1 | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 | watchOS 6.2 | 11.4<br>11.4.1<br>11.5           | Apple Watch Series 4 - 40mm<br>Apple Watch Series 4 - 44mm<br>Apple Watch Series 5 - 40mm<br>Apple Watch Series 5 - 44mm                                                                                                                                                                                                                                                                                                                                                                    |
 
-## Android
-### Android SDK Tools
+### Android
+#### Android SDK Tools
 | Package Name | Description                        |
 | ------------ | ---------------------------------- |
 | tools        | Android SDK Tools, Revision 26.1.1 |
 
-### Android SDK Platform-Tools
+#### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
 | platform-tools | Android SDK Platform-Tools, Revision 30.0.0 |
 
-### Android SDK Platforms
+#### Android SDK Platforms
 | Package Name | Description                         |
 | ------------ | ----------------------------------- |
 | android-24   | Android SDK Platform 24, Revision 2 |
@@ -253,7 +253,7 @@ ms.custom: build
 | android-28   | Android SDK Platform 28, Revision 6 |
 | android-29   | Android SDK Platform 29, Revision 4 |
 
-### Android SDK Build-Tools
+#### Android SDK Build-Tools
 | Package Name           | Description                                  |
 | ---------------------- | -------------------------------------------- |
 | build-tools-24.0.0     | Android SDK Build-Tools, Revision 24.0.0     |
@@ -282,7 +282,7 @@ ms.custom: build
 | build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
 | build-tools-30.0.0-rc1 | Android SDK Build-Tools, Revision 30.0.0 rc1 |
 
-### Android Utils
+#### Android Utils
 | Package Name     | Version      |
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
@@ -290,7 +290,7 @@ ms.custom: build
 | ndk-bundle       | 21.1.6352462 |
 | Android Emulator | 30.0.5       |
 
-### Android Google APIs
+#### Android Google APIs
 | Package Name                | Description             |
 | --------------------------- | ----------------------- |
 | addon-google_apis-google-21 | Google APIs, Revision 1 |
@@ -298,7 +298,7 @@ ms.custom: build
 | addon-google_apis-google-23 | Google APIs, Revision 1 |
 | addon-google_apis-google-24 | Google APIs, Revision 1 |
 
-### Extra Packages
+#### Extra Packages
 | Package Name                                    | Version |
 | ----------------------------------------------- | ------- |
 | Android Support Repository                      | 47.0.0  |
