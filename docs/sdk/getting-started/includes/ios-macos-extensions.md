@@ -58,7 +58,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-[!INCLUDE [swift package manager](includes/swift-package-manager.md)]
+[!INCLUDE [swift package manager](swift-package-manager.md)]
 
 ### 3.4 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Crashes for your app extension.
