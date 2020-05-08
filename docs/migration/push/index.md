@@ -84,8 +84,8 @@ Azure Notification Hubs SDK will be initialized with the application, default Li
 ```
 NotificationHub.initialize(
     this.getApplication()
-    "{Connection String}", 
-    "{Hub Name}"
+    "{Hub Name}",
+    "{Connection String}"
 );
 ```
 
