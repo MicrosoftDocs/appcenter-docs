@@ -96,9 +96,8 @@ Close the window and the new service account shows on the original page. Click t
 ## Set up app signing by Google
 
 1. Select your app in the [Google Play Developer Console](https://play.google.com/apps/publish/)
-2. Expand **Release management** in the left-hand menu
-3. Select **App signing**
-4. You can choose between three options:
+2. Select **App signing** in the left-hand menu
+3. You can choose between three options:
 	1. Upload a key exported from Android Studio
 	2. Export and upload a key from a Java keystore
 	3. Export and upload a key (not using a Java keystore)
