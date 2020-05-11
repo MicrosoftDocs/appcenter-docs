@@ -4,7 +4,7 @@ description: Software used on macOS 10.15 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 04/29/2020
+ms.date: 05/11/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -14,7 +14,7 @@ ms.custom: build
 - System Version: macOS 10.15.4 (19E287)
 - Kernel Version: Darwin 19.4.0
 - System Integrity Protection: Enabled
-- Image Version: 20200430.1
+- Image Version: 20200507.1
 
 ## Installed Software
 ### Language and Runtime
@@ -24,15 +24,15 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.43.0
+- Rust 1.43.1
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v12.16.3
-- NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0
+- NVM 0.35.3
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.2.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
@@ -48,18 +48,18 @@ ms.custom: build
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.14
+- Homebrew 2.2.15
 - NPM 6.14.4
 - Yarn 1.22.4
 - NuGet 5.5.0.6382
 - Pip 19.3.1 (python 2.7)
 - Pip 20.0.2 (python 3.7)
 - Miniconda 4.8.2
-- RubyGems 3.1.2
+- RubyGems 3.1.3
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.3
+- Gradle 6.4
 
 ### Utilities
 - Curl 7.70.0
@@ -68,7 +68,7 @@ ms.custom: build
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- Packer 1.5.5
+- Packer 1.5.6
 - GNU parallel 20200422
 - OpenSSL 1.0.2t  10 Sep 2019
 - jq 1.6
@@ -76,18 +76,18 @@ ms.custom: build
 - psql (PostgreSQL) 12.2
 - PostgreSQL 12.2
 - aria2 1.35.0
-- azcopy 10.4.1
+- azcopy 10.4.3
 - zstd 1.4.4
 - bazel 3.1.0
 - bazelisk v1.4.0
 - helm v3.2.0+ge11b7ce
 - virtualbox 6.1.6r137129
-- Vagrant 2.2.7
+- Vagrant 2.2.8
 
 ### Tools
 - Fastlane 2.146.1
 - Cmake 3.17.2
-- App Center CLI 2.5.0
+- App Center CLI 2.5.1
 - Azure CLI 2.5.1
 - AWS CLI 2.0.10
 - AWS SAM CLI 0.48.0
@@ -96,11 +96,11 @@ ms.custom: build
 ### Browsers
 - Safari 13.1 (15609.1.20.111.8)
 - SafariDriver 13.1 (15609.1.20.111.8)
-- Google Chrome 81.0.4044.129 
-- ChromeDriver 81.0.4044.69
+- Google Chrome 81.0.4044.138 
+- ChromeDriver 81.0.4044.138
 - Microsoft Edge 81.0.416.68 
 - MSEdgeDriver 81.0.416.68
-- Mozilla Firefox 75.0
+- Mozilla Firefox 76.0
 - geckodriver 0.26.0
 
 ### Toolcache
@@ -123,7 +123,7 @@ ms.custom: build
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.5.4.12
+- 8.5.5.7
 
 #### Mono
 - 6.8.0.123
@@ -159,7 +159,7 @@ ms.custom: build
 ### Xcode
 | Version          | Build   | Path                              |
 | ---------------- | ------- | --------------------------------- |
-| 11.5 (beta)      | 11N605c | /Applications/Xcode_11.5_beta.app |
+| 11.5 (beta)      | 11N605f | /Applications/Xcode_11.5_beta.app |
 | 11.4.1 (default) | 11E503a | /Applications/Xcode_11.4.1.app    |
 | 11.4             | 11E146  | /Applications/Xcode_11.4.app      |
 | 11.3.1           | 11C505  | /Applications/Xcode_11.3.1.app    |
@@ -171,7 +171,7 @@ ms.custom: build
 | 10.3             | 10G8    | /Applications/Xcode_10.3.app      |
 
 #### Xcode Support Tools
-- Nomad CLI 3.1.2
+- Nomad CLI 3.1.3
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
@@ -241,7 +241,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.0 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.1 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
@@ -280,13 +280,12 @@ ms.custom: build
 | build-tools-29.0.1     | Android SDK Build-Tools, Revision 29.0.1     |
 | build-tools-29.0.2     | Android SDK Build-Tools, Revision 29.0.2     |
 | build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
-| build-tools-30.0.0-rc1 | Android SDK Build-Tools, Revision 30.0.0 rc1 |
+| build-tools-30.0.0-rc4 | Android SDK Build-Tools, Revision 30.0.0 rc4 |
 
 #### Android Utils
 | Package Name     | Version      |
 | ---------------- | ------------ |
 | cmake            | 3.6.4111459  |
-| lldb             | 3.1.4508709  |
 | ndk-bundle       | 21.1.6352462 |
 | Android Emulator | 30.0.5       |
 
