@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 11/29/2017
+ms.date: 04/16/2020
 ms.topic: troubleshooting-article
 ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
 ms.tgt_pltfrm: uwp
@@ -15,12 +15,13 @@ ms.tgt_pltfrm: uwp
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## Analytics data doesn't show up in the portal
 

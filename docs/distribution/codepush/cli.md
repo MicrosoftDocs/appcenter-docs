@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: Zakeelm
 ms.author: zakeelm
-ms.date: 12/12/2019
+ms.date: 04/22/2020
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -22,7 +22,7 @@ ms.custom: distribute
 
 1. Create an [App Center account](https://appcenter.ms) or sign-in through the CLI using the `appcenter login` command.
 2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
-3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/react-native.md)).
+3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/rn-overview.md)).
 4. [Release and update for your app](#releasing-app-updates).
 
 ## <a name="account-creation"/>Account Management
@@ -111,7 +111,7 @@ appcenter codepush deployment add -a <ownerName>/<appName> Staging
 appcenter codepush deployment add -a <ownerName>/<appName> Production
 ```
 
-After you create the deployments, you can access the deployment keys for both deployments using `appcenter codepush deployment list --displayKeys`, which you can begin using to configure your mobile clients via their respective SDKs (details for [Cordova](./cordova.md) and [React Native](./react-native.md)).
+After you create the deployments, you can access the deployment keys for both deployments using `appcenter codepush deployment list --displayKeys`, which you can begin using to configure your mobile clients via their respective SDKs (details for [Cordova](./cordova.md) and [React Native](./rn-overview.md)).
 
 If you decide that you don't like the name you gave to an app, you can rename it at any time using the following command:
 
@@ -377,6 +377,7 @@ appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t
 [-t|--target-binary-version <targetBinaryVersion>]
 [-o|--output-dir]
 [-s|--sourcemap-output]
+[-c|--build-configuration-name <arg>]
 [--plist-file-prefix]
 [-p|--plist-file]
 [-g|--gradle-file]
@@ -524,6 +525,13 @@ This parameter specifies the relative path to where the generated JS bundle's so
 
 > [!TIP]
 > This parameter can be set using either `--sourcemap-output`  or `-s`*
+
+#### Build configuration name
+
+Name of the build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
+
+> [!NOTE]
+> This parameter should be used when building with Xcode 11 and later to override the default configuration used by Xcode.
 
 ### Releasing Updates (Cordova)
 
@@ -809,7 +817,7 @@ If you are planning to use this feature you need to do the following:
 
 1. Produce new binary update including 
    * updated CodePush plugin supporting Code Signing
-   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](react-native.md#code-signing-setup-ios),  [Android](react-native.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
+   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](rn-get-started.md#code-signing-setup-ios),  [Android](rn-get-started.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
 
 2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or simply `-k`) parameter value
 
@@ -817,7 +825,7 @@ Please refer to our compatibility tables to identify if code-signing feature is 
 
 |CodePush SDK|Version from which Code Signing is supporting|Supported Platforms|Minimal CodePush CLI version required|
 |----|----|----|----|
-|[`react-native-code-push`](react-native.md)|5.1.0|Android, iOS|2.1.0|
+|[`react-native-code-push`](rn-overview.md)|5.1.0|Android, iOS|2.1.0|
 |[`cordova-plugin-code-push`](cordova.md)|1.10.0|Android, iOS|2.1.2|
 
 ### Key generation

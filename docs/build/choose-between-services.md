@@ -4,6 +4,7 @@ description: Helps user choose between Visual Studio AppCenter and Azure Pipelin
 keywords: build
 author: manb-msft
 ms.author: manb
+ms.reviewer: kegr
 ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: c7d77240-3a2c-4e0f-9724-20f67dbba6c6

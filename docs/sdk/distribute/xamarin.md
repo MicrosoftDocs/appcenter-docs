@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 02/22/2020
+ms.date: 04/20/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -134,6 +134,12 @@ Distribute.SetEnabledForDebuggableBuild(true);
 
 #### 2.3 [For iOS only] Modify the project's **Info.plist**
 
+App Center SDK checks urls redirecting to the application to avoid sideloading, so in order for updates distributed through the portal to be handled correctly, you would need to specify `CFBundleURLSchemes` in `CFBundleURLTypes` section of `Info.plist` file:
+
+> [!NOTE]
+> `Info.plist`, or an information property list file is a structured text file that contains essential configuration information for a bundled executable.
+> You can find more information about it in [Apple developer documentation](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html).
+
 1. Add a new key for `URL types` or `CFBundleURLTypes` in your Info.plist file (in case Xcode displays your Info.plist as source code).
 2. Change the key of the first child item to `URL Schemes` or `CFBundleURLSchemes`.
 3. Enter `appcenter-${APP_SECRET}` as the URL scheme and replace `${APP_SECRET}` with the App Secret of your app.
@@ -172,7 +178,7 @@ If a user is on the **public track**, it means that they will get the latest rel
 
 By default, the SDK automatically checks for new releases:
  * When the application starts.
- * When the application goes into background then in foreground again (iOS only).
+ * When the application goes into background then in foreground again.
  * When enabling the Distribute module if previously disabled.
 
 If you want to check for new releases manually, you can disable automatic check for update.

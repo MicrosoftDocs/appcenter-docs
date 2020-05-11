@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/14/2020
+ms.date: 04/27/2020
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -58,7 +58,7 @@ Once you have created an app, you can obtain its App Secret on the **Getting Sta
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '3.2.0'
+      def appCenterSdkVersion = '3.2.1'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }
@@ -111,6 +111,19 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 ```
 ```kotlin
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
+
+If you have more than one entry point to your application (for example, a deep link activity, a service or a broadcast receiver), call `start` in the application custom class or in each entry point. In the latter case, check if App Center is already configured before the `start` call:
+
+```java
+if (!AppCenter.isConfigured())) {
+  AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
+}
+```
+```kotlin
+if (!AppCenter.isConfigured()) {
+  AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+}
 ```
 
 ### 4.2 Replace the placeholder with your App Secret

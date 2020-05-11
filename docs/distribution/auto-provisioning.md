@@ -38,7 +38,7 @@ App Center helps you with this process and can also automate it. These are the m
 
 To manually add devices to an existing release, you can use **Register devices** on the page for a distribution group. See [Device registration](#device-registration).
 
-To automatically add devices, turn on [**Automatically manage devices**](groups.md#automatically-manage-devices) under the distribution group settings. You can also opt in to doing it when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
+To automatically add devices, turn on [**Automatically manage devices**](groups.md#automatically-manage-devices) under the distribution group settings. This option can only be accessed through an app-level distribution group and is not available through a global group. You can access an app-level distribution group by selecting the app in App Center, then clicking on **Distribute**. Under Distribute, click on **Groups** and then click the specific group that you want to manage. You can also opt in to automaticaly adding devices when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
 
 App Center adds the new device to the list in the provisioning profile and re-signs your app with this provisioning profile. Now the new device can also install the app. These are the bottom steps in the diagram.
 
