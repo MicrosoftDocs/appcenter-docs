@@ -15,7 +15,7 @@ ms.service: vs-appcenter
 ## Overview
 The goal of this guide is to help you determine whether and where you may have collected personal information about your end users using App Center. The document is divided by App Center service, mapped to scenarios.
 
-If one of these scenarios applies, and one of your users requests to exercise a Data Subject Right, then you can look at the corresponding section to export or delete your end user data.
+If one of these scenarios applies, and one of your users requests to exercise a Data Subject Right, then you can look at the corresponding section to export or delete your end-user data.
 
 ### Scenario 1: I'm mapping the install IDs to user IDs
 Install IDs aren't personal information on their own. However they can be when mapped to personal info, which can be used to identify an end user.
@@ -116,7 +116,7 @@ catch (Exception exception)
 If you're using Custom Properties in App Center Analytics, every device registered for push notifications is associated to a number of custom properties. Other device-related information is associated as well like language, country, and so on. More about custom properties and how to use it in Push can be found here.
 
 #### Audience definition and description
-This is only used if you're using an audience to send push notifications. If you're pushing directly to Install IDs, you don’t have to worry about this.
+This is only used if you're using an audience to send push notifications. If you're pushing directly to Install IDs, you don’t have to worry about this issue.
 
 This scenario is the rare case where you may have personal information in an audience name, or description in the portal, or via API.
 
