@@ -16,12 +16,6 @@ ms.custom: build
 - System Integrity Protection: Enabled
 - Image Version: 20200430.1
 
-# macOS info
-- System Version: macOS 10.14.6 (18G4032)
-- Kernel Version: Darwin 18.7.0
-- System Integrity Protection: Enabled
-- Image Version: 20200510.1
-
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
