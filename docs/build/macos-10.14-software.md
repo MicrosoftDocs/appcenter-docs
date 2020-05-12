@@ -14,7 +14,7 @@ ms.custom: build
 - System Version: macOS 10.14.6 (18G4032)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200430.1
+- Image Version: 20200510.1
 
 ## Installed Software
 ### Language and Runtime
