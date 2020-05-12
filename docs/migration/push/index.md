@@ -84,8 +84,8 @@ Azure Notification Hubs SDK will be initialized with the application, default Li
 ```
 NotificationHub.initialize(
     this.getApplication()
-    "{Connection String}", 
-    "{Hub Name}"
+    "{Hub Name}",
+    "{Connection String}"
 );
 ```
 
@@ -98,7 +98,7 @@ NotificationHub.setListener(new NotificationListener() {
     }
 });
 
-NotificationHub.initialize(this.getApplication(), "{Connection String}", "{Hub Name}"));
+NotificationHub.initialize(this.getApplication(), "{Hub Name}", "{Connection String}"));
 ```
 This interface has a single method, which allows you to process the incoming custom NotificationMessage instance via the onNotificationReceived method. 
 ```
