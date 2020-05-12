@@ -22,8 +22,23 @@ Because Xamarin.UITest shares backend with Calabash, first step is to [link the 
 
 You should see that the server is running in Xcode, after following the Calabash guide.
 
-You build the `.app` file from the terminal like this: `xcrun xcodebuild build-for-testing -project ProjectFile.xcodeproj -configuration ConfiguratonWithCalabashLinked -sdk iphonesimulator13.4 -scheme SchemeWithCalabashLinked -derivedDataPath DerivedData`
+You build the `.app` file from the terminal like below:
 
+> [!NOTE]
+> .app files only work simulators
+
+```
+ xcrun xcodebuild \
+  -project ProjectFile.xcodeproj \
+  -configuration ConfiguratonWithCalabashLinked \
+  -sdk iphonesimulator \
+  ARCHS="i386 x86_64" \
+  VALID_ARCHS="i386 x86_64" \
+  ONLY_ACTIVE_ARCH=NO \
+  -scheme SchemeWithCalabashLinked \
+  -derivedDataPath DerivedData \
+  build
+```
 The following switches must match your project:
 - `-project`
 - `-configuration`
