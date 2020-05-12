@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 05/04/2020
+ms.date: 05/12/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -16,6 +16,12 @@ ms.custom: build
 - System Integrity Protection: Enabled
 - Image Version: 20200430.1
 
+# macOS info
+- System Version: macOS 10.14.6 (18G4032)
+- Kernel Version: Darwin 18.7.0
+- System Integrity Protection: Enabled
+- Image Version: 20200510.1
+
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
@@ -24,15 +30,15 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.43.0
+- Rust 1.43.1
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
-- NVM 0.33.11
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0
+- NVM 0.35.3
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.2.0
 - PowerShell 7.0.0
 - Python 2.7.17
 - Python 3.7.7
@@ -47,41 +53,41 @@ ms.custom: build
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.14
+- Homebrew 2.2.15
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 2.7)
 - Pip 20.0.2 (python 3.7)
 - Miniconda 4.8.2
-- RubyGems 3.1.2
+- RubyGems 3.1.3
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.3
+- Gradle 6.4
 
 ### Utilities
 - Curl 7.70.0
 - Git: 2.26.2
-- Git LFS: 2.10.0
+- Git LFS: 2.11.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.13.0
-- Packer 1.5.5
+- Packer 1.5.6
 - GNU parallel 20200422
-- OpenSSL 1.0.2t  10 Sep 2019
+- OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
 - psql (PostgreSQL) 12.2
 - PostgreSQL 12.2
 - aria2 1.35.0
-- azcopy 10.4.1
+- azcopy 10.4.3
 - zstd 1.4.4
 - bazel 3.1.0
 - bazelisk v1.4.0
-- helm v3.2.0+ge11b7ce
+- helm v3.2.1+gfe51cd1
 - virtualbox 6.1.6r137129
-- Vagrant 2.2.7
+- Vagrant 2.2.9
 
 ### Tools
 - Fastlane 2.146.1
@@ -90,16 +96,16 @@ ms.custom: build
 - Azure CLI 2.5.1
 - AWS CLI 2.0.10
 - AWS SAM CLI 0.48.0
-- Aliyun CLI 3.0.39
+- Aliyun CLI 3.0.42
 
 ### Browsers
 - Safari 13.1 (14609.1.20.111.8)
 - SafariDriver 13.1 (14609.1.20.111.8)
-- Google Chrome 81.0.4044.129 
-- ChromeDriver 81.0.4044.69
-- Microsoft Edge 81.0.416.68 
-- MSEdgeDriver 81.0.416.68
-- Mozilla Firefox 75.0
+- Google Chrome 81.0.4044.138 
+- ChromeDriver 81.0.4044.138
+- Microsoft Edge 81.0.416.72 
+- MSEdgeDriver 81.0.416.72
+- Mozilla Firefox 76.0.1
 - geckodriver 0.26.0
 
 ### Toolcache
@@ -221,7 +227,7 @@ ms.custom: build
 | 9.4.1            | 9F2000  | /Applications/Xcode_9.4.1.app  |
 
 #### Xcode Support Tools
-- Nomad CLI 3.1.2
+- Nomad CLI 3.1.3
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
@@ -324,7 +330,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.0 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.1 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
@@ -379,17 +385,22 @@ ms.custom: build
 | build-tools-29.0.1     | Android SDK Build-Tools, Revision 29.0.1     |
 | build-tools-29.0.2     | Android SDK Build-Tools, Revision 29.0.2     |
 | build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
-| build-tools-30.0.0-rc1 | Android SDK Build-Tools, Revision 30.0.0 rc1 |
+| build-tools-30.0.0-rc4 | Android SDK Build-Tools, Revision 30.0.0 rc4 |
 | build-tools-17.0.0     | Android SDK Build-Tools, Revision 17.0.0     |
 | build-tools-23.0.0     | Android SDK Build-Tools, Revision 23.0.0     |
 
+#### Android NDKs
+| Version      | Path                                       |
+| ------------ | ------------------------------------------ |
+| 15.2.4203891 | $HOME/Library/Android/sdk/android-ndk-r15c |
+| 18.1.5063045 | $HOME/Library/Android/sdk/ndk/18.1.5063045 |
+| 21.1.6352462 | $HOME/Library/Android/sdk/ndk-bundle       |
+
 #### Android Utils
-| Package Name     | Version      |
-| ---------------- | ------------ |
-| cmake            | 3.6.4111459  |
-| lldb             | 3.1.4508709  |
-| ndk-bundle       | 21.1.6352462 |
-| Android Emulator | 30.0.5       |
+| Package Name     | Version     |
+| ---------------- | ----------- |
+| cmake            | 3.6.4111459 |
+| Android Emulator | 30.0.5      |
 
 #### Android Google APIs
 | Package Name                | Description             |
