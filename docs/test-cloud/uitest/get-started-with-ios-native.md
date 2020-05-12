@@ -4,7 +4,7 @@ description: A guide that shows you how-to automate your iOS Swift or Objective-
 keywords: Xamarin.UITest, iOS, Swift, Obc-c, Objective-C, automated, testing, ui testing.
 author: oddj0b
 ms.author: vigimm
-ms.date: 05/06/2020
+ms.date: 05/12/2020
 ms.topic: get-started-article
 ms.assetid: 842394DD-CFDA-4B2D-B4E6-3405ED036369
 ms.custom: test
