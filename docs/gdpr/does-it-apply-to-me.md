@@ -26,7 +26,7 @@ A common way to do this is to track users when they login into your app, mapping
 
 ### Scenario 2: Analytics - I added personal information in custom events
 
-If you are using [Analytics Custom Events](~/analytics/event-metrics.md) in App Center Anaytics, events are a potential place where you could have added personal information, these are:
+If you are using [Analytics Custom Events](~/analytics/event-metrics.md) in App Center Analytics, events are a potential place where you could have added personal information, these are:
 
 - Event name
 - Event property key
