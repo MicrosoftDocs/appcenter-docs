@@ -40,7 +40,7 @@ Analytics.trackEvent("Login", properties);
 ```
 
 #### Event name or event property key
-These two cases are less probable because they're statically defined by the developer once. However, they're also potential places where you may have added personal information. See the examples below.
+These two cases are less probable because they're statically defined by the developer once. However, there are also places where you may have added personal information. See the examples below.
 
 Event name:
 
