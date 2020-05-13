@@ -32,7 +32,7 @@ You can control the amount of log messages that show up from App Center in the c
 <preference name="LOG_LEVEL" value="2" />
 ```
 
-Set the value to one of the constants, described well in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). Same contants can be used for iOS.
+Set the value to one of the constants, described well in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). Same constants can be used for iOS.
 
 To have as many log messages as possible, use **VERBOSE (2)** level.
 
