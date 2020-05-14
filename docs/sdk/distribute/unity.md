@@ -21,6 +21,9 @@ ms.tgt_pltfrm: unity
 
 App Center Distribution enables your users/testers to install new versions of an app once you distribute it via App Center. Once enabled, the SDK presents an update dialog to users to either download or postpone installation of the latest update. Once they choose to update, the SDK will start to update your application.
 
+> [!IMPORTANT]
+> The current SDK [does not support](../index#unity) Distribute for Unity when running on UWP, the instructions in this page cover only Android and iOS.
+
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
 > 1. If you have released your app in the App Store or Google Play, in-app updates will be disabled and no longer work.
