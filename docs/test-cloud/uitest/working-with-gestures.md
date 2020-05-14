@@ -46,7 +46,7 @@ app.DoubleTap("save_button")
 
 ## Scrolling the Screen to Locate Views
 
-UITest may only interact with views that are visible on the screen. It is possible to use `IApp.ScrollUp` or `IApp.ScrollDown` to programatically scroll the view onto the screen. This methods take an `AppQuery` or a *Marked string* to reference a specific view. UITest will then scroll until the view is visible on screen. The following snippet demostrates how to scroll down until a Save button is visible:
+UITest may only interact with views that are visible on the screen. It is possible to use `IApp.ScrollUp` or `IApp.ScrollDown` to programatically scroll the view onto the screen. This methods take an `AppQuery` or a *Marked string* to reference a specific view. UITest will then scroll until the view is visible on screen. The following snippet demonstrates how to scroll down until a Save button is visible:
 
 ```csharp
 app.ScrollDown("save_button")
