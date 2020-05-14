@@ -32,7 +32,7 @@ Follow the instructions in the [Unity Getting Started](~/sdk/getting-started/uni
 Crash logs on iOS require Symbolication. To enable symbolication, refer to the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md), which explains how to provide symbols for your app.
 
 > [!IMPORTANT]
-> The Distribute SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS. 
+> The Crashes SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
 > [!NOTE]
 > The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
