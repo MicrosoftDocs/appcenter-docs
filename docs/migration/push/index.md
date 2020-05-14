@@ -16,7 +16,7 @@ Microsoft recently [announced](https://devblogs.microsoft.com/appcenter/app-cent
 + We're committed to continuing the developer experience that made App Center Push a compelling offering. 
 + We want to make the migration process from App Center Push to Azure Notification Hubs as seamless as possible.
 
-To help with these goals, we've released a new [preview release of the Notification Hubs Android SDK](https://go.microsoft.com/fwlink/?linkid=2128633) and created this migration guide to help you get started with the transition.
+To help with these goals, we've released new preview releases of the Notification Hubs [Android SDK](https://go.microsoft.com/fwlink/?linkid=2128633) and [iOS SDK](https://go.microsoft.com/fwlink/?linkid=2129045), and created this migration guide to help you get started with the transition.
 
 ## Benefits of Azure Notification Hubs
 Azure Notification Hubs offers many benefits to mobile app developers:
@@ -79,7 +79,7 @@ repositories {
 
 **On iOS** 
 
-The Azure Notification Hubs SDK for iOS can be obtained a number of ways including CocoaPods, and direct download and integration.  Once the Azure Notification Hubs SDK release is final, it will be available via Carthage and the Swift Package Manager (SPM).
+The Azure Notification Hubs SDK for iOS can be obtained in a number of ways, including CocoaPods, and direct download and integration.  Once the Azure Notification Hubs SDK release is final, it will be available via Carthage and the Swift Package Manager (SPM).
 
 #### Integration via CocoaPods
 
@@ -91,9 +91,9 @@ pod 'AzureNotificationHubs-iOS'
 
 #### Integration by copying binaries into your project
 
-- Download the [Azure Notification Hubs SDK](https://github.com/Azure/azure-notificationhubs-ios/releases) framework provided as a zip file and unzip it.
+- Download the [Azure Notification Hubs iOS SDK](https://github.com/Azure/azure-notificationhubs-ios/releases) framework provided as a zip file and unzip it.
 
-- In Xcode, right-click your project and click the Add Files to option to add the WindowsAzureMessaging.framework folder to your Xcode project. Select Options and make sure Copy items if needed is selected, and then click Add.
+- In Xcode, right-click your project and click the **Add Files to** option to add the WindowsAzureMessaging.framework folder to your Xcode project. Select **Options** and make sure **Copy items if needed** is selected, and then click **Add**.
 
 #### Start Notification Hubs SDK
 Previously, applications had to first manually request a device token (provided by the device manufacturer’s native push service) and then submit that token to Azure Notification Hubs. With the latest release, the Notification Hubs SDK automatically handles device registration for push notifications. When you add the SDK to your app, and enable push, the SDK automatically registers the device within the appropriate notification hub. Learn more about how to use the [Installations API](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management).
@@ -248,7 +248,7 @@ var tags = MSNotificationHub.getTags();
 
 #### Enable/disable push
 
-Just as the AppCenter Push SDK allowed to enable and disable Push, the Azure Notification Hubs SDK allows the user to enable and disable the SDK.
+Just as the AppCenter Push SDK allows you to enable and disable Push, the Azure Notification Hubs SDK allows you to enable and disable the SDK.
 
 **On Android**
 
@@ -273,7 +273,7 @@ The Notification Hubs SDK can also check if the SDK is enabled via the isEnabled
 
 **On iOS**
 
-To enable or disable the Azure Notification Hubs SDK, use the `setEnabled` method on the `MSNotificationHub`.  In addition, the user can also get the status of the SDK by called the `isEnabled` method.
+To enable or disable the Azure Notification Hubs SDK, use the `setEnabled` method on the `MSNotificationHub`.  In addition, the user can also get the status of the SDK by calling the `isEnabled` method.
 
 ##### In Objective-C
 
@@ -331,4 +331,4 @@ Check out our [tutorials](https://go.microsoft.com/fwlink/?linkid=2128396) to le
 Now that you've updated your app to use the new Notification Hubs SDK, and your back-end to push to Notification Hubs, you're all set to publish your new app.
 
 ## Support
-If you encounter issues with migrating your application to Azure Notification Hubs, please submit your feedback request for Android in the [Azure Notification Hubs SDK for Android](https://github.com/Azure/azure-notification-hubs-android/issues) repository, and for iOS in the [Azure Notification Hubs SDK for iOS](https://github.com/Azure/azure-notificationhubs-ios/issues).  
+If you encounter issues with migrating your application to Azure Notification Hubs, please submit your feedback request in the [Azure Notification Hubs repository](https://github.com/Azure/azureNotificationHubs/issues).  
