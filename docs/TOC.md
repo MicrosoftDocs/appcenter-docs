@@ -79,6 +79,7 @@
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
+### [Get Started with iOS Native apps](test-cloud/uitest/get-started-with-ios-native.md)
 ### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
 ### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
@@ -342,7 +343,7 @@
 ## [Push](migration/push/index.md)
 
 # Reference
-## [API docs](api-docs/index.md)
+## [App Center API tokens and documentation](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
 # [Resources](general/resources.md)
