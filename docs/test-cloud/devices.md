@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 4/21/2020
+ms.date: 5/13/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -307,6 +307,7 @@ Apple iPhone SE | 13.0
 Apple iPhone SE | 13.1.3
 Apple iPhone SE | 13.2.3
 Apple iPhone SE | 13.3.1
+Apple iPhone SE (2020) | 13.4.1
 Apple iPhone SE | 9.3.5
 Apple iPhone X | 11.1.2
 Apple iPhone X | 11.2.6
@@ -410,12 +411,15 @@ HTC One (M8) | 4.4.3
 HTC One (M8) | 5.0.1
 HTC One A9 | 6.0.1
 HTC One M9 | 5.0.2
+HTC One M9 | 7.0
 HTC One Mini | 4.2.2
 HTC One S | 4.1.1
 HTC One X | 4.1.1
 HTC One mini 2 | 4.4.2
 HTC U Ultra | 7.0
+HTC U Ultra | 8.0.0
 HTC U11 | 8.0.0
+HTC U11 | 9
 HTC U12+ | 8.0.0
 HTC U12+ | 9
 Huawei Ascend G750 | 4.2.2
@@ -447,6 +451,7 @@ LG G3 s | 4.4.2
 LG G4 | 5.1
 LG G5 | 6.0.1
 LG G6 | 7.0
+LG G6 | 9
 LG G7 ThinQ | 8.0.0
 LG G7 ThinQ | 9
 LG Nexus 4 | 4.2.2
@@ -466,6 +471,7 @@ LG Nexus 5X | 8.1.0
 LG Optimus G Pro | 4.1.2
 LG Optimus GJ | 4.1.2
 LG V30 | 7.1.2
+LG V30 | 9
 LG V40 ThinQ | 9
 Lava Iris X1 | 4.4.2
 Meizu MX3 | 4.4.4
@@ -481,6 +487,8 @@ Motorola Moto G6 | 8.0.0
 Motorola Moto G6 Plus | 8.0.0
 Motorola Moto G7 Play | 9
 Motorola Moto G7 Plus | 9
+Motorola Moto G8 | 10
+Motorola Moto G8 Plus | 9
 Motorola Moto X | 5.1
 Motorola Moto X4 | 8.0.0
 Motorola Moto Z2 Force | 8.0.0
@@ -491,8 +499,10 @@ Motorola Nexus 6 | 5.0.1
 Motorola Nexus 6 | 5.1
 Motorola Nexus 6 | 6.0.1
 Motorola Nexus 6 | 7.1.1
+Motorola One | 10
 Motorola One | 8.1.0
 Motorola One | 9
+Motorola One Action | 10
 Motorola One Action | 9
 Motorola One Vision | 10
 Motorola One Vision | 9
@@ -534,6 +544,7 @@ Samsung Galaxy A40 | 9
 Samsung Galaxy A5 (2017) | 8.0.0
 Samsung Galaxy A5 | 4.4.4
 Samsung Galaxy A5 | 5.0.2
+Samsung Galaxy A50 | 10
 Samsung Galaxy A50 | 9
 Samsung Galaxy A51 | 10
 Samsung Galaxy A6+ | 8.0.0
@@ -581,6 +592,7 @@ Samsung Galaxy Note 3 (Quad-Core) | 4.4.2
 Samsung Galaxy Note 4 | 4.4.4
 Samsung Galaxy Note 4 | 5.1.1
 Samsung Galaxy Note 5 | 5.1.1
+Samsung Galaxy Note 5 | 7.0
 Samsung Galaxy Note 8 | 7.1.1
 Samsung Galaxy Note 8 | 8.0.0
 Samsung Galaxy Note 8 | 9
@@ -635,10 +647,12 @@ Samsung Galaxy S5 Active | 4.4.2
 Samsung Galaxy S5 Active | 5.0
 Samsung Galaxy S5 Mini | 4.4.2
 Samsung Galaxy S5 Neo | 5.1.1
+Samsung Galaxy S5 Neo | 6.0.1
 Samsung Galaxy S6 | 5.1.1
 Samsung Galaxy S6 Edge | 5.0.2
 Samsung Galaxy S6 Edge | 7.0
 Samsung Galaxy S6 Edge Plus | 5.1.1
+Samsung Galaxy S6 Edge Plus | 7.0
 Samsung Galaxy S7 | 6.0.1
 Samsung Galaxy S7 | 7.0
 Samsung Galaxy S7 | 8.0.0
@@ -697,7 +711,9 @@ Sony Tablet S | 4.0.3
 Sony Tablet S | 4.1.1
 Sony Xperia 1 | 10
 Sony Xperia 1 | 9
+Sony Xperia 10 | 10
 Sony Xperia 10 | 9
+Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10
 Sony Xperia 5 | 9
@@ -745,9 +761,11 @@ Xiaomi MI NOTE LTE | 4.4.4
 Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
+Xiaomi Mi A3 | 10
 Xiaomi Mi A3 | 9
 Xiaomi Redmi Note 4G | 4.4.4
 ZTE Nubia Z7 Max | 4.4.2
+
 
 
 
