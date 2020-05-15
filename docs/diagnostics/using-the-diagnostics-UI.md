@@ -23,7 +23,7 @@ App Center’s Diagnostics service is designed for you to easily monitor your ap
 
 App Center displays the crashes and errors in one view under the **Issues** tab. You can filter these issues by crashes or errors by clicking the respective tabs. 
 
-For all apps, you can filter the diagnostics data by app version, build number, time range and status. Click on a group to find more information including a list of specific reports, devices and OSs affected.
+For all apps, you can filter the diagnostics data by app version, build number, time range and status. Click on a group to find more information including a list of specific reports, devices and OS versions affected.
 
 ![Diagnostics overview page](~/diagnostics/images/diagnostics-overview.png)
 
