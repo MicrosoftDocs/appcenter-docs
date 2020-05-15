@@ -21,12 +21,14 @@ App Center’s Diagnostics service is designed for you to easily monitor your ap
 2. Select an application
 3. In the navigation area on the left, select **Diagnostics**
 
-For Android, Xamarin, Unity, , UWP, WPF and WinForms apps, App Center displays the crashes and errors in one view under the **Issues** tab. You can filter these issues by crashes or errors by clicking the respective tabs. 
+App Center displays the crashes and errors in one view under the **Issues** tab. You can filter these issues by crashes or errors by clicking the respective tabs. 
 
-For all apps, you can filter the diagnostics data by app version, build number, time range and status. Click on a group to find more information including a list of specific reports, devices and OSs affected.
+For all apps, you can filter the diagnostics data by app version, build number, time range and status. Click on a group to find more information including a list of specific reports, devices and OS versions affected.
 
 ![Diagnostics overview page](~/diagnostics/images/diagnostics-overview.png)
 
+> [!NOTE]
+> When filtering crashes or errors in groups list, the total count and affected user count values will always reflect the total number of crashes for the respective group. They are not affected by Time filters.
 
 ### Annotate a group
 
