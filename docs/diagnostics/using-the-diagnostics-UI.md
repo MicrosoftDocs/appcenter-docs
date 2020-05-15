@@ -27,6 +27,8 @@ For all apps, you can filter the diagnostics data by app version, build number, 
 
 ![Diagnostics overview page](~/diagnostics/images/diagnostics-overview.png)
 
+> [!NOTE]
+> When filtering crashes or errors in groups list, the total count and affected user count values will always reflect the total number of crashes for the respective group. They are not affected by Time filters.
 
 ### Annotate a group
 
