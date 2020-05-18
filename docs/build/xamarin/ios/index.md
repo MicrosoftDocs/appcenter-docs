@@ -53,12 +53,12 @@ To build from a **.csproj/.fsproj** file all the referenced projects (for exampl
 Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
 ### 3.3. Mono version
-App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono version you'll see the Xamarin.iOS SDK version that's bundled with it. To track Xamarin SDK version updates, you can read posts in the [Xamarin release blog](https://releases.xamarin.com/).
+App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono version, you'll see the Xamarin.iOS SDK version that's bundled with it. To track Xamarin SDK version updates, you can read posts in the [Xamarin release blog](https://releases.xamarin.com/).
 
-#### 3.3.1. .Net Core version
-Proper .Net Core version will be selected automatically based on Mono version used for build and can't be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+#### 3.3.1. .NET Core version
+Proper .NET Core version will be selected automatically based on Mono version used for build and can't be overwritten. You can view the mapping of Mono to the .NET Core used by our services in the table below:
 
-| Mono | .Net Core |
+| Mono | .NET Core |
 | ---- | --------- |
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
@@ -77,7 +77,7 @@ Simulator builds can only be ran on simulators and can't be installed on the dev
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.8. Code signing
-A successful device build will produce an ipa file. To install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
+A successful device build will produce an IPA file. To install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision`) and a valid certificate (`.p12`)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
 
 Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/platform/extensions) require an additional provisioning profile per extension to be signed.
 
@@ -138,11 +138,11 @@ Once you save the configuration, a new build will be automatically kicked off.
 ## 4. Build results
 After a build has been triggered, it can be in the following states:
 
-* **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and executing the predefined tasks
-* **succeeded** - the build is completed and it has succeeded
-* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-* **canceled** - the build has been canceled by a user action or it has timed out
+* **queued** - The build is in a queue waiting for resources to be freed up.
+* **building** - The build is running and executing the predefined tasks.
+* **succeeded** - The build is completed and it has succeeded.
+* **failed** - The build has completed but it has failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
+* **canceled** - The build has been canceled by a user action or it has timed out.
 
 ### 4.1. Build logs
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
@@ -158,10 +158,10 @@ For a completed build (succeeded or failed), download the logs to understand mor
 
 The build step-specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
-### 4.2. The app (.ipa or .app)
-The .ipa is an iOS application archive file which contains the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](~/build/ios/code-signing.md).
+### 4.2. The app (`.ipa` or `.app`)
+The `.ipa` is an iOS application archive file that contains the iOS app. If the build has been correctly signed, the `.ipa` can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with App Center](~/build/ios/code-signing.md).
 
-If the app is a simulator build, you can run the .app file on a simulator, but you can't use it on a real device.
+If the app is a simulator build, you can run the `.app` file on a simulator, but you can't use it on a real device.
 
 ### 4.3. The symbol files (.dsym)
 Symbol files are only generated for device builds. The .dsym files contain the debug symbols for the app.
