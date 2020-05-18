@@ -13,13 +13,12 @@ ms.custom: build
 ms.tgt_pltfrm: xamarin-ios
 ---
 
+# Building Xamarin apps for iOS
 > [!NOTE] 
 > Supported versions and requirements
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
 App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever available. If you're using a Component that can't be replaced, contact us. See [help and feedback](../../../help.md).
 
-
-# Building Xamarin apps for iOS
 To start building your first Xamarin iOS app, you'll need to:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
