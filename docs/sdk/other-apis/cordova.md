@@ -32,7 +32,6 @@ You can control the number of log messages that show up from App Center in the c
 ```
 
 Set the value to one of the constants, described in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). The same constants can be used for iOS.
-
 To have as many log messages as possible, use **VERBOSE (2)** level.
 
 ## Identify installations

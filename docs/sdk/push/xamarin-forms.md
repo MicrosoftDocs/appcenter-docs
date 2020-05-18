@@ -188,7 +188,7 @@ There are few reserved keywords in each platform that can be set via custom data
 
 #### Configure notification's default values
 
-[!INCLUDE [android configre notifications](includes/android-configure-notifications.md)]
+[!INCLUDE [android configure notifications](includes/android-configure-notifications.md)]
 
 ### iOS
 - **badge**: Add this key when you want to modify the badge of your app icon. If this key is not included, the badge is not changed. To remove the badge, set the value of this key to 0.
