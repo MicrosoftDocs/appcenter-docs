@@ -29,7 +29,7 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 5. Add the SDK framework to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework**, **AppCenterDistribute.framework** and **AppCenterDistributeResources.bundle** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
+   * Now drag and drop **AppCenter.framework**, **AppCenterDistribute.framework** and **AppCenterDistributeResources.bundle** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work, and your project will not compile successfully.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 [!INCLUDE [xcframework support](includes/xcframeworks-distribute.md)]
