@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ios
 
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
-[!INCLUDE [xcframework support](../includes/xcframeworks.md)]
+[!INCLUDE [xcframework support](../getting-started/includes/xcframeworks.md)]
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
