@@ -15,6 +15,8 @@ ms.tgt_pltfrm: ios
 
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
+[!INCLUDE [xcframework support](includes/xcframeworks.md)]
+
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
 2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
@@ -29,3 +31,5 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
    * Make sure the Project Navigator is visible (⌘+1).
    * Now drag and drop **AppCenter.framework**, **AppCenterDistribute.framework** and **AppCenterDistributeResources.bundle** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules will not work and your project will not compile successfully.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
+
+[!INCLUDE [xcframework support](includes/xcframeworks-distribute.md)]
