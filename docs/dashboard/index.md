@@ -1,7 +1,7 @@
 ---
 title: Using App Center
 description: Managing your App Center account and settings
-author: elamalani
+author: dimazaid
 reviewer: king-of-spades
 ms.date: 05/20/2020
 ms.topic: article
