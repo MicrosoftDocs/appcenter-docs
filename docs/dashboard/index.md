@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ---
 
 # Overview
-[Visual Studio App Center](https://appcenter.ms/) brings together multiple common services into a DevOps cloud solution. Developers use App Center to [Build](~/build/index.md), [Test](~/test/index.md), and [Distribute](~/distribution/index.md) applications. Once the app's deployed, developers monitor the status and usage of the app using the [Analytics](~/analytics/index.md) and [Diagnostics](~/diagnostics/index.md) services.
+[Visual Studio App Center](https://appcenter.ms/) brings together multiple common services into a DevOps cloud solution. Developers use App Center to [Build](~/build/index.md), [Test](~/test-cloud/index.md), and [Distribute](~/distribution/index.md) applications. Once the app's deployed, developers monitor the status and usage of the app using the [Analytics](~/analytics/index.md) and [Diagnostics](~/diagnostics/index.md) services.
 
 This section describes the basic concepts of App Center and ways to manage your account settings.
 
