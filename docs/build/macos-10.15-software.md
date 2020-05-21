@@ -4,7 +4,7 @@ description: Software used on macOS 10.15 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 05/18/2020
+ms.date: 05/20/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -14,7 +14,7 @@ ms.custom: build
 - System Version: macOS 10.15.4 (19E287)
 - Kernel Version: Darwin 19.4.0
 - System Integrity Protection: Enabled
-- Image Version: 20200514.1
+- Image Version: 20200518.2
 
 ## Installed Software
 ### Language and Runtime
@@ -33,12 +33,12 @@ ms.custom: build
 - Node.js v12.16.3
 - NVM 0.35.3
 - NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.2.0
-- PowerShell 7.0.0
+- PowerShell 7.0.1
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
 - .NET SDK 2.0.0 3.0.100 3.0.101 3.0.102 3.0.103 3.1.100 3.1.101 3.1.200 3.1.201 3.1.202
-- Go 1.14.2
+- Go 1.14.3
 - PHP 7.4.6
 - julia 1.4.1
 
@@ -48,7 +48,7 @@ ms.custom: build
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.1
-- Homebrew 2.2.16
+- Homebrew 2.2.17
 - NPM 6.14.4
 - Yarn 1.22.4
 - NuGet 5.5.0.6382
@@ -59,7 +59,7 @@ ms.custom: build
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.4
+- Gradle 6.4.1
 
 ### Utilities
 - Curl 7.70.0
@@ -74,21 +74,21 @@ ms.custom: build
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
-- psql (PostgreSQL) 12.2
-- PostgreSQL 12.2
+- psql (PostgreSQL) 12.3
+- PostgreSQL 12.3
 - aria2 1.35.0
 - azcopy 10.4.3
 - zstd 1.4.4
 - bazel 3.1.0
 - bazelisk v1.4.0
 - helm v3.2.1+gfe51cd1
-- virtualbox 6.1.6r137129
+- virtualbox 6.1.8r137981
 - mongo v4.2.6
 - mongod v4.2.6
 - Vagrant 2.2.9
 
 ### Tools
-- Fastlane 2.148.0
+- Fastlane 2.148.1
 - Cmake 3.17.2
 - App Center CLI 2.5.2
 - Azure CLI 2.5.1
@@ -160,16 +160,16 @@ ms.custom: build
 - NUnit 3.6.1
 
 ### Xcode
-| Version          | Build   | Path                              |
-| ---------------- | ------- | --------------------------------- |
-| 11.5 (beta)      | 11N605f | /Applications/Xcode_11.5_beta.app |
-| 11.4.1 (default) | 11E503a | /Applications/Xcode_11.4.1.app    |
-| 11.4             | 11E146  | /Applications/Xcode_11.4.app      |
-| 11.3.1           | 11C505  | /Applications/Xcode_11.3.1.app    |
-| 11.2.1           | 11B500  | /Applications/Xcode_11.2.1.app    |
-| 11.1             | 11A1027 | /Applications/Xcode_11.1.app      |
-| 11.0             | 11A420a | /Applications/Xcode_11.app        |
-| 10.3             | 10G8    | /Applications/Xcode_10.3.app      |
+| Version          | Build   | Path                           |
+| ---------------- | ------- | ------------------------------ |
+| 11.5             | 11E608c | /Applications/Xcode_11.5.app   |
+| 11.4.1 (default) | 11E503a | /Applications/Xcode_11.4.1.app |
+| 11.4             | 11E146  | /Applications/Xcode_11.4.app   |
+| 11.3.1           | 11C505  | /Applications/Xcode_11.3.1.app |
+| 11.2.1           | 11B500  | /Applications/Xcode_11.2.1.app |
+| 11.1             | 11A1027 | /Applications/Xcode_11.1.app   |
+| 11.0             | 11A420a | /Applications/Xcode_11.app     |
+| 10.3             | 10G8    | /Applications/Xcode_10.3.app   |
 
 #### Xcode Support Tools
 - Nomad CLI 3.1.3
