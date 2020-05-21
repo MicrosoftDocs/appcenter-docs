@@ -54,7 +54,7 @@
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
 ## [Using the GitHub App](build/github-app.md)
-## [App Center Build vs. Azure DevOps Pipelines](build/choose-between-services.md)
+## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
 ### [Introduction](build/troubleshooting/index.md)
 ### [General](build/troubleshooting/general.md)
@@ -79,6 +79,7 @@
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
+### [Get Started with iOS Native apps](test-cloud/uitest/get-started-with-ios-native.md)
 ### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
 ### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
@@ -133,7 +134,14 @@
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
 ### [Cordova Client SDK](distribution/codepush/Cordova.md)
-### [React Native Client SDK](distribution/codepush/React-Native.md)
+### React Native Client SDK
+#### [Overview](distribution/codepush/rn-overview.md)
+#### [Get Started with the React Native Client SDK](distribution/codepush/rn-get-started.md)
+#### [Using the Plugin](distribution/codepush/rn-plugin.md)
+#### [Using CodePush Deployments](distribution/codepush/rn-deployment.md)
+#### [Releasing Updates](distribution/codepush/rn-updates.md)
+#### [API Reference](distribution/codepush/rn-api-ref.md)
+#### [Troubleshooting](distribution/codepush/rn-troubleshooting.md)
 ### [Tutorials](distribution/codepush/Tutorials.md)
 ### [Azure DevOps (formerly VSTS) Extension](distribution/codepush/vsts-extension.md)
 ### [Migration Guide](distribution/codepush/MigrationGuide.md)
@@ -274,6 +282,7 @@
 ### [Android](sdk/troubleshooting/android.md)
 ### [iOS](sdk/troubleshooting/ios.md)
 ### [macOS](sdk/troubleshooting/macos.md)
+### [tvOS](sdk/troubleshooting/tvos.md)
 ### [React Native](sdk/troubleshooting/react-native.md)
 ### [Cordova](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
@@ -331,12 +340,10 @@
 #### [Cordova](transition/cordova-sdk-migration.md)
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ### [Feedback](transition/feedback.md)
-## [Auth](migration/auth/index.md)
-## [Data](migration/data/index.md)
 ## [Push](migration/push/index.md)
 
 # Reference
-## [API docs](api-docs/index.md)
+## [App Center API tokens and documentation](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
 # [Resources](general/resources.md)

@@ -140,3 +140,7 @@ Copying history to clipboard.
 ```
 
 This allows you to try and debug commands in the REPL, and then promptly update your test code.
+
+> [!NOTE]
+> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to "System Preferences -> Security & Privacy-> Privacy -> Automation", search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the repl tool does not appear. Turning it on makes the REPL tool appear.
+ ![image](https://github.com/ahanag22/iamges/blob/master/Items.png)

@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/05/2018
+ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 dev_langs:
@@ -17,12 +17,13 @@ dev_langs:
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
 > * [macOS](macos.md)
+> * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
 > * [Cordova](cordova.md)
-> * [tvOS](tvOS.md)
+> * [Unity](unity.md)
+> * [Windows](uwp.md)
+> * [Xamarin](xamarin.md)
 
 ## What Android permissions are required?
 

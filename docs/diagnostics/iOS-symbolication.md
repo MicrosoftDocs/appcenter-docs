@@ -1,9 +1,10 @@
 ---
 title: iOS Symbolication
-description: Help understanding symbolication for iOS and MacOS diagnostics in App Center
-keywords: crashes, errors, iOS, MacOS, symbols, symbolication
+description: Help understanding symbolication for iOS and macOS diagnostics in App Center
+keywords: crashes, errors, iOS, macOS, symbols, symbolication
 author: winnie
 ms.author: yuli1
+ms.reviewer: kegr
 ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea
@@ -13,11 +14,11 @@ ms.custom: analytics
 
 # iOS Symbolication
 
-MacOS, tvOS and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses and don’t show class names, methods, file names, and line numbers that are needed to read and understand the crashes.
+macOS, tvOS, and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses; not class names, methods, file names, or line numbers needed to understand the crashes.
 
-To get these memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
+To get the memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).
 
-The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files as detailed in the steps below.
+The App Center Build and Distribution service can automatically generate a valid dSYM and source map `.zip` file and upload the file to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files.
 
 ## Unsymbolicated crashes
 [!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
@@ -25,14 +26,14 @@ The App Center Build and Distribution service can automatically generate a valid
 ## Finding the `.dSYM` bundle
 
 1. In Xcode, open the **Window** menu, then select **Organizer**.
-1. Select the **Archives** tab.
-1. Select your app in the left sidebar.
-1. Right-click on the latest archive and select **Show in Finder**.
-1. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**.
-1. You should see a folder named `dSYMs` which contains your dSYM bundle.
-1. Create a zip file of the dSYM bundle.
+2. Select the **Archives** tab.
+3. Select your app in the left sidebar.
+4. Right-click on the latest archive and select **Show in Finder**.
+5. Right-click the `.xcarchive` file in Finder and select **Show Package Contents**.
+6. You should see a folder named `dSYMs` that contains your dSYM bundle.
+7. Create a zip file of the dSYM bundle.
 
-If you are using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
+If you're using Visual Studio instead of XCode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
 ## Uploading symbols
 
@@ -66,7 +67,7 @@ appcenter crashes upload-symbols --symbol {symbol file}
 
 Bitcode was introduced by Apple to allow apps sent to the App Store to be recompiled by Apple itself and apply the latest optimization. If Bitcode is enabled, the symbols generated for your app in the store will be different than the ones from your own build system.
 
-App Center crash reporting does not completely support the symbolication of crashes from bitcode-enabled apps yet. In the meantime, we advise that you **disable bitcode**. Disabling bitcode significantly simplifies symbols management and currently does not have any known downsides for iOS apps.
+App Center crash reporting doesn't completely support the symbolication of crashes from bitcode-enabled apps yet. In the meantime, we advise that you **disable bitcode**. Disabling bitcode significantly simplifies symbols management and currently doesn't have any known downsides for iOS apps.
 
 ### Disable bitcode for your app
 
@@ -81,7 +82,7 @@ With these simple steps, App Center crash reporting will behave as usual.
 
 ### Retrieve symbols for bitcode enabled apps
 
-If you would like to keep bitcode enabled, you can download the proper dSYM files by following these steps:
+If you'd like to keep bitcode enabled, you can download the proper dSYM files by following these steps:
 
 1. Open the Xcode's Organizer
 2. Select the specific archive of your app that you uploaded to iTunes Connect

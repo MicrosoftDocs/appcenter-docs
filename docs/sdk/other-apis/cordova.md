@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
 author: Zakeelm 
 ms.author: zakeelm
-ms.date: 10/16/2019
+ms.date: 04/17/2020
 ms.topic: article
 ms.assetid: 26F97578-1E05-46C4-8740-8639F1DB37F2
 ms.tgt_pltfrm: cordova
@@ -25,20 +25,17 @@ ms.tgt_pltfrm: cordova
 > * [Cordova](cordova.md)
 
 ## Adjust the log level
-
-You can control the amount of log messages that show up from App Center in the console. To do this, open the project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
+You can control the number of log messages that show up from App Center in the console. To adjust logging, open the project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
 
 ```xml
 <preference name="LOG_LEVEL" value="2" />
 ```
 
-Set the value to one of the constants, described well in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). Same contants can be used for iOS.
-
+Set the value to one of the constants, described in the official [Android documentation](https://developer.android.com/reference/kotlin/android/util/Log#constants_2). The same constants can be used for iOS.
 To have as many log messages as possible, use **VERBOSE (2)** level.
 
 ## Identify installations
-
-The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is re-installed or the user manually deletes all app data. The following API is useful for debugging purposes.
+The App Center SDK creates a UUID for each device once the app is installed. This identifier remains the same for a device when the app is updated and a new one is generated only when the app is reinstalled or the user manually deletes all app data. The following API is useful for debugging purposes.
 
 ```javascript
 var success = function(installId) {

@@ -33,7 +33,7 @@ Follow the instructions in the [Unity Get started](~/sdk/getting-started/unity.m
 >```csharp
 >using Microsoft.AppCenter.Unity.Analytics;
 >```
->You also must make sure that **Use Analaytics** is checked in the settings of your App Center game object.
+>You also must make sure that **Use Analytics** is checked in the settings of your App Center game object.
 
 ## Session and device information
 

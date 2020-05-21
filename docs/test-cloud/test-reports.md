@@ -4,7 +4,7 @@ description: Understanding test reports in App Center Test
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 03/25/2020
+ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: 810505bc-9df6-4640-8c21-0039a339ad06
 ms.service: vs-appcenter
@@ -115,6 +115,6 @@ The device log is the output from the device during the test run. Click **Downlo
 
 ## Getting help
 
-You can always contact us through [the blue chat icon in the lower-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). We do not provide 24/7 support, but will reply as soon as we can.
+You can contact support in the App Center portal. In the upper right corner of screen, select the Help (?) menu, then choose 'Contact support'. Our dedicated support team will respond to your questions.
 
 If you want help with a test run, navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
