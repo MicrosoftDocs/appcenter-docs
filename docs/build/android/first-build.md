@@ -45,7 +45,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
 
 > [!NOTE]
-> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and Product Flavors. Detecting Flavor Dimensions are not supported at this time.
+> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one of your gradle declared Product Flavors. Detecting Flavor Dimensions (combinations of product flavors) are not supported at this time.
 
 ### 3.3. Build Android App Bundle (.aab)
 
