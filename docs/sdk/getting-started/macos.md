@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/18/2019
+ms.date: 05/23/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
@@ -43,6 +43,9 @@ The following requirements must be met to use App Center SDK:
 
 > [!NOTE]
 > App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
+
+> [!NOTE]
+> App Center SDK is compatible with Mac Catalyst.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 09/18/2019
+ms.date: 05/23/2020
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -40,6 +40,9 @@ The following requirements must be met to use App Center SDK:
 * Your iOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
 * You are targeting devices running on iOS 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
+
+> [!NOTE]
+> App Center SDK is compatible with Mac Catalyst.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
