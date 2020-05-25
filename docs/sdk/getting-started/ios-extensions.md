@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 09/25/2019
+ms.date: 05/25/2019
 ms.topic: get-started-article
 ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.tgt_pltfrm: ios

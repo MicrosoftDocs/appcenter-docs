@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 03/11/2020
+ms.date: 05/25/2020
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -69,10 +69,10 @@ Push             | 4.1 and later      | 16 and later
 
 Service          | iOS Version     | Xcode
 -----------------|-----------------|--------------
-Analytics        | 9.0 or later    | 10 and later
-Crashes          | 9.0 or later    | 10 and later
-Distribute       | 9.0 or later    | 10 and later
-Push             | 9.0 or later    | 10 and later
+Analytics        | 9.0 or later    | 11 and later
+Crashes          | 9.0 or later    | 11 and later
+Distribute       | 9.0 or later    | 11 and later
+Push             | 9.0 or later    | 11 and later
 
 ### Unity
 
@@ -116,16 +116,16 @@ Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or la
 
 Service          | macOS Version   | Xcode
 -----------------|-----------------|--------------
-Analytics        | 10.9 or later   | 10 or later
-Crashes          | 10.9 or later   | 10 or later
-Push             | 10.9 or later   | 10 or later
+Analytics        | 10.9 or later   | 11 or later
+Crashes          | 10.9 or later   | 11 or later
+Push             | 10.9 or later   | 11 or later
 
 ### tvOS
 
 Service          | tvOS Version    | Xcode
 -----------------|-----------------|--------------
-Analytics        | 11.0 or later   | 10 and later
-Crashes          | 11.0 or later   | 10 and later
+Analytics        | 11.0 or later   | 11 and later
+Crashes          | 11.0 or later   | 11 and later
 
 ### Apache Cordova
 
