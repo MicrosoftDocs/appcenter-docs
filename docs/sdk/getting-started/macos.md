@@ -44,8 +44,7 @@ The following requirements must be met to use App Center SDK:
 > [!NOTE]
 > App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
 
-> [!NOTE]
-> App Center SDK is compatible with Mac Catalyst.
+App Center SDK Analytics and Crashes is compatible with Mac Catalyst.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
