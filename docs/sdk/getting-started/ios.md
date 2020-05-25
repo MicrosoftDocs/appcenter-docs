@@ -37,7 +37,7 @@ Let's get started with setting up App Center iOS SDK in your app to use App Cent
 
 The following requirements must be met to use App Center SDK:
 
-* Your iOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
+* Your iOS project is set up in Xcode 11 or later on macOS version 10.12 or later.
 * You are targeting devices running on iOS 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
 
@@ -156,6 +156,15 @@ Insert the following line in the app's `didFinishLaunchingWithOptions` delegate 
 ```
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+```
+
+If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
+
+```objc
+[MSAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+```
+```swift
+MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
