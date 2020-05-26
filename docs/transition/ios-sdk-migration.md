@@ -3,7 +3,7 @@ title: HockeySDK for iOS Migration
 description: Migrate from the HockeySDK to App Center SDK for iOS
 author: elamalani
 ms.author: emalani
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter
@@ -47,7 +47,7 @@ If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line
 
 ### 1.2 Add the new App Center SDK
 
-The App Center SDK supports integration via Cocoapods, Carthage, and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/ios.md#3-add-the-app-center-sdk-modules).
+The App Center SDK supports integration via Cocoapods, Carthage, Swift Package Manager and by using the Frameworks in your Xcode project. Read detailed instructions how to how to integrate the App Center SDK in the [App Center SDK documentation](~/sdk/getting-started/ios.md#3-add-the-app-center-sdk-modules).
 
 > [!NOTE]
 > The App Center SDK is designed with a modular approach so you can use any or all of the services. See the equivalences in the next table:
