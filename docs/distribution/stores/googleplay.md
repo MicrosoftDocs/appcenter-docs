@@ -4,7 +4,7 @@ description: Simplify distribution of mobile applications to the Google Play sto
 keywords: distribution store
 author: oddj0b
 ms.author: vigimm
-ms.date: 12/10/2019
+ms.date: 05/10/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -101,9 +101,7 @@ Close the window and the new service account shows on the original page. Click t
 	1. Upload a key exported from Android Studio
 	2. Export and upload a key from a Java keystore
 	3. Export and upload a key (not using a Java keystore)
-
-![Google Play: Set up app signing](~/distribution/images/image11.png)
-
+	4. [App signing by Google Play](https://support.google.com/googleplay/android-developer/answer/7384423) (Recommended)
 5. Click **finish**
 
 ## Create a Google Play connection in App Center
