@@ -77,7 +77,7 @@ Click the **Select a role** in the drop-down menu. Select **Project**, then **Ow
 > [!NOTE]
 > Some users can't download the .json file using Edge and Internet Explorer.
 
-On the new page click **+ Create Key (optional)** and a modal appears.
+On the new page, click **+ Create Key (optional)** and a modal appears.
 
 ![Google Play: Click + Create Key to generate a JSON file](~/distribution/images/image7.png)
 
@@ -120,8 +120,8 @@ Close the window and the new service account shows on the original page. Click t
 2. Click on **Publish to Store** on the button in the upper-right corner.
 3. Upload the app package. A few points to note:
    * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
-   * Google Play Store supports android app bundles up to a maximum of 2 GB. Apks generated from the aab cannot exceed 150 MB. You can read more about [your options at Google's docs for AAB](https://developer.android.com/guide/app-bundle/).
-   * The version of the .aab must be strictly greater than the current version in production.
+   * Google Play Store supports android app bundles up to a maximum of 2 GB. `.apk` files generated from the `.aab` cannot exceed 150 MB. You can read more about [your options at Google's docs for AAB](https://developer.android.com/guide/app-bundle/).
+   * The version of the `.aab` must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in Alpha and Beta track versions.
    * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
    * If you have a draft release in the track you will publish to, that draft release will disappear in favor of the new release you publish.
@@ -136,9 +136,9 @@ Close the window and the new service account shows on the original page. Click t
 2. Click on **Publish to Store** on the button in the upper-right corner.
 3. Upload the app package. A few points to note:
    * [Application must be prepared for release](https://developer.android.com/studio/publish/#publishing-prepare) and signed with a valid key store before uploading.
-   * Google Play Store supports application packages up to a maximum of 100 MB. If the application exceeds 100 MB, use the Expansion files to support the application package by uploading those directly in the Google Play Developer Console as we currently don't support Expansion files in App Center. Review [Expansion files](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
-   * The .apk must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
-   * The version of the .apk must be strictly greater than the current version in production.
+   * Google Play Store supports application packages up to a maximum of 100 MB. Upload expansion filees directly to the Google Play Consolee if the application exceeds 100 MB. [Read Google's doc on expansion files to set it up](https://support.google.com/googleplay/android-developer/answer/2481797?hl=en).
+   * The `.apk` must be [zipaligned](https://developer.android.com/studio/command-line/zipalign.html) during the app-building process.
+   * The version of the `.apk` must be strictly greater than the current version in production.
    * If you have app versions in other tracks like Alpha and Beta, your release version should be strictly less than versions in alpha and Beta track versions.
    * App Center currently does not support promoting an app from one track to another. You cannot promote a version from alpha to beta or beta to production.
    * If you have a draft release in the track you will publish to, that draft release will disappear in favor of the new release you publish.
@@ -150,7 +150,7 @@ Close the window and the new service account shows on the original page. Click t
 ## Publishing through the CLI
 Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
 
-Before you can use the CLI, you will need to establish a connection to a destination, i.e., Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
+Before you can use the CLI, you will need to establish a connection to a destination, that is, Google Play, App Store, or Intune in the App Center. And compile a binary that complies with your destination.
 
 You can list your stores by using the list command like this:
 
