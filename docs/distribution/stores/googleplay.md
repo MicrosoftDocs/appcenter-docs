@@ -15,7 +15,7 @@ ms.assetid: 8c034e61-7fc5-4dea-9722-242a2d01ee1f
 
 Publish an update to Google Play Store, including the Alpha and Beta tracks from App Center.
 
-## Prerequisites
+## Pre-requisites
 
 * Google requires the first version of your Google Play application to be published to production through the Google console.
 * A Google Play Developer account. If you do not have one, you can sign up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
