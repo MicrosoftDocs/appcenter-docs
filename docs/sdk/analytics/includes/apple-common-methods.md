@@ -1,13 +1,16 @@
 ---
 author: elamalani
 ms.author: emalani
-ms.date: 11/25/2019
+ms.date: 05/28/2020
 ms.topic: include
 ---
 
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.
+
+> [!NOTE]
+> On Mac Catalyst, session number may be lower that on iOS apps. The reason is that the state is almost always Foreground + Active on macOS. Apps only enter background during termination and inactive when launching in the background.
 
 The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking your users location and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
