@@ -4,7 +4,7 @@ description: Shared docs for Apple Extensions
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 09/30/2019
+ms.date: 05/07/2020
 ms.topic: include
 ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0
 ms.tgt_pltfrm: apple
@@ -58,7 +58,9 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-### 3.3 Integration by copying the binaries into your project
+[!INCLUDE [swift package manager](swift-package-manager.md)]
+
+### 3.4 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Crashes for your app extension.
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
