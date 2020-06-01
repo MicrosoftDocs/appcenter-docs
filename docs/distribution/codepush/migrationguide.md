@@ -2,8 +2,9 @@
 title: CodePush Migration Guide
 description: "How to migrate from CodePush to App Center"
 keywords: distribution
-author: zakeelm
-ms.author: zakeelm 
+author: ahdbilal
+ms.author: ahbilal
+ms.reviewer: kegr
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 94769F28-24C6-4A14-84F9-9A8D82AE1D13
@@ -13,47 +14,42 @@ ms.custom: distribute
 
 # Migration Guide
 
-Visual Studio App Center (previously known as Visual Studio Mobile Center) is now the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
+Visual Studio App Center is the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
-Regardless, change is hard. Because of this, this guide was made to ensure that moving from CodePush to App Center is a seamless experience for you, so you can focus on development and not be impeded by the learning curve of navigating  a new product. Besides the use of a new CLI, we have tried to limit the amount of changes you have to make at the time of this announcement. You will not have to make any changes in your code until the release of the new SDK next year.
+Regardless, change is hard. This guide was made to make moving from CodePush to App Center a seamless experience. Besides the use of a new CLI, we've tried to limit the changes you have to make immediately. You won't have to make any changes in your code until the release of the new SDK next year.
 
-If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by simply logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by [creating an account](https://appcenter.ms).
+If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by [creating an account](https://appcenter.ms).
 
 ## Getting Started
 
-**1. Setting up your account**
-
+### Setting up your account
 Depending on the status of your account, the process is a little different:
+- **Current CodePush users**: We've already migrated your account! No further action is required regarding account setup. You can access your account data by logging into [App Center](https://appcenter.ms).
+- **New CodePush users**: Create an account on [App Center](https://appcenter.ms).
 
-* **Current CodePush users:** We've already migrated your account! No further action is required regarding account set up is required. You can access your account data by logging into [App Center](https://appcenter.ms).
+> [!NOTE]
+> If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
 
-* **New CodePush users:** Please create an account on [App Center](https://appcenter.ms).
-
-  > [!NOTE]
-  > If you had both a CodePush and App Center account that shared an email address, then no further action is required. These accounts will be merged upon logging in to App Center.
-
-**2. Getting Set up in the App Center Portal**
-
-Once you login, the first thing you will see is a list of all your applications. If you had a previous CodePush application, you should find it listed and annotated.
+### Getting Set up in the App Center Portal
+Once you log in, the first thing you'll see is a list of all your applications. If you had a previous CodePush application, you should find it listed and annotated.
 
 ![All Your Apps](./images/mg-portal-1.png)
 
-The back-end migration of CodePush into App Center was completed on June 2nd, 2017. If any of your apps were made before this, you will have to specify the OS and Platform of the app.
+The back-end migration of CodePush was completed on June 2, 2017. If any of your apps were made before this date, you'll have to specify the OS and Platform of the app.
 
 ![Import](./images/mg-portal-2.png)
 
-If you specify that your app is a Cordova application, you may notice that we don't yet support this platforms within the portal; if this is the case, please do not despair as you will still be able to use the App Center CLI and we are working on supporting additional platforms in the portal. App Center's mission is to provide quality support for as many  platforms as possible; we are working hard to make it so. Periodically check out [the App Center blog](https://blogs.msdn.microsoft.com/vsappcenter/) for news and updates and our [product roadmap](https://docs.microsoft.com/appcenter/general/roadmap).
+You may notice if your app is a Cordova application that we don't yet support the platform in the portal. You can still use the App Center CLI, and we're working on supporting additional platforms. App Center's mission is to provide quality support for as many  platforms as possible. Periodically check out the [App Center blog](https://blogs.msdn.microsoft.com/vsappcenter/) for news or updates, and our [product roadmap](https://docs.microsoft.com/appcenter/general/roadmap).
 
-If your imported app's platform is React Native or if you are starting a new React Native app from scratch, you should see an app overview panel that lets you manage your app and provides you with instruction on how to integrate other App Center SDKs. Your App Center app secret is what allows your app to send information to App Center, it is *not* the same as your CodePush deployment keys; the latter can be discovered by open a terminal window and executing:
+If you imported a React Native app, or are starting a new React Native app, you should see an app overview panel that lets you manage your app and shows how to add other App Center SDKs. Your App Center app secret is what allows your app to send information to App Center, it isn't the same as your CodePush deployment keys. CodePush deployment keys can be checked by opening the terminal and running:
 
 ```shell
 appcenter codepush deployment list <ownerName>/<appName> --displayKeys
 ```
 
-**3. Install the App Center CLI**
-
+### Install the App Center CLI
 To start releasing updates to your end users, you must install the App Center CLI. To install it, open a terminal window or command prompt and execute the following command:
 
 ```shell
@@ -70,11 +66,10 @@ The token must be put into the CLI for authentication and to complete the login 
 
 ![Login](./images/mg-terminalkey.png)
 
-After completing this, you are free to use CodePush functionality in your apps through the App Center CLI.
+After completing this, you're free to use CodePush functionality in your apps through the App Center CLI.
 
 ## Using CodePush in the App Center Portal
-
-CodePush can be found within the Distribution section of the App Center portal. CodePush is only visible in App Center when using React Native and, in the near future, Cordova applications.
+CodePush can be found within the Distribution section of the App Center portal. CodePush is only visible in App Center when using React Native, and soon Cordova applications.
 
 If your application has a history of releases for a given deployment, these releases will be visible. Switching between deployments is as simple as using the dropdown at the upper right-hand corner of the screen.
 
@@ -84,11 +79,11 @@ Clicking the "Edit" button will provide you with a panel for patching your relea
 
 ![Release Patch](./images/mg-portal-4.png)
 
-For now, developers using CodePush must distribute releases using the release commands in the App Center CLI, but we are looking into extending this functionality to the App Center dashboard as well. Please note that if you create your React Native app using the dashboard, you *first* will have to create default deployments using App Center.
+For now, developers using CodePush must distribute releases using the release commands in the App Center CLI. You'll have to create default deployments using App Center, if you create your React Native app using the dashboard.
 
 ![CreateDeployments](./images/mg-portal-5.png)
 
-Or you can use the following commands in the App Center CLI to create the recommended deployments prior to pushing a release:
+Or you can use the following commands in the App Center CLI to create the recommended deployments before pushing a release:
 
 ```shell
 appcenter codepush deployment add -a <ownerName>/<appName> Staging
@@ -96,10 +91,9 @@ appcenter codepush deployment add -a <ownerName>/<appName> Production
 ```
 
 ## The App Center CLI Experience
-
 ![CLI](./images/mg-terminalpic.png)
 
-This section was constructed to enable you to see some of the most common CodePush commands and how they have changed within the App Center CLI. 
+This section was constructed to enable you to see some of the most common CodePush commands and how they've changed within the App Center CLI. 
 
 > [!TIP]
 > Most App Center CLI commands can be shortened by using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no longer have to use the -a flag to specify the app you're trying to perform the command on.
@@ -163,34 +157,26 @@ appcenter codepush deployment list MyApp
 | `appcenter codepush rollback`| Rollback the latest release for an app deployment | `appcenter codepush rollback Staging` |
 
 ## FAQ
+#### Will the move impact my customers?
+No.
 
-**Q:** *Will the move impact my customers?*
+#### What changes for CodePush?
+For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
 
-**A:** No
+#### Is using CodePush functionality still free?
+Yes.
 
-**Q:** *What changes for CodePush?*
+#### Why the move?
+Moving to App Center means more support, more resources, and a home among Microsoft's first class services for mobile development.
 
-**A:** As of now, the only big change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today. None of this would be possible without such an amazing community.
+#### Can I still log on?
+Yes.
 
-**Q:** *Is using CodePush functionality still free?*
+#### Can I continue to use the CLI?
+Yes, we're committed to maintain the CLI through September 2018. You're free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid-October 2018.
 
-**A:** Yes.
-
-**Q:** *Why the move?*
-
-**A:** Moving to App Center means more support, more resources, and a home among Microsoft's first class services for mobile development.
-
-**Q:** *Will I still be able to log on?*
-
-**A:** Yes.
-
-**Q:** *Can I continue to use the CLI?*
-
-**A:** Yes, we are committed to maintain the CLI through September 2018. You are free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid October 2018.
-
-**Q:** *Will I need to create a new account for App Center if I already have one?*
-
-**A:** If you used the same email for both accounts, you will be able to log into App Center using your original account. If not, one will be created for your CodePush app. If you would like to manage your apps from the same account you will need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
+#### Will I need to create a new account for App Center if I already have one?
+If you used the same email for both accounts, you can log into App Center using your original account. If not, one will be created for your CodePush app. If you'd like to manage your apps from the same account you'll need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
 
 ## Helpful Resources
 
