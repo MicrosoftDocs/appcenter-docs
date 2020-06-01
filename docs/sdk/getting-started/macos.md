@@ -44,7 +44,7 @@ The following requirements must be met to use App Center SDK:
 > [!NOTE]
 > App Center SDK will **drop support for Xcode 10** with the June SDK release.
 
-App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SPM.
+App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

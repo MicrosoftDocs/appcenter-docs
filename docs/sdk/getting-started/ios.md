@@ -41,7 +41,7 @@ The following requirements must be met to use App Center SDK:
 * You are targeting devices running on iOS 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
 
-App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SPM.
+App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

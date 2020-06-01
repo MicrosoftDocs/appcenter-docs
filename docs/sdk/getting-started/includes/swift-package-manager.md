@@ -26,4 +26,4 @@ dev_langs:
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 > [!NOTE]
-> If you're integrating App Center via SPM and want to use it in your app's extension target as well, make sure that you provide `DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES` in your configuration. This is necessary to avoid SPM limitations in linking a module to multiple targets.
+> If you're integrating App Center via SwiftPM and want to use it in your app's extension target as well, make sure that you provide `DISABLE_DIAMOND_PROBLEM_DIAGNOSTIC=YES` in your configuration. This is necessary to avoid SwiftPM limitations in linking a module to multiple targets.
