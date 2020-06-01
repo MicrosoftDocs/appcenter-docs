@@ -29,7 +29,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 1. Select **Stores** under Distribution.
 2. In the middle of the page, click on the **Connect to Store** button.
 3. Select the store type as Intune Company Portal and click **Next**.
-4. You'll be redirected to Microsoft login page where you must provide your initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**.
+4. You'll be redirected to Microsoft login page, to provide your initial domain name in Azure Active Directory (AD). It looks like **your-domain.onmicrosoft.com**.
 5. On successful login, you'll be asked to enter a **Store name**.
 6. **Select Category** of the app from the drop-down.
 7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The Intune administrator that connected App Center to the Intune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the autocomplete drop-down.
@@ -47,7 +47,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Submitted**.
 7. In case of a failure while publishing, the status is **failed** with an error message.
 
-For any issues, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
+For any issues, you can always open a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
 
 
 ## Publishing through the CLI
