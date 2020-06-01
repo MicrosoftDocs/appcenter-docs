@@ -37,14 +37,14 @@ Let's get started with setting up App Center macOS SDK in your app to use App Ce
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 11 or later on macOS version 10.12 or later.
+* Your macOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
 * You are targeting devices running on macOS 10.9 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 
 > [!NOTE]
-> App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Please refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
+> App Center SDK will **drop support for Xcode 10** with the June SDK release.
 
-App Center SDK Analytics and Crashes is compatible with Mac Catalyst.
+App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SPM.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
