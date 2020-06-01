@@ -12,11 +12,9 @@ ms.assetid: 7360e04f-01af-4c3f-ac0a-75c2dab979ba
 ---
 
 # Intune Company Portal Distribution
-
 Publish new and upgrade existing line-of-business (LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
 
-## Pre-requisites
-
+## Prerequisites
 * Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](https://docs.microsoft.com/intune/free-trial-sign-up).
 * An Intune admin and tenant account activated. 
 * Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
