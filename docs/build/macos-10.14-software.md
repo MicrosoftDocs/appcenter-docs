@@ -4,17 +4,17 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
 # macOS info
-- System Version: macOS 10.14.6 (18G4032)
+- System Version: macOS 10.14.6 (18G5033)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200524.1
+- Image Version: 20200530.1
 
 ## Installed Software
 ### Language and Runtime
@@ -32,7 +32,7 @@ ms.custom: build
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.3.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.17.0 v13.14.0 v14.3.0
 - PowerShell 7.0.1
 - Python 2.7.17
 - Python 3.7.7
@@ -46,8 +46,8 @@ ms.custom: build
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
-- CocoaPods 1.9.2
-- Homebrew 2.2.17
+- CocoaPods 1.9.3
+- Homebrew 2.3.0
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -64,12 +64,12 @@ ms.custom: build
 - Curl 7.70.0
 - Git: 2.26.2
 - Git LFS: 2.11.0
-- GitHub CLI: 0.8.0
+- GitHub CLI: 0.9.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
-- Subversion (SVN) 1.13.0
+- Subversion (SVN) 1.14.0
 - Packer 1.5.6
-- GNU parallel 20200422
+- GNU parallel 20200522
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
@@ -78,23 +78,27 @@ ms.custom: build
 - aria2 1.35.0
 - azcopy 10.4.3
 - zstd 1.4.5
-- bazel 3.1.0
+- bazel 3.2.0
 - bazelisk v1.4.0
 - helm v3.2.1+gfe51cd1
 - virtualbox 6.1.8r137981
-- mongo v4.2.6
-- mongod v4.2.6
+- mongo v4.2.7
+- mongod v4.2.7
 - Vagrant 2.2.9
 - 7-Zip 16.02
 
 ### Tools
 - Fastlane 2.148.1
-- Cmake 3.17.2
+- Cmake 3.17.3
 - App Center CLI 1.2.2
 - Azure CLI 2.6.0
-- AWS CLI 2.0.16
-- AWS SAM CLI 0.51.0
+- AWS CLI 2.0.17
+- AWS SAM CLI 0.52.0
 - Aliyun CLI 3.0.45
+- GHCup v0.1.5-p2
+- GHC 8.10.1
+- Cabal 3.2.0.0
+- Stack 2.3.1
 
 ### Browsers
 - Safari 13.1 (14609.1.20.111.8)
@@ -121,8 +125,8 @@ ms.custom: build
 - 3.8.3
 
 #### PyPy
-- 2.7.17
-- 3.6.9
+- 2.7.13 [PyPy 7.3.1]
+- 3.6.9 [PyPy 7.3.1]
 
 ### Xamarin
 #### Visual Studio for Mac
@@ -392,7 +396,7 @@ ms.custom: build
 | ------------ | ------------------------------------------ |
 | 15.2.4203891 | $HOME/Library/Android/sdk/android-ndk-r15c |
 | 18.1.5063045 | $HOME/Library/Android/sdk/ndk/18.1.5063045 |
-| 21.1.6352462 | $HOME/Library/Android/sdk/ndk-bundle       |
+| 21.2.6472646 | $HOME/Library/Android/sdk/ndk-bundle       |
 
 #### Android Utils
 | Package Name     | Version     |
