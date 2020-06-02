@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 05/18/2020
+ms.date: 05/26/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -14,7 +14,7 @@ ms.custom: build
 - System Version: macOS 10.14.6 (18G4032)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200514.2
+- Image Version: 20200524.1
 
 ## Installed Software
 ### Language and Runtime
@@ -32,22 +32,22 @@ ms.custom: build
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.2.0
-- PowerShell 7.0.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.3.0
+- PowerShell 7.0.1
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
 - .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.14.2
+- Go 1.14.3
 - PHP 7.4.6
-- julia 1.4.1
+- julia 1.4.2
 
 ### Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
 - Carthage 0.34.0
-- CocoaPods 1.9.1
-- Homebrew 2.2.16
+- CocoaPods 1.9.2
+- Homebrew 2.2.17
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -58,7 +58,7 @@ ms.custom: build
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.4
+- Gradle 6.4.1
 
 ### Utilities
 - Curl 7.70.0
@@ -73,35 +73,36 @@ ms.custom: build
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
-- psql (PostgreSQL) 12.2
-- PostgreSQL 12.2
+- psql (PostgreSQL) 12.3
+- PostgreSQL 12.3
 - aria2 1.35.0
 - azcopy 10.4.3
-- zstd 1.4.4
+- zstd 1.4.5
 - bazel 3.1.0
 - bazelisk v1.4.0
 - helm v3.2.1+gfe51cd1
-- virtualbox 6.1.6r137129
+- virtualbox 6.1.8r137981
 - mongo v4.2.6
 - mongod v4.2.6
 - Vagrant 2.2.9
+- 7-Zip 16.02
 
 ### Tools
-- Fastlane 2.148.0
+- Fastlane 2.148.1
 - Cmake 3.17.2
 - App Center CLI 1.2.2
-- Azure CLI 2.5.1
-- AWS CLI 2.0.10
-- AWS SAM CLI 0.49.0
-- Aliyun CLI 3.0.42
+- Azure CLI 2.6.0
+- AWS CLI 2.0.16
+- AWS SAM CLI 0.51.0
+- Aliyun CLI 3.0.45
 
 ### Browsers
 - Safari 13.1 (14609.1.20.111.8)
 - SafariDriver 13.1 (14609.1.20.111.8)
-- Google Chrome 81.0.4044.138 
-- ChromeDriver 81.0.4044.138
-- Microsoft Edge 81.0.416.72 
-- MSEdgeDriver 81.0.416.72
+- Google Chrome 83.0.4103.61 
+- ChromeDriver 83.0.4103.39
+- Microsoft Edge 83.0.478.37 
+- MSEdgeDriver 83.0.478.37
 - Mozilla Firefox 76.0.1
 - geckodriver 0.26.0
 
