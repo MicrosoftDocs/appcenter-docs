@@ -38,31 +38,31 @@ Let's get started with setting up App Center iOS SDK in your app to use App Cent
 The following requirements must be met to use App Center SDK:
 
 * Your iOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
-* You are targeting devices running on iOS 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
+* You're targeting devices running on iOS 9.0 or later.
+* You're not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
-2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+2. Sign up or log in and hit the blue button on the top-right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
 3. Enter a name and an optional description for your app.
 4. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
-The App Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager) or by manually adding the binaries to your project.
+The App Center SDK for iOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager), or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
 
-1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Alternatively, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
+1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify services you want in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
 
 	```ruby
-	# Use the following line to use App Center Analytics and Crashes.
+	# Use the following line to use App Center Analytics and Crashes.x
 	pod 'AppCenter'
 
 	# Use the following lines if you want to specify which service you want to use.
@@ -96,7 +96,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
     ```
 
 1. Run `carthage update`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.  
-1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/iOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
+1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** files from the **Carthage/Build/iOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
     > [!NOTE]
@@ -131,8 +131,8 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 ## 4. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
-If you're developing for an extension, please refer to the [Extension getting started page](./ios-extensions.md).
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to call each one when starting the SDK.
+If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
 
@@ -181,9 +181,9 @@ For example - If you just want to onboard to App Center Analytics, you should mo
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
-Look at the documentation for [App Center Analytics](~/sdk/analytics/ios.md) and [App Center Crashes](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
+Look at the [App Center Analytics docs](~/sdk/analytics/ios.md) and [App Center Crashes docs](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/ios.md).
 
