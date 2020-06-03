@@ -46,7 +46,7 @@ The App Center SDK for Xamarin supports the following platforms:
 
 ### 1.1 About Xamarin.Android
 
-Choose this option if you target only Android platform.. You need to create one app in the App Center portal with the **Android** as the OS and **Xamarin** as the platform.
+Choose this option if you target only Android platform. You need to create one app in the App Center portal with the **Android** as the OS and **Xamarin** as the platform.
 
 ### 1.2 About Xamarin.iOS
 
