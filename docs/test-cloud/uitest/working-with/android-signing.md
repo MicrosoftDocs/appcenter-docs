@@ -4,7 +4,7 @@ description: How to sign Android apks with your Android keystore in App Center T
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 04/08/2020
+ms.date: 06/04/2020
 ms.topic: article
 ms.assetid: 819e647d-be5c-43ce-afbf-c58e51d52e03
 ms.service: vs-appcenter
