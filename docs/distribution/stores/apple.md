@@ -15,8 +15,7 @@ ms.assetid: 32d31a11-8c89-458b-9074-0da4a06384a1
 
 Publish iOS app upgrades to the App Store and TestFlight with Fastlane in App Center.
 
-## Pre-requisites
-
+## Prerequisites
 * The first version of an iOS application must be published through the App Store Connect portal.
 * Compile the app using an App Store provisioning profile and production certificate.
 * App should be ready for submission and pass the [App Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
