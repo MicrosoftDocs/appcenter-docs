@@ -99,7 +99,7 @@ func locationManager(_ Manager: CLLocationManager, didFailWithError error: Error
 
 ## Custom events
 
-You can track your own custom events with **up to twenty properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
+You can track your own custom events with **up to 20 properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
 Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
@@ -129,7 +129,7 @@ You can track business critical events that have higher importance than other ev
 * When the local storage is full and new events needs to be stored, the oldest events that have the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
 **Normal** priority will fail as the SDK cannot make room in that case.
-* If you also use the **Crashes** service, please note that crash logs are set as **Critical** and share the same storage as events.
+* If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
 You can use the following API to track an event as **Critical**:
@@ -201,15 +201,15 @@ MSAnalytics.isEnabled()
 
 ## Local storage size
 
-By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
+By default, the SDK stores all logs up to 10 MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
 
 ## Batching event logs
 
-The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds (by default). There can be a maximum of 3 batches sent in parallel.
+The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds (by default). There can be a maximum of three batches sent in parallel.
 The transmission interval can be changed:
 
 ```objc
@@ -221,17 +221,17 @@ The transmission interval can be changed:
 MSAnalytics.setTransmissionInterval(600)
 ```
 
-The transmission interval value must be between 3 seconds and 86400 seconds (1 day) and this method must be called before the service is started.
+The transmission interval value must be between 3 seconds and 86400 seconds (one day) and this method must be called before the service is started.
 
 ## Retry and back-off logic
 
 App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
 
-* 3 tries maximum per request.
+* Three tries maximum per request.
 * Each request has its own retry state machine.
-* All the transmission channels are disabled (until next app process) after 1 request exhausts all its retries.
+* All the transmission channels are disabled (until next app process) after one request exhausts all its retries.
 
 Back-off logic
 
-* 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
+* 50% randomization, first retry between 5 to 10 seconds, second retry between 2.5 to 5 minutes, last try between 10 to 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.
