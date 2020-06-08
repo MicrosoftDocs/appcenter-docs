@@ -56,8 +56,7 @@
 ## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
-### [Introduction](build/troubleshooting/index.md)
-### [General](build/troubleshooting/general.md)
+### [General](build/troubleshooting/index.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [Backup Build Data](build/troubleshooting/backup-data.md)
