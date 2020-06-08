@@ -45,4 +45,4 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 
 ## Protect the App Center secret value
 
-[!INCLUDE [android see async](../app-secret-secure.md)]
+[!INCLUDE [app secret secure](../includes/app-secret-secure.md)]

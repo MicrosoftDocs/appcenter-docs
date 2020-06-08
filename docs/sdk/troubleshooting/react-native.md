@@ -190,4 +190,4 @@ If you have already integrated our SDK into your application and want to upgrade
 
 ## Protect the App Center secret value
 
-[!INCLUDE [android see async](../app-secret-secure.md)]
+[!INCLUDE [app secret secure](../includes/app-secret-secure.md)]

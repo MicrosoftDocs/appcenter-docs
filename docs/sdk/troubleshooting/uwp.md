@@ -40,4 +40,4 @@ ms.tgt_pltfrm: uwp
 
 ## Protect the App Center secret value
 
-[!INCLUDE [android see async](../app-secret-secure.md)]
+[!INCLUDE [app secret secure](../includes/app-secret-secure.md)]

@@ -118,4 +118,4 @@ Note that the numbers below can vary and depend on your build settings, so consi
 
 ## Protect the App Center secret value
 
-[!INCLUDE [android see async](../app-secret-secure.md)]
+[!INCLUDE [app secret secure](../includes/app-secret-secure.md)]
