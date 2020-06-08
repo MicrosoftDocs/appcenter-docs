@@ -13,7 +13,7 @@ ms.custom: build
 
 # Code Repository Troubleshooting
 
-## <a name="not-listed">Repository isn't listed in the Connect to Repository step </a>
+## <a name="not-listed" />Repository isn't listed in the Connect to Repository step
 
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
