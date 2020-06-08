@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Unity
 keywords: sdk
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 05/05/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 ---
@@ -42,3 +42,9 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 7. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it has been sent.
 9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
+
+## Protect the App Center secret value
+
+The AppCenter secret is an identifier you app. The biggest risk if your **app_secret** is exposed is sending bad/unrelated traffic to your crashes and logging, as our SDKs use the app secret to know which app the traffic applies to. 
+Our APIs are protected such that authorization happens at a user level, in which the user must provide an API token (which can be generated on the `App Center` site), and we check that they're authorized to perform the request operation with the app and organization specified. 
+There is no way to be 100% secure the **app_secret**. As a way to increased security your application is using custom inject system your **app_secret** into your code via an environment variable so that at least the **app_secret** is not in clear in the code. 

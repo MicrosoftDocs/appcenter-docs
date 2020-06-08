@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/16/2020
+ms.date: 06/08/2020
 ms.topic: troubleshooting-article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
@@ -78,3 +78,9 @@ If you are running automated UI tests, enabled in-app updates will block your au
 ## You are seeing messages in the console that indicate that the database could not be opened on iOS
 
 App Center uses SQLite to persist logs before they are sent to the backend. If you are bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Please update the SDK to version 0.16.0 or later.
+
+## Protect the App Center secret value
+
+The AppCenter secret is an identifier you app. The biggest risk if your **app_secret** is exposed is sending bad/unrelated traffic to your crashes and logging, as our SDKs use the app secret to know which app the traffic applies to. 
+Our APIs are protected such that authorization happens at a user level, in which the user must provide an API token (which can be generated on the `App Center` site), and we check that they're authorized to perform the request operation with the app and organization specified. 
+There is no way to be 100% secure the **app_secret**. As a way to increased security your application is using custom inject system your **app_secret** into your code via an environment variable so that at least the **app_secret** is not in clear in the code. 

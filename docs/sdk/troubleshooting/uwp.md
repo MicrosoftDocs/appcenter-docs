@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/16/2020
+ms.date: 06/08/2020
 ms.topic: troubleshooting-article
 ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
 ms.tgt_pltfrm: uwp
@@ -37,3 +37,9 @@ ms.tgt_pltfrm: uwp
 5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
 7. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
+
+## Protect the App Center secret value
+
+The AppCenter secret is an identifier you app. The biggest risk if your **app_secret** is exposed is sending bad/unrelated traffic to your crashes and logging, as our SDKs use the app secret to know which app the traffic applies to. 
+Our APIs are protected such that authorization happens at a user level, in which the user must provide an API token (which can be generated on the `App Center` site), and we check that they're authorized to perform the request operation with the app and organization specified. 
+There is no way to be 100% secure the **app_secret**. As a way to increased security your application is using custom inject system your **app_secret** into your code via an environment variable so that at least the **app_secret** is not in clear in the code. 
