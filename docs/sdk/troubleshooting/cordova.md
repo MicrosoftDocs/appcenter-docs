@@ -119,6 +119,6 @@ By default this value is `false`.
 
 ## Protect the App Center secret value
 
-The **app_secret** is an identifier you app. The biggest risk if your **app_secret** is exposed is sending bad/unrelated traffic to your crashes and logging, as our SDKs use the app secret to know which app the traffic applies to. 
-Our APIs are protected such that authorization happens at a user level, in which the user must provide an API token (which can be generated on the `App Center` site), and we check that they're authorized to perform the request operation with the app and organization specified. 
-There is no way to be 100% secure the **app_secret**. As a way to increased security your application is using custom inject system your **app_secret** into your code via an environment variable so that at least the **app_secret** is not in clear in the code. 
+The `app_secret` is an identifier of your app. The biggest risk of exposed your `app_secret`  is sending bad/unrelated data to your crashes and analytics, as the app secret is used only to know which app the traffic applies to. 
+It will no effect on the security of data because for getting any data needed to provide a token, which generated on the client’s side.
+However, there is no way to be 100% secure the any data that must be placed on the client's side. As a way to increased security your application is using custom inject system your `app_secret` into your code via an environment variable so that at least the `app_secret` is not in clear in the code. 
