@@ -45,6 +45,4 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 
 ## Protect the App Center secret value
 
-The `app_secret` is an identifier of your app. The biggest risk of exposed your `app_secret`  is sending bad/unrelated data to your crashes and analytics, as the app secret is used only to know which app the traffic applies to. 
-It will no effect on the security of data because for getting any data needed to provide a token, which generated on the client’s side.
-However, there is no way to be 100% secure any data that must be placed on the client's side. As a way to increased security your application is using custom inject system your `app_secret` into your code via an environment variable so that at least the `app_secret` is not in clear in the code.  
+[!INCLUDE [android see async](../app-secret-secure.md)]
