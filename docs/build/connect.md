@@ -47,7 +47,7 @@ To connect to another GitHub account, first revoke the OAuth token. Go to [the G
 
 ![Remove GitHub Oauth Token](~/build/images/remove-github-oauth-token.jpg "Remove GitHub token")
 
-### Azure DevOps (formerly Visual Studio Team Services)
+### Azure DevOps 
 To connect to another Azure DevOps account, first revoke the Oauth token. Go to the **[Azure DevOps Me Page](https://app.vsaex.visualstudio.com/me) > Manage Authorizations (See screenshot below) > Revoke App Center token**. In App Center's **Build** tab, reconnect to Azure DevOps and go through the Oauth flow again. Make sure that before you redo the Oauth flow in App Center, you sign out in the browser from the identity that you used to connect to the previous Azure DevOps account.
 
 > [!NOTE]
