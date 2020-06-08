@@ -4,7 +4,7 @@ description: Devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 5/13/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -13,25 +13,14 @@ ms.custom: test
 
 # App Center Test Devices
 
-
-
 Model | OS
 -- | --
-Acer Iconia A1-830 | 4.2.2
-Acer Iconia Tab A1 | 4.2.2
-Acer Liquid E2 | 4.2.2
-Alcatel Onetouch Idol 2 | 4.2.2
-Amazon Fire Phone | 4.4.4
-Amazon Kindle Fire (2nd Gen) | 4.0.3
-Amazon Kindle Fire HD 8.9 (2nd Gen) | 4.0.4
-Amazon Kindle Fire HDX 7 | 4.4.3
-Amazon Kindle Fire HDX 8.9 | 4.4.3
 Apple iPad 2 | 9.3.5
 Apple iPad 7th Gen | 13.1.3
 Apple iPad 7th Gen | 13.2.3
 Apple iPad 7th Gen | 13.3.1
 Apple iPad 7th Gen | 13.4.1
-Apple iPad 7th Gen | 13.5
+Apple iPad 7th Gen | 13.5.1
 Apple iPad 9.7" | 10.3.3
 Apple iPad 9.7" | 11.0.3
 Apple iPad 9.7" | 11.1.2
@@ -122,9 +111,9 @@ Apple iPad Pro 11" (2018) | 13.1.3
 Apple iPad Pro 11" (2018) | 13.2.3
 Apple iPad Pro 11" (2018) | 13.3.1
 Apple iPad Pro 11" (2018) | 13.4.1
-Apple iPad Pro 11" (2018) | 13.5
+Apple iPad Pro 11" (2018) | 13.5.1
 Apple iPad Pro 11" (2020) | 13.4.1
-Apple iPad Pro 11" (2020) | 13.5
+Apple iPad Pro 11" (2020) | 13.5.1
 Apple iPad Pro 12.9" (2017) | 11.0.3
 Apple iPad Pro 12.9" (2017) | 11.1.2
 Apple iPad Pro 12.9" (2017) | 11.2.6
@@ -140,9 +129,9 @@ Apple iPad Pro 12.9" (2018) | 13.1.3
 Apple iPad Pro 12.9" (2018) | 13.2.3
 Apple iPad Pro 12.9" (2018) | 13.3.1
 Apple iPad Pro 12.9" (2018) | 13.4.1
-Apple iPad Pro 12.9" (2018) | 13.5
+Apple iPad Pro 12.9" (2018) | 13.5.1
 Apple iPad Pro 12.9" (2020) | 13.4.1
-Apple iPad Pro 12.9" (2020) | 13.5
+Apple iPad Pro 12.9" (2020) | 13.5.1
 Apple iPad Pro 9.7" | 10.0.2
 Apple iPad Pro 9.7" | 10.1.1
 Apple iPad Pro 9.7" | 10.2.1
@@ -156,7 +145,7 @@ Apple iPhone 11 | 13.1.3
 Apple iPhone 11 | 13.2.3
 Apple iPhone 11 | 13.3.1
 Apple iPhone 11 | 13.4.1
-Apple iPhone 11 | 13.5
+Apple iPhone 11 | 13.5.1
 Apple iPhone 11 Pro | 13.0
 Apple iPhone 11 Pro | 13.1.3
 Apple iPhone 11 Pro | 13.2.3
@@ -280,7 +269,7 @@ Apple iPhone 8 | 13.1.3
 Apple iPhone 8 | 13.2.3
 Apple iPhone 8 | 13.3.1
 Apple iPhone 8 | 13.4.1
-Apple iPhone 8 | 13.5
+Apple iPhone 8 | 13.5.1
 Apple iPhone 8 Plus | 11.0.3
 Apple iPhone 8 Plus | 11.1.2
 Apple iPhone 8 Plus | 11.2.6
@@ -296,7 +285,7 @@ Apple iPhone 8 Plus | 13.1.3
 Apple iPhone 8 Plus | 13.2.3
 Apple iPhone 8 Plus | 13.3.1
 Apple iPhone 8 Plus | 13.4.1
-Apple iPhone 8 Plus | 13.5
+Apple iPhone 8 Plus | 13.5.1
 Apple iPhone SE | 10.0.2
 Apple iPhone SE | 10.1.1
 Apple iPhone SE | 10.2.1
@@ -316,6 +305,7 @@ Apple iPhone SE | 13.1.3
 Apple iPhone SE | 13.2.3
 Apple iPhone SE | 13.3.1
 Apple iPhone SE (2020) | 13.4.1
+Apple iPhone SE (2020) | 13.5.1
 Apple iPhone SE | 9.3.5
 Apple iPhone X | 11.1.2
 Apple iPhone X | 11.2.6
@@ -327,7 +317,7 @@ Apple iPhone X | 12.4.1
 Apple iPhone X | 13.0
 Apple iPhone X | 13.1.3
 Apple iPhone X | 13.2.3
-Apple iPhone X | 13.5
+Apple iPhone X | 13.5.1
 Apple iPhone XR | 12.1.4
 Apple iPhone XR | 12.2
 Apple iPhone XR | 12.3.1
@@ -342,7 +332,7 @@ Apple iPhone XS | 12.4.1
 Apple iPhone XS | 13.0
 Apple iPhone XS | 13.1.3
 Apple iPhone XS | 13.2.3
-Apple iPhone XS | 13.5
+Apple iPhone XS | 13.5.1
 Apple iPhone XS Max | 12.1.4
 Apple iPhone XS Max | 12.2
 Apple iPhone XS Max | 12.3.1
@@ -351,7 +341,7 @@ Apple iPhone XS Max | 13.0
 Apple iPhone XS Max | 13.1.3
 Apple iPhone XS Max | 13.2.3
 Apple iPhone XS Max | 13.4.1
-Apple iPhone XS Max | 13.5
+Apple iPhone XS Max | 13.5.1
 Apple iPod touch 5th Gen | 9.0.2
 Apple iPod touch 5th Gen | 9.3.5
 Apple iPod touch 6th Gen | 10.0.2
@@ -378,7 +368,16 @@ Apple iPod touch 7th Gen | 13.1.3
 Apple iPod touch 7th Gen | 13.2.3
 Apple iPod touch 7th Gen | 13.3.1
 Apple iPod touch 7th Gen | 13.4.1
-Apple iPod touch 7th Gen | 13.5
+Apple iPod touch 7th Gen | 13.5.1
+Acer Iconia A1-830 | 4.2.2
+Acer Iconia Tab A1 | 4.2.2
+Acer Liquid E2 | 4.2.2
+Alcatel Onetouch Idol 2 | 4.2.2
+Amazon Fire Phone | 4.4.4
+Amazon Kindle Fire (2nd Gen) | 4.0.3
+Amazon Kindle Fire HD 8.9 (2nd Gen) | 4.0.4
+Amazon Kindle Fire HDX 7 | 4.4.3
+Amazon Kindle Fire HDX 8.9 | 4.4.3
 Asus Google Nexus 7 (2013) | 4.4.4
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Transformer Pad TF300T | 4.1.1
@@ -584,11 +583,13 @@ Samsung Galaxy Express | 4.1.2
 Samsung Galaxy Grand 2 | 4.4.2
 Samsung Galaxy Grand Duos | 4.1.2
 Samsung Galaxy Grand Duos | 4.2.2
+Samsung Galaxy J6 | 10
 Samsung Galaxy J6 | 8.0.0
 Samsung Galaxy J7 (2017) | 7.0
 Samsung Galaxy J7 (2017) | 8.1.0
 Samsung Galaxy J7 (2017) | 9
 Samsung Galaxy M10 | 8.1.0
+Samsung Galaxy M10 | 9
 Samsung Galaxy M20 | 10
 Samsung Galaxy M20 | 8.1.0
 Samsung Galaxy M30 | 10
@@ -608,6 +609,7 @@ Samsung Galaxy Note 3 (Octo-Core) | 4.4.2
 Samsung Galaxy Note 3 (Quad-Core) | 4.4.2
 Samsung Galaxy Note 4 | 4.4.4
 Samsung Galaxy Note 4 | 5.1.1
+Samsung Galaxy Note 4 | 6.0.1
 Samsung Galaxy Note 5 | 5.1.1
 Samsung Galaxy Note 5 | 7.0
 Samsung Galaxy Note 8 | 7.1.1
@@ -675,6 +677,7 @@ Samsung Galaxy S7 | 7.0
 Samsung Galaxy S7 | 8.0.0
 Samsung Galaxy S7 Edge | 6.0.1
 Samsung Galaxy S7 Edge | 7.0
+Samsung Galaxy S7 Edge | 8.0.0
 Samsung Galaxy S8 | 7.0
 Samsung Galaxy S8 | 8.0.0
 Samsung Galaxy S8 | 9
@@ -783,6 +786,7 @@ Xiaomi Mi A3 | 10
 Xiaomi Mi A3 | 9
 Xiaomi Redmi Note 4G | 4.4.4
 ZTE Nubia Z7 Max | 4.4.2
+
 
 
 

@@ -25,7 +25,7 @@ The App Center SDK can be integrated into your app via [Cocoapods](https://cocoa
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open the project's .xcworkspace**.
+2. Run `pod install` to install your newly defined pod and open the project's .xcworkspace.
 
 > [!NOTE]
 > If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
