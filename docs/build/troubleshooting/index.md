@@ -12,7 +12,7 @@ ms.custom: build
 
 # General Troubleshooting
 ## Why did my build fail?
-There are various reasons why your build could have failed. The best way to find out what happened is to go to the build details page and download the logs. Check the logs for each of the steps to understand what happened and where exactly the build failed. If you can't understand why the build failed or you think there's an issue on our side, feel free to contact us via [App Center support](~/appcenter/general/support-center/index.md) right from within App Center.
+There are various reasons why your build could have failed. The best way to find out what happened is to go to the build details page and download the logs. Check the logs for each of the steps to understand what happened and where exactly the build failed. If you can't understand why the build failed or you think there's an issue on our side, feel free to contact us via [App Center support](~/general/support-center/index.md) right from within App Center.
 
 ## Why is the build in App Center taking longer than my local build?
 There are many reasons why build duration can be higher when using a build service:
