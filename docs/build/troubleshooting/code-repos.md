@@ -24,7 +24,7 @@ App Center currently supports cloud hosted Git repositories on Azure DevOps (for
 Disconnect the repository account, and reconnect to the correct one:
 - [BitBucket](~/build/connect.md#bitbucket)
 - [GitHub](~/build/connect.md#github)
-- [Azure DevOps](~/build/connect.md#vsts)
+- [Azure DevOps](~/build/connect.md#azure-devops)
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
