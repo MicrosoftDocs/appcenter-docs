@@ -12,6 +12,9 @@ ms.custom: test
 ---
 
 # App Center Test Devices
+> [!div class="op_single_selector"]
+> * [iOS](ios.md)
+> * [Android](android.md)
 
 Model | OS
 -- | --
@@ -369,6 +372,9 @@ Apple iPod touch 7th Gen | 13.2.3
 Apple iPod touch 7th Gen | 13.3.1
 Apple iPod touch 7th Gen | 13.4.1
 Apple iPod touch 7th Gen | 13.5.1
+
+Model | OS
+-- | --
 Acer Iconia A1-830 | 4.2.2
 Acer Iconia Tab A1 | 4.2.2
 Acer Liquid E2 | 4.2.2
