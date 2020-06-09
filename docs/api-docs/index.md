@@ -13,13 +13,13 @@ ms.custom: api
 
 # App Center API Documentation
 
-## <a name="section01" />App Center OpenAPI Specification (Swagger)
+## <a name="section01"></a>App Center OpenAPI Specification (Swagger)
 
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 
 The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
 
-## <a name="section02" />Types of tokens: user tokens and app tokens
+## <a name="section02"></a>Types of tokens: user tokens and app tokens
 
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
 
@@ -38,7 +38,7 @@ Each App Center account may create up to 5000 API tokens.
 > [!WARNING]
 > **`Content-Length` header must be specified in a request** for POST/PUT/PATCH/DELETE API calls even though requests have an empty payload body. API calls will be receive 411 Length Required response if `Content-Length` isn't specified.
 
-## <a name="section03"/>Creating an App Center App API token
+## <a name="section03"></a>Creating an App Center App API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. **Select the app** that you want to create an API token for.
@@ -56,7 +56,7 @@ Each App Center account may create up to 5000 API tokens.
 9. A pop-up will open with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you won't be able to see or generate the same token again after you click the **Close** button.
 10. Click the **Close** button.
 
-## <a name="section04"/>Creating an App Center User API token
+## <a name="section04"></a>Creating an App Center User API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
@@ -73,7 +73,7 @@ Each App Center account may create up to 5000 API tokens.
 8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
 9. Click the **Close** button.
 
-## <a name="section05" />Using an API Token in an API request
+## <a name="section05"></a>Using an API Token in an API request
 
 When sending API requests to App Center from an application, you must include the API token in the header of every request sent to App Center.
 
@@ -115,7 +115,7 @@ App Center CLI will display a list of apps, with the format `{owner-name}`/`{app
 Refer to the [App Center CLI documentation](https://github.com/Microsoft/appcenter-cli) for a full list of command-line functions.
 
 
-## <a name="section06" />Using an API Token with the App Center OpenAPI Specification
+## <a name="section06"></a>Using an API Token with the App Center OpenAPI Specification
 
 The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center APIs with your API token:
 
@@ -127,7 +127,7 @@ The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, 
 
 4. If it shows "Authorized" and a Logout button, authorization was successful. On the top-right corner of the pop-up, click the "X" to exit the pop-up.
 
-## <a name="section07" />Making your first API call using OpenAPI (Swagger)
+## <a name="section07"></a>Making your first API call using OpenAPI (Swagger)
 
 This section shows you how to use App Center's [OpenAPI page](https://openapi.appcenter.ms) by using the API call `GET /v0.1/user`. This API call returns the user's profile data.
 
@@ -138,7 +138,7 @@ This section shows you how to use App Center's [OpenAPI page](https://openapi.ap
 6. Click the **Execute** button under the **Parameters** section.
 7. Awesome! You can now see the response under the **Responses** section.
 
-## <a name="section08" />Revoking an API Token
+## <a name="section08"></a>Revoking an API Token
 
 In the event that an API token is leaked, you should revoke it immediately to prevent unauthorized access to your App Center account.
 
