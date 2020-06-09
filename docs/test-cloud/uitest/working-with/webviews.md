@@ -62,7 +62,7 @@ It is possible to match HTML elements using the [AppQuery.Css](https://developer
 For example, the following Android activity contains an [`android.webkit.WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/):
 
 
-[ ![WebView on an Android device](./images/working-with-webviews-android-01-sml.png)](./images/working-with-webviews-android-01.png#lightbox)
+[ ![WebView on an Android device](./images/webviews-android-01-sml.png)](./images/webviews-android-01.png#lightbox)
 
 This snippet shows how to locate all H1 DOM elements in the web view:
 
@@ -227,7 +227,7 @@ Here is a quick description of the parameters:
 As a example of using these API's consider the screenshots of a web view embedded in an Android application:
 
 
-[ ![Screenshot showing the WebView used in the following example.](./images/working-with-webviews-android-02-sml.png)](./images/working-with-webviews-android-02.png#lightbox)
+[ ![Screenshot showing the WebView used in the following example.](./images/webviews-android-02-sml.png)](./images/webviews-android-02.png#lightbox)
 
 If we examine the view hierarchy of this Activity in the REPL, we can see the following:
 
@@ -265,7 +265,7 @@ Scrolling down to Css("#firstname")
 To enter text into HTML input element is accomplished by providing an `AppWebQuery` and the text to enter using the [`AppQuery.EnterText`](https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.EnterText(System.Func%7BXamarin.UITest.Queries.AppQuery,Xamarin.UITest.Queries.AppQuery%7D,System.String)/) API . Given the following screenshot of a web view in an Android application:
 
 
-[ ![Screenshot showing the WebView used in the following example](./images/working-with-webviews-android-03-sml.png)](./images/working-with-webviews-android-03.png#lightbox)
+[ ![Screenshot showing the WebView used in the following example](./images/webviews-android-03-sml.png)](./images/webviews-android-03.png#lightbox)
 
 The following code snippet will show to enter text into the `firstname` HTML input element:
 
