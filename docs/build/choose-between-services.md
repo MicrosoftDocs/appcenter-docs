@@ -12,12 +12,11 @@ ms.service: vs-appcenter
 ---
 
 # Choose the right service for app builds
-
 The choice on whether to use [Visual Studio App Center](https://visualstudio.microsoft.com/app-center/) or [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) requires some thought. There are some scenarios where one service might suit your needs better than the other.  
  
 The following questions should help you make an informed decision on which service works best for you. 
  
-## <a name="app-center"/> App Center
+## App Center
 
 If you answer “Yes” to these questions, App Center is a good choice for you.   
 
@@ -55,7 +54,7 @@ App Center brings together multiple services commonly used by mobile developers 
 > [!NOTE]
 > If you feel we are missing something critical from App Center Build or need help, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
 
-## <a name="azure-pipelines"/>Azure Pipelines
+## Azure Pipelines
 
 If you answer “Yes” to these questions, Azure Pipelines may be the best tool for you. 
 

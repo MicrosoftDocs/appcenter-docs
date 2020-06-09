@@ -95,7 +95,7 @@ const crashReport = await Crashes.lastSessionCrashReport();
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
-### <a name="process"></a> Processing crashes in JavaScript
+### Processing crashes in JavaScript
 
 In order for your `Crash.setListener` methods to work as expected you need to check if your application configured properly.
 

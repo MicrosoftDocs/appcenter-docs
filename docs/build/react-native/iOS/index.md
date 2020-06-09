@@ -35,7 +35,7 @@ Before your first build, the React Native project needs to be configured.
 ### 3.1. Project
 Select your project’s `package.json`. App Center will automatically detect the associated Xcode project/workspace.
 
-### <a name="xcode-version"/>3.2. Xcode version
+### 3.2. Xcode version
 Select the Xcode version to run the build on from the dropdown list.
 If the toggle "Use legacy build system" is `On` then the legacy build system will be used regardless of the project or workspace settings.
 If the toggle "Use legacy build system" is `Off` then the build system configuration from the project or workspace settings will be used.

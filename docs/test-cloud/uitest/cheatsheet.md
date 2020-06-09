@@ -13,7 +13,6 @@ ms.custom: test
 ---
 
 # Xamarin.UITest cheat sheet
-
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing_tests)
@@ -27,9 +26,7 @@ This document is a cheat sheet that condenses some  UITest information for quick
   * [Enable Screenshots Locally](#enable_screenshots_locally)
   * [Invoke a Method on an AppResult or UI Element](#invoke_method_on_an_appResult_or_UIElement)
 
-<a name="writing_tests"></a>
 ## Writing Tests
-
 This snippet is a boilerplate `TestFixture` for a test class on a single platform:
 
 ```csharp
@@ -105,9 +102,7 @@ namespace MyApp.MyCrossPlatformUITests
 
 Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/uitest/get-started-xamarin-forms.md).
 
-<a name="initializing_tests_on_ios"></a>
 ### Initializing Xamarin.UITest on iOS
-
 Add the following snippet to the `FinishedLaunching` method of the **AppDelegate** class:
 
 ```csharp
@@ -124,9 +119,7 @@ Xamarin.Calabash.Start();
 
 The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
-<a name="get_device_id_for_ios_simulator"></a>
 ### Determine the Device ID for an iOS Simulator
-
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
 
 ```bash
@@ -151,9 +144,7 @@ iPhone 6 (8.1 Simulator) [995FF713-9DE4-460B-800E-F5A20FD93AA7]
 iPhone 6 Plus (8.1 Simulator) [AB1C20F6-BFFC-4C80-879C-F19A7E3F0B5C]
 ```
 
-<a name="start_simulator_by_device_id"></a>
 ### Starting a Particular iOS Instance
-
 It is possible to run UITests on a specific iOS version and simulator by using the device ID.
 
 ```csharp
@@ -161,9 +152,7 @@ const string simId = "3F1C286F-3D5D-47B2-92B8-66B673BD0236"; //iPhone 5s (8.1 Si
 app = ConfigureApp.iOS.DeviceIdentifier(simId).StartApp();
 ```
 
-<a name="reset_ios_simulator_to_factory_defaults"></a>
 ### Reset an iOS Simulator to Factory Defaults
-
 This code snippet can be used to stop a given iOS simulator and reset it back to factory defaults:
 
 ```csharp
@@ -179,22 +168,16 @@ static void ResetSimulator(string deviceId)
 }
 ```
 
-<a name="code_snippets"></a>
 ## Code Snippets
-
 This section will provide some code snippets that can be helpful for writing UITests.
 
-<a name="query_elements_by_property_value"></a>
 ### Querying Elements Based on Property Value
-
 ```csharp
 //Finds all elements that have a "hint" property with a value of "Search"
 app.Query(e => e.All().Property("hint", "Search"));
 ```
 
-<a name="enable_screenshots_locally"></a>
 ### Enable Screenshots Locally
-
 ```csharp
 app = ConfigureApp.Android
     .EnableLocalScreenshots()
@@ -202,9 +185,7 @@ app = ConfigureApp.Android
 ```
 The above code example puts screenshots in the directory where the test assembly resides, naming the image `screenshot-X-png`.
 
-<a name="invoke_method_on_an_appResult_or_UIElement"></a>
 ### Invoke a Method on an AppResult or UI Element
-
 It is possible to execute native methods on underlying views with the `AppQuery.Invoke` method. The method invoked must match the native method name, not the C# method name. For example, to invoke the [`setGravity`](https://developer.android.com/reference/android/widget/TextView.html#setGravity(int)) method on an Android `TextView`:
 
 ```csharp
@@ -214,7 +195,6 @@ app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# `TextView.[Gravity](https://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)` property.
 
 ### Handling Android permissions
-
 ```csharp
 ConfigureApp.Android.Debug().ApkFile(apkpath).StartApp()
 ```
