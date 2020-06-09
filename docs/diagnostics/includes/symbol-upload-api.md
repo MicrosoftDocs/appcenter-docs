@@ -21,6 +21,7 @@ curl -X POST 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
 curl -X PUT '{upload_url}' \
     -H 'x-ms-blob-type: BlockBlob' \
     --upload-file '{path to file}'
+    -d "{}"
 ```
 
 3. Make a `PATCH` request to  the [symbol_uploads API](https://openapi.appcenter.ms/#/crash/symbolUploads_complete) using the `symbol_upload_id` property returned from the first step. In the body of the request, specify whether you want to set the status of the upload to `committed` (successfully completed) the upload process, or `aborted` (unsuccessfully completed).
