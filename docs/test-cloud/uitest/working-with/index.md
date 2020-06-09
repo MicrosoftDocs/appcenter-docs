@@ -16,42 +16,42 @@ ms.custom: test
 
 The documents in this section discuss various task for writing and running Xamarin.UITests.
 
-## [Android signing](working-with-android-signing.md)
+## [Android signing](android-signing.md)
 
 Normally the default Xamarin.UITest Android signing, using a generated debug keystore, works fine. But, sometimes you may need to sign your APK and the test server with your actual Android keystore. This guide describes when it may be needed and how to specify your Android keystore information.
 
-## [Backdoors](working-with-backdoors.md)
+## [Backdoors](backdoors.md)
 
 *Backdoors* are methods that can be invoked during a test run to perform some special action to configure or set up testing state on a device. For example, a backdoor may be used to seed a database with some test data so that all of the tests in a given fixture have the same data.
 
-## [Categorized Test](working-with-categorized-tests.md)
+## [Categorized Test](categorized-tests.md)
 
 This guide discusses how to categorize your tests, allowing you to run a subset of your entire test suite.
 
-## [Entering Text](working-with-entering-text.md)
+## [Entering Text](entering-text.md)
 
 This guide discusses how to enter text into views and how to clear text from views.
 
-## [Files](working-with-files.md)
+## [Files](files.md)
 
 This guide discusses how to upload files and access them from your tests in App Center Test.
 
-## [Gestures](working-with-gestures.md)
+## [Gestures](gestures.md)
 
 Simulate gestures such as taps and swipes in your Xamarin.UITests.
 
-## [REPL](working-with-repl.md)
+## [REPL](repl.md)
 
 Discusses how to use the REPL to help create Xamarin.UITests.
 
-## [iOS Simulators](working-with-ios-simulator.md)
+## [iOS Simulators](ios-simulator.md)
 
 This guide describes how to specify which iOS simulator to use for your local Xamarin.UITests.
 
-## [Timeouts & Waiting](working-with-timeouts.md)
+## [Timeouts & Waiting](timeouts.md)
 
 This guide will discuss how to use timeouts and waits in Xamarin.UITest.
 
-## [Web Views](working-with-webviews.md)
+## [Web Views](webviews.md)
 
 Describes how to use the Xamarin.UITest APIs to interact with web views in a mobile app.
