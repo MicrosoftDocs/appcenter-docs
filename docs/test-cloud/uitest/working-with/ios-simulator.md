@@ -1,11 +1,11 @@
 ---
 title: Working with iOS Simulators
-description: This guide will discuss how to identify and select an iOS simulator that should be used to run Xamarin.UITests locally.
+description: This guide will discuss how to identify and select an iOS simulator to use for running Xamarin.UITests locally.
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.reviewer: kegr
-ms.date: 05/01/2020
+reviewer: king-of-spades
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378
 ms.service: vs-appcenter
@@ -13,12 +13,11 @@ ms.custom: test
 ---
 
 # Working with iOS Simulators
-
 #### [Visual Studio](#tab/vswin/)
-It is not possible to run local iOS tests on Windows. 
+It isn't possible to run local iOS tests on Windows. 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-This guide will discuss how to specify an iOS simulator when running tests locally on OS X or macOS.
+This guide will discuss how to specify an iOS simulator when running tests locally on macOS.
 
 Each iOS simulator that is configured on an Apple device will have a unique *device identifier* assigned to it. UITest will use this device identifier to start the desired iOS simulator.
 
@@ -31,7 +30,6 @@ IApp app = ConfigureApp.iOS.AppBundle("/path/to/iosapp.app")
 ```
 
 ## Identifying Available Simulators
-
 There are two ways to list the simulators and their device identifiers:
 
 1. The first way to identify available simulators is to start up Terminal and type `xcrun instruments -s devices`. The following output will display a list of known devices:
@@ -60,10 +58,10 @@ There are two ways to list the simulators and their device identifiers:
 
 2. Xcode provides another way to obtain a list of devices and their device identifiers. Once Xcode is running, select **Window > Devices and Simulators**:
 
-![Device Identifiers for simulator images](./images/working-with-ios-simulator-01.png)]
+![Device Identifiers for simulator images](./images/ios-simulator-01.png)]
 
-Xcode will present a window showing attached devices, select Simulators top in the windows to see installed simulators. When a simulator, is selected the device identifier can be seen in the right-hand side of the window:
+Xcode will present a window showing attached devices. Select `Simulators` in the window to see installed simulators. When a simulator is selected the device identifier can be seen in the right-hand side of the window:
 
-[ ![Selecting a simulator](./images/working-with-ios-simulator-02-sml.png)](./images/working-with-ios-simulator-02.png#lightbox)
+[ ![Selecting a simulator](./images/ios-simulator-02-sml.png)](./images/ios-simulator-02.png#lightbox)
 
 * * *
