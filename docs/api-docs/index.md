@@ -36,7 +36,7 @@ Each App Center account may create up to 5000 API tokens.
 > Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
 > [!WARNING]
-> **`Content-Length` header must be specified in a request** for POST/PUT/PATCH/DELETE API calls even though requests have an empty payload body. API calls will be receive 411 Length Required response if `Content-Length` isn't specified.
+> **A payload body must be provided in a request** for POST/PUT/PATCH/DELETE API calls even though requests don't have a payload body. API calls will be received **411 Length Required** response if a payload body isn't provided. Use `{}` in the payload body to avoid the error responses.
 
 ## <a name="section03"></a>Creating an App Center App API token
 
