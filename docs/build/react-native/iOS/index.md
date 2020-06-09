@@ -35,10 +35,10 @@ Before your first build, the React Native project needs to be configured.
 ### 3.1. Project
 Select your project’s `package.json`. App Center will automatically detect the associated Xcode project/workspace.
 
-### <a name="xcode-version"/>3.2. Xcode version
+### 3.2. Xcode version
 Select the Xcode version to run the build on from the dropdown list.
-If the toggle "Use legacy build system" is `On` then the legacy build system will be used regardless of the project or workspace settings.
-If the toggle "Use legacy build system" is `Off` then the build system configuration from the project or workspace settings will be used.
+If the toggle "Use legacy build system" is `On`, then the legacy build system will be used whatever the project or workspace settings.
+If the toggle "Use legacy build system" is `Off`, then the build system configuration from the project or workspace settings will be used.
 *Note that:*
    - Workspace setting should be committed to the repository
    - If workspace setting isn't committed, then the modern build system will be used
@@ -102,12 +102,12 @@ The `.ipa` file is an iPhone application archive file that contains the iOS app.
 ### 4.3. The source maps and symbol files
 Upon building a React Native iOS app, a JavaScript source map and one or multiple `.dsym` files are automatically generated with each build and can be downloaded once the build is completed.
 
-- if you've previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this `.dsym` file and the JavaScript sourcemap for a build to display human readable (symbolicated) crash reports.
-- if you've previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the `.dsym` file and the JavaScript sourcemap to display human readable (symbolicated) crash reports.
+- if you've previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting beacon requires this `.dsym` file and the JavaScript source map for a build to display human readable (symbolicated) crash reports.
+- if you've previously integrated another SDK for crash reporting purposes in your app, the corresponding service requires the `.dsym` file and the JavaScript source map to display human readable (symbolicated) crash reports.
 
 Keep in mind that the `.dsym` file doesn't change upon code signing the `.ipa`. If you decide to code sign the build later, the `.dsym` generated before code signing is still valid.
 
-If this app has the crashes SDK integrated, iOS symbols and source maps will be sent to the App Center Crashes service. The symbols will enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
+If this app has the crashes SDK included, iOS symbols and source maps will be sent to the App Center Crashes service. The symbols will enable human readable (symbolicated) crash reports at both the native and JavaScript stack.
 
 ## 5. Build tips
 ### 5.1. Yarn
