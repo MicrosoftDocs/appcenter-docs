@@ -69,7 +69,9 @@
 ## [Introduction](test-cloud/index.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Getting Started](test-cloud/getting-started.md)
-## [Devices Available](test-cloud/devices.md)
+## Devices Available
+### [Android](test-cloud/devices/android.md)
+### [iOS](test-cloud/devices/ios.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
 ## Appium
 ### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
