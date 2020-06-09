@@ -109,10 +109,10 @@
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
 ## Troubleshooting
 ### [Introduction](test-cloud/troubleshooting/index.md)
-### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
-### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
+### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
+### [iOS Privacy Alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [Time limits](test-cloud/troubleshooting/time-outs.md)
 
 
 # Distribute
