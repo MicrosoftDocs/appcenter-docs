@@ -16,15 +16,14 @@ ms.custom: test
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing-tests)
-  * [Initializing Xamarin.UITests on iOS](#initializing-tests-on-ios)
-  * [Determine the Device ID for an iOS Simulator](#get_device-id-for-ios-simulator)
-  * [Start a Particular iOS Instance](#start-simulator-by-device-id)
-  * [Reset an iOS Simulator to Factory Defaults](#reset-ios-simulator-to-factory-defaults)
-
+  * [Initializing Xamarin.UITests on iOS](#initializing-xamarinui-test-on-ios) 
+  * [Determine the Device ID for an iOS Simulator](#determine-device-id-for-ios-simulator)
+  * [Start a Particular iOS Instance](#starting-an-ios-simulator-instance)
+  * [Reset an iOS Simulator to Factory Defaults](#reset-an-ios-simulator-to-factory-defaults)
 * [Code Snippets](#code-snippets)
-  * [Querying Elements Based on Property Values](#query-elements-by-property-value)
+  * [Querying Elements Based on Property Values](#querying-elements-based-on-property-value)
   * [Enable Screenshots Locally](#enable-screenshots-locally)
-  * [Invoke a Method on an AppResult or UI Element](#invoke-method-on-an-appResult-or-UIElement)
+  * [Invoke a Method on an AppResult or UI Element](#invoke-a-method-on-an-appresult-or-ui-element)
 
 ## Writing Tests
 This snippet is a boilerplate `TestFixture` for a test class on a single platform:
@@ -119,7 +118,7 @@ Xamarin.Calabash.Start();
 
 The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
-### Determine the Device ID for an iOS Simulator
+### Determine Device ID for iOS Simulator
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
 
 ```bash
@@ -144,7 +143,7 @@ iPhone 6 (8.1 Simulator) [995FF713-9DE4-460B-800E-F5A20FD93AA7]
 iPhone 6 Plus (8.1 Simulator) [AB1C20F6-BFFC-4C80-879C-F19A7E3F0B5C]
 ```
 
-### Starting a Particular iOS Instance
+### Starting an iOS Simulator Instance
 It is possible to run UITests on a specific iOS version and simulator by using the device ID.
 
 ```csharp
