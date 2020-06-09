@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 06/02/2020
+ms.date: 06/09/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -14,7 +14,7 @@ ms.custom: build
 - System Version: macOS 10.14.6 (18G5033)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200530.1
+- Image Version: 20200607.1
 
 ## Installed Software
 ### Language and Runtime
@@ -24,7 +24,7 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.43.1
+- Rust 1.44.0
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
@@ -32,7 +32,7 @@ ms.custom: build
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.17.0 v13.14.0 v14.3.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.0 v13.14.0 v14.4.0
 - PowerShell 7.0.1
 - Python 2.7.17
 - Python 3.7.7
@@ -54,15 +54,15 @@ ms.custom: build
 - Pip 19.3.1 (python 2.7)
 - Pip 20.0.2 (python 3.7)
 - Miniconda 4.8.2
-- RubyGems 3.1.3
+- RubyGems 3.1.4
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.4.1
+- Gradle 6.5
 
 ### Utilities
 - Curl 7.70.0
-- Git: 2.26.2
+- Git: 2.27.0
 - Git LFS: 2.11.0
 - GitHub CLI: 0.9.0
 - Hub CLI: 2.14.2
@@ -80,34 +80,34 @@ ms.custom: build
 - zstd 1.4.5
 - bazel 3.2.0
 - bazelisk v1.4.0
-- helm v3.2.1+gfe51cd1
-- virtualbox 6.1.8r137981
+- helm v3.2.2+ga6ea663
+- virtualbox 6.1.10r138449
 - mongo v4.2.7
 - mongod v4.2.7
 - Vagrant 2.2.9
 - 7-Zip 16.02
 
 ### Tools
-- Fastlane 2.148.1
+- Fastlane 2.149.1
 - Cmake 3.17.3
 - App Center CLI 1.2.2
-- Azure CLI 2.6.0
-- AWS CLI 2.0.17
+- Azure CLI 2.7.0
+- AWS CLI 2.0.19
 - AWS SAM CLI 0.52.0
-- Aliyun CLI 3.0.45
+- Aliyun CLI 3.0.46
 - GHCup v0.1.5-p2
 - GHC 8.10.1
 - Cabal 3.2.0.0
 - Stack 2.3.1
 
 ### Browsers
-- Safari 13.1 (14609.1.20.111.8)
-- SafariDriver 13.1 (14609.1.20.111.8)
-- Google Chrome 83.0.4103.61 
+- Safari 13.1.1 (14609.2.9.1.3)
+- SafariDriver 13.1.1 (14609.2.9.1.3)
+- Google Chrome 83.0.4103.97 
 - ChromeDriver 83.0.4103.39
-- Microsoft Edge 83.0.478.37 
-- MSEdgeDriver 83.0.478.37
-- Mozilla Firefox 76.0.1
+- Microsoft Edge 83.0.478.45 
+- MSEdgeDriver 83.0.478.45
+- Mozilla Firefox 77.0.1
 - geckodriver 0.26.0
 
 ### Toolcache
@@ -229,7 +229,7 @@ ms.custom: build
 | 9.4.1            | 9F2000  | /Applications/Xcode_9.4.1.app  |
 
 #### Xcode Support Tools
-- Nomad CLI 3.1.3
+- Nomad CLI 3.1.4
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
@@ -332,7 +332,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.1 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.2 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
