@@ -25,7 +25,7 @@ See [WindowManager.LayoutParams FLAG_SECURE](https://developer.android.com/refer
 
 If your app has disabled screenshots, then seeing blank or scrambled screenshots in the test report demonstrates this security feature is working as intended for your app.
 
-If your app has disabled screenshots by setting the flag `FLAG_SECURE` in the `WindowManager.LayoutParams` but you want to see the screenshots in your test reports, then the workaround in App Center Test is to create a testing build that does not set the `FLAG_SECURE` flag. You can search your code for `FLAG_SECURE` or `WindowManagerFlags.Secure` (Xamarin.Android) to see where and how this is being set.
+If your app has disabled screenshots by setting the flag `FLAG_SECURE` in the `WindowManager.LayoutParams` but you want to see the screenshots in your test reports, then the workaround in App Center Test is to create a testing build that doesn't set the `FLAG_SECURE` flag. You can search your code for `FLAG_SECURE` or `WindowManagerFlags.Secure` (Xamarin.Android) to see where and how this value is set.
 
 ## Getting help
 
