@@ -13,41 +13,36 @@ ms.custom: test
 ---
 
 # Working with Web Views
-
-Xamarin.UITest provides API's for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use web views to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](https://developer.xamarin.com/api/type/UIKit.UIWebView/) or [WKWebView](https://developer.xamarin.com/api/type/WebKit.WKWebView/). UIWebView is older and compatible with all versions of iOS, while WKWebView is for iOS 8 and higher.
+Xamarin.UITest provides API's for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use web views to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](https://docs.microsoft.com/dotnet/api/UIKit.UIWebView/) or [WKWebView](https://docs.microsoft.com/dotnet/api/WebKit.WKWebView/). UIWebView is older and compatible with all versions of iOS, while WKWebView is for iOS 8 and higher.
   
 Interacting with web views is a bit more involved as UITest must first obtain a reference to the web view, and then to the DOM elements it contains.
 
 ## Web View APIs in UITest
-
 There are two APIs to obtain a reference to a webview control in UITest:
  
-* **[AppQuery.WebView](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.WebView()/)**  is used for `UIWebView` controls.
-* **[AppQuery.Class](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.Class/p/System.String/)** is used for `WKWebView` controls.
+* **[AppQuery.WebView](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/)**  is used for `UIWebView` controls.
+* **[AppQuery.Class](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/)** is used for `WKWebView` controls.
 
 Each of these will be discussed in more detail below. 
 
 ## Locating the `UIWebView` control with AppQuery.WebView
- 
-UITest provides the [AppQuery.WebView](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.WebView()/) method to obtain a reference to a `UIWebView` control.  The following snippet is an example:
+UITest provides the [AppQuery.WebView](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/) method to obtain a reference to a `UIWebView` control.  The following snippet is an example:
 
 ```text
 >>> app.Query(c=>c.WebView())       
 ```
 
-If there is only one web view on the screen, then `WebView` will default to that one web view. If there are multiple web views on the screen, the [`WebView(Int32)`](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.WebView(System.Int32)/) can be used to isolate one by passing a zero-based index.
+If there is only one web view on the screen, then `WebView` will default to that one web view. If there are multiple web views on the screen, the [`WebView(Int32)`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_) can be used to isolate one by passing a zero-based index.
 
 
 ## Locating the `WKWebView` control
-
-UITest provides the [AppQuery.Class](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.Class/p/System.String/) method to obtain a reference to a `WKWebView` control.  The following snippet is an example:
+UITest provides the [AppQuery.Class](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/) method to obtain a reference to a `WKWebView` control.  The following snippet is an example:
 
 ```text
 >>> app.Query(c=>c.Class("WKWebView"))
 ```                
 
 ## Interacting with DOM Elements in a web view control
-
 Once the web view has been isolated, there are two main API's for interacting with DOM elements:
 
 * **CSS** &ndash; This API uses CSS selectors to locate DOM elements displayed by the web view.
@@ -56,11 +51,9 @@ Once the web view has been isolated, there are two main API's for interacting wi
 The XPath API, which more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
 
 ### CSS
+It is possible to match HTML elements using the [AppQuery.Css](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Css#Xamarin_UITest_Queries_AppQuery_Css_System_String_) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.
 
-It is possible to match HTML elements using the [AppQuery.Css](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.Css(System.String)/) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.
-
-For example, the following Android activity contains an [`android.webkit.WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/):
-
+For example, the following Android activity contains an [`android.webkit.WebView`](https://docs.microsoft.com/dotnet/api/Android.Webkit.WebView/):
 
 [ ![WebView on an Android device](./images/webviews-android-01-sml.png)](./images/webviews-android-01.png#lightbox)
 
@@ -95,7 +88,7 @@ Query for Css("H1") gave 1 results.
 ]
 ```
 
-If there is more than one web view on a given screen, then UITest will automatically default to the first web view. If there are multiple web views, then it is necessary to explicitly identify the web view using [`IApp.WebView(Int32)`](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.WebView(System.Int32)/). For example, if a screen had two web views and we want to find all the H1 elements in the second web view:
+If there is more than one web view on a given screen, then UITest will automatically default to the first web view. If there are multiple web views, then it is necessary to explicitly identify the web view using [`IApp.WebView(Int32)`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_). For example, if a screen had two web views and we want to find all the H1 elements in the second web view:
 
 ```text
 >>> app.Query(c=>c.WebView(1).Css("H1"))                                                                                
@@ -134,7 +127,7 @@ If more than one HTML element matches the CSS query, the `Index` method can be u
 
 ### XPath
 
-XPath is a very powerful API for searching the DOM, but can be a bit more difficult to use compared to the CSS API. UITest can locate DOM elements by an XPath selector passed to the [AppQuery.XPath](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.XPath(System.String)/) method. This API is the same on Android and iOS.
+XPath is a very powerful API for searching the DOM, but can be a bit more difficult to use compared to the CSS API. UITest can locate DOM elements by an XPath selector passed to the [AppQuery.XPath](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.XPath#Xamarin_UITest_Queries_AppQuery_XPath_System_String_) method. This API is the same on Android and iOS.
 
 The following snippet is an example of how to match the H1 DOM element from the previous section using XPath:
 
@@ -168,11 +161,9 @@ Query for XPath("//h1") gave 1 results.
 ```
 
 ## Invoking JavaScript
-
-It is also possible to locate webviews using the [`AppQuery.InvokeJS`](https://developer.xamarin.com/api/member/Xamarin.UITest.Queries.AppQuery.InvokeJS/p/System.String/) method. This method takes a query in the form of, and invokes Javascript on the view elements matched by the query. If view elements other than WebViews are encountered, the execution will halt and an Exception will be thrown.
+It is also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes Javascript on the view elements matched by the query. If view elements other than WebViews are encountered, the execution will halt and an Exception will be thrown.
 
 ### InvokeJS on Android
-
 Generally speaking Android requires that the Javascript `returns` the value; otherwise the query will return `null`:
 
 ```text
@@ -187,7 +178,6 @@ Generally speaking Android requires that the Javascript `returns` the value; oth
 ```
 
 ### InvokeJS on iOS
-
 Generally speaking, on iOS the `return` is not used:
 
 ```text
@@ -203,11 +193,9 @@ Generally speaking, on iOS the `return` is not used:
 ```
 
 ## Examples
-
 This section will cover some common use cases that may be encountered when writing Calabash tests involving web views.
 
 ### Scrolling
-
 It is possible to scroll within an web view to bring DOM elements on to the screen. This is accomplished using the `IApp.ScrollDownTo` or `IApp.ScrollUpTo` methods.  The signature of these methods is very similar:
 
 ```csharp
@@ -261,8 +249,7 @@ Scrolling down to Css("#firstname")
 ```
 
 ### Entering Text
-
-To enter text into HTML input element is accomplished by providing an `AppWebQuery` and the text to enter using the [`AppQuery.EnterText`](https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.EnterText(System.Func%7BXamarin.UITest.Queries.AppQuery,Xamarin.UITest.Queries.AppQuery%7D,System.String)/) API . Given the following screenshot of a web view in an Android application:
+To enter text into HTML input element is accomplished by providing an `AppWebQuery` and the text to enter using the [`AppQuery.EnterText`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp.EnterText#Xamarin_UITest_IApp_EnterText_System_Func_Xamarin_UITest_Queries_AppQuery_Xamarin_UITest_Queries_AppQuery__System_String_) API . Given the following screenshot of a web view in an Android application:
 
 
 [ ![Screenshot showing the WebView used in the following example](./images/webviews-android-03-sml.png)](./images/webviews-android-03.png#lightbox)
