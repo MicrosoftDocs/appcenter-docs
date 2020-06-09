@@ -46,11 +46,11 @@ When the test is run and `.Repl()` is invoked, Xamarin.UITest will halt the test
 
 
 #### [Visual Studio](#tab/vswin/)
-[ ![The Xamarin.UITest REPL on Windows](././images/working-with-repl-01-vs-sml.png)](././images/working-with-repl-01-vs.png#lightbox)
+[ ![The Xamarin.UITest REPL on Windows](./images/repl-01-vs-sml.png)](./images/repl-01-vs.png#lightbox)
 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-[ ![The Xamarin.UITest REPL on macOS Terminal](././images/working-with-repl-02-xs-sml.png)](././images/working-with-repl-02-xs.png#lightbox)
+[ ![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
 * * *
 There are three ways to exit the REPL:
@@ -72,11 +72,11 @@ A common workflow is to use the `tree` command or `IApp.Flash` to identify views
 The `tree` command will display a hierarchical list of the views that are visible on the screen: 
 
 #### [Visual Studio](#tab/vswin/)
-[ ![The Tree command running in the REPL](././images/working-with-repl-02-vs-sml.png)](././images/working-with-repl-02-vs.png#lightbox)
+[ ![The Tree command running in the REPL](./images/repl-02-vs-sml.png)](./images/repl-02-vs.png#lightbox)
 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-[ ![Tree command running in the REPL](././images/working-with-repl-02-xs-sml.png)](././images/working-with-repl-02-xs.png#lightbox)
+[ ![Tree command running in the REPL](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
 * * *
 ## Discovering Views with IApp.Flash
