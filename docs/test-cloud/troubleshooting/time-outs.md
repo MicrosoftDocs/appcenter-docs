@@ -18,7 +18,7 @@ App Center Test enforces time limits per device on test suites and on individual
 > [!NOTE]
 > These limits apply to the time spent installing your app and running your tests. Time that a device is queued for running or processing completed test results do not count against these limits.
 
-App Center Test enforces time limits for test suites and individual tests independently for each device. Exceeding a limit on one device does not impact other devices.
+App Center Test enforces time limits for test suites and individual tests independently for each device. Exceeding a limit on one device doesn't impact other devices.
 
 ## Test suite time limit
 
@@ -40,7 +40,7 @@ Use the *Test Report* and log files, to help determine why a test or test suite 
 
 When an individual test exceeds the time limit, App Center Test still produces and displays a test report if there are no other issues.
 
-If a test suite exceeds the time limit, App Center Test does not produce a test report for the timed-out devices. When all devices exceed the test suite time limit, then App Center Test does not produce a test report and instead displays:
+If a test suite exceeds the time limit, App Center Test doesn't produce a test report for the timed-out devices. When all devices exceed the test suite time limit, then App Center Test doesn't produce a test report and instead displays:
 
 ```text
 Test execution timed out.

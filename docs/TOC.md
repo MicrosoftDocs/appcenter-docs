@@ -56,8 +56,7 @@
 ## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
-### [Introduction](build/troubleshooting/index.md)
-### [General](build/troubleshooting/general.md)
+### [General](build/troubleshooting/index.md)
 ### [Code Repositories](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [Backup Build Data](build/troubleshooting/backup-data.md)
@@ -70,7 +69,9 @@
 ## [Introduction](test-cloud/index.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Getting Started](test-cloud/getting-started.md)
-## [Devices Available](test-cloud/devices.md)
+## Devices Available
+### [Android](test-cloud/devices/android.md)
+### [iOS](test-cloud/devices/ios.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
 ## Appium
 ### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
@@ -108,10 +109,10 @@
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
 ## Troubleshooting
 ### [Introduction](test-cloud/troubleshooting/index.md)
-### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
-### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
+### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
+### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
+### [iOS Privacy Alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [Time limits](test-cloud/troubleshooting/time-outs.md)
 
 
 # Distribute

@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
 ms.reviewer: crdun
-ms.date: 10/25/2018
+ms.date: 06/09/2020
 ms.topic: article
 ms.assetid: 3D0C8F9C-69D6-42D9-80FB-4228EEC8849C
 ms.service: vs-appcenter
@@ -140,3 +140,7 @@ Copying history to clipboard.
 ```
 
 This allows you to try and debug commands in the REPL, and then promptly update your test code.
+
+> [!NOTE]
+> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the REPL tool doesn't appear. Turning it on makes the REPL tool appear.
+ ![image](./images/items.png)

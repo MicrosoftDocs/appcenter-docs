@@ -4,7 +4,7 @@ description: Shared docs for Apple Extensions
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 09/30/2019
+ms.date: 05/07/2020
 ms.topic: include
 ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0
 ms.tgt_pltfrm: apple
@@ -25,7 +25,7 @@ The App Center SDK can be integrated into your app via [Cocoapods](https://cocoa
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
+2. Run `pod install` to install your newly defined pod and open the project's .xcworkspace.
 
 > [!NOTE]
 > If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
@@ -37,7 +37,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
-1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
+1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks to use in your app.
 
     ```ruby
     # Use the following line to get the latest version of App Center
@@ -50,7 +50,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
     ```
 
 2. Run `carthage update`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.  
-3. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
+3. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework** and **AppCenterCrashes.framework** files from the **Carthage/Build/** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it isn't added to the project, the other modules won't work and your app won't compile.
 4. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
     > [!NOTE]
@@ -58,33 +58,36 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
-### 3.3 Integration by copying the binaries into your project
+[!INCLUDE [swift package manager](swift-package-manager.md)]
+
+### 3.4 Integration by copying the binaries into your project
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Crashes for your app extension.
+
+[!INCLUDE [xcframework support](xcframeworks.md)]
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you'll see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party libraries.
-   * As a best practice, 3rd-party libraries usually reside inside a subdirectory, often called **Vendor**. If the project isn't organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
+   * As a best practice, 3rd-party libraries are usually in a subdirectory, often called **Vendor**. If the project isn't organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
-4. Open the unzipped **AppCenter-SDK-Apple** folder in Finder and copy the folder into your project's folder at the location where you want it to reside. The folder contains frameworks in subfolders for other platforms that App Center SDK supports, so you might need to delete subfolders that you don't need.
+4. Open the unzipped **AppCenter-SDK-Apple** folder in Finder and copy the folder into your project's folder at the location where you want it. The folder contains frameworks in subfolders for other platforms that App Center SDK supports, so you might need to delete subfolders you don't need.
 
 5. Add the SDK frameworks to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app extension won't compile.
+   * Now drag and drop **AppCenter.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it isn't added to the project, the other modules won't work and your app extension won't compile.
    * A dialog will appear, make sure your app extension target is checked. Then click **Finish**.
 
 Now that you've integrated the frameworks in your app extension, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-
-In order to use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started, and you will have to explicitly call each of them when starting the SDK. 
+To use App Center, you must opt in to the module(s) to use. By default, no modules are started, and you must explicitly call each of them when starting the SDK. 
 
 ### 4.1 Add the import statements
 
-Insert the following lines in the file containing the app extension's entry point. For example inside the main ViewController file of a Today extension.
+Insert the following lines in the file containing the app extension's entry point. For example, inside the main ViewController file of a Today extension.
 
 ```objc
 @import AppCenter;
@@ -97,7 +100,7 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line in the app extension's entry point. For example inside the `viewDidLoad` method of the main ViewController file of a Today extension.
+Insert the following line in the app extension's entry point. For example, inside the `viewDidLoad` method of the main ViewController file of a Today extension.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSCrashes class]]];
@@ -114,4 +117,4 @@ Make sure to replace `{Your App Secret}` text with the actual value for your app
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-Great, you are all set to visualize Crashes data on the portal that the SDK collects automatically.
+Great, you're all set to visualize Crashes data on the portal that the SDK collects automatically.

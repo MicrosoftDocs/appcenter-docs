@@ -4,17 +4,17 @@ description: Software used on macOS 10.15 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 05/18/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
 # macOS info
-- System Version: macOS 10.15.4 (19E287)
-- Kernel Version: Darwin 19.4.0
+- System Version: macOS 10.15.5 (19F101)
+- Kernel Version: Darwin 19.5.0
 - System Integrity Protection: Enabled
-- Image Version: 20200514.1
+- Image Version: 20200604.1
 
 ## Installed Software
 ### Language and Runtime
@@ -24,86 +24,91 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.43.1
+- Rust 1.44.0
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
-- Node.js v12.16.3
+- Node.js v12.18.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.20.1 v12.16.3 v13.14.0 v14.2.0
-- PowerShell 7.0.0
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.0 v13.14.0 v14.4.0
+- PowerShell 7.0.1
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
-- .NET SDK 2.0.0 3.0.100 3.0.101 3.0.102 3.0.103 3.1.100 3.1.101 3.1.200 3.1.201 3.1.202
-- Go 1.14.2
+- .NET SDK 2.0.0 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507 2.1.602 2.1.603 2.1.604 2.1.607 2.1.700 2.1.701 2.1.801 2.1.802 2.1.803 2.1.804 2.1.805 2.1.806 3.0.100 3.0.101 3.0.102 3.0.103 3.1.100 3.1.101 3.1.200 3.1.201 3.1.300
+- Go 1.14.3
 - PHP 7.4.6
-- julia 1.4.1
+- julia 1.4.2
 
 ### Package Management
 - Rustup 1.21.1
 - Vcpkg 2020.02.04
 - Bundler version 2.1.4
 - Carthage 0.34.0
-- CocoaPods 1.9.1
-- Homebrew 2.2.16
+- CocoaPods 1.9.3
+- Homebrew 2.3.0
 - NPM 6.14.4
 - Yarn 1.22.4
-- NuGet 5.5.0.6382
+- NuGet 5.6.0.6489
 - Pip 19.3.1 (python 2.7)
 - Pip 20.0.2 (python 3.7)
 - Miniconda 4.8.2
-- RubyGems 3.1.3
+- RubyGems 3.1.4
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.4
+- Gradle 6.5
 
 ### Utilities
 - Curl 7.70.0
-- Git: 2.26.2
+- Git: 2.27.0
 - Git LFS: 2.11.0
-- GitHub CLI: 0.8.0
+- GitHub CLI: 0.9.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
-- Subversion (SVN) 1.13.0
+- Subversion (SVN) 1.14.0
 - Packer 1.5.6
-- GNU parallel 20200422
+- GNU parallel 20200522
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
-- psql (PostgreSQL) 12.2
-- PostgreSQL 12.2
+- psql (PostgreSQL) 12.3
+- PostgreSQL 12.3
 - aria2 1.35.0
 - azcopy 10.4.3
-- zstd 1.4.4
-- bazel 3.1.0
+- zstd 1.4.5
+- bazel 3.2.0
 - bazelisk v1.4.0
 - helm v3.2.1+gfe51cd1
-- virtualbox 6.1.6r137129
-- mongo v4.2.6
-- mongod v4.2.6
+- virtualbox 6.1.8r137981
+- mongo v4.2.7
+- mongod v4.2.7
 - Vagrant 2.2.9
+- 7-Zip 16.02
 
 ### Tools
-- Fastlane 2.148.0
-- Cmake 3.17.2
-- App Center CLI 2.5.2
-- Azure CLI 2.5.1
-- AWS CLI 2.0.10
-- AWS SAM CLI 0.49.0
-- Aliyun CLI 3.0.42
+- Fastlane 2.149.1
+- Cmake 3.17.3
+- App Center CLI 2.5.3
+- Azure CLI 2.7.0
+- AWS CLI 2.0.18
+- AWS SAM CLI 0.52.0
+- Aliyun CLI 3.0.46
+- GHCup v0.1.5-p2
+- GHC 8.10.1
+- Cabal 3.2.0.0
+- Stack 2.3.1
 
 ### Browsers
-- Safari 13.1 (15609.1.20.111.8)
-- SafariDriver 13.1 (15609.1.20.111.8)
-- Google Chrome 81.0.4044.138 
-- ChromeDriver 81.0.4044.138
-- Microsoft Edge 81.0.416.72 
-- MSEdgeDriver 81.0.416.72
-- Mozilla Firefox 76.0.1
+- Safari 13.1.1 (15609.2.9.1.2)
+- SafariDriver 13.1.1 (15609.2.9.1.2)
+- Google Chrome 83.0.4103.97 
+- ChromeDriver 83.0.4103.39
+- Microsoft Edge 83.0.478.44 
+- MSEdgeDriver 83.0.478.44
+- Mozilla Firefox 77.0.1
 - geckodriver 0.26.0
 
 ### Toolcache
@@ -121,19 +126,21 @@ ms.custom: build
 - 3.8.3
 
 #### PyPy
-- 2.7.17
-- 3.6.9
+- 2.7.13 [PyPy 7.3.1]
+- 3.6.9 [PyPy 7.3.1]
 
 ### Xamarin
 #### Visual Studio for Mac
-- 8.5.5.7
+- 8.6.2.6
 
 #### Mono
+- 6.10.0.104
 - 6.8.0.123
 - 6.6.0.166
 - 6.4.0.208
 
 #### Xamarin.iOS
+- 13.18.2.1
 - 13.16.0.13
 - 13.14.1.39
 - 13.10.0.21
@@ -143,6 +150,7 @@ ms.custom: build
 - 13.2.0.47
 
 #### Xamarin.Mac
+- 6.18.2.1
 - 6.16.0.13
 - 6.14.1.39
 - 6.10.0.21
@@ -152,6 +160,7 @@ ms.custom: build
 - 6.2.0.47
 
 #### Xamarin.Android
+- 10.3.1
 - 10.2.0
 - 10.1.3
 - 10.0.6
@@ -160,19 +169,19 @@ ms.custom: build
 - NUnit 3.6.1
 
 ### Xcode
-| Version          | Build   | Path                              |
-| ---------------- | ------- | --------------------------------- |
-| 11.5 (beta)      | 11N605f | /Applications/Xcode_11.5_beta.app |
-| 11.4.1 (default) | 11E503a | /Applications/Xcode_11.4.1.app    |
-| 11.4             | 11E146  | /Applications/Xcode_11.4.app      |
-| 11.3.1           | 11C505  | /Applications/Xcode_11.3.1.app    |
-| 11.2.1           | 11B500  | /Applications/Xcode_11.2.1.app    |
-| 11.1             | 11A1027 | /Applications/Xcode_11.1.app      |
-| 11.0             | 11A420a | /Applications/Xcode_11.app        |
-| 10.3             | 10G8    | /Applications/Xcode_10.3.app      |
+| Version        | Build   | Path                           |
+| -------------- | ------- | ------------------------------ |
+| 11.5 (default) | 11E608c | /Applications/Xcode_11.5.app   |
+| 11.4.1         | 11E503a | /Applications/Xcode_11.4.1.app |
+| 11.4           | 11E146  | /Applications/Xcode_11.4.app   |
+| 11.3.1         | 11C505  | /Applications/Xcode_11.3.1.app |
+| 11.2.1         | 11B500  | /Applications/Xcode_11.2.1.app |
+| 11.1           | 11A1027 | /Applications/Xcode_11.1.app   |
+| 11.0           | 11A420a | /Applications/Xcode_11.app     |
+| 10.3           | 10G8    | /Applications/Xcode_10.3.app   |
 
 #### Xcode Support Tools
-- Nomad CLI 3.1.3
+- Nomad CLI 3.1.4
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
@@ -242,7 +251,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.1 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.2 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
@@ -288,7 +297,7 @@ ms.custom: build
 | ------------ | ------------------------------------------ |
 | 15.2.4203891 | $HOME/Library/Android/sdk/android-ndk-r15c |
 | 18.1.5063045 | $HOME/Library/Android/sdk/ndk/18.1.5063045 |
-| 21.1.6352462 | $HOME/Library/Android/sdk/ndk-bundle       |
+| 21.2.6472646 | $HOME/Library/Android/sdk/ndk-bundle       |
 
 #### Android Utils
 | Package Name     | Version     |
