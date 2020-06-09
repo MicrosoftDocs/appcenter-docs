@@ -61,7 +61,7 @@ Be sure that you launch your app with the `ACTLaunch` API. See the [ACTLaunch la
 The `AppCenterXCUITestExtensions.framework` needs to be linked with the project's XCUITest target. There are three ways to do this.
 
 1. [Carthage Dependency Manager](#carthage). This is the preferred approach. 
-2. [Building from Source](#building_from_source). Build the extension from source and manually add it to the Xcode project.
+2. [Building from Source](#building-from-source). Build the extension from source and manually add it to the Xcode project.
 3. [CocoaPods](#cocoapods). For those who are already using CocoaPods.
 
 The framework should *not* be linked with the project's iOS application.

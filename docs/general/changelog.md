@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # App Center Changelog
-
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
 ### **July 31, 2019**
@@ -36,7 +35,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
-    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#xcode-version).
+    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#32xcode-version).
 
 ### **April 26, 2019**
 - **Build support for Xcode 10.2.1**

@@ -15,16 +15,16 @@ ms.custom: test
 # Xamarin.UITest cheat sheet
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
-* [Writing Tests](#writing_tests)
-  * [Initializing Xamarin.UITests on iOS](#initializing_tests_on_ios)
-  * [Determine the Device ID for an iOS Simulator](#get_device_id_for_ios_simulator)
-  * [Start a Particular iOS Instance](#start_simulator_by_device_id)
-  * [Reset an iOS Simulator to Factory Defaults](#reset_ios_simulator_to_factory_defaults)
+* [Writing Tests](#writing-tests)
+  * [Initializing Xamarin.UITests on iOS](#initializing-tests-on-ios)
+  * [Determine the Device ID for an iOS Simulator](#get_device-id-for-ios-simulator)
+  * [Start a Particular iOS Instance](#start-simulator-by-device-id)
+  * [Reset an iOS Simulator to Factory Defaults](#reset-ios-simulator-to-factory-defaults)
 
-* [Code Snippets](#code_snippets)
-  * [Querying Elements Based on Property Values](#query_elements_by_property_value)
-  * [Enable Screenshots Locally](#enable_screenshots_locally)
-  * [Invoke a Method on an AppResult or UI Element](#invoke_method_on_an_appResult_or_UIElement)
+* [Code Snippets](#code-snippets)
+  * [Querying Elements Based on Property Values](#query-elements-by-property-value)
+  * [Enable Screenshots Locally](#enable-screenshots-locally)
+  * [Invoke a Method on an AppResult or UI Element](#invoke-method-on-an-appResult-or-UIElement)
 
 ## Writing Tests
 This snippet is a boilerplate `TestFixture` for a test class on a single platform:

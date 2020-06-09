@@ -12,21 +12,17 @@ ms.custom: distribute
 ---
 
 # Releasing CodePush updates using the App Center CLI
-
 ## Installation
-
 * Install [Node.js](https://nodejs.org/)
 * Install the App Center CLI: `npm install -g appcenter-cli`
 
 ## Getting Started
-
 1. Create an [App Center account](https://appcenter.ms) or sign-in through the CLI using the `appcenter login` command.
 2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
 3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/rn-overview.md)).
-4. [Release and update for your app](#releasing-app-updates).
+4. [Release and update for your app](#releasing-updates).
 
 ## Account Management
-
 Before you can begin releasing app updates, you must sign-in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
 
 ```shell
@@ -149,7 +145,7 @@ If you will be working with other developers on the same CodePush app, you can a
 Once added, all collaborators will immediately have the following permissions in the shared app:
 
 1. View the app, its collaborators, [deployments](#deployment-management), and [release history](#viewing-release-history)
-2. [Release](#releasing-app-updates) updates to any of the app's deployments
+2. [Release](#releasing-updates) updates to any of the app's deployments
 3. [Promote](#promoting-updates) an update between any of the app's deployments
 4. [Rollback](#rolling-back-updates) any of the app's deployments
 5. [Patch](#patching-update-metadata) any releases within any of the app's deployments
@@ -393,7 +389,7 @@ appcenter codepush release-react -a <ownerName>/<appName> -d <deploymentName> -t
 [-v|--version]
 ```
 
-The `release-react` command is a React Native-specific version of the "vanilla" [`release`](#releasing-app-updates) command, which supports all of the same parameters (for example, `--mandatory`, `--description`), yet simplifies the process of releasing updates by performing the following additional behavior:
+The `release-react` command is a React Native-specific version of the "vanilla" [`release`](#releasing-updates) command, which supports all of the same parameters (for example, `--mandatory`, `--description`), yet simplifies the process of releasing updates by performing the following additional behavior:
 
 1. Running the `react-native bundle` command in order to generate the [update contents](#update-contents-parameter) (JS bundle and assets) that will be released to the CodePush server. It uses sensible defaults as much as possible (for example, creating a non-dev build, assuming an iOS entry file is named **index.ios.js**), but also exposes the relevant `react-native bundle` parameters to enable flexibility (for example, `--sourcemap-output`).
 
@@ -549,7 +545,7 @@ appcenter codepush release-cordova -a <ownerName>/<appName> -d <deploymentName> 
 [-v|--version]
 ```
 
-The `release-cordova` command is a Cordova-specific version of the "vanilla" [`release`](#releasing-app-updates) command, which supports all of the same parameters (for example, `--mandatory`, `--description`), yet simplifies the process of releasing updates by performing the following additional behavior:
+The `release-cordova` command is a Cordova-specific version of the "vanilla" [`release`](#releasing-updates) command, which supports all of the same parameters (for example, `--mandatory`, `--description`), yet simplifies the process of releasing updates by performing the following additional behavior:
 
 1. Running the `cordova prepare` (or `phonegap prepare`) command in order to generate the [update contents](#update-contents-parameter) (**www** folder) that will be released to the CodePush server.
 

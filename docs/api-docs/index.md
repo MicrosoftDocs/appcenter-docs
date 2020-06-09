@@ -18,7 +18,7 @@ App Center exposes a full set of API endpoints. You can explore the App Center A
 
 The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
 
-## Types of tokens: user tokens and app tokens
+## <a name="section02"></a>Types of tokens: user tokens and app tokens
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
 
 User API tokens have the same rights that you do as a user of App Center. User API tokens work across all organizations and apps that you're associated with.
@@ -104,7 +104,7 @@ App Center CLI will display a list of apps, with the format `{owner-name}`/`{app
 Refer to the [App Center CLI documentation](https://github.com/Microsoft/appcenter-cli) for a full list of command-line functions.
 
 
-## Using an API Token with the App Center OpenAPI Specification
+## <a name="section06"></a>Using an API Token with the App Center OpenAPI Specification
 The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center APIs with your API token:
 
 1. Navigate to App Center's [OpenAPI specification](https://openapi.appcenter.ms) to explore our APIs.
