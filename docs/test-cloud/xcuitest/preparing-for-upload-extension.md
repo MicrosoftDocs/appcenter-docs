@@ -61,12 +61,12 @@ Be sure that you launch your app with the `ACTLaunch` API. See the [ACTLaunch la
 The `AppCenterXCUITestExtensions.framework` needs to be linked with the project's XCUITest target. There are three ways to do this.
 
 1. [Carthage Dependency Manager](#carthage). This is the preferred approach. 
-2. [Building from Source](#building_from_source). Build the extension from source and manually add it to the Xcode project.
+2. [Building from Source](#building-from-source). Build the extension from source and manually add it to the Xcode project.
 3. [CocoaPods](#cocoapods). For those who are already using CocoaPods.
 
 The framework should *not* be linked with the project's iOS application.
 
-### <a name="carthage" /> Carthage
+### Carthage
 
 Install Carthage using the [homebrew dependency manager](https://brew.sh/).
 
@@ -86,7 +86,7 @@ For more information on using Carthage, see the [Carthage GitHub repository](htt
 
 Remember that the `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
 
-### <a name="building_from_source" /> Building from Source
+### Building from Source
 
 1. Make the `AppCenterXCUITestExtensions.framework`
 
@@ -128,7 +128,7 @@ When you are finished, your Build Phases pane should resemble the following:
 
 Here is a [Swift code example](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/StickShift)
 
-### <a name="cocoapods" /> Cocoapods
+### Cocoapods
 
 If you are not already using CocoaPods, we recommend you use Carthage or manually linking the framework.
 

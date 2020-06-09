@@ -13,14 +13,12 @@ ms.custom: api
 
 # App Center API Documentation
 
-## <a name="section01"></a>App Center OpenAPI Specification (Swagger)
-
+## App Center OpenAPI Specification (Swagger)
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 
 The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
 
 ## <a name="section02"></a>Types of tokens: user tokens and app tokens
-
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
 
 User API tokens have the same rights that you do as a user of App Center. User API tokens work across all organizations and apps that you're associated with.
@@ -38,8 +36,7 @@ Each App Center account may create up to 5000 API tokens.
 > [!WARNING]
 > **A payload body must be provided in a request** for POST/PUT/PATCH API calls even though requests don't have a payload body. API calls will be received **411 Length Required** response if a payload body isn't provided. Use `{}` in the payload body to avoid the error responses.
 
-## <a name="section03"></a>Creating an App Center App API token
-
+## Creating an App Center App API token
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. **Select the app** that you want to create an API token for.
 3. On the left side, choose **Settings**.
@@ -56,8 +53,7 @@ Each App Center account may create up to 5000 API tokens.
 9. A pop-up will open with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you won't be able to see or generate the same token again after you click the **Close** button.
 10. Click the **Close** button.
 
-## <a name="section04"></a>Creating an App Center User API token
-
+## Creating an App Center User API token
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
 3. In the middle panel, select **User API Tokens** from the menu list.
@@ -73,14 +69,12 @@ Each App Center account may create up to 5000 API tokens.
 8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
 9. Click the **Close** button.
 
-## <a name="section05"></a>Using an API Token in an API request
-
+## Using an API Token in an API request
 When sending API requests to App Center from an application, you must include the API token in the header of every request sent to App Center.
 
 Pass the API token in the request's `X-API-Token` header property.
 
 ## Find your App Center app name and owner name
-
 Some of App Center's API functions and CLI requests require an app name or owner name as parameters.
 
 For instance, the API call to remove the user from the app requires both: [`DELETE /v0.1/apps/{owner_name}/{app_name}/users/{user_email}`](https://openapi.appcenter.ms/#/account/apps_removeUser).
@@ -88,7 +82,6 @@ For instance, the API call to remove the user from the app requires both: [`DELE
 You can find the app name and owner name from an App Center URL, or using the [App Center CLI](https://github.com/Microsoft/appcenter-cli).
 
 ### Find owner_name and app_name from an App Center URL
-
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. Navigate to your app.
 3. When you look at your app's URL, it is in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
@@ -101,7 +94,6 @@ Owner can be a user or an organization. For example,
 | Org | `https://appcenter.ms/orgs/BallardFlowers/apps/BouquetOrders-app` | BallardFlowers | BouquetOrders-app |
 
 ### Find owner_name and app_name from the App Center CLI
-
 If you haven't yet installed the App Center CLI, installation and usage instructions can be found in the [App Center CLI documentation](https://github.com/Microsoft/appcenter-cli).
 
 Once installed, retrieve the list of apps you have access by running:
@@ -116,7 +108,6 @@ Refer to the [App Center CLI documentation](https://github.com/Microsoft/appcent
 
 
 ## <a name="section06"></a>Using an API Token with the App Center OpenAPI Specification
-
 The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center APIs with your API token:
 
 1. Navigate to App Center's [OpenAPI specification](https://openapi.appcenter.ms) to explore our APIs.
@@ -127,7 +118,7 @@ The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, 
 
 4. If it shows "Authorized" and a Logout button, authorization was successful. On the top-right corner of the pop-up, click the "X" to exit the pop-up.
 
-## <a name="section07"></a>Making your first API call using OpenAPI (Swagger)
+## Making your first API call using OpenAPI (Swagger)
 
 This section shows you how to use App Center's [OpenAPI page](https://openapi.appcenter.ms) by using the API call `GET /v0.1/user`. This API call returns the user's profile data.
 
@@ -138,19 +129,16 @@ This section shows you how to use App Center's [OpenAPI page](https://openapi.ap
 6. Click the **Execute** button under the **Parameters** section.
 7. Awesome! You can now see the response under the **Responses** section.
 
-## <a name="section08"></a>Revoking an API Token
-
+## Revoking an API Token
 In the event that an API token is leaked, you should revoke it immediately to prevent unauthorized access to your App Center account.
 
 ### Revoking a User API token
-
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
 3. In the middle panel, select **User API Tokens** from the menu.
 4. Check the box next to the token that you want to revoke, and click the **Delete** button in the upper right-hand corner.
 
 ### Revoking an App API token
-
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. **Select the app** that you want to revoke an API token for.
 3. On the left side, choose **Settings**.
