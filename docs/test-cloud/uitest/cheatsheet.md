@@ -16,7 +16,7 @@ ms.custom: test
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing-tests)
-  * [Initializing Xamarin.UITests on iOS](#initializing-xamarinui-test-on-ios) 
+  * [Initializing Xamarin.UITests on iOS](#initializing-xamarinuitest-on-ios) 
   * [Determine the Device ID for an iOS Simulator](#determine-device-id-for-ios-simulator)
   * [Start a Particular iOS Instance](#starting-an-ios-simulator-instance)
   * [Reset an iOS Simulator to Factory Defaults](#reset-an-ios-simulator-to-factory-defaults)

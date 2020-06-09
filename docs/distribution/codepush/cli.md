@@ -140,7 +140,7 @@ If you will be working with other developers on the same CodePush app, you can a
 4. Within the collaborators menu, enter the email addresses of the desired collaborators to invite them
 
 > [!IMPORTANT]
-> App Center's Collaborators feature expects that each collaborator has already [registered with App Center](#account-creation) using the specified e-mail address.
+> App Center's Collaborators feature expects that each collaborator has already [registered with App Center](#account-management) using the specified e-mail address.
 
 Once added, all collaborators will immediately have the following permissions in the shared app:
 

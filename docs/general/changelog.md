@@ -35,7 +35,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
-    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#32xcode-version).
+    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#32-xcode-version).
 
 ### **April 26, 2019**
 - **Build support for Xcode 10.2.1**
