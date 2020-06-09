@@ -3,7 +3,7 @@ title: Using App Center
 description: Managing your App Center account and settings
 author: dimazaid
 reviewer: king-of-spades
-ms.date: 05/20/2020
+ms.date: 06/09/2020
 ms.topic: article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0
 ms.service: vs-appcenter
