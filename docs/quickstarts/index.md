@@ -4,7 +4,7 @@ description: A quick introduction to working with Visual Studio App Center
 keywords: App Center, Build, Test, Distribute, Crashes, Analytics, Diagnostics, CodePush
 author: dimazaid
 reviewer: kegr
-ms.date: 05/20/2020
+ms.date: 06/09/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
