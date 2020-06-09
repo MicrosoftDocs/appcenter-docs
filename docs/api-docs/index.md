@@ -35,6 +35,9 @@ Each App Center account may create up to 5000 API tokens.
 > [!WARNING]
 > Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
+> [!WARNING]
+> **`Content-Length` header must be specified in a request** for POST/PUT/PATCH/DELETE API calls even though requests have an empty payload body. API calls will be receive 411 Length Required response if `Content-Length` isn't specified.
+
 ## <a name="section03"/>Creating an App Center App API token
 
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
