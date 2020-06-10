@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 02/19/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: EE233A46-0D14-4E01-970B-37C025F1A390
 ms.service: vs-appcenter
@@ -313,7 +313,14 @@ In order to integrate CodePush into your Android project, perform the following 
 
 ### Plugin Installation and Configuration for React Native 0.60 version and above (Android)
 
-1. In your `android/app/build.gradle` file, add the `codepush.gradle` file as an additional build task definition underneath `react.gradle`:
+1. In your `android/settings.gradle` file, make the following additions:
+
+    ```gradle
+    include ':app', ':react-native-code-push'
+    project(':react-native-code-push').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-code-push/android/app')
+    ```
+
+2. In your `android/app/build.gradle` file, add the `codepush.gradle` file as an additional build task definition underneath `react.gradle`:
 
     ```gradle
     ...
