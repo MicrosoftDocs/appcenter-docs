@@ -1,8 +1,8 @@
 ---
-author: v-ankubo
+author: ahdbilal
 ms.topic: include
 ms.date: 06/08/2020
-ms.author: v-ankubo
+ms.author: ahdbilal
 ---
 
 The `app_secret` is an identifier of your app. The biggest risk of exposing your `app_secret` is sending bad/unrelated crashes and analytics data to your app, as the `app_secret` is required to know which app the traffic applies to. 
