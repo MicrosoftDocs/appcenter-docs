@@ -443,6 +443,50 @@
           {
             "source_path": "docs/test-cloud/preparing-for-upload/xcuitest-extension.md",
             "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload-extension"
+          },
+	            {
+            "source_path": "docs/test-cloud/uitest/working-with.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-android-signing.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/android-signing"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/working-withbackdoors.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/backdoors"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-categorized-tests.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/categorized-tests"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-entering-text.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/entering-text"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/files.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/files"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-gestures.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/gestures"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/working-with-repl.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/repl"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-ios-simulator.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/ios-simulator"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-timeouts.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/timeouts"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-webviews.md",
+            "redirect_url": "/appcenter/test-cloud/uitest/working-with/webviews"
           }
  ]
 }
