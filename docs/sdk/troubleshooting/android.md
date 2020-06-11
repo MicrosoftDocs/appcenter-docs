@@ -34,7 +34,7 @@ Depending on the services you use, the following permissions are required:
 
 Required permissions are automatically merged into your app's manifest by the SDK.
 
-None of these permissions require user approval at runtime, those are all install time permissions.
+None of these permissions require user approval at runtime, they are all install time permissions.
 
 ## Analytics data doesn't show up in the portal
 
@@ -52,7 +52,7 @@ None of these permissions require user approval at runtime, those are all instal
    Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
 4. Make sure your device is online.
-5. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
+5. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
 6. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
 
 ## Crashes don't show up in the portal
@@ -72,7 +72,7 @@ None of these permissions require user approval at runtime, those are all instal
    Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
 5. Make sure your device is online.
-6. At times, logs might take few minutes to surface in the portal. Please wait for some time if that’s the case.
+6. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
 7. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 8. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
 
@@ -88,7 +88,7 @@ To illustrate this, we have created an empty java application by using Android S
 
 The tests were run without Proguard enabled.
 
-Please note that the numbers below can vary and depend on your build settings, so consider them a rough guide. The SDK's impact to your app will be even lower if you use Proguard.
+Note that the numbers below can vary and depend on your build settings, so consider them a rough guide. The SDK's impact to your app will be even lower if you use Proguard.
 
 
 | App Center modules used | Exported APK size | Installation size (as reported by the device) |

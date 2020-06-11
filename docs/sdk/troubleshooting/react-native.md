@@ -124,7 +124,7 @@ After you fix your **CocoaPods** installation, run `pod install` in the **ios** 
 
 ## CocoaPods unable to find a specification for AppCenterReactNativeShared during react-native link
 
-If you see the following CocoaPods error message during `react-native link`, chances are your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up-to-date.
+If you see the following CocoaPods error message during `react-native link`, chances are your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up to date.
 
 ```Text
 Analyzing dependencies [!] Unable to find a specification for AppCenterReactNativeShared (~> {version})
@@ -171,7 +171,7 @@ If you have already integrated our SDK into your application and want to upgrade
 
 2. `npm install --save-exact appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest App Center packages.
 
-3. `pod repo update` to make sure your CocoaPods spec repo is up-to-date.
+3. `pod repo update` to make sure your CocoaPods spec repo is up to date.
 
 4. `react-native link`.
 
