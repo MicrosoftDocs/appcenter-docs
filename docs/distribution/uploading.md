@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 02/18/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
