@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 02/18/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Release a Build
 
-Upload your application binary package to App Center to distribute it. App Center supports package distribution for Android, iOS, macOS, Windows, and custom operating system apps. You can distribute releases to groups of testers or individual testers. For iOS and Android applications, you can also release to the stores like Google Play, the App Store and Intune. See [Publish to consumer and enterprise stores](stores/index.md).
+Upload your application binary package to App Center to distribute it. App Center supports package distribution for Android, iOS, macOS, Windows, and custom operating system apps. You can distribute releases to individual testers or groups of testers. For iOS and Android applications, you can also release to the stores like Google Play, the App Store, and Intune. See [Publish to consumer and enterprise stores](stores/index.md).
 
 On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API).
 
@@ -27,7 +27,7 @@ The following sections explain how to create the files for all app types App Cen
 
 For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
 
-1. Ensure you have [updated the manifest][android-manifest] and have a correctly [configured Gradle build][gradle-config].
+1. Ensure you've [updated the manifest][android-manifest] and have a correctly [configured Gradle build][gradle-config].
 2. In Android Studio, choose **Build** > **Generate Signed Bundle / APK** and follow the steps in the wizard to build the app bundle or APK.
 
 Android Studio places built app bundles in *project-name*/*module-name*/build/outputs/bundle/ and APKs in *project-name*/*module-name*/build/outputs/apk/.
@@ -45,7 +45,7 @@ For iOS, you must produce an IPA package for your application. For full details 
 
 ### macOS
 
-For macOS, you must produce an app package. App Center supports releasing app packages of type .app.zip, .pkg or .dmg. For full details of this process, see the official [Apple MacOS documentation][apple-macos].
+For macOS, you must produce an app package. App Center supports releasing app packages of type .app.zip, .pkg or .dmg. For full details of this process, see the official [Apple macOS documentation][apple-macos].
 
 1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
 2. In Xcode, go to **Product** > **Archive** to archive your app.
@@ -53,7 +53,7 @@ For macOS, you must produce an app package. App Center supports releasing app pa
 
 ### Windows
 
-App Center supports releasing Windows app packages of type .appx, .appxbundle, .appxupload, .msi, .msix, .msixbundle, .msixupload, or .zip. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package].
+App Center supports releasing Windows app packages of type `.appx`, `.appxbundle`, `.appxupload`, `.msi`, `.msix`, `.msixbundle`, `.msixupload`, or `.zip`. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package].
 
 ### Custom operating system
 
@@ -92,15 +92,15 @@ You can call the App Center API to distribute a release.
 2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/JoshuaWeber/apps/APIExample.> Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `APIExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
 3. Upload a new release using three sequential API calls:
     1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes three body parameters:
-        - `release_id` is optional and normally not needed. You can only use this to specify the ID of an already existing release, to change that release its binary. This value must be a number, so don't use quotes or it will be a string.
+        - `release_id` is optional and normally not needed. You can only use this to specify the ID of an already existing release, to change that release's binary. This value must be a number, so don't use quotes or it will be a string.
         - `build_version` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files, and Windows or custom operating system .zip or .msi files. It becomes the version of your release for macOS, or the build number of your release for Windows and custom operating system apps.
         - `build_number` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files. It becomes the build number of your release.
 
         The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/release_uploads][POST_releaseUpload]
 
         ```shell
-        curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
-          ```
+        curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads' -d '{}'
+        ```
 
     2. Copy the `upload_url` from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
 
@@ -125,7 +125,7 @@ You can call the App Center API to distribute a release.
 
     You can find the distribution group ID on that group's settings page.
 
-The request to distribute to multiple destinations is referenced here for more complex scenarios  — [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
+The request to distribute to multiple destinations is referenced here for more complex scenarios: [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
 
 ## Re-Release a build
 
