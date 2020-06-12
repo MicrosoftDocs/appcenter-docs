@@ -4,7 +4,7 @@ description: Explore the App Center API with Swagger
 keywords: swagger
 author: scottarbeit
 ms.author: scottarbeit
-ms.date: 05/04/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
@@ -33,6 +33,9 @@ Each App Center account may create up to 5000 API tokens.
 > [!WARNING]
 > Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
+> [!WARNING]
+> **A request must contain a payload body** for POST/PUT/PATCH API calls. Use `{}` for an empty payload body, API calls will receive a **411 Length Required** error response otherwise.
+
 ## Creating an App Center App API token
 1. Navigate to [https://appcenter.ms](https://appcenter.ms) and sign in using your account credentials.
 2. **Select the app** that you want to create an API token for.
@@ -44,10 +47,10 @@ Each App Center account may create up to 5000 API tokens.
 
    **Full Access:** A full access App API token has the equivalent of Manager permissions for that app. Only Managers can create full access App API tokens.
 
-   **Read Only:** A read only App API token has the equivalent of Viewer access permissions for that app. Managers and Developers can create read only App API tokens.
+   **Read-Only:** A read-only App API token has the equivalent of Viewer access permissions for that app. Managers and Developers can create read-only App API tokens.
 
 8. At the bottom of the panel, click **Add new API token**.
-9. A pop-up will open with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you won't be able to see or generate the same token again after you click the **Close** button.
+9. A pop-up will open with your App API token. **Copy and store it in a secure location** for later use. For security reasons, you can't see or generate the same token again after you click the **Close** button.
 10. Click the **Close** button.
 
 ## Creating an App Center User API token
@@ -58,12 +61,12 @@ Each App Center account may create up to 5000 API tokens.
 5. In the text field, enter a descriptive name for your token.
 6. Select the type of access for your User API token:
 
-   **Full Access:** A full access User API token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user cannot run a test (which requires developer or manager permissions), even though you're using a full access User API token.
+   **Full Access:** A full access User API token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user can't run a test, even though you're using a full access User API token.
 
-   **Read Only:** A read only User API token has Viewer access permission for the current account / organization. For example, with a read only User API token, you can perform actions such as reading data from crashes, analytics, and getting basic app information. Read only User API tokens cannot be used for changing app settings, triggering a build, creating an export configuration, etc.
+   **Read-Only:** A read-only User API token has Viewer access permission for the current account / organization. For example, with a read-only User API token, you can read data from crashes, analytics, and get basic app information. Read-only User API tokens can't change app settings, trigger a build, create an export configuration, etc.
 
 7. At the bottom of the panel, click **Add new API token**.
-8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you will not be able to see or generate the same token again after you click the **Close** button.
+8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you can't see or generate the same token again after you click the **Close** button.
 9. Click the **Close** button.
 
 ## Using an API Token in an API request
@@ -83,7 +86,7 @@ You can find the app name and owner name from an App Center URL, or using the [A
 2. Navigate to your app.
 3. When you look at your app's URL, it is in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
 
-Owner can be a user or an organization. For example,
+Owner can be a user or an organization. For example:
 
 | Owner| URL                                                       | Owner name     | App name   |
 | ----- | --------------------------------------------------------- | -------------- | ---------- |
@@ -105,7 +108,7 @@ Refer to the [App Center CLI documentation](https://github.com/Microsoft/appcent
 
 
 ## <a name="section06"></a>Using an API Token with the App Center OpenAPI Specification
-The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) (that is, Swagger document) handles API authentication for you, so you don't have to paste the API token into the headers for all of your requests. To test App Center APIs with your API token:
+The [App Center OpenAPI Specification](https://openapi.appcenter.ms/) handles API authentication for you, so you don't have to paste the API token into headers for your requests. To test App Center APIs with your API token:
 
 1. Navigate to App Center's [OpenAPI specification](https://openapi.appcenter.ms) to explore our APIs.
 2. On the upper right corner, click on the **Authorize** button.
