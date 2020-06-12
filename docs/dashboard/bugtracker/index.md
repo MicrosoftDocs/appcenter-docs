@@ -13,16 +13,14 @@ ms.assetid: f56710ac-9797-4e58-8bd4-9581553c28a1
 # App Center bug tracker integration
 
 ## Overview
-
 App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira Cloud, Azure DevOps (formerly Visual Studio Team Services (VSTS)), and GitHub. Users need to have manager or developer permissions to be able to create and configure the bug tracker.
 
 ## Getting Started
-
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app you would like for bug tracker integration.
 
 2. In your app, select **Settings**, **Services**, and click the **Add account or service** button.
 
-3. <a name="step3"/>Select which bug tracker (Jira, VSTS, Azure DevOps, or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it.
+3. <a name="step3"></a> Select which bug tracker (Jira, VSTS, Azure DevOps, or GitHub) to integrate with. In order to add a bug tracker for a repository, you need admin permissions for it.
 
    1. For Jira:
 
@@ -61,8 +59,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
    2. Toggle to the extreme right hand of the bug tracker to **Disconnect** it.
    3. Repeat [step 3](#step3).
 
-## <a name="changeState"/>Changing the state of a crash group in App Center
-
+## <a name="changeState"/></a> Changing the state of a crash group in App Center
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app that has a bug tracker integration.
 
 2. In your app, select **Diagnostics**, **Crashes**, and click on the crash group that has a connected bug associated with it.

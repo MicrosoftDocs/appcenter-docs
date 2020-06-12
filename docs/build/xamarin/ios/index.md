@@ -63,9 +63,13 @@ Proper .NET Core version will be selected automatically based on Mono version us
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
 | 6.4 | 3.0.100 |
+| 6.6 | 3.1.100 |
+| 6.8 | 3.1.200 |
+| 6.10 | 3.1.300 |
 
 ### 3.4. Xcode Version
-Current supported versions of Xamarin require Xcode 8.3.3 or higher
+
+Currently supported versions of Xamarin require Xcode 9.4.1 or higher
 
 ### 3.5. Build triggers
 By default, a new build is triggered every time a developer pushes to a configured branch. If you prefer to trigger a new build manually, you can change this setting in the configuration pane.

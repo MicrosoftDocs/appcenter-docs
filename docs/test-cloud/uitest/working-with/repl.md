@@ -5,7 +5,7 @@ keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
 ms.reviewer: crdun
-ms.date: 10/25/2018
+ms.date: 06/09/2020
 ms.topic: article
 ms.assetid: 3D0C8F9C-69D6-42D9-80FB-4228EEC8849C
 ms.service: vs-appcenter
@@ -46,11 +46,11 @@ When the test is run and `.Repl()` is invoked, Xamarin.UITest will halt the test
 
 
 #### [Visual Studio](#tab/vswin/)
-[ ![The Xamarin.UITest REPL on Windows](./images/working-with-repl-01-vs-sml.png)](./images/working-with-repl-01-vs.png#lightbox)
+[ ![The Xamarin.UITest REPL on Windows](./images/repl-01-vs-sml.png)](./images/repl-01-vs.png#lightbox)
 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-[ ![The Xamarin.UITest REPL on macOS Terminal](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
+[ ![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
 * * *
 There are three ways to exit the REPL:
@@ -72,11 +72,11 @@ A common workflow is to use the `tree` command or `IApp.Flash` to identify views
 The `tree` command will display a hierarchical list of the views that are visible on the screen: 
 
 #### [Visual Studio](#tab/vswin/)
-[ ![The Tree command running in the REPL](./images/working-with-repl-02-vs-sml.png)](./images/working-with-repl-02-vs.png#lightbox)
+[ ![The Tree command running in the REPL](./images/repl-02-vs-sml.png)](./images/repl-02-vs.png#lightbox)
 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-[ ![Tree command running in the REPL](./images/working-with-repl-02-xs-sml.png)](./images/working-with-repl-02-xs.png#lightbox)
+[ ![Tree command running in the REPL](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
 * * *
 ## Discovering Views with IApp.Flash
@@ -140,3 +140,7 @@ Copying history to clipboard.
 ```
 
 This allows you to try and debug commands in the REPL, and then promptly update your test code.
+
+> [!NOTE]
+> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the REPL tool doesn't appear. Turning it on makes the REPL tool appear.
+ ![image](./images/items.png)

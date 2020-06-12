@@ -70,7 +70,7 @@ When these events happen, App Center notifications are posted into your integrat
 
 ## Example webhook payload
 
-Here are examples of the JSON <a name="webhookPayload"></a>webhook payload for:
+Here are examples of the JSON webhook payload for:
 
 1. Build
 

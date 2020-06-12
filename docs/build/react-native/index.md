@@ -19,4 +19,6 @@ You can build React Native apps for both Android and iOS. To get started, use th
 - [Configuring your first Android build](~/build/react-native/android/index.md)
 - [Configuring your first iOS build](~/build/react-native/ios/index.md)
 
+Currently React Native Build does not contain support for Expo.
+
 We're constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.

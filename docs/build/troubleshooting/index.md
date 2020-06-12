@@ -1,96 +1,67 @@
 ---
-title: App Center Build Frequently Asked Questions
+title: App Center Build FAQs
 description: Code signing apps built with App Center
 keywords: build, faq
-author: siminapasat
-ms.author: siminap
-ms.date: 01/16/2020
+author: elamalani
+ms.date: 06/08/2020
 ms.topic: article
-ms.assetid: 8835183e-4261-4bae-b119-8a8beca72ad4
+ms.assetid: bcb76094-34c6-48ae-a24d-60c14a261518
 ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Troubleshooting
+# General Troubleshooting
+## Why did my build fail?
+There are various reasons why your build could have failed. The best way to find out what happened is to go to the build details page and download the logs. Check the logs for each of the steps to understand what happened and where exactly the build failed. If you can't understand why the build failed or you think there's an issue on our side, feel free to contact us via [App Center support](~/general/support-center.md) right from within App Center.
 
-If you can't find the answer to your issue below, contact support via the chat bubble on App Center.
+## Why is the build in App Center taking longer than my local build?
+There are many reasons why build duration can be higher when using a build service:
 
-## [General Issues](~/build/troubleshooting/general.md)
+* When running your build locally, many things are cached (for example NuGet packages, pods, dependencies); in App Center, we always do a clean build and redownload everything required.
+* For Xamarin builds, when running your build locally, you're most likely running a simulator build; In App Center, you can run a device build (signed), which takes much longer to run.
+* Most likely the CPU power of your development machine is higher than the CPU of our VMs.
 
-* [Why did my build fail?](~/build/troubleshooting/general.md#build-fail)
+We're always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, contact us on the App Center website using **? > Contact Support**.
 
-* [Why is the build in App Center taking longer than my local build?](~/build/troubleshooting/general.md#longer-build)
+## Build Notifications
+Email and custom webhook notifications give you continual real-time updates of your build status, as well as the permanency and ability to search and be directed to your builds in App Center. This also enables faster collaboration, since you can forward the build status emails or @ mention collaborators in a chat or channel in a single workflow.
 
-* [Build Notifications](~/build/troubleshooting/general.md#build-notifications)
+You can choose to have email and webhook notifications automatically sent for the following events:
 
-* [Why do I get an extended build time when "Run launch test on a device" is enabled?](~/build/troubleshooting/general.md#launch-test)
+Build success:
+* **Always** When your app builds successfully
+* **Only** if previously failed: When your app has successfully built after one or more failed builds
+* **Never** You won't receive notifications for build success
+Build failure:
+* **Always** When your app fails to build
+* **Only if previously successful** When your app has failed to build after one or more successful builds
+* **Never** You won't receive notifications for build failure
 
-* [My build scripts (Bash) doesn't execute the logic written inside it.](~/build/troubleshooting/general.md#scripts-execute)
+By default, email notifications are sent only when a new version is released. Whether you're an admin, app developer, or tester, it's important to be notified immediately when a new version is released to testers or to the store. For admins or app developers involved in the Continuous Integration, Delivery and Deployment process, it's useful to set up email and custom webhook notifications for build and distribute.
 
-* [When do I have to update my build configuration manually through Save & Build?](~/build/troubleshooting/general.md#update-manually)
 
-## [Code Repositories](~/build/troubleshooting/code-repos.md)
+## Why do I get an extended build time when **Run launch test on a device** is enabled?
+We run the test as part of the build operation, which gives the added build time. What happens is that while App Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, and so on. After that it's time to wait for a device. Third, it's running the app on a phone, which takes little time. And lastly, we move test logs, screenshots into the cloud.
 
-* [The repository I want to connect to isn't listed in the Connect to Repository step.](~/build/troubleshooting/code-repos.md#not-listed)
+Expect an additional **10 minutes of build time**.
 
-* [Can I use on-premises repositories?](~/build/troubleshooting/code-repos.md#on-premises)
+## My build scripts (Bash) doesn't execute the logic written inside it.
+App Center allows you to use build scripts for some level of customization with builds. 
 
-* [I've connected to the wrong Bitbucket account.](~/build/troubleshooting/code-repos.md#wrong-bitbucket)
+If you clicked "Save & Build" after modifying scripts, and you see App Center running the Build Script step, for instance, without actually executing the contents inside, chances are, it's because of the line endings.
 
-* [I've connected to the wrong GitHub account.](~/build/troubleshooting/code-repos.md#reconnect-github)
+Note that these Bash scripts are run on a Mac machine. So they're expected to have UNIX style line endings (LF).
 
-* [I've connected to the wrong Azure DevOps (formerly VSTS) account.](~/build/troubleshooting/code-repos.md#wrong-VSTS)
+If you're using Windows to edit/create these scripts, ensure they're saved with the Unix (LF) format. For Notepad ++, ensure from the menu, **Edit > EOL Conversion > Unix (LF)** is selected.
 
-* [When connecting an Azure DevOps (formerly VSTS) repository, I see "No Projects Found"](~/build/troubleshooting/code-repos.md#not-listed)
+## When do I have to update my build configuration manually through Save & Build?
+You might have noticed the handy **Save & Build** option in App Center Build Configuration. It does more than just help you trigger the build immediately after Saving/Updating changes. Generally, your app build configuration is analyzed when you open the build configuration dialog. If you have made changes to your repository that don't get picked up by the build automatically, you might need to go to the configuration page again and trigger a **Save & Build** from there.
 
-* [Are Git submodules supported?](~/build/troubleshooting/code-repos.md#git-sub)
+One such example is when you add new Build Scripts to your repository. Since the build scripts are only analyzed when configuring your branch, you'll need to do another analysis to reindex your repository tree and save the results. If you simply made changes to an existing build script, which was also already used in a branch configuration, you can push your changes to the script.
 
-* [I'm connected to Bitbucket and my builds fail with Git error.](~/build/troubleshooting/code-repos.md#bitbucket-git)
+We're working on improving reindexing Build Scripts when changed. Until then, a valid workaround is to do a manual **Save & Build**.
 
-* [What can I do if I'm using Team Foundation Version Control (TFVC)?](~/build/troubleshooting/code-repos.md#tfvc)
+## When configuring a branch, I get an error message saying no projects can be found in my branch
+App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform-specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
 
-* [Is my source code secure?](~/build/troubleshooting/code-repos.md#code-source-secure)
-
-## [iOS](~/build/troubleshooting/ios.md)
-
-* [No Xcode scheme is found](~/build/troubleshooting/ios.md#no-scheme)
-
-* [My iOS builds fail with "clang: error: linker command failed with exit code 1"](~/build/troubleshooting/ios.md#clang-error)
-
-* [iOS signing issues explained](~/build/troubleshooting/ios.md#signing-issues)
-
-* [Where is my .ipa file?](~/build/troubleshooting/ios.md#ipa)
-
-* [My iOS app using Xcode fails with Invalid bitcode version error](~/build/troubleshooting/ios.md#bitcode-error)
-
-* [My iOS app fails to run a test](~/build/troubleshooting/ios.md#test-error)
-
-* [My iOS builds using CocoaPods on Xcode 9 keep failing](~/build/troubleshooting/ios.md#cocoapods-error)
-
-* [Since I've upgraded my project to Xcode 10 beta, my app build fails with the error **Cycle in dependencies between targets**](~/build/troubleshooting/ios.md#xcode-10-beta-error)
-
-## [Xamarin](~/build/troubleshooting/xamarin.md)
-
-* [Xamarin.iOS builds from solution file (.sln) instead of project file (.csproj)](~/build/troubleshooting/xamarin.md#solution-file)
-
-* [Xamarin.iOS builds fail, claiming I need to provide signing information](~/build/troubleshooting/xamarin.md#fail-signing)
-
-* [My Xamarin.Android build failed with **Error: No APK files found**.](~/build/troubleshooting/xamarin.md#no-apk)
-
-* [I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information](~/build/troubleshooting/xamarin.md#signing-info-failed)
-
-* [My Xamarin.iOS Simulator build fails to install into iOS Simulator with **Failed to chmod ... /Appname.iOS.app/Appname.iOS : No such file or directory** error.](~/build/troubleshooting/xamarin.md#sim-fails)
-
-* [My Xamarin build fails with **error MSB4018: The "WriteRestoreGraphTask" task failed unexpectedly**.](~/build/troubleshooting/xamarin.md#task-fails)
-
-* [My Xamarin build fails with **error: This project references NuGet package(s) that are missing on this computer**.](~/build/troubleshooting/xamarin.md#nuget-missing)
-
-* [I want to run unit tests for my Xamarin application.](~/build/troubleshooting/xamarin.md#unit-tests)
-
-* [I get an error: No projects found and No configurations found for Xamarin builds](~/build/troubleshooting/xamarin.md#no-projects)
-
-## [React Native](~/build/troubleshooting/react-native.md)
-
-* [My React Native build fails with: 'FBSDKCoreKit/FBSDKCoreKit.h' file not found](~/build/troubleshooting/react-native.md#FBSDKCoreKit)
-
-* [My React Native build fails with "FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory](~/build/troubleshooting/react-native.md#heap-out)
+App Center currently only searches four directory levels deep for your project files. If App Center doesn't find your project in your branch, moving it to the root directory might help. If your repository is large, it may help to reduce its size or number of files.
