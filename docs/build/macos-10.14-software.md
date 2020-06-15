@@ -4,17 +4,16 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 06/09/2020
+ms.date: 06/15/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
-
 # macOS info
 - System Version: macOS 10.14.6 (18G5033)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200607.1
+- Image Version: 20200610.3
 
 ## Installed Software
 ### Language and Runtime
@@ -79,8 +78,8 @@ ms.custom: build
 - azcopy 10.4.3
 - zstd 1.4.5
 - bazel 3.2.0
-- bazelisk v1.4.0
-- helm v3.2.2+ga6ea663
+- bazelisk v1.5.0
+- helm v3.2.3+g8f83204
 - virtualbox 6.1.10r138449
 - mongo v4.2.7
 - mongod v4.2.7
@@ -352,51 +351,52 @@ ms.custom: build
 | android-27   | Android SDK Platform 27, Revision 3 |
 | android-28   | Android SDK Platform 28, Revision 6 |
 | android-29   | Android SDK Platform 29, Revision 4 |
+| android-30   | Android SDK Platform 30, Revision 1 |
 
 #### Android SDK Build-Tools
-| Package Name           | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| build-tools-19.1.0     | Android SDK Build-Tools, Revision 19.1.0     |
-| build-tools-20.0.0     | Android SDK Build-Tools, Revision 20.0.0     |
-| build-tools-21.1.2     | Android SDK Build-Tools, Revision 21.1.2     |
-| build-tools-22.0.1     | Android SDK Build-Tools, Revision 22.0.1     |
-| build-tools-23.0.1     | Android SDK Build-Tools, Revision 23.0.1     |
-| build-tools-23.0.2     | Android SDK Build-Tools, Revision 23.0.2     |
-| build-tools-23.0.3     | Android SDK Build-Tools, Revision 23.0.3     |
-| build-tools-24.0.0     | Android SDK Build-Tools, Revision 24.0.0     |
-| build-tools-24.0.1     | Android SDK Build-Tools, Revision 24.0.1     |
-| build-tools-24.0.2     | Android SDK Build-Tools, Revision 24.0.2     |
-| build-tools-24.0.3     | Android SDK Build-Tools, Revision 24.0.3     |
-| build-tools-25.0.0     | Android SDK Build-Tools, Revision 25.0.0     |
-| build-tools-25.0.1     | Android SDK Build-Tools, Revision 25.0.1     |
-| build-tools-25.0.2     | Android SDK Build-Tools, Revision 25.0.2     |
-| build-tools-25.0.3     | Android SDK Build-Tools, Revision 25.0.3     |
-| build-tools-26.0.0     | Android SDK Build-Tools, Revision 26.0.0     |
-| build-tools-26.0.1     | Android SDK Build-Tools, Revision 26.0.1     |
-| build-tools-26.0.2     | Android SDK Build-Tools, Revision 26.0.2     |
-| build-tools-26.0.3     | Android SDK Build-Tools, Revision 26.0.3     |
-| build-tools-27.0.0     | Android SDK Build-Tools, Revision 27.0.0     |
-| build-tools-27.0.1     | Android SDK Build-Tools, Revision 27.0.1     |
-| build-tools-27.0.2     | Android SDK Build-Tools, Revision 27.0.2     |
-| build-tools-27.0.3     | Android SDK Build-Tools, Revision 27.0.3     |
-| build-tools-28.0.0     | Android SDK Build-Tools, Revision 28.0.0     |
-| build-tools-28.0.1     | Android SDK Build-Tools, Revision 28.0.1     |
-| build-tools-28.0.2     | Android SDK Build-Tools, Revision 28.0.2     |
-| build-tools-28.0.3     | Android SDK Build-Tools, Revision 28.0.3     |
-| build-tools-29.0.0     | Android SDK Build-Tools, Revision 29.0.0     |
-| build-tools-29.0.1     | Android SDK Build-Tools, Revision 29.0.1     |
-| build-tools-29.0.2     | Android SDK Build-Tools, Revision 29.0.2     |
-| build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
-| build-tools-30.0.0-rc4 | Android SDK Build-Tools, Revision 30.0.0 rc4 |
-| build-tools-17.0.0     | Android SDK Build-Tools, Revision 17.0.0     |
-| build-tools-23.0.0     | Android SDK Build-Tools, Revision 23.0.0     |
+| Package Name       | Description                              |
+| ------------------ | ---------------------------------------- |
+| build-tools-19.1.0 | Android SDK Build-Tools, Revision 19.1.0 |
+| build-tools-20.0.0 | Android SDK Build-Tools, Revision 20.0.0 |
+| build-tools-21.1.2 | Android SDK Build-Tools, Revision 21.1.2 |
+| build-tools-22.0.1 | Android SDK Build-Tools, Revision 22.0.1 |
+| build-tools-23.0.1 | Android SDK Build-Tools, Revision 23.0.1 |
+| build-tools-23.0.2 | Android SDK Build-Tools, Revision 23.0.2 |
+| build-tools-23.0.3 | Android SDK Build-Tools, Revision 23.0.3 |
+| build-tools-24.0.0 | Android SDK Build-Tools, Revision 24.0.0 |
+| build-tools-24.0.1 | Android SDK Build-Tools, Revision 24.0.1 |
+| build-tools-24.0.2 | Android SDK Build-Tools, Revision 24.0.2 |
+| build-tools-24.0.3 | Android SDK Build-Tools, Revision 24.0.3 |
+| build-tools-25.0.0 | Android SDK Build-Tools, Revision 25.0.0 |
+| build-tools-25.0.1 | Android SDK Build-Tools, Revision 25.0.1 |
+| build-tools-25.0.2 | Android SDK Build-Tools, Revision 25.0.2 |
+| build-tools-25.0.3 | Android SDK Build-Tools, Revision 25.0.3 |
+| build-tools-26.0.0 | Android SDK Build-Tools, Revision 26.0.0 |
+| build-tools-26.0.1 | Android SDK Build-Tools, Revision 26.0.1 |
+| build-tools-26.0.2 | Android SDK Build-Tools, Revision 26.0.2 |
+| build-tools-26.0.3 | Android SDK Build-Tools, Revision 26.0.3 |
+| build-tools-27.0.0 | Android SDK Build-Tools, Revision 27.0.0 |
+| build-tools-27.0.1 | Android SDK Build-Tools, Revision 27.0.1 |
+| build-tools-27.0.2 | Android SDK Build-Tools, Revision 27.0.2 |
+| build-tools-27.0.3 | Android SDK Build-Tools, Revision 27.0.3 |
+| build-tools-28.0.0 | Android SDK Build-Tools, Revision 28.0.0 |
+| build-tools-28.0.1 | Android SDK Build-Tools, Revision 28.0.1 |
+| build-tools-28.0.2 | Android SDK Build-Tools, Revision 28.0.2 |
+| build-tools-28.0.3 | Android SDK Build-Tools, Revision 28.0.3 |
+| build-tools-29.0.0 | Android SDK Build-Tools, Revision 29.0.0 |
+| build-tools-29.0.1 | Android SDK Build-Tools, Revision 29.0.1 |
+| build-tools-29.0.2 | Android SDK Build-Tools, Revision 29.0.2 |
+| build-tools-29.0.3 | Android SDK Build-Tools, Revision 29.0.3 |
+| build-tools-30.0.0 | Android SDK Build-Tools, Revision 30.0.0 |
+| build-tools-17.0.0 | Android SDK Build-Tools, Revision 17.0.0 |
+| build-tools-23.0.0 | Android SDK Build-Tools, Revision 23.0.0 |
 
 #### Android NDKs
 | Version      | Path                                       |
 | ------------ | ------------------------------------------ |
 | 15.2.4203891 | $HOME/Library/Android/sdk/android-ndk-r15c |
 | 18.1.5063045 | $HOME/Library/Android/sdk/ndk/18.1.5063045 |
-| 21.2.6472646 | $HOME/Library/Android/sdk/ndk-bundle       |
+| 21.3.6528147 | $HOME/Library/Android/sdk/ndk-bundle       |
 
 #### Android Utils
 | Package Name     | Version     |
