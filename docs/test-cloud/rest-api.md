@@ -85,5 +85,56 @@ The JSON Body looks like:
     }
 ]
 ```
-![Screenshot demonstrating API usage](images/test-runs-api.png)
+![Screenshot demonstrating Test API upload json](images/test-api-json.png)
 
+The response looks like:
+```json
+[
+    {
+     "fileType": "app-file",
+     "checksum": "3f3677f8db9ba7c07ac77d4f01f912e518a6ca16",
+     "relativePath": "com.mobilecenter.sampleappxamarin.apk",
+     
+     "uploadStatus":
+        {
+         "statusCode": 412,
+         "location": "https://testcloud.xamarin.com/v0.1/direct_uploads?token=ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SjBaWE4w%0AWDNKMWJsOXBaQ0k2SWpjNU5EVmpNbUZtTFRFeFpXTXROR1ptWVMwNU1XSTBM%0AVFExTUdJd09EVTNNbU5sT1NJc0ltVjRjQ0k2TVRVek16Z3dOVFEzTUgwLlJO%0AaTQ3VTNPYTB5YWswMVRVdTV6Q0dfWFhwV25QUWJDdkJaNmVCRWRmOENuQ19U%0AbmdpRGI4MU0yYk1lTlZNY1VCVmRWLXlkRjh4dElLaU1yNFdtQUFhOFdoay02%0AOVVjb29rYkNTYUU2eUlzamowZlZPZVJhR2lFdGpvLWJHTFJLcXNGY0ZTeUdR%0ARTQzQUZ1TFlyTWlCRnowMElpd3ZudjYzZk9wQnRGaXhNa2lNNjhUTWxxVnNa%0AOFl3TFlTeU5KSWFvYVJCM0ZZTUkwajNYOWdVb3VJclVjNnpqcGNkYkxCcWJ0%0AVUpyN0ZFaTdJeWY4UG9rMXZxTzRlUExiaEszTmItTmd0Q2JuckZzS2x6Z3Za%0AaktUWHZZb2oya0FGWXZHaVZ4LVhfNVhUcGdiVnE1Z2dxVEtIdjRaUGFuaGR4%0AdnFvZ2YxRVYwWUJYaG40YUJLM3BnUVBodw%3D%3D%0A"
+        }
+    },
+
+    {
+     "fileType": "test-file",
+     "checksum": "a2d0dbc920fb3790d4d625e5c47be042ca32c051",
+     "relativePath": "nunit.framework.dll",
+     
+     "uploadStatus":
+        {
+         "statusCode": 412,
+         "location": "https://testcloud.xamarin.com/v0.1/direct_uploads?token=ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SjBaWE4w%0AWDNKMWJsOXBaQ0k2SWpjNU5EVmpNbUZtTFRFeFpXTXROR1ptWVMwNU1XSTBM%0AVFExTUdJd09EVTNNbU5sT1NJc0ltVjRjQ0k2TVRVek16Z3dOVFEzTUgwLlJO%0AaTQ3VTNPYTB5YWswMVRVdTV6Q0dfWFhwV25QUWJDdkJaNmVCRWRmOENuQ19U%0AbmdpRGI4MU0yYk1lTlZNY1VCVmRWLXlkRjh4dElLaU1yNFdtQUFhOFdoay02%0AOVVjb29rYkNTYUU2eUlzamowZlZPZVJhR2lFdGpvLWJHTFJLcXNGY0ZTeUdR%0ARTQzQUZ1TFlyTWlCRnowMElpd3ZudjYzZk9wQnRGaXhNa2lNNjhUTWxxVnNa%0AOFl3TFlTeU5KSWFvYVJCM0ZZTUkwajNYOWdVb3VJclVjNnpqcGNkYkxCcWJ0%0AVUpyN0ZFaTdJeWY4UG9rMXZxTzRlUExiaEszTmItTmd0Q2JuckZzS2x6Z3Za%0AaktUWHZZb2oya0FGWXZHaVZ4LVhfNVhUcGdiVnE1Z2dxVEtIdjRaUGFuaGR4%0AdnFvZ2YxRVYwWUJYaG40YUJLM3BnUVBodw%3D%3D%0A"
+        }
+    },
+ 
+    {
+     "fileType": "test-file",
+     "checksum": "c1f7342d05a9d95580a507156207e6f9283a2c8d",
+     "relativePath": "Xamarin.UITest.dll",
+     
+     "uploadStatus":
+        {
+         "statusCode": 412,
+         "location": "https://testcloud.xamarin.com/v0.1/direct_uploads?token=ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SjBaWE4w%0AWDNKMWJsOXBaQ0k2SWpjNU5EVmpNbUZtTFRFeFpXTXROR1ptWVMwNU1XSTBM%0AVFExTUdJd09EVTNNbU5sT1NJc0ltVjRjQ0k2TVRVek16Z3dOVFEzTUgwLlJO%0AaTQ3VTNPYTB5YWswMVRVdTV6Q0dfWFhwV25QUWJDdkJaNmVCRWRmOENuQ19U%0AbmdpRGI4MU0yYk1lTlZNY1VCVmRWLXlkRjh4dElLaU1yNFdtQUFhOFdoay02%0AOVVjb29rYkNTYUU2eUlzamowZlZPZVJhR2lFdGpvLWJHTFJLcXNGY0ZTeUdR%0ARTQzQUZ1TFlyTWlCRnowMElpd3ZudjYzZk9wQnRGaXhNa2lNNjhUTWxxVnNa%0AOFl3TFlTeU5KSWFvYVJCM0ZZTUkwajNYOWdVb3VJclVjNnpqcGNkYkxCcWJ0%0AVUpyN0ZFaTdJeWY4UG9rMXZxTzRlUExiaEszTmItTmd0Q2JuckZzS2x6Z3Za%0AaktUWHZZb2oya0FGWXZHaVZ4LVhfNVhUcGdiVnE1Z2dxVEtIdjRaUGFuaGR4%0AdnFvZ2YxRVYwWUJYaG40YUJLM3BnUVBodw%3D%3D%0A"
+        }
+    },
+
+    {
+     "fileType": "test-file",
+     "checksum": "542153902bc889d0d85a83b005854b5ebd9864f1",
+     "relativePath": "UITest.dll",
+     
+     "uploadStatus":
+        {
+         "statusCode": 412,
+         "location": "https://testcloud.xamarin.com/v0.1/direct_uploads?token=ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SjBaWE4w%0AWDNKMWJsOXBaQ0k2SWpjNU5EVmpNbUZtTFRFeFpXTXROR1ptWVMwNU1XSTBM%0AVFExTUdJd09EVTNNbU5sT1NJc0ltVjRjQ0k2TVRVek16Z3dOVFEzTUgwLlJO%0AaTQ3VTNPYTB5YWswMVRVdTV6Q0dfWFhwV25QUWJDdkJaNmVCRWRmOENuQ19U%0AbmdpRGI4MU0yYk1lTlZNY1VCVmRWLXlkRjh4dElLaU1yNFdtQUFhOFdoay02%0AOVVjb29rYkNTYUU2eUlzamowZlZPZVJhR2lFdGpvLWJHTFJLcXNGY0ZTeUdR%0ARTQzQUZ1TFlyTWlCRnowMElpd3ZudjYzZk9wQnRGaXhNa2lNNjhUTWxxVnNa%0AOFl3TFlTeU5KSWFvYVJCM0ZZTUkwajNYOWdVb3VJclVjNnpqcGNkYkxCcWJ0%0AVUpyN0ZFaTdJeWY4UG9rMXZxTzRlUExiaEszTmItTmd0Q2JuckZzS2x6Z3Za%0AaktUWHZZb2oya0FGWXZHaVZ4LVhfNVhUcGdiVnE1Z2dxVEtIdjRaUGFuaGR4%0AdnFvZ2YxRVYwWUJYaG40YUJLM3BnUVBodw%3D%3D%0A"
+        }
+    }
+]
