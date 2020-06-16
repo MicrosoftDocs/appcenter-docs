@@ -17,7 +17,6 @@ We've decided to create a highly detailed one. We hope you find this useful and 
 1. [Create a new test run](https://openapi.appcenter.ms/#/test/test_createTestRun) using the POST Method. Once the request is sent, you'll recieve a **test run ID** in the Response Header. You should save that ID for reference.
 
 **Sample Request** https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs 
-
 ![Screenshot demonstrating API usage](images/test-runs-api.png)
 
 2. **Create file hashes** for each file you want to upload to AppCenter Test.
@@ -29,19 +28,15 @@ You can get the file hashes by running the command `shasum`. This utility is ava
 ankasani@AK--PC MINGW64 ~/source/repos/AppXamarin/sampleapp-xamarin-master/UITest/bin/Debug/testdlls (master)
 
 $ shasum nunit.framework.dll
-
  a2d0dbc920fb3790d4d625e5c47be042ca32c051 *nunit.framework.dll
 
 $ shasum Xamarin.UITest.dll
-
 c1f7342d05a9d95580a507156207e6f9283a2c8d *Xamarin.UITest.dll
 
 $ shasum UITest.dll
-
 542153902bc889d0d85a83b005854b5ebd9864f1 *UITest.dll
 
 $ shasum com.mobilecenter.sampleappxamarin.apk
-
 3f3677f8db9ba7c07ac77d4f01f912e518a6ca16 *com.mobilecenter.sampleappxamarin.apk
 ```
 
@@ -138,3 +133,136 @@ The response looks like:
         }
     }
 ]
+```
+
+4. Now we need to **upload** the actual files.
+From the previous response body, identify the `location` that contains the URL of the files you are uploading.
+
+   - In the Headers, you need to pass Content-Type:multipart/form-data
+   - In the Body, you need to use the type Body_Form with the values:
+      - *relative_path and file_type: from the previous Response Body
+      - *file : Path to the actual file
+
+You're on the right track if you get `201 Created` as the response like below.
+
+![Screenshot of API creating test run](images/test-api-created.png)
+
+(We're halfway there) 
+
+5. Repeat the previous step for the rest of the files you want to upload. 
+
+6. We are ready to Execute the test now. For this, we need a device_slug. 
+
+**Note**: You should first create "Device Sets" in your Org or you can use the REST API to [create device sets](https://openapi.appcenter.ms/#/test/test_createDeviceSetOfUser).
+
+Then, you can use the GET Method to get the [list of device sets](https://openapi.appcenter.ms/#/test/test_listDeviceSetsOfUser).
+
+Sample Request: https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/owner/device_sets
+
+![Screenshot of API call for listing device sets](images/test-api-device-sets.png)
+
+Corresponding Response Body: 
+
+```json
+{
+     "id": "00917fb6-f30f-4d36-bd53-f900a94efe9f",
+     "name": "UI Test",
+     "slug": "ui-test",
+     "osVersionCount": 1,
+     "manufacturerCount": 1,
+
+    "owner":
+    {
+        "type": "organization",
+        "id": "5dd75115-3832-4f10-9cfe-5ac8cc8a51a5",
+        "displayName": "MSKASANI",
+        "name": "MSKASANI"
+    },
+ 
+    "deviceConfigurations":
+    {
+        {
+            "id": "717cfc38-4817-41fc-8a8e-06beef4f73b2",
+            "image":
+            {
+                "thumb": "https://testcloud-prod-system-files.s3-eu-west-1.amazonaws.com/system_files/0dee6ee7-6839-4e4e-ad0b-333e3952f75c?response-cache-control=max-age%3D157788000&AWSAccessKeyId=AKIAI4UZT4FCOF2OTJYQ&Signature=r9EEm/x0YAA4NhRJ%2BhVSQwGtBbI%3D&Expires=1691079085"
+            },
+
+            "os": "8.1.0",
+            "osName": "Android 8.1.0",
+            "model":
+            {
+                "name": "Google Pixel 2 XL", 
+                "manufacturer": "Google", 
+                "releaseDate": "October 2017", 
+                "formFactor": "phone"
+            }
+        }
+    }
+}
+```
+
+7. We're now ready to use the [Test start API to trigger the test](https://openapi.appcenter.ms/#/test/test_startTestRun)! 
+The Request body below is created for Xamarin.UITest Framework. If you're using other frameworks, don't worry, refer to the end of the doc for more details! 
+
+Sample JSON Request Body:
+```json
+{
+   "test_framework":"ui_test",
+   "device_selection":"MSKASANI/ui-test",
+   "locale":"en_US",
+   "test_series":"apimaster",
+ 
+   "test_parameters":
+        {
+         "tests":
+            {
+    
+             "method":
+                {
+                 "UITest.dll":
+                    [
+                     "UITest.Tests(Android).AppLaunches",
+                     "UITest.Tests(iOS).AppLaunches"
+                    ]
+                },
+             
+             "fixture":
+                {
+                 "UITest.dll":
+                    [
+                     "UITest.Tests(Android)",
+                     "UITest.Tests(iOS)"
+                    ]
+                }
+            }
+        }
+}
+```
+
+Corresponding response body:
+```json
+{
+    "accepted_devices":["Google Pixel 2 XL (8.1.0)"],
+    "rejected_devices":[]
+}
+```
+![Screenshot of API call to list devices](images/test-api-devices.png)
+
+If you now go to the Test page of your App, you will see... 
+
+![Screenshot of test run in progress](images/test-run-progress.png)
+
+Congratulations! :) 
+
+PS : For other Test Frameworks, if you want to know how the JSON looks like (for instance, Appium test)
+
+Run the Test command manually with `--debug` switch.
+
+> appcenter test run appium --app "MSKASANI/Appium" --devices "MSKASANI/my" --app-path C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\swiftnote.apk--test-series "master" --locale "en_US" --build-dir C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\Mavenex\target\upload --debug
+
+Once the test is complete, you can check out the Command output to see how the Request Body looks like:
+
+![Screenshot of API terminal output](images/test-api-terminal)
+
+BONUS! This way you can use the CLI output to see what how our commands queue the Tests using our API! 
