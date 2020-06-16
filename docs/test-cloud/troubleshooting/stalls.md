@@ -15,7 +15,7 @@ When we detect a stalled error our operations staff will attempt to make correct
 
 Devices which stall do not count against your available device concurrency or testing time; so they should not impair any other devices or test runs from completing.
 
-# Getting support when you encounter a stall
+## Getting support when you encounter a stall
 In the upper right-hand corner of App Center, click **? > Contact Support**. 
 
 if possible check for & provide the information detailed below: 
