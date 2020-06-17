@@ -24,10 +24,9 @@ ms.tgt_pltfrm: react-native
 > * [Xamarin](xamarin.md)
 
 ## 'React/RCTDefines.h' file not found
+This error appears when RN core libraries aren't referenced correctly, which can be caused by different kinds of integrating/linking issues. It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
 
-This error appears when RN core libraries are not referenced correctly, which can be caused by a variety of integrating/linking issues.
-It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
-Our linking script supports only the standard way of linking pods, so in order to resolve this, do the following:
+Our linking script supports only the standard way of linking pods, so to resolve the problem:
 
 1. Replace the dependencies in your `Podfile` with relative linking paths:
 
@@ -120,21 +119,21 @@ rnpm-install info Platform 'android' module appcenter-analytics is already linke
 
 If you see that error, make sure the `pod` command from **CocoaPods** is available in your system's **PATH** environment variable.
 
-After you fix your **CocoaPods** installation, run `pod install` in the **ios** folder to fix your project.
+After you fix your **CocoaPods** installation, run `pod install` in the **iOS** folder to fix your project.
 
 ## CocoaPods unable to find a specification for AppCenterReactNativeShared during react-native link
 
-If you see the following CocoaPods error message during `react-native link`, chances are your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) is not up to date.
+If you see the following CocoaPods error message during `react-native link`, chances are your local clone (`~/.cocoapods/repos` on your machine) of the [CocoaPods spec repo](https://github.com/CocoaPods/Specs) isn't up to date.
 
 ```Text
 Analyzing dependencies [!] Unable to find a specification for AppCenterReactNativeShared (~> {version})
 ```
 
-You should run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, please see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
+Run `pod repo update` to update the spec repo, and try `react-native link` again. For more information of CocoaPods commands, see [CocoaPods command line reference](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
 ## How to upgrade app using App Center SDK from React Native 0.59 to 0.60
 
-For upgrading React Native to the version 0.60.0 use the following command:
+For upgrading React Native to the version 0.60.0, use the following command:
 
 ```shell
 react-native upgrade 0.60.0
@@ -165,7 +164,7 @@ react-native upgrade 0.60.0
 
 ## How to update React Native SDK to the latest version
 
-If you have already integrated our SDK into your application and want to upgrade to a newer version of the SDK, please follow the following steps to upgrade:
+If you've already integrated our SDK into your application and want to upgrade to a newer version of the SDK, follow the following steps to upgrade:
 
 1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to uninstall old App Center packages.
 

@@ -34,9 +34,9 @@ Failed to install 'cordova-plugin-appcenter-shared': Error: pod: Command failed 
 
 In `0.3.0`, we dropped iOS 8 support. The issue with this is that the `4.5.5` version of `cordova-ios` targeted iOS `9.0` by default, but used iOS `8.0` in the podfile. The problem is fixed with `cordova-ios 5.0.0`.
 
-There are two options to resolve this:
+There are two options:
 1. `cordova platform add ios@5.0.0`
-2. If for some reason you want to stay on older cordova version, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`. Then run `pod install`.
+2. If you want to stay on an older cordova version, go to `platforms` > `ios`, open `Podfile` and change `platform :ios, '8.0'` to `platform :ios, '9.0'`. Then run `pod install`.
 
 ## Failed to install 'cordova-plugin-appcenter-shared': undefined
 
