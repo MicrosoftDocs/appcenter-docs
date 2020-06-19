@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: elamalani
 ms.author: emalani
-ms.date: 07/22/2019
+ms.date: 06/19/2020
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter-sdk
@@ -151,11 +151,14 @@ Analytics.isEnabled()
 
 ## Local storage size
 
-By default, the SDK stores all the event logs up to 10MB. Developers can use an API to increase the [storage size](../other-apis/android.md#storage-size) and the SDK will keep storing logs until the storage is full.
+By default, the SDK stores all the event logs up to 10 MB. Developers can use an API to increase the [storage size](../other-apis/android.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+
+> [!NOTE]
+> The logs older than 25 days will be discarded.
 
 ## Batching event logs
 

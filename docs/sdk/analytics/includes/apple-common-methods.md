@@ -1,7 +1,7 @@
 ---
 author: elamalani
 ms.author: emalani
-ms.date: 11/25/2019
+ms.date: 06/19/2020
 ms.topic: include
 ---
 
@@ -198,11 +198,14 @@ MSAnalytics.isEnabled()
 
 ## Local storage size
 
-By default, the SDK stores all logs up to 10MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
+By default, the SDK stores all logs up to 10 MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+
+> [!NOTE]
+> The logs older than 25 days will be discarded.
 
 ## Batching event logs
 
