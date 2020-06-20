@@ -1,17 +1,17 @@
 ---
-title: "HockeyApp Transition"
+title: "HockeyApp Retirement"
 description: Transition from HockeyApp to App Center
-author: dipree
-ms.author: daadam
-ms.date: 02/24/2020
+author: ahbilal
+ms.author: Ahmed Bilal
+ms.date: 06/20/2020
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
 ms.service: vs-appcenter
 ---
 
-# HockeyApp
+# HockeySDK is retiring
 
-Apps that have been migrated from HockeyApp still receive data from the HockeySDK. In-app updates remain functional as well.
+HockeySDK is now deprecated and will continue to work until November 13, 2020. After this date, HockeySDK will stop sending data for your app. To continue getting analytics/crash data from your apps and keep using in-app updates, make sure to upgrade your apps to the App Center SDK versions before November 13, 2020. Follow the details below to update your apps to use the App Center SDK.
 
 ## Migrate from the HockeySDK to the App Center SDK
 
@@ -26,6 +26,9 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 * [HockeySDK Unity](unity-sdk-migration.md)
 * [HockeySDK Cordova](cordova-sdk-migration.md)
 * [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
+
+## FAQS
+
 
 ## Download Links
 
