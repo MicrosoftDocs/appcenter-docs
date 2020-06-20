@@ -29,32 +29,32 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 
 ## FAQS
 
-** Why are we retiring HockeySDK? **
+#### Why are we retiring HockeySDK?
 
 In 2018, we announced the transition from HockeyApp to Visual Studio App Center, a single solution for continuously building, testing, releasing, and monitoring your apps. HockeyApp transitions are now complete, but we extended the retirement of the HockeySDK to November 16, 2020, to give you more time to move to App Center SDK. 
 
-** What will happen after November 13th, 2020? ** 
+#### What will happen after November 13th, 2020?
 
 All Apps that have HockeySDK in it will stop sending data to the App Center Portal. 
 
-** What services will be impacted? ** 
+#### What services will be impacted?
 
 All services for which you are using HockeySDK will be impacted. This includes Crashes, Analytics, and In-app update. 
 
-** How can I know if my apps are using HockeySDK? ** 
+#### How can I know if my apps are using HockeySDK?
 
-** Can I get an extension on the deadline? ** 
+#### Can I get an extension on the deadline?
 
-The shutdown date is final and unfortunately will not be able to grant an extension on an individual basis. 
+The shutdown date is final and unfortunately we will not be able to grant an extension. 
 
-** How can I migrate to App Center SDK? ** 
+#### How can I migrate to App Center SDK?
 
 Follow the guides for each platform (listed above) to update your apps to use the App Center SDK instead of the HockeySDK.
 
-** App Center SDK is missing a feature that HockeySDK provided. Will these features be added to App Center SDK before the shutdown? ** 
+#### App Center SDK is missing a feature that HockeySDK provided. Will these features be added to App Center SDK before the shutdown?
 
 The App Center team has closed major feature gaps with HockeySDK. Despite this, we acknowledge that there might be a few features that are still missing in the App Center SDK. Unfortunately, these gaps and features don't align with the general App Center product direction and we will not be able to close them before the deadline. 
 
-** How can I get more help with this announcement? ** 
+#### How can I get more help with this announcement?
 
 To get help, click the help menu (?) in the upper right corner of the App Center portal, then select Contact support. Once you fill out the form, our team will be in contact with you via email. Responsiveness might vary based on the support load at a given moment. Read more about App Center support and help and feedback.
