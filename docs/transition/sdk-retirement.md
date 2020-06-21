@@ -51,6 +51,10 @@ The shutdown date is final and unfortunately we will not be able to grant an ext
 
 Follow the guides for each platform (listed above) to update your apps to use the App Center SDK instead of the HockeySDK.
 
+#### I have already migrated my app to the App Center SDK? Why did I still get the retirement announcement?
+
+If you have already migrated to App Center SDK, few of your customers may be still using the old versions of the app with HockeySDK. You will stop receiving data from these customers after November 13th, 2020 unless these customers upgrade to the version of the app with App Center SDK. 
+
 #### App Center SDK is missing a feature that HockeySDK provided. Will these features be added to App Center SDK before the shutdown?
 
 The App Center team has closed major feature gaps with HockeySDK. Despite this, we acknowledge that there might be a few features that are still missing in the App Center SDK. Unfortunately, these gaps and features don't align with the general App Center product direction and we will not be able to close them before the deadline. 
