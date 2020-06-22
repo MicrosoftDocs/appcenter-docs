@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 06/15/2020
+ms.date: 06/22/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -13,7 +13,7 @@ ms.custom: build
 - System Version: macOS 10.14.6 (18G5033)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200610.3
+- Image Version: 20200618.2
 
 ## Installed Software
 ### Language and Runtime
@@ -23,7 +23,7 @@ ms.custom: build
 - Java 12: Zulu12.3+11-CA (build 12.0.2+3)
 - Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
 - Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.44.0
+- Rust 1.44.1
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
 - gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
@@ -31,14 +31,14 @@ ms.custom: build
 - GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
 - Node.js v6.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.0 v13.14.0 v14.4.0
-- PowerShell 7.0.1
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.1 v13.14.0 v14.4.0
+- PowerShell 7.0.2
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
-- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
+- .NET SDK 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507 2.1.602 2.1.603 2.1.604 2.1.607 2.1.700 2.1.701 2.1.801 2.1.802 2.1.803 2.1.804 2.1.805 2.1.806 2.1.807
 - Go 1.14.3
-- PHP 7.4.6
+- PHP 7.4.7
 - julia 1.4.2
 
 ### Package Management
@@ -46,13 +46,13 @@ ms.custom: build
 - Bundler version 2.1.4
 - Carthage 0.34.0
 - CocoaPods 1.9.3
-- Homebrew 2.3.0
+- Homebrew 2.4.0
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 2.7)
 - Pip 20.0.2 (python 3.7)
-- Miniconda 4.8.2
+- Miniconda 4.8.3
 - RubyGems 3.1.4
 
 ### Project Management
@@ -63,11 +63,11 @@ ms.custom: build
 - Curl 7.70.0
 - Git: 2.27.0
 - Git LFS: 2.11.0
-- GitHub CLI: 0.9.0
+- GitHub CLI: 0.10.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.14.0
-- Packer 1.5.6
+- Packer 1.6.0
 - GNU parallel 20200522
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
@@ -77,12 +77,12 @@ ms.custom: build
 - aria2 1.35.0
 - azcopy 10.4.3
 - zstd 1.4.5
-- bazel 3.2.0
+- bazel 3.3.0
 - bazelisk v1.5.0
-- helm v3.2.3+g8f83204
+- helm v3.2.4+g0ad800e
 - virtualbox 6.1.10r138449
-- mongo v4.2.7
-- mongod v4.2.7
+- mongo v4.2.8
+- mongod v4.2.8
 - Vagrant 2.2.9
 - 7-Zip 16.02
 
@@ -91,8 +91,8 @@ ms.custom: build
 - Cmake 3.17.3
 - App Center CLI 1.2.2
 - Azure CLI 2.7.0
-- AWS CLI 2.0.19
-- AWS SAM CLI 0.52.0
+- AWS CLI 2.0.23
+- AWS SAM CLI 0.53.0
 - Aliyun CLI 3.0.46
 - GHCup v0.1.5-p2
 - GHC 8.10.1
@@ -102,10 +102,10 @@ ms.custom: build
 ### Browsers
 - Safari 13.1.1 (14609.2.9.1.3)
 - SafariDriver 13.1.1 (14609.2.9.1.3)
-- Google Chrome 83.0.4103.97 
+- Google Chrome 83.0.4103.106 
 - ChromeDriver 83.0.4103.39
-- Microsoft Edge 83.0.478.45 
-- MSEdgeDriver 83.0.478.45
+- Microsoft Edge 83.0.478.54 
+- MSEdgeDriver 83.0.478.54
 - Mozilla Firefox 77.0.1
 - geckodriver 0.26.0
 
@@ -232,7 +232,7 @@ ms.custom: build
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.4
+- xcversion 2.6.5
 
 #### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                          |
@@ -331,7 +331,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.2 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.3 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
