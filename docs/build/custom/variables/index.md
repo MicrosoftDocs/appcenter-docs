@@ -13,7 +13,7 @@ ms.reviewer: nirajpur
 ---
 
 # Environment variables
-Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own. 
+Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own.
 
 ## Pre-Defined variables
 
@@ -51,7 +51,7 @@ Custom environment variables allow you to define sensitive information that is r
 ![The build configuration showing custom environment variables in different states](~/build/custom/variables/images/environment-variables.png "Custom environment variables")
 
 #### Encrypting variables
-Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editable once they're saved, but they can be deleted & re-created. 
+Values of variables are encrypted by clicking on the lock icon, which obfuscates them in the build configuration & logs. Encrypted values aren't editable once they're saved, but they can be deleted & re-created.
 
 Non-encrypted values can be encrypted at any time.
 
@@ -90,9 +90,9 @@ If you're building a Xamarin or UWP app, you might want to connect to a private 
 </packageSourceCredentials>
 ```
 
-## build.gradle for Android 
+## build.gradle (app level) for Android
 
-For Android apps, you can access your variables in the **build.gradle** config. For more details, please read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
+For Android apps, you can access your variables in the **build.gradle (app level)** config. For more details, please read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
 
 ```java
 buildConfigField("String", "API_KEY", "\"${System.env.API_KEY}\"")
