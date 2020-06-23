@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # HockeySDK is retiring
 
-HockeySDK is now deprecated and will continue to work until November 13, 2020. After this date, HockeySDK will stop sending data for your app. To continue getting analytics/crash data from your apps and keep using in-app updates, make sure to upgrade your apps to the App Center SDK versions before November 13, 2020. Follow the details below to update your apps to use the App Center SDK.
+HockeySDK is now deprecated and will continue to work until November 13, 2020. After this date, HockeySDK will stop sending data for your app. To continue getting analytics/crash data from your apps and keep using in-app updates, make sure to upgrade your apps to the App Center SDK versions before November 13, 2020.
 
 ## Migrate from the HockeySDK to the App Center SDK
 
