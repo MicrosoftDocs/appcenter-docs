@@ -1,11 +1,11 @@
 ---
 title: Working with backdoors
-description: Backdoors are methods that can be invoked during a test run to perform some special action to configure or set up testing state on a device.
+description: Backdoors are methods that can be invoked during a test run to do some special action.
 keywords: uitest test cloud
 author: oddj0b
 ms.author: vigimm
-ms.reviewer: crdun
-ms.date: 03/06/2019
+ms.reviewer: king-of-spades
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: BFFC9137-6E6B-4190-AF79-E96B574E3B4B
 ms.service: vs-appcenter
@@ -14,10 +14,9 @@ ms.custom: test
 
 # Working with backdoors
 
-*Backdoors* are methods that are included in a Xamarin.iOS or Xamarin.Android
- app that can be invoked during a test run to perform some special action to configure or set up testing state on a device. For example, a backdoor may be used to seed a database with some test data so that all of the tests in a given fixture have the same data.
+*Backdoors* are methods that are included in a Xamarin.iOS or Xamarin.Android app, and are invoked during a test run to do some special action like configuring a testing state on a device. For example, a backdoor may be used to seed a database with some test data, so that all tests in a test fixture can use it consistently.
 
-The [`IApp.Invoke`](https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.Invoke/p/System.String/System.Object/) allows a test to call a backdoor method in an app. 
+The [`IApp.Invoke`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp.Invoke#Xamarin_UITest_IApp_Invoke_System_String_System_Object_) allows a test to call a backdoor method in an app. 
 
 How to use `Invoke` and implement a backdoor method in an application is 
 different between iOS and Android.
@@ -27,10 +26,10 @@ different between iOS and Android.
 On Android, `IApp.Invoke` can be used to invoke a method in the Xamarin.Android application according to the following rules:
 
 * The method must be `public`.
-* The backdoor method must be adorned with the [`Java.Interop.Export`](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/) attribute that exposes the name of the backdoor method.
+* The backdoor method must be adorned with the [`Java.Interop.Export`](https://docs.microsoft.com/dotnet/api/Java.Interop.ExportAttribute) attribute that exposes the name of the backdoor method.
 * The method may return one of `string`, `Java.Lang.String`, or `void`.
-* The method may accept a parameter which may be a `string`, `int`, or `bool`. 
-* If the method does accept a parameter, it must be provided to `IApp.Invoke`.    
+* The method may accept a parameter, which may be a `string`, `int`, or `bool`. 
+* If the method accepts a parameter, it must be provided to `IApp.Invoke`.    
 
 The Xamarin Test Cloud Agent will try to locate the method in the following order:
 
@@ -79,11 +78,11 @@ public class InvokeExampleTestFixture()
 On iOS, `IApp.Invoke` can call a C# method on the project's **AppDelegate** according to the following rules:
 
 * The method must be `public`.
-* The method must be adorned with the  [`ExportAttribute`](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) and the name of the exposed C# method identified. The exposed name must append a *:* (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
+* The method must be adorned with the  [`ExportAttribute`](https://docs.microsoft.com/dotnet/api/Foundation.ExportAttribute) and the name of the exposed C# method identified. The exposed name must append a `:` (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
 * The method must take a parameter of `NSString`.
 * The method must return `NSString` or void.
 
-The following code is a snippet showing how declare a backdoor method in iOS:
+The following code is a snippet showing how to declare a backdoor method in iOS:
 
 ```csharp
 [Register("AppDelegate")]
