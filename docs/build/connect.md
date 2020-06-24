@@ -23,9 +23,9 @@ Available repositories will populate in App Center after a successful connection
 
 ### Connecting to Self-Hosted GitLab Instances
 > [!WARNING]
-> Subdomains aren't supported. Example: https://gitlab-p.my-company.com/ 
+> Subdomains aren't supported, the SSL certificate for the GitLab instance must match exactly. Example: https://gitlab.my-company.com/ can not be served under a wildcard certificate for `*.my-company.com`.
 
-You may connect to a self-hosted GitLab instance by providing the instance URL, for example, `mycompany.gitlab.com`, and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings > Developer Accounts**.
+You may connect to a self-hosted GitLab instance by providing the instance URL, for example, `gitlab.my-company.com`, and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings > Developer Accounts**.
 
 ## Removing connections and reconnecting
 With so many identities, apps, and authentication methods, you might end up with your App Center account connected to a different code repository service than where your apps are hosted.
