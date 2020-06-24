@@ -43,6 +43,8 @@ All App Center services for which you are using HockeySDK will be impacted. This
 
 #### How can I know if my apps are using HockeySDK?
 
+To know if your app is using HockeySDK, you will have to either look into your codebase or check for dependencies in Gradle, Podfile, NuGet,etc
+
 #### Can I get an extension on the deadline?
 
 The shutdown date is final and unfortunately we will not be able to grant an extension. 
