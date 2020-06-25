@@ -5,7 +5,7 @@ keywords: test-cloud.exe, UITest.dll, Xamarin.UITest, upload
 author: king-of-spades
 ms.date: 05/20/2020
 ms.topic: article
-ms.assetid: 6a75bdce-34cd-45ba-965f-bac42e5b0167
+ms.assetid: d732a3cf-88b8-4adc-b4a7-bab3a2c3a6b4
 ---
 
 # Xamarin.UITest test-cloud.exe Upload Errors
