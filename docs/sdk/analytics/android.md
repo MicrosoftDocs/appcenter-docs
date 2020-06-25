@@ -158,7 +158,7 @@ By default, the SDK stores all the event logs up to 10 MB. Developers can use an
 When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
 
 > [!NOTE]
-> The logs older than 25 days will be discarded.
+> The logs older than 25 days won't be accepted by the backend.
 
 ## Batching event logs
 
