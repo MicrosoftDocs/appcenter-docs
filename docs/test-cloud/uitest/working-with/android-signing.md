@@ -4,7 +4,7 @@ description: How to sign Android apks with your Android keystore in App Center T
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 04/08/2020
+ms.date: 06/04/2020
 ms.topic: article
 ms.assetid: 819e647d-be5c-43ce-afbf-c58e51d52e03
 ms.service: vs-appcenter
@@ -12,10 +12,9 @@ ms.custom: test
 ---
 
 # Working with Android signing
+When Xamarin.UITest executes tests with your Android APK, it uses a test server that runs in process with your app, to facilitate the tests. Android will only allow the test server and APK in the same process if both use the same Android keystore. Normally, Xamarin.UITest signs both your APK and the test server with the same debug keystore and that works.
 
-When Xamarin.UITest executes tests with your Android APK it uses a test server that runs in process with your app to help facilitate the tests. Android will not allow them to run in the same process unless the test server and your APK are both signed with the same Android keystore. Normally, Xamarin.UITest signs both your APK and the test server with the same debug keystore and that works.
-
-Some apps will only work if signed with a specific Android keystore. Apps that use Google Maps are one example. Also, running locally, if you are connecting to an already installed app you may need to specify a keystore so that the test server can be signed with the one that matches that APK.
+Some apps will only work if signed with a specific Android keystore. Apps that use Google Maps are one example. When running locally, if you're connecting to an already installed app, you may need to specify the keystore so the test server can be signed with that keystore matching the APK.
 
 You specify a keystore directly or by specifying a *signing information file* that can be used instead. Using a signing information file avoids exposing your Android keystore and passwords on the command line, but achieves the same signing result.
 
@@ -38,11 +37,11 @@ The `KeyStore` method takes these parameters:
 public AndroidAppConfigurator KeyStore (String path, String storePassword, String keyPassword, String keyAlias)
 ```
 
->Configures the keystore that the provided apk file is signed with. A keystore is not required, but will ensure that the apk file is pristine and unchanged. If a keystore is provided, it will be used to sign the auxiliary apks installed along with the app on the device. If a keystore is not provided, Xamarin.UITest will generate a keystore and resign the apk.
+>Configures the keystore that the provided apk file is signed with. A keystore isn't required, but will ensure that the apk file is pristine and unchanged. If a keystore is provided, it will be used to sign the auxiliary apks installed along with the app on the device. If a keystore isn't provided, Xamarin.UITest will generate a keystore and resign the apk.
 
-For more information, see the [AndroidAppConfigurator.KeyStore API reference](https://developer.xamarin.com/api/member/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore/p/System.String/System.String/System.String/System.String/).
+For more information, see the [AndroidAppConfigurator.KeyStore API reference](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore#Xamarin_UITest_Configuration_AndroidAppConfigurator_KeyStore_System_String_System_String_System_String_System_String_).
 
-If you are working with an already installed APK and need to use the matching Android keystore, you can use this form of the `ConfigureApp.Android` statement:
+If you're working with an already installed APK and need to use the matching Android keystore, you can use this form of the `ConfigureApp.Android` statement:
 
 ```csharp
 ConfigureApp.Android.KeyStore(...).InstalledApp(...).StartApp();
@@ -51,7 +50,7 @@ ConfigureApp.Android.KeyStore(...).InstalledApp(...).StartApp();
 ## App Center Test and Android keystore
 
 *Question from a user:*
-"Hello, I ran Android Xamarin.UITest on App Center Test Cloud. For some reason, the device is not loading Google Maps. Can you tell me why the map is not loading?"
+"Hello, I ran Android Xamarin.UITest on App Center Test Cloud. For some reason, the device isn't loading Google Maps. Can you tell me why the map isn't loading?"
 
 The problem in this case was that the APK was getting re-signed in App Center Test Cloud with a different Android keystore. To use the correct keystore, specify it in the command when submitting your tests.
 
@@ -73,9 +72,9 @@ Required arguments:
 
 ## Signing information file
 
-The other approach is to create and specify a signing information file, and will result in the same signing but does not use your keystore and passwords in the command line. This does require creating the signing information file.
+The other approach is to create and specify a signing information file, and will result in the same signing but doesn't use your keystore and passwords in the command line. This does require creating the signing information file.
 
-First, find the `test-cloud.exe` in your NuGet packages folder for the version of Xamarin.UITest that you are using. It is in the tools folder under a Xamarin.UITest folder. Then, use it to generate the signing information file. If you change the version of Xamarin.UITest you are using, you will need to generate a new signing information file.
+First, find the `test-cloud.exe` in your NuGet packages folder for the version of Xamarin.UITest that you're using. It is in the tools folder under a Xamarin.UITest folder. Then, use it to generate the signing information file. If you change the version of Xamarin.UITest you're using, you'll need to generate a new signing information file.
 
 ### Generating the signing information file
 
@@ -85,7 +84,7 @@ First, find the `test-cloud.exe` in your NuGet packages folder for the version o
 test-cloud.exe gen-sign-info <apk-signed> <keystorefile> <keystorepass> <keyalias> <keypass> [--dir <directory>]
 ```
 > [!NOTE]
-> Beginning with UITest version 3.0.0, generating the signing information file using test-cloud.exe is not supported (it is only available up through UITest version 2.2.7).
+> Beginning with UITest version 3.0.0, generating the signing information file using test-cloud.exe isn't supported (it is only available up through UITest version 2.2.7).
 
 #### [Visual Studio for Mac](#tab/vsmac/)
 
@@ -93,7 +92,7 @@ test-cloud.exe gen-sign-info <apk-signed> <keystorefile> <keystorepass> <keyalia
 mono test-cloud.exe gen-sign-info <apk-signed> <keystorefile> <keystorepass> <keyalias> <keypass> [--dir <directory>]
 ```
 > [!NOTE]
-> Beginning with UITest version 3.0.0, generating the signing information file using test-cloud.exe is not supported (it is only available up through UITest version 2.2.7).
+> Beginning with UITest version 3.0.0, generating the signing information file using test-cloud.exe isn't supported (it is only available up through UITest version 2.2.7).
 
 * * *
 
@@ -127,7 +126,7 @@ The `SigningInfoFile` method takes one parameter:
 public AndroidAppConfigurator SigningInfoFile (String path)
 ```
 
->Configures the signing info file that the test server will be "signed" with. A signing info file is not required, but can be used instead of a keystore for signing the test server. The signing info file can be freely shared without the risk of leaking keying material. The signing info file can be generated using the console tool.
+>Configures the signing info file that the test server will be "signed" with. A signing info file isn't required, but can be used instead of a keystore for signing the test server. The signing info file can be freely shared without the risk of leaking keying material. The signing info file can be generated using the console tool.
 
 For more information, see the [AndroidAppConfigurator.SigningInfoFile API reference.](https://developer.xamarin.com/api/member/Xamarin.UITest.Configuration.AndroidAppConfigurator.SigningInfoFile/p/System.String/)
 

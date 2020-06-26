@@ -73,6 +73,9 @@ The edited and ready to use version of the command line for this hypothetical ex
 appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --app-path "app/build/outputs/apk/debug/app-debug.apk"  --test-series "master" --locale "en_US" --build-dir "app/build/outputs/apk/androidTest/debug"
 ```
 
+> [!NOTE]
+> Each uploaded file is limited to 400 MB. Make sure the size of your app file or build-dir content does not exceed the size limit.
+
 ## Getting help
 You can contact support in the App Center portal. In the upper right corner of screen, select the Help (?) menu, then choose 'Contact support'. Our dedicated support team will respond to your questions.
 

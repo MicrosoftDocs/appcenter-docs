@@ -1,7 +1,7 @@
 ---
 author: elamalani
 ms.author: emalani
-ms.date: 06/01/2020
+ms.date: 06/19/2020
 ms.topic: include
 ---
 
@@ -11,7 +11,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 > [!NOTE]
 > On a Mac Catalyst app, the amount of sessions may be lower than that on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
 
-The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking your users location and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
 * Make sure that you [enable Location Services](https://support.apple.com/en-us/HT204690) on the device.
 * Get the device's current location using `CLLocationManager`.
@@ -33,7 +33,7 @@ class AppDelegate: CLLocationManagerDelegate {
 }
 ```
 
-In the didFinishLaunchingWithOptions: method set up the location manager:
+In the didFinishLaunchingWithOptions: method set-up the location manager:
 
 ```objc
   self.locationManager = [[CLLocationManager alloc] init];
@@ -99,7 +99,7 @@ func locationManager(_ Manager: CLLocationManager, didFailWithError error: Error
 ## Custom events
 You can track your own custom events with **up to 20 properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
-Once you've started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum of 256 characters per event name, and 125 characters per event property name & property value.
+Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
@@ -126,7 +126,7 @@ You can track business critical events that have higher importance than other ev
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
-**Normal** priority will fail as the SDK can't make room in that case.
+**Normal** priority will fail as the SDK cannot make room in that case.
 * If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
@@ -202,7 +202,10 @@ By default, the SDK stores all logs up to 10 MB. Developers can use an API to in
 
 ## No internet access
 
-When there's no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+
+> [!NOTE]
+> The logs older than 25 days will be discarded.
 
 ## Batching event logs
 
