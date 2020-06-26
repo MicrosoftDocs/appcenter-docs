@@ -6,10 +6,10 @@ ms.topic: include
 ---
 
 ## Session and device information
-Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties. Including OS Version, model, and so on, without any additional code.
+Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties including OS Version, model, and so on, without any additional code.
 
 > [!NOTE]
-> On a Mac Catalyst app, the amount of sessions may be lower than that on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
+> On Mac Catalyst apps, the amount of sessions may be lower than on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
 
 The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
@@ -233,5 +233,5 @@ App Center SDK supports back-off retries on recoverable network errors. Below is
 
 Back-off logic
 
-* 50% randomization, first retry between 5 to 10 seconds, second retry between 2.5 to 5 minutes, last try between 10 to 20 minutes.
+* 50% randomization, first retry between 5 and 10 seconds, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.
