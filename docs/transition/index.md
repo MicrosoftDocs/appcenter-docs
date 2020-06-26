@@ -70,7 +70,7 @@ If you have already migrated to App Center SDK, it is likely that few of your cu
 
 #### The App Center SDK is missing a feature that the HockeySDK provided. Will these features be added to App Center SDK before the retirement?
 
-The App Center team has spent the last couple of years closing the majority of feature parity gaps with the HockeySDK. While a small number of feature parity gaps still exist, we do not itend on investing further in closing these gaps.
+The App Center team has spent the last couple of years closing the majority of feature parity gaps with the HockeySDK. While a small number of feature parity gaps still exist, we do not intend on investing further in closing these gaps.
 
 #### How can I get more help with this announcement?
 
