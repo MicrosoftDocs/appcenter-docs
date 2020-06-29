@@ -56,8 +56,8 @@ We've created detailed App Center SDK migration guides for each of our supported
 ### I've already migrated my app to the App Center SDK. Why did I still get the retirement announcement?
 If you've already migrated to App Center SDK, it's likely some of your customers are still using the old versions of the app with HockeySDK. You'll stop receiving data from these customers after November 13, 2020 unless these customers upgrade to the app version with App Center SDK. 
 
-#### The App Center SDK is missing a feature that the HockeySDK provided. Will these features be added to App Center SDK before the retirement?
+### The App Center SDK is missing a feature that the HockeySDK provided. Will these features be added to App Center SDK before the retirement?
 The App Center team has closed most feature parity gaps with the HockeySDK. While a small number of gaps still exist, we don't intend on investing further in closing them.
 
-#### How can I get more help with this announcement?
+### How can I get more help with this announcement?
 To get help, click the help menu (?) in the upper right corner of the App Center portal, then select Contact support. Once you fill out the form, our team will be in contact with you via email. Responsiveness might vary based on the support load at a given moment.
