@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 06/22/2020
+ms.date: 06/29/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -13,16 +13,16 @@ ms.custom: build
 - System Version: macOS 10.14.6 (18G5033)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200618.2
+- Image Version: 20200625.1
 
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
-- Java 1.8: (Zulu 8.46.0.19-CA-macosx) (build 1.8.0_252-b14) (default)
-- Java 11: Zulu11.39+15-CA (build 11.0.7+10-LTS)
-- Java 12: Zulu12.3+11-CA (build 12.0.2+3)
-- Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
-- Java 14: Zulu14.28+21-CA (build 14.0.1+8)
+- Java 1.8: (AdoptOpenJDK)(build 1.8.0_252-b09) (default)
+- Java 11: AdoptOpenJDK (build 11.0.7+10)
+- Java 12: AdoptOpenJDK (build 12.0.2+10)
+- Java 13: AdoptOpenJDK (build 13.0.2+8)
+- Java 14: AdoptOpenJDK (build 14.0.1+7)
 - Rust 1.44.1
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
@@ -36,17 +36,17 @@ ms.custom: build
 - Python 2.7.17
 - Python 3.7.7
 - Ruby 2.6.6p146
-- .NET SDK 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507 2.1.602 2.1.603 2.1.604 2.1.607 2.1.700 2.1.701 2.1.801 2.1.802 2.1.803 2.1.804 2.1.805 2.1.806 2.1.807
-- Go 1.14.3
+- .NET SDK 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507
+- Go 1.14.4
 - PHP 7.4.7
 - julia 1.4.2
 
 ### Package Management
 - Rustup 1.21.1
 - Bundler version 2.1.4
-- Carthage 0.34.0
+- Carthage 0.35.0
 - CocoaPods 1.9.3
-- Homebrew 2.4.0
+- Homebrew 2.4.2
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -60,15 +60,15 @@ ms.custom: build
 - Gradle 6.5
 
 ### Utilities
-- Curl 7.70.0
+- Curl 7.71.0
 - Git: 2.27.0
 - Git LFS: 2.11.0
-- GitHub CLI: 0.10.0
+- GitHub CLI: 0.10.1
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.14.0
 - Packer 1.6.0
-- GNU parallel 20200522
+- GNU parallel 20200622
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.20
@@ -90,10 +90,10 @@ ms.custom: build
 - Fastlane 2.149.1
 - Cmake 3.17.3
 - App Center CLI 1.2.2
-- Azure CLI 2.7.0
-- AWS CLI 2.0.23
+- Azure CLI 2.8.0
+- AWS CLI 2.0.25
 - AWS SAM CLI 0.53.0
-- Aliyun CLI 3.0.46
+- Aliyun CLI 3.0.48
 - GHCup v0.1.5-p2
 - GHC 8.10.1
 - Cabal 3.2.0.0
@@ -102,14 +102,14 @@ ms.custom: build
 ### Browsers
 - Safari 13.1.1 (14609.2.9.1.3)
 - SafariDriver 13.1.1 (14609.2.9.1.3)
-- Google Chrome 83.0.4103.106 
+- Google Chrome 83.0.4103.116 
 - ChromeDriver 83.0.4103.39
-- Microsoft Edge 83.0.478.54 
-- MSEdgeDriver 83.0.478.54
+- Microsoft Edge 83.0.478.56 
+- MSEdgeDriver 83.0.478.56
 - Mozilla Firefox 77.0.1
 - geckodriver 0.26.0
 
-### Toolcache
+### Cached Tools
 #### Ruby
 - 2.4.10
 - 2.5.8
@@ -126,6 +126,18 @@ ms.custom: build
 #### PyPy
 - 2.7.13 [PyPy 7.3.1]
 - 3.6.9 [PyPy 7.3.1]
+
+#### Node.js
+- 8.17.0
+- 10.21.0
+- 12.18.1
+- 14.4.0
+
+#### Go
+- 1.11.13
+- 1.12.17
+- 1.13.12
+- 1.14.4
 
 ### Xamarin
 #### Visual Studio for Mac
@@ -232,7 +244,7 @@ ms.custom: build
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.5
+- xcversion 2.6.6
 
 #### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                          |
