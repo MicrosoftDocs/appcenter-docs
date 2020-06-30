@@ -27,7 +27,7 @@ Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamari
 
    In Visual Studio for Mac, open **Build > Android Build** then select **Project Options**. On the **General** tab, look for **Packaging and Deployment** and uncheck the **Use Shared Mono Runtime** checkbox.
 
-![Remove Use Share Runtime](./images/remove-share-runtime-vsmac.png)
+![Remove Use Shared Runtime](./images/remove-share-runtime-vsmac.png)
 
 ## Visual Studio (Windows)
 
