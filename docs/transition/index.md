@@ -31,7 +31,7 @@ Requests to the link of the format `https://rink.hockeyapp.net/api/2/apps/0873e2
 > [!Note]
 > The HockeyApp app id used in the link above is equivalent to the app secret of your app in App Center but without dashes.
 
-## Feedback
+## HockeyApp Feedback Feature
 App Center doesn't support the HockeyApp Feedback functionality. For potential alternatives, see the [feedback guide](feedback.md).
 
 ## FAQS
