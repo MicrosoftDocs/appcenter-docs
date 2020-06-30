@@ -11,15 +11,13 @@ ms.custom: build
 ---
 
 # General Troubleshooting
-## Why did my build fail?
-There are various reasons why your build could have failed. The best way to find out what happened is to go to the build details page and download the logs. Check the logs for each of the steps to understand what happened and where exactly the build failed. If you can't understand why the build failed or you think there's an issue on our side, feel free to contact us via [App Center support](~/general/support-center.md) right from within App Center.
-
 ## Why is the build in App Center taking longer than my local build?
-There are many reasons why build duration can be higher when using a build service:
+There are many reasons why build duration can be higher when using App Center Build:
 
-* When running your build locally, many things are cached (for example NuGet packages, pods, dependencies); in App Center, we always do a clean build and redownload everything required.
-* For Xamarin builds, when running your build locally, you're most likely running a simulator build; In App Center, you can run a device build (signed), which takes much longer to run.
-* Most likely the CPU power of your development machine is higher than the CPU of our VMs.
+* When running your build locally, many things are cached, including NuGet packages, pods, dependencies and so on. In App Center, we always do a clean build, and also redownload dependencies not already included in your repository.
+* [Build configuration differences](~/build/troubleshooting/build-failed#if-building-works-locally-but-not-in-app-center) between your local build compared to App Center. For example, a signed device build typically takes longer than a simulator build. 
+* The CPU power of your development machine may be higher than the CPU of our VMs.
+* If you have more builds queued then you have build concurrency for your organization. 
 
 We're always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, contact us on the App Center website using **? > Contact Support**.
 
@@ -41,7 +39,7 @@ By default, email notifications are sent only when a new version is released. Wh
 
 
 ## Why do I get an extended build time when **Run launch test on a device** is enabled?
-We run the test as part of the build operation, which gives the added build time. What happens is that while App Center Test is validating your app is ready to run on real devices, several things can happen here like: signing, checking permissions, and so on. After that it's time to wait for a device. Third, it's running the app on a phone, which takes little time. And lastly, we move test logs, screenshots into the cloud.
+We run the test as part of the build operation, which gives the added build time. What happens is that while App Center Test is validating your app is ready to run on real devices, several things can happen here like signing, checking permissions, and so on. After that it's time to wait for a device. Third, it's running the app on a phone, which takes little time. And lastly, we move test logs, screenshots into the cloud.
 
 Expect an additional **10 minutes of build time**.
 
