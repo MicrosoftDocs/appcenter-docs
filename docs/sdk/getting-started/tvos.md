@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2020
+ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: tvOS
@@ -37,7 +37,7 @@ Let's get started with setting up App Center tvOS SDK in your app to use App Cen
 
 The following requirements must be met to use App Center SDK:
 
-* Your tvOS is set up in Xcode 10 or later on tvOS version 11 or later.
+* Your tvOS is set up in Xcode 11 or later on tvOS version 11 or later.
 * You aren't using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
