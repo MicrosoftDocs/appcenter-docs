@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: winnie
 ms.author: yuli1
-ms.date: 09/25/2019
+ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
 ms.tgt_pltfrm: macos
@@ -39,7 +39,7 @@ Let's get started with setting up App Center macOS SDK in your app extension to 
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 10 or later on macOS version 10.12 or later.
+* Your macOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
 * You are targeting devices running on macOS 10.9 or later.
 * You are not using any other library that provides Crash Reporting functionality.
 

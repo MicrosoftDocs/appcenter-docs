@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 06/10/2020
+ms.date: 06/30/2020
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -83,49 +83,6 @@ Distribute your release using the `appcenter distribute release` command in the 
 ```shell
 appcenter distribute release --app David/My-App --file ~/releases/my_app-23.ipa --group "Beta testers"
 ```
-
-### Distributing using the APIs
-
-You can call the App Center API to distribute a release.
-
-1. Prerequisite: [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
-2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/JoshuaWeber/apps/APIExample.> Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `APIExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
-3. Upload a new release using three sequential API calls:
-    1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes three body parameters:
-        - `release_id` is optional and normally not needed. You can only use this to specify the ID of an already existing release, to change that release's binary. This value must be a number, so don't use quotes or it will be a string.
-        - `build_version` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files, and Windows or custom operating system .zip or .msi files. It becomes the version of your release for macOS, or the build number of your release for Windows and custom operating system apps.
-        - `build_number` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files. It becomes the build number of your release.
-
-        The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/release_uploads][POST_releaseUpload]
-
-        ```shell
-        curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads' -d '{}'
-        ```
-
-    2. Copy the `upload_url` from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
-
-    ```shell
-     curl -F "ipa=@Versions_1_1_0_12.ipa" https://upload.appcenter.ms/v0.1/apps/4cf3837f-c074-4014-ba6a-07550fcf588a/uploads/85cf7d9c-1a77-4197-8d1c-1a0c19dbdf60%7C4534cc89-164d-474d-8806-4c672c41dfea%7C096c735c-62cf-4280-88ef-baec5596b803%7CP3N2PTIwMTgtMDMtMjgmc3I9YyZzaT0wOTZjNzM1Yy02MmNmLTQyODAtODhlZi1iYWVjNTU5NmI4MDMyfDIwLTItMTgtMDktMDItMTAmc2lnPUF6UiUyQjNod3Q5OFpJSnJuQ2l5a3g2RFplVWdZSCUyRmdIUjN6JTJCa2ZuenJtJTJGVSUzRCZzZT0yMDIwLTAyLTIzVDA5JTNBNDUlM0ExMFomdD1kaXN0cmlidXRpb24%3D%7Cfile.appcenter.ms
-     ```
-
-    3. After the upload has finished, update the upload resource's status to `committed` and get a `release_id`. Save that for the next step.
-
-        The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
-4. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
-
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
-
-    An example for groups:
-
-    ```shell
-    curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "id": "10d82aa2-8449-499f-b6d3-44a855058eca", "mandatory_update": false, "notify_testers": false }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/releases/2/groups'
-    ```
-
-    You can find the distribution group ID on that group's settings page.
-
-The request to distribute to multiple destinations is referenced here for more complex scenarios: [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
 
 ## Re-Release a build
 
