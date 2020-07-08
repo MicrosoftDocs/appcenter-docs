@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/19/2020
+ms.date: 07/08/2020
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.tgt_pltfrm: apple

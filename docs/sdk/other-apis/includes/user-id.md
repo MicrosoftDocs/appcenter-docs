@@ -3,5 +3,5 @@ After setting a user ID, you can use App Center's search feature to search for s
 > [!NOTE]
 > The value for the user ID is limited to 256 characters.
 > It will be shown with your crash reports but not used for aggregation or counts of affected users.
-> In case you set User ID multiple times, only the last User ID will be used.
-> You need to set the user ID yourself before each application launch, because this value is not stored in the SDK between launches.
+> In case you set user ID multiple times, only the last user ID will be used.
+> You need to set the user ID yourself before each application launch, because this value is not stored by SDK between launches.

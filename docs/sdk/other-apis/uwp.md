@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for UWP
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/17/2020
+ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.tgt_pltfrm: uwp
