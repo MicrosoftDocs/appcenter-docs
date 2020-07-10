@@ -59,24 +59,30 @@ Call the API using the following link: https://openapi.appcenter.ms/#/distribute
 
 ```json
 [
-{"id":"ebb146bc-b0d7-4500-9791-fc02f191bff9",
-"name":"Alpha team",
-"type":"apple",
-"track":"testflight-external",
-"created_by":"5114c905-76db-49e5-8a47-58c34b33a38b",
-"service_connection_id":"2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"},
-{"id":"10ba5942-1388-4b2a-869a-9de40d5c0cff",
-"name":"Production",
-"type":"apple",
-"track":"production",
-"created_by":"5114c905-76db-49e5-8a47-58c34b33a38b",
-"service_connection_id":"2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"},
-{"id":"894dd821-9f16-44a3-b2a7-d513d226babb",
-"name":"iTunes Connect users",
-"type":"apple",
-"track":"testflight-internal",
-"created_by":"5114c905-76db-49e5-8a47-58c34b33a38b",
-"service_connection_id":"2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"}
+  {
+    "id": "ebb146bc-b0d7-4500-9791-fc02f191bff9",
+    "name": "Alpha team",
+    "type": "apple",
+    "track": "testflight-external",
+    "created_by": "5114c905-76db-49e5-8a47-58c34b33a38b",
+    "service_connection_id": "2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"
+  },
+  {
+    "id": "10ba5942-1388-4b2a-869a-9de40d5c0cff",
+    "name": "Production",
+    "type": "apple",
+    "track": "production",
+    "created_by": "5114c905-76db-49e5-8a47-58c34b33a38b",
+    "service_connection_id": "2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"
+  },
+  {
+    "id": "894dd821-9f16-44a3-b2a7-d513d226babb",
+    "name": "iTunes Connect users",
+    "type": "apple",
+    "track": "testflight-internal",
+    "created_by": "5114c905-76db-49e5-8a47-58c34b33a38b",
+    "service_connection_id": "2a85ad1e-b44e-d6fd-a85f-8daee62b54ed"
+  }
 ]
 ```
 
