@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Android NDK
 
-Android NDK allows you to implement parts of your Android apps using C and C++. You can use the **Google Breakpad** client library for your Android apps to receive valid stack traces in native code. The stack traces may only contain memory addresses. They don’t show class names, methods, file names, and line numbers needed to read and understand the crashes. To get the memory addresses translated for your Android NDK app, you must upload application symbols for each build.
+Android NDK allows you to implement parts of your Android apps using C and C++. You can use the **Google Breakpad** client library for your Android apps to receive valid stack traces in native code. The stack traces may only contain memory addresses. They don’t show class names, methods, file names, and line numbers which are needed to read and understand the crashes. To get the memory addresses translated for your Android NDK app, you must upload application symbols for each build.
 
 To learn how to report NDK crashes, refer to the [Android SDK documentation](~/sdk/crashes/android.md#reporting-ndk-crashes) for Android apps, or [Unity SDK documentation](~/sdk/crashes/unity.md#reporting-ndk-crashes) for Unity apps.
 
@@ -33,7 +33,7 @@ If you want to send Breakpad crashes from other platforms to App Center, see the
 
 1. Log into App Center and select your app.
 1. In the left menu, navigate to the **Diagnostics** section, then **Issues**.
-1. If your application has not reported any crash yet, you will need to use the API or CLI to upload Breakpad symbols.
+1. If your application hasn't reported any crash yet, you'll need to use the API or CLI to upload Breakpad symbols.
 1. If your application already has reported crashes that need symbols, check the **Unsymbolicated** tab and there should be a version group with missing symbols, click on it to reveal the menu to upload the file.
 1. After the symbols are indexed by App Center, crashes will be symbolicated for you.
 
