@@ -48,8 +48,8 @@ To enable public in-app updates, create a [public distribution group][public-dg]
   - The version a tester installed was not released via App Center or the release was deleted on App Center.
   - App secret used in the SDK is incorrect. To get your app secret, go to your app's settings page, click on the triple vertical dots at the top right-hand corner, and copy app secret.
      - If you have migrated your App from HockeyApp, refer to the following articles: 
-        - iOS: [Migrating from HockeyApp](~/transition/ios-sdk-migration?tabs=objc#21-convert-the-application-identifier)
-        - Android: [Migrating from HockeyApp](~/transition/android-sdk-migration#21-convert-the-application-identifier)
+        - iOS: [Migrating from HockeyApp](~/transition/ios-sdk-migration.md?tabs=objc#21-convert-the-application-identifier)
+        - Android: [Migrating from HockeyApp](~/transition/android-sdk-migration.md#21-convert-the-application-identifier)
 
 [ios-sdk]: ~/sdk/distribute/ios.md
 [android-sdk]: ~/sdk/distribute/android.md
