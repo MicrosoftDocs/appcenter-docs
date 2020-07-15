@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnie
 ms.author: yuli1
 ms.reviewer: kegr
-ms.date: 07/15/2020
+ms.date: 05/06/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -29,27 +29,26 @@ To upload a report, call the App Center ingestion endpoint at `https://in.appcen
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
-
 - `type`: required string with log type - "appleError" for Apple crashes, "managedError" for other crashes, "handledError" for errors, and "errorAttachment" for error attachments.
 - `timestamp`: optional string with log timestamp date-time, e.g "2017-03-13T18:05:42Z" - if set, needs to be at most 72 hours in the future of time of ingestion
 - `appLaunchTimestamp`: required string that specifies timestamp date-time when the app was launched, for example "2017-03-13T18:05:42Z".
 - `device`: required object with device characteristics
-  - `appVersion`: required string with application version name, for example "1.1.0"
-  - `appBuild`: required string with application build number, for example "42"
-  - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, for example "appcenter.android" for Android and "appcenter.custom" for custom platforms
-  - `sdkVersion`: required string with version of the SDK in semantic versioning format, for example "1.2.0" or "0.12.3-alpha.1"
-  - `osName`: required string with OS name, for example "android"
-  - `osVersion`: required string with OS version, for example "9.3.0"
-  - `model`: optional string with device model, for example "iPad2"
-  - `locale`: required string with language code, for example "en-US"
-  - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone. Including daylight savings time, for example 120.
+    - `appVersion`: required string with application version name, for example "1.1.0"
+    - `appBuild`: required string with application build number, for example "42"
+    - `sdkName`: required string with name of the SDK. Consists of the name of the SDK and the platform, for example "appcenter.android" for Android and "appcenter.custom" for custom platforms
+    - `sdkVersion`: required string with version of the SDK in semantic versioning format, for example "1.2.0" or "0.12.3-alpha.1"
+    - `osName`: required string with OS name, for example "android"
+    - `osVersion`: required string with OS version, for example "9.3.0"
+    - `model`: optional string with device model, for example "iPad2"
+    - `locale`: required string with language code, for example "en-US"
+    - `timeZoneOffset`: optional offset in minutes (between -840 and 840) from Coordinated Universal Time (UTC) for the device time zone. Including daylight savings time, for example 120.
 - `userId`: optional string used for associating logs with users
 - `exception`: required object with exception details
-  - `type`: required string with exception type
-  - `frame`: optional array with stack frames
-  - `message`: optional string with exception reason
-  - `stackTrace`: optional string with raw stack trace
-  - `innerException`: optional array with inner exceptions
+    - `type`: required string with exception type
+    - `frame`: optional array with stack frames
+    - `message`: optional string with exception reason
+    - `stackTrace`: optional string with raw stack trace
+    - `innerException`: optional array with inner exceptions
 
 You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
@@ -58,7 +57,7 @@ You can find examples of how to upload a crash report, error report, and attachm
 
 ## Upload a crash report
 
-The following properties are required to upload a crash report:
+ The following properties are required to upload a crash report:
 
 - `processId`: required integer with process identifier
 - `id`: required string with exception identifier, needs to be a unique ID for this report
@@ -429,6 +428,7 @@ curl -X POST \
 
 ```
 
+
 ### Upload a Breakpad crash log and Minidump
 
 You can upload a custom Breakpad crash for Android and Windows.
@@ -515,11 +515,12 @@ To upload a Breakpad crash, the `wrapperSdkName` field must be set to "custom.nd
 To symbolicate your crash, you must upload your symbols through the CLI, or API according to our [API docs](~/diagnostics/android-ndk.md#app-center-api). If you're using Breakpad with Android, both options specified in our [Android NDK docs](~/diagnostics/android-ndk.md#generate-a-zip-file-to-upload) are supported; if you're using Breakpad with Windows, only option 2: "Upload Breakpad symbols" is supported.
 
 > [!NOTE]
-> If you're uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, for example, **MACOS gets generated and to delete this you can use `zip -d <symbols.zip> **MACOSX/\*`.
+> If you're uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, for example, __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 
 ## Upload an error report
 
 Handled errors are only supported for Android, Xamarin, Unity, UWP, WPF, and WinForms apps today. To upload an error report, make sure the log type is set to "handledError".
+
 
 ```shell
 curl -X POST \
@@ -590,6 +591,7 @@ Attachment-specific properties:
 > The size limit for attachments is currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 Below is an example of uploading a crash report and an attachment in one call.
+
 
 ```shell
 curl -X POST \
