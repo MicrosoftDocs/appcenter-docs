@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 2/19/2020
+ms.date: 07/15/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -21,33 +21,45 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 > 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that will have to be dismissed. Login is not required for the public flow.
 > 3) In-App Updates don't work on windows/UWP applications.
 
-## Public In-App Updates 
+## Public In-App Updates
 
 To enable public in-app updates, create a [public distribution group][public-dg] and distribute a release with the App Center SDK. Once your testers install the app, they'll be alerted when new releases are publicly available.
+
+## Compatibility With Application Stores
+
+### Andorid
+
+If the application is installed from Google Play or other stores instead of App Center, checking for new versions will be disabled.
+
+Please note that Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. In order to make it easier we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap. Please read detailed instructions in [iOS](TODO), [Xamarin](TODO), or [Unity](TODO) pages.
+
+### iOS
+
+If the application is installed from App Store or TestFlight, in-app updates are not available, and checking for new versions will be disabled.
 
 ## FAQ
 
  1. Why are testers asked to authenticate repeatedly?
-  - AppCenter SDK uses a device's default browser to store cookies. In the following cases, SDK will ask for reauthentication: 
+  - AppCenter SDK uses a device's default browser to store cookies. In the following cases, SDK will ask for reauthentication:
     - Tester cleared cookies from device's default browser.
     - Tester disabled cookies for the device's default browser.
     - Tester closed the first authentication window after opening the app.
-    - App Secret used to initialize the SDK isn't the same as the one listed on the AppCenter web portal.   
+    - App Secret used to initialize the SDK isn't the same as the one listed on the AppCenter web portal.
 
  2. Why do testers not see an in-app update message when a new version of the app is released?
 - Multiple scenarios can cause testers to not get in-app update notifications:
     - App Center SDK distribute feature is disabled. App Center SDK distribute feature must be enabled and initialized at app launch. If testers installed a version with the distribute feature disabled, they would need to install the latest version manually.
     - Automatic check for update is disabled. If automatic check for update is disabled, the app won't check for new releases at startup. The check happens when **checkForUpdate** is called.
-    - Release version of your app is incorrect for a new release 
+    - Release version of your app is incorrect for a new release
       - For Android: increment version code.
-      - For iOS: increment CFBundleShortVersionString and conform to semantic versioning standards
+      - For iOS: increment `CFBundleShortVersionString` and conform to semantic versioning standards
 
- 3. Why do testers see "In-app Update disabled" message?  
+ 3. Why do testers see "In-app Update disabled" message?
 - Multiple scenarios can make the App Center SDK to display this message:
-  - The app wasn't installed from App Center. 
+  - The app wasn't installed from App Center.
   - The version a tester installed wasn't released via App Center or the release was deleted on App Center.
   - App secret used in the SDK is incorrect. To get your app secret, go to your app's settings page, click on the triple vertical dots at the top right-hand corner, and copy app secret.
-     - If you've migrated your App from HockeyApp, refer to the following articles: 
+     - If you've migrated your App from HockeyApp, refer to the following articles:
         - iOS: [Migrating from HockeyApp](~/transition/ios-sdk-migration.md?tabs=objc#21-convert-the-application-identifier)
         - Android: [Migrating from HockeyApp](~/transition/android-sdk-migration.md#21-convert-the-application-identifier)
 
