@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnie
 ms.author: yuli1
-ms.date: 02/18/2020
+ms.date: 07/15/2020
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
