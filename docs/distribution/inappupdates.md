@@ -4,7 +4,7 @@ description: Easily stay up to date on the latest build with in-app update notif
 keywords: distribution
 author: JoshuaWeber
 ms.author: JoshuaWeber
-ms.date: 07/15/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: distribute
@@ -27,11 +27,11 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 
 ## Compatibility With Application Stores
 
-### Andorid
+### Android
 
 If the application is installed from Google Play or other stores instead of App Center, checking for new versions will be disabled.
 
-Please note that Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. In order to make it easier we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap. Please read detailed instructions in [iOS](TODO), [Xamarin](TODO), or [Unity](TODO) pages.
+Note that Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. In order to make it easier we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap. Read detailed instructions in [Android](~/sdk/distribute/android.md#remove-in-app-updates-for-google-play-builds), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
 
 ### iOS
 
@@ -40,11 +40,11 @@ If the application is installed from App Store or TestFlight, in-app updates are
 ## FAQ
 
  1. Why are testers asked to authenticate repeatedly?
-  - AppCenter SDK uses a device's default browser to store cookies. In the following cases, SDK will ask for reauthentication:
+  - App Center SDK uses a device's default browser to store cookies. In the following cases, SDK will ask for reauthentication:
     - Tester cleared cookies from device's default browser.
     - Tester disabled cookies for the device's default browser.
     - Tester closed the first authentication window after opening the app.
-    - App Secret used to initialize the SDK isn't the same as the one listed on the AppCenter web portal.
+    - App Secret used to initialize the SDK isn't the same as the one listed on the App Center web portal.
 
  2. Why do testers not see an in-app update message when a new version of the app is released?
 - Multiple scenarios can cause testers to not get in-app update notifications:

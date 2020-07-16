@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/15/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -64,7 +64,7 @@ Install-Package Microsoft.AppCenter.Distribute
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 > [!WARNING]
-> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](TODO) section for details.
+> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
 ### 2. Start App Center Distribute
 
@@ -165,7 +165,7 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 
 Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. In order to make it easier we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
 
-1. Add a new build configuration with name "GooglePlay" for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/create-and-edit-configurations) insructions for more details.
+1. Add a new build configuration with name `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
 2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into conditional item group:
 
     ```xml
@@ -178,7 +178,7 @@ Google can treat in-app update code in the application as a violation of publish
     ```
 
     > [!NOTE]
-    > If you are using old [packages.config](https://docs.microsoft.com/en-us/nuget/reference/packages-config) format to manage NuGet references you can migrate [PackageReference](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) format, please follow [the migration instuction](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference).
+    > If you are using old [packages.config](https://docs.microsoft.com/nuget/reference/packages-config) format to manage NuGet references you can migrate [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) format, please follow [the migration instuction](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
 3. Save your changes and restore NuGet packages.
 4. You can change the configuration in the command bar at the top of the IDE.
@@ -371,7 +371,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you haven't done that already.
 1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [UpdateTrack property](#use-private-distribution-group).
+1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [`UpdateTrack` property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
 1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.
