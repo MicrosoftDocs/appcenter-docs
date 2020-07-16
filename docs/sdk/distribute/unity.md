@@ -38,11 +38,11 @@ The App Center SDK is designed with a modular approach – a developer only need
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format `AppCenterDistribute-v{version}.unitypackage`.
 
 > [!WARNING]
-> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
 ## Remove in-app updates for Google Play builds
 
-Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play.
+Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play.
 To remove in-app updates native code you just need to uncheck **Use Distribute** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 ## Use private distribution group

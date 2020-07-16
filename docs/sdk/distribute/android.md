@@ -48,10 +48,10 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```
 
     > [!WARNING]
-    > Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+    > Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
     > [!NOTE]
-    > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+    > If the version of your Android Gradle plugin is lower than 3.0.0, you need to replace the **implementation** with **compile**.
 
 2. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
 3. [DownloadManager](https://developer.android.com/reference/android/app/DownloadManager) on Android versions prior to 5.0 does not enable TLS 1.2, so it cannot be used to download updates. The App Center SDK enforces TLS 1.2 to improve security.
@@ -92,7 +92,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Remove in-app updates for Google Play builds
 
-Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. In order to make it easier we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
 
 1. Open the project's app level **build.gradle** file (`app/build.gradle`).
 2. Configure build variants by adding product flavors:
