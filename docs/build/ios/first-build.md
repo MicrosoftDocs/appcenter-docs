@@ -62,7 +62,9 @@ Use your newly produced `.ipa` file to test if your app starts on a real device.
 
 ### 3.8. CocoaPods
 App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This step will ensure that all dependencies are installed. 
-If the repository already contains a */Pods* folder, App Center assumes you've checked in the pods in your repository and will no longer perform `pod install`.
+
+> [!WARNING]
+> If the repository already contains a */Pods* folder, App Center assumes you've checked in the pods in your repository and will no longer perform `pod install`. If you remove or modify the */Pods* folder, you might have to resave the Build configuration manually using `Save` or `Save and Build` for the update to take effect.
 
 ### 3.9. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
