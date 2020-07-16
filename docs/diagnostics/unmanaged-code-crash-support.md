@@ -4,7 +4,7 @@ description: Learn how to symbolicate your App's unmanaged code crashes
 keywords: unmanaged, crashes, upload, symbolication
 author: winnie
 ms.author: yuli1
-ms.date: 2/25/2020
+ms.date: 07/11/2020
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -14,11 +14,11 @@ ms.custom: diagnostics
 # Symbolicating Unmanaged Code Crashes
 
 App Center Diagnostics supports symbolicating unmanaged C/C++ code crashes in your application.
-You can symbolicate unmanaged code crashes which originate in your [Android NDK code](~/diagnostics/Android-NDK.md), as well as unmanaged code crashes formatted as [Breakpad minidumps](~/diagnostics/unmanaged-code-crash-support.md#using-breakpad-with-app-center) uploaded through the [Upload Crashes API](~/diagnostics/upload-crashes.md#upload-a-crash-report).
+You can symbolicate unmanaged code crashes that originate in your [Android NDK code](~/diagnostics/Android-NDK.md), and unmanaged code crashes formatted as [Breakpad minidumps](~/diagnostics/unmanaged-code-crash-support.md#using-breakpad-with-app-center) uploaded through the [Upload Crashes API](~/diagnostics/upload-crashes.md#upload-a-crash-report).
 
 ## Using Breakpad with App Center
 
-[Breakpad](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md) is a library and tool suite which helps produce C and C++ stack traces. These stack traces are generated from [`minidump` files](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md#the-minidump-file-format) produced once Breakpad is integrated with your project.
+[Breakpad](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md) is a library and tool suite that helps produce C and C++ stack traces. These stack traces are generated from [`minidump` files](https://github.com/google/breakpad/blob/master/docs/getting_started_with_breakpad.md#the-minidump-file-format) produced once Breakpad is integrated with your project.
 Breakpad offers starter guides for integrating with [Linux](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/linux_starter_guide.md), [Windows](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/windows_client_integration.md), and [Mac](https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/mac_breakpad_starter_guide.md) applications.
 
 ## Sending Breakpad Crash Logs to App Center
