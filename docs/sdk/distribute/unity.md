@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: maestersid
 ms.author: jawh
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -37,9 +37,17 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format AppCenterDistribute-v{version}.unitypackage
 
+> [!WARNING]
+> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](TODO) section for details.
+
+## Remove in-app updates for Google Play builds
+
+Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you strip this code from your application before submitting it to Google Play.
+To remove in-app updates native code you just need to uncheck **Use Distribute** checkbox under **Distribute** section on the game object with **AppCenterBehavior** attached.
+
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change `UpdateTrack` to Private. 
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change `UpdateTrack` to Private.
 To do this, choose **Private** in the **Update Track** dropdown under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 When using the private track, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
