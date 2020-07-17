@@ -64,7 +64,7 @@ Install-Package Microsoft.AppCenter.Distribute
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 > [!WARNING]
-> Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+> Google can consider in-app update code as malicious behavior even if it isn't used at runtime We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
 ### 2. Start App Center Distribute
 
@@ -163,7 +163,7 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 
 ## Remove in-app updates for Google Play builds
 
-Google can treat in-app update code in the application as a violation of publishing rules even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
 
 1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
 2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into the conditional item group:
