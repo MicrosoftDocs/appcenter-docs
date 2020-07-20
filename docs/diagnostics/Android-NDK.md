@@ -4,7 +4,7 @@ description: Learn how to symbolicate your Android NDK crash reports
 keywords: crashes, Android, NDK, symbolication
 author: winnie
 ms.author: yuli1
-ms.date: 07/11/2020
+ms.date: 07/18/2020
 ms.topic: article
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
@@ -22,6 +22,10 @@ If you want to send Breakpad crashes from other platforms to App Center, see the
 ## Unsymbolicated crashes
 
 [!INCLUDE [unsymbolicated crashes](includes/unsymbolicated-crashes.md)]
+
+> [!NOTE]
+> App Center doesn't support symbolication of frames which come from system libraries.
+> Given the high fragmentation of system binaries for Android and other platforms – which might be different on any given device/OS version combination – App Center does not provide symbols itself for system binaries and automatically skips frames from system binaries in symbolication.
 
 [!INCLUDE [generate breakpad symbols payload](includes/generate-breakpad-symbols-payload.md)]
 
