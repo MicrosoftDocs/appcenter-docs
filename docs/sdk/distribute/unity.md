@@ -43,7 +43,7 @@ Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you h
 ## Remove in-app updates for Google Play builds
 
 Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play.
-To remove in-app updates native code uncheck the **Use Distribute** checkbox under the **Distribute** section on the game object with **AppCenterBehavior** attached.
+To remove in-app updates native code, uncheck the **Use Distribute** checkbox under the **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 ## Use private distribution group
 
