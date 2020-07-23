@@ -115,7 +115,7 @@ Google can consider in-app update code as malicious behavior even if it isn't us
 
     ```groovy
     dependencies {
-        def appCenterSdkVersion = "3.2.2"
+        def appCenterSdkVersion = "3.3.0"
         appCenterImplementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
         googlePlayImplementation "com.microsoft.appcenter:appcenter-distribute-play:${appCenterSdkVersion}"
     }
