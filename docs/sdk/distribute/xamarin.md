@@ -10,7 +10,7 @@ ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Xamarin In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

@@ -11,7 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Unity In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

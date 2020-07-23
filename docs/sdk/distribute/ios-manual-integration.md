@@ -11,7 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: ios
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – iOS In-app updates (without Cocoapods)
 
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
