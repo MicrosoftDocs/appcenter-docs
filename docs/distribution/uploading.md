@@ -126,3 +126,11 @@ You can find links to specific releases to public destinations on the releases t
 [app-center-home]: https://appcenter.ms/apps
 [apple-register-single-device]: https://help.apple.com/developer-account/#/dev40df0d9fa
 [apple-register-multiple-devices]: https://help.apple.com/developer-account/#/devebd34abb1
+
+## Troubleshooting
+
+### I'm getting "404: Not Found" when I try to upload my binaries to AppCenter distribution
+
+This error can happen if a member of your company got its corporate e-mail deactivated. Not having the member inside of the AppCenter's org, but also if the member was the one who created the API tokens to publish to AppCenter, it might end-up with the token getting rejected.
+
+To avoid that to happen, make sure you create the API tokens inside of the apps settings that you are going to distribute. In that sense, the token creation will be bound to the app and not to the user.
