@@ -1,5 +1,5 @@
 ---
-title: Run UI Tests using AppCenter REST API
+title: Run UI Tests using App Center REST API
 description: Steps to upload the package (ipa/apk) via REST API and queue the UI Tests
 keywords: appcenter, test, rest, api
 ms.author: anvesh.kasani
@@ -8,18 +8,16 @@ ms.topic: article
 ms.assetid: 2abb4242-658c-4914-8ec0-d0c4967d3729
 ---
 
-# Run UI Tests using AppCenter REST API
-We've received a lot of requests where users wanted an example on how to Upload their App Package, Test Binaries and queue UI Tests using our API. 
-
-We've decided to create a highly detailed one. We hope you find this useful and informative! 
+# Run UI Tests using App Center REST API
+This example shows how to upload an app package, test binaries, and queue UI tests using our API. 
 
 ## Steps
-1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID** which you'll use later. You should save that ID for using the Response Header.
+1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID** which you'll use later for the Response Header.
 
 **Sample Request** https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs 
 ![Screenshot demonstrating API usage](images/test-runs-api.png)
 
-2. **Create file hashes** for each file you want to upload to AppCenter Test.
+2. **Create file hashes** for each file you want to upload to App Center Test.
 
 You can get the file hashes by running the command `shasum`. This utility is available in Mac/Linux machines by default. For Windows, consider installing Git Bash and use it instead.
 
@@ -40,7 +38,7 @@ $ shasum com.mobilecenter.sampleappxamarin.apk
 3f3677f8db9ba7c07ac77d4f01f912e518a6ca16 *com.mobilecenter.sampleappxamarin.apk
 ```
 
-3. [Create a store for files](https://openapi.appcenter.ms/#/test/test_uploadHashesBatch) uisng POST and hashes value calculated from the previous step. 
+3. [Create a store for files](https://openapi.appcenter.ms/#/test/test_uploadHashesBatch) using POST and hashes value calculated from the previous step. 
 
 **Sample Request**
 https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0cc373-aa4a-455f-b083-4fc1afa87f2e/hashes/batch
@@ -136,12 +134,12 @@ The response looks like:
 ```
 
 4. Now we need to **upload** the actual files.
-From the previous response body, identify the `location` that contains the URL of the files you are uploading.
+From the previous response body, identify the `location` that contains the URL of the files you're uploading.
 
-   - In the Headers, you need to pass Content-Type:multipart/form-data
+   - In the Headers, you need to pass Content-Type: multipart/form-data
    - In the Body, you need to use the type Body_Form with the values:
-      - *relative_path and file_type: from the previous Response Body
-      - *file : Path to the actual file
+      - `relative_path` and `file_type`: from the previous Response Body
+      - `file`: Path to the actual file
 
 You're on the right track if you get `201 Created` as the response like below.
 
@@ -151,9 +149,9 @@ You're on the right track if you get `201 Created` as the response like below.
 
 5. Repeat the previous step for the rest of the files you want to upload. 
 
-6. We are ready to Execute the test now. For this, we need a device_slug. 
+6. We're ready to Execute the test now. For this, we need a device_slug. 
 
-**Note**: You should first create "Device Sets" in your Org or you can use the REST API to [create device sets](https://openapi.appcenter.ms/#/test/test_createDeviceSetOfUser).
+**Note**: You should first create "Device Sets" in your Org or you can [use the REST API to create device sets](https://openapi.appcenter.ms/#/test/test_createDeviceSetOfUser).
 
 Then, you can use the GET Method to get the [list of device sets](https://openapi.appcenter.ms/#/test/test_listDeviceSetsOfUser).
 
@@ -203,7 +201,7 @@ Corresponding Response Body:
 ```
 
 7. We're now ready to use the [Test start API to trigger the test](https://openapi.appcenter.ms/#/test/test_startTestRun)! 
-The Request body below is created for Xamarin.UITest Framework. If you're using other frameworks, don't worry, refer to the end of the doc for more details! 
+The Request body below is created for Xamarin.UITest Framework. If you're using other frameworks, refer to the end of the doc for more details! 
 
 Sample JSON Request Body:
 ```json
@@ -249,13 +247,13 @@ Corresponding response body:
 ```
 ![Screenshot of API call to list devices](images/test-api-devices.png)
 
-If you now go to the **Test** page of your App, you will see... 
+If you now go to the **Test** page of your App, you'll see... 
 
 ![Screenshot of test run in progress](images/test-run-progress.png)
 
 Congratulations! :) 
 
-PS : For other Test Frameworks, if you want to know how the JSON looks like (for instance, Appium test)
+PS: For other Test Frameworks, if you want to know how the JSON looks like (for instance, Appium test)
 
 Run the Test command manually with `--debug` switch.
 
