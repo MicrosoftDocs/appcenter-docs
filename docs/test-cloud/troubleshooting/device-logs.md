@@ -18,7 +18,7 @@ Device logs and stack traces contain output from the device and can be a great h
 - crashed 
 - became unresponsive
 
-For information on how to navigate to the logs and information on the other logs see [An Introduction to Logs in App Center Test](~/test-cloud/test-reports#test-logs).
+For information on how to navigate to the logs and information on the other logs see [An Introduction to Logs in App Center Test](~/test-cloud/test-reports.md#test-logs).
 
 ## Searching the device log
 The device log contains so much output it's impractical to read or even scan the whole file from beginning to end. To identify areas for closer examination, try searching for your app name or package name in the log files. Does your app produce diagnostic output? If so, searching for that may help.

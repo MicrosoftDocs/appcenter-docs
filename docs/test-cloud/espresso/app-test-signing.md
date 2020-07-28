@@ -13,8 +13,8 @@ ms.custom: test
 # Espresso App and Test Signing for App Center Test
 To execute Espresso tests in App Center Test, the app APK and the test APK must be signed the same way. They must both be signed using: 
 
-    - the same V1 (Jar signature) OR 
-    - the same V1 (Jar Signature) plus the same V2 (Full APK Signature).
+- the same V1 (Jar signature) OR 
+- the same V1 (Jar Signature) plus the same V2 (Full APK Signature).
     
 APKs signed with only a V2 (Full APK Signature) won't pass App Center Test validation and won't be executed. Tests for APKs signed differently than each other will fail at runtime.
 
