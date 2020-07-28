@@ -69,32 +69,48 @@
 ## [Introduction](test-cloud/index.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Getting Started](test-cloud/getting-started.md)
+## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
+## [Starting a Test Run](test-cloud/starting-a-test-run.md)
+## [Test Reports](test-cloud/test-reports.md)
+## [Security](test-cloud/security.md)
+## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## [Test using REST API](test-cloud/rest-api.md)
+## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## Devices Available
 ### [Android](test-cloud/devices/android.md)
 ### [iOS](test-cloud/devices/ios.md)
 ## [Environment Variables](test-cloud/environment-variables.md)
 ## Appium
 ### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
+### [Missing test results](test-cloud/appium/missing-results.md)
 ## Espresso
 ### [Preparing for upload](test-cloud/espresso/preparing-for-upload.md)
+### [App & Test APK signing](test-cloud/espresso/app-test-signing.md)
 ## Xamarin.UITest
 ### [Introduction](test-cloud/uitest/index.md)
 ### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
 ### [Get Started with iOS Native apps](test-cloud/uitest/get-started-with-ios-native.md)
 ### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
 ### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
+### [Signing Android apps](test-cloud/uitest/android-signing.md)
 ### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
 ### [License](test-cloud/uitest/license.md)
+### Troubleshooting
+#### [Wrong platform tests are run](test-cloud/uitest/troubleshooting/invalid-platform.md)
+#### [Test-Cloud.exe Upload Errors](test-cloud/uitest/troubleshooting/upload-errors.md)
+#### [REPL Tree command unresponsive](test-cloud/uitest/troubleshooting/repl-tree.md)
 ### Working With
 #### [Introduction](test-cloud/uitest/working-with/index.md)
 #### [Android signing](test-cloud/uitest/working-with/android-signing.md)
+#### [iOS Simulator](test-cloud/uitest/working-with/ios-simulator.md)
+#### [App data between tests](test-cloud/uitest/working-with/appdatamode.md)
 #### [Backdoors](test-cloud/uitest/working-with/backdoors.md)
 #### [Categorizing Tests](test-cloud/uitest/working-with/categorized-tests.md)
+#### [Xamarin.Forms date & time pickers](test-cloud/uitest/working-with/date-time-pickers.md)
 #### [Entering Text](test-cloud/uitest/working-with/entering-text.md)
 #### [Files](test-cloud/uitest/working-with/files.md)
 #### [Gestures](test-cloud/uitest/working-with/gestures.md)
 #### [REPL](test-cloud/uitest/working-with/repl.md)
-#### [iOS Simulator](test-cloud/uitest/working-with/ios-simulator.md)
 #### [Timeouts](test-cloud/uitest/working-with/timeouts.md)
 #### [Webviews](test-cloud/uitest/working-with/webviews.md)
 ## XCUITest
@@ -102,17 +118,19 @@
 ### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
 ## Calabash [Depreciated]
 ### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
-## [Starting a Test Run](test-cloud/starting-a-test-run.md)
-## [Test Reports](test-cloud/test-reports.md)
-## [Security](test-cloud/security.md)
-## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
-## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
 ## Troubleshooting
 ### [Introduction](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
 ### [iOS Privacy Alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [Incorrect iOS coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
 ### [Time limits](test-cloud/troubleshooting/time-outs.md)
+### [Device idling](test-cloud/troubleshooting/sleep.md)
+### [Stalled devices](test-cloud/troubleshooting/stalls.md)
+### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
+### [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
+### [Database changes during tests](test-cloud/troubleshooting/database-changes.md)
+### [Analyzing Device Logs](test-cloud/troubleshooting/device-logs.md)
+
 
 
 # Distribute
