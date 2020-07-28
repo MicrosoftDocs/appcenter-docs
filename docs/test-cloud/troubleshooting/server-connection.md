@@ -28,4 +28,4 @@ If any of the following are blocked, you may need to explicitly allow them for y
    - 195.249.159.239
    
 ## See also
-[App Center Test Security - Personal Data in Tests](~/test-cloud/security#personal-data-in-tests)
+[App Center Test Security - Personal Data in Tests](~/test-cloud/security.md#personal-data-in-tests)

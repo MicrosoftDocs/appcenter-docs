@@ -15,10 +15,10 @@ This is a common scenario and works great when running a single test on one devi
 
 Here are a few approaches that others have used, roughly in order of increasing complexity and power:
 
-    1. Only run one test at a time.
-    2. Don't modify common data or don't rely on data that may be changed in your tests.
-    3. Mock the data in your tests.
-    4. Create multiple test users with unique credentials. Then use the the device index (see below) to get a unique identifier for that device within that test run and use that value to lookup a corresponding set of user credentials so that concurrent devices within the same test run will be logged in as different users.  Note that this approach will not work for multiple test runs executing at the same time; it is designed only for multiple devices within a test run.
-    5. Create a web service external to your tests that your tests can access at run time to check out a unique set of test credentials. This may be the most complex solution but also the most general.
+1. Only run one test at a time.
+2. Don't modify common data or don't rely on data that may be changed in your tests.
+3. Mock the data in your tests.
+4. Create multiple test users with unique credentials. Then use the the device index (see below) to get a unique identifier for that device within that test run and use that value to lookup a corresponding set of user credentials so that concurrent devices within the same test run will be logged in as different users.  Note that this approach will not work for multiple test runs executing at the same time; it is designed only for multiple devices within a test run.
+5. Create a web service external to your tests that your tests can access at run time to check out a unique set of test credentials. This may be the most complex solution but also the most general.
     
-For number 4 above, App Center Test has an [environment variable](~/test-cloud/environment-variables/) XTC_DEVICE_INDEX that can be accessed by the test script. This is a string in the range of 0 to N-1, where N is the number of devices the test is run on. This variable is useful in situations where the same test is being run in parallel on multiple devices. This environment variable is available only for Calabash, Appium and Xamarin.UITest and only to the test script; not to the application under test.
+For number 4 above, App Center Test has an [environment variable](~/test-cloud/environment-variables.md) XTC_DEVICE_INDEX that can be accessed by the test script. This is a string in the range of 0 to N-1, where N is the number of devices the test is run on. This variable is useful in situations where the same test is being run in parallel on multiple devices. This environment variable is available only for Calabash, Appium and Xamarin.UITest and only to the test script; not to the application under test.

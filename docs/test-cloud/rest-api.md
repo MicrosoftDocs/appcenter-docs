@@ -2,6 +2,7 @@
 title: Run UI Tests using App Center REST API
 description: Steps to upload the package (ipa/apk) via REST API and queue the UI Tests
 keywords: appcenter, test, rest, api
+author: ankasani
 ms.author: anvesh.kasani
 ms.date: 07/24/2020
 ms.topic: article
@@ -12,7 +13,7 @@ ms.assetid: 2abb4242-658c-4914-8ec0-d0c4967d3729
 This example shows how to upload an app package, test binaries, and queue UI tests using our API. 
 
 ## Steps
-1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID** which you'll use later for the Response Header.
+1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID**, which you'll use later for the Response Header.
 
 **Sample Request** https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs 
 ![Screenshot demonstrating API usage](images/test-runs-api.png)
@@ -261,6 +262,6 @@ Run the Test command manually with `--debug` switch.
 
 Once the test is complete, you can check out the Command output to see how the Request Body looks like:
 
-![Screenshot of API terminal output](images/test-api-terminal)
+![Screenshot of API terminal output](images/test-api-terminal.png)
 
 BONUS! This way you can use the CLI output to see what how our commands queue the Tests using our API! 

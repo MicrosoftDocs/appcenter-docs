@@ -29,8 +29,8 @@ To upload Espresso tests with the release build of your app to App Center Test, 
 
 See Signing Your Applications in Android Developers Portal to understand how Android applications are signed. When generating a signed APK in Android Studio, it provides two Signature Version options:
 
-    - V1 (Jar Signature) 
-    - V2 (Full APKSignature)
+- V1 (Jar Signature) 
+- V2 (Full APKSignature)
 
 ![Screenshot of APK signing dialog](images/sign-apk.png)
 
