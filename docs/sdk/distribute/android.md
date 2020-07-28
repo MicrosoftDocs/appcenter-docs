@@ -14,7 +14,7 @@ dev_langs:
  - kotlin
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Android In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
