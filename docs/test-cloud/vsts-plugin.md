@@ -142,8 +142,8 @@ Save the configuration and you're all set to start the build and App Center Test
 
 ## Xamarin.UITest
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
-* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](~/test-cloud/uitest/preparing-for-upload-android.md).
-* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](~/test-cloud/uitest/preparing-for-upload-ios.md).
+* [Read how to prepare your Xamarin.Android repository for App Center Test, Xamarin.UITest testing](~/test-cloud/frameworks/uitest/upload-droid.md).
+* [Read how to prepare your Xamarin.iOS repository for App Center Test, Xamarin.UITest testing](~/test-cloud/frameworks/uitest/upload-ios.md).
 
 ### Azure Pipelines configuration for Xamarin.UITest
 Start by adding the App Center Test task to the build definition as described earlier at [Azure Pipelines general configuration](#azure-pipelines-general-configuration).

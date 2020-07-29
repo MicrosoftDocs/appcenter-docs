@@ -83,7 +83,7 @@
 ### [Frameworks](test-cloud/frameworks/index.md)
 ### Appium
 #### [Preparing for upload](test-cloud/frameworks/appium/index.md)
-#### [Missing test results](test-cloud/frameworks/appium/frameworks/missing-results.md)
+#### [Missing test results](test-cloud/frameworks/appium/missing-results.md)
 ### Espresso
 #### [Preparing for upload](test-cloud/frameworks/espresso/index.md)
 #### [App & Test APK signing](test-cloud/frameworks/espresso/app-test-signing.md)
@@ -91,7 +91,7 @@
 #### [Introduction](test-cloud/frameworks/uitest/index.md)
 #### [Get Started with Xamarin.Forms](test-cloud/frameworks/uitest/xamarin-forms.md)
 #### [Get Started with iOS Native apps](test-cloud/frameworks/uitest/ios-native.md)
-#### [Preparing Android apps for upload](test-cloud/frameworks/uitest/upload-android.md)
+#### [Preparing Android apps for upload](test-cloud/frameworks/uitest/upload-droid.md)
 #### [Preparing iOS apps for upload](test-cloud/frameworks/uitest/upload-ios.md)
 #### [Signing Android apps](test-cloud/frameworks/uitest/android-signing.md)
 #### [Cheatsheet](test-cloud/frameworks/uitest/cheatsheet.md)

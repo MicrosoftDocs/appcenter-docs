@@ -4,7 +4,7 @@ description: How to sign Android apks with your Android keystore in App Center T
 keywords: test cloud
 author: oddj0b
 ms.author: vigimm
-ms.date: 06/04/2020
+ms.date: 07/29/2020
 ms.topic: article
 ms.assetid: 819e647d-be5c-43ce-afbf-c58e51d52e03
 ms.service: vs-appcenter
@@ -128,7 +128,7 @@ public AndroidAppConfigurator SigningInfoFile (String path)
 
 >Configures the signing info file that the test server will be "signed" with. A signing info file isn't required, but can be used instead of a keystore for signing the test server. The signing info file can be freely shared without the risk of leaking keying material. The signing info file can be generated using the console tool.
 
-For more information, see the [AndroidAppConfigurator.SigningInfoFile API reference.](https://developer.xamarin.com/api/member/Xamarin.UITest.Configuration.AndroidAppConfigurator.SigningInfoFile/p/System.String/)
+For more information, see the [AndroidAppConfigurator.SigningInfoFile API reference.](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.SigningInfoFile/p/System.String/)
 
 ### App Center Test and signing information file
 

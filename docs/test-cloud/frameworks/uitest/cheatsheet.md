@@ -99,7 +99,7 @@ namespace MyApp.MyCrossPlatformUITests
 }
 ```
 
-Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/uitest/get-started-xamarin-forms.md).
+Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/frameworks/uitest/xamarin-forms.md).
 
 ### Initializing Xamarin.UITest on iOS
 Add the following snippet to the `FinishedLaunching` method of the **AppDelegate** class:
@@ -191,7 +191,7 @@ It is possible to execute native methods on underlying views with the `AppQuery.
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
 
-Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# `TextView.[Gravity](https://developer.xamarin.com/api/property/Android.Widget.TextView.Gravity/)` property.
+Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# [TextView.Gravity](https://docs.microsoft.com/dotnet/api/Android.Widget.TextView.Gravity) property.
 
 ### Handling Android permissions
 ```csharp
