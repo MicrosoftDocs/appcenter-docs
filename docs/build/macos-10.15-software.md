@@ -39,11 +39,11 @@ ms.custom: build
 - PHP 7.4.8
 - julia 1.4.2
 
-# Rust
+#### Rust
 - Rust 1.45.0
 - Rustup 1.22.1
 
-### Packages:
+##### Packages:
 - Bindgen 0.54.1
 - Cbindgen 0.14.3
 - Cargo-outdated v0.9.11
