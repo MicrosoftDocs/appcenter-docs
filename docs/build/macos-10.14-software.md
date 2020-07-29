@@ -4,113 +4,114 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 06/09/2020
+ms.date: 07/21/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
-
 # macOS info
-- System Version: macOS 10.14.6 (18G5033)
+- System Version: macOS 10.14.6 (18G6020)
 - Kernel Version: Darwin 18.7.0
 - System Integrity Protection: Enabled
-- Image Version: 20200607.1
+- Image Version: 20200719.1
 
 ## Installed Software
 ### Language and Runtime
 - Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
-- Java 1.8: (Zulu 8.46.0.19-CA-macosx) (build 1.8.0_252-b14) (default)
-- Java 11: Zulu11.39+15-CA (build 11.0.7+10-LTS)
-- Java 12: Zulu12.3+11-CA (build 12.0.2+3)
-- Java 13: Zulu13.31+11-CA (build 13.0.3+3-MTS)
-- Java 14: Zulu14.28+21-CA (build 14.0.1+8)
-- Rust 1.44.0
+- Java 1.8: (AdoptOpenJDK)(build 1.8.0_262-b10) (default)
+- Java 11: AdoptOpenJDK (build 11.0.8+10)
+- Java 12: AdoptOpenJDK (build 12.0.2+10)
+- Java 13: AdoptOpenJDK (build 13.0.2+8)
+- Java 14: AdoptOpenJDK (build 14.0.2+12)
+- Rust 1.45.0
 - Clang/LLVM 10.0.0
 - gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
-- gcc-9 (Homebrew GCC 9.3.0_1) 9.3.0
+- gcc-9 (Homebrew GCC 9.3.0) 9.3.0
 - GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
-- GNU Fortran (Homebrew GCC 9.3.0_1) 9.3.0
+- GNU Fortran (Homebrew GCC 9.3.0) 9.3.0
 - Node.js v6.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.0 v13.14.0 v14.4.0
-- PowerShell 7.0.1
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.2 v13.14.0 v14.5.0
+- PowerShell 7.0.3
 - Python 2.7.17
-- Python 3.7.7
+- Python 3.8.4
 - Ruby 2.6.6p146
-- .NET SDK 1.0.1 1.0.4 1.1.4 1.1.5 1.1.7 1.1.8 1.1.9 1.1.10 1.1.11 1.1.12 1.1.13 2.0.0 2.0.3 2.1.2 2.1.4 2.1.100 2.1.101 2.1.102 2.1.103 2.1.104 2.1.105 2.1.200 2.1.201 2.1.202 2.1.300 2.1.301 2.1.302 2.1.400 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.2.100 2.2.101 2.2.102 2.2.103 2.2.104 2.2.105
-- Go 1.14.3
-- PHP 7.4.6
+- .NET SDK 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507
+- Go 1.14.5
+- PHP 7.4.8
 - julia 1.4.2
 
 ### Package Management
-- Rustup 1.21.1
+- Rustup 1.22.1
 - Bundler version 2.1.4
-- Carthage 0.34.0
+- Carthage 0.35.0
 - CocoaPods 1.9.3
-- Homebrew 2.3.0
+- Homebrew 2.4.8
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
 - Pip 19.3.1 (python 2.7)
-- Pip 20.0.2 (python 3.7)
-- Miniconda 4.8.2
+- Pip 20.1.1 (python 3.8)
+- Miniconda 4.8.3
 - RubyGems 3.1.4
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.5
+- Gradle 6.5.1
+- Apache Ant(TM) 1.10.8
 
 ### Utilities
-- Curl 7.70.0
+- Curl 7.71.1
 - Git: 2.27.0
 - Git LFS: 2.11.0
-- GitHub CLI: 0.9.0
+- GitHub CLI: 0.11.0
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.14.0
-- Packer 1.5.6
-- GNU parallel 20200522
+- Packer 1.6.0
+- GNU parallel 20200622
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
-- gpg (GnuPG) 2.2.20
+- gpg (GnuPG) 2.2.21
 - psql (PostgreSQL) 12.3
 - PostgreSQL 12.3
 - aria2 1.35.0
-- azcopy 10.4.3
+- azcopy 10.5.0
 - zstd 1.4.5
-- bazel 3.2.0
-- bazelisk v1.4.0
-- helm v3.2.2+ga6ea663
-- virtualbox 6.1.10r138449
-- mongo v4.2.7
-- mongod v4.2.7
+- bazel 3.4.1
+- bazelisk v1.5.0
+- helm v3.2.4+g0ad800e
+- virtualbox 6.1.12r139181
+- mongo v4.2.8
+- mongod v4.2.8
 - Vagrant 2.2.9
 - 7-Zip 16.02
 
 ### Tools
-- Fastlane 2.149.1
+- Fastlane 2.152.0
 - Cmake 3.17.3
 - App Center CLI 1.2.2
-- Azure CLI 2.7.0
-- AWS CLI 2.0.19
-- AWS SAM CLI 0.52.0
-- Aliyun CLI 3.0.46
-- GHCup v0.1.5-p2
+- Azure CLI 2.9.1
+- AWS CLI 2.0.32
+- AWS SAM CLI 0.53.0
+- AWS Session Manager CLI 1.1.61.0
+- Aliyun CLI 3.0.53
+- GHCup v0.1.6
 - GHC 8.10.1
 - Cabal 3.2.0.0
 - Stack 2.3.1
 
 ### Browsers
-- Safari 13.1.1 (14609.2.9.1.3)
-- SafariDriver 13.1.1 (14609.2.9.1.3)
-- Google Chrome 83.0.4103.97 
-- ChromeDriver 83.0.4103.39
-- Microsoft Edge 83.0.478.45 
-- MSEdgeDriver 83.0.478.45
-- Mozilla Firefox 77.0.1
+- Safari 13.1.2 (14609.3.5.1.5)
+- SafariDriver 13.1.2 (14609.3.5.1.5)
+- Google Chrome 84.0.4147.89 
+- ChromeDriver 84.0.4147.30
+- Microsoft Edge 84.0.522.40 
+- MSEdgeDriver 84.0.522.40
+- Mozilla Firefox 78.0.2
 - geckodriver 0.26.0
 
-### Toolcache
+### Cached Tools
 #### Ruby
 - 2.4.10
 - 2.5.8
@@ -120,13 +121,25 @@ ms.custom: build
 #### Python
 - 2.7.18
 - 3.5.9
-- 3.6.10
-- 3.7.7
-- 3.8.3
+- 3.6.11
+- 3.7.8
+- 3.8.4
 
 #### PyPy
 - 2.7.13 [PyPy 7.3.1]
 - 3.6.9 [PyPy 7.3.1]
+
+#### Node.js
+- 8.17.0
+- 10.21.0
+- 12.18.2
+- 14.5.0
+
+#### Go
+- 1.11.13
+- 1.12.17
+- 1.13.14
+- 1.14.6
 
 ### Xamarin
 #### Visual Studio for Mac
@@ -233,7 +246,7 @@ ms.custom: build
 - Nomad CLI IPA ipa 0.14.3
 - xcpretty 0.3.0
 - xctool 0.3.7
-- xcversion 2.6.4
+- xcversion 2.6.6
 
 #### Installed SDKs
 | SDK                     | SDK Name             | Xcode Version                          |
@@ -298,6 +311,7 @@ ms.custom: build
 | iOS 10.0    | 9.4.1<br>10.0<br>10.1<br>10.2<br>10.2.1<br>10.3<br>11.0<br>11.1<br>11.2<br>11.2.1<br>11.3<br>11.3.1 | iPhone 5<br>iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch)                                                                                                                                                                                                                                                                                                                     |
 | iOS 10.1    | 9.4.1<br>10.0<br>10.1<br>10.2<br>10.2.1<br>10.3<br>11.0<br>11.1<br>11.2<br>11.2.1<br>11.3<br>11.3.1 | iPhone 5<br>iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch)                                                                                                                                                                                                                                                                                        |
 | iOS 10.2    | 9.4.1<br>10.0<br>10.1<br>10.2<br>10.2.1<br>10.3<br>11.0<br>11.1<br>11.2<br>11.2.1<br>11.3<br>11.3.1 | iPhone 5<br>iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch)                                                                                                                                                                                                                                                                                        |
+| iOS 10.3    | 9.4.1<br>10.0<br>10.1<br>10.2<br>10.2.1<br>10.3<br>11.0<br>11.1<br>11.2<br>11.2.1<br>11.3<br>11.3.1 | iPhone 5<br>iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7 inch)<br>iPad Pro (12.9 inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)                                                                                                                                                                                              |
 | iOS 11.4    | 9.4.1                                                                                               | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone X<br>iPhone 8<br>iPhone 8 Plus<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)                                                                                                                                                                 |
 | iOS 12.0    | 10.0                                                                                                | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)                                                                                             |
 | iOS 12.1    | 10.1                                                                                                | iPhone 5s<br>iPhone 6 Plus<br>iPhone 6<br>iPhone 6s<br>iPhone 6s Plus<br>iPhone SE<br>iPhone 7<br>iPhone 7 Plus<br>iPhone 8<br>iPhone 8 Plus<br>iPhone X<br>iPhone XS<br>iPhone XS Max<br>iPhone XR<br>iPad Air<br>iPad Air 2<br>iPad Pro (9.7-inch)<br>iPad Pro (12.9-inch)<br>iPad (5th generation)<br>iPad Pro (12.9-inch) (2nd generation)<br>iPad Pro (10.5-inch)<br>iPad (6th generation)<br>iPad Pro (11-inch)<br>iPad Pro (12.9-inch) (3rd generation)                              |
@@ -332,7 +346,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.2 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.3 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
@@ -352,51 +366,53 @@ ms.custom: build
 | android-27   | Android SDK Platform 27, Revision 3 |
 | android-28   | Android SDK Platform 28, Revision 6 |
 | android-29   | Android SDK Platform 29, Revision 4 |
+| android-30   | Android SDK Platform 30, Revision 2 |
 
 #### Android SDK Build-Tools
-| Package Name           | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| build-tools-19.1.0     | Android SDK Build-Tools, Revision 19.1.0     |
-| build-tools-20.0.0     | Android SDK Build-Tools, Revision 20.0.0     |
-| build-tools-21.1.2     | Android SDK Build-Tools, Revision 21.1.2     |
-| build-tools-22.0.1     | Android SDK Build-Tools, Revision 22.0.1     |
-| build-tools-23.0.1     | Android SDK Build-Tools, Revision 23.0.1     |
-| build-tools-23.0.2     | Android SDK Build-Tools, Revision 23.0.2     |
-| build-tools-23.0.3     | Android SDK Build-Tools, Revision 23.0.3     |
-| build-tools-24.0.0     | Android SDK Build-Tools, Revision 24.0.0     |
-| build-tools-24.0.1     | Android SDK Build-Tools, Revision 24.0.1     |
-| build-tools-24.0.2     | Android SDK Build-Tools, Revision 24.0.2     |
-| build-tools-24.0.3     | Android SDK Build-Tools, Revision 24.0.3     |
-| build-tools-25.0.0     | Android SDK Build-Tools, Revision 25.0.0     |
-| build-tools-25.0.1     | Android SDK Build-Tools, Revision 25.0.1     |
-| build-tools-25.0.2     | Android SDK Build-Tools, Revision 25.0.2     |
-| build-tools-25.0.3     | Android SDK Build-Tools, Revision 25.0.3     |
-| build-tools-26.0.0     | Android SDK Build-Tools, Revision 26.0.0     |
-| build-tools-26.0.1     | Android SDK Build-Tools, Revision 26.0.1     |
-| build-tools-26.0.2     | Android SDK Build-Tools, Revision 26.0.2     |
-| build-tools-26.0.3     | Android SDK Build-Tools, Revision 26.0.3     |
-| build-tools-27.0.0     | Android SDK Build-Tools, Revision 27.0.0     |
-| build-tools-27.0.1     | Android SDK Build-Tools, Revision 27.0.1     |
-| build-tools-27.0.2     | Android SDK Build-Tools, Revision 27.0.2     |
-| build-tools-27.0.3     | Android SDK Build-Tools, Revision 27.0.3     |
-| build-tools-28.0.0     | Android SDK Build-Tools, Revision 28.0.0     |
-| build-tools-28.0.1     | Android SDK Build-Tools, Revision 28.0.1     |
-| build-tools-28.0.2     | Android SDK Build-Tools, Revision 28.0.2     |
-| build-tools-28.0.3     | Android SDK Build-Tools, Revision 28.0.3     |
-| build-tools-29.0.0     | Android SDK Build-Tools, Revision 29.0.0     |
-| build-tools-29.0.1     | Android SDK Build-Tools, Revision 29.0.1     |
-| build-tools-29.0.2     | Android SDK Build-Tools, Revision 29.0.2     |
-| build-tools-29.0.3     | Android SDK Build-Tools, Revision 29.0.3     |
-| build-tools-30.0.0-rc4 | Android SDK Build-Tools, Revision 30.0.0 rc4 |
-| build-tools-17.0.0     | Android SDK Build-Tools, Revision 17.0.0     |
-| build-tools-23.0.0     | Android SDK Build-Tools, Revision 23.0.0     |
+| Package Name       | Description                              |
+| ------------------ | ---------------------------------------- |
+| build-tools-19.1.0 | Android SDK Build-Tools, Revision 19.1.0 |
+| build-tools-20.0.0 | Android SDK Build-Tools, Revision 20.0.0 |
+| build-tools-21.1.2 | Android SDK Build-Tools, Revision 21.1.2 |
+| build-tools-22.0.1 | Android SDK Build-Tools, Revision 22.0.1 |
+| build-tools-23.0.1 | Android SDK Build-Tools, Revision 23.0.1 |
+| build-tools-23.0.2 | Android SDK Build-Tools, Revision 23.0.2 |
+| build-tools-23.0.3 | Android SDK Build-Tools, Revision 23.0.3 |
+| build-tools-24.0.0 | Android SDK Build-Tools, Revision 24.0.0 |
+| build-tools-24.0.1 | Android SDK Build-Tools, Revision 24.0.1 |
+| build-tools-24.0.2 | Android SDK Build-Tools, Revision 24.0.2 |
+| build-tools-24.0.3 | Android SDK Build-Tools, Revision 24.0.3 |
+| build-tools-25.0.0 | Android SDK Build-Tools, Revision 25.0.0 |
+| build-tools-25.0.1 | Android SDK Build-Tools, Revision 25.0.1 |
+| build-tools-25.0.2 | Android SDK Build-Tools, Revision 25.0.2 |
+| build-tools-25.0.3 | Android SDK Build-Tools, Revision 25.0.3 |
+| build-tools-26.0.0 | Android SDK Build-Tools, Revision 26.0.0 |
+| build-tools-26.0.1 | Android SDK Build-Tools, Revision 26.0.1 |
+| build-tools-26.0.2 | Android SDK Build-Tools, Revision 26.0.2 |
+| build-tools-26.0.3 | Android SDK Build-Tools, Revision 26.0.3 |
+| build-tools-27.0.0 | Android SDK Build-Tools, Revision 27.0.0 |
+| build-tools-27.0.1 | Android SDK Build-Tools, Revision 27.0.1 |
+| build-tools-27.0.2 | Android SDK Build-Tools, Revision 27.0.2 |
+| build-tools-27.0.3 | Android SDK Build-Tools, Revision 27.0.3 |
+| build-tools-28.0.0 | Android SDK Build-Tools, Revision 28.0.0 |
+| build-tools-28.0.1 | Android SDK Build-Tools, Revision 28.0.1 |
+| build-tools-28.0.2 | Android SDK Build-Tools, Revision 28.0.2 |
+| build-tools-28.0.3 | Android SDK Build-Tools, Revision 28.0.3 |
+| build-tools-29.0.0 | Android SDK Build-Tools, Revision 29.0.0 |
+| build-tools-29.0.1 | Android SDK Build-Tools, Revision 29.0.1 |
+| build-tools-29.0.2 | Android SDK Build-Tools, Revision 29.0.2 |
+| build-tools-29.0.3 | Android SDK Build-Tools, Revision 29.0.3 |
+| build-tools-30.0.0 | Android SDK Build-Tools, Revision 30.0.0 |
+| build-tools-30.0.1 | Android SDK Build-Tools, Revision 30.0.1 |
+| build-tools-17.0.0 | Android SDK Build-Tools, Revision 17.0.0 |
+| build-tools-23.0.0 | Android SDK Build-Tools, Revision 23.0.0 |
 
 #### Android NDKs
 | Version      | Path                                       |
 | ------------ | ------------------------------------------ |
 | 15.2.4203891 | $HOME/Library/Android/sdk/android-ndk-r15c |
 | 18.1.5063045 | $HOME/Library/Android/sdk/ndk/18.1.5063045 |
-| 21.2.6472646 | $HOME/Library/Android/sdk/ndk-bundle       |
+| 21.3.6528147 | $HOME/Library/Android/sdk/ndk-bundle       |
 
 #### Android Utils
 | Package Name     | Version     |

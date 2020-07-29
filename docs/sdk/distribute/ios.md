@@ -13,7 +13,7 @@ dev_langs:
  - objc
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – iOS In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

@@ -116,7 +116,7 @@
 ## XCUITest
 ### [Preparing for upload](test-cloud/xcuitest/preparing-for-upload.md)
 ### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
-## Calabash [Depreciated]
+## Calabash [Deprecated]
 ### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
 ## Troubleshooting
 ### [Introduction](test-cloud/troubleshooting/index.md)

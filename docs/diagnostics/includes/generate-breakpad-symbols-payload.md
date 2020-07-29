@@ -16,3 +16,18 @@ Put all .so files from the project's `obj/local/$ABI/` directory into a .zip fil
 2. Create a **symbols.zip** file with the following structure:
 > [!NOTE]
 > If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
+
+```text
+$ unzip -l symbols.zip
+Archive:  symbols.zip
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  07-22-13 15:07   symbols/
+        0  07-22-13 15:07   symbols/libnative.so/
+        0  07-22-13 15:07   symbols/libnative.so/EAC901FB6DDCCE8AED89E1A8E4A58360/
+    12468  07-22-13 15:07   symbols/libnative.so/EAC901FB6DDCCE8AED89E1A8E4A58360/libnative.so.sym
+        0  07-22-13 15:07   symbols/libnative.so/FDC5C9E715C4F16408C0B78F95855BF0/
+    12467  07-22-13 15:07   symbols/libnative.so/FDC5C9E715C4F16408C0B78F95855BF0/libnative.so.sym
+ --------                   -------
+    24935                   6 files
+```

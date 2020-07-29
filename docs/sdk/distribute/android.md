@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 04/23/2020
+ms.date: 07/23/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -14,7 +14,7 @@ dev_langs:
  - kotlin
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Android In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -42,13 +42,16 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '3.2.1'
+       def appCenterSdkVersion = '3.3.0'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
 
-   > [!NOTE]
-   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+    > [!WARNING]
+    > Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+
+    > [!NOTE]
+    > If the version of your Android Gradle plugin is lower than 3.0.0, you need to replace the **implementation** with **compile**.
 
 2. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
 3. [DownloadManager](https://developer.android.com/reference/android/app/DownloadManager) on Android versions prior to 5.0 does not enable TLS 1.2, so it cannot be used to download updates. The App Center SDK enforces TLS 1.2 to improve security.
@@ -86,6 +89,42 @@ import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
+
+## Remove in-app updates for Google Play builds
+
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+
+1. Open the project's app level **build.gradle** file (`app/build.gradle`).
+2. Configure build variants by adding product flavors:
+
+    ```groovy
+    android {
+        flavorDimensions "distribute"
+        productFlavors {
+            appCenter {
+                dimension "distribute"
+            }
+            googlePlay {
+                dimension "distribute"
+            }
+        }
+    }
+    ```
+
+3. Modify dependencies block to consume different dependencies based on the product flavor:
+
+    ```groovy
+    dependencies {
+        def appCenterSdkVersion = "3.3.0"
+        appCenterImplementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
+        googlePlayImplementation "com.microsoft.appcenter:appcenter-distribute-play:${appCenterSdkVersion}"
+    }
+    ```
+
+4. Save your **build.gradle** file and make sure to trigger a Gradle sync in Android Studio.
+5. You can change the build variant in **Build > Select Build Variant** drop down menu or **Build Variants** in the tool window bar.
+
+You can read more about configuring build variants in the [Android documentation](https://developer.android.com/studio/build/build-variants).
 
 ## Use private distribution group
 
@@ -126,7 +165,7 @@ Distribute.disableAutomaticCheckForUpdate()
 > [!NOTE]
 > This method must be called before the `AppCenter.start` method call.
 
-Then you can use the `checkForUpdate` API which is described in the following section.
+Then you can use the `checkForUpdate` API, which is described in the following section.
 
 ## Manually Check for Update
 

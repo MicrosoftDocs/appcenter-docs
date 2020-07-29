@@ -4,13 +4,13 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 04/20/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Xamarin In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -18,14 +18,14 @@ ms.tgt_pltfrm: xamarin
 > * [Unity](unity.md)
 > * [Xamarin](xamarin.md)
 
-App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
 This feature will NOT work if your app is deployed to the app store.
 
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
 > 1. If you have released your app in the App Store or Google Play, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
+> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -62,6 +62,9 @@ Install-Package Microsoft.AppCenter.Distribute
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
+
+> [!WARNING]
+> Google can consider in-app update code as malicious behavior even if it isn't used at runtime We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
 ### 2. Start App Center Distribute
 
@@ -157,6 +160,28 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 >       </dict>
 >   </array>
 >   ```
+
+## Remove in-app updates for Google Play builds
+
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+
+1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
+2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into the conditional item group:
+
+    ```xml
+    <ItemGroup Condition=" '$(Configuration)' != 'GooglePlay' ">
+        <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.3.0" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(Configuration)' == 'GooglePlay' ">
+        <PackageReference Include="Microsoft.AppCenter.DistributePlay" Version="3.3.0" />
+    </ItemGroup>
+    ```
+
+    > [!NOTE]
+    > If you are using old [packages.config](https://docs.microsoft.com/nuget/reference/packages-config) format to manage NuGet references, you can migrate to a [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) format, please follow [the migration instruction](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference).
+
+3. Save your changes and restore NuGet packages.
+4. You can change the configuration in the command bar at the top of the IDE.
 
 ## Use private distribution group
 
@@ -346,7 +371,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Create your app in the App Center Portal if you haven't done that already.
 1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
 1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
-1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [UpdateTrack property](#use-private-distribution-group).
+1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [`UpdateTrack` property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
 1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.
