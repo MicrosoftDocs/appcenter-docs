@@ -13,9 +13,7 @@ ms.custom: test
 
 # Supported Test Frameworks
 
-App Center Test is a test automation service for native and hybrid mobile applications. Several popular test frameworks are supported and the list of supported frameworks is evaluated continually based on user requests and market popularity. The list below outlines the test frameworks currently supported.
-
-
+App Center Test is a test automation service for native and hybrid mobile applications. The list below outlines the test frameworks currently supported.
 
 | Test framework | Vendor      | Language | Documentation & resources                |
 | -------------- | ----------- | ---------|----------------------------------------- |

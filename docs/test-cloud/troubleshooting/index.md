@@ -11,19 +11,18 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Troubleshooting
-The documents in this section discuss troubleshooting tips for App Center Test.
+# General Test Troubleshooting
+The documents in this section general troubleshooting tips for App Center Test. 
 
-## Android screenshots
-Do your App Center Test Reports consistently show blank or scrambled screenshots on Android? The typical cause is that the app has disabled screenshots. The [Android screenshots guide](android-screenshots.md) explains why that can happen and how to get the screenshots to appear.
+## Framework-specific troubleshooting
+Issues that are encountered in local testing, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
 
-## CLI exit codes
-The App Center CLI tool returns an exit code. That exit code reflects whether App Center Test received the necessary information and if there were errors. The [CLI exit codes guide](cli-exit-codes.md) lists App Center CLI exit codes with an explanation for each.
+| App Center Guides | External Framework Documentation |
+| -------------- | ----------------------------------------- |
+| [Appium](~/test-cloud/frameworks/appium/index.md) | [Appium Website](https://appium.io) |
+| Calabash | [Calabash iOS Wiki](https://github.com/calabash/calabash-ios/wiki),  [Calabash Android Wiki](https://github.com/calabash/calabash-android/wiki) |
+| [Espresso](~/test-cloud/frameworks/espresso/index.md) | [Espresso Documentation](https://developer.android.com/training/testing/espresso/) |
+| [Xamarin.UITest](~/test-cloud/frameworks/uitest/troubleshooting/index.md) | N/A |
+| [XCUITest](~/test-cloud/frameworks/xcuitest/index.md) | [XCUITest Documentation](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
 
-## iOS privacy alerts
-When an iOS application runs, the operating system displays an alert if the application requests access to restricted functionality. This alert tells the user about the request and requires the user to respond.
 
-How you handle these alerts in your test script is described in The [iOS privacy alerts guide](ios-privacy-alerts.md).
-
-## Time limits
-App Center Test generates an error if your tests exceed certain time limits. The [Time limits guide](time-outs.md) explains these limits and what to do about them.
