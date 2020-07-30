@@ -16,14 +16,14 @@ The documents in this section provide general troubleshooting tips for App Cente
 
 - [Android screenshots](android-screenshots.md)
 - [iOS Privacy Alerts](ios-privacy-alerts.md)
-- [Incorrect iOS coordinates](incorrect-ios-coordinates.md)
-- [Time limits](time-outs.md)
-- [Device idling](sleep.md)
-- [Stalled devices](stalls.md)
+- [iOS Incorrect coordinates](incorrect-ios-coordinates.md)
 - [CLI exit codes](cli-exit-codes.md)
-- [Web & server connection issues](server-connection.md)
 - [Database changes during tests](database-changes.md)
-- [Analyzing Device Logs](device-logs.md)
+- [Device idling](sleep.md)
+- [Device log analysis](device-logs.md)
+- [Stalled devices](stalls.md)
+- [Time limits](time-outs.md)
+- [Web & server connection issues](server-connection.md)
 
 ## Framework-specific troubleshooting
 Issues that are encountered in local testing, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
