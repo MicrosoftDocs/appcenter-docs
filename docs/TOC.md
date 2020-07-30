@@ -69,13 +69,6 @@
 ## [Introduction](test-cloud/index.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Getting Started](test-cloud/getting-started.md)
-## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
-## [Starting a Test Run](test-cloud/starting-a-test-run.md)
-## [Test Reports](test-cloud/test-reports.md)
-## [Environment Variables](test-cloud/environment-variables.md)
-## [Security](test-cloud/security.md)
-## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
-## [Test using REST API](test-cloud/rest-api.md)
 ## Devices Available
 ### [Android](test-cloud/devices/android.md)
 ### [iOS](test-cloud/devices/ios.md)
@@ -120,6 +113,13 @@
 #### [Preparing for upload with Extensions](test-cloud/frameworks/xcuitest/upload-extension.md)
 ### Calabash [Deprecated]
 #### [Preparing for upload](test-cloud/frameworks/calabash/index.md)
+## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
+## [Starting a Test Run](test-cloud/starting-a-test-run.md)
+## [Test Reports](test-cloud/test-reports.md)
+## [Environment Variables](test-cloud/environment-variables.md)
+## [Security](test-cloud/security.md)
+## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## [Test using REST API](test-cloud/rest-api.md)
 ## Troubleshooting
 ### [Introduction](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
