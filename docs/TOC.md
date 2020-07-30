@@ -121,7 +121,7 @@
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
 ## [Test using REST API](test-cloud/rest-api.md)
 ## Troubleshooting
-### [Introduction](test-cloud/troubleshooting/index.md)
+### [Overview](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
 ### [iOS privacy alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
 ### [iOS incorrect coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
