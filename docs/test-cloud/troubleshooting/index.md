@@ -11,8 +11,8 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# General Test Troubleshooting
-The documents in this section general troubleshooting tips for App Center Test. 
+# Test Troubleshooting
+The documents in this section provide general troubleshooting tips for App Center Test. 
 
 ## Framework-specific troubleshooting
 Issues that are encountered in local testing, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
