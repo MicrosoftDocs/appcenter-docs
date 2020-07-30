@@ -43,8 +43,7 @@ The following switches must match your project:
 - `-scheme`
 
 ## Run your Xamarin.UITest on a simulator
-
-With the Calabash backend setup, the next step is to configure your Xamarin.UITest so that is opens your app on a simulator. [See the Working with Simulators page on how identify simulators](working-with/ios-simulator.md).
+With the Calabash backend setup, the next step is to configure your Xamarin.UITest so that is opens your app on a simulator. [See the Working with Simulators page on how identify simulators](features/ios-simulator.md).
 
 The `.AppBundle()` and `.DeviceIdentifier()` must be configured. You can find the AppBundle in the DerivedData if your app was built using the command from Add an automation backend to your app.
 
