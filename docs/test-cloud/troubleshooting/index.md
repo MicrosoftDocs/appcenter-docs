@@ -4,26 +4,50 @@ description: Troubleshooting App Center Test.
 keywords: appcenter test cloud, troubleshooting
 author: oddj0b
 ms.author: vigimm
-ms.date: 02/27/2019
+ms.date: 07/30/2020
 ms.topic: article
 ms.assetid: 63f6b52d-ecd6-4270-b179-0ce580c8916c
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Troubleshooting
-The documents in this section discuss troubleshooting tips for App Center Test.
+# Test Troubleshooting
+The documents in this section provide general troubleshooting tips for App Center Test. 
 
-## Android screenshots
-Do your App Center Test Reports consistently show blank or scrambled screenshots on Android? The typical cause is that the app has disabled screenshots. The [Android screenshots guide](android-screenshots.md) explains why that can happen and how to get the screenshots to appear.
+## General Tips
+If you're unsure how to diagonse your issue, here are some general tips:
 
-## CLI exit codes
-The App Center CLI tool returns an exit code. That exit code reflects whether App Center Test received the necessary information and if there were errors. The [CLI exit codes guide](cli-exit-codes.md) lists App Center CLI exit codes with an explanation for each.
+- **Confirm your tests work locally**. Ideally compare similar device model(s) and OS versions to minimize variables.
+- **iOS simulator app packages can't be uploaded to Test**. Test requires a iOS device build (IPA) that our system can re-sign using our Development Provisioning files. 
+- **Your test suite might need [extra time](time-outs.md) or a [server connection](server-connection.md)** to reliably pass tests in App Center.
+- **Test can't automate multiple apps, or system apps (browser, camera, etc.)**. This limitation is true even for testing frameworks that allow full system control locally. 
 
-## iOS privacy alerts
-When an iOS application runs, the operating system displays an alert if the application requests access to restricted functionality. This alert tells the user about the request and requires the user to respond.
+## Common Documented Issues
+- [(Android) missing or corrupted screenshots](android-screenshots.md)
+- [(iOS) Privacy Alerts](ios-privacy-alerts.md)
+- [(iOS) Incorrect coordinates](incorrect-ios-coordinates.md)
+- [CLI exit codes](cli-exit-codes.md)
+- [Database changes during tests](database-changes.md)
+- [Device idling](sleep.md)
+- [Device log analysis](device-logs.md)
+- [Stalled devices](stalls.md)
+- [Time limits](time-outs.md)
+- [Web & server connection issues](server-connection.md) 
 
-How you handle these alerts in your test script is described in The [iOS privacy alerts guide](ios-privacy-alerts.md).
+## Framework-specific resources
+Issues that are encountered in local testing, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
 
-## Time limits
-App Center Test generates an error if your tests exceed certain time limits. The [Time limits guide](time-outs.md) explains these limits and what to do about them.
+| App Center Guides | External Framework Documentation |
+| -------------- | ----------------------------------------- |
+| [Appium](~/test-cloud/frameworks/appium/index.md) | [Appium Website](https://appium.io) |
+| Calabash | [Calabash iOS Wiki](https://github.com/calabash/calabash-ios/wiki),  [Calabash Android Wiki](https://github.com/calabash/calabash-android/wiki) |
+| [Espresso](~/test-cloud/frameworks/espresso/index.md) | [Espresso Documentation](https://developer.android.com/training/testing/espresso/) |
+| [Xamarin.UITest](~/test-cloud/frameworks/uitest/troubleshooting/index.md) | N/A |
+| [XCUITest](~/test-cloud/frameworks/xcuitest/index.md) | [XCUITest Documentation](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/09-ui_testing.html) |
+
+## Contacting App Center Support
+Open the help menu in the upper right corner of the App Center portal: **? > Contact support**. Use the message field to explain your issue or question. 
+
+![App Center Support Form](~/images/app-center-support-form.png)
+
+Support is provided in English only and during business hours.
