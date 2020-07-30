@@ -14,6 +14,17 @@ ms.custom: test
 # Test Troubleshooting
 The documents in this section provide general troubleshooting tips for App Center Test. 
 
+- [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
+- [iOS Privacy Alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+- [Incorrect iOS coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
+- [Time limits](test-cloud/troubleshooting/time-outs.md)
+- [Device idling](test-cloud/troubleshooting/sleep.md)
+- [Stalled devices](test-cloud/troubleshooting/stalls.md)
+- [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
+- [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
+- [Database changes during tests](test-cloud/troubleshooting/database-changes.md)
+- [Analyzing Device Logs](test-cloud/troubleshooting/device-logs.md)
+
 ## Framework-specific troubleshooting
 Issues that are encountered in local testing, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
 
