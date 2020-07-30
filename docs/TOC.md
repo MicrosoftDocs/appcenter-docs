@@ -72,7 +72,7 @@
 ## Devices Available
 ### [Android](test-cloud/devices/android.md)
 ### [iOS](test-cloud/devices/ios.md)
-## Supported Test Frameworks
+## Test Frameworks
 ### [Framework Support Chart](test-cloud/frameworks/index.md)
 ### Appium
 #### [Preparing for upload](test-cloud/frameworks/appium/index.md)
@@ -86,20 +86,20 @@
 #### [Cheatsheet](test-cloud/frameworks/uitest/cheatsheet.md)
 #### [License](test-cloud/frameworks/uitest/license.md)
 #### iOS
-##### [Testing with iOS Native apps](test-cloud/frameworks/uitest/ios/index.md)
-##### [iOS Simulator local testing](test-cloud/frameworks/uitest/ios/simulator.md)
-##### [Preparing iOS apps for upload](test-cloud/frameworks/uitest/ios/upload.md)
+##### [Testing native apps](test-cloud/frameworks/uitest/ios/index.md)
+##### [Simulator local testing](test-cloud/frameworks/uitest/ios/simulator.md)
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/ios/upload.md)
 #### Android
-##### [Preparing Android apps for upload](test-cloud/frameworks/uitest/android/index.md)
-##### [Signing Android apps](test-cloud/frameworks/uitest/android/signing.md)
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/android/index.md)
+##### [Signing apps](test-cloud/frameworks/uitest/android/signing.md)
 #### Features
 ##### [Introduction](test-cloud/frameworks/uitest/working-with/index.md)
 ##### [App data between tests](test-cloud/frameworks/uitest/working-with/appdatamode.md)
-##### [Using Backdoors](test-cloud/frameworks/uitest/working-with/backdoors.md)
-##### [Including Files](test-cloud/frameworks/uitest/working-with/files.md)
-##### [Categorizing Tests](test-cloud/frameworks/uitest/working-with/categorized-tests.md)
+##### [Backdoors](test-cloud/frameworks/uitest/working-with/backdoors.md)
+##### [Including files](test-cloud/frameworks/uitest/working-with/files.md)
+##### [Categorizing tests](test-cloud/frameworks/uitest/working-with/categorized-tests.md)
 ##### [Xamarin.Forms date & time pickers](test-cloud/frameworks/uitest/working-with/date-time-pickers.md)
-##### [Entering Text](test-cloud/frameworks/uitest/working-with/entering-text.md)
+##### [Entering text](test-cloud/frameworks/uitest/working-with/entering-text.md)
 ##### [Gestures](test-cloud/frameworks/uitest/working-with/gestures.md)
 ##### [REPL](test-cloud/frameworks/uitest/working-with/repl.md)
 ##### [Timeouts](test-cloud/frameworks/uitest/working-with/timeouts.md)
