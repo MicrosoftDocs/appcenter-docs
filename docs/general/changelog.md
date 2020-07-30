@@ -88,7 +88,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 ### **December 11, 2018**
 
 - **Added build support for Xamarin.iOS 12.2**:
-  Build your Xamarin apps with [Xamarin.iOS 12.2](https://developer.xamarin.com/releases/ios/xamarin.ios_12/xamarin.ios_12.2/)
+  Build your Xamarin apps with [Xamarin.iOS 12.2](https://docs.microsoft.com/xamarin/ios/release-notes/12/12.2)
   - Xamarin.iOS 12.2.1.11
 
 ### **November 30, 2018**
