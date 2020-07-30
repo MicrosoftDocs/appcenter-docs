@@ -10,7 +10,6 @@ ms.service: vs-appcenter
 ---
 
 # Preparing Xamarin.Android Apps
-
 The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
 
 > [!IMPORTANT]

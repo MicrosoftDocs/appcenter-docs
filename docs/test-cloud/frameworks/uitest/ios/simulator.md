@@ -1,5 +1,5 @@
 ---
-title: Working with iOS Simulators
+title: Local testing with iOS Simulators
 description: This guide will discuss how to identify and select an iOS simulator to use for running Xamarin.UITests locally.
 keywords: uitest test cloud
 author: oddj0b
@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Working with iOS Simulators
+# Local testing with iOS Simulators
 #### [Visual Studio](#tab/vswin/)
 It isn't possible to run local iOS tests on Windows. 
 

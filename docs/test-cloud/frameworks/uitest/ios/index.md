@@ -11,11 +11,9 @@ ms.custom: test
 ---
 
 # Automate iOS native apps with Xamarin.UITest
-
 To follow the guide, you must have access to the app source code.
 
 ## Add an automation backend to your app
-
 Part of the Xamarin.UITest toolchain is the backend that runs alongside the app. The Xamarin.UITest test script communicates with the backend, which executes the commands on the simulator or device.
 
 Because Xamarin.UITest shares backend with Calabash, first step is to [link the calabash.framework, using one of the three methods from the Calabash doc](https://github.com/calabash/calabash-ios#step-1-link-calabashframework).
