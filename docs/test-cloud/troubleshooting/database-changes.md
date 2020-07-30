@@ -1,7 +1,7 @@
 ---
 title: Handling Concurrent Database Changes During Tests
 description: Approaches to executing tests on multiple devices at the same time that are making changes to the same database.
-keywords: appcenter, test, stall
+keywords: appcenter, test, database
 author: king-of-spades
 ms.date: 07/29/2020
 ms.topic: article
