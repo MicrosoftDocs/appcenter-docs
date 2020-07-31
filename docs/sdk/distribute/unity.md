@@ -4,14 +4,14 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: maestersid
 ms.author: jawh
-ms.date: 05/15/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 
-# App Center Distribute – In-app updates
+# App Center Distribute – Unity In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -35,11 +35,19 @@ App Center Distribution enables your users/testers to install new versions of an
 
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format AppCenterDistribute-v{version}.unitypackage
+Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format `AppCenterDistribute-v{version}.unitypackage`.
+
+> [!WARNING]
+> Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+
+## Remove in-app updates for Google Play builds
+
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play.
+To remove in-app updates native code, uncheck the **Use Distribute** checkbox under the **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change `UpdateTrack` to Private. 
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to change `UpdateTrack` to Private.
 To do this, choose **Private** in the **Update Track** dropdown under **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 When using the private track, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
@@ -209,7 +217,7 @@ You must upload release builds (that use the Distribute module of the App Center
 1. Create your app in the App Center Portal if you haven't done that already.
 1. Create a new distribution group and give it a name.
 1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this step, one not already used with this app. This will ensure that you have an experience that's close to the experience of your real testers.
-1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [UpdateTrack property](#use-private-distribution-group).
+1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [`UpdateTrack` property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
 1. Once the upload has finished, click **Next** and select the **Distribution group** that you previously created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.

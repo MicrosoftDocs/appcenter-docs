@@ -30,10 +30,10 @@ Understanding the core concepts of the test service improve ease of use, navigat
 ## 5. Prepare the project for upload
 Each test framework has different requirements for uploading to App Center Test. Follow the appropriate test framework instructions:
 
-- [Appium](~/test-cloud/appium/preparing-for-upload.md)
-- [Espresso](~/test-cloud/espresso/preparing-for-upload.md)
-- [XCUITest](~/test-cloud/xcuitest/preparing-for-upload.md)
-- [Xamarin.UITest](~/test-cloud/uitest/index.md)
-    - [For Xamarin.Android](~/test-cloud/uitest/preparing-for-upload-android.md)
-    - [For Xamarin.iOS](~/test-cloud/uitest/preparing-for-upload-ios.md)
-- [Calabash (Deprecated)](~/test-cloud/calabash/preparing-for-upload.md)
+- [Appium](~/test-cloud/frameworks/appium/index.md)
+- [Espresso](~/test-cloud/frameworks/espresso/index.md)
+- [XCUITest](~/test-cloud/frameworks/xcuitest/index.md)
+- [Xamarin.UITest](~/test-cloud/frameworks/uitest/index.md)
+    - [For Xamarin.Android](~/test-cloud/frameworks/uitest/android/index.md)
+    - [For Xamarin.iOS](~/test-cloud/frameworks/uitest/ios/index.md)
+- [Calabash (Deprecated)](~/test-cloud/frameworks/calabash/index.md)

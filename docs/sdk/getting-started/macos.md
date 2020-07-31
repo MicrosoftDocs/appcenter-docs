@@ -4,7 +4,7 @@ description: Get started
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 05/01/2020
+ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
@@ -35,12 +35,15 @@ Let's get started with setting up App Center macOS SDK in your app to use App Ce
 
 ## 1. Prerequisites
 The following requirements must be met to use App Center SDK:
-* Your macOS project is set up in Xcode 10 or later, on macOS version 10.12 or later.
+
+* Your macOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
 * You're targeting devices running on macOS 10.9 or later.
 * You're not using any other library that provides Crash Reporting functionality.
 
 > [!NOTE]
-> App Center SDK will **drop support for Xcode 8 and 9** with the May SDK release. Refer to this [GitHub issue](https://github.com/Microsoft/appcenter/issues/308) for more information.
+> App Center SDK will **drop support for Xcode 10** with the June SDK release.
+
+App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -156,6 +159,15 @@ Insert the following line in the app's `didFinishLaunchingWithOptions` delegate 
 ```
 ```swift
 MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+```
+
+If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
+
+```objc
+[MSAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+```
+```swift
+MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret

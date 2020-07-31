@@ -72,48 +72,66 @@
 ## Devices Available
 ### [Android](test-cloud/devices/android.md)
 ### [iOS](test-cloud/devices/ios.md)
-## [Environment Variables](test-cloud/environment-variables.md)
-## Appium
-### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
-## Espresso
-### [Preparing for upload](test-cloud/espresso/preparing-for-upload.md)
-## Xamarin.UITest
-### [Introduction](test-cloud/uitest/index.md)
-### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
-### [Get Started with iOS Native apps](test-cloud/uitest/get-started-with-ios-native.md)
-### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
-### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
-### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
-### [License](test-cloud/uitest/license.md)
-### Working With
-#### [Introduction](test-cloud/uitest/working-with/index.md)
-#### [Android signing](test-cloud/uitest/working-with/android-signing.md)
-#### [Backdoors](test-cloud/uitest/working-with/backdoors.md)
-#### [Categorizing Tests](test-cloud/uitest/working-with/categorized-tests.md)
-#### [Entering Text](test-cloud/uitest/working-with/entering-text.md)
-#### [Files](test-cloud/uitest/working-with/files.md)
-#### [Gestures](test-cloud/uitest/working-with/gestures.md)
-#### [REPL](test-cloud/uitest/working-with/repl.md)
-#### [iOS Simulator](test-cloud/uitest/working-with/ios-simulator.md)
-#### [Timeouts](test-cloud/uitest/working-with/timeouts.md)
-#### [Webviews](test-cloud/uitest/working-with/webviews.md)
-## XCUITest
-### [Preparing for upload](test-cloud/xcuitest/preparing-for-upload.md)
-### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
-## Calabash [Deprecated]
-### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
+## Test Frameworks
+### [Framework Support Chart](test-cloud/frameworks/index.md)
+### Appium
+#### [Preparing for upload](test-cloud/frameworks/appium/index.md)
+#### [Missing test results](test-cloud/frameworks/appium/missing-results.md)
+### Espresso
+#### [Preparing for upload](test-cloud/frameworks/espresso/index.md)
+#### [App & Test APK signing](test-cloud/frameworks/espresso/app-test-signing.md)
+### Xamarin.UITest
+#### [Introduction](test-cloud/frameworks/uitest/index.md)
+#### [Testing with Xamarin.Forms](test-cloud/frameworks/uitest/xamarin-forms.md)
+#### [Cheatsheet](test-cloud/frameworks/uitest/cheatsheet.md)
+#### [License](test-cloud/frameworks/uitest/license.md)
+#### iOS
+##### [Testing native apps](test-cloud/frameworks/uitest/ios/index.md)
+##### [Simulator local testing](test-cloud/frameworks/uitest/ios/simulator.md)
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/ios/upload.md)
+#### Android
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/android/index.md)
+##### [Signing apps](test-cloud/frameworks/uitest/android/signing.md)
+#### Features
+##### [Introduction](test-cloud/frameworks/uitest/features/index.md)
+##### [App data between tests](test-cloud/frameworks/uitest/features/appdatamode.md)
+##### [Backdoors](test-cloud/frameworks/uitest/features/backdoors.md)
+##### [Including files](test-cloud/frameworks/uitest/features/files.md)
+##### [Categorizing tests](test-cloud/frameworks/uitest/features/categorized-tests.md)
+##### [Xamarin.Forms date & time pickers](test-cloud/frameworks/uitest/features/date-time-pickers.md)
+##### [Entering text](test-cloud/frameworks/uitest/features/entering-text.md)
+##### [Gestures](test-cloud/frameworks/uitest/features/gestures.md)
+##### [REPL](test-cloud/frameworks/uitest/features/repl.md)
+##### [Timeouts](test-cloud/frameworks/uitest/features/timeouts.md)
+##### [Webviews](test-cloud/frameworks/uitest/features/webviews.md)
+#### Troubleshooting
+##### [Test-Cloud.exe Upload Errors](test-cloud/frameworks/uitest/troubleshooting/index.md)
+##### [Wrong platform tests are run](test-cloud/frameworks/uitest/troubleshooting/invalid-platform.md)
+##### [REPL Tree command unresponsive](test-cloud/frameworks/uitest/troubleshooting/repl-tree.md)
+### XCUITest
+#### [Preparing for upload](test-cloud/frameworks/xcuitest/index.md)
+#### [Preparing for upload with Extensions](test-cloud/frameworks/xcuitest/upload-extension.md)
+### Calabash [Deprecated]
+#### [Preparing for upload](test-cloud/frameworks/calabash/index.md)
+## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Test Reports](test-cloud/test-reports.md)
+## [Environment Variables](test-cloud/environment-variables.md)
 ## [Security](test-cloud/security.md)
-## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## [Test using REST API](test-cloud/rest-api.md)
 ## Troubleshooting
-### [Introduction](test-cloud/troubleshooting/index.md)
+### [Overview](test-cloud/troubleshooting/index.md)
 ### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
+### [iOS privacy alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [iOS incorrect coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
 ### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [Database changes during tests](test-cloud/troubleshooting/database-changes.md)
+### [Device idling](test-cloud/troubleshooting/sleep.md)
+### [Device log analysis](test-cloud/troubleshooting/device-logs.md)
+### [Stalled devices](test-cloud/troubleshooting/stalls.md)
 ### [Time limits](test-cloud/troubleshooting/time-outs.md)
-
+### [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
 
 # Distribute
 ## [Introduction](distribution/index.md)

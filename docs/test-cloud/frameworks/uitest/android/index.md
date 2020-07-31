@@ -10,7 +10,6 @@ ms.service: vs-appcenter
 ---
 
 # Preparing Xamarin.Android Apps
-
 The section below provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
 
 > [!IMPORTANT]
@@ -27,12 +26,11 @@ Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamari
 
    In Visual Studio for Mac, open **Build > Android Build** then select **Project Options**. On the **General** tab, look for **Packaging and Deployment** and uncheck the **Use Shared Mono Runtime** checkbox.
 
-![Remove Use Share Runtime](./images/remove-share-runtime-vsmac.png)
+![Remove Use Shared Runtime](../images/remove-share-runtime-vsmac.png)
 
 ## Visual Studio (Windows)
-
 Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamarin.UITests from running in App Center for Test.
 
    In Visual Studio 2019, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck the **Use Shared Runtime** checkbox.
 
-![Remove Use Shared Runtime](./images/remove-share-runtime-vs2019.png)
+![Remove Use Shared Runtime](../images/remove-share-runtime-vs2019.png)

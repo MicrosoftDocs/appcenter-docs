@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 06/19/2020
+ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android

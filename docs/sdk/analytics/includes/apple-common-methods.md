@@ -6,7 +6,10 @@ ms.topic: include
 ---
 
 ## Session and device information
-Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without any additional code.
+Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties including OS Version, model, and so on, without any additional code.
+
+> [!NOTE]
+> On Mac Catalyst apps, the amount of sessions may be lower than on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
 
 The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
@@ -94,7 +97,6 @@ func locationManager(_ Manager: CLLocationManager, didFailWithError error: Error
 ```
 
 ## Custom events
-
 You can track your own custom events with **up to 20 properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
 Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
@@ -122,14 +124,13 @@ You can track business critical events that have higher importance than other ev
 
 * Developers can set priority of events as **Normal** (`MSFlagsNormal` in the API) or **Critical** (`MSFlagsCritical` in the API).
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
-* When the local storage is full and new events needs to be stored, the oldest events that have the lowest priority are deleted first to make room for the new ones.
+* When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
 **Normal** priority will fail as the SDK cannot make room in that case.
 * If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
 You can use the following API to track an event as **Critical**:
-
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
 [MSAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSFlagsCritical];
@@ -145,7 +146,7 @@ MSAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .crit
 
 ## Pause and resume sending logs
 
-Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they are not sent right away. Any events your app tracks while paused will only be sent once you call `resume`.
+Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they aren't sent right away. Any events your app tracks while paused will only be sent once you call `resume`.
 
 ```objc
 [MSAnalytics pause];
@@ -220,17 +221,17 @@ The transmission interval can be changed:
 MSAnalytics.setTransmissionInterval(600)
 ```
 
-The transmission interval value must be between 3 seconds and 86400 seconds (1 day) and this method must be called before the service is started.
+The transmission interval value must be between 3 seconds and 86400 seconds (one day) and this method must be called before the service is started.
 
 ## Retry and back-off logic
 
 App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
 
-* 3 tries maximum per request.
+* Three tries maximum per request.
 * Each request has its own retry state machine.
 * All the transmission channels are disabled (until next app process) after one request exhausts all its retries.
 
 Back-off logic
 
-* 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
+* 50% randomization, first retry between 5 and 10 seconds, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.

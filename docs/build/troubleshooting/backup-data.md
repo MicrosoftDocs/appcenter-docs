@@ -3,7 +3,7 @@ title: Backing up Build data
 description: How to download build logs, binaries and symbols
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/27/2020
+ms.date: 07/13/2020
 ms.topic: article 
 ms.assetid: e2ec279b-f29d-49f9-a5bc-3b1189275458
 ms.service: vs-appcenter 
@@ -32,6 +32,8 @@ General References:
 - [Swagger API methods for Build](https://openapi.appcenter.ms/#/build)
 
 You can download logs & build artifacts using this API call: https://openapi.appcenter.ms/#/build/builds_getDownloadUri. The call works as long as the build data exists and your API credentials have permission to access that data.
+
+The API can also be used to record the current branch configuration settings, using https://openapi.appcenter.ms/#/build/branchConfigurations_get
 
 ## Backup using the App Center CLI
 General References:
