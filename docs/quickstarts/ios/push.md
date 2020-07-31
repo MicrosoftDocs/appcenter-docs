@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 ---
 
-# Push - Sample Swift App and Tutorials
+# Push - Sample Swift iOS App and Tutorials
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

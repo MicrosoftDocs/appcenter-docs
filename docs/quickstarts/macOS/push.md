@@ -13,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Push - Sample Swift App and Tutorials
+# Push - Sample Swift macOS App and Tutorials
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
