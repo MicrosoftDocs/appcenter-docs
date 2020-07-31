@@ -14,10 +14,10 @@ ms.tgt_pltfrm: macos
 ---
 
 # Uploading code signing files
-To sign your Mac builds, upload your provisioning profile (.provisionprofile) and certificate (.p12 file) when [configuring the build](~/build/macos/index.md), along with the password you have set for the certificate. Your certificate can be exported from Xcode, and your provisioning profile can be downloaded from the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles.
+To sign your Mac builds, upload your provisioning profile `.provisionprofile` and certificate file `.p12` when [configuring the build](~/build/macos/index.md), along with the password you have set for the certificate. Your certificate can be exported from Xcode, and your provisioning profile can be downloaded from the [Apple Developer Center](https://developer.apple.com/account/), under **Certificates, IDs & Profiles**.
 
 ## Uploading your certificate
-Your certificate can be found in your Keychain or through simply exporting it from Xcode as follows:
+Your certificate can be found in your Keychain. Or, you can export it from Xcode:
 
 1. In Xcode, click on "Xcode" in the menubar, "Preferences", then "Accounts"
 2. Select the Apple ID on the left and then the team that contains your certificate on the right
