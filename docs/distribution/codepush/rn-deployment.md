@@ -212,7 +212,7 @@ To set this up, perform the following steps:
 
     ![Setting](./images/rn-ios-10.png)
 
-    Name this new setting something like **Multi_Deployment_Config**. Go to the setting and add value `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` for **Release**. After that add value `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)` for **Staging**.
+    Name this setting **MULTI_DEPLOYMENT_CONFIG**. Go to the setting and add value `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` for **Release**. After that add value `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)` for **Staging**.
 
     ![MultiDeploymentConfig](./images/rn-ios-13.png)
 
@@ -226,7 +226,7 @@ To set this up, perform the following steps:
 
 8. Click the **+** button again on the toolbar and select **Add User-Defined Setting**
 
-    Name this new setting something like `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** config and your **Production** deployment key for the **Release** config.
+    Name this setting `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** configuration and your **Production** deployment key for the **Release** configuration.
 
     ![Setting Keys](./images/rn-ios-11.png)
 
