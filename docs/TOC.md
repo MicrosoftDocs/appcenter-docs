@@ -17,16 +17,13 @@
 # Build
 ## [Introduction](build/index.md)
 ## Android
-### [Introduction](build/android/index.md)
-### [Configure a build](build/android/first-build.md)
+### [Configure a build](build/android/index.md)
 ### [Code Signing](build/android/code-signing.md)
 ## iOS
-### [Introduction](build/ios/index.md)
-### [Configure a build](build/ios/first-build.md)
+### [Configure a build](build/ios/index.md)
 ### [Code Signing](build/ios/code-signing.md)
 ## macOS
-### [Introduction](build/macos/index.md)
-### [Configure a build](build/macos/first-build.md)
+### [Configure a build](build/macos/index.md)
 ### [Code Signing](build/macos/code-signing.md)
 ### [Upload signing files](build/macos/uploading-signing-files.md)
 ## React Native
@@ -35,8 +32,7 @@
 ### [iOS](build/react-native/ios/index.md)
 ### [Node.js selection](build/react-native/nodejs.md)
 ## Windows
-### [Introduction](build/windows/index.md)
-### [Configure a build](build/windows/uwp/first-build.md)
+### [Configure a build](build/windows/uwp/index.md)
 ### [Build results](build/windows/uwp/results.md)
 ## Xamarin
 ### [Introduction](build/xamarin/index.md)

@@ -130,7 +130,7 @@
         },
         {
             "source_path": "docs/build/android/first-build/java.md",
-            "redirect_url": "/appcenter/build/android/first-build"
+            "redirect_url": "/appcenter/build/android/"
         },
         {
             "source_path": "docs/build/android/first-build/xamarin.md",

@@ -32,7 +32,7 @@ After installing the GitHub App, sign in to App Center or create a new App Cente
 > [!NOTE]
 > If the GitHub app was installed in a GitHub organization, an App Center organization is automatically created and that organization will be the owner of the new apps. Other members must be added to the App Center organization to see or edit the apps in App Center. You can read more about [App Center organizations](~/dashboard/creating-and-managing-apps.md).
 
-Branches must be configured before a build can start. Read more about configuring your branch in the "Configure a build" articles respectively for [Android](~/build/android/first-build.md), [iOS](~/build/ios/first-build.md), and [Windows](~/build/windows/uwp/first-build.md). If you’re building a pull request, specify the configuration for the target branch of that pull request.
+Branches must be configured before a build can start. Read more about configuring your branch in the "Configure a build" articles respectively for [Android](~/build/android/index.md), [iOS](~/build/ios/index.md), and [Windows](~/build/windows/uwp/first-build.md). If you’re building a pull request, specify the configuration for the target branch of that pull request.
 
 ## Reporting Build Status to GitHub
 

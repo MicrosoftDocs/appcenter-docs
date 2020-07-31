@@ -17,7 +17,7 @@ In this document, you'll learn how to distribute your build to a store. You'll b
 
 ## Automatically distribute from your branch configuration
 
-First, the branch needs to be setup before it's ready to automatically distribute to the store. You can read more about configuring your branch in the *Configure a build* articles respectively for [Android](~/build/android/first-build.md) and [iOS](~/build/ios/first-build.md).
+First, the branch needs to be setup before it's ready to automatically distribute to the store. You can read more about configuring your branch in the *Configure a build* articles respectively for [Android](~/build/android/index.md) and [iOS](~/build/ios/index.md).
 
 Use the branch configuration to define the target store for the build. If you have not already connected to a store, you'll see the ability to do so from the drop-down. Follow the instructions to set up a [store connection](~/distribution/stores/index.md).
 
