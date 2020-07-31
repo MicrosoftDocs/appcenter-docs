@@ -71,9 +71,9 @@
 ### [Android](build/react-native/android/index.md)
 ### [iOS](build/react-native/ios/index.md)
 ### [Node.js selection](build/react-native/nodejs.md)
-## Windows
-### [Configure a build](build/windows/uwp/index.md)
-### [Build results](build/windows/uwp/results.md)
+## Windows (UWP)
+### [Configure a build](build/uwp/index.md)
+### [Build results](build/uwp/results.md)
 ## Xamarin
 ### [Introduction](build/xamarin/index.md)
 ### Android

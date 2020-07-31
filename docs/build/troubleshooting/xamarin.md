@@ -123,7 +123,7 @@ For Mac build machines:
 </configuration>
 ```
 
-For Windows build machines, refer to [UWP C#](~/build/windows/uwp/first-build.md).
+For Windows build machines, refer to [UWP C#](~/build/uwp/index.md).
 
 If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
