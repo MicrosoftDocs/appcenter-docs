@@ -2,6 +2,19 @@
 
 # [Help & Feedback](help.md)
 
+# General
+## [Introduction](general/index.md)
+## [Product Roadmap](general/roadmap.md)
+## [Accounts in App Center](general/account.md)
+## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
+## [Pricing](general/pricing.md)
+## [Billing](general/billing.md)
+## [Azure Subscriptions](general/azure-subscriptions.md)
+## [Platform Service Matrix](general/platform-service-matrix.md)
+## [Supported Browsers](general/browsers.md)
+## [Support Center](general/support-center.md)
+
 # Dashboard
 ## [Overview](dashboard/index.md)
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
@@ -13,6 +26,33 @@
 ## [Webhooks](dashboard/webhooks/index.md)
 ## [Slack App](dashboard/slack/index.md)
 ## [FAQ](dashboard/faq.md)
+
+# Quickstarts
+## [Start Here](quickstarts/index.md)
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
+## [Android](quickstarts/android/overview.md)
+### [Getting Started](quickstarts/android/getting-started.md)
+### [Build](quickstarts/android/build.md)
+### [Test](quickstarts/android/test.md)
+### [Distribute](quickstarts/android/distribute.md)
+### [Crashes](quickstarts/android/crashes.md)
+### [Analytics](quickstarts/android/analytics.md)
+### [Push](quickstarts/android/push.md)
+## [macOS](quickstarts/macos/overview.md)
+### [Getting Started](quickstarts/macos/getting-started.md)
+### [Build](quickstarts/macos/build.md)
+### [Distribute](quickstarts/macos/distribute.md)
+### [Crashes](quickstarts/macos/crashes.md)
+### [Analytics](quickstarts/macos/analytics.md)
+### [Push](quickstarts/macos/push.md)
+
 
 # Build
 ## [Introduction](build/index.md)
@@ -305,19 +345,6 @@
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
-# General
-## [Introduction](general/index.md)
-## [Product Roadmap](general/roadmap.md)
-## [Accounts in App Center](general/account.md)
-## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
-## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
-## [Pricing](general/pricing.md)
-## [Billing](general/billing.md)
-## [Azure Subscriptions](general/azure-subscriptions.md)
-## [Platform Service Matrix](general/platform-service-matrix.md)
-## [Supported Browsers](general/browsers.md)
-## [Support Center](general/support-center.md)
-
 # GDPR
 ## [Introduction](gdpr/index.md)
 ## [Your Data](gdpr/your-data.md)
@@ -363,28 +390,3 @@
 
 # [Resources](general/resources.md)
 
-# Quickstarts
-## [Start Here](quickstarts/index.md)
-## [iOS](quickstarts/ios/overview.md)
-### [Getting started](quickstarts/ios/getting-started.md)
-### [Build](quickstarts/ios/build.md)
-### [Test](quickstarts/ios/test.md)
-### [Distribute](quickstarts/ios/distribute.md)
-### [Crashes](quickstarts/ios/crashes.md)
-### [Analytics](quickstarts/ios/analytics.md)
-### [Push](quickstarts/ios/push.md)
-## [Android](quickstarts/android/overview.md)
-### [Getting Started](quickstarts/android/getting-started.md)
-### [Build](quickstarts/android/build.md)
-### [Test](quickstarts/android/test.md)
-### [Distribute](quickstarts/android/distribute.md)
-### [Crashes](quickstarts/android/crashes.md)
-### [Analytics](quickstarts/android/analytics.md)
-### [Push](quickstarts/android/push.md)
-## [macOS](quickstarts/macos/overview.md)
-### [Getting Started](quickstarts/macos/getting-started.md)
-### [Build](quickstarts/macos/build.md)
-### [Distribute](quickstarts/macos/distribute.md)
-### [Crashes](quickstarts/macos/crashes.md)
-### [Analytics](quickstarts/macos/analytics.md)
-### [Push](quickstarts/macos/push.md)
