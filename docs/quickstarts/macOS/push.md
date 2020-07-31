@@ -14,6 +14,9 @@ dev_langs:
 ---
 
 # Push - Sample Swift App and Tutorials
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+
 In this tutorial you will learn how to send push notifications to users through App Center. Code allowing App Center to send notifications is included in the sample Swift app.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.

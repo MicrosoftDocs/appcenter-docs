@@ -14,6 +14,9 @@ ms.assetid: a2a75032-0159-447b-9704-e420a3872003
 
 # Send Push Notifications to Users
 
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Prerequisites
