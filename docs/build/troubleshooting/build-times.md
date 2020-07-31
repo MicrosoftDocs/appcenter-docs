@@ -15,7 +15,7 @@ ms.custom: build
 There are many reasons why build duration can be higher when using App Center Build:
 
 * When running your build locally, many things are cached, including NuGet packages, pods, dependencies and so on. In App Center, we always do a clean build, and also redownload dependencies not already included in your repository.
-* [Build configuration differences](~/build/troubleshooting/build-failed#if-building-works-locally-but-not-in-app-center) between your local build compared to App Center. For example, a signed device build typically takes longer than a simulator build. 
+* [Build configuration differences](~/build/troubleshooting/build-failed.md#if-building-works-locally-but-not-in-app-center) between your local build compared to App Center. For example, a signed device build typically takes longer than a simulator build. 
 * The CPU power of your development machine may be higher than the CPU of our VMs.
 * If you have more builds queued then you have build concurrency for your organization.
 * If your build includes other production tasks like running tests or publishing binaries those can also increase the total completion time.
@@ -26,4 +26,4 @@ We run the test as part of the build operation, which gives the added build time
 Expect an additional **10 minutes of build time**.
 
 ## Contact Support
-We're always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, contact us on the App Center website using **? > Contact Support**.
+We're always working on improving build times. If you consider the build duration for your app is too long compared to your expectations, contact us on the App Center website (appcenter.ms) using **? > Contact Support**.
