@@ -4,7 +4,7 @@ description: Upload a crash report, e.g. if you don't want to use our SDK or dev
 keywords: crashes, diagnostics, errors, upload
 author: vaagnavanesyan
 ms.author: v-vaavan
-ms.date: 01/25/2020
+ms.date: 08/10/2020
 ms.topic: article
 ms.assetid: 7f5135ee-c133-4f1f-9376-978af1e3405d
 ms.service: vs-appcenter
@@ -17,8 +17,7 @@ If you have a native crash report from an Apple device, you can upload it via th
 
 
 ## Retrieve crash reports from Apple devices
-To retrieve crash reports from an Apple device, follow the instructions in [Apple's developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-ACQUIRING_CRASH_AND_LOW_MEMORY_REPORTS).
-
+To retrieve crash reports from an Apple device, follow the instructions in [Apple's developer documentation](https://developer.apple.com/documentation/xcode/diagnosing_issues_using_crash_reports_and_device_logs/acquiring_crash_reports_and_diagnostic_logs).
 
 ## Manually upload crash reports via Diagnostics UI
 To manually upload Apple crash reports, follow the instructions below:
@@ -31,3 +30,6 @@ To manually upload Apple crash reports, follow the instructions below:
 6. Once your report is successfully uploaded, you will see a confirmation message.
 
 Please allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
+
+> [!NOTE]
+> Please don't try to upload reports downloaded from "raw" tab on App Center portal because it could lead to unpredictable results as it uses internal format which is different different from the Apple's one.
