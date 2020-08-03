@@ -14,23 +14,23 @@ ms.service: vs-appcenter
 
 The table below lists all the Operating System and Platforms and their supported services in App Center:
 
-| OS/Platform            | Build | Test | Distribute | Crashes | Analytics | Push |
-| :--------------------- | :---: | :--: | :--------: | :-----: | :-------: | :--: |
-| Android                |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| iOS                    |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| macOS                  |  ✅   |  ❌  |     ✅     |   ✅    |    ✅     |  ✅  |
-| tvOS                   |  ❌   |  ❌  |     ❌     |   ✅    |    ✅     |  ❌  |
-| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Windows - UWP          |  ✅   |  ❌  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |
-| Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅    |    ✅     |  ❌  |
-| Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Unity - UWP*           |  ❌   |  ❌  |     ✅     |   ❌    |    ✅     |  ✅  |
-| Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
-| Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅    |    ✅     |  ✅  |
+| OS/Platform            | Build | Test | Distribute | Diagnostics | Analytics |
+| :--------------------- | :---: | :--: | :--------: | :-----:     | :-------: |
+| Android                |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
+| iOS                    |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| macOS                  |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
+| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| tvOS                   |  ❌   |  ❌  |     ❌     |   ✅       |    ✅     |
+| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Unity - UWP*           |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
+| Windows - UWP          |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
+| Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
+| Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
+| Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 
 *For UWP, Hololens support has not been verified.
