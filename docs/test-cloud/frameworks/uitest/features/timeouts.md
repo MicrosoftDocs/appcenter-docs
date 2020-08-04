@@ -21,7 +21,8 @@ Sometimes it's necessary to pause test execution to wait for the UI to update du
 
 The methods `IApp.WaitForElement`, and `IApp.WaitForNoElement` fundamentally work the same: they'll wait for a query to be satisfied and will throw a `TimeoutException` if it isn't satisfied in the specified time limit.
 
-By default, UITests waits up to 15 seconds for tests running locally, and one minute for tests running in App Center before throwing the `TimeoutException`. If you specify a different wait time, that will override the default, and apply to both local & App Center tests. 
+> [!TIP]
+> By default, UITests waits up to 15 seconds for tests running locally, and one minute for tests running in App Center before throwing the `TimeoutException`. If you specify a different wait time, that will override the default, and apply to both local & App Center tests. 
 
 `IApp.WaitForElement` is useful to confirm the presence of a view, such as a success message or icon. This sample is an example of `IApp.WaitForElement` that will wait up to 90 seconds for a view marked with `success_message_label` to appear:
 
