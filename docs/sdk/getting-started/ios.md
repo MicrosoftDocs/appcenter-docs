@@ -154,9 +154,13 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Add the following lines into the specific method.
-1. For UI Kit AppDelegate lifecycle you need to add into `didFinishLaunchingWithOptions` delegate method;
-2. For Swift UI App lifecycle you need to create init() method into `struct` and add initialization code in it.
+#### UI Kit AppDelegate
+Add initialisation code into `didFinishLaunchingWithOptions` delegate method.
+
+#### Swift UI App lifecycle
+Create init() method into `struct` and add initialisation code in it.
+
+Use this code into methods described before, to start SDK:
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
