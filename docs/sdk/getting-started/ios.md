@@ -134,11 +134,12 @@ Now that you've integrated the frameworks in your application, it's time to star
 ## 4. Start the SDK
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to call each one when starting the SDK.
+The instructions below are slightly different depending on what lifecycle you are using. Starting from Xcode 12 you can select one of two lifecycles: "Swift UI App" (selected by default in Xcode 12) and "UI Kit AppDelegate". If you are using Xcode 11 or lower, then you are using UI Kit AppDelegate lifecycle.
 If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
 
-Open the project's **AppDelegate** file and add the following import statements:
+Open the project's **AppDelegate** file (for UI Kit AppDelegate lifecycle) or **<ProjectName>App.swift** file (for Swift UI App lifecycle) and add the following import statements:
 
 ```objc
 @import AppCenter;
@@ -153,7 +154,9 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
+Add the following lines into the specific method.
+1. For UI Kit AppDelegate lifecycle you need to add into `didFinishLaunchingWithOptions` delegate method;
+2. For Swift UI App lifecycle you need to create init() method into `struct` and add initialization code in it.
 
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
