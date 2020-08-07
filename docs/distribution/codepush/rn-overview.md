@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 12/12/2019
+ms.date: 07/27/2020
 ms.topic: article
 ms.assetid: FF626D21-2A99-457E-B632-AAC354782B54
 ms.service: vs-appcenter
@@ -58,17 +58,18 @@ We work hard to respond to new React Native releases, but they do occasionally b
 
 ### Supported Components
 
-When using the React Native assets system (like using the `require("./foo.png")` syntax), the following list represents the set of core components (and props) that support having their referenced images updated via CodePush:
+When using the React Native assets system (like using the `require("./foo.png")` syntax), the following list represents the set of core components (and props) that support having their referenced images and videos updated via CodePush:
 
 | Component                                       | Prop(s)                                  |
 |-------------------------------------------------|------------------------------------------|
-| `Image`                                         | `source`   |
+| `Image`                                         | `source`                                 |
 | `MapView.Marker` <br />*(Requires [react-native-maps](https://github.com/lelandrichardson/react-native-maps) `>=O.3.2`)* | `image`                             |
 | `ProgressViewIOS`                               | `progressImage`, `trackImage`            |
 | `TabBarIOS.Item`                                | `icon`, `selectedIcon`                   |
 | `ToolbarAndroid` <br />*(React Native 0.21.0+)* | `actions[].icon`, `logo`, `overflowIcon` |
+| `Video`                                         | `source`                                 |
 
-The following list represents the set of components (and props) that don't currently support their assets being updated via CodePush, due to their dependency on static images (like using the `{ uri: "foo" }` syntax):
+The following list represents the set of components (and props) that don't currently support their assets being updated via CodePush, due to their dependency on static images and videos (like using the `{ uri: "foo" }` syntax):
 
 | Component   | Prop(s)                                                              |
 |-------------|----------------------------------------------------------------------|
@@ -76,6 +77,13 @@ The following list represents the set of components (and props) that don't curre
 | `Video`     | `source`                                                             |
 
 We will update this list as new core components are released, which support referencing assets, to ensure users know what exactly they can expect to update using CodePush.
+
+> [!NOTE]
+> CodePush only works with Video components when using `require` in the source prop. For example:
+
+```javascript
+<Video source={require("./foo.mp4")} />
+```
 
 ## Store Guideline Compliance
 While Google Play and internally distributed apps (for example Enterprise, Fabric, HockeyApp) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
