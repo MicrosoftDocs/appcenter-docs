@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 12/12/2019
+ms.date: 07/27/2020
 ms.topic: article
 ms.assetid: 43EB5F45-7A20-4BE9-8DBE-8F0D2CCC2B4E
 ms.service: vs-appcenter
@@ -208,25 +208,32 @@ To set this up, perform the following steps:
 
 6. Select the **Build Settings** tab
 
-7. Go to **Build Location > Per-configuration Build Products Path > Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
+7. Click the **+** button on the toolbar and select **Add User-Defined Setting**
 
-   ![BuildFilesPath](./images/rn-ios-9.png)
+    ![Setting](./images/rn-ios-10.png)
 
-   > [!NOTE]
-   > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+    Name this setting **MULTI_DEPLOYMENT_CONFIG**. Go to the setting and add value `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` for **Release**. After that add value `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)` for **Staging**.
 
-8. Click the **+** button on the toolbar and select **Add User-Defined Setting**
+    ![MultiDeploymentConfig](./images/rn-ios-13.png)
 
-   ![Setting](./images/rn-ios-10.png)
+    > [!NOTE]
+    > For Xcode 10 and lower version: Go to **Build Location > Per-configuration Build Products Path > Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
 
-9. Name this new setting something like `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** config and your **Production** deployment key for the **Release** config.
+    ![BuildFilesPath](./images/rn-ios-9.png)
+
+    > [!NOTE]
+    > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+
+8. Click the **+** button again on the toolbar and select **Add User-Defined Setting**
+
+    Name this setting `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** configuration and your **Production** deployment key for the **Release** configuration.
 
     ![Setting Keys](./images/rn-ios-11.png)
 
     > [!NOTE]
-    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
+    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.
 
-10. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
+9. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
     ![Info.plist](./images/rn-ios-12.png)
 
