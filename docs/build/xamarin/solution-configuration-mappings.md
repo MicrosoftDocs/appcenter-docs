@@ -2,10 +2,8 @@
 title: Xamarin Solution File Configuration Mappings
 description: How to set up configuration mappings for your Xamarin solution
 keywords: build, ios, xamarin, solution, configuration, mapping
-author: elamalani
-ms.author: emalani
-ms.reviewer: kegr
-ms.date: 04/29/2020
+author: king-of-spades
+ms.date: 08/07/2020
 ms.topic: article
 ms.assetid: 1f49c30b-3657-4e8e-9ffa-9a07f16a6751
 ms.service: vs-appcenter
@@ -16,7 +14,7 @@ ms.tgt_pltfrm: xamarin
 # Configuration mappings
 Xamarin Solutions can be configured to build certain projects and ignore others using custom build configurations. These configurations can minimize possible errors and reduce the build time for your code. 
 
-This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](https://www.visualstudio.com/ru-ru/docs/build/apps/mobile/xamarin) 
+This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin)
 
 ## Modifying Solution Configuration Mappings
 Where to change the **Configuration Mapping** depends on the IDE you use. 
