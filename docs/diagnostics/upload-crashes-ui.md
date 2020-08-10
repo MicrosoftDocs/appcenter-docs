@@ -32,4 +32,5 @@ To manually upload Apple crash reports, follow the instructions below:
 Please allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
 
 > [!NOTE]
-> Please don't try to upload reports downloaded from "raw" tab on App Center portal because it could lead to unpredictable results as it uses internal format which is different from the Apple's one.
+> Uploading error reports retrieved from the App Center portal will lead to unpredictable results and is not supported.
+> While the raw App Center text format looks similar to Apple's crash report format, it is actually a different format which is not guaranteed to be compatible.
