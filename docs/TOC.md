@@ -76,12 +76,12 @@
 ### [Build results](build/uwp/results.md)
 ## Xamarin
 ### [Introduction](build/xamarin/index.md)
+### [Solution configuration mappings](build/xamarin/solution-configuration-mappings.md)
 ### Android
 #### [Introduction](build/xamarin/android/index.md)
 #### [Code Signing](build/xamarin/android/code-signing.md)
 ### iOS
 #### [Introduction](build/xamarin/ios/index.md)
-#### [Solution configuration mappings](build/xamarin/ios/solution-configuration-mappings.md)
 ## [Source Control System](build/connect.md)
 ## [Branches and Build configurations](build/branches.md)
 ## [Build scripts](build/custom/scripts/index.md)
