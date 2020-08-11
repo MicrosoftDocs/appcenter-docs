@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: App Center LinkedIn Learning Course
 description: Links to additional resources related to App Center
 keywords: app center
 author: jwargo
@@ -10,7 +10,7 @@ ms.assetid: aefc34a7-9e33-4f96-a91c-a508763aee35
 ms.service: vs-appcenter
 ---
 
-# Resources
+# App Center LinkedIn Learning Course
 
 LinkedIn Learning Course: [App Center: Continuous Integration and Delivery for iOS](https://www.linkedin.com/learning/app-center-continuous-integration-and-delivery-for-ios?u=3322).
 

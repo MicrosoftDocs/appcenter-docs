@@ -15,22 +15,11 @@
 ## [Supported Browsers](general/browsers.md)
 ## [Support Center](general/support-center.md)
 
-# Dashboard
-## [Overview](dashboard/index.md)
-## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
-## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
-## [Creating and managing teams](dashboard/creating-and-managing-teams.md)
-## [Email notifications](dashboard/email-notifications/index.md)
-## [Managing your Apple ID and certificates](dashboard/manage-apple-secrets.md)
-## [Bug Tracker Integration](dashboard/bugtracker/index.md)
-## [Webhooks](dashboard/webhooks/index.md)
-## [Slack App](dashboard/slack/index.md)
-## [FAQ](dashboard/faq.md)
-
-# Quickstarts
-## [Start Here](quickstarts/index.md)
+# Getting Started
+## [Quickstarts](quickstarts/index.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
+### [LinkedIn Learning Course](quickstarts/ios/linkedin.md)
 ### [Build](quickstarts/ios/build.md)
 ### [Test](quickstarts/ios/test.md)
 ### [Distribute](quickstarts/ios/distribute.md)
@@ -52,6 +41,21 @@
 ### [Crashes](quickstarts/macos/crashes.md)
 ### [Analytics](quickstarts/macos/analytics.md)
 ### [Push](quickstarts/macos/push.md)
+
+
+
+# Dashboard
+## [Overview](dashboard/index.md)
+## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
+## [Creating and managing organizations](dashboard/creating-and-managing-organizations.md)
+## [Creating and managing teams](dashboard/creating-and-managing-teams.md)
+## [Email notifications](dashboard/email-notifications/index.md)
+## [Managing your Apple ID and certificates](dashboard/manage-apple-secrets.md)
+## [Bug Tracker Integration](dashboard/bugtracker/index.md)
+## [Webhooks](dashboard/webhooks/index.md)
+## [Slack App](dashboard/slack/index.md)
+## [FAQ](dashboard/faq.md)
+
 
 
 # Build
@@ -388,5 +392,5 @@
 ## [App Center API tokens and documentation](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# [Resources](general/resources.md)
+
 
