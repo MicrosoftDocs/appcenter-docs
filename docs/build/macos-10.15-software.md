@@ -8,8 +8,9 @@ ms.date: 08/10/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
+ms.assetid: 72b0e628-3211-412e-ab64-ef6e0a0e0d07
 ---
-# macOS info
+# macOS 10.15 info
 - System Version: macOS 10.15.6 (19G73)
 - Kernel Version: Darwin 19.6.0
 - System Integrity Protection: Enabled
