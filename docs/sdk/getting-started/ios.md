@@ -155,10 +155,12 @@ import AppCenterCrashes
 ### 4.2 Add the `start:withServices:` method
 
 #### UI Kit AppDelegate
+
 Add initialisation code into `didFinishLaunchingWithOptions` delegate method.
 
 #### Swift UI App lifecycle
-Create init() method into `struct` and add initialisation code in it.
+
+Create `init()` method into `struct` and add initialisation code in it.
 
 Use this code into methods described before, to start SDK:
 
