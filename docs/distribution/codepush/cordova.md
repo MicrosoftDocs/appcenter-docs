@@ -168,18 +168,18 @@ The `release-cordova` command enables such a simple workflow because it understa
 
 ```shell
 # Release a mandatory update with a changelog
-code-push release-cordova -a <ownerName>/MyApp-ios -m --description "Modified the header color"
+appcenter codepush release-cordova -a <ownerName>/MyApp-ios -m --description "Modified the header color"
 
 # Release a dev Android build to just 1/4 of your end users
-code-push release-cordova -a <ownerName>/MyApp-Android --rollout 25%
+appcenter codepush release-cordova -a <ownerName>/MyApp-android --rollout 25
 
 # Release an update that targets users running any 1.1.* binary, as opposed to
 # limiting the update to exact version name in the config.xml file
-code-push release-cordova -a <ownerName>/MyApp-Android --target-binary-version "~1.1.0"
+appcenter codepush release-cordova -a <ownerName>/MyApp-android --target-binary-version "~1.1.0"
 
 # Release the update now but mark it as disabled
 # so that no users can download it yet
-code-push release-cordova -a <ownerName>/MyApp-ios -x
+appcenter codepush release-cordova -a <ownerName>/MyApp-ios -x
 ```
 
 The CodePush client supports differential updates, so even though you are releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
