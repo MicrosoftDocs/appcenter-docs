@@ -36,7 +36,7 @@ Before your first build, the Android project needs to be configured.
 By default, a new build is triggered every time a developer pushes to a configured branch. This is referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
 
 ### 3.2. Build variant
-The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
+The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle (app level) file. Select which build variant should be built.
 
 > [!NOTE]
 > App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one of your gradle declared Product Flavors. Detection of Flavor Dimensions (combinations of multiple product flavors) isn't supported at this time. [Feature Request - multiple flavor dimensions](https://github.com/microsoft/appcenter/issues/32)
@@ -44,7 +44,7 @@ The available build variants will populate from the Build Types and Product Flav
 ### 3.3. Build Android App Bundle (.aab)
 The Android App Bundle is a distribution format that's uploaded to the Play Store and used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/).
 
-Toggle the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` file contains the `android.bundle` block, this option will already be on.
+Toggle the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` [(app level)](https://developer.android.com/studio/build) file contains the `android.bundle` block, this option will already be on.
 
 ### 3.4. Increment version number
 When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
@@ -55,7 +55,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 ### 3.6. Launch your successful build on a real device
 Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
-### 3.7. Configure from the build.gradle File
+### 3.7. Configure from the build.gradle [(app level)](https://developer.android.com/studio/build) File
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
 
 ### 3.8. Distribute the build
