@@ -155,7 +155,7 @@ In its most basic form, this command only requires one parameter: your owner nam
 appcenter codepush release-cordova -a <ownerName>/<appName>
 
 appcenter codepush release-cordova -a <ownerName>/MyApp-ios
-appcenter codepush release-cordova -a <ownerName>/MyApp-Android
+appcenter codepush release-cordova -a <ownerName>/MyApp-android
 ```
 
 > [!TIP]
