@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: article
 ms.assetid: 43EB5F45-7A20-4BE9-8DBE-8F0D2CCC2B4E
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ Taking advantage of the `Staging` and `Production` deployments allows you to ach
 4. Run your production/release build of your app, sync the update from the server and verify it works as expected
 
    > [!TIP]
-   > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `code-push promote -a <ownerName>/<appName> -s Staging -d Production -r 20%`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100%`.
+   > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `appcenter codepush promote -a <ownerName>/<appName> -s Staging -d Production -r 20`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100`.
 
 You will notice that the above steps refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is just like handling environment-specific config for any other service your app uses (like Facebook). However, if you are looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platform(s) your app is targeting.
 
@@ -39,8 +39,8 @@ You will notice that the above steps refer to a "staging build" and "production 
 
 The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release). This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
 
-> [!NOTE] 
-> As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
+> [!NOTE]
+> As a reminder, you can retrieve these keys by running `appcenter codepush deployment list <ownerName>/<appName> -k` from your terminal.*
 
 To set this up, perform the following steps:
 
