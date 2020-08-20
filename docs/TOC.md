@@ -318,6 +318,7 @@
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)
 ## [Azure Subscriptions](general/azure-subscriptions.md)
+## [App Center Security and Compliance](general/app-center-security.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Supported Browsers](general/browsers.md)
 ## [Support Center](general/support-center.md)

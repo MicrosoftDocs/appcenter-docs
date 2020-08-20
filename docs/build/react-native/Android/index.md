@@ -40,21 +40,21 @@ Before your first build, you must configure the React Native project.
 
 ### 3.1. Project
 
-Select your project’s `package.json`. App Center will automatically extract information from its associated **build.gradle** file, including dependencies, build tools version, build types, and product flavors.
+Select your project’s `package.json`. App Center will automatically extract information from its associated **build.gradle [(app level)](https://developer.android.com/studio/build)** file, including dependencies, build tools version, build types, and product flavors.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository.
 
 ### 3.2. Build variant
 
-The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle** file. Select which build variant should be built.
+The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle [(app level)](https://developer.android.com/studio/build)** file. Select which build variant should be built.
 
 > [!NOTE]
 > App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one optional Product Flavor. Detecting combinations of multiple product flavors are not supported at this time.
 
 ### 3.3. Node.js version
 
-Select the Node.js version to use for the build 
+Select the Node.js version to use for the build
 Read more about [how to select Node.js version](~/build/react-native/nodejs.md)
 
 ### 3.4. Build triggers
@@ -65,7 +65,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
 
-Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` file contains the `android.bundle` block, this option will automatically be toggled on.
+Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` [(app level)](https://developer.android.com/studio/build) file contains the `android.bundle` block, this option will automatically be toggled on.
 
 ### 3.6. Increment version number
 

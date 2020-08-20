@@ -4,7 +4,7 @@ description: Software used on macOS 10.14 build machines
 keywords: build
 author: elamalani
 ms.author: elamalani
-ms.date: 07/21/2020
+ms.date: 08/17/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -12,41 +12,38 @@ ms.custom: build
 # macOS info
 - System Version: macOS 10.14.6 (18G6020)
 - Kernel Version: Darwin 18.7.0
-- System Integrity Protection: Enabled
-- Image Version: 20200719.1
+- Image Version: 20200813.2
 
 ## Installed Software
 ### Language and Runtime
-- Java 1.7: (Zulu 7.38.0.11-CA-macosx) (build 1.7.0_262-b10)
-- Java 1.8: (AdoptOpenJDK)(build 1.8.0_262-b10) (default)
+- Java 1.7: (Zulu 7.40.0.15-CA-macosx) (build 1.7.0_272-b10)
+- Java 1.8: (AdoptOpenJDK)(build 1.8.0_265-b01) (default)
 - Java 11: AdoptOpenJDK (build 11.0.8+10)
 - Java 12: AdoptOpenJDK (build 12.0.2+10)
 - Java 13: AdoptOpenJDK (build 13.0.2+8)
 - Java 14: AdoptOpenJDK (build 14.0.2+12)
-- Rust 1.45.0
 - Clang/LLVM 10.0.0
-- gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0
-- gcc-9 (Homebrew GCC 9.3.0) 9.3.0
-- GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0
-- GNU Fortran (Homebrew GCC 9.3.0) 9.3.0
-- Node.js v6.17.0
+- gcc-8 (Homebrew GCC 8.4.0_1) 8.4.0  — available by `gcc-8` alias
+- gcc-9 (Homebrew GCC 9.3.0) 9.3.0  — available by `gcc-9` alias
+- GNU Fortran (Homebrew GCC 8.4.0_1) 8.4.0  — available by `gfortran-8` alias
+- GNU Fortran (Homebrew GCC 9.3.0) 9.3.0  — available by `gfortran-9` alias
+- Node.js v8.17.0
 - NVM 0.35.3
-- NVM - Cached node versions: v6.17.1 v8.17.0 v10.21.0 v12.18.2 v13.14.0 v14.5.0
-- PowerShell 7.0.3
+- NVM - Cached node versions: v6.17.1 v8.17.0 v10.22.0 v12.18.3 v13.14.0 v14.8.0
 - Python 2.7.17
-- Python 3.8.4
+- Python 3.8.5
 - Ruby 2.6.6p146
 - .NET SDK 2.1.300 2.1.301 2.1.302 2.1.401 2.1.402 2.1.403 2.1.500 2.1.502 2.1.503 2.1.504 2.1.505 2.1.506 2.1.507
-- Go 1.14.5
-- PHP 7.4.8
-- julia 1.4.2
+- R 4.0.2
+- Go 1.14.7
+- PHP 7.4.9
+- julia 1.5.0
 
 ### Package Management
-- Rustup 1.22.1
 - Bundler version 2.1.4
 - Carthage 0.35.0
 - CocoaPods 1.9.3
-- Homebrew 2.4.8
+- Homebrew 2.4.11
 - NPM 3.10.10
 - Yarn 1.22.4
 - NuGet 4.7.0.5148
@@ -54,62 +51,67 @@ ms.custom: build
 - Pip 20.1.1 (python 3.8)
 - Miniconda 4.8.3
 - RubyGems 3.1.4
+- Composer 1.10.10
 
 ### Project Management
 - Apache Maven 3.6.3
-- Gradle 6.5.1
+- Gradle 6.6
 - Apache Ant(TM) 1.10.8
 
 ### Utilities
 - Curl 7.71.1
-- Git: 2.27.0
+- Git: 2.28.0
 - Git LFS: 2.11.0
-- GitHub CLI: 0.11.0
+- GitHub CLI: 0.11.1
 - Hub CLI: 2.14.2
 - GNU Wget 1.20.3
 - Subversion (SVN) 1.14.0
-- Packer 1.6.0
-- GNU parallel 20200622
+- Packer 1.6.1
+- GNU parallel 20200722
 - OpenSSL 1.0.2t  10 Sep 2019 `(/usr/local/opt/openssl -> /usr/local/Cellar/openssl/1.0.2t)`
 - jq 1.6
 - gpg (GnuPG) 2.2.21
-- psql (PostgreSQL) 12.3
-- PostgreSQL 12.3
+- psql (PostgreSQL) 12.4
+- PostgreSQL 12.4
 - aria2 1.35.0
-- azcopy 10.5.0
+- azcopy 10.5.1
 - zstd 1.4.5
 - bazel 3.4.1
-- bazelisk v1.5.0
-- helm v3.2.4+g0ad800e
+- bazelisk 1.6.0
+- helm v3.3.0+g8a4aeec
 - virtualbox 6.1.12r139181
-- mongo v4.2.8
-- mongod v4.2.8
+- mongo v4.4.0
+- mongod v4.4.0
 - Vagrant 2.2.9
 - 7-Zip 16.02
 
 ### Tools
-- Fastlane 2.152.0
-- Cmake 3.17.3
+- Fastlane 2.156.1
+- Cmake 3.18.1
 - App Center CLI 1.2.2
-- Azure CLI 2.9.1
-- AWS CLI 2.0.32
-- AWS SAM CLI 0.53.0
+- Azure CLI 2.10.1
+- AWS CLI 2.0.39
+- AWS SAM CLI 1.1.0
 - AWS Session Manager CLI 1.1.61.0
-- Aliyun CLI 3.0.53
-- GHCup v0.1.6
-- GHC 8.10.1
+- Aliyun CLI 3.0.56
+- GHCup v0.1.8
+- GHC 8.10.2
 - Cabal 3.2.0.0
-- Stack 2.3.1
+- Stack 2.3.3
+
+### Linters
+- yamllint 1.24.2
+- SwiftLint 0.40.0
 
 ### Browsers
 - Safari 13.1.2 (14609.3.5.1.5)
 - SafariDriver 13.1.2 (14609.3.5.1.5)
-- Google Chrome 84.0.4147.89 
+- Google Chrome 84.0.4147.125 
 - ChromeDriver 84.0.4147.30
-- Microsoft Edge 84.0.522.40 
-- MSEdgeDriver 84.0.522.40
-- Mozilla Firefox 78.0.2
-- geckodriver 0.26.0
+- Microsoft Edge 84.0.522.59 
+- MSEdgeDriver 84.0.522.59
+- Mozilla Firefox 79.0
+- geckodriver 0.27.0
 
 ### Cached Tools
 #### Ruby
@@ -123,7 +125,7 @@ ms.custom: build
 - 3.5.9
 - 3.6.11
 - 3.7.8
-- 3.8.4
+- 3.8.5
 
 #### PyPy
 - 2.7.13 [PyPy 7.3.1]
@@ -131,15 +133,36 @@ ms.custom: build
 
 #### Node.js
 - 8.17.0
-- 10.21.0
-- 12.18.2
-- 14.5.0
+- 10.22.0
+- 12.18.3
+- 14.8.0
 
 #### Go
 - 1.11.13
 - 1.12.17
-- 1.13.14
-- 1.14.6
+- 1.13.15
+- 1.14.7
+- 1.15.0
+
+### Rust Tools
+- Rust 1.45.2
+- Rustup 1.22.1
+
+#### Packages
+- Bindgen 0.54.1
+- Cbindgen 0.14.3
+- Cargo-outdated v0.9.11
+- Cargo-audit 0.12.0
+
+### PowerShell Tools
+- PowerShell 7.0.3
+
+#### PowerShell Modules
+| Module     | Version |
+| ---------- | ------- |
+| Az         | 4.5.0   |
+| MarkdownPS | 1.9     |
+| Pester     | 4.10.1  |
 
 ### Xamarin
 #### Visual Studio for Mac
@@ -346,7 +369,7 @@ ms.custom: build
 #### Android SDK Platform-Tools
 | Package Name   | Description                                 |
 | -------------- | ------------------------------------------- |
-| platform-tools | Android SDK Platform-Tools, Revision 30.0.3 |
+| platform-tools | Android SDK Platform-Tools, Revision 30.0.4 |
 
 #### Android SDK Platforms
 | Package Name | Description                         |
@@ -365,8 +388,8 @@ ms.custom: build
 | android-26   | Android SDK Platform 26, Revision 2 |
 | android-27   | Android SDK Platform 27, Revision 3 |
 | android-28   | Android SDK Platform 28, Revision 6 |
-| android-29   | Android SDK Platform 29, Revision 4 |
-| android-30   | Android SDK Platform 30, Revision 2 |
+| android-29   | Android SDK Platform 29, Revision 5 |
+| android-30   | Android SDK Platform 30, Revision 3 |
 
 #### Android SDK Build-Tools
 | Package Name       | Description                              |
