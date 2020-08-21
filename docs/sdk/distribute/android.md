@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/23/2020
+ms.date: 08/21/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -24,11 +24,11 @@ dev_langs:
 
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
+> [!WARNING]
+> Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+
 > [!NOTE]
-> There are a few things to consider when using in-app updates:
->
-> 1. If you have released your app in the Play Store, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -46,9 +46,6 @@ The App Center SDK is designed with a modular approach – a developer only need
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
-
-    > [!WARNING]
-    > Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
     > [!NOTE]
     > If the version of your Android Gradle plugin is lower than 3.0.0, you need to replace the **implementation** with **compile**.
