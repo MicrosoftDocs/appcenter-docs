@@ -80,7 +80,6 @@ HTC U Ultra | 7.0
 HTC U Ultra | 8.0.0
 HTC U11 | 8.0.0
 HTC U11 | 9
-HTC U12+ | 8.0.0
 HTC U12+ | 9
 Huawei Ascend G750 | 4.2.2
 Huawei Ascend Y511 | 4.2.2
@@ -146,6 +145,7 @@ Motorola Moto G5S Plus | 7.1.1
 Motorola Moto G5S Plus | 8.1.0
 Motorola Moto G6 | 8.0.0
 Motorola Moto G6 Plus | 8.0.0
+Motorola Moto G7 Play | 10
 Motorola Moto G7 Play | 9
 Motorola Moto G7 Plus | 10
 Motorola Moto G7 Plus | 9
@@ -185,6 +185,7 @@ OnePlus 2 | 5.1.1
 OnePlus 2 | 6.0.1
 OnePlus 3T | 7.0
 OnePlus 3T | 9
+OnePlus 5T | 10
 OnePlus 5T | 9
 OnePlus 6 | 10
 OnePlus 6 | 9
@@ -198,6 +199,7 @@ OnePlus 7T | 10
 OnePlus 7T Pro | 10
 OnePlus 8 | 10
 OnePlus 8 Pro | 10
+OnePlus Nord | 10
 OnePlus One | 4.4.4
 Oppo N1 | 4.3
 Samsung Galaxy A3 | 4.4.4
@@ -254,6 +256,8 @@ Samsung Galaxy Note 10+ | 10
 Samsung Galaxy Note 10+ | 9
 Samsung Galaxy Note 10.1 3G & WiFi | 4.1.2
 Samsung Galaxy Note 10.1 WiFi | 4.1.2
+Samsung Galaxy Note 20 | 10
+Samsung Galaxy Note 20 Ultra | 10
 Samsung Galaxy Note 3 (Octo-Core) | 4.4.2
 Samsung Galaxy Note 3 (Quad-Core) | 4.4.2
 Samsung Galaxy Note 4 | 4.4.4
@@ -350,6 +354,7 @@ Samsung Galaxy Tab 3 Lite 7.0 | 4.4.4
 Samsung Galaxy Tab 4 10.1 | 4.4.2
 Samsung Galaxy Tab 4 7.0 | 4.4.2
 Samsung Galaxy Tab 4 8.0 | 4.4.2
+Samsung Galaxy Tab A (2019) | 10
 Samsung Galaxy Tab A (2019) | 9
 Samsung Galaxy Tab A | 7.0
 Samsung Galaxy Tab A | 8.1.0
@@ -361,13 +366,23 @@ Samsung Galaxy Tab S 10.5 | 4.4.2
 Samsung Galaxy Tab S 8.4 | 4.4.2
 Samsung Galaxy Tab S2 8.0 | 7.0
 Samsung Galaxy Tab S3 | 7.0
+Samsung Galaxy Tab S3 | 9
+Samsung Galaxy Tab S4 | 10
 Samsung Galaxy Tab S4 | 8.1.0
+Samsung Galaxy Tab S4 | 9
+Samsung Galaxy Tab S5e | 10
 Samsung Galaxy Tab S6 | 10
 Samsung Galaxy Tab S6 | 9
+Samsung Galaxy Tab S6 Lite | 10
+Samsung Galaxy Tab S7 | 10
+Samsung Galaxy Tab S7 Plus | 10
 Samsung Galaxy Trend Plus | 4.2.2
 Samsung Galaxy XCover Pro | 10
 Samsung Galaxy Xcover 3 | 4.4.4
+Samsung Galaxy Xcover 3 (VE) | 6.0.1
 Samsung Galaxy Xcover 4 | 7.0
+Samsung Galaxy Xcover 4 | 9
+Samsung Galaxy Xcover 4s | 10
 Samsung Galaxy Xcover 4s | 9
 Samsung Galaxy Young | 4.1.2
 Samsung Galaxy Young 2 | 4.4.2
@@ -383,6 +398,7 @@ Sony Xperia 1 | 10
 Sony Xperia 1 | 9
 Sony Xperia 10 | 10
 Sony Xperia 10 | 9
+Sony Xperia 10 II | 10
 Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10
@@ -397,6 +413,7 @@ Sony Xperia Tablet Z Wifi | 4.1.2
 Sony Xperia Tipo | 4.0.4
 Sony Xperia V | 4.1.2
 Sony Xperia XZ | 6.0.1
+Sony Xperia XZ | 8.0.0
 Sony Xperia XZ2 | 10
 Sony Xperia XZ2 | 8.0.0
 Sony Xperia XZ2 | 9
@@ -421,6 +438,7 @@ Sony Xperia Z3 Compact | 4.4.4
 Sony Xperia Z3 Compact | 5.0.2
 Sony Xperia Z3+ | 5.0.2
 Sony Xperia Z5 | 5.1.1
+Sony Xperia Z5 | 7.1.1
 Sony Xperia Z5 Compact | 5.1.1
 Sony Xperia ZR | 4.1.2
 Sony Xperia ZR | 4.2.2
