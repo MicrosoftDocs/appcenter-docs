@@ -97,7 +97,7 @@
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
 ### [General](build/troubleshooting/index.md)
-### [Code Repositories](build/troubleshooting/code-repos.md)
+### [Repository Connections](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [Backup Build Data](build/troubleshooting/backup-data.md)
 ### [iOS](build/troubleshooting/ios.md)

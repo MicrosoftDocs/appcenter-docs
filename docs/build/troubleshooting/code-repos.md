@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Code Repository Troubleshooting
+# Troubleshooting Repository Connections
 ## Repository isn't listed in the Connect to Repository step
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
@@ -49,7 +49,7 @@ try the following steps:
 * Re-enable the Webhooks
 * Commit a change to the affected repository/branch and try a new build
 
-Contact [App Center support]((https://intercom.help/appcenter/getting-started/getting-help-with-app-center) if the issue persists.
+Contact [App Center support](https://docs.microsoft.com/appcenter/general/support-center.md#contact-us) if the issue persists.
 
 ## What can I do if I'm using Team Foundation Version Control (TFVC)?
 App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
