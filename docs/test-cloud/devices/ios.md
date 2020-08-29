@@ -1,10 +1,10 @@
 ---
 title: iOS Devices Available
-description: Devices that you can run tests on in App Center
+description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 7/20/2020
+ms.date: 8/21/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -25,7 +25,7 @@ Apple iPad 7th Gen | 13.2.3
 Apple iPad 7th Gen | 13.3.1
 Apple iPad 7th Gen | 13.4.1
 Apple iPad 7th Gen | 13.5.1
-Apple iPad 7th Gen | 13.6
+Apple iPad 7th Gen | 13.6.1
 Apple iPad 9.7" | 10.3.3
 Apple iPad 9.7" | 11.0.3
 Apple iPad 9.7" | 11.1.2
@@ -117,9 +117,10 @@ Apple iPad Pro 11" (2018) | 13.2.3
 Apple iPad Pro 11" (2018) | 13.3.1
 Apple iPad Pro 11" (2018) | 13.4.1
 Apple iPad Pro 11" (2018) | 13.5.1
-Apple iPad Pro 11" (2018) | 13.6
+Apple iPad Pro 11" (2018) | 13.6.1
 Apple iPad Pro 11" (2020) | 13.4.1
 Apple iPad Pro 11" (2020) | 13.5.1
+Apple iPad Pro 11" (2020) | 13.6.1
 Apple iPad Pro 12.9" (2017) | 11.0.3
 Apple iPad Pro 12.9" (2017) | 11.1.2
 Apple iPad Pro 12.9" (2017) | 11.2.6
@@ -136,10 +137,10 @@ Apple iPad Pro 12.9" (2018) | 13.2.3
 Apple iPad Pro 12.9" (2018) | 13.3.1
 Apple iPad Pro 12.9" (2018) | 13.4.1
 Apple iPad Pro 12.9" (2018) | 13.5.1
-Apple iPad Pro 12.9" (2018) | 13.6
+Apple iPad Pro 12.9" (2018) | 13.6.1
 Apple iPad Pro 12.9" (2020) | 13.4.1
 Apple iPad Pro 12.9" (2020) | 13.5.1
-Apple iPad Pro 12.9" (2020) | 13.6
+Apple iPad Pro 12.9" (2020) | 13.6.1
 Apple iPad Pro 9.7" | 10.0.2
 Apple iPad Pro 9.7" | 10.1.1
 Apple iPad Pro 9.7" | 10.2.1
@@ -154,21 +155,21 @@ Apple iPhone 11 | 13.2.3
 Apple iPhone 11 | 13.3.1
 Apple iPhone 11 | 13.4.1
 Apple iPhone 11 | 13.5.1
-Apple iPhone 11 | 13.6
+Apple iPhone 11 | 13.6.1
 Apple iPhone 11 Pro | 13.0
 Apple iPhone 11 Pro | 13.1.3
 Apple iPhone 11 Pro | 13.2.3
 Apple iPhone 11 Pro | 13.3.1
 Apple iPhone 11 Pro | 13.4.1
 Apple iPhone 11 Pro | 13.5.1
-Apple iPhone 11 Pro | 13.6
+Apple iPhone 11 Pro | 13.6.1
 Apple iPhone 11 Pro Max | 13.0
 Apple iPhone 11 Pro Max | 13.1.3
 Apple iPhone 11 Pro Max | 13.2.3
 Apple iPhone 11 Pro Max | 13.3.1
 Apple iPhone 11 Pro Max | 13.4.1
 Apple iPhone 11 Pro Max | 13.5.1
-Apple iPhone 11 Pro Max | 13.6
+Apple iPhone 11 Pro Max | 13.6.1
 Apple iPhone 4S | 9.0.2
 Apple iPhone 4S | 9.1
 Apple iPhone 4S | 9.2
@@ -319,7 +320,7 @@ Apple iPhone SE | 13.2.3
 Apple iPhone SE | 13.3.1
 Apple iPhone SE (2020) | 13.4.1
 Apple iPhone SE (2020) | 13.5.1
-Apple iPhone SE (2020) | 13.6
+Apple iPhone SE (2020) | 13.6.1
 Apple iPhone SE | 9.3.5
 Apple iPhone X | 11.1.2
 Apple iPhone X | 11.2.6
@@ -332,7 +333,7 @@ Apple iPhone X | 13.0
 Apple iPhone X | 13.1.3
 Apple iPhone X | 13.2.3
 Apple iPhone X | 13.5.1
-Apple iPhone X | 13.6
+Apple iPhone X | 13.6.1
 Apple iPhone XR | 12.1.4
 Apple iPhone XR | 12.2
 Apple iPhone XR | 12.3.1
@@ -340,7 +341,7 @@ Apple iPhone XR | 12.4.1
 Apple iPhone XR | 13.0
 Apple iPhone XR | 13.1.3
 Apple iPhone XR | 13.2.3
-Apple iPhone XR | 13.6
+Apple iPhone XR | 13.6.1
 Apple iPhone XS | 12.1.4
 Apple iPhone XS | 12.2
 Apple iPhone XS | 12.3.1
@@ -349,7 +350,7 @@ Apple iPhone XS | 13.0
 Apple iPhone XS | 13.1.3
 Apple iPhone XS | 13.2.3
 Apple iPhone XS | 13.5.1
-Apple iPhone XS | 13.6
+Apple iPhone XS | 13.6.1
 Apple iPhone XS Max | 12.1.4
 Apple iPhone XS Max | 12.2
 Apple iPhone XS Max | 12.3.1
@@ -359,7 +360,7 @@ Apple iPhone XS Max | 13.1.3
 Apple iPhone XS Max | 13.2.3
 Apple iPhone XS Max | 13.4.1
 Apple iPhone XS Max | 13.5.1
-Apple iPhone XS Max | 13.6
+Apple iPhone XS Max | 13.6.1
 Apple iPod touch 5th Gen | 9.0.2
 Apple iPod touch 5th Gen | 9.3.5
 Apple iPod touch 6th Gen | 10.0.2
@@ -387,7 +388,6 @@ Apple iPod touch 7th Gen | 13.2.3
 Apple iPod touch 7th Gen | 13.3.1
 Apple iPod touch 7th Gen | 13.4.1
 Apple iPod touch 7th Gen | 13.5.1
-
 
 
 

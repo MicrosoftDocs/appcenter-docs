@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
-# macOS info
+# macOS 10.14 info
 - System Version: macOS 10.14.6 (18G6020)
 - Kernel Version: Darwin 18.7.0
 - Image Version: 20200813.2
