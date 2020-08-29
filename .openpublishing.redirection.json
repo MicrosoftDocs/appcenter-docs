@@ -233,6 +233,10 @@
             "redirect_url": "/appcenter/diagnostics/android-proguard"
         },
         {
+            "source_path": "docs/diagnostics/playfab.md",
+            "redirect_url": "/appcenter/diagnostics/"
+        },
+        {
             "source_path": "docs/migration/hockeyapp/index.md",
             "redirect_url": "/appcenter/transition/index"
         },
