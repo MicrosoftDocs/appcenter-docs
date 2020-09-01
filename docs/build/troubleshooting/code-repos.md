@@ -17,6 +17,14 @@ ms.custom: build
 * **Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access**. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
 * **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
+## When configuring a branch, I get an error message saying "no projects can be found" in my branch
+App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform-specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
+
+App Center currently only searches four directory levels deep for your project files. If App Center doesn't find your project in your branch, moving it to the root directory might help. If your repository is large, it may help to reduce its size or number of files.
+
+> [!TIP]
+> 
+
 ## Can I use on-premises repositories?
 App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but doesn't support on-premises repositories.
 
@@ -25,6 +33,9 @@ Disconnect the repository account, and reconnect to the correct one:
 - [BitBucket](~/build/connect.md#bitbucket)
 - [GitHub](~/build/connect.md#github)
 - [Azure DevOps](~/build/connect.md#azure-devops)
+
+> [!WARNING]
+> Disconnecting your repository will delete build configurations and artifacts. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
