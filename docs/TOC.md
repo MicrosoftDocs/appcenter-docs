@@ -235,7 +235,6 @@
 ## [Windows Support](diagnostics/windows-support.md)
 ## [Upload crashes via UI](diagnostics/upload-crashes-ui.md)
 ## [Upload crashes via API](diagnostics/upload-crashes.md)
-## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 

@@ -37,7 +37,7 @@ Then, depending on your scenario, use the most suitable of the three options in 
 
 ## A. Storing everything in the Gradle configuration
 
-You can specify the signing details in the `build.gradle` file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the build configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
+You can specify the signing details in the `build.gradle` [(app level)](https://developer.android.com/studio/build) file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the build configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
 
 ## B. Uploading everything to App Center
 
@@ -84,7 +84,7 @@ In the code above, securing values behind system properties injected into your b
 If you use product flavors, you may need to adjust the code above so all your release configurations use the correct signing configuration.
 
 > [!NOTE]
-> If you use the `signingConfig` option inside the `buildTypes` section in your `build.gradle` file, you may face code-signing errors during App Center build. This is especially relevant for apps that use React Native for Android version 0.60.x and higher:
+> If you use the `signingConfig` option inside the `buildTypes` section in your `build.gradle` [(app level)](https://developer.android.com/studio/build) file, you may face code-signing errors during App Center build. This is especially relevant for apps that use React Native for Android version 0.60.x and higher:
 >
 > ```text
 >  Execution failed for task ':app:validateSigningRelease'.
@@ -93,4 +93,4 @@ If you use product flavors, you may need to adjust the code above so all your re
 >
 > To fix this issue you have to push a proper keystore used for signing to your repository and enable **My Gradle settings are entirely set to handle signing automatically** in your build configuration in the App Center portal.
 >
-> In case you uploaded a keystore to the build configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from the `buildTypes` section of your `build.gradle` file if you didn't update it from the default state of the React Native project template.
+> In case you uploaded a keystore to the build configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from the `buildTypes` section of your `build.gradle` [(app level)](https://developer.android.com/studio/build) file if you didn't update it from the default state of the React Native project template.
