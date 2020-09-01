@@ -35,7 +35,7 @@ Disconnect the repository account, and reconnect to the correct one:
 - [Azure DevOps](~/build/connect.md#azure-devops)
 
 > [!WARNING]
-> Disconnecting your repository will delete build configurations and artifacts. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
+> Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
