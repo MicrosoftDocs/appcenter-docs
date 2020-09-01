@@ -18,12 +18,12 @@ ms.custom: build
 * **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
 ## When configuring a branch, I get an error message saying "no projects can be found" in my branch
+> [!TIP]
+> The Build service has a 30-second time limit for crawling the repository. Large or complex projects might not be indexed within this time limit. In this case, if it's not feasible to host the target project separately, you may consider using [Azure Pipelines](~/build/choose-between-services.md) instead.
+
 App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform-specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
 
 App Center currently only searches four directory levels deep for your project files. If App Center doesn't find your project in your branch, moving it to the root directory might help. If your repository is large, it may help to reduce its size or number of files.
-
-> [!TIP]
-> 
 
 ## Can I use on-premises repositories?
 App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but doesn't support on-premises repositories.
