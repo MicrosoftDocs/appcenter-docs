@@ -1,6 +1,6 @@
 ---
-title: App Center Build FAQs
-description: Code signing apps built with App Center
+title: App Center Build Troubleshooting 
+description: Resources for troubleshooting issues in App Center Build
 keywords: build, faq
 author: elamalani
 ms.date: 07/31/2020
@@ -10,24 +10,28 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# General Troubleshooting
-## My build scripts (Bash) doesn't execute the logic written inside it.
-App Center allows you to use build scripts for some level of customization with builds. 
 
-If you clicked "Save & Build" after modifying scripts, and you see App Center running the Build Script step, for instance, without actually executing the contents inside, chances are, it's because of the line endings.
+# Build Troubleshoooting
+The guides in this section provide general troubleshooting tips for App Center Build.
 
-Bash scripts are run on a Mac machine. So they're expected to have UNIX style line endings (LF).
+## General Tips
+If you're unsure how to diagnose your issue, here are some general tips:
+- [Isolate differences between working & passing builds](~/build/troubleshooting/build-failed.md).
+- [Download Build data for local backup & comparison](~/build/troubleshooting/backup-data.md).
+- If your build uses [custom build scripts](~/build/custom/scripts/index.md), it's a good idea to test them locally. Don't forget to manually save your Build configuration when adding, deleting, moving or renaming scripts in your repo. 
 
-If you're using Windows to edit/create these scripts, ensure they're saved with the Unix (LF) format. For Notepad ++, ensure from the menu, **Edit > EOL Conversion > Unix (LF)** is selected.
 
-## When do I have to update my build configuration manually through Save & Build?
-You might have noticed the handy **Save & Build** option in App Center Build Configuration. It does more than just help you trigger the build immediately after Saving/Updating changes. Generally, your app build configuration is analyzed when you open the build configuration dialog. If you have made changes to your repository that don't get picked up by the build automatically, you might need to go to the configuration page again and trigger a **Save & Build** from there.
+## Framework-specific resources
+Issues that occur in local builds, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
 
-One example is when you add new Build Scripts to your repository. Since build scripts are only analyzed when configuring your branch, you'll need to do another analysis to reindex your repository tree and save the results. If you simply made changes to an existing build script, which was also already used in a branch configuration, you can push your changes to the script.
+| Build Guides | Build Troubleshoooting | External Framework Docs |
+| ------------ | ---------------------- | ----------------------- |
+| [Android (Native)](~/build/android/index.md) | General Guides | [Android Docs](https://developer.android.com/docs) |
+| [iOS (Native)](~/build/ios/index.md) | [iOS Guide](~/build/troubleshooting/ios.md) | [Apple Developer Docs](https://developer.apple.com/documentation/) |
+| [macOS](~/build/macos/index.md) | General Guides | [Apple Developer Docs](https://developer.apple.com/documentation/) |
+| [React Native](~/build/react-native/index.md) | [React Native Guide](~/build/troubleshooting/react-native.md) | [React Native Docs](https://reactnative.dev/docs/getting-started) |
+| [UWP](~/build/uwp/index.md) | General Guides | [UWP Docs](https://docs.microsoft.com/windows/uwp/) |
+| [Xamarin](~/build/xamarin/index.md) | [Xamarin Guide](~/build/troubleshooting/xamarin.md) | [Xamarin Docs](https://docs.microsoft.com/xamarin/) |
 
-We're working on improving reindexing Build Scripts when changed. Until then, a valid workaround is to do a manual **Save & Build**.
-
-## When configuring a branch, I get an error message saying "no projects can be found" in my branch
-App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform-specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
-
-App Center currently only searches four directory levels deep for your project files. If App Center doesn't find your project in your branch, moving it to the root directory might help. If your repository is large, it may help to reduce its size or number of files.
+## Contacting App Center Support
+Open the help menu in the upper-right corner of the App Center portal: **www.appcenter.ms > ? > Contact support**. Use the message field to explain your issue or question. Support is provided in English only and during business hours.
