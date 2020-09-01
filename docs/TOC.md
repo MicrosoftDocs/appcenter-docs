@@ -69,7 +69,6 @@
 ## macOS
 ### [Configure a build](build/macos/index.md)
 ### [Code Signing](build/macos/code-signing.md)
-### [Upload signing files](build/macos/uploading-signing-files.md)
 ## React Native
 ### [Introduction](build/react-native/index.md)
 ### [Android](build/react-native/android/index.md)

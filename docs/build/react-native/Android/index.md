@@ -1,6 +1,6 @@
 ---
 title: Configure a React Native Android build
-description: How to set up a build system for Android apps
+description: How to set up a build system for React Native Android apps
 keywords: android
 author: nilofer
 ms.author: nirajpur

@@ -1,6 +1,6 @@
 ---
 title: Android code signing setup
-description: How to set up code signing for Android apps
+description: How to set up code signing for Android Native apps
 keywords: android
 author: nilofer
 ms.author: nirajpur
