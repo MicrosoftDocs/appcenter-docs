@@ -1,6 +1,6 @@
 ---
 title: Uploading Mac Code Signing Files in App Center
-description: Code signing apps built with App Center
+description: Code signing macOS apps built with App Center
 keywords: code signing, mac, macos
 author: elamalani
 ms.author: emalani

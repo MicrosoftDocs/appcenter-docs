@@ -1,6 +1,6 @@
 ---
-title: App Center Build FAQs
-description: Code signing apps built with App Center
+title: App Center Build Troubleshooting 
+description: Resources for troubleshooting issues in App Center Build
 keywords: build, faq
 author: elamalani
 ms.date: 07/31/2020

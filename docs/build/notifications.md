@@ -1,7 +1,7 @@
 ---
-title: App Center Build FAQs
-description: Code signing apps built with App Center
-keywords: build, faq
+title: App Center Build Notifications
+description: details about App Center notifications triggered by build outcomes.
+keywords: build, notifications
 author: king-of-spades
 ms.date: 08/11/2020
 ms.topic: article
@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-## Troubleshooting Build Notifications
+# Build Notifications
 Email and custom webhook notifications give you continual real-time updates of your build status, as well as the permanency and ability to search and be directed to your builds in App Center. These notifications enable faster collaboration, since you can forward the build status emails or @ mention collaborators in a single workflow.
 
 You can choose to have email and webhook notifications automatically sent for the following events:
