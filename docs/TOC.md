@@ -17,9 +17,9 @@
 
 # Getting Started
 ## [Quickstarts](quickstarts/index.md)
+## [Learning Resources](quickstarts/ios/learning-resources.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
-### [LinkedIn Learning Course](quickstarts/ios/linkedin.md)
 ### [Build](quickstarts/ios/build.md)
 ### [Test](quickstarts/ios/test.md)
 ### [Distribute](quickstarts/ios/distribute.md)

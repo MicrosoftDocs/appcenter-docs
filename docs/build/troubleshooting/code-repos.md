@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 
-# Troubleshooting Repository Connections
+# Code Repository Troubleshooting
 ## Repository isn't listed in the Connect to Repository step
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
@@ -67,3 +67,5 @@ App Center Build only supports Git repositories. For projects using a TFVC repos
 
 ## Is my source code secure?
 App Center uses virtual machines to build your code. There's a clean virtual machine provisioned especially for your build, which gets discarded once the build finishes. The files uploaded for code signing and the password for the certificate are also stored securely on our servers.
+
+For more information, you can read our [App Center Security doc](~/general/app-center-security.md).
