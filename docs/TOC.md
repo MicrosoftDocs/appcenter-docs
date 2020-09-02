@@ -17,7 +17,7 @@
 
 # Getting Started
 ## [Quickstarts](quickstarts/index.md)
-## [Learning Resources](quickstarts/ios/learning-resources.md)
+## [Learning Resources](quickstarts/learning-resources.md)
 ## [iOS](quickstarts/ios/overview.md)
 ### [Getting started](quickstarts/ios/getting-started.md)
 ### [Build](quickstarts/ios/build.md)
