@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
-ms.date: 07/16/2020
+ms.date: 09/02/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -20,12 +20,11 @@ ms.tgt_pltfrm: xamarin
 
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
-This feature will NOT work if your app is deployed to the app store.
+> [!WARNING]
+> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> There are a few things to consider when using in-app updates:
-> 1. If you have released your app in the App Store or Google Play, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -62,9 +61,6 @@ Install-Package Microsoft.AppCenter.Distribute
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
-
-> [!WARNING]
-> Google can consider in-app update code as malicious behavior even if it isn't used at runtime We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
 
 ### 2. Start App Center Distribute
 
@@ -163,7 +159,7 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 
 ## Remove in-app updates for Google Play builds
 
-Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
 
 1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
 2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into the conditional item group:
