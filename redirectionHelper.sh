@@ -2,14 +2,15 @@
 sourcePaths=()
 sourcePaths+=(\
 	#example
-	test-cloud/supported-frameworks.md 	
+	#test-cloud/supported-frameworks.md
+    
 )
 
 # Target path on website (product/path-to/article)
 redirectUrls=()
 redirectUrls+=(\
 	#example
-	test-cloud/frameworks/
+	#test-cloud/frameworks/
 )
 
 # Construct Redirects
