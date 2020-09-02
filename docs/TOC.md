@@ -60,39 +60,41 @@
 
 # Build
 ## [Introduction](build/index.md)
-## Android
-### [Configure a build](build/android/index.md)
-### [Code Signing](build/android/code-signing.md)
-## iOS
-### [Configure a build](build/ios/index.md)
-### [Code Signing](build/ios/code-signing.md)
-## macOS
-### [Configure a build](build/macos/index.md)
-### [Code Signing](build/macos/code-signing.md)
-## React Native
-### [Introduction](build/react-native/index.md)
-### [Android](build/react-native/android/index.md)
-### [iOS](build/react-native/ios/index.md)
-### [Node.js selection](build/react-native/nodejs.md)
-## Windows (UWP)
-### [Configure a build](build/uwp/index.md)
-### [Build results](build/uwp/results.md)
-## Xamarin
-### [Introduction](build/xamarin/index.md)
-### [Solution configuration mappings](build/xamarin/solution-configuration-mappings.md)
+## Supported App Frameworks
 ### Android
-#### [Introduction](build/xamarin/android/index.md)
-#### [Code Signing](build/xamarin/android/code-signing.md)
+#### [Configure a build](build/android/index.md)
+#### [Code Signing](build/android/code-signing.md)
 ### iOS
-#### [Introduction](build/xamarin/ios/index.md)
-## [Source Control System](build/connect.md)
+#### [Configure a build](build/ios/index.md)
+#### [Code Signing](build/ios/code-signing.md)
+### macOS
+#### [Configure a build](build/macos/index.md)
+#### [Code Signing](build/macos/code-signing.md)
+### React Native
+#### [Introduction](build/react-native/index.md)
+#### [Android](build/react-native/android/index.md)
+#### [iOS](build/react-native/ios/index.md)
+#### [Node.js selection](build/react-native/nodejs.md)
+### Windows (UWP)
+#### [Configure a build](build/uwp/index.md)
+#### [Build results](build/uwp/results.md)
+### Xamarin
+#### [Introduction](build/xamarin/index.md)
+#### [Solution configuration mappings](build/xamarin/solution-configuration-mappings.md)
+#### Android
+##### [Introduction](build/xamarin/android/index.md)
+##### [Code Signing](build/xamarin/android/code-signing.md)
+#### iOS
+##### [Introduction](build/xamarin/ios/index.md)
+## [Managing repository connections](build/connect.md)
+## [Using the GitHub App](build/github-app.md)
 ## [Branches and Build configurations](build/branches.md)
+## [Cloud build machines](build/software.md)
+## [Build Notifications](build/notifications.md)
 ## [Build scripts](build/custom/scripts/index.md)
 ## [Environment variables](build/custom/variables/index.md)
-## [Cloud build machines](build/software.md)
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
-## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
 ### [General](build/troubleshooting/index.md)
