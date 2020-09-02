@@ -1,6 +1,6 @@
 ---
-title: App Center Build FAQs – iOS
-description: Code signing apps built with App Center
+title: iOS Build Troubleshooting
+description: Troubleshooting iOS app builds in App Center
 keywords: build, faq
 author: elamalani
 ms.author: emalani
@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ms.custom: build
 ---
 # iOS Build Troubleshooting
-
 ## No Xcode scheme is found
 Building an xcworkspace or an xcproject requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them. By default schemes aren't shared with others or included in source control.
 

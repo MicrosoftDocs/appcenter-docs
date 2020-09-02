@@ -110,7 +110,7 @@
         },
         {
             "source_path": "docs/build/ios/first-build/xamarin/solution-configuration-mappings.md",
-            "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings.md"
+            "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings"
         },
         {
             "source_path": "docs/build/ios/first-build/react-native.md",
@@ -130,7 +130,7 @@
         },
         {
             "source_path": "docs/build/android/first-build/java.md",
-            "redirect_url": "/appcenter/build/android/first-build"
+            "redirect_url": "/appcenter/build/android/"
         },
         {
             "source_path": "docs/build/android/first-build/xamarin.md",
@@ -146,19 +146,19 @@
         },
         {
             "source_path": "docs/build/android/code-signing/xamarin.md",
-            "redirect_url": "/appcenter/build/xamarin/android/code-signing.md"
+            "redirect_url": "/appcenter/build/xamarin/android/code-signing"
         },
         {
             "source_path": "docs/build/windows/configure-build/index.md",
-            "redirect_url": "/appcenter/build/windows/first-build.md"
+            "redirect_url": "/appcenter/build/uwp/"
         },
         {
             "source_path": "docs/build/windows/configure-build/uwp.md",
-            "redirect_url": "/appcenter/build/windows/first-build.md"
+            "redirect_url": "/appcenter/build/uwp/"
         },
         {
             "source_path": "docs/build/windows/build-results/index.md",
-            "redirect_url": "/appcenter/build/windows/results.md"
+            "redirect_url": "/appcenter/build/uwp/results"
         },
         {
             "source_path": "docs/crashes/index.md",
@@ -210,11 +210,11 @@
         },
         {
             "source_path": "docs/push/pushapi.md",
-            "redirect_url": "/appcenter/push/rest-api.md"
+            "redirect_url": "/appcenter/push/rest-api"
         },
         {
             "source_path": "docs/push/audiences.md",
-            "redirect_url": "/appcenter/push/send-notification.md"
+            "redirect_url": "/appcenter/push/send-notification"
         },
         {
             "source_path": "docs/azure/index.md",
@@ -222,7 +222,7 @@
         },
         {
 	        "source_path": "docs/distribution/stores/app-protection.md",
-	        "redirect_url": "docs/distribution/stores/intune.md"
+	        "redirect_url": "docs/distribution/stores/intune"
         },
         {
             "source_path": "docs/diagnostics/symbolication.md",
@@ -591,6 +591,42 @@
 	{
 		"source_path": "docs/test-cloud/xcuitest/preparing-for-upload-extension.md",
 		"redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/upload-extension"
-	}
+	},
+    {
+        "source_path": "docs/general/resources.md",
+        "redirect_url": "/appcenter/quickstarts/learning-resources"
+    },
+    {
+        "source_path": "docs/build/android/first-build.md",
+        "redirect_url": "/appcenter/build/android/"
+    },
+    {
+        "source_path": "docs/build/ios/first-build.md",
+        "redirect_url": "/appcenter/build/ios/"
+    },
+    {
+        "source_path": "docs/build/macos/first-build.md",
+        "redirect_url": "/appcenter/build/macos/"
+    },
+    {
+        "source_path": "docs/build/macos/uploading-signing-files.md",
+        "redirect_url": "/appcenter/build/macos/code-signing"
+    },
+    {
+        "source_path": "docs/build/windows/uwp/first-build.md",
+        "redirect_url": "/appcenter/build/uwp/"
+    },
+    {
+        "source_path": "docs/build/windows/index.md",
+        "redirect_url": "/appcenter/build/uwp/"
+    },
+    {
+        "source_path": "docs/build/windows/uwp/results.md",
+        "redirect_url": "/appcenter/build/uwp/results"
+    },
+    {
+        "source_path": "docs/build/xamarin/ios/solution-configuration-mappings.md",
+        "redirect_url": "/appcenter/build/xamarin/solution-configuration-mappings.md"
+    }    
  ]
 }
