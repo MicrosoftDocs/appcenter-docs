@@ -25,7 +25,7 @@ dev_langs:
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
 > [!WARNING]
-> Google Play considers the in-app update code as malicious behavior even if it isn't used at runtime. Please strip this code from your application before submitting it to Google Play. Failure to do so can lead to noncompliance and removal of the app from the Play Store. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
+> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
 > If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
