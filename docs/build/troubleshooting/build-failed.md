@@ -3,7 +3,7 @@ title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/27/2020
+ms.date: 07/31/2020
 ms.topic: article 
 ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 

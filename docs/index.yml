@@ -73,8 +73,8 @@ conceptualContent:
           - text: React Native
             url: ~/build/react-native/index.md
             itemType: how-to-guide
-          - text: Windows
-            url: ~/build/windows/index.md
+          - text: Windows (UWP)
+            url: ~/build/uwp/index.md
             itemType: how-to-guide
           - text: Xamarin
             url: ~/build/xamarin/index.md
