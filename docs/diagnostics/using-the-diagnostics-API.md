@@ -4,7 +4,7 @@ description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
 author: winnie
 ms.author: yuli1
-ms.date: 07/17/2020
+ms.date: 09/03/2020
 ms.topic: article
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.custom: analytics
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.
 
 > [!NOTE]
-> The App Center API does not support CORS (Cross-Origin Resource Sharing), so requests from clients which mandate this such as browsers will fail. To interact with the API from a browser, you can use a proxy service under your own domain which forwards requests to the App Center API.
+> The App Center Diagnostics API does not support CORS (Cross-Origin Resource Sharing), so requests from clients which mandate this such as browsers will fail. To interact with the API from a browser, you can use a proxy service under your own domain which forwards requests to the App Center API.
 
 ## Transitioning to the new APIs
 

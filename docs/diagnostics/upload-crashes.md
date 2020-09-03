@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, attachments, upload, api
 author: winnie
 ms.author: yuli1
 ms.reviewer: kegr
-ms.date: 07/17/2020
+ms.date: 09/03/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -15,9 +15,6 @@ ms.custom: diagnostics
 # Upload crashes via API
 
 You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment).
-
-> [!NOTE]
-> The App Center API does not support CORS (Cross-Origin Resource Sharing), so requests from clients which mandate this such as browsers will fail. To interact with the API from a browser, you can use a proxy service under your own domain which forwards requests to the App Center API.
 
 > [!NOTE]
 > App Center only accepts up to 60 crashes and handled errors per minute per unique app. We will not ingest any crashes or errors that exceed this limit.
