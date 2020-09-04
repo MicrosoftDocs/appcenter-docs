@@ -1,6 +1,6 @@
 ---
 title: App Center Distribute for Xamarin
-description: Using in-app updates in App Center Distribute
+description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani

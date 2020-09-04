@@ -1,6 +1,6 @@
 ---
 title: App Center Distribute for Unity
-description: Using in-app updates in App Center Distribute
+description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
 author: maestersid
 ms.author: jawh
