@@ -13,6 +13,7 @@
 ## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Supported Browsers](general/browsers.md)
+## [Platform Limits](general/platform-limits.md)
 ## [Support Center](general/support-center.md)
 
 # Getting Started
