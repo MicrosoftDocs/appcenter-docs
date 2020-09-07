@@ -84,7 +84,7 @@ ms.assetid: 72b0e628-3211-412e-ab64-ef6e0a0e0d07
 
 
 ### Tools
-- Fastlane fastlane
+- Fastlane 2.157.2
 - Cmake 3.18.2
 - App Center CLI 2.6.7
 - Azure CLI 2.11.1
