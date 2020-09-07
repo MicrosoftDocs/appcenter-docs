@@ -9,10 +9,6 @@ ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
-| Announcements |
-|-|
-| [Xcode 11.7 will be set as a default one on September, 9](https://github.com/actions/virtual-environments/issues/1537) |
-***
 # macOS 10.14 info
 - System Version: macOS 10.14.6 (18G6020)
 - Kernel Version: Darwin 18.7.0
