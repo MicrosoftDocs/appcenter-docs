@@ -59,12 +59,14 @@ If the application is installed from the App Store or TestFlight, in-app updates
   - The app wasn't installed from App Center.
   - The version a tester installed wasn't released via App Center or the release was deleted on App Center.
   - App secret used in the SDK is incorrect. To get your app secret, go to your app's settings page, click on the triple vertical dots at the top right-hand corner, and copy app secret.
-     - If you've migrated your App from HockeyApp, refer to the following articles:
-        - iOS: [Migrating from HockeyApp](~/transition/ios-sdk-migration.md?tabs=objc#21-convert-the-application-identifier)
-        - Android: [Migrating from HockeyApp](~/transition/android-sdk-migration.md#21-convert-the-application-identifier)
+     - If you have migrated your App from HockeyApp, refer to the following articles: 
+        - iOS: [Migrating from HockeyApp][ios-sdk-migration]
+        - Android: [Migrating from HockeyApp][android-sdk-migration]
 
 [ios-sdk]: ~/sdk/distribute/ios.md
 [android-sdk]: ~/sdk/distribute/android.md
 [xamarin-sdk]: ~/sdk/distribute/xamarin.md
 [uploading]: uploading.md
 [public-dg]: groups.md#creating-a-distribution-group
+[ios-sdk-migration]: ~/transition/ios-sdk-migration.md#21-convert-the-application-identifier
+[android-sdk-migration]: ~/transition/android-sdk-migration.md#21-convert-the-application-identifier
