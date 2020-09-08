@@ -4,7 +4,7 @@ description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
 author: ahdbilal
 ms.author: ahbilal
-ms.date: 12/12/2019
+ms.date: 08/14/2020
 ms.topic: article
 ms.assetid: 43EB5F45-7A20-4BE9-8DBE-8F0D2CCC2B4E
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ Taking advantage of the `Staging` and `Production` deployments allows you to ach
 4. Run your production/release build of your app, sync the update from the server and verify it works as expected
 
    > [!TIP]
-   > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `code-push promote -a <ownerName>/<appName> -s Staging -d Production -r 20%`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100%`.
+   > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `appcenter codepush promote -a <ownerName>/<appName> -s Staging -d Production -r 20`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100`.
 
 You will notice that the above steps refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is just like handling environment-specific config for any other service your app uses (like Facebook). However, if you are looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platform(s) your app is targeting.
 
@@ -39,8 +39,8 @@ You will notice that the above steps refer to a "staging build" and "production 
 
 The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release). This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
 
-> [!NOTE] 
-> As a reminder, you can retrieve these keys by running `code-push deployment ls <APP_NAME> -k` from your terminal.*
+> [!NOTE]
+> As a reminder, you can retrieve these keys by running `appcenter codepush deployment list <ownerName>/<appName> -k` from your terminal.*
 
 To set this up, perform the following steps:
 
@@ -208,25 +208,32 @@ To set this up, perform the following steps:
 
 6. Select the **Build Settings** tab
 
-7. Go to **Build Location > Per-configuration Build Products Path > Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
+7. Click the **+** button on the toolbar and select **Add User-Defined Setting**
 
-   ![BuildFilesPath](./images/rn-ios-9.png)
+    ![Setting](./images/rn-ios-10.png)
 
-   > [!NOTE]
-   > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+    Name this setting **MULTI_DEPLOYMENT_CONFIG**. Go to the setting and add value `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` for **Release**. After that add value `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)` for **Staging**.
 
-8. Click the **+** button on the toolbar and select **Add User-Defined Setting**
+    ![MultiDeploymentConfig](./images/rn-ios-13.png)
 
-   ![Setting](./images/rn-ios-10.png)
+    > [!NOTE]
+    > For Xcode 10 and lower version: Go to **Build Location > Per-configuration Build Products Path > Staging** and change **Staging** value from `$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)` to `$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
 
-9. Name this new setting something like `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** config and your **Production** deployment key for the **Release** config.
+    ![BuildFilesPath](./images/rn-ios-9.png)
+
+    > [!NOTE]
+    > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+
+8. Click the **+** button again on the toolbar and select **Add User-Defined Setting**
+
+    Name this setting `CODEPUSH_KEY`, expand it, and specify your **Staging** deployment key for the **Staging** configuration and your **Production** deployment key for the **Release** configuration.
 
     ![Setting Keys](./images/rn-ios-11.png)
 
     > [!NOTE]
-    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.*
+    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.
 
-10. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
+9. Open the project's **Info.plist** file and change the value of your `CodePushDeploymentKey` entry to `$(CODEPUSH_KEY)`
 
     ![Info.plist](./images/rn-ios-12.png)
 

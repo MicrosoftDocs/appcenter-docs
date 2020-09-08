@@ -17,7 +17,7 @@ In this document, you'll learn how to integrate App Center Build and [App Center
 
 ## Supported Configurations
 App Center device testing requires:
-   - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
+   - An [Android](~/build/android/index.md) or [iOS](~/build/ios/index.md) app.
    - The app package is compatible with running on physical devices.
 
 ## Configuring your build
@@ -51,7 +51,7 @@ You can integrate Build & Test to run a UI test suite with each build of your ap
 
 - A valid Test trial or paid license is required.
 - Only UI tests written using Appium (JUnit), Calabash, Espresso, XCUITest, or Xamarin.UITest are currently supported. 
-- Some testing frameworks require additional setup to enable App Center Test support, including [Appium](~/test-cloud/appium/preparing-for-upload.md), [Espresso](~/test-cloud/espresso/preparing-for-upload.md) & [XCUITest](~/test-cloud/xcuitest/preparing-for-upload.md) 
+- Some testing frameworks require additional setup to enable App Center Test support, including [Appium](~/test-cloud/frameworks/appium/index.md), [Espresso](~/test-cloud/frameworks/espresso/index.md) & [XCUITest](~/test-cloud/frameworks/xcuitest/index.md) 
 - Use a Post-Build script to handle any tasks your test suite requires that isn't handled by your app build directly. These tasks might include compiling your test dlls & a command to upload your test suite to the Test service.
 - The Build service doesn't extend its timeout limit (1 hour) for full UITests, so unless test runs are short, using the `--async` flag in your upload command is required. Your Build completion status won't reflect whether the test suite passed or not.
 

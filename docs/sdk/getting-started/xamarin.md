@@ -2,9 +2,8 @@
 title: Get Started with Xamarin
 description: Get started
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 12/20/2019
+author: king-of-spades
+ms.date: 08/07/2020
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -46,11 +45,11 @@ The App Center SDK for Xamarin supports the following platforms:
 
 ### 1.1 About Xamarin.Android
 
-Choose this option if you target no other platform but Android. You need to create one app in the App Center portal with the **Android** as the OS and **Xamarin** as the platform.
+Choose this option if you target only Android platform. You need to create one app in the App Center portal with the **Android** as the OS and **Xamarin** as the platform.
 
 ### 1.2 About Xamarin.iOS
 
-Choose this option if you target no other platform but iOS. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
+Choose this option if you target only iOS platform. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
 ### 1.3 About Xamarin.Forms (iOS, Android, and UWP)
 
@@ -181,17 +180,17 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > [!NOTE]
 > If you already have a custom file with backup rules, switch to the third step.
 
-    a. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
+1. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
 
-    b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
-    ```console
-    android:fullBackupContent="@xml/appcenter_backup_rule"
-    ```
+```console
+android:fullBackupContent="@xml/appcenter_backup_rule"
+```
 
-    c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
-    ```xml
+```xml
     <full-backup-content xmlns:tools="http://schemas.android.com/tools">
         <exclude domain="sharedpref" path="AppCenter.xml"/>
         <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
@@ -199,7 +198,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
         <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
         <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
     </full-backup-content>
-    ```
+```
 
 ### 4.3 Replace the placeholder with your App Secret
 

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/17/2020
+ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android
@@ -183,7 +183,7 @@ When using the App Center SDK, logs are stored locally on the device. Large logs
 You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)`. You may only call the API once.
 
 ```java
-// Use 20MB for storage.
+// Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<Boolean>() {
 
     @Override
@@ -194,7 +194,7 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<
 AppCenter.start("{Your App Secret}", Analytics.class);
 ```
 ```kotlin
-// Use 20MB for storage.
+// Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
     // The success parameter (it) is false when the size cannot be honored.
 }
@@ -202,10 +202,13 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-If you don't set the max storage size, the SDK uses a default max size of 10MB. The minimum size you are allowed to set is 20KB.
+If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
 
 > [!NOTE]
-> The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4KB.
+> The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
+
+> [!NOTE]
+> The logs older than 25 days will be discarded.
 
 ### Unsuccessful API calls
 

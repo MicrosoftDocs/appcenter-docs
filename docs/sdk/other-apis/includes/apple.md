@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: elamalani
 ms.author: emalani
-ms.date: 04/17/2020
+ms.date: 07/08/2020
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.tgt_pltfrm: apple
@@ -166,3 +166,47 @@ var customProperties = MSCustomProperties()
 customProperties.clearProperty(forKey: "score")
 MSAppCenter.setCustomProperties(customProperties)
 ```
+
+## Storage size
+
+When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
+
+Use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the `completionHandler` is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `[MSAppCenter start:...]`. You may only call the API once.
+
+```obj-c
+// Use 20 MB for storage.
+[MSAppCenter setMaxStorageSize:(20 * 1024 * 1024) completionHandler:^(BOOL success) {
+    if (!success) {
+        // The success parameter is false when the size cannot be honored.
+    }
+}];
+[MSAppCenter start:@"{Your App Secret}", withServices:@[[MSAnalytics class]]];
+```
+```swift
+// Use 20 MB for storage.
+MSAppCenter.setMaxStorageSize(20 * 1024 * 1024, completionHandler: { (success) in
+    if !success {
+        // The success parameter is false when the size cannot be honored.
+    }
+})
+MSAppCenter.start("{Your App Secret}", withServices:[MSAnalytics.self])
+```
+
+If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
+
+> [!NOTE]
+> The actual max storage size may be slightly higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
+
+> [!NOTE]
+> The logs older than 25 days will be discarded.
+
+### Unsuccessful API calls
+
+There are many reasons the `completionHandler` call may return false.
+
+* The specified size is an invalid value (less than 20 KB or greater than 140 TB).
+* The current database size is larger than the specified maximum size.
+* The API has already been called. You may configure it only once per process.
+* The API has been called after `[MSAppCenter start:...]` or `[MSAppCenter configure:...]`.
+
+You can check warnings and errors in the console using the `AppCenter` log tag to troubleshoot configuration issues.

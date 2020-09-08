@@ -2,6 +2,49 @@
 
 # [Help & Feedback](help.md)
 
+# General
+## [Introduction](general/index.md)
+## [Product Roadmap](general/roadmap.md)
+## [Accounts in App Center](general/account.md)
+## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
+## [Pricing](general/pricing.md)
+## [Billing](general/billing.md)
+## [Azure Subscriptions](general/azure-subscriptions.md)
+## [Platform Service Matrix](general/platform-service-matrix.md)
+## [Supported Browsers](general/browsers.md)
+## [Platform Limits](general/platform-limits.md)
+## [Support Center](general/support-center.md)
+
+# Getting Started
+## [Quickstarts](quickstarts/index.md)
+## [Learning Resources](quickstarts/learning-resources.md)
+## [iOS](quickstarts/ios/overview.md)
+### [Getting started](quickstarts/ios/getting-started.md)
+### [Build](quickstarts/ios/build.md)
+### [Test](quickstarts/ios/test.md)
+### [Distribute](quickstarts/ios/distribute.md)
+### [Crashes](quickstarts/ios/crashes.md)
+### [Analytics](quickstarts/ios/analytics.md)
+### [Push](quickstarts/ios/push.md)
+## [Android](quickstarts/android/overview.md)
+### [Getting Started](quickstarts/android/getting-started.md)
+### [Build](quickstarts/android/build.md)
+### [Test](quickstarts/android/test.md)
+### [Distribute](quickstarts/android/distribute.md)
+### [Crashes](quickstarts/android/crashes.md)
+### [Analytics](quickstarts/android/analytics.md)
+### [Push](quickstarts/android/push.md)
+## [macOS](quickstarts/macos/overview.md)
+### [Getting Started](quickstarts/macos/getting-started.md)
+### [Build](quickstarts/macos/build.md)
+### [Distribute](quickstarts/macos/distribute.md)
+### [Crashes](quickstarts/macos/crashes.md)
+### [Analytics](quickstarts/macos/analytics.md)
+### [Push](quickstarts/macos/push.md)
+
+
+
 # Dashboard
 ## [Overview](dashboard/index.md)
 ## [Creating and managing apps](dashboard/creating-and-managing-apps.md)
@@ -14,51 +57,49 @@
 ## [Slack App](dashboard/slack/index.md)
 ## [FAQ](dashboard/faq.md)
 
+
+
 # Build
 ## [Introduction](build/index.md)
-## Android
-### [Introduction](build/android/index.md)
-### [Configure a build](build/android/first-build.md)
-### [Code Signing](build/android/code-signing.md)
-## iOS
-### [Introduction](build/ios/index.md)
-### [Configure a build](build/ios/first-build.md)
-### [Code Signing](build/ios/code-signing.md)
-## macOS
-### [Introduction](build/macos/index.md)
-### [Configure a build](build/macos/first-build.md)
-### [Code Signing](build/macos/code-signing.md)
-### [Upload signing files](build/macos/uploading-signing-files.md)
-## React Native
-### [Introduction](build/react-native/index.md)
-### [Android](build/react-native/android/index.md)
-### [iOS](build/react-native/ios/index.md)
-### [Node.js selection](build/react-native/nodejs.md)
-## Windows
-### [Introduction](build/windows/index.md)
-### [Configure a build](build/windows/uwp/first-build.md)
-### [Build results](build/windows/uwp/results.md)
-## Xamarin
-### [Introduction](build/xamarin/index.md)
+## Supported App Frameworks
 ### Android
-#### [Introduction](build/xamarin/android/index.md)
-#### [Code Signing](build/xamarin/android/code-signing.md)
+#### [Configure a build](build/android/index.md)
+#### [Code Signing](build/android/code-signing.md)
 ### iOS
-#### [Introduction](build/xamarin/ios/index.md)
-#### [Solution configuration mappings](build/xamarin/ios/solution-configuration-mappings.md)
-## [Source Control System](build/connect.md)
+#### [Configure a build](build/ios/index.md)
+#### [Code Signing](build/ios/code-signing.md)
+### macOS
+#### [Configure a build](build/macos/index.md)
+#### [Code Signing](build/macos/code-signing.md)
+### React Native
+#### [Introduction](build/react-native/index.md)
+#### [Android](build/react-native/android/index.md)
+#### [iOS](build/react-native/ios/index.md)
+#### [Node.js selection](build/react-native/nodejs.md)
+### Windows (UWP)
+#### [Configure a build](build/uwp/index.md)
+#### [Build results](build/uwp/results.md)
+### Xamarin
+#### [Introduction](build/xamarin/index.md)
+#### [Solution configuration mappings](build/xamarin/solution-configuration-mappings.md)
+#### Android
+##### [Introduction](build/xamarin/android/index.md)
+##### [Code Signing](build/xamarin/android/code-signing.md)
+#### iOS
+##### [Introduction](build/xamarin/ios/index.md)
+## [Managing repository connections](build/connect.md)
+## [Using the GitHub App](build/github-app.md)
 ## [Branches and Build configurations](build/branches.md)
+## [Cloud build machines](build/software.md)
+## [Build Notifications](build/notifications.md)
 ## [Build scripts](build/custom/scripts/index.md)
 ## [Environment variables](build/custom/variables/index.md)
-## [Cloud build machines](build/software.md)
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
-## [Using the GitHub App](build/github-app.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
 ## Troubleshooting
-### [Introduction](build/troubleshooting/index.md)
-### [General](build/troubleshooting/general.md)
-### [Code Repositories](build/troubleshooting/code-repos.md)
+### [General](build/troubleshooting/index.md)
+### [Repository Connections](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [Backup Build Data](build/troubleshooting/backup-data.md)
 ### [iOS](build/troubleshooting/ios.md)
@@ -70,49 +111,69 @@
 ## [Introduction](test-cloud/index.md)
 ## [Core Concepts](test-cloud/core-concepts.md)
 ## [Getting Started](test-cloud/getting-started.md)
-## [Devices Available](test-cloud/devices.md)
-## [Environment Variables](test-cloud/environment-variables.md)
-## Appium
-### [Preparing for upload](test-cloud/appium/preparing-for-upload.md)
-## Espresso
-### [Preparing for upload](test-cloud/espresso/preparing-for-upload.md)
-## Xamarin.UITest
-### [Introduction](test-cloud/uitest/index.md)
-### [Get Started with Xamarin.Forms](test-cloud/uitest/get-started-xamarin-forms.md)
-### [Get Started with iOS Native apps](test-cloud/uitest/get-started-with-ios-native.md)
-### [Preparing Android apps for upload](test-cloud/uitest/preparing-for-upload-android.md)
-### [Preparing iOS apps for upload](test-cloud/uitest/preparing-for-upload-ios.md)
-### [Cheatsheet](test-cloud/uitest/cheatsheet.md)
-### [License](test-cloud/uitest/license.md)
-### Working With
-#### [Introduction](test-cloud/uitest/working-with.md)
-#### [Android signing](test-cloud/uitest/working-with-android-signing.md)
-#### [Backdoors](test-cloud/uitest/working-with-backdoors.md)
-#### [Categorizing Tests](test-cloud/uitest/working-with-categorized-tests.md)
-#### [Entering Text](test-cloud/uitest/working-with-entering-text.md)
-#### [Files](test-cloud/uitest/working-with-files.md)
-#### [Gestures](test-cloud/uitest/working-with-gestures.md)
-#### [REPL](test-cloud/uitest/working-with-repl.md)
-#### [iOS Simulator](test-cloud/uitest/working-with-ios-simulator.md)
-#### [Timeouts](test-cloud/uitest/working-with-timeouts.md)
-#### [Webviews](test-cloud/uitest/working-with-webviews.md)
-## XCUITest
-### [Preparing for upload](test-cloud/xcuitest/preparing-for-upload.md)
-### [Preparing for upload with Extensions](test-cloud/xcuitest/preparing-for-upload-extension.md)
-## Calabash [Depreciated]
-### [Preparing for upload](test-cloud/calabash/preparing-for-upload.md)
+## Devices Available
+### [Android](test-cloud/devices/android.md)
+### [iOS](test-cloud/devices/ios.md)
+## Test Frameworks
+### [Framework Support Chart](test-cloud/frameworks/index.md)
+### Appium
+#### [Preparing for upload](test-cloud/frameworks/appium/index.md)
+#### [Missing test results](test-cloud/frameworks/appium/missing-results.md)
+### Espresso
+#### [Preparing for upload](test-cloud/frameworks/espresso/index.md)
+#### [App & Test APK signing](test-cloud/frameworks/espresso/app-test-signing.md)
+### Xamarin.UITest
+#### [Introduction](test-cloud/frameworks/uitest/index.md)
+#### [Testing with Xamarin.Forms](test-cloud/frameworks/uitest/xamarin-forms.md)
+#### [Cheatsheet](test-cloud/frameworks/uitest/cheatsheet.md)
+#### [License](test-cloud/frameworks/uitest/license.md)
+#### iOS
+##### [Testing native apps](test-cloud/frameworks/uitest/ios/index.md)
+##### [Simulator local testing](test-cloud/frameworks/uitest/ios/simulator.md)
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/ios/upload.md)
+#### Android
+##### [Preparing apps for upload](test-cloud/frameworks/uitest/android/index.md)
+##### [Signing apps](test-cloud/frameworks/uitest/android/signing.md)
+#### Features
+##### [Introduction](test-cloud/frameworks/uitest/features/index.md)
+##### [App data between tests](test-cloud/frameworks/uitest/features/appdatamode.md)
+##### [Backdoors](test-cloud/frameworks/uitest/features/backdoors.md)
+##### [Including files](test-cloud/frameworks/uitest/features/files.md)
+##### [Categorizing tests](test-cloud/frameworks/uitest/features/categorized-tests.md)
+##### [Xamarin.Forms date & time pickers](test-cloud/frameworks/uitest/features/date-time-pickers.md)
+##### [Entering text](test-cloud/frameworks/uitest/features/entering-text.md)
+##### [Gestures](test-cloud/frameworks/uitest/features/gestures.md)
+##### [REPL](test-cloud/frameworks/uitest/features/repl.md)
+##### [Timeouts](test-cloud/frameworks/uitest/features/timeouts.md)
+##### [Webviews](test-cloud/frameworks/uitest/features/webviews.md)
+#### Troubleshooting
+##### [Test-Cloud.exe Upload Errors](test-cloud/frameworks/uitest/troubleshooting/index.md)
+##### [Wrong platform tests are run](test-cloud/frameworks/uitest/troubleshooting/invalid-platform.md)
+##### [REPL Tree command unresponsive](test-cloud/frameworks/uitest/troubleshooting/repl-tree.md)
+### XCUITest
+#### [Preparing for upload](test-cloud/frameworks/xcuitest/index.md)
+#### [Preparing for upload with Extensions](test-cloud/frameworks/xcuitest/upload-extension.md)
+### Calabash [Deprecated]
+#### [Preparing for upload](test-cloud/frameworks/calabash/index.md)
+## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
 ## [Starting a Test Run](test-cloud/starting-a-test-run.md)
 ## [Test Reports](test-cloud/test-reports.md)
+## [Environment Variables](test-cloud/environment-variables.md)
 ## [Security](test-cloud/security.md)
-## [Supported Test Frameworks](test-cloud/supported-frameworks.md)
 ## [Testing in Azure DevOps (formerly VSTS)](test-cloud/vsts-plugin.md)
+## [Test using REST API](test-cloud/rest-api.md)
 ## Troubleshooting
-### [Introduction](test-cloud/troubleshooting/index.md)
-### [Android screenshots](test-cloud/troubleshooting/troubleshooting-android-screenshots.md)
-### [CLI exit codes](test-cloud/troubleshooting/troubleshooting-cli-exit-codes.md)
-### [iOS Privacy Alerts](test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md)
-### [Time limits](test-cloud/troubleshooting/troubleshooting-time-outs.md)
-
+### [Overview](test-cloud/troubleshooting/index.md)
+### [Android screenshots](test-cloud/troubleshooting/android-screenshots.md)
+### [iOS privacy alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
+### [iOS incorrect coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
+### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
+### [Database changes during tests](test-cloud/troubleshooting/database-changes.md)
+### [Device idling](test-cloud/troubleshooting/sleep.md)
+### [Device log analysis](test-cloud/troubleshooting/device-logs.md)
+### [Stalled devices](test-cloud/troubleshooting/stalls.md)
+### [Time limits](test-cloud/troubleshooting/time-outs.md)
+### [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
 
 # Distribute
 ## [Introduction](distribution/index.md)
@@ -176,7 +237,6 @@
 ## [Windows Support](diagnostics/windows-support.md)
 ## [Upload crashes via UI](diagnostics/upload-crashes-ui.md)
 ## [Upload crashes via API](diagnostics/upload-crashes.md)
-## [Integrating with PlayFab](diagnostics/playfab.md)
 ## [Limitations](diagnostics/limitations.md)
 ## [Troubleshooting](diagnostics/troubleshooting.md)
 
@@ -290,19 +350,6 @@
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
-# General
-## [Introduction](general/index.md)
-## [Product Roadmap](general/roadmap.md)
-## [Accounts in App Center](general/account.md)
-## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
-## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
-## [Pricing](general/pricing.md)
-## [Billing](general/billing.md)
-## [Azure Subscriptions](general/azure-subscriptions.md)
-## [Platform Service Matrix](general/platform-service-matrix.md)
-## [Supported Browsers](general/browsers.md)
-## [Support Center](general/support-center.md)
-
 # GDPR
 ## [Introduction](gdpr/index.md)
 ## [Your Data](gdpr/your-data.md)
@@ -346,30 +393,5 @@
 ## [App Center API tokens and documentation](api-docs/index.md)
 ## [Command Line Interface](cli/index.md)
 
-# [Resources](general/resources.md)
 
-# Quickstarts
-## [Start Here](quickstarts/index.md)
-## [iOS](quickstarts/ios/overview.md)
-### [Getting started](quickstarts/ios/getting-started.md)
-### [Build](quickstarts/ios/build.md)
-### [Test](quickstarts/ios/test.md)
-### [Distribute](quickstarts/ios/distribute.md)
-### [Crashes](quickstarts/ios/crashes.md)
-### [Analytics](quickstarts/ios/analytics.md)
-### [Push](quickstarts/ios/push.md)
-## [Android](quickstarts/android/overview.md)
-### [Getting Started](quickstarts/android/getting-started.md)
-### [Build](quickstarts/android/build.md)
-### [Test](quickstarts/android/test.md)
-### [Distribute](quickstarts/android/distribute.md)
-### [Crashes](quickstarts/android/crashes.md)
-### [Analytics](quickstarts/android/analytics.md)
-### [Push](quickstarts/android/push.md)
-## [macOS](quickstarts/macos/overview.md)
-### [Getting Started](quickstarts/macos/getting-started.md)
-### [Build](quickstarts/macos/build.md)
-### [Distribute](quickstarts/macos/distribute.md)
-### [Crashes](quickstarts/macos/crashes.md)
-### [Analytics](quickstarts/macos/analytics.md)
-### [Push](quickstarts/macos/push.md)
+

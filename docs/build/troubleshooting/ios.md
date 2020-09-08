@@ -1,18 +1,17 @@
 ---
-title: App Center Build FAQs – iOS
-description: Code signing apps built with App Center
+title: iOS Build Troubleshooting
+description: Troubleshooting iOS app builds in App Center
 keywords: build, faq
 author: elamalani
 ms.author: emalani
-ms.date: 02/04/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 85e33f0b-ea23-485e-bcb9-cc2aa5fa775c
 ms.service: vs-appcenter
 ms.custom: build
 ---
 # iOS Build Troubleshooting
-
-## <a name="no-scheme"/>No Xcode scheme is found
+## No Xcode scheme is found
 Building an xcworkspace or an xcproject requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them. By default schemes aren't shared with others or included in source control.
 
 To share a scheme in Xcode, use the following steps:
@@ -27,7 +26,7 @@ To share a scheme in Xcode, use the following steps:
 > Make sure that your `xcshareddata/xcschemes/` folder is not in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder will not work.
 
 
-## <a name="clang-error"/>My iOS builds fail with "clang: error: linker command failed with exit code 1"
+## My iOS builds fail with "clang: error: linker command failed with exit code 1"
 The error could be caused by App Center building with the xcodeproj instead of the workspace. When adding CocoaPods to your project, you must switch to using the workspace when building in App Center. 
 
 Indicator: Look for this line in your build log:
@@ -40,7 +39,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 To fix this error, open your project's Build configuration and click **Save**. App Center will automatically choose the workspace correctly for future builds. 
 
-## <a name="signing-issues"/>iOS signing issues explained
+## iOS signing issues explained
 > [!NOTE]
 > Signing identities which use non-ascii characters are not supported in Build.
 
@@ -63,15 +62,15 @@ To troubleshoot and get build signing up and running, we suggest the following s
 3. Prepare the provisioning profile and certificate selected in the Xcode target and upload them to the App Center build configuration.
 4. Most importantly: make sure you’ve pushed the latest state of your project before saving the new certificate and profile to the build configuration.
 
-## <a name="ipa"/>Where is my .ipa file?
+## Where is my .ipa file?
 Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build isn't signed. Unsigned builds produce an `.xcarchive` instead. If you wish to generate an `.ipa` file with the artifacts of an unsigned build, you can use the `.xcarchive` file to do so.
 
 ![Export xcarchive file using xcode](~/build/images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer")
 
-## <a name="bitcode-error"/>My iOS app using Xcode fails with Invalid bitcode version error
+## My iOS app using Xcode fails with Invalid bitcode version error
 If your builds fail with `error: Invalid bitcode version (Producer: '802.0.38.0_0' Reader: '800.0.42.1_0')`, you're using a library or pod that was built by a newer version of Xcode than your project. You can either update your project and build configuration in App Center to use a newer version of Xcode or switch to an alternate version of the problematic library, which is compiled with a matching version of Xcode.
 
-## <a name="test-error"/>My iOS app fails to run a test
+## My iOS app fails to run a test
 A common reason for tests to fail is where the linker commands hit an error similar to the following one:
 ```text
  ld: directory not found for option iPhoneSimulator10.3.sdk/Developer/Library/Frameworks 
@@ -83,12 +82,12 @@ The likely cause of this error is the linking type of **Apple Mach-O Linker** is
 
 ![Apple Mach-O Linker](~/build/images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library")
 
-## <a name="cocoapods-error"/>My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
+## My iOS builds using CocoaPods on Xcode 9 keep failing, what should I do?
 It might be because the signing configuration in you Pods project differs from the one in your Main project. Are your Pods checked-in into your repository? If so, your Pods project must use the same signing method as your Main project. 
 
 If your Pods aren't checked-in, there might be different issues. There are a few workarounds you can use in this [GitHub Issue](https://github.com/CocoaPods/CocoaPods/pull/6964) with [pre-build scripts](~/build/custom/scripts/index.md#pre-build).
 
-## <a name="xcode-10-beta-error"/>Since I've upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets** 
+## Since I've upgraded my project to Xcode 10 beta my app fails to build with the error **Cycle in dependencies between targets** 
 Xcode 10's new build system detects dependency cycles in your build and fails your build if there are any.
 
 For more information on how to fix the build, see [Apple's documentation on resolving common types of dependency cycles](https://help.apple.com/xcode/mac/current/#/dev621201fb0).

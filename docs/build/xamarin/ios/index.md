@@ -44,7 +44,7 @@ App Center automatically detects the solution and project files in your reposito
 > For best performance, the analysis is currently limited to two directory levels for **.sln** and four directory levels for **.csproj/fsproj** including the root of your repository.
 
 #### 3.1.1. Building from the solution file (.sln)
-In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects targeting other platforms. This change will ensure that when the **.sln** is building, it won't attempt to build the other projects. There's more [solution configurations mapping information](~/build/xamarin/ios/solution-configuration-mappings.md) you can read.
+In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects targeting other platforms. This change will ensure that when the **.sln** is building, it won't attempt to build the other projects. There's more [solution configurations mapping information](~/build/xamarin/solution-configuration-mappings.md) you can read.
 
 #### 3.1.2. Building from the project file (.csproj/.fsproj)
 To build from a **.csproj/.fsproj** file all the referenced projects (for example, your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
@@ -63,9 +63,13 @@ Proper .NET Core version will be selected automatically based on Mono version us
 | <= 5.18 | 2.2.105 |
 | 6.0 | 2.2.300 |
 | 6.4 | 3.0.100 |
+| 6.6 | 3.1.100 |
+| 6.8 | 3.1.200 |
+| 6.10 | 3.1.300 |
 
 ### 3.4. Xcode Version
-Current supported versions of Xamarin require Xcode 8.3.3 or higher
+
+Currently supported versions of Xamarin require Xcode 9.4.1 or higher
 
 ### 3.5. Build triggers
 By default, a new build is triggered every time a developer pushes to a configured branch. If you prefer to trigger a new build manually, you can change this setting in the configuration pane.

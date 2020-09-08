@@ -110,7 +110,7 @@
         },
         {
             "source_path": "docs/build/ios/first-build/xamarin/solution-configuration-mappings.md",
-            "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings.md"
+            "redirect_url": "/appcenter/build/xamarin/ios/solution-configuration-mappings"
         },
         {
             "source_path": "docs/build/ios/first-build/react-native.md",
@@ -130,7 +130,7 @@
         },
         {
             "source_path": "docs/build/android/first-build/java.md",
-            "redirect_url": "/appcenter/build/android/first-build"
+            "redirect_url": "/appcenter/build/android/"
         },
         {
             "source_path": "docs/build/android/first-build/xamarin.md",
@@ -146,19 +146,19 @@
         },
         {
             "source_path": "docs/build/android/code-signing/xamarin.md",
-            "redirect_url": "/appcenter/build/xamarin/android/code-signing.md"
+            "redirect_url": "/appcenter/build/xamarin/android/code-signing"
         },
         {
             "source_path": "docs/build/windows/configure-build/index.md",
-            "redirect_url": "/appcenter/build/windows/first-build.md"
+            "redirect_url": "/appcenter/build/uwp/"
         },
         {
             "source_path": "docs/build/windows/configure-build/uwp.md",
-            "redirect_url": "/appcenter/build/windows/first-build.md"
+            "redirect_url": "/appcenter/build/uwp/"
         },
         {
             "source_path": "docs/build/windows/build-results/index.md",
-            "redirect_url": "/appcenter/build/windows/results.md"
+            "redirect_url": "/appcenter/build/uwp/results"
         },
         {
             "source_path": "docs/crashes/index.md",
@@ -210,11 +210,11 @@
         },
         {
             "source_path": "docs/push/pushapi.md",
-            "redirect_url": "/appcenter/push/rest-api.md"
+            "redirect_url": "/appcenter/push/rest-api"
         },
         {
             "source_path": "docs/push/audiences.md",
-            "redirect_url": "/appcenter/push/send-notification.md"
+            "redirect_url": "/appcenter/push/send-notification"
         },
         {
             "source_path": "docs/azure/index.md",
@@ -222,7 +222,7 @@
         },
         {
 	        "source_path": "docs/distribution/stores/app-protection.md",
-	        "redirect_url": "docs/distribution/stores/intune.md"
+	        "redirect_url": "docs/distribution/stores/intune"
         },
         {
             "source_path": "docs/diagnostics/symbolication.md",
@@ -231,6 +231,10 @@
         {
             "source_path": "docs/diagnostics/proguard.md",
             "redirect_url": "/appcenter/diagnostics/android-proguard"
+        },
+        {
+            "source_path": "docs/diagnostics/playfab.md",
+            "redirect_url": "/appcenter/diagnostics/"
         },
         {
             "source_path": "docs/migration/hockeyapp/index.md",
@@ -282,7 +286,7 @@
 	      },
 	      {
 	          "source_path": "docs/migration/test-cloud/frameworks.md",
-	          "redirect_url": "/appcenter/test-cloud/preparing-for-upload"
+	          "redirect_url": "/appcenter/test-cloud/frameworks/"
           },
           {
             "source_path": "docs/transition/distribution-groups.md",
@@ -414,35 +418,215 @@
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/index.md",
-            "redirect_url": "/appcenter/test-cloud/supported-frameworks"
+            "redirect_url": "/appcenter/test-cloud/frameworks/"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/appium.md",
-            "redirect_url": "/appcenter/test-cloud/appium/preparing-for-upload"
+            "redirect_url": "/appcenter/test-cloud/frameworks/appium/"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/espresso.md",
-            "redirect_url": "/appcenter/test-cloud/espresso/preparing-for-upload"
+            "redirect_url": "/appcenter/test-cloud/frameworks/espresso/"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/calabash.md",
-            "redirect_url": "/appcenter/test-cloud/calabash/preparing-for-upload"
+            "redirect_url": "/appcenter/test-cloud/frameworks/calabash/"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/xamarin-android-uitest.md",
-            "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-android"
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/upload-droid"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/xamarin-ios-uitest.md",
-            "redirect_url": "/appcenter/test-cloud/uitest/preparing-for-upload-ios"
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/upload-ios"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/xcuitest.md",
-            "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload"
+            "redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/"
           },
           {
             "source_path": "docs/test-cloud/preparing-for-upload/xcuitest-extension.md",
-            "redirect_url": "/appcenter/test-cloud/xcuitest/preparing-for-upload-extension"
-          }
+            "redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/upload-extension"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/"
+          },
+	  {
+            "source_path": "docs/test-cloud/frameworks/uitest/working-with-android-signing.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/android/signing"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/working-withbackdoors.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/backdoors"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-categorized-tests.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/categorized-tests"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-entering-text.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/entering-text"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/files.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/files"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-gestures.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/gestures"
+          },
+          {
+            "source_path": "docs/test-cloud/uitest/working-with-repl.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/repl"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-ios-simulator.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/ios-simulator"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-timeouts.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/timeouts"
+          },
+	  {
+            "source_path": "docs/test-cloud/uitest/working-with-webviews.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/webviews"
+          },
+	{
+		"source_path": "docs/test-cloud/supported-frameworks.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/"
+	},
+	{
+		"source_path": "docs/test-cloud/troubleshooting/troubleshooting-ios-privacy-alerts.md",
+		"redirect_url": "/appcenter/test-cloud/troubleshooting/ios-privacy-alerts"
+	},
+	{
+		"source_path": "docs/test-cloud/appium/preparing-for-upload.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/appium/"
+	},
+	{
+		"source_path": "docs/test-cloud/calabash/preparing-for-upload.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/calabash/"
+	},
+	{
+		"source_path": "docs/test-cloud/espresso/preparing-for-upload.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/espresso/"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/preparing-for-upload-android.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/android/"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/preparing-for-upload-ios.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/ios/upload"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/cheatsheet.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/cheatsheet"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/index.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/get-started-with-ios-native.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/ios/"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/license.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/license"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/get-started-xamarin-forms.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/xamarin-forms"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/android-signing.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/android/signing"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/ios-simulator.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/ios/simulator"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/backdoors.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/backdoors"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/categorized-tests.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/categorized-tests"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/entering-text.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/entering-text"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/files.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/files"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/gestures.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/gestures"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/index.md",
+		"redirect_url": "/appcenter/test-cloud/uitest/features/"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/repl.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/repl"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/timeouts.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/timeouts"
+	},
+	{
+		"source_path": "docs/test-cloud/uitest/working-with/webviews.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/uitest/features/webviews"
+	},
+	{
+		"source_path": "docs/test-cloud/xcuitest/preparing-for-upload.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/"
+	},
+	{
+		"source_path": "docs/test-cloud/xcuitest/preparing-for-upload-extension.md",
+		"redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/upload-extension"
+	},
+    {
+        "source_path": "docs/general/resources.md",
+        "redirect_url": "/appcenter/quickstarts/learning-resources"
+    },
+    {
+        "source_path": "docs/build/android/first-build.md",
+        "redirect_url": "/appcenter/build/android/"
+    },
+    {
+        "source_path": "docs/build/ios/first-build.md",
+        "redirect_url": "/appcenter/build/ios/"
+    },
+    {
+        "source_path": "docs/build/macos/first-build.md",
+        "redirect_url": "/appcenter/build/macos/"
+    },
+    {
+        "source_path": "docs/build/macos/uploading-signing-files.md",
+        "redirect_url": "/appcenter/build/macos/code-signing"
+    },
+    {
+        "source_path": "docs/build/windows/uwp/first-build.md",
+        "redirect_url": "/appcenter/build/uwp/"
+    },
+    {
+        "source_path": "docs/build/windows/index.md",
+        "redirect_url": "/appcenter/build/uwp/"
+    },
+    {
+        "source_path": "docs/build/windows/uwp/results.md",
+        "redirect_url": "/appcenter/build/uwp/results"
+    },
+    {
+        "source_path": "docs/build/xamarin/ios/solution-configuration-mappings.md",
+        "redirect_url": "/appcenter/build/xamarin/solution-configuration-mappings.md"
+    }    
  ]
 }

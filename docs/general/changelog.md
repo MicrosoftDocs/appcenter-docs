@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # App Center Changelog
-
 This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
 
 ### **July 31, 2019**
@@ -36,7 +35,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
-    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#xcode-version).
+    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#32-xcode-version).
 
 ### **April 26, 2019**
 - **Build support for Xcode 10.2.1**
@@ -89,7 +88,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 ### **December 11, 2018**
 
 - **Added build support for Xamarin.iOS 12.2**:
-  Build your Xamarin apps with [Xamarin.iOS 12.2](https://developer.xamarin.com/releases/ios/xamarin.ios_12/xamarin.ios_12.2/)
+  Build your Xamarin apps with [Xamarin.iOS 12.2](https://docs.microsoft.com/xamarin/ios/release-notes/12/12.2)
   - Xamarin.iOS 12.2.1.11
 
 ### **November 30, 2018**
@@ -168,10 +167,10 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 
 - **Added Xcode 10.0 support for React Native apps**:
   Build your React Native iOS apps with Xcode 10.0 (only available for React Native 0.56+)
-  - The build process uses the Xcode legacy build system as described in this [github issue](https://github.com/facebook/react-native/issues/19573). Currently React Native doesn't have full support of new build system that was added in Xcode 10.0
+  - The build process uses the Xcode legacy build system as described in this [GitHub issue](https://github.com/facebook/react-native/issues/19573). Currently React Native doesn't have full support of new build system that was added in Xcode 10.0
 
 - **Two-factor authentication for Apple App Store**
-  Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store connection. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only needs the six-digit code.
+  Add app-specific password to your Apple IDs for two-factor authentication support when publishing apps to App Store and TestFlight. [Adding an app-specific password](~/distribution/stores/apple.md#adding-two-factor-authentication) is only required for App Store connection. Services like [automatically manage devices](~/distribution/auto-provisioning.md) only need the six-digit code.
 
 ### **October 3, 2018**
 
@@ -234,7 +233,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **August 22, 2018**
 
 - **Support for Android Pie**:
-  We have added support to allow you build apps targeting Android Pie.
+  We've added support for building apps that target Android Pie.
 
 ### **August 20, 2018**
 
@@ -259,7 +258,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
-  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the appcenter test wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3.
+  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the `appcenter test` wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3.
 
   Bug fixes:
 
@@ -350,7 +349,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **April 2, 2018**
 
 - **CLI version 1.0.14 released**:
-  Added `--test-output-dir` and `--merge-nunit-xml` options to appcenter test run commands.
+  Added `--test-output-dir` and `--merge-nunit-xml` options to `appcenter test run` commands.
   Misc. fixes to `codepush` commands.
 
 ### **March 22, 2018**
@@ -361,13 +360,11 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   Added support for Errors for Xamarin iOS and Xamarin Android. This allows you to track your handled exceptions and report them in App Center Diagnostics.
 
 ### **March 06, 2018**
-
 - **Updated Xamarin SDKs**:
   Build your Xamarin apps with [SDK release 15.5.5](https://releases.xamarin.com/service-release-15-5-5/).
 
 ### **December 21, 2017**
-
-- **Cordova platform preview released**:
+- **Cordova platform preview release**:
   Visual Studio App Center now offers preview support for Cordova apps with our Test, Distribute, Analytics, Crash and Push Notifications services.
 
 ### **December 16, 2017**
@@ -395,24 +392,24 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 - **macOS preview released**:
   Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services.
 
-- **HockeyApp side by side enabled**:
-  We have now enabled a HockeyApp and App Center side by side experience for all HockeyApp customers. To view the side by side experience, just login to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
+- **HockeyApp side-by-side enabled**:
+  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, just log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
 
 ### **November 15, 2017**
 
-- **Visual Studio App Center launches!**:
+- **Visual Studio App Center launches!**
   Visual Studio App Center is made [generally available](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) to everyone and is officially re-branded from Visual Studio Mobile Center to Visual Studio App Center.
 
 ### **October 20, 2017**
 
 - **Improved Xamarin iOS Mono/SDK mapping and Xcode version handling**:
-  We have improved the automatic mapping between your iOS SDK versions with Mono and Xcode to ensure a smoother and more consistent build experience out of the box.
+  We've improved the automatic mapping between your iOS SDK versions with Mono and Xcode to ensure a smoother and more consistent build experience out of the box.
 
 - **Support for Android Oreo & iOS 11**:
-  We have added support to allow you build and test apps targeting iOS 11 and Android Oreo.
+  We've added support to allow you build and test apps targeting iOS 11 and Android Oreo.
 
 - **Named Device Sets in Test**:
-  You are now able to save device/OS combinations into named device sets to allow for reuse in future test runs.
+  Now you can save device & OS combinations into named device sets for reuse in future test runs.
 
 - **Export your data to Blob Storage and Application Insights**:
   You are now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
@@ -552,7 +549,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 - Upload symbol files and get symbolicated crash reports using the latest CLI, v0.6.0.
 - Gain deeper insight into user engagement with up to 10 Analytics custom event properties
 - Run automated UI tests for iOS 10 and Android 7 with Appium 1.6.3
-- FIXED: Analytics events appear correctly even if you have an adblocker in the browser
+- FIXED: Analytics events appear correctly even if you have an ad blocker in the browser
 
 ### **Feb 14, 2017**
 
