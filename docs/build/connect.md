@@ -36,7 +36,7 @@ If you've connected to a repository service with the wrong account, you'll have 
 > Keep in mind that if you connect to a new account, you'll lose all the build configuration and previous builds for ALL the apps configured with the previous account.
 
 ### Bitbucket
-To connect to another Bitbucket account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (Oauth) > Revoke App Center token. In App Center's **Build** tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you redo the Oauth flow in App Center, you sign out in that browser from Bitbucket first.
+To connect to another Bitbucket account, first revoke the Oauth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (App authorizations) > Revoke App Center token. In App Center's **Build** tab, reconnect to Bitbucket and go through the Oauth flow again. Make sure that before you redo the Oauth flow in App Center, you sign out in that browser from Bitbucket first.
 
 ![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-oauth-token.jpg "Remove Bitbucket token")
 
