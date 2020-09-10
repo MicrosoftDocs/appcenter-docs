@@ -13,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Getting Started - Sample Swift App and Tutorials
+# Getting Started - Sample Swift (macOS) App and Tutorials
 
 In this tutorial, you will learn how to set up a sample Swift app with App Center for macOS. Both Objective-C and Swift are supported.
 

@@ -19,7 +19,7 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 #ms.reviewer: [ALIAS]
 ---
 
-# Test - Sample Swift App and Tutorials
+# Test - Sample Swift iOS App and Tutorials
 
 XCUITests are included with the sample app. In this tutorial, you will learn to run the UI tests using App Center.
 

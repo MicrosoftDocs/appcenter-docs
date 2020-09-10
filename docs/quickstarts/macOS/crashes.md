@@ -15,7 +15,7 @@ dev_langs:
  - swift
 ---
 
-# Crashes - Sample Swift App and Tutorials
+# Crashes - Sample Swift (macOS) App and Tutorials
 In this tutorial, you will learn to view crashes from a sample Swift app in App Center.
 
 If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
