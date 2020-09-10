@@ -2,8 +2,8 @@
 title: Get Started with Unity
 description: Get started
 keywords: sdk
-author: maestersid
-ms.author: jawh
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/04/2020
 ms.topic: get-started-article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
