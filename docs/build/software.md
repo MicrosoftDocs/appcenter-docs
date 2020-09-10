@@ -3,7 +3,7 @@ title: App Center Cloud Build Machines
 description: Software used on build machines
 keywords: build
 author: elamalani
-ms.author: elamalani
+ms.author: emalani
 ms.reviewer: kegr
 ms.date: 04/28/2020
 ms.topic: article

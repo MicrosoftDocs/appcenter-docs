@@ -3,7 +3,7 @@ title: App Center macOS 10.15 (Catalina)
 description: Software used on macOS 10.15 build machines
 keywords: build
 author: elamalani
-ms.author: elamalani
+ms.author: emalani
 ms.date: 09/07/2020
 ms.topic: article
 ms.service: vs-appcenter

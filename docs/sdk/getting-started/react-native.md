@@ -3,7 +3,7 @@ title: Get Started with React Native
 description: Get Started
 keywords: sdk
 author: elamalani
-ms.author: elamalani
+ms.author: emalani
 ms.date: 03/25/2020
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
