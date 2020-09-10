@@ -73,7 +73,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
 
   Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing please refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 
-     ```xml
+```xml
     <platform name="android">
         ...
         <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
@@ -82,22 +82,22 @@ With the CodePush plugin installed, configure your app to use it via the followi
         ...
         <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
     </platform>
-    ```
+```
     You can use the same private/public key pair for each platform. 
 
 2. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
 
-    ```xml
+```xml
     <access origin="https://codepush.appcenter.ms" />
     <access origin="https://codepush.blob.core.windows.net" />
     <access origin="https://codepushupdates.azureedge.net" />
-    ```
+```
 
 3. To ensure that your app can access the CodePush server on [CSP](https://developer.mozilla.org/docs/Web/Security/CSP/Introducing_Content_Security_Policy)-compliant platforms, add `https://codepush.appcenter.ms` to the `Content-Security-Policy` `meta` tag in your `index.html` file:
 
-    ```xml
+```xml
     <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.appcenter.ms 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
-    ```
+```
 
 4. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, simply run the following command:
 
