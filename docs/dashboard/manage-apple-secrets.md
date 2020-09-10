@@ -38,4 +38,4 @@ App Center supports Apple IDs with two-factor authentication protection enabled.
 
 Any of your trusted Apple devices can generate a six-digit code by clicking "Allow." Once you have a code, fill out the dialogue and App Center uses the same session next time it's needed. A six-digit code must be renewed every 30 days. You can renew a code with a click on **Reconnect account** from the UI. The UI will be prompted for a new six-digit code.
 
-[App Store Connect](https://appstoreconnect.apple.com/login) requires both the six-digit code and an [app-specific password](https://support.apple.com/en-us/HT204397) to log in with two-factor authentication. You can read how to [add a app-specific password at the App Store docs page](~/distribution/stores/apple.md#adding-two-factor-authentication).
+[App Store Connect](https://appstoreconnect.apple.com/login) requires both the six-digit code and an [app-specific password](https://support.apple.com/HT204397) to log in with two-factor authentication. You can read how to [add a app-specific password at the App Store docs page](~/distribution/stores/apple.md#adding-two-factor-authentication).
