@@ -2,9 +2,8 @@
 title: Working with Timeouts
 description: This guide will discuss how to identify and select an iOS simulator to run Xamarin.UITests locally.
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/17/2018
 ms.topic: article
 ms.assetid: E72E94A6-479F-4D65-9394-C6310F670DD9
@@ -13,7 +12,6 @@ ms.custom: test
 ---
 
 # Working with Timeouts
-
 > [!TIP]
 > By default, UITests waits up to 15 seconds for tests running locally, and one minute for tests running in App Center before throwing the `TimeoutException`. If you specify a different wait time, that will override the default, and apply to both local & App Center tests. 
 

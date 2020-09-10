@@ -2,8 +2,8 @@
 title: Publishing to Google Play fails because the app isn't found
 description: Insight documentation about creating an app package in Google Play Console so that App Center can connect and work with Google Play
 keywords: google, google play store, store, insight
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/18/2020
 ms.topic: reference
 ms.assetid: 43efde4a-3249-46bc-83db-2d8d29b712e4

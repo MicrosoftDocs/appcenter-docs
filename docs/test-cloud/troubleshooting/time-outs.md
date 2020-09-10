@@ -2,8 +2,8 @@
 title: Time limits
 description: Diagnosing timeouts in App Center Test
 keywords: test cloud, time out, limits
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: fcbd21e6-fc3c-4de1-8789-62be066d4ae6

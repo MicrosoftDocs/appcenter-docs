@@ -2,8 +2,8 @@
 title: Publish to Google Play Store
 description: Simplify distribution of mobile applications to the Google Play store
 keywords: distribution store
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/10/2019
 ms.topic: article
 ms.service: vs-appcenter
