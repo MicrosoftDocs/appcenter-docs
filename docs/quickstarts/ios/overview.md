@@ -1,22 +1,13 @@
 ---
-# required metadata
-
 title: iOS Overview
 description: Landing page to navigate through tutorials.
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: 
-#ms.reviewer: [ALIAS]
 ---
 
 # Overview - Sample Swift App and Tutorials

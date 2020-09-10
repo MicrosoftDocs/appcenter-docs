@@ -15,7 +15,7 @@ dev_langs:
  - swift
 ---
 
-# Build - Sample Swift App and Tutorials
+# Build - Sample Swift (macOS) App and Tutorials
 In this tutorial, you will learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.

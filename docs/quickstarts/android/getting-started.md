@@ -2,8 +2,8 @@
 title: Android Getting Started
 description: Getting started prerequisites to onboard an Android application in App Center
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 05/20/2019

@@ -1,25 +1,16 @@
 ---
-# required metadata
-
 title: iOS Build Sample Tutorials
 description: Tutorial to build sample iOS app in App Center.
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/27/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
-# Build - Sample Swift App and Tutorials
+# Build - Sample Swift (iOS) App and Tutorials
 In this tutorial, you will learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
