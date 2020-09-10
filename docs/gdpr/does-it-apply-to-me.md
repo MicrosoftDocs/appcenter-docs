@@ -2,9 +2,8 @@
 title: Does GDPR apply to me? 
 description: How your GDPR Data Subject Rights are covered by App Center. 
 keywords: GDPR, DSR, privacy, EU
-author: bailey
-ms.author: bailey.brooks
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/31/2018 
 ms.topic: article 
 ms.assetid: 5B070250-4DD6-4975-88E7-7ECD872A1C6D
