@@ -2,8 +2,8 @@
 title: App Center Errors
 description: Feature set for errors in App Center
 keywords: app center, errors, exceptions, handled
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/02/2018
 ms.topic: article
 ms.assetid: FF9FA102-581A-445F-A875-3F90CF0B86A4

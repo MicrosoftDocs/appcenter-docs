@@ -2,8 +2,8 @@
 title: Understanding App Center Events Metrics
 description: Help using the Events Metrics on App Center
 keywords: app center, analytics
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 12/16/2019
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688
