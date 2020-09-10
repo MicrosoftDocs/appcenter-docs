@@ -10,8 +10,7 @@ ms.assetid: 26C66069-05D6-4EC2-84DD-AB86AF59EB97
 ms.service: vs-appcenter
 ---
 
-# Handling User Consent
-
+# Handling User Consent for Diagnostics
 ## Ask for the User's Consent To Send Diagnostics logs
 
 If you want to get your users' confirmation before sending a crash/error report to App Center, the App Center SDK exposes a callback that instructs App Center Diagnostics to await confirmation from each user before sending any crash/error data to App Center.
