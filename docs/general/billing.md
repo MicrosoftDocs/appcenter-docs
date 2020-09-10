@@ -2,8 +2,8 @@
 title: App Center Billing
 description: Information about Visual Studio App Center pricing plans
 keywords: pricing,billing,subscription
-author: maestersid
-ms.author: jawh
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/11/2020
 ms.topic: article
 ms.assetid: 7cc39110-1d3e-4030-9935-ea5bb8766a1d
