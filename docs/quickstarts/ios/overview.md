@@ -1,6 +1,6 @@
 ---
 title: iOS Overview
-description: Landing page to navigate through tutorials.
+description: Landing page to navigate through iOS tutorials.
 keywords: app center
 author: king-of-spades
 ms.author: kegr
@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 ---
 
-# Overview - Sample Swift App and Tutorials
+# Overview - Sample Swift (iOS) App and Tutorials
 
 These quickstart tutorials will help you onboard to App Center for iOS. The [sample swift app](https://github.com/microsoft/appcenter-sampleapp-ios-swift/tree/master) has the App Center SDK already integrated, and links to its tutorials are below.
 

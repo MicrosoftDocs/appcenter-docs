@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: macOS Analytics Sample App Tutorials
-description: Tutorial to help user set up analytics, track custom events and check logflow.
+description: Tutorial to help user set up analytics in macOS, track custom events and check logflow.
 keywords: app center
 author: iamclement
 ms.author: iamclement
@@ -15,7 +15,7 @@ dev_langs:
 ---
 
 
-# Analytics - Sample Swift App and Tutorials
+# Analytics - Sample Swift App (macOS) and Tutorials
 
 In this tutorial, you will learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 

@@ -1,9 +1,9 @@
 ---
 title: macOS Overview
-description: Landing page to navigate through tutorials.
+description: Landing page to navigate through macOS tutorials.
 keywords: app center
-author: iamclement
-ms.author: iamclement
+author: king-of-spades
+ms.author: kegr
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Overview - Sample Swift App and Tutorials
+# Overview - Sample Swift (macOS) App and Tutorials
 
 These quickstart tutorials will help you onboard to App Center for macOS. The [sample swift app](https://github.com/VSAppCenter/sampleapp-macos-swift) has the App Center SDK already integrated, and links to its tutorials are below.
 
