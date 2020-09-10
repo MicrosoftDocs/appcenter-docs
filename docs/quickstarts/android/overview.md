@@ -1,23 +1,14 @@
 ---
-# required metadata
-
 title: Android Overview
 description: Landing page to navigate through Android tutorials.
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: samples
 ms.assetid: d99d49f4-a1a7-4764-9b83-ef88ae5c2eef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
 ---
 
 

@@ -4,7 +4,6 @@ description: Software used on build machines
 keywords: build
 author: elamalani
 ms.author: emalani
-ms.reviewer: kegr
 ms.date: 04/28/2020
 ms.topic: article
 ms.assetid: 1d1f2f48-1e6c-45da-8cad-0e25200abd98

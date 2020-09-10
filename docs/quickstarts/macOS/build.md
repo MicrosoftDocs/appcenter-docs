@@ -1,11 +1,9 @@
 ---
-# required metadata
-
 title: macOS Build Sample Tutorials
 description: Tutorial to build sample macOS app in App Center.
 keywords: app center
-author: iamclement
-ms.author: iamclement
+author: king-of-spades
+ms.author: kegr
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -15,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Build - Sample Swift App and Tutorials
+# Build - Sample Swift (macOS) App and Tutorials
 In this tutorial, you will learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
