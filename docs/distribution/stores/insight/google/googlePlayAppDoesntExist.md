@@ -1,6 +1,6 @@
 ---
 title: Publishing to Google Play fails because the app isn't found
-description: Insight documentation about creating an app package in Google Play Console so that App Center can connect and work with Google Play
+description: Troubleshooting guide about creating an app package in Google Play Console that App Center can connect to and work with Google Play
 keywords: google, google play store, store, insight
 author: king-of-spades
 ms.author: kegr
@@ -12,7 +12,6 @@ ms.custom: insight, distribution store
 ---
 
 # Connecting to the Google Play Store fails because the app package name couldn't be found
-
 When connecting to the Google Play Store, you may come across an error like this:
 
 > The app package name could not be found in your Google Play Console account. Sign in to your Google Play Console account and make sure your app is published.
@@ -20,11 +19,9 @@ When connecting to the Google Play Store, you may come across an error like this
 This error appears when you try to connect to the Google Play Store before Google knows the package name of your app. Make sure you create the app in the Google Play Console first, and publish it to one of the built-in tracks at least once as well. Follow the steps below to fix the issue.
 
 ## Fixing this issue
-
 Make sure you have the right app package name, and that the app is published in the Google Play Console.
 
 ### Verify the app package name
-
 First verify you used the correct app package name. You can see this in the Google Play Console:
 
 * Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
@@ -34,7 +31,6 @@ First verify you used the correct app package name. You can see this in the Goog
   * If it is not there, go through the publishing steps below.
 
 ### Publish the app
-
 If you have the correct app package name and it still doesn't work, that means the app isn't yet published in the Google Play Console. Publish it there first, to the **Production**, **Beta** or **Alpha** track. App Center doesn't support manually created tracks.
 
 * Sign in to the [Google Play Console](https://play.google.com/apps/publish/).
