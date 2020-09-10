@@ -12,7 +12,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# App Center Analytics
+# App Center Analytics (React Native)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
