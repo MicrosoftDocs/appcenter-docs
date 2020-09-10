@@ -2,8 +2,8 @@
 title: iOS Push Sample App Tutorials
 description: Tutorial to send a push notification to the sample ios app.
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
