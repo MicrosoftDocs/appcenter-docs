@@ -19,7 +19,7 @@ CodePush is an App Center cloud service that enables Apache Cordova and React Na
 > For Android devices, CodePush will only work on TLS 1.2 compatible devices
 
 > [!NOTE]
-> CodePush API usage has rate limitation of 70 requsests per second applied. Those are counted per combination of following: Requestsed endpoint, IP request is coming from, deployment key and client unique id.
+> CodePush API usage has a rate limitation of 70 requests per second applied. Those are counted per combination of the following: Requested endpoint, IP request is coming from, deployment key, and client unique id.
 
 ## 1. Install the App Center CLI
 
