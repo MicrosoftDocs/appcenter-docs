@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deploy Azure DevOps Builds with App Center
 description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
@@ -9,27 +7,23 @@ ms.author: kegr
 ms.date: 05/04/2020
 ms.topic: article
 ms.service: vs-appcenter
-
 ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 ---
 
 # Deploy Azure DevOps Builds with App Center
-
 You can deploy your apps from Azure DevOps to  App Center with the **Deploy with App Center** Task.
 
 ## Creating a signed build
-
 Only signed builds can be deployed and installed to devices, ensure your existing Azure DevOps build definition produces a signed build.
 
 ## Setting up distribution with App Center
-
 Once you're done with the signing task, add the build task **App Center Distribute**. This task uploads your signed build to App Center so that you can distribute it to your beta testers.
 
 When configuring the App Center Distribute task, you'll need your App Center API key. To obtain this key, open a browser, and navigate to the [App Center dashboard](https://appcenter.ms), then open your Account Settings.
 
 ![Get your API key from App Center](images/distribution_new-api-token.png)
 
-Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. If you are using the new YAML editor, [follow the VSTS documentation to create a new connection](https://docs.microsoft.com/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml#create-a-service-connection).Paste the API key you copied from App Center, ensure that the server URL is `https://api.appcenter.ms/v0.1`, and give the connection a name.
+Create a new API token, making sure the API token has full access (so that Azure DevOps can create new releases for distribution), then copy the key. Switch back to Azure DevOps and the App Center Distribute task and create a new **App Center Connection**. If you are using the new YAML editor, [follow the VSTS documentation to create a new connection](https://docs.microsoft.com/azure/devops/pipelines/library/service-endpoints#create-a-service-connection).Paste the API key you copied from App Center, ensure that the server URL is `https://api.appcenter.ms/v0.1`, and give the connection a name.
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 
@@ -87,7 +81,6 @@ Call the API using the following link: https://openapi.appcenter.ms/#/distribute
 ```
 
 ### Distributing the signed builds to App Center
-
 Once you finished configuring the App Center Distribute task, you can Save and Queue your build. If it's successful, your signed build will be uploaded to the releases of the defined destination.
 
 ![Releases](images/distribution_successful-release.png)

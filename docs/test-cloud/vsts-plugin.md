@@ -14,7 +14,7 @@ ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9
 # Using Azure DevOps for UI Testing
 This guide describes how to modify your existing Azure Pipelines build that creates an application binary (`.apk` or `.ipa` file) to add an App Center Test task that runs your test suite in App Center Test.
 
-Azure Pipelines is available as part of Azure DevOps Services. Azure Pipelines helps you implement a build, test, and deployment pipeline for any app. For more information about Azure DevOps Services or Azure Pipelines, see [Azure DevOps Documentation](https://docs.microsoft.com/azure/devops/?view=azure-devops) or [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/?view=azure-devops), respectively.
+Azure Pipelines is available as part of Azure DevOps Services. Azure Pipelines helps you implement a build, test, and deployment pipeline for any app. For more information about Azure DevOps Services or Azure Pipelines, see [Azure DevOps Documentation](https://docs.microsoft.com/azure/devops/) or [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/), respectively.
 
 The App Center Test task for Azure Pipelines lets you run your test suites in App Center Test. You can use Appium, XCUItest, Espresso, and Xamarin.UITest frameworks. Read more about the frameworks on the [App Center Test Supported frameworks](frameworks/index.md) page.
 
@@ -26,7 +26,7 @@ You need the following before you can start testing,
 
 * An Azure Pipelines build that creates your application binary (`.apk` or `.ipa` file).
 * An active App Center Test account. You can activate a trial for App Center Test at [App Center](https://appcenter.ms/). First select your app and then select Test in the left-hand menu.
-* Configure the pipeline to use Node 10.x.x. [Read how to on the Azure DevOps documentation](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/javascript?view=azure-devops#build-environment), the documentation is about Javascript but the principle applies here as well.
+* Configure the pipeline to use Node 10.x.x. [Read how to on the Azure DevOps documentation](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/javascript), the documentation is about Javascript but the principle applies here as well.
 
 ### Azure Pipelines general configuration
 Locate your Azure Pipelines project and open it for **Edit**. Click **+** to add a new task, then search for **App center**.
