@@ -12,7 +12,7 @@ ms.custom: build
 ---
 
 
-# Build Troubleshoooting
+# Build Troubleshooting
 The guides in this section provide general troubleshooting tips for App Center Build.
 
 ## General Tips
@@ -26,7 +26,7 @@ If you're unsure how to diagnose your issue, here are some general tips:
 ## Framework-specific resources
 Issues that occur in local builds, or using specific framework features, usually require framework-specific troubleshooting. Helpful resources are listed below:
 
-| Build Guides | Build Troubleshoooting | External Framework Docs |
+| Build Guides | Build Troubleshooting | External Framework Docs |
 | ------------ | ---------------------- | ----------------------- |
 | [Android (Native)](~/build/android/index.md) | see General Guides | [Android Docs](https://developer.android.com/docs) |
 | [iOS (Native)](~/build/ios/index.md) | [iOS Guide](~/build/troubleshooting/ios.md) | [Apple Developer Docs](https://developer.apple.com/documentation/) |
