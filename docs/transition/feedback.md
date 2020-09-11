@@ -1,8 +1,8 @@
 ---
 title: HockeyApp Feedback
 description: Information on HockeyApp Feedback for your transition
-author: dipree
-ms.author: daadam
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/18/2020
 ms.topic: article
 ms.assetid: dcaba8de-35a3-431a-9720-ee54f8ff2e42

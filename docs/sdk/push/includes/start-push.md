@@ -1,8 +1,8 @@
 ---
-author: asb3993
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ms.date: 12/02/2019
-ms.author: amburns
 ---
 
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.

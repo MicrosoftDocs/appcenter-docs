@@ -1,8 +1,8 @@
 ---
-author: asb3993
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ms.date: 12/02/2019
-ms.author: amburns
 ---
 
 You can send optional custom data as part of the push payload. The data will be sent in the key-value format. This custom data can be intercepted in the app through Push SDK callback.

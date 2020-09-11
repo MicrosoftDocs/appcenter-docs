@@ -1,7 +1,7 @@
 ---
 title: Ignoring symbols
-author: cainejette
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ---
 
