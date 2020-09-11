@@ -3,6 +3,7 @@ title: App Center Build FAQs – Xamarin
 description: Troubleshooting guides for Xamarin apps
 keywords: build, faq
 author: elamalani
+ms.author: emalani
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 7365bb27-d7c1-4fe1-91b4-346359c705ea
@@ -123,7 +124,7 @@ For Mac build machines:
 </configuration>
 ```
 
-For Windows build machines, refer to [UWP C#](~/build/windows/uwp/first-build.md).
+For Windows build machines, refer to [UWP C#](~/build/uwp/index.md).
 
 If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

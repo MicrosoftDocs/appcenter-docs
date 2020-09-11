@@ -2,8 +2,8 @@
 title: Automate an iOS native app with Xamarin.UITest
 description: A guide that shows you how-to automate your iOS Swift or Objective-C app with Xamarin.UITest.
 keywords: Xamarin.UITest, iOS, Swift, Obc-c, Objective-C, automated, testing, ui testing.
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/12/2020
 ms.topic: get-started-article
 ms.assetid: 842394DD-CFDA-4B2D-B4E6-3405ED036369

@@ -3,6 +3,7 @@ title: Code Repository Troubleshooting
 description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: elamalani
+ms.author: emalani
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
@@ -17,6 +18,14 @@ ms.custom: build
 * **Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access**. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
 * **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
+## When configuring a branch, I get an error message saying "no projects can be found" in my branch
+> [!TIP]
+> The Build service has a 30-second time limit for crawling the repository. Large or complex projects might not be indexed within this time limit. In this case, if it's not feasible to host the target project separately, you may consider using [Azure Pipelines](~/build/choose-between-services.md) instead.
+
+App Center analyzes the contents of the branch in your repository to find an app project matching the platform selected for your app in App Center. This assumes your project uses the platform-specific standards for configuration, that is, an Xcode project or workspace for iOS apps, a Gradle project for Android apps and a solution or project for your Xamarin apps.
+
+App Center currently only searches four directory levels deep for your project files. If App Center doesn't find your project in your branch, moving it to the root directory might help. If your repository is large, it may help to reduce its size or number of files.
+
 ## Can I use on-premises repositories?
 App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but doesn't support on-premises repositories.
 
@@ -26,10 +35,13 @@ Disconnect the repository account, and reconnect to the correct one:
 - [GitHub](~/build/connect.md#github)
 - [Azure DevOps](~/build/connect.md#azure-devops)
 
+> [!WARNING]
+> Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
+
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
 
-Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) to enable it.
+Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
 
 ## Are Git submodules supported?
 For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 
@@ -49,10 +61,12 @@ try the following steps:
 * Re-enable the Webhooks
 * Commit a change to the affected repository/branch and try a new build
 
-Contact [App Center support]((https://intercom.help/appcenter/getting-started/getting-help-with-app-center) if the issue persists.
+Contact [App Center support](https://docs.microsoft.com/appcenter/general/support-center.md#contact-us) if the issue persists.
 
 ## What can I do if I'm using Team Foundation Version Control (TFVC)?
 App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
 
 ## Is my source code secure?
 App Center uses virtual machines to build your code. There's a clean virtual machine provisioned especially for your build, which gets discarded once the build finishes. The files uploaded for code signing and the password for the certificate are also stored securely on our servers.
+
+For more information, you can read our [App Center Security doc](~/general/app-center-security.md).

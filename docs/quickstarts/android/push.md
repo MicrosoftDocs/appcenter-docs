@@ -1,11 +1,9 @@
 ---
-# required metadata
-
 title: Send Push Notifications to Users
 description: Tutorial to send a push notification to the sample Android app.
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 07/23/2020
@@ -13,6 +11,9 @@ ms.assetid: a2a75032-0159-447b-9704-e420a3872003
 ---
 
 # Send Push Notifications to Users
+
+> [!IMPORTANT]
+> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 

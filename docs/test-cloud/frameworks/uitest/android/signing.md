@@ -3,6 +3,7 @@ title: Xamarin.UITest and Signing Android Apps
 description: Using your Android Keystore to sign your Android App
 keywords: appcenter, test, stall
 author: king-of-spades
+ms.author: kegr
 ms.date: 07/24/2020
 ms.topic: article
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 
@@ -23,7 +24,7 @@ When running locally with Xamarin.UITest to specify an Android Keystore, use the
 
 > ConfigureApp.Android.Keystore(path, spass, kpass, alias).StartApp();
 
-[AndroidAppConfigurator.KeyStore](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore?view=xamarin-uitest-sdk#Xamarin_UITest_Configuration_AndroidAppConfigurator_KeyStore_System_String_System_String_System_String_System_String_)
+[AndroidAppConfigurator.KeyStore](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore)
 
 > public AndroidAppConfigurator KeyStore (String path, String storePassword, String keyPassword, String keyAlias)
 

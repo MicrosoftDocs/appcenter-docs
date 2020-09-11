@@ -2,8 +2,8 @@
 title: Exporting Diagnostics Data
 description: How to export personal information from crashes and errors to your users
 keywords: GDPR, DSR, privacy, EU
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/30/2019
 ms.topic: article
 ms.assetid: 2B51F9FA-75B1-4B73-8587-992F22CB0631

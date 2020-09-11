@@ -2,8 +2,8 @@
 title: macOS Distribute Sample Tutorials
 description: Tutorial to distribute a sample macOS app to a group in App Center.
 keywords: app center
-author: iamclement
-ms.author: iamclement
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/27/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Distribute - Sample Swift App and Tutorials
+# Distribute - Sample Swift (macOS) App and Tutorials
 In this tutorial, you will learn to distribute a sample Swift app to a group of users, who can install the app on their device.
 
 If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.

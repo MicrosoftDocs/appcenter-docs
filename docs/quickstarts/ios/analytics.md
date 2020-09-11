@@ -1,9 +1,9 @@
 ---
 title: iOS Analytics Sample App Tutorials
-description: Tutorial to help user set up analytics, track custom events and check logflow.
+description: Tutorial to help user set up analytics in iOS, track custom events and check logflow.
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -11,7 +11,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 ---
 
 
-# Analytics - Sample Swift App and Tutorials
+# Analytics - Sample Swift (iOS) App and Tutorials
 
 In this tutorial, you will learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 

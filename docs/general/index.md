@@ -2,8 +2,8 @@
 title: App Center General Info
 description: General information about App Center
 keywords: roadmap, pricing
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: 49b3b1d7-4651-4adf-95a6-9c9cc2232269

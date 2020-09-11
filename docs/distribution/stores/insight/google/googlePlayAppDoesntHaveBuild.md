@@ -1,9 +1,9 @@
 ---
-title: Publishing to Google Play fails because the app is not published
-description: Insight documentation about creating an app package in Google Play Console so that App Center can connect and work with Google Play
+title: Connecting to Google Play fails because the app isn't published yet
+description: How to publish in order to enable the connection
 keywords: google, google play store, store, insight
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: d8eedbe1-bcf9-4748-bf63-1c985983ab48
@@ -12,7 +12,6 @@ ms.custom: insight, distribution store
 ---
 
 # Connecting to the Google Play Store fails because the app isn't published
-
 When connecting to the Google Play Store, you may come across an error like this:
 
 > You must publish your app to the Production, Beta or Alpha track from the Google Play Console before you can connect the store.
@@ -20,7 +19,6 @@ When connecting to the Google Play Store, you may come across an error like this
 This error appears when you try to connect to the Google Play Store before publishing the app. Because App Center doesn't support adding some of the metadata that is required for the first publication, you must publish your app to one of the built-in tracks at least once from the Google Play Console. Follow the steps below to fix the issue.
 
 ## Fixing this issue
-
 Publish the app to the **Production**, **Beta** or **Alpha** track through the Google Play Console. App Center doesn't support manually created tracks.
 
 * Sign in to the [Google Play Console](https://play.google.com/apps/publish/).

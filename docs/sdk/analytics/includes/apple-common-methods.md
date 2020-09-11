@@ -13,7 +13,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
-* Make sure that you [enable Location Services](https://support.apple.com/en-us/HT204690) on the device.
+* Make sure that you [enable Location Services](https://support.apple.com/HT204690) on the device.
 * Get the device's current location using `CLLocationManager`.
 * Convert the location into an ISO country code using `CLGeocoder`.
 * Override the carrier country code using the SDK's `setCountryCode` method.

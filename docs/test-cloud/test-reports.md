@@ -2,9 +2,9 @@
 title: Test reports
 description: Understanding test reports in App Center Test
 keywords: test cloud
-author: oddj0b
-ms.author: vigimm
-ms.date: 04/08/2020
+author: king-of-spades
+ms.author: kegr
+ms.date: 08/12/2020
 ms.topic: article
 ms.assetid: 810505bc-9df6-4640-8c21-0039a339ad06
 ms.service: vs-appcenter
@@ -27,6 +27,8 @@ Read [App Center Test Core concepts](~/test-cloud/core-concepts.md) to understan
 Starting from the App Center **My Apps** page, select an application, then select **Tests** in the navigation list. From the *Test runs dashboard* all test runs in the default test series for that application are displayed.
 
 ## Test runs dashboard
+> [!NOTE]
+> Only the 50 most recent test runs will be shown for the selected Test Series on the Dashboard. 
 
 ![App Center Test, test runs page](images/test-report-test-runs.png)
 

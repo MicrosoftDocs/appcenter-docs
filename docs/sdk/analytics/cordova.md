@@ -10,7 +10,7 @@ ms.assetid: 8900A8A7-92E0-4904-890F-97E4831118F8
 ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
-# App Center Analytics
+# App Center Analytics (Apache Cordova)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

@@ -1,10 +1,10 @@
 ---
 title: App Center Distribute for Unity
-description: Using in-app updates in App Center Distribute
+description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
-author: maestersid
-ms.author: jawh
-ms.date: 07/16/2020
+author: king-of-spades
+ms.author: kegr
+ms.date: 09/02/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -24,10 +24,11 @@ App Center Distribution enables your users/testers to install new versions of an
 > [!IMPORTANT]
 > The Distribute SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
+> [!WARNING]
+> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please remove this code as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
+
 > [!NOTE]
-> There are a few things to consider when using in-app updates:
-> 1. If you have released your app in the App Store or Google Play, in-app updates will be disabled and no longer work.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
+> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -37,12 +38,9 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format `AppCenterDistribute-v{version}.unitypackage`.
 
-> [!WARNING]
-> Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. See [Remove in-app updates for Google Play builds](#remove-in-app-updates-for-google-play-builds) section for details.
-
 ## Remove in-app updates for Google Play builds
 
-Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please remove this code before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 To remove in-app updates native code, uncheck the **Use Distribute** checkbox under the **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 ## Use private distribution group

@@ -2,8 +2,8 @@
 title: App Center Crashes for Android
 description:  App Center Crashes for Android
 keywords: sdk, crash
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/04/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
@@ -14,8 +14,7 @@ dev_langs:
  - kotlin
 ---
 
-# App Center Crashes
-
+# App Center Crashes (Android)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

@@ -11,7 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Analytics
+# App Center Analytics (Xamarin)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

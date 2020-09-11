@@ -2,18 +2,16 @@
 title: Handling User Consent for Analytics
 description: How to handle user consent with Analytics
 keywords: GDPR, DSR, Privacy, EU
-author: hamswan
-ms.author: hamswan
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/06/2019 
 ms.topic: article 
 ms.assetid: 26C66069-05D6-4EC2-84DD-AB86AF50EB97
 ms.service: vs-appcenter
 ---
 
-# Handling User Consent
-
+# Handling User Consent for Analytics
 ## Ask for the User's Consent To Send Analytics logs
-
 If you want to get your user's confirmation before sending any Analytics data to App Center, the App Center SDK exposes an API that you can leverage before sending any Analytics data to App Center.
 
 Follow the steps below:

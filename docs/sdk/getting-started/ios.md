@@ -1,9 +1,9 @@
 ---
 title: Get Started with iOS
-description: Get started
+description: Get started with iOS
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/07/2020
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
@@ -14,7 +14,6 @@ dev_langs:
 ---
 
 # Get Started with iOS
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

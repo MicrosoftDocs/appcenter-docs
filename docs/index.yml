@@ -73,8 +73,8 @@ conceptualContent:
           - text: React Native
             url: ~/build/react-native/index.md
             itemType: how-to-guide
-          - text: Windows
-            url: ~/build/windows/index.md
+          - text: Windows (UWP)
+            url: ~/build/uwp/index.md
             itemType: how-to-guide
           - text: Xamarin
             url: ~/build/xamarin/index.md
@@ -180,7 +180,7 @@ tools:
   items:
     # Card
     - title: Android
-      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_android.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
       url: ~/sdk/getting-started/android.md
     # Card
     - title: iOS
@@ -192,19 +192,19 @@ tools:
       url: ~/sdk/getting-started/react-native.md
         # Card
     - title: Windows
-      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_windows.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
       url: ~/sdk/getting-started/uwp.md
     # Card
     - title: Xamarin
-      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_xamarin.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_xamarin.svg
       url: ~/sdk/getting-started/xamarin.md
     # Card
     - title: macOS
-      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_macOS.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_macOS.svg
       url: ~/sdk/getting-started/macos.md
         # Card
     - title: Cordova
-      imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_cordova.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_cordova.svg
       url: ~/sdk/getting-started/cordova.md
     # Card
     - title: Unity

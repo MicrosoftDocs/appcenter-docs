@@ -17,7 +17,7 @@ In this document, you'll learn how to integrate App Center Build and [App Center
 
 ## Supported Configurations
 App Center device testing requires:
-   - An [Android](~/build/android/first-build.md) or [iOS](~/build/ios/first-build.md) app.
+   - An [Android](~/build/android/index.md) or [iOS](~/build/ios/index.md) app.
    - The app package is compatible with running on physical devices.
 
 ## Configuring your build

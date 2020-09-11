@@ -2,8 +2,8 @@
 title: Xamarin.UITest
 description: Key features of App Center Test 
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/29/2020
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
@@ -12,7 +12,6 @@ ms.custom: test
 ---
 
 # Xamarin.UITest
-
 *Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in C# using the [NUnit](http://www.nunit.org/) unit testing framework to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would: entering text, tapping buttons, and performing gestures - such as swipes.
 
 Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be performed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
@@ -48,7 +47,6 @@ Automated UI testing relies heavily on being able to locate and interact with vi
 To help with writing tests, Xamarin.UITest provides a *read-eval-print-loop* ([*REPL*](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)). The REPL allows developers and testers to interact with a screen while the application is running and simplifies creating the queries.
 
 ## Introducing the Xamarin.UITest API
-
 All test interactions with the mobile application occur through an instance of `Xamarin.UITest.IApp`. This interface defines the methods that are crucial for the test to collaborate with the application and interact with the user interface. There are two concrete implementations of this interface:
 
 * **`Xamarin.UITest.iOS.iOSApp`** &nbsp; This class will automate tests against iOS.
@@ -70,7 +68,6 @@ app.Tap(c=>c.Button("ValidateButton"));
 There are two implementations of the `IApp` interface within the Xamarin.UITest framework, one for iOS and one for Android.
 
 ### Initialize IApp for iOS Applications
-
 When Xamarin.UITest runs a test on iOS, it will start up an instance of the iOS simulator, deploy the application, start it, and begin running the tests. The iOS application must already be built &ndash; Xamarin.UITest will not compile the application and create the App Bundle for you.
 
 The `AppBundle` method can be used to specify where on the file system the app bundle may be found. There are two ways to do so, with an absolute path, or a relative path. This snippet shows using an absolute path to the app bundle:
@@ -106,7 +103,6 @@ The relative path example tells `AppBundle` to go up three directories from the 
 For more information on how to run iOS tests on a specific iOS Simulator, please see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
-
 Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that is already running. The app will be started, and then the test will be run. Xamarin.UITest cannot build the APK nor can it start an instance of the Android emulator.  
 
 The `ApkFile` method of `IApp` is used to specify where on the file system the APK may be found. There are two ways to do so, with an absolute path, or a relative path. This snippet shows using an absolute path to the APK:
@@ -146,7 +142,6 @@ IApp app = ConfigureApp.Android.ApkFile("/path/to/android.apk")
 ```
 
 ## Interacting with the User Interface
-
 To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](https://msdn.microsoft.com/library/bb549151(v=vs.110).aspx) delegate for locating the view. This delegate in turn uses [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery/), which is at the core of how Xamarin.UITest locates views.
 
 `AppQuery` is a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) for building the queries to locate views. Of the methods that `AppQuery` provides, the `Marked` method is one of the simplest and most flexible. This method uses a heuristic to try and locate views and will be discussed in more detail in the following section. For now, it is important to understand that `IApp` has many methods for interacting with an application. These methods use a `Func<AppQuery, AppQuery>` to obtain a reference to the view to interact with. Some of the more interesting methods provided by `AppQuery` are listed below:
@@ -179,7 +174,6 @@ Here, the `AppQuery` will first find a view marked `Pending`, then select the fi
 It can be tricky trying to create these queries by just looking at a mobile app. Xamarin.UITest provides a REPL that can be used to explore the view hierarchy of a screen, experiment with creating queries, and use them to interact with an application.
 
 ## Using the REPL
-
 The only way to start the REPL is to invoke the `IApp.Repl` method within an existing test. This requires creating an NUnit `TestFixture`, configuring an instance of `IApp` that can be used in a `Test` method. The following code snippet shows an example of how to do so:
 
 ```csharp
@@ -245,11 +239,9 @@ app.Tap(c=>c.Marked("ValidateButton"))
 As commands are being entered, they are remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
 
 ## Using Marked To Locate Views
-
-The [AppQuery.Marked](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked?view=xamarin-uitest-sdk) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
+The [AppQuery.Marked](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
 
 ### Finding iOS Views with Marked
-
 iOS views will be located using one of the following attributes:
 
 * the `AccessibilityIdentifier` of the view
@@ -268,7 +260,6 @@ This view can be located by the following query:
 AppResult[] results = app.Marked("ErrorMessagesTextField");
 ```
 ### Finding Android Views with Marked
-
 Android views will be located based on one of the following properties:
 
 * the `Id` of the view
@@ -291,9 +282,7 @@ We can see that the `android:id` of this button is *action1_button* and that the
 - `app.Query(c=>c.Marked("action1_button"));`
 - `app.Query(c=>c.Marked("Action 1"));`
 
-
 ## Controlling the Application with Xamarin.UITest.IApp
-
 Once `IApp` has been configured and initialized, the test may begin interacting with the application. One example of a method using  `Func<AppQuery, AppQuery>` is the `IApp.Query()` method. This method will execute the query and return the results. The simplest example is shown in the following snippet, which will return a list of all views that are visible on the screen:
 
 ```csharp
