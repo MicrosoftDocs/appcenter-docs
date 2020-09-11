@@ -2,8 +2,8 @@
 title: Code Signing for macOS in App Center
 description: Code signing macOS apps built with App Center
 keywords: code signing, mac, macos
-author: derpixeldan
-ms.author: daadam
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/01/2020
 ms.topic: article
 ms.assetid: 80c6e7cf-ec3a-437d-b0b4-222ff83c23ab

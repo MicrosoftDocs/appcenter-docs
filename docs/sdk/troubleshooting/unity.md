@@ -2,8 +2,8 @@
 title: Unity SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Unity
 keywords: sdk
-author: ahdbilal
-ms.author: ahbilal
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b

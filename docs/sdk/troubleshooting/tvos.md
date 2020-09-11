@@ -2,8 +2,8 @@
 title: tvOS SDK Troubleshooting
 description: Troubleshooting the App Center SDK for tvOS
 keywords: sdk
-author: ahdbilal
-ms.author: ahbilal
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: aaedb72a-3fb1-4c5c-b53b-4e3bf189656d

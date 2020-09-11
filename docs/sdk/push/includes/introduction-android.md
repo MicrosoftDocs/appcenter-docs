@@ -1,8 +1,8 @@
 ---
-author: asb3993
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ms.date: 12/02/2019
-ms.author: amburns
 ---
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal. App Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
