@@ -1,6 +1,6 @@
 ---
 title: Does GDPR apply to me? 
-description: How your GDPR Data Subject Rights are covered by App Center. 
+description: How to assess GDPR issues
 keywords: GDPR, DSR, privacy, EU
 author: king-of-spades
 ms.author: kegr
@@ -23,7 +23,6 @@ A common way to map IDs is to track users when they log in into your app, linkin
 
 ### Scenario 2: Analytics - I added personal information in custom events
 If you're using [Analytics Custom Events](~/analytics/event-metrics.md) in App Center Analytics, events are a potential place where you could have added personal information, including:
-
 - Event name
 - Event property key
 - Event property value
@@ -42,13 +41,11 @@ Analytics.trackEvent("Login", properties);
 These two cases are less probable because they're statically defined by the developer once. However, there are also places where you may have added personal information. See the examples below.
 
 Event name:
-
 ```csharp
 Analytics.trackEvent("blXXX@microsoft.com", properties);
 ```
 
 Event property key:
-
 ```csharp
 Map<String, String> properties = new HashMap<>();
 properties.put("blXXX@microsoft.com", "microsoft_address");
