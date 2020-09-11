@@ -31,7 +31,7 @@ ms.date: 12/02/2019
 
 1. At the top of this page, copy the value under **Application Secrets** as you will use it later.
 
-    ![uwp app registration](../images/appcenter-uwp-sdk-push-registration-secret.png)
+    ![uwp app registration secret](../images/appcenter-uwp-sdk-push-registration-secret.png)
 
 1. Prepend the copied on the 2nd step **Package SID** with the `ms-app://` value. 
 1. Use the **Application secret** and **Package SID** values to configure your App Center Push backend.
