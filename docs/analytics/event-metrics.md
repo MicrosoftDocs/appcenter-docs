@@ -12,7 +12,6 @@ ms.custom: analytics
 ---
 
 # Events Metrics
-
 Events are actions that users take in your app. By tracking events in your app, you will learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
 
 Tracking events in your app allows you to answer questions like:
