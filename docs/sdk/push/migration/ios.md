@@ -2,8 +2,8 @@
 title: How to migrate to a newer version of App Center Push
 description: How to migrate to a newer version of App Center Push
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: a9d6b787-68a0-4d63-b7bf-b3a6d01559c5

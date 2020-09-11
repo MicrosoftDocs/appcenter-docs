@@ -1,8 +1,8 @@
 ---
 title: HockeySDK for macOS Migration
 description: Migrate from the HockeySDK to App Center SDK for macOS
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/23/2020
 ms.topic: article
 ms.assetid: b2edce7d-f0d6-4716-9a34-32da1ff2bc2d

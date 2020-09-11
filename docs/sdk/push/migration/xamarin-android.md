@@ -2,8 +2,8 @@
 title: How to add Firebase SDK
 description: Contains instructions for how to configure your project to use Firebase Cloud Messaging
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/24/2019
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498

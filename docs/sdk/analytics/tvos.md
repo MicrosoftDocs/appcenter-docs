@@ -2,8 +2,8 @@
 title: App Center Analytics for tvOS
 description: App Center Analytics for tvOS
 keywords: analytics
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: aec43c2c-55d5-11e7-907b-a6006ad3dba0

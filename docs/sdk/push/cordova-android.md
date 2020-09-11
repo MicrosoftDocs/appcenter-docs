@@ -2,8 +2,8 @@
 title: App Center Push for Apache Cordova Android
 description: Using Push in App Center
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/22/2019
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311

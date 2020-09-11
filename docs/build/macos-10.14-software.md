@@ -2,8 +2,8 @@
 title: App Center macOS 10.14 (Mojave)
 description: Software used on macOS 10.14 build machines
 keywords: build
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/07/2020
 ms.topic: article
 ms.service: vs-appcenter
