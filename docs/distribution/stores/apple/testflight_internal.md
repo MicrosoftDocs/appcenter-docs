@@ -2,8 +2,8 @@
 title: Publish an iOS package to TestFlight (Internal Testers)
 description: Learn how to release to internal testers in TestFlight from App Center
 keywords: distribute, stores, fastlane, testflight
-author: oddj0b
-ms.author: vigim
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/10/2020
 ms.topic: article
 ms.assetid: c6a908c8-6273-4e30-92c0-7c40ccf58aa9
@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # Publish an iOS package to TestFlight (Internal Testers)
-
 > [!TIP]
 > [Build your app according to Apples guidelines](https://developer.apple.com/app-store/submissions/)
 
