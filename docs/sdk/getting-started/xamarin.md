@@ -3,6 +3,7 @@ title: Get Started with Xamarin
 description: Get started
 keywords: sdk
 author: king-of-spades
+ms.author: kegr
 ms.date: 08/07/2020
 ms.topic: get-started-article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
