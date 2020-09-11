@@ -4,8 +4,8 @@ description: "UITest can be used with Xamarin.Forms to write UI tests to run in 
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
-author: davidbritch
-ms.author: dabritch
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/24/2018
 ---
 
