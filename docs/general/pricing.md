@@ -11,11 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # App Center Pricing
-
 Visual Studio App Center offers both a generous free tier, and paid tier options billed through an Azure subscription. You can see the full breakdown of the pricing on the official [App Center Pricing](https://www.visualstudio.com/app-center/pricing) page.
 
 ## Free services
-
 - General: Unlimited apps, unlimited organizations, and unlimited teams
 - Analytics & Diagnostics: All Crashes and Analytics features
 - Distribution: Unlimited distribution to users, and stores
@@ -24,26 +22,21 @@ Visual Studio App Center offers both a generous free tier, and paid tier options
 - Push: Unlimited push Notifications
 
 ## The free tier
-
 - Build: 1 build pipeline per organization or user account, 240 build minutes per month, and up to 30 minutes per build
 - Test: A 30-day free trial for one device with unlimited device hours
 
 ## Build paid tier
-
 - Upgrade your build pipeline with unlimited build minutes and up to 60 minutes per build
 - Add additional concurrent build pipelines with unlimited build minutes and up to 60 minutes per build
   
 ## Test paid tier
-  
 - Basic tier: pay per concurrent device up to 30 hours per device per month
 - Enterprise tier: pay per concurrent device with unlimited hours per device per month
 
 ## Configuring your billing plan
-
 Refer to the [App Center Billing](~/general/billing.md) article for information on how to set up and configure your billing plan.
 
 ## FAQ
-
 - What tier should I choose?
 
   - Build: depends on the branches you've configured, number of users in your app, and number of apps within your Org. For example: If you have an org with three apps, a maximum of two branches per app, and five developers on the team, you may consider starting with two concurrent build pipelines to ensure a lower queue time and faster development cycle.

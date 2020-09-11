@@ -1,6 +1,6 @@
 ---
 title: App Center Billing
-description: Information about Visual Studio App Center pricing plans
+description: Information about Visual Studio App Center billing
 keywords: pricing,billing,subscription
 author: king-of-spades
 ms.author: kegr
@@ -11,11 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # App Center Billing
-
 You can configure a billing plan for your App Center organization or user account. If you configure a plan for an organization, all apps under the organization will bill against the configured plan. For billing configured under your user account, all apps will bill against the user account plan.
 
 ## User account billing configuration
-
 1. Log into the [App Center Portal](https://appcenter.ms).
 2. Click on the user account icon in the upper-right corner of the App Center Portal and select **Account Settings** from the menu.
 3. In the panel that opens, select **Billing**.
@@ -27,7 +25,6 @@ You can configure a billing plan for your App Center organization or user accoun
 6. Follow the remaining steps to complete the configuration process.
 
 ## Organization account billing configuration
-
 1. Log into the [App Center Portal](https://appcenter.ms).
 2. Select the Organization from the list of organizations in the App Center portal.  
 3. For the selected Organization, select **Manage** in the list of options that appears.
