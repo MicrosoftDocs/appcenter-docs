@@ -1,8 +1,8 @@
 ---
-author: asb3993
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ms.date: 12/02/2019
-ms.author: amburns
 ---
 
 You can set up a listener to be notified whenever a push notification is received in foreground, or a background push notification has been clicked by the user.

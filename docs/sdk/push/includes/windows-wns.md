@@ -1,12 +1,11 @@
 ---
-author: asb3993
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ms.date: 12/02/2019
-ms.author: amburns
 ---
 
 ### 1. Windows Store Association in Visual Studio
-
 1. In Visual Studio Solution Explorer, right-click the UWP project, then select **Store -> Associate App with the Store...**
 
     ![uwp store association](../images/appcenter-uwp-sdk-store-association.png)

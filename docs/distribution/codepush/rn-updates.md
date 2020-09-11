@@ -2,8 +2,8 @@
 title: Releasing Updates
 description: "How to use to the React Native SDK with CodePush"
 keywords: distribution
-author: ahdbilal
-ms.author: ahbilal
+author: king-of-spades
+ms.author: kegr
 ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: C689FC7D-BAF0-4653-8281-56348C44D75B

@@ -1,8 +1,8 @@
 ---
 title: HockeySDK Retirement
 description: Transition from the HockeySDK to the App Center SDK
-author: ahbilal
-ms.author: ahbilal
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/24/2020
 ms.topic: article
 ms.assetid: A5AB2B92-0616-4F41-A0E7-43FD3C778059
