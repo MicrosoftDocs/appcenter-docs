@@ -2,7 +2,8 @@
 title: Testing iOS Apps
 description: How to test iOS Apps in App Center
 keywords: distribution
-author: ahdbilal
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: a4101ef9-3272-49fc-96e5-a8b9ac5a15d6

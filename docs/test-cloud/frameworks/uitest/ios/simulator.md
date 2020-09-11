@@ -2,9 +2,8 @@
 title: Local testing with iOS Simulators
 description: This guide will discuss how to identify and select an iOS simulator to use for running Xamarin.UITests locally.
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
-reviewer: king-of-spades
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378

@@ -2,8 +2,8 @@
 title: App Center Export
 description: Explain Export feature
 keywords: app center, analytics, export
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/12/2020
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD

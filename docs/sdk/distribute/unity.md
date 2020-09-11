@@ -2,8 +2,8 @@
 title: App Center Distribute for Unity
 description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
-author: maestersid
-ms.author: jawh
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/02/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7

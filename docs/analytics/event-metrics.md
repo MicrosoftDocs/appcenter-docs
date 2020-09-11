@@ -2,8 +2,8 @@
 title: Understanding App Center Events Metrics
 description: Help using the Events Metrics on App Center
 keywords: app center, analytics
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 12/16/2019
 ms.topic: article
 ms.assetid: 85da48c4-7abb-49be-92df-3ae814529688
@@ -12,7 +12,6 @@ ms.custom: analytics
 ---
 
 # Events Metrics
-
 Events are actions that users take in your app. By tracking events in your app, you will learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
 
 Tracking events in your app allows you to answer questions like:

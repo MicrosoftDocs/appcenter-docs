@@ -2,8 +2,8 @@
 title: App Center Test Core Concepts
 description: Glossary of terms used in App Center Test
 keywords: Test
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: 5ed07ad2-ed36-4812-adbb-fc1cbf7931df

@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # General Data Protection Regulation
-
 Under GDPR, entities either control data, process data, or do a mixture of both. Visual Studio App Center serves primarily as a data processor and its customers as data controllers. In some limited cases, App Center serves as a data controller to its customers. 
 
 Put simply, we collect customer data and data from your application end users on your behalf. As such we provide you with two experiences: 

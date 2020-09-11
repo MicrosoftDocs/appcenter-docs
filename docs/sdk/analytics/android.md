@@ -15,7 +15,7 @@ dev_langs:
  - kotlin
 ---
 
-# App Center Analytics
+# App Center Analytics (Android)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

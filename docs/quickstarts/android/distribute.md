@@ -1,23 +1,14 @@
 ---
-# required metadata
-
 title: Distribute Installable Sample App to Users
 description: Tutorial to distribute a sample Android app to a group of users in App Center.
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/27/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: samples
 ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
 ---
 
 # Distribute Installable Sample App to Users

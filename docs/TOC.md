@@ -5,8 +5,8 @@
 # General
 ## [Introduction](general/index.md)
 ## [Product Roadmap](general/roadmap.md)
-## [Accounts in App Center](general/account.md)
-## [Connecting App Center Organizations to Azure Active Directory](general/connecting-to-azure-active-directory.md)
+## [Accounts](general/account.md)
+## [Connecting Orgs to Azure Active Directory](general/connecting-to-azure-active-directory.md)
 ## [Configuring Azure Active Directory Conditional Access](general/configuring-aad-conditional-access.md)
 ## [Pricing](general/pricing.md)
 ## [Billing](general/billing.md)

@@ -1,10 +1,10 @@
 ---
 title: Get Started with iOS
-description: Get started
+description: Get started with iOS
 keywords: sdk
-author: elamalani
-ms.author: emalani
-ms.date: 06/01/2020
+author: king-of-spades
+ms.author: kegr
+ms.date: 08/07/2020
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -14,7 +14,6 @@ dev_langs:
 ---
 
 # Get Started with iOS
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
@@ -34,9 +33,7 @@ The App Center SDK uses a modular architecture so you can use any or all of the 
 Let's get started with setting up App Center iOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to your app, look at the documentation for [App Center Distribute](~/sdk/distribute/ios.md).
 
 ## 1. Prerequisites
-
 The following requirements must be met to use App Center SDK:
-
 * Your iOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
 * You're targeting devices running on iOS 9.0 or later.
 * You're not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
@@ -44,7 +41,6 @@ The following requirements must be met to use App Center SDK:
 App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
-
 If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
@@ -56,11 +52,9 @@ If you've already created your app in the App Center portal, you can skip this s
 Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
-
 The App Center SDK for iOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager), or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
-
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify services you want in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
 
 	```ruby
@@ -82,7 +76,6 @@ The App Center SDK for iOS can be added to your app via [Cocoapods](https://coco
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ### 3.2 Integration via Carthage
-
 Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
 1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
@@ -109,7 +102,6 @@ Now that you've integrated the frameworks in your application, it's time to star
 [!INCLUDE [swift package manager](includes/swift-package-manager.md)]
 
 ### 3.4 Integration by copying the binaries into your project
-
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your iOS app.
 
 [!INCLUDE [xcframework support](includes/xcframeworks.md)]
@@ -126,20 +118,19 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 
 5. Add the SDK frameworks to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework** and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
+   * Now drag & drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it is not added to the project, the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-
 In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to call each one when starting the SDK.
+
+The instructions below are slightly different depending on what lifecycle you are using. Starting from Xcode 12 you can select one of two lifecycles: "Swift UI App" (selected by default in Xcode 12) and "UI Kit AppDelegate". If you are using Xcode 11 or lower, then you are using UI Kit AppDelegate lifecycle.
 If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
-
-Open the project's **AppDelegate** file and add the following import statements:
-
+Open the project's **AppDelegate** file (for UI Kit AppDelegate lifecycle) or **<ProjectName>App.swift** file (for Swift UI App lifecycle) and add the following import statements:
 ```objc
 @import AppCenter;
 @import AppCenterAnalytics;
@@ -152,9 +143,13 @@ import AppCenterCrashes
 ```
 
 ### 4.2 Add the `start:withServices:` method
+#### UI Kit AppDelegate
+Add initialization code into `didFinishLaunchingWithOptions` delegate method.
 
-Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
+#### Swift UI App lifecycle
+Create `init()` method into `struct` and add initialization code in it.
 
+Use this code into methods described before, to start SDK:
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
@@ -163,7 +158,6 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashe
 ```
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
-
 ```objc
 [MSAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
 ```
@@ -172,7 +166,6 @@ MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", wit
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
-
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
@@ -184,7 +177,6 @@ If you do not want to use one of the two services, remove the corresponding para
 Unless you explicitly specify each module as a parameter in the start method, you can't use that App Center service. In addition, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
-
 ```objc
 [MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
 ```

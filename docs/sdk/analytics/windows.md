@@ -11,7 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: windows
 ---
 
-# App Center Analytics
+# App Center Analytics (Windows)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

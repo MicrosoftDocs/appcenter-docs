@@ -2,8 +2,8 @@
 title: macOS Getting Started
 description: Tutorial to onboard an macOS application in App Center
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -13,7 +13,7 @@ dev_langs:
  - swift
 ---
 
-# Getting Started - Sample Swift App and Tutorials
+# Getting Started - Sample Swift (macOS) App and Tutorials
 
 In this tutorial, you will learn how to set up a sample Swift app with App Center for macOS. Both Objective-C and Swift are supported.
 

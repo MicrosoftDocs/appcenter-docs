@@ -2,8 +2,8 @@
 title: App Center Support
 description: Useful links for customers to provide feedback, get product update
 keywords: update,history,status,feature request,bugs
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360

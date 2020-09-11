@@ -2,8 +2,8 @@
 title: Enable In-app Updates
 description: Easily stay up to date on the latest build with in-app update notifications.
 keywords: distribution
-author: JoshuaWeber
-ms.author: JoshuaWeber
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/16/2020
 ms.topic: article
 ms.service: vs-appcenter

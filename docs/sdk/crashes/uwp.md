@@ -2,8 +2,8 @@
 title: App Center Crashes for UWP
 description: App Center Crashes for UWP
 keywords: sdk, crash
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/05/2020
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
@@ -11,8 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---
 
-# App Center Crashes
-
+# App Center Crashes (UWP)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

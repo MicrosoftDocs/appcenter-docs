@@ -2,8 +2,8 @@
 title: App Center Crashes for React Native
 description: App Center Crashes for React Native
 keywords: sdk, crash
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
@@ -11,8 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# App Center Crashes
-
+# App Center Crashes (React Native)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

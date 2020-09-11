@@ -3,6 +3,7 @@ title: Code Repository Troubleshooting
 description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: elamalani
+ms.author: emalani
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
@@ -40,7 +41,7 @@ Disconnect the repository account, and reconnect to the correct one:
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
 
-Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops) to enable it.
+Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
 
 ## Are Git submodules supported?
 For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 

@@ -1,22 +1,13 @@
 ---
-# required metadata
-
 title: View Crashes Sent From Android App in App Center
 description: Tutorial on viewing crashes from a sample Android app in App Center
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/28/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 9e2c6890-26e9-4b8a-a4fb-f43c8e55c1fb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang: dotnet
-#ms.reviewer: [ALIAS]
 ---
 
 # View Crashes Sent From Android App in App Center

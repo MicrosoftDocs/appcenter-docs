@@ -2,9 +2,8 @@
 title: Working with text entry
 description: Working with text entry in App Center
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
-ms.reviewer: king-of-spades
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: D79B1B37-53B6-4527-B62B-71D545D89A24

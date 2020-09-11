@@ -1,10 +1,9 @@
 ---
-title: Updates on App Center Diagnostics are coming soon
-description: An introduction to the App Center Diagnostics feature set
+title: Updates on App Center Diagnostics
+description: Upcoming features
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
-author: blparr
-ms.author: blparr
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/30/2018
 ms.topic: article
 ms.assetid: 513252EA-C802-4606-B733-FC0916E64EC5
