@@ -2,9 +2,8 @@
 title: Export Analytics Data 
 description: How to export Analytics data for a user
 keywords: GDPR, DSR, privacy, EU
-author: bailey
-ms.author: bailey.brooks
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/16/2018 
 ms.topic: article 
 ms.assetid: D08809D5-4CF5-461C-9F43-3F75986CC376

@@ -2,9 +2,8 @@
 title: Working with the REPL
 description: How to perform common tasks when writing and running Xamarin.UITest.
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
-ms.reviewer: crdun
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/09/2020
 ms.topic: article
 ms.assetid: 3D0C8F9C-69D6-42D9-80FB-4228EEC8849C

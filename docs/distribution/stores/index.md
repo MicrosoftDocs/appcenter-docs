@@ -2,8 +2,8 @@
 title: Publish to consumer and enterprise stores
 description: Distribute your apps to consumer and enterprise stores
 keywords: distribution store
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/26/2019
 ms.topic: article
 ms.service: vs-appcenter

@@ -1,9 +1,9 @@
 ---
 title: Get Started with UWP
-description: Get started
+description: Get Started with UWP
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/23/2019
 ms.topic: get-started-article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
@@ -11,7 +11,6 @@ ms.tgt_pltfrm: uwp
 ---
 
 # Get Started with UWP
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

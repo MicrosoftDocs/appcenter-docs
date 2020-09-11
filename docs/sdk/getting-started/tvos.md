@@ -1,9 +1,9 @@
 ---
 title: Get Started with tvOS
-description: Get started
+description: Get started with tvOS
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
@@ -14,7 +14,6 @@ dev_langs:
 ---
 
 # Get Started with tvOS
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

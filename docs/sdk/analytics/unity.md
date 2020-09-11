@@ -2,8 +2,8 @@
 title: App Center Analytics for Unity
 description: App Center Analytics for Unity
 keywords: unity
-author: maestersid
-ms.author: jawh
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
@@ -11,7 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: unity
 ---
 
-# App Center Analytics
+# App Center Analytics (Unity)
 
 > [!div class="op_single_selector"]
 > * [Android](android.md)

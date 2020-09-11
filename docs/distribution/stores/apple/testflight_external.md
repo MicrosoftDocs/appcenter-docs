@@ -2,8 +2,8 @@
 title: Publish an iOS package to TestFlight (External Testers)
 description: Learn how to release to external testers in TestFlight from App Center
 keywords: distribute, stores, testflight, fastlane
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/10/2020
 ms.topic: article
 ms.assetid: ccc31919-b918-4cf5-8c07-8ab982cf6192
@@ -11,7 +11,6 @@ ms.service: vs-appcenter
 ---
 
 # Publish an iOS package to TestFlight (External Testers)
-
 1. From the Stores home page, select the external group to distribute to.
 2. Select **Publish to Store** in the upper-right corner.
 3. At the first step of the wizard, you need to upload your .ipa file. After the file has been successfully uploaded, you'll see details, like icon and version. Select **Next**.

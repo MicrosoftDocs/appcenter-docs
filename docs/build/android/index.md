@@ -2,8 +2,8 @@
 title: Building Java apps for Android
 description: How to set up a build system for Android apps
 keywords: android
-author: phillipleblanc
-ms.author: phillip.leblanc
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/16/2019
 ms.topic: article
 ms.assetid: 7042d0ef-50b5-4fdc-bead-bedc9e94923c

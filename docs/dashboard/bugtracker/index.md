@@ -2,8 +2,8 @@
 title: App Center bug tracker documentation
 description: how to integrate App Center with bug trackers like Jira, Visual Studio Team Services (VSTS) and GitHub
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, bug tracker, bugtracker, documentation, hockeyapp, VSTS, github
-author: amchew
-ms.author: amchew
+author: king-of-spades
+ms.author: kegr
 ms.date: 01/06/2020
 ms.topic: article
 ms.service: vs-appcenter

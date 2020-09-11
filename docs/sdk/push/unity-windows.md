@@ -1,16 +1,16 @@
 ---
 title: App Center Push for Unity Windows
-description: Using Push in App Center
+description: Using Push in App Center for Unity (Windows)
 keywords: sdk, push
-author: maestersid
-ms.author: jawh
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/01/2019
 ms.topic: article
 ms.assetid: f038f869-9ab2-40c2-8860-2e02eb54f9ac
 ms.tgt_pltfrm: unity
 ---
 
-# App Center Push
+# App Center Push for Unity Windows
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

@@ -2,8 +2,8 @@
 title: Device registration
 description: Registering a device for App Center Distribution
 keywords: UDID, Distribution,
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/03/2019
 ms.topic: article
 ms.service: vs-appcenter
