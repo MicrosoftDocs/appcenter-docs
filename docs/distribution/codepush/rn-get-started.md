@@ -1,6 +1,6 @@
 ---
 title: Get Started with the React Native Client SDK
-description: "How to use to the React Native SDK with CodePush"
+description: Getting started with the React Native SDK & CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr

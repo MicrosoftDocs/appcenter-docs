@@ -1,6 +1,6 @@
 ---
 title: Using the React Native SDK with CodePush  – Distribution
-description: "How to use to the React Native SDK with CodePush"
+description: Distribution with React Native SDK and CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr

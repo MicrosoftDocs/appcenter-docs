@@ -1,6 +1,6 @@
 ---
 title: React Native SDK with CodePush API Reference
-description: "How to use to the React Native SDK with CodePush"
+description: How to use to the React Native SDK with CodePush API
 keywords: distribution
 author: king-of-spades
 ms.author: kegr

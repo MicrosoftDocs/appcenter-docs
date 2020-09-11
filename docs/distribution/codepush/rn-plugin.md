@@ -1,6 +1,6 @@
 ---
 title: React Native Client SDK Plugin Usage
-description: "How to use to the React Native SDK with CodePush"
+description: How to use React Native SDK with CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr

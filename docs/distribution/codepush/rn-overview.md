@@ -1,6 +1,6 @@
 ---
 title: Using the React Native SDK with CodePush
-description: "How to use to the React Native SDK with CodePush"
+description: How to use to the React Native SDK with CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
@@ -12,11 +12,9 @@ ms.custom: distribute
 ---
 
 # React Native Client SDK
-
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your React Native app(s).
 
 ## How does it work?
-
 React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the stores to which you are publishing.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your JavaScript and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they are available.

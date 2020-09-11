@@ -1,6 +1,6 @@
 ---
 title: Releasing Updates
-description: "How to use to the React Native SDK with CodePush"
+description: Distributing updates (React Native SDK & CodePush)
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
