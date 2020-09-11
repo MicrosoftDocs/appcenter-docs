@@ -1,6 +1,6 @@
 ---
 title: Get Started with Unity
-description: Get started
+description: Get started with Unity
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
