@@ -1,6 +1,6 @@
 ---
-title: App Center Distribute for iOS
-description: Using in-app updates in App Center Distribute
+title: App Center Distribute for iOS (Without Cocoapods)
+description: Using in-app updates in App Center Distribute (Without Cocoapods)
 keywords: sdk, distribute
 author: elamalani
 ms.author: emalani
