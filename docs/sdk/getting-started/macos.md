@@ -1,9 +1,9 @@
 ---
 title: Get Started with macOS
-description: Get started
+description: Get started with macOS
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66

@@ -2,8 +2,8 @@
 title: Working With - WebViews
 description: Describes how to use the Xamarin.UITest APIs to interact with webviews in a mobile app.
 keywords: uitest test cloud
-author: oddj0b
-ms.author: vigimm
+author: king-of-spades
+ms.author: kegr
 reviewer: king-of-spades
 ms.date: 06/08/2020
 ms.topic: article

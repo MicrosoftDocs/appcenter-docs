@@ -1,9 +1,9 @@
 ---
 title: Get Started with macOS Extensions
-description: Get started
+description: Get started with macOS extensions
 keywords: sdk
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
@@ -14,7 +14,6 @@ dev_langs:
 ---
 
 # Get Started with macOS extensions
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

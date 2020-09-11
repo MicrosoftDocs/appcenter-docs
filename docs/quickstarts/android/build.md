@@ -1,11 +1,9 @@
 ---
-# required metadata
-
 title: Build Sample Android App on App Center
 description: Tutorial to build sample Android app in App Center.
 keywords: app center
-author: sshibu
-ms.author: t-shshib
+author: king-of-spades
+ms.author: kegr
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 07/27/2017

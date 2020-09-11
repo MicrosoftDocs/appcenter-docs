@@ -4,8 +4,8 @@
 title: Test| Sample App Tutorials
 description: Tutorial to test the sample ios app with App Center.
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 #ms.reviewer: [ALIAS]
 ---
 
-# Test - Sample Swift App and Tutorials
+# Test - Sample Swift iOS App and Tutorials
 
 XCUITests are included with the sample app. In this tutorial, you will learn to run the UI tests using App Center.
 

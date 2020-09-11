@@ -2,15 +2,15 @@
 title: iOS Getting Started
 description: Tutorial to onboard an iOS application in App Center
 keywords: app center
-author: sabrinaj206
-ms.author: t-sajia
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 ---
 
-# Getting Started - Sample Swift App and Tutorials
+# Getting Started - Sample Swift (iOS) App and Tutorials
 
 In this tutorial, you'll learn how to set up a sample Swift app with App Center for iOS. Both Objective-C and Swift are supported.
 

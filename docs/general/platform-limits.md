@@ -2,8 +2,8 @@
 title: Platform limits for App Center
 description: These are the size limits for various entities in App Center.
 keywords: limits distribution groups teams organizations releases
-author: scottarbeit
-ms.author: scarbeit
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/03/2020
 ms.topic: article
 ms.assetid: e25d003b-f5eb-4fd7-b64b-a68c178adf5c

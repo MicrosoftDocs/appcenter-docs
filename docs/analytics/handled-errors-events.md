@@ -1,9 +1,9 @@
 ---
-title: Understanding App Center Events Metrics
-description: Help using the Events Metrics on App Center
+title: How to Use Events for Handled Errors
+description: Using events for error handling
 keywords: app center, analytics, exceptions
-author: blparr
-ms.author: blparr
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/22/2017
 ms.topic: article
 ms.assetid: 8F9AE70D-9153-4EFE-8173-BA1749F4BB0D
@@ -12,7 +12,6 @@ ms.custom: analytics
 ---
 
 # How to Use Events for Handled Errors
-
 > [!IMPORTANT]
 > Handled Errors are not available yet as part of the Crashes service in App Center. One workaround is to use Custom Events. This is not how "Handled Errors" are intended to be supported and it is not the main purpose of Events either. However, this page contains advice on how to best leverage Events to report on handled errors.
 

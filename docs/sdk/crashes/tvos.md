@@ -2,8 +2,8 @@
 title: App Center Crashes for tvOS
 description: App Center Crashes for tvOS
 keywords: sdk, crash
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 2f6481de-55d6-11e7-907b-a6006ad3dba0
@@ -14,8 +14,7 @@ dev_langs:
  - objc
 ---
 
-# App Center Crashes
-
+# App Center Crashes (tvOS)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
