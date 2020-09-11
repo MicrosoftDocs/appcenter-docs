@@ -11,8 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 
-# App Center Crashes
-
+# App Center Crashes (Cordova)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
