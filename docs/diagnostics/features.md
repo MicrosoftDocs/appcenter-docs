@@ -99,7 +99,7 @@ Stay on top of your crashes by configuring your App Center app definition settin
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select **Immediatly** ,**Daily**, or **Never**. The default configuration is set to **Never**.
+4. Select **Immediately** ,**Daily**, or **Never**. The default configuration is set to **Never**.
 
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
 
