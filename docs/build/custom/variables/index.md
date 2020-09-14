@@ -1,5 +1,5 @@
 ---
-title: Environment Variables
+title: Build Environment Variables
 description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
 author: king-of-spades
@@ -12,7 +12,7 @@ ms.custom: build
 ms.reviewer: nirajpur
 ---
 
-# Environment variables
+# Build Environment variables
 Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own.
 
 ## Pre-Defined variables

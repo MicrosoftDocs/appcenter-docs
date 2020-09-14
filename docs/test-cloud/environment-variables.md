@@ -1,5 +1,5 @@
 ---
-title: Environment variables
+title: Test Environment variables
 description: Environment variables in App Center Test
 keywords: test cloud
 author: king-of-spades
@@ -11,14 +11,12 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Environment variables
-
+# Environment Variables in Test
 When testing, it is often helpful to launch your application and/or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
 
 For most frameworks, useful environment variables are available within the test and/or application and you can set additional environment variables via the App Center CLI.
 
 ## Support by framework
-
 In App Center, some frameworks and platform combinations support setting and using custom environment variables as well as using variables that are made available to your application and tests automatically (for example `RUNNING_IN_APP_CENTER` and `APP_CENTER_TEST`). 
 
 The table below details the environment variable support in tests and applications for each framework or platform:
