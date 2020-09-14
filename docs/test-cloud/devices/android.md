@@ -2,8 +2,8 @@
 title: Android Devices Available
 description: Android devices that you can run tests on in App Center
 keywords: test cloud
-author: priskorn
-ms.author: miprisk
+author: king-of-spades
+ms.author: kegr
 ms.date: 8/21/2020
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849

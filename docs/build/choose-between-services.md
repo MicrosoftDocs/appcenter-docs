@@ -2,9 +2,8 @@
 title: Choose the right service for app builds
 description: Helps user choose between Visual Studio AppCenter and Azure Pipelines for Building their mobile Apps.  
 keywords: build
-author: manb-msft
-ms.author: manb
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: c7d77240-3a2c-4e0f-9724-20f67dbba6c6
@@ -60,7 +59,7 @@ If you answer “Yes” to these questions, Azure Pipelines may be the best tool
 **1. Did you want to Build other apps (Web apps, for instance)?**
 You should stick to Azure Pipelines. App Center only supports the OS/Platforms and services as mentioned in our [Platform Service Matrix page](https://docs.microsoft.com/appcenter/general/platform-service-matrix)
 
-**2. Are you ready to [create your own Build Pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?toc=/azure/devops/pipelines/toc.json&bc=/azure/devops/boards/pipelines/breadcrumb/toc.json&view=vsts), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
+**2. Are you ready to [create your own Build Pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
   
 Azure Pipelines will work out best for you if your app is:
 - Fairly complex 
