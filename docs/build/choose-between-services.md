@@ -2,9 +2,8 @@
 title: Choose the right service for app builds
 description: Helps user choose between Visual Studio AppCenter and Azure Pipelines for Building their mobile Apps.  
 keywords: build
-author: manb-msft
-ms.author: manb
-ms.reviewer: kegr
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/16/2020
 ms.topic: article
 ms.assetid: c7d77240-3a2c-4e0f-9724-20f67dbba6c6
