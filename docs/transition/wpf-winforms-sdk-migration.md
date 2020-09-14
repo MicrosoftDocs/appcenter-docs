@@ -98,5 +98,5 @@ Track handled exceptions | `HockeyClient.Current.TrackException` | [Handled Erro
 
 App Center SDK doesn't support distribution for WPF/Winforms apps yet.
 
-### HockeyApp Feedback
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

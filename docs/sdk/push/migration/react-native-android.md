@@ -1,21 +1,19 @@
 ---
-title: How to add Firebase SDK
-description: Contains instructions for how to configure your project to use Firebase Cloud Messaging
+title: How to add Firebase SDK (Android React Native)
+description: Contains instructions for how to configure your project to use Firebase Cloud Messaging (Android React Native)
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: 7fe521e7-66fc-42ac-b804-a779525ad39e
 ms.tgt_pltfrm: android
 ---
 
-# How to add Firebase SDK dependencies
-
+# How to add Firebase SDK dependencies (Android React Native)
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## 1. Integrate Firebase in application
-
 - In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**.
 - Download the **google-services.json** file to your Android project's app module (for most projects, it will be the project's `android/app` folder).
 - Modify the **android/build.gradle** file:

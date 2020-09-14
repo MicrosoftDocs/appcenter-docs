@@ -1,9 +1,9 @@
 ---
 title: Get Started with Apache Cordova
-description: Get Started
+description: Get Started (Cordova)
 keywords: sdk
-author: Zakeelm
-ms.author: zakeelm
+author: king-of-spades
+ms.author: kegr
 ms.date: 11/22/2019
 ms.topic: get-started-article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903

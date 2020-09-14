@@ -1,18 +1,16 @@
 ---
-# required metadata
-
 title: App Center Push for Xamarin.Android Apps
 description: Integrating App Center Push into Xamarin.Android applications
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 3f3e83cd-0f05-455e-8e67-6b6d5042949d
 ms.tgt_pltfrm: xamarin.android
 ---
 
-# App Center Push
+# App Center Push (Xamarin.Android)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
@@ -90,7 +88,7 @@ If you're using ProGuard, you must customize the project's configuration for Pus
 
 Add an empty file to your Xamarin.Android project named **proguard.cfg**. Set the build action to "ProguardConfiguration".
 
-![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
+![Screenshot of context menu: Build Action > ProguardConfiguration](images/proguard-configuration-build-action.png)
 
 #### 5.2. Add customization to ProGuard configuration file
 

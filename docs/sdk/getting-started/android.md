@@ -1,9 +1,9 @@
 ---
 title: Get Started with Android
-description: Get started
+description: Get started (Android)
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/23/2020
 ms.topic: get-started-article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
