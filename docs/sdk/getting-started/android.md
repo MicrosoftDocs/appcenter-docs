@@ -1,6 +1,6 @@
 ---
 title: Get Started with Android
-description: Get started
+description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
