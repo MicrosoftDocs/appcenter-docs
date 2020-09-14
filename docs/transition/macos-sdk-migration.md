@@ -191,6 +191,5 @@ Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/c
 Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-Mac/blob/5.1.1/Classes/CrashReporting/BITCrashManager.h#L218-L236) | [Documentation (not provided by default)](~/sdk/crashes/macos.md#ask-for-the-users-consent-to-send-a-crash-log)
 Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-3-1-disable-crash-reporting) | [MSCrashes.setEnabled(false)](~/sdk/crashes/macos.md#enable-or-disable-app-center-crashes-at-runtime)
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

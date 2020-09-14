@@ -1,8 +1,8 @@
 ---
 title: HockeySDK for Unity Migration
 description: Migrate from the HockeySDK to App Center SDK for Unity
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/30/2020
 ms.topic: article
 ms.assetid: 4d582645-4b1b-42f8-a40a-dee5d06fb0e1
@@ -92,6 +92,5 @@ Custom events with properties | [HockeyAppIOS.TrackEvent](https://github.com/bit
 Explicitly check for updates | [HockeyAppIOS.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L187-L190) or [HockeyAppAndroid.CheckForUpdate](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L216-L219) | [Distribute.CheckforUpdate](~/sdk/distribute/unity.md#disable-automatic-check-for-update)
 Display a feedback form | [HockeyAppIOS.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-iOS/blob/5.2.0/Plugins/HockeyAppUnityIOS/HockeyAppUnity-Scripts/HockeyAppIOS.cs#L178-L181) or [HockeyAppAndroid.ShowFeedbackForm](https://github.com/bitstadium/HockeySDK-Unity-Android/blob/5.1.1/Plugins/HockeyAppUnityAndroid/HockeyAppUnity-Scripts/HockeyAppAndroid.cs#L238-L241) | NA (please see the section below)
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

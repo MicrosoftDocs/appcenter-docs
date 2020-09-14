@@ -240,6 +240,5 @@ Restricted in-app updates | [BITHockeyManager.shared().authenticator.authenticat
 Disable service at runtime | [BITHockeyManager.shared().isUpdateManagerDisabled = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios#3-10-in-app-updates-beta-amp-enterprise-only-) | [MSDistribute.setEnabled(false)](~/sdk/distribute/ios.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [shouldDisplayUpdateAlertForUpdateManager](https://github.com/bitstadium/HockeySDK-iOS/blob/5.1.4/Classes/BITUpdateManagerDelegate.h#L49-L64) | [Documentation](~/sdk/distribute/ios.md#2-customize-the-update-dialog)
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

@@ -208,6 +208,5 @@ Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator
 Disable service at runtime | [UpdateManager.Unregister (Android) or SharedHockeyManager.DisableUpdateManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-6-add-update-distribution) | [Distribute.SetEnabledAsync](~/sdk/distribute/xamarin.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | Yes | [Distribute.ReleaseAvailable](~/sdk/distribute/xamarin.md#customize-or-localize-the-in-app-update-dialog)
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).
