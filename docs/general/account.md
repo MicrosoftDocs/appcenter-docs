@@ -21,7 +21,7 @@ Some work email addresses are backed by [Microsoft Azure Active Directory](https
 Check with your system administrator to see if your work email is backed by AAD.
 
 ### Personal and Standard work email addresses
-Customers who use personal and work email addresses that aren't backed by AAD should sign-up using the button indicated in the image below.
+Customers who use personal and work email addresses that aren't backed by AAD should sign up using the button indicated in the image below.
 
 ![If you have a non-AAD backed email; sign up!](images/sign_up_arrow.png)
 
@@ -33,4 +33,4 @@ Customers who want to use a custom email address with their account can do so by
 > [!WARNING]
 > All apps that are owned by an App Center are automatically deleted when the owner's account is deleted. If the owner's account needs to be deleted (because, for instance, they've left your organization), make sure that ownership of the app is transferred to someone else before deleting the account. 
 
-Customers who create apps and organizations in App Center should pay special attention to ownership; especially when creating these entities on behalf of an external organization or company. Ownership transfers are executed at App Center's discretion in order to protect the privacy of our customers. For this reason, enterprise customers are encouraged to use AAD and to set up admin accounts created specifically for administering their app and orgs; for example: <i>admin@contoso.com</i> or <i>awesomeapp_admin@contoso.com.</i> 
+Customers who create apps and organizations in App Center should pay special attention to ownership; especially when creating these entities for an external organization or company. Ownership transfers are executed at App Center's discretion to protect the privacy of our customers. For this reason, enterprise customers are encouraged to use AAD and to set up admin accounts created specifically for administering their app and orgs; for example: <i>admin@contoso.com</i> or <i>awesomeapp_admin@contoso.com.</i> 
