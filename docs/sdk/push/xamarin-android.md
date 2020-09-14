@@ -88,7 +88,7 @@ If you're using ProGuard, you must customize the project's configuration for Pus
 
 Add an empty file to your Xamarin.Android project named **proguard.cfg**. Set the build action to "ProguardConfiguration".
 
-![proguard-configuration-build-action](images/proguard-configuration-build-action.png)
+![Screenshot of context menu: Build Action > ProguardConfiguration](images/proguard-configuration-build-action.png)
 
 #### 5.2. Add customization to ProGuard configuration file
 
