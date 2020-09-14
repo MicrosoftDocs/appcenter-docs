@@ -1,6 +1,6 @@
 ---
 title: App Center Push for macOS
-description: Using Push in App Center
+description: Using Push in App Center (macOS)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -13,8 +13,7 @@ dev_langs:
  - objc
 ---
 
-# App Center Push
-
+# App Center Push (macOS)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

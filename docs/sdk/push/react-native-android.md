@@ -1,6 +1,6 @@
 ---
 title: App Center Push for React Native Android
-description: Using Push in App Center
+description: Using Push in App Center (Android React Native)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -10,8 +10,7 @@ ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00
 ms.tgt_pltfrm: react-native
 ---
 
-# App Center Push
-
+# App Center Push (Android React Native)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

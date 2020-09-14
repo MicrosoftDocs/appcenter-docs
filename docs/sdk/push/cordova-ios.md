@@ -1,6 +1,6 @@
 ---
 title: App Center Push for Cordova iOS
-description: Using Push in App Center
+description: Using Push in App Center (iOS Cordova)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -9,8 +9,7 @@ ms.topic: get-started-article
 ms.assetid: 0953B40C-ED43-430A-9609-43ED212A1884
 ms.tgt_pltfrm: cordova
 ---
-# App Center Push
-
+# App Center Push (iOS Cordova)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
