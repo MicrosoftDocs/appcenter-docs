@@ -2,8 +2,8 @@
 title: Other WPF and WinForms APIs
 description: Other APIs in the App Center SDK for WPF and WinForms
 keywords: sdk
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 3c917c07-a32f-4c5d-85d1-844c8d935c0c
