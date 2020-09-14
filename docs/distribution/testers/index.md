@@ -2,8 +2,8 @@
 title: Getting Started for Testers
 description: Guide to get started as an App Center tester
 keywords: distribution
-author: Zakeelm
-ms.author: Zakeelm 
+author: king-of-spades
+ms.author: kegr 
 ms.date: 11/05/2018
 ms.topic: article
 ms.assetid: 691fe32c-2b42-47a9-9722-ee4204f86268
