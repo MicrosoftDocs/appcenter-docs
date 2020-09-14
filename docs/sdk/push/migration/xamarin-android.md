@@ -1,6 +1,6 @@
 ---
-title: How to add Firebase SDK
-description: Contains instructions for how to configure your project to use Firebase Cloud Messaging
+title: How to add Firebase SDK (Xamarin.Android)
+description: Contains instructions for how to configure your project to use Firebase Cloud Messaging (Xamarin.Android)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -10,18 +10,14 @@ ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498
 ms.tgt_pltfrm: android
 ---
 
-# How to add Firebase SDK dependencies
-
+# How to add Firebase SDK dependencies (Xamarin.Android)
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## 1. Target framework
-
 If your Xamarin.Android project does not target version 9.0 or higher, you will not be able to update the Push package.
-
 You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
 
 ## 2. AndroidManifest.xml
-
 Edit the project's **AndroidManifest.xml** file and **remove** the following lines **inside** the file's `<application>` section, if present:
 
 ```xml

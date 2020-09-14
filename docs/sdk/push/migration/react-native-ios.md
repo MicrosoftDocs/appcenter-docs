@@ -1,6 +1,6 @@
 ---
-title: How to migrate to a newer version of App Center Push
-description: How to migrate to a newer version of App Center Push
+title: How to migrate to a newer version of App Center Push (React Native iOS)
+description: How to migrate to a newer version of App Center Push (React Native iOS)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -10,8 +10,7 @@ ms.assetid: add07be4-1116-4960-961c-89c9922b3c0e
 ms.tgt_pltfrm: ios
 ---
 
-# How to upgrade App Center Push to a newer version
-
+# How to upgrade App Center Push (React Native iOS) to a newer version
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
@@ -21,7 +20,6 @@ Updating the App Center SDK does not require any action by the developer except 
 > The App Center SDK features a modular architecture to enable developers to integrate only the features they need. It is not possible to mix different versions of App Center modules. Once you update App Center Push, you need to update all App Center SDK modules to the same version.
 
 ## Upgrading to App Center Push 1.10.0 or later from a version < 1.10.0
-
 Version 1.10.0 (released in November 2018) fixes a bug in the `push:didReceivePushNotification` callback. If (and only if) the developer sets their own `UNUserNotificationCenterDelegate`, the callback was not triggered once a notification was tapped or once it was received while the app was in the foreground. To fix this issue, App Center Push captures the `UNUserNotificationCenter`'s delegate and swizzles its methods to forward incoming notifications and notification-related actions to the App Center SDK.
 
 If you want to disable the swizzling of `UNUserNotificationCenterDelegate` callbacks,  please refer to [the documentation to disable automatic method forwarding of UNUserNotificationCenterDelegate methods](~/sdk/push/react-native-ios.md#user-notification-center-delegate).

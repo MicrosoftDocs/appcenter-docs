@@ -1,6 +1,6 @@
 ---
-title: How to migrate to a newer version of App Center Push
-description: How to migrate to a newer version of App Center Push
+title: How to migrate to a newer version of App Center Push (Xamarin.iOS)
+description: How to migrate to a newer version of App Center Push (Xamarin.iOS)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
@@ -10,8 +10,7 @@ ms.assetid: e22ae043-c8a8-445b-886b-7283a180cbad
 ms.tgt_pltfrm: ios
 ---
 
-# Upgrading to App Center Push 1.11.0 or later from a version < 1.11.0
-
+# Upgrading to App Center Push 1.11.0 or later from a version < 1.11.0 (Xamarin.iOS)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
