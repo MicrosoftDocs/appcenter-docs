@@ -2,8 +2,8 @@
 title: Environment variables
 description: Environment variables in App Center Test
 keywords: test cloud
-author: jonstoneman
-ms.author: jonsto
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/08/2020
 ms.topic: article
 ms.assetid: 51964205-c1d7-4fd7-8259-83485590c6e1
