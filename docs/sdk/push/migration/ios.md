@@ -1,17 +1,16 @@
 ---
-title: How to migrate to a newer version of App Center Push
-description: How to migrate to a newer version of App Center Push
+title: How to migrate to a newer version of App Center Push (iOS)
+description: How to migrate to a newer version of App Center Push (iOS)
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: a9d6b787-68a0-4d63-b7bf-b3a6d01559c5
 ms.tgt_pltfrm: ios
 ---
 
-# How to upgrade App Center Push to a newer version
-
+# How to upgrade App Center Push (iOS) to a newer version
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

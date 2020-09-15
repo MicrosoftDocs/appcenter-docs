@@ -2,8 +2,8 @@
 title: Configuring the Push Service
 description: Instructions for how to configure the App Center Push service for target platform push services.
 keywords: app center, push
-author: jwargo
-ms.author: jowargo
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: ada98c59-08ce-4ae6-a5bf-3084f0dc6203

@@ -2,8 +2,8 @@
 title: Shared docs for Apple Swift Package Manager
 description: Shared docs for Apple Swift Package Manager
 keywords: sdk
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/01/2020
 ms.topic: include
 ms.assetid: 12b31177-2d25-4fda-a193-136e84049f90

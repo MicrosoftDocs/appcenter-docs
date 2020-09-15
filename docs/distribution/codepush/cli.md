@@ -2,8 +2,8 @@
 title: Releasing CodePush updates using the App Center CLI
 description: "How to use and set up the App Center CLI to release CodePush updates"
 keywords: distribution
-author: Zakeelm
-ms.author: zakeelm
+author: king-of-spades
+ms.author: kegr
 ms.date: 04/22/2020
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F

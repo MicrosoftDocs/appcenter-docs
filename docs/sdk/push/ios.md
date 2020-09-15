@@ -1,9 +1,9 @@
 ---
 title: App Center Push for iOS
-description: Using Push in App Center
+description: Using Push in App Center (iOS)
 keywords: sdk, push
-author: jwargo
-ms.author: jowargo
+author: king-of-spades
+ms.author: kegr
 ms.date: 12/11/2019
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7
@@ -13,8 +13,7 @@ dev_langs:
  - objc
 ---
 
-# App Center Push
-
+# App Center Push (iOS)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

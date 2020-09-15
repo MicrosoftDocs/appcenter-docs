@@ -2,8 +2,8 @@
 title: Code Repository Troubleshooting
 description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b

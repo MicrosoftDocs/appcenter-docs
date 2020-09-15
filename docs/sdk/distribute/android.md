@@ -2,8 +2,8 @@
 title: App Center Distribute for Android
 description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 09/02/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb

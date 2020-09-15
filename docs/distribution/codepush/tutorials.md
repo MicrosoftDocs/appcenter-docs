@@ -2,8 +2,8 @@
 title: Tutorials
 description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
-author: Zakeelm
-ms.author: zakeelm
+author: king-of-spades
+ms.author: kegr
 ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: E5791947-AF21-47D0-84A0-90D5F06DC8A9
@@ -244,7 +244,7 @@ Once the new remote URL is set, push the repository to Azure DevOps via [Git pus
 
 A few seconds later, the source will be added to your Azure DevOps repository:
 
-![New project dialog](images/tutorials6.png)
+![source in DevOps repository](images/tutorials6.png)
 
 ### 4. Configure the CI environment
 
@@ -256,11 +256,11 @@ For React Native projects do the following:
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
-    ![Open the Azure DevOps marketplace](images/tutorials7.png)
+    ![Open Azure DevOps marketplace](images/tutorials7.png)
 
 2. Enter the term `react` in the search box and press enter. Open and install the `React Native` Azure DevOps extension made by the `Visual Studio Client Tools` team:
 
-    ![Browse the Azure DevOps marketplace](images/tutorials8.png)
+    ![Search for React in Azure DevOps marketplace](images/tutorials8.png)
 
 #### Create a new build definition
 
@@ -270,11 +270,11 @@ For React Native projects do the following:
 
 2. Select `Empty` from the list of build templates and click `Next`.
 
-    ![Selecting empty definition](images/tutorials10.png)
+    ![Selecting empty build definition](images/tutorials10.png)
 
 3. Make sure that the repo settings are correct (it should be the master branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
 
-    ![Configuring empty definition](images/tutorials11.png)
+    ![Configuring empty build definition](images/tutorials11.png)
 
 > [!NOTE]
 > The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` branch.
@@ -336,11 +336,11 @@ To leverage the CodePush service as the release vehicle, you will need to instal
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
-![Open the Azure DevOps marketplace](images/tutorials15.png)
+![Open the Azure DevOps marketplace](images/tutorials7.png)
 
 2. Enter the term `codepush` in the search box and press enter. Open and install the `React Native` Azure DevOps extension made by the `Visual Studio Client Tools` team:
 
-![Browse the Azure DevOps marketplace](images/tutorials16.png)
+![search for CodePush in Azure DevOps marketplace](images/tutorials16.png)
 
 #### Create a new release definition
 
@@ -350,11 +350,11 @@ To leverage the CodePush service as the release vehicle, you will need to instal
 
 2. Select `Empty` from the list of release templates and click `Next`.
 
-![Selecting empty definition](images/tutorials18.png)
+![Selecting empty release definition](images/tutorials18.png)
 
 3. Make sure that the project settings are correct (the source should point towards the previously created build definition). Check the `Continuous deployment` checkbox and ensure that the agent queue is set to `Hosted` and click `Create`.
 
-![Configuring empty definition](images/tutorials19.png)
+![Configuring empty release definition](images/tutorials19.png)
 
 > [!NOTE]
 > The `Continuous deployment` trigger tells Azure DevOps to kick-off a release each time a successful build completes. This behavior can be modified to release automatically or after a release is formally approved.

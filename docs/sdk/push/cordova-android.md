@@ -1,15 +1,15 @@
 ---
 title: App Center Push for Apache Cordova Android
-description: Using Push in App Center
+description: Using Push in App Center (Android Cordova)
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 03/22/2019
 ms.topic: get-started-article
 ms.assetid: 40254112-9AEE-4393-AC63-E156441C0311
 ms.tgt_pltfrm: cordova
 ---
-# App Center Push
+# App Center Push (Android Cordova)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

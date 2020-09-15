@@ -2,8 +2,8 @@
 title: Other Xamarin APIs
 description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
