@@ -2,8 +2,8 @@
 title: Shared docs for XCFrameworks
 description: Shared docs for XCFrameworks
 keywords: sdk
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 05/04/2020
 ms.topic: include
 ms.assetid: a646eee8-aed8-4bcb-8d06-686beb8d1b5d
