@@ -2,8 +2,8 @@
 title: iOS Devices Available
 description: iOS devices that you can run tests on in App Center
 keywords: test cloud
-author: priskorn
-ms.author: miprisk
+author: king-of-spades
+ms.author: kegr
 ms.date: 9/9/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748

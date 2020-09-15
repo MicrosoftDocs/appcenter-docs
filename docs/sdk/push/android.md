@@ -1,9 +1,9 @@
 ---
 title: App Center Push for Android
-description: Using Push in App Center
+description: Using Push in App Center (Android)
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/23/2020
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
@@ -13,8 +13,7 @@ dev_langs:
  - kotlin
 ---
 
-# App Center Push
-
+# App Center Push (Android)
 > [!IMPORTANT]
 > Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 

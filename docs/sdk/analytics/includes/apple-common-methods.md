@@ -1,6 +1,6 @@
 ---
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/19/2020
 ms.topic: include
 ---

@@ -1,16 +1,16 @@
 ---
-title: How to add Firebase SDK
-description: How to add Firebase SDK
+title: How to add Firebase SDK (Android)
+description: How to add Firebase SDK (Android)
 keywords: sdk, push
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/28/2018
 ms.topic: article
 ms.assetid: cdd0a651-29b6-4fb2-8fc5-4a25b54eb2ca
 ms.tgt_pltfrm: android
 ---
 
-# How to add Firebase SDK dependencies
+# How to add Firebase SDK dependencies (Android)
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 

@@ -1,8 +1,8 @@
 ---
 title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 07/23/2020
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
@@ -140,6 +140,5 @@ Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp
 Disable service at runtime | [UpdateManager.unregister](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-6-add-update-distribution) | [Distribute.setEnabled](~/sdk/distribute/android.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-3-1-providing-your-own-user-interface-for-the-update-process) | [Documentation](~/sdk/distribute/android.md#customize-or-localize-the-in-app-update-dialog)
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

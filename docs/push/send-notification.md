@@ -2,8 +2,8 @@
 title: Sending Push Notifications
 description: Instructions on how to send push notifications using the App Center portal.
 keywords: app center, push
-author: jwargo
-ms.author: jowargo
+author: king-of-spades
+ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: 4db077ee-b9bf-4dc7-ac21-e8ecc8ee840e

@@ -2,8 +2,8 @@
 title: Diagnostics Features
 description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
-author: winnie
-ms.author: yuli1
+author: king-of-spades
+ms.author: kegr
 ms.date: 11/14/2019
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
@@ -99,9 +99,9 @@ Stay on top of your crashes by configuring your App Center app definition settin
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select **Immediatly** ,**Daily**, or **Never**. The default configuration is set to **Never**.
+4. Select **Immediately** ,**Daily**, or **Never**. The default configuration is set to **Never**.
 
-![App Center shows you current threads at the time of the crash](~/diagnostics/images/email-notifications.png)
+![Screenshot setting Crashes email notification frequency](~/diagnostics/images/email-notifications.png)
 
 You can learn more about notification in our [App Center dashboard documentation](~/dashboard/email-notifications/index.md).
 

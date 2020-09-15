@@ -35,4 +35,4 @@ Issues that occur in local builds, or using specific framework features, usually
 | [Xamarin](~/build/xamarin/index.md) | [Xamarin Guide](~/build/troubleshooting/xamarin.md) | [Xamarin Docs](https://docs.microsoft.com/xamarin/) |
 
 ## Contacting App Center Support
-Open the help menu in the upper-right corner of the App Center portal: **www.appcenter.ms > ? > Contact support**. Use the message field to explain your issue or question. Support is provided in English only and during business hours.
+Open the help menu in the upper-right corner of the App Center portal: **https://www.appcenter.ms > ? > Contact support**. Use the message field to explain your issue or question. Support is provided in English only and during business hours.

@@ -1,8 +1,8 @@
 ---
 title: Distribution FAQ
 description: Frequently asked questions about Distribution service
-author: jeom
-ms.author: jeom
+author: king-of-spades
+ms.author: kegr
 ms.date: 10/18/2019
 ms.topic: article
 ms.assetid: 28011d49-082d-41e4-b3bb-2d51dbeb1192

@@ -1,8 +1,8 @@
 ---
 title: Help and Feedback
 description: What to do when you can't find what you need in the docs
-author: wisdeom
-ms.author: jeom
+author: king-of-spades
+ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a

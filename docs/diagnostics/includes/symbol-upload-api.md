@@ -1,6 +1,7 @@
 ---
 title: Uploading symbols through the API
-author: cainejette
+author: king-of-spades
+ms.author: kegr
 ms.topic: include
 ---
 

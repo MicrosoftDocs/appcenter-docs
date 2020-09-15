@@ -1,8 +1,8 @@
 ---
 title: HockeySDK for UWP Migration
 description: Migrate from the HockeySDK to App Center SDK for UWP
-author: elamalani
-ms.author: emalani
+author: king-of-spades
+ms.author: kegr
 ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
@@ -116,6 +116,5 @@ Track handled exceptions | `HockeyClient.Current.TrackException` | Not supported
 
 App Center SDK doesn't support distribution for UWP apps yet.
 
-### Feedback
-
+### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).
