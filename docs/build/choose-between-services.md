@@ -24,7 +24,7 @@ To [get started](https://docs.microsoft.com/appcenter/build/),
 
 1. Log into App Center at [https://appcenter.ms](https://appcenter.ms).
 2. Select the application project you want to build.
-3. Open build settings, and connect the App Center app to a cloud-hosted source control system (Azure Pipelines, GitHub, Bitbucket).
+3. Open build settings, and connect the App Center app to a cloud-hosted source control system (Azure Repos, GitHub, Bitbucket).
 4. Select the repository where the app's source code is located.
 5. Set up the chosen branch to be built. 
   
@@ -32,7 +32,7 @@ To [get started](https://docs.microsoft.com/appcenter/build/),
 
 In App Center, if your app follows the usual standard layout on the respective platform and doesn't rely on many external build steps, App Center finds the app automatically in your repository and builds it right away. We take care of creating the steps/tasks that builds the app on [Cloud Build Machines](https://docs.microsoft.com/appcenter/build/software). 
 
-All we need to know is the app you want us to build, from the repositories hosted on Azure Pipelines, Bitbucket, or GitHub.
+All we need to know is the app you want us to build, from the repositories hosted on Azure Repos, Bitbucket, or GitHub.
  
 > [!TIP]
 > We still offer you a way to do some customizations during build, using [Build Scripts!](https://docs.microsoft.com/appcenter/build/custom/scripts/) 
