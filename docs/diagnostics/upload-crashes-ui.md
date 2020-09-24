@@ -30,7 +30,7 @@ To manually upload Apple crash reports, follow the instructions below:
 Allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
 
 > [!NOTE]
-> This process for manually uploading crash reports is designed for the native iOS and macOS report formats. Content from other sources, including the RAW tab of App Center crashes, can lead to unpredictable results and isn't supported.
+> This process for manually uploading crash reports is designed for the native iOS and macOS report formats. Content in other formats, including the text/JSON report tab of App Center crashes, can lead to unpredictable results and isn't supported.
 
 ## How native crashes are different from ones in the RAW tab of App Center report?
 Whenever crash occurs on iOS or macOS platform then operating system generates crash report which then can be downloaded from device and uploaded to App Center via manual crash upload dialog.
