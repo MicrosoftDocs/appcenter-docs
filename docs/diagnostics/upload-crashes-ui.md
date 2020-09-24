@@ -33,7 +33,7 @@ Allow some time for the report to be processed for symbolication. The crash repo
 > This process for manually uploading crash reports is designed for the native iOS and macOS report formats. Content in other formats, including the text/JSON report tab of App Center crashes, can lead to unpredictable results and isn't supported.
 
 ## How are native crashes different from text reports or from the "raw" tab of the App Center report?
-Whenever crash occurs on iOS or macOS platform then operating system generates crash report which then can be downloaded from device and uploaded to App Center via manual crash upload dialog.
+Whenever a crash occurs on iOS or macOS, a crash report is generated which can be downloaded from the device and uploaded to App Center via the manual crash upload dialog.
 
 It's easy to notice that for iOS/macOS reports there is `RAW` tab containing the text which very similar to content of aforementioned reports.
 Those two formats are not identical: the one we have on `RAW` tab is internal App Center representation which is different from Apple's native reports, e.g. according to Apple's spec native reports have version string followed by build string, while it swapped for App Center representation.
