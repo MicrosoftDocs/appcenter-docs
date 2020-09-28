@@ -24,7 +24,7 @@ Support is provided in English only and during business hours. You can expect an
 
 
 ## Microsoft Premier Support
-Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support).
+Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support). 
 
 ## Providing feedback
 You can provide feedback on the documentation and the product in different ways, publicly and privately.
