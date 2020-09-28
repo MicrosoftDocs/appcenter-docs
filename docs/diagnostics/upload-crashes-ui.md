@@ -36,4 +36,4 @@ Allow some time for the report to be processed for symbolication. The crash repo
 Whenever a crash occurs on iOS or macOS, a crash report is generated which can be downloaded from the device and uploaded to App Center via the manual crash upload dialog.
 
 For iOS/macOS reports there is the `raw` tab containing the text which is very similar to the content of the aforementioned report.
-Those two formats are not identical: the one we have on `raw` tab is internal App Center representation which is different from system generated crash reports, e.g. ordering of version and build version number is not the same.
+Those two formats are not identical: The one on `raw` tab is an App Center-specific representation which is different from system generated crash reports, e.g. the ordering of version and build version number is not the same.
