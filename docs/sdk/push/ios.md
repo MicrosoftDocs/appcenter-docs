@@ -65,10 +65,10 @@ Add `MSPush` to your `start:withServices:` method to start App Center Push toget
 Insert the following line to start the SDK in the project's **AppDelegate.m** class in Objective-C or **AppDelegate.swift** class in Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -89,11 +89,11 @@ You need to register the delegate before starting App Center as shown in the fol
 
 ```objc
 [MSPush setDelegate:self];
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
 MSPush.setDelegate(self)
-MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
 Here is an example of the delegate implementation that displays an alert dialog when the message is received by App Center Push:

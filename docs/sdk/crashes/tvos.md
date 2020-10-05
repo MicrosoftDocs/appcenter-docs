@@ -53,7 +53,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 The following method shows how to set up a user confirmation handler:
 
 ```objc
-[MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
+[MSACCrashes setUserConfirmationHandler:(^(NSArray<MSACErrorReport *> *errorReports) {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   UIAlertController *alertController = [UIAlertController
@@ -65,21 +65,21 @@ The following method shows how to set up a user confirmation handler:
       addAction:[UIAlertAction actionWithTitle:@"Don't send"
                                         style:UIAlertActionStyleCancel
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Always send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
                                       }]];
   // Show the alert controller.
   [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
@@ -87,7 +87,7 @@ The following method shows how to set up a user confirmation handler:
 })];
 ```
 ```swift
-MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
+MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Sorry about that!",
@@ -95,15 +95,15 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
                                           preferredStyle:.alert)
 
   alertController.addAction(UIAlertAction(title: "Don't send", style: .cancel) {_ in
-    MSCrashes.notify(with: .dontSend)
+    MSACCrashes.notify(with: .dontSend)
   })
 
   alertController.addAction(UIAlertAction(title: "Send", style: .default) {_ in
-    MSCrashes.notify(with: .send)
+    MSACCrashes.notify(with: .send)
   })
 
   alertController.addAction(UIAlertAction(title: "Always send", style: .default) {_ in
-    MSCrashes.notify(with: .always)
+    MSACCrashes.notify(with: .always)
   })
 
   // Show the alert controller.
@@ -116,15 +116,15 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSCrashes.notify(with: .dontSend)
-MSCrashes.notify(with: .send)
-MSCrashes.notify(with: .always)
+MSACCrashes.notify(with: .dontSend)
+MSACCrashes.notify(with: .send)
+MSACCrashes.notify(with: .always)
 ```
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]

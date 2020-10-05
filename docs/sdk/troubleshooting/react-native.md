@@ -97,7 +97,7 @@ Command `link` unrecognized. Make sure that you have run `npm install` and that 
 
 In this case, run `npm install` and try `react-native link` again.
 
-## Build error such as 'AppCenterCrashes/MSErrorReport.h' file not found
+## Build error such as 'AppCenterCrashes/MSACErrorReport.h' file not found
 
 One possible cause is when running `react-native link` without **CocoaPods** installed.
 

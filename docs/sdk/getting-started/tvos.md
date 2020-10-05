@@ -147,10 +147,10 @@ import AppCenterCrashes
 *Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
 
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -168,10 +168,10 @@ Unless you specify each module as a parameter in the start method, you can't use
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self])
 ```
 
 ---

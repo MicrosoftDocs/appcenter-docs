@@ -103,10 +103,10 @@ import AppCenterCrashes
 Insert the following line in the app extension's entry point. For example, inside the `viewDidLoad` method of the main ViewController file of a Today extension.
 
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSCrashes class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSCrashes.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSACCrashes.self])
 ```
 
 Currently, only crash reporting is supported for application extensions.

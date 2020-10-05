@@ -38,10 +38,10 @@ dev_langs:
 3. If you want to see the logs sent to the backend, change the log level to **Verbose** in your application and the SDK will print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSAppCenter setLogLevel:MSLogLevelVerbose]
+    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
     ```swift
-    MSAppCenter.setLogLevel(.verbose)
+    MSACAppCenter.setLogLevel(.verbose)
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -65,10 +65,10 @@ dev_langs:
 4. If you want to see the logs sent to the backend, change the log level to **Verbose** in your application and the SDK will print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSAppCenter setLogLevel:MSLogLevelVerbose]
+    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
     ```swift
-    MSAppCenter.setLogLevel(.verbose)
+    MSACAppCenter.setLogLevel(.verbose)
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.

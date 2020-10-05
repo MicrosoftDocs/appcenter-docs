@@ -151,18 +151,18 @@ Create `init()` method into `struct` and add initialization code in it.
 
 Use this code into methods described before, to start SDK:
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
 ```
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
 ```objc
-[MSAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+MSACAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -178,10 +178,10 @@ Unless you explicitly specify each module as a parameter in the start method, yo
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
+MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self])
 ```
 
 Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
