@@ -10,13 +10,13 @@ ms.service: vs-appcenter
 ms.custom: build
 ms.assetid: 72b0e628-3211-412e-ab64-ef6e0a0e0d07
 ---
+# macOS 10.15 info
 | Announcements |
 |-|
 | [Default Xcode will be changed to Xcode 12.0 on October, 20](https://github.com/actions/virtual-environments/issues/1712) |
 | [Xcode 11.0, 11.1, 11.4.0 will be deprecated on October, 20](https://github.com/actions/virtual-environments/issues/1688) |
 | [Remove Xcode 12 beta 6 from MacOS Catalina image in favor of Xcode 12.2 beta 1 on October 13](https://github.com/actions/virtual-environments/issues/1646) |
 ***
-# macOS 10.15 info
 - System Version: macOS 10.15.7 (19H2)
 - Kernel Version: Darwin 19.6.0
 - Image Version: 20201003.1
