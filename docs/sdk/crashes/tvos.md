@@ -4,7 +4,7 @@ description: App Center Crashes for tvOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 07/22/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: 2f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -35,6 +35,9 @@ Also note that crash logs on tvOS require Symbolication, check out the [App Cent
 
 > [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 

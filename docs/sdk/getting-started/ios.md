@@ -4,7 +4,7 @@ description: Get started with iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/07/2020
+ms.date: 10/06/2020
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -53,6 +53,9 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 
 ## 3. Add the App Center SDK modules
 The App Center SDK for iOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager), or by manually adding the binaries to your project.
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 ### 3.1 Integration via Cocoapods
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify services you want in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.

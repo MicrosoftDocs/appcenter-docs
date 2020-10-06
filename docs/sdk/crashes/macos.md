@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 04/16/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -32,6 +32,9 @@ App Center Crashes will automatically generate a crash log every time your app c
 Please follow the [Getting Started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 
 Also note that crash logs on macOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 ### Crash reporting in extensions
 

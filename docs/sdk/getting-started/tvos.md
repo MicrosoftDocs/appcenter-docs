@@ -4,7 +4,7 @@ description: Get started with tvOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/01/2020
+ms.date: 10/06/2020
 ms.topic: get-started-article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: tvOS
@@ -54,6 +54,9 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 ## 3. Add the App Center SDK modules
 
 The App Center SDK for tvOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager) or by manually adding the binaries to your project.
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 ### 3.1  Integration via Cocoapods
 

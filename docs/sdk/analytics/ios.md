@@ -4,7 +4,7 @@ description: App Center Analytics for iOS
 keywords: analytics
 author: king-of-spades
 ms.author: kegr
-ms.date: 07/22/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e
 ms.custom: sdk
@@ -31,6 +31,9 @@ App Center Analytics helps you understand user behavior and customer engagement 
 
 > [!NOTE]
 > iOS devices without a SIM card will not send the report with carrier country code to the App Center portal. If you want to provide a country value, use the `setCountryCode` method to override the country code from your device location.
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 

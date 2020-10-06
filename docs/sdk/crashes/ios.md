@@ -4,7 +4,7 @@ description: App Center Crashes for iOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/25/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.custom: sdk
@@ -38,6 +38,9 @@ Also note that crash logs on iOS require Symbolication, check out the [App Cente
 
 > [!NOTE]
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
 
 ### Crash reporting in extensions
 
