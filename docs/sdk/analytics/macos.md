@@ -33,7 +33,7 @@ App Center Analytics helps you understand user behavior and customer engagement 
 > Carrier country and carrier name are not available on App Center Analytics for macOS, but you can set carrier country with your device location.
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow [this guide](../getting-started/migration/ios.md) to migrate App Center from previous versions.
 
 Please follow the [Get started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 

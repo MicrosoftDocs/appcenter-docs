@@ -15,7 +15,4 @@ dev_langs:
 
 # Other macOS APIs
 
-> [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow (this guide)[~/sdk/getting-started/migration] to migrate App Center from previous versions.
-
 [!INCLUDE [apple](includes/apple.md)]

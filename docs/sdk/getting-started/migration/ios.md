@@ -20,7 +20,7 @@ In order to avoid a naming conflict with classes in Apple's private frameworks, 
 First update the App Center SDK by using one of the dependency managers:
 * Cocoapods
 * Carthage
-* [Swift Package Manager](includes/swift-package-manager.md)
+* [Swift Package Manager](../includes/swift-package-manager.md)
 
 ### Usage of APIs
 The fastest and the most convenient way to update the App Center SDK API is to use autocorrect. After the replacement, you should get the result as shown below.
