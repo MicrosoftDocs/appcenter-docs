@@ -2,6 +2,7 @@
 title: How migrate to App Center SDK 4.0.0 and higher
 description: How migrate to App Center SDK 4.0.0 and higher
 keywords: sdk, apple
+author: king-of-spades
 ms.author: kegr
 ms.date: 10/06/2020
 ms.topic: migration
@@ -12,17 +13,13 @@ dev_langs:
  - objc
 ---
 
-## Migrate to App Center SDK 4.0.0 and higher
-
+# Migrate to App Center SDK 4.0.0 and higher
 In order to avoid a naming conflict with classes in Apple's private frameworks, SDK now uses `MSAC` prefix instead of `MS` which changes the SDK API.
 
-### Update the App Center SDK 
-First update the App Center SDK by using one of the dependency managers:
-* Cocoapods
-* Carthage
-* [Swift Package Manager](../includes/swift-package-manager.md)
+## Update the App Center SDK 
+First update the App Center SDK by using one of the dependency managers.
 
-### Usage of APIs
+## Usage of APIs
 The fastest and the most convenient way to update the App Center SDK API is to use autocorrect. After the replacement, you should get the result as shown below.
 
 Before updating App Center SDK to `4.0.0` and higher.
