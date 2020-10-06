@@ -4,7 +4,7 @@ description: Using Push in App Center (macOS)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/14/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.tgt_pltfrm: macos

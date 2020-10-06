@@ -3,7 +3,7 @@ title: HockeySDK for iOS Migration
 description: Migrate from the HockeySDK to App Center SDK for iOS
 author: king-of-spades
 ms.author: kegr
-ms.date: 04/23/2020
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: 7c93b0de-5900-432c-9f15-5f9d2a51187d
 ms.service: vs-appcenter

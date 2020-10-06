@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/11/2019
+ms.date: 10/06/2020
 ms.topic: include
 ms.assetid: 1c1391e4-0c39-4141-893e-766ad22266d7
 ms.custom: sdk
