@@ -1,6 +1,6 @@
 ---
-title: How migrate to App Center SDK 4.0.0 and higher
-description: How migrate to App Center SDK 4.0.0 and higher
+title: How to migrate to App Center SDK 4.0.0 and higher
+description: How to migrate to App Center SDK 4.0.0 and higher
 keywords: sdk, apple
 author: king-of-spades
 ms.author: kegr
@@ -17,7 +17,7 @@ dev_langs:
 In order to avoid a naming conflict with classes in Apple's private frameworks, SDK now uses `MSAC` prefix instead of `MS` which changes the SDK API.
 
 ## Update the App Center SDK 
-First update the App Center SDK by using one of the dependency managers.
+First, update the App Center SDK by using one of the dependency managers.
 
 ## Usage of APIs
 The fastest and the most convenient way to update the App Center SDK API is to use autocorrect. After the replacement, you should get the result as shown below.

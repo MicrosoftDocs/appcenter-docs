@@ -37,7 +37,7 @@ Also note that crash logs on tvOS require Symbolication, check out the [App Cent
 > To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow [this guide](../getting-started/migration/ios.md) to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
