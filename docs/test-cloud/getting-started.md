@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Getting Started with App Center Test
-The requisite steps below must be completed before a project can be used with App Center Test .
+These steps must be completed before a project can be used with App Center Test.
 
 ## 1. Create an App Center account
 Create an App Center account at [appcenter.ms](https://appcenter.ms).
@@ -31,8 +31,8 @@ App Center Test only uses physical devices for testing, not emulators or simulat
 
 For iOS developers, however, it can be more challenging:
 - Apps built for iOS devices and simulators aren't cross-compatible because of different processor architectures.
-- Apps built for iOS devices MUST be provisioned using Apple's signing process. iOS provisioning can be difficult to set up initially, and update later when profiles expire or require modification. 
-- Some testing frameworks, like Xamarin.UITest & Calabash, are explicitly incompatible with publishing iOS apps to the App Store. This is because they add assemblies to the IPA that should only be present during development.
+- Apps built for iOS devices MUST be provisioned using Apple's signing process. iOS provisioning can be difficult to setup initially, and update later when profiles expire or require modification. 
+- Some testing frameworks, like Xamarin.UITest & Calabash, are explicitly incompatible with publishing iOS apps to the App Store. These frameworks add assemblies to the IPA that should only be present during development.
 - The first time you test on a physical iOS device, you'll have to **Enable UIAutomation** in the device settings.
 
 It's possible, but not advised, to skip this step. It's much more difficult to diagnose issues running in App Center if the app has unresolved local testing issues. 
