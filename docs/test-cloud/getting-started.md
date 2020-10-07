@@ -35,7 +35,7 @@ For iOS developers, however, it can be more challenging:
 - Some testing frameworks, like Xamarin.UITest & Calabash, are explicitly incompatible with publishing iOS apps to the App Store. These frameworks add assemblies to the IPA that should only be present during development.
 - The first time you test on a physical iOS device, you'll have to **Enable UIAutomation** in the device settings.
 
-It's possible, but not advised, to skip this step. It's much more difficult to diagnose issues running in App Center if the app has unresolved local testing issues. 
+Skipping local testing is possible, but not recommended. It's much more difficult to diagnose issues running in App Center if the app has unresolved local testing issues. 
 
 ## 6. Prepare the project for upload
 Each test framework has different requirements for uploading to App Center Test. Follow the appropriate test framework instructions:
