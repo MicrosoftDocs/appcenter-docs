@@ -28,6 +28,9 @@ App Center Distribute will let your users install a new version of the app when 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
 
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
+
 > [!IMPORTANT]
 > App Center SDK doesn't support multiple window apps that were introduced in iOS 13.
 

@@ -4,7 +4,7 @@ description: App Center Analytics for tvOS
 keywords: analytics
 author: king-of-spades
 ms.author: kegr
-ms.date: 07/22/2019
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: aec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -31,6 +31,9 @@ App Center Analytics helps you understand user behavior and customer engagement 
 
 > [!NOTE]
 > Carrier country and carrier name are not available on App Center Analytics for tvOS, but you can set carrier country with your device location.
+
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
 
 Please follow the [Getting started](~/sdk/getting-started/tvos.md) section if you haven't set up the SDK in your application yet.
 
