@@ -4,7 +4,7 @@ description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 10/09/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
 ms.service: vs-appcenter
@@ -12,6 +12,11 @@ ms.custom: build
 ---
 
 # Code Repository Troubleshooting
+## Repository was disconnected due to account ownership changes
+If the user who originally connected the repository has their permission to access that repository revoked, due to being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
+
+Unfortunately, removing the old connection results in deleting branch configurations and build history in App Center. However, in some cases the build data can still be [downloaded for backup purposes](~/build/troubleshooting/backup-data.md).
+
 ## Repository isn't listed in the Connect to Repository step
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
