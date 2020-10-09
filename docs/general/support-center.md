@@ -12,20 +12,24 @@ ms.service: vs-appcenter
 
 # App Center Support
 ## Documentation
-
 [Product Docs](~/index.yml)
 [API Docs](~/api-docs/index.md)
 [Product Roadmap](~/general/roadmap.md)
 
 ## Troubleshooting
+### Services
+[Build](~/build/troubleshooting/index.md)
+[Test](~/test-cloud/troubleshooting/index.md)
+[Diagnostics](~/diagnostics/troubleshooting.md)
+[Analytics](~/analytics/faq.md)
 
-[Android SDK troubleshooting](~/sdk/troubleshooting/android.md)
-[iOS SDK troubleshooting](~/sdk/troubleshooting/ios.md)
-[.NET SDK troubleshooting](~/sdk/troubleshooting/xamarin.md)
-[macOS SDK troubleshooting](~/sdk/troubleshooting/macos.md)
+### App Center SDK Troubleshooting
+[Android](~/sdk/troubleshooting/android.md)
+[iOS](~/sdk/troubleshooting/ios.md)
+[.NET](~/sdk/troubleshooting/xamarin.md)
+[macOS](~/sdk/troubleshooting/macos.md)
 
-## Recent updates
-
+#### Recent updates
 SDKs (open-sourced on GitHub)
 - [Android SDK](https://github.com/microsoft/appcenter-sdk-android)
 - [Apple SDK](https://github.com/microsoft/appcenter-sdk-apple)
