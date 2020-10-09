@@ -48,7 +48,7 @@ The App Center CLI tool returns an exit code that reflects whether App Center Te
 | 27 | Artifacts Directory Invalid |
 
 ## Getting help
-You can always contact us through [the ? > Conctact Support icon in the upper-right hand corner](https://intercom.help/appcenter/getting-started/getting-help-with-app-center). We don't provide 24/7 support, but will strive to reply as fast as possible.
+You can always contact us through [the ? > Conctact Support icon in the upper-right hand corner](~/help.md). We don't provide 24/7 support, but will strive to reply as fast as possible.
 
 To help debug your test run, you can navigate to the test run in question and copy the URL from your browser and paste it into the support conversation. A test run URL looks like something like 
 > https://appcenter.ms/orgs/OrgName/apps/App-Name/test/runs/77a1c67e-2cfb-4bbd-a75a-eb2b4fd0a747.
