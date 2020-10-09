@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 # Help and feedback
 The docs you'll find here should explain everything you need to know about Visual Studio App Center. However, if you need additional help, we have a dedicated support team ready to answer your questions. This page provides instructions on how to connect with them.
 
-App Center and its product documentation are both under development and we welcome your feedback along the way. If you have a suggestion for how to make the product better or how to make the documentation better, we want to hear from you. Look in the **Providing feedback** section of this guide for information on how to give us your feedback.
+App Center and its product docs are both under development and we welcome your feedback along the way. If you have suggestions for how to make the product or docs better, we want to hear from you. Look in the **Providing feedback** section of this guide for information on how to give us your feedback.
 
 ## Accessing App Center Free Support
 Get support for App Center directly from within the App Center portal. Anytime you need it, open the help menu in the upper right corner of the App Center portal: **? > Contact support**. Use the message field to explain your issue or question. 
@@ -40,15 +40,13 @@ The comments feature on our documentation is intended for docs suggestions or qu
    - **This page** - Suggest changes to the document. 
 2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, you have to sign in with your GitHub account. 
 3. **View on GitHub** - click to view suggestions directly on GitHub. This link isn't available on all pages.
-4. Prompt asking you if the current page is helpful. This will be in different locations depending on the screen size. Your vote here helps us understand how we're doing.
+4. Prompt asking you if the current page is helpful. This prompt will be in different locations depending on the screen size. Your vote here helps us understand how we're doing.
 
 > [!Note]
 > **This product** is the preferred method to provide product feedback because it goes directly to the App Center product team and will get a quicker response. Voting whether the page is helpful simply records your vote (and comments), but doesn't allow us to directly respond to you.
 
 ### Feedback on the product
 We're constantly adding features and more capabilities to App Center. Do you not see your feature or are you curious about what new features are coming soon? We invite you to help shape the future of App Center by sharing your feedback on our [monthly public roadmap](https://github.com/Microsoft/appcenter/wiki/Iteration-Plans), or by submitting and upvoting [feature requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc).
-
-If you experience an issue, the best way to get help is to use the support features mentioned above.
 
 ## Contributing to the docs
 The App Center docs are an open-source project [hosted on GitHub](https://github.com/MicrosoftDocs/appcenter-docs).

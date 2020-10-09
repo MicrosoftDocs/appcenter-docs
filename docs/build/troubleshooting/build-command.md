@@ -11,12 +11,12 @@ ms.custom: build
 ---
 
 # How to find your build command in App Center
-Sometimes it is useful to compare the exact build command that was executed in certain builds with other builds in App Center, or locally. 
+Sometimes it's useful to compare the exact build command executed across different builds. 
 
-To do this, it helps to know where to look in App Center's logs for the relevant commands. What they look like and how to find them varies depending on the framework your app is built with. 
+To compare commands, it helps to know where to look in App Center's logs. What the commands look like and how to find them depends your app's framework. 
 
 ## Native 
-### Android (Java/Gradle)
+#### Android (Java/Gradle)
 Here is an example output from a Native Android Build:
 
 ```
@@ -31,7 +31,7 @@ SYSTEMVSSCONNECTION exists true
 [command]/Users/vsts/agent/2.150.0/work/1/s/gradlew -DMOBILECENTER_KEYSTORE_PASSWORD=*** -DMOBILECENTER_KEY_ALIAS=*** -DMOBILECENTER_KEY_PASSWORD=*** -DMOBILECENTER_BUILD_VERSION=12 -DAPPCENTER_KEYSTORE_PASSWORD=*** -DAPPCENTER_KEY_ALIAS=*** -DAPPCENTER_KEY_PASSWORD=*** -DAPPCENTER_BUILD_VERSION=12 clean :app:assembleRelease :app:testRelease :app:lintRelease
 ```
 
-### iOS (Objective-C/Swift) 
+#### iOS (Objective-C/Swift) 
 Here is an example output from a Native iOS build:
 
 ```
@@ -54,8 +54,8 @@ Build version 10E125
 > - Using npm - `npm install`
 > - Using yarn - `yarn install`
 
-### Android
-Since React Native links to the Android SDK to compile, the output from it will look very similar to that of a Native Android Application:
+#### Android
+Since React Native links to the Android SDK to compile, the output will look similar to an Native Android Application:
 
 ```
 =====================================================================
@@ -69,8 +69,8 @@ SYSTEMVSSCONNECTION exists true
 [command]/Users/vsts/agent/2.149.2/work/1/s/android/gradlew -DMOBILECENTER_BUILD_VERSION=5 -DAPPCENTER_BUILD_VERSION=5 -p android clean :app:assembleRelease :app:lintRelease
 ```
 
-### iOS
-Since React Native links to Xcode to compile, the output from it will look very similar to that of a Native iOS Application:
+#### iOS
+Since React Native links to Xcode to compile, the output from it will look similar to that of a Native iOS Application:
 
 ```
 =====================================================================
@@ -88,8 +88,8 @@ Build version 10E125
 ```
 
 ## Xamarin
-### Android
-Below is some example output from a Xamarin.Android build. The key lines to examine are those following the `[command]` brackets, though the heading is useful to help you find the correct location. 
+#### Android
+Here's some example output from a Xamarin.Android build. The key lines to examine are after the `[command]` brackets, though the heading is useful to help you find the correct location. 
 
 ```
 =====================================================================
@@ -103,7 +103,7 @@ Help         : More Information
 [command]/Library/Frameworks/Mono.framework/Versions/5_18_2/bin/msbuild /Users/vsts/agent/2.150.3/work/1/s/Xamarin.UITest/FormsGallery/FormsGallery/FormsGallery.Android/FormsGallery.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
 ```
 
-### iOS
+#### iOS
 Xamarin.iOS is almost identical in format, except the references to `Android` are for `iOS` instead:
 ```
 =====================================================================

@@ -12,14 +12,14 @@ ms.custom: test
 ---
 
 # Environment Variables in Test
-When testing, it is often helpful to launch your application and/or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
+When testing, it's often helpful to launch your application or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
 
 For most frameworks, useful environment variables are available within the test and/or application and you can set additional environment variables via the App Center CLI.
 
 ## Support by framework
 In App Center, some frameworks and platform combinations support setting and using custom environment variables as well as using variables that are made available to your application and tests automatically (for example `RUNNING_IN_APP_CENTER` and `APP_CENTER_TEST`). 
 
-The table below details the environment variable support in tests and applications for each framework or platform:
+This table lists environment variables supported for each framework or platform:
 
 | Framework | Test Environment Variables | Application Environment Variables |
 | --------- | ---------------------------| ----------------------------------|
@@ -30,7 +30,7 @@ The table below details the environment variable support in tests and applicatio
 | XCUITest | Not Available | Not Available |
 
 > [!NOTE]
-> In Espresso tests and Android applications, variables are available in the `InstrumentationRegistry` since Android does not support environment variables.
+> In Espresso tests and Android applications, variables are available in the `InstrumentationRegistry` since Android doesn't support environment variables.
 
 ## Environment variables available in your application
 
@@ -57,7 +57,7 @@ For supported frameworks, these environment variables are available within the t
 
 ## Setting additional environment variables
 
-When you upload your tests to AppCenter with the appcenter CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner and for your application (the application under test or AUT).
+When you upload your tests to App Center with the CLI, you can request environment variables be set using the `--test-parameter` option. Environment variables can be set for test runner and for your application (the application under test or AUT).
 
 > [!NOTE]
 > See [Support by framework](#support-by-framework) for details of which frameworks support test and application variables in App Center Test.
@@ -106,8 +106,7 @@ app_center_test = ENV["APP_CENTER_TEST"]
 ```
 
 ### Sample Espresso test code
-
-Since Android does not support environment variables, App Center Test sets `InstrumentationRegistry` values instead for Espresso. The following code snippet shows how to access the `InstrumentationRegistry` values.
+Since Android doesn't support environment variables, App Center Test sets `InstrumentationRegistry` values instead for Espresso. The following code snippet shows how to access the `InstrumentationRegistry` values.
 
 ```java
 
