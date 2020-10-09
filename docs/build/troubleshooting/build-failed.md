@@ -20,7 +20,7 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 2. Then change directories: `cd appcenter-test`
 3. Clone your repository with: `git clone -b <branch> <remote_repo>`
 4. Launch the freshly cloned project in your local IDE or command line. 
-5. Try comparing [the build command executed in App Center](~/build/build-command.md) to the command executed locally. 
+5. Try comparing [the build command executed in App Center](~/build/troubleshooting/build-command.md) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 ### Files with modified filenames or locations are ignored
