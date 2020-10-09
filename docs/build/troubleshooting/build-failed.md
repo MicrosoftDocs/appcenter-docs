@@ -3,7 +3,7 @@ title: Failed Builds
 description: How to find and interpret errors in App Center Build
 author: king-of-spades
 ms.author: kegr
-ms.date: 07/31/2020
+ms.date: 10/09/2020
 ms.topic: article 
 ms.assetid: d092ec2d-5f61-4cc5-8aca-bb36bec34a10
 ms.service: vs-appcenter 
@@ -20,7 +20,7 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 2. Then change directories: `cd appcenter-test`
 3. Clone your repository with: `git clone -b <branch> <remote_repo>`
 4. Launch the freshly cloned project in your local IDE or command line. 
-5. Try comparing [the build command executed in App Center](https://intercom.help/appcenter/build/how-to-find-your-build-command-in-app-center) to the command executed locally. 
+5. Try comparing [the build command executed in App Center](~/build/build-command.md) to the command executed locally. 
 6. Compare the versions of the tools you're using locally with our [Cloud Build Machines](~/build/software.md)
 
 ### Files with modified filenames or locations are ignored
@@ -102,11 +102,9 @@ Clicking on the abbreviated hash opens the linked repository on the same commit:
 
 ## Next Steps
 Here are a few options for researching your issue further:
-
 - [Other Build troubleshooting docs](~/build/troubleshooting/index.md)
-- [Intercom Help Center (Build)](https://intercom.help/appcenter/en/collections/206279-build)
 - [StackOverflow (App Center)](https://stackoverflow.com/questions/tagged/visual-studio-app-center)
-- Documentation for the development platform your app uses
+- [Development platform documentation](~/build/troubleshooting/index.md#framework-specific-resources).
 
 ## Contacting Support
 Log into https://appcenter.ms/apps and click the chat icon in the lower right corner of the screen. For best results, it's a good idea to open the ticket with:

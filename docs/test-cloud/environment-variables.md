@@ -4,7 +4,7 @@ description: Environment variables in App Center Test
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 04/08/2020
+ms.date: 10/09/2020
 ms.topic: article
 ms.assetid: 51964205-c1d7-4fd7-8259-83485590c6e1
 ms.service: vs-appcenter
@@ -49,7 +49,7 @@ For supported frameworks, these environment variables are available within the t
 | `APP_CENTER_TEST`    | Set to `1` when your tests run in App Center Test. |
 | `XTC_APP_ENDPOINT`   | Address of a secure port on the device that allows other services to communicate with the application. Used by applications that embed their own HTTP servers in an application and need to interact with the app outside of the test framework. (Android Only).<br><br>Example: `http://devicehost151.prod:37777/proxy2/token-c059c5c6-37cc-4400-9038-96d1d342ed6e/` |
 | `XTC_DEVICE`         | Combines the operating system name and the device name.<br><br>Example: `Google Pixel 2 XL (8.1.0)` |
-| `XTC_DEVICE_INDEX`   | A string in the range of 0 to N-1, where N is the number of devices the test is run on. Used in situations where the same test is being run in parallel on multiple devices. `XTC_DEVICE_INDEX` is unique for each test run for each device. For additional discussion, see:  [Handling Concurrent Database Changes During Tests](https://intercom.help/appcenter/test/handling-concurrent-database-changes-during-tests). |
+| `XTC_DEVICE_INDEX`   | A string in the range of 0 to N-1, where N is the number of devices the test is run on. Used in situations where the same test is being run in parallel on multiple devices. `XTC_DEVICE_INDEX` is unique for each test run for each device. For additional discussion, see:  [Handling Concurrent Database Changes During Tests](~/test-cloud/troubleshooting/database-changes.md). |
 | `XTC_DEVICE_NAME`    | Name of the device running the test.<br><br>Example: `Google Pixel 2 XL` |
 | `XTC_DEVICE_OS`      | Name of the operating system for the device running the test.<br><br>Example: `8.1.0` |
 | `XTC_LANG`           | Language code used to run the test.<br><br>Example: `en` |
