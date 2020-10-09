@@ -14,14 +14,15 @@ The docs you'll find here should explain everything you need to know about Visua
 
 App Center and its product documentation are both under development and we welcome your feedback along the way. If you have a suggestion for how to make the product better or how to make the documentation better, we want to hear from you. Look in the **Providing feedback** section of this guide for information on how to give us your feedback.
 
-
 ## Accessing App Center Free Support
 Get support for App Center directly from within the App Center portal. Anytime you need it, open the help menu in the upper right corner of the App Center portal: **? > Contact support**. Use the message field to explain your issue or question. 
 
 ![App Center Support Form](~/images/app-center-support-form.png)
 
-Support is provided in English only and during business hours. You can expect an answer within one business day or less, depending on the support load.
+Support is provided in English only and during business hours. You can expect an answer within one business day or less, depending on the support load. 
 
+> [!TIP]
+> When you create a ticket, the App Center Team will write to your email address we have on file with a subject line like this: `[Category] Issue #AB1CD2E4`. Make sure to check your spam filter if you're not seeing responses from our team. If you're consistently having trouble recieving support emails, you can mention that in the support form, and our team will attempt to contact you using other means.
 
 ## Microsoft Premier Support
 Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support). 
