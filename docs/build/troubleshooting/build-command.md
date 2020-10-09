@@ -55,7 +55,7 @@ Build version 10E125
 > - Using yarn - `yarn install`
 
 #### Android
-Since React Native links to the Android SDK to compile, the output will look similar to an Native Android Application:
+Since React Native links to the Android SDK to compile, the output will look similar to a Native Android Application:
 
 ```
 =====================================================================
