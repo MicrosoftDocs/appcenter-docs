@@ -46,7 +46,7 @@ Xamarin.Calabash.Start();
 When you surround the initialization code in the **ENABLE_TEST_CLOUD** conditional compile statement, the Xamarin linker will leave the Xamarin Test Cloud Agent in builds that use the **ENABLE_TEST_CLOUD** flag. Normally **Debug** builds but not **Release** builds. New Xamarin.iOS apps created in Visual Studio use this approach.
 
 ### Generating an upload command
-Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests. That process will generate a prototype command line like this:
+Once a test suite is prepared, you can [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests. That process will generate a prototype command line like this:
 
 > appcenter test run uitest --app "MyOrg/MyApp" --devices "MyOrg/MyDeviceSet" --app-path pathToFile.ipa --test-series "master" --locale "en_US" --build-dir pathToUITestBuildDir
 
