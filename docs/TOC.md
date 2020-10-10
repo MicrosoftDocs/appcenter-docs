@@ -102,6 +102,7 @@
 ### [General](build/troubleshooting/index.md)
 ### [Repository Connections](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
+### [Comparing Build Commands](build/troubleshooting/build-command.md)
 ### [Backup Build Data](build/troubleshooting/backup-data.md)
 ### [iOS](build/troubleshooting/ios.md)
 ### [Xamarin](build/troubleshooting/xamarin.md)

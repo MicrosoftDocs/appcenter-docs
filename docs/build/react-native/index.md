@@ -4,7 +4,7 @@ description: How to use App Center Build for React Native
 keywords: build, react-native
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/26/2020
+ms.date: 10/09/2020
 ms.topic: article
 ms.assetid: dd0e800f-8571-446c-b2a9-da89b3e35b29
 ms.service: vs-appcenter
@@ -21,4 +21,4 @@ You can build React Native apps for both Android and iOS. To get started, use th
 
 Currently React Native Build does not contain support for Expo.
 
-We're constantly adding features and more capabilities. If you need further support in building your app, [contact us](https://intercom.help/appcenter/) and let us know more about your needs.
+We're constantly adding features and more capabilities. If you need further support in building your app, [contact us](~/help.md) and let us know more about your needs.
