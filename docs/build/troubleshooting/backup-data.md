@@ -58,6 +58,6 @@ done
 ```
 
 > [!TIP]
-> If one of the commands fails, the script will output an error but continue executing. This means if you can use a general or approximate range for the build data. 
+> If one of the commands fails, the script will output an error but continue executing. This means you can use a general or approximate range for the build data. 
 
 This script is also available on the [App Center Repository](https://github.com/microsoft/appcenter/blob/master/sample-build-scripts/general/build-results/download.sh)

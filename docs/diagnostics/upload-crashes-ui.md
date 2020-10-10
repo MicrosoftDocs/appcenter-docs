@@ -4,7 +4,7 @@ description: Upload a crash report without using our SDK, or if developing for a
 keywords: crashes, diagnostics, errors, upload
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/10/2020
+ms.date: 09/25/2020
 ms.topic: article
 ms.assetid: 7f5135ee-c133-4f1f-9376-978af1e3405d
 ms.service: vs-appcenter
@@ -30,5 +30,9 @@ To manually upload Apple crash reports, follow the instructions below:
 Allow some time for the report to be processed for symbolication. The crash report will appear in the Diagnostics UI after it's processed.
 
 > [!NOTE]
-> Uploading error reports retrieved from the App Center portal will lead to unpredictable results and is not supported.
-> While the raw App Center text format looks similar to Apple's crash report format, it is actually a different format which is not guaranteed to be compatible.
+> Manually uploading crash reports are designed for the native iOS and macOS report formats. Content in other formats, including the text/JSON report tab of App Center crashes, can lead to unpredictable results and isn't supported.
+
+## How are native crashes different from text reports or from the "raw" tab of the App Center report?
+Whenever a crash occurs on iOS or macOS, a crash report is generated which can be downloaded from the device and uploaded to App Center via the manual crash upload dialog.
+
+For iOS/macOS reports, the `raw` tab contains text, like the crash report, but the formats aren't identical. The `raw` tab is an App Center-specific representation which differs from system-generated reports. For example, the ordering of `version` and `build version number` isn't the same.
