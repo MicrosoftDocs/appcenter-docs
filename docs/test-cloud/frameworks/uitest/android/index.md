@@ -3,7 +3,7 @@ title: Preparing Xamarin.Android app for testing
 description: A step-by-step guide to configure Xamarin.UITest for Xamarin.Android apps
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/08/2020
 ms.topic: article 
 ms.assetid: BA781EFD-92DB-44BA-8CA9-42567A5E5290 
 ms.service: vs-appcenter
@@ -34,3 +34,15 @@ Disable **Use Shared Mono Runtime**. The Shared Mono Runtime will prevent Xamari
 In Visual Studio 2019, open the project properties, and select the **Android Options** tab. In the first section, look for **Packaging Properties**, then uncheck the **Use Shared Runtime** checkbox.
 
 ![Remove Use Shared Runtime (Windows)](../images/remove-share-runtime-vs2019.png)
+
+### Generating an upload command
+Once a test suite is prepared, you can [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests. That process will generate a prototype command line like this:
+
+```bash 
+appcenter test run uitest --app "MyOrg/MyApp" --devices "MyOrg/MyDeviceSet" --app-path pathToFile.apk --test-series "master" --locale "en_US" --build-dir pathToUITestBuildDir
+```
+
+The command line requires some modifications:
+1. You _must_ provide paths for the arguments `--app-path` & `--build-dir`.
+2. You _may_ need to specify the UITest package you're using, if the CLI can't automatically find it: `--uitest-tools-dir /Users/{your username}/.nuget/packages/xamarin.uitest/{UITest version}/tools`
+
