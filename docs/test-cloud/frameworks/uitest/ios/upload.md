@@ -48,7 +48,9 @@ When you surround the initialization code in the **ENABLE_TEST_CLOUD** condition
 ### Generating an upload command
 Once a test suite is prepared, you can [setup a test run](~/test-cloud/starting-a-test-run.md) to upload and run your tests. That process will generate a prototype command line like this:
 
-> appcenter test run uitest --app "MyOrg/MyApp" --devices "MyOrg/MyDeviceSet" --app-path pathToFile.ipa --test-series "master" --locale "en_US" --build-dir pathToUITestBuildDir
+```bash
+appcenter test run uitest --app "MyOrg/MyApp" --devices "MyOrg/MyDeviceSet" --app-path pathToFile.ipa --test-series "master" --locale "en_US" --build-dir pathToUITestBuildDir
+```
 
 The command line requires some modifications:
 1. You _must_ provide paths for the arguments `--app-path` & `--build-dir`.
