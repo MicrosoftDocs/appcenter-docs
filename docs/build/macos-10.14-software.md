@@ -8,10 +8,9 @@ ms.date: 10/14/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
-
+---
 ***
 # macOS 10.14 info
----
 | Announcements |
 |-|
 | [[macOS] Default Ruby version will be changed to 2.7 on October, 26](https://github.com/actions/virtual-environments/issues/1775) |
