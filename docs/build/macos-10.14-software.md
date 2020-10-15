@@ -8,6 +8,9 @@ ms.date: 10/14/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
+
+***
+# macOS 10.14 info
 ---
 | Announcements |
 |-|
@@ -15,8 +18,6 @@ ms.custom: build
 | [Default Xcode will be changed to Xcode 12.0 on October, 20](https://github.com/actions/virtual-environments/issues/1712) |
 | [Xcode 11.0, 11.1, 11.4.0 will be deprecated on November, 5](https://github.com/actions/virtual-environments/issues/1688) |
 | [Remove Xcode 12 beta 6 from MacOS Catalina image in favor of Xcode 12.2 beta 1 on October 13](https://github.com/actions/virtual-environments/issues/1646) |
-***
-# macOS 10.14 info
 - System Version: macOS 10.14.6 (18G6032)
 - Kernel Version: Darwin 18.7.0
 - Image Version: 20201011.1
