@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ---
-***
 # macOS 10.14 info
 | Announcements |
 |-|
