@@ -4,7 +4,7 @@ description: Guide on testing
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/07/2019
+ms.date: 10/19/2020
 ms.topic: article
 ms.assetid: 43e7ae62-16b2-4c1e-8798-fafcd5040ba3
 ms.service: vs-appcenter
@@ -60,7 +60,7 @@ Lastly, if you have a QR code reader handy, you can navigate to our [App Center 
 
 ## Using the App Center Android App
 
-To get started using our native app, simply download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**
+To get started using our native app, simply download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
 
 ![Google App Store Listing](images/a-store-listing.png)
 
