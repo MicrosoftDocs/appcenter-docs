@@ -55,7 +55,7 @@ codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDurati
 
 > [!NOTE]
 > If `codePush.sync()` is not called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
- 
+
 > [!NOTE]
 > For Cordova, the first parameter that `codePush.sync()` expects is a `syncStatusCallback`, so to do the same thing, you should insert `null` as the first parameter to the call, i.e:
 
@@ -188,7 +188,7 @@ The following is required to complete this module:
 Start by creating your app and setting it up to work with the CodePush service:
 
 ```shell
-appcenter apps create -d VSTSCDSample-Android -o android -p react-native
+appcenter apps create -d VSTSCDSample-Android -o Android -p React-Native
 ```
 
 Then use the following commands to create both `Staging` and `Production` deployments:
@@ -201,7 +201,7 @@ appcenter codepush deployment add -a <ownerName>/VSTSCDSample-Android Production
 To view the deployment keys use:
 
 ```shell
-appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android
+appcenter codepush deployment list -a <ownerName>/VSTSCDSample-Android -k
 ```
 
 ![CodePush CLI providing deployment keys](images/tutorials1.png)
