@@ -95,6 +95,7 @@
 ## [Build Notifications](build/notifications.md)
 ## [Build scripts](build/custom/scripts/index.md)
 ## [Environment variables](build/custom/variables/index.md)
+## [Custom Dependency Handling](build/custom/dependencies/index.md)
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)

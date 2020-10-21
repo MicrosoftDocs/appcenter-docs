@@ -4,7 +4,7 @@ description: How to custom-handle dependencies in App Center Build
 keywords: build, pre, post, custom, scripts
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/22/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
@@ -27,7 +27,7 @@ There's several options available for restoring your dependencies:
 
 - Default Automatic restoration - Typical for NuGet packages and similar workflows.
 - Customized Automatic restoration - Including files like NuGet.config in your project that modify the normal automatic process.
-- Restoration in a [Post-Clone script](~/build/custom/scripts/) - Allows full control of the restoration process. 
+- Restoration in a [Post-Clone script](~/build/custom/scripts/index.md#post-clone) - Allows full control of the restoration process. 
 - Including packages in the repository itself - Guarantees the packages are available, but can considerably increase the size of the repository. 
 
 ## Common Examples
