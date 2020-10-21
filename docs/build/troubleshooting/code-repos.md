@@ -29,15 +29,15 @@ App Center currently only searches four directory levels deep for your project f
 ## Can I use on-premises repositories?
 App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but doesn't support on-premises repositories.
 
-## Repository disconnected after...
+## Repository connection broken after...
 ### Repo name change
 This will break the connection, in order to resolve the issue you must revert to the original name or create a new repo with the original name.
 
 ### Account ownership change
-If the user who originally connected the repository has their permission to access that repository revoked, due to being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
+If the user who originally connected the repository has their permission to access that repository revoked due to being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
 
-### Backing up data if disconnecting
-Unfortunately, removing the old connections results in deleting branch configurations and build history in App Center. However, in some cases the build data can still be [downloaded for backup purposes](~/build/troubleshooting/backup-data.md).
+> [!WARNING]
+> Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
 
 ## I've connected to the wrong account. How can I reconnect to the correct one?
 Disconnect the repository account, and reconnect to the correct one:
