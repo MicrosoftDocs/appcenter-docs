@@ -4,7 +4,7 @@ description: Troubleshooting issues with code repositories in Build
 keywords: build, troubleshooting
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 10/09/2020
 ms.topic: article
 ms.assetid: 860b2438-d3e9-4f0c-bf92-cccb98fdd29b
 ms.service: vs-appcenter
@@ -29,14 +29,21 @@ App Center currently only searches four directory levels deep for your project f
 ## Can I use on-premises repositories?
 App Center currently supports cloud hosted Git repositories on Azure DevOps (formerly known as Visual Studio Team Services (VSTS)), Bitbucket and GitHub, but doesn't support on-premises repositories.
 
+## Repository connection broken after...
+### Repo name change
+This will break the connection, in order to resolve the issue you must revert to the original name or create a new repo with the original name.
+
+### Account ownership change
+If the user who originally connected the repository has their permission to access that repository revoked due to being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
+
+> [!WARNING]
+> Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
+
 ## I've connected to the wrong account. How can I reconnect to the correct one?
 Disconnect the repository account, and reconnect to the correct one:
 - [BitBucket](~/build/connect.md#bitbucket)
 - [GitHub](~/build/connect.md#github)
 - [Azure DevOps](~/build/connect.md#azure-devops)
-
-> [!WARNING]
-> Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
