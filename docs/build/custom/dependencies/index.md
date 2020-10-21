@@ -42,10 +42,11 @@ Potential workarounds include:
 - Add `pod install` to a Post-Clone build script to add missing pods.
 
 #### Yarn packages needing extra time reliably restore
-Currently Yarn packages have 30 seconds to complete the Yarn restore task during the main build step. This can cause intermittent failures like this:
-> error An unexpected error occurred: "https://registry.yarnpkg.com/[PKG-NAME]/-/[PKG-NAME]-[VERSION].tgz: ESOCKETTIMEDOUT
+> ![TIP]
+> Originally the Build service used the default 30 second timeout for restoring Yarn packages. But this was updated to 10 minutes on Oct. 19th, 2020. You can apply the update by selecting `Save` or `Save & Build` in your branch configuration.
 
-When Yarn [times out restoring packages](https://stackoverflow.com/a/51508426/3757150), it can throw this error message, so you may need other approaches for the problematic packages to ensure they're reliably available for the build. 
+When Yarn [times out restoring packages](https://stackoverflow.com/a/51508426/3757150), it can throw this error message:
+> error An unexpected error occurred: "https://registry.yarnpkg.com/[PKG-NAME]/-/[PKG-NAME]-[VERSION].tgz: ESOCKETTIMEDOUT 
 
 Potential workarounds include:
 - Supplying the packages in your repository.
