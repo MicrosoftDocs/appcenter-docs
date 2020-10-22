@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: include
 ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
 ms.custom: sdk
@@ -22,7 +22,7 @@ App Center Crashes provides you with an API to generate a test crash for easy te
 [MSACCrashes generateTestCrash];
 ```
 ```swift
-MSACCrashes.generateTestCrash()
+Crashes.generateTestCrash()
 ```
 
 ## Get more information about a previous crash
@@ -37,11 +37,11 @@ At any time after starting the SDK, you can check if the app received a memory w
 [MSACCrashes hasReceivedMemoryWarningInLastSession];
 ```
 ```swift
-MSACCrashes.hasReceivedMemoryWarningInLastSession()
+Crashes.hasReceivedMemoryWarningInLastSession
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACCrashes` has been started, it will always return `NO` or `false` before start.
+> This method must only be used after `Crashes` has been started, it will always return `NO` or `false` before start.
 
 > [!NOTE]
 > In some cases, a device with low memory may not be able to send events.
@@ -54,7 +54,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 [MSACCrashes hasCrashedInLastSession];
 ```
 ```swift
-MSACCrashes.hasCrashedInLastSession()
+Crashes.hasCrashedInLastSession
 ```
 
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occurred.
@@ -70,19 +70,19 @@ If your app crashed previously, you can get details about the last crash.
 MSACErrorReport *crashReport = [MSACCrashes lastSessionCrashReport];
 ```
 ```swift
-var crashReport = MSACCrashes.lastSessionCrashReport()
+var crashReport = Crashes.lastSessionCrashReport
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACCrashes` has been started, it will always return `nil` before start.
+> This method must only be used after `Crashes` has been started, it will always return `nil` before start.
 
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom [MSACCrashesDelegate](#customize-your-usage-of-app-center-crashes).
+There are numerous use cases for this API, the most common one is people who call this API and implement their custom [CrashesDelegate](#customize-your-usage-of-app-center-crashes).
 
 ## Customize your usage of App Center Crashes
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
-To add your custom behavior, you need to adopt the `MSACCrashesDelegate`-protocol, all of its methods are optional.
+To add your custom behavior, you need to adopt the `CrashesDelegate`-protocol, all of its methods are optional.
 
 ### Register as a delegate
 
@@ -90,15 +90,15 @@ To add your custom behavior, you need to adopt the `MSACCrashesDelegate`-protoco
 [MSACCrashes setDelegate:self];
 ```
 ```swift
-MSACCrashes.setDelegate(self)
+Crashes.delegate = self
 ```
 
 > [!NOTE]
-> You must set the delegate *before* calling `[MSACAppCenter start]`, since App Center starts processing crashes immediately after the start.
+> You must set the delegate *before* calling `AppCenter.start`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
-Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopts the `MSACCrashesDelegate`-protocol if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopts the `CrashesDelegate`-protocol if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```objc
 - (BOOL)crashes:(MSACCrashes *)crashes shouldProcessErrorReport:(MSACErrorReport *)errorReport {
@@ -106,7 +106,7 @@ Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopt
 }
 ```
 ```swift
-func crashes(_ crashes: MSACCrashes!, shouldProcessErrorReport errorReport: MSACErrorReport!) -> Bool {
+func crashes(_ crashes: Crashes!, shouldProcessErrorReport errorReport: ErrorReport!) -> Bool {
   return true; // return true if the crash report should be processed, otherwise false.
 }
 ```

@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.tgt_pltfrm: apple
@@ -27,15 +27,15 @@ dev_langs:
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `MSACLogLevelAssert` for the App Store environment and `MSACLogLevelWarning` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the App Store environment and `LogLevelWarning` otherwise.
 
-To have as many log messages as possible, use `MSACLogLevelVerbose`/`MSACLogLevel.Verbose`.
+To have as many log messages as possible, use `MSACLogLevelVerbose`/`LogLevel.verbose`.
 
 ```objc
 [MSACAppCenter setLogLevel:MSACLogLevelVerbose];
 ```
 ```swift
-MSACAppCenter.setLogLevel(MSACLogLevel.Verbose)
+AppCenter.logLevel = .verbose
 ```
 
 ## Identify installations
@@ -46,7 +46,7 @@ The App Center SDK creates a UUID for each device once the app is installed. Thi
 NSUUID *installId = [MSACAppCenter  installId];
 ```
 ```swift
-var installId = MSACAppCenter.installId()
+var installId = AppCenter.installId
 ```
 
 ## Identify users
@@ -60,7 +60,7 @@ The App Center SDK supports setting a **user ID** that is used to augment crash 
 [MSACAppCenter setUserId:@"your-user-id"];
 ```
 ```swift
-MSACAppCenter.setUserId("your-user-id")
+AppCenter.userId = "your-user-id"
 ```
 [!INCLUDE [user id](user-id.md)]
 
@@ -72,7 +72,7 @@ If you want to disable all App Center services at once, use the `setEnabled` API
 [MSACAppCenter setEnabled:NO];
 ```
 ```swift
-MSACAppCenter.setEnabled(false)
+AppCenter.enabled = false
 ```
 
 To enable all services at once again, use the same API but pass `YES`/`true` as a parameter.
@@ -81,13 +81,13 @@ To enable all services at once again, use the same API but pass `YES`/`true` as 
 [MSACAppCenter setEnabled:YES];
 ```
 ```swift
-MSACAppCenter.setEnabled(true)
+AppCenter.enabled = true
 ```
 
 The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
-> This method must only be used after `MSACAppCenter` has been started.
+> This method must only be used after `AppCenter` has been started.
 
 ## Change state of service in runtime
 
@@ -97,11 +97,11 @@ Enable or disable desired services at the runtime with following code:
 [MSACAnalytics setEnabled:NO];
 ```
 ```swift
-MSACAnalytics.setEnabled(false)
+Analytics.enabled = false
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACAnalytics` has been started.
+> This method must only be used after `Analytics` has been started.
 
 ## Check if App Center is enabled
 
@@ -111,11 +111,11 @@ You can also check if App Center is enabled or not.
 [MSACAppCenter isEnabled];
 ```
 ```swift
-MSACAppCenter.isEnabled()
+AppCenter.enabled
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACAppCenter` has been started, it will always return `NO` or `false` before start.
+> This method must only be used after `AppCenter` has been started, it will always return `false` before start.
 
 ## Check App Center SDK version at runtime
 
@@ -125,7 +125,7 @@ You can get the version of App Center SDK that you are currently using.
 [MSACAppCenter sdkVersion];
 ```
 ```swift
-MSACAppCenter.sdkVersion()
+AppCenter.sdkVersion
 ```
 
 ## Use custom properties
@@ -145,10 +145,10 @@ MSACCustomProperties *customProperties = [MSACCustomProperties new];
 [MSACAppCenter setCustomProperties:customProperties];
 ```
 ```swift
-var customProperties = MSACCustomProperties()
+var customProperties = CustomProperties()
 customProperties.setString("blue", forKey: "color")
 customProperties.setNumber(10, forKey: "score")
-MSACAppCenter.setCustomProperties(customProperties)
+AppCenter.customProperties = customProperties
 ```
 
 > [!NOTE]
@@ -162,16 +162,16 @@ MSACCustomProperties *customProperties = [MSACCustomProperties new];
 [MSACAppCenter setCustomProperties:customProperties];
 ```
 ```swift
-var customProperties = MSACCustomProperties()
+var customProperties = CustomProperties()
 customProperties.clearProperty(forKey: "score")
-MSACAppCenter.setCustomProperties(customProperties)
+AppCenter.customProperties = customProperties
 ```
 
 ## Storage size
 
 When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
 
-Use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the `completionHandler` is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `[MSACAppCenter start:...]`. You may only call the API once.
+Use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the `completionHandler` is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start`. You may only call the API once.
 
 ```obj-c
 // Use 20 MB for storage.
@@ -184,12 +184,12 @@ Use the `setMaxStorageSize` API to set the size of the local DB. The API is asyn
 ```
 ```swift
 // Use 20 MB for storage.
-MSACAppCenter.setMaxStorageSize(20 * 1024 * 1024, completionHandler: { (success) in
+AppCenter.setMaxStorageSize(20 * 1024 * 1024, completionHandler: { (success) in
     if !success {
         // The success parameter is false when the size cannot be honored.
     }
 })
-MSACAppCenter.start("{Your App Secret}", withServices:[MSACAnalytics.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services:[Analytics.self])
 ```
 
 If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
@@ -207,6 +207,6 @@ There are many reasons the `completionHandler` call may return false.
 * The specified size is an invalid value (less than 20 KB or greater than 140 TB).
 * The current database size is larger than the specified maximum size.
 * The API has already been called. You may configure it only once per process.
-* The API has been called after `[MSACAppCenter start:...]` or `[MSACAppCenter configure:...]`.
+* The API has been called after `AppCenter.start` or `AppCenter.configure`.
 
 You can check warnings and errors in the console using the `AppCenter` log tag to troubleshoot configuration issues.

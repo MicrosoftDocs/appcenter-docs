@@ -4,7 +4,7 @@ description: Get started with macOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
@@ -62,7 +62,7 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 The App Center SDK for macOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager) or by manually adding the binaries to your project.
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 ### 3.1 Integration via Cocoapods
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
@@ -161,7 +161,7 @@ Insert the following line in the app's `didFinishLaunchingWithOptions` delegate 
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
@@ -170,7 +170,7 @@ If you have a Catalyst application, you can pass app secrets for both iOS and ma
 [MSACAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSACAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+AppCenter.start(withAppSecret:"ios={Your iOS App Secret};macos={Your macOS App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -179,19 +179,19 @@ Make sure to replace `{Your App Secret}` text with the actual value for your app
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the `start:withServices` method and include both App Center Analytics and App Center Crashes.
+The example above shows how to use the `start:withServices` (`start(withAppSecret:services:)` for Swift) method and include both App Center Analytics and App Center Crashes.
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start:withServices` (`start(withAppSecret:services:)` for Swift) API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
+For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` (`start(withAppSecret:services:)` for Swift) API call as follows:
 
 ```objc
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self])
 ```
 
 ### 4.4 Add internet capabilities for sandboxed apps

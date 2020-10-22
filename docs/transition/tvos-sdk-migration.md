@@ -3,7 +3,7 @@ title: HockeySDK for tvOS Migration
 description: Migrate from the HockeySDK to App Center SDK (tvOS)
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 44a08a47-85e2-4456-9b15-d524037df036
 ms.service: vs-appcenter
@@ -112,7 +112,7 @@ After (App Center):
    [MSACAppCenter start:@"{Your app secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
    ```
    ```swift
-   MSACAppCenter.start("{Your app secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+   AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
    ```
 
 1. Replace HockeyApp API calls throughout the application. The detailed API mapping tables are given below.

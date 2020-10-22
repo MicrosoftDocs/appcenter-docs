@@ -4,7 +4,7 @@ description: Get started with tvOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: get-started-article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: tvOS
@@ -56,7 +56,7 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 The App Center SDK for tvOS can be integrated into your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager) or by manually adding the binaries to your project.
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 ### 3.1  Integration via Cocoapods
 
@@ -153,7 +153,7 @@ import AppCenterCrashes
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -162,19 +162,19 @@ Make sure to replace `{Your App Secret}` text with the actual value for your app
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the `start:withServices` method and include both App Center Analytics and App Center Crashes.
+The example above shows how to use the `start:withServices` (`start(withAppSecret:services:)` for Swift) method and include both App Center Analytics and App Center Crashes.
 
 If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Unless you specify each module as a parameter in the start method, you can't use that App Center service. Also, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you specify each module as a parameter in the start method, you can't use that App Center service. Also, the `start:withServices` (`start(withAppSecret:services:)` for Swift) API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
+For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` (`start(withAppSecret:services:)` for Swift) API call as follows:
 
 ```objc
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self])
 ```
 
 ---

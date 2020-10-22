@@ -4,7 +4,7 @@ description: Using Push in App Center (macOS)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 16a90298-8762-11e7-bb31-be2e44b06b34
 ms.tgt_pltfrm: macos
@@ -61,7 +61,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSPush class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [MSPush.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
@@ -87,7 +87,7 @@ You need to register the delegate before starting App Center as shown in the fol
 ```
 ```swift
 MSPush.setDelegate(self)
-MSACAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [MSPush.self])
 ```
 
 Here is an example of the delegate implementation that displays an alert dialog when the message is received by App Center Push:

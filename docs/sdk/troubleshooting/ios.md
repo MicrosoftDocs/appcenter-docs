@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
@@ -42,7 +42,7 @@ dev_langs:
     ```
 
     ```swift
-    MSACAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -63,7 +63,7 @@ dev_langs:
     ```
 
     ```swift
-    MSACAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.

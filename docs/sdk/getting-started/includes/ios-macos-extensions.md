@@ -4,7 +4,7 @@ description: Shared docs for Apple Extensions
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: include
 ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0
 ms.tgt_pltfrm: apple
@@ -29,7 +29,7 @@ The App Center SDK can be integrated into your app via [Cocoapods](https://cocoa
 
 > [!NOTE]
 > If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
->  while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
+> while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -83,7 +83,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 Now that you've integrated the frameworks in your app extension, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-To use App Center, you must opt in to the module(s) to use. By default, no modules are started, and you must explicitly call each of them when starting the SDK. 
+To use App Center, you must opt in to the module(s) to use. By default, no modules are started, and you must explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 
@@ -106,7 +106,7 @@ Insert the following line in the app extension's entry point. For example, insid
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACCrashes class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACCrashes.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Crashes.self])
 ```
 
 Currently, only crash reporting is supported for application extensions.

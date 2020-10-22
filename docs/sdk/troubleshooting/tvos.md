@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for tvOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: aaedb72a-3fb1-4c5c-b53b-4e3bf189656d
 dev_langs:  
@@ -41,7 +41,7 @@ dev_langs:
     [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
     ```swift
-    MSACAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -61,7 +61,7 @@ dev_langs:
     [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
     ```swift
-    MSACAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.

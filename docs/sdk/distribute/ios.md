@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -29,7 +29,7 @@ App Center Distribute will let your users install a new version of the app when 
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 > [!IMPORTANT]
 > App Center SDK doesn't support multiple window apps that were introduced in iOS 13.
@@ -92,7 +92,7 @@ import AppCenterDistribute
 
 #### 2.2 Add the `start:withServices:` method
 
-Add `MSACDistribute` to your `start:withServices:` method to start App Center Distribute service.
+Add `Distribute` to your `start:withServices:` method to start App Center Distribute service.
 
 Insert the following line to start the SDK in the project's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
 
@@ -100,7 +100,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACDistribute class]]];
 ```
 ```swift
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACDistribute.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Distribute.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -136,11 +136,11 @@ By default, Distribute uses a public distribution group. If you want to use a pr
 MSACDistribute.updateTrack = MSACUpdateTrackPrivate;
 ```
 ```swift
-MSACDistribute.updateTrack = MSACUpdateTrackPrivate
+Distribute.updateTrack = .private
 ```
 
 > [!NOTE]
-> The default value is `MSACUpdateTrackPublic`. This property can only be updated before the `MSACAppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `MSACAppCenter.start` call, it will be public, by default.
+> The default value is `UpdateTrack.public`. This property can only be updated before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `AppCenter.start` call, it will be public, by default.
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
@@ -161,7 +161,7 @@ To do this, call the following method before the SDK start:
 [MSACDistribute disableAutomaticCheckForUpdate];
 ```
 ```swift
-MSACDistribute.disableAutomaticCheckForUpdate()
+Distribute.disableAutomaticCheckForUpdate()
 ```
 
 > [!NOTE]
@@ -175,7 +175,7 @@ Then you can use the `checkForUpdate` API which is described in the following se
 [MSACDistribute checkForUpdate];
 ```
 ```swift
-MSACDistribute.checkForUpdate()
+Distribute.checkForUpdate()
 ```
 
 This will send a request to App Center and display an update dialog in case there is a new release available.
@@ -191,13 +191,13 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `MSACDistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `DistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
 
 ```objc
 [MSACDistribute setDelegate:self];
 ```
 ```swift
-MSACDistribute.setDelegate(self);
+Distribute.delegate = self;
 ```
 
 Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
@@ -231,7 +231,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 }
 ```
 ```swift
-func distribute(_ distribute: MSACDistribute!, releaseAvailableWith details: MSACReleaseDetails!) -> Bool {
+func distribute(_ distribute: Distribute!, releaseAvailableWith details: ReleaseDetails!) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Update available.",
@@ -239,11 +239,11 @@ func distribute(_ distribute: MSACDistribute!, releaseAvailableWith details: MSA
                                  preferredStyle:.alert)
 
   alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
-    MSACDistribute.notify(.update)
+    Distribute.notify(.update)
   })
 
   alertController.addAction(UIAlertAction(title: "Postpone", style: .default) {_ in
-    MSACDistribute.notify(.postpone)
+    Distribute.notify(.postpone)
   })
 
   // Show the alert controller.
@@ -261,8 +261,8 @@ In case you return `YES`/`true` in the above method, your app should obtain user
 ```
 ```swift
 // Depending on the user's choice, call notify() with the right value.
-MSACDistribute.notify(MSACUpdateAction.update);
-MSACDistribute.notify(MSACUpdateAction.postpone);
+Distribute.notify(.update);
+Distribute.notify(.postpone);
 ```
 
 If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
@@ -275,7 +275,7 @@ You can enable and disable App Center Distribute at runtime. If you disable it, 
 [MSACDistribute setEnabled:NO];
 ```
 ```swift
-MSACDistribute.setEnabled(false)
+Distribute.enabled = false
 ```
 
 To enable App Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
@@ -284,13 +284,13 @@ To enable App Center Distribute again, use the same API but pass `YES`/`true` as
 [MSACDistribute setEnabled:YES];
 ```
 ```swift
-MSACDistribute.setEnabled(true)
+Distribute.enabled = true
 ```
 
 The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
-> This method must only be used after `MSACDistribute` has been started.
+> This method must only be used after `Distribute` has been started.
 
 ## Check if App Center Distribute is enabled
 
@@ -300,28 +300,28 @@ You can also check if App Center Distribute is enabled or not:
 BOOL enabled = [MSACDistribute isEnabled];
 ```
 ```swift
-var enabled = MSACDistribute.isEnabled()
+var enabled = Distribute.enabled
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACDistribute` has been started, it will always return `NO` or `false` before start.
+> This method must only be used after `Distribute` has been started, it will always return `false` before start.
 
 ## Don't initialize App Center Distribute during development
 
-If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `MSACDistribute` for your `DEBUG` configuration.
+If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `Distribute` for your `DEBUG` configuration.
 
  ```objc
  #if DEBUG
- 	[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
+     [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
  #else
- 	[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class], [MSACDistribute class]]];
+     [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class], [MSACDistribute class]]];
  #endif
  ```
  ```swift
  #if DEBUG
- 	MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+     AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
  #else
- 	MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self, MSACDistribute.self])
+     AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self, Distribute.self])
  #endif
  ```
 
@@ -378,18 +378,18 @@ The App Center SDK uses swizzling to improve its integration by forwarding itsel
 
 ```objc
 - (BOOL)application:(UIApplication *)application
-	            openURL:(NSURL *)url
-	  sourceApplication:(NSString *)sourceApplication
-	         annotation:(id)annotation {
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
 
-	// Pass the url to MSACDistribute.
-	return [MSACDistribute openURL:url];
+  // Pass the url to MSACDistribute.
+  return [MSACDistribute openURL:url];
 }
 ```
 ```swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
-  // Pass the URL to MSACDistribute.
-  return MSACDistribute.open(url as URL!)
+  // Pass the URL to App Center Distribute.
+  return Distribute.open(url)
 }
 ```

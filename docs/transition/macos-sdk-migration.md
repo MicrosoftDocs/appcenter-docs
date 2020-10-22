@@ -3,7 +3,7 @@ title: HockeySDK for macOS Migration
 description: Migrate from the HockeySDK to App Center SDK for macOS
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: b2edce7d-f0d6-4716-9a34-32da1ff2bc2d
 ms.service: vs-appcenter
@@ -116,7 +116,7 @@ After (App Center):
    [MSACAppCenter start:@"{Your app secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
    ```
    ```swift
-   MSACAppCenter.start("{Your app secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+   AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
    ```
 
 1. Replace HockeyApp API calls throughout the application. The detailed API mapping tables are given below.
@@ -185,7 +185,7 @@ Feature | HockeyApp | App Center
 ------- | ---------- | ---
 Automatically send Crashes | [BITHockeyManager.shared().crashManager.isAutoSubmitCrashReport = true](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-3-2-autosend-crash-reports) | [Documentation (enabled by default)](~/sdk/crashes/macos.md#should-the-crash-be-processed)
 Generate a test crash | `BITHockeyManager.shared().crashManager.generateTestCrash()` | [MSACCrashes.generateTestCrash()](~/sdk/crashes/macos.md#generate-a-test-crash)
-Info about the previous crash | `BITHockeyManager.shared().crashManager.lastSessionCrashDetails` | [MSACCrashes.lastSessionCrashReport()](~/sdk/crashes/macos.md#details-about-the-last-crash)
+Info about the previous crash | `BITHockeyManager.shared().crashManager.lastSessionCrashDetails` | [MSACCrashes.lastSessionCrashReport](~/sdk/crashes/macos.md#details-about-the-last-crash)
 Mach exception handling | `BITHockeyManager.shared().disableMachExceptionHandler = true]` | [Documentation (enabled by default)](~/sdk/crashes/macos.md#disabling-mach-exception-handling)
 Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-macos#3-3-4-attach-additional-data) | [Documentation (can be attached from delegate)](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report) |
 Customize user dialog | [setCrashReportUIHandler](https://github.com/bitstadium/HockeySDK-Mac/blob/5.1.1/Classes/CrashReporting/BITCrashManager.h#L218-L236) | [Documentation (not provided by default)](~/sdk/crashes/macos.md#ask-for-the-users-consent-to-send-a-crash-log)

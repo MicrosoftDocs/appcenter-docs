@@ -1,7 +1,7 @@
 ---
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: include
 ---
 
@@ -86,7 +86,7 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
   let userLocation:CLLocation = locations[0] as CLLocation
   CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
     if error == nil {
-      MSACAppCenter.setCountryCode(placemarks?.first?.isoCountryCode)
+      AppCenter.countryCode = placemarks?.first?.isoCountryCode
     }
   }
 }
@@ -106,7 +106,7 @@ NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.av
 [MSACAnalytics trackEvent:@"Video clicked" withProperties: properties];
 ```
 ```swift
-MSACAnalytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
+Analytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
 ```
 
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
@@ -115,14 +115,14 @@ Properties for events are entirely optional – if you just want to track an eve
 [MSACAnalytics trackEvent:@"Video clicked"];
 ```
 ```swift
-MSACAnalytics.trackEvent("Video clicked")
+Analytics.trackEvent("Video clicked")
 ```
 
 ## Event priority and persistence
 
 You can track business critical events that have higher importance than other events.
 
-* Developers can set priority of events as **Normal** (`MSACFlagsNormal` in the API) or **Critical** (`MSACFlagsCritical` in the API).
+* Developers can set priority of events as **Normal** (`FlagsNormal` in the API) or **Critical** (`FlagsCritical` in the API).
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
@@ -139,7 +139,7 @@ NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.av
 ```
 ```swift
 let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
-MSACAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
+Analytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
 
 // If you are using name only, you can pass nil as properties.
 ```
@@ -153,8 +153,8 @@ Pausing the event transmission can be useful in scenarios when the app needs to 
 [MSACAnalytics resume];
 ```
 ```swift
-MSACAnalytics.pause()
-MSACAnalytics.resume()
+Analytics.pause()
+Analytics.resume()
 ```
 
 ## Enable or disable App Center Analytics at runtime
@@ -165,7 +165,7 @@ You can enable and disable App Center Analytics at runtime. If you disable it, t
 [MSACAnalytics setEnabled:NO];
 ```
 ```swift
-MSACAnalytics.setEnabled(false)
+Analytics.enabled = false
 ```
 
 To enable App Center Analytics again, use the same API but pass `YES`/`true` as a parameter.
@@ -174,13 +174,13 @@ To enable App Center Analytics again, use the same API but pass `YES`/`true` as 
 [MSACAnalytics setEnabled:YES];
 ```
 ```swift
-MSACAnalytics.setEnabled(true)
+Analytics.enabled = true
 ```
 
 The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
-> This method must only be used after `MSACAnalytics` has been started.
+> This method must only be used after `Analytics` has been started.
 
 ## Check if App Center Analytics is enabled
 
@@ -190,11 +190,11 @@ You can also check if App Center Analytics is enabled or not.
 [MSACAnalytics isEnabled];
 ```
 ```swift
-MSACAnalytics.isEnabled()
+Analytics.enabled
 ```
 
 > [!NOTE]
-> This method must only be used after `MSACAnalytics` has been started, it will always return `NO` or `false` before start.
+> This method must only be used after `Analytics` has been started, it will always return `NO` or `false` before start.
 
 ## Local storage size
 
@@ -218,7 +218,7 @@ The transmission interval can be changed:
 ```
 ```swift
 // Change transmission interval to 10 minutes.
-MSACAnalytics.setTransmissionInterval(600)
+Analytics.transmissionInterval = 600
 ```
 
 The transmission interval value must be between 3 seconds and 86400 seconds (one day) and this method must be called before the service is started.

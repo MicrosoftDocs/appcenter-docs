@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -34,7 +34,7 @@ Please follow the [Getting Started](~/sdk/getting-started/macos.md) section if y
 Also note that crash logs on macOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/ios.md) section to migrate App Center from previous versions.
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 ### Crash reporting in extensions
 
@@ -83,7 +83,7 @@ The following method shows how to set up a user confirmation handler:
 })];
 ```
 ```swift
-MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
+Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an NSAlert.
   let alert: NSAlert = NSAlert()
@@ -96,13 +96,13 @@ MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
 
   switch (alert.runModal()) {
   case NSAlertFirstButtonReturn:
-    MSACCrashes.notify(with: .always)
+    Crashes.notify(with: .always)
     break;
   case NSAlertSecondButtonReturn:
-    MSACCrashes.notify(with: .send)
+    Crashes.notify(with: .send)
     break;
   case NSAlertThirdButtonReturn:
-    MSACCrashes.notify(with: .dontSend)
+    Crashes.notify(with: .dontSend)
     break;
   default:
     break;
@@ -122,9 +122,9 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSACCrashes.notify(with: .dontSend)
-MSACCrashes.notify(with: .send)
-MSACCrashes.notify(with: .always)
+Crashes.notify(with: .dontSend)
+Crashes.notify(with: .send)
+Crashes.notify(with: .always)
 ```
 
 ## Enable catching uncaught exceptions thrown on the main thread
@@ -192,6 +192,6 @@ The `disableMachExceptionHandler`-method provides an option to disable catching 
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSACCrashes.disableMachExceptionHandler()
-MSACAppCenter.start("{Your App Secret}", withServices: [MSACAnalytics.self, MSACCrashes.self])
+Crashes.disableMachExceptionHandler()
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```

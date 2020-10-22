@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 10/22/2020
 ms.topic: include
 ms.assetid: 1c1391e4-0c39-4141-893e-766ad22266d7
 ms.custom: sdk
@@ -16,7 +16,7 @@ dev_langs:
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `MSACCrashesDelegate`-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The `CrashesDelegate`-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
 
 #### The following callback will be invoked before the SDK sends a crash log
 
@@ -26,7 +26,7 @@ At times, you would like to know the status of your app crash. A common use case
 }
 ```
 ```swift
-func crashes(_ crashes: MSACCrashes!, willSend errorReport: MSACErrorReport!) {
+func crashes(_ crashes: Crashes!, willSend errorReport: ErrorReport!) {
   // Your code, e.g. to present a custom UI.
 }
 ```
@@ -40,7 +40,7 @@ In case we have network issues or we have an outage on the endpoint and you rest
 }
 ```
 ```swift
-func crashes(_ crashes: MSACCrashes!, didSucceedSending errorReport: MSACErrorReport!) {
+func crashes(_ crashes: Crashes!, didSucceedSending errorReport: ErrorReport!) {
   // Your code goes here.
 }
 ```
@@ -53,7 +53,7 @@ func crashes(_ crashes: MSACCrashes!, didSucceedSending errorReport: MSACErrorRe
 }
 ```
 ```swift
-func crashes(_ crashes: MSACCrashes!, didFailSending errorReport: MSACErrorReport!, withError error: Error!) {
+func crashes(_ crashes: Crashes!, didFailSending errorReport: ErrorReport!, withError error: Error!) {
   // Your code goes here.
 }
 ```
@@ -75,9 +75,9 @@ You can add binary and text attachments to a crash report. The SDK will send the
 }
 ```
 ```swift
-func attachments(with crashes: MSACCrashes, for errorReport: MSACErrorReport) -> [MSACErrorAttachmentLog] {
-  let attachment1 = MSACErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")
-  let attachment2 = MSACErrorAttachmentLog.attachment(withBinary: "Fake image".data(using: String.Encoding.utf8), filename: nil, contentType: "image/jpeg")
+func attachments(with crashes: Crashes, for errorReport: ErrorReport) -> [ErrorAttachmentLog] {
+  let attachment1 = ErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")
+  let attachment2 = ErrorAttachmentLog.attachment(withBinary: "Fake image".data(using: String.Encoding.utf8), filename: nil, contentType: "image/jpeg")
   return [attachment1!, attachment2!]
 }
 ```
@@ -93,7 +93,7 @@ You can enable and disable App Center Crashes at runtime. If you disable it, the
 [MSACCrashes setEnabled:NO];
 ```
 ```swift
-MSACCrashes.setEnabled(false)
+Crashes.enabled = false
 ```
 
 To enable App Center Crashes again, use the same API but pass `YES`/`true` as a parameter.
@@ -102,7 +102,7 @@ To enable App Center Crashes again, use the same API but pass `YES`/`true` as a 
 [MSACCrashes setEnabled:YES];
 ```
 ```swift
-MSACCrashes.setEnabled(true)
+Crashes.enabled = true
 ```
 
 The state is persisted in the device's storage across application launches.
@@ -118,7 +118,7 @@ You can also check if App Center Crashes is enabled or not:
 BOOL enabled = [MSACCrashes isEnabled];
 ```
 ```swift
-var enabled = MSACCrashes.isEnabled()
+var enabled = Crashes.enabled
 ```
 
 > [!NOTE]
