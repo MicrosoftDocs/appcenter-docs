@@ -22,11 +22,11 @@ We want to give you an idea of some of the principles that we follow to keep App
 
 ## Data residency and sovereignty
 
-App Center operates almost entirely in the United States. All data and processing for apps, users, organizations, build, distribution, analytics, diagnostics, and push run in the United States.
+App Center operates almost entirely in the United States. All data and processing for Apps, Users, Organizations, Build, Distribution, Analytics, Diagnostics, and Push occurs in the United States. There is no option available for hosting this customer data in any other country.
 
-App Center Test devices are located in the EU.
+The only part of App Center that runs outside of the United States is App Center Test. App Center Test devices are located in Denmark. Data generated using App Center Test is held in Denmark and in the United States.
 
-Content delivery networks (CDN) are used to serve some content and app releases from App Center. CDN points-of-presences are located around the world, but all source data is in the United States.
+Content delivery networks (CDN) are used to serve some content and app releases from App Center. CDN points-of-presence are located around the world, but all source data is in the United States.
 
 ## Data security
 
@@ -40,11 +40,11 @@ All data held by App Center is [encrypted at rest](https://docs.microsoft.com/az
 
 ### Encryption keys
 
-We use system-provided keys for encryption at rest. App Center doesn't support customer-provided certificates.
+We use system-provided keys for encryption at rest. App Center does not support customer-managed keys for encryption.
 
 ### Multi-tenancy
 
-App Center is a multi-tenant system. All customer data is held within one set of data stores.
+App Center is a multi-tenant system. All customer data is held within one set of data stores. There is no option to hold a customer's data in a separate or isolated set of data stores.
 
 ## Code security
 
