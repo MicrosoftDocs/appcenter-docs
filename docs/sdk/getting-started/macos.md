@@ -4,7 +4,7 @@ description: Get started with macOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/01/2020
+ms.date: 10/26/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
