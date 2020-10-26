@@ -42,7 +42,7 @@ Potential workarounds include:
 - Add `pod install` to a Post-Clone build script to add missing pods.
 
 #### Yarn packages needing extra time reliably restore
-> ![TIP]
+> [!TIP]
 > Originally the Build service used the default 30 second timeout for restoring Yarn packages. But this was updated to 10 minutes on Oct. 19th, 2020. You can apply the update by selecting `Save` or `Save & Build` in your branch configuration.
 
 When Yarn [times out restoring packages](https://stackoverflow.com/a/51508426/3757150), it can throw this error message:
