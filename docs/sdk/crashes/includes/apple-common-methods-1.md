@@ -106,7 +106,7 @@ Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopt
 }
 ```
 ```swift
-func crashes(_ crashes: Crashes!, shouldProcessErrorReport errorReport: ErrorReport!) -> Bool {
+func crashes(_ crashes: Crashes, shouldProcess errorReport: ErrorReport) -> Bool {
   return true; // return true if the crash report should be processed, otherwise false.
 }
 ```

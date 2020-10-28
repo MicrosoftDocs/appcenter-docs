@@ -26,7 +26,7 @@ At times, you would like to know the status of your app crash. A common use case
 }
 ```
 ```swift
-func crashes(_ crashes: Crashes!, willSend errorReport: ErrorReport!) {
+func crashes(_ crashes: Crashes, willSend errorReport: ErrorReport) {
   // Your code, e.g. to present a custom UI.
 }
 ```
@@ -40,7 +40,7 @@ In case we have network issues or we have an outage on the endpoint and you rest
 }
 ```
 ```swift
-func crashes(_ crashes: Crashes!, didSucceedSending errorReport: ErrorReport!) {
+func crashes(_ crashes: Crashes, didSucceedSending errorReport: ErrorReport) {
   // Your code goes here.
 }
 ```
@@ -53,7 +53,7 @@ func crashes(_ crashes: Crashes!, didSucceedSending errorReport: ErrorReport!) {
 }
 ```
 ```swift
-func crashes(_ crashes: Crashes!, didFailSending errorReport: ErrorReport!, withError error: Error!) {
+func crashes(_ crashes: Crashes, didFailSending errorReport: ErrorReport, withError error: Error) {
   // Your code goes here.
 }
 ```

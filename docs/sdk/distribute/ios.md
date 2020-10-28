@@ -231,7 +231,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 }
 ```
 ```swift
-func distribute(_ distribute: Distribute!, releaseAvailableWith details: ReleaseDetails!) -> Bool {
+func distribute(_ distribute: Distribute, releaseAvailableWith details: ReleaseDetails) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Update available.",
