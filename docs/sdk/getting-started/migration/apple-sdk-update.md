@@ -54,10 +54,12 @@ The following tables show the APIs that have been renamed.
 |  MSAppCenter                         | MSACAppCenter                                  | AppCenter                              |
 |  MSLogLevel                          | MSACLogLevel                                   | LogLevel                               |
 |  MSLogLevelVerbose                   | MSACLogLevelVerbose                            | LogLevel.verbose                       |
-|  MSLogLevelWarning                   | MSACLogLevelWarning                            | .warning                                |
-|  MSLogLevelInfo                      | MSACLogLevelInfo                               | .info                                   |
-|  MSLogLevelAssert                    | MSACLogLevelAssert                             | .assert                                 |
+|  MSLogLevelWarning                   | MSACLogLevelWarning                            | .warning                               |
+|  MSLogLevelInfo                      | MSACLogLevelInfo                               | .info                                  |
+|  MSLogLevelAssert                    | MSACLogLevelAssert                             | .assert                                |
 |  MSCustomProperties                  | MSACCustomProperties                           | CustomProperties                       |
+|  MSLogHandler                        | MSACLogHandler                                 | LogHandler                             |
+|  MSLogMessageProvider                | MSACLogMessageProvider                         | LogMessageProvider                     |
 
 | App Center Analytics lower `4.0.0`   | App Center Analytics `4.0.0`+ (ObjC)  | App Center Alanlytics `4.0.0`+ (Swift) |
 | ------------------------------------ | ---------------------------------------------- | -------------------------------------- |
@@ -77,11 +79,13 @@ The following tables show the APIs that have been renamed.
 |  MSUserConfirmationDontSend          | MSACUserConfirmationDontSend                  | UserConfirmation.dontSend              |
 |  MSUserConfirmationSend              | MSACUserConfirmationSend                      | .send                                  |
 |  MSUserConfirmationAlways            | MSACUserConfirmationAlways                    | .always                                |
+|  MSUserConfirmationHandler           | MSACUserConfirmationHandler                   | UserConfirmationHandler                |
 
 | App Center Distribute lower `4.0.0`  | App Center Distribute `4.0.0`+ (ObjC) | App Center Distribute `4.0.0`+ (Swift) |
 | ------------------------------------ | ------------------------------------- | -------------------------------------- |
 |  MSDistribute                        | MSACDistribute                        | Distribute                             |
 |  MSDistributeDelegate                | MSACDistributeDelegate                | DistributeDelegate                     |
+|  MSCrashHandlerSetupDelegate         | MSACCrashHandlerSetupDelegate         | CrashHandlerSetupDelegate              |
 |  MSReleaseDetails                    | MSACReleaseDetails                    | ReleaseDetails                         |
 |  MSUpdateAction                      | MSACUpdateAction                      | UpdateAction                           |
 |  MSUpdateActionUpdate                | MSACUpdateActionUpdate                | UpdateAction.update                    |
@@ -117,29 +121,75 @@ The following tables show the APIs that have been renamed.
 | MSAppCenter.startWithServices([MSAnalytics.self, MSCrashes.self])       | AppCenter.start(services: [Analytics.self, Crashes.self])                  |
 | MSAppCenter.startFromLibraryWithServices([MSAnalytics.self])            | AppCenter.startFromLibrary(services: [Analytics.self]) ")                  |
 
-| App Center Analytics lower `4.0.0`                    | App Center Analytics `4.0.0`+                  |
-| ----------------------------------------------------- | ---------------------------------------------- |
-| MSAnalytics.isEnabled()                               | Analytics.enabled                              |
-| MSAnalytics.setEnabled(true)                          | Analytics.enabled = true                       |
-| MSAnalytics.setTransmissionInterval(600)              | Analytics.transmissionInterval = 600           |
+| App Center Analytics lower `4.0.0`                                      | App Center Analytics `4.0.0`+                                              |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| MSAnalytics.isEnabled()                                                 | Analytics.enabled                                                          |
+| MSAnalytics.setEnabled(true)                                            | Analytics.enabled = true                                                   |
+| MSAnalytics.setTransmissionInterval(600)                                | Analytics.transmissionInterval = 600                                       |
 
-| App Center Crashes lower `4.0.0`                      | App Center Crashes `4.0.0`+                    |
-| ----------------------------------------------------- | ---------------------------------------------- |
-| MSCrashes.isEnabled()                                 | Crashes.enabled                                |
-| MSCrashes.setEnabled(true)                            | Crashes.enabled = true                         |
-| MSCrashes.setDelegate(delegate)                       | Crashes.delegate = delegate                    |
-| MSCrashes.hasCrashedInLastSession()                   | Crashes.hasCrashedInLastSession                |
-| MSCrashes.hasReceivedMemoryWarningInLastSession()     | Crashes.hasReceivedMemoryWarningInLastSession  |
-| MSErrorReport.isAppKill()                             | ErrorReport.isAppKill                          |
-| MSCrashes.lastSessionCrashReport()                    | Crashes.lastSessionCrashReport                 |
-| MSCrashes.setAutomaticProcessing(true)                | Crashes.automaticProcessing = true             |
-| MSWrapperCrashesHelper.getCrashHandlerSetupDelegate   | WrapperCrashesHelper.crashHandlerSetupDelegate |
-| MSCrashes.setUserConfirmationHandler(handler)         | Crashes.userConfirmationHandler = handler      |
+| App Center Crashes lower `4.0.0`                                        | App Center Crashes `4.0.0`+                                                |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| MSCrashes.isEnabled()                                                   | Crashes.enabled                                                            |
+| MSCrashes.setEnabled(true)                                              | Crashes.enabled = true                                                     |
+| MSCrashes.setDelegate(delegate)                                         | Crashes.delegate = delegate                                                |
+| MSCrashes.hasCrashedInLastSession()                                     | Crashes.hasCrashedInLastSession                                            |
+| MSCrashes.hasReceivedMemoryWarningInLastSession()                       | Crashes.hasReceivedMemoryWarningInLastSession                              |
+| MSErrorReport.isAppKill()                                               | ErrorReport.isAppKill                                                      |
+| MSCrashes.lastSessionCrashReport()                                      | Crashes.lastSessionCrashReport                                             |
+| MSCrashes.setAutomaticProcessing(true)                                  | Crashes.automaticProcessing = true                                         |
+| MSWrapperCrashesHelper.getCrashHandlerSetupDelegate                     | WrapperCrashesHelper.crashHandlerSetupDelegate                             |
+| MSWrapperCrashesHelper.setCrashHandlerSetupDelegate(delegate)           | WrapperCrashesHelper.crashHandlerSetupDelegate = delegate                  |
+| MSCrashes.setUserConfirmationHandler(handler)                           | Crashes.userConfirmationHandler = handler                                  |
 
-| App Center Distribute lower `4.0.0`                   | App Center Distribute `4.0.0`+                 |
-| ----------------------------------------------------- | ---------------------------------------------- |
-| MSDistribute.isEnabled()                              | Distribute.enabled                             |
-| MSDistribute.setEnabled(true)                         | Distribute.enabled = true                      |
-| MSDistribute.setDelegate(delegate)                    | Distribute.delegate = delegate                 |
-| MSDistribute.setApiUrl("{API URL}")                   | Distribute.apiUrl = "{API URL}"                |
-| MSDistribute.setInstallUrl("{Install URL}")           | Distribute.installUrl = "{Instal URL}"         |
+| App Center Distribute lower `4.0.0`                                     | App Center Distribute `4.0.0`+                                             |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| MSDistribute.isEnabled()                                                | Distribute.enabled                                                         |
+| MSDistribute.setEnabled(true)                                           | Distribute.enabled = true                                                  |
+| MSDistribute.setDelegate(delegate)                                      | Distribute.delegate = delegate                                             |
+| MSDistribute.setApiUrl("{API URL}")                                     | Distribute.apiUrl = "{API URL}"                                            |
+| MSDistribute.setInstallUrl("{Install URL}")                             | Distribute.installUrl = "{Instal URL}"                                     |
+| MSDistribute.isMandatoryUpdate                                          | Distribute.mandatoryUpdate                                                 |
+
+#### CrashesDelegate changes
+
+Before updating App Center SDK to `4.0.0` and higher.
+
+```swift
+func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErrorReport!) -> Bool
+
+func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!)
+
+func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!)
+
+func crashes(_ crashes: MSCrashes!, didFailSending errorReport: MSErrorReport!, withError error: Error!)
+
+func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MSErrorAttachmentLog]
+```
+
+After updating App Center SDK to `4.0.0` and higher.
+
+```swift
+func crashes(_ crashes: Crashes, shouldProcess errorReport: ErrorReport) -> Bool
+
+func crashes(_ crashes: Crashes, willSend errorReport: ErrorReport)
+
+func crashes(_ crashes: Crashes, didSucceedSending errorReport: ErrorReport)
+
+func crashes(_ crashes: Crashes, didFailSending errorReport: ErrorReport, withError error: Error)
+
+func attachments(with crashes: Crashes, for errorReport: ErrorReport) -> [ErrorAttachmentLog]
+```
+
+#### DistributeDelegate changes
+
+Before updating App Center SDK to `4.0.0` and higher.
+
+```swift
+func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool
+```
+
+After updating App Center SDK to `4.0.0` and higher.
+
+```swift
+  func distribute(_ distribute: Distribute, releaseAvailableWith details: ReleaseDetails) -> Bool
+```
