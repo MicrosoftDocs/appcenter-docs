@@ -9,9 +9,8 @@ ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
 ms.assetid: 72b0e628-3211-412e-ab64-ef6e0a0e0d07
-
-# macOS 10.15 info
 ---
+# macOS 10.15 info
 | Announcements |
 |-|
 | [.NET 5.0 will become a default .NET version on November, 10](https://github.com/actions/virtual-environments/issues/1891) |
