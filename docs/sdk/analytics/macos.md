@@ -4,7 +4,7 @@ description: App Center Analytics for macOS
 keywords: analytics
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: bec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -31,9 +31,6 @@ App Center Analytics helps you understand user behavior and customer engagement 
 
 > [!NOTE]
 > Carrier country and carrier name are not available on App Center Analytics for macOS, but you can set carrier country with your device location.
-
-> [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 Follow the [Get started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 

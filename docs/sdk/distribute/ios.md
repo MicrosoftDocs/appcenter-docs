@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 02/24/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -27,9 +27,6 @@ App Center Distribute will let your users install a new version of the app when 
 > 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
 > 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
-
-> [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 > [!IMPORTANT]
 > App Center SDK doesn't support multiple window apps that were introduced in iOS 13.
@@ -92,15 +89,15 @@ import AppCenterDistribute
 
 #### 2.2 Add the `start:withServices:` method
 
-Add `Distribute` to your `start:withServices:` method to start App Center Distribute service.
+Add `MSDistribute` to your `start:withServices:` method to start App Center Distribute service.
 
 Insert the following line to start the SDK in the project's **AppDelegate.m** class for Objective-C or **AppDelegate.swift** class for Swift in the `didFinishLaunchingWithOptions` method.
 
 ```objc
-[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACDistribute class]]];
+[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSDistribute class]]];
 ```
 ```swift
-AppCenter.start(withAppSecret: "{Your App Secret}", services: [Distribute.self])
+MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 ```
 
 Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
@@ -133,14 +130,14 @@ Make sure you have replaced `{Your App Secret}` in the code sample above with yo
 By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `updateTrack` property.
 
 ```objc
-MSACDistribute.updateTrack = MSACUpdateTrackPrivate;
+MSDistribute.updateTrack = MSUpdateTrackPrivate;
 ```
 ```swift
-Distribute.updateTrack = .private
+MSDistribute.updateTrack = MSUpdateTrackPrivate
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.public`. This property can only be updated before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `AppCenter.start` call, it will be public, by default.
+> The default value is `MSUpdateTrackPublic`. This property can only be updated before the `MSAppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, thus if the property is not always updated before the `MSAppCenter.start` call, it will be public, by default.
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
@@ -158,10 +155,10 @@ If you want to check for new releases manually, you can disable automatic check 
 To do this, call the following method before the SDK start:
 
 ```objc
-[MSACDistribute disableAutomaticCheckForUpdate];
+[MSDistribute disableAutomaticCheckForUpdate];
 ```
 ```swift
-Distribute.disableAutomaticCheckForUpdate()
+MSDistribute.disableAutomaticCheckForUpdate()
 ```
 
 > [!NOTE]
@@ -172,10 +169,10 @@ Then you can use the `checkForUpdate` API which is described in the following se
 ## Manually Check for Update
 
 ```objc
-[MSACDistribute checkForUpdate];
+[MSDistribute checkForUpdate];
 ```
 ```swift
-Distribute.checkForUpdate()
+MSDistribute.checkForUpdate()
 ```
 
 This will send a request to App Center and display an update dialog in case there is a new release available.
@@ -191,19 +188,19 @@ You can easily provide your own resource strings if you'd like to localize the t
 
 ### 2. Customize the update dialog
 
-You can customize the default update dialog's appearance by implementing the `DistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
+You can customize the default update dialog's appearance by implementing the `MSDistributeDelegate` protocol. You need to register the delegate before starting the SDK as shown in the following example:
 
 ```objc
-[MSACDistribute setDelegate:self];
+[MSDistribute setDelegate:self];
 ```
 ```swift
-Distribute.delegate = self;
+MSDistribute.setDelegate(self);
 ```
 
 Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
 
 ```objc
-- (BOOL)distribute:(MSACDistribute *)distribute releaseAvailableWithDetails:(MSACReleaseDetails *)details {
+- (BOOL)distribute:(MSDistribute *)distribute releaseAvailableWithDetails:(MSReleaseDetails *)details {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   UIAlertController *alertController = [UIAlertController
@@ -215,14 +212,14 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
       addAction:[UIAlertAction actionWithTitle:@"Update"
                                          style:UIAlertActionStyleCancel
                                        handler:^(UIAlertAction *action) {
-                                         [MSACDistribute notifyUpdateAction:MSACUpdateActionUpdate];
+                                         [MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
                                        }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Postpone"
                                          style:UIAlertActionStyleDefault
                                        handler:^(UIAlertAction *action) {
-                                         [MSACDistribute notifyUpdateAction:MSACUpdateActionPostpone];
+                                         [MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
                                        }]];
 
   // Show the alert controller.
@@ -231,7 +228,7 @@ Here is an example of the delegate implementation that replaces the SDK dialog w
 }
 ```
 ```swift
-func distribute(_ distribute: Distribute, releaseAvailableWith details: ReleaseDetails) -> Bool {
+func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Update available.",
@@ -239,11 +236,11 @@ func distribute(_ distribute: Distribute, releaseAvailableWith details: ReleaseD
                                  preferredStyle:.alert)
 
   alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
-    Distribute.notify(.update)
+    MSDistribute.notify(.update)
   })
 
   alertController.addAction(UIAlertAction(title: "Postpone", style: .default) {_ in
-    Distribute.notify(.postpone)
+    MSDistribute.notify(.postpone)
   })
 
   // Show the alert controller.
@@ -256,13 +253,13 @@ In case you return `YES`/`true` in the above method, your app should obtain user
 
 ```objc
 // Depending on the user's choice, call notifyUpdateAction: with the right value.
-[MSACDistribute notifyUpdateAction:MSACUpdateActionUpdate];
-[MSACDistribute notifyUpdateAction:MSACUpdateActionPostpone];
+[MSDistribute notifyUpdateAction:MSUpdateActionUpdate];
+[MSDistribute notifyUpdateAction:MSUpdateActionPostpone];
 ```
 ```swift
 // Depending on the user's choice, call notify() with the right value.
-Distribute.notify(.update);
-Distribute.notify(.postpone);
+MSDistribute.notify(MSUpdateAction.update);
+MSDistribute.notify(MSUpdateAction.postpone);
 ```
 
 If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
@@ -272,56 +269,56 @@ If you don't call the above method, the `releaseAvailableWithDetails:`-method wi
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in App Center portal.
 
 ```objc
-[MSACDistribute setEnabled:NO];
+[MSDistribute setEnabled:NO];
 ```
 ```swift
-Distribute.enabled = false
+MSDistribute.setEnabled(false)
 ```
 
 To enable App Center Distribute again, use the same API but pass `YES`/`true` as a parameter.
 
 ```objc
-[MSACDistribute setEnabled:YES];
+[MSDistribute setEnabled:YES];
 ```
 ```swift
-Distribute.enabled = true
+MSDistribute.setEnabled(true)
 ```
 
 The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
-> This method must only be used after `Distribute` has been started.
+> This method must only be used after `MSDistribute` has been started.
 
 ## Check if App Center Distribute is enabled
 
 You can also check if App Center Distribute is enabled or not:
 
 ```objc
-BOOL enabled = [MSACDistribute isEnabled];
+BOOL enabled = [MSDistribute isEnabled];
 ```
 ```swift
-var enabled = Distribute.enabled
+var enabled = MSDistribute.isEnabled()
 ```
 
 > [!NOTE]
-> This method must only be used after `Distribute` has been started, it will always return `false` before start.
+> This method must only be used after `MSDistribute` has been started, it will always return `NO` or `false` before start.
 
 ## Don't initialize App Center Distribute during development
 
-If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `Distribute` for your `DEBUG` configuration.
+If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `MSDistribute` for your `DEBUG` configuration.
 
  ```objc
  #if DEBUG
-     [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
+ 	[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
  #else
-     [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class], [MSACDistribute class]]];
+ 	[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class], [MSDistribute class]]];
  #endif
  ```
  ```swift
  #if DEBUG
-     AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
+ 	MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
  #else
-     AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self, Distribute.self])
+ 	MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
  #endif
  ```
 
@@ -378,18 +375,18 @@ The App Center SDK uses swizzling to improve its integration by forwarding itsel
 
 ```objc
 - (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
+	            openURL:(NSURL *)url
+	  sourceApplication:(NSString *)sourceApplication
+	         annotation:(id)annotation {
 
-  // Pass the url to MSACDistribute.
-  return [MSACDistribute openURL:url];
+	// Pass the url to MSDistribute.
+	return [MSDistribute openURL:url];
 }
 ```
 ```swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
-  // Pass the URL to App Center Distribute.
-  return Distribute.open(url)
+  // Pass the URL to MSDistribute.
+  return MSDistribute.open(url as URL!)
 }
 ```

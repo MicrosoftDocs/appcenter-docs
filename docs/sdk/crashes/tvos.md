@@ -4,7 +4,7 @@ description: App Center Crashes for tvOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: 2f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -36,9 +36,6 @@ Also note that crash logs on tvOS require Symbolication, check out the [App Cent
 > [!NOTE]
 > To receive properly symbolicated stack traces, ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
-> [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
-
 [!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
 ### Ask for the users' consent to send a crash log
@@ -56,7 +53,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 The following method shows how to set up a user confirmation handler:
 
 ```objc
-[MSACCrashes setUserConfirmationHandler:(^(NSArray<MSACErrorReport *> *errorReports) {
+[MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   UIAlertController *alertController = [UIAlertController
@@ -68,21 +65,21 @@ The following method shows how to set up a user confirmation handler:
       addAction:[UIAlertAction actionWithTitle:@"Don't send"
                                         style:UIAlertActionStyleCancel
                                       handler:^(UIAlertAction *action) {
-                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Always send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
+                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
                                       }]];
   // Show the alert controller.
   [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
@@ -90,7 +87,7 @@ The following method shows how to set up a user confirmation handler:
 })];
 ```
 ```swift
-MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
+MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Sorry about that!",
@@ -98,15 +95,15 @@ MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
                                           preferredStyle:.alert)
 
   alertController.addAction(UIAlertAction(title: "Don't send", style: .cancel) {_ in
-    MSACCrashes.notify(with: .dontSend)
+    MSCrashes.notify(with: .dontSend)
   })
 
   alertController.addAction(UIAlertAction(title: "Send", style: .default) {_ in
-    MSACCrashes.notify(with: .send)
+    MSCrashes.notify(with: .send)
   })
 
   alertController.addAction(UIAlertAction(title: "Always send", style: .default) {_ in
-    MSACCrashes.notify(with: .always)
+    MSCrashes.notify(with: .always)
   })
 
   // Show the alert controller.
@@ -119,15 +116,15 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.
-[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
-[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
-[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
+[MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+[MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSACCrashes.notify(with: .dontSend)
-MSACCrashes.notify(with: .send)
-MSACCrashes.notify(with: .always)
+MSCrashes.notify(with: .dontSend)
+MSCrashes.notify(with: .send)
+MSCrashes.notify(with: .always)
 ```
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
