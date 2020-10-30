@@ -4,7 +4,7 @@ description: Get started iOS Extensions
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/22/2020
+ms.date: 06/01/2020
 ms.topic: get-started-article
 ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.tgt_pltfrm: ios
@@ -57,9 +57,6 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 > [!NOTE]
 > Using an existing App Secret from another iOS project has side effects. App Center doesn't support filtering by project on the same App Center application. For instance listing crashes for a particular version will list all the crashes from both projects for this version without distinction. It can be confusing.
-
-> [!NOTE]
-> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
 
 [!INCLUDE [ios macos extension](includes/ios-macos-extensions.md)]
 

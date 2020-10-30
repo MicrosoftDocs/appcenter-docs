@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for macOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0
 dev_langs:  
@@ -38,10 +38,10 @@ dev_langs:
 3. If you want to see the logs sent to the backend, change the log level to **Verbose** in your application and the SDK will print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
+    [MSAppCenter setLogLevel:MSLogLevelVerbose]
     ```
     ```swift
-    AppCenter.logLevel = .verbose
+    MSAppCenter.setLogLevel(.verbose)
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -65,10 +65,10 @@ dev_langs:
 4. If you want to see the logs sent to the backend, change the log level to **Verbose** in your application and the SDK will print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
+    [MSAppCenter setLogLevel:MSLogLevelVerbose]
     ```
     ```swift
-    AppCenter.logLevel = .verbose
+    MSAppCenter.setLogLevel(.verbose)
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
