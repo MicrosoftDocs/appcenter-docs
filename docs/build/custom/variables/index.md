@@ -63,7 +63,7 @@ Pre-set environment variables can be consumed during the build process. Dependin
 
 ## Build scripts
 
-In the [build scripts](~/build/custom/scripts/index.md), you can access the variables with the following syntax depending on whether you're using Bash or Powershell.
+In the [build scripts](~/build/custom/scripts/index.md), you can access the variables with the following syntax depending on whether you're using Bash or PowerShell.
 
 - **Bash**
 
@@ -71,7 +71,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
     $ENVIRONMENT_VARIABLE
     ```
 
-- **Powershell**
+- **PowerShell**
 
     ```powershell
     $env:ENVIRONMENT_VARIABLE

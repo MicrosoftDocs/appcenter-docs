@@ -28,7 +28,7 @@ To start building your first React Native Android app, you must:
 
 ## 1. Linking your repository
 
-If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your React Native project is located. You must have admin and pull permissions to setup a build for a repository.
+If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your React Native project is located. You must have admin and pull permissions to set up a build for a repository.
 
 ## 2. Selecting a branch
 
@@ -63,7 +63,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.5. Build Android App Bundle (.aab)
 
-The Android App Bundle is a distribution format which can be uploaded to the Play Store and is used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/) which also helps you understand whether you want to build a bundle in addition to your regular `.apk.`
+The Android App Bundle is a distribution format that can be uploaded to the Play Store. It's used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/), which also helps you understand whether you want to build a bundle along with your regular `.apk.`
 
 Toggle on the option for Android App Bundle to produce an `.aab` in addition to the `.apk`. If the `build.gradle` [(app level)](https://developer.android.com/studio/build) file contains the `android.bundle` block, this option will automatically be toggled on.
 
@@ -72,8 +72,7 @@ Toggle on the option for Android App Bundle to produce an `.aab` in addition to 
 When enabled, the version code in the **AndroidManifest.xml** of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
 
 ### 3.7. Launch your successful build on a real device
-
-Use the newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
+Use the newly produced APK file to test if your app starts on a real device. Launch tests will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.8. Code signing
 
@@ -81,7 +80,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 ### 3.9. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
 > If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.
@@ -91,7 +90,7 @@ You can configure each successful build from a branch to be distributed to a pre
 After a build triggers, the build will be in one of the following states:
 
 - **queued** -  the build is in a queue waiting for resources to be freed up
-- **building** - the build is running and performing the predefined tasks
+- **building** - the build is running the predefined tasks
 - **succeeded** - the build is completed and it has succeeded
 - **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
 - **canceled** - the build has been canceled by a user action or it has timed out
@@ -109,11 +108,10 @@ For a completed build (succeeded or failed), download the logs to understand mor
     |-- <build-step-n> (e.g. n_Post Job Cleanup.txt)
 ```
 
-The build step specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
+The build step-specific logs (located in the `build/` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 ### 4.2. The app (.apk)
-
-The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the app can be installed on a real device and deployed to the Play Store. If the build has not been signed, the app can run on an emulator or be used for other purposes.
+The `.apk` file is an Android application packaged file that stores the Android app. If the build has been correctly signed, the app can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
 
 ## 5. Supported versions and requirements
 
@@ -126,10 +124,9 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 The [Yarn package manager](https://yarnpkg.com) is a faster, more deterministic replacement for `npm`. If a `yarn.lock` file is present in your repository next to `package.json`, then App Center will use Yarn, doing `yarn install` at the start of the build. Otherwise, it will do `npm install`.
 
 ### 6.2. Custom build scripts
-
 There are several options for running scripts before App Center's default build commands are executed.
 
-- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This will automatically execute after your dependencies are installed.
+- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This script will automatically execute after your dependencies are installed.
 
   ```javascript
     "scripts": {
@@ -152,6 +149,6 @@ There are several options for running scripts before App Center's default build 
 
 ### 6.3. Building multiple APKs
 
-For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. App Center's build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density.
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, for example different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. App Center's build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density.
 
 To learn more about APK splits and how to build a universal APK, read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). Consequently, make sure that `universalApk` is set to `true` for your React Native build configuration.
