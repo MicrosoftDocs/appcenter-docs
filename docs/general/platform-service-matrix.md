@@ -21,17 +21,18 @@ The table below lists all the Operating System and Platforms and their supported
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
 | iOS                    |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 | macOS                  |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
-| React Native - iOS     |  ✅   |  ✅  |     ✅ [^2]|   ✅       |    ✅     |
-| React Native - Android |  ✅   |  ✅  |     ✅ [^2]|   ✅       |    ✅     |
+| React Native - iOS     |  ✅   |  ✅  |     ✅ [2](2) |   ✅       |    ✅     |
+| React Native - Android |  ✅   |  ✅  |     ✅ [2](2) |   ✅       |    ✅     |
 | tvOS                   |  ❌   |  ❌  |     ❌     |   ✅       |    ✅     |
 | Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
 | Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - UWP [^1]       |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
-| Windows - UWP          |  ✅   |  ❌  |     ✅ [^2]|   ✅       |    ✅     |
+| Unity - UWP [1](1)        |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
+| Windows - UWP          |  ✅   |  ❌  |     ✅ [2](2) |   ✅       |    ✅     |
 | Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
 | Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 | Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 
-[^1]: For UWP, Hololens support has not been verified.
-[^2]: In-app updates not supported for these platforms.
+[1]: For UWP, Hololens support has not been verified.
+
+[2]: In-app updates not supported for these platforms.
