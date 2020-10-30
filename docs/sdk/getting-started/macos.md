@@ -4,7 +4,7 @@ description: Get started with macOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/26/2020
+ms.date: 10/30/2020
 ms.topic: get-started-article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
@@ -43,7 +43,10 @@ The following requirements must be met to use App Center SDK:
 > [!NOTE]
 > App Center SDK will **drop support for Xcode 10** with the June SDK release.
 
-App Center SDK is compatible with Apple Silicon.
+App Center SDK is compatible with Apple Silicon 
+
+> [!NOTE]
+> ARM64 Simulators are not supported via CocoaPods, consider using other integration methods for it to work.).
 
 App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
 
