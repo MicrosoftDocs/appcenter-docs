@@ -4,7 +4,7 @@ description: App Center Crashes for macOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 04/16/2019
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0
 ms.custom: sdk
@@ -33,6 +33,9 @@ Follow the [Getting Started](~/sdk/getting-started/macos.md) section if you have
 
 Also note that crash logs on macOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
+
 ### Crash reporting in extensions
 
 App Center supports crash reporting in macOS extensions. The usage is the same as in the container application.
@@ -51,7 +54,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 The following method shows how to set up a user confirmation handler:
 
 ```objc
-[MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
+[MSACCrashes setUserConfirmationHandler:(^(NSArray<MSACErrorReport *> *errorReports) {
 
   // Your code to present your UI to the user, e.g. an NSAlert.
   NSAlert *alert = [[NSAlert alloc] init];
@@ -64,13 +67,13 @@ The following method shows how to set up a user confirmation handler:
 
   switch ([alert runModal]) {
   case NSAlertFirstButtonReturn:
-    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+    [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
     break;
   case NSAlertSecondButtonReturn:
-    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+    [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
     break;
   case NSAlertThirdButtonReturn:
-    [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+    [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
     break;
   default:
     break;
@@ -80,7 +83,7 @@ The following method shows how to set up a user confirmation handler:
 })];
 ```
 ```swift
-MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
+Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an NSAlert.
   let alert: NSAlert = NSAlert()
@@ -93,13 +96,13 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
 
   switch (alert.runModal()) {
   case NSAlertFirstButtonReturn:
-    MSCrashes.notify(with: .always)
+    Crashes.notify(with: .always)
     break;
   case NSAlertSecondButtonReturn:
-    MSCrashes.notify(with: .send)
+    Crashes.notify(with: .send)
     break;
   case NSAlertThirdButtonReturn:
-    MSCrashes.notify(with: .dontSend)
+    Crashes.notify(with: .dontSend)
     break;
   default:
     break;
@@ -113,15 +116,15 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 
 ```objc
 // Depending on the user's choice, call notifyWithUserConfirmation: with the right value.
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSCrashes.notify(with: .dontSend)
-MSCrashes.notify(with: .send)
-MSCrashes.notify(with: .always)
+Crashes.notify(with: .dontSend)
+Crashes.notify(with: .send)
+Crashes.notify(with: .always)
 ```
 
 ## Enable catching uncaught exceptions thrown on the main thread
@@ -154,7 +157,7 @@ The App Center Crashes SDK uses swizzling to improve its integration by forwardi
     @implementation ReportExceptionApplication
 
     - (void)reportException:(NSException *)exception {
-      [MSCrashes applicationDidReportException:exception];
+      [MSACCrashes applicationDidReportException:exception];
       [super reportException:exception];
     }
 
@@ -185,10 +188,10 @@ By default, App Center Crashes uses the Mach exception handler to catch fatal si
 The `disableMachExceptionHandler`-method provides an option to disable catching fatal signals via a Mach exception server. If you want to disable the Mach exception handler, you should call this method *BEFORE* starting the SDK. Your typical setup code would look like this:
 
 ```objc
-[MSCrashes disableMachExceptionHandler];
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACCrashes disableMachExceptionHandler];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSCrashes.disableMachExceptionHandler()
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+Crashes.disableMachExceptionHandler()
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```

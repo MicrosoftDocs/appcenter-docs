@@ -1,7 +1,7 @@
 ---
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/19/2020
+ms.date: 10/22/2020
 ms.topic: include
 ---
 
@@ -67,7 +67,7 @@ Add the delegate methods:
                    if (placemarks.count == 0 || error)
                      return;
                    CLPlacemark *pm = [placemarks firstObject];
-                   [MSAppCenter setCountryCode:pm.ISOcountryCode];
+                   [MSACAppCenter setCountryCode:pm.ISOcountryCode];
                  }]
 }
 
@@ -86,7 +86,7 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
   let userLocation:CLLocation = locations[0] as CLLocation
   CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
     if error == nil {
-      MSAppCenter.setCountryCode(placemarks?.first?.isoCountryCode)
+      AppCenter.countryCode = placemarks?.first?.isoCountryCode
     }
   }
 }
@@ -103,26 +103,26 @@ Once you have started the SDK, use the `trackEvent:withProperties` method to tra
 
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
-[MSAnalytics trackEvent:@"Video clicked" withProperties: properties];
+[MSACAnalytics trackEvent:@"Video clicked" withProperties: properties];
 ```
 ```swift
-MSAnalytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
+Analytics.trackEvent("Video clicked", withProperties: ["Category" : "Music", "FileName" : "favorite.avi"])
 ```
 
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
 
 ```objc
-[MSAnalytics trackEvent:@"Video clicked"];
+[MSACAnalytics trackEvent:@"Video clicked"];
 ```
 ```swift
-MSAnalytics.trackEvent("Video clicked")
+Analytics.trackEvent("Video clicked")
 ```
 
 ## Event priority and persistence
 
 You can track business critical events that have higher importance than other events.
 
-* Developers can set priority of events as **Normal** (`MSFlagsNormal` in the API) or **Critical** (`MSFlagsCritical` in the API).
+* Developers can set priority of events as **Normal** (`FlagsNormal` in the API) or **Critical** (`FlagsCritical` in the API).
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
@@ -133,13 +133,13 @@ You can track business critical events that have higher importance than other ev
 You can use the following API to track an event as **Critical**:
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
-[MSAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSFlagsCritical];
+[MSACAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSACFlagsCritical];
 
 // If you are using name only, you can pass nil as properties.
 ```
 ```swift
 let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
-MSAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
+Analytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
 
 // If you are using name only, you can pass nil as properties.
 ```
@@ -149,12 +149,12 @@ MSAnalytics.trackEvent("Video clicked", withProperties: properties, flags: .crit
 Pausing the event transmission can be useful in scenarios when the app needs to control the network bandwidth for more business critical needs. You can pause sending logs to the App Center backend. When paused, events can still be tracked and saved, but they aren't sent right away. Any events your app tracks while paused will only be sent once you call `resume`.
 
 ```objc
-[MSAnalytics pause];
-[MSAnalytics resume];
+[MSACAnalytics pause];
+[MSACAnalytics resume];
 ```
 ```swift
-MSAnalytics.pause()
-MSAnalytics.resume()
+Analytics.pause()
+Analytics.resume()
 ```
 
 ## Enable or disable App Center Analytics at runtime
@@ -162,39 +162,39 @@ MSAnalytics.resume()
 You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
 
 ```objc
-[MSAnalytics setEnabled:NO];
+[MSACAnalytics setEnabled:NO];
 ```
 ```swift
-MSAnalytics.setEnabled(false)
+Analytics.enabled = false
 ```
 
 To enable App Center Analytics again, use the same API but pass `YES`/`true` as a parameter.
 
 ```objc
-[MSAnalytics setEnabled:YES];
+[MSACAnalytics setEnabled:YES];
 ```
 ```swift
-MSAnalytics.setEnabled(true)
+Analytics.enabled = true
 ```
 
 The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
-> This method must only be used after `MSAnalytics` has been started.
+> This method must only be used after `Analytics` has been started.
 
 ## Check if App Center Analytics is enabled
 
 You can also check if App Center Analytics is enabled or not.
 
 ```objc
-[MSAnalytics isEnabled];
+[MSACAnalytics isEnabled];
 ```
 ```swift
-MSAnalytics.isEnabled()
+Analytics.enabled
 ```
 
 > [!NOTE]
-> This method must only be used after `MSAnalytics` has been started, it will always return `NO` or `false` before start.
+> This method must only be used after `Analytics` has been started, it will always return `NO` or `false` before start.
 
 ## Local storage size
 
@@ -214,11 +214,11 @@ The transmission interval can be changed:
 
 ```objc
 // Change transmission interval to 10 minutes.
-[MSAnalytics setTransmissionInterval:600];
+[MSACAnalytics setTransmissionInterval:600];
 ```
 ```swift
 // Change transmission interval to 10 minutes.
-MSAnalytics.setTransmissionInterval(600)
+Analytics.transmissionInterval = 600
 ```
 
 The transmission interval value must be between 3 seconds and 86400 seconds (one day) and this method must be called before the service is started.
