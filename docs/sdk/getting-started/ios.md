@@ -4,7 +4,7 @@ description: Get started with iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/07/2020
+ms.date: 10/30/2020
 ms.topic: get-started-article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -55,6 +55,10 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 The App Center SDK for iOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager), or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
+
+> [!NOTE]
+> ARM64 Simulators (when launched from Xcode running on Apple Silicon Mac) are not supported via CocoaPods, consider using other integration methods for it to work.
+
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify services you want in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
 
 	```ruby
@@ -77,6 +81,9 @@ Now that you've integrated the frameworks in your application, it's time to star
 
 ### 3.2 Integration via Carthage
 Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+> [!NOTE]
+> Carthage integration does not work out of box in Xcode 12. To make it work, refer to [this Carthage instruction](https://github.com/Carthage/Carthage/blob/master/Documentation/Xcode12Workaround.md)
 
 1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
 
