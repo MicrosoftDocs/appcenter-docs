@@ -18,7 +18,7 @@ Follow the guidance for [quick edits to existing documents](https://docs.microso
 ### Larger edits
 Review the guidance for [pull requests](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) in the contributors guide.
 
-1.  Before you begin, make sure that your local master branch is up to date with the remote by using `git pull --rebase`.  
+1. Before you begin, make sure that your local master branch is up to date with the remote by using `git pull --rebase`.  
 2. Create a `branch` for your changes in the format `alias-functions` (e.g. `amburns-update-page`).
 3. Write your content.
 

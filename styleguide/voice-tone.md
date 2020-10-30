@@ -36,9 +36,7 @@ The first paragraph above follows our recommendation conversational style. The s
 is a more academic style. You see the difference immediately.
 
 ### Write in second person
-
 #### Appropriate Style
-
 You should write your articles as though you are speaking directly to the reader. You
 should use second person often (as I just have in these two sentences). 2nd person doesn't
 always mean using the word 'you'. Write directly to the reader. Write imperative sentences.
@@ -53,7 +51,6 @@ The first paragraph follows our recommended style. The second uses third person.
 in second person. You probably found that much easier to read.
 
 ### Use Active Voice
-
 Write your articles in active voice. Active voice means that the subject of the sentence performs
 the action (verb) of that sentence. It contrasts with passive voice, where the sentence is arranged
 such that the subject of the sentence is acted upon. Contrast these two examples:
@@ -68,7 +65,6 @@ The first sentence uses active voice. The second sentence was written in passive
 We recommend active voice because it is more readable. Passive voice can be more difficult to read.
 
 ### Target a Fifth Grade Reading Level
-
 We provide this final guideline because many of our readers are not native English speakers.
 You are reaching an international audience with your articles. Take into account that
 they may not have the English vocabulary you have.

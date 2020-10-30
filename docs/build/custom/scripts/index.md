@@ -77,8 +77,8 @@ To run scripts post-build, add the following file next to the project file in th
         HOCKEYAPP_API_TOKEN={API_Token}
         HOCKEYAPP_APP_ID={APP_ID}
 
-        # Example: Upload master branch app binary to HockeyApp using the API
-        if [ "$APPCENTER_BRANCH" == "master" ];
+        # Example: Upload main branch app binary to HockeyApp using the API
+        if [ "$APPCENTER_BRANCH" == "main" ];
          then
             curl \
             -F "status=2" \
