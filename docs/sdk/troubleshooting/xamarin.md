@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 10/06/2020
 ms.topic: troubleshooting-article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
@@ -77,7 +77,7 @@ If you're running automated UI tests, enabled in-app updates will block your aut
 
 ## Messages in the console that indicate that the database couldn't be opened on iOS
 
-App Center uses SQLite to persist logs before they are sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
+App Center uses SQLite to persist logs before they are sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
 
 ## Protect the App Center secret value
 

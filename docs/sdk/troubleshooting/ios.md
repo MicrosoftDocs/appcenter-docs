@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
@@ -38,11 +38,11 @@ dev_langs:
 3. If you want to see the logs that are sent to the backend, change the log level to **Verbose** in your application. The SDK will then print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSAppCenter setLogLevel:MSLogLevelVerbose]
+    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
 
     ```swift
-    MSAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -59,11 +59,11 @@ dev_langs:
 4. If you want to see the logs that are sent to the backend, change the log level to **Verbose** in your application. The SDK will then print the logs in the **Console**. Insert the following call before the SDK start:
 
     ```objc
-    [MSAppCenter setLogLevel:MSLogLevelVerbose]
+    [MSACAppCenter setLogLevel:MSACLogLevelVerbose]
     ```
 
     ```swift
-    MSAppCenter.setLogLevel(.verbose)
+    AppCenter.logLevel = .verbose
     ```
 
     Make sure "App Center SDK configured successfully" appears in the logs (at **INFO** log level), then check if you see HTTPS request logs.
@@ -82,7 +82,7 @@ If you're using Cocoapods, it takes care of the resources automatically. Try rei
 
 ## You see messages in the console that indicate that the database couldn't be opened
 
-Starting with version 0.11.0 of the iOS SDK, App Center uses SQLite to persist logs before it sends them to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.13.0 or later.
+Starting with version 0.11.0 of the iOS SDK, App Center uses SQLite to persist logs before it sends them to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.13.0 or later.
 
 ## Distribute and in-app updates are blocking my automated UI tests
 
