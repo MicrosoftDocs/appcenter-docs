@@ -12,7 +12,7 @@ ms.tgt_pltfrm: xamarin.android
 
 # App Center Push (Xamarin.Android)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -31,13 +31,12 @@ ms.tgt_pltfrm: xamarin.android
 > * [Unity Windows](unity-windows.md)
 > 
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
+> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
-
-Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
+Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application yet.
 
 ### 1. Add the App Center Push module
 

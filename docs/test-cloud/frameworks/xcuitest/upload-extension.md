@@ -189,7 +189,7 @@ $ xcrun xcodebuild build-for-testing [args] -derivedDataPath DerivedData -scheme
 $ appcenter test run xcuitest \
   --app "<app center username/<app name>" \
   --devices DEVICE_SET \
-  --test-series "master" \
+  --test-series "main" \
   --locale "en_US" \
   --build-dir DerivedData/Build/Products/Debug-iphoneos \
   --token APP_CENTER_API_TOKEN

@@ -55,7 +55,7 @@ Here's an example of how you might upload your XCUITest suite to App Center Test
 appcenter test run xcuitest \
   --app "APP_ID" \
   --devices "DEVICE_SET_ID" \
-  --test-series "master" \
+  --test-series "main" \
   --locale "en_US" \
   --build-dir DerivedData/Build/Products/Debug-iphoneos
 ```

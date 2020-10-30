@@ -35,4 +35,4 @@ curl -X PATCH 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol
 ```
 
 > [!NOTE]
-> The symbol uploads API does not work for files that are larger than 256MB. Please use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).
+> The symbol uploads API does not work for files that are larger than 256MB. Use the App Center CLI to upload these files. You can install the App Center CLI by following the instructions in our [App Center CLI repo](https://github.com/microsoft/appcenter-cli).

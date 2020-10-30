@@ -16,7 +16,7 @@ ms.custom: distribute
 Once your app is configured and distributed to your users, and you have made some JS or asset changes, it's time to release them. The recommended way to release them is using the `release-react` command in the CodePush CLI, which will bundle your JavaScript files, asset files, and release the update to the CodePush server.
 
 > [!NOTE]
-> Before you can start releasing updates, please log into App Center by running the `appcenter login` command.
+> Before you can start releasing updates, log into App Center by running the `appcenter login` command.
 
 In its most basic form, this command only requires one parameter: your owner name + "/" + app name.
 

@@ -31,12 +31,12 @@ Let's get started with setting up App Center React Native SDK in your app to use
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that the following prerequisites are met:
+Before you begin, make sure that the following prerequisites are met:
 
 * You are using a React Native project that runs React Native 0.34 or later.
 * You are targeting devices that are running on Android Version 4.1/API level 16 or later, or iOS version 9.0 or later.
 * You are not using any other library that provides Crash Reporting functionality on iOS.
-* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, please follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
+* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -143,7 +143,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
     Analyzing dependencies [!] Unable to find a specification for AppCenterReactNativeShared (~> {version}) 
     ```
 
-    Please run the following command:
+    Run the following command:
 
     ```shell
     pod repo update

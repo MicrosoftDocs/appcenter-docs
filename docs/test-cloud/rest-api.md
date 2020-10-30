@@ -258,7 +258,7 @@ PS: For other Test Frameworks, if you want to know how the JSON looks like (for 
 
 Run the Test command manually with `--debug` switch.
 
-> appcenter test run appium --app "MSKASANI/Appium" --devices "MSKASANI/my" --app-path C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\swiftnote.apk--test-series "master" --locale "en_US" --build-dir C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\Mavenex\target\upload --debug
+> appcenter test run appium --app "MSKASANI/Appium" --devices "MSKASANI/my" --app-path C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\swiftnote.apk --test-series "master" --locale "en_US" --build-dir C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\Mavenex\target\upload --debug
 
 Once the test is complete, you can check out the Command output to see how the Request Body looks like:
 

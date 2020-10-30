@@ -63,7 +63,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
    > [!IMPORTANT]
    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample illustrates declaring separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
 
-    Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing please refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
+    Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 ```xml
     <platform name="android">
         ...
@@ -128,7 +128,7 @@ Additionally, if you would like to display an update confirmation dialog (an "ac
 Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server.
 
 > [!NOTE]
-> Before you can start releasing updates, please log into App Center by running the `appcenter login` command
+> Before you can start releasing updates, log into App Center by running the `appcenter login` command
 
 In its most basic form, this command only requires one parameter: your owner name + "/" + app name.
 
@@ -614,4 +614,4 @@ The Cordova community has graciously created some awesome open source apps that 
 * [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](https://rangle.io) used for [PhoneGap Day Europe 2016](https://pgday.phonegap.com/eu2016/).
 
 > [!NOTE]
-> If you've developed a Cordova app using CodePush, that is open-source, please let us know. We would love to add it to this list!*
+> If you've developed a Cordova app using CodePush, that is open-source, let us know. We would love to add it to this list!*

@@ -14,7 +14,7 @@ ms.custom: push
 # Configuring an App for Push
 
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 This section contains instructions for how to use the App Center Push SDK in your applications; the links below contain instructions for each supported target platform for your application.
 

@@ -31,11 +31,11 @@ dev_langs:
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center Android SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, please have a look at the [documentation for App Center Distribute](~/sdk/distribute/android.md).
+Let's get started with setting up App Center Android SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, have a look at the [documentation for App Center Distribute](~/sdk/distribute/android.md).
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that the following prerequisites are met:
+Before you begin, make sure that the following prerequisites are met:
 
 * Your Android project is set up in Android Studio.
 * You are targeting devices running Android Version 4.1 (API level 16) or later.
