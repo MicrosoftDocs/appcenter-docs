@@ -14,7 +14,6 @@ dev_langs:
 ---
 
 # Get Started with macOS
-
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
@@ -43,12 +42,11 @@ The following requirements must be met to use App Center SDK:
 > [!NOTE]
 > App Center SDK will **drop support for Xcode 10** with the June SDK release.
 
-App Center SDK Analytics and Crashes is compatible with Mac Catalyst via XCFramework or SwiftPM.
+App Center SDK Analytics and Crashes are compatible with Mac Catalyst via XCFramework or SwiftPM.
 
 App Center SDK is compatible with Apple Silicon.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
-
 If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
@@ -60,7 +58,6 @@ If you've already created your app in the App Center portal, you can skip this s
 Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
-
 The App Center SDK for macOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager) or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
@@ -75,12 +72,11 @@ The App Center SDK for macOS can be added to your app via [Cocoapods](https://co
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
+2. Run `pod install` to install your newly defined pod and open the project's `.xcworkspace`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ### 3.2 Integration via Carthage
-
 Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
 1. Add the following dependencies to your `Cartfile` to include App Center into your app. This will pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
@@ -107,7 +103,6 @@ Now that you've integrated the frameworks in your application, it's time to star
 [!INCLUDE [swift package manager](includes/swift-package-manager.md)]
 
 ### 3.4 Integration by copying the binaries into your project
-
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up App Center Analytics and App Center Crashes for your macOS app.
 
 [!INCLUDE [xcframework support](includes/xcframeworks.md)]
@@ -117,7 +112,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 2. Unzip the file and you'll see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party libraries.
-   * 3rd-party libraries are usually in a subdirectory (it is often called **Vendor**), so if your project doesn't use a subdirectory for libraries, create a **Vendor** subdirectory now.
+   * 3rd-party libraries are usually in a subdirectory (it's often called **Vendor**), so if your project doesn't use a subdirectory for libraries, create a **Vendor** subdirectory now.
    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
 4. Open the unzipped **AppCenter-SDK-Apple** folder in Finder and copy the folder into your project's folder at the location where you want it. The folder contains frameworks in subfolders for other platforms that App Center SDK supports, so you might need to delete unneeded subfolders.
@@ -133,12 +128,10 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you've to call each one when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must call each one when starting the SDK.
 If you're developing for an extension, refer to the [Extension getting started page](./macos-extensions.md).
 
 ### 4.1 Add the import statements
-
 Open the project's **AppDelegate** file and add the following import statements:
 
 ```objc
@@ -153,7 +146,6 @@ import AppCenterCrashes
 ```
 
 ### 4.2 Add the `start:withServices:` method
-
 Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
 
 ```objc
@@ -173,16 +165,15 @@ MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", wit
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
-
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
 The example above shows how to use the `start:withServices` method and include both App Center Analytics and App Center Crashes.
 
-If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. Also, the `start:withServices` API can only be used once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
 
@@ -194,7 +185,6 @@ MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 
 ### 4.4 Add internet capabilities for sandboxed apps
-
 If your app is using the App Sandbox, you've to set the capability to allow outgoing (Client) connections to allow the app to have access to the internet.
 Xcode 9 enables the App Sandbox by default but the capabilities for outgoing connections need to be set explicitly.
 
