@@ -13,20 +13,28 @@ ms.service: vs-appcenter
 # App Center Support
 ## Documentation
 [Product Docs](~/index.yml)
+
 [API Docs](~/api-docs/index.md)
+
 [Product Roadmap](~/general/roadmap.md)
 
 ## Troubleshooting
 ### Services
 [Build](~/build/troubleshooting/index.md)
+
 [Test](~/test-cloud/troubleshooting/index.md)
+
 [Diagnostics](~/diagnostics/troubleshooting.md)
+
 [Analytics](~/analytics/faq.md)
 
 ### App Center SDK Troubleshooting
 [Android](~/sdk/troubleshooting/android.md)
+
 [iOS](~/sdk/troubleshooting/ios.md)
+
 [.NET](~/sdk/troubleshooting/xamarin.md)
+
 [macOS](~/sdk/troubleshooting/macos.md)
 
 #### Recent updates
