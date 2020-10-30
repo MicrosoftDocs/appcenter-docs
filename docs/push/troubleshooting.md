@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Push Troubleshooting
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 ## Increase Push SDK Verbosity
 To get a better understanding what's happening under the covers, [increase log output](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) in the Push SDK. Since the Push SDK is often initialized during app launch, verbose logs will tell you more about what's happening when the app starts.

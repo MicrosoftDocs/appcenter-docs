@@ -11,7 +11,7 @@ ms.tgt_pltfrm: cordova
 ---
 # App Center Push (iOS Cordova)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -94,8 +94,7 @@ For more information, refer to the [Apple documentation](https://help.apple.com/
 [!INCLUDE [ios enable silent notifications](includes/ios-enable-silent-notifications.md)]
 
 ## Add App Center Push to your app
-
-Please follow the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet. The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in.
+Follow the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet. The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in.
 
 To add App Center Push to your app open a Terminal and navigate to the root of your Cordova project, then enter the following to add App Center Push to the app:
 

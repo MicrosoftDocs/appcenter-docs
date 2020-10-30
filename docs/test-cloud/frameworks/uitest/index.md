@@ -100,7 +100,7 @@ The relative path example tells `AppBundle` to go up three directories from the 
 | `DeviceIdentifier` | Configures the device to use with the device identifier. This method will be described in more detail below. |
 | `EnableLocalScreenshots` | Enable screenshots when running tests locally. Screenshots are always enabled when tests are running in the cloud. |
 
-For more information on how to run iOS tests on a specific iOS Simulator, please see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
+For more information on how to run iOS tests on a specific iOS Simulator, see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
 Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that is already running. The app will be started, and then the test will be run. Xamarin.UITest cannot build the APK nor can it start an instance of the Android emulator.  
@@ -310,7 +310,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `Screenshot(String)` | Takes a screenshot of the application in it's current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
 | `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |
 
-For more information on the [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/) interface, please consult the [API documentation](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Docs/) for [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
+For more information on the [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/) interface, consult the [API documentation](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Docs/) for [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
 
 As an example of how to use these methods, consider the following test for the screenshot that was displayed above. This test will enter a 17-digit number for a credit card into a text field and then tap a button on the screen. It will then inspect the screen for an error message informing the user that the number is too long to be a valid credit card number:
 

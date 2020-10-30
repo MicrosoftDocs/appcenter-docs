@@ -37,7 +37,7 @@ Tests will be run using Maven Surefire, which requires tests to follow [certain 
 Before attempting to upload to App Center Test, make sure that running tests locally on your machine using Maven works:
 
 ```text
-➜  AppiumTest git:(master) ✗ mvn verify
+➜  AppiumTest git:(main) ✗ mvn verify
 ...
 Running MainTest
 started: SimpleTest (MainTest)

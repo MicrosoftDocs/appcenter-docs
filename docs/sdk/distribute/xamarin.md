@@ -21,14 +21,13 @@ ms.tgt_pltfrm: xamarin
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
 > [!WARNING]
-> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
+> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
 > If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
-
-Please follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
+Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
 
 ### 1. Add the App Center Distribute module
 
@@ -174,7 +173,7 @@ Google Play considers the in-app update code as malicious behavior even if it is
     ```
 
     > [!NOTE]
-    > If you are using old [packages.config](https://docs.microsoft.com/nuget/reference/packages-config) format to manage NuGet references, you can migrate to a [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) format, please follow [the migration instruction](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference).
+    > If you are using old [packages.config](https://docs.microsoft.com/nuget/reference/packages-config) format to manage NuGet references, you can migrate to a [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) format, follow [the migration instruction](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
 3. Save your changes and restore NuGet packages.
 4. You can change the configuration in the command bar at the top of the IDE.
@@ -376,7 +375,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
-> Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+> Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 > While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 

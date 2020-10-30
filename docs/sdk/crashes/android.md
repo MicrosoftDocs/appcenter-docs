@@ -29,7 +29,7 @@ dev_langs:
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
+Follow the [Getting Started](~/sdk/getting-started/android.md) section if you haven't set up the SDK in your application yet.
 
 ## Generate a test crash
 
@@ -255,7 +255,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here's an example of how to attach text and an image to a crash:
 
 ```java
 @Override
@@ -480,7 +480,7 @@ Once these methods are properly set up, the app sends the minidump to App Center
 To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` before `AppCenter.start`) to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it's a minidump file so we can handle it properly.
 
 > [!NOTE]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

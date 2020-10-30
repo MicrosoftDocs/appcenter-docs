@@ -12,7 +12,7 @@ ms.assetid: c5e0de7e-63d8-41a4-839f-9fd210ba3aca
 
 # Push - Sample Swift iOS App and Tutorials
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 In this tutorial you will learn how to send push notifications to users through App Center. Code allowing App Center to send notifications is included in the sample Swift app.
 

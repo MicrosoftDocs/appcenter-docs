@@ -330,4 +330,4 @@ Check out our [tutorials](https://go.microsoft.com/fwlink/?linkid=2128396) to le
 Now that you've updated your app to use the new Notification Hubs SDK, and your back-end to push to Notification Hubs, you're all set to publish your new app.
 
 ## Support
-If you encounter issues with migrating your application to Azure Notification Hubs, please submit your feedback request in the [Azure Notification Hubs repository](https://github.com/Azure/azureNotificationHubs/issues).  
+If you encounter issues with migrating your application to Azure Notification Hubs, submit your feedback request in the [Azure Notification Hubs repository](https://github.com/Azure/azureNotificationHubs/issues).  

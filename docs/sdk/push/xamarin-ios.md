@@ -12,7 +12,7 @@ ms.tgt_pltfrm: xamarin.ios
 
 # App Center Push (Xamarin.iOS)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -31,13 +31,12 @@ ms.tgt_pltfrm: xamarin.ios
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> Starting with version 1.11.0, calling `Push.DidReceiveRemoteNotification(...)` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `Push.DidReceiveRemoteNotification(...)` callback, please refer to [the App Center SDK migration guide](migration/xamarin-ios.md) to migrate your code.
+> Starting with version 1.11.0, calling `Push.DidReceiveRemoteNotification(...)` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `Push.DidReceiveRemoteNotification(...)` callback, refer to [the App Center SDK migration guide](migration/xamarin-ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
 ## Prerequisite - Enable Apple Push Notifications service (APNs) for your app
-
-Please configure Apple Push Notifications service (APNs) for your app from your Apple developer account and the App Center portal before adding App Center Push to your app. App Center Push won't get any notifications if you don't setup push notifications.
+Configure Apple Push Notifications service (APNs) for your app from your Apple developer account and the App Center portal before adding App Center Push to your app. App Center Push won't get any notifications if you don't setup push notifications.
 
 ### Enable push notifications on your application
 
@@ -175,7 +174,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Xamarin.iOS documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Xamarin.iOS documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -248,7 +247,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.

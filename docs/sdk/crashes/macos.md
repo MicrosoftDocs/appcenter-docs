@@ -29,9 +29,9 @@ dev_langs:
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
+Follow the [Getting Started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 
-Also note that crash logs on macOS require Symbolication, please check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
+Also note that crash logs on macOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 ### Crash reporting in extensions
 

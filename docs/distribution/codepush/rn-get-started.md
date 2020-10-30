@@ -24,7 +24,7 @@ As with all other React Native plugins, the integration experience is different 
 If you want to see how other projects have integrated with CodePush, see the [example apps](rn-overview.md#example-apps--starters), which are provided by the community. Additionally, if you would like to familiarize yourself with CodePush + React Native, see the getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and [Deepak Sisodiya](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
 
 > [!IMPORTANT]
-> This guide assumes you have used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, please run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would have created.*
+> This guide assumes you have used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would have created.*
 
 ## iOS Setup
 Once you have the CodePush plugin, you must integrate it into the Xcode project of your React Native app and configure it correctly.
@@ -136,7 +136,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 2. Run `pod install`
 
 > [!NOTE]
-> The CodePush `.podspec` depends on the `React` pod, and so in order to ensure that it can correctly use the version of React Native that your app is built with, please make sure to define the `React` dependency in your app's `Podfile` as explained in the [React Native integration documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
+> The CodePush `.podspec` depends on the `React` pod, and so in order to ensure that it can correctly use the version of React Native that your app is built with, make sure to define the `React` dependency in your app's `Podfile` as explained in the [React Native integration documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
 
 #### Plugin Installation (iOS - Manual)
 1. Open your app's Xcode project

@@ -26,7 +26,7 @@ ms.tgt_pltfrm: react-native
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up the SDK in your application yet.
+Follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up the SDK in your application yet.
 
 Wherever you are using App Center Crashes, add the following import at the top of the file.
 ```javascript
@@ -55,7 +55,7 @@ throw new Error('This is a test javascript crash!');
 > At this time, App Center does not support source maps to unminify JavaScript stack traces for Android React Native apps.
 
 > [!NOTE]
-> It is best practice to avoid JavaScript `throw` statement with a string value (e.g.: `throw 'message'`), as [React Native doesn't preserve full JavaScript stack](https://github.com/facebook/react-native/blob/v0.57.1/Libraries/Core/ExceptionsManager.js#L67-L71) in this scenario. Please `throw` a JavaScript `Error` (e.g.: `throw Error('message')`) instead.
+> It's best practice to avoid JavaScript `throw` statement with a string value (e.g.: `throw 'message'`), as [React Native doesn't preserve full JavaScript stack](https://github.com/facebook/react-native/blob/v0.57.1/Libraries/Core/ExceptionsManager.js#L67-L71) in this scenario. Instead, `throw` a JavaScript `Error` (e.g.: `throw Error('message')`).
 
 ## Get more information about a previous crash
 
@@ -206,7 +206,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';

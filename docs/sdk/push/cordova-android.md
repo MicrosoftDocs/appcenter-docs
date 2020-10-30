@@ -11,7 +11,7 @@ ms.tgt_pltfrm: cordova
 ---
 # App Center Push (Android Cordova)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -30,13 +30,12 @@ ms.tgt_pltfrm: cordova
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Please follow [the SDK migration guide](migration/cordova-android.md).
+> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow [the SDK migration guide](migration/cordova-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
-
-Please follow the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet. The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in.
+Follow the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet. The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in.
 
 To add App Center Push to your app open a Terminal and navigate to the root of your Cordova project, then enter the following to add App Center Push to the app:
 
@@ -44,7 +43,7 @@ To add App Center Push to your app open a Terminal and navigate to the root of y
 cordova plugin add cordova-plugin-appcenter-push
 ```
 
-Please check out the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet.
+Check out the [Get started](~/sdk/getting-started/cordova.md) section if you haven't set up and started the SDK in your application yet.
 
 ## Edit config.xml
 

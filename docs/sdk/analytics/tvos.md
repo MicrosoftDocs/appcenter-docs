@@ -32,6 +32,6 @@ App Center Analytics helps you understand user behavior and customer engagement 
 > [!NOTE]
 > Carrier country and carrier name are not available on App Center Analytics for tvOS, but you can set carrier country with your device location.
 
-Please follow the [Getting started](~/sdk/getting-started/tvos.md) section if you haven't set up the SDK in your application yet.
+Follow the [Getting started](~/sdk/getting-started/tvos.md) section if you haven't set up the SDK in your application yet.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods.md)]

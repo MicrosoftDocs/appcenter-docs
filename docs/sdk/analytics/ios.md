@@ -32,6 +32,6 @@ App Center Analytics helps you understand user behavior and customer engagement 
 > [!NOTE]
 > iOS devices without a SIM card will not send the report with carrier country code to the App Center portal. If you want to provide a country value, use the `setCountryCode` method to override the country code from your device location.
 
-Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
+Follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't set up the SDK in your application yet.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods.md)]
