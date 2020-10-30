@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Distribution FAQ
 
-This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here, please [contact support](~/general/support-center.md).
+This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here, [contact support](~/general/support-center.md).
 
 ## Frequently asked questions
 ### Can I distribute using an App Store Provisioning Profile?
@@ -26,7 +26,7 @@ No, it's not possible to distribute apps using the App Store Provisioning profil
 6. Then follow the process of adding the UDID to your provisioning profile. For more information, read our [Device Registration and App Re-signing guide](~/distribution/auto-provisioning.md).
 
 ### How to inspect the iOS console log
-If you're the developer of the app and can reproduce the problem on your device, please follow these steps:
+If you're the developer of the app and can reproduce the problem on your device, follow these steps:
 
 1. Connect your iPhone, iPad, or iPod touch to your Mac.
 2. Open Xcode, then go to **Window** > **Devices**.
@@ -35,5 +35,5 @@ If you're the developer of the app and can reproduce the problem on your device,
  ![FAQ: how to inspect iOS console log](~/distribution/images/inspect_ios_console_log.png)
 5. Start the installation of your app.
 
-During the installation, you might see warnings or errors. If you need help with those messages, please save the log as a .txt file and send it to [support](~/general/support-center.md).
+During the installation, you might see warnings or errors. If you need help with those messages, save the log as a .txt file and send it to [support](~/general/support-center.md).
 

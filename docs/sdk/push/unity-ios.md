@@ -12,7 +12,7 @@ ms.tgt_pltfrm: unity
 
 # App Center Push for Unity iOS
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 
 > [!div  class="op_single_selector"]

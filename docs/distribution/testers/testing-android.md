@@ -22,7 +22,7 @@ After getting invited to test an Android Application in App Center you will rece
 
 ### Android 9.x and higher 
 * Grant permission to the app to install unknown apps. This will trigger the installation.
-* Android Oreo removed **allow unknown sources** from settings, for more info please see refer to the blog post [Making it safer to get apps on Android O](https://android-developers.googleblog.com/2017/08/making-it-safer-to-get-apps-on-android-o.html)
+* Android Oreo removed **allow unknown sources** from settings, for more info see refer to the blog post [Making it safer to get apps on Android O](https://android-developers.googleblog.com/2017/08/making-it-safer-to-get-apps-on-android-o.html)
 
 ### Android 8.x and higher
 

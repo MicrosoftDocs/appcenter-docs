@@ -51,7 +51,7 @@ The available projects in your repository will populate if they are located with
 
 App Center allows using different Mono environments bundled with the respective Xamarin.Android SDK for your builds. This way we maintain backward compatibility while also supporting the latest features. The default Mono version for a new branch configuration is the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
-When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, please read the [Xamarin release blog](https://releases.xamarin.com/).
+When selecting a Mono version in the build configuration, the bundled Xamarin.Android SDK version displayed right next to it. For more information about Xamarin SDK version updates, read the [Xamarin release blog](https://releases.xamarin.com/).
 
 #### 3.3.1. .Net Core version
 
@@ -108,7 +108,7 @@ If the `NuGet.config` file is checked-in into the repository and sitting next to
 </configuration>
 ```
 
-If you have complex configurations and need more information, please refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.9. Distribute the build
 
@@ -150,4 +150,4 @@ The `.apk` file is an Android application packaged file which stores the Android
 
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
-App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, please reach out to us. See [help and feedback](../../../help.md).
+App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, reach out to us. See [help and feedback](../../../help.md).

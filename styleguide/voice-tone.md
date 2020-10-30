@@ -45,7 +45,6 @@ always mean using the word 'you'. Write directly to the reader. Write imperative
 Tell your reader what you want them to learn.
 
 #### Inappropriate Style
-
 An author could also choose to write in third person. In that model, an author must find some
 pronoun or noun to use when referring to the reader. A reader might often find this third
 person style less engaging and less enjoyable to read.
@@ -71,7 +70,7 @@ We recommend active voice because it is more readable. Passive voice can be more
 ### Target a Fifth Grade Reading Level
 
 We provide this final guideline because many of our readers are not native English speakers.
-You are reaching an international audience with your articles. Please take into account that
+You are reaching an international audience with your articles. Take into account that
 they may not have the English vocabulary you have.
 
 However, you are still writing for technical professionals. You can assume that your readers

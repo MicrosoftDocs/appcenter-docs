@@ -15,7 +15,7 @@ dev_langs:
 
 # App Center Push (Android)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -34,13 +34,12 @@ dev_langs:
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, please refer to [the SDK migration guide](migration/android.md).
+> Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, refer to [the SDK migration guide](migration/android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## Add App Center Push to your app
-
-Please follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
+Follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
 
 ### 1. Add the App Center Push module
 

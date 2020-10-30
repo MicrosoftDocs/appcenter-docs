@@ -1,33 +1,25 @@
 # Contributing
-
-Thank you for your interest in contributing to the App Center documentation!
+Thanks for your interest in contributing to the App Center documentation!
 
 This guide covers some general topics around contributing and refers out to the docs.microsoft.com contributors guide for more detailed explanations.
 
 ## Code of conduct
-
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/), or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## How can I contribute?
-
 There is a variety of ways to contribute to the documentation. Review the sections below to find out which one is right for you.
 
 ### Report bugs or suggest enhancements
-
-Please use the feedback tool at the bottom of any article to submit bugs and suggestions.
+Use the feedback tool at the bottom of any article to submit bugs and suggestions.
 
 ### Quick edit in GitHub
-
 Follow the guidance for [quick edits to existing documents](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
 
 ### Larger edits
-
 Review the guidance for [pull requests](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) in the contributors guide.
 
 1.  Before you begin, make sure that your local master branch is up to date with the remote by using `git pull --rebase`.  
-
 2. Create a `branch` for your changes in the format `alias-functions` (e.g. `amburns-update-page`).
-
 3. Write your content.
 
     If it's a new topic, you can use this [template file](./styleguide/template.md) as your starting point. It contains the writing guidelines and also explains the metadata required for each article, such as author information.

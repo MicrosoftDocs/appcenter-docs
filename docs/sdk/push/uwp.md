@@ -12,7 +12,7 @@ ms.tgt_pltfrm: UWP
 
 # App Center Push for Universal Windows Platform
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -43,7 +43,7 @@ Before you can send notification using WNS, your app must be registered with the
 
 ## Add App Center Push to your app
 
-Please follow the [Get started](~/sdk/getting-started/uwp.md) section if you haven't set up and started the SDK in your application.
+Follow the [Get started](~/sdk/getting-started/uwp.md) section if you haven't set up and started the SDK in your application.
 
 ### 1. Add the App Center Push package
 

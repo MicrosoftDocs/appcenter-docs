@@ -31,7 +31,7 @@ Let's get started with setting up App Center UWP SDK in your app to use App Cent
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that the following prerequisites are met:
+Before you begin, make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2017 Update 15.9 or later.
 * You are targeting devices running Windows 10 build 16299 or later.
@@ -39,7 +39,7 @@ Before you begin, please make sure that the following prerequisites are met:
 * NuGet 4.3 or later.
 
 > [!NOTE]
-> If you want to use Xamarin.Forms for UWP, please follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
+> If you want to use Xamarin.Forms for UWP, follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

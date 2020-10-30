@@ -178,7 +178,7 @@ Note that this callback is not triggered if it's a network issue. In this case, 
 
 ### Add attachments to a crash or an unhandled exception report
 
-You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
+You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -365,7 +365,7 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> App Center uses the reserved name `minidump.dmp` for minidump attachments. Please make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
 
 > [!WARNING]
 > There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

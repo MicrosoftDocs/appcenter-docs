@@ -28,11 +28,11 @@ ms.tgt_pltfrm: xamarin
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center Xamarin SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, please have a look at the [documentation for App Center Distribute](~/sdk/distribute/xamarin.md).
+Let's get started with setting up App Center Xamarin SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, have a look at the [documentation for App Center Distribute](~/sdk/distribute/xamarin.md).
 
 ## 1. Prerequisites
 
-Before you begin, please make sure that the following prerequisites are met:
+Before you begin, make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2017 or Visual Studio for Mac.
 * You are targeting devices running iOS 9.0 or later or Android 4.1 (API level 16) or later.
@@ -137,7 +137,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 > [!NOTE]
-> If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, please look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
+> If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
 
 #### 4.2.2 Xamarin.iOS
 
@@ -168,7 +168,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
 > 
 > [!NOTE]
-> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, please remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.

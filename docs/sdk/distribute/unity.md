@@ -25,7 +25,7 @@ App Center Distribution enables your users/testers to install new versions of an
 > The Distribute SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
 > [!WARNING]
-> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please remove this code as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
+> Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Remove this code as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
 > If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
@@ -40,7 +40,7 @@ Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you h
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please remove this code before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Remove this code before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 To remove in-app updates native code, uncheck the **Use Distribute** checkbox under the **Distribute** section on the game object with **AppCenterBehavior** attached.
 
 ## Use private distribution group
@@ -224,5 +224,5 @@ You must upload release builds (that use the Distribute module of the App Center
 1. Build the release version of your app and upload a new build just like you did in the previous step. Distribute to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
-> Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+> Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.

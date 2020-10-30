@@ -15,7 +15,7 @@ dev_langs:
 
 # App Center Push (iOS)
 > [!IMPORTANT]
-> Please note this feature is being retired. For more information, please see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
+> Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -34,7 +34,7 @@ dev_langs:
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> Starting with version 1.11.0 of the App Center Push SDK, calling `push:didReceivePushNotification:` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `push:didReceivePushNotification:` callback, please refer to [the App Center SDK migration guide](migration/ios.md) to migrate your code.
+> Starting with version 1.11.0 of the App Center Push SDK, calling `push:didReceivePushNotification:` within a `UNUserNotificationCenterDelegate` is no longer necessary. If you implemented a `UNUserNotificationCenterDelegate` and are calling the `push:didReceivePushNotification:` callback, refer to [the App Center SDK migration guide](migration/ios.md) to migrate your code.
 
 App Center Push enables you to send push notifications to users of your app from the App Center portal.
 
@@ -71,7 +71,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 MSAppCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 > [!NOTE]
 > The first time App Center Push starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start App Center Push later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured.
@@ -320,7 +320,7 @@ The App Center SDK uses swizzling to improve its integration by forwarding itsel
 
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -417,7 +417,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. Please see [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.

@@ -18,7 +18,7 @@ App Center takes security seriously. As a first-party Microsoft Azure service, w
 We want to give you an idea of some of the principles that we follow to keep App Center secure. Although it isn't meant to be an exhaustive list of security concepts, it's shaped by a number of requests from customers for similar information.
 
 > [!IMPORTANT]
-> This documentation is meant to share information about our security stance. Nothing in this documentation implies or should be taken to mean that App Center  will never have a security issue. Nothing in this documentation supercedes any information in [Microsoft's Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products). If you become aware of a potential security issue with App Center, please contact the [Microsoft Security Response Center](https://www.microsoft.com/msrc) immediately.
+> This documentation is meant to share information about our security stance. Nothing in this documentation implies or should be taken to mean that App Center  will never have a security issue. Nothing in this documentation supercedes any information in [Microsoft's Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products). If you become aware of a potential security issue with App Center, contact the [Microsoft Security Response Center](https://www.microsoft.com/msrc) immediately.
 
 ## Data residency and sovereignty
 

@@ -92,7 +92,7 @@ If you're building a Xamarin or UWP app, you might want to connect to a private 
 
 ## build.gradle [(app level)](https://developer.android.com/studio/build) for Android
 
-For Android apps, you can access your variables in the **build.gradle [(app level)](https://developer.android.com/studio/build)** config. For more details, please read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
+For Android apps, you can access your variables in the **build.gradle [(app level)](https://developer.android.com/studio/build)** config. For more details, read the [Gradle Tips and Recipes](https://developer.android.com/studio/build/gradle-tips.html#share-custom-fields-and-resource-values-with-your-app-code) documentation.
 
 ```java
 buildConfigField("String", "API_KEY", "\"${System.env.API_KEY}\"")

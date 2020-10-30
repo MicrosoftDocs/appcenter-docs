@@ -28,8 +28,7 @@ The App Center SDK can be integrated into your app via [Cocoapods](https://cocoa
 2. Run `pod install` to install your newly defined pod and open the project's .xcworkspace.
 
 > [!NOTE]
-> If you see an error like ```[!] Unable to find a specification for `AppCenter` ```
->  while running `pod install`, please run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
+> If you see an error like ```[!] Unable to find a specification for `AppCenter` ``` while running `pod install`, run `pod repo update` to get the latest pods from the Cocoapods repository and then run `pod install`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 

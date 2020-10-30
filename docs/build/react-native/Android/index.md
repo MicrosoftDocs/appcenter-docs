@@ -154,4 +154,4 @@ There are several options for running scripts before App Center's default build 
 
 For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. App Center's build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density.
 
-To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). Consequently, make sure that `universalApk` is set to `true` for your React Native build configuration.
+To learn more about APK splits and how to build a universal APK, read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). Consequently, make sure that `universalApk` is set to `true` for your React Native build configuration.

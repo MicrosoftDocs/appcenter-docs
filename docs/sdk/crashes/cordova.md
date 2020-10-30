@@ -26,7 +26,7 @@ ms.tgt_pltfrm: react-native
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
-Please follow the [Getting Started](~/sdk/getting-started/cordova.md) section if you haven't set up the SDK in your application yet.
+Follow the [Getting Started](~/sdk/getting-started/cordova.md) section if you haven't set up the SDK in your application yet.
 
 ## Generate a test crash
 
@@ -147,7 +147,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending stored crash from previous application launches, but not at the crash time. Please be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach a text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending stored crash from previous application launches, but not at the crash time. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach a text and an image to a crash:
 
 ```js
 var errorCallback = function(error) {

@@ -416,7 +416,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]
-> We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, please don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!
+> We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!
 
 #### App name parameter
 
@@ -565,7 +565,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]
->  We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, please don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.*
+>  We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.*
 
 #### App name parameter
 
@@ -810,11 +810,11 @@ If you are planning to use this feature you need to do the following:
 
 1. Produce new binary update including 
    * updated CodePush plugin supporting Code Signing
-   * configure your code-push sdk to use your public key (please, refer relevant React Native SDK ([iOS](rn-get-started.md#code-signing-setup-ios),  [Android](rn-get-started.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
+   * configure your code-push sdk to use your public key (refer relevant React Native SDK ([iOS](rn-get-started.md#code-signing-setup-ios),  [Android](rn-get-started.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
 
 2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or simply `-k`) parameter value
 
-Please refer to our compatibility tables to identify if code-signing feature is supported within your SDK/CLI:
+Refer to our compatibility tables to identify if code-signing feature is supported within your SDK/CLI:
 
 |CodePush SDK|Version from which Code Signing is supporting|Supported Platforms|Minimal CodePush CLI version required|
 |----|----|----|----|

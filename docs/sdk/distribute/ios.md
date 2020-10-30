@@ -33,7 +33,7 @@ App Center Distribute will let your users install a new version of the app when 
 
 ## Add in-app updates to your app
 
-Please follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
+Follow the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 ### 1. Add the App Center Distribute module
 
@@ -100,7 +100,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 MSAppCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Please also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 #### 2.3 Modify the project's **Info.plist**
 
@@ -362,7 +362,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
-> Please have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
+> Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
 > While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## Disable forwarding of the application delegate's methods calls to App Center services

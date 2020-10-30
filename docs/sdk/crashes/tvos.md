@@ -34,7 +34,7 @@ Follow the [Getting Started](~/sdk/getting-started/tvos.md) section if you haven
 Also note that crash logs on tvOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
-> To receive properly symbolicated stack traces, please ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
+> To receive properly symbolicated stack traces, ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-1.md)]
 
