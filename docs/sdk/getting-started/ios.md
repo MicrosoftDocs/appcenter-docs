@@ -1,7 +1,7 @@
 ---
 title: Get Started with iOS
 description: Get started with iOS
-keywords: sdkx
+keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 10/30/2020
