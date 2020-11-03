@@ -15,7 +15,7 @@ ms.custom: test
 This guide provides instructions for preparing XCUITest tests for upload to App Center Test.
 
 ## Requirements
-> ![NOTE]
+> [!NOTE]
 > Xcode 12 / iOS 14 support is being worked on but not yet available.
 
 * Xcode >= 9.4.1
