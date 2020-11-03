@@ -627,6 +627,14 @@
     {
         "source_path": "docs/build/xamarin/ios/solution-configuration-mappings.md",
         "redirect_url": "/appcenter/build/xamarin/solution-configuration-mappings.md"
-    }    
+    },
+    {
+        "source_path": "docs/build/macos-10.14-software.md",
+        "redirect_url": "/appcenter/build/software.md"
+    },
+    {
+        "source_path": "docs/build/macos-10.15-software.md",
+        "redirect_url": "/appcenter/build/software.md"
+    }
  ]
 }
