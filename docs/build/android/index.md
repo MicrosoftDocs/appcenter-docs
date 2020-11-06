@@ -100,6 +100,8 @@ The `mapping.txt` file contains information on how to map obfuscated stack trace
 * If you've previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the `mapping.txt` file to display readable crash reports.
 
 ## 5. Supported versions and requirements
-The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
+The minimum version supported to build Android apps is 7.0 (API level 24). Android apps can have a lower minimum API level required to run, but have to target at least API level 24. 
 
 Apps must build with Gradle and the Android Gradle plugin to be configured correctly. Your repository needs to include a Gradle wrapper.
+
+See also: [Cloud Build Machine information](https://docs.microsoft.com/en-us/appcenter/build/software)
