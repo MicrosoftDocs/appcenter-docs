@@ -104,4 +104,4 @@ The minimum version supported to build Android apps is 7.0 (API level 24). Andro
 
 Apps must build with Gradle and the Android Gradle plugin to be configured correctly. Your repository needs to include a Gradle wrapper.
 
-See also: [Cloud Build Machine information](https://docs.microsoft.com/en-us/appcenter/build/software)
+See also: [Cloud Build Machine information](~/build/software.md)
