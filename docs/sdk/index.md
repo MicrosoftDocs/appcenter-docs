@@ -60,10 +60,10 @@ Android Studio 2.2 or later.
 
 Service          | Android OS Version | API Level
 -----------------|--------------------|-------------
-Analytics        | 4.1 and later      | 16 and later
-Crashes          | 4.1 and later      | 16 and later
-Distribute       | 4.1 and later      | 16 and later
-Push             | 4.1 and later      | 16 and later
+Analytics        | 5.0 and later      | 21 and later
+Crashes          | 5.0 and later      | 21 and later
+Distribute       | 5.0 and later      | 21 and later
+Push             | 5.0 and later      | 21 and later
 
 ### iOS
 
@@ -107,10 +107,10 @@ Push             | not available  | not available | not available   | not availa
 
 Service    |  RN version   | iOS Version              | Android Version
 -----------|---------------|--------------------------|----------------------------
-Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
-Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
-Distribute | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
-Push       | 0.34 or later | 9.0 or later & Cocoapods | 4.1 / API Level 16 or later
+Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
+Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
+Distribute | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
+Push       | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
 
 ### macOS
 
@@ -131,10 +131,10 @@ Crashes          | 11.0 or later   | 11 and later
 
 Service    |  AC CLI version      | iOS Version     | Android Version
 -----------|----------------------|-----------------|----------------
-Analytics  | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
-Crashes    | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
-Distribute | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
-Push       | 6.4.0 and later      | 4.3.0 and later | 4.1.0 and later
+Analytics  | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
+Crashes    | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
+Distribute | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
+Push       | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
 
 ## Source Code and Release Notes
 

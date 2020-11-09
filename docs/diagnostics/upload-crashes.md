@@ -341,7 +341,7 @@ curl -X POST \
         "osApiLevel": 16,
         "osBuild": "JRO03O",
         "osName": "Android",
-        "osVersion": "4.1.1",
+        "osVersion": "5.0.0",
         "screenSize": "720x1184",
         "sdkName": "appcenter.custom",
         "sdkVersion": "1.9.1",
