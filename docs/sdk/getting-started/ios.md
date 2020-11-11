@@ -54,6 +54,9 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 ## 3. Add the App Center SDK modules
 The App Center SDK for iOS can be added to your app via [Cocoapods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage), [Swift Package Manager](https://github.com/apple/swift-package-manager), or by manually adding the binaries to your project.
 
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
+
 ### 3.1 Integration via Cocoapods
 
 > [!NOTE]
@@ -157,18 +160,18 @@ Create `init()` method into `struct` and add initialization code in it.
 
 Use this code into methods described before, to start SDK:
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
 ```objc
-[MSAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSAppCenter.start("ios={Your iOS App Secret};macos={Your macOS App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+AppCenter.start(withAppSecret:"ios={Your iOS App Secret};macos={Your macOS App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
@@ -176,18 +179,19 @@ Make sure to replace `{Your App Secret}` text with the actual value for your app
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the `start:withServices` method and include both App Center Analytics and App Center Crashes.
+The example above shows how to use the `start:withServices` (`start(withAppSecret:services:)` for Swift) method and include both App Center Analytics and App Center Crashes.
 
 If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Unless you explicitly specify each module as a parameter in the start method, you can't use that App Center service. Also, the `start:withServices` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as a parameter in the start method, you can't use that App Center service. Also, the `start:withServices` (`start(withAppSecret:services:)` for Swift) API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` API call as follows:
+For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` (`start(withAppSecret:services:)` for Swift) API call as follows:
+
 ```objc
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];
 ```
 ```swift
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self])
 ```
 
 Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
