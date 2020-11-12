@@ -27,8 +27,11 @@ Create a new API token, making sure the API token has full access (so that Azure
 
 ![Create an App Center connection](images/vsts-deploy-app-center-api.png)
 
-After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. You can find the app slug by going to your project on App Center, and extracting it based on `https://appcenter.ms/users/{username}/apps/{app_identifier}`. For example, the app slug for `https://appcenter.ms/users/vigimm/apps/SkyTube` is `vigimm/Skytube`. 
-If you are using organisations, your url will look like this `https://appcenter.ms/orgs/{organisationname}/apps/{app_identifier}` so for example the app slug for `https://appcenter.ms/orgs/vigimm/apps/SkyTube` is `vigimm/Skytube`. 
+After you've created the connection between Azure DevOps and App Center, Azure DevOps needs to know which app you want to distribute the signed build to. You can find the app slug by going to your project on App Center, and extracting it based on the url for the app:
+- App owned by user - `https://appcenter.ms/users/{USER_NAME}/apps/{APP_ID}` 
+- App owned by org - `https://appcenter.ms/orgs/{ORG_NAME}/apps/{APP_ID}` 
+
+For example, the app slug for `https://appcenter.ms/users/vigimm/apps/SkyTube` is `vigimm/Skytube`. 
 
 ![Copy your App Slug from App Center](images/vsts-deploy-app-center-slug.png)
 
