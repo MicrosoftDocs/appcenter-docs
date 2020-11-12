@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 10/06/2020
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
 ms.tgt_pltfrm: react-native
@@ -97,7 +97,7 @@ Command `link` unrecognized. Make sure that you have run `npm install` and that 
 
 In this case, run `npm install` and try `react-native link` again.
 
-## Build error such as 'AppCenterCrashes/MSErrorReport.h' file not found
+## Build error such as 'AppCenterCrashes/MSACErrorReport.h' file not found
 
 One possible cause is when running `react-native link` without **CocoaPods** installed.
 

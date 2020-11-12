@@ -4,7 +4,7 @@ description: App Center Crashes for iOS
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/25/2019
+ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.custom: sdk
@@ -39,6 +39,9 @@ Also note that crash logs on iOS require Symbolication, check out the [App Cente
 > [!NOTE]
 > To receive properly symbolicated stack traces, ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).
 
+> [!NOTE]
+> In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
+
 ### Crash reporting in extensions
 
 App Center supports crash reporting in iOS extensions. The usage is the same as in the container application.
@@ -60,7 +63,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 The following method shows how to set up a user confirmation handler:
 
 ```objc
-[MSCrashes setUserConfirmationHandler:(^(NSArray<MSErrorReport *> *errorReports) {
+[MSACCrashes setUserConfirmationHandler:(^(NSArray<MSACErrorReport *> *errorReports) {
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   UIAlertController *alertController = [UIAlertController
@@ -72,21 +75,21 @@ The following method shows how to set up a user confirmation handler:
       addAction:[UIAlertAction actionWithTitle:@"Don't send"
                                         style:UIAlertActionStyleCancel
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
                                       }]];
 
   [alertController
       addAction:[UIAlertAction actionWithTitle:@"Always send"
                                         style:UIAlertActionStyleDefault
                                       handler:^(UIAlertAction *action) {
-                                        [MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+                                        [MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
                                       }]];
   // Show the alert controller.
   [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
@@ -94,7 +97,7 @@ The following method shows how to set up a user confirmation handler:
 })];
 ```
 ```swift
-MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
+Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 
   // Your code to present your UI to the user, e.g. an UIAlertController.
   let alertController = UIAlertController(title: "Sorry about that!",
@@ -102,15 +105,15 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
                                           preferredStyle:.alert)
 
   alertController.addAction(UIAlertAction(title: "Don't send", style: .cancel) {_ in
-    MSCrashes.notify(with: .dontSend)
+    Crashes.notify(with: .dontSend)
   })
 
   alertController.addAction(UIAlertAction(title: "Send", style: .default) {_ in
-    MSCrashes.notify(with: .send)
+    Crashes.notify(with: .send)
   })
 
   alertController.addAction(UIAlertAction(title: "Always send", style: .default) {_ in
-    MSCrashes.notify(with: .always)
+    Crashes.notify(with: .always)
   })
 
   // Show the alert controller.
@@ -123,15 +126,15 @@ In case you return `YES`/`true` in the handler block above, your app should obta
 
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationDontSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationSend];
-[MSCrashes notifyWithUserConfirmation:MSUserConfirmationAlways];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationDontSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationSend];
+[MSACCrashes notifyWithUserConfirmation:MSACUserConfirmationAlways];
 ```
 ```swift
 // Depending on the user's choice, call notify(with:) with the right value.
-MSCrashes.notify(with: .dontSend)
-MSCrashes.notify(with: .send)
-MSCrashes.notify(with: .always)
+Crashes.notify(with: .dontSend)
+Crashes.notify(with: .send)
+Crashes.notify(with: .always)
 ```
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
@@ -143,10 +146,10 @@ By default, App Center Crashes uses the Mach exception handler to catch fatal si
 The `disableMachExceptionHandler`-method provides an option to disable catching fatal signals via a Mach exception server. If you want to disable the Mach exception handler, you should call this method *BEFORE* starting the SDK. Your typical setup code would look like this:
 
 ```objc
-[MSCrashes disableMachExceptionHandler];
-[MSAppCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+[MSACCrashes disableMachExceptionHandler];
+[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
 ```
 ```swift
-MSCrashes.disableMachExceptionHandler()
-MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+Crashes.disableMachExceptionHandler()
+AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
