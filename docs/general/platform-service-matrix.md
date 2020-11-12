@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/20/2019
+ms.date: 11/12/2020
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -21,18 +21,17 @@ The table below lists all the Operating System and Platforms and their supported
 | Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
 | iOS                    |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 | macOS                  |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
-| React Native - iOS     |  ✅   |  ✅  |     ✅ [2](2) |   ✅       |    ✅     |
-| React Native - Android |  ✅   |  ✅  |     ✅ [2](2) |   ✅       |    ✅     |
+| React Native - iOS     |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
+| React Native - Android |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
 | tvOS                   |  ❌   |  ❌  |     ❌     |   ✅       |    ✅     |
 | Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
 | Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - UWP [1](1)        |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
-| Windows - UWP          |  ✅   |  ❌  |     ✅ [2](2) |   ✅       |    ✅     |
+| Unity - UWP&#185;       |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
+| Windows - UWP          |  ✅   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
 | Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
 | Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 | Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
 
-[1]: For UWP, Hololens support has not been verified.
-
-[2]: In-app updates not supported for these platforms.
+1 - For UWP, Hololens support has not been verified.
+2 - In-app updates not supported for these platforms.
