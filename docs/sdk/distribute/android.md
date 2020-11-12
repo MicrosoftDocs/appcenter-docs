@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/15/2020
+ms.date: 11/12/2020
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -41,7 +41,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '3.3.1'
+       def appCenterSdkVersion = '4.0.0'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
