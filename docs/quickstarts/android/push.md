@@ -51,7 +51,7 @@ You need a Google Account and use the Firebase console.
 
       dependencies {
           // Add this line
-          classpath 'com.google.gms:google-services:4.0.1'
+          classpath 'com.google.gms:google-services:5.0'
       }
   }
 
