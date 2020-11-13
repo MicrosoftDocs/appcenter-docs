@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 13/11/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -68,6 +68,13 @@ pod 'AppCenter/Distribute'
 1. Open your application target's **General** settings tab. Drag and drop the **AppCenterDistribute.framework** file from the **Carthage/Build/iOS** folder to the **Linked Frameworks and Libraries** section in XCode.
 1. Drag and drop **AppCenterDistributeResources.bundle** from **AppCenterDistribute.framework** into XCode's Project Navigator.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
+
+#### Integration via Swift Package Manager
+
+1. From the Xcode menu click **File > Swift Packages > Add Package Dependency**.
+1. In the dialog that appears, enter the repository URL: https://github.com/microsoft/appcenter-sdk-apple.git.
+1. In **Version**, select **Up to Next Major** and take the default option.
+1. Choose the **AppCenterDistribute** in the **Package Product** column.
 
 #### Integration by copying the binaries into your project
 
