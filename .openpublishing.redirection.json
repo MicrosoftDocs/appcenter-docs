@@ -645,23 +645,23 @@
         "redirect_url": "/appcenter/distribution/codepush/rn-deployment.md"
     },
     {
-        "source_path": "docs/distribution/codepush/rn-get-started.md",
+        "source_path": "docs/distribution/codepush/react-native-get-started.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-get-started.md"
     },
     {
-        "source_path": "docs/distribution/codepush/rn-overview.md",
+        "source_path": "docs/distribution/codepush/react-native-overview.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-overview.md"
     },
     {
-        "source_path": "docs/distribution/codepush/rn-plugin.md",
+        "source_path": "docs/distribution/codepush/react-native-plugin.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-plugin.md"
     },
     {
-        "source_path": "docs/distribution/codepush/rn-troubleshooting.md",
+        "source_path": "docs/distribution/codepush/react-native-troubleshooting.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-troubleshooting.md"
     },
     {
-        "source_path": "docs/distribution/codepush/rn-updates.md",
+        "source_path": "docs/distribution/codepush/react-native-updates.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-updates.md"
     }
  ]
