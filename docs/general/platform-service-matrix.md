@@ -4,7 +4,7 @@ description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/20/2019
+ms.date: 11/12/2020
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
@@ -16,21 +16,22 @@ The table below lists all the Operating System and Platforms and their supported
 
 | OS/Platform            | Build | Test | Distribute | Diagnostics | Analytics |
 | :--------------------- | :---: | :--: | :--------: | :-----:     | :-------: |
-| Android                |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| iOS                    |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| macOS                  |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
-| React Native - iOS     |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| React Native - Android |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| tvOS                   |  ❌   |  ❌  |     ❌     |   ✅       |    ✅     |
-| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - UWP*           |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
-| Windows - UWP          |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
-| Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
-| Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
-| Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Android                |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Cordova - iOS          |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Cordova - Android      |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| iOS                    |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| macOS                  |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| React Native - iOS     |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
+| React Native - Android |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
+| tvOS                   |  ❌   |  ❌  |     ❌       |   ✅       |    ✅     |
+| Unity - iOS            |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Unity - Android        |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Unity - UWP*           |  ❌   |  ❌  |     ✅†      |   ❌       |    ✅     |
+| Windows - UWP          |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| Windows - WPF          |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| Windows - WinForms     |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| Xamarin - iOS          |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Xamarin - Android      |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 
-*For UWP, Hololens support has not been verified.
+* - For UWP, HoloLens support has not been verified.
+† - In-app updates not supported for these platforms.

@@ -115,7 +115,7 @@ The `.apk` file is an Android application packaged file that stores the Android 
 
 ## 5. Supported versions and requirements
 
-The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
+The minimum version supported to build Android apps is 5.0 (API level 21). Android apps can have a lower minimum API level required to run, but have to target at least API level 21.
 
 ## 6. Build tips
 

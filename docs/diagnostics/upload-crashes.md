@@ -4,7 +4,7 @@ description: Post a crash report, for example, if you don't want to use our SDK 
 keywords: crashes, diagnostics, errors, attachments, upload, api
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/03/2020
+ms.date: 11/10/2020
 ms.topic: article
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
@@ -341,7 +341,7 @@ curl -X POST \
         "osApiLevel": 16,
         "osBuild": "JRO03O",
         "osName": "Android",
-        "osVersion": "4.1.1",
+        "osVersion": "5.0.0",
         "screenSize": "720x1184",
         "sdkName": "appcenter.custom",
         "sdkVersion": "1.9.1",
