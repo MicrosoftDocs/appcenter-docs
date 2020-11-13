@@ -4,7 +4,7 @@ description: Get Started (Cordova)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/22/2019
+ms.date: 11/10/2020
 ms.topic: get-started-article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903
 ms.tgt_pltfrm: cordova
@@ -35,7 +35,7 @@ In this article, you'll learn how to add the App Center SDK to your Apache Cordo
 Before you begin, ensure that your Apache Cordova application project meets the following minimum requirements:
 
 * Cordova CLI 6.4.0 or later
-* `cordova-android` engine 4.1.0 or later
+* `cordova-android` engine 5.0.0 or later
 * `cordova-ios` engine 4.3.0 or later
 
 To determine your Cordova CLI version, open a terminal window or Windows command prompt and execute the following command:
