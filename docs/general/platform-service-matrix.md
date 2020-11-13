@@ -16,22 +16,23 @@ The table below lists all the Operating System and Platforms and their supported
 
 | OS/Platform            | Build | Test | Distribute | Diagnostics | Analytics |
 | :--------------------- | :---: | :--: | :--------: | :-----:     | :-------: |
-| Android                |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Cordova - iOS          |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Cordova - Android      |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| iOS                    |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| macOS                  |  ✅   |  ❌  |     ✅     |   ✅       |    ✅     |
+| Android                |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Cordova - iOS          |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Cordova - Android      |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| iOS                    |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| macOS                  |  ✅   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
 | React Native - iOS     |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
 | React Native - Android |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
-| tvOS                   |  ❌   |  ❌  |     ❌     |   ✅       |    ✅     |
-| Unity - iOS            |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - Android        |  ❌   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Unity - UWP&#185;       |  ❌   |  ❌  |     ✅     |   ❌       |    ✅     |
+| tvOS                   |  ❌   |  ❌  |     ❌       |   ✅       |    ✅     |
+| Unity - iOS            |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Unity - Android        |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Unity - UWP&#185;      |  ❌   |  ❌  |     ✅&#178; |   ❌       |    ✅     |
 | Windows - UWP          |  ✅   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
-| Windows - WPF          |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
-| Windows - WinForms     |  ❌   |  ❌  |     ✅     |   ✅       |    ✅     |
-| Xamarin - iOS          |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
-| Xamarin - Android      |  ✅   |  ✅  |     ✅     |   ✅       |    ✅     |
+| Windows - WPF          |  ❌   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
+| Windows - WinForms     |  ❌   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
+| Xamarin - iOS          |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
+| Xamarin - Android      |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 
-1 - For UWP, Hololens support has not been verified.
-2 - In-app updates not supported for these platforms.
+Footnotes:
+1. For UWP, Hololens support has not been verified.
+2. In-app updates not supported for these platforms.
