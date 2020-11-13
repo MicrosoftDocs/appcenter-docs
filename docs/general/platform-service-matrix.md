@@ -20,19 +20,18 @@ The table below lists all the Operating System and Platforms and their supported
 | Cordova - iOS          |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
 | Cordova - Android      |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
 | iOS                    |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
-| macOS                  |  ✅   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
-| React Native - iOS     |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
-| React Native - Android |  ✅   |  ✅  |     ✅&#178; |   ✅       |    ✅     |
+| macOS                  |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| React Native - iOS     |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
+| React Native - Android |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
 | tvOS                   |  ❌   |  ❌  |     ❌       |   ✅       |    ✅     |
 | Unity - iOS            |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
 | Unity - Android        |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
-| Unity - UWP&#185;      |  ❌   |  ❌  |     ✅&#178; |   ❌       |    ✅     |
-| Windows - UWP          |  ✅   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
-| Windows - WPF          |  ❌   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
-| Windows - WinForms     |  ❌   |  ❌  |     ✅&#178; |   ✅       |    ✅     |
+| Unity - UWP*           |  ❌   |  ❌  |     ✅†      |   ❌       |    ✅     |
+| Windows - UWP          |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| Windows - WPF          |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
+| Windows - WinForms     |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 | Xamarin - Android      |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 
-Footnotes:
-1. For UWP, Hololens support has not been verified.
-2. In-app updates not supported for these platforms.
+* - For UWP, Hololens support has not been verified.
+† - In-app updates not supported for these platforms.
