@@ -635,6 +635,34 @@
     {
         "source_path": "docs/build/macos-10.15-software.md",
         "redirect_url": "/appcenter/build/software.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-api-ref.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-api-ref.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-deployment.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-deployment.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-get-started.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-get-started.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-overview.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-overview.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-plugin.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-plugin.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-troubleshooting.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-troubleshooting.md"
+    },
+    {
+        "source_path": "docs/distribution/codepush/react-native-updates.md",
+        "redirect_url": "/appcenter/distribution/codepush/rn-updates.md"
     }
  ]
 }
