@@ -72,7 +72,7 @@ pod 'AppCenter/Distribute'
 #### Integration via Swift Package Manager
 
 1. From the Xcode menu click **File > Swift Packages > Add Package Dependency**.
-1. In the dialog that appears, enter the repository URL: https://github.com/microsoft/appcenter-sdk-apple.git.
+1. In the dialog that appears, enter the repository URL: `https://github.com/microsoft/appcenter-sdk-apple.git`.
 1. In **Version**, select **Up to Next Major** and take the default option.
 1. Choose the **AppCenterDistribute** in the **Package Product** column.
 
