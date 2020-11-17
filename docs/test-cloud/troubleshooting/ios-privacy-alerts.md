@@ -69,7 +69,7 @@ begin
   device_agent.wait_for_springboard_alert(10) # timeout is optional
   device_agent.dismiss_springboard_alert("OK")
 rescue RuntimeError
-   # Alert did not appear, so there is nothing to do
+   # Alert didn't appear, so there's nothing to do
 end
 ...
 

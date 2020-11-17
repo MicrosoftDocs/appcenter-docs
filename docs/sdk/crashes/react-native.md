@@ -182,7 +182,7 @@ Crashes.setListener({
         // called when crash report sent successfully.
     },
     onSendingFailed: function (report) {
-        // called when crash report could not be sent.
+        // called when crash report couldn't be sent.
     }
 
     // Other callbacks must also be defined at the same time if used.
