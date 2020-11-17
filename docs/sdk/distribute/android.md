@@ -124,7 +124,7 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the method isn't always called before the `AppCenter.start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
@@ -226,7 +226,7 @@ public class MyDistributeListener implements DistributeListener {
             }
         });
 
-        // We can postpone the release only if the update is not mandatory
+        // We can postpone the release only if the update isn't mandatory
         if (!releaseDetails.isMandatoryUpdate()) {
             dialogBuilder.setNegativeButton(com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
 
@@ -277,7 +277,7 @@ class MyDistributeListener : DistributeListener {
             Distribute.notifyUpdateAction(UpdateAction.UPDATE)
         }
 
-        // We can postpone the release only if the update is not mandatory
+        // We can postpone the release only if the update isn't mandatory
         if (!releaseDetails.isMandatoryUpdate) {
             dialogBuilder.setNegativeButton(
                 com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone

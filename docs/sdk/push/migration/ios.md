@@ -17,7 +17,7 @@ ms.tgt_pltfrm: ios
 Updating the App Center SDK doesn't require any action by the developer except for the exceptions that are outlined below.
 
 > [!NOTE]
-> The App Center SDK features a modular architecture to enable developers to integrate only the features they need. It is not possible to mix different versions of App Center modules. Once you update App Center Push, you need to update all App Center SDK modules to the same version.
+> The App Center SDK features a modular architecture to enable developers to integrate only the features they need. It isn't possible to mix different versions of App Center modules. Once you update App Center Push, you need to update all App Center SDK modules to the same version.
 
 ## Upgrading to App Center Push 1.11.0 or later from a version < 1.11.0
 

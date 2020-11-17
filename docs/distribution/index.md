@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Distribute
 
-App Center Distribute is a tool for developers to quickly release builds to end user devices. Distribute supports Android, iOS, macOS, UWP, WPF and WinForms apps, allowing you to manage app distribution across multiple platforms all in one place. With a complete [install portal experience](~/distribution/testers/index.md), Distribute is not only a powerful solution for beta app tester distribution but also a convenient alternative to distribution through the public app stores. Automate your distribution workflow even further with our [App Center Build](~/build/index.md) and [public app store integrations](~/distribution/stores/index.md). Upon the completion of a successful build, automatically submit your app release to TestFlight, Apple App Store, Google Play, and Intune.
+App Center Distribute is a tool for developers to quickly release builds to end user devices. Distribute supports Android, iOS, macOS, UWP, WPF and WinForms apps, allowing you to manage app distribution across multiple platforms all in one place. With a complete [install portal experience](~/distribution/testers/index.md), Distribute isn't only a powerful solution for beta app tester distribution but also a convenient alternative to distribution through the public app stores. Automate your distribution workflow even further with our [App Center Build](~/build/index.md) and [public app store integrations](~/distribution/stores/index.md). Upon the completion of a successful build, automatically submit your app release to TestFlight, Apple App Store, Google Play, and Intune.
 
 ## Getting Started
 

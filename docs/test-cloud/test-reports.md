@@ -87,7 +87,7 @@ The **Tests** navigation list on the left shows the test step name or test label
 * The **Details** icon displays device information like memory, CPU speed, and dimensions.
 * Clicking the **Logs** icon will navigate to the *Test logs* page.
 * The **Hardware usage** graph displays the **Memory** and **CPU** utilization during the test. 
-* **Duration** shows the time to complete this test and test step. The test step time shown here is the test time starting with the displayed screenshot and the selected test step until the following screenshot. It is not the time ending with this screenshot.
+* **Duration** shows the time to complete this test and test step. The test step time shown here is the test time starting with the displayed screenshot and the selected test step until the following screenshot. It isn't the time ending with this screenshot.
 
 ## Test logs
 

@@ -333,7 +333,7 @@ public void CreditCardNumber_TooLong_DisplayErrorMessage()
 
     /* Assert */
     AppResult[] result = app.Query(c => c.Class("UILabel").Text("Credit card number is too long."));
-    Assert.IsTrue(result.Any(), "The error message is not being displayed.");
+    Assert.IsTrue(result.Any(), "The error message isn't being displayed.");
 }
 ```
 

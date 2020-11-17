@@ -643,7 +643,7 @@ Indicates which release (for example, `v23`) you want to update within the speci
 
 ### Mandatory parameter
 
-It is the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag is not equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You must set this parameter to `--mandatory false` to explicitly make a release optional.
+It is the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag isn't equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You must set this parameter to `--mandatory false` to explicitly make a release optional.
 
 ### Description parameter
 
@@ -651,7 +651,7 @@ It is the same parameter as the one described in the [above section](#descriptio
 
 ### Disabled parameter
 
-It is the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag is not equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You must set this parameter to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
+It is the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag isn't equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You must set this parameter to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
 
 ### Rollout parameter
 
@@ -711,7 +711,7 @@ It is the same parameter as the one described in the [above section](#no-duplica
 
 ### Rollout parameter
 
-It is the same parameter as the one described in the [above section](#rollout-parameter), and allows you to specify whether the newly created release should only be made available to a portion of your users. Unlike the other release metadata parameters (for example, `description`), the `rollout` of a release is not carried over/inherited as part of a promote, and therefore, you must explicitly set this if you don't want the newly created release to be available to all of your users.
+It is the same parameter as the one described in the [above section](#rollout-parameter), and allows you to specify whether the newly created release should only be made available to a portion of your users. Unlike the other release metadata parameters (for example, `description`), the `rollout` of a release isn't carried over/inherited as part of a promote, and therefore, you must explicitly set this if you don't want the newly created release to be available to all of your users.
 
 ### Target binary version parameter
 
@@ -802,7 +802,7 @@ Developers want to know that the code they ship is the code that they wrote. Cod
 
 First, the developer generates an asymmetric key pair: the private key will be used for signing bundles; the public key for bundle signature verification. The CodePush CLI then uses the private key to sign bundles during `release`, `release-react` and `release-cordova` commands. The public key is shipped with the mobile application. Control over the generation and management of keys is in the hands of the developer.
 
-At the end of release command, the CLI computes the bundle's content hash and places this value into a JWT signed with the private key. When the CodePush plugin downloads a bundle to a device, it checks the `.codepushrelease` file containing the JWT and validates the JWT signature using the public key. If validation fails, the update is not installed.
+At the end of release command, the CLI computes the bundle's content hash and places this value into a JWT signed with the private key. When the CodePush plugin downloads a bundle to a device, it checks the `.codepushrelease` file containing the JWT and validates the JWT signature using the public key. If validation fails, the update isn't installed.
 
 ### Requirements for using this feature
 

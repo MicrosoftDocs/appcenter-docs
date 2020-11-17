@@ -14,7 +14,7 @@ ms.custom: errors
 In this page, you will learn about the feature set available for Xamarin errors.
 
 > [!NOTE]
-> While the Crashes and Errors section portal experience is similar, there is not feature parity between the two sections of App Center.
+> While the Crashes and Errors section portal experience is similar, there isn't feature parity between the two sections of App Center.
 
 
 ## Error Group Overview

@@ -117,7 +117,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
     else
     {
         // Allow user to update or postpone (you should probably show some custom UI here)
-        // "GetUserUpdateAction()" is not part of the SDK; it just represents a way of getting user response.
+        // "GetUserUpdateAction()" isn't part of the SDK; it just represents a way of getting user response.
         // This blocks the thread while awaiting the user's response! This example should not be used literally
         UpdateAction updateAction = GetUserUpdateAction();
         Distribute.NotifyUpdateAction(updateAction);

@@ -464,7 +464,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
+  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there is a format you would like to use which isn't there yet, just let us know.
 
 ### **June 8, 2017**
 

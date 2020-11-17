@@ -177,7 +177,7 @@ Generally speaking Android requires that the JavaScript `returns` the value; oth
 ```
 
 ### InvokeJS on iOS
-Generally speaking, on iOS the `return` is not used:
+Generally speaking, on iOS the `return` isn't used:
 
 ```text
 >>> app.Query (w => w.WebView ().InvokeJS ("return document.getElementById('lastname').value"))

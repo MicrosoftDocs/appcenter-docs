@@ -234,7 +234,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 
 ### Handle a push notification while the app is in foreground
 
-App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
+App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback isn't enough in this case since the application's state will always be reported as `active`.
 
 > [!NOTE]
 > To detect if a push notification was received while the app is in foreground, you need to modify the project's native **AppDelegate** as there is currently no official way in React-Native that supports foreground detection for iOS.

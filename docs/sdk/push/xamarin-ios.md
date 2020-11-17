@@ -69,7 +69,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 [!INCLUDE [start push](includes/start-push.md)]
 
 > [!NOTE]
-> If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
+> If your Xamarin.iOS project is part of a [Xamarin.Forms](xamarin-forms.md) application, it isn't necessary to add the call to `AppCenter.Start()` in the Xamarin.iOS portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application.
 
 ## Intercept push notifications
 
@@ -172,7 +172,7 @@ Now, the `Push.PushNotificationReceived` event will be invoked when your applica
 
 ### Handle a push notification while the app is in foreground
 
-App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
+App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in [the App Center Push documentation](~/sdk/push/ios.md). In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback isn't enough in this case since the application's state will always be reported as `active`.
 
 To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Xamarin.iOS documentation](https://docs.microsoft.com/xamarin/ios/platform/user-notifications/enhanced-user-notifications) for more details.
 

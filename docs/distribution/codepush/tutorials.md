@@ -54,7 +54,7 @@ codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDurati
 ```
 
 > [!NOTE]
-> If `codePush.sync()` is not called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
+> If `codePush.sync()` isn't called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
 
 > [!NOTE]
 > For Cordova, the first parameter that `codePush.sync()` expects is a `syncStatusCallback`, so to do the same thing, you should insert `null` as the first parameter to the call, i.e:

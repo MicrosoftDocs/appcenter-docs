@@ -61,7 +61,7 @@ Open the Apache Cordova project's **config.xml** file, and add **google-services
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> A notification is not generated when your application receives a push in the foreground.
+> A notification isn't generated when your application receives a push in the foreground.
 > 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.

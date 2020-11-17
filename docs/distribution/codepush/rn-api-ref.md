@@ -38,7 +38,7 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [getUpdateMetadata](#codepushgetupdatemetadata): Retrieves the metadata for an installed update (like description, mandatory).
 
-- [notifyAppReady](#codepushnotifyappready): Notifies the CodePush runtime that an installed update is considered successful. If you are manually checking for and installing updates (that is not using the [sync](#codepushsync) method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and roll back to the previous version when the app next restarts.
+- [notifyAppReady](#codepushnotifyappready): Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (that isn't using the [sync](#codepushsync) method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and roll back to the previous version when the app next restarts.
 
 - [restartApp](#codepushrestartapp): Immediately restarts the app. If there is an update pending, it will be immediately displayed to the end user. Otherwise, calling this method simply has the same behavior as the end user killing and restarting the process.
 
@@ -202,7 +202,7 @@ codePush.checkForUpdate(deploymentKey: String = null, handleBinaryVersionMismatc
 Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that is configured in your **Info.plist** file (iOS), or **MainActivity.java** file (Android), but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "early access" via an easter egg or a user setting switch.
 
 Second optional parameter `handleBinaryVersionMismatchCallback` is an optional callback function that can be used to notify user if there are any binary update.
-For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update is not targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
+For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update isn't targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
 
 > [!IMPORTANT]
 > Be cautious to use Alerts within this callback if you are developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions in order to access functionality, content, or use of the app.

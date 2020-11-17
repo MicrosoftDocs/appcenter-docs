@@ -29,7 +29,7 @@ App Center supports three different ways of setting up code signing for Android 
 1. Go to your app in App Center.
 2. Go to **Build**.
 3. Go to the branch you want to configure by choosing it from the list.
-4. Either use the 'Settings' menu in the upper-right corner, or choose **Configure** if your branch is not configured for build yet.
+4. Either use the 'Settings' menu in the upper-right corner, or choose **Configure** if your branch isn't configured for build yet.
 5. Enable **Sign builds**.
 6. Choose **Save**.
 

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: xamarin-android
 ---
 
 # Setting up a Xamarin.Android project for code signing
-When App Center builds a Xamarin.Android application with a debug build type, a keystore associated with a developer is not required. These builds will be automatically code signed with a debug key. For a release build that will be deployed, App Center will require a keystore to be uploaded.
+When App Center builds a Xamarin.Android application with a debug build type, a keystore associated with a developer isn't required. These builds will be automatically code signed with a debug key. For a release build that will be deployed, App Center will require a keystore to be uploaded.
 
 ## Generating a keystore
 If you don't currently have a keystore, you can generate one using instructions specific for the OS and IDE of your choice.

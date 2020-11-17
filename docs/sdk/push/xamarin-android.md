@@ -120,7 +120,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 [!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 > [!NOTE]
-> A notification is not generated when your application receives a push in the foreground.
+> A notification isn't generated when your application receives a push in the foreground.
 > 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.

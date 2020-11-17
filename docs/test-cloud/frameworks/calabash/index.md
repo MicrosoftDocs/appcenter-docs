@@ -17,7 +17,7 @@ ms.custom: test
 > After delivering support for the final releases of iOS 11 and Android 8 operating systems, Microsoft will discontinue our contributions to Calabash, the open-source mobile app testing tool. We hope that the community will continue to fully adopt and maintain it. As part of our transition on the development of Calabash, we've provided an overview of mobile app UI and end-to-end testing frameworks as a starting point for teams who are looking to re-evaluate their testing strategy. See our [Mobile App Testing Frameworks Overview](https://docs.microsoft.com/appcenter/migration/test-cloud/frameworks) document.
 
 > [!NOTE]
-> Xamarin.UITest is not being deprecated despite having shared logic with Calabash.
+> Xamarin.UITest isn't being deprecated despite having shared logic with Calabash.
 
 For detailed instructions on preparing Calabash tests for upload, see the [Calabash wiki](https://github.com/calabash/calabash-ios/wiki).
 

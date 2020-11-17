@@ -115,7 +115,7 @@ Crashes.setListener({
     },
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -147,7 +147,7 @@ Crashes.setListener({
     },
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -186,7 +186,7 @@ Crashes.setListener({
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -202,7 +202,7 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+Note that this callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 ### Add attachments to a crash report
 
@@ -219,7 +219,7 @@ Crashes.setListener({
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -242,7 +242,7 @@ Crashes.setListener({
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 

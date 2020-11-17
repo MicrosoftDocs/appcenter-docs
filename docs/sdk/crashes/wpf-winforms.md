@@ -36,7 +36,7 @@ Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md)
 > [!NOTE]
 > This section and following sub sections apply only to WinForms. You can skip this section if you are integrating the SDK on WPF.
 
-By default, an unhandled exception in a WinForms application doesn't trigger a crash (the application doesn't exit) if the debugger is not attached.
+By default, an unhandled exception in a WinForms application doesn't trigger a crash (the application doesn't exit) if the debugger isn't attached.
 
 Instead, Windows shows a dialog to the user the option to continue or quit app execution. Consequently, the App Center SDK is unable to automatically capture these exceptions (even if the user clicks on the **Quit** button).
 
@@ -55,7 +55,7 @@ Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
 AppCenter.Start(...);
 ```
 
-If this option is not acceptable in your application, you can report the unhandled exception as a runtime error (described below).
+If this option isn't acceptable in your application, you can report the unhandled exception as a runtime error (described below).
 
 ### Report the unhandled exception as a runtime error
 
@@ -199,7 +199,7 @@ Crashes.FailedToSendErrorReport += (sender, e) =>
 
 Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
+Note that this callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
 ### Add attachments to a crash report
 

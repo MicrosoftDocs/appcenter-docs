@@ -19,7 +19,7 @@ If you haven't already, first follow the [getting started tutorial](getting-star
 ## Open the app and view user analytics
 1. Navigate to the app repository in your local machine and open the app module in Android Studio.
 
-2. Click **Run > Run 'app'** from the toolbar. Create a new virtual device of your choice if one is not available to you already, select it, and open the app in the Android Emulator.
+2. Click **Run > Run 'app'** from the toolbar. Create a new virtual device of your choice if one isn't available to you already, select it, and open the app in the Android Emulator.
 
 3. Go to the **Analytics** service in [App Center](https://appcenter.ms/apps).
 

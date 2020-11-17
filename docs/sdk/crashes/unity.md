@@ -34,7 +34,7 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 > The Crashes SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
 > [!NOTE]
-> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
+> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger isn't attached when you crash the app.
 
 > [!NOTE]
 > If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK will not collect crash logs.
@@ -174,7 +174,7 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 
 Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
+Note that this callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
 ### Add attachments to a crash or an unhandled exception report
 
@@ -285,7 +285,7 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash.
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash.
 
 ### Add attachments to an unhandled exception report
 

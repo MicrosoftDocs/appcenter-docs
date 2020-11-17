@@ -36,7 +36,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 ### Country Code
 
-Country code is not automatically reported by the SDK. If you want to report it manually, you can follow the instructions for your platform below.
+Country code isn't automatically reported by the SDK. If you want to report it manually, you can follow the instructions for your platform below.
 
 #### UWP
 

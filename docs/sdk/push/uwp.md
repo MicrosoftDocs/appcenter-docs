@@ -58,7 +58,7 @@ Now that you've integrated App Center Push in your application, it's time to sta
 [!INCLUDE [start push](includes/start-push.md)]
 
 > [!NOTE]
-> If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it is not necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application in the `OnStart` callback.
+> If your UWP project is part of a [Xamarin.Forms](xamarin-forms.md) application, it isn't necessary to add the call to `AppCenter.Start()` in the UWP portion of the project. The method call can instead be made from the PCL or shared project portion of your Xamarin.Forms application in the `OnStart` callback.
 
 ## Intercept push notifications
 

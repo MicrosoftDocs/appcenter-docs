@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Analytics FAQ
 ## Is the data sampled?
-The data is not sampled. Analytics will use all the data that is sent, unless it is sent in the wrong format or some of the known limits are reached.
+The data isn't sampled. Analytics will use all the data that is sent, unless it is sent in the wrong format or some of the known limits are reached.
 
 ## What is the latency between a log sent and its representation in the Analytics dashboards?
 The latency is typically just a few seconds.

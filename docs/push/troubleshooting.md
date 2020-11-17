@@ -40,7 +40,7 @@ Check for one of the following reasons:
 - The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
 
 ### "Wrong Token"
-This is an error returned by Notification Hubs, indicating the push token is not correct for the given credentials.
+This is an error returned by Notification Hubs, indicating the push token isn't correct for the given credentials.
 
 For Android apps, this usually means the Google API token doesn't have permission to send notifications to the specific app. You should double check the **Sender ID** or **Google API Key** and ensure the values are valid for the app.
 

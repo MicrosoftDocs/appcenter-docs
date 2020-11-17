@@ -103,7 +103,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 This section applies if you have a [Splash Screen activity](https://docs.microsoft.com/xamarin/android/user-interface/splash-screen) (or a similar concept) that starts the main activity and main activity is the one creating the forms application.
 
-When you click on the push notification if the application is not launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity in order to process that information.
+When you click on the push notification if the application isn't launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity in order to process that information.
 
 The simplest way of doing that is to locate the code where you start your main activity from the launcher activity:
 
@@ -155,7 +155,7 @@ The behavior of the event depends on:
 * The platform (iOS vs Android vs UWP).
 * Whether the push is received while application is in foreground or background.
 
-For all platforms, when the push is received in background, the event is not
+For all platforms, when the push is received in background, the event isn't
 fired right away, the user will first see an Android system notification, an
 iOS alert, or a UWP toast.
 
@@ -189,7 +189,7 @@ There are few reserved keywords in each platform that can be set via custom data
 [!INCLUDE [android configure notifications](includes/android-configure-notifications.md)]
 
 ### iOS
-- **badge**: Add this key when you want to modify the badge of your app icon. If this key is not included, the badge is not changed. To remove the badge, set the value of this key to 0.
+- **badge**: Add this key when you want to modify the badge of your app icon. If this key isn't included, the badge isn't changed. To remove the badge, set the value of this key to 0.
 - **sound**: Add this key when you want to play a sound. The value of this key is the name of a sound file in your app's main bundle or in the `Library/Sounds` folder of your app’s data container. If the sound file can't be found, or if you specify `default` for the value, the system plays the default alert sound.
 - **content-available**: Add this key with a value of 1 to configure a silent notification. When this key is present, the system wakes up your app in the background and delivers the notification to its app delegate. For information about configuring and handling silent notifications, see [Configuring a Silent Notification](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8).
 - **mutable-content**: Add this key with a value of 1 to enable media attachments. The application needs to support a service extension to download and handle the attachment content. For more information you can refer to [Apple documentations](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ModifyingNotifications.html).

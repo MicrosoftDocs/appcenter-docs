@@ -119,7 +119,7 @@ For your iOS application, open the `AppDelegate.cs` and add the following line *
 Distribute.DontCheckForUpdatesInDebug();
 ```
 
-This step is not necessary on Android where the debug configuration is detected automatically at runtime.
+This step isn't necessary on Android where the debug configuration is detected automatically at runtime.
 
 To enable in-app updates for debug builds on Android, call the following method in the project's **MainActivity.cs** file, in the `OnCreate` method and before `LoadApplication`.
 
@@ -187,9 +187,9 @@ Distribute.UpdateTrack = UpdateTrack.Private;
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.Public`. This property can only be updated before the `AppCenter.Start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the property is not always updated before the `AppCenter.Start` call, it will be public, by default.
+> The default value is `UpdateTrack.Public`. This property can only be updated before the `AppCenter.Start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the property isn't always updated before the `AppCenter.Start` call, it will be public, by default.
 
-After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track is not persisted in the SDK across app launches.  
+After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track isn't persisted in the SDK across app launches.  
 
 If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
 If a user is on the **public track**, it means that they will get the latest release from any public distribution group.

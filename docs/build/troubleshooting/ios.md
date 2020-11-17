@@ -23,7 +23,7 @@ To share a scheme in Xcode, use the following steps:
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
 > [!WARNING]
-> Make sure that your `xcshareddata/xcschemes/` folder is not in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder will not work.
+> Make sure that your `xcshareddata/xcschemes/` folder isn't in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder will not work.
 
 
 ## My iOS builds fail with "clang: error: linker command failed with exit code 1"
