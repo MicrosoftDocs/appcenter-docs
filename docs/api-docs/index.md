@@ -31,7 +31,7 @@ Each App Center account may create up to 5000 API tokens.
 > We recommend creating and using App API tokens to limit the authorization scope to only one app at a time (and therefore limit the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a User API token.
 
 > [!WARNING]
-> Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
+> Don't embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
 > [!WARNING]
 > **A request must contain a payload body** for POST/PUT/PATCH API calls. Use `{}` for an empty payload body, API calls will receive a **411 Length Required** error response otherwise.

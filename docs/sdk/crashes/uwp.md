@@ -31,7 +31,7 @@ The App Center SDK collects only crashes caused by unhandled .NET exceptions. It
 Follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
 > [!NOTE]
-> Currently we do not support detection of low memory warnings on the UWP platform.
+> Currently we don't support detection of low memory warnings on the UWP platform.
 
 ## Adding the crashes module
 

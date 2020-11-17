@@ -115,7 +115,7 @@ Xamarin.Calabash.Start();
 #endregion
 ```
 
-The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
+The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds don't have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
 ### Determine Device ID for iOS Simulator
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:

@@ -134,7 +134,7 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 The example above shows how to use the `start()` method and include both App Center Analytics and App Center Crashes.
 
-If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
 Note that, unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 

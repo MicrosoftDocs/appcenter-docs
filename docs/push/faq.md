@@ -51,4 +51,4 @@ All notifications are delivered to target devices by the platform's PNS. When a 
 
 All connections, from the sender to the App Center Push to the PNS, use HTTPS.
 
-Do not send personal or confidential information in a notification. To send sensitive payloads, we recommend using a Secure Push pattern. With this pattern, the sender sends a ping notification with a message identifier to the device without the sensitive payload. When the app on the device receives the notification, the app calls a secure API directly to fetch the message details.
+Don't send personal or confidential information in a notification. To send sensitive payloads, we recommend using a Secure Push pattern. With this pattern, the sender sends a ping notification with a message identifier to the device without the sensitive payload. When the app on the device receives the notification, the app calls a secure API directly to fetch the message details.

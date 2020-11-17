@@ -308,7 +308,7 @@ var enabled = Distribute.enabled
 
 ## Don't initialize App Center Distribute during development
 
-If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend initializing `Distribute` for your `DEBUG` configuration.
+If in private mode, App Center Distribute will open up its UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We don't recommend initializing `Distribute` for your `DEBUG` configuration.
 
  ```objc
  #if DEBUG

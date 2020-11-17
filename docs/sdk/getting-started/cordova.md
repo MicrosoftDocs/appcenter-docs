@@ -61,7 +61,7 @@ In order for the App Center SDK to connect with your application project in App 
 
 If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You can also the app secret on the application project's **Settings** page. Access the menu in the page's upper right corner, then select **Copy app secret** to copy the app secret to the clipboard.
 
-If you do not have an application created in the App Center Dashboard, complete the following steps.
+If you don't have an application created in the App Center Dashboard, complete the following steps.
 
 1. Register for an App Center account, or Login to an existing App Center account at [https://appcenter.ms](https://appcenter.ms).
 2. In the App Center Dashboard, click the **Add new** drop-down in the upper-right corner of the page. Select **Add new app** from the menu.

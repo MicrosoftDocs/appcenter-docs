@@ -16,7 +16,7 @@ ms.tgt_pltfrm: xamarin-android
 When App Center builds a Xamarin.Android application with a debug build type, a keystore associated with a developer is not required. These builds will be automatically code signed with a debug key. For a release build that will be deployed, App Center will require a keystore to be uploaded.
 
 ## Generating a keystore
-If you do not currently have a keystore, you can generate one using instructions specific for the OS and IDE of your choice.
+If you don't currently have a keystore, you can generate one using instructions specific for the OS and IDE of your choice.
 
 ### 1. In Windows
 You can use the [instructions for different versions of Visual Studio](https://docs.microsoft.com/xamarin/android/deploy-test/signing/) to generate a keystore. Or, if you want to use the command line, check: **2. Android: Generate a Private Certificate** in [Cross Platform Development Documentation](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/publishing/publish-to-a-store)

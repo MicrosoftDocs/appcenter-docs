@@ -54,7 +54,7 @@ appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --ap
 ```
 
 > [!IMPORTANT]
-> The command shown here is for illustration purposes only. Do not use *this* command. Instead, use the dialog to generate a command prototype for your application, test framework and test parameters.
+> The command shown here is for illustration purposes only. Don't use *this* command. Instead, use the dialog to generate a command prototype for your application, test framework and test parameters.
 
 The command parameters include:
 

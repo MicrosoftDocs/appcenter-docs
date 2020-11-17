@@ -15,7 +15,7 @@ App Center is your continuous integration, delivery and learning solution for iO
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
 
 > [!WARNING]
-> Do not embed any of your [API tokens](../api-docs/index.md) into source code.
+> Don't embed any of your [API tokens](../api-docs/index.md) into source code.
 
 ## App Center Services
 

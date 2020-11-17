@@ -24,7 +24,7 @@ This article covers the following scenarios:
 
 ## Create a new Azure Subscription
 
-If you do not have an existing Azure subscription, the following steps will guide you through the process.
+If you don't have an existing Azure subscription, the following steps will guide you through the process.
 
 1. First navigate to **Azure** under your organization/personal account settings in App Center and select the **+** to add an Azure subscription.
 2. Enter your email to sign in to Azure. Sign in with a Microsoft account. If you already have an account, skip to step 5.

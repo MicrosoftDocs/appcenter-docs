@@ -198,7 +198,7 @@ Crashes are differentiated from unhandled exceptions in reports with the `IsCras
 > The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 > [!NOTE]
-> `GetErrorAttachments` is invoked on the main thread and doesn't split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
+> `GetErrorAttachments` is invoked on the main thread and doesn't split work over frames. To avoid blocking the game loop, don't perform any long running tasks in this callback.
 
 ## Enable or disable App Center Crashes at runtime
 

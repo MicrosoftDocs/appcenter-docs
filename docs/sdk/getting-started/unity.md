@@ -118,7 +118,7 @@ App Center works as a component that you attach to a game object in the scene th
 In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
 
 > [!NOTE]
-> You do not need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
+> You don't need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
 
 ### 4.3 Configure App Center settings
 

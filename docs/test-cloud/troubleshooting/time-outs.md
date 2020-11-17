@@ -15,7 +15,7 @@ ms.custom: test
 App Center Test enforces time limits per device on test suites and on individual tests. App Center Test stops a test or test suite that exceeds the limit, to prevent tests from trying to run forever.
 
 > [!NOTE]
-> These limits apply to the time spent installing your app and running your tests. Time that a device is queued for running or processing completed test results do not count against these limits.
+> These limits apply to the time spent installing your app and running your tests. Time that a device is queued for running or processing completed test results don't count against these limits.
 
 App Center Test enforces time limits for test suites and individual tests independently for each device. Exceeding a limit on one device doesn't impact other devices.
 
