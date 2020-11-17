@@ -54,4 +54,4 @@ Property Key: Exception Message
 Property Value: Exception in thread "main" java.lang.RuntimeException
 
 
-Note however, that the number of characters in the property values is limited to 64 characters so you will most likely need to truncate or filter the string. Finally, you should not include the stack trace as part of the event name or property values for the same reason.
+Note however, that the number of characters in the property values is limited to 64 characters so you will most likely need to truncate or filter the string. Finally, you shouldn't include the stack trace as part of the event name or property values for the same reason.

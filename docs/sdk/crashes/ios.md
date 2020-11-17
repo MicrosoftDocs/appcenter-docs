@@ -58,7 +58,7 @@ If you chose to do so, you are responsible for obtaining the user's confirmation
 > The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 > [!NOTE]
-> The app should not call `notifyWithUserConfirmation` explicitly if it doesn't implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
+> The app shouldn't call `notifyWithUserConfirmation` explicitly if it doesn't implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
 
 The following method shows how to set up a user confirmation handler:
 

@@ -786,7 +786,7 @@ You can clear the release history associated with a deployment using the followi
 appcenter codepush deployment clear -a <ownerName>/<appName> <deploymentName>
 ```
 
-After running this command, client devices configured to receive updates using its associated deployment key will no longer receive the updates that have been cleared. This command is irreversible, and therefore should not be used in a production deployment.
+After running this command, client devices configured to receive updates using its associated deployment key will no longer receive the updates that have been cleared. This command is irreversible, and therefore shouldn't be used in a production deployment.
 
 ## Code Signing
 
