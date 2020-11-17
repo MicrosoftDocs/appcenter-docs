@@ -47,6 +47,6 @@ All four of these command-line options must be specified to use this approach:
 - **--store-path <arg>** - Path to the keystore file.
     
 ## Signing Info File
-Instead of using Xamarin.UITest to specify an Android Keystore, you can create and specify a signing info file. This has the same effect but does not use your Keystore and passwords in the command line. This process requires creating the signing info file.
+Instead of using Xamarin.UITest to specify an Android Keystore, you can create and specify a signing info file. This has the same effect but doesn't use your Keystore and passwords in the command line. This process requires creating the signing info file.
 
 First, find the test-cloud.exe in your NuGet packages folder for the version of Xamarin.UITest that you're using. It will be in the tools folder under a Xamarin.UITest folder. Then, use it to generate the Signing Info file. If you change the version of Xamarin.UITest you're using, you'll need to generate a new Signing Info file.

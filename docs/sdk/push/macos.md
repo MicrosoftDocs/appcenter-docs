@@ -77,7 +77,7 @@ Select your project in the project navigator, select the **Capabilities** tab an
 
 You can set up a delegate to be notified whenever a push notification is received while the application is active (currently frontmost) or a notification in Notification Center has been clicked by the user.
 
-By default, App Center Push does not generate notifications when the push is received while the application is active, you can use the delegate to customize the push experience when received while the application is active or do a specific action when the application is being active by clicking on the notification from Notification Center when received while the application is inactive. *App Center Push will not generate any notifications if the push is received while the application is not running.*
+By default, App Center Push doesn't generate notifications when the push is received while the application is active, you can use the delegate to customize the push experience when received while the application is active or do a specific action when the application is being active by clicking on the notification from Notification Center when received while the application is inactive. *App Center Push will not generate any notifications if the push is received while the application is not running.*
 
 You need to register the delegate before starting App Center as shown in the following example:
 

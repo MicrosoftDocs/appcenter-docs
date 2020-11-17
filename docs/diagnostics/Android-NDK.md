@@ -25,7 +25,7 @@ If you want to send Breakpad crashes from other platforms to App Center, see the
 
 > [!NOTE]
 > App Center doesn't support symbolication of frames which come from system libraries.
-> Given the high fragmentation of system binaries for Android and other platforms – which might be different on any given device/OS version combination – App Center does not provide symbols itself for system binaries and automatically skips frames from system binaries in symbolication.
+> Given the high fragmentation of system binaries for Android and other platforms – which might be different on any given device/OS version combination – App Center doesn't provide symbols itself for system binaries and automatically skips frames from system binaries in symbolication.
 
 [!INCLUDE [generate breakpad symbols payload](includes/generate-breakpad-symbols-payload.md)]
 

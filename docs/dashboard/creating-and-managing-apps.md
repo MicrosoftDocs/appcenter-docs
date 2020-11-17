@@ -26,7 +26,7 @@ Select one of the suggested release types: Alpha, Beta, Enterprise, Production o
 
 ## Uploading an app icon
 
-Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Note that uploading an icon in App Center does not change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
+Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Note that uploading an icon in App Center doesn't change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
 
 ## Accessing apps
 

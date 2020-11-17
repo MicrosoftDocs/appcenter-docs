@@ -43,7 +43,7 @@ Customize your organization by uploading an org icon:
 1. On the left side navigation, select the organization
 2. Select the **Manage** tab
 3. On the right side of the screen, click the placeholder org icon
-4. Select an image file no larger than 512px and does not exceed 1 MB
+4. Select an image file no larger than 512px and doesn't exceed 1 MB
 
 ![How to upload org icon](images/org-upload-icon.png)
 

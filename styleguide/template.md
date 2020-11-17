@@ -1,6 +1,6 @@
 # Metadata and Markdown Template
 
-This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view does not).
+This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
 
 When creating a Markdown file, you should copy this template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
 ## Metadata
@@ -24,7 +24,7 @@ ms.custom: Analytics data, a field that gets imported into SkyEye so you can use
 Some key notes:
 
 - You **must** have a space between the colon (:) and the value for a metadata element.
-- If an optional metadata element does not have a value, comment out the element with a # or remove it (do not leave it blank or use "na"); if you are adding a value to an element that was commented out, be sure to remove the #.
+- If an optional metadata element doesn't have a value, comment out the element with a # or remove it (do not leave it blank or use "na"); if you are adding a value to an element that was commented out, be sure to remove the #.
 - Colons in a value (for example, a title) break the metadata parser. In this case, surround the title with double quotes (for example, `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
 - **title**: This title will appear in search engine results. You can also add a pipe (|) followed by the product name (for example, `title: Developing Libraries with Cross Platform Tools | .NET Core`). The title doesn't need be identical to the title in your H1 heading and it should contain 65 characters or less (including | PRODUCT NAME).
 - **author**, **ms.author**, **ms.manager**, **ms.reviewer**: The `author` field should contain the **GitHub username** of the author, not their alias. The `ms.author`, `ms.manager` and `ms.reviewer` fields, on the other hand, should contain Microsoft aliases. `ms.reviewer` specifies the name of the PM/dev associated with the article or feature.

@@ -72,7 +72,7 @@ If you would prefer to handle re-building your app with the updated provisioning
 
 ## Distribute a new release
 
-When you distribute a new release to a group that does not have automatic device management enabled, a **Devices** step is part of the wizard. The step checks if you have unprovisioned devices in the distribution group; if this happens, you can check the **Register devices and re-sign app** checkbox. App Center then performs three operations for you:
+When you distribute a new release to a group that doesn't have automatic device management enabled, a **Devices** step is part of the wizard. The step checks if you have unprovisioned devices in the distribution group; if this happens, you can check the **Register devices and re-sign app** checkbox. App Center then performs three operations for you:
 
 1. Register new device IDs in the Apple Developer portal.
 2. Add the devices to the provisioning profile and download it.

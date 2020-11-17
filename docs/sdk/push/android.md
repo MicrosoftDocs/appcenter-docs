@@ -122,7 +122,7 @@ import com.microsoft.appcenter.push.Push
 Set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> The device does not generate a notification when an application receives a push notification when the app is in the foreground.
+> The device doesn't generate a notification when an application receives a push notification when the app is in the foreground.
 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.

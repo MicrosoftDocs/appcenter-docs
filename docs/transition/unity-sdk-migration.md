@@ -82,7 +82,7 @@ Version Updates (enabled by default) | Use Distribute | [Distribute module](~/sd
 Update Alert | NA | [Documentation (has to be configured)](~/sdk/distribute/unity.md#2-customize-the-update-dialog)
 
 > [!NOTE]
-> If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
+> If your project doesn't support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
 
 If your project has the HockeySDK API calls throughout the application, replace them using the detailed API mapping table given below.
 

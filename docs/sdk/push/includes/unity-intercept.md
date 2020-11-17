@@ -13,7 +13,7 @@ You can set up a listener to be notified whenever a push notification is receive
 > If the push is received in background, the event is NOT triggered at receive time.
 > The event is triggered when you click on the notification.
 >
-> The background notification click callback does NOT expose **title** and **message**.
+> The background notification click callback doesn't expose **title** and **message**.
 > **Title** and **message** are only available in foreground pushes.
 
 To register the listener, see the following example:

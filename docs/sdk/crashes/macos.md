@@ -49,7 +49,7 @@ If user privacy is important to you, you might want to get user confirmation bef
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following method shows how to set up a user confirmation handler:
 

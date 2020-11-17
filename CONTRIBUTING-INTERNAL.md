@@ -54,7 +54,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
         - **Once you have reviewed the preview page and are happy with the content, comment `#sign-off`**.
         - Once PRMerger sees the sign-off comment, it adds the `ready-to-merge` label, confirms the filters were successful, and the build has passed. PRMerger will then proceed to auto-merge this Pull Request and add a label merged-by-prmerger
     
-    - If the PR does not meet the criteria: 
+    - If the PR doesn't meet the criteria: 
         - A “needs-human-review" label will be added. 
         - The designated pull request reviewers for the repository have to review the pull request (right now this is Amy Burns)
         - The reviewer will check the content, particularly for these quality issues listed. 

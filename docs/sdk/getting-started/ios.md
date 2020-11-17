@@ -85,7 +85,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 Below are the steps on how to integrate the App Center SDK in your Xcode project using [Carthage](https://github.com/Carthage/Carthage) version **0.30 or higher**, a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
 > [!NOTE]
-> Carthage integration does not work out of box in Xcode 12. To make it work, refer to [this Carthage instruction](https://github.com/Carthage/Carthage/blob/master/Documentation/Xcode12Workaround.md)
+> Carthage integration doesn't work out of box in Xcode 12. To make it work, refer to [this Carthage instruction](https://github.com/Carthage/Carthage/blob/master/Documentation/Xcode12Workaround.md)
 
 1. Add the following dependencies to your `Cartfile` to include App Center. These dependencies pull in all the frameworks. Then you can link only those frameworks that you want to use in your app.
 

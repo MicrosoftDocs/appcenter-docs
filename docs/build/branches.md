@@ -32,4 +32,4 @@ A clone copies:
 If you want to use your source branch only as a template and edit individual settings, you can always edit the cloned build configuration after creating it.
 
 > [!NOTE]
-> App Center does not mirror changes between the original and cloned build configurations. When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that is independent from the original. 
+> App Center doesn't mirror changes between the original and cloned build configurations. When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that is independent from the original. 

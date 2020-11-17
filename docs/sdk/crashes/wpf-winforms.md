@@ -26,7 +26,7 @@ ms.tgt_pltfrm: windows
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center.
 
-The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++. However, if you have an app with C++ crashes, you can upload them to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
+The App Center SDK collects only crashes caused by unhandled .NET exceptions. It doesn't collect native crashes e.g. when using C or C++. However, if you have an app with C++ crashes, you can upload them to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
 
 Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) if you haven't set up the SDK in your application yet.
@@ -36,7 +36,7 @@ Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md)
 > [!NOTE]
 > This section and following sub sections apply only to WinForms. You can skip this section if you are integrating the SDK on WPF.
 
-By default, an unhandled exception in a WinForms application does not trigger a crash (the application does not exit) if the debugger is not attached.
+By default, an unhandled exception in a WinForms application doesn't trigger a crash (the application doesn't exit) if the debugger is not attached.
 
 Instead, Windows shows a dialog to the user the option to continue or quit app execution. Consequently, the App Center SDK is unable to automatically capture these exceptions (even if the user clicks on the **Quit** button).
 
@@ -138,17 +138,17 @@ If user privacy is important to you, you might want to get user confirmation bef
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 > [!NOTE]
-> The app should not call `NotifyUserConfirmation` explicitly if it does not implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
+> The app should not call `NotifyUserConfirmation` explicitly if it doesn't implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;

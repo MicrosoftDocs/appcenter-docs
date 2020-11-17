@@ -101,7 +101,7 @@ You can set up a listener to be notified whenever a push notification is receive
 > [!NOTE]
 > If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
 
-By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+By default, iOS doesn't generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 [!INCLUDE [react native listener](includes/react-native-listener.md)]
 

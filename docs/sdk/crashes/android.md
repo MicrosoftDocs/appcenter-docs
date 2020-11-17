@@ -165,7 +165,7 @@ If user privacy is important to you, you might want to get user confirmation bef
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
@@ -173,7 +173,7 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
@@ -423,7 +423,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID).
 
 > [!NOTE]
-> The App Center SDK does not bundle Google Breakpad by default.
+> The App Center SDK doesn't bundle Google Breakpad by default.
 
 #### Attaching the exception handler
 

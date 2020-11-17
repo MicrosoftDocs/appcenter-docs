@@ -125,7 +125,7 @@ After (App Center):
    ```
 
    > [!NOTE]
-   > App Center SDK does not have equivalents for `[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:liveIdentifier:delegate]`.
+   > App Center SDK doesn't have equivalents for `[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:liveIdentifier:delegate]`.
 
 1. [Optional] Modify the project's **Info.plist**
 
@@ -220,7 +220,7 @@ Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled =
 > Unlike in HockeyApp, App Center in-app updates feature will ONLY work with builds that are distributed using the App Center Distribute service. Distribute won't work when the debugger is attached.
 If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a one-time step that will not occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/ios.md#how-do-in-app-updates-work) for more details.
 
-The HockeySDK does not enable in-app updates by default.
+The HockeySDK doesn't enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `Distribute` class to the `start` method. This module is enabled by default, unlike in the HockeySDK.
 
 #### [Objective C](#tab/objc/)

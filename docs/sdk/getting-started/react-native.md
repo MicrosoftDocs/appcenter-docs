@@ -114,7 +114,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
         "app_secret": "{APP_SECRET_VALUE}"
     }
     ```
-Note: If the folder named assets does not exist, it should be created under "project_root/android/app/src/main/assets"
+Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets"
 
 2. Modify the app's **res/values/strings.xml** to include the following lines:
 
@@ -152,7 +152,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
     And then retry running `react-native link`.
 
     > [!NOTE]
-    > App Center SDK does not set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
     
     > ```JSON
     > "setupFiles": [

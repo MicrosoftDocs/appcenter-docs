@@ -20,7 +20,7 @@ CodePush provides Cordova and React Native developers with multiple options to c
 This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
 
 > [!NOTE]
-> This tutorial does not cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
+> This tutorial doesn't cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
 
 ### 1.  Silent mode
 

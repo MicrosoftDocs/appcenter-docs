@@ -26,7 +26,7 @@ ms.tgt_pltfrm: UWP
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta apps and those submitted to the Windows Store. Crash logs contain valuable information for you to help fix the crashes.
 
-The App Center SDK collects only crashes caused by unhandled .NET exceptions. It does not collect native crashes e.g. when using C or C++. However, if you have an app with C++ crashes, you can upload them to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
+The App Center SDK collects only crashes caused by unhandled .NET exceptions. It doesn't collect native crashes e.g. when using C or C++. However, if you have an app with C++ crashes, you can upload them to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump).
 
 Follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
@@ -127,17 +127,17 @@ If user privacy is important to you, you might want to get user confirmation bef
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 > [!NOTE]
-> The app should not call `NotifyUserConfirmation` explicitly if it does not implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
+> The app shouldn't call `NotifyUserConfirmation` explicitly if it doesn't implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. The SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. The SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;

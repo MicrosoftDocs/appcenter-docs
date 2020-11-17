@@ -49,7 +49,7 @@ Country code is not automatically reported by the SDK. If you want to report it 
 private static async Task SetCountryCode()
 {
     // The following country code is used only as a fallback for the main implementation.
-    // This fallback country code does not reflect the physical device location, but rather the
+    // This fallback country code doesn't reflect the physical device location, but rather the
     // country that corresponds to the culture it uses.
     var countryCode = new GeographicRegion().CodeTwoLetter;
     var accessStatus = await Geolocator.RequestAccessAsync();
@@ -102,7 +102,7 @@ using System.Globalization;
 
 private static void SetCountryCode()
 {
-    // This fallback country code does not reflect the physical device location, but rather the
+    // This fallback country code doesn't reflect the physical device location, but rather the
     // country that corresponds to the culture it uses.
     var countryCode = RegionInfo.CurrentRegion.TwoLetterISORegionName;
     AppCenter.SetCountryCode(countryCode);

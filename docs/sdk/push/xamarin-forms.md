@@ -165,7 +165,7 @@ When the push is received in **foreground**, the event is fired right away but
 **no notification** is shown to user.
 
 > [!NOTE]
-> When the push is clicked from background on **Android and UWP**, the event **does not** have **title**
+> When the push is clicked from background on **Android and UWP**, the event **doesn't** have **title**
 > and **message** in the event arguments, only iOS expose those fields for all events.
 >
 > [!NOTE]

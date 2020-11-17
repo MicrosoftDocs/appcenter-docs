@@ -14,7 +14,7 @@ ms.tgt_pltfrm: android
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
 ## 1. Target framework
-If your Xamarin.Android project does not target version 9.0 or higher, you will not be able to update the Push package.
+If your Xamarin.Android project doesn't target version 9.0 or higher, you will not be able to update the Push package.
 You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.
 
 ## 2. AndroidManifest.xml

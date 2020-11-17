@@ -42,6 +42,6 @@ Check for one of the following reasons:
 ### "Wrong Token"
 This is an error returned by Notification Hubs, indicating the push token is not correct for the given credentials.
 
-For Android apps, this usually means the Google API token does not have permission to send notifications to the specific app. You should double check the **Sender ID** or **Google API Key** and ensure the values are valid for the app.
+For Android apps, this usually means the Google API token doesn't have permission to send notifications to the specific app. You should double check the **Sender ID** or **Google API Key** and ensure the values are valid for the app.
 
 For iOS apps, this usually means that the APNs credentials do not have permission to send notifications to the specific app. This *could* be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNS credentials.

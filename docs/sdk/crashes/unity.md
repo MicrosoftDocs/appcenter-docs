@@ -114,14 +114,14 @@ If user privacy is important to you, you might want to get user confirmation bef
 If your code uses this callback, you are responsible for obtaining the user's confirmation. One option is through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
@@ -198,7 +198,7 @@ Crashes are differentiated from unhandled exceptions in reports with the `IsCras
 > The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 > [!NOTE]
-> `GetErrorAttachments` is invoked on the main thread and does not split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
+> `GetErrorAttachments` is invoked on the main thread and doesn't split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
 
 ## Enable or disable App Center Crashes at runtime
 
@@ -308,7 +308,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). In order to use it in Unity, just include the binary with your app.
 
 > [!NOTE]
-> The App Center SDK does not bundle Google Breakpad by default.
+> The App Center SDK doesn't bundle Google Breakpad by default.
 
 #### Attaching the exception handler
 

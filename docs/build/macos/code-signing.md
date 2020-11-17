@@ -34,7 +34,7 @@ Provisioning profiles are optional, sandboxed apps require:
 
 ### Support
 The following signing methods are currently not supported:
-- Mac App Development signing does not work with manual signing and a provisioning profile. Signing an app with a Mac App Development provisioning profile requires that the UUID of the device that the app built on is provisioned in the selected profile. All of our builds run on one of our Virtual Machines chosen during runtime. Since the physical UUID of Virtual Machines changes, it's not possible to support signing with a Mac Developer certificate and provisioning profile.
+- Mac App Development signing doesn't work with manual signing and a provisioning profile. Signing an app with a Mac App Development provisioning profile requires that the UUID of the device that the app built on is provisioned in the selected profile. All of our builds run on one of our Virtual Machines chosen during runtime. Since the physical UUID of Virtual Machines changes, it's not possible to support signing with a Mac Developer certificate and provisioning profile.
 
 - Signing for the Mac App Store isn't supported since it requires that you upload two certificates.
 

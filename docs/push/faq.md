@@ -29,7 +29,7 @@ One of the reasons could be that you are using a Sandbox token to send a Push No
 **Can I delay showing the Push Notifications permission pop-up until the user click a button or a certain screen?**
 
 Yes. Execute `AppCenter.Start("{APP-SECRET}", services)` as usual (without specifying the Push service). Once the user opted-in to receive push notifications, execute `AppCenter.Start(typeof(Push))` to start just the Push service.
-Note that the second call to `Start()` does not include the app secret.
+Note that the second call to `Start()` doesn't include the app secret.
 
 Here's how:
 

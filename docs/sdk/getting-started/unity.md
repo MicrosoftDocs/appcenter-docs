@@ -127,7 +127,7 @@ Click on this new "App Center" object and add your app secrets to the correspond
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 
 > [!NOTE]
-> If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
+> If your project doesn't support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
 
 ---
 Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK will automatically collect.

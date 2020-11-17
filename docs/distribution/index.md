@@ -17,7 +17,7 @@ App Center Distribute is a tool for developers to quickly release builds to end 
 
 ## Getting Started
 
-Distributing with App Center is quick and easy, and does not require the App Center SDK to get started.
+Distributing with App Center is quick and easy, and doesn't require the App Center SDK to get started.
 
 1. [Add collaborators to your app](~/dashboard/creating-and-managing-apps.md) to collaborate and grant access to all releases.
 2. [Create Distribution Groups](~/distribution/groups.md) to organize your testers and manage access.

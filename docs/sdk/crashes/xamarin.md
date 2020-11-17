@@ -111,17 +111,17 @@ If user privacy is important to you, you might want to get user confirmation bef
 If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 > [!NOTE]
-> The app should not call `NotifyUserConfirmation` explicitly if it does not implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
+> The app shouldn't call `NotifyUserConfirmation` explicitly if it doesn't implement a user confirmation dialog; the Crashes module will handle sending logs for you implicitly.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
