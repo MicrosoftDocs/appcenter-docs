@@ -66,7 +66,7 @@ To change the permission of a collaborator:
 To share your app with others, select an app from the dashboard and then click **Manage app** to add collaborators by typing in the user's email address.
 
 > [!NOTE]
-> If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
+> If you're not a 'Manager' role on an app, you can't add collaborators to that app.
 
 ## Transferring an app
 

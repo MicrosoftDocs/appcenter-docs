@@ -25,7 +25,7 @@ Yes. When there is no network connectivity, the SDK saves up to 10 MB (by defaul
 A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
 
 ## Why is my "OS Distribution" chart showing more devices than the number of installs?
-OS Distribution counts are not snapshots. They are counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they will be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
+OS Distribution counts aren't snapshots. They are counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they will be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
 
 ## Why is the country information not showing? / The country information doesn't seem to be correct.
 The country is determined by the carrier country and requires that the device has a SIM. If you are using a tablet or a device with no SIM card, the country will not be reported. If you are using a simulator, the country information will most probably not be accurate.

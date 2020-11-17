@@ -60,7 +60,7 @@ The App Center SDK for iOS can be added to your app via [Cocoapods](https://coco
 ### 3.1 Integration via Cocoapods
 
 > [!NOTE]
-> ARM64 Simulators (when launched from Xcode running on Apple Silicon Mac) are not supported via CocoaPods, consider using other integration methods for it to work.
+> ARM64 Simulators (when launched from Xcode running on Apple Silicon Mac) aren't supported via CocoaPods, consider using other integration methods for it to work.
 
 1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This action pulls in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify services you want in your app. Each service has its own subspec and they all rely on AppCenter. It will get pulled in automatically.
 

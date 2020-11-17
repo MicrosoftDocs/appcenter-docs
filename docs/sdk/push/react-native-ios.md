@@ -157,7 +157,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 2. Add the `AppCenterAppDelegateForwarderEnabled` key, and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
-    You must then add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they are not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` and `application:didFailToRegisterForRemoteNotificationsWithError:` callbacks in your **AppDelegate** to register for Push notifications.
+    You must then add `@import AppCenterPush` and `@import AppCenterReactNativeShared` if they're not already added. Then implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` and `application:didFailToRegisterForRemoteNotificationsWithError:` callbacks in your **AppDelegate** to register for Push notifications.
 
     ```objc
     @import AppCenterPush;

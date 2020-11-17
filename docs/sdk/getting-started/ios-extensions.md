@@ -40,8 +40,8 @@ Let's get started with setting up App Center iOS SDK in your app extension to us
 The following requirements must be met to use App Center SDK:
 
 * Your iOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
-* You are targeting devices running on iOS 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality.
+* You're targeting devices running on iOS 9.0 or later.
+* You're not using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 

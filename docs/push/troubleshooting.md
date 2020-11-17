@@ -35,7 +35,7 @@ For Android applications, this means that the device token has expired; either b
 Check for one of the following reasons:
 
 - The device registration expired - this occurs when an app is uninstalled, or the registration App Center has for the device is obsolete.
-- You are not using a valid certificate - it's possible that you have re-signed the app with a different certificate.
+- You're not using a valid certificate - it's possible that you have re-signed the app with a different certificate.
 - You may be sending an incorrect device ID through the API.
 - The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
 

@@ -147,7 +147,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;

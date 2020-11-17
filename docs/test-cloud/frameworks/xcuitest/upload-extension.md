@@ -129,7 +129,7 @@ Here is a [Swift code example](https://github.com/Microsoft/AppCenter-Test-XCUIT
 
 ### Cocoapods
 
-If you are not already using CocoaPods, we recommend you use Carthage or manually linking the framework.
+If you aren't already using CocoaPods, we recommend you use Carthage or manually linking the framework.
 
 Update your `Podfile` in your Xcode project folder with the following:
 

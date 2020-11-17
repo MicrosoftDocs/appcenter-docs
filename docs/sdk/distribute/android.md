@@ -65,7 +65,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 AppCenter.start(application, "{Your App Secret}", Distribute::class.java)
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
@@ -124,7 +124,7 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 

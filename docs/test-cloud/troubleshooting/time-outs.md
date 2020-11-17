@@ -58,7 +58,7 @@ This error could be caused by an issue with test code or perhaps your test suite
 If the test suite completes successfully, sometimes but not always, check the test time using the [Test Reports](~/test-cloud/test-reports.md) for the completed tests. If it's close to the timeout limits, then small variances in execution time could make the difference between completion or timing out. Again, running fewer tests in a test suite can help get test results consistently.
 
 > [!NOTE]
-> Tests may need additional time to execute in App Center Test compared to running locally due to network latency or additional time for screenshots. Emulators and simulators are not accurate for time comparison since App Center Test only uses real devices. The **Duration** from the *Test Report* is for the combined duration of all devices in the test, even those which did not time out.
+> Tests may need additional time to execute in App Center Test compared to running locally due to network latency or additional time for screenshots. Emulators and simulators aren't accurate for time comparison since App Center Test only uses real devices. The **Duration** from the *Test Report* is for the combined duration of all devices in the test, even those which did not time out.
 
 If you don't know which devices hit the test suite time limit, you can contact App Center Support. Include a link to the test run and they can look at internal data for the run.
 

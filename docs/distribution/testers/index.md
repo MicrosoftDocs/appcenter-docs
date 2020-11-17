@@ -41,9 +41,9 @@ To get started with installing the app you've been invited to test, select one o
 
 You can stop testing an app and remove yourself from all distribution groups for that app. When you do this, you will no longer receive notification associated with that app, and will no longer have access to the app in the App Center developer and install portals. To remove yourself from an app, the following conditions must be true:
 
-- You are not an app collaborator for the app
-- You are not part of a shared group for the app
-- You are not part of an AAD group for the app
+- You're not an app collaborator for the app
+- You're not part of a shared group for the app
+- You're not part of an AAD group for the app
 
 If all the listed conditions apply to you, you can remove yourself as a tester for an app. To do so, complete the following steps:
 

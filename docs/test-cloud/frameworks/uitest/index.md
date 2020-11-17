@@ -52,7 +52,7 @@ All test interactions with the mobile application occur through an instance of `
 * **`Xamarin.UITest.iOS.iOSApp`** &nbsp; This class will automate tests against iOS.
 * **`Xamarin.UITest.Android.AndroidApp`** &nbsp; This class is for automating tests on Android.
 
-`iOSApp` and `AndroidApp` objects are not instantiated directly. Instead, they are created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
+`iOSApp` and `AndroidApp` objects aren't instantiated directly. Instead, they are created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
 
 It is recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
 

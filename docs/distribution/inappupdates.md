@@ -35,7 +35,7 @@ Note that Google can consider in-app update code as malicious behavior even if i
 
 ### iOS
 
-If the application is installed from the App Store or TestFlight, in-app updates are not available, and checking for new versions will be disabled.
+If the application is installed from the App Store or TestFlight, in-app updates aren't available, and checking for new versions will be disabled.
 
 ## FAQ
 

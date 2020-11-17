@@ -106,7 +106,7 @@ AppCenter.start(application, "{Your App Secret}", Push::class.java)
 
 Replace `{Your App Secret}` in the sample with the App Secret for the App Center project associated with this application. Refer to the [Get started](~/sdk/getting-started/android.md) section if the SDK isn't configured in the application yet.
 
-Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;

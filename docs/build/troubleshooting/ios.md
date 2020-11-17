@@ -41,7 +41,7 @@ To fix this error, open your project's Build configuration and click **Save**. A
 
 ## iOS signing issues explained
 > [!NOTE]
-> Signing identities which use non-ascii characters are not supported in Build.
+> Signing identities which use non-ascii characters aren't supported in Build.
 
 Dealing with provisioning profiles and certificates can be a challenging process. The following tips should help you successfully sign your iOS apps: 
 

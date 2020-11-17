@@ -21,5 +21,5 @@ The lines below should be added to **AndroidManifest.xml** inside the `applicati
     android:name="com.google.firebase.messaging.default_notification_color"
     android:resource="@color/notification" />
 ```
-App Center displays the application icon if a custom default icon and an icon are not set in the push payload.
+App Center displays the application icon if a custom default icon and an icon aren't set in the push payload.
 

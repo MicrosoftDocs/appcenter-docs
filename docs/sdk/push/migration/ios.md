@@ -29,5 +29,5 @@ In case you did not implement your own `UNUserNotificationCenterDelegate`, there
 
 If you are using App Center Push's default setup logic (i.e. you did NOT add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` entry to your **Info.plist** or it is set to `1`) and are implementing your own `UNUserNotificationCenterDelegate` callbacks, do the following:
 
-1. Check if you are calling `MSPush`'s `didReceiveRemoteNotification:` method. If you are not, skip step 2; no action is required.
+1. Check if you're calling `MSPush`'s `didReceiveRemoteNotification:` method. If you're not, skip step 2; no action is required.
 2. Remove any explicit calls to `MSPush`'s `didReceiveRemoteNotification:`. For example, you no longer need to call `didReceiveRemoteNotification:` inside your `UNUserNotificationCenterDelegate` callbacks as App Center will swizzle the `UNUserNotificationCenterDelegate` callbacks in addition to your custom implementation.

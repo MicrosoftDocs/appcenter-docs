@@ -33,9 +33,9 @@ Let's get started with setting up App Center React Native SDK in your app to use
 
 Before you begin, make sure that the following prerequisites are met:
 
-* You are using a React Native project that runs React Native 0.34 or later.
-* You are targeting devices that are running on Android Version 5.0/API level 21 or later, or iOS version 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality on iOS.
+* You're using a React Native project that runs React Native 0.34 or later.
+* You're targeting devices that are running on Android Version 5.0/API level 21 or later, or iOS version 9.0 or later.
+* You're not using any other library that provides Crash Reporting functionality on iOS.
 * For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
@@ -52,7 +52,7 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 
 ## 3. Add the App Center SDK modules
 
-The default integration of the SDK uses CocoaPods for iOS. If you are not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
+The default integration of the SDK uses CocoaPods for iOS. If you're not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
 
 Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 

@@ -65,8 +65,8 @@ The first sentence uses active voice. The second sentence was written in passive
 We recommend active voice because it is more readable. Passive voice can be more difficult to read.
 
 ### Target a Fifth Grade Reading Level
-We provide this final guideline because many of our readers are not native English speakers.
-You are reaching an international audience with your articles. Take into account that
+We provide this final guideline because many of our readers aren't native English speakers.
+You're reaching an international audience with your articles. Take into account that
 they may not have the English vocabulary you have.
 
 However, you are still writing for technical professionals. You can assume that your readers
