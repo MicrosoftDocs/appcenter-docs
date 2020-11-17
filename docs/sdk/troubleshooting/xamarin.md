@@ -49,7 +49,7 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
 4. Make sure your device is online.
 5. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
-6. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
+6. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it's been sent.
 
 ## Crashes don't show up in the portal
 
@@ -69,7 +69,7 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 7. Make sure your device is online.
 8. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
 9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it's been sent.
 
 ## Distribute and in-app updates are blocking my automated UI tests
 

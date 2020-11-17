@@ -63,7 +63,7 @@ A unique [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) should be add
 
 ### iOS application project
 
-To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it has been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
+To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it's been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
 
 ```csharp
 #if ENABLE_TEST_CLOUD

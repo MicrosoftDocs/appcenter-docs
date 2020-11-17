@@ -725,7 +725,7 @@ appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t 
 
 ## Rolling Back Updates
 
-A deployment's release history is immutable, so you can't delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
+A deployment's release history is immutable, so you can't delete or remove an update once it's been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
 
 ```shell
 appcenter codepush rollback <ownerName>/<appName> <deploymentName>

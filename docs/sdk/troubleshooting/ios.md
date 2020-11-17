@@ -49,7 +49,7 @@ dev_langs:
 
 4. Make sure your device is online.
 5. Sometimes, logs might take a few minutes to surface in the portal. Wait for some time if that's the case.
-6. To check if App Center backend has received your data, go to the **Log flow** section in **Analytics** service. Your events should appear once it has been sent.
+6. To check if App Center backend has received your data, go to the **Log flow** section in **Analytics** service. Your events should appear once it's been sent.
 
 ## Crashes don't show up in the portal
 
@@ -72,7 +72,7 @@ dev_langs:
 6. Make sure your device is online.
 7. At times, logs might take few minutes to surface in the portal. Wait for some time if that's the case.
 8. Check if the SDK detected the crash on the next app start. You can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash `didSucceedSendingErrorReport` callback to see if it was successfully sent to the server.
-9. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+9. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it's been sent.
 
 ## The Alert that prompts users for an update doesn't contain strings, but just the keys for them
 

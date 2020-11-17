@@ -19,9 +19,9 @@ After a build has been triggered, it can be in the following states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up.
 * **building** - the build is running the predefined tasks.
-* **succeeded** - the build is completed and it has succeeded
+* **succeeded** - the build is completed and it's succeeded
 * **failed** - the build completed, but failed. You can troubleshoot what went wrong by [inspecting the build logs](~/build/troubleshooting/build-failed.md#isolating-and-interpreting-error-messages).
-* **canceled** - the build has been canceled by a user action or it has timed out
+* **canceled** - the build has been canceled by a user action or it's timed out
 
 ### 1.1. The AppPackages
 Building your app for Release will result in a folder called "AppPackages" that contains a `.appxupload` file for the store and the Test folder that contains the `.appxbundle` files for sideloading, one for each platform.

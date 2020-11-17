@@ -252,7 +252,7 @@ codePush.getCurrentPackage(function (update) {
 codePush.getPendingPackage(onSuccess, onError?);
 ```
 
-Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it has been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you'd like to determine whether there is a pending update and then prompt the user if they would like to restart now (via `codePush.restartApplication`) in order to apply it.
+Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you'd like to determine whether there is a pending update and then prompt the user if they would like to restart now (via `codePush.restartApplication`) in order to apply it.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app doesn't currently have a pending update (e.g. the app is already running the latest available version).

@@ -61,7 +61,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
         - If there are issues, they add a comment #hold-off and notify the author to fix.
         - The author will need to fix the issues in a timely manner and add #sign-off when they are happy that the issues are fixed.
     
-    Remember, before signing off any PR, it’s your responsibility to ensure it has had a technical review.
+    Remember, before signing off any PR, it’s your responsibility to ensure it's had a technical review.
 
 On a certain cadence, we push all commits from the master branch into the live site and then you'll be able to see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
 

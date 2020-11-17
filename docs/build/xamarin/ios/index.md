@@ -144,9 +144,9 @@ After a build has been triggered, it can be in the following states:
 
 * **queued** - The build is in a queue waiting for resources to be freed up.
 * **building** - The build is running and executing the predefined tasks.
-* **succeeded** - The build is completed and it has succeeded.
-* **failed** - The build has completed but it has failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
-* **canceled** - The build has been canceled by a user action or it has timed out.
+* **succeeded** - The build is completed and it's succeeded.
+* **failed** - The build has completed but it's failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
+* **canceled** - The build has been canceled by a user action or it's timed out.
 
 ### 4.1. Build logs
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:
