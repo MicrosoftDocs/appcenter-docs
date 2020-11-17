@@ -105,7 +105,7 @@ This section applies if you have a [Splash Screen activity](https://docs.microso
 
 When you click on the push notification if the application isn't launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity in order to process that information.
 
-The simplest way of doing that is to locate the code where you start your main activity from the launcher activity:
+The simplest way of doing that, is to locate the code where you start your main activity from the launcher activity:
 
 ```csharp
     // Most apps have this

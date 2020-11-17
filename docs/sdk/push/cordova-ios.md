@@ -111,7 +111,7 @@ You can set up a listener to be notified whenever a push notification is receive
 
 By default, iOS doesn't generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-You need to register the listener when your app starts. A convenient place to do that is at `app.onDeviceReady` method of your `js/index.js:
+You need to register the listener when your app starts. A convenient place to do that's at the `app.onDeviceReady` method of your `js/index.js:
 
 ```js
 var app = {

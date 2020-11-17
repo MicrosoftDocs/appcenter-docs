@@ -95,7 +95,7 @@ The build logs (located in the `build/` directory of the archive) are helpful fo
 ### 4.2. The app (.ipa)
 The `.ipa` file is an iPhone application archive file that contains the iOS app.
 
-- If the build was signed correctly, you can install the `.ipa` file on a real device that is included in the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
+- If the build was signed correctly, you can install the `.ipa` file on a real device that's included in the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
 - If the build isn't signed during the build, developers can sign the `.ipa` file (locally using codesign) or used for other purposes (for example, upload to Test service for UI testing on real devices or run in the simulator).
 - Unsigned builds won't produce an `.ipa` file. The artifact of an unsigned build is the `.xcarchive` file, which can be used to generate an `.ipa` file with the Xcode Archives organizer.
 

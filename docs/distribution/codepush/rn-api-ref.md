@@ -149,13 +149,13 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
   - **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
 
-  - **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that is available. Defaults to `"Ignore"`.
+  - **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that's available. Defaults to `"Ignore"`.
 
   - **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press in order to install an optional update. Defaults to `"Install"`.
 
   - **optionalUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is optional. Defaults to `"An update is available. Would you like to install it?"`.
 
-  - **title** *(String)* - The text used as the header of an update notification that is displayed to the end user. Defaults to `"Update available"`.
+  - **title** *(String)* - The text used as the header of an update notification that's displayed to the end user. Defaults to `"Update available"`.
 
 #### codePushStatusDidChange (event hook)
 
@@ -165,7 +165,7 @@ Called when the sync process moves from one stage to another in the overall upda
 
 Called periodically when an available update is being downloaded from the CodePush server. The method is called with a `DownloadProgress` object, which contains the following two properties:
 
-- **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (that is the size of the set of files, which changed from the previous release).
+- **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (that's the size of the set of files, which changed from the previous release).
 
 - **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
 
@@ -199,7 +199,7 @@ See [disallowRestart](#codepushdisallowrestart) for an example of how this metho
 codePush.checkForUpdate(deploymentKey: String = null, handleBinaryVersionMismatchCallback: (update: RemotePackage) => void): Promise<RemotePackage>;
 ```
 
-Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that is configured in your **Info.plist** file (iOS), or **MainActivity.java** file (Android), but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "early access" via an easter egg or a user setting switch.
+Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that's configured in your **Info.plist** file (iOS), or **MainActivity.java** file (Android), but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "early access" via an easter egg or a user setting switch.
 
 Second optional parameter `handleBinaryVersionMismatchCallback` is an optional callback function that can be used to notify user if there are any binary update.
 For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update isn't targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
@@ -251,7 +251,7 @@ After calling this method, any calls to `sync` would still be allowed to check f
 
 This is an advanced API, and is primarily useful when individual components within your app (like an onboarding process) need to ensure that no end-user interruptions can occur during their lifetime, while continuing to allow the app to keep syncing with the CodePush server at its own pace and using whatever install modes are appropriate. This has the benefit of allowing the app to discover and download available updates as soon as possible, while also preventing any disruptions during key end-user experiences.
 
-As an alternative, you could also choose to simply use `InstallMode.ON_NEXT_RESTART` whenever calling `sync` (which will never attempt to programmatically restart the app), and then explicitly calling `restartApp` at points in your app that is "safe" to do so. `disallowRestart` provides an alternative approach to this when the code that synchronizes with the CodePush server is separate from the code/components that want to enforce a no-restart policy.
+As an alternative, you could also choose to simply use `InstallMode.ON_NEXT_RESTART` whenever calling `sync` (which will never attempt to programmatically restart the app), and then explicitly calling `restartApp` at points in your app that's "safe" to do so. `disallowRestart` provides an alternative approach to this when the code that synchronizes with the CodePush server is separate from the code/components that want to enforce a no-restart policy.
 
 Example Usage:
 
@@ -285,7 +285,7 @@ class OnboardingProcess extends Component {
 codePush.getCurrentPackage(): Promise<LocalPackage>;
 ```
 
-Retrieves the metadata about the currently installed "package" (like description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there is a pending update that is waiting to be applied via a resume or restart.
+Retrieves the metadata about the currently installed "package" (like description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there's a pending update that's waiting to be applied via a resume or restart.
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
@@ -316,7 +316,7 @@ codePush.getCurrentPackage()
 codePush.getUpdateMetadata(updateState: UpdateState = UpdateState.RUNNING): Promise<LocalPackage>;
 ```
 
-Retrieves the metadata for an installed update (like description, mandatory) whose state matches the specified `updateState` parameter. This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there is a pending update that is waiting to be applied via a resume or restart. For more information about the possible update states, and what they represent, see to the [UpdateState reference](#updatestate).
+Retrieves the metadata for an installed update (like description, mandatory) whose state matches the specified `updateState` parameter. This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there's a pending update that's waiting to be applied via a resume or restart. For more information about the possible update states, and what they represent, see to the [UpdateState reference](#updatestate).
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
@@ -462,7 +462,7 @@ In addition to the options, the `sync` method also accepts several optional func
 
 - **downloadProgressCallback** *((progress: DownloadProgress) => void)* - Called periodically when an available update is being downloaded from the CodePush server. The method is called with a `DownloadProgress` object, which contains the following two properties:
 
-  - **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (that is the size of the set of files, which changed from the previous release).
+  - **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (that's the size of the set of files, which changed from the previous release).
 
   - **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
 
@@ -507,7 +507,7 @@ The `sync` method can be called anywhere you'd like to check for an update. That
 
 The `checkForUpdate` and `getUpdateMetadata` methods return `Promise` objects, that when resolved, provide access to "package" objects. The package represents your code update and any extra metadata (like description, mandatory?). The CodePush API has the distinction between the following types of packages:
 
-- [LocalPackage](#localpackage): Represents a downloaded update that is either already running, or has been installed and is pending an app restart.
+- [LocalPackage](#localpackage): Represents a downloaded update that's either already running, or has been installed and is pending an app restart.
 
 - [RemotePackage](#remotepackage): Represents an available update on the CodePush server that hasn't been downloaded yet.
 
@@ -534,7 +534,7 @@ Contains details about an update that has been downloaded locally or already ins
 
 #### RemotePackage
 
-Contains details about an update that is available for download from the CodePush server. You get a reference to an instance of this object by calling the `checkForUpdate` method when an update is available. If you are using the `sync` API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `checkForUpdate` method when an update is available. If you are using the `sync` API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 
@@ -590,7 +590,7 @@ This enum is provided to the `syncStatusChangedCallback` function that can be pa
 
 This enum specifies the state that an update is currently in, and can be specified when calling the `getUpdateMetadata` method. It includes the following values:
 
-- **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that is currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics and/or crash reporting service.
+- **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that's currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics and/or crash reporting service.
 
 - **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet in order to apply it. This can be useful for determining whether there is a pending update, which you may want to force a programmatic restart (via `restartApp`) in order to apply.
 
@@ -606,11 +606,11 @@ Contains static methods for retrieving the `NSURL` that represents the most rece
 
 The `CodePush` class' methods can be thought of as composite resolvers, which always load the appropriate bundle, in order to accommodate the following scenarios:
 
-1. When an end user installs your app from the store (like `1.0.0`), they will get the JS bundle that is contained within the binary. This is the behavior you would get without using CodePush, but we make sure it doesn't break :)
+1. When an end user installs your app from the store (like `1.0.0`), they'll get the JS bundle that's contained within the binary. This is the behavior you would get without using CodePush, but we make sure it doesn't break :)
 
 2. As soon as you begin releasing CodePush updates, your end users will get the JS bundle that represents the latest release for the configured deployment. This is the behavior that allows you to iterate beyond what you shipped to the store.
 
-3. As soon as you release an update to the app store (like `1.1.0`), and your end users update it, they will once again get the JS bundle that is contained within the binary. This behavior ensures that CodePush updates that targeted a previous binary version aren't used (since we don't know it they would work), and your end-users always have a working version of your app.
+3. As soon as you release an update to the app store (like `1.1.0`), and your end users update it, they will once again get the JS bundle that's contained within the binary. This behavior ensures that CodePush updates that targeted a previous binary version aren't used (since we don't know it they would work), and your end-users always have a working version of your app.
 
 4. Repeat #2 and #3 as the CodePush releases and app store releases continue on into infinity (and beyond?)
 
@@ -620,9 +620,9 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 - **(NSURL \*)bundleURL** - Returns the most recent JS bundle `NSURL` as described above. This method assumes that the name of the JS bundle contained within your app binary is `main.jsbundle`.
 
-- **(NSURL \*)bundleURLForResource:(NSString \*)resourceName** - Equivalent to the `bundleURL` method, but also allows customizing the name of the JS bundle that is looked for within the app binary. This is useful if you aren't naming this file `main` (which is the default convention). This method assumes that the JS bundle's extension is `*.jsbundle`.
+- **(NSURL \*)bundleURLForResource:(NSString \*)resourceName** - Equivalent to the `bundleURL` method, but also allows customizing the name of the JS bundle that's searched for within the app binary. This is useful if you aren't naming this file `main` (which is the default convention). This method assumes that the JS bundle's extension is `*.jsbundle`.
 
-- **(NSURL \*)bundleURLForResource:(NSString \*)resourceName withExtension:(NSString \*)resourceExtension**: Equivalent to the `bundleURLForResource:` method, but also allows customizing the extension used by the JS bundle that is looked for within the app binary. This is useful if you aren't naming this file `*.jsbundle` (which is the default convention).
+- **(NSURL \*)bundleURLForResource:(NSString \*)resourceName withExtension:(NSString \*)resourceExtension**: Equivalent to the `bundleURLForResource:` method, but also allows customizing the extension used by the JS bundle that's searched for within the app binary. This is useful if you aren't naming this file `*.jsbundle` (which is the default convention).
 
 - **(void)overrideAppVersion:(NSString \*)appVersionOverride** - Sets the version of the application's binary interface, which would otherwise default to the App Store version specified as the `CFBundleShortVersionString` in the **Info.plist**. This should be called a single time, before the bundle URL is loaded.
 

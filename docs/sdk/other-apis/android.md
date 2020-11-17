@@ -58,7 +58,7 @@ AppCenter.getInstallId()
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `AppCenter.start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/android.md). 
 2. Set a `userID` in the SDK using the following code:

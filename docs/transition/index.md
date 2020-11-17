@@ -26,7 +26,7 @@ Follow this documentation to update your apps to use the App Center SDK instead 
 * [HockeySDK WPF/Winforms](wpf-winforms-sdk-migration.md)
 
 ## Download Links
-Requests to the link of the format `https://rink.hockeyapp.net/api/2/apps/0873e2b98ad046a92c170a243a8515f6?format=apk` are forwarded to App Center. Make sure the file format is appropriate to the binary uploaded. The latest version that is released to the "All users of AppName" distribution group or to any other public distribution group will be returned.
+Requests to the link of the format `https://rink.hockeyapp.net/api/2/apps/0873e2b98ad046a92c170a243a8515f6?format=apk` are forwarded to App Center. Make sure the file format is appropriate to the binary uploaded. The latest version that's released to the "All users of AppName" distribution group or to any other public distribution group will be returned.
 
 > [!Note]
 > The HockeyApp app id used in the link above is equivalent to the app secret of your app in App Center but without dashes.

@@ -188,7 +188,7 @@ Additionally, the following objects and enums are also exposed globally as part 
 codePush.checkForUpdate(onSuccess, onError?, deploymentKey?: String);
 ```
 
-Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that is configured in your **config.xml** file, but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "Early access" via an easter egg or a user setting switch.
+Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that's configured in your **config.xml** file, but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "Early access" via an easter egg or a user setting switch.
 
 When the update check completes, it will trigger the `onUpdateCheck` callback with one of two possible values:
 1. `null` if there is no update available. This occurs in the following scenarios:
@@ -198,8 +198,8 @@ When the update check completes, it will trigger the `onUpdateCheck` callback wi
 2. A `RemotePackage` instance which represents an available update that can be inspected and/or subsequently downloaded.
     
 Parameters:
-* **onSuccess**: Callback that is invoked upon receiving a successful response from the server. The callback receives a single parameter, which is described above.
-* **onError**: Optional callback that is invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
+* **onSuccess**: Callback that's invoked upon receiving a successful response from the server. The callback receives a single parameter, which is described above.
+* **onError**: Optional callback that's invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
 * **deploymentKey**: Optional deployment key that overrides the **config.xml** setting.
 
 Example usage:
@@ -218,7 +218,7 @@ codePush.checkForUpdate(function (update) {
 codePush.getCurrentPackage(onSuccess, onError?);
 ```
 
-Retrieves the metadata about the currently installed "package" (e.g. description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there is a pending update that is waiting to be applied via a resume or restart.
+Retrieves the metadata about the currently installed "package" (e.g. description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there is a pending update that's waiting to be applied via a resume or restart.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app is currently running the HTML start page from the binary and not a CodePush update. This occurs in the following scenarios:
@@ -227,8 +227,8 @@ When the update retrieval completes, it will trigger the `onSuccess` callback wi
 2. A `LocalPackage` instance which represents the metadata for the currently running CodePush update.
 
 Parameters:
-* **onSuccess**: Callback that is invoked upon receiving the metadata about the currently running update. The callback receives a single parameter, which is described above.
-* **onError**: Optional callback that is invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
+* **onSuccess**: Callback that's invoked upon receiving the metadata about the currently running update. The callback receives a single parameter, which is described above.
+* **onError**: Optional callback that's invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
 
 Example Usage:
 ```javascript
@@ -259,8 +259,8 @@ When the update retrieval completes, it will trigger the `onSuccess` callback wi
 2. A `LocalPackage` instance which represents the metadata for the currently pending CodePush update.
 
 Parameters:
-* **onSuccess**: Callback that is invoked upon receiving the metadata about the currently pending update. The callback receives a single parameter, which is described above.
-* **onError**: Optional callback that is invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
+* **onSuccess**: Callback that's invoked upon receiving the metadata about the currently pending update. The callback receives a single parameter, which is described above.
+* **onError**: Optional callback that's invoked in the event of an error. The callback takes one error parameter, containing the details of the error.
 
 Example Usage:
 ```javascript
@@ -343,10 +343,10 @@ The following list represents the available options and their defaults:
 * **descriptionPrefix** *(String)* - Indicates the string you would like to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`.
 * **mandatoryContinueButtonLabel** *(String)*: The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
 * **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
-* **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that is available. Defaults to `"Ignore"`.
+* **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that's available. Defaults to `"Ignore"`.
 * **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press in order to install an optional update. Defaults to `"Install"`.
 * **optionalUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is optional. Defaults to `"An update is available. Would you like to install it?"`.
-*- **updateTitle** *(String)* - The text used as the header of an update notification that is displayed to the end user. Defaults to `"Update available"`.
+*- **updateTitle** *(String)* - The text used as the header of an update notification that's displayed to the end user. Defaults to `"Update available"`.
 
 Example Usage:
 ```javascript
@@ -401,7 +401,7 @@ The `sync` method can be called anywhere you'd like to check for an update. That
 
 ### Package objects
 The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide access to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:
-1. `LocalPackage`: Represents a downloaded update that is either already running, or has been installed and is pending an app restart.
+1. `LocalPackage`: Represents a downloaded update that's either already running, or has been installed and is pending an app restart.
 2. `RemotePackage`: Represents an available update on the CodePush server that hasn't been downloaded yet.
 
 #### LocalPackage
@@ -480,7 +480,7 @@ var app = {
 For an example on how you are protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
 #### RemotePackage
-Contains details about an update that is available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
@@ -536,7 +536,7 @@ This enum specified when you would like an installed update to actually be appli
 For an example on how you are protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
 #### RemotePackage
-Contains details about an update that is available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
@@ -614,4 +614,4 @@ The Cordova community has graciously created some awesome open source apps that 
 * [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](https://rangle.io) used for [PhoneGap Day Europe 2016](https://pgday.phonegap.com/eu2016/).
 
 > [!NOTE]
-> If you've developed a Cordova app using CodePush, that is open-source, let us know. We would love to add it to this list!*
+> If you've developed a Cordova app using CodePush, that's open-source, let us know. We would love to add it to this list!*

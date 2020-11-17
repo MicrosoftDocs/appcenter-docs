@@ -29,7 +29,7 @@ Some key notes:
 - **title**: This title will appear in search engine results. You can also add a pipe (|) followed by the product name (for example, `title: Developing Libraries with Cross Platform Tools | .NET Core`). The title doesn't need be identical to the title in your H1 heading and it should contain 65 characters or less (including | PRODUCT NAME).
 - **author**, **ms.author**, **ms.manager**, **ms.reviewer**: The `author` field should contain the **GitHub username** of the author, not their alias. The `ms.author`, `ms.manager` and `ms.reviewer` fields, on the other hand, should contain Microsoft aliases. `ms.reviewer` specifies the name of the PM/dev associated with the article or feature.
 - **ms.devlang** defines the technology. Some of the supported values are: dotnet, cpp, csharp, fsharp, vb and xml.
-- **ms.assetid**: This is the GUID of the article that is used for internal tracking purposes such as Business Intelligence (BI). When creating a new Markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
+- **ms.assetid**: This is the GUID of the article that's used for internal tracking purposes such as Business Intelligence (BI). When creating a new Markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
 
 ## Basic Markdown, GFM, and special characters
 
@@ -113,7 +113,7 @@ If a URL appears in a Markdown file, it will be transformed into a clickable lin
 ### Links to APIs
 
 The build system has some extensions that allow us to link to .NET Core APIs without having to use external links.
-When linking to an API, you can use its unique identifier (UID) that is auto-generated from the source code.
+When linking to an API, you can use its unique identifier (UID) that's auto-generated from the source code.
 
 You can use one of the following syntax:
 

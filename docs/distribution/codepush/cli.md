@@ -193,15 +193,15 @@ appcenter codepush deployment list -a <ownerName>/<appName>
 
 The install metrics have the following meaning:
 
-* **Active** - The number of successful installs that are currently running this release (that is, if the user opened your app, they would see/run this version). This number will increase and decrease as end users upgrade to and away from this release, respectively. This metric shows both the total of active users, as well as what percentage of your overall audience that represents. This makes it easy to determine the distribution of updates that your users are currently running, as well as answer questions such as "How many of my users have received my latest update?".
+* **Active** - The number of successful installs that are currently running this release (if the user opened your app, they would see/run this version). This number will increase and decrease as end users upgrade to and away from this release, respectively. This metric shows both the total of active users, as well as what percentage of your overall audience that represents. This makes it easy to determine the distribution of updates that your users are currently running, as well as answer questions such as "How many of my users have received my latest update?".
 
 * **Total** - The total number of successful installations that this update has received overall. This number only ever increases as new users/devices install it, and therefore, it's always a superset of the total active count. An update is considered successful once `notifyApplicationReady` (or `sync`) is called after it was installed. Between the moment that an update is downloaded, and it's marked as being successful, it will be reported as a "pending" update (see below for details).
 
-* **Pending** - The number of times this release has been downloaded, but not yet installed (that is, the app was restarted to apply the changes). Therefore, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume and/or restart to apply an update (for example, I want to roll back an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that initiates sending install reports and marks installed updates as being considered successful.
+* **Pending** - The number of times this release has been downloaded, but not yet installed (the app was restarted to apply the changes). Therefore, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume and/or restart to apply an update (for example, I want to roll back an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that initiates sending install reports and marks installed updates as being considered successful.
 
 * **Rollbacks** - The number of times that this release has been automatically rolled back on the client. Ideally this number should be zero, and in that case, this metric isn't even shown. However, if you released an update that includes a crash as part of the installation process, the CodePush plugin will roll the end user back to the previous release, and report that issue back to the server. This allows your end users to remain unblocked in case of broken releases, and by being able to see this telemetry in the CLI, you can identify erroneous releases and respond to them by [rolling it back](#rolling-back-updates) on the server.
 
-* **Rollout** - Indicates the percentage of users that are eligible to receive this update. This property will only be displayed for releases that represent an "active" rollout, and therefore, have a rollout percentage that is less than 100%. Additionally, since a deployment can only have one active rollout at any given time, this label would only be present on the latest release within a deployment.
+* **Rollout** - Indicates the percentage of users that are eligible to receive this update. This property will only be displayed for releases that represent an "active" rollout, and therefore, have a rollout percentage that's less than 100%. Additionally, since a deployment can only have one active rollout at any given time, this label would only be present on the latest release within a deployment.
 
 * **Disabled** - Indicates whether the release has been marked as disabled or not, and therefore, is downloadable by end users. This property will only be displayed for releases that are disabled.
 
@@ -267,7 +267,7 @@ This parameter specifies the store/binary version of the application you are rel
 
 2. If a user is running a newer binary version, then it's presumed that what they are running is newer (and potentially incompatible) with the CodePush update.
 
-If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a [semver range expression](https://github.com/npm/node-semver#advanced-range-syntax). That way, any client device running a version of the binary that satisfies the range expression (that is, `semver.satisfies(version, range)` returns `true`) will get the update. Examples of valid **semver** range expressions are as follows:
+If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a [semver range expression](https://github.com/npm/node-semver#advanced-range-syntax). That way, any client device running a version of the binary that satisfies the range expression (`semver.satisfies(version, range)` returns `true`) will get the update. Examples of valid **semver** range expressions are as follows:
 
 | Range Expression | Who gets the update                                                                    |
 |------------------|----------------------------------------------------------------------------------------|
@@ -312,7 +312,7 @@ This parameter provides an optional "change log" for the deployment. The value i
 
 #### Disabled parameter
 
-This parameter specifies whether an update should be downloadable by end users or not. If left unspecified, the update will not be disabled (that is, users will download it the moment your app calls `sync`). This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (for example, an announcement blog post went live).
+This parameter specifies whether an update should be downloadable by end users or not. If left unspecified, the update won't be disabled. Instead users will download it the moment your app calls `sync`. This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (for example, an announcement blog post went live).
 
 > [!TIP]
 > This parameter can be set using either `--disabled` or `-x`*
@@ -332,11 +332,11 @@ The mandatory attribute is unique because the server will dynamically modify it 
 | v2      | Yes        |
 | v3      | No         |
 
-If an end user is currently running `v1`, and they query the server for an update, it will respond with `v3` (since that is the latest), but it will dynamically convert the release to mandatory, since a mandatory update was released in between. This behavior is important since the code contained in `v3` is incremental to that included in `v2`, and therefore, whatever made `v2` mandatory, continues to make `v3` mandatory for anyone that didn't already acquire `v2`.
+If an end user is currently running `v1`, and they query the server for an update, it will respond with `v3` (since that's the latest), but it will dynamically convert the release to mandatory, since a mandatory update was released in between. This behavior is important since the code contained in `v3` is incremental to that included in `v2`, and therefore, whatever made `v2` mandatory, continues to make `v3` mandatory for anyone that didn't already acquire `v2`.
 
 If an end user is currently running `v2`, and they query the server for an update, it will respond with `v3`, but leave the release as optional. This is because they already received the mandatory update, and therefore, there isn't a need to modify the policy of `v3`. This behavior is why we say that the server will "dynamically convert" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It's only changed on-the-fly as necessary when responding to an update check from an end user.
 
-If you never release an update that is marked as mandatory, then the above behavior doesn't apply to you, since the server will never change an optional release to mandatory unless there were intermingled mandatory updates as illustrated above. Additionally, if a release is marked as mandatory, it will never be converted to optional, since that wouldn't make any sense. The server will only change an optional release to mandatory in order to respect the semantics described above.
+If you never release an update that's marked as mandatory, then the above behavior doesn't apply to you, since the server will never change an optional release to mandatory unless there were intermingled mandatory updates as illustrated above. Additionally, if a release is marked as mandatory, it will never be converted to optional, since that wouldn't make any sense. The server will only change an optional release to mandatory in order to respect the semantics described above.
 
 > [!TIP]
 > This parameter can be set using either `--mandatory` or `-m`*
@@ -354,7 +354,7 @@ This parameter specifies the percentage of users (as an integer between `1` and 
 
  When leveraging the rollout capability, there are a few additional considerations to keep in mind:
 
-1. You can't release a new update to a deployment whose latest release is an "active" rollout (that is, its rollout property is non-null). The rollout needs to be "completed" (that is, setting the `rollout` property to `100`) before you can release further updates to the deployment.
+1. You can't release a new update to a deployment whose latest release is an "active" rollout (its rollout property is non-null). The rollout needs to be "completed" (setting the `rollout` property to `100`) before you can release further updates to the deployment.
 
 2. If you roll back a deployment whose latest release is an "active" rollout, the rollout value will be cleared, effectively "deactivating" the rollout behavior
 
@@ -393,7 +393,7 @@ The `release-react` command is a React Native-specific version of the "vanilla" 
 
 1. Running the `react-native bundle` command in order to generate the [update contents](#update-contents-parameter) (JS bundle and assets) that will be released to the CodePush server. It uses sensible defaults as much as possible (for example, creating a non-dev build, assuming an iOS entry file is named **index.ios.js**), but also exposes the relevant `react-native bundle` parameters to enable flexibility (for example, `--sourcemap-output`).
 
-2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that is specified in the project's **Info.plist** (for iOS) and **build.gradle** (for Android) files.
+2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that's specified in the project's **Info.plist** (for iOS) and **build.gradle** (for Android) files.
 
 To illustrate the difference that the `release-react` command can make, the following is an example of how you might generate and release an update for a React Native app using the "vanilla" `release` command:
 
@@ -549,7 +549,7 @@ The `release-cordova` command is a Cordova-specific version of the "vanilla" [`r
 
 1. Running the `cordova prepare` (or `phonegap prepare`) command in order to generate the [update contents](#update-contents-parameter) (**www** folder) that will be released to the CodePush server.
 
-2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that is specified in the project's **config.xml** file.
+2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that's specified in the project's **config.xml** file.
 
 To illustrate the difference that the `release-cordova` command can make, the following is an example of how you might generate and release an update for a Cordova app using the "vanilla" `release` command:
 
@@ -687,7 +687,7 @@ appcenter codepush promote -a <ownerName>/<appName> -s <sourceDeploymentName> -d
 
 The `promote` command creates a new release for the destination deployment, which includes the **exact code and metadata** (description, mandatory, and target binary version) from the latest release of the source deployment. While you could use the `release` command to "manually" migrate an update from one environment to another, the `promote` command has the following benefits:
 
-1. It's quicker, since you don't have to reassemble the release assets you want to publish or remember the description/binary version that is associated with the source deployment's release.
+1. It's quicker, since you don't have to reassemble the release assets you want to publish or remember the description/binary version that's associated with the source deployment's release.
 
 2. It's less error-prone, since the promote operation ensures that the exact thing that you already tested in the source deployment (for example, `Staging`) will become active in the destination deployment (for example, `Production`).
 
@@ -725,7 +725,7 @@ appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t 
 
 ## Rolling Back Updates
 
-A deployment's release history is immutable, so you can't delete or remove an update once it's been released. However, if you release an update that is broken or contains unintended features, it's easy to roll it back using the `rollback` command:
+A deployment's release history is immutable, so you can't delete or remove an update once it's been released. However, if you release an update that's broken or contains unintended features, it's easy to roll it back using the `rollback` command:
 
 ```shell
 appcenter codepush rollback <ownerName>/<appName> <deploymentName>

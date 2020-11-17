@@ -88,7 +88,7 @@ While Google Play and internally distributed apps (for example Enterprise, Fabri
 
 [Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed performing over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
 
-> Interpreted code may be downloaded to an Application but only so long as such code: (a) doesn't change the primary purpose of the Application by providing features or functionality that is inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) doesn't bypass signing, sandbox, or other security features of the OS.
+> Interpreted code may be downloaded to an Application but only so long as such code: (a) doesn't change the primary purpose of the Application by providing features or functionality that's inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) doesn't bypass signing, sandbox, or other security features of the OS.
 
 CodePush allows you to follow these rules in full compliance so long as the update you push doesn't significantly deviate your product from its original App Store approved intent.
 
@@ -113,7 +113,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 - [Pepperoni](http://getpepperoni.com/)
 
   > [!NOTE]
-  > If you've developed a React Native app using CodePush, that is open-source, let us know. We would love to add it to this list!*
+  > If you've developed a React Native app using CodePush, that's open-source, let us know. We would love to add it to this list!*
 
 ## Continuous Integration / Delivery
 

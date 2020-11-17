@@ -33,7 +33,7 @@ Select the provider from the list of options on the page, and follow the prompts
 > Some older App Center accounts were created using an email address and password, but that option isn't available for new accounts.
 
 ## About organizations and users
-App Center recognizes two types of entities: users and organizations. You just created a user account, and you can only see the apps you create and manage in App Center. If you work for an organization that is an App Center customer, you could be invited to join your organization's App Center Organization. Once you accept that invitation, you'll be able to see your own apps and your organization's apps in App Center.
+App Center recognizes two types of entities: users and organizations. You just created a user account, and you can only see the apps you create and manage in App Center. If you work for an organization that's an App Center customer, you could be invited to join your organization's App Center Organization. Once you accept that invitation, you'll be able to see your own apps and your organization's apps in App Center.
 
 App Center even allows you to belong to multiple organizations; in this case, in App Center will list your apps, plus the apps for all of the organizations to which you belong.
 

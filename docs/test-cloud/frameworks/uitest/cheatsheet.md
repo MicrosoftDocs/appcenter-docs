@@ -44,7 +44,7 @@ namespace MyApp.MyUITests
         [SetUp]
         public void BeforeEachTest()
         {
-            // Uncomment the line that is appropriate for the platform:
+            // Uncomment the line that's appropriate for the platform:
             // app = ConfigureApp.Android.StartApp();
             // app = ConfigureApp.iOS.StartApp();
         }

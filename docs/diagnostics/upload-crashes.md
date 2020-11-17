@@ -21,7 +21,7 @@ You can upload a crash report if you don't want to use our SDK or develop for a 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
-- `App-Secret`: string that is the unique identifier associated with each app. You can find the app secret in the settings of an app.
+- `App-Secret`: string that's the unique identifier associated with each app. You can find the app secret in the settings of an app.
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
@@ -581,7 +581,7 @@ Attachment-specific properties:
 - `contentType`: required string with content type, for example, "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
 - `errorId`: required string containing the unique identifier of the attachment's associated error report
-- `fileName`: required string for NDK crashes that is set to "minidump.dmp"
+- `fileName`: required string for NDK crashes that's set to "minidump.dmp"
 
 > [!NOTE]
 > The size limit for attachments is currently 7 MB. Attempting to send a larger attachment will trigger an error.

@@ -71,7 +71,7 @@ Install-Package Microsoft.AppCenter.Crashes
 ```
 
 > [!NOTE]
-> If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that is running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
+> If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that's running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
 
 ## 5. Start the SDK
 

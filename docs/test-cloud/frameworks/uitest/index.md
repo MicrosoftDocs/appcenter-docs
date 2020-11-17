@@ -14,7 +14,7 @@ ms.custom: test
 # Xamarin.UITest
 *Xamarin.UITest* is a testing framework that enables Automated UI Acceptance Tests written in C# using the [NUnit](http://www.nunit.org/) unit testing framework to be run against iOS and Android applications. It integrates tightly with Xamarin.iOS and Xamarin.Android projects but it can also be used with iOS and Android projects written natively in Objective-C/Swift and Java. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface just as a user would: entering text, tapping buttons, and performing gestures - such as swipes.
 
-Typically, each Xamarin.UITest is written as a method that is referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be performed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
+Typically, each Xamarin.UITest is written as a method that's referred to as a *test*. The class which contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be performed when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
 
 1. **Arrange**: The test will setup conditions and initialize things so that the test can be actioned.
 2. **Act**: The test will interact with the application, enter text, pushing buttons, and so on.
@@ -103,7 +103,7 @@ The relative path example tells `AppBundle` to go up three directories from the 
 For more information on how to run iOS tests on a specific iOS Simulator, see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
-Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that is already running. The app will be started, and then the test will be run. Xamarin.UITest can't build the APK nor can it start an instance of the Android emulator.  
+Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that's already running. The app will be started, and then the test will be run. Xamarin.UITest can't build the APK nor can it start an instance of the Android emulator.  
 
 The `ApkFile` method of `IApp` is used to specify where on the file system the APK may be found. There are two ways to do so, with an absolute path, or a relative path. This snippet shows using an absolute path to the APK:
 
@@ -169,7 +169,7 @@ app.Tap(c=>c.Marked("Pending")
             .Parent()
             .Class("AppointmentListCell").Index(0));
 ```
-Here, the `AppQuery` will first find a view marked `Pending`, then select the first parent of that view that is a `AppointmentListCell` type.
+Here, the `AppQuery` will first find a view marked `Pending`, then select the first parent of that view that's a `AppointmentListCell` type.
 
 It can be tricky trying to create these queries by just looking at a mobile app. Xamarin.UITest provides a REPL that can be used to explore the view hierarchy of a screen, experiment with creating queries, and use them to interact with an application.
 
@@ -203,7 +203,7 @@ The test will run, and when the `Repl` method is invoked, Xamarin.UITest will st
 
 [ ![Screenshot of the macOS terminal running the Xamarin.UITest REPL](./images/index-02-xs-sml.png)](./images/index-02-xs.png#lightbox)
 
-Notice that the REPL has initialized an instance of `IApp` that is called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
+Notice that the REPL has initialized an instance of `IApp` that's called `app`, which can be used to interact with the application. At this point, one of the first things to do is to explore the user interface. The REPL has a `tree` command that will do exactly that. It will print out the hierarchy of views in the displayed screen. As an example, consider the following screenshot of an application:
 
 [ ![Screenshot of a sample application running on an iPhone](./images/index-03-xs-sml.png)](./images/index-03-xs.png#lightbox)
 

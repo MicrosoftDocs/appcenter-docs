@@ -25,7 +25,7 @@ UITest provides a large number of APIs to simulate gestures or physical interact
 * **IApp.Tap** - This will tap the first matched element.
 * **IApp.TouchAndHold** - This method will continuously touch view.
 
-These APIs all take an [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery) that is used to locate the view in question. If more than one view is located by the query, then the API will act on the first view found. For example, this code snippet will double tap:
+These APIs all take an [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery) that's used to locate the view in question. If more than one view is located by the query, then the API will act on the first view found. For example, this code snippet will double tap:
 
 ```csharp
 app.DoubleTap(c=>c.Marked("save_button"))

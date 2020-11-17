@@ -80,7 +80,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
 1. [RNPM](#plugin-installation-ios---rnpm) - [React Native Package Manager](https://github.com/rnpm/rnpm) (RNPM) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you are already using it, or you want to use it, then we recommend this approach.
 
-2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you are building a native iOS app that is embedding React Native into it, or you simply prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
+2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you're building a native iOS app that's embedding React Native into it, or you simply prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
 
 3. [**"Manual"**](#plugin-installation-ios---manual) - If you don't want to depend on any additional tools or are fine with a few extra installation steps (it's a one-time thing), then go with this approach.
 
@@ -636,7 +636,7 @@ Once you have acquired the CodePush plugin, you need to integrate it into the Vi
 
 3. Browse to the `node_modules\react-native-code-push\windows` directory, select the  file, and click `OK`
 
-4. Back in the `Solution Explorer`, right-click the project node that is named after your app, and select the `Add -> Reference...` menu item
+4. Back in the `Solution Explorer`, right-click the project node that's named after your app, and select the `Add -> Reference...` menu item
 
    ![Add Reference](./images/rn-windows-6.png)
 

@@ -26,11 +26,11 @@ Follow these steps to automate the release and promotion of app updates via Code
 1. Using the [App Center CLI](./cli.md), generate a new access token whose description indicates it will be used for Azure DevOps CI builds (for example, `appcenter tokens create -d "VSTS-CI"`)
 
    > [!NOTE]
-   > You can use the API key that is displayed in the App Center portal, and don't have to generate an additional token via the App Center CLI.
+   > You can use the API key that's displayed in the App Center portal, and don't have to generate an additional token via the App Center CLI.
 
 2. Install the **CodePush** extension from the [Azure DevOps Marketplace](https://marketplace.visualstudio.com/items/ms-vsclient.code-push)
 
-3. Go to your Visual Studio Team Services or TFS project, click on the **Build** tab, and create a new build definition (the "+" icon) that is hooked up to your project's appropriate source repository.
+3. Go to your Visual Studio Team Services or TFS project, click on the **Build** tab, and create a new build definition (the "+" icon) that's hooked up to your project's appropriate source repository.
 
    > [!NOTE]
    > If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release definition in order to work.

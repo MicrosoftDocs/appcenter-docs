@@ -262,7 +262,7 @@ To distinguish between notifications received in the foreground and notification
 3. Implement the following callback to detect a foreground notification:
 
     ```objc
-    // iOS 10 and later, called when a notification is delivered to an app that is in the foreground.
+    // iOS 10 and later, called when a notification is delivered to an app that's in the foreground.
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
           willPresentNotification:(UNNotification *)notification
             withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {

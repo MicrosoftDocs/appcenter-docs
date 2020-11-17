@@ -10,7 +10,7 @@ ms.assetid: d732a3cf-88b8-4adc-b4a7-bab3a2c3a6b4
 ---
 
 # Xamarin.UITest test-cloud.exe Upload Errors
-When you submit a Xamarin.UITest test run to App Center Test, the `appcenter` command uses `test-cloud.exe` from the Xamarin.UITest NuGet package. If the `appcenter` command is unable to find that executable, or it finds one that is a different version than the one  used to build the tests, it won't upload the test run and you'll get an error.
+When you submit a Xamarin.UITest test run to App Center Test, the `appcenter` command uses `test-cloud.exe` from the Xamarin.UITest NuGet package. If the `appcenter` command is unable to find that executable, or it finds one that's a different version than the one  used to build the tests, it won't upload the test run and you'll get an error.
 
 The command uses a heuristic to locate test-cloud.exe. Some project or NuGet settings can result in `appcenter` not finding it and reporting the `Cannot find test-cloud.exe` error, or locating the wrong one and advising `UITest.dll and the tools are incompatible`.
 
