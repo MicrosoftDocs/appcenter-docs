@@ -347,7 +347,7 @@ The in-app updates feature works as follows:
    * the versions are the same but the build unique identifier is different.
 
 > [!TIP]
-> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it is a **different** binary.
+> If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it's a **different** binary.
 
 ## How do I test in-app updates?
 
@@ -366,7 +366,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 > [!TIP]
 > Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-> While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+> While it's possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
 
 ## Disable forwarding of the application delegate's methods calls to App Center services
 

@@ -136,7 +136,7 @@ After (App Center):
     > [!NOTE]
     > If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
     > The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
-    > Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
+    > Once the `AppCenter.Start` method returns, it's safe to try/catch null reference exceptions again.
     > You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
 
     **Xamarin.Forms**:

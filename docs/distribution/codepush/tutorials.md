@@ -94,7 +94,7 @@ To customize the update dialog, developers can create an updateDialogOption obje
 Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./rn-api-ref.md) API Reference pages for a full description of all the available UpdateDialogOptions options.
 
 > [!IMPORTANT]
-> While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
+> While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
 
 ### 3.  Custom mode
 

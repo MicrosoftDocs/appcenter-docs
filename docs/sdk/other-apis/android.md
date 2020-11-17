@@ -29,7 +29,7 @@ dev_langs:
 
 ## Adjust the log level
 
-You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
+You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it's set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
 
 To have as many log messages as possible, use `Log.Verbose`.
 
@@ -178,7 +178,7 @@ AppCenter.setCustomProperties(properties)
 
 ## Storage size
 
-When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
+When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It's also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
 
 You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)`. You may only call the API once.
 

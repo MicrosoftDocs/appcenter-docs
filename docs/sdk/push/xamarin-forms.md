@@ -169,7 +169,7 @@ When the push is received in **foreground**, the event is fired right away but
 > and **message** in the event arguments, only iOS expose those fields for all events.
 >
 > [!NOTE]
-> On iOS only, if silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+> On iOS only, if silent notifications are enabled **and** you push a notification with `content-available: 1`, then the event may be triggered twice for the same notification: when the notification is received in background and when it's tapped.
 
 [!INCLUDE [dotnet push event example](includes/dotnet-push-event-example.md)]
 

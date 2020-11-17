@@ -65,7 +65,7 @@ appcenter tokens delete <machineName>
 
 ### Access Tokens
 
-To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it is for):
+To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it's for):
 
 ```shell
 appcenter tokens create -d "Azure DevOps Integration"
@@ -77,7 +77,7 @@ The key will only display once, so remember to save it somewhere if needed! Afte
 appcenter login --token <accessToken>
 ```
 
-When signing in using this method, the access token will not automatically invalidate on sign-out, and can be used in future sessions until it is explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
+When signing in using this method, the access token will not automatically invalidate on sign-out, and can be used in future sessions until it's explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
 
 ## App Management
 
@@ -168,7 +168,7 @@ If at any time you want to list all collaborators that have been added to an app
 From the CodePush perspective, an app is a named grouping for one or more "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (for example, the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a developer's personal environment to a testing/QA/staging environment, before finally making their way into production.
 
 > [!NOTE]
-> As you'll see below, the `release`, `promote` and `rollback` commands require both an app name and a deployment name in order to work, because it is the combination of the two that uniquely identifies a point of distribution (for example, I want to release an update of my iOS app to my beta testers).
+> As you'll see below, the `release`, `promote` and `rollback` commands require both an app name and a deployment name in order to work, because it's the combination of the two that uniquely identifies a point of distribution (for example, I want to release an update of my iOS app to my beta testers).
 
 Whenever an app is registered with the CodePush service, we recommend you create the following deployments: `Staging` and `Production`. This allows you to begin releasing updates to an internal environment, where you can thoroughly test each update before pushing them out to your end users. This workflow is critical for ensuring your releases are ready for mass-consumption, and is a practice that has been established in the web for a long time.
 
@@ -195,7 +195,7 @@ The install metrics have the following meaning:
 
 * **Active** - The number of successful installs that are currently running this release (that is, if the user opened your app, they would see/run this version). This number will increase and decrease as end users upgrade to and away from this release, respectively. This metric shows both the total of active users, as well as what percentage of your overall audience that represents. This makes it easy to determine the distribution of updates that your users are currently running, as well as answer questions such as "How many of my users have received my latest update?".
 
-* **Total** - The total number of successful installations that this update has received overall. This number only ever increases as new users/devices install it, and therefore, it is always a superset of the total active count. An update is considered successful once `notifyApplicationReady` (or `sync`) is called after it was installed. Between the moment that an update is downloaded, and it is marked as being successful, it will be reported as a "pending" update (see below for details).
+* **Total** - The total number of successful installations that this update has received overall. This number only ever increases as new users/devices install it, and therefore, it's always a superset of the total active count. An update is considered successful once `notifyApplicationReady` (or `sync`) is called after it was installed. Between the moment that an update is downloaded, and it's marked as being successful, it will be reported as a "pending" update (see below for details).
 
 * **Pending** - The number of times this release has been downloaded, but not yet installed (that is, the app was restarted to apply the changes). Therefore, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume and/or restart to apply an update (for example, I want to roll back an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that initiates sending install reports and marks installed updates as being considered successful.
 
@@ -261,7 +261,7 @@ It's important that the path you specify refers to the platform-specific, prepar
 
 #### Target binary version parameter
 
-This parameter specifies the store/binary version of the application you are releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary will not. It is useful for the following reasons:
+This parameter specifies the store/binary version of the application you are releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary will not. It's useful for the following reasons:
 
 1. If a user is running an older binary version, it's possible that there are breaking changes in the CodePush update that wouldn't be compatible with what they're running.
 
@@ -282,7 +282,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 
 > [!NOTE]
 > If the app's **semver** expression starts with a special shell character or operator such as `>`, `^`, or **
-> *, the command may not execute correctly if you don't wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it is best to wrap the app's `targetBinaryVersion` parameter in double quotes when calling the `release` command, for example, `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
+> *, the command may not execute correctly if you don't wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it's best to wrap the app's `targetBinaryVersion` parameter in double quotes when calling the `release` command, for example, `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
 
 The following table outlines the version value that CodePush expects your update's **semver** range to satisfy for each respective app type:
 
@@ -334,7 +334,7 @@ The mandatory attribute is unique because the server will dynamically modify it 
 
 If an end user is currently running `v1`, and they query the server for an update, it will respond with `v3` (since that is the latest), but it will dynamically convert the release to mandatory, since a mandatory update was released in between. This behavior is important since the code contained in `v3` is incremental to that included in `v2`, and therefore, whatever made `v2` mandatory, continues to make `v3` mandatory for anyone that didn't already acquire `v2`.
 
-If an end user is currently running `v2`, and they query the server for an update, it will respond with `v3`, but leave the release as optional. This is because they already received the mandatory update, and therefore, there isn't a need to modify the policy of `v3`. This behavior is why we say that the server will "dynamically convert" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It is only changed on-the-fly as necessary when responding to an update check from an end user.
+If an end user is currently running `v2`, and they query the server for an update, it will respond with `v3`, but leave the release as optional. This is because they already received the mandatory update, and therefore, there isn't a need to modify the policy of `v3`. This behavior is why we say that the server will "dynamically convert" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It's only changed on-the-fly as necessary when responding to an update check from an end user.
 
 If you never release an update that is marked as mandatory, then the above behavior doesn't apply to you, since the server will never change an optional release to mandatory unless there were intermingled mandatory updates as illustrated above. Additionally, if a release is marked as mandatory, it will never be converted to optional, since that wouldn't make any sense. The server will only change an optional release to mandatory in order to respect the semantics described above.
 
@@ -343,14 +343,14 @@ If you never release an update that is marked as mandatory, then the above behav
 
 #### No duplicate release error parameter
 
-This parameter specifies that if the update is identical to the latest release on the deployment, the CLI should generate a warning instead of an error. It is useful for continuous integration scenarios where it is expected that small modifications may trigger releases where no production code has changed.
+This parameter specifies that if the update is identical to the latest release on the deployment, the CLI should generate a warning instead of an error. It's useful for continuous integration scenarios where it's expected that small modifications may trigger releases where no production code has changed.
 
 #### Rollout parameter
 
 > [!IMPORTANT]
 > In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Therefore, until you have adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we would advise not setting a rollout value on the app's releases, since no one would end up receiving it.
 
-This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it is set to `100%`, and therefore, you only have to set it if you want to limit how many users will receive it.
+This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it's set to `100%`, and therefore, you only have to set it if you want to limit how many users will receive it.
 
  When leveraging the rollout capability, there are a few additional considerations to keep in mind:
 
@@ -420,7 +420,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS
 
 #### App name parameter
 
-It is the same parameter as the one described in the [above section](#app-name-parameter).
+It's the same parameter as the one described in the [above section](#app-name-parameter).
 
 #### Platform parameter
 
@@ -428,27 +428,27 @@ This parameter specifies which platform the current update is targeting, and can
 
 #### Deployment name parameter
 
-It is the same parameter as the one described in the [above section](#deployment-name-parameter).
+It's the same parameter as the one described in the [above section](#deployment-name-parameter).
 
 #### Description parameter
 
-It is the same parameter as the one described in the [above section](#description-parameter).
+It's the same parameter as the one described in the [above section](#description-parameter).
 
 #### Mandatory parameter
 
-It is the same parameter as the one described in the [above section](#mandatory-parameter).
+It's the same parameter as the one described in the [above section](#mandatory-parameter).
 
 #### No duplicate release error parameter
 
-It is the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
+It's the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
 
 #### Rollout parameter
 
-It is the same parameter as the one described in the [above section](#rollout-parameter). If left unspecified, the release will be made available to all users.
+It's the same parameter as the one described in the [above section](#rollout-parameter). If left unspecified, the release will be made available to all users.
 
 #### Target binary version parameter
 
-It is the same parameter as the one described in the [above section](#target-binary-version-parameter). If left unspecified, it defaults to targeting the exact version specified in the app's **Info.plist** (for iOS) and **build.gradle** (for Android) files.
+It's the same parameter as the one described in the [above section](#target-binary-version-parameter). If left unspecified, it defaults to targeting the exact version specified in the app's **Info.plist** (for iOS) and **build.gradle** (for Android) files.
 
 #### Bundle name parameter
 
@@ -466,7 +466,7 @@ This parameter specifies whether to generate an unminified, development JS bundl
 
 #### Disabled parameter
 
-It is the same parameter as the one described in the [above section](#disabled-parameter).
+It's the same parameter as the one described in the [above section](#disabled-parameter).
 
 #### Entry file parameter
 
@@ -569,7 +569,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 
 #### App name parameter
 
-It is the same parameter as the one described in the [above section](#app-name-parameter).
+It's the same parameter as the one described in the [above section](#app-name-parameter).
 
 #### Platform parameter
 
@@ -577,35 +577,35 @@ This parameter specifies which platform the current update is targeting, and can
 
 #### Deployment name parameter
 
-It is the same parameter as the one described in the [above section](#deployment-name-parameter).
+It's the same parameter as the one described in the [above section](#deployment-name-parameter).
 
 #### Description parameter
 
-It is the same parameter as the one described in the [above section](#description-parameter).
+It's the same parameter as the one described in the [above section](#description-parameter).
 
 #### Mandatory parameter
 
-It is the same parameter as the one described in the [above section](#mandatory-parameter).
+It's the same parameter as the one described in the [above section](#mandatory-parameter).
 
 #### No duplicate release error parameter
 
-It is the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
+It's the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
 
 #### Rollout parameter
 
-It is the same parameter as the one described in the [above section](#rollout-parameter). If left unspecified, the release will be made available to all users.
+It's the same parameter as the one described in the [above section](#rollout-parameter). If left unspecified, the release will be made available to all users.
 
 #### Target binary version parameter
 
-It is the same parameter as the one described in the [above section](#target-binary-version-parameter). If left unspecified, the command defaults to targeting only the specified version in the project's metadata (**Info.plist** if this update is for iOS clients, and **build.gradle** for Android clients).
+It's the same parameter as the one described in the [above section](#target-binary-version-parameter). If left unspecified, the command defaults to targeting only the specified version in the project's metadata (**Info.plist** if this update is for iOS clients, and **build.gradle** for Android clients).
 
 #### Disabled parameter
 
-It is the same parameter as the one described in the [above section](#disabled-parameter).
+It's the same parameter as the one described in the [above section](#disabled-parameter).
 
 #### Build parameter
 
-This parameter specifies whether you want to run `cordova build` instead of `cordova prepare` (which is the default behavior), when generating your updated web assets. It is valuable if your project includes before and/or after build hooks (for example, to transpile TypeScript), and therefore, having CodePush run `cordova prepare` isn't sufficient to create and release an update. If left unspecified, it defaults to `false`.
+This parameter specifies whether you want to run `cordova build` instead of `cordova prepare` (which is the default behavior), when generating your updated web assets. It's valuable if your project includes before and/or after build hooks (for example, to transpile TypeScript), and therefore, having CodePush run `cordova prepare` isn't sufficient to create and release an update. If left unspecified, it defaults to `false`.
 
 > [!TIP]
 > This parameter can be set using either `--build` or `-b`*
@@ -625,7 +625,7 @@ appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-rel
 ```
 
 > [!NOTE]
-> This command doesn't allow modifying the actual update contents of a release (for example, `www` folder of a Cordova app). If you want to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it is available.*
+> This command doesn't allow modifying the actual update contents of a release (for example, `www` folder of a Cordova app). If you want to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it's available.*
 
 Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update just a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
 
@@ -643,25 +643,25 @@ Indicates which release (for example, `v23`) you want to update within the speci
 
 ### Mandatory parameter
 
-It is the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag isn't equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You must set this parameter to `--mandatory false` to explicitly make a release optional.
+It's the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag isn't equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You must set this parameter to `--mandatory false` to explicitly make a release optional.
 
 ### Description parameter
 
-It is the same parameter as the one described in the [above section](#description-parameter), and allows you to update the description associated with the release (for example, you made a typo when releasing, or you forgot to add a description at all). If this parameter is omitted, no change will be made to the value of the target release's description property.
+It's the same parameter as the one described in the [above section](#description-parameter), and allows you to update the description associated with the release (for example, you made a typo when releasing, or you forgot to add a description at all). If this parameter is omitted, no change will be made to the value of the target release's description property.
 
 ### Disabled parameter
 
-It is the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag isn't equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You must set this parameter to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
+It's the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag isn't equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You must set this parameter to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
 
 ### Rollout parameter
 
-It is the same parameter as the one described in the [above section](#rollout-parameter), and allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can set this parameter to `--rollout 100`. If this parameter is omitted, no change will be made to the value of the target release's rollout parameter.
+It's the same parameter as the one described in the [above section](#rollout-parameter), and allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can set this parameter to `--rollout 100`. If this parameter is omitted, no change will be made to the value of the target release's rollout parameter.
 
-Additionally, as mentioned above, when you release an update without a rollout value, it is treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you can't change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
+Additionally, as mentioned above, when you release an update without a rollout value, it's treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you can't change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
 
 ### Target binary version parameter
 
-It is the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to update the **semver** range that indicates which binary version(s) a release is compatible with. This can be useful if you made a mistake when originally releasing an update (for example, you specified `1.0.0` but meant `1.1.0`) or you want to increase or decrease the version range that a release supports (for example, you discovered that a release doesn't work with `1.1.2` after all). If this parameter is omitted, no change will be made to the value of the target release's version property.
+It's the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to update the **semver** range that indicates which binary version(s) a release is compatible with. This can be useful if you made a mistake when originally releasing an update (for example, you specified `1.0.0` but meant `1.1.0`) or you want to increase or decrease the version range that a release supports (for example, you discovered that a release doesn't work with `1.1.2` after all). If this parameter is omitted, no change will be made to the value of the target release's version property.
 
 ```shell
 # Add a "max binary version" to an existing release
@@ -695,27 +695,27 @@ We recommend that all users take advantage of the automatically created `Staging
 
 ### Description parameter
 
-It is the same parameter as the one described in the [above section](#description-parameter), and allows you to override the description that will be used for the promoted release. If unspecified, the new release will inherit the description from the release being promoted.
+It's the same parameter as the one described in the [above section](#description-parameter), and allows you to override the description that will be used for the promoted release. If unspecified, the new release will inherit the description from the release being promoted.
 
 ### Disabled parameter
 
-It is the same parameter as the one described in the [above section](#disabled-parameter), and allows you to override the value of the disabled flag that will be used for the promoted release. If unspecified, the new release will inherit the disabled property from the release being promoted.
+It's the same parameter as the one described in the [above section](#disabled-parameter), and allows you to override the value of the disabled flag that will be used for the promoted release. If unspecified, the new release will inherit the disabled property from the release being promoted.
 
 ### Mandatory parameter
 
-It is the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to override the mandatory flag that will be used for the promoted release. If unspecified, the new release will inherit the mandatory property from the release being promoted.
+It's the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to override the mandatory flag that will be used for the promoted release. If unspecified, the new release will inherit the mandatory property from the release being promoted.
 
 ### No duplicate release error parameter
 
-It is the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
+It's the same parameter as the one described in the [above section](#no-duplicate-release-error-parameter).
 
 ### Rollout parameter
 
-It is the same parameter as the one described in the [above section](#rollout-parameter), and allows you to specify whether the newly created release should only be made available to a portion of your users. Unlike the other release metadata parameters (for example, `description`), the `rollout` of a release isn't carried over/inherited as part of a promote, and therefore, you must explicitly set this if you don't want the newly created release to be available to all of your users.
+It's the same parameter as the one described in the [above section](#rollout-parameter), and allows you to specify whether the newly created release should only be made available to a portion of your users. Unlike the other release metadata parameters (for example, `description`), the `rollout` of a release isn't carried over/inherited as part of a promote, and therefore, you must explicitly set this if you don't want the newly created release to be available to all of your users.
 
 ### Target binary version parameter
 
-It is the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to override the target binary version that will be used for the promoted release. If unspecified, the new release will inherit the target binary version property from the release being promoted.
+It's the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to override the target binary version that will be used for the promoted release. If unspecified, the new release will inherit the target binary version property from the release being promoted.
 
 ```shell
 # Promote the release to production and make it
@@ -725,7 +725,7 @@ appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t 
 
 ## Rolling Back Updates
 
-A deployment's release history is immutable, so you can't delete or remove an update once it's been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
+A deployment's release history is immutable, so you can't delete or remove an update once it's been released. However, if you release an update that is broken or contains unintended features, it's easy to roll it back using the `rollback` command:
 
 ```shell
 appcenter codepush rollback <ownerName>/<appName> <deploymentName>

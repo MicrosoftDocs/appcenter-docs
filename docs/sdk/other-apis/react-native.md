@@ -26,7 +26,7 @@ ms.tgt_pltfrm: react-native
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. The default level is `LogLevel.ASSERT` for the iOS App Store environment and Android release builds. Otherwise, it is set to `LogLevel.WARNING`.
+You can control the amount of log messages that show up from App Center. Log messages show in the console on iOS and LogCat on Android. Use the `setLogLevel` API to enable additional logging while debugging. The default level is `LogLevel.ASSERT` for the iOS App Store environment and Android release builds. Otherwise, it's set to `LogLevel.WARNING`.
 
 To output all log messages, use `LogLevel.VERBOSE`.
 

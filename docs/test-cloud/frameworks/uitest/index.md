@@ -54,12 +54,12 @@ All test interactions with the mobile application occur through an instance of `
 
 `iOSApp` and `AndroidApp` objects aren't instantiated directly. Instead, they are created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
 
-It is recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
+It's recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
 
 * **In the `SetUp` method** Typically, a test fixture is a logical grouping of related tests, each of them running independent of the other. In this scenario the `IApp` should be initialized in the `SetUp` method, ensuring that a new `IApp` is available for each test.
 * **In the `TestFixtureSetup` method**  In some situations a single test may require its own test fixture. In this case it may make more sense to initialize the `IApp` object once in the `TestFixtureSetup` method.
 
-Once `IApp` has been configured, a test may begin to interact with the application being tested. To do so, it is necessary to obtain references to the views that are visible on the screen. Many methods in Xamarin.UITest take a `Func<AppQuery, AppQuery>` parameter to locate the views. For example, the following snippet shows how to tap on a button:
+Once `IApp` has been configured, a test may begin to interact with the application being tested. To do so, it's necessary to obtain references to the views that are visible on the screen. Many methods in Xamarin.UITest take a `Func<AppQuery, AppQuery>` parameter to locate the views. For example, the following snippet shows how to tap on a button:
 
 ```csharp
 app.Tap(c=>c.Button("ValidateButton"));
@@ -124,7 +124,7 @@ IApp app = ConfigureApp
 
 The relative path example tells `ApkFile` to go up three directories from the Xamarin.UITest assembly, and then navigate down the project tree of the Android application project to find the apk file.
 
-If there is more than one device or emulator connected, Xamarin.UITest will halt test execution and display an error message as it is unable to resolve what the intended target is for the test. In this case, it will be necessary to provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
+If there is more than one device or emulator connected, Xamarin.UITest will halt test execution and display an error message as it's unable to resolve what the intended target is for the test. In this case, it will be necessary to provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
 
 ```bash
 $ adb devices
@@ -144,7 +144,7 @@ IApp app = ConfigureApp.Android.ApkFile("/path/to/android.apk")
 ## Interacting with the User Interface
 To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](https://msdn.microsoft.com/library/bb549151(v=vs.110).aspx) delegate for locating the view. This delegate in turn uses [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery/), which is at the core of how Xamarin.UITest locates views.
 
-`AppQuery` is a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) for building the queries to locate views. Of the methods that `AppQuery` provides, the `Marked` method is one of the simplest and most flexible. This method uses a heuristic to try and locate views and will be discussed in more detail in the following section. For now, it is important to understand that `IApp` has many methods for interacting with an application. These methods use a `Func<AppQuery, AppQuery>` to obtain a reference to the view to interact with. Some of the more interesting methods provided by `AppQuery` are listed below:
+`AppQuery` is a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) for building the queries to locate views. Of the methods that `AppQuery` provides, the `Marked` method is one of the simplest and most flexible. This method uses a heuristic to try and locate views and will be discussed in more detail in the following section. For now, it's important to understand that `IApp` has many methods for interacting with an application. These methods use a `Func<AppQuery, AppQuery>` to obtain a reference to the view to interact with. Some of the more interesting methods provided by `AppQuery` are listed below:
 
 | Method      | Description |
 | ----------- | ------------|
@@ -162,7 +162,7 @@ For example, the following method shows how to simulate a tap on a button called
 app.Tap(c=>c.Marked("SaveUserDataButton"));
 ```
 
-Because `AppQuery` is a fluent interface, it is  possible to chain together multiple method invocations together. Consider this more complicated example of tapping on a view:
+Because `AppQuery` is a fluent interface, it's  possible to chain together multiple method invocations together. Consider this more complicated example of tapping on a view:
 
 ```csharp
 app.Tap(c=>c.Marked("Pending")

@@ -34,7 +34,7 @@ dev_langs:
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, refer to [the SDK migration guide](migration/android.md).
+> Google announced it's migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, refer to [the SDK migration guide](migration/android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 

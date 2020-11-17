@@ -122,7 +122,7 @@ document.addEventListener("resume", function () {
 Additionally, if you would like to display an update confirmation dialog (an "active install"), configure when an available update is installed (e.g. force an immediate restart) or customize the update experience in any way, refer to the `sync` method's API reference for information on how to tweak this default behavior.
 
 > [!IMPORTANT]
-> While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
+> While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
 
 ## Releasing Updates
 Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server.
@@ -277,7 +277,7 @@ codePush.getPendingPackage(function (update) {
 codePush.notifyApplicationReady(notifySucceeded?, notifyFailed?);
 ```
 
-Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It is mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
+Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
 If you are using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
 
@@ -428,7 +428,7 @@ Contains details about an update that has been downloaded locally or already ins
 Interface defining several options for customizing install operation behavior.
 * **installMode**: Used to specify the [InstallMode](#installmode) used for the install operation. Defaults to `InstallMode.ON_NEXT_RESTART`.
 * **mandatoryInstallMode**: Used to specify the [InstallMode](#installmode) used for the install operation if the package is mandatory. Defaults to `InstallMode.IMMEDIATE`.
-* **minimumBackgroundDuration**: If **installMode** is `InstallMode.ON_NEXT_RESUME`, used to specify the amount of time the app must be in the background before the update is installed when it is resumed. Defaults to `0`.
+* **minimumBackgroundDuration**: If **installMode** is `InstallMode.ON_NEXT_RESUME`, used to specify the amount of time the app must be in the background before the update is installed when it's resumed. Defaults to `0`.
 
 Example Usage:
 ```javascript

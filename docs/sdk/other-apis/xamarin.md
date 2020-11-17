@@ -26,7 +26,7 @@ ms.tgt_pltfrm: xamarin
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it's set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
 To have as many log messages as possible, use `LogLevel.Verbose`.
 

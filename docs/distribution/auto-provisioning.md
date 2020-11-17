@@ -84,7 +84,7 @@ The flow requires the username and password for the [Apple Developer portal](htt
 
 When you add your Apple credentials and a signing certificate to App Center, we use a secure connection. App Center stores the information in an encrypted vault. It isn't possible for any user to download or retrieve sensitive information from the vault.
 
-If you provide this set of credentials and a certificate, it is automatically available to app collaborators but only for that specific service. As an example, say developer X adds credentials and certificates to distribution group "Tester." Then when developer Y distributes a new release to the "Tester" group, X's username, password, and certificate are by default selected. App Center will use them for developer Y. App Center only uses your Apple ID during the transaction and it doesn't use it for anything else.
+If you provide this set of credentials and a certificate, it's automatically available to app collaborators but only for that specific service. As an example, say developer X adds credentials and certificates to distribution group "Tester." Then when developer Y distributes a new release to the "Tester" group, X's username, password, and certificate are by default selected. App Center will use them for developer Y. App Center only uses your Apple ID during the transaction and it doesn't use it for anything else.
 
 ## Apple device registration limit
 

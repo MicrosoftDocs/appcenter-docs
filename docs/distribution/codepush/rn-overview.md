@@ -30,7 +30,7 @@ In order to ensure that your end users always have a functioning version of your
 - Android (5.0+)
 - Windows (UWP)
 
-We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it is possible that you need to use a specific version of the CodePush plugin in order to support the exact version of React Native you are using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
+We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin in order to support the exact version of React Native you are using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
 | React Native version(s) | Supporting CodePush version(s)                       |
 |-------------------------|------------------------------------------------------|
@@ -92,7 +92,7 @@ While Google Play and internally distributed apps (for example Enterprise, Fabri
 
 CodePush allows you to follow these rules in full compliance so long as the update you push doesn't significantly deviate your product from its original App Store approved intent.
 
-To further remain in compliance with Apple's guidelines we suggest that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, since in the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) it is written that:
+To further remain in compliance with Apple's guidelines we suggest that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, since in the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) it's written that:
 
 > Apps must not force users to rate the app, review the app, download other apps, or other similar actions in order to access functionality, content, or use of the app.
 

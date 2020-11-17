@@ -47,7 +47,7 @@ No, you can't. App Center Push doesn't set notification priority, so the target 
 
 **How should I handle sensitive payload in push notifications?**
 
-All notifications are delivered to target devices by the platform's PNS. When a notification is sent to App Center Push, it is processed and passed to the respective PNS.
+All notifications are delivered to target devices by the platform's PNS. When a notification is sent to App Center Push, it's processed and passed to the respective PNS.
 
 All connections, from the sender to the App Center Push to the PNS, use HTTPS.
 

@@ -36,7 +36,7 @@ Before you begin, make sure that the following prerequisites are met:
 * You're using a React Native project that runs React Native 0.34 or later.
 * You're targeting devices that are running on Android Version 5.0/API level 21 or later, or iOS version 9.0 or later.
 * You're not using any other library that provides Crash Reporting functionality on iOS.
-* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
+* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it's possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -189,7 +189,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 4. You will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
 
 5. [Optional] Create a subdirectory for 3rd-party libraries.
-   * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
+   * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it's often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
 6. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.

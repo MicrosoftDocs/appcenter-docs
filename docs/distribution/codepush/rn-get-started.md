@@ -163,7 +163,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
 
-Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it is responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
+Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
 
 1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 

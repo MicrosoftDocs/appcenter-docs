@@ -62,7 +62,7 @@ such that the subject of the sentence is acted upon. Contrast these two examples
 The first sentence uses active voice. The second sentence was written in passive voice.
 (Those two sentences provide another example of each style).
 
-We recommend active voice because it is more readable. Passive voice can be more difficult to read.
+We recommend active voice because it's more readable. Passive voice can be more difficult to read.
 
 ### Target a Fifth Grade Reading Level
 We provide this final guideline because many of our readers aren't native English speakers.
