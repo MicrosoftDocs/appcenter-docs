@@ -11,7 +11,7 @@ ms.assetid: 9e2c6890-26e9-4b8a-a4fb-f43c8e55c1fb
 ---
 
 # View Crashes Sent From Android App in App Center
-If you have not already, follow the [getting started tutorial](getting-started.md) to set up the sample app.
+If you haven't already, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Crashing the sample app
 1. Navigate to the app repository in your local machine and open the app module in Android Studio.

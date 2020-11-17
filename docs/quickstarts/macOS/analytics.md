@@ -19,7 +19,7 @@ dev_langs:
 
 In this tutorial, you will learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
+If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ## Open the app and view user Analytics
 To see users, session, and other information on the Overview page:

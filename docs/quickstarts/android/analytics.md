@@ -14,7 +14,7 @@ ms.assetid: 2eab2986-32ce-4cc5-aa49-ab60a72bf456
 
 
 # View Custom Events and Track User Analytics
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
+If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Open the app and view user analytics
 1. Navigate to the app repository in your local machine and open the app module in Android Studio.
