@@ -52,7 +52,7 @@ You can configure a billing plan for your App Center organization or user accoun
 
 - Can I use my Free Azure subscription or credits from my Dev Essentials subscription?
 
-  No, free Azure Subscriptions or credits from Dev Essentials subscriptions cannot be used to pay for App Center.
+  No, free Azure Subscriptions or credits from Dev Essentials subscriptions can't be used to pay for App Center.
 
 - Can I use an Azure Subscription with spending limits?
 

@@ -108,7 +108,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 
     // (Do something with the values if you want)
 
-    // On mandatory update, user cannot postpone
+    // On mandatory update, user can't postpone
     if (releaseDetails.MandatoryUpdate)
     {
         // Force user to update (you should probably show some custom UI here)

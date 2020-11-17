@@ -115,7 +115,7 @@ App Center allows you to define custom properties as key value pairs in your app
 
 > [!NOTE]
 > Only devices that have [Push](../push/xamarin-ios.md) successfully registered are matched in audiences.
-> As a consequence, the iOS simulator can not be used to test audience matching.
+> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 

@@ -19,7 +19,7 @@ ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 
 1. Crashes caused by `StackOverflowException` aren't reported. This is a limitation of the Xamarin runtime.
 2. You can't use most AppCenter SDK APIs in a Xamarin Forms application constructor if you want to use the previewer. The Xamarin previewer does not support native code.
-3. You cannot deploy an application using the AppCenter SDK to the Xamarin Live Player as the SDK contains native code.
+3. You can't deploy an application using the AppCenter SDK to the Xamarin Live Player as the SDK contains native code.
 
 ## UWP, WPF, and WinForms
 

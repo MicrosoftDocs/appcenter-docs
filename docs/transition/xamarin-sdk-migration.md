@@ -180,7 +180,7 @@ Identify users | Crash only | [AppCenter.SetUserId](~/sdk/other-apis/xamarin.md#
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled only on Android | [Documentation (cannot be disabled)](~/sdk/analytics/xamarin.md#session-and-device-information)
+Automatically track sessions | Yes, can be disabled only on Android | [Documentation (can't be disabled)](~/sdk/analytics/xamarin.md#session-and-device-information)
 Custom events with properties | [HockeyApp.MetricsManager.TrackEvent](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-5-add-custom-events) | [Analytics.TrackEvent](~/sdk/analytics/xamarin.md#custom-events)
 Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or [SharedHockeyManager.DisableMetricsManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#for-ios_1) | [Analytics.SetEnabledAsync](~/sdk/analytics/xamarin.md#enable-or-disable-app-center-analytics-at-runtime)
 

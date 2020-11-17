@@ -164,7 +164,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
     >```
 
     > [!NOTE]
-    > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
+    > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes can't be processed at the time the application crashes.
 
 2. Edit the project's `android/app/src/main/assets/appcenter-config.json` and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
 

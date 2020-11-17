@@ -43,7 +43,7 @@ AppCenter.Start(typeof(Push));
 
 **Can I set a priority for notifications sent through App Center Push?**
 
-No, you cannot. App Center Push does not set notification priority, so the target PNS will deliver notifications with default priority. For Android, that means **Normal** and iOS it's `apns-priority = 10`
+No, you can't. App Center Push doesn't set notification priority, so the target PNS will deliver notifications with default priority. For Android, that means **Normal** and iOS it's `apns-priority = 10`
 
 **How should I handle sensitive payload in push notifications?**
 

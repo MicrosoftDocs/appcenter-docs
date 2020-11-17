@@ -150,7 +150,7 @@ Once added, all collaborators will immediately have the following permissions in
 4. [Rollback](#rolling-back-updates) any of the app's deployments
 5. [Patch](#patching-update-metadata) any releases within any of the app's deployments
 
-Collaborators cannot do any of the following actions:
+Collaborators can't do any of the following actions:
 
 1. Rename or delete the app
 2. Create, rename, or delete new deployments within the app
@@ -354,7 +354,7 @@ This parameter specifies the percentage of users (as an integer between `1` and 
 
  When leveraging the rollout capability, there are a few additional considerations to keep in mind:
 
-1. You cannot release a new update to a deployment whose latest release is an "active" rollout (that is, its rollout property is non-null). The rollout needs to be "completed" (that is, setting the `rollout` property to `100`) before you can release further updates to the deployment.
+1. You can't release a new update to a deployment whose latest release is an "active" rollout (that is, its rollout property is non-null). The rollout needs to be "completed" (that is, setting the `rollout` property to `100`) before you can release further updates to the deployment.
 
 2. If you roll back a deployment whose latest release is an "active" rollout, the rollout value will be cleared, effectively "deactivating" the rollout behavior
 
@@ -657,7 +657,7 @@ It is the same parameter as the one described in the [above section](#disabled-p
 
 It is the same parameter as the one described in the [above section](#rollout-parameter), and allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can set this parameter to `--rollout 100`. If this parameter is omitted, no change will be made to the value of the target release's rollout parameter.
 
-Additionally, as mentioned above, when you release an update without a rollout value, it is treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you cannot change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
+Additionally, as mentioned above, when you release an update without a rollout value, it is treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you can't change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
 
 ### Target binary version parameter
 
@@ -725,7 +725,7 @@ appcenter codepush promote -a <ownerName>/MyApp-iOS -s Staging -d Production -t 
 
 ## Rolling Back Updates
 
-A deployment's release history is immutable, so you cannot delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
+A deployment's release history is immutable, so you can't delete or remove an update once it has been released. However, if you release an update that is broken or contains unintended features, it is easy to roll it back using the `rollback` command:
 
 ```shell
 appcenter codepush rollback <ownerName>/<appName> <deploymentName>

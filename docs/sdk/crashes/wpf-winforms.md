@@ -59,7 +59,7 @@ If this option is not acceptable in your application, you can report the unhandl
 
 ### Report the unhandled exception as a runtime error
 
-If your application must keep running after an unhandled exception, you cannot report the exception as a **crash** in App Center but you can instead report it as an **error**.
+If your application must keep running after an unhandled exception, you can't report the exception as a **crash** in App Center but you can instead report it as an **error**.
 
 To do that, you can use the following code sample:
 

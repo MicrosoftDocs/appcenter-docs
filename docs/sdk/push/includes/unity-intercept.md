@@ -26,7 +26,7 @@ Push.PushNotificationReceived += (sender, e) =>
         foreach (var data in e.CustomData)
             customData += data.Key + " = " + data.Value + Environment.NewLine;
 
-    // Message and title cannot be read from a background notification object.
+    // Message and title can't be read from a background notification object.
     // Message being a mandatory field, you can use that to check foreground vs background.
     if (string.IsNullOrEmpty(e.Message))
     {

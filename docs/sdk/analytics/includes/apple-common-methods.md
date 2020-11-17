@@ -126,7 +126,7 @@ You can track business critical events that have higher importance than other ev
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
-**Normal** priority will fail as the SDK cannot make room in that case.
+**Normal** priority will fail as the SDK can't make room in that case.
 * If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 

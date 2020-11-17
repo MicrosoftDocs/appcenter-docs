@@ -103,7 +103,7 @@ The relative path example tells `AppBundle` to go up three directories from the 
 For more information on how to run iOS tests on a specific iOS Simulator, see [Determine the Device ID for an iOS Simulator](https://docs.microsoft.com/appcenter/test-cloud/uitest/cheatsheet#get_device_id_for_ios_simulator).
 
 ### Initialize IApp for Android Applications
-Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that is already running. The app will be started, and then the test will be run. Xamarin.UITest cannot build the APK nor can it start an instance of the Android emulator.  
+Xamarin.UITest will deploy an existing APK to an attached device or an instance of the Android emulator that is already running. The app will be started, and then the test will be run. Xamarin.UITest can't build the APK nor can it start an instance of the Android emulator.  
 
 The `ApkFile` method of `IApp` is used to specify where on the file system the APK may be found. There are two ways to do so, with an absolute path, or a relative path. This snippet shows using an absolute path to the APK:
 

@@ -42,7 +42,7 @@ On each app there are three roles:
 
 * **Managers** can manage app settings, collaborators, and integrations.
 * **Developers** can manage app services (e.g. create builds, run tests).
-* **Viewers** can view and download all data but cannot make changes.
+* **Viewers** can view and download all data but can't make changes.
 
 For every app you create, whether owned by you or your organization, you are automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
 
@@ -82,7 +82,7 @@ To transfer an app from your personal account to an organization or from one org
 
 > [!NOTE]
 > * You can only transfer an app in and out of organizations you are an admin of.
-> * After transferring an app into an organization, you cannot transfer it back to your personal account.
+> * After transferring an app into an organization, you can't transfer it back to your personal account.
 
 ![The three dots 'More' settings menu](images/settings-dot-menu.png)
 

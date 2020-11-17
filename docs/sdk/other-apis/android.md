@@ -188,7 +188,7 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<
 
     @Override
     public void accept(Boolean success) {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 });
 AppCenter.start("{Your App Secret}", Analytics.class);
@@ -196,7 +196,7 @@ AppCenter.start("{Your App Secret}", Analytics.class);
 ```kotlin
 // Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
-    // The success parameter (it) is false when the size cannot be honored.
+    // The success parameter (it) is false when the size can't be honored.
 }
 
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)

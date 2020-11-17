@@ -134,7 +134,7 @@ App Center allows you to define custom properties as key value pairs in your app
 
 > [!NOTE]
 > Only devices that have [Push](../../push/ios.md) successfully registered are matched in audiences.
-> As a consequence, the iOS simulator can not be used to test audience matching.
+> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
@@ -177,7 +177,7 @@ Use the `setMaxStorageSize` API to set the size of the local DB. The API is asyn
 // Use 20 MB for storage.
 [MSACAppCenter setMaxStorageSize:(20 * 1024 * 1024) completionHandler:^(BOOL success) {
     if (!success) {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 }];
 [MSACAppCenter start:@"{Your App Secret}", withServices:@[[MSACAnalytics class]]];
@@ -186,7 +186,7 @@ Use the `setMaxStorageSize` API to set the size of the local DB. The API is asyn
 // Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024, completionHandler: { (success) in
     if !success {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 })
 AppCenter.start(withAppSecret: "{Your App Secret}", services:[Analytics.self])

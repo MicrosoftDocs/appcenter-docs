@@ -40,7 +40,7 @@ The Events Page provides a table with an overview of the events happening in you
 
 By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you will see distribution of counts for your event properties.
 
-Remove individual events from this page by clicking the settings option on top right of the page. Note that this action cannot be undone.
+Remove individual events from this page by clicking the settings option on top right of the page. Note that this action can't be undone.
 
 ## Events Properties
 

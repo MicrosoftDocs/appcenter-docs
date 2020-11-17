@@ -114,7 +114,7 @@ Identify users | [Documentation (crashes only)](https://support.hockeyapp.net/kb
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (cannot be disabled)](~/sdk/analytics/android.md#session-and-device-information)
+Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (can't be disabled)](~/sdk/analytics/android.md#session-and-device-information)
 Custom events with properties | [MetricsManager.trackEvent](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-5-add-user-metrics) | [Analytics.trackEvent](~/sdk/analytics/android.md#custom-events)
 Disable service at runtime | `MetricsManager.disableUserMetrics` and `MetricsManager.enableUserMetrics` | [Analytics.setEnabled](~/sdk/analytics/android.md#enable-or-disable-app-center-analytics-at-runtime)
 

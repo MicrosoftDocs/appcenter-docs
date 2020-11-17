@@ -87,7 +87,7 @@ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iO
 ## Submitting Tests to App Center Test by Category
 
 > [!WARNING]
-> ️ NUnit category names which contain spaces cannot be specified for upload.
+> ️ NUnit category names which contain spaces can't be specified for upload.
 
 You can instruct App Center Test to run a subset of your tests using the `--include-category` parameter.  
 

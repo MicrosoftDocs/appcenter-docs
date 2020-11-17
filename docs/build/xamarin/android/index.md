@@ -55,7 +55,7 @@ When selecting a Mono version in the build configuration, the bundled Xamarin.An
 
 #### 3.3.1. .Net Core version
 
-Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+Proper .Net Core version will be selected automatically based on Mono version used for build and can't be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
 
 | Mono | .Net Core |
 | ---- | --------- |
@@ -150,4 +150,4 @@ The `.apk` file is an Android application packaged file which stores the Android
 
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
-App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, reach out to us. See [help and feedback](../../../help.md).
+App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which can't be replaced, reach out to us. See [help and feedback](../../../help.md).
