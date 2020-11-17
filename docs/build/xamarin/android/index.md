@@ -144,7 +144,7 @@ The build step specific logs (located in the build/ directory of the archive) ar
 
 ### 4.2. The app (.apk)
 
-The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build has not been signed, the app can run on an emulator or be used for other purposes.
+The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
 
 ## Supported versions and requirements
 

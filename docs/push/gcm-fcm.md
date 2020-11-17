@@ -43,4 +43,4 @@ If you are creating a new FCM project and not attaching to the existing GCM proj
 
 **Q**: How can I transition to the new FCM SDKs and libraries without breaking existing users?
 
-**A**: Upgrade at any time. Google has not yet announced any deprecation of existing GCM SDKs and libraries. To ensure you don't break push notifications to your existing users, make sure when you create the new Firebase project you are associating with your existing GCM project. This will ensure new Firebase secrets will work for users running the older versions of your app with GCM SDKs and libraries, as well as new users of your app with FCM SDKs and libraries.
+**A**: Upgrade at any time. Google hasn't yet announced any deprecation of existing GCM SDKs and libraries. To ensure you don't break push notifications to your existing users, make sure when you create the new Firebase project you are associating with your existing GCM project. This will ensure new Firebase secrets will work for users running the older versions of your app with GCM SDKs and libraries, as well as new users of your app with FCM SDKs and libraries.
