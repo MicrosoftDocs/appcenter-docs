@@ -5,7 +5,7 @@ keywords: build, xamarin, ios
 author: king-of-spades
 ms.author: kegr
 ms.reviewer: kegr
-ms.date: 03/26/2020
+ms.date: 11/17/2020
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6
 ms.service: vs-appcenter
@@ -44,7 +44,7 @@ App Center automatically detects the solution and project files in your reposito
 > For best performance, the analysis is currently limited to two directory levels for **.sln** and four directory levels for **.csproj/fsproj** including the root of your repository.
 
 #### 3.1.1. Building from the solution file (.sln)
-In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects targeting other platforms. This change will ensure that when the **.sln** is building, it won't attempt to build the other projects. There's more [solution configurations mapping information](~/build/xamarin/solution-configuration-mappings.md) you can read.
+In your code, make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all projects targeting other platforms. This change will ensure that when the **.sln** is building, it won't attempt to build the other projects. There's more [solution configurations mapping information](~/build/xamarin/solution-configuration-mappings.md) you can read.
 
 #### 3.1.2. Building from the project file (.csproj/.fsproj)
 To build from a **.csproj/.fsproj** file all the referenced projects (for example, your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
@@ -146,7 +146,7 @@ After a build has been triggered, it can be in the following states:
 * **queued** - The build is in a queue waiting for resources to be freed up.
 * **building** - The build is running and executing the predefined tasks.
 * **succeeded** - The build is completed and it has succeeded.
-* **failed** - The build has completed but it has failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
+* **failed** - The build stopped due to a failure. You can troubleshoot what went wrong by downloading and inspecting the build log.
 * **canceled** - The build has been canceled by a user action or it has timed out.
 
 ### 4.1. Build logs
@@ -171,7 +171,7 @@ If the app is a simulator build, you can run the `.app` file on a simulator, but
 ### 4.3. The symbol files (.dsym)
 Symbol files are only generated for device builds. The .dsym files contain the debug symbols for the app.
 
-* If previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build to display human readable (symbolicated) crash reports.
-* If you previously integrated another SDK for crash reporting in your app (for example, HockeyApp SDK), the corresponding service requires the .dsym file to display human readable crash reports.
+* If previously integrated the App Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this `.dsym` file for a build to display human readable (symbolicated) crash reports.
+* If you previously integrated another SDK for crash reporting in your app (for example, HockeyApp SDK), the corresponding service requires the `.dsym` file to display human readable crash reports.
 
 
