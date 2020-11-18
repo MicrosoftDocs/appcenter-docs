@@ -63,7 +63,7 @@ Install-Package Microsoft.AppCenter.Distribute
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
 
 #### 2.1 Add App Center Distribute imports
 
@@ -180,7 +180,7 @@ Google Play considers the in-app update code as malicious behavior even if it is
 
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `UpdateTrack` property.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you'll need to explicitly set it via `UpdateTrack` property.
 
 ```csharp
 Distribute.UpdateTrack = UpdateTrack.Private;

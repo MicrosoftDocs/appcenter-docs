@@ -40,11 +40,11 @@ You can configure a billing plan for your App Center organization or user accoun
 
 - What happens if I delete my organization during the month?
 
-  You will lose the data from your org and will still pay for the full month.
+  You'll lose the data from your org and will still pay for the full month.
 
 - What happens if a paid user's subscription has an issue (credit card expiry)?
 
-  Azure will notify you via an email notification first. In App Center, you will be downgraded to the free tier temporarily until the subscription issue is fixed. Once it's fixed, we'll convert you back to your previously selected paid plan.
+  Azure will notify you via an email notification first. In App Center, you'll be downgraded to the free tier temporarily until the subscription issue is fixed. Once it's fixed, we'll convert you back to your previously selected paid plan.
 
 - Can I downgrade during the month?
 

@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Search in Diagnostics
 
-In this section, you will learn about the ability to search Diagnostics data in App Center.
+In this section, you'll learn about the ability to search Diagnostics data in App Center.
 
 ## How to use Search
 

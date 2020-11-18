@@ -100,7 +100,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
 
-2. You will be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 #### Plugin Installation (iOS - CocoaPods)
 1. Add the React Native and CodePush plugin dependencies to your `Podfile`, pointing at the path where NPM has installed modules
@@ -382,7 +382,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.*
 
-2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. If you're using RNPM >=1.6.0, you'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 
@@ -561,7 +561,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 **For React Native v0.19 - v0.28**
 
-Before v0.29, React Native didn't provide a `ReactNativeHost` abstraction. If you are launching a background instance, you will likely have built your own, which should now implement `ReactInstanceHolder`. Once that's done:
+Before v0.29, React Native didn't provide a `ReactNativeHost` abstraction. If you are launching a background instance, you'll likely have built your own, which should now implement `ReactInstanceHolder`. Once that's done:
 
 ```java
 // 1. Provide your ReactInstanceHolder to CodePush.

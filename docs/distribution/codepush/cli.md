@@ -132,7 +132,7 @@ appcenter apps list
 ```
 
 ### App Collaboration
-If you will be working with other developers on the same CodePush app, you can add them as collaborators using the App Center portal by following the set of instructions below:
+If you'll be working with other developers on the same CodePush app, you can add them as collaborators using the App Center portal by following the set of instructions below:
 
 1. In the App Center portal, select the app for which you want to add collaborators
 2. In the navigation area on the left side of the page, click **Settings**
@@ -205,7 +205,7 @@ The install metrics have the following meaning:
 
 * **Disabled** - Indicates whether the release has been marked as disabled or not, and therefore, is downloadable by end users. This property will only be displayed for releases that are disabled.
 
-When the metrics cell reports `No installs recorded`, that indicates that the server hasn't seen any activity for this release. This could either be because it precluded the plugin versions that included telemetry support, or no end users have synchronized with the CodePush server yet. As soon as an install happens, you will begin to see metrics populate in the CLI for the release.
+When the metrics cell reports `No installs recorded`, that indicates that the server hasn't seen any activity for this release. This could either be because it precluded the plugin versions that included telemetry support, or no end users have synchronized with the CodePush server yet. As soon as an install happens, you'll begin to see metrics populate in the CLI for the release.
 
 ## Releasing Updates
 Once your app has been configured to query for updates against the App Center server, you can begin releasing updates to it. In order to provide both simplicity and flexibility, the App Center CLI includes three different commands for releasing updates:

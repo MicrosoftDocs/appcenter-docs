@@ -8,7 +8,7 @@ help with that. Our style guide contains four recommendations:
 - [Use Active Voice](#use-active-voice)
 - [Target a 5th Grade Reading Level](#target-a-fifth-grade-reading-level)
 
-You will see examples of each of these as you read this style guide. We've written this guide
+You'll see examples of each of these as you read this style guide. We've written this guide
 following our guidelines to provide examples for you to follow as you build documentation
 for App Center. We also provide contrasting samples so you can see what articles look like
 when you don't follow our guidelines.

@@ -13,7 +13,7 @@ ms.assetid: 392b1718-cdb2-4831-a20a-d7d6eccc0e96
 
 # Branches and build configurations
 
-After you [connect your repository](~/build/connect.md), you will be able to configure continuous integration for any of your repository's branches.
+After you [connect your repository](~/build/connect.md), you'll be able to configure continuous integration for any of your repository's branches.
 In App Center Build, your branches are the origin of setting up a build. For every branch you can configure whether you want to build on every push, or only when you manually queue a build.
 
 You can see the respective instructions to configure your build for [iOS](~/build/ios/index.md), [Android](~/build/android/index.md), [Windows (UWP)](~/build/uwp/index.md), [macOS](~/build/macos/index.md), [Xamarin](~/build/xamarin/index.md), and [React Native](~/build/react-native/index.md).
@@ -32,4 +32,4 @@ A clone copies:
 If you want to use your source branch only as a template and edit individual settings, you can always edit the cloned build configuration after creating it.
 
 > [!NOTE]
-> App Center doesn't mirror changes between the original and cloned build configurations. When cloning the build configuration of a branch, you will end up with a new build configuration for your target branch that's independent from the original. 
+> App Center doesn't mirror changes between the original and cloned build configurations. When cloning the build configuration of a branch, you'll end up with a new build configuration for your target branch that's independent from the original. 

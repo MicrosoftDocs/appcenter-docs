@@ -226,7 +226,7 @@ Give it a name and ensure `Git` is selected for `Version control`:
 
 ![New project dialog](images/tutorials4.png)
 
-Once the project is created, copy the remote string as you will use it to update the local repository's remote URL to point to your new Azure DevOps project:
+Once the project is created, copy the remote string as you'll use it to update the local repository's remote URL to point to your new Azure DevOps project:
 
 ![Getting Azure DevOps remote](images/tutorials5.png)
 
@@ -250,7 +250,7 @@ A few seconds later, the source will be added to your Azure DevOps repository:
 
 #### Install Azure DevOps extension
 
-To build the project you will need to install an extension from the Azure DevOps Marketplace.
+To build the project you'll need to install an extension from the Azure DevOps Marketplace.
 
 For React Native projects do the following:
 
@@ -332,7 +332,7 @@ As a best practice, we recommend creating three release environments: "Staging",
 
 #### Install Azure DevOps extension
 
-To leverage the CodePush service as the release vehicle, you will need to install another extension from the Azure DevOps Marketplace.
+To leverage the CodePush service as the release vehicle, you'll need to install another extension from the Azure DevOps Marketplace.
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 

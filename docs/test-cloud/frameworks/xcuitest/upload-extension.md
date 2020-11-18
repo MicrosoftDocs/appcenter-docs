@@ -178,7 +178,7 @@ Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-t
 
 ```shell
 # Follow the instructions to generate a resuable API token.
-# Save this token, you will use it later, but keep it private.
+# Save this token, you'll use it later, but keep it private.
 $ appcenter login
 
 # Generate an XCUITest bundle and your iOS application as describe above.

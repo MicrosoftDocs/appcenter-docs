@@ -12,7 +12,7 @@ ms.custom: analytics
 ---
 
 # Events Metrics
-Events are actions that users take in your app. By tracking events in your app, you will learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
+Events are actions that users take in your app. By tracking events in your app, you'll learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
 
 Tracking events in your app allows you to answer questions like:
 
@@ -38,7 +38,7 @@ The Events Page provides a table with an overview of the events happening in you
 
 ## Detailed event view
 
-By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you will see distribution of counts for your event properties.
+By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you'll see distribution of counts for your event properties.
 
 Remove individual events from this page by clicking the settings option on top right of the page. Note that this action can't be undone.
 

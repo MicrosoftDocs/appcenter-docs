@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: errors
 ---
 # Errors Feature Set
-In this page, you will learn about the feature set available for Xamarin errors.
+In this page, you'll learn about the feature set available for Xamarin errors.
 
 > [!NOTE]
 > While the Crashes and Errors section portal experience is similar, there isn't feature parity between the two sections of App Center.

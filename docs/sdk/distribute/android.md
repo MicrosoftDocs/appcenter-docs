@@ -54,7 +54,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
@@ -114,7 +114,7 @@ You can read more about configuring build variants in the [Android documentation
 
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you'll need to explicitly set it via `setUpdateTrack` API.
 
 ```java
 Distribute.setUpdateTrack(UpdateTrack.PRIVATE);

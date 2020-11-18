@@ -61,7 +61,7 @@ In the Project window, navigate to the **AppCenter** folder that was added to yo
 
 #### Configure App Center settings
 
-Click on this game object and in the **Inspector** window, you will see the App Center configuration.
+Click on this game object and in the **Inspector** window, you'll see the App Center configuration.
 
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 

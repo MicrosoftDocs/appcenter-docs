@@ -378,7 +378,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **November 17, 2017**
 
 - **Added support for re-releasing builds for distribution**:
-  You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
+  You'll be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
 
 - **Shipped support for publishing directly to the Apple Store and Testflight**:
   You can create new stores that target release to the production Apple Store or beta TestFlight service.

@@ -93,7 +93,7 @@ The default email notification settings at the app-level are:
   - **Never** for Crashes
   - **Never** for Test events
 
-You will receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
+You'll receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
 
 ![Email notification for a successful build](media/emailSuccessfulBuild.png)
 

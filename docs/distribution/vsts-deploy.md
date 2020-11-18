@@ -53,7 +53,7 @@ You'll find the destination ID below the distribution group name.
 
 Obtain the Store connection ID using an API call; learn [how to use the App Center API](../api-docs/index.md) elsewhere in the documentation.
 
-Call the API using the following link: https://openapi.appcenter.ms/#/distribute/stores_list for querying for the Store IDs using . Below is an example of the results returned from the API call. You will be using the value of the key ID for specifying a store as target.
+Call the API using the following link: https://openapi.appcenter.ms/#/distribute/stores_list for querying for the Store IDs using . Below is an example of the results returned from the API call. You'll be using the value of the key ID for specifying a store as target.
 
 ```json
 [

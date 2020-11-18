@@ -35,7 +35,7 @@ Here are some answers to common questions we’ve heard from customers:
 
 If/when you decide to upgrade to the latest App Center SDKs and libraries to take advantage of new features, your GCM key will still work. You may switch to using an FCM key if you wish, but ensure you are adding Firebase to your existing GCM project when creating the new Firebase project. This will guarantee backward compatibility with your customers that are running older versions of the app that still use GCM SDKs and libraries.
 
-If you are creating a new FCM project and not attaching to the existing GCM project, once you update App Center with the new FCM secret you will lose the ability to push notifications to your existing app installations, since the new FCM key has no link to the old GCM project.
+If you are creating a new FCM project and not attaching to the existing GCM project, once you update App Center with the new FCM secret you'll lose the ability to push notifications to your existing app installations, since the new FCM key has no link to the old GCM project.
 
 **Q**: Why am I getting this email about old GCM endpoints being used? What do I have to do?
 

@@ -126,7 +126,7 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
 > [!NOTE]
-> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You'll either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
@@ -182,11 +182,11 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 
 1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file and unzip it.
 
-2. You will see a folder named **AppCenterReactNativeShared** which contains a single framework for the required React Native iOS bridge.
+2. You'll see a folder named **AppCenterReactNativeShared** which contains a single framework for the required React Native iOS bridge.
 
 3. Download the corresponding [App Center SDK for iOS](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file and unzip it.
 
-4. You will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that's shared between the different modules.
+4. You'll see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that's shared between the different modules.
 
 5. [Optional] Create a subdirectory for 3rd-party libraries.
    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it's often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).

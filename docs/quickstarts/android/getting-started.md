@@ -11,7 +11,7 @@ ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
 ---
 
 # Getting Started by Creating Android App and Codesigning
-In this tutorial, you will learn to set up a sample Android app with App Center.
+In this tutorial, you'll learn to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
 - Create [GitHub account](https://github.com/join).

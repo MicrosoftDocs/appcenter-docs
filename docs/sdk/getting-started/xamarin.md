@@ -107,7 +107,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ## 4. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the using statements
 
@@ -236,4 +236,4 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md)
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you will see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.
+> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.

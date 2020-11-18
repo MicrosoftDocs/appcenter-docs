@@ -60,7 +60,7 @@ The Countries and Languages panel display information about devices geographical
 The country is determined by the carrier country and requires the device to have a SIM card. Note that if you are using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
 
 - The map shows shaded countries depending on the number of active users. The more users, the darker the shade.
-- You will see the top seven countries by number of active users.
+- You'll see the top seven countries by number of active users.
 
 The language is the one defined at the OS level by the user.
 

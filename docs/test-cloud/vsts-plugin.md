@@ -157,7 +157,7 @@ Save the configuration and you're all set to start the build and App Center Test
 * [Read how to prepare your repository for App Center Test, XCUITest testing](frameworks/xcuitest/index.md).
 
 > [!NOTE]
-> In your pipeline, before the App Center Test task, you will need an **Xcode** task step with an action of `build-for-testing` to build the test runner app needed for testing. In that task, under **Arguments** in the **Advanced** section, specify a derived data path, typically using `-derivedDataPath DerivedData`. You will also need an `.ipa file` for your application. You can build the `.ipa file` in the same **Xcode** `build-for-testing` task by checking the `Create app package` option, or in a separate **Xcode** build step or in a **Bash** script step.
+> In your pipeline, before the App Center Test task, you'll need an **Xcode** task step with an action of `build-for-testing` to build the test runner app needed for testing. In that task, under **Arguments** in the **Advanced** section, specify a derived data path, typically using `-derivedDataPath DerivedData`. You'll also need an `.ipa file` for your application. You can build the `.ipa file` in the same **Xcode** `build-for-testing` task by checking the `Create app package` option, or in a separate **Xcode** build step or in a **Bash** script step.
 
 ### Azure Pipelines configuration for XCUITest
 
