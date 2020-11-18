@@ -53,7 +53,7 @@ The November 13, 2020 extended retirement date is final and we can't grant exten
 ### How can I migrate to the App Center SDK?
 We've created detailed App Center SDK migration guides for each of our supported platforms. Links to each of these guides are listed at the top of this page. 
 
-### I've already migrated my app to the App Center SDK. Why did I still get the retirement announcement?
+### I've already migrated my app to the App Center SDK. Why'd I still get the retirement announcement?
 If you've already migrated to App Center SDK, it's likely some of your customers are still using the old versions of the app with HockeySDK. You'll stop receiving data from these customers after November 13, 2020 unless these customers upgrade to the app version with App Center SDK. 
 
 ### The App Center SDK is missing a feature that the HockeySDK provided. Will these features be added to App Center SDK before the retirement?
