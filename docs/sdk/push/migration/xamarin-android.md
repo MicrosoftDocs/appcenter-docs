@@ -52,13 +52,13 @@ Also, remove the following lines from the file:
 * Download the **google-services.json** file.
 * Copy the **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
 * Close and reopen your solution.
-* The next step depends if you are on Mac or Windows:
+* The next step depends if you're on Mac or Windows:
     * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.
     * On Visual Studio for Windows, select the project's **google-services.json** file in the Solution explorer. In **Properties > Advanced > Build Action**, select **GoogleServicesJson**.
 
 ## 4. ProGuard
 
-If you are using ProGuard, you must update the rules in the **proguard.cfg** file.
+If you're using ProGuard, you must update the rules in the **proguard.cfg** file.
 
 Remove the following line:
 

@@ -245,7 +245,7 @@ class MyPushListener : PushListener {
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
+App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

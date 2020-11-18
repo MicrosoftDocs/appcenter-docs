@@ -124,7 +124,7 @@ val customListener = object : CrashesListener {
 Crashes.setListener(customListener)
 ```
 
-In case you are only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead:
+In case you're only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead:
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
@@ -162,7 +162,7 @@ override fun shouldProcess(report: ErrorReport?): Boolean {
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.

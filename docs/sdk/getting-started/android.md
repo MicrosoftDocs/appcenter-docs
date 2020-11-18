@@ -38,7 +38,7 @@ Let's get started with setting up App Center Android SDK in your app to use App 
 Before you begin, make sure that the following prerequisites are met:
 
 * Your Android project is set up in Android Studio.
-* You are targeting devices running Android Version 5.0 (API level 21) or later.
+* You're targeting devices running Android Version 5.0 (API level 21) or later.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -160,7 +160,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 ```
 
-You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+You're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md) and [App Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 

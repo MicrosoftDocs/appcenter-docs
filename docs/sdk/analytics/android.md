@@ -86,13 +86,13 @@ properties.put("FileName", "favorite.avi");
 
 Analytics.trackEvent("eventName", properties, Flags.CRITICAL);
 
-// If you are using name only, you can pass null as properties.
+// If you're using name only, you can pass null as properties.
 ```
 ```kotlin
 val properties = hashMapOf("Category" to "Music", "FileName" to "favorite.avi")
 Analytics.trackEvent("Video clicked", properties, Flags.CRITICAL)
 
-// If you are using name only, you can pass null as properties.
+// If you're using name only, you can pass null as properties.
 ```
 
 ## Pause and resume sending logs

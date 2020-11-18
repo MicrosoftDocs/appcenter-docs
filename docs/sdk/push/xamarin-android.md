@@ -50,7 +50,7 @@ Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven'
 
 * Copy the **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
 * Close and reopen your solution.
-* The next step depends if you are on Mac or Windows:
+* The next step depends if you're on Mac or Windows:
     * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.
     * On Visual Studio for Windows, select the **google-services.json** file in the Solution explorer. In **Properties > Advanced > Build Action**, select **GoogleServicesJson**.
 
@@ -142,7 +142,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call `Push.EnableFirebaseAnalytics()` before `AppCenter.Start()` like so:
+App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call `Push.EnableFirebaseAnalytics()` before `AppCenter.Start()` like so:
 
 ```csharp
 Push.EnableFirebaseAnalytics();

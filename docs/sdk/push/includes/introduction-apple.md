@@ -13,7 +13,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 #### Integration via Cocoapods
 
-If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
+If you're integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
 pod 'AppCenter/Push'

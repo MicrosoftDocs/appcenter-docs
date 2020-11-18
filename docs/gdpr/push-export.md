@@ -16,15 +16,15 @@ In App Center Push, your customer's information can be in the following fields:
 
 * Custom Properties used to define your audience
 
-    If you are using Custom Properties in App Center Analytics, every device registered for push notifications is associated with a number of custom properties. Other device related information is associated as well such as language, country, etc. More about custom properties and how to use it in Push can be found here.
+    If you're using Custom Properties in App Center Analytics, every device registered for push notifications is associated with a number of custom properties. Other device related information is associated as well such as language, country, etc. More about custom properties and how to use it in Push can be found here.
 
 * Audience definition and description
 
-    This is only if you are using a App Center Push's Audience feature to send push notifications; if you are pushing directly to install IDs, you don’t have to worry about this.
+    This is only if you're using a App Center Push's Audience feature to send push notifications; if you're pushing directly to install IDs, you don’t have to worry about this.
 
 * Push Notification: message details, or the campaign description
 
-    This data is stored for every Push Notification you make, regardless of whether you are using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
+    This data is stored for every Push Notification you make, regardless of whether you're using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
 
 To get a copy of any personal information associated with your end-user for Push, there are three different APIs you must call, each corresponding to one of the categories listed above.
 

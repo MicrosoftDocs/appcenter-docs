@@ -205,7 +205,7 @@ Second optional parameter `handleBinaryVersionMismatchCallback` is an optional c
 For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update isn't targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
 
 > [!IMPORTANT]
-> Be cautious to use Alerts within this callback if you are developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions in order to access functionality, content, or use of the app.
+> Be cautious to use Alerts within this callback if you're developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions in order to access functionality, content, or use of the app.
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
@@ -360,7 +360,7 @@ codePush.notifyAppReady(): Promise<void>;
 
 Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It is mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
-If you are using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyAppReady` since `sync` will call it for you. This behavior exists because of the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
+If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyAppReady` since `sync` will call it for you. This behavior exists because of the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
 
 > [!NOTE]
 > This method is also aliased as `notifyApplicationReady` (for backwards compatibility).*
@@ -534,7 +534,7 @@ Contains details about an update that has been downloaded locally or already ins
 
 #### RemotePackage
 
-Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `checkForUpdate` method when an update is available. If you are using the `sync` API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `checkForUpdate` method when an update is available. If you're using the `sync` API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 

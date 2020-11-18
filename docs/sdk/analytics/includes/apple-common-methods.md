@@ -135,13 +135,13 @@ You can use the following API to track an event as **Critical**:
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
 [MSACAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSACFlagsCritical];
 
-// If you are using name only, you can pass nil as properties.
+// If you're using name only, you can pass nil as properties.
 ```
 ```swift
 let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
 Analytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
 
-// If you are using name only, you can pass nil as properties.
+// If you're using name only, you can pass nil as properties.
 ```
 
 ## Pause and resume sending logs

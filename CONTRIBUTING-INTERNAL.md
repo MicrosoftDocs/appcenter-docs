@@ -27,7 +27,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     Navigate to the folder that corresponds to the TOC location determined for your article in step 1.
     That folder contains the Markdown files for all articles in that section. If necessary, create a new folder to place the files for your content.
 
-    For images and other static resources, add them to the subfolder called **images**. If you are creating a new folder for content, add an images folder to the new folder.
+    For images and other static resources, add them to the subfolder called **images**. If you're creating a new folder for content, add an images folder to the new folder.
 
     Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide/template.md) for more information.
 

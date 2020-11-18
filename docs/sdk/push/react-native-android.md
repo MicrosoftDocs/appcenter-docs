@@ -123,7 +123,7 @@ public void onNewIntent(Intent intent) {
 
 ## Existing Firebase Analytics users
 
-The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
+The App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

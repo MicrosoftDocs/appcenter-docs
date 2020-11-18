@@ -104,7 +104,7 @@ const enabled = await AppCenter.isEnabled();
 
 ## Check App Center SDK version at runtime
  
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
  
 ```javascript
 AppCenter.getSdkVersion();

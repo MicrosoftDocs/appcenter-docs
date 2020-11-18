@@ -23,6 +23,6 @@ if possible check for & provide the information detailed below:
 
 - Can you consistently reproduce the stall, or is it unpredictable? 
 - Provide a link to the test run with the stall. Also, if the app sometimes completes tests without stalling, send a link to that test run as well.
-- Try to confirm that the app you are uploading is compatible for all of the devices & OS versions you are targeting. 
+- Try to confirm that the app you're uploading is compatible for all of the devices & OS versions you're targeting. 
 - Check if your test framework and build setup has any updates related to some of the device models or OS versions you're targeting. 
 - If you find a consistent workaround for the stalling on your own, let our support team know. We can use your feedback to try to improve future error handling in tests.

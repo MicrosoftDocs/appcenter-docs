@@ -51,7 +51,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
    > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
 
 
-   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
    Your `sourceURLForBridge` method should look like this:
 
@@ -78,7 +78,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
 
 ### Plugin Installation for React Native lower than 0.60 (iOS)
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
-1. [RNPM](#plugin-installation-ios---rnpm) - [React Native Package Manager](https://github.com/rnpm/rnpm) (RNPM) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you are already using it, or you want to use it, then we recommend this approach.
+1. [RNPM](#plugin-installation-ios---rnpm) - [React Native Package Manager](https://github.com/rnpm/rnpm) (RNPM) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you're already using it, or you want to use it, then we recommend this approach.
 
 2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you're building a native iOS app that's embedding React Native into it, or you simply prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
 
@@ -117,7 +117,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
        'RCTAnimation', # Needed for FlatList and animations running on native UI thread
        # Add any other subspecs you want to use in your project
     ]
-    # Explicitly include Yoga if you are using RN >= 0.42.0
+    # Explicitly include Yoga if you're using RN >= 0.42.0
     pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
     pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
     pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
@@ -204,7 +204,7 @@ This change configures your app to always load the most recent version of your a
 > [!NOTE]
 > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you have configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
 
-Typically, you are only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you are debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
 For React Native 0.59 - 0.59.10:
 
@@ -358,7 +358,7 @@ In order to integrate CodePush into your Android project, perform the following 
 
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports Android installation via two mechanisms:
 
-1. [**RNPM**](#plugin-installation-android---rnpm) - [React Native Package Manager (RNPM)](https://github.com/rnpm/rnpm) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you are already using it, or you want to use it, then we recommend this approach.
+1. [**RNPM**](#plugin-installation-android---rnpm) - [React Native Package Manager (RNPM)](https://github.com/rnpm/rnpm) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you're already using it, or you want to use it, then we recommend this approach.
 
 2. [**"Manual"**](#plugin-installation-android---manual) - If you don't want to depend on any additional tools or are fine with a few extra installation steps (it's a one-time thing), then go with this approach.
 
@@ -423,7 +423,7 @@ After installing the plugin and syncing your Android Studio project with Gradle,
 
 **For React Native >= v0.29**
 
-If you are integrating CodePush into React Native application, do the following steps:
+If you're integrating CodePush into React Native application, do the following steps:
 
 Update the `MainApplication.java` file to use CodePush via the following changes:
 
@@ -458,7 +458,7 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
-If you are integrating React Native into existing native application, do the following steps:
+If you're integrating React Native into existing native application, do the following steps:
 
 Update `MyReactActivity.java` (it could be named differently in your app) file to use CodePush via the following changes:
 
@@ -528,7 +528,7 @@ public class MainActivity extends ReactActivity {
 
 #### Background React Instances
 
-*This section is only necessary if you are *explicitly* launching a React Native instance without an `Activity` (for example, from within a native push notification receiver). For these situations, CodePush must be told how to find your React Native instance.*
+*This section is only necessary if you're *explicitly* launching a React Native instance without an `Activity` (for example, from within a native push notification receiver). For these situations, CodePush must be told how to find your React Native instance.*
 
 In order to update/restart your React Native instance, CodePush must be configured with a `ReactInstanceHolder` before attempting to restart an instance in the background. This is done in your `Application` implementation.
 
@@ -561,7 +561,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 **For React Native v0.19 - v0.28**
 
-Before v0.29, React Native didn't provide a `ReactNativeHost` abstraction. If you are launching a background instance, you'll likely have built your own, which should now implement `ReactInstanceHolder`. Once that's done:
+Before v0.29, React Native didn't provide a `ReactNativeHost` abstraction. If you're launching a background instance, you'll likely have built your own, which should now implement `ReactInstanceHolder`. Once that's done:
 
 ```java
 // 1. Provide your ReactInstanceHolder to CodePush.

@@ -34,7 +34,7 @@ Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md)
 ## Unhandled exceptions on WinForms applications
 
 > [!NOTE]
-> This section and following sub sections apply only to WinForms. You can skip this section if you are integrating the SDK on WPF.
+> This section and following sub sections apply only to WinForms. You can skip this section if you're integrating the SDK on WPF.
 
 By default, an unhandled exception in a WinForms application doesn't trigger a crash (the application doesn't exit) if the debugger isn't attached.
 
@@ -135,7 +135,7 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.

@@ -34,7 +34,7 @@ If it's a new topic, you can use this [template file](./styleguide/template.md) 
 Navigate to the folder that corresponds to the TOC location determined for your article in step 1.
 That folder contains the Markdown files for all articles in that section. If necessary, create a new folder to place the files for your content.
 
-For images and other static resources, add them to the subfolder called **images**. If you are creating a new folder for content, add an images folder to the new folder.
+For images and other static resources, add them to the subfolder called **images**. If you're creating a new folder for content, add an images folder to the new folder.
 
 Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide/template.md) for more information.
 
@@ -60,7 +60,7 @@ On a certain cadence, we push all commits from live branch into the live site an
 
 ## DOs and DON'Ts
 
-Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
+Below is a short list of guiding rules that you should keep in mind when you're contributing to the .NET documentation.
 
 * **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
 * **DO** read the [style guide](./styleguide/template.md) and [voice and tone](./styleguide/voice-tone.md) guidelines.

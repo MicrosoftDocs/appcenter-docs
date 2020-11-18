@@ -15,7 +15,7 @@ ms.custom: distribute
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
 ## How does it work?
-A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code (e.g. making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which of course, includes any review time associated with the store(s) you are publishing to.
+A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code (e.g. making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which of course, includes any review time associated with the store(s) you're publishing to.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your code and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they are available. It's a win-win!
 
@@ -28,7 +28,7 @@ Cordova 5.0.0+ is fully supported, along with the following associated platforms
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - Including CrossWalk!
 * iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (In order to use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
 
-To check which versions of each Cordova platform you are currently using, you can run the following command and inspect the `Installed platforms` list:
+To check which versions of each Cordova platform you're currently using, you can run the following command and inspect the `Installed platforms` list:
 
 ```shell
     cordova platform ls
@@ -93,12 +93,12 @@ With the CodePush plugin installed, configure your app to use it via the followi
     cordova plugin ls    
 ```
 
-    If `cordova-plugin-whitelist` is in the list, then you are good to go. Otherwise, simply run the following command to add it:
+    If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, simply run the following command to add it:
 ```shell
     cordova plugin add cordova-plugin-whitelist
 ```
 
-You are now ready to use the plugin in the application code. See the sample applications for examples and the API documentation for more details.
+You're now ready to use the plugin in the application code. See the sample applications for examples and the API documentation for more details.
 
 ## Plugin Usage
 With the CodePush plugin installed and configured, the only thing left is to add the necessary code to your app to control the following policies:
@@ -162,7 +162,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android --target-binary-
 appcenter codepush release-cordova -a <ownerName>/MyApp-ios -x
 ```
 
-The CodePush client supports differential updates, so even though you are releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
+The CodePush client supports differential updates, so even though you're releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
 
 For more details about how the `release-cordova` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-cordova). Additionally, if you'd prefer to handle running the `cordova prepare` command yourself, and therefore, want an even more flexible solution than `release-cordova`, refer to the [`release` command](./cli.md#releasing-updates-general) for more details.
 
@@ -173,7 +173,7 @@ The CodePush API is exposed to your app via the global `codePush` object, which 
 * **[checkForUpdate](#codepushcheckforupdate)**: Asks the CodePush service whether the configured app deployment has an update available.
 * **[getCurrentPackage](#codepushgetcurrentpackage)**: Retrieves the metadata about the currently installed update (e.g. description, installation time, size).
 * **[getPendingPackage](#codepushgetpendingpackage)**: Retrieves the metadata for an update (if one exists) that was downloaded and installed, but hasn't been applied yet via a restart.
-* **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you are manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and rollback to the previous version when the app next restarts.
+* **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and rollback to the previous version when the app next restarts.
 * **[restartApplication](#codepushrestartapplication)**: Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user.
 * **[sync](#codepushsync)**: Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps.
 
@@ -279,7 +279,7 @@ codePush.notifyApplicationReady(notifySucceeded?, notifyFailed?);
 
 Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
-If you are using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
+If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
 
 Parameters:
 * **notifySucceeded**: Optional callback invoked if the plugin was successfully notified.
@@ -477,10 +477,10 @@ var app = {
 }
 ```
 
-For an example on how you are protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
+For an example on how you're protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
 #### RemotePackage
-Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you're using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
@@ -533,10 +533,10 @@ This enum specified when you want an installed update to actually be applied, an
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
-For an example on how you are protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
+For an example on how you're protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
 #### RemotePackage
-Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you are using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
+Contains details about an update that's available for download from the CodePush server. You get a reference to an instance of this object by calling the `codePush.checkForUpdate` method when an update is available. If you're using the sync API, you don't need to worry about the `RemotePackage`, since it will handle the download and installation process automatically for you.
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:

@@ -32,7 +32,7 @@ appcenter login
 This command will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. Once authenticated, it will create a CodePush account "linked" to your GitHub/MSA identity, and generate an access key you can copy/paste into the CLI in order to sign-in.
 
 > [!NOTE]
-> After registering, you are automatically logged-in with the CLI, so until you explicitly log out, you don't have to sign-in again from the same machine.
+> After registering, you're automatically logged-in with the CLI, so until you explicitly log out, you don't have to sign-in again from the same machine.
 
 ### Authentication
 
@@ -42,9 +42,9 @@ Most commands within the App Center CLI require authentication, and therefore, b
 appcenter login
 ```
 
-This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key that you must copy/paste into the CLI (it will prompt you for it). You are now successfully authenticated and can safely close your browser window.
+This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key that you must copy/paste into the CLI (it will prompt you for it). You're now successfully authenticated and can safely close your browser window.
 
-If at any time you want to determine if you are already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
+If at any time you want to determine if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
 
 ```shell
 appcenter profile list
@@ -261,7 +261,7 @@ It's important that the path you specify refers to the platform-specific, prepar
 
 #### Target binary version parameter
 
-This parameter specifies the store/binary version of the application you are releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary won't. It's useful for the following reasons:
+This parameter specifies the store/binary version of the application you're releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary won't. It's useful for the following reasons:
 
 1. If a user is running an older binary version, it's possible that there are breaking changes in the CodePush update that wouldn't be compatible with what they're running.
 
@@ -775,7 +775,7 @@ The history will display all attributes about each release (for example, label, 
 Additionally, the history displays the install metrics for each release. You can view the details about how to interpret the metric data in the documentation for the `deployment list` command above.
 
 <!---
-By default, the history doesn't display the author of each release, but if you are collaborating on an app with other developers, and want to view who released each update, you can pass the additional `--displayAuthor` (or `-a`) flag to the history command.
+By default, the history doesn't display the author of each release, but if you're collaborating on an app with other developers, and want to view who released each update, you can pass the additional `--displayAuthor` (or `-a`) flag to the history command.
 -->
 
 ## Clearing Release History
@@ -806,7 +806,7 @@ At the end of release command, the CLI computes the bundle's content hash and pl
 
 ### Requirements for using this feature
 
-If you are planning to use this feature you need to do the following:
+If you're planning to use this feature you need to do the following:
 
 1. Produce new binary update including 
    * updated CodePush plugin supporting Code Signing

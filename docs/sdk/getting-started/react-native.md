@@ -152,7 +152,7 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
     And then retry running `react-native link`.
 
     > [!NOTE]
-    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you're using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
     
     > ```JSON
     > "setupFiles": [
@@ -408,4 +408,4 @@ For iOS, open your project's `ios/{appname}.xcworkspace` or `ios/{appname}.xcode
 
 For Android, import your **android** project in Android Studio and build from there.
 
-You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There's no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.
+You're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There's no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.

@@ -51,7 +51,7 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests. App Center doesn't support launch tests for Mac builds.
 
 ### 3.6. Code signing
-A successful build will produce a `.app` file. To install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](~/build/macos/code-signing.md#uploading-code-signing-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. A provisioning profile is optional for code signing.
+A successful build will produce a `.app` file. To install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](~/build/macos/code-signing.md#uploading-code-signing-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you're uploading. A provisioning profile is optional for code signing.
 
 Currently, App Center only supports these signing configurations:
 

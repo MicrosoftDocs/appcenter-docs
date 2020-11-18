@@ -26,4 +26,4 @@ Distributing with App Center is quick and easy, and doesn't require the App Cent
    - Integrate the App Center SDK and enable [In-App Updates](~/distribution/inappupdates.md) to help your users stay always on the latest release.
 4. [Install the release](~/distribution/installation.md) onto your device by clicking on the link in the email.
 
-If you are distributing an iOS build, learn more about how we assist with the [collection of device UDIDs](~/distribution/auto-provisioning.md) for device provisioning or enable you to [automate the whole process with auto-provisioning](~/distribution/auto-provisioning.md).
+If you're distributing an iOS build, learn more about how we assist with the [collection of device UDIDs](~/distribution/auto-provisioning.md) for device provisioning or enable you to [automate the whole process with auto-provisioning](~/distribution/auto-provisioning.md).

@@ -185,4 +185,4 @@ If you're using App Center Analytics in your app, there's some additional config
 
   ## 4. Where to go next?
 
-Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There isn't any additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.
+Great, you're all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There isn't any additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.

@@ -16,7 +16,7 @@ Since Data Subject requests to be forgotten must be serviced within thirty days,
 
 ## Block incoming Errors data by install ID
 
-**Step 1.** If you are already keeping a mapping between the App Center install IDs to a way to identify your users, you can skip to Step 3.
+**Step 1.** If you're already keeping a mapping between the App Center install IDs to a way to identify your users, you can skip to Step 3.
 
 **Step 2.** Continuously [Export to Blob Storage](~/analytics/export.md) and search for a specific install ID following the steps explained in the [Install ID](~/gdpr/install-id.md) section.
 

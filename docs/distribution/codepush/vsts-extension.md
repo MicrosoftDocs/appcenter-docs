@@ -192,7 +192,7 @@ Allows you to promote a previously released update from one deployment to anothe
 
    3. **Service Endpoint (HockeyApp)** - Allows you to reference a globally configured HockeyApp service endpoint.
 
-2. **App Owner/App Name** *(String, Required)* - Name of the app that has the deployments you are targeting for promotion (e.g. `<ownerName>/MyApp-iOS`).
+2. **App Owner/App Name** *(String, Required)* - Name of the app that has the deployments you're targeting for promotion (e.g. `<ownerName>/MyApp-iOS`).
 
 3. **Source Deployment** *(String)* - Name of the deployment you want to promote the latest release from. Defaults to **Staging**.
 

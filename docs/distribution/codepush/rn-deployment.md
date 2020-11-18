@@ -33,7 +33,7 @@ Taking advantage of the `Staging` and `Production` deployments allows you to ach
    > [!TIP]
    > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `appcenter codepush promote -a <ownerName>/<appName> -s Staging -d Production -r 20`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100`.
 
-You'll notice that the above steps refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is just like handling environment-specific config for any other service your app uses (like Facebook). However, if you are looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platform(s) your app is targeting.
+You'll notice that the above steps refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is just like handling environment-specific config for any other service your app uses (like Facebook). However, if you're looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platform(s) your app is targeting.
 
 ### Android
 
@@ -79,7 +79,7 @@ To set this up, perform the following steps:
     ```
 
 > [!NOTE]
-> Remember to remove the key from `strings.xml` if you are configuring the deployment key in the build process*
+> Remember to remove the key from `strings.xml` if you're configuring the deployment key in the build process*
 
 > [!NOTE]
 > The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).*

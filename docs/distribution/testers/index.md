@@ -27,7 +27,7 @@ This document assumes that you're attempting to get started as a tester, and hav
 
 ## First Steps
 
-When you're invited to test an app by a developer, you should receive an email notifying you of the assignment. This email includes a button that enables you to create an App Center account if you don't currently have one. If you have an account, login and view your apps. After logging in, the steps for installing your apps are slightly different depending on the OS you are testing on.
+When you're invited to test an app by a developer, you should receive an email notifying you of the assignment. This email includes a button that enables you to create an App Center account if you don't currently have one. If you have an account, login and view your apps. After logging in, the steps for installing your apps are slightly different depending on the OS you're testing on.
 
 You can create an account before a developer officially invites you to test an application, you can sign up on the [App Center website](https://appcenter.ms/signup)
 

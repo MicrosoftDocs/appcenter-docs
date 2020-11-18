@@ -412,7 +412,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   Now you can save device & OS combinations into named device sets for reuse in future test runs.
 
 - **Export your data to Blob Storage and Application Insights**:
-  You are now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
+  You're now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
 
 - **Crash Results now include Events leading up to a Crash (Breadcrumbs)**:
   Events leading up to a crash are now listed, helping you diagnose issues more easily.

@@ -98,6 +98,6 @@ When an error occurs in any of the methods, the promise will be rejected with a 
 - **statusCode**: An HTTP response code that identifies the category of error:
   - **CodePush.ERROR_GATEWAY_TIMEOUT**: A network error prevented you from connecting to the CodePush server.
   - **CodePush.ERROR_INTERNAL_SERVER**: An error occurred internally on the CodePush server.
-  - **CodePush.ERROR_NOT_FOUND**: The resource you are attempting to retrieve does not exist.
-  - **CodePush.ERROR_CONFLICT**: The resource you are attempting to create already exists.
+  - **CodePush.ERROR_NOT_FOUND**: The resource you're attempting to retrieve does not exist.
+  - **CodePush.ERROR_CONFLICT**: The resource you're attempting to create already exists.
   - **CodePush.ERROR_UNAUTHORIZED**: The access key you configured is invalid or expired.

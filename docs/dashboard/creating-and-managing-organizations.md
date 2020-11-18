@@ -98,7 +98,7 @@ Removing a collaborator from an organization will remove the user from all apps 
 4. Click the **Leave** button by the organization you want to leave.
 
 > [!NOTE]
-> If you are the sole 'Admin' of an organization, you can't leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.
+> If you're the sole 'Admin' of an organization, you can't leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.
 
 ## Deleting an organization
 

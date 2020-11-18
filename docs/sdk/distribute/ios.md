@@ -26,7 +26,7 @@ App Center Distribute will let your users install a new version of the app when 
 > There are a few things to consider when using in-app updates:
 > 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
+> 2. If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
 
 > [!NOTE]
 > In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
@@ -44,7 +44,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 #### Integration via Cocoapods
 
-If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
+If you're integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
 pod 'AppCenter/Distribute'

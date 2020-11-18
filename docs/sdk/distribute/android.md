@@ -28,7 +28,7 @@ App Center Distribute will let your users install a new version of the app when 
 > Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 Follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -241,7 +241,7 @@ public class MyDistributeListener implements DistributeListener {
         dialogBuilder.setCancelable(false); // if it's cancelable you should map cancel to postpone, but only for optional updates
         dialogBuilder.create().show();
 
-        // Return true if you are using your own dialog, false otherwise
+        // Return true if you're using your own dialog, false otherwise
         return true;
     }
 }
@@ -289,7 +289,7 @@ class MyDistributeListener : DistributeListener {
         dialogBuilder.setCancelable(false) // if it's cancelable you should map cancel to postpone, but only for optional updates
         dialogBuilder.create().show()
 
-        // Return true if you are using your own dialog, false otherwise
+        // Return true if you're using your own dialog, false otherwise
         return true
     }
 }

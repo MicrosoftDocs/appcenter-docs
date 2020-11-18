@@ -45,7 +45,7 @@ Also note that crash logs on tvOS require Symbolication, check out the [App Cent
 
 If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await your users' confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, for example, through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, for example, through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
 > The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
@@ -115,7 +115,7 @@ MSACCrashes.setUserConfirmationHandler({ (errorReports: [MSACErrorReport]) in
 })
 ```
 
-In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you'd call it from within your implementation of the `alertView:clickedButtonAtIndex:`-callback.
+In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you're using an alert for this, as we do in the sample above, you'd call it from within your implementation of the `alertView:clickedButtonAtIndex:`-callback.
 
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.

@@ -131,7 +131,7 @@ AppCenter.isEnabled()
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```java
 AppCenter.getSdkVersion();
@@ -202,7 +202,7 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
+If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you're allowed to set is 20 KB.
 
 > [!NOTE]
 > The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.

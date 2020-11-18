@@ -151,7 +151,7 @@ After (App Center):
     > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
 
     > [!NOTE]
-    > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, remember that it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+    > In case you're using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, remember that it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
     > [!NOTE]
     > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.

@@ -28,7 +28,7 @@ App Center Distribution enables your users/testers to install new versions of an
 > Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Remove this code as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
+> If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -122,7 +122,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
         UpdateAction updateAction = GetUserUpdateAction();
         Distribute.NotifyUpdateAction(updateAction);
     }
-    // Return true if you are using your own UI to get user response, false otherwise
+    // Return true if you're using your own UI to get user response, false otherwise
     return true;
 }
 ```

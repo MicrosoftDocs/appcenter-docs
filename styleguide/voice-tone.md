@@ -22,7 +22,7 @@ when you don't follow our guidelines.
 We want our documentation to have a conversational tone. You should feel as though you
 are having a conversation with the author as you read any of our tutorials or explanations.
 Your experience as a reader should be informal, conversational, and informative. You should
-feel as though you are listening to the author explain the concepts to you.
+feel as though you're listening to the author explain the concepts to you.
 
 #### Inappropriate Style
 
@@ -37,7 +37,7 @@ is a more academic style. You see the difference immediately.
 
 ### Write in second person
 #### Appropriate Style
-You should write your articles as though you are speaking directly to the reader. You
+You should write your articles as though you're speaking directly to the reader. You
 should use second person often (as I just have in these two sentences). 2nd person doesn't
 always mean using the word 'you'. Write directly to the reader. Write imperative sentences.
 Tell your reader what you want them to learn.
@@ -69,7 +69,7 @@ We provide this final guideline because many of our readers aren't native Englis
 You're reaching an international audience with your articles. Take into account that
 they may not have the English vocabulary you have.
 
-However, you are still writing for technical professionals. You can assume that your readers
+However, you're still writing for technical professionals. You can assume that your readers
 have programming knowledge and the specific vocabulary for programming terms. Object Oriented
 Programming, Class, and Object, Function and Method will all be familiar terms. However, not everyone
 reading your articles will have a formal computer science degree. Terms like 'idempotent' probably

@@ -15,7 +15,7 @@ ms.custom: distribute
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your React Native app(s).
 
 ## How does it work?
-React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the stores to which you are publishing.
+React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the stores to which you're publishing.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your JavaScript and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they are available.
 
@@ -30,7 +30,7 @@ In order to ensure that your end users always have a functioning version of your
 - Android (5.0+)
 - Windows (UWP)
 
-We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin in order to support the exact version of React Native you are using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
+We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin in order to support the exact version of React Native you're using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
 | React Native version(s) | Supporting CodePush version(s)                       |
 |-------------------------|------------------------------------------------------|

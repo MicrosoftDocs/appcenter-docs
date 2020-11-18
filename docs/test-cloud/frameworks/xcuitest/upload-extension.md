@@ -14,9 +14,9 @@ ms.custom: test
 # Preparing XCUITest Tests for Upload with App Center Extensions Framework
 
 > [!WARNING]
-> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you are just starting with XCUITest, don't link this framework.
+> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you're just starting with XCUITest, don't link this framework.
 
-If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
+If you're already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
 
 For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/frameworks/xcuitest/index.md).
 
@@ -121,7 +121,7 @@ Note that your project may already have a 'Copy Files' phase.
 
 ![Inside Xcode select Frameworks in Destination](images/xcuitest-link-framework.gif)
 
-When you are finished, your Build Phases pane should resemble the following:
+When you're finished, your Build Phases pane should resemble the following:
 
 ![Showing the configured Build Phases pane](images/xcuitest-build-settings.png)
 

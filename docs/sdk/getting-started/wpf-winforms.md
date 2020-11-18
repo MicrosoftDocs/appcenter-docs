@@ -137,6 +137,6 @@ The example above shows how to use the `Start()` method and includes App Center 
 
 Note that, unless you explicitly specify each service as parameters in the start method, you can't use that App Center service. In addition, the `Start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the services included in the first call will be available.
 
-Great, you are all set to visualize crashes on the portal that the SDK collects automatically.
+Great, you're all set to visualize crashes on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) and [App Center Crashes](~/sdk/crashes/wpf-winforms.md) to learn how to customize and use more advanced functionalities of both services.
