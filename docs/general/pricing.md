@@ -55,7 +55,7 @@ Refer to the [App Center Billing](~/general/billing.md) article for information 
 
   We'll prorate your bill based on the month remaining.
 
-- What will happen if I delete my org during the month?
+- What'll happen if I delete my org during the month?
 
   The organization will be removed, but will still be billed for the full month.
 

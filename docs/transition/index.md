@@ -38,7 +38,7 @@ App Center doesn't support the HockeyApp Feedback functionality. For potential a
 ### Why are we retiring HockeySDK?
 In 2018, we announced the transition from HockeyApp to Visual Studio App Center. App Center is a single solution for continuously building, testing, releasing, and monitoring your apps. HockeyApp transitions are now complete, but we extended the retirement of the HockeySDK to November 13, 2020, to give you more time to move to App Center SDK. 
 
-### What will happen after November 13, 2020?
+### What'll happen after November 13, 2020?
 All apps that still include the HockeySDK after November 13, 2020 will stop sending data to the App Center Portal. You'll no longer receive Analytics and Diagnostics data for these versions, and users will no longer receive in-app updates. 
 
 ### What services will be affected?
