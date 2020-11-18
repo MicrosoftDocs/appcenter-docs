@@ -70,7 +70,7 @@ AppCenter.setUserId("your-user-id");
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK won't forward any information to App Center.
 
 ```javascript
 import AppCenter from 'appcenter';
@@ -131,7 +131,7 @@ AppCenter.setCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```javascript
 import AppCenter, {CustomProperties} from 'appcenter';

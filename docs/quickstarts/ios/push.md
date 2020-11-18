@@ -34,7 +34,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 ## Build and Distribute the app
 1. **Add, commit, and push the changes to GitHub.**
 
-2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification will not appear on a simulator.
+2. Follow the [Build tutorial](build.md) and then the [Distribute tutorial](distribute.md) to deploy the app **onto your device**. The push notification won't appear on a simulator.
 
 ## Set up Push in App Center
 1. Go to the **Push** service in [App Center](https://appcenter.ms/apps).
@@ -81,4 +81,4 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 3. Click **Next** and **Send notification** at the bottom.
 
    > [!WARNING]
-   > **A push notification will be sent to the device you distributed the app to - it will not show up in the simulator.**
+   > **A push notification will be sent to the device you distributed the app to - it won't show up in the simulator.**

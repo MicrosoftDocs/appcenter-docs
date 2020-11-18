@@ -75,7 +75,7 @@ Distribute.CheckForUpdate();
 This will send a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
@@ -195,7 +195,7 @@ The in-app updates feature works as follows:
 1. This feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service. It won't work if the iOS Guided Access feature is turned on.
 2. Once you integrate the SDK, build a release version of your app, and upload it to App Center. Users in the distribution group are notified about the new release via email.
 3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser won't open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 5. A new release of the app shows the in-app update dialog asking users to update your application if it's:
     * iOS:
         * a higher value of `CFBundleShortVersionString` or
@@ -206,7 +206,7 @@ The in-app updates feature works as follows:
         * an equal value of `versionCode` but a different value of `versionName`.
 
 > [!TIP]
-> If you upload the same .apk/.ipa a second time, the dialog will NOT appear as the binaries are identical. On iOS, if you upload a new build with the same version properties, it will show the update dialog. The reason for this is that it's a different binary. On Android, binaries are considered the same if both version properties are the same.
+> If you upload the same .apk/.ipa a second time, the dialog WON'T appear as the binaries are identical. On iOS, if you upload a new build with the same version properties, it will show the update dialog. The reason for this is that it's a different binary. On Android, binaries are considered the same if both version properties are the same.
 
 ## How do I test in-app updates?
 

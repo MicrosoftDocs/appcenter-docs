@@ -68,7 +68,7 @@ app.Tap(c=>c.Button("ValidateButton"));
 There are two implementations of the `IApp` interface within the Xamarin.UITest framework, one for iOS and one for Android.
 
 ### Initialize IApp for iOS Applications
-When Xamarin.UITest runs a test on iOS, it will start up an instance of the iOS simulator, deploy the application, start it, and begin running the tests. The iOS application must already be built &ndash; Xamarin.UITest will not compile the application and create the App Bundle for you.
+When Xamarin.UITest runs a test on iOS, it will start up an instance of the iOS simulator, deploy the application, start it, and begin running the tests. The iOS application must already be built &ndash; Xamarin.UITest won't compile the application and create the App Bundle for you.
 
 The `AppBundle` method can be used to specify where on the file system the app bundle may be found. There are two ways to do so, with an absolute path, or a relative path. This snippet shows using an absolute path to the app bundle:
 
@@ -305,7 +305,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | --- | --- |
 | `PressEnter` |Press the enter key in the app. |
 | `Tap` | Simulates a tap / touch gesture on the matched element. |
-| `EnterText` | Enters text into the view. In an iOS application, Xamarin.UITest will enter the text using the soft keyboard. In contrast, Xamarin.UITest will not use the Android keyboard, it will directly enter the text into the view. |
+| `EnterText` | Enters text into the view. In an iOS application, Xamarin.UITest will enter the text using the soft keyboard. In contrast, Xamarin.UITest won't use the Android keyboard, it will directly enter the text into the view. |
 | `WaitForElement` | Pauses the execution of the test until the views appear on the screen. |
 | `Screenshot(String)` | Takes a screenshot of the application in it's current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
 | `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |

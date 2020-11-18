@@ -23,16 +23,16 @@ You can choose to have email notifications automatically sent for the following 
   - On build success:
     - **Always**: when your app builds successfully
     - **Only if previously failed**: when your app has successfully built after one or more failed builds
-    - **Never**: you will not receive notifications for build success
+    - **Never**: you won't receive notifications for build success
   - On build failure:
     - **Always**: when your app fails to build
     - **Only if previously successful**: when your app has failed to build after one or more successful builds
-    - **Never**: you will not receive notifications for build failure    
+    - **Never**: you won't receive notifications for build failure    
 
 - **Crashes**: 
     - **Immediately**: when a new crash group is created
     - **Daily**: a summary of all your new crash groups for that day will be sent at approximately 0:00 UTC
-    - **Never**: you will not receive notifications when a new crash group is created
+    - **Never**: you won't receive notifications when a new crash group is created
 
 > [!NOTE]
 > Only the top 3 crash groups based on number of occurrences will be included in the daily email. 
@@ -41,10 +41,10 @@ You can choose to have email notifications automatically sent for the following 
   - A new version is released:
     - **Immediately**: when a new version is released
     - **Daily**: a summary of all your releases for that day will be sent at approximately 0:00 UTC
-    - **Never**: you will not receive notifications when a new version is released
+    - **Never**: you won't receive notifications when a new version is released
   - Adding new devices to a release failed:
     - **Checked**: when adding new devices to a release failed
-    - **Unchecked**: you will not receive notifications when adding new devices to a release fails
+    - **Unchecked**: you won't receive notifications when adding new devices to a release fails
 - **Test:** when a test run completes
 
 ### Email notification preferences

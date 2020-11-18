@@ -77,7 +77,7 @@ The key will only display once, so remember to save it somewhere if needed! Afte
 appcenter login --token <accessToken>
 ```
 
-When signing in using this method, the access token will not automatically invalidate on sign-out, and can be used in future sessions until it's explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
+When signing in using this method, the access token won't automatically invalidate on sign-out, and can be used in future sessions until it's explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
 
 ## App Management
 
@@ -261,7 +261,7 @@ It's important that the path you specify refers to the platform-specific, prepar
 
 #### Target binary version parameter
 
-This parameter specifies the store/binary version of the application you are releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary will not. It's useful for the following reasons:
+This parameter specifies the store/binary version of the application you are releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary won't. It's useful for the following reasons:
 
 1. If a user is running an older binary version, it's possible that there are breaking changes in the CodePush update that wouldn't be compatible with what they're running.
 
@@ -282,7 +282,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 
 > [!NOTE]
 > If the app's **semver** expression starts with a special shell character or operator such as `>`, `^`, or **
-> *, the command may not execute correctly if you don't wrap the value in quotes as the shell will not supply the right values to our CLI process. Therefore, it's best to wrap the app's `targetBinaryVersion` parameter in double quotes when calling the `release` command, for example, `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
+> *, the command may not execute correctly if you don't wrap the value in quotes as the shell won't supply the right values to our CLI process. Therefore, it's best to wrap the app's `targetBinaryVersion` parameter in double quotes when calling the `release` command, for example, `appcenter codepush release -a <ownerName>/<appName> updateContents ">1.2.3"`.
 
 The following table outlines the version value that CodePush expects your update's **semver** range to satisfy for each respective app type:
 
@@ -358,7 +358,7 @@ This parameter specifies the percentage of users (as an integer between `1` and 
 
 2. If you roll back a deployment whose latest release is an "active" rollout, the rollout value will be cleared, effectively "deactivating" the rollout behavior
 
-3. Unlike the `mandatory` and `description` fields, when you promote a release from one deployment to another, it will not propagate the `rollout` property, and therefore, if you want the new release (in the target deployment) to have a rollout value, you must explicitly set it when you call the `promote` command.
+3. Unlike the `mandatory` and `description` fields, when you promote a release from one deployment to another, it won't propagate the `rollout` property, and therefore, if you want the new release (in the target deployment) to have a rollout value, you must explicitly set it when you call the `promote` command.
 
 > [!TIP]
 > This parameter can be set using either `--rollout` or `-r`*
@@ -514,7 +514,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS --plist-file-prefix "D
 
 #### Source map output parameter
 
-This parameter specifies the relative path to where the generated JS bundle's source map file should be written. If left unspecified, source maps will not be generated.
+This parameter specifies the relative path to where the generated JS bundle's source map file should be written. If left unspecified, source maps won't be generated.
 
 > [!TIP]
 > This parameter can be set using either `--sourcemap-output`  or `-s`*

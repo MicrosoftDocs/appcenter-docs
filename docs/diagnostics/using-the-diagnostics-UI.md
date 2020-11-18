@@ -49,7 +49,7 @@ Mark each of your groups as open, closed, or ignored. To mark the status of your
 2. Click on the **Mark as** button  
 3. Select the state (open, closed, ignored)
 
-Any new crash or error instance which is part of a closed or ignored group will not reopen or unignore the corresponding group.
+Any new crash or error instance which is part of a closed or ignored group won't reopen or unignore the corresponding group.
 
 ![Track the status of your crash and error groups](~/diagnostics/images/track-status.png)
 

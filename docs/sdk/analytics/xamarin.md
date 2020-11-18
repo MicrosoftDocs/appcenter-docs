@@ -53,7 +53,7 @@ Analytics.TrackEvent("Video clicked");
 
 ## Enable or disable App Center Analytics at runtime
 
-You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+You can enable and disable App Center Analytics at runtime. If you disable it, the SDK won't collect any more analytics information for the app.
 
 ```csharp
 Analytics.SetEnabledAsync(false);

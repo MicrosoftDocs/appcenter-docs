@@ -34,7 +34,7 @@ Follow the [Getting Started](~/sdk/getting-started/ios.md) section if you haven'
 Also note that crash logs on iOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
-> The SDK will not forward any crash log if you are attached to the debugger. Make sure the debugger isn't attached when you crash the app.
+> The SDK won't forward any crash log if you're attached to the debugger. Make sure the debugger isn't attached when you crash the app.
 
 > [!NOTE]
 > To receive properly symbolicated stack traces, ensure bitcode is disabled. You can learn more about bitcode in App Center's [iOS Symbolication documentation](~/diagnostics/ios-symbolication.md#bitcode).

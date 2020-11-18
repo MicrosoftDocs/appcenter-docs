@@ -66,7 +66,7 @@ AppCenter.Analytics.trackEvent('Video clicked', success, error);
 
 ## Enable or disable App Center Analytics at runtime
 
-You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect analytics information for the app anymore.
+You can enable and disable App Center Analytics at runtime. If you disable it, the SDK won't collect analytics information for the app anymore.
 
 ```js
 var success = function() {

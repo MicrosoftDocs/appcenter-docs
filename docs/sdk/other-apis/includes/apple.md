@@ -66,7 +66,7 @@ AppCenter.userId = "your-user-id"
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK won't forward any information to App Center.
 
 ```objc
 [MSACAppCenter setEnabled:NO];
@@ -154,7 +154,7 @@ AppCenter.customProperties = customProperties
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```objc
 MSACCustomProperties *customProperties = [MSACCustomProperties new];

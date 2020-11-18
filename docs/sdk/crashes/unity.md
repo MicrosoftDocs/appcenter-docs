@@ -34,10 +34,10 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 > The Crashes SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
 > [!NOTE]
-> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger isn't attached when you crash the app.
+> The SDK won't forward any crash logs if you've attached the debugger. Make sure the debugger isn't attached when you crash the app.
 
 > [!NOTE]
-> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK will not collect crash logs.
+> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK won't collect crash logs.
 
 ## Generate a test crash
 
@@ -63,7 +63,7 @@ bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().
 ```
 
 > [!NOTE]
-> This method will not work in `Awake()`.
+> This method won't work in `Awake()`.
 
 > [!NOTE]
 > In some cases, a device with low memory may not be able to send events.
@@ -202,7 +202,7 @@ Crashes are differentiated from unhandled exceptions in reports with the `IsCras
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not perform any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't perform any crash reporting for the app.
 
 ```csharp
 Crashes.SetEnabledAsync(false);

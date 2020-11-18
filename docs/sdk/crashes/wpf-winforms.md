@@ -203,7 +203,7 @@ Note that this callback isn't triggered if it's a network issue. In this case, t
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It won't be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -222,7 +222,7 @@ Crashes.GetErrorAttachments = (ErrorReport report) =>
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't do any crash reporting for the app.
 
 ```csharp
 Crashes.SetEnabledAsync(false);

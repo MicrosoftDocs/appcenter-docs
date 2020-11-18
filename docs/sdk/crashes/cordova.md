@@ -120,7 +120,7 @@ var errorCallback = function(error) {
 };
 
 var processFunction = function(attachments, sendCallback) {
-    sendCallback(false); //crash will not be sent
+    sendCallback(false); //crash won't be sent
 };
 
 AppCenter.Crashes.process(processFunction, errorCallback);
@@ -174,7 +174,7 @@ AppCenter.Crashes.process(processFunction, errorCallback);
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't do any crash reporting for the app.
 
 ```js
 var success = function() {

@@ -36,7 +36,7 @@ A new day starts at 12am UTC.
 
 Engagement measures the daily sessions per user and session duration.
 
-A **session** is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
+A **session** is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session won't be counted.
 
 Analytics will offer you the following information:
 

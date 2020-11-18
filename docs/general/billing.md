@@ -48,7 +48,7 @@ You can configure a billing plan for your App Center organization or user accoun
 
 - Can I downgrade during the month?
 
-  You can, but it will not take effect until the next calendar month.
+  You can, but it won't take effect until the next calendar month.
 
 - Can I use my Free Azure subscription or credits from my Dev Essentials subscription?
 

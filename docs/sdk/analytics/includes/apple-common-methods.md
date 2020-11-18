@@ -11,7 +11,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 > [!NOTE]
 > On Mac Catalyst apps, the amount of sessions may be lower than on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
 
-The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices won't report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
 * Make sure that you [enable Location Services](https://support.apple.com/HT204690) on the device.
 * Get the device's current location using `CLLocationManager`.
@@ -159,7 +159,7 @@ Analytics.resume()
 
 ## Enable or disable App Center Analytics at runtime
 
-You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+You can enable and disable App Center Analytics at runtime. If you disable it, the SDK won't collect any more analytics information for the app.
 
 ```objc
 [MSACAnalytics setEnabled:NO];
