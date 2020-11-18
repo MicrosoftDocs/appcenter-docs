@@ -348,7 +348,7 @@ This parameter specifies that if the update is identical to the latest release o
 #### Rollout parameter
 
 > [!IMPORTANT]
-> In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Therefore, until you have adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we would advise not setting a rollout value on the app's releases, since no one would end up receiving it.
+> In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Therefore, until you have adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we'd advise not setting a rollout value on the app's releases, since no one would end up receiving it.
 
 This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it's set to `100%`, and therefore, you only have to set it if you want to limit how many users will receive it.
 

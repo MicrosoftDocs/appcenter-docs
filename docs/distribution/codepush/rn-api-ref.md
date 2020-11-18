@@ -279,7 +279,7 @@ class OnboardingProcess extends Component {
 ### codePush.getCurrentPackage
 
 > [!NOTE]
-> This method is considered deprecated as of `v1.10.3-beta` of the CodePush module. If you're running this version (or newer), we would recommend using the [`codePush.getUpdateMetadata`](#codepushgetupdatemetadata) instead, since it has more predictable behavior.
+> This method is considered deprecated as of `v1.10.3-beta` of the CodePush module. If you're running this version (or newer), we'd recommend using the [`codePush.getUpdateMetadata`](#codepushgetupdatemetadata) instead, since it has more predictable behavior.
 
 ```javascript
 codePush.getCurrentPackage(): Promise<LocalPackage>;
@@ -610,7 +610,7 @@ The `CodePush` class' methods can be thought of as composite resolvers, which al
 
 2. As soon as you begin releasing CodePush updates, your end users will get the JS bundle that represents the latest release for the configured deployment. This is the behavior that allows you to iterate beyond what you shipped to the store.
 
-3. As soon as you release an update to the app store (like `1.1.0`), and your end users update it, they will once again get the JS bundle that's contained within the binary. This behavior ensures that CodePush updates that targeted a previous binary version aren't used (since we don't know it they would work), and your end-users always have a working version of your app.
+3. As soon as you release an update to the app store (like `1.1.0`), and your end users update it, they'll once again get the JS bundle that's contained within the binary. This behavior ensures that CodePush updates that targeted a previous binary version aren't used (since we don't know it they would work), and your end-users always have a working version of your app.
 
 4. Repeat #2 and #3 as the CodePush releases and app store releases continue on into infinity (and beyond?)
 

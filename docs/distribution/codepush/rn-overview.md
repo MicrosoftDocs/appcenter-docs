@@ -113,7 +113,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 - [Pepperoni](http://getpepperoni.com/)
 
   > [!NOTE]
-  > If you've developed a React Native app using CodePush, that's open-source, let us know. We would love to add it to this list!*
+  > If you've developed a React Native app using CodePush, that's open-source, let us know. We'd love to add it to this list!*
 
 ## Continuous Integration / Delivery
 
