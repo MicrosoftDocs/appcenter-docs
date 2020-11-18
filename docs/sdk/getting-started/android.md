@@ -103,7 +103,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ### 4.1 Add the start() method
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.  
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.  
 Insert the following line inside your app's main activity class' `onCreate`-callback to use **App Center Analytics** and **App Center Crashes**:
 
 ```java

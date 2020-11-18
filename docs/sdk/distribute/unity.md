@@ -129,7 +129,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 
 Implementation notes for Android:
 
-As shown in the example, you have to call either `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
+As shown in the example, you must call either `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
 
 If you don't call `NotifyUpdateAction`, the callback will repeat on every activity change.
 

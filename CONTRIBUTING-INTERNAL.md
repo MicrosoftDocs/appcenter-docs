@@ -56,7 +56,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     
     - If the PR doesn't meet the criteria: 
         - A “needs-human-review" label will be added. 
-        - The designated pull request reviewers for the repository have to review the pull request (right now this is Amy Burns)
+        - The designated pull request reviewers for the repository must review the pull request (right now this is Amy Burns)
         - The reviewer will check the content, particularly for these quality issues listed. 
         - If there are issues, they add a comment #hold-off and notify the author to fix.
         - The author will need to fix the issues in a timely manner and add #sign-off when they are happy that the issues are fixed.

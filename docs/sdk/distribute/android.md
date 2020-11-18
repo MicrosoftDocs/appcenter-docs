@@ -54,7 +54,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
@@ -295,7 +295,7 @@ class MyDistributeListener : DistributeListener {
 }
 ```
 
-As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
+As shown in the example, you must either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
 
 If you don't call `notifyUpdateAction`, the callback will repeat on every activity change.
 

@@ -19,7 +19,7 @@ On this page you can learn how to generate the binary for release, and how to up
 
 ## Generating an application binary package
 
-First you have to package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
+First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
 
 The following sections explain how to create the files for all app types App Center supports for distribution.
 

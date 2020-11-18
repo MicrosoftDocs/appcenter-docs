@@ -18,7 +18,7 @@ ms.tgt_pltfrm: android
 
 Signing an app is a requirement to run an app on real devices during the development process or to distribute it via a beta program or in the Play Store. Without code signing, the app can only run on an emulator.
 
-When App Center builds an Android application with a debug build type, a keystore associated with a developer isn't required but can be uploaded. These builds will be automatically code signed with a debug key. For a release build that will be deployed, you have to upload a keystore to App Center.
+When App Center builds an Android application with a debug build type, a keystore associated with a developer isn't required but can be uploaded. These builds will be automatically code signed with a debug key. For a release build that will be deployed, you must upload a keystore to App Center.
 
 ## Generating a keystore
 If you don't currently have a keystore, you can generate one in Android Studio. You can find instructions on generating a keystore to sign APKs in [Android Studio's official User Guide](https://developer.android.com/studio/publish/app-signing.html).
@@ -88,6 +88,6 @@ If you use product flavors, you may need to adjust the code above so all your re
 >  Keystore file '.../android/app/debug.keystore' not found for signing config 'debug'
 > ```
 >
-> To fix this issue you have to push a proper keystore used for signing to your repository and enable **My Gradle settings are entirely set to handle signing automatically** in your build configuration in the App Center portal.
+> To fix this issue you must push a proper keystore used for signing to your repository and enable **My Gradle settings are entirely set to handle signing automatically** in your build configuration in the App Center portal.
 >
 > In case you uploaded a keystore to the build configuration in the App Center portal, take into account that this approach will require to delete the `signingConfig` option from the `buildTypes` section of your `build.gradle` [(app level)](https://developer.android.com/studio/build) file if you didn't update it from the default state of the React Native project template.

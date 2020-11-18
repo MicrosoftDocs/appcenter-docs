@@ -245,7 +245,7 @@ CodePush plugin makes HTTPS requests to the following domains:
 - codepush.blob.core.windows.net
 - codepushupdates.azureedge.net
 
-If you want to change the default HTTP security configuration for any of these domains, you have to define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside the project's **Info.plist** file:
+If you want to change the default HTTP security configuration for any of these domains, you must define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside the project's **Info.plist** file:
 
 ```xml
 <plist version="1.0">

@@ -58,7 +58,7 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 ### 2. Start App Center Push
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 #### 2.1 Add the import for App Center Push
 

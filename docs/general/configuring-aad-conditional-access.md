@@ -18,7 +18,7 @@ Visual Studio App Center supports [Azure Active Directory Conditional Access](ht
 > Azure Active Directory Conditional Access is available in the Premium tier of Azure AD. For more information about Azure AD Premium, see [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## Connecting your organization to Azure Active Directory
-If your App Center organization isn't already connected to an Azure Active Directory tenant, you'll have to connect it first. See [Connecting to Azure Active Directory](./connecting-to-azure-active-directory.md) for how to do that.
+If your App Center organization isn't already connected to an Azure Active Directory tenant, you must connect it first. See [Connecting to Azure Active Directory](./connecting-to-azure-active-directory.md) for how to do that.
 
 ## Setting up Conditional Access
 > [!NOTE]

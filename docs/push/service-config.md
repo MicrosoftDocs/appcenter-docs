@@ -26,7 +26,7 @@ The App Center Push (ACP) service abstracts away the complexities of dealing wit
 
 ## App project initial configuration
 
-When you created your app project in App Center, you selected a target platform for your app, so App Center already knows what information it needs to send notifications to your app's users, now you simply have to provide it using the following instructions:
+When you created your app project in App Center, you selected a target platform for your app, so App Center already knows what information it needs to send notifications to your app's users, now you must provide it using the following instructions:
 
 1. Log into [App Center](https://appcenter.ms).
 2. Using the project navigator on the left side of the page, select the your user account, or an organization where the app project is defined, then select the app from the list that appears.
@@ -37,7 +37,7 @@ When you created your app project in App Center, you selected a target platform 
 7. Click the **Done** button when you're done with the configuration.
 
 > [!NOTE]
-> The settings you need here are provided by the vendor service, so you'll have to open up a separate browser or browser window, log into the platform vendor's service, and copy settings between the two browser tabs. As much as we'd like to automate all of this, or provide you with detailed, step-by-step instructions for completing this configuration, we can't. The vendors generally don't expose APIs for collecting the settings we need, and they regularly move things around in their admin UIs as they add new features. We'll provide the best instructions we can in the App Center portal and send you off to collect the data we need.
+> The settings you need here are provided by the vendor service, so you must open up a separate browser or browser window, log into the platform vendor's service, and copy settings between the two browser tabs. As much as we'd like to automate all of this, or provide you with detailed, step-by-step instructions for completing this configuration, we can't. The vendors generally don't expose APIs for collecting the settings we need, and they regularly move things around in their admin UIs as they add new features. We'll provide the best instructions we can in the App Center portal and send you off to collect the data we need.
 
 ## Changing your project's Push configuration
 

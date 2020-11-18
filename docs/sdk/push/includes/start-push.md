@@ -5,7 +5,7 @@ ms.topic: include
 ms.date: 12/02/2019
 ---
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 Add the following using statement to the top of the file you're referencing `Push` from: 
 

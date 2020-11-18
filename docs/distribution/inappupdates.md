@@ -18,7 +18,7 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 > [!IMPORTANT]
 > At this time, there are some limitations to In-App Updates:
 > 1) Android devices won't be prompted for an update if there's no change in `versionCode` or `versionName`.
-> 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that will have to be dismissed. Login isn't required for the public flow.
+> 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that must be dismissed. Login isn't required for the public flow.
 > 3) In-App Updates don't work on windows/UWP applications.
 
 ## Public In-App Updates
@@ -59,7 +59,7 @@ If the application is installed from the App Store or TestFlight, in-app updates
   - The app wasn't installed from App Center.
   - The version a tester installed wasn't released via App Center or the release was deleted on App Center.
   - App secret used in the SDK is incorrect. To get your app secret, go to your app's settings page, click on the triple vertical dots at the top right-hand corner, and copy app secret.
-     - If you have migrated your App from HockeyApp, refer to the following articles: 
+     - If you've migrated your App from HockeyApp, refer to the following articles: 
         - iOS: [Migrating from HockeyApp][ios-sdk-migration]
         - Android: [Migrating from HockeyApp][android-sdk-migration]
 

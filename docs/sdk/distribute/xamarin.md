@@ -63,7 +63,7 @@ Install-Package Microsoft.AppCenter.Distribute
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must explicitly call each of them when starting the SDK.
 
 #### 2.1 Add App Center Distribute imports
 
@@ -285,7 +285,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 
 Implementation notes for **Xamarin.Android**:
 
-As shown in the example, you have to either call `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
+As shown in the example, you must either call `Distribute.NotifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.NotifyUpdateAction(UpdateAction.POSTPONE);` if your callback returns `true`.
 
 If you don't call `NotifyUpdateAction`, the callback will repeat on every activity change.
 

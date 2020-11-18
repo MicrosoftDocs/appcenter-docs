@@ -31,7 +31,7 @@ You may connect to a self-hosted GitLab instance by providing the instance URL, 
 ## Removing connections and reconnecting
 With so many identities, apps, and authentication methods, you might end up with your App Center account connected to a different code repository service than where your apps are hosted.
 
-If you've connected to a repository service with the wrong account, you'll have to open your User settings in the hosting service (Azure DevOps, GitHub, or Bitbucket) and revoke the Oauth token manually. Then you can reconnect to another account in App Center.
+If you connected to a repository service with the wrong account, you must open your User settings in the hosting service (Azure DevOps, GitHub, or Bitbucket) and revoke the Oauth token manually. Then you can reconnect to another account in App Center.
 
 > [!IMPORTANT]
 > Keep in mind that if you connect to a new account, you'll lose all the build configuration and previous builds for ALL the apps configured with the previous account.

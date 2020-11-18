@@ -37,7 +37,7 @@ If/when you decide to upgrade to the latest App Center SDKs and libraries to tak
 
 If you're creating a new FCM project and not attaching to the existing GCM project, once you update App Center with the new FCM secret you'll lose the ability to push notifications to your existing app installations, since the new FCM key has no link to the old GCM project.
 
-**Q**: Why am I getting this email about old GCM endpoints being used? What do I have to do?
+**Q**: Why am I getting this email about old GCM endpoints being used? What must I do?
 
 **A**: Nothing. We've migrated to the new endpoints and no other changes are necessary. Nothing is broken, our one missed endpoint simply caused warning messages from Google.
 

@@ -124,12 +124,12 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
    
 > [!NOTE]
-> The SDK binary isn't packaged following the tvOS framework convention. The reason is that the App Center SDK for tvOS isn't a conventional framework but a static one. You have to link it as a static framework: make sure that you're not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
+> The SDK binary isn't packaged following the tvOS framework convention. The reason is that the App Center SDK for tvOS isn't a conventional framework but a static one. You must link it as a static framework: make sure that you're not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 Open the project's **AppDelegate** file and add the following import statements:
