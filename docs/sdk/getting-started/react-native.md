@@ -40,7 +40,7 @@ Before you begin, make sure that the following prerequisites are met:
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -48,7 +48,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
@@ -126,7 +126,7 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
 > [!NOTE]
-> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You'll either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You either must follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you've already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
@@ -178,7 +178,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 > [!NOTE]
 > The latest App Center React Native SDK doesn't necessarily depend on the latest App Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
 >
-> The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
+> The consequence is that you must know which version of the iOS SDK the React Native SDK depends on.
 
 1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file and unzip it.
 
@@ -279,7 +279,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 14. Modify **Header Search Paths** to find React Native headers from the App Center React Native plugins projects:
 
     * Make sure the Project Navigator is visible (⌘+1).
-    * For each AppCenter React Native plugins project that you have added to the **Libraries** group in step 8:
+    * For each AppCenter React Native plugins project that you've added to the **Libraries** group in step 8:
       * Select the project and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files with a `recursive` option: `${SRCROOT}/../../../ios/Pods/Headers`
 
 ### 3.4 [Android only] Integrate the SDK manually for React Native lower than 0.60 without react-native link

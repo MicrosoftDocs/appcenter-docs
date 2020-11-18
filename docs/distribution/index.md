@@ -22,7 +22,7 @@ Distributing with App Center is quick and easy, and doesn't require the App Cent
 1. [Add collaborators to your app](~/dashboard/creating-and-managing-apps.md) to collaborate and grant access to all releases.
 2. [Create Distribution Groups](~/distribution/groups.md) to organize your testers and manage access.
 3. [Upload](~/distribution/uploading.md) a new application build and select the desired users and distribution groups for the release.
-   - After you have distributed a new release, App Center sends an email to the chosen users notifying them that a new build is available for them to download.
+   - After you've distributed a new release, App Center sends an email to the chosen users notifying them that a new build is available for them to download.
    - Integrate the App Center SDK and enable [In-App Updates](~/distribution/inappupdates.md) to help your users stay always on the latest release.
 4. [Install the release](~/distribution/installation.md) onto your device by clicking on the link in the email.
 

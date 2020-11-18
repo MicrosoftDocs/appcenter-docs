@@ -96,7 +96,7 @@ Note that when the app calls `register` for the first time after being installed
 
 ## Intercept push notifications
 
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](#custom-data-in-your-notifications) flag set to true.
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you've enabled [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](#custom-data-in-your-notifications) flag set to true.
 
 > [!NOTE]
 > If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it's tapped.
@@ -275,7 +275,7 @@ To distinguish between notifications received in the foreground and notification
     }
     ```
 
-4. (Optional) If you have implemented the `application:didReceiveRemoteNotification:fetchCompletionHandler:` or the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
+4. (Optional) If you've implemented the `application:didReceiveRemoteNotification:fetchCompletionHandler:` or the App Center Push SDK `push:DidReceivePushNotification:` callback, you may want adjust its behavior to a handle the foreground detection:
 
     ```objc
     - (void)application:(UIApplication *)application

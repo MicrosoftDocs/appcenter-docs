@@ -42,7 +42,7 @@ Before you begin, make sure that the following prerequisites are met:
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and click the **Add new** button in the upper-right corner of the page, and select **Add new app** from the dropdown menu.
@@ -50,7 +50,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **Android** as the OS and **Java** as a platform.
 5. Click the **Add new app** button.
 
-Once you have created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
+Once you've created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 

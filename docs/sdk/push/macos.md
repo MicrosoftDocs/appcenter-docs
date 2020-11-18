@@ -64,7 +64,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [MSPush.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
+Make sure you've replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
 
 ### 2.3 Add internet capabilities for sandboxed apps
 

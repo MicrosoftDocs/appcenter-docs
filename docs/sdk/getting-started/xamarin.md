@@ -60,7 +60,7 @@ You need to select **Xamarin** as the platform for Android and iOS applications 
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -68,7 +68,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS and platform depending on your project as described above.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK to your solution
 
@@ -92,7 +92,7 @@ The App Center SDK can be integrated using Visual Studio or the Package Manager 
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* If you're working in **Visual Studio for Mac**, make sure you've installed **NuGet Package Management Extensions**. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following command in the console:
 
 ```shell

@@ -117,7 +117,7 @@ private static void SetCountryCode()
 
 You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Once you've started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {

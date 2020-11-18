@@ -24,9 +24,9 @@ Check for one of the following:
 - The token registered with App Center Push is no longer valid.
 - Production mode/sandbox mode doesn't match the certificate. If the Provisioning profile is *Development*, then you must use *Sandbox* endpoint type. If the Provisioning profile is either *Ad hoc* or *Production*, you must use *Production* endpoint type.
 
-For Android apps, this usually means the push token has an incorrect format; this shouldn't happen if you have configured the AppCenter Push SDK correctly.
+For Android apps, this usually means the push token has an incorrect format; this shouldn't happen if you've configured the AppCenter Push SDK correctly.
 
-For iOS apps, this usually means the push token has an incorrect format; this shouldn't happen if you have configured the AppCenter Push SDK correctly. This could also be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNs credentials.
+For iOS apps, this usually means the push token has an incorrect format; this shouldn't happen if you've configured the AppCenter Push SDK correctly. This could also be caused by a mismatch in the APNs environment (sandbox vs production) between the app entitlements and the APNs credentials.
 
 ### Expired Channel
 For Android applications, this means that the device token has expired; either because the token expired or because the application that registered the token was uninstalled from the device.
@@ -35,7 +35,7 @@ For Android applications, this means that the device token has expired; either b
 Check for one of the following reasons:
 
 - The device registration expired - this occurs when an app is uninstalled, or the registration App Center has for the device is obsolete.
-- You're not using a valid certificate - it's possible that you have re-signed the app with a different certificate.
+- You're not using a valid certificate - it's possible that you've re-signed the app with a different certificate.
 - You may be sending an incorrect device ID through the API.
 - The SDK didn't initialize properly - depending on the Platform, you can enable [verbose logs](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#adjust-the-log-level) to see if there are any errors during initialization.
 

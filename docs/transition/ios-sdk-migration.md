@@ -23,7 +23,7 @@ dev_langs:
 
 #### Manual
 
-If you have added the SDK manually, follow these steps:
+If you've added the SDK manually, follow these steps:
 
 1. Remove `HockeySDK.embeddedframework` reference from the XCode project. Don't click _Move to Trash_ button, just click the _Remove reference_ button.
 
@@ -35,7 +35,7 @@ If you have added the SDK manually, follow these steps:
 
 #### Podfile
 
-If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line from the Podfile, then run `pod install`.
+If you've added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line from the Podfile, then run `pod install`.
 
 #### Carthage
 

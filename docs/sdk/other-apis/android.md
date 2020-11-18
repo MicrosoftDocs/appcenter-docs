@@ -205,7 +205,7 @@ AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you're allowed to set is 20 KB.
 
 > [!NOTE]
-> The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
+> The actual max storage size may be higher than the value you've chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
 
 > [!NOTE]
 > The logs older than 25 days will be discarded.

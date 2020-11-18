@@ -42,7 +42,7 @@ The following signing methods are currently not supported:
 > [!IMPORTANT]
 > Make sure the signing assets you upload are those you intend to sign the app with. The bundle identifier and team ID in your app will be overwritten by the signing assets.
 
-To sign your Mac builds, upload the provisioning profile `.provisionprofile` and certificate file `.p12` when [configuring the build](~/build/macos/index.md), along with the password you have set for the certificate. Your certificate can be exported from Xcode, and your provisioning profile can be downloaded from the [Apple Developer Center](https://developer.apple.com/account/), under **Certificates, IDs & Profiles**.
+To sign your Mac builds, upload the provisioning profile `.provisionprofile` and certificate file `.p12` when [configuring the build](~/build/macos/index.md), along with the password you've set for the certificate. Your certificate can be exported from Xcode, and your provisioning profile can be downloaded from the [Apple Developer Center](https://developer.apple.com/account/), under **Certificates, IDs & Profiles**.
 
 ### Uploading your certificate
 Your certificate can be found in your Keychain. Or, you can export it from Xcode:

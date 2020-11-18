@@ -71,7 +71,7 @@ Fill in the additional information using the detailed configuration mapping tabl
 
 HockeyApp Setting | App Center Setting | Notes
 ------------------- | ------------------- | ---
-App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
+App ID | Android/iOS App Secret | Use the App ID that you've converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
 Restricted in-app updates | NA | [Distribute.UpdateTrack](~/sdk/distribute/unity.md#use-private-distribution-group)
 Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity.md)

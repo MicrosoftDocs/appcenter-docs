@@ -46,7 +46,7 @@ appcenter crashes upload-mappings --mapping {mapping file} --version-name {versi
 ```
 
 > [!NOTE]
-> App Center can't check if you have uploaded the right `mapping.txt` file. We therefore recommend to upload the file directly after you create the .apk file or push it to your code repository if you want to upload it later.
+> App Center can't check if you've uploaded the right `mapping.txt` file. We therefore recommend to upload the file directly after you create the .apk file or push it to your code repository if you want to upload it later.
 
 ### Forwarding the mapping from a build in App Center
 

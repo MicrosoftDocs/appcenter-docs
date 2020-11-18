@@ -19,7 +19,7 @@ ms.service: vs-appcenter
 
 #### Manual
 
-If you have added the SDK manually, follow these steps:
+If you've added the SDK manually, follow these steps:
 
 1. Remove `HockeySDK.framework` reference from the XCode project. Don't click **Move to Trash** button, just click the **Remove reference** button.
 
@@ -31,7 +31,7 @@ If you have added the SDK manually, follow these steps:
 
 #### Podfile
 
-If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"` line from the Podfile, then run `pod install`.
+If you've added the SDK using **CocoaPods**, remove the `pod "HockeySDK-tvOS"` line from the Podfile, then run `pod install`.
 
 #### Carthage
 

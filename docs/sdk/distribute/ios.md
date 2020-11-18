@@ -25,7 +25,7 @@ App Center Distribute will let your users install a new version of the app when 
 > [!NOTE]
 > There are a few things to consider when using in-app updates:
 > 
-> 1. If you have released your app in the App Store, in-app updates will be disabled.
+> 1. If you've released your app in the App Store, in-app updates will be disabled.
 > 2. If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
 
 > [!NOTE]
@@ -103,7 +103,7 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [Distribute.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
+Make sure you've replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 #### 2.3 Modify the project's **Info.plist**
 
@@ -353,9 +353,9 @@ The in-app updates feature works as follows:
 
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
-1. Create your app in the App Center Portal if you haven't done that already.
+1. Create your app in the App Center Portal if you haven't already.
 1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that wasn't used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
+1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that wasn't used for that app on App Center. This ensures that your experience is close to the experience of your real testers.
 1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [updateTrack property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
 1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
