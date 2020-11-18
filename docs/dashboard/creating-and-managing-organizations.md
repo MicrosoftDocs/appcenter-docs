@@ -95,7 +95,7 @@ Removing a collaborator from an organization will remove the user from all apps 
 1. Click on the App Center user menu in the upper-right corner of any page
 2. Select **Account Settings**
 3. Select **Organizations**
-4. Click the **Leave** button by the organization you would like to leave
+4. Click the **Leave** button by the organization you want to leave.
 
 > [!NOTE]
 > If you are the sole 'Admin' of an organization, you can't leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.

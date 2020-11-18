@@ -187,7 +187,7 @@ This will send a request to App Center and display an update dialog in case ther
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/AppCenter-SDK-Apple/blob/master/AppCenterDistribute/AppCenterDistribute/Resources/en.lproj/AppCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+You can easily provide your own resource strings if you want to localize the text displayed in the update dialog. Look at [this strings file](https://github.com/Microsoft/AppCenter-SDK-Apple/blob/master/AppCenterDistribute/AppCenterDistribute/Resources/en.lproj/AppCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 2. Customize the update dialog
 

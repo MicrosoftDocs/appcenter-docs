@@ -41,11 +41,11 @@ Property Value 2: 10.3
 Property Value 3: 9.3.5
 
 Depending on your specific use case, you might want to include these as part of the event name instead. However, note that the number of event names is limited to 200. It's important to know what you want to answer to get the most value from using events for handled errors.
-If you would like to filter by version, you don't need to include that as part of the property, as you can use the dropdown provided on top right of the event page.
+If you want to filter by version, you don't need to include that as part of the property, as you can use the dropdown provided on top right of the event page.
 
 ![Use the APP VERSIONS list to select which version or versions to report](~/analytics/images/version-filtering.PNG)
 
-If you'd like to include the exception message, you can include it as another property.
+If you want to include the exception message, you can include it as another property.
 
 **Example**:
 

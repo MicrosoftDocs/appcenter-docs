@@ -41,7 +41,7 @@ To access the Google API, you must link your Google Play Console to a Google API
 * If you're already a user of the Google Play Developer API, you can link to your existing API project by following these steps. If the API project to link to isn't listed, verify that your Google Play Console account is designated as an Owner, and the Google Play Developer API is enabled.
 * Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAccessPlace) on the Google Play Console.
 * Accept the API Terms of Service.
-* Choose the project you would like to link.
+* Choose the project you want to link.
 * Click on **Link**.
 
 ## Setting Up API Access Clients

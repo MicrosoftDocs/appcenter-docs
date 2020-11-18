@@ -48,7 +48,7 @@ You can stop testing an app and remove yourself from all distribution groups for
 If all the listed conditions apply to you, you can remove yourself as a tester for an app. To do so, complete the following steps:
 
 1. Navigate to the [App Center Install Portal](https://install.appcenter.ms/) on your mobile device.
-2. Select the Application project you would like to stop testing.
+2. Select the Application project you want to stop testing.
 3. Located on the top right of the screen, click the three dots menu item.
 4. Click the **Stop testing app** button.
 

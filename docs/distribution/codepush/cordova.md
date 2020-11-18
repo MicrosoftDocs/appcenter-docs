@@ -111,7 +111,7 @@ codePush.sync();
 
 If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS), which ensures the least invasive experience for your end users. If an available update is mandatory, then it will be installed immediately, ensuring that the end user gets it as soon as possible.
 
-If you would like your app to discover updates more quickly, you can also choose to call `sync` every time the app resumes from the background, by adding the following code (or something equivalent) as part of your app's startup behavior. You can call `sync` as frequently as you would like, so when and where you call it just depends on your personal preference.
+If you want your app to discover updates more quickly, you can also choose to call `sync` every time the app resumes from the background, by adding the following code (or something equivalent) as part of your app's startup behavior. You can call `sync` as frequently as you want, so when and where you call it just depends on your personal preference.
 
 ```javascript
 document.addEventListener("resume", function () {
@@ -119,7 +119,7 @@ document.addEventListener("resume", function () {
 });
 ```
 
-Additionally, if you would like to display an update confirmation dialog (an "active install"), configure when an available update is installed (e.g. force an immediate restart) or customize the update experience in any way, refer to the `sync` method's API reference for information on how to tweak this default behavior.
+Additionally, if you want to display an update confirmation dialog (an "active install"), configure when an available update is installed (e.g. force an immediate restart) or customize the update experience in any way, refer to the `sync` method's API reference for information on how to tweak this default behavior.
 
 > [!IMPORTANT]
 > While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
@@ -164,7 +164,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-ios -x
 
 The CodePush client supports differential updates, so even though you are releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
 
-For more details about how the `release-cordova` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-cordova). Additionally, if you would prefer to handle running the `cordova prepare` command yourself, and therefore, want an even more flexible solution than `release-cordova`, refer to the [`release` command](./cli.md#releasing-updates-general) for more details.
+For more details about how the `release-cordova` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-cordova). Additionally, if you'd prefer to handle running the `cordova prepare` command yourself, and therefore, want an even more flexible solution than `release-cordova`, refer to the [`release` command](./cli.md#releasing-updates-general) for more details.
 
 If you run into any issues, or have any questions/comments/feedback, you can [e-mail us](mailto:codepushfeed@microsoft.com) and/or open a new issue on this repo and we'll respond ASAP! See also [help and feedback](../../help.md).
 
@@ -252,7 +252,7 @@ codePush.getCurrentPackage(function (update) {
 codePush.getPendingPackage(onSuccess, onError?);
 ```
 
-Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you'd like to determine whether there's a pending update and then prompt the user if they would like to restart now (via `codePush.restartApplication`) in order to apply it.
+Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you want to determine whether there's a pending update and then prompt the user if they want to restart immediately (via `codePush.restartApplication`) in order to apply it.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app doesn't currently have a pending update (e.g. the app is already running the latest available version).
@@ -267,7 +267,7 @@ Example Usage:
 codePush.getPendingPackage(function (update) {
     if (update) {
         // An update is currently pending, ask the
-        // user if they would like to restart
+        // user if they want to restart
     }
 });
 ```
@@ -332,15 +332,15 @@ While the sync method tries to make it easy to perform silent and active updates
 #### SyncOptions
 While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above:
 * **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the **config.xml** file, but this option allows you to override it from the script-side if you need to dynamically use a different deployment for a specific call to `sync`.
-* **installMode** *(InstallMode)* - Specifies when you would like to install optional updates (i.e. those that aren't marked as mandatory). Defaults to `InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
-* **mandatoryInstallMode** *(InstallMode)* - Specifies when you would like to install updates which are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
+* **installMode** *(InstallMode)* - Specifies when you want to install optional updates (i.e. those that aren't marked as mandatory). Defaults to `InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
+* **mandatoryInstallMode** *(InstallMode)* - Specifies when you want to install updates which are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 * **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds that the app needs to have been in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which has the effect of applying the update immediately after a resume, regardless how long it was in the background.
 * **ignoreFailedUpdates** *(Boolean)* - Specifies whether an available update should be ignored if it had been previously installed and rolled back on the client (because `notifyApplicationReady` wasn't successfully called). Defaults to `true`.
 * **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which has the effect of disabling the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
 
 The following list represents the available options and their defaults:
-* **appendReleaseDescription** *(Boolean)* - Indicates whether you would like to append the description of an available release to the notification message which is displayed to the end user. Defaults to `false`.
-* **descriptionPrefix** *(String)* - Indicates the string you would like to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`.
+* **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message which is displayed to the end user. Defaults to `false`.
+* **descriptionPrefix** *(String)* - Indicates the string you want to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`.
 * **mandatoryContinueButtonLabel** *(String)*: The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
 * **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
 * **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that's available. Defaults to `"Ignore"`.
@@ -397,7 +397,7 @@ function downloadProgress(downloadProgress) {
 }
 ```
 
-The `sync` method can be called anywhere you'd like to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
 ### Package objects
 The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide access to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:
@@ -529,7 +529,7 @@ window.codePush.checkForUpdate(onUpdateCheck, onError);
 The CodePush API includes the following "enum" objects which can be used to customize the update experience, and are available globally off of the `window` object:
 
 #### InstallMode
-This enum specified when you would like an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
+This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
@@ -585,7 +585,7 @@ window.codePush.checkForUpdate(onUpdateCheck, onError);
 The CodePush API includes the following "enum" objects which can be used to customize the update experience, and are available globally off of the `window` object:
 
 #### InstallMode
-This enum specified when you would like an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
+This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 * **ON_NEXT_RESUME**: Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.

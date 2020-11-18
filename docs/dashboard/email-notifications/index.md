@@ -75,7 +75,7 @@ The default email notification settings at the user-level are toggled **On**.
 
 App-level email notifications send information for the specific app to the user.
 
-1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the app you would like to configure email notifications for.
+1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the app you want to configure email notifications for.
 
 2. In the left panel, select **Settings** from the menu list.
 

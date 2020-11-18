@@ -161,7 +161,7 @@ appcenter codepush deployment list MyApp
 No.
 
 #### What changes for CodePush?
-For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
+For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team wants to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
 
 #### Is using CodePush functionality still free?
 Yes.
@@ -176,7 +176,7 @@ Yes.
 Yes, we're committed to maintain the CLI through September 2018. You're free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid-October 2018.
 
 #### Will I need to create a new account for App Center if I already have one?
-If you used the same email for both accounts, you can log into App Center using your original account. If not, one will be created for your CodePush app. If you'd like to manage your apps from the same account you'll need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
+If you used the same email for both accounts, you can log into App Center using your original account. If not, one will be created for your CodePush app. If you want to manage your apps from the same account you'll need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
 
 ## Helpful Resources
 

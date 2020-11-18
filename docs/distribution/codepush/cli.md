@@ -56,7 +56,7 @@ When you sign-in from the CLI, your access key persists to disk for the duration
 appcenter logout
 ```
 
-If you forget to sign-out from a machine you would prefer not to leave a running session on (for example, your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
+If you forget to sign-out from a machine you don't want to leave a running session on (for example, your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
 
 ```shell
 appcenter tokens list
@@ -134,7 +134,7 @@ appcenter apps list
 ### App Collaboration
 If you will be working with other developers on the same CodePush app, you can add them as collaborators using the App Center portal by following the set of instructions below:
 
-1. In the App Center portal, select the app for which you would like to add collaborators
+1. In the App Center portal, select the app for which you want to add collaborators
 2. In the navigation area on the left side of the page, click **Settings**
 3. Click the **Collaborators** link
 4. Within the collaborators menu, enter the email addresses of the desired collaborators to invite them
@@ -185,7 +185,7 @@ appcenter codepush deployment remove -a <ownerName>/<appName> <deploymentName>
 appcenter codepush deployment rename -a <ownerName>/<appName> <deploymentName> <newDeploymentName>
 ```
 
-If at any time you'd like to view the list of deployments that a specific app includes, you can run the following command:
+If at any time you want to view the list of deployments that a specific app includes, you can run the following command:
 
 ```shell
 appcenter codepush deployment list -a <ownerName>/<appName>
@@ -319,7 +319,7 @@ This parameter specifies whether an update should be downloadable by end users o
 
 #### Mandatory parameter
 
-This parameter specifies whether the update should be considered mandatory or not (for example, it includes a critical security fix). This attribute is round tripped to the client, who can then decide if and how they would like to enforce it.
+This parameter specifies whether the update should be considered mandatory or not (for example, it includes a critical security fix). This attribute is round tripped to the client, who can then decide if and how they want to enforce it.
 
 > [!NOTE]
 > This parameter is a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (for example, `--mandatory true`), however, specifying `--mandatory` is sufficient for marking a release as mandatory.*
@@ -751,7 +751,7 @@ If you ran the `rollback` command on that deployment, a new release (`v4`) would
 
 End users that'd already acquired `v3` would now be "moved back" to `v2` when the app performs an update check. Additionally, any users that were still running `v2`, and therefore, had never acquired `v3`, wouldn't receive an update since they are already running the latest release (this is why our update check uses the package hash in addition to the release label).
 
-If you would like to roll back a deployment to a release other than the previous (for example, `v3` -> `v2`), you can specify the optional `--target-release` parameter:
+If you want to roll back a deployment to a release other than the previous (for example, `v3` -> `v2`), you can specify the optional `--target-release` parameter:
 
 ```shell
 appcenter codepush rollback -a <ownerName>/MyApp-iOS Production --target-release v34

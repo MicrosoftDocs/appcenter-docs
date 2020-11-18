@@ -98,7 +98,7 @@ Crashes.delegate = self
 
 ### Should the crash be processed?
 
-Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopts the `CrashesDelegate`-protocol if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopts the `CrashesDelegate`-protocol if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```objc
 - (BOOL)crashes:(MSACCrashes *)crashes shouldProcessErrorReport:(MSACErrorReport *)errorReport {

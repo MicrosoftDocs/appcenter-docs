@@ -17,7 +17,7 @@ To start building your first Mac app, you'll need to do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+3. Configure the build's project or workspace, and the scheme you want to build.
 
 > [!NOTE]
 > For the app to be distributed, the build needs to be code signed with a certificate. A provisioning profile is optional.  Additionally, build for Mac Installers is currently not supported.

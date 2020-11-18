@@ -112,7 +112,7 @@ Then you can use `AppCenter.Crashes.process(processFunction, errorCallback)` met
 
 ### Should the crash be processed?
 
-Pass `false` to the `sendCallback` if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Pass `false` to the `sendCallback` if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```js
 var errorCallback = function(error) {

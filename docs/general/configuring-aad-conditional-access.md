@@ -30,7 +30,7 @@ In Conditional Access settings, click **New policy** to create a policy.
 
 ![Azure Active Directory Conditional Access](./images/conditional-access-2.png)
 
-In New policy settings, click on **Cloud apps or actions** and select Visual Studio App Center as the target of the policy. Then [select the other conditions](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) that you'd like to apply, enable the policy, and click **Create** to save it.
+In New policy settings, click on **Cloud apps or actions** and select Visual Studio App Center as the target of the policy. Then [select the other conditions](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) that you want to apply, enable the policy, and click **Create** to save it.
 
 ![AAD Conditional Access: Cloud apps or actions](./images/conditional-access-1.png)
 

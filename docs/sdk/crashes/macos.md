@@ -112,7 +112,7 @@ Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 })
 ```
 
-In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it based on the result (**ModalResponse**) of `runModal` call.
+In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you're using an alert for this, as we do in the sample above, you'd call it based on the result (**ModalResponse**) of `runModal` call.
 
 ```objc
 // Depending on the user's choice, call notifyWithUserConfirmation: with the right value.

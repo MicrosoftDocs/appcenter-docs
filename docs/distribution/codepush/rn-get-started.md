@@ -21,7 +21,7 @@ npm install --save react-native-code-push
 
 As with all other React Native plugins, the integration experience is different for iOS and Android, so follow the setup steps depending on the platform(s) you target for your app. Note, if you're targeting both platforms it's recommended to create separate CodePush applications for each platform.
 
-If you want to see how other projects have integrated with CodePush, see the [example apps](rn-overview.md#example-apps--starters), which are provided by the community. Additionally, if you would like to familiarize yourself with CodePush + React Native, see the getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and [Deepak Sisodiya](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
+If you want to see how other projects have integrated with CodePush, see the [example apps](rn-overview.md#example-apps--starters), which are provided by the community. Additionally, if you want to familiarize yourself with CodePush + React Native, see the getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and [Deepak Sisodiya](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
 
 > [!IMPORTANT]
 > This guide assumes you have used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would've created.*
@@ -100,7 +100,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
 
-2. You will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. You will be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 #### Plugin Installation (iOS - CocoaPods)
 1. Add the React Native and CodePush plugin dependencies to your `Podfile`, pointing at the path where NPM has installed modules
@@ -382,7 +382,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.*
 
-2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you would like to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. If you are using RNPM >=1.6.0, you will be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 

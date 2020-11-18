@@ -38,7 +38,7 @@ Let’s look at each of these steps:
 ### Start with an Azure subscription
 Use of native Azure services requires an Azure subscription. If you don’t already have an active subscription, you can quickly and easily [create a free account](https://azure.microsoft.com/free/).
 
-App Center Push has constraints around number of devices registered and number of pushes available to each application. If your needs demand higher volumes or you would like to tailor feature sets to your application, check out Notification Hubs [pricing details](https://azure.microsoft.com/pricing/details/notification-hubs/).
+App Center Push has constraints around number of devices registered and number of pushes available to each application. If your needs demand higher volumes, or you want to tailor feature sets to your application, check out Notification Hubs [pricing details](https://azure.microsoft.com/pricing/details/notification-hubs/).
 
 ### Get started with Azure Notification Hubs
 If you’ve previously used App Center Push within your application(s), you’ve probably gone through the following setup process:

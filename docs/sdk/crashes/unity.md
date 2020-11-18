@@ -97,7 +97,7 @@ App Center Crashes provides callbacks for developers to take additional actions 
 
 ### Should the crash be processed?
 
-Set the following callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you want to ignore and not send to App Center.
+Set the following callback if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you want to ignore and not send to App Center.
 
 ```csharp
 Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
@@ -141,7 +141,7 @@ As an example you can refer to [our custom dialog example](https://aka.ms/custom
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is displaying a UI that informs the user the app is submitting a crash report. Another Scenario is when you want to adjust the behavior of the app to ensure the crash logs can be submitted shortly after relaunch. App Center Crashes provides three different callbacks you can make to be notified of what's taken place:
+At times, you want to know the status of your app crash. A common use case is displaying a UI that informs the user the app is submitting a crash report. Another Scenario is when you want to adjust the behavior of the app to ensure the crash logs can be submitted shortly after relaunch. App Center Crashes provides three different callbacks you can make to be notified of what's taken place:
 
 #### The following callback will be invoked before the SDK sends a crash log
 

@@ -18,7 +18,7 @@ App Center can build React Native apps written in React Native version 0.34 or n
 To build a React Native app for iOS, you must:
 1. Connect to your repository service account (for example: Azure DevOps, Bitbucket, GitHub, or VSTS).
 2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+3. Configure the build's project or workspace, and the scheme you want to build.
 
 > [!NOTE]
 > For the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.

@@ -69,7 +69,7 @@ Go through the data retrieved in Step 2, package it, and transmit this data your
 
 ### Push Segment definition
 
-In order to send your push campaign to your users you can use either installation IDs, or an audience for customers you would like to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, you must follow these steps to send your customers any personal information residing in the audience name, definition, or description.
+In order to send your push campaign to your users you can use either installation IDs, or an audience for customers you want to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, you must follow these steps to send your customers any personal information residing in the audience name, definition, or description.
 
 Here’s a summary of what you need to do:
 

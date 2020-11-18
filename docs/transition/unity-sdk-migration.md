@@ -18,7 +18,7 @@ ms.tgt_pltfrm: unity
 
 ### 1.1 Remove old HockeySDK
 
-1. Choose the game object that you had created for the SDK and remove `HockeyAppAndroid` / `HockeyAppiOS` component by clicking the **Settings** icon > **Remove Component**.
+1. Choose the game object that you'd created for the SDK and remove `HockeyAppAndroid` / `HockeyAppiOS` component by clicking the **Settings** icon > **Remove Component**.
 
 1. Remove **HockeyAppUnityAndroid** / **HockeyAppUnityiOS** folder(s) from the **Assets** folder inside your Unity project.
 

@@ -127,13 +127,13 @@ This decorator provides support for letting you customize its behavior to easily
 
 The `codePush` decorator accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above:
 
-- **checkFrequency** *(codePush.CheckFrequency)* - Specifies when you would like to check for updates. Defaults to `codePush.CheckFrequency.ON_APP_START`. Refer to the [`CheckFrequency`](#checkfrequency) enum reference for a description of the available options and what they do.
+- **checkFrequency** *(codePush.CheckFrequency)* - Specifies when you want to check for updates. Defaults to `codePush.CheckFrequency.ON_APP_START`. Refer to the [`CheckFrequency`](#checkfrequency) enum reference for a description of the available options and what they do.
 
 - **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the **Info.plist** file (iOS) and **MainActivity.java** file (Android), but this option allows you to override it from the script-side if you need to dynamically use a different deployment.
 
-- **installMode** *(codePush.InstallMode)* - Specifies when you would like to install optional updates (those that aren't marked as mandatory). Defaults to `codePush.InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
+- **installMode** *(codePush.InstallMode)* - Specifies when you want to install optional updates (those that aren't marked as mandatory). Defaults to `codePush.InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 
-- **mandatoryInstallMode** *(codePush.InstallMode)* - Specifies when you would like to install updates, which are marked as mandatory. Defaults to `codePush.InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
+- **mandatoryInstallMode** *(codePush.InstallMode)* - Specifies when you want to install updates, which are marked as mandatory. Defaults to `codePush.InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 
 - **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds that the app needs to have been in the background before restarting the app. This property only applies to updates, which are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which has the effect of applying the update immediately after a resume or unless the app suspension is long enough to not matter, regardless how long it was in the background.
 
@@ -141,9 +141,9 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
     The following list represents the available options and their defaults:
 
-  - **appendReleaseDescription** *(Boolean)* - Indicates whether you would like to append the description of an available release to the notification message, which is displayed to the end user. Defaults to `false`.
+  - **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message, which is displayed to the end user. Defaults to `false`.
 
-  - **descriptionPrefix** *(String)* - Indicates the string you would like to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`
+  - **descriptionPrefix** *(String)* - Indicates the string you want to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`
 
   - **mandatoryContinueButtonLabel** *(String)* - The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
 
@@ -501,7 +501,7 @@ This method returns a `Promise`, which is resolved to a `SyncStatus` code that i
 
 - **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation running which prevents the current call from being executed.
 
-The `sync` method can be called anywhere you'd like to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
 ### Package objects
 
@@ -521,7 +521,7 @@ Contains details about an update that has been downloaded locally or already ins
 - **deploymentKey**: The deployment key that was used to originally download this update. *(String)*
 - **description**: The description of the update. This is the same value that you specified in the CLI when you released the update. *(String)*
 - **failedInstall**: Indicates whether this update has been previously installed but was rolled back. The `sync` method will automatically ignore updates, which have previously failed, so you only need to worry about this property if using `checkForUpdate`. *(Boolean)*
-- **isFirstRun**: Indicates whether this is the first time the update has been run after being installed. This is useful for determining whether you would like to show a "What's New?" UI to the end user after installing an update. *(Boolean)*
+- **isFirstRun**: Indicates whether this is the first time the update has been run after being installed. This is useful for determining whether you want to show a "What's New?" UI to the end user after installing an update. *(Boolean)*
 - **isMandatory**: Indicates whether the update is considered mandatory.  This is the value that was specified in the CLI when the update was released. *(Boolean)*
 - **isPending**: Indicates whether this update is in a "pending" state. When `true`, that means the update has been downloaded and installed, but the app restart needed to apply it hasn't occurred yet, and that's why its changes aren't currently visible to the end user. *(Boolean)*
 - **label**: The internal label automatically given to the update by the CodePush server, such as `v5`. This value uniquely identifies the update within its deployment. *(String)*
@@ -552,11 +552,11 @@ The CodePush API includes the following enums, which can be used to customize th
 
 #### InstallMode
 
-This enum specifies when you would like an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
+This enum specifies when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 
 - **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially undesired latency between the update installation and the next time the end user restarts or resumes the app.
 
-- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it's probably disruptive to the end user if the app suddenly restarts out of nowhere. They wouldn't realize an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
 - **codePush.InstallMode.ON_NEXT_RESUME** *(2)* - Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 
@@ -564,7 +564,7 @@ This enum specifies when you would like an installed update to actually be appli
 
 #### CheckFrequency
 
-This enum specifies when you would like your app to sync with the server for updates, and can be passed to the `codePushify` decorator. It includes the following values:
+This enum specifies when you want your app to sync with the server for updates, and can be passed to the `codePushify` decorator. It includes the following values:
 
 - **codePush.CheckFrequency.ON_APP_START** *(0)* - Indicates that you want to check for updates whenever the app's process is started.
 

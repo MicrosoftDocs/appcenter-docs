@@ -77,7 +77,7 @@ If you already have a billing plan set for Azure Pipelines, because your organiz
  
 Billing isn't shared between Azure Pipelines and App Center. The pipelines you purchased for Azure Pipelines can't be used with App Center. 
   
-Your team might also be used to Azure Pipelines, and would like to continue using the service for builds, in this case, Azure Pipelines might be better for you.   
+Your team might also be used to Azure Pipelines, and want to continue using the service for builds. In this case, Azure Pipelines might be better for you.   
 
 > [!TIP]
 > If you still want to use App Center Features as part of Build, you can use [Distribute](https://docs.microsoft.com/appcenter/distribution/vsts-deploy) and [Test](https://docs.microsoft.com/appcenter/test-cloud/vsts-plugin) tasks created for Azure Pipelines!

@@ -171,7 +171,7 @@ This will send a request to App Center and display an update dialog in case ther
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/AppCenter-SDK-Android/blob/master/sdk/appcenter-distribute/src/main/res/values/appcenter_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+You can easily provide your own resource strings if you want to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/AppCenter-SDK-Android/blob/master/sdk/appcenter-distribute/src/main/res/values/appcenter_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ### 2. Customize the update dialog
 

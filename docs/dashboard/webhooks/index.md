@@ -37,7 +37,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 
 ## Getting Started
 
-1. Navigate to [App Center](https://appcenter.ms), and select the specific app you would like for webhooks integration.
+1. Navigate to [App Center](https://appcenter.ms), and select the specific app you want for webhooks integration.
 
 2. In your app, in the far left-hand panel, select **Settings**
 
