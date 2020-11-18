@@ -30,7 +30,7 @@ To modify settings for a particular release, select (click on) the release in th
 At the top of the page are three options:
 
 + **Download Bundle** button: Click the button to download the packaged release assets. You'll do this in troubleshooting when you want to view what data is being deployed to devices. The bundle is essentially a zip file (without an extension); after you've downloaded the bundle, add a `.zip` extension to the file, then interact with the file like any other zip file.
-+ **Promote** button: Click this button to promote this release from the current deployment to a different deployment. For example, you would use this feature to promote a release from the **Staging** to **Production** deployments for release to a larger target audience.
++ **Promote** button: Click this button to promote this release from the current deployment to a different deployment. For example, you'd use this feature to promote a release from the **Staging** to **Production** deployments for release to a larger target audience.
 + **Wrench Icon**: Click the icon to edit settings for the selected release.
 
 The body of the pane displays deployment statistics for the release, enabling you to understand how this release is deployed:
@@ -78,7 +78,7 @@ A brief description of this release, which provides an optional "change log" for
 > This setting corresponds to the [CLI's description parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#description-parameter).
 
 ### Enabled
-Controls whether the update is available for deployment to users. This option is enabled by default, you would disable this setting when you want to keep a particular release from deploying, for example, because of a bug in the code, or when you're not ready to deploy a version yet.
+Controls whether the update is available for deployment to users. This option is enabled by default, you'd disable this setting when you want to keep a particular release from deploying, for example, because of a bug in the code, or when you're not ready to deploy a version yet.
 
 > [!NOTE]
 > This setting corresponds to the [CLI's disabled parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#disabled-parameter).

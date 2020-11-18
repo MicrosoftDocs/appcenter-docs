@@ -122,7 +122,7 @@ Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 })
 ```
 
-In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it from within your implementation of the `alertView:clickedButtonAtIndex:`-callback.
+In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you'd call it from within your implementation of the `alertView:clickedButtonAtIndex:`-callback.
 
 ```objc
 // Depending on the users's choice, call notifyWithUserConfirmation: with the right value.

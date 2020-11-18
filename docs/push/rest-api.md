@@ -97,7 +97,7 @@ https://appcenter.ms/api/v0.1/apps/{owner_name}/{app_name}/push
 
 Where, as described in the previous section, the portion of the URL represented by `{owner_name}` in the example is the account or organization name, and the portion of the URL represented by `{app_name}` is the app project name.
 
-To invoke the API to send notifications, you would build an API endpoint similar to the following:
+To invoke the API to send notifications, you'd build an API endpoint similar to the following:
 
 ```text
 https://appcenter.ms/api/v0.1/apps/{owner_name}/{app_name}/push/notifications

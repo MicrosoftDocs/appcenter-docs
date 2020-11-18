@@ -606,7 +606,7 @@ Contains static methods for retrieving the `NSURL` that represents the most rece
 
 The `CodePush` class' methods can be thought of as composite resolvers, which always load the appropriate bundle, in order to accommodate the following scenarios:
 
-1. When an end user installs your app from the store (like `1.0.0`), they'll get the JS bundle that's contained within the binary. This is the behavior you would get without using CodePush, but we make sure it doesn't break :)
+1. When an end user installs your app from the store (like `1.0.0`), they'll get the JS bundle that's contained within the binary. This is the behavior you'd get without using CodePush, but we make sure it doesn't break :)
 
 2. As soon as you begin releasing CodePush updates, your end users will get the JS bundle that represents the latest release for the configured deployment. This is the behavior that allows you to iterate beyond what you shipped to the store.
 

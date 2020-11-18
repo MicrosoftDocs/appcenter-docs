@@ -68,7 +68,7 @@ Registering a device means making it part of the list of devices on the Apple De
 3. Once you sign in with your Apple username and password, App Center adds the unprovisioned devices to both your Apple developer account and the releases provisioning profile.
 4. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file).
 
-If you would prefer to handle re-building your app with the updated provisioning profile separately, you can still use App Center to register your tester's devices automatically in the Apple developer portal without performing the re-signing step. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
+If you prefer to handle re-building your app with the updated provisioning profile separately, you can still use App Center to register your tester's devices automatically in the Apple developer portal without performing the re-signing step. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
 
 ## Distribute a new release
 
