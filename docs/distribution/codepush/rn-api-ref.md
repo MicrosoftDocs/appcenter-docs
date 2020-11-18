@@ -40,7 +40,7 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [notifyAppReady](#codepushnotifyappready): Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (that isn't using the [sync](#codepushsync) method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and roll back to the previous version when the app next restarts.
 
-- [restartApp](#codepushrestartapp): Immediately restarts the app. If there is an update pending, it will be immediately displayed to the end user. Otherwise, calling this method simply has the same behavior as the end user killing and restarting the process.
+- [restartApp](#codepushrestartapp): Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user. Otherwise, calling this method simply has the same behavior as the end user killing and restarting the process.
 
 - [sync](#codepushsync): Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps
 
@@ -175,7 +175,7 @@ Called periodically when an available update is being downloaded from the CodePu
 codePush.allowRestart(): void;
 ```
 
-Reallows programmatic restarts to occur, that would have otherwise been rejected due to a previous call to `disallowRestart`. If `disallowRestart` was never called in the first place, then calling this method will simply result in a no-op.
+Reallows programmatic restarts to occur, that would've otherwise been rejected due to a previous call to `disallowRestart`. If `disallowRestart` was never called in the first place, then calling this method will simply result in a no-op.
 
 If a CodePush update is currently pending, which attempted to restart the app (for example it used `InstallMode.IMMEDIATE`), but was blocked due to `disallowRestart` having been called, then calling `allowRestart` will result in an immediate restart. This allows the update to be applied as soon as possible, without interrupting the end user during critical workflows (for example an onboarding process).
 
@@ -183,9 +183,9 @@ For example, calling `allowRestart` would trigger an immediate restart if either
 
 1. No CodePush updates were installed since the last time `disallowRestart` was called, and therefore, there isn't any need to restart anyways.
 
-2. There is currently a pending CodePush update, but it was installed via `InstallMode.ON_NEXT_RESTART`, and therefore, doesn't require a programmatic restart.
+2. There's currently a pending CodePush update, but it was installed via `InstallMode.ON_NEXT_RESTART`, and therefore, doesn't require a programmatic restart.
 
-3. There is currently a pending CodePush update, but it was installed via `InstallMode.ON_NEXT_RESUME` and the app hasn't been put into the background yet, and therefore, there isn't a need to programmatically restart yet.
+3. There's currently a pending CodePush update, but it was installed via `InstallMode.ON_NEXT_RESUME` and the app hasn't been put into the background yet, and therefore, there isn't a need to programmatically restart yet.
 
 4. No calls to `restartApp` were made since the last time `disallowRestart` was called.
 
@@ -209,7 +209,7 @@ For example, consider a use-case where currently installed binary version is 1.0
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
-1. `null` if there is no update available. This can occur in the following scenarios:
+1. `null` if there isn't an update available. This can occur in the following scenarios:
 
    1. The configured deployment doesn't contain any releases, and therefore, nothing to update.
    2. The latest release within the configured deployment is targeting a different binary version than what you're currently running (either older or newer).
@@ -335,7 +335,7 @@ This method returns a `Promise`, which resolves to one of two possible values:
 Example Usage:
 
 ```javascript
-// Check if there is currently a CodePush update running, and if
+// Check if there's currently a CodePush update running, and if
 // so, register it with the HockeyApp SDK (https://github.com/slowpath/react-native-hockeyapp)
 // so that crash reports will correctly display the JS bundle version the user was running.
 codePush.getUpdateMetadata().then((update) => {
@@ -344,7 +344,7 @@ codePush.getUpdateMetadata().then((update) => {
     }
 });
 
-// Check to see if there is still an update pending.
+// Check to see if there's still an update pending.
 codePush.getUpdateMetadata(UpdateState.PENDING).then((update) => {
     if (update) {
         // There's a pending update, do we want to force a restart?
@@ -371,7 +371,7 @@ If you are using the `sync` function, and doing your update check on app start, 
 codePush.restartApp(onlyIfUpdateIsPending: Boolean = false): void;
 ```
 
-Immediately restarts the app. If a truth value is provided to the `onlyIfUpdateIsPending` parameter, then the app will only restart if there is actually a pending update waiting to be applied.
+Immediately restarts the app. If a truth value is provided to the `onlyIfUpdateIsPending` parameter, then the app will only restart if there's actually a pending update waiting to be applied.
 
 This method is for advanced scenarios, and is primarily useful when the following conditions are true:
 
@@ -499,7 +499,7 @@ This method returns a `Promise`, which is resolved to a `SyncStatus` code that i
 
 - **codePush.SyncStatus.UPDATE_INSTALLED** *(6)* - The update has been installed and will be run either immediately after the `syncStatusChangedCallback` function returns or the next time the app resumes/restarts, depending on the `InstallMode` specified in `SyncOptions`.
 
-- **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There is an ongoing `sync` operation running which prevents the current call from being executed.
+- **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation running which prevents the current call from being executed.
 
 The `sync` method can be called anywhere you'd like to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
@@ -583,7 +583,7 @@ This enum is provided to the `syncStatusChangedCallback` function that can be pa
 - **codePush.SyncStatus.UP_TO_DATE** *(4)* - The app is fully up to date with the configured deployment.
 - **codePush.SyncStatus.UPDATE_IGNORED** *(5)* - The app has an optional update, which the end user chose to ignore. (This is only applicable when the `updateDialog` is used)
 - **codePush.SyncStatus.UPDATE_INSTALLED** *(6)* - An available update has been installed and will be run either immediately after the `syncStatusChangedCallback` function returns or the next time the app resumes/restarts, depending on the `InstallMode` specified in `SyncOptions`.
-- **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There is an ongoing `sync` operation running which prevents the current call from being executed.
+- **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation running which prevents the current call from being executed.
 - **codePush.SyncStatus.UNKNOWN_ERROR** *(-1)* - The sync operation encountered an unknown error.
 
 #### UpdateState
@@ -592,7 +592,7 @@ This enum specifies the state that an update is currently in, and can be specifi
 
 - **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that's currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics and/or crash reporting service.
 
-- **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet in order to apply it. This can be useful for determining whether there is a pending update, which you may want to force a programmatic restart (via `restartApp`) in order to apply.
+- **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet in order to apply it. This can be useful for determining whether there's a pending update, which you may want to force a programmatic restart (via `restartApp`) in order to apply.
 
 - **codePush.UpdateState.LATEST** *(2)* - Indicates that an update represents the latest available release, and can be either currently running or pending.
 

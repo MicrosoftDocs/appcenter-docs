@@ -149,7 +149,7 @@ After calling `Push.setEnabled(true)` once, App Center Push will be started auto
 
 ## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
 ### Application Delegate
 
@@ -237,7 +237,7 @@ App Center uses swizzling to automatically forward various delegate methods to A
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it's helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback isn't enough in this case since the application's state will always be reported as `active`.
 
 > [!NOTE]
-> To detect if a push notification was received while the app is in foreground, you need to modify the project's native **AppDelegate** as there is currently no official way in React-Native that supports foreground detection for iOS.
+> To detect if a push notification was received while the app is in foreground, you need to modify the project's native **AppDelegate** as there's currently no official way in React-Native that supports foreground detection for iOS.
 
 To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 

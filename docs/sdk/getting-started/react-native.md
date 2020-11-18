@@ -408,4 +408,4 @@ For iOS, open your project's `ios/{appname}.xcworkspace` or `ios/{appname}.xcode
 
 For Android, import your **android** project in Android Studio and build from there.
 
-You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.
+You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There's no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.

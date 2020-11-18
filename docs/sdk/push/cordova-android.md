@@ -30,7 +30,7 @@ ms.tgt_pltfrm: cordova
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow [the SDK migration guide](migration/cordova-android.md).
+> For all the Android developers using App Center, there's a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow [the SDK migration guide](migration/cordova-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 

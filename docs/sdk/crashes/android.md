@@ -483,7 +483,7 @@ To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` 
 > App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it's a minidump file so we can handle it properly.
 
 > [!NOTE]
-> There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
+> There's a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 

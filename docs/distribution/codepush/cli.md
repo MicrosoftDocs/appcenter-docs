@@ -657,7 +657,7 @@ It's the same parameter as the one described in the [above section](#disabled-pa
 
 It's the same parameter as the one described in the [above section](#rollout-parameter), and allows you to increase the rollout percentage of the target release. This parameter can only be set to an integer whose value is greater than the current rollout value. Additionally, if you want to "complete" the rollout, and therefore, make the release available to everyone, you can set this parameter to `--rollout 100`. If this parameter is omitted, no change will be made to the value of the target release's rollout parameter.
 
-Additionally, as mentioned above, when you release an update without a rollout value, it's treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you can't change the rollout property of it via the `patch` command since that would be considered lowering the rollout percentage.
+Additionally, as mentioned above, when you release an update without a rollout value, it's treated equivalently to setting the rollout to `100`. Therefore, if you released an update without a rollout, you can't change the rollout property of it via the `patch` command since that'd be considered lowering the rollout percentage.
 
 ### Target binary version parameter
 
@@ -749,7 +749,7 @@ If you ran the `rollback` command on that deployment, a new release (`v4`) would
 | v3                          | Bug fixes         | Yes       |
 | v4 (Rollback from v3 to v2) | Added new feature | No        |
 
-End users that had already acquired `v3` would now be "moved back" to `v2` when the app performs an update check. Additionally, any users that were still running `v2`, and therefore, had never acquired `v3`, wouldn't receive an update since they are already running the latest release (this is why our update check uses the package hash in addition to the release label).
+End users that'd already acquired `v3` would now be "moved back" to `v2` when the app performs an update check. Additionally, any users that were still running `v2`, and therefore, had never acquired `v3`, wouldn't receive an update since they are already running the latest release (this is why our update check uses the package hash in addition to the release label).
 
 If you would like to roll back a deployment to a release other than the previous (for example, `v3` -> `v2`), you can specify the optional `--target-release` parameter:
 

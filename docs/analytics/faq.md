@@ -19,7 +19,7 @@ The data isn't sampled. Analytics will use all the data that's sent, unless it's
 The latency is typically just a few seconds.
 
 ## If the app is offline, does the SDK store the logs and then send them once it's back online?
-Yes. When there is no network connectivity, the SDK saves up to 10 MB (by default) of logs in the local storage. The size limitation is applied only for [Android](~/sdk/other-apis/android.md#storage-size) and [iOS](~/sdk/other-apis/ios.md#storage-size) (Windows SDK doesn't have the limit yet) and can be changed via `setMaxStorageSize` API. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
+Yes. When there's no network connectivity, the SDK saves up to 10 MB (by default) of logs in the local storage. The size limitation is applied only for [Android](~/sdk/other-apis/android.md#storage-size) and [iOS](~/sdk/other-apis/ios.md#storage-size) (Windows SDK doesn't have the limit yet) and can be changed via `setMaxStorageSize` API. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
 
 ## Session duration is unknown, why?
 A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.
@@ -31,7 +31,7 @@ OS Distribution counts aren't snapshots. They are counts of devices that match t
 The country is determined by the carrier country and requires that the device has a SIM. If you are using a tablet or a device with no SIM card, the country will not be reported. If you are using a simulator, the country information will most probably not be accurate.
 
 ## What is the maximum number of distinct events that can be sent per app?
-The maximum number of distinct custom events that we will track per day is 200. This count will be reset daily at 12am UTC. However, there is no limit on the maximum number of events instances sent per device.
+The maximum number of distinct custom events that we will track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
 
 ## What is the maximum number of event properties that I can define per event? What happens if I send more than the limit?
 The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they are automatically rejected.

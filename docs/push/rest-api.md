@@ -161,7 +161,7 @@ Send the body of the request in JSON format (using the `application/json` conten
 }
 ```
 
-**Note**: Available `notification_target` options are: `[ audiences_target, devices_target, user_ids_target, account_ids_target ]`. There is no `notification_target` option for broadcast, so the application simply passes in the `null` value, or omits the property all together.
+**Note**: Available `notification_target` options are: `[ audiences_target, devices_target, user_ids_target, account_ids_target ]`. There isn't a `notification_target` option for broadcast, so the application either passes in the `null` value, or omits the property all together.
 
 In this example:
 

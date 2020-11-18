@@ -31,7 +31,7 @@ ms.tgt_pltfrm: xamarin.android
 > * [Unity Windows](unity-windows.md)
 > 
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
+> For all the Android developers using App Center, there's a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 

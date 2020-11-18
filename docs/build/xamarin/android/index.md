@@ -82,7 +82,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 ### 3.7. Launch your successful build on a real device
 
-Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
+Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There's more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.8. NuGet restore
 
@@ -112,7 +112,7 @@ If you have complex configurations and need more information, refer to [Configur
 
 ### 3.9. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
 > If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.

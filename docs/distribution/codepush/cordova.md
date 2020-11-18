@@ -174,7 +174,7 @@ The CodePush API is exposed to your app via the global `codePush` object, which 
 * **[getCurrentPackage](#codepushgetcurrentpackage)**: Retrieves the metadata about the currently installed update (e.g. description, installation time, size).
 * **[getPendingPackage](#codepushgetpendingpackage)**: Retrieves the metadata for an update (if one exists) that was downloaded and installed, but hasn't been applied yet via a restart.
 * **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you are manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and rollback to the previous version when the app next restarts.
-* **[restartApplication](#codepushrestartapplication)**: Immediately restarts the app. If there is an update pending, it will be immediately displayed to the end user.
+* **[restartApplication](#codepushrestartapplication)**: Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user.
 * **[sync](#codepushsync)**: Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps.
 
 Additionally, the following objects and enums are also exposed globally as part of the CodePush API:
@@ -191,7 +191,7 @@ codePush.checkForUpdate(onSuccess, onError?, deploymentKey?: String);
 Queries the CodePush service to see whether the configured app deployment has an update available. By default, it will use the deployment key that's configured in your **config.xml** file, but you can override that by specifying a value via the optional `deploymentKey` parameter. This can be useful when you want to dynamically "redirect" a user to a specific deployment, such as allowing "Early access" via an easter egg or a user setting switch.
 
 When the update check completes, it will trigger the `onUpdateCheck` callback with one of two possible values:
-1. `null` if there is no update available. This occurs in the following scenarios:
+1. `null` if there's no update available. This occurs in the following scenarios:
    - The configured deployment doesn't contain any releases, and therefore, nothing to update.
    - The latest release within the configured deployment is targeting a different binary version than what you're currently running (either older or newer).
    - The currently running app already has the latest release from the configured deployment, and therefore, doesn't need it again.
@@ -218,7 +218,7 @@ codePush.checkForUpdate(function (update) {
 codePush.getCurrentPackage(onSuccess, onError?);
 ```
 
-Retrieves the metadata about the currently installed "package" (e.g. description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there is a pending update that's waiting to be applied via a resume or restart.
+Retrieves the metadata about the currently installed "package" (e.g. description, installation time). This can be useful for scenarios such as displaying a "what's new?" dialog after an update has been applied or checking whether there's a pending update that's waiting to be applied via a resume or restart.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app is currently running the HTML start page from the binary and not a CodePush update. This occurs in the following scenarios:
@@ -252,7 +252,7 @@ codePush.getCurrentPackage(function (update) {
 codePush.getPendingPackage(onSuccess, onError?);
 ```
 
-Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you'd like to determine whether there is a pending update and then prompt the user if they would like to restart now (via `codePush.restartApplication`) in order to apply it.
+Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you'd like to determine whether there's a pending update and then prompt the user if they would like to restart now (via `codePush.restartApplication`) in order to apply it.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app doesn't currently have a pending update (e.g. the app is already running the latest available version).
@@ -327,7 +327,7 @@ While the sync method tries to make it easy to perform silent and active updates
 * **downloadProgress**: Called periodically when an available update is being downloaded from the CodePush server. The method is called with a `DownloadProgress` object, which contains the following two properties:
   * **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (i.e. the size of the set of files which changed from the previous release).
   * **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
-* **syncErrback**: Called when there is an error in any of sync internal steps. The method is called with a standard javascript `Error` object as first argument.
+* **syncErrback**: Called when there's an error in any of sync internal steps. The method is called with a standard javascript `Error` object as first argument.
 
 #### SyncOptions
 While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above:

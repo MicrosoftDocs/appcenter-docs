@@ -38,7 +38,7 @@ Server/Resources.xcassets/springboard-alerts/springboard-alerts-en.dataset/alert
 If your application has alerts that aren't in that file, go to **? > Contact Support** in the App Center website to get them added. If they're already in that file, there may be some problem with the device configuration, which should be reported as a bug to App Center Test Support.  
 
 > [!NOTE]
-> You may notice `DismissSpringboardAlerts()` in the Xamarin.UITest API. `DismissSpringboardAlerts()` is a method that Xamarin.UITest uses internally. There is generally no need to call `DismissSpringboardAlerts()` in user test code.
+> You may notice `DismissSpringboardAlerts()` in the Xamarin.UITest API. `DismissSpringboardAlerts()` is a method that Xamarin.UITest uses internally. There isn't generally a need to call `DismissSpringboardAlerts()` in user test code.
 
 ### XCUITest versus UIAutomation
 Xamarin.UITest and Calabash use one of two Apple test frameworks for interacting with the devices. 

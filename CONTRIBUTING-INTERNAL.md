@@ -7,7 +7,7 @@ This guide covers some general topics around contributing and refers out to the 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/), or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## How can I contribute?
-There is a variety of ways to contribute to the documentation. Review the sections below to find out which one is right for you.
+There's a variety of ways to contribute to the documentation. Review the sections below to find out which one is right for you.
 
 ### Report bugs or suggest enhancements
 Use the feedback tool at the bottom of any article to submit bugs and suggestions.
@@ -48,7 +48,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     There are two tools that run every time you create a PR that you need to pay attention to: Build Status and PR Merger. They work together as follows:
 
     - Build status will check for any basic quality issues, including spelling and valid links. **You must fix all these issues before you can go to the next step**
-    - Once there is a successful build on your PR, PR Merger will assess these validation filters on your changes. 
+    - Once there's a successful build on your PR, PR Merger will assess these validation filters on your changes. 
     - If the PR meets all the criteria:
         - it will add the label “qualifies-for-automerge”
         - **Once you have reviewed the preview page and are happy with the content, comment `#sign-off`**.

@@ -31,7 +31,7 @@ This document lists new features as they're added to [Visual Studio App Center](
 - **Node.js switching support**
     - Node.js version can be specified in the app's branch configuration.  
 The following versions are available for use in App Center Build: 6, 8, 10, 12.  
-Also there is way to [specify](~/build/react-native/nodejs.md) custom version of Node.js.
+Also there's a way to [specify](~/build/react-native/nodejs.md) a custom version of Node.js.
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
@@ -464,7 +464,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there is a format you would like to use which isn't there yet, just let us know.
+  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you would like to use which isn't there yet, just let us know.
 
 ### **June 8, 2017**
 
@@ -542,7 +542,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you are using to login to install the build so there is no more confusion about it.
+- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
 
 ### **Mar 02, 2017**
 

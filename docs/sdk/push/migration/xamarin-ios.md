@@ -18,7 +18,7 @@ Version 1.11.0 (released in November 2018) fixes a bug in the `Push.DidReceiveRe
 
 If you want to disable the swizzling of `UNUserNotificationCenterDelegate` callbacks, refer to [the documentation to disable automatic method forwarding of UNUserNotificationCenterDelegate methods](~/sdk/push/xamarin-ios.md#user-notification-center-delegate).
 
-In case you didn't implement your own `UNUserNotificationCenterDelegate`, there is no action required.
+In case you didn't implement your own `UNUserNotificationCenterDelegate`, there's no action required.
 
 If you are using App Center Push's default setup logic (i.e. you didn't add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` entry to your **Info.plist** or it's set to `1`) and are implementing your own `UNUserNotificationCenterDelegate` callbacks, do the following:
 

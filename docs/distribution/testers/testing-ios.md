@@ -75,7 +75,7 @@ This error could be caused by many reasons, and you should contact the app devel
 * App is over 50 MB and downloaded over a cellular connection
 
 ### When I press the “Install” button, the installation alert never shows up and the app isn't installed
-If you've previously installed the app from the App Store, and it carries the same version of the app that's being installed, there will be no alert to confirm the installation. As a workaround, try uninstalling the existing version of the app, and then tap the Install button again.
+If you've previously installed the app from the App Store, and it carries the same version of the app that's being installed, there'll be no alert to confirm the installation. As a workaround, try uninstalling the existing version of the app, and then tap the Install button again.
 
 ### When I press the "+ Add new device" button nothing happens
 Typically this occurs on iPads when Safari requests a desktop version of App Center instead of a mobile version. To resolve this, tap on the 'AA' and select the option 'Request Mobile Website'. On older versions of iOS, Safari has this feature integrated into the refresh button. To handle this case, press and hold the refresh button and the same option should appear.

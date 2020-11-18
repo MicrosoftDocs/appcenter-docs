@@ -124,7 +124,7 @@ IApp app = ConfigureApp
 
 The relative path example tells `ApkFile` to go up three directories from the Xamarin.UITest assembly, and then navigate down the project tree of the Android application project to find the apk file.
 
-If there is more than one device or emulator connected, Xamarin.UITest will halt test execution and display an error message as it's unable to resolve what the intended target is for the test. In this case, it will be necessary to provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
+If there's more than one device or emulator connected, Xamarin.UITest will halt test execution and display an error message as it's unable to resolve what the intended target is for the test. In this case, it will be necessary to provide the *serial ID* of the device/emulator that should be used to run the test. For example, consider the following output from the `adb devices` command which will list all of the devices (or emulators) attached to the computer (along with their serial ID):
 
 ```bash
 $ adb devices
@@ -230,7 +230,7 @@ Exit REPL with ctrl-c or see help for more commands.
 >>>
 ```
 
-We can see that there is a `UIButton` in this view with the `id` of **ValidateButton**. We can use the information displayed by the `tree` command to help craft the necessary queries to locate and interact with views. For example, the following code simulates a tap on the button:
+We can see that there's a `UIButton` in this view with the `id` of **ValidateButton**. We can use the information displayed by the `tree` command to help craft the necessary queries to locate and interact with views. For example, the following code simulates a tap on the button:
 
 ```csharp
 app.Tap(c=>c.Marked("ValidateButton"))

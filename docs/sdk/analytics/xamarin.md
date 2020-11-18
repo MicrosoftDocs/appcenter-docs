@@ -36,7 +36,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 
 You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Once you have started the SDK, use the `TrackEvent()` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {
@@ -89,7 +89,7 @@ By default, the SDK stores up to 10MB of logs in the storage.
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
+When there isn't any network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
 
 ## Batching event logs
 

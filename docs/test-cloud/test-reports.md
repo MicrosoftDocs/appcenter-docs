@@ -56,7 +56,7 @@ Click in the Test Runs navigation list on the left to view the summary for that 
 * The **Devices passed** graphic shows the percentage and number of devices on which all tests passed.
 * The **Tests** list displays the tests in the test run.
 
-Click on a test of interest in the detail pane and either the *Test overview* page or the *Test detail* page opens, depending on the number of devices in the test run. If there is one device, App Center opens the *Test detail* page and if there are multiple devices, App Center opens the *Test overview* page where you can navigate to a *Test detail* page for a specific device.
+Click on a test of interest in the detail pane and either the *Test overview* page or the *Test detail* page opens, depending on the number of devices in the test run. If there's one device, App Center opens the *Test detail* page and if there are multiple devices, App Center opens the *Test overview* page where you can navigate to a *Test detail* page for a specific device.
 
 ## Test overview
 
@@ -72,7 +72,7 @@ Click on a screenshot to navigate to the **Test detail** page for that device.
 
 ### Download the full sized screenshot
 
-To speed up the page rendering, all screenshots are resized to match multiple browser windows sizes. For larger screenshots, the test report automatically renders with the 50% screenshot. The API can be used to download the full sized screenshots by getting the test report `https://openapi.appcenter.ms/#/test/test_getTestReport` and from the report fetch the step report (step_report_url). Within the step report, there will be a field called original (/deviceScreenshots/*/screenshot/urls/original) that will point to the full size screenshot.
+To speed up the page rendering, all screenshots are resized to match multiple browser windows sizes. For larger screenshots, the test report automatically renders with the 50% screenshot. The API can be used to download the full sized screenshots by getting the test report `https://openapi.appcenter.ms/#/test/test_getTestReport` and from the report fetch the step report (step_report_url). Within the step report, there'll be a field called original (/deviceScreenshots/*/screenshot/urls/original) that will point to the full size screenshot.
 
 [Follow this link for instructions on how to use App Center's API](https://docs.microsoft.com/appcenter/api-docs/)
 

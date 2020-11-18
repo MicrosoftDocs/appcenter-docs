@@ -55,7 +55,7 @@ Note that property values are optimized for values of type 'String'.
 
 ## Limits
 
-- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12 AM UTC. However, there is no limit on the maximum number of events instances sent per device.
+- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12 AM UTC. However, there isn't a limit on the maximum number of events instances sent per device.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped.
 - The SDK truncates event names to the first 256 characters.
 - The SDK truncates each property key and value to the first 125 characters.

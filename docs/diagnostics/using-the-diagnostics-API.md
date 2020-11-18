@@ -64,7 +64,7 @@ Old APIs listed in the crashes section are deprecated and have been removed. You
 
 ### Unaltered Crashes APIs
 
-There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there is no action needed at this time.
+There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there isn't action needed at this time.
 
 | Unaltered Crashes APIs        |
 | ----------------------------- |

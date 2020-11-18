@@ -62,7 +62,7 @@ Now that you've integrated App Center Push in your application, it's time to sta
 
 ## Intercept push notifications
 
-App Center Push makes it possible to intercept push notifications but there is some setup required to enable this feature in UWP.
+App Center Push makes it possible to intercept push notifications but there's some setup required to enable this feature in UWP.
 
 ### Additional setup
 
