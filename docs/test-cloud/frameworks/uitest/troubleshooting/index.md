@@ -26,7 +26,7 @@ If you haven't rebuilt the UITest project after changing the Xamarin.UITest pack
 
 If that doesn't solve the problem, the solution is to add the `--uitest-tools-dir` option to your command, pointing to the `tools` directory that has the right `test-cloud.exe`.
 
-#### But where is test-cloud.exe?
+#### But where's test-cloud.exe?
 `test-cloud.exe` is inside your Xamarin.UITest package. To find that package, check the **properties > path** setting for Xamarin.UITest in the Visual Studio Project Explorer.
 
 ##### Visual Studio for Mac

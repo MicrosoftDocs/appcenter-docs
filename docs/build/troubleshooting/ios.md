@@ -23,7 +23,7 @@ To share a scheme in Xcode, use the following steps:
 ![Mark scheme as shared](~/build/ios/images/xcode-share-scheme.png "Marking a scheme as shared in Xcode")
 
 > [!WARNING]
-> Make sure that your `xcshareddata/xcschemes/` folder isn't in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder will not work.
+> Make sure that your `xcshareddata/xcschemes/` folder isn't in your `.gitignore` file. This is where the `.xcscheme` files are stored by Xcode. App Center relies on these files to build the project properly. Simply exporting the `.xcscheme` into a different folder won't work.
 
 
 ## My iOS builds fail with "clang: error: linker command failed with exit code 1"
@@ -62,7 +62,7 @@ To troubleshoot and get build signing up and running, we suggest the following s
 3. Prepare the provisioning profile and certificate selected in the Xcode target and upload them to the App Center build configuration.
 4. Most importantly: make sure you’ve pushed the latest state of your project before saving the new certificate and profile to the build configuration.
 
-## Where is my .ipa file?
+## Where's my .ipa file?
 Xcodebuild, unlike xcrun, doesn't allow generating an `.ipa` file if the build isn't signed. Unsigned builds produce an `.xcarchive` instead. If you wish to generate an `.ipa` file with the artifacts of an unsigned build, you can use the `.xcarchive` file to do so.
 
 ![Export xcarchive file using xcode](~/build/images/export-xcode-xcarchive-organizer.png "Exporting an Xcarchive file using Xcode Archives organizer")
