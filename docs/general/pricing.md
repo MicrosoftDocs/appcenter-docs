@@ -43,7 +43,7 @@ Refer to the [App Center Billing](~/general/billing.md) article for information 
 
   - Test: depends on the number of apps you have, number of tests per day, average length of your tests, and number of devices in your device set.
 
-- What is a concurrent device?
+- What's a concurrent device?
 
   Concurrent devices determine the number of devices you can run tests on simultaneously. For example, with five concurrent devices, you can test five different device configurations in the same time it would normally take to test one. Concurrency doesn't limit the number of devices you can run during a test. For example, a test run on five devices with one concurrency will run on one device at a time to completion. Concurrency applies to all apps within an Org or account.
 

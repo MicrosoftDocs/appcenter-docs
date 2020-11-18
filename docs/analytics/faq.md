@@ -15,7 +15,7 @@ ms.custom: analytics
 ## Is the data sampled?
 The data isn't sampled. Analytics will use all the data that's sent, unless it's sent in the wrong format or some of the known limits are reached.
 
-## What is the latency between a log sent and its representation in the Analytics dashboards?
+## What's the latency between a log sent and its representation in the Analytics dashboards?
 The latency is typically just a few seconds.
 
 ## If the app is offline, does the SDK store the logs and then send them once it's back online?
@@ -30,13 +30,13 @@ OS Distribution counts aren't snapshots. They are counts of devices that match t
 ## Why is the country information not showing? / The country information doesn't seem to be correct.
 The country is determined by the carrier country and requires that the device has a SIM. If you are using a tablet or a device with no SIM card, the country will not be reported. If you are using a simulator, the country information will most probably not be accurate.
 
-## What is the maximum number of distinct events that can be sent per app?
+## What's the maximum number of distinct events that can be sent per app?
 The maximum number of distinct custom events that we'll track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
 
-## What is the maximum number of event properties that I can define per event? What happens if I send more than the limit?
+## What's the maximum number of event properties that I can define per event? What happens if I send more than the limit?
 The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they are automatically rejected.
 
-## What is the maximum number of property values that I can send per event?
+## What's the maximum number of property values that I can send per event?
 You will see the count for the ten property values with highest count.
 
 ## Why am I not seeing any data in log flow?

@@ -35,7 +35,7 @@ The new and improved diagnostics experience includes the following additions:
 
 You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
-### What is the transition experience?
+### What's the transition experience?
 After you update to the App Center UWP SDK Version 2.5.0, you'll see crash and error data coming into the App Center Diagnostics portal in a new and improved UI. For crash and error data displayed in the new Diagnostics UI, you need to use the APIs listed under the [errors section](https://openapi.appcenter.ms/#/errors). Learn more about how the old crashes APIs map to the new errors APIs in the [API transition documentation](~/diagnostics/using-the-diagnostics-api.md#transitioning-to-the-new-apis).
 
 ## Symbolication

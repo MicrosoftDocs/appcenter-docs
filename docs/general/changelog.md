@@ -469,7 +469,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **June 8, 2017**
 
 - **Get deeper insights by attaching your own logs to crashes:**
-  The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash.
+  The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what's happening before a crash.
 
 - **Annotate your findings to crash groups:**
   It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.

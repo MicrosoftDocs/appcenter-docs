@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Log Flow
 
-Log Flow will show you what is being received by the backend in real time. The main use cases for log flow are:
+Log Flow will show you what's being received by the backend in real time. The main use cases for log flow are:
 
 - Check if the SDK is properly integrated and if our backend is receiving data. Similar to when you do a microphone check: "Is this on?".
 - Ensure that the backend is receiving what the app is supposed to send.

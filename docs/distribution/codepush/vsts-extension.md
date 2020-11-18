@@ -200,7 +200,7 @@ Allows you to promote a previously released update from one deployment to anothe
 
 #### Update Metadata
 
-By default, when a release is promoted from one deployment to another, the newly created release will "inherit" not just the update contents, but also the metadata (e.g. `description`). This ensures that what is being promoted is the exact same thing that you tested in the source deployment. However, if you want to override one or more properties in the newly created release within the target deployment (e.g. because you use `mandatory` differently between environments), you can use the following fields:
+By default, when a release is promoted from one deployment to another, the newly created release will "inherit" not just the update contents, but also the metadata (e.g. `description`). This ensures that what's being promoted is the exact same thing that you tested in the source deployment. However, if you want to override one or more properties in the newly created release within the target deployment (e.g. because you use `mandatory` differently between environments), you can use the following fields:
 
 1. **Rollout** *(String)* - Percentage of users this release should be immediately available to. Defaults to `100%`
 
