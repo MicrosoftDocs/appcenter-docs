@@ -31,7 +31,7 @@ OS Distribution counts aren't snapshots. They are counts of devices that match t
 The country is determined by the carrier country and requires that the device has a SIM. If you are using a tablet or a device with no SIM card, the country will not be reported. If you are using a simulator, the country information will most probably not be accurate.
 
 ## What is the maximum number of distinct events that can be sent per app?
-The maximum number of distinct custom events that we will track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
+The maximum number of distinct custom events that we'll track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
 
 ## What is the maximum number of event properties that I can define per event? What happens if I send more than the limit?
 The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they are automatically rejected.

@@ -33,4 +33,4 @@ Additional details are available in the [Analytics API](https://openapi.appcente
 In order to provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.
 
 > [!NOTE]
-> We are working on code samples that will help you filter the exported data for a specific install ID.
+> We're working on code samples that will help you filter the exported data for a specific install ID.

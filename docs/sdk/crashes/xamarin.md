@@ -152,7 +152,7 @@ Crashes.SendingErrorReport += (sender, e) =>
 };
 ```
 
-In case we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is triggered again after process restart.
+In case we have network issues or an outage on the endpoint, and you restart the app, `SendingErrorReport` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 

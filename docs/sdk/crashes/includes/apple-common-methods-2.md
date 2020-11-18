@@ -30,7 +30,7 @@ func crashes(_ crashes: Crashes, willSend errorReport: ErrorReport) {
   // Your code, e.g. to present a custom UI.
 }
 ```
-In case we have network issues or we have an outage on the endpoint and you restart the app, `willSendErrorReport` is triggered again after process restart.
+In case we have network issues or an outage on the endpoint, and you restart the app, `willSendErrorReport` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 

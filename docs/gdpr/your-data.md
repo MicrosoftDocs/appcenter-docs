@@ -63,7 +63,7 @@ You can cancel the deletion of your data for up to seven days.
 
 ## Export
 
-The personal information of yours we collect, we collect in order to maintain your ability to use our development tools. If at any point you would like to view, access, or take that data with you; the [App Center API](https://openapi.appcenter.ms/) provides access to GET methods that return it. However, we incidentally collect some data that doesn't really fit in our standard methods, so to cover this additional data we have added an export method.
+The personal information of yours we collect, we collect in order to maintain your ability to use our development tools. If at any point you would like to view, access, or take that data with you; the [App Center API](https://openapi.appcenter.ms/) provides access to GET methods that return it. However, we incidentally collect some data that doesn't really fit in our standard methods, so to cover this additional data we've added an export method.
 
 ```TEXT
 https://appcenter.ms/api/v0.1/user/dsr/export

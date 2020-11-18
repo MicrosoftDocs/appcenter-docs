@@ -52,7 +52,7 @@ We try our best to maintain backwards compatibility of our plugin with previous 
 | v0.59                   | v5.6+ *(RN refactored js bundle loader code)*         |
 | v0.60-v0.61             | v6.0+ *(RN migrated to Autolinking)*                  |
 
-We work hard to respond to new React Native releases, but they do occasionally break us. We will update this chart with each React Native release, so that users can check to see what our official support is.
+We work hard to respond to new React Native releases, but they do occasionally break us. We'll update this chart with each React Native release, so that users can check to see what our official support is.
 
 ### Supported Components
 
@@ -74,7 +74,7 @@ The following list represents the set of components (and props) that don't curre
 | `SliderIOS` | `maximumTrackImage`, `minimumTrackImage`, `thumbImage`, `trackImage` |
 | `Video`     | `source`                                                             |
 
-We will update this list as new core components are released, which support referencing assets, to ensure users know what exactly they can expect to update using CodePush.
+We'll update this list as new core components are released, which support referencing assets, to ensure users know what exactly they can expect to update using CodePush.
 
 > [!NOTE]
 > CodePush only works with Video components when using `require` in the source prop. For example:

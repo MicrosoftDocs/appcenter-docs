@@ -82,7 +82,7 @@ The URL you provided is the download URL, and `is_external_build` shows this is 
 
 After creating the release, you distribute it by calling the [distribute to a group POST endpoint](https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup) `/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups`. Or you can use the similar endpoint for distributing to testers. Keep in mind you can't distribute a release with an externally hosted build to stores. See [Requirements and limitations](#requirements-and-limitations).
 
-Use the `id` value returned when you created the release for the `{release_id}` parameter in the URL. Find the `id` of the group you want to distribute to by calling the [distribution groups GET endpoint](https://openapi.appcenter.ms/#/account/distributionGroups_list). Here we are distributing the release to the group `86aa9283-4e04-4872-a003-208c267d9388` and notifying testers of the release:
+Use the `id` value returned when you created the release for the `{release_id}` parameter in the URL. Find the `id` of the group you want to distribute to by calling the [distribution groups GET endpoint](https://openapi.appcenter.ms/#/account/distributionGroups_list). Here we're distributing the release to the group `86aa9283-4e04-4872-a003-208c267d9388` and notifying testers of the release:
 
 ``` json
 {

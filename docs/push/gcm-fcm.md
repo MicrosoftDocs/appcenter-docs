@@ -31,7 +31,7 @@ Here are some answers to common questions we’ve heard from customers:
 
 **Q**: What do I need to do to be compatible by the cutoff date (Google’s current cutoff date is May 29th and may change)?
 
-**A**: Nothing. We will maintain compatibility with existing GCM notification schema. Your GCM key will continue to work as normal as will versions of your app that are built with the GCM SDKs and libraries.
+**A**: Nothing. We'll maintain compatibility with existing GCM notification schema. Your GCM key will continue to work as normal as will versions of your app that are built with the GCM SDKs and libraries.
 
 If/when you decide to upgrade to the latest App Center SDKs and libraries to take advantage of new features, your GCM key will still work. You may switch to using an FCM key if you wish, but ensure you are adding Firebase to your existing GCM project when creating the new Firebase project. This will guarantee backward compatibility with your customers that are running older versions of the app that still use GCM SDKs and libraries.
 
@@ -39,7 +39,7 @@ If you are creating a new FCM project and not attaching to the existing GCM proj
 
 **Q**: Why am I getting this email about old GCM endpoints being used? What do I have to do?
 
-**A**: Nothing. We have migrated to the new endpoints and no other changes are necessary. Nothing is broken, our one missed endpoint simply caused warning messages from Google.
+**A**: Nothing. We've migrated to the new endpoints and no other changes are necessary. Nothing is broken, our one missed endpoint simply caused warning messages from Google.
 
 **Q**: How can I transition to the new FCM SDKs and libraries without breaking existing users?
 

@@ -67,7 +67,7 @@ You'll get a result like this:
 [["Alpha","googleplay","alpha"],["Beta","googleplay","beta"],["Production","googleplay","production"]
 ```
 
-And it's the Store column we will use in the final step.
+And it's the Store column we'll use in the final step.
 
 The final step is to publish your app by running:
 

@@ -222,7 +222,7 @@ To set this up, perform the following steps:
     ![BuildFilesPath](./images/rn-ios-9.png)
 
     > [!NOTE]
-    > Due to https://github.com/facebook/react-native/issues/11813, we have to do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+    > Due to https://github.com/facebook/react-native/issues/11813, we must do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
 
 8. Click the **+** button again on the toolbar and select **Add User-Defined Setting**
 
