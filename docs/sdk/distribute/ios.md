@@ -26,7 +26,7 @@ App Center Distribute will let your users install a new version of the app when 
 > There are a few things to consider when using in-app updates:
 > 
 > 1. If you have released your app in the App Store, in-app updates will be disabled.
-> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
+> 2. If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI test target.
 
 > [!NOTE]
 > In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
@@ -144,8 +144,8 @@ Distribute.updateTrack = .private
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they'll get the latest release from any public distribution group.
 
 ## Disable Automatic Check for Update
 
@@ -338,7 +338,7 @@ The in-app updates feature works as follows:
 4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
-   * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it can't be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
+   * On iOS 11, the user experience is similar to iOS 9 and 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it can't be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They'll be asked to access login information again when they launch the app the next time.
 
 5. A new release of the app shows the in-app update dialog asking users to update your application if it's:
 

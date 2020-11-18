@@ -30,7 +30,7 @@ App Center uses your Apple ID to manage your provisioning profile and your signi
 
 ## How can app members use my Apple ID?
 
-When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members, and they will use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
+When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members, and they'll use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
 
 ## Two factor authentication
 

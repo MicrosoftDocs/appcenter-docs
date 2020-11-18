@@ -28,7 +28,7 @@ App Center Distribution enables your users/testers to install new versions of an
 > Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Remove this code as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
+> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend disabling in-app updates for your UI tests.
 
 ## Add in-app updates to your app
 
@@ -50,8 +50,8 @@ To do this, choose **Private** in the **Update Track** dropdown under **Distribu
 
 When using the private track, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they'll get the latest release from any public distribution group.
 
 ## Disable Automatic Check for Update
 

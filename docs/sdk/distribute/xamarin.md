@@ -24,7 +24,7 @@ App Center Distribute will let your users install a new version of the app when 
 > Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven't set up and started the SDK in your application, yet.
@@ -191,8 +191,8 @@ Distribute.UpdateTrack = UpdateTrack.Private;
 
 After this call, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track. The update track isn't persisted in the SDK across app launches.  
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they are a member of.
+If a user is on the **public track**, it means that they'll get the latest release from any public distribution group.
 
 ## Disable Automatic Check for Update
 
@@ -344,7 +344,7 @@ The in-app updates feature works as follows:
 4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
 
    * On iOS 9 and 10, an instance of `SFSafariViewController` will open within the app to authenticate the user. It will close itself automatically after the authentication succeeded.
-   * On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it can't be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They will be asked to access login information again when they launch the app the next time.
+   * On iOS 11, the user experience is similar to iOS 10 but iOS 11 will ask the user for their permission to access login information. This is a system level dialog and it can't be customized. If the user cancels the dialog, they can continue to use the version they are testing, but they won't get in-app-updates. They'll be asked to access login information again when they launch the app the next time.
 
 5. A new release of the app shows the in-app update dialog asking users to update your application if it's:
    * iOS: 

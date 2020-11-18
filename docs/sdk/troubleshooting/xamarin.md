@@ -73,7 +73,7 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
 ## Distribute and in-app updates are blocking my automated UI tests
 
-If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
+If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
 
 ## Messages in the console that indicate that the database couldn't be opened on iOS
 
