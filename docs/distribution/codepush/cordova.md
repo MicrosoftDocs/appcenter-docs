@@ -125,7 +125,7 @@ Additionally, if you want to display an update confirmation dialog (an "active i
 > While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
 
 ## Releasing Updates
-Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which will handle preparing and releasing your update to the CodePush server.
+Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which handles preparing and releasing your update to the CodePush server.
 
 > [!NOTE]
 > Before you can start releasing updates, log into App Center by running the `appcenter login` command

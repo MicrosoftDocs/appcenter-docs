@@ -63,7 +63,7 @@ Use sentence-style capitalization. Always capitalize:
 
 Headings should be done using atx-style, that is, use 1-6 hash characters (#) at the start of the line to indicate a heading, corresponding to HTML headings levels H1 through H6. Examples of first- and second-level headers are used above.
 
-There **must** be only one first-level heading (H1) in your topic, which will be displayed as the on-page title.
+There **must** be only one first-level heading (H1) in your topic, which is displayed as the on-page title.
 
 If your heading finishes with a `#` character, you need to add an extra `#` character in the end in order for the title to render correctly. For example, `# Async Programming in F# #`.
 

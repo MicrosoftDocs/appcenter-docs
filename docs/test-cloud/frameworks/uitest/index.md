@@ -283,7 +283,7 @@ We can see that the `android:id` of this button is *action1_button* and that the
 - `app.Query(c=>c.Marked("Action 1"));`
 
 ## Controlling the Application with Xamarin.UITest.IApp
-Once `IApp` has been configured and initialized, the test may begin interacting with the application. One example of a method using  `Func<AppQuery, AppQuery>` is the `IApp.Query()` method. This method will execute the query and return the results. The simplest example is shown in the following snippet, which will return a list of all views that are visible on the screen:
+Once `IApp` has been configured and initialized, the test may begin interacting with the application. One example of a method using  `Func<AppQuery, AppQuery>` is the `IApp.Query()` method. This method will execute the query and return the results. The simplest example is shown in the following snippet, which returns a list of all views that are visible on the screen:
 
 ```csharp
 AppResult[] results = app.Query(c=>c.All())

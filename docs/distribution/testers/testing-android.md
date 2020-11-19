@@ -54,7 +54,7 @@ When you click on an app, App Center displays additional information about the a
 
 ![App Details View in the Portal](images/a-appdetails-installportal.png)
 
-Clicking this button initiates the application install, which will result in the app being placed onto your home screen.
+Clicking this button initiates the application install, which results in the app being placed onto your home screen.
 
 Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps)  and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
 

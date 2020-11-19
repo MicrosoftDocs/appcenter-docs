@@ -19,7 +19,7 @@ App Center Analytics will help you understand more about your app users and thei
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin](~/sdk/getting-started/xamarin.md). | Simple steps to integrate the SDK, which will provide you out-of-the-box insights about your users.|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin](~/sdk/getting-started/xamarin.md). | Simple steps to integrate the SDK, which provides you out-of-the-box insights about your users.|
 | [Overview](~/analytics/overview.md) | Key metrics about your users and their app usage.|
 | [Custom Events](~/analytics/event-metrics.md)| Understand the actions that your users take in your app.|
 | [Log Flow](~/analytics/log-flow.md)| See incoming logs in real time to check whether your SDK is properly integrated.|

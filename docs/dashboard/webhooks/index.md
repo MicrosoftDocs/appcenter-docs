@@ -41,7 +41,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 
 2. In your app, in the far left-hand panel, select **Settings**
 
-3. In the row panel titled **Webhooks**, go to the right-hand corner and click on the **pencil icon**, which will bring up the **Webhooks** panel.
+3. In the row panel titled **Webhooks**, go to the right-hand corner and click on the **pencil icon**, which brings up the **Webhooks** panel.
 
     ![How to edit the webhook's settings](media/editWebhook.png)
 
