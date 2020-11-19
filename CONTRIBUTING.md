@@ -70,4 +70,4 @@ Below is a short list of guiding rules that you should keep in mind when you're 
 * **DO** blog and tweet (or whatever) about your contributions, frequently!
 
 > [!NOTE]
-> You might notice that some of the topics aren't currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.
+> You might notice some of the topics aren't currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.

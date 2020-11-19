@@ -127,7 +127,7 @@ As a complete example, for a Apache Cordova project that supports both Android a
 </platform>
 ```
 > [!Note]
-> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. Notice that the app secrets are different, this is because you'll have unique secrets for your Android and iOS application projects in App Center.
+> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. The app secrets are different because you'll have unique secrets for your Android and iOS application projects in App Center.
 
 #### Analytics Preferences
 
