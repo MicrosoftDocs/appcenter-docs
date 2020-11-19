@@ -42,7 +42,7 @@ Analytics will offer you the following information:
 
 - Daily sessions per user: Daily average number of sessions per user.
 - Total sessions: Total number of sessions.
-- Average sessions per day: Number of session per day averaged over the time range.
+- Average sessions per day: Number of sessions per day averaged over the time range.
 - Session duration: Distribution of the number of sessions over a few duration intervals.
 - Average session length: Average of all the session durations in the selected time range.
 
