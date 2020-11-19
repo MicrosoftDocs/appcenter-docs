@@ -28,13 +28,13 @@ When running locally with Xamarin.UITest to specify an Android Keystore, use the
 
 > public AndroidAppConfigurator KeyStore (String path, String storePassword, String keyPassword, String keyAlias)
 
-Configures the keystore that the provided apk file is signed with. A keystore isn't required, but will ensure the apk file is pristine and unchanged. If a keystore is provided, it's used to sign the auxiliary `apks` installed along with the app on the device. If a keystore isn't provided, Xamarin.UITest will generate a keystore and resign the apk.
+Configures the keystore that the provided apk file is signed with. A keystore isn't required, but will ensure the apk file is pristine and unchanged. If a keystore is provided, it's used to sign the auxiliary `apks` installed along with the app on the device. If a keystore isn't provided, Xamarin.UITest will generate a keystore and re-sign the apk.
 
 ### App Center Test
 Question from a user:
 > "Hello, I ran Android Xamarin.UITest on App Center Test Cloud. For some reason the device isn't loading Google Maps. Why?"
 
-The problem in this case was that the APK was getting resigned in App Center Test Cloud with a different Android Keystore. To use the correct Keystore, specify it in the CLI command when submitting your tests. 
+The problem in this case was that the APK was getting re-signed in App Center Test Cloud with a different Android Keystore. To use the correct Keystore, specify it in the CLI command when submitting your tests. 
 
 Example addition to your CLI [`appcenter` test run command](~/test-cloud/starting-a-test-run.md#submit):
 > --store-password mystorepass --key-alias myalias --key-password mykeypass --store-path /Users/myname/test_keystore
