@@ -25,7 +25,7 @@ App Center Diagnostics allows you to search for specific crashes and handled err
 
 App Center searches in the indexed fields, and can be done in two ways:
 
-1. Use the search box to include free text. Note that this text will be searched in just the indexed fields.
+1. Use the search box to include free text. This text will be searched in just the indexed fields.
 
   ![Free text search](~/diagnostics/images/crashes-results-freetext.png)
 

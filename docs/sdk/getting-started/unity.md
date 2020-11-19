@@ -45,7 +45,7 @@ The App Center SDK for Unity supports the following platforms:
 
 In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asynchronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
-Also note that the App Center SDK for Unity is only available in C#.
+Also, the App Center SDK for Unity is only available in C#.
 
 ## 2. Create your app in the App Center Portal to acquire the App Secret
 

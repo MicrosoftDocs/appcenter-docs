@@ -273,7 +273,7 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
         else
         {
             // Notify SDK that user selected postpone (for 1 day)
-            // Note that this method call is ignored by the SDK if the update is mandatory
+            // This method call is ignored by the SDK if the update is mandatory
             Distribute.NotifyUpdateAction(UpdateAction.Postpone);
         }
     });

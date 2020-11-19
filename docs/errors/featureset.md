@@ -22,7 +22,7 @@ The Error group overview page provides you with the key metrics about the errors
 
 ![App Center lists the error groups generated based on your errors instances](~/errors/images/groupsoverview.png)
 
-Note that you can filter this page based on **time range**, **app version** and **status** (open, closed and ignored). The latest will help you track the status of your error groups and close them or ignore them if taken care of.
+You can filter this page based on **time range**, **app version** and **status** (open, closed and ignored). The latest will help you track the status of your error groups and close them or ignore them if taken care of.
 
 ## Detailed Error Group View
 Drill down into error groups to get more information to help you fix the root cause of the error.

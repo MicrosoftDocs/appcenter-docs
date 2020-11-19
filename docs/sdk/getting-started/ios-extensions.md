@@ -29,7 +29,7 @@ dev_langs:
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
-Note that application extensions only support crash reporting.
+Application extensions only support crash reporting.
 
 To learn how to add App Center SDK to your container app, refer to the documentation for [App Center iOS Getting Started](./ios.md).
 

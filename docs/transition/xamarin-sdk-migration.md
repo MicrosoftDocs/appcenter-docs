@@ -48,7 +48,7 @@ Install-Package Microsoft.AppCenter.Crashes
 Install-Package Microsoft.AppCenter.Distribute
 ```
 
-Note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
+The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------

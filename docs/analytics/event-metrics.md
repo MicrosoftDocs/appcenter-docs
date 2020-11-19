@@ -40,7 +40,7 @@ The Events Page provides a table with an overview of the events happening in you
 
 By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you'll see distribution of counts for your event properties.
 
-Remove individual events from this page by clicking the settings option on top right of the page. Note that this action can't be undone.
+Remove individual events from this page by clicking the settings option on top right of the page. This action can't be undone.
 
 ## Events Properties
 
@@ -51,7 +51,7 @@ Examples of events and properties are:
 - *Event Name:* "File Upload", *Event properties:* ".PDF", ".txt", ".PNG".
 - *Event Name:* "Question answered", *Event properties:* "Accept", "Decline", "Ignore".
 
-Note that property values are optimized for values of type 'String'.
+Property values are optimized for values of type 'String'.
 
 ## Limits
 

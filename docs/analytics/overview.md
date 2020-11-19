@@ -20,7 +20,7 @@ The objective of the Overview page is to provide you with the key metrics about 
 - Should I translate my app into a new language?
 - Are my users adopting my latest version?
 
-All the data in the Overview page can be filtered by **time range** and **app version**, so you can further drill down into your charts. Note that the app version needs to follow the [Semver 2.0](https://semver.org/spec/v2.0.0.html) format.
+All the data in the Overview page can be filtered by **time range** and **app version**, so you can further drill down into your charts. The app version needs to follow the [Semver 2.0](https://semver.org/spec/v2.0.0.html) format.
 
 ## Active users
 
@@ -57,7 +57,7 @@ The Devices panel gives information about the users' devices:
 
 The Countries and Languages panel display information about devices geographical location and language settings in the device.
 
-The country is determined by the carrier country and requires the device to have a SIM card. Note that if you're using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
+The country is determined by the carrier country and requires the device to have a SIM card. If you're using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
 
 - The map shows shaded countries depending on the number of active users. The more users, the darker the shade.
 - You'll see the top seven countries by number of active users.

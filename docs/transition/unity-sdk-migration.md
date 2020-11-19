@@ -26,7 +26,7 @@ ms.tgt_pltfrm: unity
 
 The App Center SDK is integrated by importing Unity Packages into your project. To do so, first install the [App Center Unity Editor Extensions](https://github.com/Microsoft/AppCenter-SDK-Unity-Extension) plugin. Open the Editor Extensions via the Unity menu: **Window** > **App Center** > **Editor Extensions** and select **Install App Center SDK**.
 
-Note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
 
 HockeyApp module         | App Center module
 ------------------------ | -----------------

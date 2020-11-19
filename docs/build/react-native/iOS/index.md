@@ -39,9 +39,9 @@ Select your project’s `package.json`. App Center will automatically detect the
 Select the Xcode version to run the build on from the dropdown list.
 If the toggle "Use legacy build system" is `On`, then the legacy build system will be used whatever the project or workspace settings.
 If the toggle "Use legacy build system" is `Off`, then the build system configuration from the project or workspace settings will be used.
-*Note that:*
-   - Workspace setting should be committed to the repository
-   - If workspace setting isn't committed, then the modern build system will be used
+> [!NOTE]
+>   - Workspace setting should be committed to the repository
+>   - If workspace setting isn't committed, then the modern build system will be used
 
 ### 3.3. Node.js version
 Select the Node.js version to use for the build. Learn more about [how to select Node.js version](~/build/react-native/nodejs.md)

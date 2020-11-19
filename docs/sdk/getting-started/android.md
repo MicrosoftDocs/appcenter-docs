@@ -136,7 +136,7 @@ The example above shows how to use the `start()` method and include both App Cen
 
 If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start()` API call as follows:
 

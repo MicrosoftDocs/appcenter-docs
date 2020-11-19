@@ -112,7 +112,7 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 The example above shows how to use the `Start()` method and includes App Center Analytics.
 
-Note that, unless you explicitly specify each service as parameters in the start method, you can't use that App Center service. In addition, the `Start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the services included in the first call will be available.
+Unless you explicitly specify each service as parameters in the start method, you can't use that App Center service. In addition, the `Start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the services included in the first call will be available.
 
 Great, you're all set to visualize Analytics on the portal that the SDK collects automatically.
 
