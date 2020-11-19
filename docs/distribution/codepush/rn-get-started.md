@@ -363,7 +363,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
 2. [**"Manual"**](#plugin-installation-android---manual) - If you don't want to depend on any additional tools or are fine with a few extra installation steps (it's a one-time thing), then go with this approach.
 
 > [!NOTE]
-> Due to a code change from the React Native repository, if your installed React Native version ranges from 0.29 to 0.32, we recommend following the manual steps to set up correctly.
+> Because of a code change from the React Native repository, if your installed React Native version ranges from 0.29 to 0.32, we recommend following the manual steps to set up correctly.
 
 #### Plugin Installation (Android - RNPM)
 

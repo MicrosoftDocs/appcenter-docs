@@ -175,9 +175,9 @@ Called periodically when an available update is being downloaded from the CodePu
 codePush.allowRestart(): void;
 ```
 
-Reallows programmatic restarts to occur, that would've otherwise been rejected due to a previous call to `disallowRestart`. If `disallowRestart` was never called in the first place, then calling this method results in a no-op.
+Reallows programmatic restarts to occur, that would've otherwise been rejected because of a previous call to `disallowRestart`. If `disallowRestart` was never called in the first place, then calling this method results in a no-op.
 
-If a CodePush update is currently pending, which attempted to restart the app (for example it used `InstallMode.IMMEDIATE`), but was blocked due to `disallowRestart` having been called, then calling `allowRestart` will result in an immediate restart. This allows the update to be applied as soon as possible, without interrupting the end user during critical workflows (for example an onboarding process).
+If a CodePush update is currently pending, which attempted to restart the app (for example it used `InstallMode.IMMEDIATE`), but was blocked because of `disallowRestart` having been called, then calling `allowRestart` will result in an immediate restart. This allows the update to be applied as soon as possible, without interrupting the end user during critical workflows (for example an onboarding process).
 
 For example, calling `allowRestart` would trigger an immediate restart if either of the three scenarios mentioned in the [`disallowRestart` docs](#codepushdisallowrestart) occurred after `disallowRestart` was called. However, calling `allowRestart` wouldn't trigger a restart if the following points are true:
 
@@ -205,7 +205,7 @@ Second optional parameter `handleBinaryVersionMismatchCallback` is an optional c
 For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update isn't targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
 
 > [!IMPORTANT]
-> Be cautious to use Alerts within this callback if you're developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions to access functionality, content, or use of the app.
+> Be cautious to use Alerts within this callback if you're developing iOS application, because of [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions to access functionality, content, or use of the app.
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
@@ -556,7 +556,7 @@ This enum specifies when you want an installed update to actually be applied, an
 
 - **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially undesired latency between the update installation and the next time the end user restarts or resumes the app.
 
-- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it's probably disruptive to the end user if the app suddenly restarts out of nowhere. They wouldn't realize an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+- **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (because of the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it's probably disruptive to the end user if the app suddenly restarts out of nowhere. They wouldn't realize an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
 - **codePush.InstallMode.ON_NEXT_RESUME** *(2)* - Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 

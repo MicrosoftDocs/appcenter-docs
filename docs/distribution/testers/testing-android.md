@@ -77,7 +77,7 @@ After logging in, you'll be presented with list of all the apps you've been invi
 
 Here are some common issues along with their solutions we've seen in the installation process:
 
-**While installing the app, I get an "Install Blocked" due to an unknown sources error:**
+**While installing the app, I get an "Install Blocked" because of an unknown sources error:**
 
 In order for the app to be available for use, you must allow for apps to be installed from sources outside the Google Play Store. From your home screen or menu, tap on **Settings>Security**. Under the **Device Administration** heading, check the box next to **Unknown Sources**. 
 

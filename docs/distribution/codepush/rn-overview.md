@@ -30,7 +30,7 @@ To ensure that your end users always have a functioning version of your app, the
 - Android (5.0+)
 - Windows (UWP)
 
-We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but due to the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin to support the exact version of React Native you're using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
+We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but because of the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin to support the exact version of React Native you're using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
 | React Native version(s) | Supporting CodePush version(s)                       |
 |-------------------------|------------------------------------------------------|
@@ -67,7 +67,7 @@ When using the React Native assets system (like using the `require("./foo.png")`
 | `ToolbarAndroid` <br />*(React Native 0.21.0+)* | `actions[].icon`, `logo`, `overflowIcon` |
 | `Video`                                         | `source`                                 |
 
-The following list represents the set of components (and props) that don't currently support their assets being updated via CodePush, due to their dependency on static images and videos (like using the `{ uri: "foo" }` syntax):
+The following list represents the set of components (and props) that don't currently support their assets being updated via CodePush, because of their dependency on static images and videos (like using the `{ uri: "foo" }` syntax):
 
 | Component   | Prop(s)                                                              |
 |-------------|----------------------------------------------------------------------|

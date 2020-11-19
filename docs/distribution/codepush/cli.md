@@ -768,7 +768,7 @@ You can view a history of the 50 most recent releases for a specific app deploym
 appcenter codepush deployment history -a <ownerName>/<appName> <deploymentName>
 ```
 
-The history will display all attributes about each release (for example, label, mandatory) as well as indicate if any releases were made due to a promotion or a rollback operation.
+The history will display all attributes about each release (for example, label, mandatory) as well as indicate if any releases were made because of a promotion or a rollback operation.
 
 ![Deployment History](./images/CLI2.png)
 

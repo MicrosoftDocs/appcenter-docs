@@ -98,4 +98,4 @@ You'll receive automatic email notifications when your selected events happen. F
 ![Email notification for a successful build](media/emailSuccessfulBuild.png)
 
 > [!NOTE]
-> If your branch name contains alphanumeric characters other than `a-z`, `A-Z`, `0-9`, `-`, `+` and `/`, all email notifications will be successfully delivered. However, when you click on the **View Build** button in the email received, you might be directed to a non-existent page. This is due to the encodings for alphanumeric characters by some email services. We advise you to only use the supported characters in branch names. If this is a blocking issue for you, contact us via support.
+> If your branch name contains alphanumeric characters other than `a-z`, `A-Z`, `0-9`, `-`, `+` and `/`, all email notifications will be successfully delivered. However, when you click on the **View Build** button in the email received, you might be directed to a non-existent page. This is because of the encodings for alphanumeric characters by some email services. We advise you to only use the supported characters in branch names. If this is a blocking issue for you, contact us via support.

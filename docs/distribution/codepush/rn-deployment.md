@@ -82,7 +82,7 @@ To set this up, perform the following steps:
 > Remember to remove the key from `strings.xml` if you're configuring the deployment key in the build process*
 
 > [!NOTE]
-> The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
+> The naming convention for `releaseStaging` is significant because of [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
 
 
 **For React Native v0.29 - v0.59**
@@ -139,7 +139,7 @@ To set this up, perform the following steps:
    > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys` from your terminal.
 
    > [!NOTE]
-   > The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
+   > The naming convention for `releaseStaging` is significant because of [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
 
 3. Pass the deployment key to the `CodePush` constructor via the build config you defined, as opposed to a string literal.
 
@@ -222,7 +222,7 @@ To set this up, perform the following steps:
     ![BuildFilesPath](./images/rn-ios-9.png)
 
     > [!NOTE]
-    > Due to https://github.com/facebook/react-native/issues/11813, we must do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
+    > Because of https://github.com/facebook/react-native/issues/11813, we must do this step to make it possible to use other configurations than Debug or Release on RN 0.40.0 or higher.
 
 8. Click the **+** button again on the toolbar and select **Add User-Defined Setting**
 

@@ -34,7 +34,7 @@ In addition to this, a **public download link** is displayed underneath the dist
 ### Shared Distribution Groups
 Shared distribution groups are private or public distribution groups that are shared across multiple apps in a single organization. Shared distribution groups eliminate the need to replicate distribution groups across multiple apps. With a few clicks, you can give a shared distribution group access to any combination of apps belonging to a particular organization.
 
-Unlike app-level distribution groups, shared distribution groups are at the organization level rather than the app level. Due to this, the steps to create one are slightly different:
+Unlike app-level distribution groups, shared distribution groups are at the organization level rather than the app level. Because of this, the steps to create one are slightly different:
 1. Sign in to the App Center portal, then select the organization to which you want to add a shared group.
 2. On the navigator pane that opens, click **People**.
 3. On the People page, click the distribution group link to open the shared distribution groups page.

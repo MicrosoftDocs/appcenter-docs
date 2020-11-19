@@ -49,7 +49,7 @@ Log properties:
 You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
 > [!NOTE]
-> Due to retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
+> Because of retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
 
 ## Upload a crash report
 

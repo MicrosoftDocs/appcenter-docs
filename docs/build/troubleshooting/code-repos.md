@@ -34,7 +34,7 @@ App Center currently supports cloud hosted Git repositories on Azure DevOps (for
 This breaks the connection, to resolve the issue you must revert to the original name or create a new repo with the original name.
 
 ### Account ownership change
-If the user who originally connected the repository has their permission to access that repository revoked due to being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
+If the user who originally connected the repository has their permission to access that repository revoked because of being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
 
 > [!WARNING]
 > Disconnecting your repository will delete configurations and artifacts stored in App Center Build. You can [manually backup your data](~/build/troubleshooting/backup-data.md) before disconnecting to preserve it.

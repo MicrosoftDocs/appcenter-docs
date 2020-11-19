@@ -280,7 +280,7 @@ codePush.notifyApplicationReady(notifySucceeded?, notifyFailed?);
 
 Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
-If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that when `sync` is called in your app represents a good approximation of a successful startup.
+If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists because of the assumption that when `sync` is called in your app represents a good approximation of a successful startup.
 
 Parameters:
 * **notifySucceeded**: Optional callback invoked if the plugin was successfully notified.
@@ -532,7 +532,7 @@ The CodePush API includes the following "enum" objects that can be used to custo
 #### InstallMode
 This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
-* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (because of the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 
 For an example on how you're protected against a bad update, see the [notifyApplicationReady() documentation](#codepushnotifyapplicationready).
 
@@ -588,7 +588,7 @@ The CodePush API includes the following "enum" objects that can be used to custo
 #### InstallMode
 This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
-* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (due to the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
+* **ON_NEXT_RESTART**: Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (because of the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when performing silent updates, since it would likely be disruptive to the end user if the app suddenly restarted out of nowhere, since they wouldn't have realized an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 * **ON_NEXT_RESUME**: Indicates that you want to install the update, but don't want to restart the app until the next time the end user resumes it from the background. This way, you don't disrupt their current session, but you can get the update in front of them sooner than having to wait for the next natural restart. This value is appropriate for silent installs that can be applied on resume in a non-invasive way.
 
 #### SyncStatus
