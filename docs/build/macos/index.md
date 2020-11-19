@@ -23,7 +23,7 @@ To start building your first Mac app, do these steps:
 > For the app to be distributed, the build needs to be code signed with a certificate. A provisioning profile is optional.  Additionally, build for Mac Installers is currently not supported.
 
 ## 1. Linking your repository
-You need to connect to your repository service account. Once your account is connected, select the repository where your Mac project is located. To set up a build for a repository, you need admin and pull permission for it.
+You must connect to your repository service account. Once your account is connected, select the repository where your Mac project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.

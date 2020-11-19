@@ -29,7 +29,7 @@ To start building your first Xamarin iOS app, you'll need to:
 > For the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
 
 ## 1. Linking your repository
-If you haven't previously connected to your repository service account, you'll need to connect it. Once your account is connected, select the repository where your iOS project is located. To set up a build for a repository, you need admin and pull permission for it.
+If you haven't previously connected to your repository service account, you must connect it. Once your account is connected, select the repository where your iOS project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default all the active branches will be listed.

@@ -24,7 +24,7 @@ To build your first Android app, follow these steps:
 > For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 ## 1. Linking your repository
-You'll need to connect to your repository service account if you haven't already. Once your account is connected, select the repository where your Android project is located. To set up a build for a repository, you need admin and pull permission for it.
+You must connect to your repository service account if you haven't already. Once your account is connected, select the repository where your Android project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
@@ -93,7 +93,7 @@ The APK is a package that contains the Android app and assets. If the build is c
 ### 4.3. Building multiple APKs
 If your app configuration builds multiple APKs, you need to build a universal APK too. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and building a universal APK, read the [ABI split guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
 
-### 4.4. The deobfuscation-mapping file (mapping.txt)
+### 4.4. The deobfuscation-Fmapping file (mapping.txt)
 The `mapping.txt` file contains information on how to map obfuscated stack traces for the app back to the original class and method names.
 
 * If you've previously integrated the App Center SDK in your app with the crash reporting module enabled and use either Proguard or R8 to minify and obfuscate the app binary, the crash reporting service requires this `mapping.txt` file for a build to display [human readable (deobfuscated) crash reports](~/diagnostics/Android-Deobfuscation.md).
