@@ -13,7 +13,7 @@ ms.tgt_pltfrm: macos
 ---
 
 # Building Objective-C or Swift apps for macOS
-To start building your first Mac app, you'll need to do these steps:
+To start building your first Mac app, do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.

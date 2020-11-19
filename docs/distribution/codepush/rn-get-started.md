@@ -582,7 +582,7 @@ To effectively make use of the `Staging` and `Production` deployments that we re
 
 ### Code Signing setup (Android)
 
-Starting with CLI version **2.1.0** you can self-sign bundles during release and verify its signature before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing). To use Public Key for Code Signing, you need to do following steps:
+Starting with CLI version **2.1.0** you can self-sign bundles during release and verify its signature before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing). To use Public Key for Code Signing, do the following steps:
 
    Add a `CodePushPublicKey` string item to `/path_to_your_app/android/app/src/main/res/values/strings.xml`. It may look like this:
 

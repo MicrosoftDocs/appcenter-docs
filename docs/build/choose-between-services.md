@@ -63,7 +63,7 @@ You should stick to Azure Pipelines. App Center only supports the OS/Platforms a
   
 Azure Pipelines will work out best for you if your app is:
 - Fairly complex 
-- Has a lot of customizations 
+- Has many customizations 
 - Uses a framework that’s not supported by App Center 
 - Has requirements not currently served by App Center, like special signing considerations
 

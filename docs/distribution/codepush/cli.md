@@ -806,7 +806,7 @@ At the end of release command, the CLI computes the bundle's content hash and pl
 
 ### Requirements for using this feature
 
-If you're planning to use this feature you need to do the following:
+If you're planning to use this feature, do the following:
 
 1. Produce new binary update including 
    * updated CodePush plugin supporting Code Signing
