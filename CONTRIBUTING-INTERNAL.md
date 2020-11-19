@@ -63,6 +63,6 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     
     Remember, before signing off any PR, it’s your responsibility to ensure it's had a technical review.
 
-On a certain cadence, we push all commits from the master branch into the live site and then you'll be able to see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
+On a certain cadence, we push all commits from the master branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
 
 

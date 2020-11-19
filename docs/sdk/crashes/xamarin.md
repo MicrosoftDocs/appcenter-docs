@@ -57,7 +57,7 @@ bool hadMemoryWarning = await Crashes.HasReceivedMemoryWarningInLastSessionAsync
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory can't send events.
 
 ### Did the app crash in the previous session?
 

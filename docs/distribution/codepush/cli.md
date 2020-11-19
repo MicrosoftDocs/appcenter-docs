@@ -312,7 +312,7 @@ This parameter provides an optional "change log" for the deployment. The value i
 
 #### Disabled parameter
 
-This parameter specifies whether an update should be downloadable by end users or not. If left unspecified, the update won't be disabled. Instead users will download it the moment your app calls `sync`. This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (for example, an announcement blog post went live).
+This parameter specifies whether an update should be downloadable by end users or not. If left unspecified, the update won't be disabled. Instead users will download it the moment your app calls `sync`. This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) and want end users to download it (for example, an announcement blog post went live).
 
 > [!TIP]
 > This parameter can be set using either `--disabled` or `-x`.
@@ -477,7 +477,7 @@ This parameter specifies the relative path to the app's root/entry JavaScript fi
 
 #### Gradle file parameter (Android only)
 
-This parameter specifies the relative path to the **build.gradle** file that the CLI should use when attempting to autodetect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find the project's **build.gradle** file in "standard" React Native projects. However, if the project's gradle file is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter. Since **build.gradle** is a required file name, specifying the path to the containing folder or the full path to the file itself will both achieve the same effect.
+This parameter specifies the relative path to the **build.gradle** file that the CLI should use when attempting to autodetect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI can automatically find the project's **build.gradle** file in "standard" React Native projects. However, if the project's gradle file is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter. Since **build.gradle** is a required file name, specifying the path to the containing folder or the full path to the file itself will both achieve the same effect.
 
 ```shell
 appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/"
@@ -489,7 +489,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android  -g "./foo/bar/bui
 
 #### Plist file parameter (iOS only)
 
-This parameter specifies the relative path to the **Info.plist** file that the CLI should use when attempting to autodetect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI will automatically be able to find the project's **Info.plist** file in "standard" React Native projects, and you can use the `--plistFilePrefix` parameter to support per-environment plist files (for example, **STAGING-Info.plist**). However, if the project's plist is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter.
+This parameter specifies the relative path to the **Info.plist** file that the CLI should use when attempting to autodetect the target binary version for the release. This parameter is only meant for advanced scenarios, since the CLI can automatically find the project's **Info.plist** file in "standard" React Native projects, and you can use the `--plistFilePrefix` parameter to support per-environment plist files (for example, **STAGING-Info.plist**). However, if the project's plist is located in an arbitrary location, that the CLI can't discover, then using this parameter allows you to continue releasing CodePush updates, without needing to explicitly set the `--target-binary-version` parameter.
 
 ```shell
 appcenter codepush release-react -a <ownerName>/MyApp-iOS -p "./foo/bar/MyFile.plist"
@@ -500,7 +500,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS -p "./foo/bar/MyFile.p
 
 #### Plist file prefix parameter (iOS only)
 
-This parameter specifies the file name prefix of the **Info.plist** file that that CLI should use when attempting to autodetect the target binary version for the release. This can be useful if you've created per-environment plist files (for example, **DEV-Info.plist**, **STAGING-Info.plist**), and you want to be able to release CodePush updates without needing to explicitly set the `--target-binary-version` parameter. By specifying a `--plist-file-prefix`, the CLI will look for a file named `<prefix>-Info.plist`, instead of **Info.plist** (which is the default behavior), in the following locations: `./ios` and `./ios/<appName>`. If the project's plist file isn't located in either of those directories (for example, your app is a native iOS app with embedded RN views), or uses an entirely different file naming convention, then consider using the `--plist-file ` parameter.
+This parameter specifies the file name prefix of the **Info.plist** file that that CLI should use when attempting to autodetect the target binary version for the release. This can be useful if you've created per-environment plist files (for example, **DEV-Info.plist**, **STAGING-Info.plist**), and you want to release CodePush updates without needing to explicitly set the `--target-binary-version` parameter. By specifying a `--plist-file-prefix`, the CLI will look for a file named `<prefix>-Info.plist`, instead of **Info.plist** (which is the default behavior), in the following locations: `./ios` and `./ios/<appName>`. If the project's plist file isn't located in either of those directories (for example, your app is a native iOS app with embedded RN views), or uses an entirely different file naming convention, then consider using the `--plist-file ` parameter.
 
 ```shell
 # Autodetect the target binary version of this release by looking up the

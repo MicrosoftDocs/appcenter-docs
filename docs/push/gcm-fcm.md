@@ -25,7 +25,7 @@ We replaced that deprecated endpoint and the fix is deployed.
 
 If you're using the latest App Center SDK, you're already using the FCM SDK in your application. If you haven’t upgraded to the latest App Center SDK, then your app will continue to work with the GCM library but you should go ahead and follow Google’s instructions to migrate your GCM project to an FCM project.
 
-According to [Google’s FCM FAQ](https://developers.google.com/cloud-messaging/faq), Google said “client SDKs and GCM tokens will continue to work indefinitely. However, you won't be able to target the latest version of Google Play Services in your Android app unless you migrate to FCM.”
+According to [Google’s FCM FAQ](https://developers.google.com/cloud-messaging/faq), Google said “client SDKs and GCM tokens will continue to work indefinitely. However, you can't target the latest version of Google Play Services in your Android app unless you migrate to FCM.”
 
 Here are some answers to common questions we’ve heard from customers:
 

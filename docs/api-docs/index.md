@@ -16,7 +16,7 @@ ms.custom: api
 ## App Center OpenAPI Specification (Swagger)
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 
-The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
+The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can call App Center APIs to learn about the API and see what data it returns.
 
 ## <a name="section02"></a>Types of tokens: user tokens and app tokens
 App Center exposes two kinds of API tokens: user tokens, and app tokens.

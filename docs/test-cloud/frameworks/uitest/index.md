@@ -236,7 +236,7 @@ We can see that there's a `UIButton` in this view with the `id` of **ValidateBut
 app.Tap(c=>c.Marked("ValidateButton"))
 ```
 
-As commands are being entered, they're remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
+As commands are being entered, they're remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This allows us to prototype a test. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
 
 ## Using Marked To Locate Views
 The [AppQuery.Marked](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.

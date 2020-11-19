@@ -258,7 +258,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
 ### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
-  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the `appcenter test` wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3.
+  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the `appcenter test` wizard command for creating and running tests, with prompts for each required parameter, and updated to Typescript 2.8.3.
 
   Bug fixes:
 
@@ -378,7 +378,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
 ### **November 17, 2017**
 
 - **Added support for re-releasing builds for distribution**:
-  You'll be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
+  You can select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
 
 - **Shipped support for publishing directly to the Apple Store and Testflight**:
   You can create new stores that target release to the production Apple Store or beta TestFlight service.

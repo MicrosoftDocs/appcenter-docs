@@ -47,7 +47,7 @@ You can upload the keystore and configure the signing credentials through App Ce
 Set up your [build configuration](#setting-up-code-signing) in App Center as follows:
 
 1. Disable **My Gradle settings are entirely set to handle signing automatically**.
-2. Upload your keystore file to the **Keystore file** upload file drop. You can drag the file onto the box or click it and browse for the file. Keystore files have the extension .keystore or .jks.
+2. Upload your keystore file to the **Keystore file** upload file drop. You can drag the file onto the box or click it and browse for the file. Keystore files have the extension `.keystore` or `.jks`.
 3. Enter the keystore password, key alias, and key password in the corresponding fields. These values are the same ones you'd otherwise enter in Android Studio when you sign a build.
 
 ## C. Storing Signing Details in the Repository with Environment Variables

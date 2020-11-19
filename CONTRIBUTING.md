@@ -56,7 +56,7 @@ The App Center team will review your PR and let you know if the change looks goo
 
 The maintainers will merge your PR into the live branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from live branch into the live site and then you'll be able to see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
+On a certain cadence, we push all commits from live branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
 
 ## DOs and DON'Ts
 

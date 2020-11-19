@@ -70,7 +70,7 @@ const hadLowMemoryWarning = await Crashes.hasReceivedMemoryWarningInLastSession(
 ```
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory may not send events.
 
 ### Did the app crash in the previous session?
 

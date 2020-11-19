@@ -46,7 +46,7 @@ There are a number of benefits using the `TrackError` method:
 
 #### Track Handled Errors in App Center
 
-Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you'll be able to track errors by using the `TrackError` method:
+Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you can track errors by using the `TrackError` method:
 
 ```csharp
 try

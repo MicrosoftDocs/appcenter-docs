@@ -66,7 +66,7 @@ bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().
 > This method won't work in `Awake()`.
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory can't send events.
 
 ### Did the app crash in the previous session?
 
@@ -178,7 +178,7 @@ This callback isn't triggered if it's a network issue. In this case, the SDK kee
 
 ### Add attachments to a crash or an unhandled exception report
 
-You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
+You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to send attachments. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
