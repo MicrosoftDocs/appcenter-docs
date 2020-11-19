@@ -86,8 +86,8 @@ Use for UI elements.
 
 ### Internal Links
 
-To link to a header in the same Markdown file (also known as anchor links), you'll need to find out the id of the header you're trying to link to. To confirm the ID, view the source of the rendered article, find the id of the header (for example, `id="blockquote"`), and link using # + id (for example, `#blockquote`).
-The id is auto-generated based on the header text. So, for example, given a unique section named `## Step 2`, the id would look like this `id="step-2"`.
+To link to a header in the same Markdown file (also known as anchor links), you'll need to find out the ID of the header you're trying to link to. To confirm the ID, view the source of the rendered article, find the ID of the header (for example, `id="blockquote"`), and link using # + ID (for example, `#blockquote`).
+The ID is auto-generated based on the header text. So, for example, given a unique section named `## Step 2`, the ID would look like this `id="step-2"`.
 
 - Example: [Chapter 1](#chapter-1)
 
