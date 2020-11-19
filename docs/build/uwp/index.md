@@ -20,7 +20,7 @@ To start building your first UWP app, do these steps:
 3. Set up your first build.
 
 ## 1. Linking your repository
-First you must connect to your repository service account. Once your account is connected, select the repository where your UWP project is located. To setup a build for a repository, you need admin and pull permission for it.
+First you must connect to your repository service account. Once your account is connected, select the repository where your UWP project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 

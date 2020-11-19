@@ -26,7 +26,7 @@ To start building your first Xamarin Android app, you must:
 
 ## 1. Linking your repository
 
-If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your Xamarin project is located. You must have admin and pull permissions to setup a build for a repository.
+If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your Xamarin project is located. You must have admin and pull permissions to set up a build for a repository.
 
 ## 2. Selecting a branch
 

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: windows
 ---
 
 # Build results
-The build results give you rich information about the status of your build. You can download your successful build or only the symbols to use for crash reporting. In case of failure you can investigate the logs to solve build issues.
+The build results give you rich information about the status of your build. You can download your successful build or only the symbols to use for crash reporting. In case of failure, you can investigate the logs to solve build issues.
 
 After a build has been triggered, it can be in the following states:
 
