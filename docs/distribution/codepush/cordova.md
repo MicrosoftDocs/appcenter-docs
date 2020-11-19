@@ -15,7 +15,7 @@ ms.custom: distribute
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
 ## How does it work?
-A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code (e.g. making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the store(s) you're publishing to.
+A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code or image assets requires you to recompile and redistribute the entire binary. This process includes review time for the store(s) you're publishing to.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your code and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they're available. It's a win-win!
 
@@ -28,7 +28,7 @@ Cordova 5.0.0+ is fully supported, along with the following associated platforms
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - Including CrossWalk!
 * iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (In order to use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
 
-To check which versions of each Cordova platform you're currently using, you can run the following command and inspect the `Installed platforms` list:
+To check the versions of each Cordova platform you're currently using, you can run the following command and inspect the `Installed platforms` list:
 
 ```shell
     cordova platform ls
@@ -58,10 +58,10 @@ With the CodePush plugin installed, configure your app to use it via the followi
         <preference name="CodePushDeploymentKey" value="YOUR-IOS-DEPLOYMENT-KEY" />
     </platform>
 ```
-    As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can simply run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
+    As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
 
    > [!IMPORTANT]
-   > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample illustrates declaring separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
+   > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
 
     Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 ```xml
@@ -88,12 +88,12 @@ With the CodePush plugin installed, configure your app to use it via the followi
     <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.appcenter.ms 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
 ```
 
-4. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, simply run the following command:
+4. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, run the following command:
 ```shell
     cordova plugin ls    
 ```
 
-    If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, simply run the following command to add it:
+    If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, run the following command to add it:
 ```shell
     cordova plugin add cordova-plugin-whitelist
 ```
@@ -139,7 +139,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android
 ```
 
 > [!TIP]
-> By using the App Center CLI `set-current` function you no longer must use the -a flag to specify which app a command is directed at.*
+> By using the App Center CLI `set-current` function you don't have to use the -a flag to specify the app a command is directed at.*
 >
 > [!TIP]
 > When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.*
@@ -299,7 +299,7 @@ Immediately restarts the app. This method is for advanced scenarios, and is prim
 codePush.sync(syncCallback?, syncOptions?, downloadProgress?, syncErrback?);
 ```
 
-Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which simply checks for the presence of an update, and lets you control what to do next, `sync` handles the update check, download and installation experience for you.
+Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which checks for the presence of an update, and lets you control what to do next, `sync` handles the update check, download and installation experience for you.
 
 This method provides support for two different (but customizable) "modes" to easily enable apps with different requirements:
 1. **Silent mode** *(the default behavior)*, which automatically downloads available updates, and applies them the next time the app restarts (e.g. the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt and/or "synthetic" app restarts.
@@ -319,7 +319,7 @@ codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then simply wrap the call to sync in a condition that ensures you only call it when desired.*
+> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when desired.*
 
 While the sync method tries to make it easy to perform silent and active updates with little configuration, it accepts the following optional parameters that allow you to customize numerous aspects of the default behavior mentioned above:
 * **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
@@ -604,7 +604,7 @@ Defines the possible statuses of the [sync](#codepushsync) operation. There are 
 * **INSTALLING_UPDATE**: An available update was downloaded and is about to be installed.
 
 ## PhoneGap Build
-This plugin is compatible with [PhoneGap Build](https://build.phonegap.com), and supports creating Android and iOS builds out-of-the-box. However, in order for CodePush to calculate the hash of your binary contents on Android, PhoneGap Build needs to use Gradle to build your app, which isn't its default behavior (it uses Ant). To resolve this, simply add the following element to the project's **config.xml** file, as a child of the `<platform name="android">` element:
+This plugin is compatible with [PhoneGap Build](https://build.phonegap.com), and supports creating Android and iOS builds out-of-the-box. However, in order for CodePush to calculate the hash of your binary contents on Android, PhoneGap Build needs to use Gradle to build your app, which isn't its default behavior (it uses Ant). To resolve this, add the following element to the project's **config.xml** file, as a child of the `<platform name="android">` element:
 ```xml
 <preference name="android-build-tool" value="gradle" />
 ```

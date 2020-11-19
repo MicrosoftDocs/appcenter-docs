@@ -18,7 +18,7 @@ ms.custom: push
 
 **When sending a Push to device IDs, how many devices can I send to each request?**
 
-You can send up to 100 devices in single send request. To send notifications to more than 100 devices, simply break your request into batches and send multiple requests (one per batch).
+You can send up to 100 devices in single send request. To send notifications to more than 100 devices, break your request into batches and send multiple requests (one per batch).
 
 **I'm seeing an Expired Channel error on iOS after I attempted to send a Push, how can I resolve it?**
 

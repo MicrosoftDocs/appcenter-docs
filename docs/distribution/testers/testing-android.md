@@ -60,7 +60,7 @@ Lastly, if you have a QR code reader handy, you can navigate to our [App Center 
 
 ## Using the App Center Android App
 
-To get started using our native app, simply download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
+To get started using our native app, download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
 
 ![Google App Store Listing](images/a-store-listing.png)
 

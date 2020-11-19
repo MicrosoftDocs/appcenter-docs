@@ -48,7 +48,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
    This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this will correspond to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
    > [!NOTE]
-   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior.
 
 
    Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
@@ -80,7 +80,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
 In order to accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
 1. [RNPM](#plugin-installation-ios---rnpm) - [React Native Package Manager](https://github.com/rnpm/rnpm) (RNPM) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you're already using it, or you want to use it, then we recommend this approach.
 
-2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you're building a native iOS app that's embedding React Native into it, or you simply prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
+2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you're building a native iOS app that's embedding React Native into it, or you prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
 
 3. [**"Manual"**](#plugin-installation-ios---manual) - If you don't want to depend on any additional tools or are fine with a few extra installation steps (it's a one-time thing), then go with this approach.
 
@@ -100,7 +100,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
 
-2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by simply hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 #### Plugin Installation (iOS - CocoaPods)
 1. Add the React Native and CodePush plugin dependencies to your `Podfile`, pointing at the path where NPM has installed modules
@@ -202,7 +202,7 @@ For React Native 0.58 and below:
 This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this corresponds to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
 > [!NOTE]
-> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, simply call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
 
 Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 

@@ -42,7 +42,7 @@ future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
 
 To avoid blocking UI thread that causes slowing down your application, consider using `thenAccept` with the callback all the time.
 
-On a worker thread you can simply call `{AnyAsyncApi}().get()`.
+On a worker thread you can call `{AnyAsyncApi}().get()`.
 
 Callback example:
 

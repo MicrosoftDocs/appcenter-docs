@@ -159,12 +159,12 @@ Open up your **MainActivity.java** file and make the following changes:
  ```
 
 > [!NOTE]
-> If you gave your build setting a different name in your Gradle file, simply make sure to reflect that in your Java code.
+> If you gave your build setting a different name in your Gradle file, make sure to reflect that in your Java code.
 
 And that's it! Now when you run or build your app, your debug builds will automatically be configured to sync with your `Staging` deployment, and your release builds will be configured to sync with your `Production` deployment.
 
 > [!NOTE]
-> By default, the `react-native run-android` command builds and deploys the debug version of your app, so if you want to test out a release/production build, simply run `react-native run-android --variant release. Refer to the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#conten) for details about how to configure and create release builds for your Android apps.
+> By default, the `react-native run-android` command builds and deploys the debug version of your app, so if you want to test out a release/production build, run `react-native run-android --variant release. Refer to the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#conten) for details about how to configure and create release builds for your Android apps.
 
 If you want to be able to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS, or you, will be able to differentiate between the two. You can achieve this by performing the following steps:
 
@@ -190,7 +190,7 @@ And that's it! Refer to [resource merging](https://developer.android.com/studio/
 
 ### iOS
 
-Xcode allows you to define custom build settings for each "configuration" (like debug, release), which can then be referenced as the value of keys within the **Info.plist** file (like the `CodePushDeploymentKey` setting). This mechanism allows you to easily configure your builds to produce binaries, which are configured to synchronize with different CodePush deployments.
+Xcode allows you to define custom build settings for each "configuration" (like debug, release), which can be referenced as the value of keys within the **Info.plist** file (like the `CodePushDeploymentKey` setting). This mechanism allows you to easily configure your builds to produce binaries, which are configured to synchronize with different CodePush deployments.
 
 To set this up, perform the following steps:
 
@@ -252,7 +252,7 @@ In order to achieve this workflow, all you need to do is specify the deployment 
 
 ```javascript
 // Imagine that "userProfile" is a prop that this component received
-// which includes the deployment key that the current user should use.
+// that includes the deployment key that the current user should use.
 codePush.sync({ deploymentKey: userProfile.CODEPUSH_KEY });
 ```
 

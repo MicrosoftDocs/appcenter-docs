@@ -229,8 +229,7 @@ bool isEnabled = await Crashes.IsEnabledAsync();
 
 ## Handled Errors
 
-App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `TrackError` method:
+App Center also allows you to track errors by using handled exceptions. In order to do so, use the `TrackError` method:
 
 ```csharp
 try {

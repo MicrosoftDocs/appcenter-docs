@@ -48,7 +48,7 @@ There are two ways to report unhandled exceptions in WinForms. The application c
 
 This is the only way to report the unhandled exception as a **crash** on App Center, make the application exit on unhandled exceptions.
 
-To do that, simply call a Windows method before initializing the SDK:
+To do that, call a Windows method before initializing the SDK:
 
 ```csharp
 Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
@@ -248,8 +248,7 @@ bool isEnabled = await Crashes.IsEnabledAsync();
 
 ## Handled Errors
 
-App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `TrackError` method:
+App Center also allows you to track errors by using handled exceptions. In order to do so, use the `TrackError` method:
 
 ```csharp
 try {

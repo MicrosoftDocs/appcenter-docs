@@ -519,10 +519,10 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps.
 
 - **XCUITest now available for testing iOS apps**:
-  Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, simply select this option in the "new test run" dialog.
+  Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, select this option in the "new test run" dialog.
 
 - **Get the latest build from distribution with in-app updates**:
-  Notify testers of the latest releases from inside your distributed application. Simply integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release.
+  Notify testers of the latest releases from inside your distributed application. Integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release.
 
 - **Auto-detect missing symbols in your Crash reports**:
   If you forget to upload symbols for your iOS app, App Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.

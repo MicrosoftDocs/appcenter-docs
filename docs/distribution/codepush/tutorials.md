@@ -170,7 +170,7 @@ In addition, Azure DevOps allows developers to extend the service by creating Az
 
 The CodePush service provides an Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
 
-Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can simply push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
+Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
 ### Prerequisites
 
