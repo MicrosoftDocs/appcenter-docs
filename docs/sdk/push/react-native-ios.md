@@ -92,7 +92,7 @@ App Center Push is started by this call:
 
 That call is added automatically to the project's **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
 
-Note that when the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications.
+When the app calls `register` for the first time after being installed, iOS will prompt the user for permission to receive push notifications.
 
 ## Intercept push notifications
 

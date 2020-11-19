@@ -197,7 +197,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 7. Add the SDK frameworks to the project in Xcode:
 
    * Make sure the Project Navigator is visible (⌘+1).
-   * Drag and drop the **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** files from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that the **AppCenter.framework** and **AppCenterReactNativeShared.framework** files are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+   * Drag and drop the **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** files from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** and **AppCenterReactNativeShared.framework** files are required to start the SDK, make sure they're added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
 8. Link AppCenter React Native plugins projects to your app's project:

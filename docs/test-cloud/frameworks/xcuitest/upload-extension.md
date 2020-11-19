@@ -117,7 +117,7 @@ In Xcode, in the 'Build Phases' tab of the *XCUITest target* (not the main appli
 
 In the same tab, add a 'Copy Files' phase with Destination: Frameworks and add the `AppCenterXCUITestExtensions.framework`.
 
-Note that your project may already have a 'Copy Files' phase.
+Your project may already have a 'Copy Files' phase.
 
 ![Inside Xcode select Frameworks in Destination](images/xcuitest-link-framework.gif)
 

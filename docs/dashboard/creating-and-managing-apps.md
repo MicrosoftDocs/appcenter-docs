@@ -22,19 +22,19 @@ To create an app:
 
 ## Release Type
 
-Select one of the suggested release types: Alpha, Beta, Enterprise, Production or Store. You can also use a custom release type by selecting the 'Custom' field. This custom release type must be a single word, alphanumeric, starting with a capital letter or number, followed by lowercase or numbers.
+Select one of the suggested release types: Alpha, Beta, Enterprise, Production, or Store. You can also use a custom release type by selecting the 'Custom' field. This custom release type must be a single word, alphanumeric, starting with a capital letter or number, followed by lowercase or numbers.
 
 ## Uploading an app icon
 
-Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Note that uploading an icon in App Center doesn't change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
+Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Uploading an icon in App Center doesn't change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
 
 ## Accessing apps
 
-All apps you belong to can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
+All apps that belong to you can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
 
 ## App secrets
 
-App secret is like an api key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
+App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## App roles
 
