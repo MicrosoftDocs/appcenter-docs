@@ -50,7 +50,7 @@ Select the test series, the system language, and the test framework. The system 
 Based on the previous steps a prototype command is generated. Some parameters in this prototype command must be edited to match your environment before using it to upload and start your test run. For example, the command prototype generated for a hypothetical user and an Android app with Espresso tests might look like:
 
 ```shell
-appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --app-path PATH_TO_FILE.apk  --test-series "master" --locale "en_US" --build-dir PATH_TO_ESPRESSO_BUILD_FOLDER
+appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --app-path PATH_TO_FILE.apk  --test-series "main" --locale "en_US" --build-dir PATH_TO_ESPRESSO_BUILD_FOLDER
 ```
 
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ Edit the *app-path* and *build-dir* in the generated command to match your envir
 The edited and ready to use version of the command line for this hypothetical example could be:
 
 ```shell
-appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --app-path "app/build/outputs/apk/debug/app-debug.apk"  --test-series "master" --locale "en_US" --build-dir "app/build/outputs/apk/androidTest/debug"
+appcenter test run espresso --app "user_org_key/App_key" --devices 36608302 --app-path "app/build/outputs/apk/debug/app-debug.apk"  --test-series "main" --locale "en_US" --build-dir "app/build/outputs/apk/androidTest/debug"
 ```
 
 > [!NOTE]

@@ -151,7 +151,7 @@ Steps to upload a test:
 
 3. Run the upload command:
    ```shell
-   appcenter test run appium --app "APP_ID" --devices "DEVICE_SET_ID" --app-path PATH_TO_FILE.apk  --test-series "master" --locale "en_US" --build-dir target/upload
+   appcenter test run appium --app "APP_ID" --devices "DEVICE_SET_ID" --app-path PATH_TO_FILE.apk  --test-series "main" --locale "en_US" --build-dir target/upload
    ```
 
 ## 4. Performance Troubleshooting

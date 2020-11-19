@@ -77,10 +77,10 @@ Here are examples of the JSON webhook payload for:
 ```JSON
 {
   "app_name": "myFirstApp",
-  "branch": "master",
+  "branch": "main",
   "build_status": "Succeeded",
   "build_id": "33",
-  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33",
+  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/main/builds/33",
   "build_reason": "manual",
   "finish_time": "2018-06-14T23:59:05.2542221Z",
   "icon_link": "https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/f7794e4c-42f1-4e7c-8013-07ed2e1b733d/ic_launcher.png?sv=2020-02-18&sr=c&sig=gs4JfcWjpKeYH%2F%2Fg0jEtSKKbeRkug9q%2FldslmzzeOg0%3D&se=2020-02-26T08%3A57%3A58Z&sp=r",

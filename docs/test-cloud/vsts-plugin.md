@@ -82,7 +82,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run appium --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir target/upload
 ```
 
@@ -110,7 +110,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run espresso --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir pathToEspressoBuildFolder
 ```
 
@@ -139,7 +139,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run uitest --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir pathTUITestBuildDir
 ```
 
@@ -170,7 +170,7 @@ In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checke
 Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
-appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "master" --locale "en_US" --build-dir pathToXCUItestBuildFolder
+appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "main" --locale "en_US" --build-dir pathToXCUItestBuildFolder
 ```
 
 ![Run section for the App Center Test task](images/vsts-run-test.png)

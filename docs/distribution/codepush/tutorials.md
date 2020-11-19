@@ -272,12 +272,12 @@ For React Native projects do the following:
 
     ![Selecting empty build definition](images/tutorials10.png)
 
-3. Make sure that the repo settings are correct (it should be the master branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
+3. Make sure that the repo settings are correct (it should be the master or main branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
 
     ![Configuring empty build definition](images/tutorials11.png)
 
 > [!NOTE]
-> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` branch.
+> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` (or `main`) branch.
 
 #### Configure the build task
 
@@ -324,7 +324,7 @@ Pressing `OK` on the "Queue build" dialog starts the build process:
 ![Build running](images/tutorials14.png)
 
 > [!NOTE]
-> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` branch.
+> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` (or `main`) branch.
 
 ### 5. Configure the CD environment
 
