@@ -240,7 +240,7 @@ The output from the `tree` command tells us that the webview has an the ID `webV
 * an HTML input field `firstname`, with the markup `<input type="text" name="firstname" id='firstname'>`
 * an HTML input field `lastname`, with the markup `<input type="text" name="lastname" id='lastname'>`
 
-The `show_secret` button is visible on the screen, but `firstname` and `lastname` aren't. Before a UITest may interact with those DOM elements, it's necessary to use the scrolling APIs to bring those fields into view. The following snippet from the REPL shows how to can scroll the HTML input elements into view using the `ScrollDownTo` API:
+The `show_secret` button is visible on the screen, but `firstname` and `lastname` aren't. Before a UITest may interact with those DOM elements, it's necessary to use the scrolling APIs to bring those fields into view. The following snippet from the REPL shows how to scroll the HTML input elements into view using the `ScrollDownTo` API:
 
 ```text
 >>> app.ScrollDownTo(c=>c.Css("#firstname"))                              
