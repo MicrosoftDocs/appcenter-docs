@@ -15,13 +15,13 @@ ms.custom: distribute
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
 ## How does it work?
-A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code (e.g. making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which of course, includes any review time associated with the store(s) you're publishing to.
+A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code (e.g. making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the store(s) you're publishing to.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your code and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they're available. It's a win-win!
 
-In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update which includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
+In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
 
-*Note: Any product changes which touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
+*Note: Any product changes that touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
 
 ## Supported Cordova Platforms
 Cordova 5.0.0+ is fully supported, along with the following associated platforms:
@@ -195,7 +195,7 @@ When the update check completes, it will trigger the `onUpdateCheck` callback wi
    - The configured deployment doesn't contain any releases, and therefore, nothing to update.
    - The latest release within the configured deployment is targeting a different binary version than what you're currently running (either older or newer).
    - The currently running app already has the latest release from the configured deployment, and therefore, doesn't need it again.
-2. A `RemotePackage` instance which represents an available update that can be inspected and/or subsequently downloaded.
+2. A `RemotePackage` instance that represents an available update that can be inspected and/or subsequently downloaded.
     
 Parameters:
 * **onSuccess**: Callback that's invoked upon receiving a successful response from the server. The callback receives a single parameter, which is described above.
@@ -224,7 +224,7 @@ When the update retrieval completes, it will trigger the `onSuccess` callback wi
 1. `null` if the app is currently running the HTML start page from the binary and not a CodePush update. This occurs in the following scenarios:
    - The end user installed the app binary and has yet to install a CodePush update
    - The end user installed an update of the binary (e.g. from the store), which cleared away the old CodePush updates, and gave precedence back to the binary.
-2. A `LocalPackage` instance which represents the metadata for the currently running CodePush update.
+2. A `LocalPackage` instance that represents the metadata for the currently running CodePush update.
 
 Parameters:
 * **onSuccess**: Callback that's invoked upon receiving the metadata about the currently running update. The callback receives a single parameter, which is described above.
@@ -256,7 +256,7 @@ Gets the metadata for the currently pending update (if one exists). An update is
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app doesn't currently have a pending update (e.g. the app is already running the latest available version).
-2. A `LocalPackage` instance which represents the metadata for the currently pending CodePush update.
+2. A `LocalPackage` instance that represents the metadata for the currently pending CodePush update.
 
 Parameters:
 * **onSuccess**: Callback that's invoked upon receiving the metadata about the currently pending update. The callback receives a single parameter, which is described above.
@@ -279,7 +279,7 @@ codePush.notifyApplicationReady(notifySucceeded?, notifyFailed?);
 
 Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
-If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that the point at which `sync` is called in your app represents a good approximation of a successful startup.
+If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists due to the assumption that when `sync` is called in your app represents a good approximation of a successful startup.
 
 Parameters:
 * **notifySucceeded**: Optional callback invoked if the plugin was successfully notified.
@@ -291,7 +291,7 @@ codePush.restartApplication();
 ```
 
 Immediately restarts the app. This method is for advanced scenarios, and is primarily useful when the following conditions are true:
-1. Your app is specifying an install mode value of `ON_NEXT_RESTART` or `ON_NEXT_RESUME` when calling the `sync` or `LocalPackage.install` methods. This has the effect of not applying your update until the app has been restarted (by either the end user or OS) or resumed, and therefore, the update won't be immediately displayed to the end user.
+1. Your app is specifying an install mode value of `ON_NEXT_RESTART` or `ON_NEXT_RESUME` when calling the `sync` or `LocalPackage.install` methods. This doesn't apply your update until the app restarts (by either the end user or OS) or resumes, and therefore, the update won't be immediately displayed to the end user.
 2. You have an app-specific user event (e.g. the end user navigated back to the app's home route) that allows you to apply the update in an unobtrusive way, and potentially gets the update in front of the end user sooner than waiting until the next restart or resume.
 
 ### codePush.sync
@@ -307,12 +307,12 @@ This method provides support for two different (but customizable) "modes" to eas
 
 Example Usage:
 ```javascript
-// Fully silent update which keeps the app in
+// Fully silent update that keeps the app in
 // sync with the server, without ever
 // interrupting the end user
 codePush.sync();
 
-// Active update, which lets the end user know
+// Active update that lets the end user know
 // about each update, and displays it to them
 // immediately after downloading it
 codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
@@ -321,11 +321,11 @@ codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
 > [!TIP]
 > If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then simply wrap the call to sync in a condition that ensures you only call it when desired.*
 
-While the sync method tries to make it easy to perform silent and active updates with little configuration, it accepts the following optional parameters which allow you to customize numerous aspects of the default behavior mentioned above:
-* **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code which represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
+While the sync method tries to make it easy to perform silent and active updates with little configuration, it accepts the following optional parameters that allow you to customize numerous aspects of the default behavior mentioned above:
+* **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
 * **syncOptions**: Optional [`SyncOptions`](#syncoptions) parameter configuring the behavior of the sync operation.
 * **downloadProgress**: Called periodically when an available update is being downloaded from the CodePush server. The method is called with a `DownloadProgress` object, which contains the following two properties:
-  * **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (i.e. the size of the set of files which changed from the previous release).
+  * **totalBytes** *(Number)* - The total number of bytes expected to be received for this update (i.e. the size of the set of files that changed from the previous release).
   * **receivedBytes** *(Number)* - The number of bytes downloaded thus far, which can be used to track download progress.
 * **syncErrback**: Called when there's an error in any of sync internal steps. The method is called with a standard javascript `Error` object as first argument.
 
@@ -334,9 +334,9 @@ While the `sync` method tries to make it easy to perform silent and active updat
 * **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the **config.xml** file, but this option allows you to override it from the script-side if you need to dynamically use a different deployment for a specific call to `sync`.
 * **installMode** *(InstallMode)* - Specifies when you want to install optional updates (i.e. those that aren't marked as mandatory). Defaults to `InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 * **mandatoryInstallMode** *(InstallMode)* - Specifies when you want to install updates which are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
-* **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which has the effect of applying the update immediately after a resume, regardless how long it was in the background.
+* **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume, regardless of how long it was in the background.
 * **ignoreFailedUpdates** *(Boolean)* - Specifies whether an available update should be ignored if it had been previously installed and rolled back on the client (because `notifyApplicationReady` wasn't successfully called). Defaults to `true`.
-* **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which has the effect of disabling the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
+* **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
 
 The following list represents the available options and their defaults:
 * **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message which is displayed to the end user. Defaults to `false`.

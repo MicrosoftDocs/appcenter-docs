@@ -732,7 +732,7 @@ appcenter codepush rollback <ownerName>/<appName> <deploymentName>
 appcenter codepush rollback -a <ownerName>/MyApp-iOS Production
 ```
 
-Executing this command has the effect of creating a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. For example, imagine that you released the following updates to your app:
+Executing this command creates a new release for the deployment that includes the **exact same code and metadata** as the version prior to the latest one. For example, imagine that you released the following updates to your app:
 
 | Release | Description       | Mandatory |
 |---------|-------------------|-----------|

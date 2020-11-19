@@ -65,7 +65,7 @@ This decorator provides support for letting you customize its behavior to easily
 1. **Silent sync on app start** *(the simplest, default behavior)*. Your app will automatically download available updates, and apply them the next time the app restarts (like the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt and/or "synthetic" app restarts.
 
     ```javascript
-    // Fully silent update which keeps the app in
+    // Fully silent update that keeps the app in
     // sync with the server, without ever
     // interrupting the end user
     class MyApp extends Component {}
@@ -83,7 +83,7 @@ This decorator provides support for letting you customize its behavior to easily
 3. **Interactive**. When an update is available, prompt the end user for permission before downloading it, and then immediately apply the update. If an update was released using the `mandatory` flag, the end user would still be notified about the update, but they wouldn't have the choice to ignore it.
 
     ```javascript
-    // Active update, which lets the end user know
+    // Active update that lets the end user know
     // about each update, and displays it to them
     // immediately after downloading it
     class MyApp extends Component {}
@@ -135,9 +135,9 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
 - **mandatoryInstallMode** *(codePush.InstallMode)* - Specifies when you want to install updates, which are marked as mandatory. Defaults to `codePush.InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 
-- **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates, which are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which has the effect of applying the update immediately after a resume or unless the app suspension is long enough to not matter, regardless how long it was in the background.
+- **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates that are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume or unless the app suspension is long enough to not matter, regardless how long it was in the background.
 
-- **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which has the effect of disabling the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings. Before enabling this option within an App Store-distributed app, see [this note](https://github.com/Microsoft/react-native-code-push#user-content-apple-note).
+- **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings. Before enabling this option within an App Store-distributed app, see [this note](https://github.com/Microsoft/react-native-code-push#user-content-apple-note).
 
     The following list represents the available options and their defaults:
 
@@ -375,7 +375,7 @@ Immediately restarts the app. If a truth value is provided to the `onlyIfUpdateI
 
 This method is for advanced scenarios, and is primarily useful when the following conditions are true:
 
-1. Your app is specifying an install mode value of `ON_NEXT_RESTART` or `ON_NEXT_RESUME` when calling the `sync` or `LocalPackage.install` methods. This has the effect of not applying your update until the app has been restarted (by either the end user or OS) or resumed, and therefore, the update won't be immediately displayed to the end user.
+1. Your app is specifying an install mode value of `ON_NEXT_RESTART` or `ON_NEXT_RESUME` when calling the `sync` or `LocalPackage.install` methods. This doesn't apply your update until the app has restarted (by either the end user or OS) or resumed, and therefore, the update won't be immediately displayed to the end user.
 
 2. You have an app-specific user event (like the end user navigated back to the app's home route) that allows you to apply the update in an unobtrusive way, and potentially gets the update to the end user sooner than waiting until the next restart or resume.
 
