@@ -363,7 +363,7 @@ codePush.sync(null, { mandatoryInstallMode: InstallMode.ON_NEXT_RESUME });
 // confirmation dialog of an "active" update
 codePush.sync(null, { updateDialog: { title: "An update is available!" } });
 
-// Displaying an update prompt which includes the
+// Displaying an update prompt that includes the
 // description associated with the CodePush release
 codePush.sync(null, {
    updateDialog: {
@@ -484,7 +484,7 @@ Contains details about an update that's available for download from the CodePush
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
-* **downloadUrl**: The URL at which the package is available for download. This property is only needed for advanced usage, since the `download` method will automatically handle the acquisition of updates for you. *(String)*
+* **downloadUrl**: The URL where the package is available for download. This property is only needed for advanced usage, since the `download` method will automatically handle the acquisition of updates for you. *(String)*
 
 ##### Methods
 * **abortDownload(abortSuccess, abortError)**: Aborts the current download session, if any.
@@ -540,7 +540,7 @@ Contains details about an update that's available for download from the CodePush
 
 ##### Properties
 The `RemotePackage` inherits all of the same properties as the `LocalPackage`, but includes one additional one:
-* **downloadUrl**: The URL at which the package is available for download. This property is only needed for advanced usage, since the `download` method will automatically handle the acquisition of updates for you. *(String)*
+* **downloadUrl**: The URL where the package is available for download. This property is only needed for advanced usage, since the `download` method will automatically handle the acquisition of updates for you. *(String)*
 
 ##### Methods
 * **abortDownload(abortSuccess, abortError)**: Aborts the current download session, if any.

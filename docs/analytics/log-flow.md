@@ -35,7 +35,7 @@ Log flow will show you the following information:
 - The fact that a crash occurred
 - Events, including the event name and its properties
 
-All data includes a subset of the *installation id* which uniquely identifies devices and the time in local timezone at which the log was emitted in the application.
+All data includes a subset of the *installation id* which uniquely identifies devices and the time in local timezone where the log was emitted in the application.
 
 ## "Is this on?"
 
