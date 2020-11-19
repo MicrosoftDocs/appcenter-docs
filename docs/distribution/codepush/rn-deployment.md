@@ -40,7 +40,7 @@ The steps above refer to a "staging build" and "production build" of your app. I
 The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/index.html) allows you to define custom config settings for each "build type" (like debug, release). This mechanism allows you to easily configure your debug builds to use your CodePush staging deployment key and your release builds to use your CodePush production deployment key.
 
 > [!NOTE]
-> As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> -k` from your terminal.*
+> As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> -k` from your terminal.
 
 To set this up, perform the following steps:
 
@@ -82,7 +82,7 @@ To set this up, perform the following steps:
 > Remember to remove the key from `strings.xml` if you're configuring the deployment key in the build process*
 
 > [!NOTE]
-> The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).*
+> The naming convention for `releaseStaging` is significant due to [this line](https://github.com/facebook/react-native/blob/e083f9a139b3f8c5552528f8f8018529ef3193b9/react.gradle#L79).
 
 
 **For React Native v0.29 - v0.59**

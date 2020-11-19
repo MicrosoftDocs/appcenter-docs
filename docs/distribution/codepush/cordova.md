@@ -21,7 +21,8 @@ The CodePush plugin helps get product improvements in front of your end users in
 
 In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
 
-*Note: Any product changes that touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).*
+> [!NOTE] 
+> Any product changes that touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).
 
 ## Supported Cordova Platforms
 Cordova 5.0.0+ is fully supported, along with the following associated platforms:
@@ -61,7 +62,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
     As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
 
    > [!IMPORTANT]
-   > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.*
+   > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.
 
     Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 ```xml
@@ -122,7 +123,7 @@ document.addEventListener("resume", function () {
 Additionally, if you want to display an update confirmation dialog (an "active install"), configure when an available update is installed (e.g. force an immediate restart) or customize the update experience in any way, refer to the `sync` method's API reference for information on how to tweak this default behavior.
 
 > [!IMPORTANT]
-> While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.*
+> While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
 
 ## Releasing Updates
 Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which handles preparing and releasing your update to the CodePush server.
@@ -139,10 +140,10 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android
 ```
 
 > [!TIP]
-> By using the App Center CLI `set-current` function you don't have to use the -a flag to specify the app a command is directed at.*
+> By using the App Center CLI `set-current` function you don't have to use the -a flag to specify the app a command is directed at.
 >
 > [!TIP]
-> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.*
+> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.
 
 The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and therefore, can generate your update and know exactly which files to upload. Additionally, in order to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).
 
@@ -319,7 +320,7 @@ codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when desired.*
+> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when desired.
 
 While the sync method tries to make it easy to perform silent and active updates with little configuration, it accepts the following optional parameters that allow you to customize numerous aspects of the default behavior mentioned above:
 * **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
@@ -333,13 +334,13 @@ While the sync method tries to make it easy to perform silent and active updates
 While the `sync` method tries to make it easy to perform silent and active updates with little configuration, it accepts an "options" object that allows you to customize numerous aspects of the default behavior mentioned above:
 * **deploymentKey** *(String)* - Specifies the deployment key you want to query for an update against. By default, this value is derived from the **config.xml** file, but this option allows you to override it from the script-side if you need to dynamically use a different deployment for a specific call to `sync`.
 * **installMode** *(InstallMode)* - Specifies when you want to install optional updates (i.e. those that aren't marked as mandatory). Defaults to `InstallMode.ON_NEXT_RESTART`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
-* **mandatoryInstallMode** *(InstallMode)* - Specifies when you want to install updates which are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
+* **mandatoryInstallMode** *(InstallMode)* - Specifies when you want to install updates that are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 * **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume, regardless of how long it was in the background.
 * **ignoreFailedUpdates** *(Boolean)* - Specifies whether an available update should be ignored if it had been previously installed and rolled back on the client (because `notifyApplicationReady` wasn't successfully called). Defaults to `true`.
 * **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
 
 The following list represents the available options and their defaults:
-* **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message which is displayed to the end user. Defaults to `false`.
+* **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message that's displayed to the end user. Defaults to `false`.
 * **descriptionPrefix** *(String)* - Indicates the string you want to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`.
 * **mandatoryContinueButtonLabel** *(String)*: The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
 * **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
@@ -411,7 +412,7 @@ Contains details about an update that has been downloaded locally or already ins
 * **appVersion**: The native version of the application this package update is intended for. *(String)*
 * **deploymentKey**: Deployment key of the package. *(String)*
 * **description**: The description of the update. This is the same value that you specified in the CLI when you released the update. *(String)*
-* **failedInstall**: Indicates whether this update has been previously installed but was rolled back. The `sync` method will automatically ignore updates which have previously failed, so you only need to worry about this property if using `checkForUpdate`. *(Boolean)*
+* **failedInstall**: Indicates whether this update has been previously installed but was rolled back. The `sync` method will automatically ignore updates that have previously failed, so you only need to worry about this property if using `checkForUpdate`. *(Boolean)*
 * **isFirstRun**: Flag indicating if the current application run is the first one after the package was applied. *(Boolean)*
 * **isMandatory**: Indicates whether the update is considered mandatory. This is the value that was specified in the CLI when the update was released. *(Boolean)*
 * **label**: The internal label automatically given to the update by the CodePush server, such as `v5`. This value uniquely identifies the update within its deployment. *(String)*
@@ -526,7 +527,7 @@ window.codePush.checkForUpdate(onUpdateCheck, onError);
 ```
 
 ### Enums
-The CodePush API includes the following "enum" objects which can be used to customize the update experience, and are available globally off of the `window` object:
+The CodePush API includes the following "enum" objects that can be used to customize the update experience, and are available globally off of the `window` object:
 
 #### InstallMode
 This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
@@ -582,7 +583,7 @@ window.codePush.checkForUpdate(onUpdateCheck, onError);
 ```
 
 ### Enums
-The CodePush API includes the following "enum" objects which can be used to customize the update experience, and are available globally off of the `window` object:
+The CodePush API includes the following "enum" objects that can be used to customize the update experience, and are available globally off of the `window` object:
 
 #### InstallMode
 This enum specified when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:

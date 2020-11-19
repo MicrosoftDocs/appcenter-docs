@@ -308,21 +308,21 @@ This parameter specifies which deployment you want to release the update to. It 
 This parameter provides an optional "change log" for the deployment. The value is round tripped to the client so that when the update is detected, your app can choose to display it to the end user (for example, via a "What's new?" dialog). This string accepts control characters such as `\n` and `\t` so that you can include whitespace formatting within your descriptions for improved readability.
 
 > [!TIP]
-> This parameter can be set using `--description`.*
+> This parameter can be set using `--description`.
 
 #### Disabled parameter
 
 This parameter specifies whether an update should be downloadable by end users or not. If left unspecified, the update won't be disabled. Instead users will download it the moment your app calls `sync`. This parameter can be valuable if you want to release an update that isn't immediately available, until you explicitly [patch it](#patching-update-metadata) when you want end users to be able to download it (for example, an announcement blog post went live).
 
 > [!TIP]
-> This parameter can be set using either `--disabled` or `-x`*
+> This parameter can be set using either `--disabled` or `-x`.
 
 #### Mandatory parameter
 
 This parameter specifies whether the update should be considered mandatory or not (for example, it includes a critical security fix). This attribute is round tripped to the client, who can then decide if and how they want to enforce it.
 
 > [!NOTE]
-> This parameter is a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (for example, `--mandatory true`), however, specifying `--mandatory` is sufficient for marking a release as mandatory.*
+> This parameter is a "flag", and therefore, its absence indicates that the release is optional, and its presence indicates that it's mandatory. You can provide a value to it (for example, `--mandatory true`), however, specifying `--mandatory` is sufficient for marking a release as mandatory.
 
 The mandatory attribute is unique because the server will dynamically modify it as necessary in order to ensure that the semantics of the app's releases are maintained for your end users. For example, imagine that you released the following three updates to your app:
 
@@ -565,7 +565,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 ```
 
 > [!NOTE]
->  We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.*
+> We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.
 
 #### App name parameter
 
@@ -625,7 +625,7 @@ appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-rel
 ```
 
 > [!NOTE]
-> This command doesn't allow modifying the actual update contents of a release (for example, `www` folder of a Cordova app). If you want to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it's available.*
+> This command doesn't allow modifying the actual update contents of a release (for example, `www` folder of a Cordova app). If you want to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it's available.
 
 Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update just a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
 
@@ -758,7 +758,7 @@ appcenter codepush rollback -a <ownerName>/MyApp-iOS Production --target-release
 ```
 
 > [!NOTE]
-> The release produced by a rollback will be annotated in the output of the `deployment history` command to help identify them more easily.*
+> The release produced by a rollback will be annotated in the output of the `deployment history` command to help identify them more easily.
 
 ## Viewing Release History
 

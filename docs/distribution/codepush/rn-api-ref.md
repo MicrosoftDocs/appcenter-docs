@@ -363,7 +363,7 @@ Notifies the CodePush runtime that a freshly installed update should be consider
 If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyAppReady` since `sync` will call it for you. This behavior exists because of the assumption that when `sync` is called in your app, it represents a good approximation of a successful startup.
 
 > [!NOTE]
-> This method is also aliased as `notifyApplicationReady` (for backwards compatibility).*
+> This method is also aliased as `notifyApplicationReady` (for backwards compatibility).
 
 ### codePush.restartApp
 
@@ -408,7 +408,7 @@ codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE 
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when desired.*
+> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when desired.
 
 #### SyncOptions
 

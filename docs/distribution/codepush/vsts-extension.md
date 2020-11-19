@@ -56,7 +56,7 @@ In addition to specifying your access token directly within each build task inst
 1. Generate or retrieve your access token as described above
 
    > [!NOTE]
-   > If you want to retrieve a previously generated access token, you can run the `appcenter token list` command and look for the token with the description you specified when initially creating it.*
+   > If you want to retrieve a previously generated access token, you can run the `appcenter token list` command and look for the token with the description you specified when initially creating it.
 
 2. Go into your Visual Studio Team Services or TFS project and click on the gear icon in the upper right corner
 

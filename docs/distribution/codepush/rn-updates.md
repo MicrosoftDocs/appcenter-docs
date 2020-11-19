@@ -28,7 +28,7 @@ appcenter codepush release-react -a <ownerName>/MyApp-Android
 ```
 
 > [!TIP]
-> By using the App Center CLI `set-current` function you no longer must use the -a flag to specify which app a command is directed at.*
+> By using the App Center CLI `set-current` function you no longer must use the -a flag to specify which app a command is directed at.
 
 The `release-react` command enables such a simple workflow because it provides many sensible defaults (like generating a release bundle, assuming your app's entry file on iOS is either `index.ios.js` or `index.js`). However, all of these defaults can be customized to allow incremental flexibility as necessary, which makes it a good fit for most scenarios.
 

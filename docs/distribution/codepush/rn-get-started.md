@@ -24,7 +24,7 @@ As with all other React Native plugins, the integration experience is different 
 If you want to see how other projects have integrated with CodePush, see the [example apps](rn-overview.md#example-apps--starters), which are provided by the community. Additionally, if you want to familiarize yourself with CodePush + React Native, see the getting started videos produced by [Bilal Budhani](https://www.youtube.com/watch?v=uN0FRWk-YW8&feature=youtu.be) and [Deepak Sisodiya](https://www.youtube.com/watch?v=f6I9y7V-Ibk).
 
 > [!IMPORTANT]
-> This guide assumes you've used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would've created.*
+> This guide assumes you've used the `react-native init` command to initialize your React Native project. As of March 2017, the command `create-react-native-app` can also be used to initialize a React Native project. If using this command, run `npm run eject` in your project's home directory to get a project very similar to what `react-native init` would've created.
 
 ## iOS Setup
 Once you have the CodePush plugin, you must integrate it into the Xcode project of your React Native app and configure it correctly.
@@ -98,7 +98,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ```
 
    > [!NOTE]
-   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.*
+   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.
 
 2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
@@ -156,12 +156,12 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ![Libz reference](./images/rn-ios-3.png)
 
    > [!NOTE]
-   > Alternatively, if you prefer, you can add the `-lz` flag to the `Other Linker Flags` field in the `Linking` section of the `Build Settings`.*
+   > Alternatively, if you prefer, you can add the `-lz` flag to the `Other Linker Flags` field in the `Linking` section of the `Build Settings`.
 
 ### Plugin Configuration for React Native lower than 0.60 (iOS)
 
 > [!NOTE]
-> If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
+> If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
 Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
 
@@ -380,7 +380,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ```
 
    > [!NOTE]
-   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.*
+   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.
 
 2. If you're using RNPM >=1.6.0, you'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
@@ -417,7 +417,7 @@ And that's it for installation using RNPM! Continue below to the [Plugin Configu
 ### Plugin Configuration for React Native lower than 0.60 (Android)
 
 > [!NOTE]
-> If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.*
+> If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
 After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
 
@@ -528,7 +528,8 @@ public class MainActivity extends ReactActivity {
 
 #### Background React Instances
 
-*This section is only necessary if you're *explicitly* launching a React Native instance without an `Activity` (for example, from within a native push notification receiver). For these situations, CodePush must be told how to find your React Native instance.*
+> [!NOTE]
+> This section is only necessary if you're *explicitly* launching a React Native instance without an `Activity` (for example, from within a native push notification receiver). For these situations, CodePush must be told how to find your React Native instance.
 
 In order to update/restart your React Native instance, CodePush must be configured with a `ReactInstanceHolder` before attempting to restart an instance in the background. This is done in your `Application` implementation.
 
