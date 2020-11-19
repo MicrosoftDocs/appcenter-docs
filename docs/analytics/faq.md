@@ -34,7 +34,7 @@ The country is determined by the carrier country and requires that the device ha
 The maximum number of distinct custom events that we'll track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
 
 ## What's the maximum number of event properties that I can define per event? What happens if I send more than the limit?
-The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they're automatically rejected.
+The maximum number of event properties is currently set to 20. If more than 20 properties are sent, they're automatically rejected.
 
 ## What's the maximum number of property values that I can send per event?
 You'll see the count for the 10 property values with highest count.

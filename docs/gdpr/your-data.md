@@ -16,7 +16,7 @@ App Center customers who wish to exercise their rights as data subjects may do s
 
 ## Delete
 
-The right to be forgotten differs from typical account closure in that we must delete your personal information within thirty days of your request. It also differs in that we provide you with a mechanism to programmatically and anonymously validate that your request has been serviced; even after your account has been closed.
+The right to be forgotten differs from typical account closure in that we must delete your personal information within 30 days of your request. It also differs in that we provide you with a mechanism to programmatically and anonymously validate that your request has been serviced; even after your account has been closed.
 
 To call the delete API, you must first have an API token from Visual Studio App Center with which to call the API method. If you don't have an API token, follow the steps to [get an App Center API Token](https://docs.microsoft.com/appcenter/api-docs/). The delete endpoint can be found here:
 

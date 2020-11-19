@@ -33,7 +33,7 @@ Once you add App Center Analytics to your app and the SDK is started, it will au
 
 ## Custom events
 
-You can track your own custom events with **up to twenty properties** to understand the interaction between your users and the app.
+You can track your own custom events with **up to 20 properties** to understand the interaction between your users and the app.
 
 Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 

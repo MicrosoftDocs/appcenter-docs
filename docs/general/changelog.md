@@ -322,7 +322,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **April 25, 2018**
 
 - **Increased number of property keys**:
-  Increased the number of property keys from five to twenty for both errors and custom events.
+  Increased the number of property keys from 5 to 20 for both errors and custom events.
 - **Increased number of characters allowed in property keys and values**:
   Increased the number of characters allowed in custom event and error property keys and values.
 
