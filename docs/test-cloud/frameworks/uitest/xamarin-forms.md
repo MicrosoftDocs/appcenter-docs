@@ -1,6 +1,7 @@
 ---
 title: "Get started with UITest and Xamarin.Forms"
 description: "UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center."
+zone_pivot_groups: platform
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
@@ -10,11 +11,9 @@ ms.date: 10/24/2018
 ---
 
 # Get started with UITest and Xamarin.Forms
-
-_UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices._
+UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices.
 
 ## Overview
-
 **[App Center Test](~/test-cloud/index.md)** allows developers to write automated user interface tests for iOS and Android apps. With some minor tweaks, Xamarin.Forms apps can be tested using Xamarin.UITest, including sharing the same test code. This article introduces specific tips to get Xamarin.UITest working with Xamarin.Forms.
 
 This guide does assume that familiarity with Xamarin.UITest. The following guides are recommended for gaining familiarity with Xamarin.UITest:
@@ -26,11 +25,9 @@ This guide does assume that familiarity with Xamarin.UITest. The following guide
 Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
 ## Requirements
-
 Refer to [Xamarin.UITest](~/test-cloud/frameworks/uitest/index.md) to confirm your project is ready for automated UI testing.
 
 ## Adding UITest support to Xamarin.Forms apps
-
 UITest automates the user interface by activating controls on the screen and performing input anywhere a user would normally interact with the application. To enable tests that can *press a button* or *enter text in a box* the test code will need a way to identify the controls on the screen.
 
 To enable the UITest code to reference controls, each control needs a unique identifier. In Xamarin.Forms, the recommended way to set this identifier is by using the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property as shown below:
@@ -62,7 +59,6 @@ A unique [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) should be add
 > An `InvalidOperationException` will be thrown if an attempt is made to set the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property of an [`Element`](xref:Xamarin.Forms.Element) more than once.
 
 ### iOS application project
-
 To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it's been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
 
 ```csharp
