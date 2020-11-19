@@ -16,7 +16,7 @@ ms.reviewer: nirajpur
 > [!NOTE]
 > Build scripts allow you to customize your builds; but issues you encounter during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
 
-You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln**, or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we'll run them as custom build steps. 
+You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (`.xcodeproj`, `.csproj`, `.sln`, or `package.json`) file or module-level (`build.gradle`) file that you've selected in the build configuration and we'll run them as custom build steps. 
 
 In App Center, non-UWP apps are built on macOS, so they can use Bash scripts. UWP apps are built on Windows, so they can use PowerShell scripts. Many similar tasks can be performed in either script format, but you might need to do some conversion if migrating between them. For example, macOS Bash requires the use of UNIX-style line endings (LF).
 
